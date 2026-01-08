@@ -1,6 +1,6 @@
 Instructions for Dooza.ai Export
 
-This folder contains a standalone React project for the Dooza Intern product on the dooza.ai domain.
+This folder contains a standalone React project for the Dooza agent product on the dooza.ai domain.
 
 1. Copy this entire 'dooza-ai-export' folder to your local machine.
 2. IMPORTANT: Copy these files from your original 'dooza.co' project to the 'dooza-ai-export/public' folder:

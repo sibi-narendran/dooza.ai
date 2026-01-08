@@ -28,8 +28,8 @@ const Navbar = ({ openModal }) => {
                     </div>
 
                     <div className="hidden md:flex items-center space-x-6">
-                        <a href={getProductSigninUrl('intern')} className="text-[15px] font-medium text-slate-600 hover:text-primary-600 transition-colors">Login</a>
-                        <a href={getProductSignupUrl('intern')} className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-[15px] font-medium hover:bg-slate-800 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                        <a href={getProductSigninUrl('agent')} className="text-[15px] font-medium text-slate-600 hover:text-primary-600 transition-colors">Login</a>
+                        <a href={getProductSignupUrl('agent')} className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-[15px] font-medium hover:bg-slate-800 transition-all hover:shadow-lg hover:-translate-y-0.5">
                             Create free account
                         </a>
                     </div>
@@ -46,8 +46,8 @@ const Navbar = ({ openModal }) => {
                 <div className="md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
                     <div className="px-4 pt-2 pb-6 space-y-4">
                         <a href="/partners" className="block w-full text-center px-3 py-3 text-base font-medium text-slate-600">Partners</a>
-                        <a href={getProductSigninUrl('intern')} className="block w-full text-center px-3 py-3 text-base font-medium text-slate-600">Login</a>
-                        <a href={getProductSignupUrl('intern')} className="block w-full text-center bg-primary-600 text-white px-3 py-3 rounded-lg text-base font-medium">
+                        <a href={getProductSigninUrl('agent')} className="block w-full text-center px-3 py-3 text-base font-medium text-slate-600">Login</a>
+                        <a href={getProductSignupUrl('agent')} className="block w-full text-center bg-primary-600 text-white px-3 py-3 rounded-lg text-base font-medium">
                             Create free account
                         </a>
                     </div>

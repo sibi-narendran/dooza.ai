@@ -23,12 +23,12 @@ const Home = () => {
     };
 
     const aiEmployees = [
-        { role: "SEO Intern", description: "I write SEO-optimized blog posts that rank on Google and drive traffic to your site.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Alex&backgroundColor=b6e3f4,c0aede,d1d4f9", name: "Alex" },
-        { role: "Email Intern", description: "I organize your inbox, draft replies, and manage your calendar so you stay on top.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Sam&backgroundColor=ffdfbf,ffd5dc,d1d4f9", name: "Sam" },
-        { role: "Social Media Intern", description: "I post daily updates, engage with followers, and grow your social presence automatically.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Taylor&backgroundColor=b6e3f4,c0aede,ffdfbf", name: "Jordan" },
-        { role: "Sales Intern", description: "I find qualified leads, send cold emails, and follow up until they convert.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Sophie&backgroundColor=ffd5dc,c0aede,d1d4f9", name: "Casey" },
-        { role: "Call Intern", description: "I answer every call professionally, take messages, and schedule appointments for you.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Riley&backgroundColor=b6e3f4,ffdfbf,c0aede", name: "Riley" },
-        { role: "Legal Intern", description: "I review contracts, answer legal questions, and protect you from costly mistakes.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Morgan&backgroundColor=d1d4f9,b6e3f4,ffd5dc", name: "Morgan" }
+        { role: "SEO agent", description: "I write SEO-optimized blog posts that rank on Google and drive traffic to your site.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Alex&backgroundColor=b6e3f4,c0aede,d1d4f9", name: "Alex" },
+        { role: "Email agent", description: "I organize your inbox, draft replies, and manage your calendar so you stay on top.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Sam&backgroundColor=ffdfbf,ffd5dc,d1d4f9", name: "Sam" },
+        { role: "Social Media agent", description: "I post daily updates, engage with followers, and grow your social presence automatically.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Taylor&backgroundColor=b6e3f4,c0aede,ffdfbf", name: "Jordan" },
+        { role: "Sales agent", description: "I find qualified leads, send cold emails, and follow up until they convert.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Sophie&backgroundColor=ffd5dc,c0aede,d1d4f9", name: "Casey" },
+        { role: "Call agent", description: "I answer every call professionally, take messages, and schedule appointments for you.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Riley&backgroundColor=b6e3f4,ffdfbf,c0aede", name: "Riley" },
+        { role: "Legal agent", description: "I review contracts, answer legal questions, and protect you from costly mistakes.", image: "https://api.dicebear.com/9.x/lorelei/svg?seed=Morgan&backgroundColor=d1d4f9,b6e3f4,ffd5dc", name: "Morgan" }
     ];
 
     const timeline = [
@@ -45,9 +45,9 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             <SEO
-                title="Dooza Intern | AI Employees That Never Sleep"
+                title="Dooza agent | AI Employees That Never Sleep"
                 description="Get an AI Team who run your inbox, socials, SEO, lead generation, calls, and support."
-                keywords="AI employees, AI intern, automated business"
+                keywords="AI employees, AI agent, automated business"
             />
 
             <Navbar openModal={handleAction} />
@@ -68,7 +68,7 @@ const Home = () => {
                             Build, grow, and scale your business with a team of AI employees.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <a href={getProductSignupUrl('intern')} className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                            <a href={getProductSignupUrl('agent')} className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
                                 Get Started
                                 <ArrowRight className="w-5 h-5" />
                             </a>
@@ -109,7 +109,7 @@ const Home = () => {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Welcome to your new life</h2>
-                            <p className="text-xl text-slate-600">Here's what your day looks like with Dooza Interns</p>
+                            <p className="text-xl text-slate-600">Here's what your day looks like with Dooza agents</p>
                         </div>
 
                         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-teal-300 before:to-transparent">
@@ -172,7 +172,7 @@ const Home = () => {
                                 <div className="flex gap-1 text-yellow-400 mb-4">
                                     {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}
                                 </div>
-                                <p className="text-slate-700 font-medium mb-6">"I hired the Legal Assistant intern to review my contracts. Saved me thousands in lawyer fees."</p>
+                                <p className="text-slate-700 font-medium mb-6">"I hired the Legal Assistant agent to review my contracts. Saved me thousands in lawyer fees."</p>
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">AL</div>
                                     <div>
@@ -192,7 +192,7 @@ const Home = () => {
                         <div className="space-y-4">
                             <div className="bg-white p-6 rounded-xl border border-slate-200">
                                 <h3 className="font-bold text-slate-900 mb-2">Do I need to know how to prompt?</h3>
-                                <p className="text-slate-600">No! Our interns are pre-trained. You just talk to them like a normal person.</p>
+                                <p className="text-slate-600">No! Our agents are pre-trained. You just talk to them like a normal person.</p>
                             </div>
                             <div className="bg-white p-6 rounded-xl border border-slate-200">
                                 <h3 className="font-bold text-slate-900 mb-2">Is there a money-back guarantee?</h3>
@@ -209,7 +209,7 @@ const Home = () => {
                 <section className="py-24 bg-primary-600 text-white text-center">
                     <div className="max-w-4xl mx-auto px-4">
                         <h2 className="text-4xl md:text-6xl font-extrabold mb-8">We are ready to work.<br /><span className="opacity-90">Are you?</span></h2>
-                        <a href={getProductSignupUrl('intern')} className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1">
+                        <a href={getProductSignupUrl('agent')} className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1">
                             Get Started
                             <ArrowRight className="w-6 h-6" />
                         </a>
