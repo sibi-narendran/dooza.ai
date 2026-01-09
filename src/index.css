@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
   @apply text-slate-900 font-bold tracking-tight;
 }
 
+/* Scroll animation */
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -32,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: scroll 30s linear infinite;
 }
 
+/* Blob animation */
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(30px, -50px) scale(1.1); }
@@ -49,4 +51,101 @@ h1, h2, h3, h4, h5, h6 {
 
 .animation-delay-4000 {
   animation-delay: 4s;
+}
+
+/* Slow pulse for dark theme backgrounds */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Stagger animations */
+.animation-delay-100 { animation-delay: 0.1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-500 { animation-delay: 0.5s; }
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow effect */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.4);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for dark theme */
+.dark-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark-scrollbar::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #444;
 }

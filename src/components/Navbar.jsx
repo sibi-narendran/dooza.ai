@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { getProductSignupUrl, getProductSigninUrl } from '../constants/links';
 
-const Navbar = ({ openModal }) => {
+const Navbar = ({ openModal, variant = 'light' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [productsOpen, setProductsOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    const isDark = variant === 'dark';
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -12,43 +16,184 @@ const Navbar = ({ openModal }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setProductsOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const products = [
+        { name: 'Sidekick', href: '/' },
+        { name: 'Studio', href: '/agent-builder' }
+    ];
+
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${
+            scrolled 
+                ? isDark 
+                    ? 'bg-[#0a0a0f]/90 backdrop-blur-md shadow-lg shadow-black/20 py-3' 
+                    : 'bg-white/90 backdrop-blur-md shadow-sm py-3'
+                : 'bg-transparent py-5'
+        }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-10">
                         <a href="/" className="flex-shrink-0 flex items-center gap-2">
                             <img src="/logo.png" alt="Dooza" className="w-8 h-8 rounded-lg" />
-                            <span className="text-xl font-bold text-slate-900 tracking-tight">Dooza</span>
+                            <span className={`text-xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                                Dooza
+                            </span>
                         </a>
 
                         <div className="hidden md:flex items-center space-x-8">
-                            <a href="/partners" className="text-[15px] font-medium text-slate-600 hover:text-primary-600 transition-colors">Partners</a>
+                            {/* Products Dropdown */}
+                            <div className="relative" ref={dropdownRef}>
+                                <button 
+                                    onClick={() => setProductsOpen(!productsOpen)}
+                                    className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${
+                                        isDark 
+                                            ? 'text-gray-300 hover:text-white' 
+                                            : 'text-slate-600 hover:text-primary-600'
+                                    }`}
+                                >
+                                    Products
+                                    <ChevronDown className={`w-4 h-4 transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                {productsOpen && (
+                                    <div className={`absolute top-full left-0 mt-2 min-w-[180px] rounded-xl shadow-xl border overflow-hidden ${
+                                        isDark 
+                                            ? 'bg-[#12121a] border-white/10' 
+                                            : 'bg-white border-slate-100'
+                                    }`}>
+                                        <div className="py-2">
+                                            {products.map((product) => (
+                                                <a
+                                                    key={product.name}
+                                                    href={product.href}
+                                                    onClick={() => setProductsOpen(false)}
+                                                    className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${
+                                                        isDark 
+                                                            ? 'text-gray-300 hover:bg-white/5 hover:text-white' 
+                                                            : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                                                    }`}
+                                                >
+                                                    {product.name}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            <a 
+                                href="/partners" 
+                                className={`text-[15px] font-medium transition-colors ${
+                                    isDark 
+                                        ? 'text-gray-300 hover:text-white' 
+                                        : 'text-slate-600 hover:text-primary-600'
+                                }`}
+                            >
+                                Partners
+                            </a>
                         </div>
                     </div>
 
                     <div className="hidden md:flex items-center space-x-6">
-                        <a href={getProductSigninUrl('agent')} className="text-[15px] font-medium text-slate-600 hover:text-primary-600 transition-colors">Login</a>
-                        <a href={getProductSignupUrl('agent')} className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-[15px] font-medium hover:bg-slate-800 transition-all hover:shadow-lg hover:-translate-y-0.5">
-                            Create free account
+                        <a 
+                            href={getProductSigninUrl('agent')} 
+                            className={`text-[15px] font-medium transition-colors ${
+                                isDark 
+                                    ? 'text-gray-300 hover:text-white' 
+                                    : 'text-slate-600 hover:text-primary-600'
+                            }`}
+                        >
+                            Login
+                        </a>
+                        <a 
+                            href={getProductSignupUrl('agent')} 
+                            className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all hover:shadow-lg hover:-translate-y-0.5 ${
+                                isDark 
+                                    ? 'bg-white text-black hover:bg-gray-100' 
+                                    : 'bg-slate-900 text-white hover:bg-slate-800'
+                            }`}
+                        >
+                            Get Started
                         </a>
                     </div>
 
                     <div className="md:hidden flex items-center">
-                        <button onClick={() => setIsOpen(!isOpen)} className="text-slate-600 hover:text-slate-900">
+                        <button 
+                            onClick={() => setIsOpen(!isOpen)} 
+                            className={isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}
+                        >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
                     </div>
                 </div>
             </div>
 
+            {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
-                    <div className="px-4 pt-2 pb-6 space-y-4">
-                        <a href="/partners" className="block w-full text-center px-3 py-3 text-base font-medium text-slate-600">Partners</a>
-                        <a href={getProductSigninUrl('agent')} className="block w-full text-center px-3 py-3 text-base font-medium text-slate-600">Login</a>
-                        <a href={getProductSignupUrl('agent')} className="block w-full text-center bg-primary-600 text-white px-3 py-3 rounded-lg text-base font-medium">
-                            Create free account
+                <div className={`md:hidden absolute w-full shadow-xl ${
+                    isDark 
+                        ? 'bg-[#12121a] border-t border-white/10' 
+                        : 'bg-white border-t border-slate-100'
+                }`}>
+                    <div className="px-4 pt-2 pb-6 space-y-2">
+                        {/* Mobile Products Section */}
+                        <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
+                            Products
+                        </div>
+                        {products.map((product) => (
+                            <a 
+                                key={product.name}
+                                href={product.href} 
+                                className={`block px-3 py-3 rounded-lg font-medium ${
+                                    isDark 
+                                        ? 'text-gray-300 hover:bg-white/5' 
+                                        : 'text-slate-600 hover:bg-slate-50'
+                                }`}
+                            >
+                                {product.name}
+                            </a>
+                        ))}
+                        
+                        <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
+                        
+                        <a 
+                            href="/partners" 
+                            className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${
+                                isDark 
+                                    ? 'text-gray-300 hover:bg-white/5' 
+                                    : 'text-slate-600 hover:bg-slate-50'
+                            }`}
+                        >
+                            Partners
+                        </a>
+                        <a 
+                            href={getProductSigninUrl('agent')} 
+                            className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${
+                                isDark 
+                                    ? 'text-gray-300 hover:bg-white/5' 
+                                    : 'text-slate-600 hover:bg-slate-50'
+                            }`}
+                        >
+                            Login
+                        </a>
+                        <a 
+                            href={getProductSignupUrl('agent')} 
+                            className={`block w-full text-center px-3 py-3 rounded-lg text-base font-medium ${
+                                isDark 
+                                    ? 'bg-white text-black' 
+                                    : 'bg-primary-600 text-white'
+                            }`}
+                        >
+                            Get Started
                         </a>
                     </div>
                 </div>

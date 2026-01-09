@@ -109,7 +109,7 @@ const Home = () => {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Welcome to your new life</h2>
-                            <p className="text-xl text-slate-600">Here's what your day looks like with Dooza agents</p>
+                            <p className="text-xl text-slate-600">Here's what your day looks like with Sidekick</p>
                         </div>
 
                         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-teal-300 before:to-transparent">

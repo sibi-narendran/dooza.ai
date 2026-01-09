@@ -9,7 +9,7 @@ const BottomCTA = ({ openModal }) => {
                     Ready to scale your business?
                 </h2>
                 <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-                    Join thousands of companies using Dooza agents to automate their work.
+                    Join thousands of companies using Sidekick to automate their work.
                     Get started for free today.
                 </p>
 
