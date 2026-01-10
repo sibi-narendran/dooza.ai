@@ -72,6 +72,7 @@ const PartnerSignup = () => {
                 <SEO 
                     title="Partner Application Received | Dooza"
                     description="Thank you for applying to the Dooza Partner Program."
+                    canonicalUrl="https://dooza.ai/partner-signup"
                     noindex={true}
                 />
                 <Navbar />
@@ -102,6 +103,7 @@ const PartnerSignup = () => {
             <SEO 
                 title="Become a Partner | Dooza"
                 description="Apply to join the Dooza Partner Program."
+                canonicalUrl="https://dooza.ai/partner-signup"
                 noindex={true}
             />
             

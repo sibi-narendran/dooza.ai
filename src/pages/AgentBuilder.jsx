@@ -121,6 +121,7 @@ const AgentBuilder = () => {
                 title="Studio | Build Production-Ready AI Agents"
                 description="Design, build, and deploy intelligent AI agents with our visual workflow builder. Connect any LLM, add RAG pipelines, and ship to production in minutes."
                 keywords="AI agent builder, LLM workflow, RAG pipeline, AI automation, no-code AI"
+                canonicalUrl="https://dooza.ai/agent-builder"
             />
 
             <Navbar />
