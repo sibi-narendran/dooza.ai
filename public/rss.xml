@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Dooza Blog - AI Employees &amp; Business Automation</title>
+    <title>Dooza Blog</title>
     <description>Expert insights on AI employees, business automation, and scaling your operations with intelligent agents.</description>
     <link>https://dooza.ai/blog</link>
     <atom:link href="https://dooza.ai/rss.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2026 00:00:00 +0000</lastBuildDate>
     <copyright>Copyright 2026 Dooza. All rights reserved.</copyright>
     <managingEditor>hello@dooza.ai (Dooza Team)</managingEditor>
     <webMaster>hello@dooza.ai (Dooza Team)</webMaster>
@@ -20,33 +20,33 @@
       <title>Sintra AI Alternative: Why Businesses Are Switching to Dooza in 2026</title>
       <link>https://dooza.ai/blog/better-than-sintra-ai</link>
       <guid isPermaLink="true">https://dooza.ai/blog/better-than-sintra-ai</guid>
-      <pubDate>Fri, 10 Jan 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
       <description>Looking for a Sintra AI alternative? Discover why Dooza offers better AI employees with simpler setup, transparent pricing, and superior automation for your business.</description>
       <category>Comparison</category>
       <author>hello@dooza.ai (Dooza Team)</author>
-      <enclosure url="https://dooza.ai/blog/comparison-general.png" type="image/png"/>
+      <enclosure url="https://dooza.ai/blog/comparison-general.png" type="image/png" length="195000"/>
     </item>
 
     <item>
       <title>Marblism Alternative: Why Dooza Beats Marblism for AI Employees</title>
       <link>https://dooza.ai/blog/better-than-marblism</link>
       <guid isPermaLink="true">https://dooza.ai/blog/better-than-marblism</guid>
-      <pubDate>Fri, 10 Jan 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
       <description>Comparing Marblism vs Dooza for AI employees? See why businesses choose Dooza for more powerful AI agents, better integrations, and transparent pricing.</description>
       <category>Comparison</category>
       <author>hello@dooza.ai (Dooza Team)</author>
-      <enclosure url="https://dooza.ai/blog/comparison-structures.png" type="image/png"/>
+      <enclosure url="https://dooza.ai/blog/comparison-structures.png" type="image/png" length="464000"/>
     </item>
 
     <item>
       <title>How AI Employees Are Transforming Small Business Operations in 2026</title>
       <link>https://dooza.ai/blog/ai-employees-transforming-small-business</link>
       <guid isPermaLink="true">https://dooza.ai/blog/ai-employees-transforming-small-business</guid>
-      <pubDate>Wed, 08 Jan 2026 00:00:00 GMT</pubDate>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
       <description>Discover how AI-powered employees are helping small businesses automate their daily operations, from email management to social media posting.</description>
       <category>AI Automation</category>
       <author>hello@dooza.ai (Dooza Team)</author>
-      <enclosure url="https://dooza.ai/blog/ai-employees.png" type="image/png"/>
+      <enclosure url="https://dooza.ai/blog/ai-employees.png" type="image/png" length="453000"/>
     </item>
 
   </channel>
