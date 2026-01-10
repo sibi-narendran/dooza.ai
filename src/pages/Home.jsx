@@ -20,6 +20,10 @@ const homeFaqData = [
     {
         question: "Can I manage multiple businesses?",
         answer: "Absolutely. You can create different workspaces for different businesses."
+    },
+    {
+        question: "How is Dooza different from Sintra AI or Marblism?",
+        answer: "Unlike Sintra AI and Marblism, Dooza offers free concierge onboarding where our team builds custom AI employees for your specific workflow. We also have transparent pricing starting at $29/month with no hidden fees, and our AI employees are purpose-built for business automation, not just chatbots."
     }
 ];
 
@@ -113,9 +117,9 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             <SEO
-                title="AI Employees That Never Sleep | Dooza"
-                description="Build, grow, and scale your business with AI employees. Automate your inbox, social media, SEO, lead generation, calls, and customer support 24/7."
-                keywords="AI employees, AI agents, business automation, AI for small business, automated email, AI social media, AI sales agent, hire AI employees"
+                title="AI Employees That Never Sleep | Dooza - Sintra AI & Marblism Alternative"
+                description="Build, grow, and scale your business with AI employees. The #1 Sintra AI alternative with simpler setup, transparent pricing. Automate inbox, social media, SEO, calls 24/7."
+                keywords="AI employees, AI agents, business automation, Sintra AI alternative, Marblism alternative, AI for small business, automated email, AI social media, AI sales agent, hire AI employees, Sintra AI vs Dooza"
                 canonicalUrl={SITE_URL}
                 image="/logo.png"
                 structuredData={websiteSchema}
@@ -261,6 +265,78 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Competitor Alternatives Section - SEO for "X alternative" searches */}
+                <section className="py-20 bg-white border-t border-slate-100">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                                Switching to Dooza?
+                            </h2>
+                            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                                Join thousands who switched from other AI employee platforms. See why businesses choose Dooza over the competition.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-6 mb-10">
+                            {/* Sintra AI Alternative */}
+                            <a 
+                                href="/blog/better-than-sintra-ai" 
+                                className="group bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-200 rounded-2xl p-6 transition-all"
+                            >
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Alternative to</span>
+                                    <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
+                                </div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Sintra AI</h3>
+                                <p className="text-slate-600 text-sm mb-4">
+                                    Tired of complex setup and confusing pricing? Dooza offers simpler onboarding, transparent costs, and AI employees that actually understand your business.
+                                </p>
+                                <div className="flex items-center gap-4 text-sm">
+                                    <span className="flex items-center gap-1 text-green-600">
+                                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                                        5-min setup
+                                    </span>
+                                    <span className="flex items-center gap-1 text-green-600">
+                                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                                        70% cheaper
+                                    </span>
+                                </div>
+                            </a>
+
+                            {/* Marblism Alternative */}
+                            <a 
+                                href="/blog/better-than-marblism" 
+                                className="group bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-200 rounded-2xl p-6 transition-all"
+                            >
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Alternative to</span>
+                                    <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
+                                </div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Marblism</h3>
+                                <p className="text-slate-600 text-sm mb-4">
+                                    Looking for dedicated AI employees, not just code generation? Dooza is purpose-built for business automation with human support included.
+                                </p>
+                                <div className="flex items-center gap-4 text-sm">
+                                    <span className="flex items-center gap-1 text-green-600">
+                                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                                        Free onboarding call
+                                    </span>
+                                    <span className="flex items-center gap-1 text-green-600">
+                                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                                        We build for you
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div className="text-center">
+                            <p className="text-slate-500 text-sm">
+                                Using another platform? <a href="/blog" className="text-primary-600 hover:underline font-medium">Read our comparison guides</a> or <a href={CAL_BOOKING_URL} onClick={handleAction} className="text-primary-600 hover:underline font-medium">book a free migration call</a>.
+                            </p>
                         </div>
                     </div>
                 </section>
