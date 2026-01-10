@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://dooza.ai/</loc>
     <lastmod>2026-01-10</lastmod>
@@ -24,10 +26,36 @@
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+  
+  <!-- Blog Posts -->
   <url>
     <loc>https://dooza.ai/blog/ai-employees-transforming-small-business</loc>
-    <lastmod>2026-01-08</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://dooza.ai/blog/ai-employees.png</image:loc>
+      <image:title>AI employees automating small business operations</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dooza.ai/blog/better-than-sintra-ai</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://dooza.ai/blog/comparison-general.png</image:loc>
+      <image:title>Sintra AI vs Dooza comparison</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dooza.ai/blog/better-than-marblism</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://dooza.ai/blog/comparison-structures.png</image:loc>
+      <image:title>Marblism vs Dooza comparison</image:title>
+    </image:image>
   </url>
 </urlset>

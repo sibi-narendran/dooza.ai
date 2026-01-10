@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemaps and Feeds
 Sitemap: https://dooza.ai/sitemap.xml
+
+# RSS Feed
+# https://dooza.ai/rss.xml

@@ -10,6 +10,7 @@ const SEO = ({
   type = 'website', 
   noindex = false,
   structuredData,
+  additionalStructuredData = [],
   author = 'Dooza Team',
   publishedTime,
   modifiedTime
@@ -26,6 +27,12 @@ const SEO = ({
     
   const resolvedCanonical = canonicalUrl || siteUrl;
   const isArticle = type === 'article';
+
+  // Combine all structured data into an array
+  const allStructuredData = [
+    structuredData,
+    ...additionalStructuredData
+  ].filter(Boolean);
 
   return (
     <Helmet>
@@ -46,6 +53,9 @@ const SEO = ({
       
       {/* Canonical */}
       <link rel="canonical" href={resolvedCanonical} />
+      
+      {/* RSS Feed */}
+      <link rel="alternate" type="application/rss+xml" title="Dooza Blog RSS Feed" href={`${siteUrl}/rss.xml`} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
@@ -77,12 +87,12 @@ const SEO = ({
       <meta name="twitter:image" content={fullImage} />
       <meta name="twitter:image:alt" content={title || siteName} />
       
-      {/* Structured Data / JSON-LD */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+      {/* Structured Data / JSON-LD - Output each schema separately */}
+      {allStructuredData.map((data, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(data)}
         </script>
-      )}
+      ))}
     </Helmet>
   );
 };

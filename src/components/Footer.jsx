@@ -59,13 +59,13 @@ const Footer = ({ variant = 'light' }) => {
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Resources</h4>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Documentation
+                                <a href="/blog" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Blog
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Blog
+                                <a href="/blog/ai-employees-transforming-small-business" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI Employees Guide
                                 </a>
                             </li>
                         </ul>

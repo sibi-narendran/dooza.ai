@@ -4,7 +4,75 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BookingModal from '../components/BookingModal';
 import SEO from '../components/SEO';
+import { SITE_URL } from '../constants/site';
 import { ArrowRight, Mail, Calendar, MessageSquare, Star } from 'lucide-react';
+
+// Homepage FAQ data for schema
+const homeFaqData = [
+    {
+        question: "Do I need to know how to prompt?",
+        answer: "No! Our agents are pre-trained. You just talk to them like a normal person."
+    },
+    {
+        question: "Is there a money-back guarantee?",
+        answer: "Yes! If you're not happy within 7 days, just let us know and we'll give you a full refund, no questions asked."
+    },
+    {
+        question: "Can I manage multiple businesses?",
+        answer: "Absolutely. You can create different workspaces for different businesses."
+    }
+];
+
+// WebSite schema for sitelinks in Google
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Dooza",
+    "url": SITE_URL,
+    "description": "AI Employees That Never Sleep - Build, grow, and scale your business with a team of AI employees.",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": `${SITE_URL}/blog?q={search_term_string}`
+        },
+        "query-input": "required name=search_term_string"
+    }
+};
+
+// Organization schema for brand knowledge panel
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dooza",
+    "url": SITE_URL,
+    "logo": `${SITE_URL}/logo.png`,
+    "description": "AI Employees That Never Sleep - Automate your business with intelligent AI agents for email, social media, sales, and more.",
+    "foundingDate": "2024",
+    "sameAs": [
+        "https://twitter.com/sibinarendran",
+        "https://linkedin.com/company/dooza"
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "hello@dooza.ai"
+    }
+};
+
+// FAQ schema for homepage
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": homeFaqData.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+        }
+    }))
+};
 
 const Home = () => {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -45,10 +113,13 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             <SEO
-                title="Dooza agent | AI Employees That Never Sleep"
-                description="Get an AI Team who run your inbox, socials, SEO, lead generation, calls, and support."
-                keywords="AI employees, AI agent, automated business"
-                canonicalUrl="https://dooza.ai/"
+                title="AI Employees That Never Sleep | Dooza"
+                description="Build, grow, and scale your business with AI employees. Automate your inbox, social media, SEO, lead generation, calls, and customer support 24/7."
+                keywords="AI employees, AI agents, business automation, AI for small business, automated email, AI social media, AI sales agent, hire AI employees"
+                canonicalUrl={SITE_URL}
+                image="/logo.png"
+                structuredData={websiteSchema}
+                additionalStructuredData={[organizationSchema, faqSchema]}
             />
 
             <Navbar openModal={handleAction} />
@@ -197,21 +268,15 @@ const Home = () => {
                 {/* FAQ Section */}
                 <section className="py-20 bg-slate-50">
                     <div className="max-w-4xl mx-auto px-4">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center">Questions?</h2>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center">Frequently Asked Questions</h2>
 
                         <div className="space-y-4">
-                            <div className="bg-white p-6 rounded-xl border border-slate-200">
-                                <h3 className="font-bold text-slate-900 mb-2">Do I need to know how to prompt?</h3>
-                                <p className="text-slate-600">No! Our agents are pre-trained. You just talk to them like a normal person.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-xl border border-slate-200">
-                                <h3 className="font-bold text-slate-900 mb-2">Is there a money-back guarantee?</h3>
-                                <p className="text-slate-600">Yes! If you're not happy within 7 days, just let us know and we'll give you a full refund, no questions asked.</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-xl border border-slate-200">
-                                <h3 className="font-bold text-slate-900 mb-2">Can I manage multiple businesses?</h3>
-                                <p className="text-slate-600">Absolutely. You can create different workspaces for different businesses.</p>
-                            </div>
+                            {homeFaqData.map((item, idx) => (
+                                <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200">
+                                    <h3 className="font-bold text-slate-900 mb-2">{item.question}</h3>
+                                    <p className="text-slate-600">{item.answer}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
