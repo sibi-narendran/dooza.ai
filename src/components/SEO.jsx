@@ -16,7 +16,7 @@ const SEO = ({
 }) => {
   const siteName = 'Dooza';
   const siteUrl = 'https://dooza.ai';
-  const twitterHandle = '@doaborto';
+  const twitterHandle = '@sibinarendran';
   const themeColor = '#0d9488';
   
   const fullTitle = title ? `${title} | ${siteName}` : siteName;

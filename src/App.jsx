@@ -6,6 +6,7 @@ import PartnerProgram from './pages/PartnerProgram.jsx'
 import PartnerSignup from './pages/PartnerSignup.jsx'
 import Blog from './pages/Blog.jsx'
 import AIEmployeesTransformingBusiness from './pages/blog/AIEmployeesTransformingBusiness.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/partner-signup" element={<PartnerSignup />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/ai-employees-transforming-small-business" element={<AIEmployeesTransformingBusiness />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }
