@@ -4,11 +4,11 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import { trackSignupClick, trackDemoClick } from '../lib/analytics';
-import { 
-    ArrowRight, 
-    Database, 
-    Shield, 
-    Globe, 
+import {
+    ArrowRight,
+    Database,
+    Shield,
+    Globe,
     Users,
     Code2,
     Workflow,
@@ -81,23 +81,23 @@ const TESTIMONIALS = [
 ];
 
 const USE_CASES = [
-    { 
-        title: "Customer Support", 
+    {
+        title: "Customer Support",
         description: "Build AI agents that resolve tickets, answer questions, and escalate when needed.",
         icon: Users
     },
-    { 
-        title: "Data Analysis", 
+    {
+        title: "Data Analysis",
         description: "Create agents that query databases, generate reports, and surface insights.",
         icon: Database
     },
-    { 
-        title: "Content Generation", 
+    {
+        title: "Content Generation",
         description: "Automate blog posts, social media, and marketing copy at scale.",
         icon: Code2
     },
-    { 
-        title: "Process Automation", 
+    {
+        title: "Process Automation",
         description: "Connect your tools and automate repetitive workflows end-to-end.",
         icon: Settings
     }
@@ -111,7 +111,7 @@ const ENTERPRISE_METRICS = [
     { label: "Response Time", value: "45ms avg" }
 ];
 
-const AgentBuilder = () => {
+const Studio = () => {
     const [activeTab, setActiveTab] = useState('workflow');
     const activeFeature = FEATURES[activeTab];
     const FeatureIcon = activeFeature.icon;
@@ -121,8 +121,8 @@ const AgentBuilder = () => {
             <SEO
                 title="Studio | Build Production-Ready AI Agents"
                 description="Design, build, and deploy intelligent AI agents with our visual workflow builder. Connect any LLM, add RAG pipelines, and ship to production in minutes."
-                keywords="AI agent builder, LLM workflow, RAG pipeline, AI automation, no-code AI"
-                canonicalUrl="https://dooza.ai/agent-builder"
+                keywords="AI studio, AI agent builder, LLM workflow, RAG pipeline, AI automation, no-code AI"
+                canonicalUrl="https://dooza.ai/studio"
             />
 
             <Navbar />
@@ -147,15 +147,15 @@ const AgentBuilder = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                            <a 
-                                href={getProductSignupUrl('agent-builder')} 
+                            <a
+                                href={getProductSignupUrl('studio')}
                                 onClick={() => trackSignupClick('studio_hero')}
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
                             >
                                 Start Building Free
                                 <ArrowRight className="w-5 h-5" />
                             </a>
-                            <a 
+                            <a
                                 href={CAL_BOOKING_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -171,8 +171,8 @@ const AgentBuilder = () => {
                             <div className="flex items-center gap-2">
                                 <div className="flex -space-x-2">
                                     {['A', 'B', 'C', 'D'].map((letter) => (
-                                        <div 
-                                            key={letter} 
+                                        <div
+                                            key={letter}
                                             className="w-8 h-8 rounded-full bg-linear-to-br from-primary-400 to-primary-600 border-2 border-white flex items-center justify-center text-xs font-medium text-white"
                                         >
                                             {letter}
@@ -183,7 +183,7 @@ const AgentBuilder = () => {
                             </div>
                             <span className="w-px h-4 bg-slate-200" />
                             <div className="flex items-center gap-1">
-                                {[1,2,3,4,5].map((i) => (
+                                {[1, 2, 3, 4, 5].map((i) => (
                                     <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                                 ))}
                                 <span className="ml-1">4.9/5 rating</span>
@@ -211,11 +211,10 @@ const AgentBuilder = () => {
                                 <button
                                     key={key}
                                     onClick={() => setActiveTab(key)}
-                                    className={`px-6 py-3 rounded-full font-medium transition-all ${
-                                        activeTab === key 
-                                            ? 'bg-primary-600 text-white shadow-lg' 
+                                    className={`px-6 py-3 rounded-full font-medium transition-all ${activeTab === key
+                                            ? 'bg-primary-600 text-white shadow-lg'
                                             : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-                                    }`}
+                                        }`}
                                 >
                                     {feature.label}
                                 </button>
@@ -274,7 +273,7 @@ const AgentBuilder = () => {
                 {/* Use Cases Section */}
                 <section className="py-24 px-4 bg-linear-to-br from-teal-50 via-cyan-50 to-green-50 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-cyan-100/30 to-transparent skew-x-12 transform origin-top-right" />
-                    
+
                     <div className="max-w-7xl mx-auto relative z-10">
                         <div className="text-center mb-16">
                             <div className="inline-block px-4 py-1 rounded-full bg-cyan-100 text-cyan-700 font-bold text-sm mb-6">
@@ -289,8 +288,8 @@ const AgentBuilder = () => {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {USE_CASES.map((useCase) => (
-                                <div 
-                                    key={useCase.title} 
+                                <div
+                                    key={useCase.title}
                                     className="group p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-lg hover:border-primary-200 transition-all duration-300"
                                 >
                                     <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4 group-hover:bg-primary-100 transition-colors">
@@ -318,12 +317,12 @@ const AgentBuilder = () => {
 
                         <div className="grid md:grid-cols-3 gap-8">
                             {TESTIMONIALS.map((testimonial) => (
-                                <div 
-                                    key={testimonial.author} 
+                                <div
+                                    key={testimonial.author}
                                     className="bg-slate-50 p-8 rounded-2xl border border-slate-100"
                                 >
                                     <div className="flex gap-1 text-yellow-400 mb-6">
-                                        {[1,2,3,4,5].map((j) => (
+                                        {[1, 2, 3, 4, 5].map((j) => (
                                             <Star key={j} className="w-4 h-4 fill-current" />
                                         ))}
                                     </div>
@@ -369,7 +368,7 @@ const AgentBuilder = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <a 
+                                <a
                                     href={CAL_BOOKING_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -407,8 +406,8 @@ const AgentBuilder = () => {
                         <p className="text-xl text-primary-100 mb-10 max-w-2xl mx-auto">
                             Join thousands of builders creating intelligent AI agents. Start free, scale when ready.
                         </p>
-                        <a 
-                            href={getProductSignupUrl('agent-builder')} 
+                        <a
+                            href={getProductSignupUrl('studio')}
                             onClick={() => trackSignupClick('studio_bottom_cta')}
                             className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1"
                         >
@@ -424,4 +423,4 @@ const AgentBuilder = () => {
     );
 };
 
-export default AgentBuilder;
+export default Studio;

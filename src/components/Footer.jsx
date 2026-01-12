@@ -5,11 +5,10 @@ const Footer = ({ variant = 'light' }) => {
     const isDark = variant === 'dark';
 
     return (
-        <footer className={`pt-16 pb-8 ${
-            isDark 
-                ? 'bg-[#0a0a0f] border-t border-white/5' 
+        <footer className={`pt-16 pb-8 ${isDark
+                ? 'bg-[#0a0a0f] border-t border-white/5'
                 : 'bg-white border-t border-slate-100'
-        }`}>
+            }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
                     <div className="flex items-center gap-2">
@@ -34,8 +33,8 @@ const Footer = ({ variant = 'light' }) => {
                                 </a>
                             </li>
                             <li>
-                                <a href="/agent-builder" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Agent Builder
+                                <a href="/studio" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Studio
                                 </a>
                             </li>
                         </ul>

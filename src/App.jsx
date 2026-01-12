@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Home from './pages/Home.jsx'
-import AgentBuilder from './pages/AgentBuilder.jsx'
+import Studio from './pages/Studio.jsx'
 import PartnerProgram from './pages/PartnerProgram.jsx'
 import PartnerSignup from './pages/PartnerSignup.jsx'
 import Blog from './pages/Blog.jsx'
@@ -18,7 +18,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/agent-builder" element={<AgentBuilder />} />
+        <Route path="/studio" element={<Studio />} />
         <Route path="/partners" element={<PartnerProgram />} />
         <Route path="/partner-signup" element={<PartnerSignup />} />
         <Route path="/blog" element={<Blog />} />
