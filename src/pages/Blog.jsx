@@ -15,10 +15,10 @@ const formatBlogDate = (isoDate) => {
         const datePart = isoDate.split('T')[0];
         const [year, month, day] = datePart.split('-').map(Number);
         const date = new Date(year, month - 1, day);
-        return date.toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
         });
     } catch {
         return isoDate;
@@ -75,7 +75,7 @@ export default function Blog() {
 
     return (
         <div className="min-h-screen bg-white overflow-x-hidden">
-            <SEO 
+            <SEO
                 title="Blog | AI Automation Insights & Resources"
                 description="Expert insights on AI employees, business automation, and scaling your operations. Stay ahead with Dooza."
                 keywords="AI employees blog, business automation insights, AI agents tips, productivity automation"
@@ -149,72 +149,75 @@ export default function Blog() {
                             {filteredPosts.map(post => (
                                 <article
                                     key={post.id}
-                                    className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-slate-100 hover:border-primary-200"
+                                    className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-slate-100 hover:border-primary-200 flex flex-col h-full"
                                 >
-                                    <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-50 relative overflow-hidden">
-                                        {post.image ? (
-                                            <img 
-                                                src={post.image} 
-                                                alt={post.title} 
-                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                                loading="lazy"
-                                                width="400"
-                                                height="225"
-                                                onError={(e) => {
-                                                    e.target.style.display = 'none';
-                                                    e.target.nextSibling.style.display = 'flex';
-                                                }}
-                                            />
-                                        ) : null}
-                                        <div className={`absolute inset-0 items-center justify-center text-primary-200 ${post.image ? 'hidden' : 'flex'}`}>
-                                            <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24" aria-label="Article icon">
-                                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <div className="p-6">
-                                        <div className="mb-3">
-                                            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 text-xs font-semibold rounded-full">
-                                                {post.category}
-                                            </span>
-                                        </div>
-
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
-                                            {post.title}
-                                        </h3>
-
-                                        <p className="text-slate-600 mb-4 line-clamp-3">
-                                            {post.excerpt}
-                                        </p>
-
-                                        <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
-                                            <div className="flex items-center gap-1.5">
-                                                <Clock className="w-4 h-4" />
-                                                {post.readTime}
-                                            </div>
-                                            <div className="flex items-center gap-1.5">
-                                                <Calendar className="w-4 h-4" />
-                                                {formatBlogDate(post.date)}
+                                    <Link to={`/blog/${post.slug}`} className="flex flex-col h-full">
+                                        <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-50 relative overflow-hidden">
+                                            {post.image ? (
+                                                <img
+                                                    src={post.image}
+                                                    alt={post.title}
+                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                    loading="lazy"
+                                                    width="400"
+                                                    height="225"
+                                                    onError={(e) => {
+                                                        e.target.style.display = 'none';
+                                                        e.target.nextSibling.style.display = 'flex';
+                                                    }}
+                                                />
+                                            ) : null}
+                                            <div className={`absolute inset-0 items-center justify-center text-primary-200 ${post.image ? 'hidden' : 'flex'}`}>
+                                                <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24" aria-label="Article icon">
+                                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                                                </svg>
                                             </div>
                                         </div>
 
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {(post.tags || []).slice(0, 3).map(tag => (
-                                                <span key={tag} className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">
-                                                    #{tag}
+                                        <div className="p-6 flex flex-col flex-1">
+                                            <div className="mb-3">
+                                                <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 text-xs font-semibold rounded-full">
+                                                    {post.category}
                                                 </span>
-                                            ))}
-                                        </div>
+                                            </div>
 
-                                        <Link
-                                            to={`/blog/${post.slug}`}
-                                            className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all group/link"
-                                        >
-                                            Read Article
-                                            <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                                        </Link>
-                                    </div>
+                                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
+                                                {post.title}
+                                            </h3>
+
+                                            <p className="text-slate-600 mb-4 line-clamp-3">
+                                                {post.excerpt}
+                                            </p>
+
+                                            <div className="mt-auto">
+                                                <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
+                                                    <div className="flex items-center gap-1.5">
+                                                        <Clock className="w-4 h-4" />
+                                                        {post.readTime}
+                                                    </div>
+                                                    <div className="flex items-center gap-1.5">
+                                                        <Calendar className="w-4 h-4" />
+                                                        {formatBlogDate(post.date)}
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex flex-wrap gap-2 mb-4">
+                                                    {(post.tags || []).slice(0, 3).map(tag => (
+                                                        <span key={tag} className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">
+                                                            #{tag}
+                                                        </span>
+                                                    ))}
+                                                </div>
+
+                                                <span
+                                                    className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all group/link"
+                                                >
+                                                    Read Article
+                                                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </Link>
                                 </article>
                             ))}
                         </div>

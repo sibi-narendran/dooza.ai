@@ -1,0 +1,7 @@
+{
+  "success": true,
+  "errors": "Check that your vite.json configuration file is available in the load path:\n\n\tNo such file or directory @ rb_sysopen - C:/codes/dooza.ai/dooza.ai/config/vite.json\n\n",
+  "timestamp": "2026-01-12 15:15:09",
+  "vite_ruby": "3.8.0",
+  "digest": "7b3210fcbb6ee3d1aded47c7ede985bf454eb313"
+}

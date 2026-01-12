@@ -44,6 +44,21 @@ export const blogPosts = [
         image: '/blog/comparison-structures.png',
         imageAlt: 'Comparison between Marblism and Dooza showing why Dooza is the better choice for AI employees',
         slug: 'better-than-marblism'
+    },
+    {
+        id: 4,
+        title: 'AI Agents vs Agentic AI: The Simple Explanation',
+        excerpt: 'Confused by the jargon? We break down the differences between Generative AI, AI Agents, and Agentic AI in simple terms.',
+        author: 'Dooza Team',
+        date: '2026-01-12',
+        modifiedDate: '2026-01-12',
+        readTime: '10 min read',
+        readTimeMinutes: 10,
+        category: 'AI Education',
+        tags: ['AI Agents', 'Agentic AI', 'Generative AI', 'LLM'],
+        image: '/blog/ai-agents-vs-agentic-ai.png',
+        imageAlt: 'Comparison diagram of Generative AI, AI Agents, and Agentic AI',
+        slug: 'ai-agents-vs-agentic-ai'
     }
 ];
 
