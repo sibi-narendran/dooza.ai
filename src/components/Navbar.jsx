@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { getProductSignupUrl, getProductSigninUrl } from '../constants/links';
+import { trackSignupClick } from '../lib/analytics';
 
 const Navbar = ({ openModal, variant = 'light' }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -127,6 +128,7 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                         </a>
                         <a 
                             href={getProductSignupUrl('agent')} 
+                            onClick={() => trackSignupClick('navbar')}
                             className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all hover:shadow-lg hover:-translate-y-0.5 ${
                                 isDark 
                                     ? 'bg-white text-black hover:bg-gray-100' 
@@ -208,6 +210,7 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                         </a>
                         <a 
                             href={getProductSignupUrl('agent')} 
+                            onClick={() => trackSignupClick('navbar_mobile')}
                             className={`block w-full text-center px-3 py-3 rounded-lg text-base font-medium ${
                                 isDark 
                                     ? 'bg-white text-black' 

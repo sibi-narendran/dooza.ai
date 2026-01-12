@@ -1,7 +1,17 @@
 import React from 'react';
 import { CAL_BOOKING_URL, getProductSignupUrl } from '../constants/links';
+import { trackSignupClick, trackDemoClick } from '../lib/analytics';
 
 const BottomCTA = ({ openModal }) => {
+    const handleSignupClick = () => {
+        trackSignupClick('bottom_cta_component');
+    };
+
+    const handleDemoClick = (e) => {
+        trackDemoClick('bottom_cta_component');
+        if (openModal) openModal(e);
+    };
+
     return (
         <div className="py-16 md:py-24 bg-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -14,14 +24,18 @@ const BottomCTA = ({ openModal }) => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href={getProductSignupUrl('agent')} onClick={openModal} className="bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1">
+                    <a 
+                        href={getProductSignupUrl('agent')} 
+                        onClick={handleSignupClick} 
+                        className="bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
+                    >
                         Create free account
                     </a>
-                    <a href={CAL_BOOKING_URL}
-                        onClick={(e) => {
-                            if (openModal) openModal(e);
-                        }}
-                        className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1">
+                    <a 
+                        href={CAL_BOOKING_URL}
+                        onClick={handleDemoClick}
+                        className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
+                    >
                         Speak with Expert now
                     </a>
                 </div>
