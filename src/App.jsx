@@ -10,6 +10,7 @@ import AIEmployeesTransformingBusiness from './pages/blog/AIEmployeesTransformin
 import BetterThanSintraAI from './pages/blog/BetterThanSintraAI.jsx'
 import BetterThanMarblism from './pages/blog/BetterThanMarblism.jsx'
 import AiAgentsVsAgenticAi from './pages/blog/AiAgentsVsAgenticAi.jsx'
+import SurferSeoVsAhrefs from './pages/blog/SurferSeoVsAhrefs.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/blog/better-than-sintra-ai" element={<BetterThanSintraAI />} />
         <Route path="/blog/better-than-marblism" element={<BetterThanMarblism />} />
         <Route path="/blog/ai-agents-vs-agentic-ai" element={<AiAgentsVsAgenticAi />} />
+        <Route path="/blog/surfer-seo-vs-ahrefs" element={<SurferSeoVsAhrefs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

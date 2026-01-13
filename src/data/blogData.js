@@ -59,6 +59,21 @@ export const blogPosts = [
         image: '/blog/ai-agents-vs-agentic-ai.png',
         imageAlt: 'Comparison diagram of Generative AI, AI Agents, and Agentic AI',
         slug: 'ai-agents-vs-agentic-ai'
+    },
+    {
+        id: 5,
+        title: 'Surfer SEO vs Ahrefs: Which Tool is Best for 2026?',
+        excerpt: 'Comparing Surfer SEO\'s content optimization prowess against Ahrefs\' backlink authority. Which one should you choose for your business?',
+        author: 'Dooza Team',
+        date: '2026-01-13',
+        modifiedDate: '2026-01-13',
+        readTime: '12 min read',
+        readTimeMinutes: 12,
+        category: 'Comparison',
+        tags: ['SEO', 'Surfer SEO', 'Ahrefs', 'AI Employees', 'Comparison'],
+        image: '/blog/surfer-seo-vs-ahrefs.png',
+        imageAlt: 'Comparison of Surfer SEO and Ahrefs features',
+        slug: 'surfer-seo-vs-ahrefs'
     }
 ];
 
