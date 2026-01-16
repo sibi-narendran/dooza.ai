@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { CAL_BOOKING_URL, getProductSignupUrl } from '../constants/links';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -118,9 +119,9 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             <SEO
-                title="AI Employees That Never Sleep | Dooza - Sintra AI & Marblism Alternative"
-                description="Build, grow, and scale your business with AI employees. The #1 Sintra AI alternative with simpler setup, transparent pricing. Automate inbox, social media, SEO, calls 24/7."
-                keywords="AI employees, AI agents, business automation, Sintra AI alternative, Marblism alternative, AI for small business, automated email, AI social media, AI sales agent, hire AI employees, Sintra AI vs Dooza"
+                title="AI Employees That Never Sleep"
+                description="Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7. Free setup, transparent pricing from $29/mo."
+                keywords="AI employees, AI agents, business automation, Sintra AI alternative, Marblism alternative, AI for small business, automated email, AI social media, AI sales agent, hire AI employees"
                 canonicalUrl={SITE_URL}
                 image="/logo.png"
                 structuredData={websiteSchema}
@@ -289,8 +290,8 @@ const Home = () => {
 
                         <div className="grid md:grid-cols-2 gap-6 mb-10">
                             {/* Sintra AI Alternative */}
-                            <a 
-                                href="/blog/better-than-sintra-ai" 
+                            <Link 
+                                to="/blog/better-than-sintra-ai" 
                                 className="group bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-200 rounded-2xl p-6 transition-all"
                             >
                                 <div className="flex items-center justify-between mb-4">
@@ -311,11 +312,11 @@ const Home = () => {
                                         70% cheaper
                                     </span>
                                 </div>
-                            </a>
+                            </Link>
 
                             {/* Marblism Alternative */}
-                            <a 
-                                href="/blog/better-than-marblism" 
+                            <Link 
+                                to="/blog/better-than-marblism" 
                                 className="group bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-200 rounded-2xl p-6 transition-all"
                             >
                                 <div className="flex items-center justify-between mb-4">
@@ -336,12 +337,12 @@ const Home = () => {
                                         We build for you
                                     </span>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="text-center">
                             <p className="text-slate-500 text-sm">
-                                Using another platform? <a href="/blog" className="text-primary-600 hover:underline font-medium">Read our comparison guides</a> or <a href={CAL_BOOKING_URL} onClick={handleAction} className="text-primary-600 hover:underline font-medium">book a free migration call</a>.
+                                Using another platform? <Link to="/blog" className="text-primary-600 hover:underline font-medium">Read our comparison guides</Link> or <a href={CAL_BOOKING_URL} onClick={handleAction} className="text-primary-600 hover:underline font-medium">book a free migration call</a>.
                             </p>
                         </div>
                     </div>

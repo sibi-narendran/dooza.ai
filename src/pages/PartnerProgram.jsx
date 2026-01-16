@@ -13,6 +13,7 @@ import {
     Magnet,
     ArrowRight
 } from 'lucide-react';
+import { SITE_URL } from '../constants/site';
 
 const PartnerProgram = () => {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -60,10 +61,10 @@ const PartnerProgram = () => {
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900">
             <SEO 
-                title="Dooza Partner Program | Earn 30% Recurring Commission" 
+                title="Partner Program | Earn 30% Recurring Commission" 
                 description="Join the Dooza Partner Program and earn 30% lifetime recurring commission. Partner with the leading AI workforce platform."
                 keywords="affiliate program, partner program, saas affiliate, recurring commission, software partner"
-                canonicalUrl="https://dooza.ai/partners"
+                canonicalUrl={`${SITE_URL}/partners`}
             />
             
             <Navbar openModal={handleAction} />

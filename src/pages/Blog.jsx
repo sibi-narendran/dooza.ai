@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
@@ -26,10 +26,30 @@ const formatBlogDate = (isoDate) => {
 };
 
 export default function Blog() {
-    const [searchQuery, setSearchQuery] = useState('');
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState('idle'); // idle, loading, success, error
     const [message, setMessage] = useState('');
+
+    // Sync URL params with search query
+    useEffect(() => {
+        const urlQuery = searchParams.get('q') || '';
+        if (urlQuery !== searchQuery) {
+            setSearchQuery(urlQuery);
+        }
+    }, [searchParams]);
+
+    // Update URL when search changes
+    const handleSearchChange = (e) => {
+        const value = e.target.value;
+        setSearchQuery(value);
+        if (value) {
+            setSearchParams({ q: value });
+        } else {
+            setSearchParams({});
+        }
+    };
 
     const handleSubscribe = async (e) => {
         e.preventDefault();
@@ -124,7 +144,7 @@ export default function Blog() {
                                 type="text"
                                 placeholder="Search articles..."
                                 value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
+                                onChange={handleSearchChange}
                                 className="w-full px-6 py-4 rounded-full border-2 border-slate-200 focus:border-primary-600 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-lg"
                             />
                             <svg className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="Search">

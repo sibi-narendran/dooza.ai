@@ -3,6 +3,7 @@ import { getProductSignupUrl, CAL_BOOKING_URL } from '../constants/links';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import { SITE_URL } from '../constants/site';
 import { trackSignupClick, trackDemoClick } from '../lib/analytics';
 import {
     ArrowRight,
@@ -122,7 +123,7 @@ const Studio = () => {
                 title="Studio | Build Production-Ready AI Agents"
                 description="Design, build, and deploy intelligent AI agents with our visual workflow builder. Connect any LLM, add RAG pipelines, and ship to production in minutes."
                 keywords="AI studio, AI agent builder, LLM workflow, RAG pipeline, AI automation, no-code AI"
-                canonicalUrl="https://dooza.ai/studio"
+                canonicalUrl={`${SITE_URL}/studio`}
             />
 
             <Navbar />

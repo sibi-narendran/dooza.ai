@@ -467,12 +467,12 @@ const SurferSeoVsAhrefs = () => {
                                         >
                                             Start with Seomi Free
                                         </a>
-                                        <a
-                                            href="/partners"
+                                        <Link
+                                            to="/partners"
                                             className="px-6 py-3 bg-white text-primary-700 font-bold rounded-lg border border-primary-200 hover:bg-primary-50 transition-colors text-center"
                                         >
                                             Partner with Dooza (Agencies)
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

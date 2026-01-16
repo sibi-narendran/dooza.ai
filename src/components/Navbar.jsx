@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { getProductSignupUrl, getProductSigninUrl } from '../constants/links';
 import { trackSignupClick } from '../lib/analytics';
@@ -28,8 +29,8 @@ const Navbar = ({ openModal, variant = 'light' }) => {
     }, []);
 
     const products = [
-        { name: 'Sidekick', href: '/' },
-        { name: 'Studio', href: '/studio' }
+        { name: 'Sidekick', to: '/' },
+        { name: 'Studio', to: '/studio' }
     ];
 
     return (
@@ -42,12 +43,12 @@ const Navbar = ({ openModal, variant = 'light' }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-10">
-                        <a href="/" className="flex-shrink-0 flex items-center gap-2">
-                            <img src="/logo.png" alt="Dooza" className="w-8 h-8 rounded-lg" />
+                        <Link to="/" className="flex-shrink-0 flex items-center gap-2">
+                            <img src="/logo.png" alt="Dooza" className="w-8 h-8 rounded-lg" width="32" height="32" />
                             <span className={`text-xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
                                 Dooza
                             </span>
-                        </a>
+                        </Link>
 
                         <div className="hidden md:flex items-center space-x-8">
                             {/* Products Dropdown */}
@@ -70,9 +71,9 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                                         }`}>
                                         <div className="py-2">
                                             {products.map((product) => (
-                                                <a
+                                                <Link
                                                     key={product.name}
-                                                    href={product.href}
+                                                    to={product.to}
                                                     onClick={() => setProductsOpen(false)}
                                                     className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${isDark
                                                         ? 'text-gray-300 hover:bg-white/5 hover:text-white'
@@ -80,32 +81,32 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                                                         }`}
                                                 >
                                                     {product.name}
-                                                </a>
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>
                                 )}
                             </div>
 
-                            <a
-                                href="/partners"
+                            <Link
+                                to="/partners"
                                 className={`text-[15px] font-medium transition-colors ${isDark
                                     ? 'text-gray-300 hover:text-white'
                                     : 'text-slate-600 hover:text-primary-600'
                                     }`}
                             >
                                 Partners
-                            </a>
+                            </Link>
 
-                            <a
-                                href="/blog"
+                            <Link
+                                to="/blog"
                                 className={`text-[15px] font-medium transition-colors ${isDark
                                     ? 'text-gray-300 hover:text-white'
                                     : 'text-slate-600 hover:text-primary-600'
                                     }`}
                             >
                                 Blog
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -154,38 +155,41 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                             Products
                         </div>
                         {products.map((product) => (
-                            <a
+                            <Link
                                 key={product.name}
-                                href={product.href}
+                                to={product.to}
+                                onClick={() => setIsOpen(false)}
                                 className={`block px-3 py-3 rounded-lg font-medium ${isDark
                                     ? 'text-gray-300 hover:bg-white/5'
                                     : 'text-slate-600 hover:bg-slate-50'
                                     }`}
                             >
                                 {product.name}
-                            </a>
+                            </Link>
                         ))}
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 
-                        <a
-                            href="/partners"
+                        <Link
+                            to="/partners"
+                            onClick={() => setIsOpen(false)}
                             className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
                                 ? 'text-gray-300 hover:bg-white/5'
                                 : 'text-slate-600 hover:bg-slate-50'
                                 }`}
                         >
                             Partners
-                        </a>
-                        <a
-                            href="/blog"
+                        </Link>
+                        <Link
+                            to="/blog"
+                            onClick={() => setIsOpen(false)}
                             className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
                                 ? 'text-gray-300 hover:bg-white/5'
                                 : 'text-slate-600 hover:bg-slate-50'
                                 }`}
                         >
                             Blog
-                        </a>
+                        </Link>
                         <a
                             href={getProductSigninUrl('agent')}
                             className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark

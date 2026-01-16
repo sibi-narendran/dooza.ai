@@ -6,7 +6,7 @@
     <link>https://dooza.ai/blog</link>
     <atom:link href="https://dooza.ai/rss.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2026 00:00:00 +0000</lastBuildDate>
     <copyright>Copyright 2026 Dooza. All rights reserved.</copyright>
     <managingEditor>hello@dooza.ai (Dooza Team)</managingEditor>
     <webMaster>hello@dooza.ai (Dooza Team)</webMaster>
@@ -17,10 +17,32 @@
     </image>
 
     <item>
+      <title>Surfer SEO vs Ahrefs: Which Tool is Best for 2026?</title>
+      <link>https://dooza.ai/blog/surfer-seo-vs-ahrefs</link>
+      <guid isPermaLink="true">https://dooza.ai/blog/surfer-seo-vs-ahrefs</guid>
+      <pubDate>Mon, 13 Jan 2026 00:00:00 +0000</pubDate>
+      <description>Comparing Surfer SEO's content optimization prowess against Ahrefs' backlink authority. Which one should you choose for your business?</description>
+      <category>Comparison</category>
+      <author>hello@dooza.ai (Dooza Team)</author>
+      <enclosure url="https://dooza.ai/blog/surfer-seo-vs-ahrefs.png" type="image/png" length="200000"/>
+    </item>
+
+    <item>
+      <title>AI Agents vs Agentic AI: The Simple Explanation</title>
+      <link>https://dooza.ai/blog/ai-agents-vs-agentic-ai</link>
+      <guid isPermaLink="true">https://dooza.ai/blog/ai-agents-vs-agentic-ai</guid>
+      <pubDate>Sun, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <description>Confused by the jargon? We break down the differences between Generative AI, AI Agents, and Agentic AI in simple terms.</description>
+      <category>AI Education</category>
+      <author>hello@dooza.ai (Dooza Team)</author>
+      <enclosure url="https://dooza.ai/blog/ai-agents-vs-agentic-ai.png" type="image/png" length="200000"/>
+    </item>
+
+    <item>
       <title>Sintra AI Alternative: Why Businesses Are Switching to Dooza in 2026</title>
       <link>https://dooza.ai/blog/better-than-sintra-ai</link>
       <guid isPermaLink="true">https://dooza.ai/blog/better-than-sintra-ai</guid>
-      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Jan 2026 00:00:00 +0000</pubDate>
       <description>Looking for a Sintra AI alternative? Discover why Dooza offers better AI employees with simpler setup, transparent pricing, and superior automation for your business.</description>
       <category>Comparison</category>
       <author>hello@dooza.ai (Dooza Team)</author>
@@ -31,7 +53,7 @@
       <title>Marblism Alternative: Why Dooza Beats Marblism for AI Employees</title>
       <link>https://dooza.ai/blog/better-than-marblism</link>
       <guid isPermaLink="true">https://dooza.ai/blog/better-than-marblism</guid>
-      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Jan 2026 00:00:00 +0000</pubDate>
       <description>Comparing Marblism vs Dooza for AI employees? See why businesses choose Dooza for more powerful AI agents, better integrations, and transparent pricing.</description>
       <category>Comparison</category>
       <author>hello@dooza.ai (Dooza Team)</author>
@@ -42,7 +64,7 @@
       <title>How AI Employees Are Transforming Small Business Operations in 2026</title>
       <link>https://dooza.ai/blog/ai-employees-transforming-small-business</link>
       <guid isPermaLink="true">https://dooza.ai/blog/ai-employees-transforming-small-business</guid>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Jan 2026 00:00:00 +0000</pubDate>
       <description>Discover how AI-powered employees are helping small businesses automate their daily operations, from email management to social media posting.</description>
       <category>AI Automation</category>
       <author>hello@dooza.ai (Dooza Team)</author>

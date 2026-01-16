@@ -1,15 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10872232955"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-10872232955');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,15 +20,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   
-  <!-- Canonical (Fallback) -->
-  <link rel="canonical" href="https://dooza.ai/" />
-  
   <!-- Open Graph / Facebook (Fallbacks) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dooza" />
   <meta property="og:title" content="Dooza | AI Employees That Never Sleep" />
   <meta property="og:description" content="Build, grow, and scale your business with a team of AI employees. Automate email, social media, lead generation, calls, and more." />
   <meta property="og:image" content="https://dooza.ai/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://dooza.ai/" />
   <meta property="og:locale" content="en_US" />
   
@@ -48,16 +38,23 @@
   <meta name="twitter:description" content="Build, grow, and scale your business with a team of AI employees." />
   <meta name="twitter:image" content="https://dooza.ai/logo.png" />
   
-  <!-- Fonts -->
+  <!-- Fonts - Preconnect for faster loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  
-  <!-- Ahrefs Analytics -->
-  <script src="https://analytics.ahrefs.com/analytics.js" data-key="ExUFJSiq7qufMJ0WMEpL+A" async></script>
 </head>
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  
+  <!-- Analytics - Deferred to not block rendering -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10872232955"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-10872232955');
+  </script>
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="ExUFJSiq7qufMJ0WMEpL+A" async></script>
 </body>
 </html>

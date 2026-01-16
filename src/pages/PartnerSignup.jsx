@@ -6,6 +6,7 @@ import SEO from '../components/SEO';
 import { CheckCircle2, Loader2 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { countries } from '../data/countries';
+import { SITE_URL } from '../constants/site';
 
 const PartnerSignup = () => {
     const navigate = useNavigate();
@@ -70,9 +71,9 @@ const PartnerSignup = () => {
         return (
             <div className="min-h-screen bg-gray-50 font-sans">
                 <SEO 
-                    title="Partner Application Received | Dooza"
+                    title="Partner Application Received"
                     description="Thank you for applying to the Dooza Partner Program."
-                    canonicalUrl="https://dooza.ai/partner-signup"
+                    canonicalUrl={`${SITE_URL}/partner-signup`}
                     noindex={true}
                 />
                 <Navbar />
@@ -101,9 +102,9 @@ const PartnerSignup = () => {
     return (
         <div className="min-h-screen bg-gray-50 font-sans">
             <SEO 
-                title="Become a Partner | Dooza"
+                title="Become a Partner"
                 description="Apply to join the Dooza Partner Program."
-                canonicalUrl="https://dooza.ai/partner-signup"
+                canonicalUrl={`${SITE_URL}/partner-signup`}
                 noindex={true}
             />
             

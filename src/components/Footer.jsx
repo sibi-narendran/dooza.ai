@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Facebook } from 'lucide-react';
 
 const Footer = ({ variant = 'light' }) => {
@@ -11,12 +12,12 @@ const Footer = ({ variant = 'light' }) => {
             }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-                    <div className="flex items-center gap-2">
-                        <img src="/logo.png" alt="Dooza" className="w-8 h-8 rounded-lg" />
+                    <Link to="/" className="flex items-center gap-2">
+                        <img src="/logo.png" alt="Dooza" className="w-8 h-8 rounded-lg" width="32" height="32" />
                         <span className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-primary-600'}`}>
                             Dooza
                         </span>
-                    </div>
+                    </Link>
                     <p className={`text-sm max-w-xs text-center md:text-left ${isDark ? 'text-gray-500' : 'text-slate-500'}`}>
                         Build, grow, and scale your business with AI-powered solutions.
                     </p>
@@ -28,14 +29,14 @@ const Footer = ({ variant = 'light' }) => {
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Products</h4>
                         <ul className="space-y-2">
                             <li>
-                                <a href="/" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                <Link to="/" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Sidekick
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/studio" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                <Link to="/studio" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Studio
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -43,14 +44,14 @@ const Footer = ({ variant = 'light' }) => {
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Company</h4>
                         <ul className="space-y-2">
                             <li>
-                                <a href="/partners" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                <Link to="/partners" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Partners
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
                                     About
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -58,14 +59,14 @@ const Footer = ({ variant = 'light' }) => {
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Resources</h4>
                         <ul className="space-y-2">
                             <li>
-                                <a href="/blog" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                <Link to="/blog" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Blog
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/blog/ai-employees-transforming-small-business" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                <Link to="/blog/ai-employees-transforming-small-business" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     AI Employees Guide
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -73,14 +74,14 @@ const Footer = ({ variant = 'light' }) => {
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Legal</h4>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
                                     Privacy
-                                </a>
+                                </span>
                             </li>
                             <li>
-                                <a href="#" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
                                     Terms
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
