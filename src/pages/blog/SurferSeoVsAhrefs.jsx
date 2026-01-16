@@ -8,6 +8,7 @@ import BookingModal from '../../components/BookingModal';
 import SEO from '../../components/SEO';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import RelatedPosts from '../../components/RelatedPosts';
+import YouTubeEmbed from '../../components/YouTubeEmbed';
 import { SITE_URL } from '../../constants/site';
 import { generateFAQSchema, generateBreadcrumbSchema, generateArticleSchema, blogPosts } from '../../data/blogData';
 import {
@@ -160,17 +161,11 @@ const SurferSeoVsAhrefs = () => {
                         </div>
 
                         {/* Hero Video */}
-                        <div className="mt-10 max-w-3xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-xl bg-slate-900">
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/sz-YqQnaCsY?si=9IGZx0da2WrF2DeY"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                            ></iframe>
+                        <div className="mt-10 max-w-3xl mx-auto">
+                            <YouTubeEmbed 
+                                videoId="sz-YqQnaCsY"
+                                title="Surfer SEO vs Ahrefs Comparison"
+                            />
                         </div>
                     </div>
                 </div>
@@ -365,6 +360,9 @@ const SurferSeoVsAhrefs = () => {
                                 src="/blog/surfer-seo-vs-ahrefs.png"
                                 alt="Surfer SEO vs Ahrefs Visual Comparison"
                                 className="w-full rounded-xl shadow-lg border border-slate-100"
+                                loading="lazy"
+                                width="800"
+                                height="450"
                             />
                         </div>
 

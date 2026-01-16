@@ -181,6 +181,9 @@ const AIEmployeesTransformingBusiness = () => {
                                 src="/blog/ai-employees.png"
                                 alt="AI employees automating small business operations including email management, social media, and customer support"
                                 className="w-full rounded-2xl shadow-xl"
+                                loading="lazy"
+                                width="800"
+                                height="450"
                                 width="800"
                                 height="450"
                             />

@@ -8,6 +8,7 @@ import BookingModal from '../../components/BookingModal';
 import SEO from '../../components/SEO';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import RelatedPosts from '../../components/RelatedPosts';
+import YouTubeEmbed from '../../components/YouTubeEmbed';
 import { SITE_URL } from '../../constants/site';
 import { generateFAQSchema, generateBreadcrumbSchema, generateArticleSchema, blogPosts } from '../../data/blogData';
 import {
@@ -175,6 +176,9 @@ const BetterThanMarblism = () => {
                                 src="/blog/comparison-structures.png"
                                 alt="Comparison between Marblism and Dooza showing why Dooza is the better choice for AI employees"
                                 className="w-full rounded-2xl shadow-xl"
+                                loading="lazy"
+                                width="800"
+                                height="450"
                                 width="800"
                                 height="450"
                             />
@@ -256,20 +260,13 @@ const BetterThanMarblism = () => {
                                     While Marblism and Sintra operate in the same space, Dooza takes a fundamentally different approach—one that prioritizes ease of use and human support. Dooza isn't just software; it's a partnership where we help you build custom AI employees for your unique workflows.
                                 </p>
 
-                                <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-8">
-                                    <iframe
-                                        className="w-full h-full"
-                                        src="https://www.youtube.com/embed/b7vWOfSKy_0?si=yln2orYH5dzSRy3I"
-                                        title="Marblism AI Employees Review - YouTube video"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerPolicy="strict-origin-when-cross-origin"
-                                        loading="lazy"
-                                        allowFullScreen
-                                    ></iframe>
+                                <div className="w-full mb-8">
+                                    <YouTubeEmbed 
+                                        videoId="b7vWOfSKy_0"
+                                        title="Marblism AI Employees Review"
+                                        className="aspect-video rounded-xl overflow-hidden shadow-lg bg-slate-900"
+                                    />
                                 </div>
-                                <p className="text-center text-sm text-slate-500">
-                                    Video not playing? <a href="https://www.youtube.com/watch?v=b7vWOfSKy_0" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Watch this review on YouTube</a>
-                                </p>
                             </div>
                         </section>
 

@@ -8,6 +8,7 @@ import BookingModal from '../../components/BookingModal';
 import SEO from '../../components/SEO';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import RelatedPosts from '../../components/RelatedPosts';
+import YouTubeEmbed from '../../components/YouTubeEmbed';
 import { SITE_URL } from '../../constants/site';
 import { generateFAQSchema, generateBreadcrumbSchema, generateArticleSchema, blogPosts } from '../../data/blogData';
 import {
@@ -168,17 +169,11 @@ const AiAgentsVsAgenticAi = () => {
                         </div>
 
                         {/* Hero Video */}
-                        <div className="mt-10 max-w-3xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-xl bg-slate-900">
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/2j26a5dmCnI?si=q7yTU2oWudBr1oWC"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                            ></iframe>
+                        <div className="mt-10 max-w-3xl mx-auto">
+                            <YouTubeEmbed 
+                                videoId="2j26a5dmCnI"
+                                title="AI Agents vs Agentic AI Explained"
+                            />
                         </div>
                     </div>
                 </div>
@@ -381,6 +376,9 @@ const AiAgentsVsAgenticAi = () => {
                                     src="/blog/ai-agents-vs-agentic-ai.png"
                                     alt="Comparison of Generative AI, AI Agents, and Agentic AI"
                                     className="w-full rounded-xl shadow-lg border border-slate-100"
+                                    loading="lazy"
+                                    width="800"
+                                    height="450"
                                 />
                             </div>
 

@@ -8,6 +8,7 @@ import BookingModal from '../../components/BookingModal';
 import SEO from '../../components/SEO';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import RelatedPosts from '../../components/RelatedPosts';
+import YouTubeEmbed from '../../components/YouTubeEmbed';
 import { SITE_URL } from '../../constants/site';
 import { generateFAQSchema, generateBreadcrumbSchema, generateArticleSchema, blogPosts } from '../../data/blogData';
 import {
@@ -173,6 +174,9 @@ const BetterThanSintraAI = () => {
                                 src="/blog/comparison-general.png"
                                 alt="Comparison between Sintra AI and Dooza AI employees platform showing feature differences and pricing"
                                 className="w-full rounded-2xl shadow-xl"
+                                loading="lazy"
+                                width="800"
+                                height="450"
                                 width="800"
                                 height="450"
                             />
@@ -260,16 +264,12 @@ const BetterThanSintraAI = () => {
                                     With Sintra, you are given a LOGIN and left to figure it out. With Dooza, you get a TEAM that helps you build custom AI employees for your unique workflows.
                                 </p>
 
-                                <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-8">
-                                    <iframe
-                                        className="w-full h-full"
-                                        src="https://www.youtube.com/embed/y6G-KBz1WYo"
+                                <div className="w-full mb-8">
+                                    <YouTubeEmbed 
+                                        videoId="y6G-KBz1WYo"
                                         title="Sintra AI Review - Honest comparison with Dooza"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        referrerPolicy="strict-origin-when-cross-origin"
-                                        loading="lazy"
-                                        allowFullScreen
-                                    ></iframe>
+                                        className="aspect-video rounded-xl overflow-hidden shadow-lg bg-slate-900"
+                                    />
                                 </div>
                             </div>
                         </section>
