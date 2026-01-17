@@ -33,11 +33,10 @@ export default function BlogPage() {
     const [status, setStatus] = useState('idle');
     const [message, setMessage] = useState('');
 
+    // Sync search query from URL when URL changes
     useEffect(() => {
         const urlQuery = searchParams.get('q') || '';
-        if (urlQuery !== searchQuery) {
-            setSearchQuery(urlQuery);
-        }
+        setSearchQuery(urlQuery);
     }, [searchParams]);
 
     const handleSearchChange = (e) => {
