@@ -5,13 +5,19 @@ export const metadata = {
     description: 'Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7. Free setup, transparent pricing from $29/mo.',
     keywords: ['AI employees', 'AI agents', 'business automation', 'Sintra AI alternative', 'Marblism alternative', 'AI for small business', 'AI automation platform', 'virtual employees'],
     alternates: {
-        canonical: 'https://dooza.ai',
+        canonical: 'https://www.dooza.ai',
     },
     openGraph: {
         title: 'AI Employees That Never Sleep | Dooza',
         description: 'Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7.',
-        url: 'https://dooza.ai',
-        images: [{ url: 'https://dooza.ai/og-image.png', width: 1200, height: 630, alt: 'Dooza - AI Employees Platform' }],
+        url: 'https://www.dooza.ai',
+        images: [{ url: 'https://www.dooza.ai/logo.png', width: 512, height: 512, alt: 'Dooza - AI Employees Platform' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'AI Employees That Never Sleep | Dooza',
+        description: 'Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7.',
+        images: ['https://www.dooza.ai/logo.png'],
     },
 };
 
@@ -20,8 +26,8 @@ const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Dooza",
-    "url": "https://dooza.ai",
-    "logo": "https://dooza.ai/logo.png",
+    "url": "https://www.dooza.ai",
+    "logo": "https://www.dooza.ai/logo.png",
     "description": "AI employees that automate your business operations 24/7",
     "foundingDate": "2024",
     "sameAs": [
@@ -40,13 +46,13 @@ const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Dooza",
-    "url": "https://dooza.ai",
+    "url": "https://www.dooza.ai",
     "description": "AI Employees That Never Sleep - Build, grow, and scale your business with AI automation",
     "potentialAction": {
         "@type": "SearchAction",
         "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://dooza.ai/blog?q={search_term_string}"
+            "urlTemplate": "https://www.dooza.ai/blog?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
     }

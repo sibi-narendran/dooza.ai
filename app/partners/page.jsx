@@ -13,13 +13,13 @@ export const metadata = {
         title: 'Partner Program | Earn 30% Recurring Commission',
         description: 'Join the Dooza Partner Program and earn 30% lifetime recurring commission.',
         url: `${SITE_URL}/partners`,
-        images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Dooza Partner Program' }],
+        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Partner Program' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Partner Program | Earn 30% Recurring Commission',
         description: 'Join the Dooza Partner Program and earn 30% lifetime recurring commission.',
-        images: [`${SITE_URL}/og-image.png`],
+        images: [`${SITE_URL}/logo.png`],
     },
 };
 

@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://dooza.ai'),
+  metadataBase: new URL('https://www.dooza.ai'),
   title: {
     default: 'Dooza | AI Employees That Never Sleep',
     template: '%s | Dooza',
@@ -33,15 +33,15 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://dooza.ai',
+    url: 'https://www.dooza.ai',
     siteName: 'Dooza',
     title: 'Dooza | AI Employees That Never Sleep',
     description: 'Build, grow, and scale your business with a team of AI employees. Automate email, social media, lead generation, calls, and more.',
     images: [
       {
-        url: 'https://dooza.ai/og-image.png',
-        width: 1200,
-        height: 630,
+        url: 'https://www.dooza.ai/logo.png',
+        width: 512,
+        height: 512,
         alt: 'Dooza - AI Employees That Never Sleep',
       },
     ],
@@ -52,10 +52,10 @@ export const metadata = {
     creator: '@sibinarendran',
     title: 'Dooza | AI Employees That Never Sleep',
     description: 'Build, grow, and scale your business with a team of AI employees.',
-    images: ['https://dooza.ai/og-image.png'],
+    images: ['https://www.dooza.ai/logo.png'],
   },
   alternates: {
-    canonical: 'https://dooza.ai',
+    canonical: 'https://www.dooza.ai',
     types: {
       'application/rss+xml': '/rss.xml',
     },

@@ -12,13 +12,13 @@ export const metadata = {
         title: 'Studio | Build Production-Ready AI Agents',
         description: 'Design, build, and deploy intelligent AI agents with our visual workflow builder.',
         url: `${SITE_URL}/studio`,
-        images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Dooza Studio - AI Agent Builder' }],
+        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Studio - AI Agent Builder' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Studio | Build Production-Ready AI Agents',
         description: 'Design, build, and deploy intelligent AI agents with our visual workflow builder.',
-        images: [`${SITE_URL}/og-image.png`],
+        images: [`${SITE_URL}/logo.png`],
     },
 };
 
