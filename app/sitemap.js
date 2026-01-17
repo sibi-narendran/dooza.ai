@@ -1,0 +1,44 @@
+import { blogPosts } from '../lib/blogData';
+
+const SITE_URL = 'https://dooza.ai';
+
+export default function sitemap() {
+    // Static pages
+    const staticPages = [
+        {
+            url: SITE_URL,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 1.0,
+        },
+        {
+            url: `${SITE_URL}/studio`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/partners`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/blog`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.9,
+        },
+    ];
+
+    // Dynamic blog pages
+    const blogPages = blogPosts.map((post) => ({
+        url: `${SITE_URL}/blog/${post.slug}`,
+        lastModified: new Date(post.modifiedDate || post.date),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+        images: post.image ? [`${SITE_URL}${post.image}`] : [],
+    }));
+
+    return [...staticPages, ...blogPages];
+}

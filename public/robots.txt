@@ -1,9 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Allow: /
-
-# Disallow pages that are noindexed
-Disallow: /partner-signup
-
-# Sitemap
-Sitemap: https://dooza.ai/sitemap.xml
