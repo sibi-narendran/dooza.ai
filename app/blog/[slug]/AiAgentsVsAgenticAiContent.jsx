@@ -192,7 +192,7 @@ export default function AiAgentsVsAgenticAiContent() {
                                     Generative AI is, at its core, an AI that can create new content—text, images, videos, or audio—based on patterns it has learned.
                                 </p>
                                 <p className="mb-6">
-                                    At the heart of it is a <strong>Large Language Model (LLM)</strong>—think <a href="https://openai.com/gpt-4" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">GPT-4</a>, <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Claude</a>, or <a href="https://deepmind.google/technologies/gemini/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Gemini</a>.
+                                    At the heart of it is a <strong>Large Language Model (LLM)</strong>—think <a href="https://openai.com/gpt-4" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">GPT-4</a>, <a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Claude</a>, or <a href="https://ai.google.dev" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Gemini</a>.
                                 </p>
                                 <div className="bg-slate-50 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6">
                                     <h4 className="font-bold text-slate-900 mb-2">The Limitation: The Knowledge Cutoff</h4>
