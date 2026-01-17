@@ -26,7 +26,10 @@ const homeFaqData = [
     },
     {
         question: "How is Dooza different from Sintra AI or Marblism?",
-        answer: "Unlike Sintra AI and Marblism, Dooza offers free concierge onboarding where our team builds custom AI employees for your specific workflow. We also have transparent pricing starting at $29/month with no hidden fees, and our AI employees are purpose-built for business automation, not just chatbots."
+        answer: "Unlike Sintra AI and Marblism, Dooza offers free concierge onboarding where our team builds custom AI employees for your specific workflow. We also have transparent pricing starting at $29/month with no hidden fees, and our AI employees are purpose-built for business automation, not just chatbots.",
+        links: [
+            { text: "Learn more about AI agents", url: "https://openai.com/index/introducing-gpts" }
+        ]
     }
 ];
 
@@ -311,7 +314,12 @@ export default function HomePage() {
                             {homeFaqData.map((item, idx) => (
                                 <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200">
                                     <h3 className="font-bold text-slate-900 mb-2">{item.question}</h3>
-                                    <p className="text-slate-600">{item.answer}</p>
+                                    <p className="text-slate-600">
+                                        {item.answer}
+                                        {item.links && item.links.map((link, i) => (
+                                            <span key={i}> <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">{link.text}</a>.</span>
+                                        ))}
+                                    </p>
                                 </div>
                             ))}
                         </div>

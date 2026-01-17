@@ -206,7 +206,7 @@ export default function BlogPage() {
                             Stay ahead of the curve
                         </h2>
                         <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
-                            Get the latest insights on AI automation and business scaling delivered to your inbox.
+                            Get the latest insights on AI automation and business scaling delivered to your inbox. For more on AI trends, check out <a href="https://openai.com/news" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">OpenAI's latest updates</a>.
                         </p>
 
                         <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
