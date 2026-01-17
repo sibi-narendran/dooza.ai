@@ -105,7 +105,7 @@ export default function BetterThanSintraAIContent() {
                             <span>Comparison Guide</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            <span className="text-primary-600">Sintra AI</span> Alternative: Why Businesses Are Switching to Dooza
+                            <span className="text-primary-600">Sintra AI</span> Alternative: Why Businesses Switch to Dooza
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                             Why businesses are switching from Sintra AI to Dooza for their AI employee needs.
@@ -192,7 +192,7 @@ export default function BetterThanSintraAIContent() {
                                     <strong>The problem?</strong> Complex setup processes, unclear pricing, and AI that often requires extensive hand-holding.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    You can also check out reviews on <a href="https://www.g2.com/categories/ai-assistants" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">G2's AI Assistants category</a> to see how different platforms compare.
+                                    You can also check out reviews on <a href="https://www.g2.com/categories/ai-agents" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">G2's AI Agents category</a> to see how different platforms compare.
                                 </p>
                             </div>
                         </section>

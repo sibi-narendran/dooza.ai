@@ -107,7 +107,7 @@ export default function AIEmployeesTransformingBusinessContent() {
                             <span>AI Automation</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            How AI Employees Are Transforming <span className="text-primary-600">Small Business</span> Operations
+                            How AI Employees Transform <span className="text-primary-600">Small Business</span> Operations
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                             Discover how AI-powered employees are helping small businesses automate their daily operations.
@@ -193,7 +193,7 @@ export default function AIEmployeesTransformingBusinessContent() {
                                     <strong>Most small business owners spend over 60% of their time on tasks that could be automated</strong>. According to <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">McKinsey's research on AI productivity</a>, that's where AI employees come in.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    For more on small business best practices, the <a href="https://www.sba.gov/business-guide" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">U.S. Small Business Administration</a> offers excellent resources.
+                                    For more on small business best practices, the <a href="https://www.sba.gov/business-guide/launch-your-business" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">U.S. Small Business Administration</a> offers excellent resources.
                                 </p>
                             </div>
                         </section>

@@ -42,7 +42,8 @@ export default function PartnersContent() {
         },
         {
             question: "How do commissions work?",
-            answer: "Earn 30% recurring commission for the lifetime of every customer. Payouts via PayPal or Stripe (min $50)."
+            answer: "Earn 30% recurring commission for the lifetime of every customer. Payouts via PayPal or Stripe (min $50).",
+            link: { text: "PayPal", url: "https://www.paypal.com" }
         },
         {
             question: "Is there a cost to join?",
@@ -295,7 +296,12 @@ export default function PartnersContent() {
                             {partnerFaqs.map((faq, index) => (
                                 <div key={index}>
                                     <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.question}</h3>
-                                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        {faq.answer}
+                                        {faq.link && (
+                                            <> Learn more at <a href={faq.link.url} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">{faq.link.text}</a>.</>
+                                        )}
+                                    </p>
                                 </div>
                             ))}
                         </div>

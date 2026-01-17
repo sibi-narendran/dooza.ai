@@ -1,6 +1,5 @@
 import { blogPosts } from '../lib/blogData';
-
-const SITE_URL = 'https://dooza.ai';
+import { SITE_URL } from '../lib/site';
 
 export default function sitemap() {
     // Static pages

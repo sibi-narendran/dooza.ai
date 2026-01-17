@@ -35,7 +35,12 @@ const FEATURES = {
         title: "Multi-Model Support",
         description: "Connect to any LLM provider — OpenAI, Anthropic, Google, or your own. Switch models without changing code.",
         icon: Cpu,
-        points: ["OpenAI, Claude, Gemini", "Local model support", "Model fallbacks", "Cost optimization"]
+        points: ["OpenAI, Claude, Gemini", "Local model support", "Model fallbacks", "Cost optimization"],
+        links: [
+            { name: "OpenAI", url: "https://openai.com" },
+            { name: "Anthropic", url: "https://www.anthropic.com" },
+            { name: "Google AI", url: "https://ai.google.dev" }
+        ]
     },
     rag: {
         label: "RAG Pipeline",
@@ -235,6 +240,22 @@ export default function StudioContent() {
                                         </li>
                                     ))}
                                 </ul>
+                                {activeFeature.links && (
+                                    <div className="mt-6 flex flex-wrap gap-3">
+                                        <span className="text-sm text-slate-500">Supported:</span>
+                                        {activeFeature.links.map((link) => (
+                                            <a
+                                                key={link.name}
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-sm text-primary-600 hover:underline"
+                                            >
+                                                {link.name}
+                                            </a>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                             <div className="order-1 lg:order-2">
                                 <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xl p-8">

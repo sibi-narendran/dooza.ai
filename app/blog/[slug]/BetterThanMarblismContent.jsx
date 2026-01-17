@@ -102,7 +102,7 @@ export default function BetterThanMarblismContent() {
                             <span>Comparison Guide</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            <span className="text-primary-600">Marblism</span> Alternative: Why Dooza Beats Marblism for AI Employees
+                            <span className="text-primary-600">Marblism</span> Alternative: Why Dooza Wins for AI Employees
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                             Marblism entered the AI employee space, but does it deliver? Here's why Dooza remains the smarter choice.
@@ -180,7 +180,7 @@ export default function BetterThanMarblismContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-lg leading-relaxed">
-                                    <a href="https://marblism.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Marblism</a> has fully pivoted into the AI employee space, joining platforms like <a href="https://sintra.ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Sintra AI</a> in the race to automate business operations.
+                                    <a href="https://www.marblism.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Marblism</a> has fully pivoted into the AI employee space, joining platforms like <a href="https://sintra.ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Sintra AI</a> in the race to automate business operations.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     In this comparison, we'll break down how Marblism stacks up against Dooza—and why businesses serious about AI automation are choosing Dooza.
