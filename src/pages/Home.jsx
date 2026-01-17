@@ -162,7 +162,7 @@ const Home = () => {
                                 className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 hover:bg-primary-50 px-8 py-4 rounded-full font-bold text-lg transition-all"
                             >
                                 <Calendar className="w-5 h-5" />
-                                Book Demo
+                                Book Free Setup
                             </a>
                         </div>
                     </div>
@@ -384,7 +384,7 @@ const Home = () => {
                                 className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-5 rounded-full font-bold text-xl transition-all"
                             >
                                 <Calendar className="w-6 h-6" />
-                                Book Demo
+                                Book Free Setup
                             </a>
                         </div>
                     </div>

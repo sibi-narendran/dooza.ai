@@ -164,7 +164,7 @@ const Studio = () => {
                                 className="inline-flex items-center gap-2 bg-white border-2 border-primary-600 text-primary-600 hover:bg-primary-50 px-8 py-4 rounded-full font-bold text-lg transition-all"
                             >
                                 <Calendar className="w-5 h-5" />
-                                Book Demo
+                                Book Free Setup
                             </a>
                         </div>
 

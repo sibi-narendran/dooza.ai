@@ -179,8 +179,6 @@ const BetterThanMarblism = () => {
                                 loading="lazy"
                                 width="800"
                                 height="450"
-                                width="800"
-                                height="450"
                             />
                         </div>
                     </div>

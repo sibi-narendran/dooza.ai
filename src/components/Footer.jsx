@@ -92,14 +92,23 @@ const Footer = ({ variant = 'light' }) => {
                         © {new Date().getFullYear()} Dooza. All rights reserved.
                     </p>
                     <div className={`flex space-x-6 ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>
-                        <a href="#" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-primary-600'}`}>
+                        <a 
+                            href="https://twitter.com/sibinarendran" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label="Follow us on Twitter"
+                            className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-primary-600'}`}
+                        >
                             <Twitter size={20} />
                         </a>
-                        <a href="#" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-primary-600'}`}>
+                        <a 
+                            href="https://linkedin.com/company/dooza" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label="Follow us on LinkedIn"
+                            className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-primary-600'}`}
+                        >
                             <Linkedin size={20} />
-                        </a>
-                        <a href="#" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-primary-600'}`}>
-                            <Facebook size={20} />
                         </a>
                     </div>
                 </div>

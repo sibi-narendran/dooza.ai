@@ -23,7 +23,7 @@ export const trackSignupClick = (source = 'unknown') => {
 };
 
 /**
- * Track book demo button click (engagement only, NOT a conversion)
+ * Track Book Free Setup button click (engagement only, NOT a conversion)
  * Conversion should only fire when demo is actually booked (handled in BookingModal)
  */
 export const trackDemoClick = (source = 'unknown') => {

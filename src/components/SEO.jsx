@@ -25,7 +25,8 @@ const SEO = ({
     ? (image.startsWith('http') ? image : `${siteUrl}${image}`)
     : `${siteUrl}/logo.png`;
     
-  const resolvedCanonical = canonicalUrl || siteUrl;
+  // Only set canonical if explicitly provided (prevents duplicate canonicals)
+  const resolvedCanonical = canonicalUrl;
   const isArticle = type === 'article';
 
   // Combine all structured data into an array
@@ -51,8 +52,10 @@ const SEO = ({
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       )}
       
-      {/* Canonical */}
-      <link rel="canonical" href={resolvedCanonical} />
+      {/* Canonical - only if provided and not noindex */}
+      {resolvedCanonical && !noindex && (
+        <link rel="canonical" href={resolvedCanonical} />
+      )}
       
       {/* RSS Feed */}
       <link rel="alternate" type="application/rss+xml" title="Dooza Blog RSS Feed" href={`${siteUrl}/rss.xml`} />
@@ -66,7 +69,7 @@ const SEO = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title || siteName} />
-      <meta property="og:url" content={resolvedCanonical} />
+      {resolvedCanonical && <meta property="og:url" content={resolvedCanonical} />}
       <meta property="og:locale" content="en_US" />
       
       {/* Article specific Open Graph */}

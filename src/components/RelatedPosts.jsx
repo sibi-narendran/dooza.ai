@@ -39,9 +39,6 @@ const RelatedPosts = ({ currentSlug, category, tags = [], maxPosts = 2 }) => {
                                     loading="lazy"
                                     width="400"
                                     height="225"
-                                    loading="lazy"
-                                    width="400"
-                                    height="225"
                                 />
                             </div>
                         )}
