@@ -222,6 +222,8 @@ const BetterThanSintraAI = () => {
                                 <p className="text-sm text-slate-600 mb-4">Ready to switch?</p>
                                 <a
                                     href={getProductSignupUrl('agent')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
                                     Try Dooza Free
@@ -237,13 +239,13 @@ const BetterThanSintraAI = () => {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-lg leading-relaxed">
-                                    If you've been exploring AI employees for your business, you've probably come across Sintra AI. While Sintra has made waves in the AI assistant space, many businesses are discovering that it doesn't quite meet their needs.
+                                    If you've been exploring AI employees for your business, you've probably come across <a href="https://sintra.ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Sintra AI</a>. While Sintra has made waves in the AI assistant space, many businesses are discovering that it doesn't quite meet their needs.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     <strong>The problem?</strong> Complex setup processes, unclear pricing, and AI that often requires extensive hand-holding. That's why more and more businesses are making the switch to Dooza.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    In this comparison, we'll break down exactly why Dooza is the better choice for businesses serious about AI automation.
+                                    In this comparison, we'll break down exactly why Dooza is the better choice for businesses serious about AI automation. You can also check out reviews on <a href="https://www.g2.com/categories/ai-assistants" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">G2's AI Assistants category</a> to see how different platforms compare.
                                 </p>
                             </div>
                         </section>
@@ -671,6 +673,8 @@ const BetterThanSintraAI = () => {
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a
                                         href={getProductSignupUrl('agent')}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
                                         Start Free Trial

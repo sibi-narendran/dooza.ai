@@ -232,6 +232,8 @@ const AIEmployeesTransformingBusiness = () => {
                                 <p className="text-sm text-slate-600 mb-4">Ready to hire your AI team?</p>
                                 <a
                                     href={getProductSignupUrl('agent')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
                                     Get Started Free
@@ -250,10 +252,10 @@ const AIEmployeesTransformingBusiness = () => {
                                     Running a small business means wearing many hats. One moment you're answering emails, the next you're posting on social media, then you're following up with leads—all before lunch. Sound familiar?
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    The truth is, <strong>most small business owners spend over 60% of their time on tasks that could be automated</strong>. That's where AI employees come in—intelligent agents that work 24/7 to handle your repetitive tasks, so you can focus on what actually grows your business.
+                                    The truth is, <strong>most small business owners spend over 60% of their time on tasks that could be automated</strong>. According to <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">McKinsey's research on AI productivity</a>, that's where AI employees come in—intelligent agents that work 24/7 to handle your repetitive tasks, so you can focus on what actually grows your business.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    In this guide, we'll explore how AI employees are revolutionizing small business operations and how you can start building your own AI team today.
+                                    In this guide, we'll explore how AI employees are revolutionizing small business operations and how you can start building your own AI team today. For more on small business best practices, the <a href="https://www.sba.gov/business-guide" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">U.S. Small Business Administration</a> offers excellent resources.
                                 </p>
                             </div>
                         </section>
@@ -612,6 +614,8 @@ const AIEmployeesTransformingBusiness = () => {
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a
                                         href={getProductSignupUrl('agent')}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
                                         Get Started Free

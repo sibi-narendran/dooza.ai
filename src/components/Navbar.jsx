@@ -113,6 +113,8 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                     <div className="hidden md:flex items-center space-x-6">
                         <a
                             href={getProductSigninUrl('agent')}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className={`text-[15px] font-medium transition-colors ${isDark
                                 ? 'text-gray-300 hover:text-white'
                                 : 'text-slate-600 hover:text-primary-600'
@@ -122,6 +124,8 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                         </a>
                         <a
                             href={getProductSignupUrl('agent')}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={() => trackSignupClick('navbar')}
                             className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all hover:shadow-lg hover:-translate-y-0.5 ${isDark
                                 ? 'bg-white text-black hover:bg-gray-100'
@@ -192,6 +196,8 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                         </Link>
                         <a
                             href={getProductSigninUrl('agent')}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
                                 ? 'text-gray-300 hover:bg-white/5'
                                 : 'text-slate-600 hover:bg-slate-50'
@@ -201,6 +207,8 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                         </a>
                         <a
                             href={getProductSignupUrl('agent')}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={() => trackSignupClick('navbar_mobile')}
                             className={`block w-full text-center px-3 py-3 rounded-lg text-base font-medium ${isDark
                                 ? 'bg-white text-black'

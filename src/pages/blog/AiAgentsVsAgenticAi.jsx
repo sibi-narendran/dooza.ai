@@ -214,6 +214,8 @@ const AiAgentsVsAgenticAi = () => {
                                 <p className="text-sm text-slate-600 mb-4">Ready to hire your AI team?</p>
                                 <a
                                     href={getProductSignupUrl('agent')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
                                     Get Started Free
@@ -251,7 +253,7 @@ const AiAgentsVsAgenticAi = () => {
                                     Generative AI is, at its core, an AI that can create new content. This content can be text, images, videos, or even audio, based on patterns it has learned from existing data.
                                 </p>
                                 <p className="mb-6">
-                                    At the heart of it is a <strong>Large Language Model (LLM)</strong>—think GPT-4, Claude, or Gemini. These models are trained on a huge volume of internet data: Wikipedia, Google Books, and so on.
+                                    At the heart of it is a <strong>Large Language Model (LLM)</strong>—think <a href="https://openai.com/gpt-4" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">GPT-4</a>, <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Claude</a>, or <a href="https://deepmind.google/technologies/gemini/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Gemini</a>. These models are trained on a huge volume of internet data: Wikipedia, Google Books, and so on.
                                 </p>
 
                                 <div className="bg-slate-50 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6">
@@ -438,6 +440,8 @@ const AiAgentsVsAgenticAi = () => {
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a
                                         href={getProductSignupUrl('agent')}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
                                         Get Started Free

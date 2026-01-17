@@ -207,6 +207,8 @@ const SurferSeoVsAhrefs = () => {
                                 <p className="text-sm text-slate-600 mb-4">Hire Seomi for your SEO?</p>
                                 <a
                                     href={getProductSignupUrl('agent')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
                                     Get Started Free
@@ -222,13 +224,13 @@ const SurferSeoVsAhrefs = () => {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-lg leading-relaxed">
-                                    Today we're exploring two powerhouses in the SEO world: <strong>Surfer SEO</strong> and <strong>Ahrefs</strong>.
+                                    Today we're exploring two powerhouses in the SEO world: <a href="https://surferseo.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Surfer SEO</a> and <a href="https://ahrefs.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Ahrefs</a>.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     Surfer SEO is renowned for its comprehensive suite of optimization features, making it a favorite for content creators. On the other hand, Ahrefs excels in backlink analysis and competitor research, standing as the industry standard for deep data.
                                 </p>
                                 <p>
-                                    Let's delve into their features, pricing structure, user experience, and help you decide which one fits your needs best.
+                                    Let's delve into their features, pricing structure, user experience, and help you decide which one fits your needs best. For more on SEO best practices, check out <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Google's SEO Starter Guide</a>.
                                 </p>
                             </div>
                         </section>
@@ -461,6 +463,8 @@ const SurferSeoVsAhrefs = () => {
                                     <div className="flex flex-col sm:flex-row gap-4">
                                         <a
                                             href={getProductSignupUrl('seomi')}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="px-6 py-3 bg-primary-600 text-white font-bold rounded-lg hover:bg-primary-700 transition-colors text-center shadow-lg shadow-primary-600/20"
                                         >
                                             Start with Seomi Free

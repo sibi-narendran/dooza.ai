@@ -224,6 +224,8 @@ const BetterThanMarblism = () => {
                                 <p className="text-sm text-slate-600 mb-4">See the difference yourself</p>
                                 <a
                                     href={getProductSignupUrl('agent')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
                                     Try Dooza Free
@@ -239,7 +241,7 @@ const BetterThanMarblism = () => {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-lg leading-relaxed">
-                                    Marblism has fully pivoted into the AI employee space, joining platforms like Sintra AI in the race to automate business operations. With so many options now available, choosing the right AI employee platform is more important than ever.
+                                    <a href="https://marblism.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Marblism</a> has fully pivoted into the AI employee space, joining platforms like <a href="https://sintra.ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Sintra AI</a> in the race to automate business operations. With so many options now available, choosing the right AI employee platform is more important than ever.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     In this comparison, we'll break down how Marblism stacks up against Dooza—and why businesses serious about AI automation are choosing Dooza as their platform of choice.
@@ -689,6 +691,8 @@ const BetterThanMarblism = () => {
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a
                                         href={getProductSignupUrl('agent')}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
                                         Start Free Trial

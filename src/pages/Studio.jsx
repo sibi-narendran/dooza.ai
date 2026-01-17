@@ -150,6 +150,8 @@ const Studio = () => {
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
                             <a
                                 href={getProductSignupUrl('studio')}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => trackSignupClick('studio_hero')}
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
                             >
@@ -409,6 +411,8 @@ const Studio = () => {
                         </p>
                         <a
                             href={getProductSignupUrl('studio')}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={() => trackSignupClick('studio_bottom_cta')}
                             className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1"
                         >

@@ -1,3 +1,10 @@
+# Global Security Headers
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
 # Sitemap
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
