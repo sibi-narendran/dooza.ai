@@ -31,7 +31,7 @@ const Navbar = ({ openModal, variant = 'light' }) => {
     }, []);
 
     const products = [
-        { name: 'Sidekick', href: '/' },
+        { name: 'Workforce', href: '/' },
         { name: 'Studio', href: '/studio' }
     ];
 
@@ -114,7 +114,7 @@ const Navbar = ({ openModal, variant = 'light' }) => {
 
                     <div className="hidden md:flex items-center space-x-6">
                         <a
-                            href={getProductSigninUrl('agent')}
+                            href={getProductSigninUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`text-[15px] font-medium transition-colors ${isDark
@@ -125,7 +125,7 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                             Login
                         </a>
                         <a
-                            href={getProductSignupUrl('agent')}
+                            href={getProductSignupUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => trackSignupClick('navbar')}
@@ -197,7 +197,7 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                             Blog
                         </Link>
                         <a
-                            href={getProductSigninUrl('agent')}
+                            href={getProductSigninUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
@@ -208,7 +208,7 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                             Login
                         </a>
                         <a
-                            href={getProductSignupUrl('agent')}
+                            href={getProductSignupUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => trackSignupClick('navbar_mobile')}

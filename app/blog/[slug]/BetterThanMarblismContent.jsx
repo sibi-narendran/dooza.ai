@@ -164,7 +164,7 @@ export default function BetterThanMarblismContent() {
                             <div className="mt-8 pt-6 border-t border-slate-200">
                                 <p className="text-sm text-slate-600 mb-4">See the difference yourself</p>
                                 <a
-                                    href={getProductSignupUrl('agent')}
+                                    href={getProductSignupUrl('workforce')}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
@@ -300,7 +300,7 @@ export default function BetterThanMarblismContent() {
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready for AI Employees That Actually Deliver?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">Try Dooza free for 14 days. No credit card required.</p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <a href={getProductSignupUrl('agent')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
+                                    <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
                                         Start Free Trial <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">

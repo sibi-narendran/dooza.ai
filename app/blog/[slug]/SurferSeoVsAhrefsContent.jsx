@@ -158,7 +158,7 @@ export default function SurferSeoVsAhrefsContent() {
                             <div className="mt-8 pt-6 border-t border-slate-200">
                                 <p className="text-sm text-slate-600 mb-4">Hire Seomi for your SEO?</p>
                                 <a
-                                    href={getProductSignupUrl('agent')}
+                                    href={getProductSignupUrl('workforce')}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"

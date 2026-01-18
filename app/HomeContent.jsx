@@ -121,7 +121,7 @@ export default function HomePage() {
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <a 
-                                href={getProductSignupUrl('agent')} 
+                                href={getProductSignupUrl('workforce')} 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => trackSignupClick('hero')}
@@ -176,7 +176,7 @@ export default function HomePage() {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Welcome to your new life</h2>
-                            <p className="text-xl text-slate-600">Here's what your day looks like with Sidekick</p>
+                            <p className="text-xl text-slate-600">Here's what your day looks like with Workforce</p>
                         </div>
 
                         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-teal-300 before:to-transparent">
@@ -332,7 +332,7 @@ export default function HomePage() {
                         <h2 className="text-4xl md:text-6xl font-extrabold mb-8">We are ready to work.<br /><span className="opacity-90">Are you?</span></h2>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <a 
-                                href={getProductSignupUrl('agent')} 
+                                href={getProductSignupUrl('workforce')} 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => trackSignupClick('bottom_cta')}

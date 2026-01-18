@@ -20,13 +20,13 @@ const BottomCTA = ({ openModal }) => {
                     Ready to scale your business?
                 </h2>
                 <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-                    Join thousands of companies using Sidekick to automate their work.
+                    Join thousands of companies using Workforce to automate their work.
                     Get started for free today.
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <a 
-                        href={getProductSignupUrl('agent')} 
+                        href={getProductSignupUrl('workforce')} 
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={handleSignupClick} 

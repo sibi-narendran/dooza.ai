@@ -29,7 +29,7 @@ const Footer = ({ variant = 'light' }) => {
                         <ul className="space-y-2">
                             <li>
                                 <Link href="/" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Sidekick
+                                    Workforce
                                 </Link>
                             </li>
                             <li>
