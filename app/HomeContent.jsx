@@ -8,7 +8,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
 import { ArrowRight, Mail, Calendar, MessageSquare, Star } from 'lucide-react';
-import { trackSignupClick, trackDemoClick } from '@/lib/analytics';
+import { trackSignupClick, trackDemoClick, trackFBLead, trackFBSchedule } from '@/lib/analytics';
 
 // Homepage FAQ data for schema
 const homeFaqData = [
@@ -124,7 +124,7 @@ export default function HomePage() {
                                 href={getProductSignupUrl('workforce')} 
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                onClick={() => trackSignupClick('hero')}
+                                onClick={() => { trackSignupClick('hero'); trackFBLead('hero_signup'); }}
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
                             >
                                 Get Started
@@ -134,7 +134,7 @@ export default function HomePage() {
                                 href={CAL_BOOKING_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                onClick={() => trackDemoClick('hero')}
+                                onClick={() => { trackDemoClick('hero'); trackFBSchedule(); }}
                                 className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 hover:bg-primary-50 px-8 py-4 rounded-full font-bold text-lg transition-all"
                             >
                                 <Calendar className="w-5 h-5" />
@@ -335,7 +335,7 @@ export default function HomePage() {
                                 href={getProductSignupUrl('workforce')} 
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                onClick={() => trackSignupClick('bottom_cta')}
+                                onClick={() => { trackSignupClick('bottom_cta'); trackFBLead('bottom_cta_signup'); }}
                                 className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1"
                             >
                                 Get Started
@@ -345,7 +345,7 @@ export default function HomePage() {
                                 href={CAL_BOOKING_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                onClick={() => trackDemoClick('bottom_cta')}
+                                onClick={() => { trackDemoClick('bottom_cta'); trackFBSchedule(); }}
                                 className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-5 rounded-full font-bold text-xl transition-all"
                             >
                                 <Calendar className="w-6 h-6" />

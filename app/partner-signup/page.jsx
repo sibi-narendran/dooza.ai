@@ -7,6 +7,7 @@ import Footer from '../../components/Footer';
 import { CheckCircle2, Loader2 } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import { countries } from '../../lib/countries';
+import { trackFBCompleteRegistration, trackFBLead } from '../../lib/analytics';
 
 export default function PartnerSignupPage() {
     const router = useRouter();
@@ -49,6 +50,10 @@ export default function PartnerSignupPage() {
 
             if (error) throw error;
 
+            // Track Facebook Pixel events
+            trackFBCompleteRegistration('partner_signup');
+            trackFBLead('partner_signup');
+            
             setIsSuccess(true);
         } catch (error) {
             console.error('Error submitting partner application:', error);

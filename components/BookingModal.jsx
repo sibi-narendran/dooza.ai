@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { X } from 'lucide-react';
 import { CAL_BOOKING_URL } from '@/lib/links';
-import { trackAdsConversion } from '@/lib/analytics';
+import { trackAdsConversion, trackFBSchedule } from '@/lib/analytics';
 
 const BookingModal = ({ isOpen, onClose }) => {
     useEffect(() => {
@@ -16,6 +16,7 @@ const BookingModal = ({ isOpen, onClose }) => {
         const handleCalEvent = (e) => {
             if (e.data.type === 'cal:bookingSuccessful' || e.data.type === 'bookingSuccessful') {
                 trackAdsConversion();
+                trackFBSchedule();
             }
         };
 
