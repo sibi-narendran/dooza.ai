@@ -9,6 +9,7 @@ import BottomCTA from '../../../components/BottomCTA';
 import BookingModal from '../../../components/BookingModal';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
+import InternalLinks from '../../../components/InternalLinks';
 import YouTubeEmbed from '../../../components/YouTubeEmbed';
 import {
     CheckCircle2,
@@ -171,6 +172,10 @@ export default function BetterThanMarblismContent() {
                                 >
                                     Try Dooza Free
                                 </a>
+                            </div>
+
+                            <div className="mt-6">
+                                <InternalLinks currentSlug="better-than-marblism" />
                             </div>
                         </div>
                     </aside>

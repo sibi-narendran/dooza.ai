@@ -28,6 +28,24 @@ export default function sitemap() {
             changeFrequency: 'daily',
             priority: 0.9,
         },
+        {
+            url: `${SITE_URL}/alternatives`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/industries`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/author`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
     ];
 
     // Dynamic blog pages

@@ -12,7 +12,7 @@ export default function robots() {
                 disallow: ['/partner-signup'],
             },
         ],
-        sitemap: 'https://dooza.ai/sitemap.xml',
-        host: 'https://dooza.ai',
+        sitemap: 'https://www.dooza.ai/sitemap.xml',
+        host: 'https://www.dooza.ai',
     };
 }

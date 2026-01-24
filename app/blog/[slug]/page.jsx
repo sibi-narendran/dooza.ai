@@ -8,6 +8,14 @@ import BetterThanMarblismContent from './BetterThanMarblismContent';
 import AIEmployeesTransformingBusinessContent from './AIEmployeesTransformingBusinessContent';
 import AiAgentsVsAgenticAiContent from './AiAgentsVsAgenticAiContent';
 import SurferSeoVsAhrefsContent from './SurferSeoVsAhrefsContent';
+import BetterThanMotionContent from './BetterThanMotionContent';
+import SeoForDoctorsDentistsContent from './SeoForDoctorsDentistsContent';
+import AiForRealEstateAgentsContent from './AiForRealEstateAgentsContent';
+import AiCopywritingToolsContent from './AiCopywritingToolsContent';
+import SmallBusinessMarketingToolsContent from './SmallBusinessMarketingToolsContent';
+import SeoToolsSmallBusinessContent from './SeoToolsSmallBusinessContent';
+import MarketingAutomationToolsContent from './MarketingAutomationToolsContent';
+import ContentMarketingToolsContent from './ContentMarketingToolsContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -16,6 +24,14 @@ const BLOG_COMPONENTS = {
     'ai-employees-transforming-small-business': AIEmployeesTransformingBusinessContent,
     'ai-agents-vs-agentic-ai': AiAgentsVsAgenticAiContent,
     'surfer-seo-vs-ahrefs': SurferSeoVsAhrefsContent,
+    'better-than-motion': BetterThanMotionContent,
+    'seo-for-doctors-dentists': SeoForDoctorsDentistsContent,
+    'ai-for-real-estate-agents': AiForRealEstateAgentsContent,
+    'ai-copywriting-tools': AiCopywritingToolsContent,
+    'small-business-marketing-tools': SmallBusinessMarketingToolsContent,
+    'seo-tools-small-business': SeoToolsSmallBusinessContent,
+    'marketing-automation-tools': MarketingAutomationToolsContent,
+    'content-marketing-tools': ContentMarketingToolsContent,
 };
 
 // Generate static params for all blog posts

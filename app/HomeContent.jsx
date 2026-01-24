@@ -33,38 +33,18 @@ const homeFaqData = [
     }
 ];
 
-// Structured data for SEO
-const structuredData = {
+// FAQ structured data (Organization/WebSite schemas are in page.jsx)
+const faqSchema = {
     "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "WebSite",
-            "name": "Dooza",
-            "url": SITE_URL,
-            "description": "AI Employees That Never Sleep - Build, grow, and scale your business with a team of AI employees."
-        },
-        {
-            "@type": "Organization",
-            "name": "Dooza",
-            "url": SITE_URL,
-            "logo": `${SITE_URL}/logo.png`,
-            "sameAs": [
-                "https://twitter.com/sibinarendran",
-                "https://linkedin.com/company/dooza"
-            ]
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": homeFaqData.map(item => ({
-                "@type": "Question",
-                "name": item.question,
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": item.answer
-                }
-            }))
+    "@type": "FAQPage",
+    "mainEntity": homeFaqData.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
         }
-    ]
+    }))
 };
 
 export default function HomePage() {
@@ -92,14 +72,29 @@ export default function HomePage() {
         { time: "11:00 PM", event: "The world's asleep. Linda reviews your contract." }
     ];
 
-    if (!isMounted) return null;
+    if (!isMounted) {
+        return (
+            <div className="min-h-screen bg-white">
+                <div className="min-h-screen flex flex-col items-center justify-center px-4 pt-20">
+                    <div className="max-w-4xl mx-auto w-full text-center">
+                        <div className="h-16 w-3/4 bg-slate-200 rounded-lg mx-auto mb-6 animate-pulse" />
+                        <div className="h-8 w-1/2 bg-slate-100 rounded mx-auto mb-10 animate-pulse" />
+                        <div className="flex justify-center gap-4">
+                            <div className="h-14 w-40 bg-slate-200 rounded-full animate-pulse" />
+                            <div className="h-14 w-40 bg-slate-100 rounded-full animate-pulse" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             <Script
-                id="structured-data"
+                id="faq-schema"
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             
             <Navbar openModal={handleAction} />

@@ -8,6 +8,7 @@ import BottomCTA from '../../../components/BottomCTA';
 import BookingModal from '../../../components/BookingModal';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
+import InternalLinks from '../../../components/InternalLinks';
 import YouTubeEmbed from '../../../components/YouTubeEmbed';
 import {
     CheckCircle2,
@@ -165,6 +166,10 @@ export default function AiAgentsVsAgenticAiContent() {
                                 >
                                     Get Started Free
                                 </a>
+                            </div>
+
+                            <div className="mt-6">
+                                <InternalLinks currentSlug="ai-agents-vs-agentic-ai" />
                             </div>
                         </div>
                     </aside>

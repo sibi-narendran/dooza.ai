@@ -56,6 +56,10 @@ export const metadata = {
   },
   alternates: {
     canonical: 'https://www.dooza.ai',
+    languages: {
+      'en-US': 'https://www.dooza.ai',
+      'x-default': 'https://www.dooza.ai',
+    },
     types: {
       'application/rss+xml': '/rss.xml',
     },
@@ -71,11 +75,6 @@ export const metadata = {
     ],
   },
   manifest: '/site.webmanifest',
-  verification: {
-    google: 'your-google-verification-code', // Replace with actual code
-    // yandex: 'your-yandex-verification-code',
-    // bing: 'your-bing-verification-code',
-  },
   other: {
     'theme-color': '#0d9488',
     'msapplication-TileColor': '#0d9488',

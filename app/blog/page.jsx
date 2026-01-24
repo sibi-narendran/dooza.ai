@@ -29,18 +29,83 @@ export const metadata = {
 const blogListSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Dooza Blog",
-    "description": "Expert insights on AI employees, business automation, and scaling your operations",
+    "name": "Dooza Blog - AI Automation Insights",
+    "description": "Expert insights on AI employees, business automation, and scaling your operations. Guides on Sintra AI alternatives, medical SEO, and more.",
     "url": `${SITE_URL}/blog`,
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "Dooza",
+        "url": SITE_URL
+    },
+    "about": [
+        "AI Employees",
+        "Business Automation",
+        "AI Agents",
+        "SEO for Medical Practices",
+        "Productivity Software Comparisons"
+    ],
     "mainEntity": {
         "@type": "ItemList",
+        "numberOfItems": blogPosts.length,
         "itemListElement": blogPosts.map((post, index) => ({
             "@type": "ListItem",
             "position": index + 1,
             "url": `${SITE_URL}/blog/${post.slug}`,
-            "name": post.title
+            "name": post.title,
+            "description": post.excerpt
         }))
     }
+};
+
+// Blog schema for structured content
+const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Dooza Blog",
+    "description": "Expert insights on AI employees, business automation, and scaling operations with AI",
+    "url": `${SITE_URL}/blog`,
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dooza",
+        "logo": {
+            "@type": "ImageObject",
+            "url": `${SITE_URL}/logo.png`
+        }
+    },
+    "blogPost": blogPosts.map(post => ({
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.excerpt,
+        "url": `${SITE_URL}/blog/${post.slug}`,
+        "datePublished": post.date,
+        "dateModified": post.modifiedDate || post.date,
+        "author": {
+            "@type": "Organization",
+            "name": post.author
+        },
+        "image": post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}/logo.png`,
+        "keywords": post.tags?.join(', ')
+    }))
+};
+
+// Breadcrumb schema
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": SITE_URL
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": `${SITE_URL}/blog`
+        }
+    ]
 };
 
 export default function Blog() {
@@ -48,7 +113,9 @@ export default function Blog() {
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify([blogListSchema, blogSchema, breadcrumbSchema])
+                }}
             />
             <Suspense fallback={<BlogLoadingSkeleton />}>
                 <BlogPage />

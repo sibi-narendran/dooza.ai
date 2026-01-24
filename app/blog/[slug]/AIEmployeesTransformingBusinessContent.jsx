@@ -8,6 +8,7 @@ import BottomCTA from '../../../components/BottomCTA';
 import BookingModal from '../../../components/BookingModal';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
+import InternalLinks from '../../../components/InternalLinks';
 import {
     CheckCircle2,
     Clock,
@@ -178,6 +179,10 @@ export default function AIEmployeesTransformingBusinessContent() {
                                 >
                                     Get Started Free
                                 </a>
+                            </div>
+
+                            <div className="mt-6">
+                                <InternalLinks currentSlug="ai-employees-transforming-small-business" />
                             </div>
                         </div>
                     </aside>
