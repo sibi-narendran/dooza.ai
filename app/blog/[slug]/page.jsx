@@ -16,6 +16,9 @@ import SmallBusinessMarketingToolsContent from './SmallBusinessMarketingToolsCon
 import SeoToolsSmallBusinessContent from './SeoToolsSmallBusinessContent';
 import MarketingAutomationToolsContent from './MarketingAutomationToolsContent';
 import ContentMarketingToolsContent from './ContentMarketingToolsContent';
+import WhatIsClawdbotContent from './WhatIsClawdbotContent';
+import WhatIsMoltbotContent from './WhatIsMoltbotContent';
+import MoltbotAlternativesContent from './MoltbotAlternativesContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -32,6 +35,9 @@ const BLOG_COMPONENTS = {
     'seo-tools-small-business': SeoToolsSmallBusinessContent,
     'marketing-automation-tools': MarketingAutomationToolsContent,
     'content-marketing-tools': ContentMarketingToolsContent,
+    'what-is-clawdbot': WhatIsClawdbotContent,
+    'what-is-moltbot': WhatIsMoltbotContent,
+    'moltbot-alternatives': MoltbotAlternativesContent,
 };
 
 // Generate static params for all blog posts
