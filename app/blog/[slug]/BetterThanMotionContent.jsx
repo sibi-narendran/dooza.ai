@@ -137,7 +137,7 @@ export default function BetterThanMotionContent() {
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
-                                src="/blog/comparison-general.png"
+                                src="/blog/better-than-motion.png"
                                 alt="Comparison between Motion App and Dooza AI Employees"
                                 priority={true}
                             />

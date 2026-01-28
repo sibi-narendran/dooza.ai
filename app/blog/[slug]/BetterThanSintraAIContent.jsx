@@ -125,7 +125,7 @@ export default function BetterThanSintraAIContent() {
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
-                                src="/blog/comparison-general.png"
+                                src="/blog/better-than-sintra-ai.png"
                                 alt="Comparison between Sintra AI and Dooza"
                                 priority={true}
                             />
@@ -160,7 +160,7 @@ export default function BetterThanSintraAIContent() {
                                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${activeSection === item.id
                                             ? 'bg-primary-50 text-primary-700 font-medium'
                                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
@@ -212,7 +212,7 @@ export default function BetterThanSintraAIContent() {
                                     The difference lies in the approach: Sintra is a self-serve software tool, while Dooza is a comprehensive service. With Sintra, you are given a LOGIN and left to figure it out. With Dooza, you get a TEAM.
                                 </p>
                                 <div className="w-full mb-8">
-                                    <YouTubeEmbed 
+                                    <YouTubeEmbed
                                         videoId="y6G-KBz1WYo"
                                         title="Sintra AI Review"
                                     />

@@ -122,7 +122,7 @@ export default function BetterThanMarblismContent() {
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
-                                src="/blog/comparison-structures.png"
+                                src="/blog/better-than-marblism.png"
                                 alt="Comparison between Marblism and Dooza"
                                 priority={true}
                             />
@@ -155,7 +155,7 @@ export default function BetterThanMarblismContent() {
                                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${activeSection === item.id
                                             ? 'bg-primary-50 text-primary-700 font-medium'
                                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
@@ -203,7 +203,7 @@ export default function BetterThanMarblismContent() {
                                     Dooza takes a fundamentally different approach—one that prioritizes ease of use and human support. Dooza isn't just software; it's a partnership.
                                 </p>
                                 <div className="w-full mb-8">
-                                    <YouTubeEmbed 
+                                    <YouTubeEmbed
                                         videoId="b7vWOfSKy_0"
                                         title="Marblism AI Employees Review"
                                     />

@@ -127,7 +127,7 @@ export default function AIEmployeesTransformingBusinessContent() {
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
-                                src="/blog/ai-employees.png"
+                                src="/blog/ai-employees-transforming-small-business.png"
                                 alt="AI employees automating small business operations"
                                 priority={true}
                             />
@@ -162,7 +162,7 @@ export default function AIEmployeesTransformingBusinessContent() {
                                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${activeSection === item.id
                                             ? 'bg-primary-50 text-primary-700 font-medium'
                                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
