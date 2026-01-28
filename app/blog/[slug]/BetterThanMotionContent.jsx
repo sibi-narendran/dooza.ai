@@ -174,7 +174,7 @@ export default function BetterThanMotionContent() {
                                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${activeSection === item.id
                                             ? 'bg-primary-50 text-primary-700 font-medium'
                                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
@@ -369,7 +369,7 @@ export default function BetterThanMotionContent() {
                                     <ul className="space-y-3 mb-6">
                                         {[
                                             "Eva - Email Manager (drafts AND sends replies)",
-                                            "Sonny - Social Media Manager (posts autonomously)",
+                                            "Somi - Social Media Manager (posts autonomously)",
                                             "Stan - Lead Generator (finds and qualifies leads)",
                                             "Penny - SEO Specialist (optimizes your content)",
                                             "Rachel - AI Receptionist (makes/receives calls)",

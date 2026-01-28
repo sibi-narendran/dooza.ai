@@ -217,7 +217,7 @@ export default function MarketingAutomationToolsContent() {
                                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${activeSection === item.id
                                             ? 'bg-primary-50 text-primary-700 font-medium'
                                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
@@ -465,7 +465,7 @@ export default function MarketingAutomationToolsContent() {
                                             </li>
                                             <li className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                                                <span><strong>Sonny</strong> handles social media—creates and posts content</span>
+                                                <span><strong>Somi</strong> handles social media—creates and posts content</span>
                                             </li>
                                             <li className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-5 h-5 text-green-500" />

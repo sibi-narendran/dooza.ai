@@ -41,7 +41,7 @@ import {
 const faqData = [
     {
         question: "What is AI copywriting?",
-        answer: "AI copywriting uses artificial intelligence and natural language processing to generate marketing copy, blog posts, social media content, emails, and other written materials. Modern AI copywriting tools like Dooza's Sonny and Seomi can create human-quality content that matches your brand voice, saving hours of writing time while maintaining quality."
+        answer: "AI copywriting uses artificial intelligence and natural language processing to generate marketing copy, blog posts, social media content, emails, and other written materials. Modern AI copywriting tools like Dooza's Somi and Seomi can create human-quality content that matches your brand voice, saving hours of writing time while maintaining quality."
     },
     {
         question: "Is AI-generated content good for SEO?",
@@ -53,7 +53,7 @@ const faqData = [
     },
     {
         question: "How much do AI copywriting tools cost?",
-        answer: "Standalone AI copywriting tools like Jasper AI ($49-$125/month) and Copy.ai ($49-$249/month) focus only on writing. Dooza includes AI copywriting through Sonny (social media) and Seomi (SEO/blogs) as part of a complete AI employee suite for just $29/month—along with email management, phone answering, and lead generation."
+        answer: "Standalone AI copywriting tools like Jasper AI ($49-$125/month) and Copy.ai ($49-$249/month) focus only on writing. Dooza includes AI copywriting through Somi (social media) and Seomi (SEO/blogs) as part of a complete AI employee suite for just $29/month—along with email management, phone answering, and lead generation."
     },
     {
         question: "Can AI write in my brand voice?",
@@ -224,7 +224,7 @@ export default function AiCopywritingToolsContent() {
                                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${activeSection === item.id
                                             ? 'bg-primary-50 text-primary-700 font-medium'
                                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
@@ -501,7 +501,7 @@ export default function AiCopywritingToolsContent() {
                             <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-amber-800 mb-3">The Key Difference</h4>
                                 <p className="text-amber-700">
-                                    Most AI copywriting tools just generate text—you still have to copy/paste, format, and publish manually. Dooza's AI employees (Sonny for social media, Seomi for SEO/blogs) create AND publish content automatically. You approve what goes live, but the heavy lifting is done for you.
+                                    Most AI copywriting tools just generate text—you still have to copy/paste, format, and publish manually. Dooza's AI employees (Somi for social media, Seomi for SEO/blogs) create AND publish content automatically. You approve what goes live, but the heavy lifting is done for you.
                                 </p>
                             </div>
                         </section>
@@ -522,7 +522,7 @@ export default function AiCopywritingToolsContent() {
                                         <ul className="space-y-2 text-slate-700">
                                             <li className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                                                <span><strong>Sonny</strong> creates and publishes social media content daily</span>
+                                                <span><strong>Somi</strong> creates and publishes social media content daily</span>
                                             </li>
                                             <li className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-5 h-5 text-green-500" />

@@ -80,7 +80,7 @@ const toolCategories = [
         title: "Social Media Management",
         description: "Scheduling, posting, and engagement across platforms",
         tools: ["Hootsuite ($99-739/mo)", "Buffer ($6-120/mo)", "Sprout Social ($249-499/mo)"],
-        dooza: "Sonny posts daily content"
+        dooza: "Somi posts daily content"
     },
     {
         icon: Search,
@@ -227,7 +227,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${activeSection === item.id
                                             ? 'bg-primary-50 text-primary-700 font-medium'
                                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
@@ -481,7 +481,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                 <div className="space-y-3 mb-6">
                                     {[
                                         { employee: "Eva - Email Manager", included: true },
-                                        { employee: "Sonny - Social Media Manager", included: true },
+                                        { employee: "Somi - Social Media Manager", included: true },
                                         { employee: "Seomi - SEO Specialist", included: true },
                                         { employee: "Stan - Lead Generator", included: true },
                                         { employee: "Rachel - AI Receptionist", included: true },

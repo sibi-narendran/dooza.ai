@@ -59,7 +59,7 @@ const faqData = [
     },
     {
         question: "Can AI really write content that sounds like me?",
-        answer: "Yes. Dooza's AI employees learn your brand voice, your market expertise, and your unique selling points. Sonny (social media) and Seomi (SEO/blogs) create content that reflects your personality and local knowledge. You approve everything before it posts, but most agents find the content needs minimal editing."
+        answer: "Yes. Dooza's AI employees learn your brand voice, your market expertise, and your unique selling points. Somi (social media) and Seomi (SEO/blogs) create content that reflects your personality and local knowledge. You approve everything before it posts, but most agents find the content needs minimal editing."
     },
     {
         question: "What about my existing CRM and tools?",
@@ -225,7 +225,7 @@ export default function AiForRealEstateAgentsContent() {
                                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${activeSection === item.id
                                             ? 'bg-primary-50 text-primary-700 font-medium'
                                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
@@ -590,13 +590,13 @@ export default function AiForRealEstateAgentsContent() {
                                             <Megaphone size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-slate-900 text-xl mb-2">Sonny - AI Social Media Manager</h3>
+                                            <h3 className="font-bold text-slate-900 text-xl mb-2">Somi - AI Social Media Manager</h3>
                                             <p className="text-slate-600 mb-4">
-                                                Sonny creates and posts engaging content to your Instagram, Facebook, LinkedIn, and more. Market updates, listing features, neighborhood spotlights, home tips—all tailored to your brand and market.
+                                                Somi creates and posts engaging content to your Instagram, Facebook, LinkedIn, and more. Market updates, listing features, neighborhood spotlights, home tips—all tailored to your brand and market.
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">
-                                                    <strong>Real estate impact:</strong> According to industry research, 71% of buyers prefer agents with strong social presence. Sonny ensures you're always visible and top-of-mind in your market.
+                                                    <strong>Real estate impact:</strong> According to industry research, 71% of buyers prefer agents with strong social presence. Somi ensures you're always visible and top-of-mind in your market.
                                                 </p>
                                             </div>
                                         </div>

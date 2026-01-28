@@ -236,7 +236,7 @@ export default function ContentMarketingToolsContent() {
                                         className={`block w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${activeSection === item.id
                                             ? 'bg-primary-50 text-primary-700 font-medium'
                                             : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
@@ -466,7 +466,7 @@ export default function ContentMarketingToolsContent() {
                                     },
                                     {
                                         icon: MessageSquare,
-                                        employee: "Sonny",
+                                        employee: "Somi",
                                         title: "AI Social Media Manager",
                                         description: "Creates and posts engaging social content across all your platforms. Maintains consistent posting schedule, adapts content for each platform, and keeps your brand voice consistent.",
                                         replaces: "Social scheduling tool + content creator"

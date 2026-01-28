@@ -106,7 +106,7 @@ const softwareSchema = {
     "releaseNotes": "AI Employees for business automation including email, social media, SEO, and calls",
     "featureList": [
         "AI Email Manager (Eva)",
-        "AI Social Media Manager (Sonny)",
+        "AI Social Media Manager (Somi)",
         "AI Lead Generator (Stan)",
         "AI SEO Specialist (Penny/Seomi)",
         "AI Receptionist with Phone Calls (Rachel)",
@@ -240,7 +240,7 @@ const serviceSchema = {
                 "@type": "Offer",
                 "itemOffered": {
                     "@type": "Service",
-                    "name": "Sonny - AI Social Media Manager",
+                    "name": "Somi - AI Social Media Manager",
                     "description": "AI employee that creates and posts content to your social media accounts daily"
                 }
             },
@@ -340,7 +340,7 @@ const aiEmployeesListSchema = {
         {
             "@type": "ListItem",
             "position": 2,
-            "name": "Sonny - AI Social Media Manager",
+            "name": "Somi - AI Social Media Manager",
             "description": "Creates and posts content to social media daily",
             "url": "https://www.dooza.ai"
         },
