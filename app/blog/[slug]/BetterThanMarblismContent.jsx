@@ -11,6 +11,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
 import InternalLinks from '../../../components/InternalLinks';
 import YouTubeEmbed from '../../../components/YouTubeEmbed';
+import BlogHeroImage from '../../../components/BlogHeroImage';
 import {
     CheckCircle2,
     XCircle,
@@ -120,11 +121,10 @@ export default function BetterThanMarblismContent() {
                         </div>
 
                         <div className="mt-10 max-w-3xl mx-auto">
-                            <img
+                            <BlogHeroImage
                                 src="/blog/comparison-structures.png"
                                 alt="Comparison between Marblism and Dooza"
-                                className="w-full rounded-2xl shadow-xl"
-                                loading="lazy"
+                                priority={true}
                             />
                         </div>
                     </div>

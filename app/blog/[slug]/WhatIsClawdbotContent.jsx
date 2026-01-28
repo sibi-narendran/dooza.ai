@@ -11,6 +11,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
 import InternalLinks from '../../../components/InternalLinks';
 import YouTubeEmbed from '../../../components/YouTubeEmbed';
+import BlogHeroImage from '../../../components/BlogHeroImage';
 import {
     CheckCircle2,
     XCircle,
@@ -134,11 +135,10 @@ export default function WhatIsClawdbotContent() {
                         </div>
 
                         <div className="mt-10 max-w-3xl mx-auto">
-                            <img
+                            <BlogHeroImage
                                 src="/blog/what-is-clawdbot.png"
                                 alt="ClawdBot AI assistant interface"
-                                className="w-full rounded-2xl shadow-xl"
-                                loading="lazy"
+                                priority={true}
                             />
                         </div>
                     </div>

@@ -2,6 +2,15 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 
+// Resource hints for external services - improves Core Web Vitals
+const resourceHints = [
+    { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+    { rel: 'preconnect', href: 'https://connect.facebook.net' },
+    { rel: 'preconnect', href: 'https://analytics.ahrefs.com' },
+    { rel: 'dns-prefetch', href: 'https://www.facebook.com' },
+    { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+];
+
 const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
@@ -81,57 +90,78 @@ export const metadata = {
   },
 };
 
+// Analytics IDs from environment variables
+const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+const AHREFS_KEY = process.env.NEXT_PUBLIC_AHREFS_KEY;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/* Resource hints for faster external resource loading */}
+        {resourceHints.map((hint, index) => (
+          <link key={index} rel={hint.rel} href={hint.href} />
+        ))}
+      </head>
       <body className={`${inter.className} antialiased`}>
         {children}
-        
+
         {/* Facebook Pixel */}
-        <Script id="facebook-pixel" strategy="afterInteractive">
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window,document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '677827290037883');
-            fbq('track', 'PageView');
-          `}
-        </Script>
-        <noscript>
-          <img 
-            height="1" 
-            width="1" 
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=677827290037883&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
-        
+        {FB_PIXEL_ID && (
+          <>
+            <Script id="facebook-pixel" strategy="afterInteractive">
+              {`
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window,document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '${FB_PIXEL_ID}');
+                fbq('track', 'PageView');
+              `}
+            </Script>
+            <noscript>
+              <img
+                height="1"
+                width="1"
+                style={{ display: 'none' }}
+                src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
+                alt=""
+              />
+            </noscript>
+          </>
+        )}
+
         {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-10872232955"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-10872232955');
-          `}
-        </Script>
-        
+        {GOOGLE_ADS_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GOOGLE_ADS_ID}');
+              `}
+            </Script>
+          </>
+        )}
+
         {/* Ahrefs Analytics */}
-        <Script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="ExUFJSiq7qufMJ0WMEpL+A"
-          strategy="afterInteractive"
-        />
+        {AHREFS_KEY && (
+          <Script
+            src="https://analytics.ahrefs.com/analytics.js"
+            data-key={AHREFS_KEY}
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );

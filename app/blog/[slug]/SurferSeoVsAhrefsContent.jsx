@@ -11,6 +11,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
 import InternalLinks from '../../../components/InternalLinks';
 import YouTubeEmbed from '../../../components/YouTubeEmbed';
+import BlogHeroImage from '../../../components/BlogHeroImage';
 import {
     CheckCircle2,
     Clock,

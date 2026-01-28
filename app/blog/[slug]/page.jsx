@@ -19,6 +19,9 @@ import ContentMarketingToolsContent from './ContentMarketingToolsContent';
 import WhatIsClawdbotContent from './WhatIsClawdbotContent';
 import WhatIsMoltbotContent from './WhatIsMoltbotContent';
 import MoltbotAlternativesContent from './MoltbotAlternativesContent';
+import LindyAiAlternativeContent from './LindyAiAlternativeContent';
+import AiEmployeesVsVirtualAssistantsContent from './AiEmployeesVsVirtualAssistantsContent';
+import AiToolsForSolopreneursContent from './AiToolsForSolopreneursContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -38,6 +41,9 @@ const BLOG_COMPONENTS = {
     'what-is-clawdbot': WhatIsClawdbotContent,
     'what-is-moltbot': WhatIsMoltbotContent,
     'moltbot-alternatives': MoltbotAlternativesContent,
+    'lindy-ai-alternative': LindyAiAlternativeContent,
+    'ai-employees-vs-virtual-assistants': AiEmployeesVsVirtualAssistantsContent,
+    'ai-tools-for-solopreneurs': AiToolsForSolopreneursContent,
 };
 
 // Generate static params for all blog posts

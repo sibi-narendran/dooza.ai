@@ -11,6 +11,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
 import InternalLinks from '../../../components/InternalLinks';
 import YouTubeEmbed from '../../../components/YouTubeEmbed';
+import BlogHeroImage from '../../../components/BlogHeroImage';
 import {
     CheckCircle2,
     XCircle,
@@ -123,11 +124,10 @@ export default function BetterThanSintraAIContent() {
                         </div>
 
                         <div className="mt-10 max-w-3xl mx-auto">
-                            <img
+                            <BlogHeroImage
                                 src="/blog/comparison-general.png"
                                 alt="Comparison between Sintra AI and Dooza"
-                                className="w-full rounded-2xl shadow-xl"
-                                loading="lazy"
+                                priority={true}
                             />
                         </div>
                     </div>
