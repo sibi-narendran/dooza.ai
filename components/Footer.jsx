@@ -78,9 +78,9 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
-                                <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
+                                <Link href="/terms" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Terms
-                                </span>
+                                </Link>
                             </li>
                         </ul>
                     </div>
