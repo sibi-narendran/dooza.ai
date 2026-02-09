@@ -48,9 +48,9 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
-                                <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
+                                <Link href="/about" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     About
-                                </span>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -73,9 +73,9 @@ const Footer = ({ variant = 'light' }) => {
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Legal</h4>
                         <ul className="space-y-2">
                             <li>
-                                <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
+                                <Link href="/privacy" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Privacy
-                                </span>
+                                </Link>
                             </li>
                             <li>
                                 <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
@@ -88,7 +88,10 @@ const Footer = ({ variant = 'light' }) => {
 
                 <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className={`text-sm ${isDark ? 'text-gray-500' : 'text-slate-500'}`}>
-                        © {new Date().getFullYear()} Dooza. All rights reserved.
+                        © 2025 Adam Laboratory Inc. All rights reserved.
+                    </p>
+                    <p className={`text-xs ${isDark ? 'text-gray-600' : 'text-slate-400'}`}>
+                        Dooza.ai is a product of Adam Laboratory Inc., a Delaware corporation.
                     </p>
                     <div className={`flex space-x-6 ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>
                         <a 
