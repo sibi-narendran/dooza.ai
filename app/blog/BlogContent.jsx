@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ArrowRight, Clock, Calendar, Loader2 } from 'lucide-react';
@@ -140,13 +141,12 @@ export default function BlogPage() {
                                     <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
                                         <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-50 relative overflow-hidden">
                                             {post.image && (
-                                                <img
+                                                <Image
                                                     src={post.image}
-                                                    alt={post.title}
-                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                                    loading="lazy"
-                                                    width="400"
-                                                    height="225"
+                                                    alt={post.imageAlt || post.title}
+                                                    fill
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                                                 />
                                             )}
                                         </div>

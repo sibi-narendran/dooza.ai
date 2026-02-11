@@ -22,6 +22,8 @@ import MoltbotAlternativesContent from './MoltbotAlternativesContent';
 import LindyAiAlternativeContent from './LindyAiAlternativeContent';
 import AiEmployeesVsVirtualAssistantsContent from './AiEmployeesVsVirtualAssistantsContent';
 import AiToolsForSolopreneursContent from './AiToolsForSolopreneursContent';
+import WhatIsOpenClawContent from './WhatIsOpenClawContent';
+import AiEmployeesOpenclawBusinessContent from './AiEmployeesOpenclawBusinessContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -44,6 +46,8 @@ const BLOG_COMPONENTS = {
     'lindy-ai-alternative': LindyAiAlternativeContent,
     'ai-employees-vs-virtual-assistants': AiEmployeesVsVirtualAssistantsContent,
     'ai-tools-for-solopreneurs': AiToolsForSolopreneursContent,
+    'what-is-openclaw': WhatIsOpenClawContent,
+    'ai-employees-openclaw-business': AiEmployeesOpenclawBusinessContent,
 };
 
 // Generate static params for all blog posts
@@ -113,11 +117,18 @@ export default async function BlogPostPage({ params }) {
         { name: post.title }
     ]);
 
+    const schemas = [articleSchema, breadcrumbSchema];
+
+    // Add FAQ schema if post has FAQ data
+    if (post.faqData && post.faqData.length > 0) {
+        schemas.push(generateFAQSchema(post.faqData));
+    }
+
     return (
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema]) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
             />
             <BlogComponent post={post} />
         </>

@@ -18,7 +18,12 @@ const relatedPostMappings = {
     'small-business-marketing-tools': ['seo-tools-small-business', 'marketing-automation-tools', 'content-marketing-tools'],
     'seo-tools-small-business': ['surfer-seo-vs-ahrefs', 'seo-for-doctors-dentists', 'small-business-marketing-tools'],
     'marketing-automation-tools': ['ai-employees-transforming-small-business', 'small-business-marketing-tools', 'content-marketing-tools'],
-    'content-marketing-tools': ['ai-copywriting-tools', 'marketing-automation-tools', 'small-business-marketing-tools']
+    'content-marketing-tools': ['ai-copywriting-tools', 'marketing-automation-tools', 'small-business-marketing-tools'],
+    'what-is-openclaw': ['what-is-clawdbot', 'what-is-moltbot', 'moltbot-alternatives'],
+    'what-is-clawdbot': ['what-is-openclaw', 'what-is-moltbot', 'moltbot-alternatives'],
+    'what-is-moltbot': ['what-is-openclaw', 'what-is-clawdbot', 'moltbot-alternatives'],
+    'moltbot-alternatives': ['what-is-openclaw', 'what-is-clawdbot', 'what-is-moltbot'],
+    'ai-employees-openclaw-business': ['what-is-openclaw', 'ai-employees-transforming-small-business', 'ai-employees-vs-virtual-assistants']
 };
 
 const InternalLinks = ({ currentSlug, position = 'sidebar' }) => {
