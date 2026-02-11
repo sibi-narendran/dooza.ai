@@ -23,7 +23,10 @@ const relatedPostMappings = {
     'what-is-clawdbot': ['what-is-openclaw', 'what-is-moltbot', 'moltbot-alternatives'],
     'what-is-moltbot': ['what-is-openclaw', 'what-is-clawdbot', 'moltbot-alternatives'],
     'moltbot-alternatives': ['what-is-openclaw', 'what-is-clawdbot', 'what-is-moltbot'],
-    'ai-employees-openclaw-business': ['what-is-openclaw', 'ai-employees-transforming-small-business', 'ai-employees-vs-virtual-assistants']
+    'ai-employees-openclaw-business': ['what-is-openclaw', 'ai-employees-transforming-small-business', 'ai-employees-vs-virtual-assistants'],
+    'lindy-ai-alternative': ['better-than-sintra-ai', 'better-than-motion', 'ai-employees-transforming-small-business'],
+    'ai-employees-vs-virtual-assistants': ['ai-employees-transforming-small-business', 'ai-tools-for-solopreneurs', 'ai-employees-openclaw-business'],
+    'ai-tools-for-solopreneurs': ['small-business-marketing-tools', 'ai-employees-vs-virtual-assistants', 'marketing-automation-tools']
 };
 
 const InternalLinks = ({ currentSlug, position = 'sidebar' }) => {
