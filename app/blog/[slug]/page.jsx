@@ -24,6 +24,11 @@ import AiEmployeesVsVirtualAssistantsContent from './AiEmployeesVsVirtualAssista
 import AiToolsForSolopreneursContent from './AiToolsForSolopreneursContent';
 import WhatIsOpenClawContent from './WhatIsOpenClawContent';
 import AiEmployeesOpenclawBusinessContent from './AiEmployeesOpenclawBusinessContent';
+import AutomateBusinessProcessesContent from './AutomateBusinessProcessesContent';
+import BestAiReceptionistContent from './BestAiReceptionistContent';
+import AiStaffingContent from './AiStaffingContent';
+import VirtualReceptionistSmallBusinessContent from './VirtualReceptionistSmallBusinessContent';
+import BuildA20xCompanyContent from './BuildA20xCompanyContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -48,6 +53,11 @@ const BLOG_COMPONENTS = {
     'ai-tools-for-solopreneurs': AiToolsForSolopreneursContent,
     'what-is-openclaw': WhatIsOpenClawContent,
     'ai-employees-openclaw-business': AiEmployeesOpenclawBusinessContent,
+    'automate-business-processes': AutomateBusinessProcessesContent,
+    'best-ai-receptionist': BestAiReceptionistContent,
+    'ai-staffing': AiStaffingContent,
+    'virtual-receptionist-for-small-business': VirtualReceptionistSmallBusinessContent,
+    'build-a-20x-company': BuildA20xCompanyContent,
 };
 
 // Generate static params for all blog posts

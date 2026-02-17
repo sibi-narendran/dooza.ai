@@ -6,7 +6,7 @@ import { blogPosts } from '@/lib/blogData';
 
 // Define related post mappings for better internal linking
 const relatedPostMappings = {
-    'ai-employees-transforming-small-business': ['marketing-automation-tools', 'small-business-marketing-tools', 'ai-copywriting-tools'],
+    'ai-employees-transforming-small-business': ['automate-business-processes', 'ai-staffing', 'marketing-automation-tools'],
     'better-than-sintra-ai': ['better-than-marblism', 'better-than-motion', 'ai-employees-transforming-small-business'],
     'better-than-marblism': ['better-than-sintra-ai', 'better-than-motion', 'ai-employees-transforming-small-business'],
     'ai-agents-vs-agentic-ai': ['ai-copywriting-tools', 'marketing-automation-tools', 'ai-employees-transforming-small-business'],
@@ -17,7 +17,7 @@ const relatedPostMappings = {
     'ai-copywriting-tools': ['content-marketing-tools', 'small-business-marketing-tools', 'ai-employees-transforming-small-business'],
     'small-business-marketing-tools': ['seo-tools-small-business', 'marketing-automation-tools', 'content-marketing-tools'],
     'seo-tools-small-business': ['surfer-seo-vs-ahrefs', 'seo-for-doctors-dentists', 'small-business-marketing-tools'],
-    'marketing-automation-tools': ['ai-employees-transforming-small-business', 'small-business-marketing-tools', 'content-marketing-tools'],
+    'marketing-automation-tools': ['automate-business-processes', 'ai-employees-transforming-small-business', 'small-business-marketing-tools'],
     'content-marketing-tools': ['ai-copywriting-tools', 'marketing-automation-tools', 'small-business-marketing-tools'],
     'what-is-openclaw': ['what-is-clawdbot', 'what-is-moltbot', 'moltbot-alternatives'],
     'what-is-clawdbot': ['what-is-openclaw', 'what-is-moltbot', 'moltbot-alternatives'],
@@ -25,8 +25,13 @@ const relatedPostMappings = {
     'moltbot-alternatives': ['what-is-openclaw', 'what-is-clawdbot', 'what-is-moltbot'],
     'ai-employees-openclaw-business': ['what-is-openclaw', 'ai-employees-transforming-small-business', 'ai-employees-vs-virtual-assistants'],
     'lindy-ai-alternative': ['better-than-sintra-ai', 'better-than-motion', 'ai-employees-transforming-small-business'],
-    'ai-employees-vs-virtual-assistants': ['ai-employees-transforming-small-business', 'ai-tools-for-solopreneurs', 'ai-employees-openclaw-business'],
-    'ai-tools-for-solopreneurs': ['small-business-marketing-tools', 'ai-employees-vs-virtual-assistants', 'marketing-automation-tools']
+    'ai-employees-vs-virtual-assistants': ['ai-staffing', 'ai-employees-transforming-small-business', 'ai-tools-for-solopreneurs'],
+    'ai-tools-for-solopreneurs': ['automate-business-processes', 'small-business-marketing-tools', 'ai-employees-vs-virtual-assistants'],
+    'automate-business-processes': ['best-ai-receptionist', 'ai-staffing', 'marketing-automation-tools'],
+    'best-ai-receptionist': ['virtual-receptionist-for-small-business', 'automate-business-processes', 'ai-staffing'],
+    'ai-staffing': ['automate-business-processes', 'best-ai-receptionist', 'ai-employees-vs-virtual-assistants'],
+    'virtual-receptionist-for-small-business': ['best-ai-receptionist', 'automate-business-processes', 'ai-for-real-estate-agents'],
+    'build-a-20x-company': ['what-is-openclaw', 'ai-staffing', 'automate-business-processes']
 };
 
 const InternalLinks = ({ currentSlug, position = 'sidebar' }) => {

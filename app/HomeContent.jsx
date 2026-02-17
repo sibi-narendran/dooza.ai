@@ -188,9 +188,9 @@ export default function HomePage() {
                         </div>
 
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
-                            AI Employees That
+                            Hire AI Employees to
                             <span className="block bg-gradient-to-r from-primary-600 via-teal-500 to-primary-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                                Never Sleep
+                                Automate Your Business 24/7
                             </span>
                         </h1>
 
@@ -697,6 +697,83 @@ export default function HomePage() {
                             >
                                 <span className="text-slate-600 group-hover:text-slate-900 font-medium">View all comparisons →</span>
                             </Link>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Solutions Section */}
+                <section className="py-24 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center max-w-3xl mx-auto mb-16">
+                            <span className="inline-block px-4 py-1 rounded-full bg-teal-50 text-teal-600 font-semibold text-sm mb-4">SOLUTIONS</span>
+                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">AI automation for every part of your business</h2>
+                            <p className="text-xl text-slate-600">Purpose-built AI employees that handle your most time-consuming tasks.</p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div id="ai-lead-generation" className="group bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-orange-200 transition-all hover:shadow-xl hover:-translate-y-1">
+                                <div className="w-14 h-14 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <TrendingUp className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-3">AI for Lead Generation</h3>
+                                <p className="text-slate-600 leading-relaxed mb-6">Stan finds, qualifies, and nurtures leads around the clock so your pipeline never runs dry.</p>
+                                <a
+                                    href={getProductSignupUrl('workforce')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+                                >
+                                    Get started <ArrowRight className="w-4 h-4" />
+                                </a>
+                            </div>
+
+                            <div id="ai-customer-support" className="group bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-purple-200 transition-all hover:shadow-xl hover:-translate-y-1">
+                                <div className="w-14 h-14 bg-purple-50 text-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <Phone className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-3">AI for Customer Support</h3>
+                                <p className="text-slate-600 leading-relaxed mb-6">Rachel answers every call 24/7, books appointments, and never puts a customer on hold.</p>
+                                <a
+                                    href={getProductSignupUrl('workforce')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+                                >
+                                    Get started <ArrowRight className="w-4 h-4" />
+                                </a>
+                            </div>
+
+                            <div id="ai-social-media-management" className="group bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-pink-200 transition-all hover:shadow-xl hover:-translate-y-1">
+                                <div className="w-14 h-14 bg-pink-50 text-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <MessageSquare className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-3">AI for Social Media Management</h3>
+                                <p className="text-slate-600 leading-relaxed mb-6">Somi creates and posts engaging content daily across all your social platforms.</p>
+                                <a
+                                    href={getProductSignupUrl('workforce')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+                                >
+                                    Get started <ArrowRight className="w-4 h-4" />
+                                </a>
+                            </div>
+
+                            <div id="ai-inbox-management" className="group bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-blue-200 transition-all hover:shadow-xl hover:-translate-y-1">
+                                <div className="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <Mail className="w-7 h-7" />
+                                </div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-3">AI for Inbox Management</h3>
+                                <p className="text-slate-600 leading-relaxed mb-6">Eva sorts, prioritizes, and responds to emails automatically so nothing slips through.</p>
+                                <a
+                                    href={getProductSignupUrl('workforce')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+                                >
+                                    Get started <ArrowRight className="w-4 h-4" />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>

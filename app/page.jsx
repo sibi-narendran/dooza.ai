@@ -1,21 +1,21 @@
 import HomePage from './HomeContent';
 
 export const metadata = {
-    title: 'AI Employees That Never Sleep',
+    title: { absolute: 'AI Employees for Business Automation | Dooza.ai' },
     description: 'Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7. Free setup, transparent pricing from $29/mo.',
     keywords: ['AI employees', 'AI agents', 'business automation', 'Sintra AI alternative', 'Marblism alternative', 'AI for small business', 'AI automation platform', 'virtual employees'],
     alternates: {
         canonical: 'https://www.dooza.ai',
     },
     openGraph: {
-        title: 'AI Employees That Never Sleep | Dooza',
+        title: 'AI Employees for Business Automation | Dooza.ai',
         description: 'Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7.',
         url: 'https://www.dooza.ai',
         images: [{ url: 'https://www.dooza.ai/logo.png', width: 512, height: 512, alt: 'Dooza - AI Employees Platform' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'AI Employees That Never Sleep | Dooza',
+        title: 'AI Employees for Business Automation | Dooza.ai',
         description: 'Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7.',
         images: ['https://www.dooza.ai/logo.png'],
     },

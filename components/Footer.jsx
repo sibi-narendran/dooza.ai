@@ -23,7 +23,7 @@ const Footer = ({ variant = 'light' }) => {
                 </div>
 
                 {/* Links */}
-                <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y ${isDark ? 'border-white/5' : 'border-slate-100'}`}>
+                <div className={`grid grid-cols-2 md:grid-cols-5 gap-8 py-8 border-y ${isDark ? 'border-white/5' : 'border-slate-100'}`}>
                     <div>
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Products</h4>
                         <ul className="space-y-2">
@@ -35,6 +35,31 @@ const Footer = ({ variant = 'light' }) => {
                             <li>
                                 <Link href="/studio" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Studio
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Solutions</h4>
+                        <ul className="space-y-2">
+                            <li>
+                                <Link href="/#ai-lead-generation" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI for Lead Generation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/#ai-customer-support" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI for Customer Support
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/#ai-social-media-management" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI for Social Media
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/#ai-inbox-management" className={`text-sm transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI for Inbox Management
                                 </Link>
                             </li>
                         </ul>
