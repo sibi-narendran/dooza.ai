@@ -3,10 +3,16 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
+import { motion, AnimatePresence } from 'framer-motion';
 import { CAL_BOOKING_URL, getProductSignupUrl, SITE_URL } from '@/lib/links';
+import { useIsMobile } from '@/lib/useIsMobile';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
+import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
+import AnimatedCounter from '@/components/AnimatedCounter';
+import SVGConnectingLine from '@/components/SVGConnectingLine';
+import { CharacterGroup, getCharacter, EvaCharacter, SomiCharacter, SeomiCharacter, RachelCharacter, StanCharacter, LindaCharacter } from '@/components/characters/CharacterIllustrations';
 import {
     ArrowRight,
     Mail,
@@ -25,7 +31,8 @@ import {
     X,
     Clock,
     Rocket,
-    Brain
+    Brain,
+    ChevronDown
 } from 'lucide-react';
 import { trackSignupClick, trackDemoClick, trackFBLead, trackFBSchedule } from '@/lib/analytics';
 
@@ -76,6 +83,9 @@ const aiEmployees = [
         icon: Mail,
         color: "from-blue-500 to-cyan-500",
         bgColor: "bg-blue-50",
+        accentColor: "text-blue-600",
+        borderHover: "hover:border-blue-200",
+        quote: "I sort, prioritize, and draft replies to every email—so nothing slips through your inbox.",
         description: "Manages your inbox, drafts replies, and sends emails. Never miss an important message again.",
         tasks: ["Sorts & prioritizes emails", "Drafts professional replies", "Schedules follow-ups"]
     },
@@ -85,6 +95,9 @@ const aiEmployees = [
         icon: MessageSquare,
         color: "from-pink-500 to-rose-500",
         bgColor: "bg-pink-50",
+        accentColor: "text-pink-600",
+        borderHover: "hover:border-pink-200",
+        quote: "I write posts, schedule content, and engage your audience across every platform—daily.",
         description: "Creates and posts engaging content daily. Grows your audience while you focus on business.",
         tasks: ["Creates daily content", "Posts across platforms", "Engages with followers"]
     },
@@ -94,6 +107,9 @@ const aiEmployees = [
         icon: Search,
         color: "from-green-500 to-emerald-500",
         bgColor: "bg-green-50",
+        accentColor: "text-green-600",
+        borderHover: "hover:border-green-200",
+        quote: "I write blog posts, optimize your pages, and climb your Google rankings automatically.",
         description: "Writes blog posts, optimizes your site, and improves your Google rankings automatically.",
         tasks: ["Writes SEO content", "Optimizes pages", "Manages Google Business"]
     },
@@ -103,6 +119,9 @@ const aiEmployees = [
         icon: Phone,
         color: "from-purple-500 to-violet-500",
         bgColor: "bg-purple-50",
+        accentColor: "text-purple-600",
+        borderHover: "hover:border-purple-200",
+        quote: "I answer every call 24/7, book appointments, and never put a customer on hold.",
         description: "Answers calls 24/7, books appointments, and never puts a customer on hold.",
         tasks: ["Answers all calls", "Books appointments", "Qualifies leads"]
     },
@@ -112,6 +131,9 @@ const aiEmployees = [
         icon: TrendingUp,
         color: "from-orange-500 to-amber-500",
         bgColor: "bg-orange-50",
+        accentColor: "text-orange-600",
+        borderHover: "hover:border-orange-200",
+        quote: "I find prospects, qualify them, and nurture leads—so your pipeline is always full.",
         description: "Finds, qualifies, and nurtures leads. Fills your pipeline while you sleep.",
         tasks: ["Finds prospects", "Qualifies leads", "Nurtures contacts"]
     },
@@ -121,17 +143,62 @@ const aiEmployees = [
         icon: FileText,
         color: "from-slate-500 to-gray-600",
         bgColor: "bg-slate-100",
+        accentColor: "text-slate-600",
+        borderHover: "hover:border-slate-300",
+        quote: "I review contracts and legal documents, flagging risks before they become problems.",
         description: "Reviews contracts and legal documents. Catches issues before they become problems.",
         tasks: ["Reviews contracts", "Flags risks", "Summarizes terms"]
     }
 ];
 
+// FAQ Accordion item
+function FAQItem({ item, idx }) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div className="bg-white rounded-2xl border border-slate-100 hover:border-slate-200 transition-all card-shadow overflow-hidden">
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full flex items-center justify-between p-6 text-left"
+            >
+                <h3 className="font-bold text-slate-900 text-lg font-serif pr-4">{item.question}</h3>
+                <motion.div
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="shrink-0"
+                >
+                    <ChevronDown className="w-5 h-5 text-slate-400" />
+                </motion.div>
+            </button>
+            <AnimatePresence initial={false}>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                    >
+                        <div className="px-6 pb-6">
+                            <p className="text-slate-600 leading-relaxed">
+                                {item.answer}
+                                {item.links && item.links.map((link, i) => (
+                                    <span key={i}> <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">{link.text}</a>.</span>
+                                ))}
+                            </p>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
+
 export default function HomePage() {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     const [activeEmployee, setActiveEmployee] = useState(0);
+    const isMobile = useIsMobile();
 
     useEffect(() => {
-        // Auto-rotate employees
         const interval = setInterval(() => {
             setActiveEmployee(prev => (prev + 1) % aiEmployees.length);
         }, 4000);
@@ -146,8 +213,14 @@ export default function HomePage() {
         }
     };
 
+    const ActiveCharacter = getCharacter(aiEmployees[activeEmployee].name);
+    // On mobile: no whileHover (touch doesn't support it well)
+    const hoverLift = isMobile ? {} : { whileHover: { y: -6 } };
+    const hoverLiftSmall = isMobile ? {} : { whileHover: { y: -4 } };
+    const hoverScale = isMobile ? {} : { whileHover: { scale: 1.01 } };
+
     return (
-        <div className="min-h-screen bg-white text-slate-900 font-sans overflow-x-hidden">
+        <div className="min-h-screen bg-warm text-slate-900 font-sans overflow-x-hidden">
             <Script
                 id="faq-schema"
                 type="application/ld+json"
@@ -157,74 +230,87 @@ export default function HomePage() {
             <Navbar openModal={handleAction} />
 
             <main>
-                {/* Hero Section */}
-                <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 md:px-8 pt-16 pb-20 overflow-hidden">
+                {/* ═══════════════ HERO SECTION ═══════════════ */}
+                <section className="relative min-h-[70vh] md:min-h-[90vh] flex flex-col items-center justify-center px-4 md:px-8 pt-20 pb-12 md:pb-20 overflow-hidden">
                     {/* Animated Background */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-50 via-white to-white"></div>
-                        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-100/40 rounded-full blur-[100px] animate-pulse"></div>
-                        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-teal-100/50 rounded-full blur-[100px] animate-pulse animation-delay-2000"></div>
-                        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-primary-50/50 to-transparent rounded-full blur-[80px]"></div>
-
+                        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-50/80 via-warm to-warm"></div>
+                        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-100/30 rounded-full blur-[120px] animate-pulse"></div>
+                        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[120px] animate-pulse animation-delay-2000"></div>
+                        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-primary-50/30 to-transparent rounded-full blur-[80px]"></div>
                         {/* Grid pattern */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
                     </div>
 
-                    <div className="max-w-5xl mx-auto relative z-10 w-full text-center">
-                        {/* Trust Badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-md border border-slate-200 mb-8 animate-fade-in">
-                            <div className="flex -space-x-2">
-                                <div className="w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 border-2 border-white"></div>
-                                <div className="w-6 h-6 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 border-2 border-white"></div>
-                                <div className="w-6 h-6 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 border-2 border-white"></div>
+                    <div className="max-w-6xl mx-auto relative z-10 w-full">
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            {/* Left: Text content */}
+                            <div className="text-center lg:text-left">
+                                <motion.h1
+                                    initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 0.1 }}
+                                    className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5 md:mb-6 font-serif"
+                                >
+                                    Hire AI Employees to
+                                    <span className="block bg-gradient-to-r from-primary-600 via-teal-500 to-primary-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+                                        Automate Your Business 24/7
+                                    </span>
+                                </motion.h1>
+
+                                <motion.p
+                                    initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 0.2 }}
+                                    className="text-lg md:text-2xl text-slate-600 mb-8 md:mb-10 max-w-xl leading-relaxed"
+                                >
+                                    6 AI employees handle your email, social media, SEO, calls, leads, and legal work—24/7, for less than one coffee a day.
+                                </motion.p>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 0.35 }}
+                                    className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start"
+                                >
+                                    <a
+                                        href={getProductSignupUrl('workforce')}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => { trackSignupClick('hero'); trackFBLead('hero_signup'); }}
+                                        className="group inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                    >
+                                        Start Free Trial
+                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </a>
+                                    <a
+                                        href={CAL_BOOKING_URL}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => { handleAction(e); trackDemoClick('hero'); trackFBSchedule(); }}
+                                        className="group inline-flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50 px-8 py-4 rounded-full font-bold text-lg transition-all"
+                                    >
+                                        <Calendar className="w-5 h-5" />
+                                        Book Free Demo
+                                    </a>
+                                </motion.div>
                             </div>
-                            <span className="text-sm text-slate-600">
-                                <span className="font-semibold text-slate-900">500+</span> businesses automated
-                            </span>
-                            <div className="flex items-center gap-0.5 text-yellow-500">
-                                <Star className="w-3.5 h-3.5 fill-current" />
-                                <span className="text-xs font-semibold text-slate-900">4.9</span>
-                            </div>
-                        </div>
 
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
-                            Hire AI Employees to
-                            <span className="block bg-gradient-to-r from-primary-600 via-teal-500 to-primary-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                                Automate Your Business 24/7
-                            </span>
-                        </h1>
-
-                        <p className="text-xl md:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            6 AI employees handle your email, social media, SEO, calls, leads, and legal work—24/7, for less than one coffee a day.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-                            <a
-                                href={getProductSignupUrl('workforce')}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => { trackSignupClick('hero'); trackFBLead('hero_signup'); }}
-                                className="group inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                            {/* Right: Character illustrations */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 40 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.3 }}
+                                className="hidden lg:flex justify-center"
                             >
-                                Start Free Trial
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </a>
-                            <a
-                                href={CAL_BOOKING_URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={(e) => { handleAction(e); trackDemoClick('hero'); trackFBSchedule(); }}
-                                className="group inline-flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50 px-8 py-4 rounded-full font-bold text-lg transition-all"
-                            >
-                                <Calendar className="w-5 h-5" />
-                                Book Free Demo
-                            </a>
+                                <CharacterGroup size={100} />
+                            </motion.div>
                         </div>
                     </div>
                 </section>
 
-                {/* Integrations Section */}
-                <section className="py-12 bg-white border-y border-slate-100">
+                {/* ═══════════════ INTEGRATIONS BAR ═══════════════ */}
+                <section className="py-12 bg-white/60 backdrop-blur-sm border-y border-slate-100">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <p className="text-center text-sm text-slate-500 mb-8 font-medium uppercase tracking-wide">Seamlessly integrates with your favorite tools</p>
                         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
@@ -299,541 +385,532 @@ export default function HomePage() {
                     </div>
                 </section>
 
-                {/* Problem Section */}
-                <section className="py-24 bg-white">
+                {/* ═══════════════ PROBLEM SECTION ═══════════════ */}
+                <section className="py-16 md:py-24 bg-warm">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="inline-block px-4 py-1 rounded-full bg-red-50 text-red-600 font-semibold text-sm mb-4">THE PROBLEM</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">You want to scale, but you're drowning in busywork</h2>
-                            <p className="text-xl text-slate-600">Sound familiar?</p>
-                        </div>
+                        <ScrollReveal>
+                            <div className="text-center max-w-3xl mx-auto mb-16">
+                                <span className="section-label block mb-4 text-red-500">THE PROBLEM</span>
+                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">You want to scale, but you're drowning in busywork</h2>
+                                <p className="text-xl text-slate-600">Sound familiar?</p>
+                            </div>
+                        </ScrollReveal>
 
-                        <div className="grid md:grid-cols-3 gap-8">
-                            <div className="group relative bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                <div className="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <Mail className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">Inbox Overload</h3>
-                                <p className="text-slate-600 leading-relaxed">You start every day with 100+ emails demanding attention. By noon, you're behind.</p>
-                            </div>
-                            <div className="group relative bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                <div className="w-14 h-14 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <MessageSquare className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">Social Silence</h3>
-                                <p className="text-slate-600 leading-relaxed">Your last post was 3 weeks ago. Your competitors post daily. You know you should too.</p>
-                            </div>
-                            <div className="group relative bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                <div className="w-14 h-14 bg-slate-100 text-slate-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <Calendar className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">Never Enough Time</h3>
-                                <p className="text-slate-600 leading-relaxed">Marketing, sales, admin—everything keeps getting pushed to 'next week.'</p>
-                            </div>
-                        </div>
+                        <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.15}>
+                            {[
+                                { icon: Mail, iconBg: 'bg-red-50', iconColor: 'text-red-500', title: 'Inbox Overload', desc: "You start every day with 100+ emails demanding attention. By noon, you're behind." },
+                                { icon: MessageSquare, iconBg: 'bg-orange-50', iconColor: 'text-orange-500', title: 'Social Silence', desc: "Your last post was 3 weeks ago. Your competitors post daily. You know you should too." },
+                                { icon: Calendar, iconBg: 'bg-slate-100', iconColor: 'text-slate-500', title: 'Never Enough Time', desc: "Marketing, sales, admin—everything keeps getting pushed to 'next week.'" }
+                            ].map((item, idx) => (
+                                <StaggerItem key={idx}>
+                                    <motion.div
+                                        {...hoverLift}
+                                        transition={{ duration: 0.3 }}
+                                        className="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-100 card-shadow hover:card-shadow-hover transition-all"
+                                    >
+                                        <div className={`w-12 h-12 md:w-14 md:h-14 ${item.iconBg} ${item.iconColor} rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform`}>
+                                            <item.icon className="w-6 h-6 md:w-7 md:h-7" />
+                                        </div>
+                                        <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-3 font-serif">{item.title}</h3>
+                                        <p className="text-slate-600 leading-relaxed text-sm md:text-base">{item.desc}</p>
+                                    </motion.div>
+                                </StaggerItem>
+                            ))}
+                        </StaggerContainer>
                     </div>
                 </section>
 
-                {/* Solution - Meet Your AI Employees */}
-                <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+                {/* ═══════════════ AI EMPLOYEE SHOWCASE ═══════════════ */}
+                <section className="py-16 md:py-24 bg-gradient-to-b from-white/60 to-warm">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="inline-block px-4 py-1 rounded-full bg-primary-50 text-primary-600 font-semibold text-sm mb-4">THE SOLUTION</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Meet your new AI employees</h2>
-                            <p className="text-xl text-slate-600">6 specialists. 24/7 availability. One subscription.</p>
-                        </div>
+                        <ScrollReveal>
+                            <div className="text-center max-w-3xl mx-auto mb-16">
+                                <span className="section-label block mb-4">MEET YOUR TEAM</span>
+                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Meet your new AI employees</h2>
+                                <p className="text-xl text-slate-600">6 specialists. 24/7 availability. One subscription.</p>
+                            </div>
+                        </ScrollReveal>
 
-                        {/* Employee Selector */}
-                        <div className="flex flex-wrap justify-center gap-3 mb-12">
-                            {aiEmployees.map((emp, idx) => (
-                                <button
-                                    key={idx}
-                                    onClick={() => setActiveEmployee(idx)}
-                                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all ${activeEmployee === idx
-                                            ? 'bg-primary-600 text-white shadow-lg'
-                                            : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300'
-                                        }`}
-                                >
-                                    <emp.icon className="w-4 h-4" />
-                                    {emp.name}
-                                </button>
-                            ))}
-                        </div>
+                        {/* Employee Grid */}
+                        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.1}>
+                            {aiEmployees.map((emp, idx) => {
+                                const Character = getCharacter(emp.name);
+                                return (
+                                    <StaggerItem key={idx}>
+                                        <motion.div
+                                            {...hoverLift}
+                                            transition={{ duration: 0.3 }}
+                                            className={`group bg-white rounded-2xl border border-slate-100 ${emp.borderHover} card-shadow hover:card-shadow-hover transition-all overflow-hidden`}
+                                        >
+                                            {/* Character illustration header */}
+                                            <div className={`${emp.bgColor} flex justify-center pt-4 md:pt-6 pb-1 md:pb-2`}>
+                                                <Character size={isMobile ? 70 : 90} />
+                                            </div>
 
-                        {/* Active Employee Card */}
-                        <div className="max-w-4xl mx-auto">
-                            <div className={`${aiEmployees[activeEmployee].bgColor} rounded-3xl p-8 md:p-12 border border-slate-200 transition-all duration-500`}>
-                                <div className="grid md:grid-cols-2 gap-8 items-center">
-                                    <div>
-                                        <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${aiEmployees[activeEmployee].color} text-white mb-6 shadow-lg`}>
-                                            {(() => {
-                                                const Icon = aiEmployees[activeEmployee].icon;
-                                                return <Icon className="w-8 h-8" />;
-                                            })()}
-                                        </div>
-                                        <h3 className="text-3xl font-bold text-slate-900 mb-2">
-                                            {aiEmployees[activeEmployee].name}
-                                            <span className="text-slate-500 font-normal ml-2">— {aiEmployees[activeEmployee].role}</span>
-                                        </h3>
-                                        <p className="text-lg text-slate-600 mb-6">{aiEmployees[activeEmployee].description}</p>
-                                        <ul className="space-y-3">
-                                            {aiEmployees[activeEmployee].tasks.map((task, i) => (
-                                                <li key={i} className="flex items-center gap-3 text-slate-700">
-                                                    <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
-                                                    {task}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                    <div className="hidden md:block">
-                                        <div className="relative">
-                                            <div className={`absolute inset-0 bg-gradient-to-r ${aiEmployees[activeEmployee].color} rounded-2xl blur-2xl opacity-20`}></div>
-                                            <div className="relative bg-white rounded-2xl p-6 shadow-xl border border-slate-200">
-                                                <div className="flex items-center gap-3 mb-4">
-                                                    <div className={`w-10 h-10 rounded-full bg-gradient-to-r ${aiEmployees[activeEmployee].color} flex items-center justify-center text-white`}>
-                                                        <Bot className="w-5 h-5" />
+                                            <div className="p-6">
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-r ${emp.color} flex items-center justify-center text-white shadow-md`}>
+                                                        <emp.icon className="w-5 h-5" />
                                                     </div>
                                                     <div>
-                                                        <div className="font-semibold text-slate-900">{aiEmployees[activeEmployee].name}</div>
-                                                        <div className="text-sm text-green-600 flex items-center gap-1">
-                                                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                                                            Working now
-                                                        </div>
+                                                        <h3 className="font-bold text-slate-900 font-serif text-lg">{emp.name}</h3>
+                                                        <p className="text-sm text-slate-500">{emp.role}</p>
                                                     </div>
                                                 </div>
-                                                <div className="space-y-2 text-sm text-slate-600">
-                                                    <div className="bg-slate-50 p-3 rounded-lg">✓ Completed 12 tasks today</div>
-                                                    <div className="bg-slate-50 p-3 rounded-lg">✓ Saved you 2.5 hours</div>
-                                                    <div className="bg-primary-50 p-3 rounded-lg text-primary-700">→ Currently processing new items...</div>
-                                                </div>
+
+                                                <p className="text-slate-600 italic mb-4 text-sm leading-relaxed">"{emp.quote}"</p>
+
+                                                <ul className="space-y-2 mb-4">
+                                                    {emp.tasks.map((task, i) => (
+                                                        <li key={i} className="flex items-center gap-2 text-sm text-slate-700">
+                                                            <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                                                            {task}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+
+                                                <a
+                                                    href={getProductSignupUrl('workforce')}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className={`inline-flex items-center gap-1 text-sm font-semibold ${emp.accentColor} hover:opacity-80 transition-opacity`}
+                                                >
+                                                    Hire {emp.name} <ArrowRight className="w-3.5 h-3.5" />
+                                                </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                        </motion.div>
+                                    </StaggerItem>
+                                );
+                            })}
+                        </StaggerContainer>
                     </div>
                 </section>
 
-                {/* How It Works */}
-                <section className="py-24 bg-white">
+                {/* ═══════════════ HOW IT WORKS ═══════════════ */}
+                <section className="py-16 md:py-24 bg-warm">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="inline-block px-4 py-1 rounded-full bg-green-50 text-green-600 font-semibold text-sm mb-4">HOW IT WORKS</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Up and running in 5 minutes</h2>
-                            <p className="text-xl text-slate-600">No technical skills required. We handle everything.</p>
-                        </div>
+                        <ScrollReveal>
+                            <div className="text-center max-w-3xl mx-auto mb-16">
+                                <span className="section-label block mb-4 text-green-600">HOW IT WORKS</span>
+                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Up and running in 5 minutes</h2>
+                                <p className="text-xl text-slate-600">No technical skills required. We handle everything.</p>
+                            </div>
+                        </ScrollReveal>
 
                         <div className="grid md:grid-cols-3 gap-6 md:gap-4 relative">
-                            {/* Connecting line */}
-                            <div className="hidden md:block absolute top-16 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-primary-200 via-primary-300 to-primary-200"></div>
+                            <SVGConnectingLine />
 
-                            {/* Step 1 */}
-                            <div className="relative bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary-300 hover:shadow-lg transition-all text-center">
-                                <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10">1</div>
-                                <div className="w-12 h-12 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                    <Users className="w-6 h-6" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">Sign up free</h3>
-                                <p className="text-slate-600 leading-relaxed">Create your account in 2 minutes. No credit card required to start.</p>
-                            </div>
-
-                            {/* Step 2 */}
-                            <div className="relative bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary-300 hover:shadow-lg transition-all text-center">
-                                <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10">2</div>
-                                <div className="w-12 h-12 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                    <Zap className="w-6 h-6" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">We set it up for you</h3>
-                                <p className="text-slate-600 leading-relaxed">Book a free call. Our team configures your AI employees for your workflow.</p>
-                            </div>
-
-                            {/* Step 3 */}
-                            <div className="relative bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary-300 hover:shadow-lg transition-all text-center">
-                                <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10">3</div>
-                                <div className="w-12 h-12 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                    <BarChart3 className="w-6 h-6" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">They work 24/7</h3>
-                                <p className="text-slate-600 leading-relaxed">Your AI employees start working immediately. Track progress in your dashboard.</p>
-                            </div>
+                            {[
+                                { num: '1', icon: Users, title: 'Sign up free', desc: 'Create your account in 2 minutes. No credit card required to start.' },
+                                { num: '2', icon: Zap, title: 'We set it up for you', desc: 'Book a free call. Our team configures your AI employees for your workflow.' },
+                                { num: '3', icon: BarChart3, title: 'They work 24/7', desc: 'Your AI employees start working immediately. Track progress in your dashboard.' }
+                            ].map((step, idx) => (
+                                <ScrollReveal key={idx} delay={idx * 0.2}>
+                                    <motion.div
+                                        {...hoverLiftSmall}
+                                        transition={{ duration: 0.3 }}
+                                        className="relative bg-white p-6 md:p-8 rounded-2xl border border-slate-100 card-shadow hover:card-shadow-hover hover:border-primary-200 transition-all text-center"
+                                    >
+                                        <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10 shadow-md">{step.num}</div>
+                                        <div className="w-12 h-12 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                            <step.icon className="w-6 h-6" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-3 font-serif">{step.title}</h3>
+                                        <p className="text-slate-600 leading-relaxed">{step.desc}</p>
+                                    </motion.div>
+                                </ScrollReveal>
+                            ))}
                         </div>
 
-                        <div className="text-center mt-12">
-                            <a
-                                href={CAL_BOOKING_URL}
-                                onClick={(e) => { handleAction(e); trackDemoClick('how_it_works'); }}
-                                className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
-                            >
-                                <Calendar className="w-5 h-5" />
-                                Book Your Free Setup Call
-                            </a>
-                            <p className="text-sm text-slate-500 mt-4">30-minute call • No commitment • We do the work</p>
-                        </div>
+                        <ScrollReveal delay={0.4}>
+                            <div className="text-center mt-12">
+                                <a
+                                    href={CAL_BOOKING_URL}
+                                    onClick={(e) => { handleAction(e); trackDemoClick('how_it_works'); }}
+                                    className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                >
+                                    <Calendar className="w-5 h-5" />
+                                    Book Your Free Setup Call
+                                </a>
+                                <p className="text-sm text-slate-500 mt-4">30-minute call · No commitment · We do the work</p>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </section>
 
-                {/* Comparison Table: DIY vs AI Employees */}
-                <section className="py-24 bg-slate-50">
+                {/* ═══════════════ COMPARISON TABLE ═══════════════ */}
+                <section className="py-16 md:py-24 bg-white/60">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="inline-block px-4 py-1 rounded-full bg-orange-50 text-orange-600 font-semibold text-sm mb-4">COMPARE</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Doing It Yourself vs AI Employees</h2>
-                            <p className="text-xl text-slate-600">Any business not using AI to improve productivity is leaving money on the table.</p>
-                        </div>
-
-                        <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200">
-                            {/* Table Header */}
-                            <div className="grid grid-cols-3 bg-slate-50 border-b border-slate-200">
-                                <div className="p-6 text-left">
-                                    <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Comparison</span>
-                                </div>
-                                <div className="p-6 text-center">
-                                    <div className="flex items-center justify-center gap-2">
-                                        <Users className="w-5 h-5 text-slate-500" />
-                                        <span className="font-bold text-slate-700">Doing It Yourself</span>
-                                    </div>
-                                </div>
-                                <div className="p-6 text-center bg-primary-50 border-l border-primary-100">
-                                    <div className="flex items-center justify-center gap-2">
-                                        <Bot className="w-5 h-5 text-primary-600" />
-                                        <span className="font-bold text-primary-700">AI Employees</span>
-                                    </div>
-                                </div>
+                        <ScrollReveal>
+                            <div className="text-center max-w-3xl mx-auto mb-16">
+                                <span className="section-label block mb-4 text-orange-600">COMPARE</span>
+                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Doing It Yourself vs AI Employees</h2>
+                                <p className="text-xl text-slate-600">Any business not using AI to improve productivity is leaving money on the table.</p>
                             </div>
+                        </ScrollReveal>
 
-                            {/* Comparison Rows */}
-                            {[
-                                {
-                                    label: "Time Spent Daily",
-                                    icon: Clock,
-                                    diy: "3-5 hours on repetitive tasks",
-                                    ai: "0 hours — runs autonomously"
-                                },
-                                {
-                                    label: "Availability",
-                                    icon: Zap,
-                                    diy: "Limited to your working hours",
-                                    ai: "24/7/365 — never stops"
-                                },
-                                {
-                                    label: "Email Management",
-                                    icon: Mail,
-                                    diy: "Inbox overload, missed emails",
-                                    ai: "Sorted, prioritized, responded"
-                                },
-                                {
-                                    label: "Social Media",
-                                    icon: MessageSquare,
-                                    diy: "Inconsistent, forgotten posts",
-                                    ai: "Daily content, auto-posted"
-                                },
-                                {
-                                    label: "Lead Follow-up",
-                                    icon: TrendingUp,
-                                    diy: "Leads slip through the cracks",
-                                    ai: "Every lead nurtured instantly"
-                                },
-                                {
-                                    label: "Mental Load",
-                                    icon: Brain,
-                                    diy: "Constant stress & overwhelm",
-                                    ai: "Peace of mind, it's handled"
-                                },
-                                {
-                                    label: "Focus on Growth",
-                                    icon: Rocket,
-                                    diy: "Stuck in busywork",
-                                    ai: "Free to scale your business"
-                                }
-                            ].map((row, idx) => (
-                                <div key={idx} className="grid grid-cols-3 border-b border-slate-100 last:border-b-0">
-                                    <div className="p-5 flex items-center gap-3">
-                                        <row.icon className="w-5 h-5 text-slate-400 shrink-0" />
-                                        <span className="font-medium text-slate-700">{row.label}</span>
+                        <ScrollReveal delay={0.2}>
+                            {/* Desktop: Table layout */}
+                            <div className="hidden md:block bg-white rounded-3xl overflow-hidden card-shadow border border-slate-100">
+                                {/* Table Header */}
+                                <div className="grid grid-cols-3 bg-slate-50/80 border-b border-slate-100">
+                                    <div className="p-6 text-left">
+                                        <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Comparison</span>
                                     </div>
-                                    <div className="p-5 text-center flex items-center justify-center">
-                                        <span className="text-slate-500">{row.diy}</span>
-                                    </div>
-                                    <div className="p-5 text-center bg-primary-50/50 border-l border-primary-50 flex items-center justify-center">
-                                        <span className="text-primary-700 font-semibold flex items-center gap-2">
-                                            <CheckCircle2 className="w-4 h-4 text-green-500" />
-                                            {row.ai}
-                                        </span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="text-center mt-10">
-                            <a
-                                href={getProductSignupUrl('workforce')}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => { trackSignupClick('comparison'); trackFBLead('comparison_signup'); }}
-                                className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
-                            >
-                                Let AI Handle the Busywork
-                                <ArrowRight className="w-5 h-5" />
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Social Proof / Testimonials */}
-                <section className="py-24 bg-white">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="inline-block px-4 py-1 rounded-full bg-yellow-50 text-yellow-700 font-semibold text-sm mb-4">TESTIMONIALS</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Loved by business owners</h2>
-                        </div>
-
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {[
-                                { quote: "My AI receptionist answers every call while I'm on site. Haven't missed a lead in months.", author: "Interio Square", role: "Interior Design" },
-                                { quote: "Our social pages used to be dead. Now Seomi posts daily updates and we're actually growing our following.", author: "Suresh Timbers", role: "Retail" },
-                                { quote: "I hired the Legal Assistant to review contracts. Saved me thousands in lawyer fees this year alone.", author: "Adam Labs", role: "Tech Startup" }
-                            ].map((item, idx) => (
-                                <div key={idx} className="bg-white p-8 rounded-3xl border border-slate-200 hover:shadow-xl transition-all group">
-                                    <div className="flex gap-1 text-yellow-400 mb-6">
-                                        {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-5 h-5 fill-current" />)}
-                                    </div>
-                                    <p className="text-lg text-slate-700 font-medium mb-8 leading-relaxed">"{item.quote}"</p>
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-teal-500 flex items-center justify-center font-bold text-white">
-                                            {item.author.split(' ').map(n => n[0]).join('')}
+                                    <div className="p-6 text-center">
+                                        <div className="flex items-center justify-center gap-2">
+                                            <Users className="w-5 h-5 text-slate-500" />
+                                            <span className="font-bold text-slate-700">Doing It Yourself</span>
                                         </div>
-                                        <div>
-                                            <div className="font-bold text-slate-900">{item.author}</div>
-                                            <div className="text-sm text-slate-500">{item.role}</div>
+                                    </div>
+                                    <div className="p-6 text-center bg-primary-50/60 border-l border-primary-100">
+                                        <div className="flex items-center justify-center gap-2">
+                                            <Bot className="w-5 h-5 text-primary-600" />
+                                            <span className="font-bold text-primary-700">AI Employees</span>
                                         </div>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
 
-                {/* Pricing Preview */}
-                <section className="py-24 bg-white">
-                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-primary-50 text-primary-600 font-semibold text-sm mb-4">SIMPLE PRICING</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">One price. 6 AI employees.</h2>
-                        <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">Less than a coffee a day for a full team working around the clock.</p>
-
-                        <div className="bg-white rounded-3xl p-10 md:p-12 border-2 border-primary-100 shadow-xl">
-                            <div className="flex justify-center items-baseline gap-2 mb-4">
-                                <span className="text-6xl md:text-7xl font-bold text-slate-900">$29</span>
-                                <span className="text-xl text-slate-500">/month</span>
-                            </div>
-                            <p className="text-slate-500 mb-8">Billed monthly. Cancel anytime.</p>
-
-                            <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-10 text-left">
+                                {/* Comparison Rows */}
                                 {[
-                                    "All 6 AI employees included",
-                                    "Unlimited tasks & automations",
-                                    "Free concierge onboarding",
-                                    "24/7 autonomous operation",
-                                    "1000+ app integrations",
-                                    "7-day money-back guarantee"
-                                ].map((item, idx) => (
-                                    <div key={idx} className="flex items-center gap-3">
-                                        <CheckCircle2 className="w-5 h-5 text-primary-500 shrink-0" />
-                                        <span className="text-slate-700">{item}</span>
-                                    </div>
+                                    { label: "Time Spent Daily", icon: Clock, diy: "3-5 hours on repetitive tasks", ai: "0 hours — runs autonomously" },
+                                    { label: "Availability", icon: Zap, diy: "Limited to your working hours", ai: "24/7/365 — never stops" },
+                                    { label: "Email Management", icon: Mail, diy: "Inbox overload, missed emails", ai: "Sorted, prioritized, responded" },
+                                    { label: "Social Media", icon: MessageSquare, diy: "Inconsistent, forgotten posts", ai: "Daily content, auto-posted" },
+                                    { label: "Lead Follow-up", icon: TrendingUp, diy: "Leads slip through the cracks", ai: "Every lead nurtured instantly" },
+                                    { label: "Mental Load", icon: Brain, diy: "Constant stress & overwhelm", ai: "Peace of mind, it's handled" },
+                                    { label: "Focus on Growth", icon: Rocket, diy: "Stuck in busywork", ai: "Free to scale your business" }
+                                ].map((row, idx) => (
+                                    <motion.div
+                                        key={idx}
+                                        initial={{ opacity: 0 }}
+                                        whileInView={{ opacity: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: idx * 0.08 }}
+                                        className={`grid grid-cols-3 border-b border-slate-50 last:border-b-0 ${idx % 2 === 1 ? 'bg-slate-50/30' : ''}`}
+                                    >
+                                        <div className="p-5 flex items-center gap-3">
+                                            <row.icon className="w-5 h-5 text-slate-400 shrink-0" />
+                                            <span className="font-medium text-slate-700">{row.label}</span>
+                                        </div>
+                                        <div className="p-5 text-center flex items-center justify-center">
+                                            <span className="text-slate-500">{row.diy}</span>
+                                        </div>
+                                        <div className="p-5 text-center bg-primary-50/30 border-l border-primary-50 flex items-center justify-center">
+                                            <span className="text-primary-700 font-semibold flex items-center gap-2">
+                                                <CheckCircle2 className="w-4 h-4 text-green-500" />
+                                                {row.ai}
+                                            </span>
+                                        </div>
+                                    </motion.div>
                                 ))}
                             </div>
 
-                            <a
-                                href={getProductSignupUrl('workforce')}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => { trackSignupClick('pricing'); trackFBLead('pricing_signup'); }}
-                                className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
-                            >
-                                Start Free Trial
-                                <ArrowRight className="w-5 h-5" />
-                            </a>
-                        </div>
+                            {/* Mobile: Stacked card layout */}
+                            <div className="md:hidden space-y-3">
+                                {[
+                                    { label: "Time Spent Daily", icon: Clock, diy: "3-5 hours on repetitive tasks", ai: "0 hours — runs autonomously" },
+                                    { label: "Availability", icon: Zap, diy: "Limited to your working hours", ai: "24/7/365 — never stops" },
+                                    { label: "Email Management", icon: Mail, diy: "Inbox overload, missed emails", ai: "Sorted, prioritized, responded" },
+                                    { label: "Social Media", icon: MessageSquare, diy: "Inconsistent, forgotten posts", ai: "Daily content, auto-posted" },
+                                    { label: "Lead Follow-up", icon: TrendingUp, diy: "Leads slip through the cracks", ai: "Every lead nurtured instantly" },
+                                    { label: "Mental Load", icon: Brain, diy: "Constant stress & overwhelm", ai: "Peace of mind, it's handled" },
+                                    { label: "Focus on Growth", icon: Rocket, diy: "Stuck in busywork", ai: "Free to scale your business" }
+                                ].map((row, idx) => (
+                                    <div key={idx} className="bg-white rounded-2xl p-4 border border-slate-100 card-shadow">
+                                        <div className="flex items-center gap-2 mb-3">
+                                            <row.icon className="w-4 h-4 text-slate-400 shrink-0" />
+                                            <span className="font-semibold text-slate-900 text-sm">{row.label}</span>
+                                        </div>
+                                        <div className="flex items-start gap-2 mb-2 text-sm">
+                                            <X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+                                            <span className="text-slate-500">{row.diy}</span>
+                                        </div>
+                                        <div className="flex items-start gap-2 text-sm">
+                                            <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                                            <span className="text-primary-700 font-semibold">{row.ai}</span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </ScrollReveal>
+
+                        <ScrollReveal delay={0.3}>
+                            <div className="text-center mt-10">
+                                <a
+                                    href={getProductSignupUrl('workforce')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => { trackSignupClick('comparison'); trackFBLead('comparison_signup'); }}
+                                    className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                >
+                                    Let AI Handle the Busywork
+                                    <ArrowRight className="w-5 h-5" />
+                                </a>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </section>
 
-                {/* Competitor Alternatives */}
-                <section className="py-20 bg-slate-50">
-                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-12">
-                            <span className="inline-block px-4 py-1 rounded-full bg-blue-50 text-blue-600 font-semibold text-sm mb-4">COMPARISONS</span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Switching from another platform?</h2>
-                            <p className="text-lg text-slate-600">See why businesses choose Dooza</p>
-                        </div>
+                {/* ═══════════════ TESTIMONIALS (Tweet-wall style) ═══════════════ */}
+                <section className="py-16 md:py-24 bg-warm">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <ScrollReveal>
+                            <div className="text-center max-w-3xl mx-auto mb-16">
+                                <span className="section-label block mb-4 text-yellow-600">TESTIMONIALS</span>
+                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Loved by business owners</h2>
+                            </div>
+                        </ScrollReveal>
 
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.15}>
+                            {[
+                                { quote: "My AI receptionist answers every call while I'm on site. Haven't missed a lead in months.", author: "Interio Square", role: "Interior Design", initials: "IS" },
+                                { quote: "Our social pages used to be dead. Now Seomi posts daily updates and we're actually growing our following.", author: "Suresh Timbers", role: "Retail", initials: "ST" },
+                                { quote: "I hired the Legal Assistant to review contracts. Saved me thousands in lawyer fees this year alone.", author: "Adam Labs", role: "Tech Startup", initials: "AL" }
+                            ].map((item, idx) => (
+                                <StaggerItem key={idx}>
+                                    <div className="bg-white p-6 rounded-2xl border border-slate-100 card-shadow hover:card-shadow-hover transition-all">
+                                        {/* Social-style header */}
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <div className="w-11 h-11 rounded-full bg-gradient-to-r from-primary-500 to-teal-500 flex items-center justify-center font-bold text-white text-sm">
+                                                {item.initials}
+                                            </div>
+                                            <div>
+                                                <div className="font-bold text-slate-900 text-sm">{item.author}</div>
+                                                <div className="text-xs text-slate-400">{item.role}</div>
+                                            </div>
+                                            <div className="ml-auto flex gap-0.5 text-yellow-400">
+                                                {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-3.5 h-3.5 fill-current" />)}
+                                            </div>
+                                        </div>
+                                        <p className="text-slate-700 leading-relaxed">"{item.quote}"</p>
+                                    </div>
+                                </StaggerItem>
+                            ))}
+                        </StaggerContainer>
+                    </div>
+                </section>
+
+                {/* ═══════════════ PRICING ═══════════════ */}
+                <section className="py-16 md:py-24 bg-white/60">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <ScrollReveal>
+                            <span className="section-label block mb-4">SIMPLE PRICING</span>
+                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">One price. 6 AI employees.</h2>
+                            <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">Less than a coffee a day for a full team working around the clock.</p>
+                        </ScrollReveal>
+
+                        <ScrollReveal delay={0.2}>
+                            <motion.div
+                                {...hoverScale}
+                                transition={{ duration: 0.3 }}
+                                className="bg-white rounded-3xl p-6 md:p-12 border-2 border-primary-100 card-shadow hover:ring-2 hover:ring-primary-400 hover:ring-offset-2 transition-all"
+                            >
+                                <div className="flex justify-center items-baseline gap-2 mb-4">
+                                    <span className="text-6xl md:text-7xl font-bold text-slate-900 font-serif">$29</span>
+                                    <span className="text-xl text-slate-500">/month</span>
+                                </div>
+                                <p className="text-slate-500 mb-8">Billed monthly. Cancel anytime.</p>
+
+                                <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-10 text-left">
+                                    {[
+                                        "All 6 AI employees included",
+                                        "Unlimited tasks & automations",
+                                        "Free concierge onboarding",
+                                        "24/7 autonomous operation",
+                                        "1000+ app integrations",
+                                        "7-day money-back guarantee"
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="flex items-center gap-3">
+                                            <CheckCircle2 className="w-5 h-5 text-primary-500 shrink-0" />
+                                            <span className="text-slate-700">{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <a
+                                    href={getProductSignupUrl('workforce')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => { trackSignupClick('pricing'); trackFBLead('pricing_signup'); }}
+                                    className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                >
+                                    Start Free Trial
+                                    <ArrowRight className="w-5 h-5" />
+                                </a>
+                            </motion.div>
+                        </ScrollReveal>
+                    </div>
+                </section>
+
+                {/* ═══════════════ COMPETITOR ALTERNATIVES ═══════════════ */}
+                <section className="py-16 md:py-20 bg-warm">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <ScrollReveal>
+                            <div className="text-center mb-12">
+                                <span className="section-label block mb-4 text-blue-600">COMPARISONS</span>
+                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 font-serif">Switching from another platform?</h2>
+                                <p className="text-lg text-slate-600">See why businesses choose Dooza</p>
+                            </div>
+                        </ScrollReveal>
+
+                        <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
                             {[
                                 { name: "Sintra AI", slug: "better-than-sintra-ai", benefits: ["5-min setup", "70% cheaper"] },
                                 { name: "Marblism", slug: "better-than-marblism", benefits: ["Free onboarding", "We build for you"] },
                                 { name: "Motion", slug: "better-than-motion", benefits: ["6 AI employees", "Better value"] }
                             ].map((item, idx) => (
+                                <StaggerItem key={idx}>
+                                    <Link
+                                        href={`/blog/${item.slug}`}
+                                        className="group bg-white hover:bg-primary-50 border border-slate-100 hover:border-primary-200 rounded-2xl p-6 transition-all card-shadow hover:card-shadow-hover block"
+                                    >
+                                        <div className="flex items-center justify-between mb-4">
+                                            <span className="text-sm font-semibold text-slate-500 uppercase">vs {item.name}</span>
+                                            <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
+                                        </div>
+                                        <div className="flex items-center gap-4 text-sm">
+                                            {item.benefits.map((b, i) => (
+                                                <span key={i} className="flex items-center gap-1 text-green-600">
+                                                    <CheckCircle2 className="w-4 h-4" />{b}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </Link>
+                                </StaggerItem>
+                            ))}
+                            <StaggerItem>
                                 <Link
-                                    key={idx}
-                                    href={`/blog/${item.slug}`}
-                                    className="group bg-white hover:bg-primary-50 border border-slate-200 hover:border-primary-200 rounded-2xl p-6 transition-all"
+                                    href="/alternatives"
+                                    className="group flex items-center justify-center bg-slate-50 hover:bg-slate-100 rounded-2xl p-6 transition-all border border-slate-100"
                                 >
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-sm font-semibold text-slate-500 uppercase">vs {item.name}</span>
-                                        <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
-                                    </div>
-                                    <div className="flex items-center gap-4 text-sm">
-                                        {item.benefits.map((b, i) => (
-                                            <span key={i} className="flex items-center gap-1 text-green-600">
-                                                <CheckCircle2 className="w-4 h-4" />{b}
-                                            </span>
-                                        ))}
-                                    </div>
+                                    <span className="text-slate-600 group-hover:text-slate-900 font-medium">View all comparisons →</span>
                                 </Link>
-                            ))}
-                            <Link
-                                href="/alternatives"
-                                className="group flex items-center justify-center bg-slate-100 hover:bg-slate-200 rounded-2xl p-6 transition-all"
-                            >
-                                <span className="text-slate-600 group-hover:text-slate-900 font-medium">View all comparisons →</span>
-                            </Link>
-                        </div>
+                            </StaggerItem>
+                        </StaggerContainer>
                     </div>
                 </section>
 
-                {/* Solutions Section */}
-                <section className="py-24 bg-white">
+                {/* ═══════════════ SOLUTIONS SECTION ═══════════════ */}
+                <section className="py-16 md:py-24 bg-white/60">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="inline-block px-4 py-1 rounded-full bg-teal-50 text-teal-600 font-semibold text-sm mb-4">SOLUTIONS</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">AI automation for every part of your business</h2>
-                            <p className="text-xl text-slate-600">Purpose-built AI employees that handle your most time-consuming tasks.</p>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div id="ai-lead-generation" className="group bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-orange-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                <div className="w-14 h-14 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <TrendingUp className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">AI for Lead Generation</h3>
-                                <p className="text-slate-600 leading-relaxed mb-6">Stan finds, qualifies, and nurtures leads around the clock so your pipeline never runs dry.</p>
-                                <a
-                                    href={getProductSignupUrl('workforce')}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
-                                >
-                                    Get started <ArrowRight className="w-4 h-4" />
-                                </a>
+                        <ScrollReveal>
+                            <div className="text-center max-w-3xl mx-auto mb-16">
+                                <span className="section-label block mb-4 text-teal-600">SOLUTIONS</span>
+                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">AI automation for every part of your business</h2>
+                                <p className="text-xl text-slate-600">Purpose-built AI employees that handle your most time-consuming tasks.</p>
                             </div>
+                        </ScrollReveal>
 
-                            <div id="ai-customer-support" className="group bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-purple-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                <div className="w-14 h-14 bg-purple-50 text-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <Phone className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">AI for Customer Support</h3>
-                                <p className="text-slate-600 leading-relaxed mb-6">Rachel answers every call 24/7, books appointments, and never puts a customer on hold.</p>
-                                <a
-                                    href={getProductSignupUrl('workforce')}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
-                                >
-                                    Get started <ArrowRight className="w-4 h-4" />
-                                </a>
-                            </div>
-
-                            <div id="ai-social-media-management" className="group bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-pink-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                <div className="w-14 h-14 bg-pink-50 text-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <MessageSquare className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">AI for Social Media Management</h3>
-                                <p className="text-slate-600 leading-relaxed mb-6">Somi creates and posts engaging content daily across all your social platforms.</p>
-                                <a
-                                    href={getProductSignupUrl('workforce')}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
-                                >
-                                    Get started <ArrowRight className="w-4 h-4" />
-                                </a>
-                            </div>
-
-                            <div id="ai-inbox-management" className="group bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-blue-200 transition-all hover:shadow-xl hover:-translate-y-1">
-                                <div className="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <Mail className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">AI for Inbox Management</h3>
-                                <p className="text-slate-600 leading-relaxed mb-6">Eva sorts, prioritizes, and responds to emails automatically so nothing slips through.</p>
-                                <a
-                                    href={getProductSignupUrl('workforce')}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
-                                >
-                                    Get started <ArrowRight className="w-4 h-4" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FAQ */}
-                <section className="py-24 bg-white">
-                    <div className="max-w-4xl mx-auto px-4">
-                        <div className="text-center mb-12">
-                            <span className="inline-block px-4 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold text-sm mb-4">FAQ</span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Frequently Asked Questions</h2>
-                        </div>
-                        <div className="space-y-4">
-                            {homeFaqData.map((item, idx) => (
-                                <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-slate-200 transition-all">
-                                    <h3 className="font-bold text-slate-900 mb-2 text-lg">{item.question}</h3>
-                                    <p className="text-slate-600 leading-relaxed">
-                                        {item.answer}
-                                        {item.links && item.links.map((link, i) => (
-                                            <span key={i}> <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">{link.text}</a>.</span>
-                                        ))}
-                                    </p>
-                                </div>
+                        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
+                            {[
+                                { id: 'ai-lead-generation', icon: TrendingUp, iconBg: 'bg-orange-50', iconColor: 'text-orange-500', borderHover: 'hover:border-orange-200', title: 'AI for Lead Generation', desc: 'Stan finds, qualifies, and nurtures leads around the clock so your pipeline never runs dry.' },
+                                { id: 'ai-customer-support', icon: Phone, iconBg: 'bg-purple-50', iconColor: 'text-purple-500', borderHover: 'hover:border-purple-200', title: 'AI for Customer Support', desc: 'Rachel answers every call 24/7, books appointments, and never puts a customer on hold.' },
+                                { id: 'ai-social-media-management', icon: MessageSquare, iconBg: 'bg-pink-50', iconColor: 'text-pink-500', borderHover: 'hover:border-pink-200', title: 'AI for Social Media Management', desc: 'Somi creates and posts engaging content daily across all your social platforms.' },
+                                { id: 'ai-inbox-management', icon: Mail, iconBg: 'bg-blue-50', iconColor: 'text-blue-500', borderHover: 'hover:border-blue-200', title: 'AI for Inbox Management', desc: 'Eva sorts, prioritizes, and responds to emails automatically so nothing slips through.' }
+                            ].map((item, idx) => (
+                                <StaggerItem key={idx}>
+                                    <motion.div
+                                        id={item.id}
+                                        {...hoverLift}
+                                        transition={{ duration: 0.3 }}
+                                        className={`group bg-white p-6 md:p-8 rounded-3xl border border-slate-100 ${item.borderHover} card-shadow hover:card-shadow-hover transition-all`}
+                                    >
+                                        <div className={`w-14 h-14 ${item.iconBg} ${item.iconColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                                            <item.icon className="w-7 h-7" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-3 font-serif">{item.title}</h3>
+                                        <p className="text-slate-600 leading-relaxed mb-6">{item.desc}</p>
+                                        <a
+                                            href={getProductSignupUrl('workforce')}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+                                        >
+                                            Get started <ArrowRight className="w-4 h-4" />
+                                        </a>
+                                    </motion.div>
+                                </StaggerItem>
                             ))}
-                        </div>
+                        </StaggerContainer>
                     </div>
                 </section>
 
-                {/* Final CTA */}
-                <section className="py-24 bg-gradient-to-br from-primary-50 via-teal-50 to-primary-50 relative overflow-hidden">
+                {/* ═══════════════ FAQ ═══════════════ */}
+                <section className="py-16 md:py-24 bg-warm">
+                    <div className="max-w-4xl mx-auto px-4">
+                        <ScrollReveal>
+                            <div className="text-center mb-12">
+                                <span className="section-label block mb-4 text-slate-500">FAQ</span>
+                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-serif">Frequently Asked Questions</h2>
+                            </div>
+                        </ScrollReveal>
+                        <StaggerContainer className="space-y-4" staggerDelay={0.1}>
+                            {homeFaqData.map((item, idx) => (
+                                <StaggerItem key={idx}>
+                                    <FAQItem item={item} idx={idx} />
+                                </StaggerItem>
+                            ))}
+                        </StaggerContainer>
+                    </div>
+                </section>
+
+                {/* ═══════════════ FINAL CTA ═══════════════ */}
+                <section className="py-16 md:py-24 bg-gradient-to-br from-primary-50 via-teal-50 to-primary-50 relative overflow-hidden">
                     <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary-100/50 rounded-full blur-[120px]"></div>
                     <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-teal-100/50 rounded-full blur-[120px]"></div>
 
                     <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-                        <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-slate-900">
-                            Ready to hire your
-                            <span className="block bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">AI workforce?</span>
-                        </h2>
-                        <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-                            Join 500+ businesses already saving 10+ hours every week with AI employees.
-                        </p>
-                        <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <a
-                                href={getProductSignupUrl('workforce')}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => { trackSignupClick('bottom_cta'); trackFBLead('bottom_cta_signup'); }}
-                                className="group inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-primary-700 transition-all shadow-xl hover:-translate-y-1"
-                            >
-                                Start Free Trial
-                                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                            </a>
-                            <a
-                                href={CAL_BOOKING_URL}
-                                onClick={(e) => { handleAction(e); trackDemoClick('bottom_cta'); trackFBSchedule(); }}
-                                className="inline-flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-10 py-5 rounded-full font-bold text-xl transition-all"
-                            >
-                                <Calendar className="w-6 h-6" />
-                                Book Free Setup
-                            </a>
-                        </div>
+                        {/* Character illustrations waving */}
+                        <ScrollReveal>
+                            <div className="flex justify-center gap-2 md:gap-6 mb-8 md:mb-10">
+                                {[EvaCharacter, SomiCharacter, SeomiCharacter, RachelCharacter, StanCharacter, LindaCharacter].map((Character, idx) => (
+                                    <div
+                                        key={idx}
+                                        className={`${idx >= 4 ? 'hidden md:block' : ''} ${isMobile ? '' : 'animate-float'}`}
+                                        style={isMobile ? {} : { animationDelay: `${idx * 0.3}s` }}
+                                    >
+                                        <Character size={isMobile ? 40 : 56} />
+                                    </div>
+                                ))}
+                            </div>
+                        </ScrollReveal>
+
+                        <ScrollReveal delay={0.2}>
+                            <h2 className="text-3xl md:text-6xl font-extrabold mb-5 md:mb-6 leading-tight text-slate-900 font-serif">
+                                Ready to hire your
+                                <span className="block bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">AI workforce?</span>
+                            </h2>
+                        </ScrollReveal>
+
+                        <ScrollReveal delay={0.3}>
+                            <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+                                Join 500+ businesses already saving 10+ hours every week with AI employees.
+                            </p>
+                        </ScrollReveal>
+
+                        <ScrollReveal delay={0.4}>
+                            <div className="flex flex-col sm:flex-row justify-center gap-4">
+                                <a
+                                    href={getProductSignupUrl('workforce')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => { trackSignupClick('bottom_cta'); trackFBLead('bottom_cta_signup'); }}
+                                    className="group inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl hover:bg-primary-700 transition-all shadow-xl hover:-translate-y-1"
+                                >
+                                    Start Free Trial
+                                    <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
+                                </a>
+                                <a
+                                    href={CAL_BOOKING_URL}
+                                    onClick={(e) => { handleAction(e); trackDemoClick('bottom_cta'); trackFBSchedule(); }}
+                                    className="inline-flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl transition-all"
+                                >
+                                    <Calendar className="w-6 h-6" />
+                                    Book Free Setup
+                                </a>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </section>
             </main>

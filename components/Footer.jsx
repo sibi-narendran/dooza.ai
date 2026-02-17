@@ -7,7 +7,7 @@ const Footer = ({ variant = 'light' }) => {
     return (
         <footer className={`pt-16 pb-8 ${isDark
                 ? 'bg-[#0a0a0f] border-t border-white/5'
-                : 'bg-white border-t border-slate-100'
+                : 'bg-[#f5f4f1] border-t border-slate-100'
             }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">

@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google';
+import { DM_Sans, Source_Serif_4 } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 
@@ -11,10 +11,16 @@ const resourceHints = [
     { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
 ];
 
-const inter = Inter({ 
+const dmSans = DM_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-dm-sans',
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-source-serif',
 });
 
 export const metadata = {
@@ -97,14 +103,14 @@ const AHREFS_KEY = process.env.NEXT_PUBLIC_AHREFS_KEY;
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${dmSans.variable} ${sourceSerif.variable}`}>
       <head>
         {/* Resource hints for faster external resource loading */}
         {resourceHints.map((hint, index) => (
           <link key={index} rel={hint.rel} href={hint.href} />
         ))}
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${dmSans.className} antialiased`}>
         {children}
 
         {/* Facebook Pixel */}
