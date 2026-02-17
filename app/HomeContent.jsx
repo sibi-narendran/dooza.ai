@@ -156,7 +156,7 @@ function FAQItem({ item, idx }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="bg-white rounded-2xl border border-slate-100 hover:border-slate-200 transition-all card-shadow overflow-hidden">
+        <div className="bg-white rounded-2xl border border-violet-50 hover:border-violet-100 transition-all card-shadow overflow-hidden">
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full flex items-center justify-between p-6 text-left"
@@ -214,10 +214,16 @@ export default function HomePage() {
     };
 
     const ActiveCharacter = getCharacter(aiEmployees[activeEmployee].name);
-    // On mobile: no whileHover (touch doesn't support it well)
-    const hoverLift = isMobile ? {} : { whileHover: { y: -6 } };
-    const hoverLiftSmall = isMobile ? {} : { whileHover: { y: -4 } };
-    const hoverScale = isMobile ? {} : { whileHover: { scale: 1.01 } };
+    // Desktop: hover lift. Mobile: tap feedback (press-in scale)
+    const hoverLift = isMobile
+        ? { whileTap: { scale: 0.97 } }
+        : { whileHover: { y: -6 } };
+    const hoverLiftSmall = isMobile
+        ? { whileTap: { scale: 0.98 } }
+        : { whileHover: { y: -4 } };
+    const hoverScale = isMobile
+        ? { whileTap: { scale: 0.98 } }
+        : { whileHover: { scale: 1.01 } };
 
     return (
         <div className="min-h-screen bg-warm text-slate-900 font-sans overflow-x-hidden">
@@ -231,7 +237,7 @@ export default function HomePage() {
 
             <main>
                 {/* ═══════════════ HERO SECTION ═══════════════ */}
-                <section className="relative min-h-[70vh] md:min-h-[90vh] flex flex-col items-center justify-center px-4 md:px-8 pt-20 pb-12 md:pb-20 overflow-hidden">
+                <section className="relative min-h-[70vh] md:min-h-[90vh] flex flex-col items-center justify-center px-4 md:px-8 pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden">
                     {/* Animated Background */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
                         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-50/80 via-warm to-warm"></div>
@@ -249,7 +255,7 @@ export default function HomePage() {
                                 <motion.h1
                                     initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 0.1 }}
+                                    transition={{ duration: isMobile ? 0.3 : 0.6, delay: 0 }}
                                     className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5 md:mb-6 font-serif"
                                 >
                                     Hire AI Employees to
@@ -261,16 +267,34 @@ export default function HomePage() {
                                 <motion.p
                                     initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 0.2 }}
+                                    transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0.1 : 0.2 }}
                                     className="text-lg md:text-2xl text-slate-600 mb-8 md:mb-10 max-w-xl leading-relaxed"
                                 >
                                     6 AI employees handle your email, social media, SEO, calls, leads, and legal work—24/7, for less than one coffee a day.
                                 </motion.p>
 
+                                {/* Mobile character strip */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.4, delay: 0.15 }}
+                                    className="flex lg:hidden items-end justify-center gap-3 mb-8"
+                                >
+                                    {[EvaCharacter, SomiCharacter, RachelCharacter, StanCharacter].map((Character, idx) => (
+                                        <div
+                                            key={idx}
+                                            className="animate-float"
+                                            style={{ animationDelay: `${idx * 0.5}s` }}
+                                        >
+                                            <Character size={idx === 1 ? 52 : idx === 2 ? 44 : 48} />
+                                        </div>
+                                    ))}
+                                </motion.div>
+
                                 <motion.div
                                     initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 0.35 }}
+                                    transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0.2 : 0.35 }}
                                     className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start"
                                 >
                                     <a
@@ -288,7 +312,7 @@ export default function HomePage() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={(e) => { handleAction(e); trackDemoClick('hero'); trackFBSchedule(); }}
-                                        className="group inline-flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50 px-8 py-4 rounded-full font-bold text-lg transition-all"
+                                        className="group inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-200 text-primary-700 hover:border-primary-300 hover:bg-primary-50 px-8 py-4 rounded-full font-bold text-lg transition-all"
                                     >
                                         <Calendar className="w-5 h-5" />
                                         Book Free Demo
@@ -398,15 +422,15 @@ export default function HomePage() {
 
                         <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.15}>
                             {[
-                                { icon: Mail, iconBg: 'bg-red-50', iconColor: 'text-red-500', title: 'Inbox Overload', desc: "You start every day with 100+ emails demanding attention. By noon, you're behind." },
-                                { icon: MessageSquare, iconBg: 'bg-orange-50', iconColor: 'text-orange-500', title: 'Social Silence', desc: "Your last post was 3 weeks ago. Your competitors post daily. You know you should too." },
-                                { icon: Calendar, iconBg: 'bg-slate-100', iconColor: 'text-slate-500', title: 'Never Enough Time', desc: "Marketing, sales, admin—everything keeps getting pushed to 'next week.'" }
+                                { icon: Mail, iconBg: 'bg-gradient-to-br from-red-50 to-rose-100 shadow-sm shadow-red-100', iconColor: 'text-red-500', title: 'Inbox Overload', desc: "You start every day with 100+ emails demanding attention. By noon, you're behind." },
+                                { icon: MessageSquare, iconBg: 'bg-gradient-to-br from-orange-50 to-amber-100 shadow-sm shadow-orange-100', iconColor: 'text-orange-500', title: 'Social Silence', desc: "Your last post was 3 weeks ago. Your competitors post daily. You know you should too." },
+                                { icon: Calendar, iconBg: 'bg-gradient-to-br from-slate-50 to-slate-100 shadow-sm shadow-slate-200', iconColor: 'text-slate-500', title: 'Never Enough Time', desc: "Marketing, sales, admin—everything keeps getting pushed to 'next week.'" }
                             ].map((item, idx) => (
                                 <StaggerItem key={idx}>
                                     <motion.div
                                         {...hoverLift}
                                         transition={{ duration: 0.3 }}
-                                        className="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-100 card-shadow hover:card-shadow-hover transition-all"
+                                        className="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-100 hover:border-red-100/60 card-shadow hover:card-shadow-hover transition-all"
                                     >
                                         <div className={`w-12 h-12 md:w-14 md:h-14 ${item.iconBg} ${item.iconColor} rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform`}>
                                             <item.icon className="w-6 h-6 md:w-7 md:h-7" />
@@ -421,7 +445,7 @@ export default function HomePage() {
                 </section>
 
                 {/* ═══════════════ AI EMPLOYEE SHOWCASE ═══════════════ */}
-                <section className="py-16 md:py-24 bg-gradient-to-b from-white/60 to-warm">
+                <section className="py-16 md:py-24 bg-gradient-to-b from-primary-50/30 to-warm">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -463,7 +487,7 @@ export default function HomePage() {
                                                 <ul className="space-y-2 mb-4">
                                                     {emp.tasks.map((task, i) => (
                                                         <li key={i} className="flex items-center gap-2 text-sm text-slate-700">
-                                                            <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                                                            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                                                             {task}
                                                         </li>
                                                     ))}
@@ -487,11 +511,11 @@ export default function HomePage() {
                 </section>
 
                 {/* ═══════════════ HOW IT WORKS ═══════════════ */}
-                <section className="py-16 md:py-24 bg-warm">
+                <section className="py-16 md:py-24 bg-white">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center max-w-3xl mx-auto mb-16">
-                                <span className="section-label block mb-4 text-green-600">HOW IT WORKS</span>
+                                <span className="section-label block mb-4 text-emerald-600">HOW IT WORKS</span>
                                 <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Up and running in 5 minutes</h2>
                                 <p className="text-xl text-slate-600">No technical skills required. We handle everything.</p>
                             </div>
@@ -509,10 +533,10 @@ export default function HomePage() {
                                     <motion.div
                                         {...hoverLiftSmall}
                                         transition={{ duration: 0.3 }}
-                                        className="relative bg-white p-6 md:p-8 rounded-2xl border border-slate-100 card-shadow hover:card-shadow-hover hover:border-primary-200 transition-all text-center"
+                                        className="relative bg-white p-6 md:p-8 rounded-2xl border border-emerald-100/50 card-shadow hover:card-shadow-hover hover:border-primary-200 transition-all text-center"
                                     >
-                                        <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10 shadow-md">{step.num}</div>
-                                        <div className="w-12 h-12 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                        <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10 shadow-lg shadow-primary-200 ring-4 ring-primary-100">{step.num}</div>
+                                        <div className="w-12 h-12 bg-gradient-to-br from-primary-50 to-teal-100 shadow-sm shadow-primary-100 text-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                                             <step.icon className="w-6 h-6" />
                                         </div>
                                         <h3 className="text-xl font-bold text-slate-900 mb-3 font-serif">{step.title}</h3>
@@ -539,11 +563,11 @@ export default function HomePage() {
                 </section>
 
                 {/* ═══════════════ COMPARISON TABLE ═══════════════ */}
-                <section className="py-16 md:py-24 bg-white/60">
+                <section className="py-16 md:py-24 bg-warm">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center max-w-3xl mx-auto mb-16">
-                                <span className="section-label block mb-4 text-orange-600">COMPARE</span>
+                                <span className="section-label block mb-4 text-orange-500">COMPARE</span>
                                 <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Doing It Yourself vs AI Employees</h2>
                                 <p className="text-xl text-slate-600">Any business not using AI to improve productivity is leaving money on the table.</p>
                             </div>
@@ -598,7 +622,7 @@ export default function HomePage() {
                                         </div>
                                         <div className="p-5 text-center bg-primary-50/30 border-l border-primary-50 flex items-center justify-center">
                                             <span className="text-primary-700 font-semibold flex items-center gap-2">
-                                                <CheckCircle2 className="w-4 h-4 text-green-500" />
+                                                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                                                 {row.ai}
                                             </span>
                                         </div>
@@ -617,17 +641,17 @@ export default function HomePage() {
                                     { label: "Mental Load", icon: Brain, diy: "Constant stress & overwhelm", ai: "Peace of mind, it's handled" },
                                     { label: "Focus on Growth", icon: Rocket, diy: "Stuck in busywork", ai: "Free to scale your business" }
                                 ].map((row, idx) => (
-                                    <div key={idx} className="bg-white rounded-2xl p-4 border border-slate-100 card-shadow">
+                                    <div key={idx} className="bg-white rounded-2xl p-4 border border-slate-100 border-l-2 border-l-primary-200 card-shadow">
                                         <div className="flex items-center gap-2 mb-3">
                                             <row.icon className="w-4 h-4 text-slate-400 shrink-0" />
                                             <span className="font-semibold text-slate-900 text-sm">{row.label}</span>
                                         </div>
                                         <div className="flex items-start gap-2 mb-2 text-sm">
-                                            <X className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+                                            <X className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                                             <span className="text-slate-500">{row.diy}</span>
                                         </div>
                                         <div className="flex items-start gap-2 text-sm">
-                                            <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                                            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                                             <span className="text-primary-700 font-semibold">{row.ai}</span>
                                         </div>
                                     </div>
@@ -653,11 +677,11 @@ export default function HomePage() {
                 </section>
 
                 {/* ═══════════════ TESTIMONIALS (Tweet-wall style) ═══════════════ */}
-                <section className="py-16 md:py-24 bg-warm">
+                <section className="py-16 md:py-24 bg-gradient-to-br from-amber-50/40 via-warm to-warm">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center max-w-3xl mx-auto mb-16">
-                                <span className="section-label block mb-4 text-yellow-600">TESTIMONIALS</span>
+                                <span className="section-label block mb-4 text-amber-500">TESTIMONIALS</span>
                                 <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Loved by business owners</h2>
                             </div>
                         </ScrollReveal>
@@ -669,7 +693,7 @@ export default function HomePage() {
                                 { quote: "I hired the Legal Assistant to review contracts. Saved me thousands in lawyer fees this year alone.", author: "Adam Labs", role: "Tech Startup", initials: "AL" }
                             ].map((item, idx) => (
                                 <StaggerItem key={idx}>
-                                    <div className="bg-white p-6 rounded-2xl border border-slate-100 card-shadow hover:card-shadow-hover transition-all">
+                                    <div className="bg-white p-6 rounded-2xl border border-amber-100 card-shadow hover:card-shadow-hover transition-all">
                                         {/* Social-style header */}
                                         <div className="flex items-center gap-3 mb-4">
                                             <div className="w-11 h-11 rounded-full bg-gradient-to-r from-primary-500 to-teal-500 flex items-center justify-center font-bold text-white text-sm">
@@ -679,7 +703,7 @@ export default function HomePage() {
                                                 <div className="font-bold text-slate-900 text-sm">{item.author}</div>
                                                 <div className="text-xs text-slate-400">{item.role}</div>
                                             </div>
-                                            <div className="ml-auto flex gap-0.5 text-yellow-400">
+                                            <div className="ml-auto flex gap-0.5 text-yellow-400 star-glow">
                                                 {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-3.5 h-3.5 fill-current" />)}
                                             </div>
                                         </div>
@@ -692,7 +716,7 @@ export default function HomePage() {
                 </section>
 
                 {/* ═══════════════ PRICING ═══════════════ */}
-                <section className="py-16 md:py-24 bg-white/60">
+                <section className="py-16 md:py-24 bg-white">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <ScrollReveal>
                             <span className="section-label block mb-4">SIMPLE PRICING</span>
@@ -748,7 +772,7 @@ export default function HomePage() {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center mb-12">
-                                <span className="section-label block mb-4 text-blue-600">COMPARISONS</span>
+                                <span className="section-label block mb-4 text-indigo-500">COMPARISONS</span>
                                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 font-serif">Switching from another platform?</h2>
                                 <p className="text-lg text-slate-600">See why businesses choose Dooza</p>
                             </div>
@@ -771,7 +795,7 @@ export default function HomePage() {
                                         </div>
                                         <div className="flex items-center gap-4 text-sm">
                                             {item.benefits.map((b, i) => (
-                                                <span key={i} className="flex items-center gap-1 text-green-600">
+                                                <span key={i} className="flex items-center gap-1 text-emerald-600">
                                                     <CheckCircle2 className="w-4 h-4" />{b}
                                                 </span>
                                             ))}
@@ -792,7 +816,7 @@ export default function HomePage() {
                 </section>
 
                 {/* ═══════════════ SOLUTIONS SECTION ═══════════════ */}
-                <section className="py-16 md:py-24 bg-white/60">
+                <section className="py-16 md:py-24 bg-warm">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -804,10 +828,10 @@ export default function HomePage() {
 
                         <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
                             {[
-                                { id: 'ai-lead-generation', icon: TrendingUp, iconBg: 'bg-orange-50', iconColor: 'text-orange-500', borderHover: 'hover:border-orange-200', title: 'AI for Lead Generation', desc: 'Stan finds, qualifies, and nurtures leads around the clock so your pipeline never runs dry.' },
-                                { id: 'ai-customer-support', icon: Phone, iconBg: 'bg-purple-50', iconColor: 'text-purple-500', borderHover: 'hover:border-purple-200', title: 'AI for Customer Support', desc: 'Rachel answers every call 24/7, books appointments, and never puts a customer on hold.' },
-                                { id: 'ai-social-media-management', icon: MessageSquare, iconBg: 'bg-pink-50', iconColor: 'text-pink-500', borderHover: 'hover:border-pink-200', title: 'AI for Social Media Management', desc: 'Somi creates and posts engaging content daily across all your social platforms.' },
-                                { id: 'ai-inbox-management', icon: Mail, iconBg: 'bg-blue-50', iconColor: 'text-blue-500', borderHover: 'hover:border-blue-200', title: 'AI for Inbox Management', desc: 'Eva sorts, prioritizes, and responds to emails automatically so nothing slips through.' }
+                                { id: 'ai-lead-generation', icon: TrendingUp, iconBg: 'bg-gradient-to-br from-orange-50 to-amber-100 shadow-sm shadow-orange-100', iconColor: 'text-orange-500', borderHover: 'hover:border-orange-200', title: 'AI for Lead Generation', desc: 'Stan finds, qualifies, and nurtures leads around the clock so your pipeline never runs dry.' },
+                                { id: 'ai-customer-support', icon: Phone, iconBg: 'bg-gradient-to-br from-purple-50 to-violet-100 shadow-sm shadow-purple-100', iconColor: 'text-purple-500', borderHover: 'hover:border-purple-200', title: 'AI for Customer Support', desc: 'Rachel answers every call 24/7, books appointments, and never puts a customer on hold.' },
+                                { id: 'ai-social-media-management', icon: MessageSquare, iconBg: 'bg-gradient-to-br from-pink-50 to-rose-100 shadow-sm shadow-pink-100', iconColor: 'text-pink-500', borderHover: 'hover:border-pink-200', title: 'AI for Social Media Management', desc: 'Somi creates and posts engaging content daily across all your social platforms.' },
+                                { id: 'ai-inbox-management', icon: Mail, iconBg: 'bg-gradient-to-br from-blue-50 to-cyan-100 shadow-sm shadow-blue-100', iconColor: 'text-blue-500', borderHover: 'hover:border-blue-200', title: 'AI for Inbox Management', desc: 'Eva sorts, prioritizes, and responds to emails automatically so nothing slips through.' }
                             ].map((item, idx) => (
                                 <StaggerItem key={idx}>
                                     <motion.div
@@ -837,11 +861,11 @@ export default function HomePage() {
                 </section>
 
                 {/* ═══════════════ FAQ ═══════════════ */}
-                <section className="py-16 md:py-24 bg-warm">
+                <section className="py-16 md:py-24 bg-white">
                     <div className="max-w-4xl mx-auto px-4">
                         <ScrollReveal>
                             <div className="text-center mb-12">
-                                <span className="section-label block mb-4 text-slate-500">FAQ</span>
+                                <span className="section-label block mb-4 text-violet-500">FAQ</span>
                                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-serif">Frequently Asked Questions</h2>
                             </div>
                         </ScrollReveal>
@@ -867,8 +891,8 @@ export default function HomePage() {
                                 {[EvaCharacter, SomiCharacter, SeomiCharacter, RachelCharacter, StanCharacter, LindaCharacter].map((Character, idx) => (
                                     <div
                                         key={idx}
-                                        className={`${idx >= 4 ? 'hidden md:block' : ''} ${isMobile ? '' : 'animate-float'}`}
-                                        style={isMobile ? {} : { animationDelay: `${idx * 0.3}s` }}
+                                        className={`${idx >= 4 ? 'hidden md:block' : ''} animate-float`}
+                                        style={{ animationDelay: `${idx * 0.3}s` }}
                                     >
                                         <Character size={isMobile ? 40 : 56} />
                                     </div>
@@ -904,7 +928,7 @@ export default function HomePage() {
                                 <a
                                     href={CAL_BOOKING_URL}
                                     onClick={(e) => { handleAction(e); trackDemoClick('bottom_cta'); trackFBSchedule(); }}
-                                    className="inline-flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl transition-all"
+                                    className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-200 text-primary-700 hover:bg-primary-50 hover:border-primary-300 px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl transition-all"
                                 >
                                     <Calendar className="w-6 h-6" />
                                     Book Free Setup

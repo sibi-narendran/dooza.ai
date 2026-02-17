@@ -10,8 +10,8 @@ const directionOffsets = {
     right: { x: -40, y: 0 },
 };
 
-// On mobile: minimal fade-in only (no slide), shorter duration, no delays
-const mobileOffset = { y: 12, x: 0 };
+// On mobile: visible slide-in with moderate offset
+const mobileOffset = { y: 24, x: 0 };
 
 export default function ScrollReveal({
     children,
@@ -30,7 +30,7 @@ export default function ScrollReveal({
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once, margin: isMobile ? '-40px' : '-80px' }}
             transition={{
-                duration: isMobile ? 0.35 : duration,
+                duration: isMobile ? 0.45 : duration,
                 delay: isMobile ? 0 : delay,
                 ease: [0.25, 0.1, 0.25, 1],
             }}
@@ -51,7 +51,7 @@ export function StaggerContainer({ children, className = '', staggerDelay = 0.15
             viewport={{ once: true, margin: isMobile ? '-40px' : '-80px' }}
             variants={{
                 visible: {
-                    transition: { staggerChildren: isMobile ? 0.05 : staggerDelay },
+                    transition: { staggerChildren: isMobile ? 0.1 : staggerDelay },
                 },
             }}
             className={className}
@@ -74,7 +74,7 @@ export function StaggerItem({ children, className = '', direction = 'up' }) {
                     x: 0,
                     y: 0,
                     transition: {
-                        duration: isMobile ? 0.3 : 0.6,
+                        duration: isMobile ? 0.45 : 0.6,
                         ease: [0.25, 0.1, 0.25, 1],
                     },
                 },
