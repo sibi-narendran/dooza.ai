@@ -29,6 +29,7 @@ import BestAiReceptionistContent from './BestAiReceptionistContent';
 import AiStaffingContent from './AiStaffingContent';
 import VirtualReceptionistSmallBusinessContent from './VirtualReceptionistSmallBusinessContent';
 import BuildA20xCompanyContent from './BuildA20xCompanyContent';
+import HerEntireTeamWasAiContent from './HerEntireTeamWasAiContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -58,6 +59,7 @@ const BLOG_COMPONENTS = {
     'ai-staffing': AiStaffingContent,
     'virtual-receptionist-for-small-business': VirtualReceptionistSmallBusinessContent,
     'build-a-20x-company': BuildA20xCompanyContent,
+    'her-entire-team-was-ai': HerEntireTeamWasAiContent,
 };
 
 // Generate static params for all blog posts
