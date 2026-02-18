@@ -180,31 +180,35 @@ html {
   filter: drop-shadow(0 0 3px rgba(250, 204, 21, 0.4));
 }
 
-/* Scroll Reveal (replaces framer-motion ScrollReveal) */
+/* Scroll Reveal — visible by default, JS hides below-fold elements */
 .scroll-reveal {
+  opacity: 1; transform: none;
+}
+/* JS adds .scroll-animate to below-fold elements only */
+.scroll-reveal.scroll-animate {
   opacity: 0; transform: translateY(24px);
   transition: opacity 0.6s cubic-bezier(0.25,0.1,0.25,1), transform 0.6s cubic-bezier(0.25,0.1,0.25,1);
 }
-.scroll-reveal.revealed { opacity: 1; transform: translateY(0); }
-/* Instantly show if JS already revealed it on mount (no animation needed) */
-.scroll-reveal.revealed-instant { opacity: 1; transform: none; transition: none; }
+.scroll-reveal.scroll-animate.revealed { opacity: 1; transform: translateY(0); }
 
-/* Fallback: if JS hasn't hydrated after 1.5s, force all content visible */
+/* Fallback: if JS added scroll-animate but never revealed, force visible after 0.5s */
 @keyframes force-visible { to { opacity: 1; transform: none; } }
-.scroll-reveal { animation: force-visible 0s 1.5s forwards; }
-.scroll-reveal.revealed, .scroll-reveal.revealed-instant { animation: none; }
+.scroll-reveal.scroll-animate { animation: force-visible 0s 0.5s forwards; }
+.scroll-reveal.scroll-animate.revealed { animation: none; }
 
 /* Stagger children */
 .reveal-child {
+  opacity: 1; transform: none;
+}
+.scroll-animate .reveal-child {
   opacity: 0; transform: translateY(24px);
   transition: opacity 0.6s cubic-bezier(0.25,0.1,0.25,1), transform 0.6s cubic-bezier(0.25,0.1,0.25,1);
 }
-.revealed .reveal-child { opacity: 1; transform: translateY(0); }
-.revealed-instant .reveal-child { opacity: 1; transform: none; transition: none; }
+.scroll-animate.revealed .reveal-child { opacity: 1; transform: translateY(0); }
 
 /* Mobile: faster, subtler */
 @media (max-width: 767px) {
-  .scroll-reveal, .reveal-child { transform: translateY(16px); transition-duration: 0.45s; }
+  .scroll-reveal.scroll-animate, .scroll-animate .reveal-child { transform: translateY(16px); transition-duration: 0.35s; }
 }
 
 /* Card Interactions (replaces isMobile + framer-motion hover/tap) */
@@ -220,13 +224,19 @@ html {
   .card-interactive-scale:active { transform: scale(0.98); }
 }
 
-/* Hero Entrance (replaces framer-motion animate) */
+/* Hero Entrance — only animate if JS loaded (prevents flash of invisible content) */
 .hero-entrance {
+  opacity: 1; transform: none;
+}
+.js-loaded .hero-entrance {
   opacity: 0; transform: translateY(10px);
   animation: hero-enter 0.4s cubic-bezier(0.25,0.1,0.25,1) forwards;
 }
 @keyframes hero-enter { to { opacity: 1; transform: translateY(0); } }
 .hero-entrance-right {
+  opacity: 1; transform: none;
+}
+.js-loaded .hero-entrance-right {
   opacity: 0; transform: translateX(20px);
   animation: hero-enter-right 0.5s cubic-bezier(0.25,0.1,0.25,1) 0.15s forwards;
 }
@@ -236,11 +246,11 @@ html {
 .hero-delay-3 { animation-delay: 0.06s; }
 .hero-delay-4 { animation-delay: 0.15s; }
 @media (max-width: 767px) {
-  .hero-entrance { transform: translateY(6px); animation-duration: 0.25s; }
+  .js-loaded .hero-entrance { transform: translateY(6px); animation-duration: 0.2s; }
   .hero-delay-1 { animation-delay: 0s; }
-  .hero-delay-2 { animation-delay: 0.05s; }
-  .hero-delay-3 { animation-delay: 0.05s; }
-  .hero-delay-4 { animation-delay: 0.1s; }
+  .hero-delay-2 { animation-delay: 0.03s; }
+  .hero-delay-3 { animation-delay: 0.03s; }
+  .hero-delay-4 { animation-delay: 0.06s; }
 }
 
 /* FAQ Accordion (replaces framer-motion AnimatePresence) */
@@ -254,8 +264,9 @@ html {
 .faq-chevron.rotated { transform: rotate(180deg); }
 
 /* Comparison Row Fade */
-.comparison-row { opacity: 0; transition: opacity 0.4s ease; }
-.revealed .comparison-row { opacity: 1; }
+.comparison-row { opacity: 1; transition: opacity 0.4s ease; }
+.scroll-animate .comparison-row { opacity: 0; }
+.scroll-animate.revealed .comparison-row { opacity: 1; }
 
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {

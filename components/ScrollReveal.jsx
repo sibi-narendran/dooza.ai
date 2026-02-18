@@ -9,12 +9,14 @@ export default function ScrollReveal({ children, delay = 0, className = '' }) {
         const el = ref.current;
         if (!el) return;
 
-        // If element is already in viewport on mount, show it instantly (no animation)
+        // If element is already in viewport on mount, leave it visible (CSS default)
         const rect = el.getBoundingClientRect();
         if (rect.top < window.innerHeight + 50) {
-            el.classList.add('revealed-instant');
             return;
         }
+
+        // Below fold: hide it, then animate in on scroll
+        el.classList.add('scroll-animate');
 
         if (delay > 0) {
             el.style.transitionDelay = `${delay}s`;
@@ -48,12 +50,14 @@ export function StaggerContainer({ children, className = '', staggerDelay = 0.15
         const el = ref.current;
         if (!el) return;
 
-        // If element is already in viewport on mount, show it instantly
+        // If element is already in viewport on mount, leave it visible
         const rect = el.getBoundingClientRect();
         if (rect.top < window.innerHeight + 50) {
-            el.classList.add('revealed-instant');
             return;
         }
+
+        // Below fold: hide it, then animate in on scroll
+        el.classList.add('scroll-animate');
 
         // Apply stagger delays to reveal-child children
         const items = el.querySelectorAll('.reveal-child');

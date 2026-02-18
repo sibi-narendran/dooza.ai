@@ -103,6 +103,7 @@ export default function RootLayout({ children }) {
         {resourceHints.map((hint, index) => (
           <link key={index} rel={hint.rel} href={hint.href} />
         ))}
+        <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('js-loaded')` }} />
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
