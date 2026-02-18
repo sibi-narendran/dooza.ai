@@ -16,11 +16,25 @@
 }
 
 body {
-  @apply antialiased text-slate-600 bg-white font-sans overflow-x-hidden;
+  @apply antialiased text-slate-600 bg-warm font-sans overflow-x-hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-slate-900 font-bold tracking-tight;
+  @apply text-slate-900 font-bold tracking-tight font-serif;
+}
+
+/* Section labels */
+.section-label {
+  @apply uppercase tracking-[3px] text-primary-600 text-sm font-bold font-sans;
+}
+
+/* Soft card shadow */
+.card-shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.03);
+}
+
+.card-shadow-hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 16px 40px rgba(0,0,0,0.06);
 }
 
 /* Scroll animation */
@@ -113,6 +127,17 @@ h1, h2, h3, h4, h5, h6 {
   animation: float 3s ease-in-out infinite;
 }
 
+/* Mobile: reduced float amplitude */
+@media (max-width: 767px) {
+  .animate-float {
+    animation: float-mobile 3s ease-in-out infinite;
+  }
+}
+@keyframes float-mobile {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
 /* Glow effect */
 @keyframes glow {
   0%, 100% {
@@ -148,4 +173,113 @@ html {
 
 .dark-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #444;
+}
+
+/* Star golden glow */
+.star-glow {
+  filter: drop-shadow(0 0 3px rgba(250, 204, 21, 0.4));
+}
+
+/* Scroll Reveal (replaces framer-motion ScrollReveal) */
+.scroll-reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.25,0.1,0.25,1), transform 0.6s cubic-bezier(0.25,0.1,0.25,1);
+}
+.scroll-reveal.revealed { opacity: 1; transform: translateY(0); }
+/* Instantly show if JS already revealed it on mount (no animation needed) */
+.scroll-reveal.revealed-instant { opacity: 1; transform: none; transition: none; }
+
+/* Fallback: if JS hasn't hydrated after 1.5s, force all content visible */
+@keyframes force-visible { to { opacity: 1; transform: none; } }
+.scroll-reveal { animation: force-visible 0s 1.5s forwards; }
+.scroll-reveal.revealed, .scroll-reveal.revealed-instant { animation: none; }
+
+/* Stagger children */
+.reveal-child {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.25,0.1,0.25,1), transform 0.6s cubic-bezier(0.25,0.1,0.25,1);
+}
+.revealed .reveal-child { opacity: 1; transform: translateY(0); }
+.revealed-instant .reveal-child { opacity: 1; transform: none; transition: none; }
+
+/* Mobile: faster, subtler */
+@media (max-width: 767px) {
+  .scroll-reveal, .reveal-child { transform: translateY(16px); transition-duration: 0.45s; }
+}
+
+/* Card Interactions (replaces isMobile + framer-motion hover/tap) */
+.card-interactive { transition: transform 0.3s ease; }
+@media (min-width: 768px) {
+  .card-interactive:hover { transform: translateY(-6px); }
+  .card-interactive-sm:hover { transform: translateY(-4px); }
+  .card-interactive-scale:hover { transform: scale(1.01); }
+}
+@media (max-width: 767px) {
+  .card-interactive:active { transform: scale(0.97); }
+  .card-interactive-sm:active { transform: scale(0.98); }
+  .card-interactive-scale:active { transform: scale(0.98); }
+}
+
+/* Hero Entrance (replaces framer-motion animate) */
+.hero-entrance {
+  opacity: 0; transform: translateY(10px);
+  animation: hero-enter 0.4s cubic-bezier(0.25,0.1,0.25,1) forwards;
+}
+@keyframes hero-enter { to { opacity: 1; transform: translateY(0); } }
+.hero-entrance-right {
+  opacity: 0; transform: translateX(20px);
+  animation: hero-enter-right 0.5s cubic-bezier(0.25,0.1,0.25,1) 0.15s forwards;
+}
+@keyframes hero-enter-right { to { opacity: 1; transform: translateX(0); } }
+.hero-delay-1 { animation-delay: 0s; }
+.hero-delay-2 { animation-delay: 0.08s; }
+.hero-delay-3 { animation-delay: 0.06s; }
+.hero-delay-4 { animation-delay: 0.15s; }
+@media (max-width: 767px) {
+  .hero-entrance { transform: translateY(6px); animation-duration: 0.25s; }
+  .hero-delay-1 { animation-delay: 0s; }
+  .hero-delay-2 { animation-delay: 0.05s; }
+  .hero-delay-3 { animation-delay: 0.05s; }
+  .hero-delay-4 { animation-delay: 0.1s; }
+}
+
+/* FAQ Accordion (replaces framer-motion AnimatePresence) */
+.faq-content {
+  display: grid; grid-template-rows: 0fr; opacity: 0;
+  transition: grid-template-rows 0.3s cubic-bezier(0.25,0.1,0.25,1), opacity 0.3s cubic-bezier(0.25,0.1,0.25,1);
+}
+.faq-content.open { grid-template-rows: 1fr; opacity: 1; }
+.faq-content > div { overflow: hidden; }
+.faq-chevron { transition: transform 0.3s ease; }
+.faq-chevron.rotated { transform: rotate(180deg); }
+
+/* Comparison Row Fade */
+.comparison-row { opacity: 0; transition: opacity 0.4s ease; }
+.revealed .comparison-row { opacity: 1; }
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-blob,
+  .animate-pulse,
+  .animate-pulse-slow,
+  .animate-gradient,
+  .animate-glow,
+  .animate-scroll,
+  .animate-fade-in,
+  .scroll-reveal,
+  .reveal-child,
+  .hero-entrance,
+  .hero-entrance-right,
+  .card-interactive,
+  .card-interactive-sm,
+  .card-interactive-scale,
+  .faq-content,
+  .faq-chevron,
+  .comparison-row {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

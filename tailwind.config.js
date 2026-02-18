@@ -19,9 +19,11 @@ module.exports = {
           800: '#115e59',
           900: '#134e4a',
         },
+        warm: '#faf9f7',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
       }
     },
   },

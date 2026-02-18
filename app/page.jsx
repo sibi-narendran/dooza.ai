@@ -1,4 +1,19 @@
-import HomePage from './HomeContent';
+import BookingModalProvider from '@/components/BookingModalProvider';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import HeroSection from '@/components/sections/HeroSection';
+import IntegrationsBar from '@/components/sections/IntegrationsBar';
+import ProblemSection from '@/components/sections/ProblemSection';
+import AIEmployeeShowcase from '@/components/sections/AIEmployeeShowcase';
+import HowItWorksSection from '@/components/sections/HowItWorksSection';
+import ComparisonSection from '@/components/sections/ComparisonSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
+import PricingSection from '@/components/sections/PricingSection';
+import CompetitorAlternatives from '@/components/sections/CompetitorAlternatives';
+import SolutionsSection from '@/components/sections/SolutionsSection';
+import FAQSection from '@/components/sections/FAQSection';
+import FinalCTASection from '@/components/sections/FinalCTASection';
+import { faqSchema } from '@/lib/homeData';
 
 export const metadata = {
     title: { absolute: 'AI Employees for Business Automation | Dooza.ai' },
@@ -388,11 +403,31 @@ export default function Home() {
                         productSchema,
                         serviceSchema,
                         howToSchema,
-                        aiEmployeesListSchema
+                        aiEmployeesListSchema,
+                        faqSchema
                     ])
                 }}
             />
-            <HomePage />
+            <BookingModalProvider>
+                <div className="min-h-screen bg-warm text-slate-900 font-sans overflow-x-hidden">
+                    <Navbar />
+                    <main>
+                        <HeroSection />
+                        <IntegrationsBar />
+                        <ProblemSection />
+                        <AIEmployeeShowcase />
+                        <HowItWorksSection />
+                        <ComparisonSection />
+                        <TestimonialsSection />
+                        <PricingSection />
+                        <CompetitorAlternatives />
+                        <SolutionsSection />
+                        <FAQSection />
+                        <FinalCTASection />
+                    </main>
+                    <Footer />
+                </div>
+            </BookingModalProvider>
         </>
     );
 }

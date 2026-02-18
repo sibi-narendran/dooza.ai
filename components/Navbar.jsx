@@ -2,11 +2,12 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { getProductSignupUrl, getProductSigninUrl } from '@/lib/links';
 import { trackSignupClick } from '@/lib/analytics';
 
-const Navbar = ({ openModal, variant = 'light' }) => {
+const Navbar = ({ variant = 'light' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
@@ -46,7 +47,7 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-10">
                         <Link href="/" className="flex-shrink-0 flex items-center gap-2">
-                            <img src="/logo.png" alt="Dooza" className="w-8 h-8 rounded-lg" width="32" height="32" />
+                            <Image src="/logo.png" alt="Dooza" className="rounded-lg" width={32} height={32} />
                             <span className={`text-xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
                                 Dooza
                             </span>
@@ -57,6 +58,12 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                             <div className="relative" ref={dropdownRef}>
                                 <button
                                     onClick={() => setProductsOpen(!productsOpen)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Escape') setProductsOpen(false);
+                                    }}
+                                    aria-expanded={productsOpen}
+                                    aria-haspopup="true"
+                                    aria-controls="products-dropdown"
                                     className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
                                         ? 'text-gray-300 hover:text-white'
                                         : 'text-slate-600 hover:text-primary-600'
@@ -67,16 +74,24 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                                 </button>
 
                                 {productsOpen && (
-                                    <div className={`absolute top-full left-0 mt-2 min-w-[180px] rounded-xl shadow-xl border overflow-hidden ${isDark
-                                        ? 'bg-[#12121a] border-white/10'
-                                        : 'bg-white border-slate-100'
-                                        }`}>
+                                    <div
+                                        id="products-dropdown"
+                                        role="menu"
+                                        className={`absolute top-full left-0 mt-2 min-w-[180px] rounded-xl shadow-xl border overflow-hidden ${isDark
+                                            ? 'bg-[#12121a] border-white/10'
+                                            : 'bg-white border-slate-100'
+                                        }`}
+                                    >
                                         <div className="py-2">
                                             {products.map((product) => (
                                                 <Link
                                                     key={product.name}
                                                     href={product.href}
+                                                    role="menuitem"
                                                     onClick={() => setProductsOpen(false)}
+                                                    onKeyDown={(e) => {
+                                                        if (e.key === 'Escape') setProductsOpen(false);
+                                                    }}
                                                     className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${isDark
                                                         ? 'text-gray-300 hover:bg-white/5 hover:text-white'
                                                         : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
@@ -141,6 +156,8 @@ const Navbar = ({ openModal, variant = 'light' }) => {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
+                            aria-expanded={isOpen}
+                            aria-label={isOpen ? 'Close menu' : 'Open menu'}
                             className={isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}

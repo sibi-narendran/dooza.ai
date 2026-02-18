@@ -13,6 +13,6 @@ export default function robots() {
             },
         ],
         sitemap: 'https://www.dooza.ai/sitemap.xml',
-        host: 'https://www.dooza.ai',
+        host: 'www.dooza.ai',
     };
 }
