@@ -180,42 +180,54 @@ html {
   filter: drop-shadow(0 0 3px rgba(250, 204, 21, 0.4));
 }
 
-/* Scroll Reveal — visible by default, JS hides below-fold elements */
-.scroll-reveal {
+/* ============================================================
+   Scroll Reveal — PURE CSS, zero JavaScript.
+   Uses animation-timeline: view() for scroll-triggered animations.
+   Content is ALWAYS visible by default. Animation is progressive enhancement.
+   ============================================================ */
+
+/* Base: everything visible. Always. */
+.scroll-reveal, .scroll-stagger, .reveal-child, .comparison-row {
   opacity: 1; transform: none;
 }
-/* JS adds .scroll-animate to below-fold elements — INSTANT hide, no transition */
-.scroll-reveal.scroll-animate {
-  opacity: 0; transform: translateY(24px);
-}
-/* Only the REVEAL animates (0→1) */
-.scroll-reveal.scroll-animate.revealed {
-  opacity: 1; transform: translateY(0);
-  transition: opacity 0.6s cubic-bezier(0.25,0.1,0.25,1), transform 0.6s cubic-bezier(0.25,0.1,0.25,1);
+
+/* Desktop: scroll-triggered fade-in (progressive enhancement) */
+@supports (animation-timeline: view()) {
+  @media (min-width: 768px) {
+    @keyframes scroll-fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .scroll-reveal {
+      animation: scroll-fade-in ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 25%;
+    }
+
+    /* Stagger containers: don't animate the container, animate each child */
+    .scroll-stagger { animation: none; }
+    .scroll-stagger .reveal-child {
+      animation: scroll-fade-in ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+
+    /* Comparison rows get their own scroll animation */
+    .comparison-row {
+      animation: scroll-fade-in ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
 }
 
-/* Fallback: if JS added scroll-animate but never revealed, force visible after 0.5s */
-@keyframes force-visible { to { opacity: 1; transform: none; } }
-.scroll-reveal.scroll-animate { animation: force-visible 0s 0.5s forwards; }
-.scroll-reveal.scroll-animate.revealed { animation: none; }
-
-/* Stagger children */
-.reveal-child {
-  opacity: 1; transform: none;
-}
-/* INSTANT hide — no transition */
-.scroll-animate .reveal-child {
-  opacity: 0; transform: translateY(24px);
-}
-/* Only the REVEAL animates */
-.scroll-animate.revealed .reveal-child {
-  opacity: 1; transform: translateY(0);
-  transition: opacity 0.6s cubic-bezier(0.25,0.1,0.25,1), transform 0.6s cubic-bezier(0.25,0.1,0.25,1);
-}
-
-/* Mobile: faster, subtler */
+/* Mobile: no animations, everything visible instantly */
 @media (max-width: 767px) {
-  .scroll-reveal.scroll-animate.revealed, .scroll-animate.revealed .reveal-child { transform: translateY(16px); transition-duration: 0.35s; }
+  .scroll-reveal, .scroll-stagger, .reveal-child, .comparison-row {
+    opacity: 1 !important; transform: none !important;
+    animation: none !important;
+  }
 }
 
 /* Card Interactions (replaces isMobile + framer-motion hover/tap) */
@@ -253,11 +265,11 @@ html {
 .hero-delay-3 { animation-delay: 0.06s; }
 .hero-delay-4 { animation-delay: 0.15s; }
 @media (max-width: 767px) {
-  .js-loaded .hero-entrance { transform: translateY(6px); animation-duration: 0.2s; }
-  .hero-delay-1 { animation-delay: 0s; }
-  .hero-delay-2 { animation-delay: 0.03s; }
-  .hero-delay-3 { animation-delay: 0.03s; }
-  .hero-delay-4 { animation-delay: 0.06s; }
+  /* Mobile: NO hero animation. Content visible instantly. Period. */
+  .hero-entrance, .hero-entrance-right,
+  .js-loaded .hero-entrance, .js-loaded .hero-entrance-right {
+    opacity: 1 !important; transform: none !important; animation: none !important;
+  }
 }
 
 /* FAQ Accordion (replaces framer-motion AnimatePresence) */
@@ -270,10 +282,7 @@ html {
 .faq-chevron { transition: transform 0.3s ease; }
 .faq-chevron.rotated { transform: rotate(180deg); }
 
-/* Comparison Row Fade */
-.comparison-row { opacity: 1; }
-.scroll-animate .comparison-row { opacity: 0; }
-.scroll-animate.revealed .comparison-row { opacity: 1; transition: opacity 0.4s ease; }
+/* Comparison rows: styled via scroll-reveal CSS above */
 
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
@@ -286,15 +295,16 @@ html {
   .animate-scroll,
   .animate-fade-in,
   .scroll-reveal,
+  .scroll-stagger,
   .reveal-child,
+  .comparison-row,
   .hero-entrance,
   .hero-entrance-right,
   .card-interactive,
   .card-interactive-sm,
   .card-interactive-scale,
   .faq-content,
-  .faq-chevron,
-  .comparison-row {
+  .faq-chevron {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;

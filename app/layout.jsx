@@ -104,6 +104,14 @@ export default function RootLayout({ children }) {
           <link key={index} rel={hint.rel} href={hint.href} />
         ))}
         <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('js-loaded')` }} />
+        {/* Critical inline CSS — loads instantly in HTML bytes, before any external file.
+            Forces ALL content visible on mobile. Zero blank page possible. */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          @media(max-width:767px){
+            .hero-entrance,.hero-entrance-right{opacity:1!important;transform:none!important;animation:none!important}
+            .scroll-reveal,.scroll-stagger,.reveal-child,.comparison-row{opacity:1!important;transform:none!important;animation:none!important}
+          }
+        `}} />
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
