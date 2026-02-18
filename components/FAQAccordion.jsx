@@ -10,6 +10,7 @@ function FAQItem({ item, index }) {
     return (
         <div className="bg-white rounded-2xl border border-violet-50 hover:border-violet-100 transition-all card-shadow overflow-hidden">
             <button
+                id={`faq-btn-${index}`}
                 onClick={() => setIsOpen(!isOpen)}
                 aria-expanded={isOpen}
                 aria-controls={contentId}

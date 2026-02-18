@@ -165,7 +165,7 @@ export default function AIEmployeeShowcase() {
                                     onClick={() => handleSelect(idx)}
                                     className={`rounded-full transition-all duration-300 ${
                                         idx === activeIndex
-                                            ? 'w-8 h-2.5 bg-gradient-to-r ' + active.color
+                                            ? `w-8 h-2.5 bg-gradient-to-r ${active.color}`
                                             : 'w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400'
                                     }`}
                                     aria-label={`Show ${aiEmployees[idx].name}`}
