@@ -107,7 +107,7 @@ export default function RootLayout({ children }) {
         {/* Critical inline CSS — loads instantly in HTML bytes, before any external file.
             Forces ALL content visible on mobile. Zero blank page possible. */}
         <style dangerouslySetInnerHTML={{ __html: `
-          @media(max-width:767px){
+          @media(max-width:1023px){
             .hero-entrance,.hero-entrance-right{opacity:1!important;transform:none!important;animation:none!important}
             .scroll-reveal,.scroll-stagger,.reveal-child,.comparison-row{opacity:1!important;transform:none!important;animation:none!important}
           }

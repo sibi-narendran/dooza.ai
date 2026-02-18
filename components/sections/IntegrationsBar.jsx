@@ -1,8 +1,8 @@
-import { Calendar, X } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 export default function IntegrationsBar() {
     return (
-        <section className="py-12 bg-white/60 backdrop-blur-sm border-y border-slate-100">
+        <section className="py-12 bg-white border-y border-slate-100">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <p className="text-center text-sm text-slate-500 mb-8 font-medium uppercase tracking-wide">Seamlessly integrates with your favorite tools</p>
                 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
@@ -43,7 +43,9 @@ export default function IntegrationsBar() {
                     </div>
                     {/* X/Twitter */}
                     <div className="flex items-center gap-2 text-slate-400 hover:text-slate-600 transition-colors">
-                        <X className="w-5 h-5" />
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
                         <span className="font-medium text-sm">X</span>
                     </div>
                     {/* Zapier */}

@@ -8,8 +8,8 @@ const characters = [EvaCharacter, SomiCharacter, SeomiCharacter, RachelCharacter
 export default function FinalCTASection() {
     return (
         <section className="py-16 md:py-24 bg-gradient-to-br from-primary-50 via-teal-50 to-primary-50 relative overflow-hidden">
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary-100/50 rounded-full blur-[120px]"></div>
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-teal-100/50 rounded-full blur-[120px]"></div>
+            <div className="hidden md:block absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary-100/50 rounded-full blur-[120px]"></div>
+            <div className="hidden md:block absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-teal-100/50 rounded-full blur-[120px]"></div>
 
             <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
                 {/* Character illustrations waving */}

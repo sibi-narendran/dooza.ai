@@ -6,6 +6,8 @@ import ScrollReveal from '@/components/ScrollReveal';
 import { getProductSignupUrl } from '@/lib/links';
 import { aiEmployees } from '@/lib/homeData';
 
+const ROTATION_INTERVAL = 4000;
+const RESUME_DELAY = 10000;
 const iconMap = { Mail, MessageSquare, Search, Phone, TrendingUp, FileText };
 
 export default function AIEmployeeShowcase() {
@@ -22,7 +24,7 @@ export default function AIEmployeeShowcase() {
         if (isPaused) return;
         intervalRef.current = setInterval(() => {
             setActiveIndex(prev => (prev + 1) % aiEmployees.length);
-        }, 4000);
+        }, ROTATION_INTERVAL);
         return () => clearInterval(intervalRef.current);
     }, [isPaused]);
 
@@ -30,7 +32,7 @@ export default function AIEmployeeShowcase() {
         setActiveIndex(index);
         setIsPaused(true);
         clearTimeout(resumeTimerRef.current);
-        resumeTimerRef.current = setTimeout(() => setIsPaused(false), 10000);
+        resumeTimerRef.current = setTimeout(() => setIsPaused(false), RESUME_DELAY);
     }, []);
 
     const handleMouseEnter = useCallback(() => {
@@ -39,7 +41,7 @@ export default function AIEmployeeShowcase() {
     }, []);
 
     const handleMouseLeave = useCallback(() => {
-        resumeTimerRef.current = setTimeout(() => setIsPaused(false), 10000);
+        resumeTimerRef.current = setTimeout(() => setIsPaused(false), RESUME_DELAY);
     }, []);
 
     // Cleanup
@@ -67,15 +69,20 @@ export default function AIEmployeeShowcase() {
                         onMouseLeave={handleMouseLeave}
                     >
                         {/* Tab buttons */}
-                        <div className="flex flex-wrap justify-center gap-2 mb-8">
+                        <div className="flex flex-wrap justify-center gap-2 mb-8" role="tablist" aria-label="AI Employees">
                             {aiEmployees.map((emp, idx) => {
                                 const TabIcon = iconMap[emp.iconName];
                                 const isActive = idx === activeIndex;
                                 return (
                                     <button
                                         key={idx}
+                                        role="tab"
+                                        aria-selected={isActive}
+                                        aria-label={emp.name}
                                         onClick={() => handleSelect(idx)}
-                                        className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                                        onFocus={handleMouseEnter}
+                                        onBlur={handleMouseLeave}
+                                        className={`flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-full text-sm font-semibold transition-all duration-300 ${
                                             isActive
                                                 ? `bg-gradient-to-r ${emp.color} text-white shadow-lg scale-105`
                                                 : 'bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 hover:border-slate-300'
@@ -158,18 +165,20 @@ export default function AIEmployeeShowcase() {
                         </div>
 
                         {/* Progress dots */}
-                        <div className="flex justify-center gap-2 mt-6">
+                        <div className="flex justify-center gap-1 mt-6">
                             {aiEmployees.map((_, idx) => (
                                 <button
                                     key={idx}
                                     onClick={() => handleSelect(idx)}
-                                    className={`rounded-full transition-all duration-300 ${
+                                    className={`p-2 rounded-full transition-all duration-300`}
+                                    aria-label={`Show ${aiEmployees[idx].name}`}
+                                >
+                                    <span className={`block rounded-full transition-all duration-300 ${
                                         idx === activeIndex
                                             ? `w-8 h-2.5 bg-gradient-to-r ${active.color}`
-                                            : 'w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400'
-                                    }`}
-                                    aria-label={`Show ${aiEmployees[idx].name}`}
-                                />
+                                            : 'w-2.5 h-2.5 bg-slate-300'
+                                    }`} />
+                                </button>
                             ))}
                         </div>
                     </div>

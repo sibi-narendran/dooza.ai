@@ -5,13 +5,13 @@ import BookDemoButton from '@/components/buttons/BookDemoButton';
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-[70vh] md:min-h-[90vh] flex flex-col items-center justify-center px-4 md:px-8 pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden">
+        <section className="relative min-h-[70dvh] md:min-h-[90dvh] flex flex-col items-center justify-center px-4 md:px-8 pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden">
             {/* Animated Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-50/80 via-warm to-warm"></div>
-                <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-100/30 rounded-full blur-[120px] animate-pulse"></div>
-                <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[120px] animate-pulse animation-delay-2000"></div>
-                <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-primary-50/30 to-transparent rounded-full blur-[80px]"></div>
+                <div className="hidden md:block absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-100/30 rounded-full blur-[120px]"></div>
+                <div className="hidden md:block absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[120px]"></div>
+                <div className="hidden md:block absolute -bottom-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-primary-50/30 to-transparent rounded-full blur-[80px]"></div>
                 {/* Grid pattern */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
             </div>

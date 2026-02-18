@@ -37,16 +37,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 16px 40px rgba(0,0,0,0.06);
 }
 
-/* Scroll animation */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-scroll {
-  animation: scroll 30s linear infinite;
-}
-
 /* Blob animation */
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
@@ -94,29 +84,6 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 200% 200%;
 }
 
-/* Fade in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-/* Stagger animations */
-.animation-delay-100 { animation-delay: 0.1s; }
-.animation-delay-200 { animation-delay: 0.2s; }
-.animation-delay-300 { animation-delay: 0.3s; }
-.animation-delay-400 { animation-delay: 0.4s; }
-.animation-delay-500 { animation-delay: 0.5s; }
-
 /* Float animation */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -127,52 +94,11 @@ h1, h2, h3, h4, h5, h6 {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Mobile: reduced float amplitude */
-@media (max-width: 767px) {
+/* Mobile: no float animation — save GPU */
+@media (max-width: 1023px) {
   .animate-float {
-    animation: float-mobile 3s ease-in-out infinite;
+    animation: none;
   }
-}
-@keyframes float-mobile {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-/* Glow effect */
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(16, 185, 129, 0.4);
-  }
-}
-
-.animate-glow {
-  animation: glow 2s ease-in-out infinite;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar for dark theme */
-.dark-scrollbar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.dark-scrollbar::-webkit-scrollbar-track {
-  background: #0a0a0f;
-}
-
-.dark-scrollbar::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
-}
-
-.dark-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #444;
 }
 
 /* Star golden glow */
@@ -193,7 +119,7 @@ html {
 
 /* Desktop: scroll-triggered fade-in (progressive enhancement) */
 @supports (animation-timeline: view()) {
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     @keyframes scroll-fade-in {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -222,8 +148,8 @@ html {
   }
 }
 
-/* Mobile: no animations, everything visible instantly */
-@media (max-width: 767px) {
+/* Mobile + tablet: no animations, everything visible instantly */
+@media (max-width: 1023px) {
   .scroll-reveal, .scroll-stagger, .reveal-child, .comparison-row {
     opacity: 1 !important; transform: none !important;
     animation: none !important;
@@ -264,8 +190,8 @@ html {
 .hero-delay-2 { animation-delay: 0.08s; }
 .hero-delay-3 { animation-delay: 0.06s; }
 .hero-delay-4 { animation-delay: 0.15s; }
-@media (max-width: 767px) {
-  /* Mobile: NO hero animation. Content visible instantly. Period. */
+@media (max-width: 1023px) {
+  /* Mobile + tablet: NO hero animation. Content visible instantly. Period. */
   .hero-entrance, .hero-entrance-right,
   .js-loaded .hero-entrance, .js-loaded .hero-entrance-right {
     opacity: 1 !important; transform: none !important; animation: none !important;
@@ -282,8 +208,6 @@ html {
 .faq-chevron { transition: transform 0.3s ease; }
 .faq-chevron.rotated { transform: rotate(180deg); }
 
-/* Comparison rows: styled via scroll-reveal CSS above */
-
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
@@ -291,9 +215,6 @@ html {
   .animate-pulse,
   .animate-pulse-slow,
   .animate-gradient,
-  .animate-glow,
-  .animate-scroll,
-  .animate-fade-in,
   .scroll-reveal,
   .scroll-stagger,
   .reveal-child,

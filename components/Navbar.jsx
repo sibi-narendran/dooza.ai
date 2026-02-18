@@ -17,7 +17,7 @@ const Navbar = ({ variant = 'light' }) => {
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -39,10 +39,16 @@ const Navbar = ({ variant = 'light' }) => {
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled
             ? isDark
-                ? 'bg-[#0a0a0f]/90 backdrop-blur-md shadow-lg shadow-black/20 py-3'
-                : 'bg-white/90 backdrop-blur-md shadow-sm py-3'
+                ? 'bg-[#0a0a0f] md:bg-[#0a0a0f]/90 md:backdrop-blur-md shadow-lg shadow-black/20 py-3'
+                : 'bg-white md:bg-white/90 md:backdrop-blur-md shadow-sm py-3'
             : 'bg-transparent py-5'
             }`}>
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
+            >
+                Skip to main content
+            </a>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-10">
@@ -64,6 +70,7 @@ const Navbar = ({ variant = 'light' }) => {
                                     aria-expanded={productsOpen}
                                     aria-haspopup="true"
                                     aria-controls="products-dropdown"
+                                    aria-label="Products menu"
                                     className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
                                         ? 'text-gray-300 hover:text-white'
                                         : 'text-slate-600 hover:text-primary-600'

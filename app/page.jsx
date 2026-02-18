@@ -409,9 +409,9 @@ export default function Home() {
                 }}
             />
             <BookingModalProvider>
-                <div className="min-h-screen bg-warm text-slate-900 font-sans overflow-x-hidden">
+                <div className="min-h-screen bg-warm text-slate-900 font-sans">
                     <Navbar />
-                    <main>
+                    <main id="main-content">
                         <HeroSection />
                         <IntegrationsBar />
                         <ProblemSection />

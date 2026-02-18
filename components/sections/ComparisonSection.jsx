@@ -46,7 +46,6 @@ export default function ComparisonSection() {
                                 <div
                                     key={idx}
                                     className={`comparison-row grid grid-cols-3 border-b border-slate-50 last:border-b-0 ${idx % 2 === 1 ? 'bg-slate-50/30' : ''}`}
-                                    style={{ transitionDelay: `${idx * 0.08}s` }}
                                 >
                                     <div className="p-5 flex items-center gap-3">
                                         <Icon className="w-5 h-5 text-slate-400 shrink-0" />

@@ -126,7 +126,7 @@ export default function StudioContent() {
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             <Navbar />
 
-            <main>
+            <main id="main-content">
                 {/* Hero Section */}
                 <section className="min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-20 md:pt-24 pb-8 md:pb-16 relative overflow-hidden bg-white">
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">

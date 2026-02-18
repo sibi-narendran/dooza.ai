@@ -27,15 +27,24 @@ const BookingModal = ({ isOpen, onClose }) => {
         };
     }, [isOpen]);
 
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') onClose();
+        };
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [isOpen, onClose]);
+
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Book a demo">
             <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onClick={onClose}></div>
-            <div className="relative w-full max-w-4xl h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+            <div className="relative w-full max-w-4xl h-[80dvh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col">
                 <div className="flex justify-between items-center p-4 border-b border-slate-100 bg-white z-10">
                     <h3 className="text-lg font-semibold text-slate-900">Speak with Expert now</h3>
-                    <button onClick={onClose} className="p-2 text-slate-400 hover:text-slate-600 rounded-full">
+                    <button onClick={onClose} aria-label="Close booking modal" className="p-2 text-slate-400 hover:text-slate-600 rounded-full">
                         <X size={20} />
                     </button>
                 </div>
