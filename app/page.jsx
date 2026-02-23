@@ -48,7 +48,7 @@ const organizationSchema = {
     "foundingDate": "2024",
     "founder": {
         "@type": "Person",
-        "name": "Sibin Arendran",
+        "name": "Sibi Narendran",
         "url": "https://twitter.com/sibinarendran"
     },
     "sameAs": [

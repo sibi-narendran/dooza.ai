@@ -142,7 +142,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                             Most people building on OpenClaw are making the same mistake. They're building AI tools. They should be building AI employees. The difference is worth 100x in revenue.
                         </p>
                         <p className="text-sm text-slate-500 mb-8">
-                            By <a href="https://twitter.com/sibinarendran" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Sibin Arendran</a>, Founder at Dooza
+                            By <a href="https://twitter.com/sibinarendran" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Sibi Narendran</a>, Founder at Dooza
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
