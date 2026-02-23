@@ -12,6 +12,7 @@ import RelatedPosts from '../../../components/RelatedPosts';
 import InternalLinks from '../../../components/InternalLinks';
 import TwitterEmbed from '../../../components/TwitterEmbed';
 import BlogHeroImage from '../../../components/BlogHeroImage';
+import YouTubeEmbed from '../../../components/YouTubeEmbed';
 import {
     CheckCircle2,
     XCircle,
@@ -343,6 +344,11 @@ export default function AiEmployeesOpenclawBusinessContent() {
                                 <p className="text-lg font-semibold text-slate-900">
                                     So we flipped the model. Build the infrastructure once on OpenClaw. Let anyone build brains. That's the real business.
                                 </p>
+                            </div>
+
+                            <div className="my-8">
+                                <YouTubeEmbed videoId="YRhGtHfs1Lw" title="Building AI Employees as a Business on OpenClaw" />
+                                <p className="text-sm text-slate-500 text-center mt-3">Watch: How to build AI employees as a business</p>
                             </div>
                         </section>
 

@@ -10,6 +10,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
 import InternalLinks from '../../../components/InternalLinks';
 import BlogHeroImage from '../../../components/BlogHeroImage';
+import YouTubeEmbed from '../../../components/YouTubeEmbed';
 import {
     CheckCircle2,
     Clock,
@@ -218,6 +219,11 @@ export default function AIEmployeesTransformingBusinessContent() {
                                         Imagine hiring a team member who never sleeps, never takes breaks, never calls in sick, and costs a fraction of a traditional employee.
                                     </p>
                                 </div>
+                            </div>
+
+                            <div className="my-8">
+                                <YouTubeEmbed videoId="4zXQyswXj7U" title="How AI Employees Are Transforming Small Business" />
+                                <p className="text-sm text-slate-500 text-center mt-3">Watch: How AI employees are changing small business operations</p>
                             </div>
                         </section>
 

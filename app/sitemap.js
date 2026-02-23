@@ -1,4 +1,5 @@
 import { blogPosts } from '../lib/blogData';
+import { industryPages } from '../lib/industryData';
 import { SITE_URL } from '../lib/site';
 
 export default function sitemap() {
@@ -75,5 +76,14 @@ export default function sitemap() {
         images: post.image ? [`${SITE_URL}${post.image}`] : [],
     }));
 
-    return [...staticPages, ...blogPages];
+    // Dynamic industry pages
+    const industryPageEntries = industryPages.map((page) => ({
+        url: `${SITE_URL}/industries/${page.slug}`,
+        lastModified: new Date(page.modifiedDate || page.date),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+        images: page.image ? [`${SITE_URL}${page.image}`] : [],
+    }));
+
+    return [...staticPages, ...blogPages, ...industryPageEntries];
 }

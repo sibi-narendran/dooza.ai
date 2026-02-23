@@ -30,6 +30,15 @@ import AiStaffingContent from './AiStaffingContent';
 import VirtualReceptionistSmallBusinessContent from './VirtualReceptionistSmallBusinessContent';
 import BuildA20xCompanyContent from './BuildA20xCompanyContent';
 import HerEntireTeamWasAiContent from './HerEntireTeamWasAiContent';
+import AiSalesAgentGuideContent from './AiSalesAgentGuideContent';
+import OpenclawVsDoozaContent from './OpenclawVsDoozaContent';
+import AiReceptionistForSalonsContent from './AiReceptionistForSalonsContent';
+import AiAppointmentSetterContent from './AiAppointmentSetterContent';
+import AiReceptionistForDentalOfficeContent from './AiReceptionistForDentalOfficeContent';
+import AiAgentLinkedinLeadGenerationContent from './AiAgentLinkedinLeadGenerationContent';
+import AiVoiceAgentMissedCallsContent from './AiVoiceAgentMissedCallsContent';
+import AutomateEmployeePerformanceReviewsContent from './AutomateEmployeePerformanceReviewsContent';
+import AiLegalAssistantContent from './AiLegalAssistantContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -60,6 +69,15 @@ const BLOG_COMPONENTS = {
     'virtual-receptionist-for-small-business': VirtualReceptionistSmallBusinessContent,
     'build-a-20x-company': BuildA20xCompanyContent,
     'her-entire-team-was-ai': HerEntireTeamWasAiContent,
+    'ai-sales-agent-guide': AiSalesAgentGuideContent,
+    'openclaw-vs-dooza': OpenclawVsDoozaContent,
+    'ai-receptionist-for-salons': AiReceptionistForSalonsContent,
+    'ai-appointment-setter': AiAppointmentSetterContent,
+    'ai-receptionist-for-dental-office': AiReceptionistForDentalOfficeContent,
+    'ai-agent-linkedin-lead-generation': AiAgentLinkedinLeadGenerationContent,
+    'ai-voice-agent-missed-calls': AiVoiceAgentMissedCallsContent,
+    'automate-employee-performance-reviews': AutomateEmployeePerformanceReviewsContent,
+    'ai-legal-assistant': AiLegalAssistantContent,
 };
 
 // Generate static params for all blog posts
@@ -93,7 +111,8 @@ export async function generateMetadata({ params }) {
             url: `${SITE_URL}/blog/${slug}`,
             type: 'article',
             publishedTime: post.date,
-            authors: ['Dooza Team'],
+            modifiedTime: post.modifiedDate || post.date,
+            authors: [post.author],
             images: post.image ? [
                 {
                     url: `${SITE_URL}${post.image}`,

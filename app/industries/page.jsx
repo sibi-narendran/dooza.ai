@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BottomCTA from '../../components/BottomCTA';
-import { ArrowRight, Clock, Building2, Stethoscope, Home, Briefcase, ShoppingBag, Wrench, Scale, GraduationCap } from 'lucide-react';
+import { ArrowRight, Clock, Building2, Stethoscope, Home, Briefcase, ShoppingBag, Wrench, Scale, GraduationCap, Scissors } from 'lucide-react';
 import { blogPosts } from '../../lib/blogData';
 import { SITE_URL } from '../../lib/site';
 
@@ -18,18 +18,32 @@ export default function IndustriesPage() {
 
     const industries = [
         {
+            icon: Scissors,
+            name: 'Salons & Beauty',
+            description: 'AI receptionist that books appointments, sends reminders, and never misses a call',
+            industrySlug: 'salons',
+            benefits: ['24/7 appointment booking', 'Stylist-specific scheduling', 'SMS reminders & no-show reduction']
+        },
+        {
+            icon: Wrench,
+            name: 'Contractors & Home Services',
+            description: 'AI answering service that captures every lead — even when you\'re on the job site',
+            industrySlug: 'contractors',
+            benefits: ['Capture leads on-site', 'Emergency dispatch', 'Estimate quoting']
+        },
+        {
+            icon: Home,
+            name: 'Real Estate',
+            description: 'AI sales agent that follows up on every lead 24/7 and books showings',
+            industrySlug: 'real-estate',
+            benefits: ['Instant lead response', 'Lead qualification', 'Showing scheduling']
+        },
+        {
             icon: Stethoscope,
             name: 'Healthcare & Medical',
             description: 'AI employees for doctors, dentists, and medical practices',
             slug: 'seo-for-doctors-dentists',
             benefits: ['HIPAA-aware content', 'Google Business Profile management', 'Patient acquisition']
-        },
-        {
-            icon: Home,
-            name: 'Real Estate',
-            description: 'AI employees for real estate agents and brokerages',
-            slug: 'ai-for-real-estate-agents',
-            benefits: ['24/7 lead response', 'Listing content creation', 'Social media automation']
         },
         {
             icon: Briefcase,
@@ -51,13 +65,6 @@ export default function IndustriesPage() {
             description: 'AI employees for law firms and attorneys',
             slug: 'ai-employees-transforming-small-business',
             benefits: ['Client intake automation', 'Content marketing', 'Lead qualification']
-        },
-        {
-            icon: Wrench,
-            name: 'Home Services',
-            description: 'AI employees for contractors, plumbers, electricians',
-            slug: 'seo-tools-small-business',
-            benefits: ['Local SEO', 'Review management', 'Appointment booking']
         }
     ];
 
@@ -90,7 +97,9 @@ export default function IndustriesPage() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {industries.map((industry, idx) => {
-                        const post = blogPosts.find(p => p.slug === industry.slug);
+                        const linkHref = industry.industrySlug
+                            ? `/industries/${industry.industrySlug}`
+                            : industry.slug ? `/blog/${industry.slug}` : null;
                         return (
                             <div key={idx} className="bg-white border-2 border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg transition-all">
                                 <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center text-primary-600 mb-4">
@@ -108,9 +117,9 @@ export default function IndustriesPage() {
                                     ))}
                                 </ul>
 
-                                {post && (
+                                {linkHref && (
                                     <Link
-                                        href={`/blog/${post.slug}`}
+                                        href={linkHref}
                                         className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all"
                                     >
                                         Learn More
@@ -198,7 +207,9 @@ export default function IndustriesPage() {
                                 "@type": "ListItem",
                                 "position": idx + 1,
                                 "name": `AI Employees for ${industry.name}`,
-                                "url": `${SITE_URL}/blog/${industry.slug}`
+                                "url": industry.industrySlug
+                                    ? `${SITE_URL}/industries/${industry.industrySlug}`
+                                    : `${SITE_URL}/blog/${industry.slug}`
                             }))
                         }
                     })

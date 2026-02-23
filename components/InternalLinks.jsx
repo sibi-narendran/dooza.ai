@@ -31,7 +31,17 @@ const relatedPostMappings = {
     'best-ai-receptionist': ['virtual-receptionist-for-small-business', 'automate-business-processes', 'ai-staffing'],
     'ai-staffing': ['automate-business-processes', 'best-ai-receptionist', 'ai-employees-vs-virtual-assistants'],
     'virtual-receptionist-for-small-business': ['best-ai-receptionist', 'automate-business-processes', 'ai-for-real-estate-agents'],
-    'build-a-20x-company': ['what-is-openclaw', 'ai-staffing', 'automate-business-processes']
+    'build-a-20x-company': ['what-is-openclaw', 'ai-staffing', 'automate-business-processes'],
+    'openclaw-vs-dooza': ['what-is-openclaw', 'ai-employees-openclaw-business', 'build-a-20x-company'],
+    'ai-sales-agent-guide': ['ai-for-real-estate-agents', 'best-ai-receptionist', 'automate-business-processes'],
+    'her-entire-team-was-ai': ['ai-staffing', 'ai-employees-transforming-small-business', 'automate-business-processes'],
+    'ai-receptionist-for-salons': ['best-ai-receptionist', 'virtual-receptionist-for-small-business', 'automate-business-processes'],
+    'ai-appointment-setter': ['ai-sales-agent-guide', 'best-ai-receptionist', 'ai-employees-vs-virtual-assistants'],
+    'ai-receptionist-for-dental-office': ['seo-for-doctors-dentists', 'best-ai-receptionist', 'virtual-receptionist-for-small-business'],
+    'ai-agent-linkedin-lead-generation': ['ai-for-real-estate-agents', 'small-business-marketing-tools', 'automate-business-processes'],
+    'ai-voice-agent-missed-calls': ['automate-business-processes', 'ai-for-real-estate-agents', 'ai-staffing'],
+    'automate-employee-performance-reviews': ['ai-staffing', 'automate-business-processes', 'ai-employees-vs-virtual-assistants'],
+    'ai-legal-assistant': ['best-ai-receptionist', 'ai-appointment-setter', 'ai-sales-agent-guide']
 };
 
 const InternalLinks = ({ currentSlug, position = 'sidebar' }) => {
