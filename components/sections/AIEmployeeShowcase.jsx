@@ -90,6 +90,9 @@ export default function AIEmployeeShowcase() {
                                     >
                                         <TabIcon className="w-4 h-4" />
                                         <span className="hidden sm:inline">{emp.name}</span>
+                                        {emp.comingSoon && (
+                                            <span className="text-[10px] font-bold uppercase tracking-wide bg-amber-400 text-amber-900 px-1.5 py-0.5 rounded-full leading-none">Soon</span>
+                                        )}
                                     </button>
                                 );
                             })}
@@ -107,7 +110,12 @@ export default function AIEmployeeShowcase() {
                                                 <Icon className="w-7 h-7" />
                                             </div>
                                             <div>
-                                                <h3 className="text-2xl font-bold text-slate-900 font-serif">{active.name}</h3>
+                                                <div className="flex items-center gap-2">
+                                                    <h3 className="text-2xl font-bold text-slate-900 font-serif">{active.name}</h3>
+                                                    {active.comingSoon && (
+                                                        <span className="text-xs font-bold uppercase tracking-wide bg-amber-400 text-amber-900 px-2 py-0.5 rounded-full">Coming Soon</span>
+                                                    )}
+                                                </div>
                                                 <p className="text-slate-500 font-medium">{active.role}</p>
                                             </div>
                                         </div>

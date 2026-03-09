@@ -33,7 +33,7 @@ const Navbar = ({ variant = 'light' }) => {
 
     const products = [
         { name: 'Workforce', href: '/' },
-        { name: 'Studio', href: '/studio' }
+        { name: 'Studio', href: '/studio', comingSoon: true }
     ];
 
     return (
@@ -105,6 +105,11 @@ const Navbar = ({ variant = 'light' }) => {
                                                         }`}
                                                 >
                                                     {product.name}
+                                                    {product.comingSoon && (
+                                                        <span className="ml-2 text-[11px] font-semibold px-1.5 py-0.5 rounded-full bg-primary-100 text-primary-600">
+                                                            Soon
+                                                        </span>
+                                                    )}
                                                 </Link>
                                             ))}
                                         </div>
@@ -195,6 +200,11 @@ const Navbar = ({ variant = 'light' }) => {
                                     }`}
                             >
                                 {product.name}
+                                {product.comingSoon && (
+                                    <span className="ml-2 text-[11px] font-semibold px-1.5 py-0.5 rounded-full bg-primary-100 text-primary-600">
+                                        Soon
+                                    </span>
+                                )}
                             </Link>
                         ))}
 

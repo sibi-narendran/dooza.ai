@@ -136,6 +136,9 @@ export default function StudioContent() {
                     </div>
 
                     <div className="max-w-4xl mx-auto relative z-10 w-full text-center">
+                        <div className="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-700 font-bold text-sm mb-6">
+                            COMING SOON
+                        </div>
                         <h1 className="text-4xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
                             Build Production-Ready <br />
                             <span className="text-primary-600">AI Agents</span>
@@ -147,13 +150,13 @@ export default function StudioContent() {
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
                             <a
-                                href={getProductSignupUrl('studio')}
+                                href={getProductSignupUrl('workforce')}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => trackSignupClick('studio_hero')}
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
                             >
-                                Start Building Free
+                                Try Workforce Instead
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -424,13 +427,13 @@ export default function StudioContent() {
                             Join thousands of builders creating intelligent AI agents. Start free, scale when ready.
                         </p>
                         <a
-                            href={getProductSignupUrl('studio')}
+                            href={getProductSignupUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => trackSignupClick('studio_bottom_cta')}
                             className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1"
                         >
-                            Start Building Free
+                            Try Workforce Instead
                             <ArrowRight className="w-6 h-6" />
                         </a>
                     </div>

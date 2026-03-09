@@ -34,8 +34,11 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/studio" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                <Link href="/studio" className={`text-sm py-1 inline-flex items-center gap-2 transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Studio
+                                    <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-primary-100 text-primary-600">
+                                        Soon
+                                    </span>
                                 </Link>
                             </li>
                         </ul>
