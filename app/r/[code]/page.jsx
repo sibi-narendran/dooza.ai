@@ -14,9 +14,10 @@ export default function ReferralPage() {
       const expires = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
       document.cookie = `dooza_ref=${encodeURIComponent(code)}; path=/; expires=${expires}; SameSite=Lax`;
 
-      // Log the click on accounts.dooza.ai (fire and forget)
-      fetch(`https://accounts.dooza.ai/api/affiliate/click?code=${encodeURIComponent(code)}`)
-        .catch(() => {});
+      // Log the click on accounts.dooza.ai (keepalive ensures request completes after navigation)
+      fetch(`https://accounts.dooza.ai/api/affiliate/click?code=${encodeURIComponent(code)}`, {
+        keepalive: true,
+      }).catch(() => {});
     }
     router.replace('/');
   }, [params.code, router]);
