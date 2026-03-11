@@ -13,6 +13,10 @@ export default function ReferralPage() {
       // Store referral code in a cookie (30 days expiry)
       const expires = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
       document.cookie = `dooza_ref=${encodeURIComponent(code)}; path=/; expires=${expires}; SameSite=Lax`;
+
+      // Log the click on accounts.dooza.ai (fire and forget)
+      fetch(`https://accounts.dooza.ai/api/affiliate/click?code=${encodeURIComponent(code)}`)
+        .catch(() => {});
     }
     router.replace('/');
   }, [params.code, router]);

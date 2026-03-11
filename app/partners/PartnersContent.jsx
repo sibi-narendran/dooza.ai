@@ -81,12 +81,14 @@ export default function PartnersContent() {
                         </p>
                         
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <button 
-                                onClick={() => router.push('/partner-signup')}
+                            <a
+                                href="https://accounts.dooza.ai/affiliate/signup"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white rounded-full font-bold text-lg hover:bg-gray-800 transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
                             >
                                 Join Now <ArrowRight size={20} />
-                            </button>
+                            </a>
                             <a 
                                 href="#calculator" 
                                 className="w-full sm:w-auto px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-full font-bold text-lg hover:bg-gray-50 transition-all hover:border-gray-300 flex items-center justify-center"
