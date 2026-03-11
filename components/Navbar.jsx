@@ -7,7 +7,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { getProductSignupUrl, getProductSigninUrl } from '@/lib/links';
 import { trackSignupClick } from '@/lib/analytics';
 
-const Navbar = ({ variant = 'light' }) => {
+const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
@@ -141,7 +141,7 @@ const Navbar = ({ variant = 'light' }) => {
 
                     <div className="hidden md:flex items-center space-x-6">
                         <a
-                            href={getProductSigninUrl('workforce')}
+                            href={loginUrl || getProductSigninUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`text-[15px] font-medium transition-colors ${isDark
@@ -152,7 +152,7 @@ const Navbar = ({ variant = 'light' }) => {
                             Login
                         </a>
                         <a
-                            href={getProductSignupUrl('workforce')}
+                            href={signupUrl || getProductSignupUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => trackSignupClick('navbar')}
@@ -161,7 +161,7 @@ const Navbar = ({ variant = 'light' }) => {
                                 : 'bg-slate-900 text-white hover:bg-slate-800'
                                 }`}
                         >
-                            Get Started
+                            {signupLabel || 'Get Started'}
                         </a>
                     </div>
 
@@ -231,7 +231,7 @@ const Navbar = ({ variant = 'light' }) => {
                             Blog
                         </Link>
                         <a
-                            href={getProductSigninUrl('workforce')}
+                            href={loginUrl || getProductSigninUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
@@ -242,7 +242,7 @@ const Navbar = ({ variant = 'light' }) => {
                             Login
                         </a>
                         <a
-                            href={getProductSignupUrl('workforce')}
+                            href={signupUrl || getProductSignupUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => trackSignupClick('navbar_mobile')}
@@ -251,7 +251,7 @@ const Navbar = ({ variant = 'light' }) => {
                                 : 'bg-primary-600 text-white'
                                 }`}
                         >
-                            Get Started
+                            {signupLabel || 'Get Started'}
                         </a>
                     </div>
                 </div>

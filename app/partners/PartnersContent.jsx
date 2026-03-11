@@ -61,7 +61,7 @@ export default function PartnersContent() {
 
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900">
-            <Navbar openModal={handleAction} />
+            <Navbar openModal={handleAction} loginUrl="https://accounts.dooza.ai/affiliate/login" signupUrl="https://accounts.dooza.ai/affiliate/signup" signupLabel="Sign Up" />
 
             <main className="pt-20">
                 {/* Hero Section */}
