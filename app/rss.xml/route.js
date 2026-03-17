@@ -1,11 +1,35 @@
 import { blogPosts } from '../../lib/blogData';
 import { SITE_URL, SITE_NAME } from '../../lib/site';
+import { supabaseServer } from '../../lib/supabaseServer';
+import { dbToPost } from '../../lib/blogTransform';
+
+export const revalidate = 60;
 
 export async function GET() {
     const baseUrl = SITE_URL;
 
+    // Fetch dynamic posts from Supabase
+    let dynamicPosts = [];
+    try {
+        const { data } = await supabaseServer
+            .from('blog_posts')
+            .select('id, slug, title, excerpt, author, category, tags, image, image_alt, read_time, read_time_minutes, faq_data, status, published_at, created_at, updated_at')
+            .eq('status', 'published');
+
+        if (data) {
+            dynamicPosts = data.map(dbToPost);
+        }
+    } catch {
+        // Supabase unavailable — skip dynamic posts
+    }
+
+    // Merge static + dynamic, deduplicate by slug
+    const staticSlugs = new Set(blogPosts.map(p => p.slug));
+    const uniqueDynamic = dynamicPosts.filter(p => !staticSlugs.has(p.slug));
+    const allPosts = [...blogPosts, ...uniqueDynamic];
+
     // Sort posts by date (newest first)
-    const sortedPosts = [...blogPosts].sort(
+    const sortedPosts = allPosts.sort(
         (a, b) => new Date(b.date) - new Date(a.date)
     );
 

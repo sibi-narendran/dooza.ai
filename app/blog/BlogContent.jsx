@@ -27,7 +27,7 @@ const formatBlogDate = (isoDate) => {
     }
 };
 
-export default function BlogPage() {
+export default function BlogPage({ posts }) {
     const searchParams = useSearchParams();
     const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
     const [email, setEmail] = useState('');
@@ -75,7 +75,8 @@ export default function BlogPage() {
         }
     };
 
-    const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+    const allPosts = posts || blogPosts;
+    const sortedPosts = [...allPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const filteredPosts = sortedPosts.filter(post => {
         const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

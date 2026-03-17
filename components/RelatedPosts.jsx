@@ -2,9 +2,10 @@ import Link from 'next/link';
 import { ArrowRight, Clock } from 'lucide-react';
 import { blogPosts } from '@/lib/blogData';
 
-const RelatedPosts = ({ currentSlug, category, tags = [], maxPosts = 2 }) => {
+const RelatedPosts = ({ currentSlug, category, tags = [], maxPosts = 2, allPosts }) => {
     // Find related posts based on category and tags, excluding current post
-    const relatedPosts = blogPosts
+    const postsPool = allPosts || blogPosts;
+    const relatedPosts = postsPool
         .filter(post => post.slug !== currentSlug)
         .map(post => {
             let score = 0;

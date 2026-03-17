@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation';
 import { SITE_URL } from '../../../lib/site';
 import { blogPosts, generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '../../../lib/blogData';
+import { supabaseServer } from '../../../lib/supabaseServer';
+import { dbToPost } from '../../../lib/blogTransform';
+import DynamicBlogContent from './DynamicBlogContent';
 
 // Import all blog post components
 import BetterThanSintraAIContent from './BetterThanSintraAIContent';
@@ -80,6 +83,9 @@ const BLOG_COMPONENTS = {
     'ai-legal-assistant': AiLegalAssistantContent,
 };
 
+// ISR: revalidate dynamic posts every 60 seconds
+export const revalidate = 60;
+
 // Generate static params for all blog posts
 export async function generateStaticParams() {
     return blogPosts.map((post) => ({
@@ -87,11 +93,35 @@ export async function generateStaticParams() {
     }));
 }
 
+// Fetch dynamic post from Supabase
+async function getDynamicPost(slug) {
+    try {
+        const { data, error } = await supabaseServer
+            .from('blog_posts')
+            .select('*')
+            .eq('slug', slug)
+            .eq('status', 'published')
+            .single();
+
+        if (error || !data) return null;
+        return dbToPost(data);
+    } catch {
+        return null;
+    }
+}
+
 // Generate metadata for each blog post
 export async function generateMetadata({ params }) {
     const { slug } = await params;
-    const post = blogPosts.find(p => p.slug === slug);
-    
+
+    // Check static posts first
+    let post = blogPosts.find(p => p.slug === slug);
+
+    // Fall back to dynamic post
+    if (!post) {
+        post = await getDynamicPost(slug);
+    }
+
     if (!post) {
         return {
             title: 'Post Not Found',
@@ -133,26 +163,54 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPostPage({ params }) {
     const { slug } = await params;
-    const post = blogPosts.find(p => p.slug === slug);
+
+    // 1. Check static posts first
+    const staticPost = blogPosts.find(p => p.slug === slug);
     const BlogComponent = BLOG_COMPONENTS[slug];
-    
-    if (!post || !BlogComponent) {
+
+    if (staticPost && BlogComponent) {
+        // Render static blog (unchanged behavior)
+        const articleSchema = generateArticleSchema(staticPost, SITE_URL);
+        const breadcrumbSchema = generateBreadcrumbSchema([
+            { name: "Home", url: SITE_URL },
+            { name: "Blog", url: `${SITE_URL}/blog` },
+            { name: staticPost.title }
+        ]);
+
+        const schemas = [articleSchema, breadcrumbSchema];
+        if (staticPost.faqData && staticPost.faqData.length > 0) {
+            schemas.push(generateFAQSchema(staticPost.faqData));
+        }
+
+        return (
+            <>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+                />
+                <BlogComponent post={staticPost} />
+            </>
+        );
+    }
+
+    // 2. Fall back to dynamic post from Supabase
+    const dynamicPost = await getDynamicPost(slug);
+
+    if (!dynamicPost) {
         notFound();
     }
 
-    // Generate structured data
-    const articleSchema = generateArticleSchema(post, SITE_URL);
+    // Generate structured data for dynamic post
+    const articleSchema = generateArticleSchema(dynamicPost, SITE_URL);
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: SITE_URL },
         { name: "Blog", url: `${SITE_URL}/blog` },
-        { name: post.title }
+        { name: dynamicPost.title }
     ]);
 
     const schemas = [articleSchema, breadcrumbSchema];
-
-    // Add FAQ schema if post has FAQ data
-    if (post.faqData && post.faqData.length > 0) {
-        schemas.push(generateFAQSchema(post.faqData));
+    if (dynamicPost.faqData && dynamicPost.faqData.length > 0) {
+        schemas.push(generateFAQSchema(dynamicPost.faqData));
     }
 
     return (
@@ -161,7 +219,7 @@ export default async function BlogPostPage({ params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
             />
-            <BlogComponent post={post} />
+            <DynamicBlogContent post={dynamicPost} />
         </>
     );
 }

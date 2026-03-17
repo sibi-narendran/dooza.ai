@@ -1,8 +1,9 @@
 import { blogPosts } from '../lib/blogData';
 import { industryPages } from '../lib/industryData';
 import { SITE_URL } from '../lib/site';
+import { supabaseServer } from '../lib/supabaseServer';
 
-export default function sitemap() {
+export default async function sitemap() {
     // Static pages
     const staticPages = [
         {
@@ -67,7 +68,7 @@ export default function sitemap() {
         },
     ];
 
-    // Dynamic blog pages
+    // Static blog pages
     const blogPages = blogPosts.map((post) => ({
         url: `${SITE_URL}/blog/${post.slug}`,
         lastModified: new Date(post.modifiedDate || post.date),
@@ -75,6 +76,30 @@ export default function sitemap() {
         priority: 0.8,
         images: post.image ? [`${SITE_URL}${post.image}`] : [],
     }));
+
+    // Dynamic blog pages from Supabase
+    let dynamicBlogPages = [];
+    try {
+        const { data } = await supabaseServer
+            .from('blog_posts')
+            .select('slug, updated_at, published_at, image')
+            .eq('status', 'published');
+
+        if (data) {
+            const staticSlugs = new Set(blogPosts.map(p => p.slug));
+            dynamicBlogPages = data
+                .filter(p => !staticSlugs.has(p.slug))
+                .map((post) => ({
+                    url: `${SITE_URL}/blog/${post.slug}`,
+                    lastModified: new Date(post.updated_at || post.published_at),
+                    changeFrequency: 'monthly',
+                    priority: 0.8,
+                    images: post.image ? [`${SITE_URL}${post.image}`] : [],
+                }));
+        }
+    } catch {
+        // Supabase unavailable — skip dynamic posts
+    }
 
     // Dynamic industry pages
     const industryPageEntries = industryPages.map((page) => ({
@@ -85,5 +110,5 @@ export default function sitemap() {
         images: page.image ? [`${SITE_URL}${page.image}`] : [],
     }));
 
-    return [...staticPages, ...blogPages, ...industryPageEntries];
+    return [...staticPages, ...blogPages, ...dynamicBlogPages, ...industryPageEntries];
 }
