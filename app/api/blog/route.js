@@ -54,8 +54,9 @@ export async function GET(request) {
     );
 }
 
-// POST /api/blog — Create a new blog post (authenticated)
+// POST /api/blog — Connection verification + blog publishing (authenticated)
 export async function POST(request) {
+    // 1. Auth check
     if (!authenticate(request)) {
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -67,8 +68,12 @@ export async function POST(request) {
         return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
     }
 
-    // Accept both camelCase (content, excerpt, image) and DB format (content_html, meta_description, image_url)
-    // Normalize to DB column names
+    // 2. Dry-run = connection verification from Workforce
+    if (body.dryRun) {
+        return NextResponse.json({ ok: true });
+    }
+
+    // 3. Real publish — normalize field names to DB columns
     const row = {};
     row.id = crypto.randomUUID();
     row.slug = body.slug;
@@ -83,7 +88,7 @@ export async function POST(request) {
     // Validate required fields
     if (!row.slug || !row.title || (!row.content_html && !row.content_markdown)) {
         return NextResponse.json(
-            { error: 'Missing required fields: slug, title, and content_html (or content) are required' },
+            { error: 'Missing required fields: slug, title, and content (or content_html) are required' },
             { status: 400 }
         );
     }
@@ -104,5 +109,7 @@ export async function POST(request) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    return NextResponse.json({ post: dbToPost(data) }, { status: 201 });
+    // Return exactly what Workforce expects: { ok: true, url: "..." }
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dooza.ai';
+    return NextResponse.json({ ok: true, url: `${siteUrl}/blog/${row.slug}` });
 }
