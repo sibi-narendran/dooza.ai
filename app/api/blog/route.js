@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import crypto from 'crypto';
 import { supabaseServer } from '../../../lib/supabaseServer';
 import { dbToPost, postToDb, generateTocFromHtml } from '../../../lib/blogTransform';
 
@@ -77,6 +78,7 @@ export async function POST(request) {
     }
 
     const row = postToDb(body);
+    row.id = crypto.randomUUID();
 
     const { data, error } = await supabaseServer
         .from('blog_articles')
