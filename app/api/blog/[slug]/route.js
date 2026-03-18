@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabaseServer } from '../../../../lib/supabaseServer';
-import { dbToPost, postToDb, generateTocFromHtml } from '../../../../lib/blogTransform';
+import { dbToPost, postToDb } from '../../../../lib/blogTransform';
 
 function authenticate(request) {
     const authHeader = request.headers.get('authorization');
@@ -14,10 +14,9 @@ export async function GET(request, { params }) {
     const { slug } = await params;
 
     const { data, error } = await supabaseServer
-        .from('blog_posts')
+        .from('blog_articles')
         .select('*')
         .eq('slug', slug)
-        .eq('status', 'published')
         .single();
 
     if (error || !data) {
@@ -49,28 +48,10 @@ export async function PATCH(request, { params }) {
         return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
     }
 
-    // Re-generate TOC if content is being updated and no new TOC provided
-    if (body.content && (!body.tocData || body.tocData.length === 0)) {
-        body.tocData = generateTocFromHtml(body.content);
-    }
-
     const row = postToDb(body);
-    row.updated_at = new Date().toISOString();
-
-    // If status changes to published and no published_at, set it
-    if (row.status === 'published') {
-        const { data: existing } = await supabaseServer
-            .from('blog_posts')
-            .select('published_at')
-            .eq('slug', slug)
-            .single();
-        if (existing && !existing.published_at) {
-            row.published_at = new Date().toISOString();
-        }
-    }
 
     const { data, error } = await supabaseServer
-        .from('blog_posts')
+        .from('blog_articles')
         .update(row)
         .eq('slug', slug)
         .select()
@@ -92,7 +73,7 @@ export async function DELETE(request, { params }) {
     const { slug } = await params;
 
     const { error } = await supabaseServer
-        .from('blog_posts')
+        .from('blog_articles')
         .delete()
         .eq('slug', slug);
 

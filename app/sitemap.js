@@ -81,9 +81,8 @@ export default async function sitemap() {
     let dynamicBlogPages = [];
     try {
         const { data } = await supabaseServer
-            .from('blog_posts')
-            .select('slug, updated_at, published_at, image')
-            .eq('status', 'published');
+            .from('blog_articles')
+            .select('slug, image_url, created_at');
 
         if (data) {
             const staticSlugs = new Set(blogPosts.map(p => p.slug));
@@ -91,10 +90,10 @@ export default async function sitemap() {
                 .filter(p => !staticSlugs.has(p.slug))
                 .map((post) => ({
                     url: `${SITE_URL}/blog/${post.slug}`,
-                    lastModified: new Date(post.updated_at || post.published_at),
+                    lastModified: new Date(post.created_at),
                     changeFrequency: 'monthly',
                     priority: 0.8,
-                    images: post.image ? [`${SITE_URL}${post.image}`] : [],
+                    images: post.image_url ? [post.image_url] : [],
                 }));
         }
     } catch {

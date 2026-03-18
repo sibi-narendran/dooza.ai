@@ -3,6 +3,16 @@ const nextConfig = {
   // Redirect trailing slashes
   trailingSlash: false,
 
+  // Allow external image domains (dynamic blog images)
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.outrank.so',
+      },
+    ],
+  },
+
   // Security headers
   async headers() {
     // Content Security Policy - allows necessary external resources

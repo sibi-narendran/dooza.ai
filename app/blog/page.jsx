@@ -32,10 +32,9 @@ export const metadata = {
 async function getDynamicPosts() {
     try {
         const { data, error } = await supabaseServer
-            .from('blog_posts')
-            .select('id, slug, title, excerpt, author, category, tags, image, image_alt, read_time, read_time_minutes, faq_data, status, published_at, created_at, updated_at')
-            .eq('status', 'published')
-            .order('published_at', { ascending: false });
+            .from('blog_articles')
+            .select('id, slug, title, meta_description, tags, image_url, content_html, source, created_at')
+            .order('created_at', { ascending: false });
 
         if (error || !data) return [];
         return data.map(dbToPost);

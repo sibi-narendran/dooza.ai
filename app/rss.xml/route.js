@@ -12,9 +12,8 @@ export async function GET() {
     let dynamicPosts = [];
     try {
         const { data } = await supabaseServer
-            .from('blog_posts')
-            .select('id, slug, title, excerpt, author, category, tags, image, image_alt, read_time, read_time_minutes, faq_data, status, published_at, created_at, updated_at')
-            .eq('status', 'published');
+            .from('blog_articles')
+            .select('id, slug, title, meta_description, tags, image_url, content_html, source, created_at');
 
         if (data) {
             dynamicPosts = data.map(dbToPost);

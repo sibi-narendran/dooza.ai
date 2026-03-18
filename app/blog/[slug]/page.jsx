@@ -97,10 +97,9 @@ export async function generateStaticParams() {
 async function getDynamicPost(slug) {
     try {
         const { data, error } = await supabaseServer
-            .from('blog_posts')
+            .from('blog_articles')
             .select('*')
             .eq('slug', slug)
-            .eq('status', 'published')
             .single();
 
         if (error || !data) return null;
