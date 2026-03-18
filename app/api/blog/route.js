@@ -67,18 +67,26 @@ export async function POST(request) {
         return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
     }
 
+    // Accept both camelCase (content, excerpt, image) and DB format (content_html, meta_description, image_url)
+    // Normalize to DB column names
+    const row = {};
+    row.id = crypto.randomUUID();
+    row.slug = body.slug;
+    row.title = body.title;
+    row.content_html = body.content_html || body.content || null;
+    row.content_markdown = body.content_markdown || body.contentMarkdown || null;
+    row.meta_description = body.meta_description || body.excerpt || null;
+    row.image_url = body.image_url || body.image || null;
+    row.tags = body.tags || [];
+    row.source = body.source || null;
+
     // Validate required fields
-    const required = ['slug', 'title', 'content'];
-    const missing = required.filter(f => !body[f]);
-    if (missing.length > 0) {
+    if (!row.slug || !row.title || (!row.content_html && !row.content_markdown)) {
         return NextResponse.json(
-            { error: `Missing required fields: ${missing.join(', ')}` },
+            { error: 'Missing required fields: slug, title, and content_html (or content) are required' },
             { status: 400 }
         );
     }
-
-    const row = postToDb(body);
-    row.id = crypto.randomUUID();
 
     const { data, error } = await supabaseServer
         .from('blog_articles')
