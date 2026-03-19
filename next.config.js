@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cdn.outrank.so',
       },
+      {
+        protocol: 'https',
+        hostname: '*.supabase.co',
+      },
     ],
   },
 
