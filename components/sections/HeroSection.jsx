@@ -21,9 +21,9 @@ export default function HeroSection() {
                     {/* Left: Text content */}
                     <div className="text-center lg:text-left">
                         <h1 className="hero-entrance hero-delay-1 text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5 md:mb-6 font-serif">
-                            Hire AI Employees to
+                            AI Employees That
                             <span className="block bg-gradient-to-r from-primary-600 via-teal-500 to-primary-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                                Automate Your Business 24/7
+                                Get Work Done While You Sleep
                             </span>
                         </h1>
 
