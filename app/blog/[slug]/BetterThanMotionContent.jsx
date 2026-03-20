@@ -368,7 +368,7 @@ export default function BetterThanMotionContent() {
                                     </h3>
                                     <ul className="space-y-3 mb-6">
                                         {[
-                                            "Eva - Email Manager (drafts AND sends replies)",
+                                            "Maily - Email Manager (drafts AND sends replies)",
                                             "Somi - Social Media Manager (posts autonomously)",
                                             "Stan - Lead Generator (finds and qualifies leads)",
                                             "Penny - SEO Specialist (optimizes your content)",

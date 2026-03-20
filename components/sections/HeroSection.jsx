@@ -1,5 +1,5 @@
 import { getProductSignupUrl } from '@/lib/links';
-import { CharacterGroup, EvaCharacter, SomiCharacter, RachelCharacter, StanCharacter } from '@/components/characters/CharacterIllustrations';
+import { CharacterGroup, MailyCharacter, SomiCharacter, RachelCharacter, StanCharacter } from '@/components/characters/CharacterIllustrations';
 import SignupButton from '@/components/buttons/SignupButton';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 
@@ -33,7 +33,7 @@ export default function HeroSection() {
 
                         {/* Mobile character strip */}
                         <div className="hero-entrance hero-delay-3 flex lg:hidden items-end justify-center gap-3 mb-8">
-                            {[EvaCharacter, SomiCharacter, RachelCharacter, StanCharacter].map((Character, idx) => (
+                            {[MailyCharacter, SomiCharacter, RachelCharacter, StanCharacter].map((Character, idx) => (
                                 <div
                                     key={idx}
                                     className="animate-float"

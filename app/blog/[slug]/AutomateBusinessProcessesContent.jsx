@@ -272,7 +272,7 @@ export default function AutomateBusinessProcessesContent() {
                                 <div className="bg-green-50 border-2 border-green-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                                         <CheckCircle2 className="w-5 h-5 text-green-600" />
-                                        After — Eva (AI Email Manager)
+                                        After — Maily (AI Email Manager)
                                     </h3>
                                     <p className="text-green-700">
                                         Reads, prioritizes, and responds to emails. Follows up automatically. Never lets a lead go cold. Works 24/7.
@@ -282,10 +282,10 @@ export default function AutomateBusinessProcessesContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p className="text-lg leading-relaxed">
-                                    Eva handles the entire email lifecycle for your business. She triages your inbox — separating urgent client emails from newsletters and spam. She drafts contextual responses that match your tone and brand voice. She follows up with leads who haven't responded, sending perfectly timed nudges that keep deals moving forward.
+                                    Maily handles the entire email lifecycle for your business. She triages your inbox — separating urgent client emails from newsletters and spam. She drafts contextual responses that match your tone and brand voice. She follows up with leads who haven't responded, sending perfectly timed nudges that keep deals moving forward.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Need to schedule a meeting? Eva handles that too — coordinating across calendars, suggesting times, and sending confirmations without you lifting a finger.
+                                    Need to schedule a meeting? Maily handles that too — coordinating across calendars, suggesting times, and sending confirmations without you lifting a finger.
                                 </p>
                             </div>
 
@@ -450,11 +450,11 @@ export default function AutomateBusinessProcessesContent() {
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { name: "Eva", role: "AI Email Manager", desc: "Reads, responds, follows up. Your inbox, handled.", icon: Mail },
+                                    { name: "Maily", role: "AI Email Manager", desc: "Reads, responds, follows up. Your inbox, handled.", icon: Mail },
                                     { name: "Somi", role: "AI Social Media Manager", desc: "Creates and posts content across all platforms.", icon: Share2 },
                                     { name: "Rachel", role: "AI Receptionist", desc: "Answers calls, qualifies leads, books appointments.", icon: Phone },
                                     { name: "Stan", role: "AI Lead Generator", desc: "Finds and qualifies prospects while you sleep.", icon: Target },
-                                    { name: "Seomi", role: "AI SEO Specialist", desc: "Writes blogs, optimizes Google, builds rankings.", icon: TrendingUp },
+                                    { name: "Ranky", role: "AI SEO Specialist", desc: "Writes blogs, optimizes Google, builds rankings.", icon: TrendingUp },
                                     { name: "Linda", role: "AI Legal Assistant", desc: "Handles compliance, contracts, and legal docs.", icon: Users }
                                 ].map((agent, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">

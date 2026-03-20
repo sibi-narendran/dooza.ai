@@ -909,7 +909,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         step: "1",
                                         title: "Sign Up & Book Your Free Onboarding",
                                         desc: "Create your Dooza account ($29/month for your full AI workforce including voice agent, sales agent, email, social media, SEO, and legal). Book a free 30-minute onboarding call with our concierge team.",
-                                        detail: "You'll also get Rachel (AI receptionist), Stan (sales agent), Eva (email), Somi (social media), Seomi (SEO), and Linda (legal) — all configured during onboarding."
+                                        detail: "You'll also get Rachel (AI receptionist), Stan (sales agent), Maily (email), Somi (social media), Ranky (SEO), and Linda (legal) — all configured during onboarding."
                                     },
                                     {
                                         step: "2",

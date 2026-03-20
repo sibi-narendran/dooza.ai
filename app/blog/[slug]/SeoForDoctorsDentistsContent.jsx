@@ -44,8 +44,8 @@ const faqData = [
         answer: "Absolutely. According to Pew Research, 77% of patients search online before booking a doctor, and Backlinko data shows 75% never scroll past page one of Google. If you're not visible, you're losing patients to competitors who are. SEO isn't optional anymore—it's how patients find you."
     },
     {
-        question: "I don't have time to write blogs. How can Seomi help?",
-        answer: "Seomi writes and publishes SEO-optimized blog posts for your practice automatically. You don't need to write anything—Seomi creates patient-focused content about procedures, FAQs, and health tips that Google loves, published on your schedule. This follows Google's E-E-A-T guidelines for healthcare content."
+        question: "I don't have time to write blogs. How can Ranky help?",
+        answer: "Ranky writes and publishes SEO-optimized blog posts for your practice automatically. You don't need to write anything—Ranky creates patient-focused content about procedures, FAQs, and health tips that Google loves, published on your schedule. This follows Google's E-E-A-T guidelines for healthcare content."
     },
     {
         question: "What's the difference between SEO and Google Ads for my practice?",
@@ -53,15 +53,15 @@ const faqData = [
     },
     {
         question: "How does Google Business Profile affect my patient bookings?",
-        answer: "Your Google Business Profile drives more new patients than your website when optimized correctly. According to Google's own data, a complete profile makes you 70% more likely to attract patient visits. Seomi keeps your profile active with weekly posts, photos, and updates—following Google's best practices."
+        answer: "Your Google Business Profile drives more new patients than your website when optimized correctly. According to Google's own data, a complete profile makes you 70% more likely to attract patient visits. Ranky keeps your profile active with weekly posts, photos, and updates—following Google's best practices."
     },
     {
         question: "Can AI really help patients find my practice through ChatGPT?",
-        answer: "Yes! Research shows 73% of potential patients now start their search with AI tools like ChatGPT, Perplexity, and Google AI Overviews. AI recommends practices based on online presence, reviews, and structured data. Seomi optimizes your practice for Answer Engine Optimization (AEO) to appear in AI-generated recommendations."
+        answer: "Yes! Research shows 73% of potential patients now start their search with AI tools like ChatGPT, Perplexity, and Google AI Overviews. AI recommends practices based on online presence, reviews, and structured data. Ranky optimizes your practice for Answer Engine Optimization (AEO) to appear in AI-generated recommendations."
     },
     {
         question: "How much does medical SEO typically cost?",
-        answer: "According to PatientGain and industry surveys, traditional medical SEO agencies charge $999-$5,000/month. With Dooza, Seomi handles your SEO for just $29/month—daily blog posts, Google Business Profile updates, and AI optimization included. No hidden fees, no long-term contracts."
+        answer: "According to PatientGain and industry surveys, traditional medical SEO agencies charge $999-$5,000/month. With Dooza, Ranky handles your SEO for just $29/month—daily blog posts, Google Business Profile updates, and AI optimization included. No hidden fees, no long-term contracts."
     },
     {
         question: "How long until I see results from SEO?",
@@ -116,7 +116,7 @@ export default function SeoForDoctorsDentistsContent() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['introduction', 'pain-points', 'why-seo-matters', 'google-business', 'ai-discovery', 'content-challenge', 'seomi-solution', 'what-seomi-does', 'pricing', 'getting-started', 'faq'];
+            const sections = ['introduction', 'pain-points', 'why-seo-matters', 'google-business', 'ai-discovery', 'content-challenge', 'ranky-solution', 'what-ranky-does', 'pricing', 'getting-started', 'faq'];
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -164,7 +164,7 @@ export default function SeoForDoctorsDentistsContent() {
                             SEO for <span className="text-primary-600">Doctors & Dentists</span>: Let AI Handle Marketing While You Heal Patients
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            You spent years learning medicine, not marketing. Discover how Seomi—your AI SEO specialist—publishes daily blogs, optimizes your Google listing, and helps AI recommend your practice. So you can focus on what matters: patient care.
+                            You spent years learning medicine, not marketing. Discover how Ranky—your AI SEO specialist—publishes daily blogs, optimizes your Google listing, and helps AI recommend your practice. So you can focus on what matters: patient care.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -184,7 +184,7 @@ export default function SeoForDoctorsDentistsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Meet Seomi - Your AI SEO Specialist
+                                Meet Ranky - Your AI SEO Specialist
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -208,8 +208,8 @@ export default function SeoForDoctorsDentistsContent() {
                                     { id: 'google-business', label: 'Google Business Profile' },
                                     { id: 'ai-discovery', label: 'AI Patient Discovery' },
                                     { id: 'content-challenge', label: 'The Content Problem' },
-                                    { id: 'seomi-solution', label: 'Meet Seomi' },
-                                    { id: 'what-seomi-does', label: 'What Seomi Does' },
+                                    { id: 'ranky-solution', label: 'Meet Ranky' },
+                                    { id: 'what-ranky-does', label: 'What Ranky Does' },
                                     { id: 'pricing', label: 'Pricing Comparison' },
                                     { id: 'getting-started', label: 'Getting Started' },
                                     { id: 'faq', label: 'FAQ' },
@@ -235,7 +235,7 @@ export default function SeoForDoctorsDentistsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Get Seomi Now
+                                    Get Ranky Now
                                 </a>
                             </div>
 
@@ -519,8 +519,8 @@ export default function SeoForDoctorsDentistsContent() {
                             </p>
                         </section>
 
-                        <section id="seomi-solution" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Meet Seomi: Your AI SEO Specialist Who Never Sleeps</h2>
+                        <section id="ranky-solution" className="scroll-mt-28">
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Meet Ranky: Your AI SEO Specialist Who Never Sleeps</h2>
                             <div className="bg-gradient-to-br from-primary-50 to-blue-50 border-2 border-primary-200 p-8 rounded-2xl mb-8">
                                 <div className="flex flex-col md:flex-row items-center gap-8">
                                     <div className="w-24 h-24 bg-primary-600 rounded-2xl flex items-center justify-center text-white shrink-0">
@@ -529,7 +529,7 @@ export default function SeoForDoctorsDentistsContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-4">What if your SEO ran itself?</h3>
                                         <p className="text-lg text-slate-700 mb-4">
-                                            Seomi is your AI employee dedicated to one thing: making sure patients find your practice online. While you're seeing patients, Seomi is:
+                                            Ranky is your AI employee dedicated to one thing: making sure patients find your practice online. While you're seeing patients, Ranky is:
                                         </p>
                                         <ul className="space-y-2 text-slate-700">
                                             <li className="flex items-center gap-2">
@@ -554,12 +554,12 @@ export default function SeoForDoctorsDentistsContent() {
                             </div>
 
                             <p className="text-xl text-slate-700 font-medium text-center mb-8">
-                                You focus on healing patients. Seomi focuses on helping patients find you.
+                                You focus on healing patients. Ranky focuses on helping patients find you.
                             </p>
                         </section>
 
-                        <section id="what-seomi-does" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Exactly What Seomi Does for Your Practice</h2>
+                        <section id="what-ranky-does" className="scroll-mt-28">
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Exactly What Ranky Does for Your Practice</h2>
 
                             <div className="space-y-6 mb-8">
                                 <div className="bg-white border-2 border-slate-200 p-6 rounded-xl hover:border-primary-200 transition-colors">
@@ -570,11 +570,11 @@ export default function SeoForDoctorsDentistsContent() {
                                         <div>
                                             <h3 className="font-bold text-slate-900 text-xl mb-2">Daily Blog Publishing</h3>
                                             <p className="text-slate-600 mb-4">
-                                                Seomi writes patient-focused content that ranks: "What to Expect During a Root Canal," "5 Signs You Need to See a Dentist," "How to Prepare for Your First Visit." Topics your patients are actually searching for.
+                                                Ranky writes patient-focused content that ranks: "What to Expect During a Root Canal," "5 Signs You Need to See a Dentist," "How to Prepare for Your First Visit." Topics your patients are actually searching for.
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">
-                                                    <strong>Example:</strong> A dental practice using Seomi published 30 blogs in their first month. Within 90 days, they ranked on page 1 for "emergency dentist [city name]" and "teeth whitening near me."
+                                                    <strong>Example:</strong> A dental practice using Ranky published 30 blogs in their first month. Within 90 days, they ranked on page 1 for "emergency dentist [city name]" and "teeth whitening near me."
                                                 </p>
                                             </div>
                                         </div>
@@ -589,7 +589,7 @@ export default function SeoForDoctorsDentistsContent() {
                                         <div>
                                             <h3 className="font-bold text-slate-900 text-xl mb-2">Google Business Profile Management</h3>
                                             <p className="text-slate-600 mb-4">
-                                                Weekly posts, seasonal health tips, photo updates, and ensuring your NAP is consistent across all directories. Seomi keeps your profile active so Google keeps you visible.
+                                                Weekly posts, seasonal health tips, photo updates, and ensuring your NAP is consistent across all directories. Ranky keeps your profile active so Google keeps you visible.
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">
@@ -608,7 +608,7 @@ export default function SeoForDoctorsDentistsContent() {
                                         <div>
                                             <h3 className="font-bold text-slate-900 text-xl mb-2">AI Recommendation Optimization</h3>
                                             <p className="text-slate-600 mb-4">
-                                                Seomi structures your content so ChatGPT, Claude, and Google AI can recommend your practice. This includes Answer Engine Optimization (AEO), structured data, and building the authority signals AI looks for.
+                                                Ranky structures your content so ChatGPT, Claude, and Google AI can recommend your practice. This includes Answer Engine Optimization (AEO), structured data, and building the authority signals AI looks for.
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">
@@ -627,7 +627,7 @@ export default function SeoForDoctorsDentistsContent() {
                                         <div>
                                             <h3 className="font-bold text-slate-900 text-xl mb-2">Local SEO Monitoring</h3>
                                             <p className="text-slate-600 mb-4">
-                                                Seomi tracks your rankings, monitors competitors, and adjusts strategy based on what's working. You get visibility into your SEO performance without needing to become an SEO expert.
+                                                Ranky tracks your rankings, monitors competitors, and adjusts strategy based on what's working. You get visibility into your SEO performance without needing to become an SEO expert.
                                             </p>
                                         </div>
                                     </div>
@@ -636,7 +636,7 @@ export default function SeoForDoctorsDentistsContent() {
                         </section>
 
                         <section id="pricing" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Cost Comparison: Agency vs. Seomi</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Cost Comparison: Agency vs. Ranky</h2>
                             <p className="text-lg text-slate-600 mb-8">
                                 Traditional medical SEO agencies charge premium prices. According to <a href="https://www.patientgain.com/medical-seo-doctors" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">PatientGain</a>, expect to pay $999-$5,000/month for quality medical SEO services. Here's how Dooza compares:
                             </p>
@@ -695,17 +695,17 @@ export default function SeoForDoctorsDentistsContent() {
                                     {
                                         step: "1",
                                         title: "Book a Free Onboarding Call (30 minutes)",
-                                        desc: "Tell us about your practice, your patients, and your goals. We'll set up Seomi to understand your specialty and local market."
+                                        desc: "Tell us about your practice, your patients, and your goals. We'll set up Ranky to understand your specialty and local market."
                                     },
                                     {
                                         step: "2",
                                         title: "Connect Your Google Business Profile",
-                                        desc: "One-click connection. Seomi starts analyzing your current presence and identifying opportunities."
+                                        desc: "One-click connection. Ranky starts analyzing your current presence and identifying opportunities."
                                     },
                                     {
                                         step: "3",
-                                        title: "Seomi Starts Working Immediately",
-                                        desc: "Within 24 hours, Seomi is writing blogs, optimizing your GBP, and building your AI visibility. You don't need to do anything else."
+                                        title: "Ranky Starts Working Immediately",
+                                        desc: "Within 24 hours, Ranky is writing blogs, optimizing your GBP, and building your AI visibility. You don't need to do anything else."
                                     },
                                     {
                                         step: "4",
@@ -726,11 +726,11 @@ export default function SeoForDoctorsDentistsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Let AI Handle Your Marketing?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    You've worked too hard building your skills to lose patients to competitors with better marketing. Let Seomi level the playing field.
+                                    You've worked too hard building your skills to lose patients to competitors with better marketing. Let Ranky level the playing field.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Start With Seomi - $29/month <ArrowRight className="w-4 h-4" />
+                                        Start With Ranky - $29/month <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

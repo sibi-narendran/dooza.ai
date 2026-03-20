@@ -346,11 +346,11 @@ export default function AiStaffingContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { role: "Email Manager", humanCost: "$3,500", agent: "Eva", doozaCost: "Included" },
+                                            { role: "Email Manager", humanCost: "$3,500", agent: "Maily", doozaCost: "Included" },
                                             { role: "Social Media Manager", humanCost: "$4,200", agent: "Somi", doozaCost: "Included" },
                                             { role: "Receptionist", humanCost: "$3,500", agent: "Rachel", doozaCost: "Included" },
                                             { role: "Lead Generation Specialist", humanCost: "$4,500", agent: "Stan", doozaCost: "Included" },
-                                            { role: "SEO Specialist", humanCost: "$5,000", agent: "Seomi", doozaCost: "Included" },
+                                            { role: "SEO Specialist", humanCost: "$5,000", agent: "Ranky", doozaCost: "Included" },
                                             { role: "Legal/Compliance Assistant", humanCost: "$4,000", agent: "Linda", doozaCost: "Included" }
                                         ].map((item, idx) => (
                                             <tr key={idx} className="border-t border-slate-200">
@@ -425,14 +425,14 @@ export default function AiStaffingContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Meet Your AI Dream Team</h2>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
-                                {/* Eva */}
+                                {/* Maily */}
                                 <div className="bg-white border-2 border-slate-200 p-6 rounded-2xl hover:border-primary-200 transition-colors">
                                     <div className="flex items-center gap-3 mb-4">
                                         <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
                                             <Mail size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-slate-900 text-lg">Eva</h3>
+                                            <h3 className="font-bold text-slate-900 text-lg">Maily</h3>
                                             <p className="text-sm text-slate-500">AI Email Manager</p>
                                         </div>
                                     </div>
@@ -514,14 +514,14 @@ export default function AiStaffingContent() {
                                     </div>
                                 </div>
 
-                                {/* Seomi */}
+                                {/* Ranky */}
                                 <div className="bg-white border-2 border-slate-200 p-6 rounded-2xl hover:border-primary-200 transition-colors">
                                     <div className="flex items-center gap-3 mb-4">
                                         <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600">
                                             <TrendingUp size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-slate-900 text-lg">Seomi</h3>
+                                            <h3 className="font-bold text-slate-900 text-lg">Ranky</h3>
                                             <p className="text-sm text-slate-500">AI SEO Specialist</p>
                                         </div>
                                     </div>
@@ -629,7 +629,7 @@ export default function AiStaffingContent() {
                                     {
                                         step: "2",
                                         title: "Start With Your Bottleneck",
-                                        desc: "Which role would save you the most time or money? For most businesses, it's email (Eva) or calls (Rachel)."
+                                        desc: "Which role would save you the most time or money? For most businesses, it's email (Maily) or calls (Rachel)."
                                     },
                                     {
                                         step: "3",
@@ -679,7 +679,7 @@ export default function AiStaffingContent() {
                                         Solo Consultant
                                     </h3>
                                     <p className="text-blue-700">
-                                        You're a one-person shop. Eva handles your email. Somi posts to LinkedIn. Rachel answers calls. You just gained <strong>20 hours/week</strong> to serve clients.
+                                        You're a one-person shop. Maily handles your email. Somi posts to LinkedIn. Rachel answers calls. You just gained <strong>20 hours/week</strong> to serve clients.
                                     </p>
                                 </div>
 
@@ -689,7 +689,7 @@ export default function AiStaffingContent() {
                                         Small Agency (5-10 people)
                                     </h3>
                                     <p className="text-purple-700">
-                                        Your team is stretched thin. Seomi handles SEO for all client accounts. Stan generates leads. Linda reviews contracts. Your team focuses on <strong>creative and strategy</strong>.
+                                        Your team is stretched thin. Ranky handles SEO for all client accounts. Stan generates leads. Linda reviews contracts. Your team focuses on <strong>creative and strategy</strong>.
                                     </p>
                                 </div>
 
@@ -699,7 +699,7 @@ export default function AiStaffingContent() {
                                         Local Service Business
                                     </h3>
                                     <p className="text-green-700">
-                                        You run a plumbing company. Rachel captures emergency calls at 3 AM. Somi posts before/after photos. Eva follows up on quotes. You went from missing <strong>60% of calls</strong> to capturing <strong>100%</strong>.
+                                        You run a plumbing company. Rachel captures emergency calls at 3 AM. Somi posts before/after photos. Maily follows up on quotes. You went from missing <strong>60% of calls</strong> to capturing <strong>100%</strong>.
                                     </p>
                                 </div>
                             </div>

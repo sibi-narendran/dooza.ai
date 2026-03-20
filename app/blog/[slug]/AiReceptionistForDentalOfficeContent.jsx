@@ -762,7 +762,7 @@ export default function AiReceptionistForDentalOfficeContent() {
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Want to make sure patients find your practice before they call? <Link href="/blog/seo-for-doctors-dentists" className="text-primary-600 hover:underline font-medium">Read our dental SEO guide</Link> to learn how Seomi, your AI SEO specialist, keeps your practice visible on Google and AI recommendation engines.
+                                    Want to make sure patients find your practice before they call? <Link href="/blog/seo-for-doctors-dentists" className="text-primary-600 hover:underline font-medium">Read our dental SEO guide</Link> to learn how Ranky, your AI SEO specialist, keeps your practice visible on Google and AI recommendation engines.
                                 </p>
                             </div>
                         </section>

@@ -461,7 +461,7 @@ export default function MarketingAutomationToolsContent() {
                                         <ul className="space-y-2 text-slate-700">
                                             <li className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                                                <span><strong>Eva</strong> manages your email—sends, follows up, nurtures</span>
+                                                <span><strong>Maily</strong> manages your email—sends, follows up, nurtures</span>
                                             </li>
                                             <li className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-5 h-5 text-green-500" />

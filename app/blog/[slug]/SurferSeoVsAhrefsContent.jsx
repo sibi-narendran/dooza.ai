@@ -36,8 +36,8 @@ const faqData = [
         answer: "Absolutely! Many SEO professionals use Ahrefs for keyword research and Surfer SEO to write the actual content."
     },
     {
-        question: "What is Seomi and how can she help?",
-        answer: "Seomi is an AI employee from Dooza that can handle your SEO tasks. She can research keywords, optimize content, and rank your business on Google."
+        question: "What is Ranky and how can she help?",
+        answer: "Ranky is an AI employee from Dooza that can handle your SEO tasks. She can research keywords, optimize content, and rank your business on Google."
     }
 ];
 
@@ -55,7 +55,7 @@ export default function SurferSeoVsAhrefsContent() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['introduction', 'surfer-seo-features', 'ahrefs-features', 'pricing', 'comparison', 'seomi-ai-employee', 'conclusion', 'faq'];
+            const sections = ['introduction', 'surfer-seo-features', 'ahrefs-features', 'pricing', 'comparison', 'ranky-ai-employee', 'conclusion', 'faq'];
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -140,7 +140,7 @@ export default function SurferSeoVsAhrefsContent() {
                                     { id: 'ahrefs-features', label: 'Ahrefs Features' },
                                     { id: 'pricing', label: 'Pricing Comparison' },
                                     { id: 'comparison', label: 'Pros & Cons' },
-                                    { id: 'seomi-ai-employee', label: 'Meet Seomi (AI)' },
+                                    { id: 'ranky-ai-employee', label: 'Meet Ranky (AI)' },
                                     { id: 'conclusion', label: 'Conclusion' },
                                     { id: 'faq', label: 'FAQ' },
                                 ].map((item) => (
@@ -158,7 +158,7 @@ export default function SurferSeoVsAhrefsContent() {
                             </nav>
 
                             <div className="mt-8 pt-6 border-t border-slate-200">
-                                <p className="text-sm text-slate-600 mb-4">Hire Seomi for your SEO?</p>
+                                <p className="text-sm text-slate-600 mb-4">Hire Ranky for your SEO?</p>
                                 <a
                                     href={getProductSignupUrl('workforce')}
                                     target="_blank"
@@ -284,27 +284,27 @@ export default function SurferSeoVsAhrefsContent() {
                             </div>
                         </section>
 
-                        <section id="seomi-ai-employee" className="scroll-mt-28">
+                        <section id="ranky-ai-employee" className="scroll-mt-28">
                             <div className="bg-primary-50 border border-primary-200 rounded-2xl p-8 relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary-100 rounded-full blur-3xl -mr-32 -mt-32 opacity-50"></div>
                                 <div className="relative z-10">
                                     <div className="flex items-center gap-3 mb-4">
                                         <div className="bg-white p-2 rounded-lg shadow-sm"><Zap className="w-6 h-6 text-primary-600" /></div>
-                                        <h2 className="text-2xl font-bold text-slate-900">The Smarter Way: Meet Seomi</h2>
+                                        <h2 className="text-2xl font-bold text-slate-900">The Smarter Way: Meet Ranky</h2>
                                     </div>
                                     <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-                                        Stop struggling to learn complex tools. Seomi is an <strong>intelligent AI employee</strong> that does the work for you—researching, drafting, and optimizing while you sleep.
+                                        Stop struggling to learn complex tools. Ranky is an <strong>intelligent AI employee</strong> that does the work for you—researching, drafting, and optimizing while you sleep.
                                     </p>
                                     <div className="bg-white/80 backdrop-blur-sm rounded-xl p-5 mb-6">
                                         <ul className="space-y-3">
-                                            {["Uses the Best Tools: Seomi analyzes data from top SEO sources.", "Zero Management: She works autonomously.", "Agency Quality, Software Price: Results that usually cost $2,000/mo."].map((item, idx) => (
+                                            {["Uses the Best Tools: Ranky analyzes data from top SEO sources.", "Zero Management: She works autonomously.", "Agency Quality, Software Price: Results that usually cost $2,000/mo."].map((item, idx) => (
                                                 <li key={idx} className="flex gap-3 text-slate-700"><CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" /><span>{item}</span></li>
                                             ))}
                                         </ul>
                                     </div>
                                     <div className="flex flex-col sm:flex-row gap-4">
-                                        <a href={getProductSignupUrl('seomi')} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-primary-600 text-white font-bold rounded-lg hover:bg-primary-700 transition-colors text-center shadow-lg shadow-primary-600/20">
-                                            Start with Seomi Free
+                                        <a href={getProductSignupUrl('ranky')} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-primary-600 text-white font-bold rounded-lg hover:bg-primary-700 transition-colors text-center shadow-lg shadow-primary-600/20">
+                                            Start with Ranky Free
                                         </a>
                                         <Link href="/partners" className="px-6 py-3 bg-white text-primary-700 font-bold rounded-lg border border-primary-200 hover:bg-primary-50 transition-colors text-center">
                                             Partner with Dooza (Agencies)
@@ -324,7 +324,7 @@ export default function SurferSeoVsAhrefsContent() {
                                     If you are an SEO specialist who needs to clean up backlink profiles or find technical site errors, <strong>Ahrefs</strong> is indispensable.
                                 </p>
                                 <p>
-                                    But if you want the best of both worlds without the manual labor, consider automating the entire process with an AI employee like Seomi.
+                                    But if you want the best of both worlds without the manual labor, consider automating the entire process with an AI employee like Ranky.
                                 </p>
                             </div>
                         </section>

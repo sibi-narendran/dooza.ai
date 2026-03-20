@@ -478,20 +478,20 @@ export default function BuildA20xCompanyContent() {
                             </div>
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                                {/* Eva */}
+                                {/* Maily */}
                                 <div className="bg-white border-2 border-slate-200 p-6 rounded-2xl hover:border-primary-200 transition-colors">
                                     <div className="flex items-center gap-3 mb-4">
                                         <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
                                             <Mail size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-slate-900 text-lg">Eva</h3>
+                                            <h3 className="font-bold text-slate-900 text-lg">Maily</h3>
                                             <p className="text-sm text-slate-500">AI Email Manager</p>
                                         </div>
                                     </div>
                                     <p className="text-slate-600 text-sm mb-3">Reads, prioritizes, responds, and follows up on email — autonomously.</p>
                                     <div className="bg-blue-50 p-3 rounded-lg">
-                                        <p className="text-xs text-blue-700 font-medium">Legion Health's 1-person departments? Eva is your email department.</p>
+                                        <p className="text-xs text-blue-700 font-medium">Legion Health's 1-person departments? Maily is your email department.</p>
                                     </div>
                                 </div>
 
@@ -546,14 +546,14 @@ export default function BuildA20xCompanyContent() {
                                     </div>
                                 </div>
 
-                                {/* Seomi */}
+                                {/* Ranky */}
                                 <div className="bg-white border-2 border-slate-200 p-6 rounded-2xl hover:border-primary-200 transition-colors">
                                     <div className="flex items-center gap-3 mb-4">
                                         <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600">
                                             <TrendingUp size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-slate-900 text-lg">Seomi</h3>
+                                            <h3 className="font-bold text-slate-900 text-lg">Ranky</h3>
                                             <p className="text-sm text-slate-500">AI SEO Specialist</p>
                                         </div>
                                     </div>
@@ -605,7 +605,7 @@ export default function BuildA20xCompanyContent() {
                                     {
                                         step: "2",
                                         title: "Your AI Employees Go Live",
-                                        desc: "Eva starts managing email. Somi begins posting to social media. Rachel answers calls. Stan generates leads. Seomi writes SEO content. Linda handles compliance. All working 24/7."
+                                        desc: "Maily starts managing email. Somi begins posting to social media. Rachel answers calls. Stan generates leads. Ranky writes SEO content. Linda handles compliance. All working 24/7."
                                     },
                                     {
                                         step: "3",
@@ -662,7 +662,7 @@ export default function BuildA20xCompanyContent() {
                                     {
                                         step: "Week 2",
                                         title: "Deploy",
-                                        desc: "Start with your biggest bottleneck. For most businesses, that's email (Eva) or missed calls (Rachel). Book your free onboarding call and go live.",
+                                        desc: "Start with your biggest bottleneck. For most businesses, that's email (Maily) or missed calls (Rachel). Book your free onboarding call and go live.",
                                         color: "bg-blue-50 border-blue-200",
                                         stepColor: "bg-blue-100 text-blue-700"
                                     },
@@ -676,7 +676,7 @@ export default function BuildA20xCompanyContent() {
                                     {
                                         step: "Month 2+",
                                         title: "Scale",
-                                        desc: "Activate more AI employees. Add Somi for social media. Deploy Stan for lead generation. Turn on Seomi for SEO. Go from 1 AI employee to a full 20X operation.",
+                                        desc: "Activate more AI employees. Add Somi for social media. Deploy Stan for lead generation. Turn on Ranky for SEO. Go from 1 AI employee to a full 20X operation.",
                                         color: "bg-purple-50 border-purple-200",
                                         stepColor: "bg-purple-100 text-purple-700"
                                     }

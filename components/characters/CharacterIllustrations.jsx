@@ -1,7 +1,7 @@
 const characterStyles = {
-    eva: { accent: '#3b82f6', bg: '#dbeafe' },
+    maily: { accent: '#3b82f6', bg: '#dbeafe' },
     somi: { accent: '#ec4899', bg: '#fce7f3' },
-    seomi: { accent: '#10b981', bg: '#d1fae5' },
+    ranky: { accent: '#10b981', bg: '#d1fae5' },
     rachel: { accent: '#8b5cf6', bg: '#ede9fe' },
     stan: { accent: '#f97316', bg: '#ffedd5' },
     linda: { accent: '#64748b', bg: '#f1f5f9' },
@@ -32,8 +32,8 @@ function CharacterBase({ accent, bg, accessory, size = 120 }) {
     );
 }
 
-export function EvaCharacter({ size = 120 }) {
-    const { accent, bg } = characterStyles.eva;
+export function MailyCharacter({ size = 120 }) {
+    const { accent, bg } = characterStyles.maily;
     return (
         <CharacterBase
             accent={accent}
@@ -76,8 +76,8 @@ export function SomiCharacter({ size = 120 }) {
     );
 }
 
-export function SeomiCharacter({ size = 120 }) {
-    const { accent, bg } = characterStyles.seomi;
+export function RankyCharacter({ size = 120 }) {
+    const { accent, bg } = characterStyles.ranky;
     return (
         <CharacterBase
             accent={accent}
@@ -170,7 +170,7 @@ export function CharacterGroup({ size = 80 }) {
     return (
         <div className="flex items-end justify-center gap-2 md:gap-4">
             <div className="animate-float" style={{ animationDelay: '0s' }}>
-                <EvaCharacter size={size} />
+                <MailyCharacter size={size} />
             </div>
             <div className="animate-float" style={{ animationDelay: '0.5s' }}>
                 <SomiCharacter size={size * 1.1} />
@@ -186,16 +186,16 @@ export function CharacterGroup({ size = 80 }) {
 }
 
 const characterMap = {
-    Eva: EvaCharacter,
+    Maily: MailyCharacter,
     Somi: SomiCharacter,
-    Seomi: SeomiCharacter,
+    Ranky: RankyCharacter,
     Rachel: RachelCharacter,
     Stan: StanCharacter,
     Linda: LindaCharacter,
 };
 
 export function getCharacter(name) {
-    return characterMap[name] || EvaCharacter;
+    return characterMap[name] || MailyCharacter;
 }
 
 export default characterMap;

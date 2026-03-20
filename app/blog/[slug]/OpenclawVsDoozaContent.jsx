@@ -479,7 +479,7 @@ export default function OpenclawVsDoozaContent() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
                                 {[
-                                    { icon: Users, title: "6 Pre-Built AI Employees", desc: "Eva (Email), Somi (Social Media), Seomi (SEO), Rachel (Receptionist), Stan (Sales), Linda (Legal). All configured and working from day one." },
+                                    { icon: Users, title: "6 Pre-Built AI Employees", desc: "Maily (Email), Somi (Social Media), Ranky (SEO), Rachel (Receptionist), Stan (Sales), Linda (Legal). All configured and working from day one." },
                                     { icon: Timer, title: "Autonomous Cron Jobs", desc: "AI employees wake up on schedule, do their work, and report back. Social posts at 9am. Review monitoring at noon. Weekly reports on Monday." },
                                     { icon: ShieldCheck, title: "Enterprise Security", desc: "Three-layer security: agent whitelists, global blacklists, and sandbox isolation. All active by default. Zero configuration." },
                                     { icon: Database, title: "Multi-Tenancy Built In", desc: "Row-level database security, filesystem sandboxing, runtime identity tracking. Each customer's data is completely isolated." },
@@ -721,7 +721,7 @@ export default function OpenclawVsDoozaContent() {
                                     {
                                         step: "2",
                                         title: "Book Your Free Onboarding Call",
-                                        desc: "Our concierge team configures your 6 AI employees — Eva (email), Somi (social), Seomi (SEO), Rachel (receptionist), Stan (sales), and Linda (legal) — to match your business, brand voice, and workflows."
+                                        desc: "Our concierge team configures your 6 AI employees — Maily (email), Somi (social), Ranky (SEO), Rachel (receptionist), Stan (sales), and Linda (legal) — to match your business, brand voice, and workflows."
                                     },
                                     {
                                         step: "3",

@@ -59,7 +59,7 @@ const faqData = [
     },
     {
         question: "Can AI really write content that sounds like me?",
-        answer: "Yes. Dooza's AI employees learn your brand voice, your market expertise, and your unique selling points. Somi (social media) and Seomi (SEO/blogs) create content that reflects your personality and local knowledge. You approve everything before it posts, but most agents find the content needs minimal editing."
+        answer: "Yes. Dooza's AI employees learn your brand voice, your market expertise, and your unique selling points. Somi (social media) and Ranky (SEO/blogs) create content that reflects your personality and local knowledge. You approve everything before it posts, but most agents find the content needs minimal editing."
     },
     {
         question: "What about my existing CRM and tools?",
@@ -571,13 +571,13 @@ export default function AiForRealEstateAgentsContent() {
                                             <Mail size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-slate-900 text-xl mb-2">Eva - AI Email Manager</h3>
+                                            <h3 className="font-bold text-slate-900 text-xl mb-2">Maily - AI Email Manager</h3>
                                             <p className="text-slate-600 mb-4">
-                                                Eva manages your inbox, drafts responses, follows up with leads, and ensures nothing falls through the cracks. She learns your communication style and handles routine inquiries automatically.
+                                                Maily manages your inbox, drafts responses, follows up with leads, and ensures nothing falls through the cracks. She learns your communication style and handles routine inquiries automatically.
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">
-                                                    <strong>Real estate impact:</strong> Those 6-month-old leads in your database? Eva starts nurturing them with personalized follow-ups. Most agents are shocked when "dead" leads suddenly respond.
+                                                    <strong>Real estate impact:</strong> Those 6-month-old leads in your database? Maily starts nurturing them with personalized follow-ups. Most agents are shocked when "dead" leads suddenly respond.
                                                 </p>
                                             </div>
                                         </div>
@@ -609,9 +609,9 @@ export default function AiForRealEstateAgentsContent() {
                                             <Search size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-slate-900 text-xl mb-2">Seomi - AI SEO Specialist</h3>
+                                            <h3 className="font-bold text-slate-900 text-xl mb-2">Ranky - AI SEO Specialist</h3>
                                             <p className="text-slate-600 mb-4">
-                                                Seomi writes and publishes SEO-optimized blog posts, neighborhood guides, and market reports. She optimizes your Google Business Profile and ensures you rank when buyers search for agents in your area.
+                                                Ranky writes and publishes SEO-optimized blog posts, neighborhood guides, and market reports. She optimizes your Google Business Profile and ensures you rank when buyers search for agents in your area.
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">

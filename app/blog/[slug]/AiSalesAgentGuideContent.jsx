@@ -583,7 +583,7 @@ export default function AiSalesAgentGuideContent() {
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Stan doesn't work alone. He's part of your <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">full AI workforce</Link> — working alongside Rachel (receptionist), Eva (email), Somi (social media), Seomi (SEO), and Linda (legal) to turn your business into a lead-generating machine.
+                                    Stan doesn't work alone. He's part of your <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">full AI workforce</Link> — working alongside Rachel (receptionist), Maily (email), Somi (social media), Ranky (SEO), and Linda (legal) to turn your business into a lead-generating machine.
                                 </p>
                             </div>
                         </section>

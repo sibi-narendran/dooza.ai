@@ -120,10 +120,10 @@ const softwareSchema = {
     "softwareVersion": "2.0",
     "releaseNotes": "AI Employees for business automation including email, social media, SEO, and calls",
     "featureList": [
-        "AI Email Manager (Eva)",
+        "AI Email Manager (Maily)",
         "AI Social Media Manager (Somi)",
         "AI Lead Generator (Stan)",
-        "AI SEO Specialist (Penny/Seomi)",
+        "AI SEO Specialist (Penny/Ranky)",
         "AI Receptionist with Phone Calls (Rachel)",
         "AI Legal Assistant (Linda)",
         "Custom AI Employee Builder",
@@ -181,7 +181,7 @@ const softwareSchema = {
                 "@type": "Organization",
                 "name": "Suresh Timbers"
             },
-            "reviewBody": "Our social pages used to be dead. Now Seomi posts daily updates and we're actually growing."
+            "reviewBody": "Our social pages used to be dead. Now Ranky posts daily updates and we're actually growing."
         }
     ]
 };
@@ -247,7 +247,7 @@ const serviceSchema = {
                 "@type": "Offer",
                 "itemOffered": {
                     "@type": "Service",
-                    "name": "Eva - AI Email Manager",
+                    "name": "Maily - AI Email Manager",
                     "description": "AI employee that manages your inbox, drafts replies, and sends emails automatically"
                 }
             },
@@ -263,7 +263,7 @@ const serviceSchema = {
                 "@type": "Offer",
                 "itemOffered": {
                     "@type": "Service",
-                    "name": "Seomi - AI SEO Specialist",
+                    "name": "Ranky - AI SEO Specialist",
                     "description": "AI employee that writes blog posts, optimizes Google Business Profile, and improves search rankings"
                 }
             },
@@ -348,7 +348,7 @@ const aiEmployeesListSchema = {
         {
             "@type": "ListItem",
             "position": 1,
-            "name": "Eva - AI Email Manager",
+            "name": "Maily - AI Email Manager",
             "description": "Manages inbox, drafts and sends replies automatically",
             "url": "https://www.dooza.ai"
         },
@@ -362,7 +362,7 @@ const aiEmployeesListSchema = {
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Seomi - AI SEO Specialist",
+            "name": "Ranky - AI SEO Specialist",
             "description": "Writes blogs, optimizes Google Business Profile, improves rankings",
             "url": "https://www.dooza.ai"
         },

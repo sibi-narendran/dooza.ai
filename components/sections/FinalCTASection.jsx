@@ -1,9 +1,9 @@
-import { EvaCharacter, SomiCharacter, SeomiCharacter, RachelCharacter, StanCharacter, LindaCharacter } from '@/components/characters/CharacterIllustrations';
+import { MailyCharacter, SomiCharacter, RankyCharacter, RachelCharacter, StanCharacter, LindaCharacter } from '@/components/characters/CharacterIllustrations';
 import ScrollReveal from '@/components/ScrollReveal';
 import SignupButton from '@/components/buttons/SignupButton';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 
-const characters = [EvaCharacter, SomiCharacter, SeomiCharacter, RachelCharacter, StanCharacter, LindaCharacter];
+const characters = [MailyCharacter, SomiCharacter, RankyCharacter, RachelCharacter, StanCharacter, LindaCharacter];
 
 export default function FinalCTASection() {
     return (

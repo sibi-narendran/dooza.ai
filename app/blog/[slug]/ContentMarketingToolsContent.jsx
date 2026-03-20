@@ -459,7 +459,7 @@ export default function ContentMarketingToolsContent() {
                                 {[
                                     {
                                         icon: PenTool,
-                                        employee: "Seomi",
+                                        employee: "Ranky",
                                         title: "AI SEO & Blog Specialist",
                                         description: "Writes and publishes SEO-optimized blog posts daily. Researches keywords, creates content that ranks, handles internal linking, and manages your content calendar—all automatically.",
                                         replaces: "SEO tool + AI writer + content manager"
@@ -473,7 +473,7 @@ export default function ContentMarketingToolsContent() {
                                     },
                                     {
                                         icon: FileText,
-                                        employee: "Eva",
+                                        employee: "Maily",
                                         title: "AI Email Manager",
                                         description: "Drafts email campaigns, follow-up sequences, and newsletters. Personalizes content for different segments and ensures consistent communication with your audience.",
                                         replaces: "Email marketing tool + copywriter"

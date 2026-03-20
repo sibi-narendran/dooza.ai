@@ -46,7 +46,7 @@ const faqData = [
     },
     {
         question: "Is Ahrefs or Semrush better for small businesses?",
-        answer: "Both are overkill for most small businesses. Ahrefs starts at $29/month (limited) or $129/month (Lite), while Semrush starts at $139.95/month. Most SMBs don't need enterprise-level backlink analysis. SE Ranking ($65/month) or Moz ($49/month) offer more appropriate features at better prices. Or let Seomi handle your SEO automatically for $29/month."
+        answer: "Both are overkill for most small businesses. Ahrefs starts at $29/month (limited) or $129/month (Lite), while Semrush starts at $139.95/month. Most SMBs don't need enterprise-level backlink analysis. SE Ranking ($65/month) or Moz ($49/month) offer more appropriate features at better prices. Or let Ranky handle your SEO automatically for $29/month."
     },
     {
         question: "How long does SEO take to show results?",
@@ -119,7 +119,7 @@ export default function SeoToolsSmallBusinessContent() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['introduction', 'why-seo-matters', 'tool-comparison', 'free-tools', 'ai-alternative', 'what-seomi-does', 'getting-started', 'faq'];
+            const sections = ['introduction', 'why-seo-matters', 'tool-comparison', 'free-tools', 'ai-alternative', 'what-ranky-does', 'getting-started', 'faq'];
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -210,7 +210,7 @@ export default function SeoToolsSmallBusinessContent() {
                                     { id: 'tool-comparison', label: 'Tool Comparison' },
                                     { id: 'free-tools', label: 'Free SEO Tools' },
                                     { id: 'ai-alternative', label: 'The AI Alternative' },
-                                    { id: 'what-seomi-does', label: 'What Seomi Does' },
+                                    { id: 'what-ranky-does', label: 'What Ranky Does' },
                                     { id: 'getting-started', label: 'Getting Started' },
                                     { id: 'faq', label: 'FAQ' },
                                 ].map((item) => (
@@ -235,7 +235,7 @@ export default function SeoToolsSmallBusinessContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Seomi Free
+                                    Try Ranky Free
                                 </a>
                             </div>
 
@@ -467,8 +467,8 @@ export default function SeoToolsSmallBusinessContent() {
                             </div>
                         </section>
 
-                        <section id="what-seomi-does" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What Seomi (Your AI SEO Employee) Actually Does</h2>
+                        <section id="what-ranky-does" className="scroll-mt-28">
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What Ranky (Your AI SEO Employee) Actually Does</h2>
 
                             <div className="space-y-6 mb-8">
                                 {[
@@ -527,7 +527,7 @@ export default function SeoToolsSmallBusinessContent() {
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
                                         <div className="text-2xl font-bold text-green-700">$29/mo</div>
-                                        <p className="text-sm text-green-600">Seomi (does the work for you)</p>
+                                        <p className="text-sm text-green-600">Ranky (does the work for you)</p>
                                     </div>
                                 </div>
                             </div>
@@ -546,7 +546,7 @@ export default function SeoToolsSmallBusinessContent() {
                                     {
                                         step: "2",
                                         title: "Decide: Research or Execution?",
-                                        desc: "Do you need a tool to tell you what to do (Semrush, Ahrefs)? Or do you need something that does the work (Seomi)? Most small businesses need execution more than research."
+                                        desc: "Do you need a tool to tell you what to do (Semrush, Ahrefs)? Or do you need something that does the work (Ranky)? Most small businesses need execution more than research."
                                     },
                                     {
                                         step: "3",
@@ -572,11 +572,11 @@ export default function SeoToolsSmallBusinessContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Start Ranking?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Skip the expensive tools that just tell you what you already know. Let Seomi handle your SEO execution while you run your business.
+                                    Skip the expensive tools that just tell you what you already know. Let Ranky handle your SEO execution while you run your business.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Seomi - $29/month <ArrowRight className="w-4 h-4" />
+                                        Get Ranky - $29/month <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

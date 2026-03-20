@@ -73,7 +73,7 @@ const toolCategories = [
         title: "Email Marketing",
         description: "Newsletters, drip campaigns, and automated follow-ups",
         tools: ["Mailchimp ($13-350/mo)", "Constant Contact ($12-80/mo)", "ActiveCampaign ($29-149/mo)"],
-        dooza: "Eva handles email automatically"
+        dooza: "Maily handles email automatically"
     },
     {
         icon: Megaphone,
@@ -87,7 +87,7 @@ const toolCategories = [
         title: "SEO & Content",
         description: "Blog posts, keyword research, and search optimization",
         tools: ["Semrush ($139-499/mo)", "Ahrefs ($29-449/mo)", "Surfer SEO ($89-219/mo)"],
-        dooza: "Seomi writes and optimizes content"
+        dooza: "Ranky writes and optimizes content"
     },
     {
         icon: Target,
@@ -480,9 +480,9 @@ export default function SmallBusinessMarketingToolsContent() {
                                 <h3 className="font-bold text-green-800 mb-6 text-xl">Dooza: One Platform, 6 AI Employees</h3>
                                 <div className="space-y-3 mb-6">
                                     {[
-                                        { employee: "Eva - Email Manager", included: true },
+                                        { employee: "Maily - Email Manager", included: true },
                                         { employee: "Somi - Social Media Manager", included: true },
-                                        { employee: "Seomi - SEO Specialist", included: true },
+                                        { employee: "Ranky - SEO Specialist", included: true },
                                         { employee: "Stan - Lead Generator", included: true },
                                         { employee: "Rachel - AI Receptionist", included: true },
                                         { employee: "Linda - Legal Assistant", included: true }
