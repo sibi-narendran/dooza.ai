@@ -1,5 +1,6 @@
 import { blogPosts } from '../lib/blogData';
 import { industryPages } from '../lib/industryData';
+import { agentPages } from '../lib/agentData';
 import { SITE_URL } from '../lib/site';
 import { supabaseServer } from '../lib/supabaseServer';
 
@@ -109,5 +110,13 @@ export default async function sitemap() {
         images: page.image ? [`${SITE_URL}${page.image}`] : [],
     }));
 
-    return [...staticPages, ...blogPages, ...dynamicBlogPages, ...industryPageEntries];
+    // Agent landing pages
+    const agentPageEntries = agentPages.map((page) => ({
+        url: `${SITE_URL}/agents/${page.slug}`,
+        lastModified: new Date(page.modifiedDate || page.date),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    }));
+
+    return [...staticPages, ...blogPages, ...dynamicBlogPages, ...industryPageEntries, ...agentPageEntries];
 }
