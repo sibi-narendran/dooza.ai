@@ -38,6 +38,18 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/dooza-vs-sintra`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/dooza-vs-marblism`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/industries`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
