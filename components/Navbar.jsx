@@ -11,7 +11,9 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
+    const [agentsOpen, setAgentsOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const agentsDropdownRef = useRef(null);
 
     const isDark = variant === 'dark';
 
@@ -26,6 +28,9 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setProductsOpen(false);
             }
+            if (agentsDropdownRef.current && !agentsDropdownRef.current.contains(event.target)) {
+                setAgentsOpen(false);
+            }
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -33,7 +38,11 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
 
     const products = [
         { name: 'Workforce', href: '/' },
-        { name: 'Studio', href: '/studio', comingSoon: true }
+        { name: 'Studio', href: '/studio', comingSoon: true },
+    ];
+
+    const agents = [
+        { name: 'Ranky — AI SEO', href: '/agents/ranky' },
     ];
 
     return (
@@ -110,6 +119,58 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                                                             Soon
                                                         </span>
                                                     )}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Agents Dropdown */}
+                            <div className="relative" ref={agentsDropdownRef}>
+                                <button
+                                    onClick={() => setAgentsOpen(!agentsOpen)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Escape') setAgentsOpen(false);
+                                    }}
+                                    aria-expanded={agentsOpen}
+                                    aria-haspopup="true"
+                                    aria-controls="agents-dropdown"
+                                    aria-label="Agents menu"
+                                    className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
+                                        ? 'text-gray-300 hover:text-white'
+                                        : 'text-slate-600 hover:text-primary-600'
+                                        }`}
+                                >
+                                    Agents
+                                    <ChevronDown className={`w-4 h-4 transition-transform ${agentsOpen ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                {agentsOpen && (
+                                    <div
+                                        id="agents-dropdown"
+                                        role="menu"
+                                        className={`absolute top-full left-0 mt-2 min-w-[200px] rounded-xl shadow-xl border overflow-hidden ${isDark
+                                            ? 'bg-[#12121a] border-white/10'
+                                            : 'bg-white border-slate-100'
+                                        }`}
+                                    >
+                                        <div className="py-2">
+                                            {agents.map((agent) => (
+                                                <Link
+                                                    key={agent.name}
+                                                    href={agent.href}
+                                                    role="menuitem"
+                                                    onClick={() => setAgentsOpen(false)}
+                                                    onKeyDown={(e) => {
+                                                        if (e.key === 'Escape') setAgentsOpen(false);
+                                                    }}
+                                                    className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${isDark
+                                                        ? 'text-gray-300 hover:bg-white/5 hover:text-white'
+                                                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                                                        }`}
+                                                >
+                                                    {agent.name}
                                                 </Link>
                                             ))}
                                         </div>
@@ -205,6 +266,26 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                                         Soon
                                     </span>
                                 )}
+                            </Link>
+                        ))}
+
+                        <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
+
+                        {/* Mobile Agents Section */}
+                        <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
+                            Agents
+                        </div>
+                        {agents.map((agent) => (
+                            <Link
+                                key={agent.name}
+                                href={agent.href}
+                                onClick={() => setIsOpen(false)}
+                                className={`block px-3 py-3 rounded-lg font-medium ${isDark
+                                    ? 'text-gray-300 hover:bg-white/5'
+                                    : 'text-slate-600 hover:bg-slate-50'
+                                    }`}
+                            >
+                                {agent.name}
                             </Link>
                         ))}
 

@@ -59,7 +59,7 @@ export default function AuthorLayout({ children }) {
             "url": `${SITE_URL}/author`,
             "sameAs": [
                 "https://twitter.com/sibinarendran",
-                "https://www.linkedin.com/company/dooza"
+                "https://www.linkedin.com/company/110144933/"
             ]
         }
     };

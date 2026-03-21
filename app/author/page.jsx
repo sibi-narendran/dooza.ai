@@ -194,8 +194,8 @@ export default function AuthorPage() {
                             "url": `${SITE_URL}/author`,
                             "logo": `${SITE_URL}/logo.png`,
                             "sameAs": [
-                                "https://twitter.com/dooza_ai",
-                                "https://linkedin.com/company/dooza"
+                                "https://twitter.com/sibinarendran",
+                                "https://www.linkedin.com/company/110144933/"
                             ],
                             "knowsAbout": [
                                 "AI Automation",

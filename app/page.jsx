@@ -53,7 +53,7 @@ const organizationSchema = {
     },
     "sameAs": [
         "https://twitter.com/sibinarendran",
-        "https://linkedin.com/company/dooza",
+        "https://www.linkedin.com/company/110144933/",
         "https://www.crunchbase.com/organization/dooza",
         "https://www.g2.com/products/dooza"
     ],
@@ -67,7 +67,7 @@ const organizationSchema = {
         {
             "@type": "ContactPoint",
             "contactType": "sales",
-            "email": "hello@dooza.ai",
+            "email": "support@dooza.ai",
             "availableLanguage": ["English"]
         }
     ],

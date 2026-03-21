@@ -52,7 +52,7 @@ export default function BlogError({ error, reset }) {
 
                 <p className="mt-8 text-sm text-slate-500">
                     If the problem persists, please{' '}
-                    <a href="mailto:hello@dooza.ai" className="text-primary-600 hover:underline">
+                    <a href="mailto:support@dooza.ai" className="text-primary-600 hover:underline">
                         contact us
                     </a>
                     .

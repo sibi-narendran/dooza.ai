@@ -9,6 +9,7 @@ export const metadata = {
         'AI employees comparison', 'Marblism review', 'Marblism pricing',
         'best AI employee platform', 'Marblism vs Dooza', 'AI automation platform',
         'Marblism limitations', 'Marblism integrations', 'AI business assistant',
+        'AI employees for small business', 'AI automation tools 2026',
     ],
     alternates: { canonical: `${SITE_URL}/dooza-vs-marblism` },
     openGraph: {
@@ -44,11 +45,35 @@ const faqData = [
     },
     {
         question: 'How do I switch from Marblism to Dooza?',
-        answer: 'You can start with Dooza\'s free tier (10 prompts/month) to test the platform. When ready, book a free 20-minute setup call with the founder, who will walk you through configuration and connect your tools.',
+        answer: 'You can start with Dooza\'s free plan to test the platform. When ready, book a free 20-minute setup call with the founder, who will walk you through configuration and connect your tools.',
     },
     {
         question: 'What AI employees does Dooza offer?',
-        answer: 'Dooza has 7 specialized AI employees: Maily (email), Somi (social media), Linky (LinkedIn), Tweety (Twitter/X), Utumy (YouTube), Ranky (SEO), and Lex (legal documents). Each is purpose-built for its domain.',
+        answer: 'Dooza has 7 specialized AI employees. Maily writes, personalizes, and sends email campaigns through your Gmail or Outlook. Somi creates and schedules posts across Facebook, Instagram, and other social platforms. Linky handles LinkedIn outreach — connection requests, messages, and content publishing. Tweety manages your Twitter/X presence with tweets, threads, and engagement. Utumy helps with YouTube — scripts, titles, descriptions, and SEO for your videos. Ranky is your SEO specialist — keyword research, site audits, content briefs, and blog writing to get you ranking. Lex drafts legal documents like NDAs, contracts, and terms of service. Each agent connects directly to your tools and works autonomously.',
+    },
+    {
+        question: 'Can AI employees really replace human workers?',
+        answer: 'AI employees handle repetitive, time-consuming tasks like writing emails, scheduling social media posts, optimizing SEO, and drafting legal documents. They work 24/7, never take sick days, and cost a fraction of hiring. They don\'t fully replace humans for complex strategy work, but they free up your team to focus on what matters most.',
+    },
+    {
+        question: 'What is an AI employee platform?',
+        answer: 'An AI employee platform provides specialized AI agents that handle specific business functions — like email marketing, social media, SEO, and customer outreach. Unlike generic AI chatbots, AI employees are trained for specific roles, connect to your business tools, and execute tasks autonomously.',
+    },
+    {
+        question: 'Is Dooza safe to use with my business data?',
+        answer: 'Yes. Dooza connects to your tools via Composio with OAuth-based authentication. Your credentials are never stored directly. All data is encrypted in transit and at rest. You control which integrations are active and can disconnect them at any time.',
+    },
+    {
+        question: 'How long does it take to set up Dooza?',
+        answer: 'Most businesses are fully set up in about 20 minutes. You book a free call with the founder, who walks you through configuration, connects your tools, and makes sure everything is running. Your brand info is auto-extracted from your website to personalize outputs from day one.',
+    },
+    {
+        question: 'What makes AI employees different from ChatGPT or other AI chatbots?',
+        answer: 'AI chatbots are general-purpose conversation tools. AI employees are specialized agents built for specific business functions — they connect to your tools (Gmail, Slack, LinkedIn), understand your brand voice, and execute tasks end-to-end. They don\'t just generate text — they publish posts, send emails, and optimize your SEO automatically.',
+    },
+    {
+        question: 'Do I need technical skills to use Dooza?',
+        answer: 'No. Dooza is designed for non-technical business owners. The founder personally walks you through setup in a free call, and the platform auto-extracts your brand info from your website. If you can use email, you can use Dooza.',
     },
 ];
 

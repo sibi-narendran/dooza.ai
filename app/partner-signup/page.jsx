@@ -69,7 +69,7 @@ export default function PartnerSignupPage() {
 
     const handleLogin = (e) => {
         e.preventDefault(); 
-        alert("Please email sibi@sibinarendran.com for partner portal access.");
+        alert("Please email support@dooza.ai for partner portal access.");
     };
 
     if (isSuccess) {

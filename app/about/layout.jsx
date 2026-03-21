@@ -68,7 +68,7 @@ export default function AboutLayout({ children }) {
         },
         "sameAs": [
             "https://twitter.com/sibinarendran",
-            "https://www.linkedin.com/company/dooza"
+            "https://www.linkedin.com/company/110144933/"
         ]
     };
 

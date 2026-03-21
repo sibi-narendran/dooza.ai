@@ -50,7 +50,7 @@ export async function GET() {
       <pubDate>${pubDate}</pubDate>
       <description><![CDATA[${post.excerpt}]]></description>
       <category>${post.category}</category>
-      <author>hello@dooza.ai (${post.author})</author>
+      <author>support@dooza.ai (${post.author})</author>
       ${imageUrl ? `<enclosure url="${imageUrl}" type="image/png" length="200000"/>` : ''}
     </item>`;
         })
@@ -66,8 +66,8 @@ export async function GET() {
     <language>en-us</language>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>
     <copyright>Copyright ${new Date().getFullYear()} ${SITE_NAME}. All rights reserved.</copyright>
-    <managingEditor>hello@dooza.ai (${SITE_NAME} Team)</managingEditor>
-    <webMaster>hello@dooza.ai (${SITE_NAME} Team)</webMaster>
+    <managingEditor>support@dooza.ai (${SITE_NAME} Team)</managingEditor>
+    <webMaster>support@dooza.ai (${SITE_NAME} Team)</webMaster>
     <image>
       <url>${baseUrl}/logo.png</url>
       <title>${SITE_NAME} Blog</title>

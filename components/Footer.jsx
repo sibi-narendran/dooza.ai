@@ -42,6 +42,14 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                         </ul>
+                        <h4 className={`font-semibold mb-4 mt-6 ${isDark ? 'text-white' : 'text-slate-900'}`}>Agents</h4>
+                        <ul className="space-y-3">
+                            <li>
+                                <Link href="/agents/ranky" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Ranky — AI SEO
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                     <div>
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Solutions</h4>
@@ -143,7 +151,7 @@ const Footer = ({ variant = 'light' }) => {
                             <Twitter size={20} />
                         </a>
                         <a 
-                            href="https://linkedin.com/company/dooza" 
+                            href="https://www.linkedin.com/company/110144933/" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             aria-label="Follow us on LinkedIn"
