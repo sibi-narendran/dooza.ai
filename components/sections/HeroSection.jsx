@@ -1,5 +1,3 @@
-import { getProductSignupUrl } from '@/lib/links';
-import { CharacterGroup, MailyCharacter, SomiCharacter, RachelCharacter, StanCharacter } from '@/components/characters/CharacterIllustrations';
 import SignupButton from '@/components/buttons/SignupButton';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 
@@ -16,44 +14,21 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
             </div>
 
-            <div className="max-w-6xl mx-auto relative z-10 w-full">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Left: Text content */}
-                    <div className="text-center lg:text-left">
-                        <h1 className="hero-entrance hero-delay-1 text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5 md:mb-6 font-serif">
-                            AI Employees That
-                            <span className="block bg-gradient-to-r from-primary-600 via-teal-500 to-primary-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                                Get Work Done While You Sleep
-                            </span>
-                        </h1>
+            <div className="max-w-4xl mx-auto relative z-10 w-full text-center">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5 md:mb-6 font-serif">
+                    Pick an AI Employee.
+                    <span className="block bg-gradient-to-r from-primary-600 via-teal-500 to-primary-600 bg-clip-text text-transparent leading-normal pb-2">
+                        Put It to Work.
+                    </span>
+                </h1>
 
-                        <p className="hero-entrance hero-delay-2 text-lg md:text-2xl text-slate-600 mb-8 md:mb-10 max-w-xl leading-relaxed">
-                            6 AI employees handle your email, social media, SEO, calls, leads, and legal work—24/7, for less than one coffee a day.
-                        </p>
+                <p className="text-lg md:text-xl text-slate-500 mb-8 md:mb-10 max-w-2xl mx-auto">
+                    Choose from our library of AI employees, or build your own custom workforce
+                </p>
 
-                        {/* Mobile character strip */}
-                        <div className="hero-entrance hero-delay-3 flex lg:hidden items-end justify-center gap-3 mb-8">
-                            {[MailyCharacter, SomiCharacter, RachelCharacter, StanCharacter].map((Character, idx) => (
-                                <div
-                                    key={idx}
-                                    className="animate-float"
-                                    style={{ animationDelay: `${idx * 0.5}s` }}
-                                >
-                                    <Character size={idx === 1 ? 52 : idx === 2 ? 44 : 48} />
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
-                            <SignupButton source="hero" />
-                            <BookDemoButton source="hero" />
-                        </div>
-                    </div>
-
-                    {/* Right: Character illustrations */}
-                    <div className="hero-entrance-right hidden lg:flex justify-center">
-                        <CharacterGroup size={100} />
-                    </div>
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+                    <SignupButton source="hero" />
+                    <BookDemoButton source="hero" />
                 </div>
             </div>
         </section>

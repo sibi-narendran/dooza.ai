@@ -1,14 +1,14 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Mail, MessageSquare, Search, Phone, TrendingUp, FileText, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Mail, MessageSquare, Search, TrendingUp, FileText, CheckCircle2, ArrowRight } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import { getProductSignupUrl } from '@/lib/links';
 import { aiEmployees } from '@/lib/homeData';
 
 const ROTATION_INTERVAL = 4000;
 const RESUME_DELAY = 10000;
-const iconMap = { Mail, MessageSquare, Search, Phone, TrendingUp, FileText };
+const iconMap = { Mail, MessageSquare, Search, TrendingUp, FileText };
 
 export default function AIEmployeeShowcase() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -59,7 +59,7 @@ export default function AIEmployeeShowcase() {
                     <div className="text-center max-w-3xl mx-auto mb-12">
                         <span className="section-label block mb-4">MEET YOUR TEAM</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Meet your new AI employees</h2>
-                        <p className="text-xl text-slate-600">6 specialists. 24/7 availability. One subscription.</p>
+                        <p className="text-xl text-slate-600">5 specialists. 24/7 availability. One subscription.</p>
                     </div>
                 </ScrollReveal>
 
@@ -78,7 +78,7 @@ export default function AIEmployeeShowcase() {
                                         key={idx}
                                         role="tab"
                                         aria-selected={isActive}
-                                        aria-label={emp.name}
+                                        aria-label={emp.role}
                                         onClick={() => handleSelect(idx)}
                                         onFocus={handleMouseEnter}
                                         onBlur={handleMouseLeave}
@@ -89,7 +89,7 @@ export default function AIEmployeeShowcase() {
                                         }`}
                                     >
                                         <TabIcon className="w-4 h-4" />
-                                        <span className="hidden sm:inline">{emp.name}</span>
+                                        <span className="hidden sm:inline">{emp.role}</span>
                                         {emp.comingSoon && (
                                             <span className="text-[10px] font-bold uppercase tracking-wide bg-amber-400 text-amber-900 px-1.5 py-0.5 rounded-full leading-none">Soon</span>
                                         )}
@@ -111,12 +111,12 @@ export default function AIEmployeeShowcase() {
                                             </div>
                                             <div>
                                                 <div className="flex items-center gap-2">
-                                                    <h3 className="text-2xl font-bold text-slate-900 font-serif">{active.name}</h3>
+                                                    <h3 className="text-2xl font-bold text-slate-900 font-serif">{active.role}</h3>
                                                     {active.comingSoon && (
                                                         <span className="text-xs font-bold uppercase tracking-wide bg-amber-400 text-amber-900 px-2 py-0.5 rounded-full">Coming Soon</span>
                                                     )}
                                                 </div>
-                                                <p className="text-slate-500 font-medium">{active.role}</p>
+                                                <p className="text-slate-500 font-medium">Meet {active.name}</p>
                                             </div>
                                         </div>
 
@@ -137,7 +137,7 @@ export default function AIEmployeeShowcase() {
                                             rel="noopener noreferrer"
                                             className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r ${active.color} text-white font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]`}
                                         >
-                                            Hire {active.name} <ArrowRight className="w-4 h-4" />
+                                            Try {active.role} <ArrowRight className="w-4 h-4" />
                                         </a>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@ export default function AIEmployeeShowcase() {
                                     key={idx}
                                     onClick={() => handleSelect(idx)}
                                     className={`p-2 rounded-full transition-all duration-300`}
-                                    aria-label={`Show ${aiEmployees[idx].name}`}
+                                    aria-label={`Show ${aiEmployees[idx].role}`}
                                 >
                                     <span className={`block rounded-full transition-all duration-300 ${
                                         idx === activeIndex

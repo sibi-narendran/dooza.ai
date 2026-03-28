@@ -3,35 +3,35 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import IntegrationsBar from '@/components/sections/IntegrationsBar';
-import ProblemSection from '@/components/sections/ProblemSection';
+import AutopilotSection from '@/components/sections/AutopilotSection';
+import VideoSection from '@/components/sections/VideoSection';
 import AIEmployeeShowcase from '@/components/sections/AIEmployeeShowcase';
 import HowItWorksSection from '@/components/sections/HowItWorksSection';
 import ComparisonSection from '@/components/sections/ComparisonSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import PricingSection from '@/components/sections/PricingSection';
 import CompetitorAlternatives from '@/components/sections/CompetitorAlternatives';
-import SolutionsSection from '@/components/sections/SolutionsSection';
 import FAQSection from '@/components/sections/FAQSection';
 import FinalCTASection from '@/components/sections/FinalCTASection';
 import { faqSchema } from '@/lib/homeData';
 
 export const metadata = {
-    title: { absolute: 'AI Employees for Business Automation | Dooza.ai' },
-    description: 'Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7. Free setup, transparent pricing from $29/mo.',
+    title: { absolute: 'Delegate Your Work to AI Employees | Dooza.ai' },
+    description: 'Claim back your time with AI employees that handle email, social media, SEO, and leads 24/7. Free setup, transparent pricing from $29/mo.',
     keywords: ['AI employees', 'AI agents', 'business automation', 'Sintra AI alternative', 'Marblism alternative', 'AI for small business', 'AI automation platform', 'virtual employees'],
     alternates: {
         canonical: 'https://www.dooza.ai',
     },
     openGraph: {
-        title: 'AI Employees for Business Automation | Dooza.ai',
-        description: 'Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7.',
+        title: 'Delegate Your Work to AI Employees | Dooza.ai',
+        description: 'Claim back your time with AI employees that handle email, social media, SEO, and leads 24/7.',
         url: 'https://www.dooza.ai',
         images: [{ url: 'https://www.dooza.ai/logo.png', width: 512, height: 512, alt: 'Dooza - AI Employees Platform' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'AI Employees for Business Automation | Dooza.ai',
-        description: 'Build, grow, and scale your business with AI employees. Automate inbox, social media, SEO, sales calls 24/7.',
+        title: 'Delegate Your Work to AI Employees | Dooza.ai',
+        description: 'Claim back your time with AI employees that handle email, social media, SEO, and leads 24/7.',
         images: ['https://www.dooza.ai/logo.png'],
     },
 };
@@ -44,7 +44,7 @@ const organizationSchema = {
     "legalName": "Dooza AI",
     "url": "https://www.dooza.ai",
     "logo": "https://www.dooza.ai/logo.png",
-    "description": "AI employees that automate your business operations 24/7. Offering AI-powered solutions for email management, social media, SEO, sales calls, and customer support.",
+    "description": "AI employees that automate your business operations 24/7. Offering AI-powered solutions for email management, social media, SEO, lead generation, and legal review.",
     "foundingDate": "2024",
     "founder": {
         "@type": "Person",
@@ -118,13 +118,12 @@ const softwareSchema = {
     "downloadUrl": "https://workforce.dooza.ai",
     "screenshot": "https://www.dooza.ai/logo.png",
     "softwareVersion": "2.0",
-    "releaseNotes": "AI Employees for business automation including email, social media, SEO, and calls",
+    "releaseNotes": "AI Employees for business automation including email, social media, SEO, and lead generation",
     "featureList": [
         "AI Email Manager (Maily)",
         "AI Social Media Manager (Somi)",
         "AI Lead Generator (Stan)",
-        "AI SEO Specialist (Penny/Ranky)",
-        "AI Receptionist with Phone Calls (Rachel)",
+        "AI SEO Specialist (Ranky)",
         "AI Legal Assistant (Linda)",
         "Custom AI Employee Builder",
         "Google Business Profile Automation",
@@ -168,7 +167,7 @@ const softwareSchema = {
                 "@type": "Organization",
                 "name": "Interio Square"
             },
-            "reviewBody": "My AI receptionist answers every call while I'm on site. Haven't missed a lead in months."
+            "reviewBody": "Our AI email manager handles all customer support emails automatically. Response times dropped from hours to minutes."
         },
         {
             "@type": "Review",
@@ -191,7 +190,7 @@ const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Dooza AI Employees Platform",
-    "description": "AI-powered virtual employees that automate your business operations 24/7. Includes email management, social media posting, SEO optimization, lead generation, phone calls, and more.",
+    "description": "AI-powered virtual employees that automate your business operations 24/7. Includes email management, social media posting, SEO optimization, lead generation, and legal review.",
     "brand": {
         "@type": "Brand",
         "name": "Dooza"
@@ -271,14 +270,6 @@ const serviceSchema = {
                 "@type": "Offer",
                 "itemOffered": {
                     "@type": "Service",
-                    "name": "Rachel - AI Receptionist",
-                    "description": "AI employee that makes and receives phone calls 24/7 for your business"
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
                     "name": "Stan - AI Lead Generator",
                     "description": "AI employee that finds, qualifies, and nurtures leads for your sales pipeline"
                 }
@@ -343,7 +334,7 @@ const aiEmployeesListSchema = {
     "@type": "ItemList",
     "name": "Dooza AI Employees",
     "description": "Complete list of AI employees available on the Dooza platform",
-    "numberOfItems": 6,
+    "numberOfItems": 5,
     "itemListElement": [
         {
             "@type": "ListItem",
@@ -369,20 +360,13 @@ const aiEmployeesListSchema = {
         {
             "@type": "ListItem",
             "position": 4,
-            "name": "Rachel - AI Receptionist",
-            "description": "Makes and receives phone calls 24/7",
-            "url": "https://www.dooza.ai"
-        },
-        {
-            "@type": "ListItem",
-            "position": 5,
             "name": "Stan - AI Lead Generator",
             "description": "Finds and qualifies leads for your sales pipeline",
             "url": "https://www.dooza.ai"
         },
         {
             "@type": "ListItem",
-            "position": 6,
+            "position": 5,
             "name": "Linda - AI Legal Assistant",
             "description": "Reviews contracts and legal documents",
             "url": "https://www.dooza.ai"
@@ -413,15 +397,15 @@ export default function Home() {
                     <Navbar />
                     <main id="main-content">
                         <HeroSection />
+                        <AutopilotSection />
                         <IntegrationsBar />
-                        <ProblemSection />
+                        <VideoSection />
+                        <TestimonialsSection />
                         <AIEmployeeShowcase />
                         <HowItWorksSection />
                         <ComparisonSection />
-                        <TestimonialsSection />
                         <PricingSection />
                         <CompetitorAlternatives />
-                        <SolutionsSection />
                         <FAQSection />
                         <FinalCTASection />
                     </main>

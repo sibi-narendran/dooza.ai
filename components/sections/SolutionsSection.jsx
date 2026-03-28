@@ -1,10 +1,10 @@
-import { TrendingUp, Phone, MessageSquare, Mail, ArrowRight } from 'lucide-react';
+import { TrendingUp, MessageSquare, Mail, ArrowRight } from 'lucide-react';
 import { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import ScrollReveal from '@/components/ScrollReveal';
 import { getProductSignupUrl } from '@/lib/links';
 import { solutionCards } from '@/lib/homeData';
 
-const iconMap = { TrendingUp, Phone, MessageSquare, Mail };
+const iconMap = { TrendingUp, MessageSquare, Mail };
 
 export default function SolutionsSection() {
     return (
