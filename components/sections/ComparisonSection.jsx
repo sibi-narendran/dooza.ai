@@ -1,13 +1,39 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
 import { Users, Bot, Clock, Zap, Mail, MessageSquare, TrendingUp, Brain, Rocket, CheckCircle2, X } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
-import SignupButton from '@/components/buttons/SignupButton';
+import BookDemoButton from '@/components/buttons/BookDemoButton';
+import { useBookingModal } from '@/components/BookingModalProvider';
 import { comparisonRows } from '@/lib/homeData';
 
 const iconMap = { Clock, Zap, Mail, MessageSquare, TrendingUp, Brain, Rocket };
 
 export default function ComparisonSection() {
+    const sectionRef = useRef(null);
+    const hasTriggered = useRef(false);
+    const { openModal } = useBookingModal();
+
+    useEffect(() => {
+        const el = sectionRef.current;
+        if (!el) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasTriggered.current) {
+                    hasTriggered.current = true;
+                    openModal();
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, [openModal]);
+
     return (
-        <section className="py-16 md:py-24 bg-warm">
+        <section ref={sectionRef} className="py-16 md:py-24 bg-warm">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <div className="text-center max-w-3xl mx-auto mb-16">
@@ -91,7 +117,8 @@ export default function ComparisonSection() {
 
                 <ScrollReveal delay={0.3}>
                     <div className="text-center mt-10">
-                        <SignupButton source="comparison">Let AI Handle the Busywork</SignupButton>
+                        <BookDemoButton source="comparison">Book a Demo</BookDemoButton>
+                        <p className="text-sm text-slate-400 mt-3">See how AI employees can replace your busywork</p>
                     </div>
                 </ScrollReveal>
             </div>

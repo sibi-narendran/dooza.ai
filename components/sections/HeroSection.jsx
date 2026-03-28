@@ -14,19 +14,22 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
             </div>
 
-            <div className="max-w-4xl mx-auto relative z-10 w-full text-center">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5 md:mb-6 font-serif">
-                    Pick an AI Employee.
-                    <span className="block bg-gradient-to-r from-primary-600 via-teal-500 to-primary-600 bg-clip-text text-transparent leading-normal pb-2">
-                        Put It to Work.
+            <div className="max-w-5xl mx-auto relative z-10 w-full text-left">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-6 md:mb-8 font-serif">
+                    AI Employees That
+                    <br className="hidden sm:block" />
+                    Get Work Done{' '}
+                    <span className="relative inline-block">
+                        <span className="relative z-10 bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">While You Sleep</span>
+                        <span className="absolute bottom-1 md:bottom-2 left-0 w-full h-3 md:h-4 bg-primary-100/60 rounded-sm -z-0" />
                     </span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-slate-500 mb-8 md:mb-10 max-w-2xl mx-auto">
+                <p className="text-lg md:text-xl text-slate-500 mb-8 md:mb-10 max-w-2xl">
                     Choose from our library of AI employees, or build your own custom workforce
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                     <SignupButton source="hero" />
                     <BookDemoButton source="hero" />
                 </div>

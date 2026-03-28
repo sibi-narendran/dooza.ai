@@ -5,7 +5,6 @@ import HeroSection from '@/components/sections/HeroSection';
 import IntegrationsBar from '@/components/sections/IntegrationsBar';
 import AutopilotSection from '@/components/sections/AutopilotSection';
 import VideoSection from '@/components/sections/VideoSection';
-import AIEmployeeShowcase from '@/components/sections/AIEmployeeShowcase';
 import HowItWorksSection from '@/components/sections/HowItWorksSection';
 import ComparisonSection from '@/components/sections/ComparisonSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
@@ -401,10 +400,9 @@ export default function Home() {
                         <IntegrationsBar />
                         <VideoSection />
                         <TestimonialsSection />
-                        <AIEmployeeShowcase />
                         <HowItWorksSection />
-                        <ComparisonSection />
                         <PricingSection />
+                        <ComparisonSection />
                         <CompetitorAlternatives />
                         <FAQSection />
                         <FinalCTASection />

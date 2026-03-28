@@ -623,7 +623,7 @@ export default function AiSalesAgentGuideContent() {
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-3xl font-bold text-green-700 mb-2">$29/mo</div>
-                                    <p className="text-sm text-green-800 font-medium">Stan + 5 AI Employees (Dooza)</p>
+                                    <p className="text-sm text-green-800 font-medium">Stan + All AI Employees (Dooza)</p>
                                     <p className="text-xs text-green-600 mt-1">24/7, unlimited leads, instant response</p>
                                 </div>
                             </div>

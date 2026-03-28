@@ -179,6 +179,16 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                             </div>
 
                             <Link
+                                href="/pricing"
+                                className={`text-[15px] font-medium transition-colors ${isDark
+                                    ? 'text-gray-300 hover:text-white'
+                                    : 'text-slate-600 hover:text-primary-600'
+                                    }`}
+                            >
+                                Pricing
+                            </Link>
+
+                            <Link
                                 href="/partners"
                                 className={`text-[15px] font-medium transition-colors ${isDark
                                     ? 'text-gray-300 hover:text-white'
@@ -291,6 +301,16 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 
+                        <Link
+                            href="/pricing"
+                            onClick={() => setIsOpen(false)}
+                            className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
+                                ? 'text-gray-300 hover:bg-white/5'
+                                : 'text-slate-600 hover:bg-slate-50'
+                                }`}
+                        >
+                            Pricing
+                        </Link>
                         <Link
                             href="/partners"
                             onClick={() => setIsOpen(false)}
