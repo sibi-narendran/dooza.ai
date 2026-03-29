@@ -734,7 +734,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     Stan doesn't work alone. He's part of your <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">full AI workforce</Link> — working alongside Rachel (AI receptionist for inbound calls), Maily (email management), Somi (social media), Ranky (SEO), and Linda (legal compliance). When Stan generates a lead, the rest of the team supports the relationship — answering calls, sending emails, nurturing on social.
                                 </p>
                                 <p>
-                                    The entire team costs <strong>$29/month</strong>. That's less than a single LinkedIn Premium subscription — and you get 6 AI employees working 24/7.
+                                    The entire team costs <strong>$29/month</strong>. That's less than a single LinkedIn Premium subscription — and you get AI employees working 24/7.
                                 </p>
                             </div>
 

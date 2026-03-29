@@ -2,22 +2,22 @@ import StudioContent from './StudioContent';
 import { SITE_URL } from '../../lib/site';
 
 export const metadata = {
-    title: 'Studio | Build Production-Ready AI Agents',
-    description: 'Design, build, and deploy intelligent AI agents with our visual workflow builder. Connect any LLM, add RAG pipelines, and ship to production in minutes.',
+    title: 'Dooza Studio — Build & Deploy AI Agents in Minutes (Free)',
+    description: 'Visual drag-and-drop builder for production-ready AI agents. Connect OpenAI, Claude, or Gemini. Add RAG pipelines. Deploy with one click. No coding required.',
     keywords: ['AI studio', 'AI agent builder', 'LLM workflow', 'RAG pipeline', 'AI automation', 'no-code AI', 'visual AI builder', 'AI development platform'],
     alternates: {
         canonical: `${SITE_URL}/studio`,
     },
     openGraph: {
-        title: 'Studio | Build Production-Ready AI Agents',
-        description: 'Design, build, and deploy intelligent AI agents with our visual workflow builder.',
+        title: 'Dooza Studio — Build & Deploy AI Agents in Minutes (Free)',
+        description: 'Visual drag-and-drop builder for production-ready AI agents. Connect any LLM, add RAG, deploy with one click.',
         url: `${SITE_URL}/studio`,
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Studio - AI Agent Builder' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Studio | Build Production-Ready AI Agents',
-        description: 'Design, build, and deploy intelligent AI agents with our visual workflow builder.',
+        title: 'Dooza Studio — Build & Deploy AI Agents in Minutes (Free)',
+        description: 'Visual drag-and-drop builder for production-ready AI agents. Connect any LLM, add RAG, deploy with one click.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

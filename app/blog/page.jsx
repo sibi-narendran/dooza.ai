@@ -8,23 +8,23 @@ import { SITE_URL } from '../../lib/site';
 export const revalidate = 60;
 
 export const metadata = {
-    title: 'Blog | AI Automation Insights & Resources',
-    description: 'Expert insights on AI employees, business automation, and scaling your operations. Learn how to automate your business with AI.',
+    title: 'Dooza Blog — Proven AI Automation Strategies [2026]',
+    description: 'Actionable guides on AI employees, business automation, and scaling with AI. Real results, not theory. Updated weekly with the latest strategies and case studies.',
     keywords: ['AI employees blog', 'business automation insights', 'AI agents tips', 'productivity automation', 'AI automation guide', 'Sintra AI comparison', 'Marblism alternative'],
     alternates: {
         canonical: `${SITE_URL}/blog`,
     },
     openGraph: {
-        title: 'Blog | AI Automation Insights & Resources',
-        description: 'Expert insights on AI employees, business automation, and scaling your operations.',
+        title: 'Dooza Blog — Proven AI Automation Strategies [2026]',
+        description: 'Actionable guides on AI employees, business automation, and scaling with AI. Real results, not theory.',
         url: `${SITE_URL}/blog`,
         type: 'website',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Blog' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Blog | AI Automation Insights & Resources',
-        description: 'Expert insights on AI employees, business automation, and scaling your operations.',
+        title: 'Dooza Blog — Proven AI Automation Strategies [2026]',
+        description: 'Actionable guides on AI employees, business automation, and scaling with AI. Real results, not theory.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

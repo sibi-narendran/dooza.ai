@@ -1,15 +1,15 @@
 import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
-    title: 'AI Employee Alternatives & Comparisons',
-    description: 'Compare Dooza with Sintra AI, Marblism, Motion App, and other AI automation platforms. See why businesses choose Dooza for AI employees.',
+    title: 'Dooza vs Competitors — Honest Comparisons [2026]',
+    description: 'Side-by-side comparisons of Dooza vs Sintra AI, Marblism, and Motion App. Real pricing, features, and limitations revealed. See which platform wins for your business.',
     keywords: ['Sintra AI alternative', 'Marblism alternative', 'Motion App alternative', 'AI employees comparison', 'AI automation comparison'],
     alternates: {
         canonical: `${SITE_URL}/alternatives`,
     },
     openGraph: {
-        title: 'AI Employee Alternatives & Comparisons | Dooza',
-        description: 'Compare Dooza with Sintra AI, Marblism, Motion App, and other AI automation platforms. See why businesses choose Dooza.',
+        title: 'Dooza vs Competitors — Honest Comparisons [2026]',
+        description: 'Side-by-side comparisons of Dooza vs Sintra AI, Marblism, and Motion App. Real pricing, features, and limitations revealed.',
         url: `${SITE_URL}/alternatives`,
         siteName: SITE_NAME,
         type: 'website',
@@ -24,8 +24,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'AI Employee Alternatives & Comparisons | Dooza',
-        description: 'Compare Dooza with Sintra AI, Marblism, Motion App, and other AI automation platforms.',
+        title: 'Dooza vs Competitors — Honest Comparisons [2026]',
+        description: 'Side-by-side comparisons of Dooza vs Sintra AI, Marblism, and Motion App. Real pricing, features, and limitations revealed.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

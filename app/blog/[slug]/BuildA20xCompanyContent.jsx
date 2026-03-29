@@ -583,7 +583,7 @@ export default function BuildA20xCompanyContent() {
 
                             <div className="bg-green-50 border-2 border-green-200 p-8 rounded-xl text-center">
                                 <p className="text-2xl font-bold text-green-800 mb-2">
-                                    6 AI employees. $29/month. No engineers required.
+                                    AI employees. $29/month. No engineers required.
                                 </p>
                                 <p className="text-green-700">
                                     The same automation YC companies spend months building — ready in 30 minutes.
@@ -727,7 +727,7 @@ export default function BuildA20xCompanyContent() {
                                 <p className="text-2xl font-bold text-slate-900 mb-4">
                                     You don't need YC. You don't need engineers. You need Dooza.
                                 </p>
-                                <p className="text-slate-600 mb-6">Built on OpenClaw. 6 AI employees. $29/month. 24/7. The 20X playbook — for everyone.</p>
+                                <p className="text-slate-600 mb-6">Built on OpenClaw. AI employees. $29/month. 24/7. The 20X playbook — for everyone.</p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('20x')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
                                         Get Started - $29/month <ArrowRight className="w-4 h-4" />

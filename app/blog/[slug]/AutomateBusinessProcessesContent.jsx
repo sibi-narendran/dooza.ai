@@ -37,7 +37,7 @@ const faqData = [
     { question: "What business processes can I automate without coding?", answer: "You can automate email management, social media posting, inbound call handling, lead generation, SEO content, and legal compliance — all without writing a single line of code. Dooza's AI employees handle these end-to-end for $29/month." },
     { question: "How much time can business automation actually save?", answer: "Most small business owners save 15-25 hours per week. Specifically: 10+ hours on email, 6+ hours on social media, and 5+ hours on missed call follow-ups. That's roughly $6,200+/month in recovered productivity." },
     { question: "How is Dooza different from Zapier or Make?", answer: "Zapier and Make connect apps with if-then rules — you still build and maintain every workflow. Dooza gives you AI employees that autonomously handle entire job functions like email, social media, and calls. No workflow building required." },
-    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides 6 AI employees handling email, social, calls, leads, SEO, and legal for just $29/month." },
+    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides AI employees handling email, social, calls, leads, SEO, and legal for just $29/month." },
     { question: "Which business processes should I automate first?", answer: "Start with your biggest time drain. For most businesses, that's email management or social media. Audit where you spend the most hours, automate that first, then expand to calls, leads, and SEO." }
 ];
 
@@ -484,7 +484,7 @@ export default function AutomateBusinessProcessesContent() {
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
                                         <div className="text-2xl font-bold text-green-700">$29/mo</div>
-                                        <p className="text-sm text-green-600">Dooza (6 AI Employees)</p>
+                                        <p className="text-sm text-green-600">Dooza (AI Employees)</p>
                                     </div>
                                 </div>
                             </div>

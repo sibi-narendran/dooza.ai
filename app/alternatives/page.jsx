@@ -19,7 +19,7 @@ export default function AlternativesPage() {
             name: 'Sintra AI',
             slug: 'better-than-sintra-ai',
             tagline: 'Complex setup, limited automation',
-            doozaAdvantage: 'Simpler setup, 6 AI employees, transparent pricing'
+            doozaAdvantage: 'Simpler setup, AI employees, transparent pricing'
         },
         {
             name: 'Marblism',
@@ -31,7 +31,7 @@ export default function AlternativesPage() {
             name: 'Motion App',
             slug: 'better-than-motion',
             tagline: '$348/year for limited AI features',
-            doozaAdvantage: '$348/year for 6 full AI employees'
+            doozaAdvantage: '$348/year for full AI employees'
         },
         {
             name: 'Surfer SEO vs Ahrefs',
@@ -54,12 +54,12 @@ export default function AlternativesPage() {
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                             See how Dooza compares to other AI tools and marketing platforms.
-                            Get 6 AI employees for $29/month—less than most competitors charge for a single feature.
+                            Get AI employees for $29/month—less than most competitors charge for a single feature.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 mb-8">
                             <div className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full">
                                 <CheckCircle2 className="w-5 h-5" />
-                                <span className="font-medium">6 AI Employees</span>
+                                <span className="font-medium">AI Employees</span>
                             </div>
                             <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full">
                                 <DollarSign className="w-5 h-5" />

@@ -218,7 +218,7 @@ export default function DoozaVsSintraContent({ faqData }) {
                                     <div className="text-4xl font-bold text-white mb-1">$29<span className="text-base font-normal text-slate-400">/month</span></div>
                                     <p className="text-sm text-slate-400 mb-5">No contracts. Cancel anytime.</p>
                                     <ul className="space-y-2.5 text-sm">
-                                        {['All 7 AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '7-day money-back guarantee'].map((item, i) => (
+                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '7-day money-back guarantee'].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {item}

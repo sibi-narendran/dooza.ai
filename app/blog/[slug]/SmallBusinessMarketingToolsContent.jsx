@@ -477,7 +477,7 @@ export default function SmallBusinessMarketingToolsContent() {
                             </div>
 
                             <div className="bg-green-50 border-2 border-green-200 p-8 rounded-xl mb-8">
-                                <h3 className="font-bold text-green-800 mb-6 text-xl">Dooza: One Platform, 6 AI Employees</h3>
+                                <h3 className="font-bold text-green-800 mb-6 text-xl">Dooza: One Platform, AI Employees</h3>
                                 <div className="space-y-3 mb-6">
                                     {[
                                         { employee: "Maily - Email Manager", included: true },
@@ -548,7 +548,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                     The Small Business AI Advantage
                                 </h4>
                                 <p className="text-blue-700">
-                                    According to <a href="https://localiq.com/blog/small-business-marketing-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">LocaliQ</a>, small businesses using AI see a <strong>25% increase in marketing ROI</strong>. Unlike enterprise solutions that cost thousands, Dooza brings enterprise-level AI marketing to small businesses at a price that makes sense: <strong>$29/month for 6 AI employees</strong>.
+                                    According to <a href="https://localiq.com/blog/small-business-marketing-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">LocaliQ</a>, small businesses using AI see a <strong>25% increase in marketing ROI</strong>. Unlike enterprise solutions that cost thousands, Dooza brings enterprise-level AI marketing to small businesses at a price that makes sense: <strong>$29/month for AI employees</strong>.
                                 </p>
                             </div>
                         </section>
@@ -592,7 +592,7 @@ export default function SmallBusinessMarketingToolsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Simplify Your Marketing?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop juggling 5 different tools and spending hours on tasks AI can handle. Get 6 AI employees for less than most businesses pay for a single tool.
+                                    Stop juggling 5 different tools and spending hours on tasks AI can handle. Get AI employees for less than most businesses pay for a single tool.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

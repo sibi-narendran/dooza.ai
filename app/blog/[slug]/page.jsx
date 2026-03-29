@@ -129,7 +129,7 @@ export async function generateMetadata({ params }) {
         };
     }
 
-    return {
+    const metadata = {
         title: post.title,
         description: post.excerpt,
         keywords: post.tags?.join(', '),
@@ -160,6 +160,12 @@ export async function generateMetadata({ params }) {
             images: post.image ? [`${SITE_URL}${post.image}`] : [],
         },
     };
+
+    if (post.noindex) {
+        metadata.robots = { index: false, follow: true };
+    }
+
+    return metadata;
 }
 
 export default async function BlogPostPage({ params }) {

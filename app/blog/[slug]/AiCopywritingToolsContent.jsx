@@ -492,7 +492,7 @@ export default function AiCopywritingToolsContent() {
                                             <td className="p-4 font-bold text-primary-700">Dooza</td>
                                             <td className="p-4 font-bold text-primary-700">$29/mo</td>
                                             <td className="p-4 text-primary-700">Full automation + publishing</td>
-                                            <td className="p-4 text-primary-700">Includes 6 AI employees</td>
+                                            <td className="p-4 text-primary-700">Includes AI employees</td>
                                         </tr>
                                     </tbody>
                                 </table>

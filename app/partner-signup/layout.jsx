@@ -3,10 +3,10 @@ export const metadata = {
     description: 'Join Dooza as a partner and help businesses automate with AI employees.',
     robots: {
         index: false,
-        follow: false,
+        follow: true,
         googleBot: {
             index: false,
-            follow: false,
+            follow: true,
         },
     },
 };

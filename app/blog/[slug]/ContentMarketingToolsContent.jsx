@@ -510,7 +510,7 @@ export default function ContentMarketingToolsContent() {
                                     <div className="bg-green-100 p-6 rounded-lg">
                                         <div className="text-sm font-bold text-green-600 mb-2">DOOZA AI EMPLOYEES</div>
                                         <div className="text-3xl font-bold text-green-700 mb-1">$29/mo</div>
-                                        <p className="text-sm text-green-600">6 AI employees, they do the work</p>
+                                        <p className="text-sm text-green-600">AI employees, they do the work</p>
                                     </div>
                                 </div>
                                 <p className="text-center text-green-700 font-bold mt-6 text-lg">

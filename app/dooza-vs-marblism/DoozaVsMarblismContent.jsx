@@ -90,7 +90,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Dooza offers 7 AI employees, flat pricing, and a personal founder setup call. Marblism offers 6 agents with per-seat fees and self-serve setup. Here is the full breakdown.
+                                Dooza offers AI employees, flat pricing, and a personal founder setup call. Marblism offers 6 agents with per-seat fees and self-serve setup. Here is the full breakdown.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -244,7 +244,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                     <div className="text-4xl font-bold text-white mb-1">$29<span className="text-base font-normal text-slate-400">/month</span></div>
                                     <p className="text-sm text-slate-400 mb-5">Entire team. No per-seat fees.</p>
                                     <ul className="space-y-2.5 text-sm">
-                                        {['All 7 AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '7-day money-back guarantee'].map((item, i) => (
+                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '7-day money-back guarantee'].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {item}
@@ -259,7 +259,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                     <p className="text-sm text-slate-500 mb-5">Per user. +$29/seat for team members.</p>
                                     <ul className="space-y-2.5 text-sm">
                                         {[
-                                            { text: '6 AI employees', neg: false },
+                                            { text: 'AI employees', neg: false },
                                             { text: 'Unlimited chat interactions', neg: false },
                                             { text: 'Limited integrations', neg: true },
                                             { text: 'Self-serve setup', neg: true },

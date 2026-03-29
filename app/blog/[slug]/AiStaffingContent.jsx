@@ -40,7 +40,7 @@ const faqData = [
     },
     {
         question: "How much does AI staffing cost compared to hiring?",
-        answer: "Traditional hiring costs $4,700 per hire plus $3,500-6,000/month per employee in salary alone. Dooza provides 6 AI employees for $29/month — a 99.88% cost reduction compared to hiring the equivalent human team ($24,700/month)."
+        answer: "Traditional hiring costs $4,700 per hire plus $3,500-6,000/month per employee in salary alone. Dooza provides AI employees for $29/month — a 99.88% cost reduction compared to hiring the equivalent human team ($24,700/month)."
     },
     {
         question: "Can AI employees really replace human workers?",
@@ -52,7 +52,7 @@ const faqData = [
     },
     {
         question: "Is AI staffing only for large companies?",
-        answer: "AI staffing is actually most impactful for small businesses and solopreneurs who can't afford to hire full teams. A solo consultant can get an entire support staff of 6 AI employees for less than the cost of a single lunch meeting."
+        answer: "AI staffing is actually most impactful for small businesses and solopreneurs who can't afford to hire full teams. A solo consultant can get an entire support staff of AI employees for less than the cost of a single lunch meeting."
     }
 ];
 
@@ -363,7 +363,7 @@ export default function AiStaffingContent() {
                                         <tr className="border-t-2 border-slate-300 bg-slate-50 font-bold">
                                             <td className="p-4 text-slate-900">Total</td>
                                             <td className="p-4 text-slate-900">$24,700/mo</td>
-                                            <td className="p-4 text-primary-700 bg-primary-100">6 AI Employees</td>
+                                            <td className="p-4 text-primary-700 bg-primary-100">AI Employees</td>
                                             <td className="p-4 text-primary-700 bg-primary-100">$29/mo</td>
                                         </tr>
                                     </tbody>
@@ -414,7 +414,7 @@ export default function AiStaffingContent() {
                                     </div>
                                     <div className="bg-green-100 p-4 rounded-lg">
                                         <div className="text-2xl font-bold text-green-700">$348/yr</div>
-                                        <p className="text-sm text-green-600 mt-1">Dooza: 6 AI employees total cost</p>
+                                        <p className="text-sm text-green-600 mt-1">Dooza: AI employees total cost</p>
                                     </div>
                                 </div>
                             </div>
@@ -655,7 +655,7 @@ export default function AiStaffingContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Build Your AI Workforce?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop spending months hiring. Get 6 AI employees working for your business in 30 minutes.
+                                    Stop spending months hiring. Get AI employees working for your business in 30 minutes.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
@@ -715,7 +715,7 @@ export default function AiStaffingContent() {
                         <section className="scroll-mt-28">
                             <div className="bg-gradient-to-br from-primary-50 to-blue-50 border-2 border-primary-200 p-8 rounded-2xl text-center">
                                 <p className="text-2xl font-bold text-slate-900 mb-4">
-                                    $29/month. 6 AI employees. 24/7. No interviews. No PTO. No turnover.
+                                    $29/month. AI employees. 24/7. No interviews. No PTO. No turnover.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

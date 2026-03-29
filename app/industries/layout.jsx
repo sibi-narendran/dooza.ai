@@ -1,15 +1,15 @@
 import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
-    title: 'AI Employees by Industry',
-    description: 'Discover how AI employees help businesses in healthcare, real estate, e-commerce, legal services, and more. Industry-specific AI automation solutions.',
+    title: 'AI Employees for Your Industry — Instant Setup [2026]',
+    description: 'See how 10+ industries use AI employees to save 20+ hours/week. Healthcare, real estate, salons, legal, contractors, and more. Proven results from $29/mo.',
     keywords: ['AI for healthcare', 'AI for real estate', 'AI for small business', 'AI for e-commerce', 'industry AI automation'],
     alternates: {
         canonical: `${SITE_URL}/industries`,
     },
     openGraph: {
-        title: 'AI Employees by Industry | Dooza',
-        description: 'Discover how AI employees help businesses in healthcare, real estate, e-commerce, legal services, and more.',
+        title: 'AI Employees for Your Industry — Instant Setup [2026]',
+        description: 'See how 10+ industries use AI employees to save 20+ hours/week. Healthcare, real estate, salons, legal, and more.',
         url: `${SITE_URL}/industries`,
         siteName: SITE_NAME,
         type: 'website',
@@ -24,8 +24,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'AI Employees by Industry | Dooza',
-        description: 'Discover how AI employees help businesses in healthcare, real estate, e-commerce, legal services, and more.',
+        title: 'AI Employees for Your Industry — Instant Setup [2026]',
+        description: 'See how 10+ industries use AI employees to save 20+ hours/week. Healthcare, real estate, salons, legal, and more.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

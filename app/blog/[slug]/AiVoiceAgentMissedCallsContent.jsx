@@ -940,7 +940,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     Want to see how this fits into a broader automation strategy? <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Read our complete guide to automating business processes</Link> — covering email, social media, phone, leads, and more.
                                 </p>
                                 <p>
-                                    Interested in the full AI workforce approach? <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">See how AI staffing replaces traditional hiring</Link> — 6 AI employees for less than the cost of one human hire's first day.
+                                    Interested in the full AI workforce approach? <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">See how AI staffing replaces traditional hiring</Link> — AI employees for less than the cost of one human hire's first day.
                                 </p>
                             </div>
 

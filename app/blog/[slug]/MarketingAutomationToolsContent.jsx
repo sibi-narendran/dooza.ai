@@ -493,7 +493,7 @@ export default function MarketingAutomationToolsContent() {
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
                                         <div className="text-2xl font-bold text-green-700">$29/mo</div>
-                                        <p className="text-sm text-green-600">Dooza (6 AI employees)</p>
+                                        <p className="text-sm text-green-600">Dooza (AI employees)</p>
                                     </div>
                                 </div>
                             </div>

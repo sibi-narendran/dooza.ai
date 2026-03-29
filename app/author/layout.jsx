@@ -4,6 +4,10 @@ export const metadata = {
     title: 'Dooza Team - Authors & Contributors',
     description: 'Meet the Dooza content team. We write actionable guides on AI automation, small business marketing, and scaling with AI employees.',
     keywords: ['Dooza team', 'AI experts', 'business automation authors', 'AI content creators'],
+    robots: {
+        index: false,
+        follow: true,
+    },
     alternates: {
         canonical: `${SITE_URL}/author`,
     },

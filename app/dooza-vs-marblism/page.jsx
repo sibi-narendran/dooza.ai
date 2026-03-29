@@ -2,8 +2,8 @@ import { SITE_URL } from '../../lib/site';
 import DoozaVsMarblismContent from './DoozaVsMarblismContent';
 
 export const metadata = {
-    title: 'Dooza vs Marblism — We Build It For You | 2026 Comparison',
-    description: 'Dooza vs Marblism compared head-to-head. Personal founder setup call vs self-serve, $29/mo flat vs $44/mo + per-seat fees, 17 direct integrations vs undocumented. See why businesses choose Dooza.',
+    title: 'Dooza vs Marblism — $29 Flat vs Per-Seat Fees [2026]',
+    description: 'Dooza vs Marblism compared: $29/mo flat vs $44/mo + per-seat fees, free founder setup vs self-serve, 17 integrations vs undocumented. See the honest breakdown.',
     keywords: [
         'Dooza vs Marblism', 'Marblism alternative', 'Marblism comparison',
         'AI employees comparison', 'Marblism review', 'Marblism pricing',
@@ -33,11 +33,11 @@ const faqData = [
     },
     {
         question: 'How are Dooza and Marblism different?',
-        answer: 'Dooza was built as a purpose-built AI employee platform from day one with 7 specialized agents (Maily, Somi, Linky, Tweety, Utumy, Ranky, Lex). Marblism pivoted from being an app code generator to AI employees in 2025-2026 and offers 6 agents. The biggest differences are in pricing (flat vs per-seat), onboarding (personal founder call vs self-serve), and integrations (17 documented vs undocumented).',
+        answer: 'Dooza was built as a purpose-built AI employee platform from day one with specialized agents (Maily, Somi, Linky, Tweety, Utumy, Ranky, Lex). Marblism pivoted from being an app code generator to AI employees in 2025-2026 and offers 6 agents. The biggest differences are in pricing (flat vs per-seat), onboarding (personal founder call vs self-serve), and integrations (17 documented vs undocumented).',
     },
     {
         question: 'Does Marblism charge per seat?',
-        answer: 'Yes. Marblism charges $44/month for the first user on the monthly plan, then $29/month for each additional seat. On the annual plan it is $24/month + $14/seat. Dooza charges a flat $29/month with no per-seat fees — your entire team can access all 7 AI employees.',
+        answer: 'Yes. Marblism charges $44/month for the first user on the monthly plan, then $29/month for each additional seat. On the annual plan it is $24/month + $14/seat. Dooza charges a flat $29/month with no per-seat fees — your entire team can access all AI employees.',
     },
     {
         question: 'Which has better integrations — Dooza or Marblism?',

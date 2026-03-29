@@ -5,8 +5,44 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Building2, Globe, Shield, Users } from 'lucide-react';
 
+const aboutFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Who is behind Dooza.ai?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dooza.ai is built and operated by Adam Laboratory Inc., a Delaware C-Corporation."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Where is Dooza based?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dooza is a remote-first company registered in Delaware, USA."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is Dooza safe to use?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We follow strict data privacy practices. Read our privacy policy for details."
+            }
+        }
+    ]
+};
+
 export default function AboutPage() {
     return (
+        <>
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutFaqSchema) }}
+        />
         <div className="min-h-screen bg-white font-sans text-slate-900">
             <Navbar />
 
@@ -142,5 +178,6 @@ export default function AboutPage() {
 
             <Footer />
         </div>
+        </>
     );
 }

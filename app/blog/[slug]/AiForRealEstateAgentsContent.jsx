@@ -67,7 +67,7 @@ const faqData = [
     },
     {
         question: "How much does a traditional real estate VA cost compared to Dooza?",
-        answer: "According to industry data, human virtual assistants for real estate cost $1,000-$2,600/month for full-time help, or $20-40/hour in the US. Dooza gives you 6 AI employees working 24/7 for just $29/month—that's roughly 97% less than a single part-time VA, with no contracts or hourly limits."
+        answer: "According to industry data, human virtual assistants for real estate cost $1,000-$2,600/month for full-time help, or $20-40/hour in the US. Dooza gives you AI employees working 24/7 for just $29/month—that's roughly 97% less than a single part-time VA, with no contracts or hourly limits."
     },
     {
         question: "How quickly will I see results?",
@@ -509,7 +509,7 @@ export default function AiForRealEstateAgentsContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-4">What if you had a full team working 24/7?</h3>
                                         <p className="text-lg text-slate-700 mb-4">
-                                            Dooza gives you 6 AI employees dedicated to growing your real estate business. While you're with clients, they're:
+                                            Dooza gives you AI employees dedicated to growing your real estate business. While you're with clients, they're:
                                         </p>
                                         <ul className="space-y-2 text-slate-700">
                                             <li className="flex items-center gap-2">
@@ -697,7 +697,7 @@ export default function AiForRealEstateAgentsContent() {
                                 <div className="bg-primary-50 border-2 border-primary-200 p-6 rounded-xl">
                                     <div className="text-primary-600 font-bold text-sm mb-2">DOOZA AI EMPLOYEES</div>
                                     <div className="text-4xl font-bold text-slate-900 mb-2">$29<span className="text-lg font-normal text-slate-500">/month</span></div>
-                                    <div className="text-lg text-slate-600 mb-4">$348/year for 6 AI employees</div>
+                                    <div className="text-lg text-slate-600 mb-4">$348/year for AI employees</div>
                                     <ul className="space-y-3">
                                         {[
                                             "24/7 phone answering & lead qualification",
@@ -717,7 +717,7 @@ export default function AiForRealEstateAgentsContent() {
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
                                 <p className="text-2xl font-bold text-green-700">That's 97% less than a part-time VA</p>
-                                <p className="text-green-600 mt-2">With 6 AI employees working 24/7—no sick days, no training time, no management needed</p>
+                                <p className="text-green-600 mt-2">With AI employees working 24/7—no sick days, no training time, no management needed</p>
                             </div>
 
                             <div className="mt-8 bg-blue-50 border border-blue-200 p-6 rounded-xl">

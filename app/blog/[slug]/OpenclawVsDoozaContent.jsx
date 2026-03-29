@@ -721,7 +721,7 @@ export default function OpenclawVsDoozaContent() {
                                     {
                                         step: "2",
                                         title: "Book Your Free Onboarding Call",
-                                        desc: "Our concierge team configures your 6 AI employees — Maily (email), Somi (social), Ranky (SEO), Rachel (receptionist), Stan (sales), and Linda (legal) — to match your business, brand voice, and workflows."
+                                        desc: "Our concierge team configures your AI employees — Maily (email), Somi (social), Ranky (SEO), Rachel (receptionist), Stan (sales), and Linda (legal) — to match your business, brand voice, and workflows."
                                     },
                                     {
                                         step: "3",
