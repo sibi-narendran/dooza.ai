@@ -130,14 +130,14 @@ const softwareSchema = {
     ],
     "offers": {
         "@type": "Offer",
-        "price": "29",
+        "price": "39",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://workforce.dooza.ai",
         "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "29",
+            "price": "39",
             "priceCurrency": "USD",
             "billingIncrement": 1,
             "billingDuration": {
@@ -204,7 +204,7 @@ const productSchema = {
         "@type": "Offer",
         "url": "https://workforce.dooza.ai",
         "priceCurrency": "USD",
-        "price": "29",
+        "price": "39",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "seller": {
@@ -295,7 +295,7 @@ const howToSchema = {
     "estimatedCost": {
         "@type": "MonetaryAmount",
         "currency": "USD",
-        "value": "29"
+        "value": "39"
     },
     "step": [
         {
@@ -333,7 +333,6 @@ const aiEmployeesListSchema = {
     "@type": "ItemList",
     "name": "Dooza AI Employees",
     "description": "Complete list of AI employees available on the Dooza platform",
-    "numberOfItems": 5,
     "itemListElement": [
         {
             "@type": "ListItem",
@@ -376,21 +375,13 @@ const aiEmployeesListSchema = {
 export default function Home() {
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify([
-                        organizationSchema,
-                        websiteSchema,
-                        softwareSchema,
-                        productSchema,
-                        serviceSchema,
-                        howToSchema,
-                        aiEmployeesListSchema,
-                        faqSchema
-                    ])
-                }}
-            />
+            {[organizationSchema, websiteSchema, softwareSchema, productSchema, serviceSchema, howToSchema, aiEmployeesListSchema, faqSchema].map((schema, i) => (
+                <script
+                    key={i}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                />
+            ))}
             <BookingModalProvider>
                 <div className="min-h-screen bg-warm text-slate-900 font-sans">
                     <Navbar />
