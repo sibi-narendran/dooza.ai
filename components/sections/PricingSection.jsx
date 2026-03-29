@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CheckCircle2, Zap } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import { getProductSignupUrl } from '@/lib/links';
 import { trackSignupClick } from '@/lib/analytics';
@@ -101,13 +101,11 @@ export default function PricingSection() {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <div className="text-center max-w-3xl mx-auto mb-10">
-                        <span className="section-label block mb-4">SIMPLE PRICING</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 font-serif">Choose the best plan for your needs.</h2>
-                        <p className="text-lg text-slate-500">No hidden fees. Cancel anytime.</p>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 font-serif">Simple, transparent pricing</h2>
                     </div>
 
                     {/* Billing toggle */}
-                    <div className="flex justify-center mb-12">
+                    <div className="flex justify-center mb-6">
                         <div className="inline-flex items-center bg-slate-100 rounded-full p-1">
                             <button
                                 onClick={() => setBilling('monthly')}
@@ -122,6 +120,19 @@ export default function PricingSection() {
                                 Yearly
                                 <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">-20%</span>
                             </button>
+                        </div>
+                    </div>
+
+                    {/* $1 trial badge */}
+                    <div className="flex justify-center mb-12">
+                        <div className="inline-flex items-center gap-3 bg-slate-900 rounded-full px-7 py-3.5 shadow-lg shadow-slate-900/20">
+                            <span className="flex items-center justify-center w-8 h-8 bg-white rounded-full">
+                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </span>
+                            <span className="text-base font-bold text-white">Try today for $1</span>
+                            <span className="text-sm text-slate-400">— 7-day full access</span>
                         </div>
                     </div>
                 </ScrollReveal>
@@ -184,14 +195,10 @@ export default function PricingSection() {
 
                 {/* Bottom section */}
                 <ScrollReveal delay={0.3}>
-                    <div className="flex flex-col items-center mt-10 gap-4">
-                        <div className="inline-flex items-center gap-2 text-sm text-slate-400">
-                            <Zap className="w-4 h-4 text-primary-500" />
-                            <span>Try today for $1 — activates 7-day free trial</span>
-                        </div>
-                        <p className="text-slate-400 text-sm">or</p>
-                        <BookDemoButton source="pricing">Book a Free Demo</BookDemoButton>
-                        <p className="text-xs text-slate-400">See your AI employees in action before you commit</p>
+                    <div className="flex flex-col items-center mt-10 gap-3">
+                        <p className="text-sm text-slate-400">or</p>
+                        <BookDemoButton source="pricing">Talk to Founder</BookDemoButton>
+                        <p className="text-sm font-medium text-slate-600">Free setup & walkthrough · 15 min · No commitment</p>
                     </div>
                 </ScrollReveal>
             </div>

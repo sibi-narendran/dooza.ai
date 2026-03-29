@@ -6,11 +6,11 @@ import { CAL_BOOKING_URL } from '@/lib/links';
 import { trackAdsConversion, trackFBSchedule } from '@/lib/analytics';
 
 const BookingModal = ({ isOpen, onClose }) => {
-    const [preloaded, setPreloaded] = useState(false);
+    const [iframeReady, setIframeReady] = useState(false);
 
-    // Preload iframe after page loads
+    // Start loading iframe 2s after mount — always stays in DOM
     useEffect(() => {
-        const timer = setTimeout(() => setPreloaded(true), 2000);
+        const timer = setTimeout(() => setIframeReady(true), 2000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -46,24 +46,19 @@ const BookingModal = ({ isOpen, onClose }) => {
 
     return (
         <>
-            {/* Hidden preloaded iframe */}
-            {preloaded && !isOpen && (
-                <iframe
-                    src={CAL_BOOKING_URL}
-                    className="fixed -left-[9999px] w-0 h-0"
-                    title="Booking preload"
-                    tabIndex={-1}
-                    aria-hidden="true"
-                />
-            )}
-
-            {/* Visible modal */}
-            {isOpen && (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Book a demo">
+            {/* Persistent iframe — loads once, shown/hidden via CSS */}
+            {iframeReady && (
+                <div
+                    className={`fixed inset-0 z-[100] flex items-center justify-center p-4 transition-opacity duration-200 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Talk to Founder"
+                    aria-hidden={!isOpen}
+                >
                     <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onClick={onClose}></div>
                     <div className="relative w-full max-w-4xl h-[80dvh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col">
                         <div className="flex justify-between items-center p-4 border-b border-slate-100 bg-white z-10">
-                            <h3 className="text-lg font-semibold text-slate-900">Speak with Expert now</h3>
+                            <h3 className="text-lg font-semibold text-slate-900">Talk to Founder</h3>
                             <button onClick={onClose} aria-label="Close booking modal" className="p-2 text-slate-400 hover:text-slate-600 rounded-full">
                                 <X size={20} />
                             </button>
