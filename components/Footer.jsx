@@ -124,6 +124,11 @@ const Footer = ({ variant = 'light' }) => {
                                     AI Solutions for Business
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/marblism-alternatives" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Marblism Alternatives
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div>
