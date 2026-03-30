@@ -22,6 +22,13 @@ export default function AlternativesPage() {
             doozaAdvantage: 'Simpler setup, AI employees, transparent pricing'
         },
         {
+            name: 'Sintra AI Alternatives',
+            slug: null,
+            directLink: '/sintra-alternatives',
+            tagline: '7 alternatives compared — pricing, features, pros & cons',
+            doozaAdvantage: 'No credits, personal onboarding, $1 trial'
+        },
+        {
             name: 'Marblism',
             slug: 'better-than-marblism',
             tagline: 'Developer-focused, technical setup',
@@ -99,9 +106,9 @@ export default function AlternativesPage() {
                                     </p>
                                 </div>
 
-                                {post && (
+                                {(post || competitor.directLink) && (
                                     <Link
-                                        href={`/blog/${post.slug}`}
+                                        href={competitor.directLink || `/blog/${post.slug}`}
                                         className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all"
                                     >
                                         Read Full Comparison
