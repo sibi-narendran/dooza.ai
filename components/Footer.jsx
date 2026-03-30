@@ -114,6 +114,16 @@ const Footer = ({ variant = 'light' }) => {
                                     Dooza vs Marblism
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/sintra-alternatives" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Sintra AI Alternatives
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/ai-solutions-for-business" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI Solutions for Business
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div>
