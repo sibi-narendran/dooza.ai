@@ -539,6 +539,12 @@ export default function SintraAlternativesContent({ faqData }) {
                             <Link href="/dooza-vs-marblism" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Dooza vs Marblism →
                             </Link>
+                            <Link href="/marblism-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                Marblism Alternatives →
+                            </Link>
+                            <Link href="/ai-solutions-for-business" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                AI Solutions for Business →
+                            </Link>
                             <Link href="/alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 All Comparisons →
                             </Link>

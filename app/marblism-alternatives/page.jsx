@@ -5,7 +5,8 @@ export const metadata = {
     title: '7 Best Marblism Alternatives [2026] — Honest Pros & Cons',
     description: 'Looking for Marblism alternatives? We tested 7 AI employee platforms and compared pricing, integrations, onboarding, and agent quality. Honest pros and cons for each.',
     keywords: [
-        'Marblism alternatives', 'Marblism AI alternatives', 'best Marblism alternative 2026',
+        'Marblism alternatives', 'Marblism alternative', 'Marblism AI alternative',
+        'Marblism AI alternatives', 'best Marblism alternative 2026',
         'platforms like Marblism', 'Marblism competitors', 'Marblism alternative no per seat',
         'AI employee platform', 'AI employees for business', 'Marblism vs Dooza',
         'Marblism vs Sintra', 'best AI agents for small business', 'Marblism replacement',
@@ -107,7 +108,8 @@ const schemas = [
         '@type': 'BreadcrumbList',
         itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-            { '@type': 'ListItem', position: 2, name: 'Marblism Alternatives', item: `${SITE_URL}/marblism-alternatives` },
+            { '@type': 'ListItem', position: 2, name: 'Alternatives', item: `${SITE_URL}/alternatives` },
+            { '@type': 'ListItem', position: 3, name: 'Marblism Alternatives', item: `${SITE_URL}/marblism-alternatives` },
         ],
     },
     {
@@ -115,13 +117,13 @@ const schemas = [
         '@type': 'ItemList',
         name: '7 Best Marblism Alternatives in 2026',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Dooza' },
-            { '@type': 'ListItem', position: 2, name: 'Sintra AI' },
-            { '@type': 'ListItem', position: 3, name: 'Motion' },
-            { '@type': 'ListItem', position: 4, name: 'NoimosAI' },
-            { '@type': 'ListItem', position: 5, name: 'Lindy AI' },
-            { '@type': 'ListItem', position: 6, name: 'Relevance AI' },
-            { '@type': 'ListItem', position: 7, name: 'Cubeo AI' },
+            { '@type': 'ListItem', position: 1, name: 'Dooza', url: SITE_URL },
+            { '@type': 'ListItem', position: 2, name: 'Sintra AI', url: 'https://sintra.ai' },
+            { '@type': 'ListItem', position: 3, name: 'Motion', url: 'https://usemotion.com' },
+            { '@type': 'ListItem', position: 4, name: 'NoimosAI', url: 'https://noimosai.com' },
+            { '@type': 'ListItem', position: 5, name: 'Lindy AI', url: 'https://lindy.ai' },
+            { '@type': 'ListItem', position: 6, name: 'Relevance AI', url: 'https://relevanceai.com' },
+            { '@type': 'ListItem', position: 7, name: 'Cubeo AI', url: 'https://cubeo.ai' },
         ],
     },
 ];
