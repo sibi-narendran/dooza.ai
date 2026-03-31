@@ -11,7 +11,7 @@ export const metadata = {
         'affordable AI tools for small business', 'AI for business operations',
         'AI implementation for small business', 'AI tools by business function',
         'AI employee platform', 'business automation tools 2026',
-        'AI marketing tools for business', 'AI customer service for small business',
+        'AI business tools', 'AI marketing tools for business', 'AI customer service for small business',
     ],
     alternates: { canonical: `${SITE_URL}/ai-solutions-for-business` },
     robots: {

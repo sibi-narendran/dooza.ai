@@ -724,6 +724,9 @@ export default function AISolutionsContent({ faqData }) {
                             <Link href="/sintra-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Sintra AI Alternatives →
                             </Link>
+                            <Link href="/marblism-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                Marblism Alternatives →
+                            </Link>
                             <Link href="/dooza-vs-sintra" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Dooza vs Sintra AI →
                             </Link>

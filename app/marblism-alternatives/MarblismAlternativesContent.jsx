@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
     CheckCircle2, XCircle, ArrowRight, Sparkles, Star,
-    CreditCard, Puzzle, Shield, Users, Bot, AlertTriangle
+    DollarSign, Puzzle, Shield, Users, Bot, AlertTriangle, Clock
 } from 'lucide-react';
 import SignupButton from '@/components/buttons/SignupButton';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
@@ -15,21 +15,21 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
-const sintraPainPoints = [
-    { icon: CreditCard, title: '250 Credit Cap', desc: 'Every Sintra plan caps you at 250 credits per month. Advanced actions burn credits fast, forcing you to buy top-ups or wait.' },
-    { icon: Puzzle, title: 'No Inter-Helper Communication', desc: 'Sintra helpers cannot share context. Multi-step workflows require manually copying data between helper chats.' },
-    { icon: Shield, title: 'Self-Serve Onboarding Only', desc: 'No human guidance during setup. You get a login and are left to figure out 90+ Power-Ups on your own.' },
-    { icon: AlertTriangle, title: 'Rigid Helper Structure', desc: 'Pre-built helpers with fixed capabilities. No way to create custom agents, modify prompts, or chain actions between helpers.' },
-    { icon: Users, title: 'Confusing Pricing Tiers', desc: 'Listed at $97/mo with a perpetual 50% discount. Credit top-ups add hidden costs. Annual lock-in required for the best rate.' },
-    { icon: Bot, title: 'Output Quality Concerns', desc: 'Multiple independent reviews note that AI outputs require significant editing before they are usable for real business tasks.' },
+const marblismPainPoints = [
+    { icon: DollarSign, title: 'Per-Seat Pricing Adds Up', desc: 'Marblism charges $44/mo for one user plus $29 for every additional seat. A 5-person team pays $160/mo — more than 3× the base price.' },
+    { icon: Puzzle, title: 'Limited Integrations', desc: 'Only Gmail, Instagram, Facebook, WordPress, and Wix. No Slack, Shopify, Notion, HubSpot, or TikTok. Competing platforms offer 1,000-5,000+ integrations.' },
+    { icon: Shield, title: 'No Free Trial', desc: 'No free plan and no free trial. You pay $44 upfront and rely on a 7-day money-back guarantee. Most competitors offer free trials or $1 entry points.' },
+    { icon: Users, title: 'Self-Serve Onboarding Only', desc: 'No human guidance during setup. You get a login and are left to configure 6 AI employees on your own. No setup call, no walkthrough.' },
+    { icon: Bot, title: 'Agents Ignore Instructions', desc: 'Multiple independent reviews report agents "having a mind of their own" — rewriting requests, forgetting context, and altering task instructions.' },
+    { icon: Clock, title: 'Daily Check-In Model', desc: 'Agents check in once per day at a set time for approval. You cannot adjust priorities mid-day or assign urgent tasks between check-ins.' },
 ];
 
 const alternatives = [
     {
         rank: 1,
         name: 'Dooza',
-        tagline: 'Best overall Sintra alternative for SMBs',
-        bestFor: 'Small businesses wanting hands-off AI employees with personal onboarding',
+        tagline: 'Best overall — flat pricing, personal onboarding, 1,000+ integrations',
+        bestFor: 'SMBs and teams wanting AI employees without per-seat fees or DIY setup',
         price: 'From $39/mo (yearly) or $49/mo (monthly)',
         trial: '$1 for 7-day full access',
         agents: '5 named AI employees — Maily (email), Somi (social media), Ranky (SEO), Stan (customer support), Linda (lead generation)',
@@ -38,11 +38,11 @@ const alternatives = [
         namedAgents: true,
         highlight: true,
         pros: [
-            '5 named AI employees included in every plan',
+            'Flat pricing — $49/mo for the whole team, no per-seat fees',
             '$1 trial with full 7-day access — lowest risk entry',
             'Free concierge onboarding — founder personally sets up your workspace',
-            'No credit system — usage-based tiers instead of confusing credits',
-            '1,000+ app integrations via Composio',
+            '1,000+ app integrations via Composio (vs Marblism\'s ~5 platforms)',
+            'Purpose-built for AI employees from day one (not a pivot)',
         ],
         cons: [
             'Fewer named agents than Sintra (5 vs 12+)',
@@ -52,59 +52,59 @@ const alternatives = [
     },
     {
         rank: 2,
-        name: 'Marblism',
-        tagline: 'Cheapest named-agent platform',
-        bestFor: 'Budget-conscious solopreneurs who want an affordable AI team',
-        price: 'From $24/mo (yearly) or $44/mo (monthly)',
-        trial: '7-day money-back guarantee (no free trial)',
-        agents: '6 named AI employees — Eva (assistant), Sonny (social), Penny (SEO), Stan (leads), Rachel (receptionist), Linda (legal)',
-        integrations: 'Limited — Gmail, Instagram, Facebook, WordPress, Wix',
-        creditSystem: false,
+        name: 'Sintra AI',
+        tagline: 'Largest named agent roster with 12+ helpers',
+        bestFor: 'Users who want the widest variety of pre-built AI helpers',
+        price: '~$48.50/mo (50% discount from $97) or $15.60/mo yearly',
+        trial: '14-day money-back guarantee',
+        agents: '12+ named helpers — Vizzy, Milli, Soshie, Seomi, Penn, Emmie, and more',
+        integrations: '15+ direct integrations',
+        creditSystem: true,
         namedAgents: true,
         highlight: false,
         pros: [
-            'Cheapest starting price at $24/mo yearly',
-            '4.7/5 on Trustpilot from 765+ reviews',
-            '6 named agents including a phone receptionist (Rachel)',
-            'No credit system — all features included in every plan',
+            'Largest roster — 12+ named AI helpers covering diverse tasks',
+            '40,000+ users and 4.5/5 Trustpilot rating',
+            'Brain AI knowledge base personalizes all helpers to your brand',
+            '14-day money-back guarantee (longer than Marblism\'s 7 days)',
         ],
         cons: [
-            'Limited integrations compared to competitors',
-            'No free trial — relies on 7-day refund guarantee',
-            'Some users report agents occasionally ignore prompts',
-            'Per-seat pricing ($14-29/mo) adds up for teams',
+            '250 credit cap on every plan — advanced actions burn credits fast',
+            'Helpers cannot share context — manual copy-paste between helpers',
+            'Confusing pricing with perpetual "50% discount" display',
+            'Self-serve onboarding only — no human setup assistance',
         ],
     },
     {
         rank: 3,
         name: 'Motion',
-        tagline: 'Project management tool with AI employees bolted on',
-        bestFor: 'Teams already using Motion for PM/calendar who want AI features',
+        tagline: 'Project management + AI employees in one tool',
+        bestFor: 'Teams already using Motion for PM/calendar who want AI features added',
         price: 'From $19/seat/mo (yearly) or $29/seat/mo (monthly)',
         trial: '7-day free trial',
-        agents: '5+ named agents (Alfred, Chip, Clide, Millie, Suki) + custom builder',
+        agents: '5+ named agents (Alfred, Chip, Clide, Millie, Suki) + custom agent builder',
         integrations: 'Moderate — Gmail-dependent, limited Outlook support',
         creditSystem: true,
         namedAgents: true,
         highlight: false,
         pros: [
-            '$60M funded (Series C) — well-resourced and actively developing',
+            '$60M funded (Series C) — actively developing with strong runway',
             'Custom agent builder for tailored workflows',
-            'Strong project management and calendar foundation',
-            '7-day free trial with no commitment',
+            'Strong project management and calendar as a foundation',
+            '7-day free trial with no upfront payment',
         ],
         cons: [
-            'Credit-based AI usage (7,500-15,000 credits/seat) limits actual output',
-            'Per-seat pricing gets expensive fast for teams',
-            'AI employees are secondary to the core PM product — not purpose-built',
+            'Credit-based AI usage (7,500-15,000 credits/seat) limits output',
+            'Per-seat pricing — same scaling problem as Marblism',
+            'AI employees are secondary to the core PM product',
             'Gmail dependency — Outlook users get degraded functionality',
         ],
     },
     {
         rank: 4,
         name: 'NoimosAI',
-        tagline: 'Marketing-only AI agents (deep but narrow)',
-        bestFor: 'Marketing teams and agencies wanting specialized marketing automation',
+        tagline: 'Deepest marketing AI agents (11 specialists)',
+        bestFor: 'Marketing teams and agencies who only need marketing automation',
         price: 'From ~$79/mo (Pro) or ~$174/mo annually (Team)',
         trial: 'Free to start with limited features',
         agents: '11 marketing agents — SEO, Social, Competitor, GEO, Social Listening, CVR, Ads, and more',
@@ -116,11 +116,11 @@ const alternatives = [
             'Deepest marketing agent roster — 11 specialized agents',
             'Unique GEO agent for AI search engine optimization',
             'Social Listening agent tracks brand mentions across the web',
-            'No credit system on base features',
+            'Free tier available to test basic features',
         ],
         cons: [
             'Marketing-only — no email management, legal, receptionist, or general business agents',
-            'Expensive starting point at ~$79/mo',
+            'Expensive starting point at ~$79/mo for full features',
             'Smaller company with limited public reviews',
             'Credit system applies to advanced features',
         ],
@@ -128,8 +128,8 @@ const alternatives = [
     {
         rank: 5,
         name: 'Lindy AI',
-        tagline: 'Custom agent builder with massive integrations',
-        bestFor: 'Technical users who want to build their own AI agents from scratch',
+        tagline: 'Custom agent builder with 5,000+ integrations',
+        bestFor: 'Technical users who want to build custom AI agents from scratch',
         price: 'From $49.99/mo (Plus) or $59.99/mo (Pro)',
         trial: '7-day free trial',
         agents: 'No pre-built agents — build your own custom "Lindies" from 50+ templates',
@@ -145,16 +145,16 @@ const alternatives = [
         ],
         cons: [
             '2.0/5 on Trustpilot — major complaints about billing and unauthorized charges',
-            'Requires technical knowledge to build agents — not plug-and-play',
+            'Requires technical knowledge — not plug-and-play like Marblism',
             'Credit-based system plus per-minute voice charges add up',
-            'No pre-built named agents — you build and configure everything yourself',
+            'No pre-built named agents — you build everything yourself',
         ],
     },
     {
         rank: 6,
         name: 'Relevance AI',
         tagline: 'Enterprise-grade AI workforce platform',
-        bestFor: 'Mid-market companies and GTM teams (Canva, KPMG use it)',
+        bestFor: 'Mid-market companies and GTM teams (used by Canva, KPMG)',
         price: 'Free tier, then $19/mo (Pro) up to $234/mo (Team)',
         trial: 'Free plan with 200 actions/month',
         agents: 'Custom agent builder — design your own AI workforce',
@@ -171,16 +171,16 @@ const alternatives = [
         cons: [
             'Dual credit system (actions + LLM vendor credits) is confusing',
             'Not designed for SMBs — pricing and complexity target enterprise',
-            'Requires days or weeks of setup — not plug-and-play',
+            'Requires days or weeks of setup — far more complex than Marblism',
             'Limited organic reviews suggest low SMB adoption',
         ],
     },
     {
         rank: 7,
         name: 'Cubeo AI',
-        tagline: 'No-code chatbot builder (not autonomous agents)',
+        tagline: 'Cheapest entry point — no-code chatbot builder',
         bestFor: 'Businesses wanting simple AI chatbots on their website',
-        price: 'From ~\u20ac17/mo (Starter) — pricing in euros',
+        price: 'From ~€17/mo (Starter) — pricing in euros',
         trial: 'Free plan with 100 credits',
         agents: 'No-code builder — create chatbots and AI assistants (not autonomous employees)',
         integrations: 'Basic — Salesforce, HubSpot, Slack, Zapier, Make',
@@ -188,7 +188,7 @@ const alternatives = [
         namedAgents: false,
         highlight: false,
         pros: [
-            'Very affordable entry point (~\u20ac17/mo)',
+            'Very affordable entry point (~€17/mo)',
             'No-code builder — easy for non-technical users',
             'Free plan available with no credit card required',
             'GPT-4 and Claude models under the hood',
@@ -203,22 +203,22 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Named AI employees, $1 trial, personal founder onboarding, no credit system, 1,000+ integrations' },
-    { need: 'Lowest price', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 6 named agents and no credit system' },
-    { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations — but beware of the 2.0/5 Trustpilot rating and credit system' },
-    { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG, multi-agent orchestration, $37M funded' },
-    { need: 'Marketing only', pick: 'NoimosAI', reason: '11 specialized marketing agents including unique GEO and Social Listening agents' },
-    { need: 'PM + AI in one tool', pick: 'Motion', reason: 'Calendar, task management, and AI employees in a single platform' },
-    { need: 'Best user reviews', pick: 'Marblism', reason: '4.7/5 on Trustpilot from 765+ reviews — highest rated in this list' },
-    { need: 'Personal onboarding', pick: 'Dooza', reason: 'The only platform offering a free founder setup call with concierge onboarding' },
+    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Flat pricing (no per-seat fees), $1 trial, personal founder onboarding, 1,000+ integrations' },
+    { need: 'Most AI agents', pick: 'Sintra AI', reason: '12+ named helpers — the widest roster. But capped at 250 credits/month' },
+    { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations — but 2.0/5 Trustpilot and requires technical setup' },
+    { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG. Multi-agent orchestration. But not SMB-friendly' },
+    { need: 'Marketing only', pick: 'NoimosAI', reason: '11 specialized marketing agents including unique GEO and Social Listening' },
+    { need: 'PM + AI in one tool', pick: 'Motion', reason: 'Calendar, tasks, and AI employees in one platform. But still per-seat pricing' },
+    { need: 'Cheapest single user', pick: 'Marblism ($24/mo yearly)', reason: 'Still the cheapest for one person on a yearly plan — but per-seat fees kick in fast' },
+    { need: 'Personal onboarding', pick: 'Dooza', reason: 'The only platform where the founder personally sets up your AI employees in a free call' },
 ];
 
-export default function SintraAlternativesContent({ faqData }) {
+export default function MarblismAlternativesContent({ faqData }) {
     const [jsLoaded, setJsLoaded] = useState(false);
 
     useEffect(() => {
         setJsLoaded(true);
-        trackFBViewContent('sintra_alternatives', 'alternatives_page');
+        trackFBViewContent('marblism_alternatives', 'alternatives_page');
     }, []);
 
     return (
@@ -244,40 +244,40 @@ export default function SintraAlternativesContent({ faqData }) {
                             </div>
 
                             <h1 className="hero-entrance hero-delay-2 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                                7 Best <span className="bg-gradient-to-r from-primary-600 via-teal-500 to-primary-600 bg-clip-text text-transparent animate-gradient">Sintra AI Alternatives</span> [2026]
+                                7 Best <span className="bg-gradient-to-r from-primary-600 via-teal-500 to-primary-600 bg-clip-text text-transparent animate-gradient">Marblism Alternatives</span> [2026]
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                Credits running out? Helpers not talking to each other? You are not alone.
+                                Per-seat fees adding up? Integrations too limited? You are not alone.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Sintra AI caps every plan at 250 credits and their helpers cannot share context. We tested 7 alternatives and compared pricing, features, pros, and cons — so you do not have to.
+                                Marblism charges $29/seat on top of the base price, only connects to ~5 platforms, and offers no free trial. We tested 7 alternatives and compared pricing, integrations, pros, and cons — so you do not have to.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="sintra_alt_hero">Try Dooza for $1</SignupButton>
-                                <BookDemoButton source="sintra_alt_hero" />
+                                <SignupButton source="marblism_alt_hero">Try Dooza for $1</SignupButton>
+                                <BookDemoButton source="marblism_alt_hero" />
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* ── Why People Look for Sintra Alternatives ── */}
+                {/* ── Why People Look for Marblism Alternatives ── */}
                 <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center mb-16">
                                 <p className="section-label mb-3">The Problem</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Why People Look for Sintra Alternatives</h2>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Why People Look for Marblism Alternatives</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
-                                    Sintra AI has 40,000+ users and a 4.5/5 Trustpilot rating. But recurring complaints push many to explore other options.
+                                    Marblism has 11,800+ users and a 4.7/5 Trustpilot rating. But recurring complaints push many to explore other options.
                                 </p>
                             </div>
                         </ScrollReveal>
 
                         <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {sintraPainPoints.map((item, i) => (
+                            {marblismPainPoints.map((item, i) => (
                                 <StaggerItem key={i}>
                                     <div className="card-shadow bg-white rounded-2xl border border-slate-100 p-8 h-full hover:border-red-200 transition-colors">
                                         <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center mb-5">
@@ -357,7 +357,7 @@ export default function SintraAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <div className="text-center mb-16">
                                 <p className="section-label mb-3">Detailed Breakdown</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">7 Best Sintra AI Alternatives — In Detail</h2>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">7 Best Marblism Alternatives — In Detail</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
                                     Honest pros and cons for each platform. Yes, including ours.
                                 </p>
@@ -442,8 +442,8 @@ export default function SintraAlternativesContent({ faqData }) {
                                     {/* CTA for Dooza only */}
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <SignupButton source="sintra_alt_dooza_card">Try Dooza for $1</SignupButton>
-                                            <BookDemoButton source="sintra_alt_dooza_card" />
+                                            <SignupButton source="marblism_alt_dooza_card">Try Dooza for $1</SignupButton>
+                                            <BookDemoButton source="marblism_alt_dooza_card" />
                                         </div>
                                     )}
                                 </div>
@@ -452,7 +452,7 @@ export default function SintraAlternativesContent({ faqData }) {
                     </div>
                 </section>
 
-                {/* ── Decision Guide (Dark) ── */}
+                {/* ── Per-Seat Pricing Breakdown (Dark) ── */}
                 <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900 overflow-hidden relative">
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
                     <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl" />
@@ -460,9 +460,60 @@ export default function SintraAlternativesContent({ faqData }) {
                     <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center mb-16">
-                                <p className="section-label mb-3">Decision Guide</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Which Alternative Is Right for You?</h2>
+                                <p className="section-label mb-3">The Math</p>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">What Per-Seat Pricing Actually Costs</h2>
                                 <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
+                                    Marblism&apos;s $44/mo looks affordable — until you add your team.
+                                </p>
+                            </div>
+                        </ScrollReveal>
+
+                        <ScrollReveal>
+                            <div className="overflow-x-auto -mx-4 px-4">
+                                <div className="border border-white/10 rounded-2xl overflow-hidden min-w-[500px]">
+                                    <table className="w-full border-collapse text-left">
+                                        <thead>
+                                            <tr className="bg-white/5">
+                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-white">Team Size</th>
+                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-slate-400">Marblism (monthly)</th>
+                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-primary-300">Dooza (monthly)</th>
+                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-green-400">You Save</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="text-sm">
+                                            {[
+                                                { team: '1 person', marblism: '$44/mo', dooza: '$49/mo', save: '—', doozaWins: false },
+                                                { team: '2 people', marblism: '$73/mo', dooza: '$49/mo', save: '$24/mo', doozaWins: true },
+                                                { team: '3 people', marblism: '$102/mo', dooza: '$49/mo', save: '$53/mo', doozaWins: true },
+                                                { team: '5 people', marblism: '$160/mo', dooza: '$49/mo', save: '$111/mo', doozaWins: true },
+                                                { team: '10 people', marblism: '$305/mo', dooza: '$49/mo', save: '$256/mo', doozaWins: true },
+                                            ].map((row, i) => (
+                                                <tr key={i} className="border-b border-white/5 last:border-0">
+                                                    <td className="p-4 md:p-5 text-white font-medium">{row.team}</td>
+                                                    <td className="p-4 md:p-5 text-slate-400">{row.marblism}</td>
+                                                    <td className="p-4 md:p-5 text-primary-300 font-medium">{row.dooza}</td>
+                                                    <td className={`p-4 md:p-5 font-bold ${row.doozaWins ? 'text-green-400' : 'text-slate-500'}`}>{row.save}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <p className="text-sm text-slate-500 mt-4 italic text-center">
+                                Marblism monthly pricing: $44 base + $29/seat. Dooza charges a flat rate with no per-seat fees on any plan.
+                            </p>
+                        </ScrollReveal>
+                    </div>
+                </section>
+
+                {/* ── Decision Guide ── */}
+                <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <ScrollReveal>
+                            <div className="text-center mb-16">
+                                <p className="section-label mb-3">Decision Guide</p>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Which Alternative Is Right for You?</h2>
+                                <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
                                     Match your needs to the right platform. No one tool fits everyone.
                                 </p>
                             </div>
@@ -471,18 +522,18 @@ export default function SintraAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <div className="grid gap-4">
                                 {decisionGuide.map((item, i) => (
-                                    <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4 hover:bg-white/10 transition-colors">
+                                    <div key={i} className="card-shadow bg-white rounded-xl border border-slate-100 p-5 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-primary-200 transition-colors">
                                         <div className="sm:w-1/4">
-                                            <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-1">If you need</p>
-                                            <p className="font-bold text-white">{item.need}</p>
+                                            <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">If you need</p>
+                                            <p className="font-bold text-slate-900">{item.need}</p>
                                         </div>
                                         <div className="sm:w-1/4">
-                                            <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-1">Choose</p>
-                                            <p className="font-bold text-primary-300">{item.pick}</p>
+                                            <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Choose</p>
+                                            <p className="font-bold text-primary-600">{item.pick}</p>
                                         </div>
                                         <div className="sm:w-1/2">
-                                            <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-1">Why</p>
-                                            <p className="text-slate-300 text-sm">{item.reason}</p>
+                                            <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Why</p>
+                                            <p className="text-slate-600 text-sm">{item.reason}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -492,7 +543,7 @@ export default function SintraAlternativesContent({ faqData }) {
                 </section>
 
                 {/* ── FAQ ── */}
-                <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
+                <section className="py-20 lg:py-28 bg-white">
                     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center mb-12">
@@ -516,13 +567,13 @@ export default function SintraAlternativesContent({ faqData }) {
 
                     <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <ScrollReveal>
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Sintra Alternative?</h2>
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Marblism Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start with a $1 trial — full access for 7 days. Or book a free setup call with the founder. No sales pitch, just a walkthrough of what Dooza handles for your business.
+                                Start with a $1 trial — full access for 7 days. No per-seat fees. Or book a free setup call with the founder.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="sintra_alt_cta">Try Dooza for $1</SignupButton>
-                                <BookDemoButton source="sintra_alt_cta" />
+                                <SignupButton source="marblism_alt_cta">Try Dooza for $1</SignupButton>
+                                <BookDemoButton source="marblism_alt_cta" />
                             </div>
                         </ScrollReveal>
                     </div>
@@ -533,14 +584,14 @@ export default function SintraAlternativesContent({ faqData }) {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h3 className="font-bold text-slate-900 mb-4">Related Comparisons</h3>
                         <div className="flex flex-wrap gap-3">
-                            <Link href="/dooza-vs-sintra" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
-                                Dooza vs Sintra AI →
-                            </Link>
                             <Link href="/dooza-vs-marblism" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Dooza vs Marblism →
                             </Link>
-                            <Link href="/marblism-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
-                                Marblism Alternatives →
+                            <Link href="/sintra-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                Sintra AI Alternatives →
+                            </Link>
+                            <Link href="/dooza-vs-sintra" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                Dooza vs Sintra AI →
                             </Link>
                             <Link href="/ai-solutions-for-business" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 AI Solutions for Business →
