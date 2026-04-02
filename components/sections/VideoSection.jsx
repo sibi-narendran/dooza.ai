@@ -10,7 +10,7 @@ export default function VideoSection() {
                     </div>
                     <div className="relative rounded-2xl overflow-hidden card-shadow border border-slate-100 aspect-video">
                         <iframe
-                            src="https://www.youtube.com/embed/p4nChWwW7BY?si=5xOTWz09YQXphMRX&rel=0"
+                            src="https://www.youtube.com/embed/4awjwkvELS8?si=C1GFl1_Q-JW9LwK4&rel=0"
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin"
