@@ -43,6 +43,7 @@ import AiVoiceAgentMissedCallsContent from './AiVoiceAgentMissedCallsContent';
 import AutomateEmployeePerformanceReviewsContent from './AutomateEmployeePerformanceReviewsContent';
 import AiLegalAssistantContent from './AiLegalAssistantContent';
 import OutrankVsDoozaRankyContent from './OutrankVsDoozaRankyContent';
+import DoozaItAndResellContent from './DoozaItAndResellContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -83,6 +84,7 @@ const BLOG_COMPONENTS = {
     'automate-employee-performance-reviews': AutomateEmployeePerformanceReviewsContent,
     'ai-legal-assistant': AiLegalAssistantContent,
     'outrank-vs-dooza-ranky': OutrankVsDoozaRankyContent,
+    'dooza-it-and-resell': DoozaItAndResellContent,
 };
 
 // ISR: revalidate dynamic posts every 60 seconds
