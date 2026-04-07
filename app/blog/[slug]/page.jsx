@@ -43,6 +43,10 @@ import AiVoiceAgentMissedCallsContent from './AiVoiceAgentMissedCallsContent';
 import AutomateEmployeePerformanceReviewsContent from './AutomateEmployeePerformanceReviewsContent';
 import AiLegalAssistantContent from './AiLegalAssistantContent';
 import OutrankVsDoozaRankyContent from './OutrankVsDoozaRankyContent';
+import AiForWoocommerceStoreContent from './AiForWoocommerceStoreContent';
+import VirtualVsHumanContent from './VirtualVsHumanContent';
+import AiChatbotWoocommerceContent from './AiChatbotWoocommerceContent';
+import AiForShopifyStoreContent from './AiForShopifyStoreContent';
 import DoozaItAndResellContent from './DoozaItAndResellContent';
 
 // Map slugs to components
@@ -84,6 +88,10 @@ const BLOG_COMPONENTS = {
     'automate-employee-performance-reviews': AutomateEmployeePerformanceReviewsContent,
     'ai-legal-assistant': AiLegalAssistantContent,
     'outrank-vs-dooza-ranky': OutrankVsDoozaRankyContent,
+    'ai-for-woocommerce-store': AiForWoocommerceStoreContent,
+    'virtual-vs-human': VirtualVsHumanContent,
+    'ai-chatbot-woocommerce': AiChatbotWoocommerceContent,
+    'ai-for-shopify-store': AiForShopifyStoreContent,
     'dooza-it-and-resell': DoozaItAndResellContent,
 };
 
