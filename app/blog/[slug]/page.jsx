@@ -48,6 +48,7 @@ import VirtualVsHumanContent from './VirtualVsHumanContent';
 import AiChatbotWoocommerceContent from './AiChatbotWoocommerceContent';
 import AiForShopifyStoreContent from './AiForShopifyStoreContent';
 import DoozaItAndResellContent from './DoozaItAndResellContent';
+import BestAiChatbotShopifyContent from './BestAiChatbotShopifyContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -93,6 +94,7 @@ const BLOG_COMPONENTS = {
     'ai-chatbot-woocommerce': AiChatbotWoocommerceContent,
     'ai-for-shopify-store': AiForShopifyStoreContent,
     'dooza-it-and-resell': DoozaItAndResellContent,
+    'best-ai-chatbot-shopify': BestAiChatbotShopifyContent,
 };
 
 // ISR: revalidate dynamic posts every 60 seconds
