@@ -33,7 +33,11 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside, { passive: true });
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
     }, []);
 
     const products = [
@@ -241,7 +245,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                             onClick={() => setIsOpen(!isOpen)}
                             aria-expanded={isOpen}
                             aria-label={isOpen ? 'Close menu' : 'Open menu'}
-                            className={isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}
+                            className={`tap-target -mr-2 ${isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>

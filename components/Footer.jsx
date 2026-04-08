@@ -155,22 +155,22 @@ const Footer = ({ variant = 'light' }) => {
                     <p className={`text-xs ${isDark ? 'text-gray-600' : 'text-slate-400'}`}>
                         Dooza.ai is a product of Adam Laboratory Inc., a Delaware corporation.
                     </p>
-                    <div className={`flex space-x-6 ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>
-                        <a 
-                            href="https://twitter.com/sibinarendran" 
-                            target="_blank" 
+                    <div className={`flex gap-2 ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>
+                        <a
+                            href="https://twitter.com/sibinarendran"
+                            target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Follow us on Twitter"
-                            className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-primary-600'}`}
+                            className={`tap-target rounded-full transition-colors ${isDark ? 'hover:text-white' : 'hover:text-primary-600'}`}
                         >
                             <Twitter size={20} />
                         </a>
-                        <a 
-                            href="https://www.linkedin.com/company/110144933/" 
-                            target="_blank" 
+                        <a
+                            href="https://www.linkedin.com/company/110144933/"
+                            target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Follow us on LinkedIn"
-                            className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-primary-600'}`}
+                            className={`tap-target rounded-full transition-colors ${isDark ? 'hover:text-white' : 'hover:text-primary-600'}`}
                         >
                             <Linkedin size={20} />
                         </a>

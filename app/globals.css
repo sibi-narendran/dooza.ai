@@ -28,6 +28,16 @@ h1, h2, h3, h4, h5, h6 {
   @apply uppercase tracking-[3px] text-primary-600 text-sm font-bold font-sans;
 }
 
+/* Minimum 44x44 tap target — Apple HIG / WCAG 2.5.5. Use on icon-only
+   buttons that would otherwise be too small to tap reliably on mobile. */
+.tap-target {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Soft card shadow */
 .card-shadow {
   box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.03);
