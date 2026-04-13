@@ -61,7 +61,7 @@ export default function AlternativesPage() {
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                             See how Dooza compares to other AI tools and marketing platforms.
-                            Get AI employees for $29/month—less than most competitors charge for a single feature.
+                            Get AI employees for $49/month—less than most competitors charge for a single feature.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 mb-8">
                             <div className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full">
@@ -70,7 +70,7 @@ export default function AlternativesPage() {
                             </div>
                             <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full">
                                 <DollarSign className="w-5 h-5" />
-                                <span className="font-medium">$29/month</span>
+                                <span className="font-medium">$49/month</span>
                             </div>
                             <div className="flex items-center gap-2 bg-purple-50 text-purple-700 px-4 py-2 rounded-full">
                                 <Zap className="w-5 h-5" />

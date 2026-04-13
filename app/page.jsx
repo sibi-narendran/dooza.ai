@@ -15,21 +15,21 @@ import FinalCTASection from '@/components/sections/FinalCTASection';
 import { faqSchema } from '@/lib/homeData';
 
 export const metadata = {
-    title: { absolute: 'AI Employees for $29/mo — Work 24/7 | Dooza.ai' },
+    title: { absolute: 'AI Employees for $49/mo — Work 24/7 | Dooza.ai' },
     description: 'Get AI employees that handle email, social media, SEO, calls, and leads while you sleep. Free setup call with the founder. Cancel anytime. [2026]',
     keywords: ['AI employees', 'AI agents', 'business automation', 'Sintra AI alternative', 'Marblism alternative', 'AI for small business', 'AI automation platform', 'virtual employees'],
     alternates: {
         canonical: 'https://www.dooza.ai',
     },
     openGraph: {
-        title: 'AI Employees for $29/mo — Work 24/7 | Dooza.ai',
+        title: 'AI Employees for $49/mo — Work 24/7 | Dooza.ai',
         description: 'Get AI employees that handle email, social media, SEO, calls, and leads while you sleep. Free setup call with the founder.',
         url: 'https://www.dooza.ai',
         images: [{ url: 'https://www.dooza.ai/logo.png', width: 512, height: 512, alt: 'Dooza - AI Employees Platform' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'AI Employees for $29/mo — Work 24/7 | Dooza.ai',
+        title: 'AI Employees for $49/mo — Work 24/7 | Dooza.ai',
         description: 'Get AI employees that handle email, social media, SEO, calls, and leads while you sleep. Free setup call with the founder.',
         images: ['https://www.dooza.ai/logo.png'],
     },

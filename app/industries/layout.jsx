@@ -2,7 +2,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
     title: 'AI Employees for Your Industry — Instant Setup [2026]',
-    description: 'See how 10+ industries use AI employees to save 20+ hours/week. Healthcare, real estate, salons, legal, contractors, and more. Proven results from $29/mo.',
+    description: 'See how 10+ industries use AI employees to save 20+ hours/week. Healthcare, real estate, salons, legal, contractors, and more. Proven results from $49/mo.',
     keywords: ['AI for healthcare', 'AI for real estate', 'AI for small business', 'AI for e-commerce', 'industry AI automation'],
     alternates: {
         canonical: `${SITE_URL}/industries`,

@@ -59,7 +59,7 @@ const faqData = [
     },
     {
         question: "What are the best alternatives to OpenClaw?",
-        answer: "For non-technical users and businesses, managed AI platforms like Dooza offer similar automation capabilities (email, social media, SEO, content creation) without the security risks, technical complexity, or unpredictable costs. Dooza provides pre-built AI employees starting at $29/month with enterprise-grade security."
+        answer: "For non-technical users and businesses, managed AI platforms like Dooza offer similar automation capabilities (email, social media, SEO, content creation) without the security risks, technical complexity, or unpredictable costs. Dooza provides pre-built AI employees starting at $49/month with enterprise-grade security."
     },
     {
         question: "Why did ClawdBot change its name to OpenClaw?",
@@ -868,7 +868,7 @@ export default function WhatIsOpenClawContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Monthly Cost</td>
                                             <td className="p-4 border-b text-red-500">$10-1,000+/mo (unpredictable)</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$29/mo (flat rate)</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/mo (flat rate)</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Takes Real Actions</td>

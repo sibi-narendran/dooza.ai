@@ -41,11 +41,11 @@ import {
 const faqData = [
     {
         question: "What AI tools do solopreneurs need in 2026?",
-        answer: "Solopreneurs in 2026 need AI tools for content creation (ChatGPT, Jasper), visual design (Canva AI, Midjourney), email management (Superhuman), social media scheduling (Buffer, Hootsuite), meeting transcription (Otter.ai), automation (Zapier, Make), and accounting (QuickBooks). However, managing 7+ subscriptions can cost $200-500/month. Platforms like Dooza consolidate these functions into pre-built AI employees for $29/month."
+        answer: "Solopreneurs in 2026 need AI tools for content creation (ChatGPT, Jasper), visual design (Canva AI, Midjourney), email management (Superhuman), social media scheduling (Buffer, Hootsuite), meeting transcription (Otter.ai), automation (Zapier, Make), and accounting (QuickBooks). However, managing 7+ subscriptions can cost $200-500/month. Platforms like Dooza consolidate these functions into pre-built AI employees for $49/month."
     },
     {
         question: "How much do AI tools cost for a solopreneur?",
-        answer: "Individual AI tools typically cost $10-50/month each. A full stack including content creation, design, email, social media, automation, and accounting tools can run $200-500/month. All-in-one platforms like Dooza offer multiple AI employees for $29/month, potentially saving solopreneurs hundreds of dollars monthly while reducing tool fatigue."
+        answer: "Individual AI tools typically cost $10-50/month each. A full stack including content creation, design, email, social media, automation, and accounting tools can run $200-500/month. All-in-one platforms like Dooza offer multiple AI employees for $49/month, potentially saving solopreneurs hundreds of dollars monthly while reducing tool fatigue."
     },
     {
         question: "Can AI replace a virtual assistant for solopreneurs?",
@@ -57,7 +57,7 @@ const faqData = [
     },
     {
         question: "Is Dooza good for solopreneurs?",
-        answer: "Dooza is designed specifically for small businesses and solopreneurs who need AI automation without technical complexity. For $29/month, you get pre-built AI employees for email, social media, SEO, sales, and more. Unlike building your own tool stack or using developer-focused platforms like MoltBot, Dooza requires no coding, no integrations, and no maintenance—making it ideal for one-person businesses."
+        answer: "Dooza is designed specifically for small businesses and solopreneurs who need AI automation without technical complexity. For $49/month, you get pre-built AI employees for email, social media, SEO, sales, and more. Unlike building your own tool stack or using developer-focused platforms like MoltBot, Dooza requires no coding, no integrations, and no maintenance—making it ideal for one-person businesses."
     },
     {
         question: "How much time can AI tools save solopreneurs?",
@@ -218,7 +218,7 @@ export default function AiToolsForSolopreneursContent() {
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                             Drowning in subscriptions? You're juggling content creation, email, social media,
                             accounting, and more—all by yourself. See the essential AI tools, then discover
-                            how one platform can replace your entire tech stack for $29/month.
+                            how one platform can replace your entire tech stack for $49/month.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">

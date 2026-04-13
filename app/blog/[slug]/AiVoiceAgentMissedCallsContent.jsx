@@ -59,7 +59,7 @@ const faqData = [
     },
     {
         question: "What's the ROI of an AI voice agent?",
-        answer: "If you capture just 5 additional leads per month that would have gone to voicemail, and your average deal value is $500, that's $2,500/month in recovered revenue — an 86x return on a $29/month investment."
+        answer: "If you capture just 5 additional leads per month that would have gone to voicemail, and your average deal value is $500, that's $2,500/month in recovered revenue — an 86x return on a $49/month investment."
     }
 ];
 
@@ -145,7 +145,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Your AI Voice Agent - $29/mo
+                                Get Your AI Voice Agent - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -410,7 +410,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         ))}
                                     </tbody>
                                 </table>
-                                <p className="text-xs text-slate-500 mt-2">*Based on 150 captured leads/month at $29/month</p>
+                                <p className="text-xs text-slate-500 mt-2">*Based on 150 captured leads/month at $49/month</p>
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -833,7 +833,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                             <p className="text-xs text-slate-500 mb-3">{item.captured} x {item.avgDeal}</p>
                                             <div className="pt-3 border-t border-slate-200">
                                                 <div className={`text-2xl font-bold ${c.stat}`}>{item.roi} ROI</div>
-                                                <p className="text-xs text-slate-500">on $29/month investment</p>
+                                                <p className="text-xs text-slate-500">on $49/month investment</p>
                                             </div>
                                         </div>
                                     );
@@ -848,28 +848,28 @@ export default function AiVoiceAgentMissedCallsContent() {
                                             industry: "HVAC Company",
                                             detail: "Captures 10 after-hours emergency calls/month that previously went to voicemail",
                                             calculation: "10 calls x $400 avg job = $4,000/month recovered",
-                                            roi: "138x return on $29/month",
+                                            roi: "138x return on $49/month",
                                             roiColor: "text-green-400"
                                         },
                                         {
                                             industry: "Law Firm",
                                             detail: "Captures 3 potential client calls/month that competitors would have gotten",
                                             calculation: "3 calls x $1,500 avg case = $4,500/month recovered",
-                                            roi: "155x return on $29/month",
+                                            roi: "155x return on $49/month",
                                             roiColor: "text-green-400"
                                         },
                                         {
                                             industry: "Dental Practice",
                                             detail: "Captures 8 new patient inquiries/month during lunch and after hours",
                                             calculation: "8 calls x $600 first-year value = $4,800/month recovered",
-                                            roi: "166x return on $29/month",
+                                            roi: "166x return on $49/month",
                                             roiColor: "text-green-400"
                                         },
                                         {
                                             industry: "Real Estate Agent",
                                             detail: "Captures 2 buyer leads/month from weekend and evening calls",
                                             calculation: "2 calls x $3,500 expected commission = $7,000/month recovered",
-                                            roi: "241x return on $29/month",
+                                            roi: "241x return on $49/month",
                                             roiColor: "text-green-400"
                                         }
                                     ].map((item, idx) => (
@@ -887,7 +887,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                 <div className="text-center">
                                     <h4 className="font-bold text-green-800 mb-2 text-lg">The Bottom Line</h4>
                                     <p className="text-green-700 text-lg">
-                                        At <strong>$29/month</strong>, an AI voice agent needs to capture <strong>one single lead</strong> that would have otherwise gone to voicemail to pay for itself <strong>many times over</strong>. For most businesses, that happens on day one.
+                                        At <strong>$49/month</strong>, an AI voice agent needs to capture <strong>one single lead</strong> that would have otherwise gone to voicemail to pay for itself <strong>many times over</strong>. For most businesses, that happens on day one.
                                     </p>
                                 </div>
                             </div>
@@ -908,7 +908,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     {
                                         step: "1",
                                         title: "Sign Up & Book Your Free Onboarding",
-                                        desc: "Create your Dooza account ($29/month for your full AI workforce including voice agent, sales agent, email, social media, SEO, and legal). Book a free 30-minute onboarding call with our concierge team.",
+                                        desc: "Create your Dooza account ($49/month for your full AI workforce including voice agent, sales agent, email, social media, SEO, and legal). Book a free 30-minute onboarding call with our concierge team.",
                                         detail: "You'll also get Rachel (AI receptionist), Stan (sales agent), Maily (email), Somi (social media), Ranky (SEO), and Linda (legal) — all configured during onboarding."
                                     },
                                     {

@@ -559,7 +559,7 @@ export default function RankyContent({ page }) {
                                 Hire Ranky and automate your SEO — from keyword research to published content.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="ranky_cta">Hire Ranky — $29/mo</SignupButton>
+                                <SignupButton source="ranky_cta">Hire Ranky — $49/mo</SignupButton>
                                 <BookDemoButton source="ranky_cta" />
                             </div>
                         </ScrollReveal>

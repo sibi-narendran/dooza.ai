@@ -76,7 +76,7 @@ const faqData = [
     },
     {
         question: 'Does Marblism have a free trial?',
-        answer: 'No. Marblism does not offer a free trial or a free plan. They provide a 7-day money-back guarantee, meaning you pay upfront ($44/mo monthly) and can request a refund within 7 days. Alternatives like Dooza ($1 for 7 days), Motion (7-day free trial), and Lindy AI (7-day free trial) offer lower-risk ways to test.',
+        answer: 'No. Marblism does not offer a free trial or a free plan. They provide a 7-day money-back guarantee, meaning you pay upfront ($44/mo monthly) and can request a refund within 7 days. Alternatives like Dooza ($1 for 3 days), Motion (7-day free trial), and Lindy AI (7-day free trial) offer lower-risk ways to test.',
     },
     {
         question: 'Which AI employee platform has the best onboarding?',

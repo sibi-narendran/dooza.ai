@@ -132,7 +132,7 @@ export default function PricingSection() {
                                 </svg>
                             </span>
                             <span className="text-base font-bold text-white">Try today for $1</span>
-                            <span className="text-sm text-slate-400">— 7-day full access</span>
+                            <span className="text-sm text-slate-400">— 3-day full access</span>
                         </div>
                     </div>
                 </ScrollReveal>

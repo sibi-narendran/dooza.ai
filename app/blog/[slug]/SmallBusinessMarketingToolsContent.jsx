@@ -43,7 +43,7 @@ import {
 const faqData = [
     {
         question: "What marketing tools do small businesses actually need?",
-        answer: "At minimum, small businesses need: email marketing, social media management, SEO/website optimization, and analytics. Many businesses also benefit from CRM, paid ads management, and content creation tools. The challenge is these often require 5-10 separate subscriptions costing $200-500/month combined. Dooza consolidates these into AI employees for $29/month."
+        answer: "At minimum, small businesses need: email marketing, social media management, SEO/website optimization, and analytics. Many businesses also benefit from CRM, paid ads management, and content creation tools. The challenge is these often require 5-10 separate subscriptions costing $200-500/month combined. Dooza consolidates these into AI employees for $49/month."
     },
     {
         question: "How much should a small business spend on marketing tools?",
@@ -194,7 +194,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get All-in-One AI Marketing - $29/mo
+                                Get All-in-One AI Marketing - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -430,7 +430,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                                     <div className="bg-primary-50 p-3 rounded-lg">
                                                         <div className="text-xs font-bold text-primary-600 mb-2">DOOZA ALTERNATIVE</div>
                                                         <p className="text-sm text-primary-700 font-medium">{category.dooza}</p>
-                                                        <p className="text-xs text-primary-600 mt-1">Included in $29/mo</p>
+                                                        <p className="text-xs text-primary-600 mt-1">Included in $49/mo</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -494,7 +494,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                     ))}
                                     <div className="flex justify-between items-center pt-2">
                                         <span className="font-bold text-slate-900">Monthly Total</span>
-                                        <span className="font-bold text-green-700 text-xl">$29/mo</span>
+                                        <span className="font-bold text-green-700 text-xl">$49/mo</span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="font-bold text-slate-900">Annual Total</span>
@@ -548,7 +548,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                     The Small Business AI Advantage
                                 </h4>
                                 <p className="text-blue-700">
-                                    According to <a href="https://localiq.com/blog/small-business-marketing-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">LocaliQ</a>, small businesses using AI see a <strong>25% increase in marketing ROI</strong>. Unlike enterprise solutions that cost thousands, Dooza brings enterprise-level AI marketing to small businesses at a price that makes sense: <strong>$29/month for AI employees</strong>.
+                                    According to <a href="https://localiq.com/blog/small-business-marketing-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">LocaliQ</a>, small businesses using AI see a <strong>25% increase in marketing ROI</strong>. Unlike enterprise solutions that cost thousands, Dooza brings enterprise-level AI marketing to small businesses at a price that makes sense: <strong>$49/month for AI employees</strong>.
                                 </p>
                             </div>
                         </section>
@@ -596,7 +596,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started - $29/month <ArrowRight className="w-4 h-4" />
+                                        Get Started - $49/month <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

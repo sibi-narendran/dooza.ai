@@ -184,7 +184,7 @@ export default function MarketingAutomationToolsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get AI Automation - $29/mo
+                                Get AI Automation - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -492,7 +492,7 @@ export default function MarketingAutomationToolsContent() {
                                         <p className="text-sm text-slate-600">ActiveCampaign Plus</p>
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
-                                        <div className="text-2xl font-bold text-green-700">$29/mo</div>
+                                        <div className="text-2xl font-bold text-green-700">$49/mo</div>
                                         <p className="text-sm text-green-600">Dooza (AI employees)</p>
                                     </div>
                                 </div>
@@ -542,7 +542,7 @@ export default function MarketingAutomationToolsContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started - $29/month <ArrowRight className="w-4 h-4" />
+                                        Get Started - $49/month <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

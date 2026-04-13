@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "Why is Dooza better than building on OpenClaw?",
-        answer: "Dooza solves the 7 infrastructure problems that OpenClaw doesn't: multi-tenancy, workstation UIs, real-time chat, cron scheduling, prebuilt skills, memory management, and security. You get all of this for $29/month instead of spending weeks building it yourself."
+        answer: "Dooza solves the 7 infrastructure problems that OpenClaw doesn't: multi-tenancy, workstation UIs, real-time chat, cron scheduling, prebuilt skills, memory management, and security. You get all of this for $49/month instead of spending weeks building it yourself."
     },
     {
         question: "Can I use OpenClaw for business?",
@@ -526,7 +526,7 @@ export default function OpenclawVsDoozaContent() {
                                         {[
                                             { feature: "Setup Time", openclaw: "3-4 months", dooza: "30 minutes" },
                                             { feature: "Upfront Cost", openclaw: "$45,000-67,500 (dev time)", dooza: "$0 (free trial)" },
-                                            { feature: "Monthly Cost", openclaw: "$100-300+/day in API + hosting", dooza: "$29/month flat" },
+                                            { feature: "Monthly Cost", openclaw: "$100-300+/day in API + hosting", dooza: "$49/month flat" },
                                             { feature: "Multi-Tenancy", openclaw: "Build from scratch", dooza: "Built in" },
                                             { feature: "Security Layers", openclaw: "Build from scratch", dooza: "3 layers, active by default" },
                                             { feature: "Cron Scheduling", openclaw: "Build from scratch", dooza: "Built in" },
@@ -598,7 +598,7 @@ export default function OpenclawVsDoozaContent() {
                                     <div className="space-y-2">
                                         {[
                                             { label: "Infrastructure development", value: "$0" },
-                                            { label: "Subscription ($29/mo)", value: "$348/year" },
+                                            { label: "Subscription ($49/mo)", value: "$348/year" },
                                             { label: "API costs", value: "Included" },
                                             { label: "Server hosting", value: "Included" },
                                             { label: "Maintenance & updates", value: "Included" },
@@ -669,7 +669,7 @@ export default function OpenclawVsDoozaContent() {
                                             "You want AI employees working for your business today",
                                             "You're a business owner, not a developer",
                                             "You need email, social media, SEO, calls, sales, and legal handled",
-                                            "You want predictable $29/month pricing, no surprises",
+                                            "You want predictable $49/month pricing, no surprises",
                                             "You'd rather spend time on your business than building infrastructure"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-sm text-slate-700">

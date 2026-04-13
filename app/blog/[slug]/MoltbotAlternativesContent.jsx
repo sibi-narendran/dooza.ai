@@ -39,7 +39,7 @@ import {
 const faqData = [
     {
         question: "What is the best MoltBot alternative for businesses?",
-        answer: "Dooza is the top MoltBot alternative for businesses. It offers pre-built AI employees for email, social media, SEO, and sales with enterprise-grade security, predictable pricing ($29/month), and zero coding required - unlike MoltBot which requires extensive technical expertise."
+        answer: "Dooza is the top MoltBot alternative for businesses. It offers pre-built AI employees for email, social media, SEO, and sales with enterprise-grade security, predictable pricing ($49/month), and zero coding required - unlike MoltBot which requires extensive technical expertise."
     },
     {
         question: "Why should I consider alternatives to MoltBot?",
@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "How much do MoltBot alternatives cost?",
-        answer: "Costs vary significantly. Dooza starts at $29/month with all features included. ChatGPT Plus is $20/month but lacks automation features. MoltBot itself is 'free' but API costs run $100-300+/day for active use."
+        answer: "Costs vary significantly. Dooza starts at $49/month with all features included. ChatGPT Plus is $20/month but lacks automation features. MoltBot itself is 'free' but API costs run $100-300+/day for active use."
     },
     {
         question: "Can developers bring their MoltBot agents to other platforms?",
@@ -68,7 +68,7 @@ const alternatives = [
         name: "Dooza",
         tagline: "Pre-built AI Employees for Business",
         description: "Dooza offers ready-to-use AI employees that handle email, social media, SEO, sales, and customer support. No coding required, enterprise-grade security, and predictable monthly pricing.",
-        price: "$29/month",
+        price: "$49/month",
         priceNote: "All features included",
         rating: 4.9,
         pros: [
@@ -545,7 +545,7 @@ export default function MoltbotAlternativesContent() {
                                     {
                                         icon: DollarSign,
                                         title: "Predictable Pricing",
-                                        desc: "$29/month covers everything. No API costs, no usage surprises, no $300/day bills. Budget with confidence."
+                                        desc: "$49/month covers everything. No API costs, no usage surprises, no $300/day bills. Budget with confidence."
                                     },
                                     {
                                         icon: Bot,

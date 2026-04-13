@@ -43,11 +43,11 @@ const faqData = [
     },
     {
         question: "How many more meetings does an AI appointment setter book compared to an agency?",
-        answer: "AI appointment setters typically book 3-5x more meetings per dollar. Agencies average $150-250 per booked meeting. AI appointment setters average $1.93 per booked meeting with Dooza — because there's no per-meeting fee, just a flat $29/month."
+        answer: "AI appointment setters typically book 3-5x more meetings per dollar. Agencies average $150-250 per booked meeting. AI appointment setters average $1.93 per booked meeting with Dooza — because there's no per-meeting fee, just a flat $49/month."
     },
     {
         question: "How much does an AI appointment setter cost per meeting?",
-        answer: "With Dooza, the cost per meeting approaches $1.93 (based on 15 meetings/month at $29/month). Agencies charge $2,000-5,000/month, working out to $150-250 per booked meeting at typical volumes."
+        answer: "With Dooza, the cost per meeting approaches $1.93 (based on 15 meetings/month at $49/month). Agencies charge $2,000-5,000/month, working out to $150-250 per booked meeting at typical volumes."
     },
     {
         question: "Do I still need an appointment setting agency if I use AI?",
@@ -137,7 +137,7 @@ export default function AiAppointmentSetterContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try AI Appointment Setting - $29/mo
+                                Try AI Appointment Setting - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -424,7 +424,7 @@ export default function AiAppointmentSetterContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { metric: "Monthly Cost", ai: "$29/mo", agency: "$2,000-5,000", sdr: "$4,000-6,500", diy: "$0 (your time)" },
+                                            { metric: "Monthly Cost", ai: "$49/mo", agency: "$2,000-5,000", sdr: "$4,000-6,500", diy: "$0 (your time)" },
                                             { metric: "Cost Per Meeting", ai: "~$1.93", agency: "$150-250", sdr: "$100-150", diy: "Hours of your time" },
                                             { metric: "Response Time", ai: "Under 60 seconds", agency: "1-14 hours", sdr: "5-60 minutes", diy: "When you're free" },
                                             { metric: "Availability", ai: "24/7/365", agency: "Business hours (M-F)", sdr: "Business hours (M-F)", diy: "Whenever you check" },
@@ -516,7 +516,7 @@ export default function AiAppointmentSetterContent() {
                                         { label: "Agency: $3,000/mo / 12 meetings", value: "$250/meeting", highlight: false },
                                         { label: "In-House SDR: $5,000/mo / 20 meetings", value: "$250/meeting", highlight: false },
                                         { label: "SDR (adjusted for benefits + tools)", value: "~$150/meeting", highlight: false },
-                                        { label: "AI Appointment Setter: $29/mo / 15 meetings", value: "$1.93/meeting", highlight: true }
+                                        { label: "AI Appointment Setter: $49/mo / 15 meetings", value: "$1.93/meeting", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>
                                             <span className="text-slate-700">{item.label}</span>
@@ -545,7 +545,7 @@ export default function AiAppointmentSetterContent() {
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-3xl font-bold text-green-700 mb-2">$1.93/meeting</div>
                                     <p className="text-sm text-green-800 font-medium">AI Appointment Setter (Dooza)</p>
-                                    <p className="text-xs text-green-600 mt-1">$29/mo, unlimited capacity</p>
+                                    <p className="text-xs text-green-600 mt-1">$49/mo, unlimited capacity</p>
                                 </div>
                             </div>
 
@@ -678,7 +678,7 @@ export default function AiAppointmentSetterContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Book More Meetings for Less?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop overpaying agencies for slow follow-up and inconsistent results. Dooza's AI appointment setter responds in seconds, follows up automatically, and books meetings 24/7 — for $29/month.
+                                    Stop overpaying agencies for slow follow-up and inconsistent results. Dooza's AI appointment setter responds in seconds, follows up automatically, and books meetings 24/7 — for $49/month.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

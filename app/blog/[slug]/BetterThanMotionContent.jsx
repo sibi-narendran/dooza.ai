@@ -44,7 +44,7 @@ const faqData = [
     },
     {
         question: "How does Dooza pricing compare to Motion?",
-        answer: "Motion starts at $29/month but AI Employees require the $49/month plan with limited credits. Dooza starts at $29/month with ALL AI employees included and unlimited conversations. No credit limits, no surprises."
+        answer: "Motion starts at $29/month but AI Employees require the $49/month plan with limited credits. Dooza starts at $49/month with ALL AI employees included and unlimited conversations. No credit limits, no surprises."
     },
     {
         question: "Does Dooza work if I already use Google Calendar?",
@@ -306,7 +306,7 @@ export default function BetterThanMotionContent() {
                                     { icon: Sliders, title: "Fully Customizable", desc: "Create AI employees tailored to YOUR workflow. Name them, train them on your data, and deploy them in minutes.", color: "blue" },
                                     { icon: Phone, title: "Phone Call Capabilities", desc: "Our AI receptionist Rachel can make and receive calls 24/7. Motion can't do this at all.", color: "green" },
                                     { icon: HeadphonesIcon, title: "Free Concierge Onboarding", desc: "We don't just give you software—our team builds your custom AI employees FOR you during a free onboarding call.", color: "purple" },
-                                    { icon: DollarSign, title: "Transparent Pricing", desc: "$29/month for ALL AI employees. No credit limits. No surprise fees. No complex tier structures.", color: "emerald" },
+                                    { icon: DollarSign, title: "Transparent Pricing", desc: "$49/month for ALL AI employees. No credit limits. No surprise fees. No complex tier structures.", color: "emerald" },
                                     { icon: Zap, title: "Works With Your Stack", desc: "Dooza integrates with your existing tools—Gmail, Outlook, social platforms, CRMs—without forcing you to change how you work.", color: "orange" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -383,7 +383,7 @@ export default function BetterThanMotionContent() {
                                         ))}
                                     </ul>
                                     <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                                        <p className="text-green-700 text-sm font-medium">Included in $29/mo:</p>
+                                        <p className="text-green-700 text-sm font-medium">Included in $49/mo:</p>
                                         <ul className="text-green-600 text-sm mt-2 space-y-1">
                                             <li>• ALL AI employees included</li>
                                             <li>• Unlimited conversations</li>
@@ -407,8 +407,8 @@ export default function BetterThanMotionContent() {
                                         </tr>
                                     </thead>
                                     <tbody className="text-slate-600">
-                                        <tr><td className="p-4 border-b font-medium">Starting Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$29/month</td><td className="p-4 border-b">$29/month (no AI)</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">AI Employees Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Included in $29</td><td className="p-4 border-b text-red-500">Requires $49/mo plan</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Starting Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/month</td><td className="p-4 border-b">$29/month (no AI)</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">AI Employees Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Included in $49</td><td className="p-4 border-b text-red-500">Requires $49/mo plan</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Usage Limits</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Unlimited</td><td className="p-4 border-b text-red-500">10,000 credits/month</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Phone Calls</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes (Rachel AI)</td><td className="p-4 border-b text-red-500">No</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Autonomous Actions</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - sends, posts, calls</td><td className="p-4 border-b text-red-500">No - drafts only</td></tr>
@@ -528,7 +528,7 @@ export default function BetterThanMotionContent() {
                                     If you want AI that can actually execute tasks autonomously—sending emails, posting to social media, making phone calls, generating leads—Dooza is the clear choice.
                                 </p>
                                 <p>
-                                    And with transparent pricing ($29/month for everything), free concierge onboarding, and unlimited usage, you'll save money while getting more done.
+                                    And with transparent pricing ($49/month for everything), free concierge onboarding, and unlimited usage, you'll save money while getting more done.
                                 </p>
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">

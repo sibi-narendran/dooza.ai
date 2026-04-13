@@ -511,7 +511,7 @@ export default function WhatIsClawdbotContent() {
                                             <td className="p-4 border-b font-medium">Monthly Cost</td>
                                             <td className="p-4 border-b text-red-500">$100-300+/day</td>
                                             <td className="p-4 border-b">$20-200/mo</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$29/mo</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/mo</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Technical Expertise</td>

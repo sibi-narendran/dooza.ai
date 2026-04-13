@@ -169,7 +169,7 @@ export default function SalonsContent({ page }) {
                                 rel="noopener noreferrer"
                                 className="bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                             >
-                                Get Started Free — $29/mo
+                                Get Started Free — $49/mo
                             </a>
                             <a
                                 href={CAL_BOOKING_URL}

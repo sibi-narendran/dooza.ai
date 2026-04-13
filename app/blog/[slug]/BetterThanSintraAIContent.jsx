@@ -247,7 +247,7 @@ export default function BetterThanSintraAIContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { icon: Zap, title: "5-Minute Setup", desc: "Get your AI employees working in minutes.", color: "primary" },
-                                    { icon: DollarSign, title: "Transparent Pricing", desc: "Starting at $29/month. No hidden fees.", color: "green" },
+                                    { icon: DollarSign, title: "Transparent Pricing", desc: "Starting at $49/month. No hidden fees.", color: "green" },
                                     { icon: Settings, title: "Native Integrations", desc: "Direct connections to your favorite tools.", color: "blue" },
                                     { icon: Bot, title: "Context-Aware AI", desc: "Our AI learns your business and preferences.", color: "purple" }
                                 ].map((item, idx) => (
@@ -275,7 +275,7 @@ export default function BetterThanSintraAIContent() {
                                     </thead>
                                     <tbody className="text-slate-600">
                                         <tr><td className="p-4 border-b font-medium">Setup Time</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">5 minutes</td><td className="p-4 border-b text-red-500">Hours to days</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Starting Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$29/month</td><td className="p-4 border-b">$97+/month</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Starting Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/month</td><td className="p-4 border-b">$97+/month</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Free Trial</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">✅ Yes, 14 days</td><td className="p-4 border-b">Limited</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Native Integrations</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">✅ Built-in</td><td className="p-4 border-b text-red-500">Requires Zapier</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Onboarding Support</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Free Concierge</td><td className="p-4 border-b text-red-500">Self-Serve</td></tr>

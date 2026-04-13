@@ -31,7 +31,7 @@ import {
 const faqData = [
     {
         question: "How much do AI employees cost?",
-        answer: "AI employees are significantly cheaper than human hires. At Dooza, plans start at just $29/month."
+        answer: "AI employees are significantly cheaper than human hires. At Dooza, plans start at just $49/month."
     },
     {
         question: "Do I need technical skills to use AI employees?",

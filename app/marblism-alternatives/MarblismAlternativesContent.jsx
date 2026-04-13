@@ -31,7 +31,7 @@ const alternatives = [
         tagline: 'Best overall — flat pricing, personal onboarding, 1,000+ integrations',
         bestFor: 'SMBs and teams wanting AI employees without per-seat fees or DIY setup',
         price: 'From $39/mo (yearly) or $49/mo (monthly)',
-        trial: '$1 for 7-day full access',
+        trial: '$1 for 3-day full access',
         agents: '5 named AI employees — Maily (email), Somi (social media), Ranky (SEO), Stan (customer support), Linda (lead generation)',
         integrations: '1,000+ via Composio',
         creditSystem: false,
@@ -39,7 +39,7 @@ const alternatives = [
         highlight: true,
         pros: [
             'Flat pricing — $49/mo for the whole team, no per-seat fees',
-            '$1 trial with full 7-day access — lowest risk entry',
+            '$1 trial with full 3-day access — lowest risk entry',
             'Free concierge onboarding — founder personally sets up your workspace',
             '1,000+ app integrations via Composio (vs Marblism\'s ~5 platforms)',
             'Purpose-built for AI employees from day one (not a pivot)',

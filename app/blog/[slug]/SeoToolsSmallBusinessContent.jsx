@@ -38,7 +38,7 @@ import {
 const faqData = [
     {
         question: "Do small businesses really need SEO tools?",
-        answer: "Yes, but not necessarily the expensive ones. 75% of users never scroll past page one of Google, and 46% of all searches have local intent. If customers can't find you online, they'll find your competitors. The question is whether you need a $139/month tool or whether AI can handle your SEO needs for $29/month."
+        answer: "Yes, but not necessarily the expensive ones. 75% of users never scroll past page one of Google, and 46% of all searches have local intent. If customers can't find you online, they'll find your competitors. The question is whether you need a $139/month tool or whether AI can handle your SEO needs for $49/month."
     },
     {
         question: "What's the best free SEO tool for small businesses?",
@@ -46,7 +46,7 @@ const faqData = [
     },
     {
         question: "Is Ahrefs or Semrush better for small businesses?",
-        answer: "Both are overkill for most small businesses. Ahrefs starts at $29/month (limited) or $129/month (Lite), while Semrush starts at $139.95/month. Most SMBs don't need enterprise-level backlink analysis. SE Ranking ($65/month) or Moz ($49/month) offer more appropriate features at better prices. Or let Ranky handle your SEO automatically for $29/month."
+        answer: "Both are overkill for most small businesses. Ahrefs starts at $29/month (limited) or $129/month (Lite), while Semrush starts at $139.95/month. Most SMBs don't need enterprise-level backlink analysis. SE Ranking ($65/month) or Moz ($49/month) offer more appropriate features at better prices. Or let Ranky handle your SEO automatically for $49/month."
     },
     {
         question: "How long does SEO take to show results?",
@@ -187,7 +187,7 @@ export default function SeoToolsSmallBusinessContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try AI-Powered SEO - $29/mo
+                                Try AI-Powered SEO - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -526,7 +526,7 @@ export default function SeoToolsSmallBusinessContent() {
                                         <p className="text-sm text-slate-600">SE Ranking (budget option)</p>
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
-                                        <div className="text-2xl font-bold text-green-700">$29/mo</div>
+                                        <div className="text-2xl font-bold text-green-700">$49/mo</div>
                                         <p className="text-sm text-green-600">Ranky (does the work for you)</p>
                                     </div>
                                 </div>
@@ -576,7 +576,7 @@ export default function SeoToolsSmallBusinessContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Ranky - $29/month <ArrowRight className="w-4 h-4" />
+                                        Get Ranky - $49/month <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

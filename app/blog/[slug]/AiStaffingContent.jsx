@@ -40,7 +40,7 @@ const faqData = [
     },
     {
         question: "How much does AI staffing cost compared to hiring?",
-        answer: "Traditional hiring costs $4,700 per hire plus $3,500-6,000/month per employee in salary alone. Dooza provides AI employees for $29/month — a 99.88% cost reduction compared to hiring the equivalent human team ($24,700/month)."
+        answer: "Traditional hiring costs $4,700 per hire plus $3,500-6,000/month per employee in salary alone. Dooza provides AI employees for $49/month — a 99.88% cost reduction compared to hiring the equivalent human team ($24,700/month)."
     },
     {
         question: "Can AI employees really replace human workers?",
@@ -118,7 +118,7 @@ export default function AiStaffingContent() {
                             <span className="text-primary-600">AI Staffing</span>: Building a Workforce That Runs 24/7
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            The average hire costs $4,700 and takes 42 days. What if you could hire 6 roles in 30 minutes for $29/month? AI staffing is replacing traditional hiring for small businesses.
+                            The average hire costs $4,700 and takes 42 days. What if you could hire 6 roles in 30 minutes for $49/month? AI staffing is replacing traditional hiring for small businesses.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -138,7 +138,7 @@ export default function AiStaffingContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Hire Your AI Team - $29/mo
+                                Hire Your AI Team - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -205,7 +205,7 @@ export default function AiStaffingContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    According to SHRM, the average cost-per-hire is <strong>$4,700</strong> and it takes <strong>42 days</strong> to fill a position. What if you could hire 6 roles in 30 minutes for $29/month?
+                                    According to SHRM, the average cost-per-hire is <strong>$4,700</strong> and it takes <strong>42 days</strong> to fill a position. What if you could hire 6 roles in 30 minutes for $49/month?
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     AI staffing isn't about replacing humans. It's about filling the operational gaps that small businesses can't afford to fill with traditional hiring.
@@ -228,7 +228,7 @@ export default function AiStaffingContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">The Staffing Reality</h4>
                                             <p className="text-slate-700">
-                                                Small businesses need help with email, social media, phones, lead gen, SEO, and legal — but hiring 6 employees would cost <strong>$24,700+/month</strong>. AI staffing fills these roles for <strong>$29/month</strong>.
+                                                Small businesses need help with email, social media, phones, lead gen, SEO, and legal — but hiring 6 employees would cost <strong>$24,700+/month</strong>. AI staffing fills these roles for <strong>$49/month</strong>.
                                             </p>
                                         </div>
                                     </div>
@@ -364,7 +364,7 @@ export default function AiStaffingContent() {
                                             <td className="p-4 text-slate-900">Total</td>
                                             <td className="p-4 text-slate-900">$24,700/mo</td>
                                             <td className="p-4 text-primary-700 bg-primary-100">AI Employees</td>
-                                            <td className="p-4 text-primary-700 bg-primary-100">$29/mo</td>
+                                            <td className="p-4 text-primary-700 bg-primary-100">$49/mo</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -659,7 +659,7 @@ export default function AiStaffingContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started - $29/month <ArrowRight className="w-4 h-4" />
+                                        Get Started - $49/month <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding
@@ -715,7 +715,7 @@ export default function AiStaffingContent() {
                         <section className="scroll-mt-28">
                             <div className="bg-gradient-to-br from-primary-50 to-blue-50 border-2 border-primary-200 p-8 rounded-2xl text-center">
                                 <p className="text-2xl font-bold text-slate-900 mb-4">
-                                    $29/month. AI employees. 24/7. No interviews. No PTO. No turnover.
+                                    $49/month. AI employees. 24/7. No interviews. No PTO. No turnover.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

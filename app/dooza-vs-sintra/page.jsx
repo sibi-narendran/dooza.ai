@@ -3,7 +3,7 @@ import DoozaVsSintraContent from './DoozaVsSintraContent';
 
 export const metadata = {
     title: 'Dooza vs Sintra AI — Unlimited vs 250 Credits [2026]',
-    description: 'Dooza vs Sintra AI compared: unlimited tasks vs 250 monthly credits, $29/mo flat vs confusing tiers, free founder setup call vs self-serve. See the honest breakdown.',
+    description: 'Dooza vs Sintra AI compared: unlimited tasks vs 250 monthly credits, $49/mo flat vs confusing tiers, free founder setup call vs self-serve. See the honest breakdown.',
     keywords: [
         'Dooza vs Sintra AI', 'Sintra AI alternative', 'Sintra AI comparison',
         'AI employees comparison', 'Sintra AI review', 'Sintra AI pricing',
@@ -14,7 +14,7 @@ export const metadata = {
     alternates: { canonical: `${SITE_URL}/dooza-vs-sintra` },
     openGraph: {
         title: 'Dooza vs Sintra AI — Unlimited Tasks, No Credit Caps',
-        description: 'Head-to-head comparison: Dooza offers unlimited tasks at $29/mo flat. Sintra AI caps you at 250 credits. See the full breakdown.',
+        description: 'Head-to-head comparison: Dooza offers unlimited tasks at $49/mo flat. Sintra AI caps you at 250 credits. See the full breakdown.',
         url: `${SITE_URL}/dooza-vs-sintra`,
         siteName: 'Dooza',
         type: 'website',
@@ -29,7 +29,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'Is Dooza really better than Sintra AI?',
-        answer: 'It depends on your needs. Dooza offers unlimited tasks with no credit caps, a personal setup call with the founder, and a flat $29/month price with AI employees. Sintra AI offers more helpers (12+) but limits you to 250 credits per month and has no human onboarding support. If you need unlimited usage and guided setup, Dooza is the stronger choice.',
+        answer: 'It depends on your needs. Dooza offers unlimited tasks with no credit caps, a personal setup call with the founder, and a flat $49/month price with AI employees. Sintra AI offers more helpers (12+) but limits you to 250 credits per month and has no human onboarding support. If you need unlimited usage and guided setup, Dooza is the stronger choice.',
     },
     {
         question: 'Does Sintra AI have a credit limit?',
@@ -49,7 +49,7 @@ const faqData = [
     },
     {
         question: 'Which is cheaper — Dooza or Sintra AI?',
-        answer: 'Dooza is $29/month flat with everything included and no credit limits. Sintra AI starts at $48.50/month (monthly) or $15.60/month on an annual commitment — but all plans are capped at 250 credits. Sintra is cheaper annually; Dooza is cheaper monthly and has no usage caps.',
+        answer: 'Dooza is $49/month flat with everything included and no credit limits. Sintra AI starts at $48.50/month (monthly) or $15.60/month on an annual commitment — but all plans are capped at 250 credits. Sintra is cheaper annually; Dooza is cheaper monthly and has no usage caps.',
     },
     {
         question: 'What is an AI employee and how does it work?',

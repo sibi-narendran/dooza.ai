@@ -240,7 +240,7 @@ export default function BetterThanMarblismContent() {
                                     { icon: Zap, title: "5-Minute Setup", desc: "Get your AI employees working in minutes." },
                                     { icon: Bot, title: "Context-Aware AI", desc: "Our AI learns your business and voice." },
                                     { icon: Globe, title: "Native Integrations", desc: "Direct connections to 50+ tools." },
-                                    { icon: DollarSign, title: "Transparent Pricing", desc: "Starting at $29/month. No hidden fees." }
+                                    { icon: DollarSign, title: "Transparent Pricing", desc: "Starting at $49/month. No hidden fees." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-6 rounded-xl shadow-sm">
                                         <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center text-primary-600 mb-4">
@@ -267,7 +267,7 @@ export default function BetterThanMarblismContent() {
                                     <tbody className="text-slate-600">
                                         <tr><td className="p-4 border-b font-medium">Onboarding Support</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Free Concierge</td><td className="p-4 border-b text-slate-500">Self-Serve</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Custom Agent Building</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">We Build For You</td><td className="p-4 border-b text-slate-500">Do It Yourself</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Starting Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$29/month</td><td className="p-4 border-b">$49+/month</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Starting Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/month</td><td className="p-4 border-b">$49+/month</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Call Agent (Voice AI)</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">✅ Included</td><td className="p-4 border-b text-red-500">❌ Not available</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Support Response</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">&lt; 2 hours</td><td className="p-4 border-b">24-48 hours</td></tr>
                                     </tbody>

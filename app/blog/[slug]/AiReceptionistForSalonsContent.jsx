@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "How much does an AI receptionist cost for a salon?",
-        answer: "Dooza's Rachel costs $29/month — unlimited calls, 24/7. Compare that to a front desk receptionist at $2,500-3,500/month or a virtual receptionist service at $300-900/month."
+        answer: "Dooza's Rachel costs $49/month — unlimited calls, 24/7. Compare that to a front desk receptionist at $2,500-3,500/month or a virtual receptionist service at $300-900/month."
     },
     {
         question: "Does the AI send appointment confirmations via text?",
@@ -141,7 +141,7 @@ export default function AiReceptionistForSalonsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Rachel AI - $29/mo
+                                Get Rachel AI - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -387,7 +387,7 @@ export default function AiReceptionistForSalonsContent() {
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    No human receptionist can deliver all of this at $29/month. No voicemail box can do any of it. And no generic answering service knows the difference between balayage and an ombre. This is where AI changes the game for salons specifically.
+                                    No human receptionist can deliver all of this at $49/month. No voicemail box can do any of it. And no generic answering service knows the difference between balayage and an ombre. This is where AI changes the game for salons specifically.
                                 </p>
                             </div>
                         </section>
@@ -713,7 +713,7 @@ export default function AiReceptionistForSalonsContent() {
                                     <p className="text-xs text-slate-500 mt-1">Limited calls, takes messages only</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$29/mo</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
                                     <p className="text-sm text-green-800 font-medium">Rachel AI (Dooza)</p>
                                     <p className="text-xs text-green-600 mt-1">Unlimited calls, 24/7, books appointments</p>
                                 </div>
@@ -839,7 +839,7 @@ export default function AiReceptionistForSalonsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Stop Missing Bookings?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Every missed call is a client who booked somewhere else. Rachel answers every call, knows your services, and books appointments — all for $29/month.
+                                    Every missed call is a client who booked somewhere else. Rachel answers every call, knows your services, and books appointments — all for $49/month.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

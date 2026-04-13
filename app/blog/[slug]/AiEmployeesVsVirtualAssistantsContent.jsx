@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "How much cheaper is AI than a virtual assistant?",
-        answer: "AI can be up to 80% more cost-efficient than human assistants for repetitive tasks. A US-based VA costs $25-65/hour ($4,000-10,000+/month full-time), while offshore VAs cost $7-20/hour. AI platforms like Dooza cost $29/month with unlimited use, making them dramatically cheaper for high-volume work."
+        answer: "AI can be up to 80% more cost-efficient than human assistants for repetitive tasks. A US-based VA costs $25-65/hour ($4,000-10,000+/month full-time), while offshore VAs cost $7-20/hour. AI platforms like Dooza cost $49/month with unlimited use, making them dramatically cheaper for high-volume work."
     },
     {
         question: "Will AI replace virtual assistants?",
@@ -571,7 +571,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     <div>
                                         <h4 className="font-bold text-green-800 mb-2">Potential Savings with AI</h4>
                                         <p className="text-green-700">
-                                            According to <a href="https://www.zirtual.com/blog/ai-virtual-assistants/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Zirtual</a>, AI can be up to <strong>80% more cost-efficient</strong> compared to human assistants for repetitive tasks. A business spending $5,000/month on a VA for scheduling, email, and data entry could potentially spend $29/month on AI for the same work.
+                                            According to <a href="https://www.zirtual.com/blog/ai-virtual-assistants/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Zirtual</a>, AI can be up to <strong>80% more cost-efficient</strong> compared to human assistants for repetitive tasks. A business spending $5,000/month on a VA for scheduling, email, and data entry could potentially spend $49/month on AI for the same work.
                                         </p>
                                     </div>
                                 </div>
@@ -646,7 +646,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { icon: Bot, title: "Pre-built AI Employees", desc: "Email assistant, social media manager, SEO specialist, sales rep—all ready to work on day one." },
-                                    { icon: DollarSign, title: "Predictable $29/month", desc: "No per-task costs, no credit limits, no surprises. Know exactly what you'll pay." },
+                                    { icon: DollarSign, title: "Predictable $49/month", desc: "No per-task costs, no credit limits, no surprises. Know exactly what you'll pay." },
                                     { icon: Zap, title: "5-Minute Setup", desc: "Connect your tools and start automating. No coding, no configuration headaches." },
                                     { icon: Shield, title: "Enterprise Security", desc: "Your data is protected. We handle compliance so you don't have to." }
                                 ].map((item, idx) => (
@@ -688,7 +688,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     <strong>If you're scaling:</strong> A hybrid model lets AI handle volume while humans focus on relationships.
                                 </p>
                                 <p>
-                                    <strong>If budget is tight:</strong> Start with AI for $29/month, add a part-time VA when you need the human touch.
+                                    <strong>If budget is tight:</strong> Start with AI for $49/month, add a part-time VA when you need the human touch.
                                 </p>
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">

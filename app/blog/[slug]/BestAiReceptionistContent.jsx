@@ -40,7 +40,7 @@ const faqData = [
     },
     {
         question: "How much does an AI receptionist cost compared to a human?",
-        answer: "A human receptionist costs $3,500-4,200/month. Virtual receptionist services like Ruby or Smith.ai cost $300-935/month. Dooza's Rachel (AI Receptionist) costs $29/month and handles unlimited calls 24/7."
+        answer: "A human receptionist costs $3,500-4,200/month. Virtual receptionist services like Ruby or Smith.ai cost $300-935/month. Dooza's Rachel (AI Receptionist) costs $49/month and handles unlimited calls 24/7."
     },
     {
         question: "Can an AI receptionist handle complex conversations?",
@@ -138,7 +138,7 @@ export default function BestAiReceptionistContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Rachel AI - $29/mo
+                                Get Rachel AI - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -505,7 +505,7 @@ export default function BestAiReceptionistContent() {
                                     <p className="text-xs text-slate-500 mt-1">200 calls/month limit</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$29/mo</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
                                     <p className="text-sm text-green-800 font-medium">Rachel (Dooza)</p>
                                     <p className="text-xs text-green-600 mt-1">Unlimited calls, 24/7</p>
                                 </div>

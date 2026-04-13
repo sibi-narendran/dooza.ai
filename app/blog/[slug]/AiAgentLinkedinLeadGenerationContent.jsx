@@ -145,7 +145,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get AI Lead Generation - $29/mo
+                                Get AI Lead Generation - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -642,7 +642,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Five new customers per month from LinkedIn alone — at a cost of $29/month for the AI agent doing the work. If your average deal size is $5,000, that's <strong>$25,000 in new revenue per month</strong> from a $29 investment. Even at a $1,000 deal size, the ROI is 172x.
+                                    Five new customers per month from LinkedIn alone — at a cost of $49/month for the AI agent doing the work. If your average deal size is $5,000, that's <strong>$25,000 in new revenue per month</strong> from a $29 investment. Even at a $1,000 deal size, the ROI is 172x.
                                 </p>
                                 <p>
                                     Compare that to hiring an SDR at $5,000-7,000/month who might book 15-20 meetings — with 3-6 months of ramp-up time before they hit those numbers. The AI starts producing results in week one.
@@ -661,7 +661,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     <p className="text-xs text-slate-500 mt-1">Shared reps, generic outreach</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$29/mo</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
                                     <p className="text-sm text-green-800 font-medium">Stan + AI Team (Dooza)</p>
                                     <p className="text-xs text-green-600 mt-1">24/7, personalized at scale</p>
                                 </div>
@@ -734,7 +734,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     Stan doesn't work alone. He's part of your <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">full AI workforce</Link> — working alongside Rachel (AI receptionist for inbound calls), Maily (email management), Somi (social media), Ranky (SEO), and Linda (legal compliance). When Stan generates a lead, the rest of the team supports the relationship — answering calls, sending emails, nurturing on social.
                                 </p>
                                 <p>
-                                    The entire team costs <strong>$29/month</strong>. That's less than a single LinkedIn Premium subscription — and you get AI employees working 24/7.
+                                    The entire team costs <strong>$49/month</strong>. That's less than a single LinkedIn Premium subscription — and you get AI employees working 24/7.
                                 </p>
                             </div>
 

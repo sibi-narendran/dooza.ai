@@ -31,7 +31,7 @@ const alternatives = [
         tagline: 'Best overall Sintra alternative for SMBs',
         bestFor: 'Small businesses wanting hands-off AI employees with personal onboarding',
         price: 'From $39/mo (yearly) or $49/mo (monthly)',
-        trial: '$1 for 7-day full access',
+        trial: '$1 for 3-day full access',
         agents: '5 named AI employees — Maily (email), Somi (social media), Ranky (SEO), Stan (customer support), Linda (lead generation)',
         integrations: '1,000+ via Composio',
         creditSystem: false,
@@ -39,7 +39,7 @@ const alternatives = [
         highlight: true,
         pros: [
             '5 named AI employees included in every plan',
-            '$1 trial with full 7-day access — lowest risk entry',
+            '$1 trial with full 3-day access — lowest risk entry',
             'Free concierge onboarding — founder personally sets up your workspace',
             'No credit system — usage-based tiers instead of confusing credits',
             '1,000+ app integrations via Composio',
@@ -518,7 +518,7 @@ export default function SintraAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Sintra Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start with a $1 trial — full access for 7 days. Or book a free setup call with the founder. No sales pitch, just a walkthrough of what Dooza handles for your business.
+                                Start with a $1 trial — full access for 3 days. Or book a free setup call with the founder. No sales pitch, just a walkthrough of what Dooza handles for your business.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="sintra_alt_cta">Try Dooza for $1</SignupButton>

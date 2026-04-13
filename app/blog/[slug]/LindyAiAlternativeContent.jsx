@@ -37,7 +37,7 @@ import {
 const faqData = [
     {
         question: "What is the best Lindy AI alternative?",
-        answer: "Dooza is the top Lindy AI alternative for businesses seeking predictable pricing. Unlike Lindy's credit-based system that can lead to surprise costs, Dooza offers flat-rate pricing at $29/month with all AI employees included. Other alternatives include Gumloop for cheaper automation and Zapier for backend workflows."
+        answer: "Dooza is the top Lindy AI alternative for businesses seeking predictable pricing. Unlike Lindy's credit-based system that can lead to surprise costs, Dooza offers flat-rate pricing at $49/month with all AI employees included. Other alternatives include Gumloop for cheaper automation and Zapier for backend workflows."
     },
     {
         question: "Why are users switching from Lindy AI?",
@@ -45,7 +45,7 @@ const faqData = [
     },
     {
         question: "How much does Lindy AI cost compared to alternatives?",
-        answer: "Lindy AI uses a credit-based system starting at $50/month for 5,000 credits, but costs vary based on task complexity ($0.01-$0.10+ per task). Dooza offers fixed pricing at $29/month with unlimited use. Gumloop offers similar capabilities at lower price points, and Zapier starts at $19/month for basic automation."
+        answer: "Lindy AI uses a credit-based system starting at $50/month for 5,000 credits, but costs vary based on task complexity ($0.01-$0.10+ per task). Dooza offers fixed pricing at $49/month with unlimited use. Gumloop offers similar capabilities at lower price points, and Zapier starts at $19/month for basic automation."
     },
     {
         question: "Is Lindy AI good for small businesses?",
@@ -57,7 +57,7 @@ const faqData = [
     },
     {
         question: "What does Dooza offer that Lindy AI doesn't?",
-        answer: "Dooza offers: predictable flat-rate pricing ($29/month), pre-built AI employees for specific roles (email, social, SEO, sales), free concierge onboarding, no credit system or usage limits, and dedicated support. Lindy requires building agents from scratch and uses variable credit-based pricing."
+        answer: "Dooza offers: predictable flat-rate pricing ($49/month), pre-built AI employees for specific roles (email, social, SEO, sales), free concierge onboarding, no credit system or usage limits, and dedicated support. Lindy requires building agents from scratch and uses variable credit-based pricing."
     }
 ];
 
@@ -66,7 +66,7 @@ const alternatives = [
         name: "Dooza",
         tagline: "Pre-built AI Employees with Fixed Pricing",
         description: "Dooza offers ready-to-use AI employees for email, social media, SEO, sales, and customer support. No credit system, no usage limits, just predictable monthly pricing.",
-        price: "$29/month",
+        price: "$49/month",
         priceNote: "All AI employees included",
         rating: 4.9,
         pros: [
@@ -512,7 +512,7 @@ export default function LindyAiAlternativeContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Starting Price</td>
                                             <td className="p-4 border-b">$50/month</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$29/month</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/month</td>
                                             <td className="p-4 border-b">$0 (free tier)</td>
                                             <td className="p-4 border-b">$19/month</td>
                                         </tr>

@@ -200,7 +200,7 @@ export default function RealEstateContent({ page }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Get Started Free — $29/mo
+                            Get Started Free — $49/mo
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
@@ -421,7 +421,7 @@ export default function RealEstateContent({ page }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Get Started Free — $29/mo
+                            Get Started Free — $49/mo
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a

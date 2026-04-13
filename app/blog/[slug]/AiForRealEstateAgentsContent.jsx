@@ -67,7 +67,7 @@ const faqData = [
     },
     {
         question: "How much does a traditional real estate VA cost compared to Dooza?",
-        answer: "According to industry data, human virtual assistants for real estate cost $1,000-$2,600/month for full-time help, or $20-40/hour in the US. Dooza gives you AI employees working 24/7 for just $29/month—that's roughly 97% less than a single part-time VA, with no contracts or hourly limits."
+        answer: "According to industry data, human virtual assistants for real estate cost $1,000-$2,600/month for full-time help, or $20-40/hour in the US. Dooza gives you AI employees working 24/7 for just $49/month—that's roughly 97% less than a single part-time VA, with no contracts or hourly limits."
     },
     {
         question: "How quickly will I see results?",
@@ -190,7 +190,7 @@ export default function AiForRealEstateAgentsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Your AI Team - $29/month
+                                Get Your AI Team - $49/month
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -774,7 +774,7 @@ export default function AiForRealEstateAgentsContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Your AI Team - $29/month <ArrowRight className="w-4 h-4" />
+                                        Get Your AI Team - $49/month <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

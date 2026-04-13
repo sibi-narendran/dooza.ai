@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: "How much does an AI sales agent cost compared to hiring an SDR?",
-        answer: "A human SDR costs $4,000-$7,000/month in base salary alone, plus commission, benefits, and management overhead. Dooza's AI sales agent (Stan) costs $29/month as part of a 6-employee AI team — that's 99% less than a single junior hire."
+        answer: "A human SDR costs $4,000-$7,000/month in base salary alone, plus commission, benefits, and management overhead. Dooza's AI sales agent (Stan) costs $49/month as part of a 6-employee AI team — that's 99% less than a single junior hire."
     },
     {
         question: "Will prospects know they're talking to an AI?",
@@ -149,7 +149,7 @@ export default function AiSalesAgentGuideContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Your AI Sales Agent - $29/mo
+                                Get Your AI Sales Agent - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -622,7 +622,7 @@ export default function AiSalesAgentGuideContent() {
                                     <p className="text-xs text-slate-500 mt-1">Business hours only, shared reps</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$29/mo</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
                                     <p className="text-sm text-green-800 font-medium">Stan + All AI Employees (Dooza)</p>
                                     <p className="text-xs text-green-600 mt-1">24/7, unlimited leads, instant response</p>
                                 </div>

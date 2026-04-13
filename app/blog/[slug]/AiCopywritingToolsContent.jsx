@@ -53,7 +53,7 @@ const faqData = [
     },
     {
         question: "How much do AI copywriting tools cost?",
-        answer: "Standalone AI copywriting tools like Jasper AI ($49-$125/month) and Copy.ai ($49-$249/month) focus only on writing. Dooza includes AI copywriting through Somi (social media) and Ranky (SEO/blogs) as part of a complete AI employee suite for just $29/month—along with email management, phone answering, and lead generation."
+        answer: "Standalone AI copywriting tools like Jasper AI ($49-$125/month) and Copy.ai ($49-$249/month) focus only on writing. Dooza includes AI copywriting through Somi (social media) and Ranky (SEO/blogs) as part of a complete AI employee suite for just $49/month—along with email management, phone answering, and lead generation."
     },
     {
         question: "Can AI write in my brand voice?",
@@ -190,7 +190,7 @@ export default function AiCopywritingToolsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try AI Copywriting - $29/month
+                                Try AI Copywriting - $49/month
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -490,7 +490,7 @@ export default function AiCopywritingToolsContent() {
                                         </tr>
                                         <tr className="bg-primary-50">
                                             <td className="p-4 font-bold text-primary-700">Dooza</td>
-                                            <td className="p-4 font-bold text-primary-700">$29/mo</td>
+                                            <td className="p-4 font-bold text-primary-700">$49/mo</td>
                                             <td className="p-4 text-primary-700">Full automation + publishing</td>
                                             <td className="p-4 text-primary-700">Includes AI employees</td>
                                         </tr>
@@ -616,7 +616,7 @@ export default function AiCopywritingToolsContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Start AI Copywriting - $29/month <ArrowRight className="w-4 h-4" />
+                                        Start AI Copywriting - $49/month <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

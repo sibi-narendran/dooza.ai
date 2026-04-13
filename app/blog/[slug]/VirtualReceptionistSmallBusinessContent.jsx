@@ -37,10 +37,10 @@ import {
 
 const faqData = [
     { question: "What is a virtual receptionist for small business?", answer: "A virtual receptionist answers your business calls remotely — greeting callers, taking messages, booking appointments, and routing urgent calls. Traditional services use human agents; AI virtual receptionists like Rachel do it with AI for a fraction of the cost." },
-    { question: "How much does a virtual receptionist cost?", answer: "Traditional virtual receptionist services cost $230–$1,640/month (Ruby) or $255–$1,500/month (Smith.ai) depending on call volume. Dooza's AI receptionist Rachel costs $29/month with unlimited calls, 24/7." },
+    { question: "How much does a virtual receptionist cost?", answer: "Traditional virtual receptionist services cost $230–$1,640/month (Ruby) or $255–$1,500/month (Smith.ai) depending on call volume. Dooza's AI receptionist Rachel costs $49/month with unlimited calls, 24/7." },
     { question: "Can an AI virtual receptionist handle real conversations?", answer: "Yes. Rachel uses natural language processing for multi-turn conversations — she asks qualifying questions, answers FAQs about your business, books appointments, and knows when to route calls to you directly." },
     { question: "Is an AI receptionist reliable for a small business?", answer: "More reliable than human services. Rachel answers every call in under 1 second, never calls in sick, and works nights, weekends, and holidays. She handles the calls that human virtual receptionists miss after-hours." },
-    { question: "How do I switch from my current answering service to AI?", answer: "Sign up for Dooza ($29/month), book a free 30-minute onboarding call, and our team configures Rachel with your business info, FAQs, and calendar. Most businesses switch in a single day." }
+    { question: "How do I switch from my current answering service to AI?", answer: "Sign up for Dooza ($49/month), book a free 30-minute onboarding call, and our team configures Rachel with your business info, FAQs, and calendar. Most businesses switch in a single day." }
 ];
 
 export default function VirtualReceptionistSmallBusinessContent() {
@@ -106,7 +106,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                             Virtual Receptionist for <span className="text-primary-600">Small Business</span>: Why AI Beats Traditional Services
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Traditional virtual receptionists cost $300–$900/month and still miss after-hours calls. An AI receptionist answers 24/7 for $29/month — here's why small businesses are switching.
+                            Traditional virtual receptionists cost $300–$900/month and still miss after-hours calls. An AI receptionist answers 24/7 for $49/month — here's why small businesses are switching.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -130,7 +130,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Rachel AI — $29/mo
+                                Get Rachel AI — $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -227,7 +227,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 </div>
 
                                 <p className="text-lg leading-relaxed">
-                                    There's a better way. AI virtual receptionists answer every call, 24/7/365, for a flat $29/month. No per-minute billing. No after-hours gaps. No hold queues. Here's why small businesses are making the switch.
+                                    There's a better way. AI virtual receptionists answer every call, 24/7/365, for a flat $49/month. No per-minute billing. No after-hours gaps. No hold queues. Here's why small businesses are making the switch.
                                 </p>
                             </div>
                         </section>
@@ -337,7 +337,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { label: "Availability", traditional: "Business hours (8am–8pm)", ai: "24/7/365 — nights, weekends, holidays" },
-                                    { label: "Cost", traditional: "$300–$900/mo + per-minute overages", ai: "Flat $29/mo — unlimited calls" },
+                                    { label: "Cost", traditional: "$300–$900/mo + per-minute overages", ai: "Flat $49/mo — unlimited calls" },
                                     { label: "Consistency", traditional: "Different agent each call", ai: "Same voice, same quality, every call" },
                                     { label: "Speed", traditional: "15–30 second hold time", ai: "Answers in under 1 second" }
                                 ].map((item, idx) => (
@@ -535,7 +535,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-3xl font-bold text-green-700 mb-2">$348/yr</div>
                                     <p className="text-sm text-green-800 font-medium">Rachel (Dooza)</p>
-                                    <p className="text-xs text-green-600 mt-1">$29/mo — unlimited calls, 24/7</p>
+                                    <p className="text-xs text-green-600 mt-1">$49/mo — unlimited calls, 24/7</p>
                                 </div>
                             </div>
 
@@ -571,7 +571,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     {
                                         step: "1",
                                         title: "Sign Up for Dooza",
-                                        desc: "$29/month. 7-day money-back guarantee. No long-term contract."
+                                        desc: "$49/month. 3-day money-back guarantee. No long-term contract."
                                     },
                                     {
                                         step: "2",

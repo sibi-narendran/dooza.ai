@@ -468,7 +468,7 @@ export default function WhatIsMoltbotContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Software Cost</td>
                                             <td className="p-4 border-b text-green-600">Free</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$29/month all-inclusive</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/month all-inclusive</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">API Costs</td>

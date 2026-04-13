@@ -82,7 +82,7 @@ const faqData = [
     },
     {
         question: "How much does an AI team cost compared to hiring?",
-        answer: "Hiring six human employees for email, social media, SEO, phone, sales, and legal would cost ₹1.75–2.95 lakh/month in India. AI employee platforms like Dooza offer all six roles for $29/month (~₹2,400)."
+        answer: "Hiring six human employees for email, social media, SEO, phone, sales, and legal would cost ₹1.75–2.95 lakh/month in India. AI employee platforms like Dooza offer all six roles for $49/month (~₹2,400)."
     },
     {
         question: "Is this only for tech companies?",
@@ -317,7 +317,7 @@ export default function HerEntireTeamWasAiContent() {
                                     Hiring is expensive relative to revenue. A social media manager, an email administrator, a receptionist, an SEO specialist, a sales representative, and a legal assistant would collectively cost &#8377;1.75 to 2.95 lakh per month. For most MSMEs, that&apos;s not a budget line — it&apos;s a fantasy.
                                 </p>
                                 <p>
-                                    AI employee platforms like Dooza are changing that equation. For $29/month — roughly &#8377;2,400 — a business owner gets six AI agents that handle each of those functions autonomously. They work around the clock. They don&apos;t take leave. They respond instantly.
+                                    AI employee platforms like Dooza are changing that equation. For $49/month — roughly &#8377;2,400 — a business owner gets six AI agents that handle each of those functions autonomously. They work around the clock. They don&apos;t take leave. They respond instantly.
                                 </p>
                                 <p>
                                     Indian entrepreneurs in cities like Bangalore, Mumbai, Delhi, Hyderabad, and Pune are early movers. They&apos;re not waiting for AI to become mainstream — they&apos;re deploying it now, while competitors are still debating whether to try ChatGPT.

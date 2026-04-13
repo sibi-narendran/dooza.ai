@@ -16,14 +16,14 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const comparisonRows = [
-    { feature: 'Monthly Price', dooza: '$29/mo flat', competitor: '$48.50/mo (discounted from $97)', doozaWins: true },
-    { feature: 'Annual Price', dooza: '$29/mo — no lock-in required', competitor: '$15.60/mo — 12-month commitment', doozaWins: false },
+    { feature: 'Monthly Price', dooza: '$49/mo flat', competitor: '$48.50/mo (discounted from $97)', doozaWins: true },
+    { feature: 'Annual Price', dooza: '$39/mo — no lock-in required', competitor: '$15.60/mo — 12-month commitment', doozaWins: false },
     { feature: 'Task / Usage Limits', dooza: 'Unlimited', competitor: '250 credits per month', doozaWins: true },
     { feature: 'Number of AI Agents', dooza: '7 specialized employees', competitor: '12+ helpers', doozaWins: false },
     { feature: 'Onboarding', dooza: 'Personal setup call with founder', competitor: 'Self-serve only', doozaWins: true },
     { feature: 'Integrations', dooza: '17 direct (Gmail, Slack, LinkedIn, Shopify…)', competitor: '15+ direct integrations', doozaWins: false },
     { feature: 'Setup Time', dooza: '~20 min (guided)', competitor: 'Hours to days (DIY)', doozaWins: true },
-    { feature: 'Money-Back Guarantee', dooza: '7 days', competitor: '14 days', doozaWins: false },
+    { feature: 'Money-Back Guarantee', dooza: '3 days', competitor: '14 days', doozaWins: false },
     { feature: 'Brand Personalization', dooza: 'Auto-extracted from your site', competitor: 'Brain AI knowledge base', doozaWins: false },
     { feature: 'Free Plan', dooza: 'Yes — free to start', competitor: 'No free tier', doozaWins: true },
 ];
@@ -31,7 +31,7 @@ const comparisonRows = [
 const doozaAdvantages = [
     { icon: Infinity, title: 'No Credit Caps', desc: 'Dooza has no 250-credit ceiling. Use your AI employees as much as you need without rationing.' },
     { icon: Zap, title: 'Personal Setup Call', desc: 'A free 20-minute call with the founder to configure your workspace together. Not a chatbot — a real person.' },
-    { icon: Shield, title: 'Flat $29/mo Pricing', desc: 'No "original price" vs "discounted" confusion. One price, everything included, cancel anytime.' },
+    { icon: Shield, title: 'Flat $49/mo Pricing', desc: 'No "original price" vs "discounted" confusion. One price, everything included, cancel anytime.' },
     { icon: Puzzle, title: 'Free Plan Available', desc: 'Try Dooza before committing. No credit card required to get started.' },
 ];
 
@@ -115,7 +115,7 @@ export default function DoozaVsSintraContent({ faqData }) {
                                     Sintra AI offers more helpers (12+), but caps every plan at <strong>250 credits per month</strong>. Once those credits run out, you pay for top-ups or wait. Helpers also <strong>cannot share context</strong> — you copy-paste between them manually.
                                 </p>
                                 <p className="text-lg text-slate-600 leading-relaxed">
-                                    Dooza takes the opposite approach: 7 purpose-built agents, <strong>unlimited tasks</strong>, a <strong>personal setup call with the founder</strong>, and a <strong>flat $29/month</strong> with no credit meters. It also offers a free plan to get started.
+                                    Dooza takes the opposite approach: 7 purpose-built agents, <strong>unlimited tasks</strong>, a <strong>personal setup call with the founder</strong>, and a <strong>flat $49/month</strong> with no credit meters. It also offers a free plan to get started.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -215,10 +215,10 @@ export default function DoozaVsSintraContent({ faqData }) {
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="bg-primary-500/10 backdrop-blur-sm border border-primary-400/20 rounded-2xl p-8">
                                     <p className="text-primary-300 font-bold text-sm uppercase tracking-wider mb-2">Dooza</p>
-                                    <div className="text-4xl font-bold text-white mb-1">$29<span className="text-base font-normal text-slate-400">/month</span></div>
+                                    <div className="text-4xl font-bold text-white mb-1">$49<span className="text-base font-normal text-slate-400">/month</span></div>
                                     <p className="text-sm text-slate-400 mb-5">No contracts. Cancel anytime.</p>
                                     <ul className="space-y-2.5 text-sm">
-                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '7-day money-back guarantee'].map((item, i) => (
+                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '3-day money-back guarantee'].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {item}

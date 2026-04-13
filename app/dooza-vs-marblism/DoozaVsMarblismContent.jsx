@@ -16,8 +16,8 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const comparisonRows = [
-    { feature: 'Monthly Price', dooza: '$29/mo flat', competitor: '$44/mo + $29/seat', doozaWins: true },
-    { feature: 'Annual Price', dooza: '$29/mo — no lock-in', competitor: '$24/mo + $14/seat', doozaWins: true },
+    { feature: 'Monthly Price', dooza: '$49/mo flat', competitor: '$44/mo + $29/seat', doozaWins: true },
+    { feature: 'Annual Price', dooza: '$39/mo — no lock-in', competitor: '$24/mo + $14/seat', doozaWins: true },
     { feature: 'Per-Seat Fees', dooza: 'None — whole team included', competitor: '$29/seat (monthly)', doozaWins: true },
     { feature: 'Number of AI Agents', dooza: '7 specialized employees', competitor: '6 agents', doozaWins: true },
     { feature: 'Onboarding', dooza: 'Personal setup call with founder', competitor: 'Self-serve only', doozaWins: true },
@@ -30,10 +30,10 @@ const comparisonRows = [
 ];
 
 const teamPricing = [
-    ['1 person', '$29/mo', '$44/mo', '$15/mo'],
-    ['2 people', '$29/mo', '$73/mo', '$44/mo'],
-    ['3 people', '$29/mo', '$102/mo', '$73/mo'],
-    ['5 people', '$29/mo', '$160/mo', '$131/mo'],
+    ['1 person', '$49/mo', '$44/mo', '-$5/mo'],
+    ['2 people', '$49/mo', '$73/mo', '$24/mo'],
+    ['3 people', '$49/mo', '$102/mo', '$53/mo'],
+    ['5 people', '$49/mo', '$160/mo', '$111/mo'],
 ];
 
 const doozaAdvantages = [
@@ -116,7 +116,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                     Marblism charges <strong>$44/month + $29 per additional seat</strong>, offers no human onboarding, and has an undocumented integration ecosystem.
                                 </p>
                                 <p className="text-lg text-slate-600 leading-relaxed">
-                                    Dooza charges a <strong>flat $29/month</strong> for your whole team, offers a <strong>personal setup call with the founder</strong>, and connects to <strong>17 integrations</strong> directly. It also has a free plan to get started. For businesses that want guided setup and flat pricing, the difference is significant.
+                                    Dooza charges a <strong>flat $49/month</strong> for your whole team, offers a <strong>personal setup call with the founder</strong>, and connects to <strong>17 integrations</strong> directly. It also has a free plan to get started. For businesses that want guided setup and flat pricing, the difference is significant.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -241,10 +241,10 @@ export default function DoozaVsMarblismContent({ faqData }) {
                             <div className="grid md:grid-cols-2 gap-6 mt-12">
                                 <div className="bg-primary-500/10 backdrop-blur-sm border border-primary-400/20 rounded-2xl p-8">
                                     <p className="text-primary-300 font-bold text-sm uppercase tracking-wider mb-2">Dooza</p>
-                                    <div className="text-4xl font-bold text-white mb-1">$29<span className="text-base font-normal text-slate-400">/month</span></div>
+                                    <div className="text-4xl font-bold text-white mb-1">$49<span className="text-base font-normal text-slate-400">/month</span></div>
                                     <p className="text-sm text-slate-400 mb-5">Entire team. No per-seat fees.</p>
                                     <ul className="space-y-2.5 text-sm">
-                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '7-day money-back guarantee'].map((item, i) => (
+                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '3-day money-back guarantee'].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {item}

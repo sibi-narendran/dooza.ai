@@ -61,7 +61,7 @@ const faqData = [
     },
     {
         question: "How much does medical SEO typically cost?",
-        answer: "According to PatientGain and industry surveys, traditional medical SEO agencies charge $999-$5,000/month. With Dooza, Ranky handles your SEO for just $29/month—daily blog posts, Google Business Profile updates, and AI optimization included. No hidden fees, no long-term contracts."
+        answer: "According to PatientGain and industry surveys, traditional medical SEO agencies charge $999-$5,000/month. With Dooza, Ranky handles your SEO for just $49/month—daily blog posts, Google Business Profile updates, and AI optimization included. No hidden fees, no long-term contracts."
     },
     {
         question: "How long until I see results from SEO?",
@@ -730,7 +730,7 @@ export default function SeoForDoctorsDentistsContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Start With Ranky - $29/month <ArrowRight className="w-4 h-4" />
+                                        Start With Ranky - $49/month <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

@@ -40,7 +40,7 @@ import {
 const faqData = [
     { question: "Is an AI receptionist HIPAA-compliant for dental offices?", answer: "Dooza's Rachel is designed with healthcare privacy in mind. She doesn't store patient health records, doesn't access your practice management system, and conversations are encrypted. She collects only the information needed to schedule appointments and triage urgency." },
     { question: "Can the AI triage dental emergencies?", answer: "Yes. Rachel is configured with dental emergency protocols -- she asks the right questions (What happened? When? Pain level? Bleeding?), classifies urgency, and either books an emergency slot or provides after-hours instructions based on your practice's guidelines." },
-    { question: "How much does an AI receptionist cost compared to a dental front desk hire?", answer: "A dental front desk receptionist costs $3,500-4,500/month in salary alone, plus benefits and training. An answering service runs $500-1,200/month with limited hours. Dooza's Rachel costs $29/month -- 24/7, unlimited calls, with dental-specific configuration." },
+    { question: "How much does an AI receptionist cost compared to a dental front desk hire?", answer: "A dental front desk receptionist costs $3,500-4,500/month in salary alone, plus benefits and training. An answering service runs $500-1,200/month with limited hours. Dooza's Rachel costs $49/month -- 24/7, unlimited calls, with dental-specific configuration." },
     { question: "Can the AI handle dental insurance questions?", answer: "Rachel can be configured with your accepted insurance plans and common coverage questions. She tells callers whether you accept their insurance and what to bring to their appointment. For complex benefits questions, she routes the caller to your billing team." },
     { question: "Does the AI know the difference between a hygienist appointment and a dentist appointment?", answer: "Yes. During setup, you configure Rachel with your appointment types, durations, and provider assignments. She books cleanings with hygienists and procedures with dentists -- automatically matching the right provider to the right appointment type." }
 ];
@@ -107,7 +107,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                             Automating the <span className="text-primary-600">Front Desk</span>: How AI Handles Dental Emergencies & Scheduling
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            35% of dental calls come after hours. 62% of small business calls go unanswered. An AI receptionist for your dental office picks up every call, triages emergencies, verifies insurance, and books the right appointment -- 24/7, for $29/month.
+                            35% of dental calls come after hours. 62% of small business calls go unanswered. An AI receptionist for your dental office picks up every call, triages emergencies, verifies insurance, and books the right appointment -- 24/7, for $49/month.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -127,7 +127,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Rachel AI - $29/mo
+                                Get Rachel AI - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -653,7 +653,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     "One customer comes in with enough gross profit embedded to pay for that customer plus the cost of acquiring the next customer. If you can accomplish that within a 30-day cycle, cash is no longer a constraint to growth."
                                 </p>
                                 <p className="text-slate-600 text-sm">
-                                    Hormozi's "money model" math works perfectly for dental practices. Rachel costs $29/month. One captured emergency patient who would have otherwise called your competitor is worth $3,000+ in lifetime revenue. That single answered call doesn't just pay for Rachel — it funds your entire marketing budget for the year. The ROI isn't 10x. It's 100x.
+                                    Hormozi's "money model" math works perfectly for dental practices. Rachel costs $49/month. One captured emergency patient who would have otherwise called your competitor is worth $3,000+ in lifetime revenue. That single answered call doesn't just pay for Rachel — it funds your entire marketing budget for the year. The ROI isn't 10x. It's 100x.
                                 </p>
                                 <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, conversation with Replit CEO Amjad Massad</p>
                             </div>
@@ -707,7 +707,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     <p className="text-xs text-amber-500 mt-2">$6,000-14,400/year</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$29/mo</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
                                     <p className="text-sm text-green-800 font-medium">Rachel AI (Dooza)</p>
                                     <p className="text-xs text-green-600 mt-1">Unlimited calls, 24/7</p>
                                     <p className="text-xs text-green-600">Emergency triage + booking</p>
@@ -805,11 +805,11 @@ export default function AiReceptionistForDentalOfficeContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Stop Losing Patients to Voicemail?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Every missed call is a missed patient. Every missed patient is $3,000-5,000 in lifetime revenue. Rachel answers every call, triages every emergency, and books every appointment -- for $29/month.
+                                    Every missed call is a missed patient. Every missed patient is $3,000-5,000 in lifetime revenue. Rachel answers every call, triages every emergency, and books every appointment -- for $49/month.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Rachel AI - $29/mo <ArrowRight className="w-4 h-4" />
+                                        Get Rachel AI - $49/mo <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

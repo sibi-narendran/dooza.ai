@@ -34,10 +34,10 @@ import {
 } from 'lucide-react';
 
 const faqData = [
-    { question: "What business processes can I automate without coding?", answer: "You can automate email management, social media posting, inbound call handling, lead generation, SEO content, and legal compliance — all without writing a single line of code. Dooza's AI employees handle these end-to-end for $29/month." },
+    { question: "What business processes can I automate without coding?", answer: "You can automate email management, social media posting, inbound call handling, lead generation, SEO content, and legal compliance — all without writing a single line of code. Dooza's AI employees handle these end-to-end for $49/month." },
     { question: "How much time can business automation actually save?", answer: "Most small business owners save 15-25 hours per week. Specifically: 10+ hours on email, 6+ hours on social media, and 5+ hours on missed call follow-ups. That's roughly $6,200+/month in recovered productivity." },
     { question: "How is Dooza different from Zapier or Make?", answer: "Zapier and Make connect apps with if-then rules — you still build and maintain every workflow. Dooza gives you AI employees that autonomously handle entire job functions like email, social media, and calls. No workflow building required." },
-    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides AI employees handling email, social, calls, leads, SEO, and legal for just $29/month." },
+    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides AI employees handling email, social, calls, leads, SEO, and legal for just $49/month." },
     { question: "Which business processes should I automate first?", answer: "Start with your biggest time drain. For most businesses, that's email management or social media. Audit where you spend the most hours, automate that first, then expand to calls, leads, and SEO." }
 ];
 
@@ -123,7 +123,7 @@ export default function AutomateBusinessProcessesContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get AI Employees - $29/mo
+                                Get AI Employees - $49/mo
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -439,7 +439,7 @@ export default function AutomateBusinessProcessesContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-4">Stop Using Tools. Hire AI Employees.</h3>
                                         <p className="text-lg text-slate-700 mb-4">
-                                            Most automation tools give you building blocks and expect you to assemble them. Dooza gives you AI employees who own entire job functions — just like hiring a real team member, except they work 24/7 and cost $29/month.
+                                            Most automation tools give you building blocks and expect you to assemble them. Dooza gives you AI employees who own entire job functions — just like hiring a real team member, except they work 24/7 and cost $49/month.
                                         </p>
                                         <p className="text-slate-700">
                                             Learn more about <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline font-medium">how AI employees are transforming small business</Link> and explore our <Link href="/blog/marketing-automation-tools" className="text-primary-600 hover:underline font-medium">marketing automation tools guide</Link>.
@@ -483,7 +483,7 @@ export default function AutomateBusinessProcessesContent() {
                                         <p className="text-sm text-slate-600">DIY Tool Stack</p>
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
-                                        <div className="text-2xl font-bold text-green-700">$29/mo</div>
+                                        <div className="text-2xl font-bold text-green-700">$49/mo</div>
                                         <p className="text-sm text-green-600">Dooza (AI Employees)</p>
                                     </div>
                                 </div>
@@ -622,7 +622,7 @@ export default function AutomateBusinessProcessesContent() {
                                         <div className="grid md:grid-cols-3 gap-4 text-center">
                                             <div className="bg-white p-4 rounded-xl border border-primary-100">
                                                 <p className="text-sm text-slate-500 mb-1">Dooza Cost</p>
-                                                <div className="text-2xl font-bold text-slate-900">$29/mo</div>
+                                                <div className="text-2xl font-bold text-slate-900">$49/mo</div>
                                             </div>
                                             <div className="bg-white p-4 rounded-xl border border-primary-100">
                                                 <p className="text-sm text-slate-500 mb-1">Value Generated</p>
