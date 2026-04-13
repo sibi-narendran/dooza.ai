@@ -13,7 +13,7 @@ export default function ComparisonSection() {
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="section-label block mb-4 text-orange-500">COMPARE</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Doing It Yourself vs AI Employees</h2>
-                        <p className="text-xl text-slate-600">Any business not using AI to improve productivity is leaving money on the table.</p>
+                        <p className="text-xl text-slate-600">Stop doing. Start Dooza-ing.</p>
                     </div>
                 </ScrollReveal>
 

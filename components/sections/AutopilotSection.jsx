@@ -28,6 +28,8 @@ export default function AutopilotSection() {
                                 </div>
                             ))}
                         </div>
+
+                        <p className="text-xl md:text-2xl font-bold text-slate-400 mt-8 text-center tracking-wide">Dooza&hellip; done.</p>
                     </div>
                 </ScrollReveal>
             </div>

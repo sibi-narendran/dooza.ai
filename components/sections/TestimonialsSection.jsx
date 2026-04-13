@@ -10,7 +10,7 @@ export default function TestimonialsSection() {
                 <ScrollReveal>
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="section-label block mb-4 text-amber-500">TESTIMONIALS</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">What people are saying</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Still doing? World is Dooza-ing.</h2>
                     </div>
                 </ScrollReveal>
 

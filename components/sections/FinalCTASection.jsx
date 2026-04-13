@@ -38,7 +38,7 @@ export default function FinalCTASection() {
 
                 <ScrollReveal delay={0.3}>
                     <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-                        Join 500+ businesses already saving 10+ hours every week with AI employees.
+                        The world isn&apos;t doing anymore. It&apos;s Dooza-ing.
                     </p>
                 </ScrollReveal>
 
