@@ -100,6 +100,26 @@ export default function DoozaVsSintraContent({ faqData }) {
                     </div>
                 </section>
 
+                {/* ── Video ── */}
+                <section className="py-16 lg:py-20 bg-white">
+                    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <ScrollReveal>
+                            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl border border-slate-100">
+                                <iframe
+                                    className="w-full h-full"
+                                    src="https://www.youtube.com/embed/irKKggby-MA?si=2s4Z6mA9Hv6rEjh8"
+                                    title="Dooza vs Sintra AI"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                    loading="lazy"
+                                />
+                            </div>
+                        </ScrollReveal>
+                    </div>
+                </section>
+
                 {/* ── Quick Verdict ── */}
                 <section className="py-20 lg:py-28 bg-white">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
