@@ -41,7 +41,11 @@ const relatedPostMappings = {
     'ai-agent-linkedin-lead-generation': ['ai-for-real-estate-agents', 'small-business-marketing-tools', 'automate-business-processes'],
     'ai-voice-agent-missed-calls': ['automate-business-processes', 'ai-for-real-estate-agents', 'ai-staffing'],
     'automate-employee-performance-reviews': ['ai-staffing', 'automate-business-processes', 'ai-employees-vs-virtual-assistants'],
-    'ai-legal-assistant': ['best-ai-receptionist', 'ai-appointment-setter', 'ai-sales-agent-guide']
+    'ai-legal-assistant': ['best-ai-receptionist', 'ai-appointment-setter', 'ai-sales-agent-guide'],
+    'better-than-sintra-ai-agents': ['better-than-sintra-ai', 'ai-agents-vs-agentic-ai', 'dooza-it-and-resell'],
+    'reddit-agent-dooza-workspace-guide': ['ai-employees-transforming-small-business', 'ai-agents-vs-agentic-ai', 'automate-business-processes'],
+    'claude-cowork-vs-dooza': ['ai-employees-vs-virtual-assistants', 'automate-business-processes', 'ai-employees-transforming-small-business'],
+    'perplexity-computer-vs-dooza': ['claude-cowork-vs-dooza', 'openclaw-vs-dooza', 'ai-employees-transforming-small-business']
 };
 
 const InternalLinks = ({ currentSlug, position = 'sidebar' }) => {
