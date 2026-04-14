@@ -10,6 +10,7 @@ import BookingModal from '../../../components/BookingModal';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
 import InternalLinks from '../../../components/InternalLinks';
+import BlogHeroImage from '../../../components/BlogHeroImage';
 import YouTubeEmbed from '../../../components/YouTubeEmbed';
 import {
     CheckCircle2,
@@ -157,6 +158,14 @@ export default function PerplexityComputerVsDoozaContent() {
                                 <Calendar className="w-4 h-4" />
                                 <span>April 14, 2026</span>
                             </div>
+                        </div>
+
+                        <div className="mt-10 max-w-3xl mx-auto">
+                            <BlogHeroImage
+                                src="/blog/perplexity-computer-vs-dooza.png"
+                                alt="Perplexity Computer vs Dooza comparison — multi-model AI agent platform at $200/month versus 6 AI employees at $29/month"
+                                priority={true}
+                            />
                         </div>
 
                         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
