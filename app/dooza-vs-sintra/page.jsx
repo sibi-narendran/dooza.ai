@@ -2,27 +2,27 @@ import { SITE_URL } from '../../lib/site';
 import DoozaVsSintraContent from './DoozaVsSintraContent';
 
 export const metadata = {
-    title: 'Dooza vs Sintra AI — Unlimited vs 250 Credits [2026]',
-    description: 'Dooza vs Sintra AI compared: unlimited tasks vs 250 monthly credits, $49/mo flat vs confusing tiers, free founder setup call vs self-serve. See the honest breakdown.',
+    title: 'Sintra AI Alternative — Dooza vs Sintra Compared [2026]',
+    description: 'Looking for a Sintra AI alternative? Compare Dooza vs Sintra AI — unlimited tasks, flat $49/mo, free founder setup vs Sintra\'s 250 credit cap and self-serve-only model.',
     keywords: [
-        'Dooza vs Sintra AI', 'Sintra AI alternative', 'Sintra AI comparison',
-        'AI employees comparison', 'Sintra AI review', 'Sintra AI pricing',
-        'best AI employee platform', 'Sintra AI vs Dooza', 'AI automation platform',
-        'Sintra AI credit limit', 'Sintra AI limitations', 'AI business assistant',
-        'AI employees for small business', 'AI automation tools 2026',
+        'Sintra AI alternative', 'Dooza vs Sintra AI', 'Sintra AI review',
+        'Sintra AI comparison', 'best Sintra AI alternative', 'Sintra AI vs Dooza',
+        'AI employees comparison', 'Sintra AI pricing', 'Sintra AI credit limit',
+        'Sintra AI limitations', 'best AI employee platform', 'AI automation platform',
+        'AI business assistant', 'AI employees for small business', 'AI automation tools 2026',
     ],
     alternates: { canonical: `${SITE_URL}/dooza-vs-sintra` },
     openGraph: {
-        title: 'Dooza vs Sintra AI — Unlimited Tasks, No Credit Caps',
-        description: 'Head-to-head comparison: Dooza offers unlimited tasks at $49/mo flat. Sintra AI caps you at 250 credits. See the full breakdown.',
+        title: 'Sintra AI Alternative — Dooza vs Sintra Compared [2026]',
+        description: 'The #1 Sintra AI alternative. Unlimited tasks at $49/mo flat, free founder setup call — no 250 credit caps, no DIY setup.',
         url: `${SITE_URL}/dooza-vs-sintra`,
         siteName: 'Dooza',
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Dooza vs Sintra AI — 2026 Comparison',
-        description: 'Unlimited tasks vs 250 credits. Free onboarding vs self-serve. See why businesses choose Dooza over Sintra AI.',
+        title: 'Sintra AI Alternative — Dooza vs Sintra [2026]',
+        description: 'Looking for a Sintra AI alternative? Dooza gives you unlimited AI employees, flat pricing, and free founder onboarding.',
     },
 };
 

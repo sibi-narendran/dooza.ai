@@ -85,11 +85,11 @@ export default function DoozaVsSintraContent({ faqData }) {
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                Unlimited tasks vs 250 credits. Which actually delivers?
+                                The #1 Sintra AI alternative for unlimited AI employees.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Sintra AI offers 12+ helpers capped at 250 credits/month. Dooza offers 7 purpose-built agents with unlimited tasks and a personal founder setup call. Here is the full breakdown.
+                                Looking for a Sintra AI alternative? Sintra AI offers 12+ helpers capped at 250 credits/month. Dooza offers 7 purpose-built agents with unlimited tasks and a free personal founder setup call. Here is the full breakdown.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
