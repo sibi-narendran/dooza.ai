@@ -53,6 +53,7 @@ import BetterThanSintraAIAgentsContent from './BetterThanSintraAIAgentsContent';
 import RedditAgentDoozaWorkspaceGuideContent from './RedditAgentDoozaWorkspaceGuideContent';
 import ClaudeCoworkVsDoozaContent from './ClaudeCoworkVsDoozaContent';
 import PerplexityComputerVsDoozaContent from './PerplexityComputerVsDoozaContent';
+import AccioWorkVsDoozaContent from './AccioWorkVsDoozaContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -103,6 +104,7 @@ const BLOG_COMPONENTS = {
     'reddit-agent-dooza-workspace-guide': RedditAgentDoozaWorkspaceGuideContent,
     'claude-cowork-vs-dooza': ClaudeCoworkVsDoozaContent,
     'perplexity-computer-vs-dooza': PerplexityComputerVsDoozaContent,
+    'accio-work-vs-dooza': AccioWorkVsDoozaContent,
 };
 
 // ISR: revalidate dynamic posts every 60 seconds
