@@ -516,7 +516,8 @@ export default function PerplexityComputerVsDoozaContent() {
                                             { feature: "Sales Outreach", perplexity: "Research & drafting", dooza: "Automated pipeline (Stan)" },
                                             { feature: "Scheduling", perplexity: "Task-based (no cron)", dooza: "Built-in cron scheduling" },
                                             { feature: "Memory", perplexity: "Persistent across sessions", dooza: "Persistent — learns your business" },
-                                            { feature: "Setup Difficulty", perplexity: "Medium — prompt engineering needed", dooza: "None — free concierge onboarding" },
+                                            { feature: "Setup & Onboarding", perplexity: "No setup help — self-serve only", dooza: "Free concierge onboarding included" },
+                                            { feature: "Customer Support", perplexity: "Nowhere to be found", dooza: "Direct founder access & email support" },
                                             { feature: "Price", perplexity: "$200/mo + credit uncertainty", dooza: "$29/mo — all employees, no caps" },
                                             { feature: "Credits/Limits", perplexity: "10,000 credits/mo (expire monthly)", dooza: "Unlimited — no credit system" },
                                             { feature: "Best For", perplexity: "AI researchers, developers, power users", dooza: "Business owners needing AI operations" }
