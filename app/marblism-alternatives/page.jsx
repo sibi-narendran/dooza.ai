@@ -2,8 +2,8 @@ import { SITE_URL } from '../../lib/site';
 import MarblismAlternativesContent from './MarblismAlternativesContent';
 
 export const metadata = {
-    title: '7 Best Marblism Alternatives [2026] — Honest Pros & Cons',
-    description: 'Looking for Marblism alternatives? We tested 7 AI employee platforms and compared pricing, integrations, onboarding, and agent quality. Honest pros and cons for each.',
+    title: '7 Marblism Alternatives Ranked — Real Pricing & Pros/Cons (2026)',
+    description: 'Marblism charges per seat and supports 5 integrations. We tested 7 alternatives — see real pricing, pros, cons, and which one fits your team best.',
     keywords: [
         'Marblism alternatives', 'Marblism alternative', 'Marblism AI alternative',
         'Marblism AI alternatives', 'best Marblism alternative 2026',
@@ -23,20 +23,20 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: '7 Best Marblism Alternatives [2026] — Honest Pros & Cons',
-        description: 'Per-seat pricing adding up? Limited integrations? We compared 7 Marblism alternatives with real pricing, pros, and cons.',
+        title: '7 Marblism Alternatives Ranked — Real Pricing & Pros/Cons (2026)',
+        description: 'Marblism charges per seat and supports 5 integrations. We tested 7 alternatives with real pricing, pros, and cons.',
         url: `${SITE_URL}/marblism-alternatives`,
         siteName: 'Dooza',
         type: 'article',
-        modifiedTime: '2026-03-30T00:00:00.000Z',
+        modifiedTime: '2026-04-15T00:00:00.000Z',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Marblism Alternatives — Dooza' }],
     },
     twitter: {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: '7 Best Marblism Alternatives [2026]',
-        description: 'Per-seat fees, limited integrations, no free trial — 7 alternatives compared with honest pros and cons.',
+        title: '7 Marblism Alternatives Ranked (2026)',
+        description: 'Per-seat fees, limited integrations, no free trial — 7 alternatives compared with real pricing and honest pros/cons.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
