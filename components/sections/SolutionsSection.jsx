@@ -1,10 +1,10 @@
-import { TrendingUp, MessageSquare, Mail, ArrowRight } from 'lucide-react';
+import { TrendingUp, MessageSquare, Mail, Search, ArrowRight } from 'lucide-react';
 import { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import ScrollReveal from '@/components/ScrollReveal';
 import { getProductSignupUrl } from '@/lib/links';
 import { solutionCards } from '@/lib/homeData';
 
-const iconMap = { TrendingUp, MessageSquare, Mail };
+const iconMap = { TrendingUp, MessageSquare, Mail, Search };
 
 export default function SolutionsSection() {
     return (
@@ -12,7 +12,7 @@ export default function SolutionsSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="section-label block mb-4 text-teal-600">SOLUTIONS</span>
+                        <span className="section-label block mb-4 text-teal-600">SOLUTIONS · AI EMPLOYEES</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">AI automation for every part of your business</h2>
                         <p className="text-xl text-slate-600">Purpose-built AI employees that handle your most time-consuming tasks.</p>
                     </div>

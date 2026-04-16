@@ -42,17 +42,9 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                         </ul>
-                        <h4 className={`font-semibold mb-4 mt-6 ${isDark ? 'text-white' : 'text-slate-900'}`}>Agents</h4>
-                        <ul className="space-y-3">
-                            <li>
-                                <Link href="/agents/ranky" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Ranky — AI SEO
-                                </Link>
-                            </li>
-                        </ul>
                     </div>
                     <div>
-                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Solutions</h4>
+                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Solutions · AI Employees</h4>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/#ai-lead-generation" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
@@ -60,18 +52,18 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/#ai-customer-support" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    AI for Customer Support
-                                </Link>
-                            </li>
-                            <li>
                                 <Link href="/#ai-social-media-management" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    AI for Social Media
+                                    AI for Social Media Management
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/#ai-inbox-management" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     AI for Inbox Management
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/agents/ranky" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI for Visibility &amp; Growth
                                 </Link>
                             </li>
                         </ul>

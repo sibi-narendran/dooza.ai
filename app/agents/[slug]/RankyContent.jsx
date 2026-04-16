@@ -230,7 +230,7 @@ function CapabilitiesSection({ capabilities }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     <div className="text-center mb-12">
                         <p className="section-label mb-3">What Ranky Does</p>
-                        <h2 className="text-3xl sm:text-4xl mb-4">Your Full-Stack SEO Department</h2>
+                        <h2 className="text-3xl sm:text-4xl mb-4">Your Full-Stack Visibility Employee</h2>
                     </div>
                     <div className="space-y-6">
                         {capabilities.map((cap, i) => {
@@ -267,7 +267,7 @@ function CapabilitiesSection({ capabilities }) {
                                 {i === 0 && (
                                     <div className="text-center mb-12">
                                         <p className="section-label mb-3">What Ranky Does</p>
-                                        <h2 className="text-3xl lg:text-5xl">Your Full-Stack SEO Department</h2>
+                                        <h2 className="text-3xl lg:text-5xl">Your Full-Stack Visibility Employee</h2>
                                     </div>
                                 )}
 
@@ -445,7 +445,7 @@ export default function RankyContent({ page }) {
                         <ScrollReveal>
                             <div className="text-center mb-16">
                                 <p className="section-label mb-3">Get Started</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl">Three Steps to Page One</h2>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl">Three Steps to Everywhere Visibility</h2>
                             </div>
                         </ScrollReveal>
 
@@ -490,9 +490,9 @@ export default function RankyContent({ page }) {
                         <ScrollReveal>
                             <div className="text-center mb-12">
                                 <p className="section-label mb-3">Deep Expertise</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Built-In SEO Knowledge</h2>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Built-In Visibility Playbook</h2>
                                 <p className="text-lg text-slate-500 max-w-xl mx-auto">
-                                    Ranky doesn't guess — he's trained on proven SEO frameworks and best practices.
+                                    Ranky doesn't guess — he's trained on proven SEO, GEO, and engagement playbooks.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -509,7 +509,7 @@ export default function RankyContent({ page }) {
                         <ScrollReveal>
                             <div className="text-center mb-10">
                                 <p className="section-label mb-3">Connects With Your Tools</p>
-                                <h2 className="text-2xl sm:text-3xl">Publishes Where You Need It</h2>
+                                <h2 className="text-2xl sm:text-3xl">Plugs Into 1,000+ Apps</h2>
                             </div>
                         </ScrollReveal>
 
@@ -554,9 +554,9 @@ export default function RankyContent({ page }) {
 
                     <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <ScrollReveal>
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Ready to Rank Higher?</h2>
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Ready to Be Everywhere?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Hire Ranky and automate your SEO — from keyword research to published content.
+                                Hire Ranky and automate your visibility — from Google and ChatGPT to LinkedIn, YouTube, and Reddit.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="ranky_cta">Hire Ranky — $49/mo</SignupButton>

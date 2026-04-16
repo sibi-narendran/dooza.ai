@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import IntegrationsBar from '@/components/sections/IntegrationsBar';
 import AutopilotSection from '@/components/sections/AutopilotSection';
+import SolutionsSection from '@/components/sections/SolutionsSection';
 import VideoSection from '@/components/sections/VideoSection';
 import HowItWorksSection from '@/components/sections/HowItWorksSection';
 import ComparisonSection from '@/components/sections/ComparisonSection';
