@@ -197,7 +197,7 @@ export default function PricingSection() {
                 <ScrollReveal delay={0.3}>
                     <div className="flex flex-col items-center mt-10 gap-3">
                         <p className="text-sm text-slate-400">or</p>
-                        <BookDemoButton source="pricing">Talk to Founder</BookDemoButton>
+                        <BookDemoButton source="pricing">Book Free Setup & Onboarding</BookDemoButton>
                         <p className="text-sm font-medium text-slate-600">Free setup & walkthrough · 15 min · No commitment</p>
                     </div>
                 </ScrollReveal>

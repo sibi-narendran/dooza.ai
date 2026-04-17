@@ -91,7 +91,7 @@ export default function ComparisonSection() {
 
                 <ScrollReveal delay={0.3}>
                     <div className="text-center mt-10">
-                        <BookDemoButton source="comparison">Talk to Founder</BookDemoButton>
+                        <BookDemoButton source="comparison">Book Free Setup & Onboarding</BookDemoButton>
                         <p className="text-sm font-medium text-slate-600 mt-3">Free 15-min call · No commitment</p>
                     </div>
                 </ScrollReveal>
