@@ -4,7 +4,7 @@ import { Calendar } from 'lucide-react';
 import { useBookingModal } from '@/components/BookingModalProvider';
 import { trackDemoClick, trackFBSchedule } from '@/lib/analytics';
 
-export default function BookDemoButton({ source = 'unknown', children = 'Book Free Setup & Onboarding', className = '', size = 'lg' }) {
+export default function BookDemoButton({ source = 'unknown', children = 'Book Free Setup with Founder', className = '', size = 'lg' }) {
     const { openModal } = useBookingModal();
 
     const sizeClasses = size === 'xl'

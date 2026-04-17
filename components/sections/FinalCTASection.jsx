@@ -45,7 +45,7 @@ export default function FinalCTASection() {
                 <ScrollReveal delay={0.4}>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <SignupButton source="bottom_cta" size="xl" />
-                        <BookDemoButton source="bottom_cta" size="xl">Book Free Setup & Onboarding</BookDemoButton>
+                        <BookDemoButton source="bottom_cta" size="xl">Book Free Setup with Founder</BookDemoButton>
                     </div>
                 </ScrollReveal>
             </div>
