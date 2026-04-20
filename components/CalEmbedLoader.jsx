@@ -45,11 +45,23 @@ export default function CalEmbedLoader() {
         window.Cal.ns[NAMESPACE]('on', {
             action: 'bookingSuccessful',
             callback: (e) => {
-                const bookingUid =
-                    e?.detail?.data?.booking?.uid ||
-                    e?.data?.booking?.uid ||
-                    undefined;
-                trackFBSchedule(bookingUid);
+                const booking =
+                    e?.detail?.data?.booking ||
+                    e?.data?.booking ||
+                    {};
+                const attendee = Array.isArray(booking.attendees) && booking.attendees.length > 0
+                    ? booking.attendees[0]
+                    : {};
+                const nameParts = String(attendee.name || '').trim().split(/\s+/);
+                const firstName = nameParts[0] || undefined;
+                const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : undefined;
+
+                trackFBSchedule(booking.uid, {
+                    email: attendee.email,
+                    phone: attendee.phoneNumber,
+                    firstName,
+                    lastName,
+                });
                 trackAdsConversion();
             },
         });
