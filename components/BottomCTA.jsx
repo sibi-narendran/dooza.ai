@@ -44,7 +44,7 @@ const BottomCTA = ({ openModal }) => {
                 </div>
 
                 <p className="mt-8 text-sm text-slate-500">
-                    No credit card required · 3-day $1 trial · Cancel anytime
+                    No credit card required · 7-day money-back guarantee · Cancel anytime
                 </p>
             </div>
         </div>

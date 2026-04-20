@@ -593,7 +593,7 @@ export default function LindyAiAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">How to Switch from Lindy AI to Dooza</h2>
                             <div className="space-y-4">
                                 {[
-                                    { step: "1", title: "Sign Up for Dooza Free Trial", desc: "Create your account in under 2 minutes. No credit card required for the 14-day trial." },
+                                    { step: "1", title: "Sign Up for Dooza", desc: "Create your account in under 2 minutes. Starts at $49/mo with a 7-day money-back guarantee." },
                                     { step: "2", title: "Choose Your AI Employees", desc: "Select from pre-built roles: email assistant, social media manager, SEO specialist, sales rep, and more." },
                                     { step: "3", title: "Connect Your Tools", desc: "Link your email, calendar, CRM, and social accounts with one-click integrations." },
                                     { step: "4", title: "Get Onboarding Help", desc: "Our concierge team will help you replicate your Lindy workflows in Dooza—for free." },
@@ -626,11 +626,11 @@ export default function LindyAiAlternativeContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Try a Lindy Alternative?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    14-day free trial. No credit card required. Predictable pricing you can actually budget for.
+                                    Starts at $49/mo with a 7-day money-back guarantee. Predictable pricing you can actually budget for.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Start Free Trial <ArrowRight className="w-4 h-4" />
+                                        Get Started <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book a Demo

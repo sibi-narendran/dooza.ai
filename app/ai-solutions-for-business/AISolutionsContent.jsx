@@ -199,7 +199,7 @@ const budgetTiers = [
         label: 'Just Getting Started',
         color: 'primary',
         recommendation: 'Start with an all-in-one AI employee platform that covers email, social, SEO, support, and leads in one subscription.',
-        bestPick: 'Dooza Starter — $49/mo ($39/mo yearly). 5 AI employees, 1,000+ integrations, free concierge onboarding. $1 trial to start.',
+        bestPick: 'Dooza Starter — $49/mo ($39/mo yearly). 5 AI employees, 1,000+ integrations, free concierge onboarding. 7-day money-back guarantee.',
         tools: ['Dooza ($49/mo — 5 AI employees)', 'Buffer ($6/mo — social only)', 'Canva Free (design only)'],
     },
     {
@@ -233,7 +233,7 @@ const implementationSteps = [
         title: 'Trial One AI Tool',
         time: 'Week 1',
         desc: 'Start with a single AI solution for your biggest time sink. Use free trials or low-cost entry points. Do not try to automate everything at once — that is the #1 cause of AI failure.',
-        actionItems: ['Pick one function (email, social, or SEO)', 'Sign up for a trial (Dooza offers $1 for 7 days)', 'Set up the AI with your brand voice and guidelines'],
+        actionItems: ['Pick one function (email, social, or SEO)', 'Sign up (Dooza starts at $49/mo with a 7-day money-back guarantee)', 'Set up the AI with your brand voice and guidelines'],
     },
     {
         step: 3,
@@ -314,7 +314,7 @@ export default function AISolutionsContent({ faqData }) {
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="ai_solutions_hero">Try Dooza for $1</SignupButton>
+                                <SignupButton source="ai_solutions_hero">Get started with Dooza</SignupButton>
                                 <BookDemoButton source="ai_solutions_hero" />
                             </div>
                         </div>
@@ -602,7 +602,7 @@ export default function AISolutionsContent({ faqData }) {
                                     <strong>Skip the setup complexity.</strong> Dooza offers free concierge onboarding — the founder personally configures your AI employees in a 20-minute call.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                    <SignupButton source="ai_solutions_implementation">Try Dooza for $1</SignupButton>
+                                    <SignupButton source="ai_solutions_implementation">Get started with Dooza</SignupButton>
                                     <BookDemoButton source="ai_solutions_implementation" />
                                 </div>
                             </div>
@@ -706,10 +706,10 @@ export default function AISolutionsContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Bring AI into Your Business?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Stop paying $200-450/month for 5 separate tools. Get 5 AI employees for $49/month — or try everything for $1 for 7 days.
+                                Stop paying $200-450/month for 5 separate tools. Get 5 AI employees for $49/month — backed by a 7-day money-back guarantee.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="ai_solutions_cta">Try Dooza for $1</SignupButton>
+                                <SignupButton source="ai_solutions_cta">Get started with Dooza</SignupButton>
                                 <BookDemoButton source="ai_solutions_cta" />
                             </div>
                         </ScrollReveal>

@@ -580,7 +580,7 @@ export default function AiToolsForSolopreneursContent() {
                                             rel="noopener noreferrer"
                                             className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors"
                                         >
-                                            Start Free Trial
+                                            Get Started
                                         </a>
                                     </div>
                                 </div>
@@ -737,8 +737,8 @@ export default function AiToolsForSolopreneursContent() {
                                     },
                                     {
                                         step: "2",
-                                        title: "Try Dooza Free for 7 Days",
-                                        desc: "No credit card required. See how the AI employees work. Test them on real tasks—an email, a social post, a blog outline."
+                                        title: "Get Started with Dooza",
+                                        desc: "Starts at $49/mo with a 7-day money-back guarantee. See how the AI employees work on real tasks—an email, a social post, a blog outline."
                                     },
                                     {
                                         step: "3",
@@ -777,7 +777,7 @@ export default function AiToolsForSolopreneursContent() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
-                                        Start Your Free Trial <ArrowRight className="w-4 h-4" />
+                                        Get Started <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

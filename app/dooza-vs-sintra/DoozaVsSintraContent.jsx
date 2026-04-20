@@ -23,7 +23,7 @@ const comparisonRows = [
     { feature: 'Onboarding', dooza: 'Personal setup call with founder', competitor: 'Self-serve only', doozaWins: true },
     { feature: 'Integrations', dooza: '17 direct (Gmail, Slack, LinkedIn, Shopify…)', competitor: '15+ direct integrations', doozaWins: false },
     { feature: 'Setup Time', dooza: '~20 min (guided)', competitor: 'Hours to days (DIY)', doozaWins: true },
-    { feature: 'Money-Back Guarantee', dooza: '3 days', competitor: '14 days', doozaWins: false },
+    { feature: 'Money-Back Guarantee', dooza: '7 days', competitor: '14 days', doozaWins: false },
     { feature: 'Brand Personalization', dooza: 'Auto-extracted from your site', competitor: 'Brain AI knowledge base', doozaWins: false },
     { feature: 'Free Plan', dooza: 'Yes — free to start', competitor: 'No free tier', doozaWins: true },
 ];
@@ -238,7 +238,7 @@ export default function DoozaVsSintraContent({ faqData }) {
                                     <div className="text-4xl font-bold text-white mb-1">$49<span className="text-base font-normal text-slate-400">/month</span></div>
                                     <p className="text-sm text-slate-400 mb-5">No contracts. Cancel anytime.</p>
                                     <ul className="space-y-2.5 text-sm">
-                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '3-day money-back guarantee'].map((item, i) => (
+                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '7-day money-back guarantee'].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {item}

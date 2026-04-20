@@ -525,7 +525,7 @@ export default function OpenclawVsDoozaContent() {
                                     <tbody>
                                         {[
                                             { feature: "Setup Time", openclaw: "3-4 months", dooza: "30 minutes" },
-                                            { feature: "Upfront Cost", openclaw: "$45,000-67,500 (dev time)", dooza: "$0 (free trial)" },
+                                            { feature: "Upfront Cost", openclaw: "$45,000-67,500 (dev time)", dooza: "$49/mo, 7-day money-back" },
                                             { feature: "Monthly Cost", openclaw: "$100-300+/day in API + hosting", dooza: "$49/month flat" },
                                             { feature: "Multi-Tenancy", openclaw: "Build from scratch", dooza: "Built in" },
                                             { feature: "Security Layers", openclaw: "Build from scratch", dooza: "3 layers, active by default" },
@@ -716,7 +716,7 @@ export default function OpenclawVsDoozaContent() {
                                     {
                                         step: "1",
                                         title: "Sign Up for Dooza",
-                                        desc: "Start your free trial. No credit card required. No commitment."
+                                        desc: "Starts at $49/mo with a 7-day money-back guarantee. No long-term commitment."
                                     },
                                     {
                                         step: "2",
@@ -752,7 +752,7 @@ export default function OpenclawVsDoozaContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Start Free Trial <ArrowRight className="w-4 h-4" />
+                                        Get Started <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book Free Onboarding

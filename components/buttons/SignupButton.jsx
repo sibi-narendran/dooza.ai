@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { getProductSignupUrl } from '@/lib/links';
 import { trackSignupClick, trackFBLead } from '@/lib/analytics';
 
-export default function SignupButton({ source = 'unknown', children = 'Start Trial', className = '', size = 'lg' }) {
+export default function SignupButton({ source = 'unknown', children = 'Get Started', className = '', size = 'lg' }) {
     const sizeClasses = size === 'xl'
         ? 'px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl'
         : 'px-8 py-4 text-lg';
