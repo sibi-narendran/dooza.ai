@@ -2,7 +2,7 @@
 
 import { Calendar } from 'lucide-react';
 import { useBookingModal } from '@/components/BookingModalProvider';
-import { trackDemoClick, trackFBSchedule } from '@/lib/analytics';
+import { trackDemoClick } from '@/lib/analytics';
 
 export default function BookDemoButton({ source = 'unknown', children = 'Book Free Setup with Founder', className = '', size = 'lg' }) {
     const { openModal } = useBookingModal();
@@ -13,7 +13,7 @@ export default function BookDemoButton({ source = 'unknown', children = 'Book Fr
 
     return (
         <button
-            onClick={() => { openModal(); trackDemoClick(source); trackFBSchedule(); }}
+            onClick={() => { openModal(); trackDemoClick(source); }}
             className={`group inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-200 text-primary-700 hover:border-primary-300 hover:bg-primary-50 ${sizeClasses} rounded-full font-bold transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 focus-visible:outline-none ${className}`}
         >
             <Calendar className="w-5 h-5" />
