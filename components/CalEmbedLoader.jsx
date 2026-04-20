@@ -4,10 +4,32 @@ import { useEffect } from 'react';
 import { trackFBSchedule, trackAdsConversion } from '@/lib/analytics';
 
 const NAMESPACE = 'demo';
+const CAL_LINK = 'sibinarendran/demo';
+const CAL_HOST_PATTERN = /^https?:\/\/(app\.)?cal\.com\/sibinarendran/i;
 
 export default function CalEmbedLoader() {
     useEffect(() => {
         if (typeof window === 'undefined') return;
+
+        // Intercept any <a href="cal.com/sibinarendran/..."> click and route
+        // it through the Cal modal so tracking fires. Zero-touch for existing
+        // hyperlinks scattered across blog posts, industry pages, etc.
+        if (!window.__calLinkInterceptorRegistered) {
+            window.__calLinkInterceptorRegistered = true;
+            document.addEventListener('click', (e) => {
+                if (e.defaultPrevented) return;
+                if (e.button !== 0) return;
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                const anchor = e.target.closest && e.target.closest('a[href]');
+                if (!anchor) return;
+                const href = anchor.getAttribute('href') || '';
+                if (!CAL_HOST_PATTERN.test(href)) return;
+                if (typeof window.Cal?.ns?.[NAMESPACE] !== 'function') return;
+                e.preventDefault();
+                window.Cal.ns[NAMESPACE]('modal', { calLink: CAL_LINK });
+            }, true);
+        }
+
         if (window.__calListenerRegistered) return;
 
         let tries = 0;
