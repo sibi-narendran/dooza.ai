@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: "Is Accio Work free?",
-        answer: "Accio Work offers a freemium model with a 14-day free trial. However, pricing details beyond that aren't publicly transparent. Dooza starts at $49/month with all AI employees included and offers a $1 trial for 3 days."
+        answer: "Accio Work offers a freemium model with a 14-day free trial. However, pricing details beyond that aren't publicly transparent. Dooza starts at $49/month with all AI employees included, backed by a 7-day money-back guarantee."
     },
     {
         question: "Does Accio Work handle social media and email?",
@@ -582,7 +582,7 @@ export default function AccioWorkVsDoozaContent() {
                                             { text: "1,000+ integrations", good: true },
                                             { text: "Cloud-based — works 24/7", good: true },
                                             { text: "Free concierge onboarding", good: true },
-                                            { text: "$1 trial for 3 days", good: true }
+                                            { text: "7-day money-back guarantee", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -596,7 +596,7 @@ export default function AccioWorkVsDoozaContent() {
                             <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-slate-900 mb-2">The Transparency Factor</h4>
                                 <p className="text-slate-700 text-sm">
-                                    Dooza publishes its pricing clearly: $49/month Starter, $69/month Growth, $119/month Pro — with a 20% yearly discount and a 3-day money-back guarantee. Accio Work's pricing beyond the free trial isn't publicly available, making it hard to budget for. When you're running a business, <strong>predictable costs matter</strong>.
+                                    Dooza publishes its pricing clearly: $49/month Starter, $69/month Growth, $119/month Pro — with a 20% yearly discount and a 7-day money-back guarantee. Accio Work's pricing beyond the free trial isn't publicly available, making it hard to budget for. When you're running a business, <strong>predictable costs matter</strong>.
                                 </p>
                             </div>
                         </section>
@@ -778,7 +778,7 @@ export default function AccioWorkVsDoozaContent() {
                                     Try Dooza Free — Hire Your AI Team Today
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
-                                <p className="text-sm text-slate-500 mt-3">$1 trial for 3 days. No commitment. Free concierge onboarding included.</p>
+                                <p className="text-sm text-slate-500 mt-3">$49/month with a 7-day money-back guarantee. No commitment. Free concierge onboarding included.</p>
                             </div>
                         </section>
 

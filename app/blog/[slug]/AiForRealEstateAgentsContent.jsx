@@ -240,7 +240,7 @@ export default function AiForRealEstateAgentsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Start Free Trial
+                                    Get Started
                                 </a>
                             </div>
 

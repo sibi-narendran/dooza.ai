@@ -528,7 +528,7 @@ export default function RedditAgentDoozaWorkspaceGuideContent() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
-                                        Start Free Trial <ArrowRight className="w-4 h-4" />
+                                        Get Started <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a
                                         href={CAL_BOOKING_URL}

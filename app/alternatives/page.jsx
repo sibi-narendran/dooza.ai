@@ -26,7 +26,7 @@ export default function AlternativesPage() {
             slug: null,
             directLink: '/sintra-alternatives',
             tagline: '7 alternatives compared — pricing, features, pros & cons',
-            doozaAdvantage: 'No credits, personal onboarding, $1 trial'
+            doozaAdvantage: 'No credits, personal onboarding, 7-day money-back guarantee'
         },
         {
             name: 'Marblism',

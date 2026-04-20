@@ -37,7 +37,7 @@ const plans = {
             name: 'Starter',
             price: 49,
             desc: 'For businesses getting started',
-            cta: 'Try for $1',
+            cta: 'Get started',
             ctaStyle: 'primary',
             popular: false,
             features: starterFeatures,
@@ -66,7 +66,7 @@ const plans = {
             name: 'Starter',
             price: 39,
             desc: 'For businesses getting started',
-            cta: 'Try for $1',
+            cta: 'Get started',
             ctaStyle: 'primary',
             popular: false,
             features: starterFeatures,
@@ -123,16 +123,16 @@ export default function PricingSection() {
                         </div>
                     </div>
 
-                    {/* $1 trial badge */}
+                    {/* Money-back guarantee badge */}
                     <div className="flex justify-center mb-12">
                         <div className="inline-flex items-center gap-3 bg-slate-900 rounded-full px-7 py-3.5 shadow-lg shadow-slate-900/20">
                             <span className="flex items-center justify-center w-8 h-8 bg-white rounded-full">
                                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </span>
-                            <span className="text-base font-bold text-white">Try today for $1</span>
-                            <span className="text-sm text-slate-400">— 3-day full access</span>
+                            <span className="text-base font-bold text-white">Starts at $49/mo</span>
+                            <span className="text-sm text-slate-400">— 7-day money-back guarantee</span>
                         </div>
                     </div>
                 </ScrollReveal>

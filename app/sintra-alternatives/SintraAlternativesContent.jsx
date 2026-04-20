@@ -31,7 +31,7 @@ const alternatives = [
         tagline: 'Best overall Sintra alternative for SMBs',
         bestFor: 'Small businesses wanting hands-off AI employees with personal onboarding',
         price: 'From $39/mo (yearly) or $49/mo (monthly)',
-        trial: '$1 for 3-day full access',
+        trial: '7-day money-back guarantee',
         agents: '5 named AI employees — Maily (email), Somi (social media), Ranky (SEO), Stan (customer support), Linda (lead generation)',
         integrations: '1,000+ via Composio',
         creditSystem: false,
@@ -39,7 +39,7 @@ const alternatives = [
         highlight: true,
         pros: [
             '5 named AI employees included in every plan',
-            '$1 trial with full 3-day access — lowest risk entry',
+            '7-day money-back guarantee — full refund if it is not the right fit',
             'Free concierge onboarding — founder personally sets up your workspace',
             'No credit system — usage-based tiers instead of confusing credits',
             '1,000+ app integrations via Composio',
@@ -47,7 +47,7 @@ const alternatives = [
         cons: [
             'Fewer named agents than Sintra (5 vs 12+)',
             'Newer platform with a smaller user base',
-            'No free plan — $1 trial is the entry point',
+            'No free plan — paid from day one, backed by 7-day refund',
         ],
     },
     {
@@ -203,7 +203,7 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Named AI employees, $1 trial, personal founder onboarding, no credit system, 1,000+ integrations' },
+    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Named AI employees, 7-day money-back guarantee, personal founder onboarding, no credit system, 1,000+ integrations' },
     { need: 'Lowest price', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 6 named agents and no credit system' },
     { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations — but beware of the 2.0/5 Trustpilot rating and credit system' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG, multi-agent orchestration, $37M funded' },
@@ -256,7 +256,7 @@ export default function SintraAlternativesContent({ faqData }) {
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="sintra_alt_hero">Try Dooza for $1</SignupButton>
+                                <SignupButton source="sintra_alt_hero">Get started with Dooza</SignupButton>
                                 <BookDemoButton source="sintra_alt_hero" />
                             </div>
                         </div>
@@ -442,7 +442,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                     {/* CTA for Dooza only */}
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <SignupButton source="sintra_alt_dooza_card">Try Dooza for $1</SignupButton>
+                                            <SignupButton source="sintra_alt_dooza_card">Get started with Dooza</SignupButton>
                                             <BookDemoButton source="sintra_alt_dooza_card" />
                                         </div>
                                     )}
@@ -518,10 +518,10 @@ export default function SintraAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Sintra Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start with a $1 trial — full access for 3 days. Or book a free setup call with the founder. No sales pitch, just a walkthrough of what Dooza handles for your business.
+                                Start today for $49/mo — full access backed by a 7-day money-back guarantee. Or book a free setup call with the founder. No sales pitch, just a walkthrough of what Dooza handles for your business.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="sintra_alt_cta">Try Dooza for $1</SignupButton>
+                                <SignupButton source="sintra_alt_cta">Get started with Dooza</SignupButton>
                                 <BookDemoButton source="sintra_alt_cta" />
                             </div>
                         </ScrollReveal>

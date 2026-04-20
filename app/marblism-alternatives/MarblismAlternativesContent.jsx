@@ -18,7 +18,7 @@ import { trackFBViewContent } from '@/lib/analytics';
 const marblismPainPoints = [
     { icon: DollarSign, title: 'Per-Seat Pricing Adds Up', desc: 'Marblism charges $44/mo for one user plus $29 for every additional seat. A 5-person team pays $160/mo — more than 3× the base price.' },
     { icon: Puzzle, title: 'Limited Integrations', desc: 'Only Gmail, Instagram, Facebook, WordPress, and Wix. No Slack, Shopify, Notion, HubSpot, or TikTok. Competing platforms offer 1,000-5,000+ integrations.' },
-    { icon: Shield, title: 'No Free Trial', desc: 'No free plan and no free trial. You pay $44 upfront and rely on a 7-day money-back guarantee. Most competitors offer free trials or $1 entry points.' },
+    { icon: Shield, title: 'No Free Trial', desc: 'No free plan and no free trial. You pay $44 upfront and rely on a 7-day money-back guarantee. Most competitors offer free trials or their own refund windows.' },
     { icon: Users, title: 'Self-Serve Onboarding Only', desc: 'No human guidance during setup. You get a login and are left to configure 6 AI employees on your own. No setup call, no walkthrough.' },
     { icon: Bot, title: 'Agents Ignore Instructions', desc: 'Multiple independent reviews report agents "having a mind of their own" — rewriting requests, forgetting context, and altering task instructions.' },
     { icon: Clock, title: 'Daily Check-In Model', desc: 'Agents check in once per day at a set time for approval. You cannot adjust priorities mid-day or assign urgent tasks between check-ins.' },
@@ -31,7 +31,7 @@ const alternatives = [
         tagline: 'Best overall — flat pricing, personal onboarding, 1,000+ integrations',
         bestFor: 'SMBs and teams wanting AI employees without per-seat fees or DIY setup',
         price: 'From $39/mo (yearly) or $49/mo (monthly)',
-        trial: '$1 for 3-day full access',
+        trial: '7-day money-back guarantee',
         agents: '5 named AI employees — Maily (email), Somi (social media), Ranky (SEO), Stan (customer support), Linda (lead generation)',
         integrations: '1,000+ via Composio',
         creditSystem: false,
@@ -39,7 +39,7 @@ const alternatives = [
         highlight: true,
         pros: [
             'Flat pricing — $49/mo for the whole team, no per-seat fees',
-            '$1 trial with full 3-day access — lowest risk entry',
+            '7-day money-back guarantee — full refund if it is not the right fit',
             'Free concierge onboarding — founder personally sets up your workspace',
             '1,000+ app integrations via Composio (vs Marblism\'s ~5 platforms)',
             'Purpose-built for AI employees from day one (not a pivot)',
@@ -47,7 +47,7 @@ const alternatives = [
         cons: [
             'Fewer named agents than Sintra (5 vs 12+)',
             'Newer platform with a smaller user base',
-            'No free plan — $1 trial is the entry point',
+            'No free plan — paid from day one, backed by 7-day refund',
         ],
     },
     {
@@ -203,7 +203,7 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Flat pricing (no per-seat fees), $1 trial, personal founder onboarding, 1,000+ integrations' },
+    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Flat pricing (no per-seat fees), 7-day money-back guarantee, personal founder onboarding, 1,000+ integrations' },
     { need: 'Most AI agents', pick: 'Sintra AI', reason: '12+ named helpers — the widest roster. But capped at 250 credits/month' },
     { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations — but 2.0/5 Trustpilot and requires technical setup' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG. Multi-agent orchestration. But not SMB-friendly' },
@@ -256,7 +256,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="marblism_alt_hero">Try Dooza for $1</SignupButton>
+                                <SignupButton source="marblism_alt_hero">Get started with Dooza</SignupButton>
                                 <BookDemoButton source="marblism_alt_hero" />
                             </div>
                         </div>
@@ -442,7 +442,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                     {/* CTA for Dooza only */}
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <SignupButton source="marblism_alt_dooza_card">Try Dooza for $1</SignupButton>
+                                            <SignupButton source="marblism_alt_dooza_card">Get started with Dooza</SignupButton>
                                             <BookDemoButton source="marblism_alt_dooza_card" />
                                         </div>
                                     )}
@@ -569,10 +569,10 @@ export default function MarblismAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Marblism Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start with a $1 trial — full access for 7 days. No per-seat fees. Or book a free setup call with the founder.
+                                Start today for $49/mo — full access backed by a 7-day money-back guarantee. No per-seat fees. Or book a free setup call with the founder.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="marblism_alt_cta">Try Dooza for $1</SignupButton>
+                                <SignupButton source="marblism_alt_cta">Get started with Dooza</SignupButton>
                                 <BookDemoButton source="marblism_alt_cta" />
                             </div>
                         </ScrollReveal>

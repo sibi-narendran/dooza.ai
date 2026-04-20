@@ -48,7 +48,7 @@ const faqData = [
     },
     {
         question: 'Is Dooza better than Marblism?',
-        answer: 'Dooza and Marblism both offer named AI employees, but they differ in key areas. Dooza charges a flat $49/mo for the whole team (no per-seat fees), offers 1,000+ integrations via Composio, a $1 trial, and free concierge onboarding with the founder. Marblism starts at $24/mo yearly but charges $14-29 per additional seat, has limited integrations (Gmail, Instagram, Facebook, WordPress, Wix), no free trial, and self-serve onboarding only.',
+        answer: 'Dooza and Marblism both offer named AI employees, but they differ in key areas. Dooza charges a flat $49/mo for the whole team (no per-seat fees), offers 1,000+ integrations via Composio, a 7-day money-back guarantee, and free concierge onboarding with the founder. Marblism starts at $24/mo yearly but charges $14-29 per additional seat, has limited integrations (Gmail, Instagram, Facebook, WordPress, Wix), no free trial, and self-serve onboarding only.',
     },
     {
         question: 'Why are people switching from Marblism?',
@@ -64,7 +64,7 @@ const faqData = [
     },
     {
         question: 'Is there a free alternative to Marblism?',
-        answer: 'Relevance AI offers a free tier with 200 actions/month, but it is designed for enterprise users and requires technical setup. Cubeo AI has a free plan with 100 credits. For the lowest-risk paid option, Dooza offers a $1 trial with full access for 7 days — significantly less risk than Marblism\'s $44 upfront payment with a money-back guarantee.',
+        answer: 'Relevance AI offers a free tier with 200 actions/month, but it is designed for enterprise users and requires technical setup. Cubeo AI has a free plan with 100 credits. For a lower-commitment paid option, Dooza starts at $49/mo with a 7-day money-back guarantee — full access from day one, with a refund available if it is not the right fit.',
     },
     {
         question: 'Can Marblism agents work fully autonomously?',
@@ -76,7 +76,7 @@ const faqData = [
     },
     {
         question: 'Does Marblism have a free trial?',
-        answer: 'No. Marblism does not offer a free trial or a free plan. They provide a 7-day money-back guarantee, meaning you pay upfront ($44/mo monthly) and can request a refund within 7 days. Alternatives like Dooza ($1 for 3 days), Motion (7-day free trial), and Lindy AI (7-day free trial) offer lower-risk ways to test.',
+        answer: 'No. Marblism does not offer a free trial or a free plan. They provide a 7-day money-back guarantee, meaning you pay upfront ($44/mo monthly) and can request a refund within 7 days. Alternatives like Dooza ($49/mo with a 7-day money-back guarantee), Motion (7-day free trial), and Lindy AI (7-day free trial) offer different ways to evaluate the platform.',
     },
     {
         question: 'Which AI employee platform has the best onboarding?',
