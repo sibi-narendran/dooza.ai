@@ -57,6 +57,7 @@ import AccioWorkVsDoozaContent from './AccioWorkVsDoozaContent';
 import TaskletVsDoozaContent from './TaskletVsDoozaContent';
 import OutrankingIoVsDoozaContent from './OutrankingIoVsDoozaContent';
 import LindyVsDoozaContent from './LindyVsDoozaContent';
+import AiAutomationAgencyContent from './AiAutomationAgencyContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -111,6 +112,7 @@ const BLOG_COMPONENTS = {
     'tasklet-vs-dooza': TaskletVsDoozaContent,
     'outranking-io-vs-dooza': OutrankingIoVsDoozaContent,
     'lindy-vs-dooza': LindyVsDoozaContent,
+    'ai-automation-agency': AiAutomationAgencyContent,
 };
 
 // ISR: revalidate dynamic posts every 60 seconds
