@@ -140,7 +140,7 @@ export default function AiReceptionistForSmallBusinessContent() {
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
-                                src="/blog/ai-receptionist-for-small-business.png"
+                                src="/blog/8b212ff4-e6bf-4f4f-be40-b4ec50c79687.jpg"
                                 alt="AI receptionist for small business \u2014 24/7 phone answering, lead qualification, and appointment booking"
                                 priority={true}
                             />
