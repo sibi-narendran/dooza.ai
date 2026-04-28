@@ -142,7 +142,7 @@ export default function HowToAutomateBusinessWithAiContent() {
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
-                                src="/blog/how-to-automate-your-business-with-ai.png"
+                                src="/blog/b0ac8033-8e27-448d-9b41-3de48eb699fe.jpg"
                                 alt="How to automate your entire business with AI in 2026 — step-by-step guide"
                                 priority={true}
                             />
