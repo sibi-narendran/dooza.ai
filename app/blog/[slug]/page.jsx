@@ -58,6 +58,7 @@ import TaskletVsDoozaContent from './TaskletVsDoozaContent';
 import OutrankingIoVsDoozaContent from './OutrankingIoVsDoozaContent';
 import LindyVsDoozaContent from './LindyVsDoozaContent';
 import AiAutomationAgencyContent from './AiAutomationAgencyContent';
+import HowMuchDoesAiEmployeeCostContent from './HowMuchDoesAiEmployeeCostContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -113,6 +114,7 @@ const BLOG_COMPONENTS = {
     'outranking-io-vs-dooza': OutrankingIoVsDoozaContent,
     'lindy-vs-dooza': LindyVsDoozaContent,
     'ai-automation-agency': AiAutomationAgencyContent,
+    'how-much-does-an-ai-employee-cost': HowMuchDoesAiEmployeeCostContent,
 };
 
 // ISR: revalidate dynamic posts every 60 seconds
