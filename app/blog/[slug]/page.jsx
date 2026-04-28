@@ -61,6 +61,7 @@ import AiAutomationAgencyContent from './AiAutomationAgencyContent';
 import HowMuchDoesAiEmployeeCostContent from './HowMuchDoesAiEmployeeCostContent';
 import ReplaceVaWithAiContent from './ReplaceVaWithAiContent';
 import HowToAutomateBusinessWithAiContent from './HowToAutomateBusinessWithAiContent';
+import AiReceptionistForSmallBusinessContent from './AiReceptionistForSmallBusinessContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -119,6 +120,7 @@ const BLOG_COMPONENTS = {
     'how-much-does-an-ai-employee-cost': HowMuchDoesAiEmployeeCostContent,
     'replace-va-with-ai': ReplaceVaWithAiContent,
     'how-to-automate-your-business-with-ai': HowToAutomateBusinessWithAiContent,
+    'ai-receptionist-for-small-business': AiReceptionistForSmallBusinessContent,
 };
 
 // ISR: revalidate dynamic posts every 60 seconds
