@@ -1,7 +1,7 @@
 import { Check } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const categories = ['Emails', 'Social Content', 'SEO', 'Lead Generation', 'Sales', 'Support'];
+const categories = ['Emails', 'Social Content', 'SEO', 'Lead Generation', 'Sales', 'Phone Calls', 'Support'];
 
 export default function AutopilotSection() {
     return (

@@ -280,7 +280,7 @@ export default function AccioWorkVsDoozaContent() {
                                 </p>
                                 <ul>
                                     <li><strong>Accio (accio.com)</strong> — An AI-powered B2B sourcing engine integrated with Alibaba.com, 1688.com, AliExpress, and Europages. Trusted by 10M+ monthly active users for product discovery and supplier matching.</li>
-                                    <li><strong>Accio Work (work.accio.com)</strong> — A local-first desktop AI agent platform (Electron app for macOS and Windows) that goes beyond sourcing. It can read local files, run terminal commands, control your browser, and call external APIs.</li>
+                                    <li><strong>Accio Work (work.accio.com)</strong> — A local-first desktop AI agent platform (Electron app for macOS only) that goes beyond sourcing. It can read local files, run terminal commands, control your browser, and call external APIs.</li>
                                 </ul>
                                 <p>
                                     Think of it as <strong>Alibaba's supply chain wrapped in an AI agent shell</strong>. You describe what you want to sell, and Accio's agents handle market analysis, product sourcing, store design, listing creation, and logistics.
@@ -289,7 +289,7 @@ export default function AccioWorkVsDoozaContent() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                                 {[
-                                    { icon: HardDrive, title: "Desktop Agent", desc: "Runs locally on Mac or Windows" },
+                                    { icon: HardDrive, title: "Desktop Agent", desc: "Runs locally on Mac only" },
                                     { icon: ShoppingCart, title: "E-Commerce Focus", desc: "Sourcing, store setup, inventory" },
                                     { icon: Globe, title: "Browser Automation", desc: "Web scraping, form filling, multi-step flows" },
                                     { icon: Users, title: "Multi-Agent Teams", desc: "Delegation and group chat between agents" }
@@ -491,7 +491,7 @@ export default function AccioWorkVsDoozaContent() {
                                     <tbody>
                                         {[
                                             { feature: "Type", accio: "Desktop AI agent (e-commerce)", dooza: "AI employee platform (all industries)" },
-                                            { feature: "Runs On", accio: "Your computer (Electron app)", dooza: "Cloud — works 24/7" },
+                                            { feature: "Runs On", accio: "Mac desktop only (Electron app)", dooza: "Cloud — works on any device, anywhere" },
                                             { feature: "Works When PC Off?", accio: "No — stops completely", dooza: "Yes — always running" },
                                             { feature: "Primary Focus", accio: "Product sourcing & global trade", dooza: "Full business operations" },
                                             { feature: "Phone Calls", accio: "Not supported", dooza: "AI receptionist (Rachel)" },
@@ -504,7 +504,7 @@ export default function AccioWorkVsDoozaContent() {
                                             { feature: "Product Listing", accio: "Automated via Alibaba", dooza: "Via integrations (Shopify, etc.)" },
                                             { feature: "Integrations", accio: "Telegram, Discord, DingTalk, Lark", dooza: "1,000+ via Zapier" },
                                             { feature: "Status", accio: "Beta (v0.6.2)", dooza: "Production-ready" },
-                                            { feature: "Setup", accio: "Desktop install + self-service", dooza: "30 min (free onboarding call)" },
+                                            { feature: "Setup & Onboarding", accio: "Desktop install — no onboarding offered", dooza: "30 min free onboarding call with founder" },
                                             { feature: "Starting Price", accio: "Freemium (unclear pricing)", dooza: "$49/mo (all employees included)" },
                                             { feature: "Best For", accio: "E-commerce & dropshipping", dooza: "Any business needing AI operations" }
                                         ].map((row, idx) => (

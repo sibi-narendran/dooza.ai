@@ -22,16 +22,16 @@ const nextConfig = {
     // Content Security Policy - allows necessary external resources
     const cspHeader = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://analytics.ahrefs.com https://www.youtube.com https://s.ytimg.com https://platform.twitter.com https://cdn.syndication.twimg.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://analytics.ahrefs.com https://www.youtube.com https://s.ytimg.com https://platform.twitter.com https://cdn.syndication.twimg.com https://app.cal.com https://cal.com",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https: blob:",
       "font-src 'self' data:",
-      "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://cal.com https://platform.twitter.com https://syndication.twitter.com",
-      "connect-src 'self' https://www.google-analytics.com https://analytics.ahrefs.com https://www.facebook.com https://connect.facebook.net https://*.supabase.co https://syndication.twitter.com https://accounts.dooza.ai",
+      "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://cal.com https://app.cal.com https://platform.twitter.com https://syndication.twitter.com https://www.facebook.com",
+      "connect-src 'self' https://www.google-analytics.com https://analytics.ahrefs.com https://www.facebook.com https://connect.facebook.net https://*.supabase.co https://syndication.twitter.com https://accounts.dooza.ai https://app.cal.com https://cal.com",
       "media-src 'self'",
       "object-src 'none'",
       "base-uri 'self'",
-      "form-action 'self'",
+      "form-action 'self' https://www.facebook.com",
       "frame-ancestors 'none'",
       "upgrade-insecure-requests",
     ].join('; ');

@@ -1,5 +1,5 @@
-import SignupButton from '@/components/buttons/SignupButton';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
+import SignupTextLink from '@/components/buttons/SignupTextLink';
 
 export default function HeroSection() {
     return (
@@ -29,9 +29,11 @@ export default function HeroSection() {
                     Choose from our library of AI employees, or build your own custom workforce
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-                    <SignupButton source="hero" />
-                    <BookDemoButton source="hero" />
+                <div className="flex flex-col items-start gap-3 md:gap-4">
+                    <BookDemoButton source="hero" variant="primary" size="xl">
+                        Book 15 Min with Founder — Free
+                    </BookDemoButton>
+                    <SignupTextLink source="hero" />
                 </div>
             </div>
         </section>

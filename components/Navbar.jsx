@@ -46,7 +46,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
     ];
 
     const agents = [
-        { name: 'Ranky — AI SEO', href: '/agents/ranky' },
+        { name: 'Ranky — AI Visibility', href: '/agents/ranky' },
     ];
 
     return (

@@ -93,7 +93,7 @@ export default function HowItWorksSection() {
 
                 <ScrollReveal delay={0.4}>
                     <div className="text-center mt-14">
-                        <BookDemoButton source="how_it_works" className="text-lg px-8 py-4">Talk to Founder</BookDemoButton>
+                        <BookDemoButton source="how_it_works" className="text-lg px-8 py-4">Book Free Setup with Founder</BookDemoButton>
                         <p className="text-sm font-medium text-slate-600 mt-3">Free 15-min call · No commitment</p>
                     </div>
                 </ScrollReveal>

@@ -45,7 +45,8 @@ const relatedPostMappings = {
     'better-than-sintra-ai-agents': ['better-than-sintra-ai', 'ai-agents-vs-agentic-ai', 'dooza-it-and-resell'],
     'reddit-agent-dooza-workspace-guide': ['ai-employees-transforming-small-business', 'ai-agents-vs-agentic-ai', 'automate-business-processes'],
     'claude-cowork-vs-dooza': ['ai-employees-vs-virtual-assistants', 'automate-business-processes', 'ai-employees-transforming-small-business'],
-    'perplexity-computer-vs-dooza': ['claude-cowork-vs-dooza', 'openclaw-vs-dooza', 'ai-employees-transforming-small-business']
+    'perplexity-computer-vs-dooza': ['claude-cowork-vs-dooza', 'openclaw-vs-dooza', 'ai-employees-transforming-small-business'],
+    'hatrio-ai-canada-partnership': ['content-marketing-tools', 'ai-copywriting-tools', 'outrank-vs-dooza-ranky']
 };
 
 const InternalLinks = ({ currentSlug, position = 'sidebar' }) => {

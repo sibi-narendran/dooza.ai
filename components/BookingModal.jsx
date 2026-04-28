@@ -3,13 +3,11 @@
 import { useEffect, useRef } from 'react';
 import { CAL_BOOKING_URL } from '@/lib/links';
 
-// Backward-compat shim. The in-page iframe modal was removed because it
-// froze mobile browsers (Cal.com pulls in megabytes of JS). When a parent
-// component flips `isOpen` to true, we open Cal.com in a new tab and
-// immediately call onClose so the parent's state stays consistent.
-//
-// Many pages still import and render <BookingModal isOpen={...} onClose={...} />,
-// so this file intentionally keeps the same signature.
+const CAL_LINK = 'sibinarendran/demo';
+const NAMESPACE = 'demo';
+const WAIT_TIMEOUT_MS = 2000;
+const POLL_INTERVAL_MS = 50;
+
 const BookingModal = ({ isOpen, onClose }) => {
     const openedRef = useRef(false);
 
@@ -20,10 +18,35 @@ const BookingModal = ({ isOpen, onClose }) => {
         }
         if (openedRef.current) return;
         openedRef.current = true;
-        if (typeof window !== 'undefined') {
-            window.open(CAL_BOOKING_URL, '_blank', 'noopener,noreferrer');
+
+        if (typeof window === 'undefined') {
+            onClose?.();
+            return;
         }
-        onClose?.();
+
+        const openModal = () => window.Cal.ns[NAMESPACE]('modal', { calLink: CAL_LINK });
+        const openFallback = () => window.open(CAL_BOOKING_URL, '_blank', 'noopener,noreferrer');
+
+        if (typeof window.Cal?.ns?.[NAMESPACE] === 'function') {
+            openModal();
+            onClose?.();
+            return;
+        }
+
+        const start = Date.now();
+        const interval = setInterval(() => {
+            if (typeof window.Cal?.ns?.[NAMESPACE] === 'function') {
+                clearInterval(interval);
+                openModal();
+                onClose?.();
+            } else if (Date.now() - start > WAIT_TIMEOUT_MS) {
+                clearInterval(interval);
+                openFallback();
+                onClose?.();
+            }
+        }, POLL_INTERVAL_MS);
+
+        return () => clearInterval(interval);
     }, [isOpen, onClose]);
 
     return null;
