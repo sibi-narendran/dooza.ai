@@ -55,6 +55,7 @@ import ClaudeCoworkVsDoozaContent from './ClaudeCoworkVsDoozaContent';
 import PerplexityComputerVsDoozaContent from './PerplexityComputerVsDoozaContent';
 import AccioWorkVsDoozaContent from './AccioWorkVsDoozaContent';
 import HatrioAiCanadaPartnershipContent from './HatrioAiCanadaPartnershipContent';
+import ReplaceVaWithAiContent from './ReplaceVaWithAiContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -107,6 +108,7 @@ const BLOG_COMPONENTS = {
     'perplexity-computer-vs-dooza': PerplexityComputerVsDoozaContent,
     'accio-work-vs-dooza': AccioWorkVsDoozaContent,
     'hatrio-ai-canada-partnership': HatrioAiCanadaPartnershipContent,
+    'replace-va-with-ai': ReplaceVaWithAiContent,
 };
 
 // ISR: revalidate dynamic posts every 60 seconds

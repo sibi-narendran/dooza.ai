@@ -10,6 +10,7 @@ const resourceHints = [
     { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
     { rel: 'preconnect', href: 'https://connect.facebook.net' },
     { rel: 'preconnect', href: 'https://analytics.ahrefs.com' },
+    { rel: 'preconnect', href: 'https://www.clarity.ms' },
     { rel: 'dns-prefetch', href: 'https://www.facebook.com' },
     { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
 ];
@@ -97,6 +98,7 @@ export const metadata = {
 const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 const AHREFS_KEY = process.env.NEXT_PUBLIC_AHREFS_KEY;
+const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
 export default function RootLayout({ children }) {
   return (
@@ -202,6 +204,19 @@ export default function RootLayout({ children }) {
             data-key={AHREFS_KEY}
             strategy="afterInteractive"
           />
+        )}
+
+        {/* Microsoft Clarity */}
+        {CLARITY_PROJECT_ID && (
+          <Script id="microsoft-clarity" strategy="afterInteractive">
+            {`
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "${CLARITY_PROJECT_ID}");
+            `}
+          </Script>
         )}
       </body>
     </html>
