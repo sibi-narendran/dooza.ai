@@ -39,28 +39,33 @@ export default function CalEmbedLoader() {
             if (typeof window.Cal?.ns?.[NAMESPACE] === 'function') {
                 clearInterval(interval);
                 window.__calListenerRegistered = true;
+
+                const handleBookingSuccess = (e) => {
+                    const data = e?.detail?.data || e?.data || {};
+                    const booking = data.booking || data || {};
+                    const attendee = Array.isArray(booking.attendees) && booking.attendees.length > 0
+                        ? booking.attendees[0]
+                        : {};
+                    const nameParts = String(attendee.name || '').trim().split(/\s+/);
+                    const firstName = nameParts[0] || undefined;
+                    const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : undefined;
+
+                    trackFBSchedule(booking.uid || data.uid, {
+                        email: attendee.email,
+                        phone: attendee.phoneNumber,
+                        firstName,
+                        lastName,
+                    });
+                    trackAdsConversion();
+                };
+
+                window.Cal.ns[NAMESPACE]('on', {
+                    action: 'bookingSuccessfulV2',
+                    callback: handleBookingSuccess,
+                });
                 window.Cal.ns[NAMESPACE]('on', {
                     action: 'bookingSuccessful',
-                    callback: (e) => {
-                        const booking =
-                            e?.detail?.data?.booking ||
-                            e?.data?.booking ||
-                            {};
-                        const attendee = Array.isArray(booking.attendees) && booking.attendees.length > 0
-                            ? booking.attendees[0]
-                            : {};
-                        const nameParts = String(attendee.name || '').trim().split(/\s+/);
-                        const firstName = nameParts[0] || undefined;
-                        const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : undefined;
-
-                        trackFBSchedule(booking.uid, {
-                            email: attendee.email,
-                            phone: attendee.phoneNumber,
-                            firstName,
-                            lastName,
-                        });
-                        trackAdsConversion();
-                    },
+                    callback: handleBookingSuccess,
                 });
             } else if (tries >= maxTries) {
                 clearInterval(interval);

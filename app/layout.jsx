@@ -5,6 +5,8 @@ import CalEmbedLoader from '../components/CalEmbedLoader';
 
 // Resource hints for external services - improves Core Web Vitals
 const resourceHints = [
+    { rel: 'preconnect', href: 'https://app.cal.com' },
+    { rel: 'preconnect', href: 'https://cal.com' },
     { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
     { rel: 'preconnect', href: 'https://connect.facebook.net' },
     { rel: 'preconnect', href: 'https://analytics.ahrefs.com' },
