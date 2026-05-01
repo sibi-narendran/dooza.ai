@@ -1,23 +1,4 @@
 import BookPageClient from './BookPageClient';
-import { CAL_BOOKING_URL } from '@/lib/links';
-
-const bookingLoaderScript = `
-  (function () {
-    var frame = document.getElementById('dooza-booking-frame');
-    var loader = document.getElementById('dooza-booking-loader');
-    if (!frame || !loader) return;
-
-    function hideLoader() {
-      loader.classList.add('dooza-booking-loader-hidden');
-      window.setTimeout(function () {
-        loader.setAttribute('hidden', '');
-      }, 350);
-    }
-
-    frame.addEventListener('load', hideLoader, { once: true });
-    window.setTimeout(hideLoader, 7000);
-  })();
-`;
 
 const bookingLoaderStyles = `
   .dooza-booking-shell {
@@ -25,9 +6,7 @@ const bookingLoaderStyles = `
   }
 
   .dooza-booking-loader {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
+    min-height: calc(100vh - 72px);
     display: grid;
     place-items: center;
     padding: 24px;
@@ -36,11 +15,6 @@ const bookingLoaderStyles = `
       radial-gradient(circle at 82% 18%, rgba(59, 130, 246, 0.12), transparent 28%),
       linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     transition: opacity 350ms ease, visibility 350ms ease;
-  }
-
-  .dooza-booking-loader-hidden {
-    opacity: 0;
-    visibility: hidden;
   }
 
   .dooza-loader-card {
@@ -201,7 +175,7 @@ export default function BookPage() {
                 </div>
 
                 <div
-                    className="dooza-booking-shell min-h-[760px] flex-1 overflow-hidden rounded-md border border-slate-200 bg-white"
+                    className="dooza-booking-shell flex-1 overflow-hidden rounded-md border border-slate-200 bg-white"
                 >
                     <div id="dooza-booking-loader" className="dooza-booking-loader" aria-live="polite">
                         <div className="dooza-loader-card">
@@ -210,7 +184,7 @@ export default function BookPage() {
                             </div>
                             <p className="dooza-loader-title">Getting Dooza ready</p>
                             <p className="dooza-loader-copy">
-                                Your setup call is loading. We are lining up the workspace, automations, and next steps.
+                                Your setup call is opening. We are lining up the workspace, automations, and next steps.
                             </p>
                             <div className="dooza-loader-steps" aria-hidden="true">
                                 <div className="dooza-loader-step">
@@ -228,19 +202,9 @@ export default function BookPage() {
                             </div>
                         </div>
                     </div>
-                    <iframe
-                        id="dooza-booking-frame"
-                        title="Book a meeting with Dooza"
-                        src={CAL_BOOKING_URL}
-                        className="h-full min-h-[760px] w-full border-0"
-                        loading="eager"
-                        fetchPriority="high"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                    />
                 </div>
             </section>
             <style dangerouslySetInnerHTML={{ __html: bookingLoaderStyles }} />
-            <script dangerouslySetInnerHTML={{ __html: bookingLoaderScript }} />
             <BookPageClient />
         </main>
     );
