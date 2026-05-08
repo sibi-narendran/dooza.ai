@@ -63,6 +63,7 @@ import EmailAutomationDoozaContent from './EmailAutomationDoozaContent';
 import InstantlyAlternativeContent from './InstantlyAlternativeContent';
 import SmartleadAlternativeAiNativeApplicationContent from './SmartleadAlternativeAiNativeApplicationContent';
 import MakeugcAlternativeContent from './MakeugcAlternativeContent';
+import RevidAlternativeContent from './RevidAlternativeContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -123,6 +124,7 @@ const BLOG_COMPONENTS = {
     'instantly-ai-alternative': InstantlyAlternativeContent,
     'smartlead-alternative-ai-native-application': SmartleadAlternativeAiNativeApplicationContent,
     'makeugc-alternative': MakeugcAlternativeContent,
+    'revid-ai-alternative': RevidAlternativeContent,
 };
 
 // ISR: revalidate dynamic posts every 60 seconds
