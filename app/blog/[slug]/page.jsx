@@ -56,7 +56,14 @@ import PerplexityComputerVsDoozaContent from './PerplexityComputerVsDoozaContent
 import AccioWorkVsDoozaContent from './AccioWorkVsDoozaContent';
 import HatrioAiCanadaPartnershipContent from './HatrioAiCanadaPartnershipContent';
 import ReplaceVaWithAiContent from './ReplaceVaWithAiContent';
+import DoozaVsLindyAiContent from './DoozaVsLindyAiContent';
 import BestAiAgenticAiToolForAutomationUsaContent from './BestAiAgenticAiToolForAutomationUsaContent';
+import OutrankSoAlternativeContent from './OutrankSoAlternativeContent';
+import EmailAutomationDoozaContent from './EmailAutomationDoozaContent';
+import InstantlyAlternativeContent from './InstantlyAlternativeContent';
+import SmartleadAlternativeAiNativeApplicationContent from './SmartleadAlternativeAiNativeApplicationContent';
+import MakeugcAlternativeContent from './MakeugcAlternativeContent';
+import RevidAlternativeContent from './RevidAlternativeContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -110,7 +117,14 @@ const BLOG_COMPONENTS = {
     'accio-work-vs-dooza': AccioWorkVsDoozaContent,
     'hatrio-ai-canada-partnership': HatrioAiCanadaPartnershipContent,
     'replace-va-with-ai': ReplaceVaWithAiContent,
+    'dooza-vs-lindy-ai': DoozaVsLindyAiContent,
     'best-ai-agentic-ai-tool-for-automation-in-usa': BestAiAgenticAiToolForAutomationUsaContent,
+    'outrank-so-alternative': OutrankSoAlternativeContent,
+    'email-automation-dooza': EmailAutomationDoozaContent,
+    'instantly-ai-alternative': InstantlyAlternativeContent,
+    'smartlead-alternative-ai-native-application': SmartleadAlternativeAiNativeApplicationContent,
+    'makeugc-alternative': MakeugcAlternativeContent,
+    'revid-ai-alternative': RevidAlternativeContent,
 };
 
 // ISR: revalidate dynamic posts every 60 seconds
