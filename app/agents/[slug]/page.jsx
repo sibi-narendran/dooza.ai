@@ -5,10 +5,15 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '../../../lib/indust
 
 // Import agent content components
 import RankyContent from './RankyContent';
+import GenericAgentContent from './GenericAgentContent';
 
 // Map slugs to components
 const AGENT_COMPONENTS = {
     'ranky': RankyContent,
+    'outbound-pro': GenericAgentContent,
+    'lead-gen-pro': GenericAgentContent,
+    'ugc-reel-creator': GenericAgentContent,
+    'voice-pro': GenericAgentContent,
 };
 
 export async function generateStaticParams() {

@@ -1,10 +1,11 @@
-import { TrendingUp, MessageSquare, Mail, Search, ArrowRight } from 'lucide-react';
+import { TrendingUp, MessageSquare, Search, ArrowRight, Send, Video, PhoneCall } from 'lucide-react';
+import Link from 'next/link';
 import { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import ScrollReveal from '@/components/ScrollReveal';
 import { getProductSignupUrl } from '@/lib/links';
 import { solutionCards } from '@/lib/homeData';
 
-const iconMap = { TrendingUp, MessageSquare, Mail, Search };
+const iconMap = { TrendingUp, MessageSquare, Search, Send, Video, PhoneCall };
 
 export default function SolutionsSection() {
     return (
@@ -18,12 +19,17 @@ export default function SolutionsSection() {
                     </div>
                 </ScrollReveal>
 
-                <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
+                <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.1}>
                     {solutionCards.map((item, idx) => {
                         const Icon = iconMap[item.iconName];
+                        const href = item.href || getProductSignupUrl('workforce');
+                        const isInternal = href.startsWith('/');
+                        const CardLink = isInternal ? Link : 'a';
                         return (
                             <StaggerItem key={idx}>
-                                <div
+                                <CardLink
+                                    href={href}
+                                    {...(!isInternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                                     id={item.id}
                                     className={`card-interactive group bg-white p-6 md:p-8 rounded-3xl border border-slate-100 ${item.borderHover} card-shadow hover:card-shadow-hover transition-all`}
                                 >
@@ -32,15 +38,10 @@ export default function SolutionsSection() {
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-900 mb-3 font-serif">{item.title}</h3>
                                     <p className="text-slate-600 leading-relaxed mb-6">{item.desc}</p>
-                                    <a
-                                        href={getProductSignupUrl('workforce')}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
-                                    >
-                                        Get started <ArrowRight className="w-4 h-4" />
-                                    </a>
-                                </div>
+                                    <span className="inline-flex items-center gap-1 text-primary-600 font-semibold group-hover:text-primary-700 transition-colors">
+                                        Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    </span>
+                                </CardLink>
                             </StaggerItem>
                         );
                     })}

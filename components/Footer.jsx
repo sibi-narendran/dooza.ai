@@ -47,23 +47,28 @@ const Footer = ({ variant = 'light' }) => {
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Solutions · AI Employees</h4>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/#ai-lead-generation" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    AI for Lead Generation
+                                <Link href="/agents/outbound-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Outbound Pro
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/#ai-social-media-management" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    AI for Social Media Management
+                                <Link href="/agents/lead-gen-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Lead Gen Pro
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/#ai-inbox-management" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    AI for Inbox Management
+                                <Link href="/agents/ugc-reel-creator" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    UGC Reel Creator
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/agents/voice-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Voice Pro
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/agents/ranky" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    AI for Visibility &amp; Growth
+                                    Ranky
                                 </Link>
                             </li>
                         </ul>

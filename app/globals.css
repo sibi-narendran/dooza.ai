@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section labels */
 .section-label {
-  @apply uppercase tracking-[3px] text-primary-600 text-sm font-bold font-sans;
+  @apply uppercase tracking-[3px] text-primary-700 text-sm font-bold font-sans;
 }
 
 /* Minimum 44x44 tap target — Apple HIG / WCAG 2.5.5. Use on icon-only

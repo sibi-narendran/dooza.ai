@@ -47,6 +47,10 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
 
     const agents = [
         { name: 'Ranky — AI Visibility', href: '/agents/ranky' },
+        { name: 'Outbound Pro — Email Automation', href: '/agents/outbound-pro' },
+        { name: 'Lead Gen Pro — Lead Generation', href: '/agents/lead-gen-pro' },
+        { name: 'UGC Reel Creator — Video', href: '/agents/ugc-reel-creator' },
+        { name: 'Voice Pro — Calls', href: '/agents/voice-pro' },
     ];
 
     return (
@@ -154,7 +158,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                                     <div
                                         id="agents-dropdown"
                                         role="menu"
-                                        className={`absolute top-full left-0 mt-2 min-w-[200px] rounded-xl shadow-xl border overflow-hidden ${isDark
+                                        className={`absolute top-full left-0 mt-2 min-w-[280px] rounded-xl shadow-xl border overflow-hidden ${isDark
                                             ? 'bg-[#12121a] border-white/10'
                                             : 'bg-white border-slate-100'
                                         }`}
