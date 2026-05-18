@@ -16,6 +16,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
     const agentsDropdownRef = useRef(null);
 
     const isDark = variant === 'dark';
+    const solidNav = scrolled || isOpen;
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -40,6 +41,34 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
         };
     }, []);
 
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                setIsOpen(false);
+            }
+        };
+
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            document.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isOpen]);
+
     const products = [
         { name: 'Workforce', href: '/' },
         { name: 'Studio', href: '/studio', comingSoon: true },
@@ -54,7 +83,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${solidNav
             ? isDark
                 ? 'bg-[#0a0a0f] md:bg-[#0a0a0f]/90 md:backdrop-blur-md shadow-lg shadow-black/20 py-3'
                 : 'bg-white md:bg-white/90 md:backdrop-blur-md shadow-sm py-3'
@@ -258,6 +287,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             aria-expanded={isOpen}
+                            aria-controls="mobile-menu"
                             aria-label={isOpen ? 'Close menu' : 'Open menu'}
                             className={`tap-target -mr-2 ${isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
                         >
@@ -269,11 +299,14 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className={`md:hidden absolute w-full shadow-xl ${isDark
+                <div
+                    id="mobile-menu"
+                    className={`md:hidden absolute left-0 right-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain shadow-xl ${isDark
                     ? 'bg-[#12121a] border-t border-white/10'
                     : 'bg-white border-t border-slate-100'
-                    }`}>
-                    <div className="px-4 pt-2 pb-6 space-y-2">
+                    }`}
+                >
+                    <div className="px-4 pt-2 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] space-y-2">
                         {/* Mobile Products Section */}
                         <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
                             Products
@@ -363,6 +396,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                             href={loginUrl || getProductSigninUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => setIsOpen(false)}
                             className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
                                 ? 'text-gray-300 hover:bg-white/5'
                                 : 'text-slate-600 hover:bg-slate-50'
@@ -374,7 +408,10 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                             href={signupUrl || getProductSignupUrl('workforce')}
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={() => trackSignupClick('navbar_mobile')}
+                            onClick={() => {
+                                setIsOpen(false);
+                                trackSignupClick('navbar_mobile');
+                            }}
                             className={`block w-full text-center px-3 py-3 rounded-lg text-base font-medium ${isDark
                                 ? 'bg-white text-black'
                                 : 'bg-primary-600 text-white'
