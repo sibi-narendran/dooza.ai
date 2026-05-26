@@ -133,6 +133,12 @@ export default function IntegrationsBar({ className = '' }) {
         }
     }
 
+    function collapseIntegrations() {
+        setIsExpanded(false);
+        setQuery('');
+        setDebouncedQuery('');
+    }
+
     return (
         <section className={`py-16 md:py-20 bg-white border-y border-slate-100 ${className}`}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,16 +208,27 @@ export default function IntegrationsBar({ className = '' }) {
                             See more integrations
                         </button>
                     )}
-                    {isExpanded && nextCursor && (
-                        <button
-                            type="button"
-                            onClick={loadMore}
-                            disabled={isLoadingMore}
-                            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-bold text-slate-800 shadow-sm transition hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700 disabled:cursor-not-allowed disabled:opacity-60"
-                        >
-                            {isLoadingMore ? <Loader2 className="h-4 w-4 animate-spin" /> : <ExternalLink className="h-4 w-4" />}
-                            {isLoadingMore ? 'Loading integrations' : 'See more integrations'}
-                        </button>
+                    {isExpanded && (
+                        <div className="flex flex-wrap items-center justify-center gap-3">
+                            {nextCursor && (
+                                <button
+                                    type="button"
+                                    onClick={loadMore}
+                                    disabled={isLoadingMore}
+                                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-bold text-slate-800 shadow-sm transition hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700 disabled:cursor-not-allowed disabled:opacity-60"
+                                >
+                                    {isLoadingMore ? <Loader2 className="h-4 w-4 animate-spin" /> : <ExternalLink className="h-4 w-4" />}
+                                    {isLoadingMore ? 'Loading integrations' : 'See more integrations'}
+                                </button>
+                            )}
+                            <button
+                                type="button"
+                                onClick={collapseIntegrations}
+                                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-5 py-2.5 text-sm font-bold text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-white"
+                            >
+                                See less
+                            </button>
+                        </div>
                     )}
                     <div className="inline-flex max-w-xl items-center justify-center gap-2 rounded-full bg-slate-50 px-4 py-2 text-center text-sm text-slate-500">
                         <PlugZap className="h-4 w-4 text-primary-600" />
