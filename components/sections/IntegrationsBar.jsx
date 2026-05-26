@@ -10,6 +10,7 @@ import {
 import ScrollReveal from '@/components/ScrollReveal';
 
 const PAGE_SIZE = 12;
+const MIN_SEARCH_LENGTH = 3;
 
 function IntegrationLogo({ item }) {
     const initials = (item.name || 'AI').split(/\s+/).slice(0, 2).map((word) => word[0]).join('').toUpperCase();
@@ -41,6 +42,8 @@ export default function IntegrationsBar({ className = '' }) {
     const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [error, setError] = useState('');
 
+    const isSearchTooShort = debouncedQuery.length > 0 && debouncedQuery.length < MIN_SEARCH_LENGTH;
+
     useEffect(() => {
         const timeout = window.setTimeout(() => {
             setDebouncedQuery(query.trim());
@@ -50,12 +53,23 @@ export default function IntegrationsBar({ className = '' }) {
     }, [query]);
 
     const catalogUrl = useMemo(() => {
+        if (isSearchTooShort) return null;
+
         const params = new URLSearchParams({ limit: String(PAGE_SIZE) });
         if (debouncedQuery) params.set('search', debouncedQuery);
         return `/api/integrations/catalog?${params.toString()}`;
-    }, [debouncedQuery]);
+    }, [debouncedQuery, isSearchTooShort]);
 
     useEffect(() => {
+        if (!catalogUrl) {
+            setItems([]);
+            setTotalItems(null);
+            setNextCursor(null);
+            setError('');
+            setIsLoading(false);
+            return undefined;
+        }
+
         const controller = new AbortController();
 
         async function loadCatalog() {
@@ -161,7 +175,12 @@ export default function IntegrationsBar({ className = '' }) {
                         </div>
                     ))}
                 </div>
-                {!isLoading && items.length === 0 && (
+                {!isLoading && isSearchTooShort && (
+                    <p className="mt-8 text-center text-sm font-medium text-slate-500">
+                        Keep typing to search the live integration catalog.
+                    </p>
+                )}
+                {!isLoading && !error && !isSearchTooShort && items.length === 0 && (
                     <p className="mt-8 text-center text-sm font-medium text-slate-500">
                         No exact match yet. Dooza can still connect custom tools through Zapier or API workflows.
                     </p>
