@@ -1,190 +1,191 @@
+'use client';
+
+import { useEffect, useMemo, useState } from 'react';
+import {
+    ExternalLink,
+    Loader2,
+    PlugZap,
+    Search,
+} from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const integrations = [
-    {
-        name: 'Gmail',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z" />
-                <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z" />
-                <path fill="#e53935" d="M35,11.2L24,19.45L13,11.2L12,17l12,10l12-10L35,11.2z" />
-                <path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C8.916,8.186,7.556,8.078,6.476,8.558C5.18,9.135,3,10.831,3,12.298z" />
-                <path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C39.084,8.186,40.444,8.078,41.524,8.558C42.82,9.135,45,10.831,45,12.298z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'Outlook',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#1976d2" d="M28,13h14.533C43.343,13,44,13.657,44,14.467v19.066C44,34.343,43.343,35,42.533,35H28V13z" />
-                <rect fill="#1565c0" x="28" y="17" width="16" height="16" />
-                <polygon fill="#1565c0" points="44,17 36,24 28,17" />
-                <polygon fill="#1e88e5" points="44,17 36,25 28,17" />
-                <polygon fill="#42a5f5" points="44,35 36,28 28,35" />
-                <rect fill="#1e88e5" x="28" y="24" width="16" height="12" />
-                <path fill="#1565c0" d="M4,43.5V4.5l22-4v47L4,43.5z" />
-                <path fill="#1976d2" d="M4,43.5V4.5l22-4v47L4,43.5z" />
-                <ellipse fill="#fff" cx="15" cy="24" rx="5.5" ry="6.5" />
-                <ellipse fill="#1565c0" cx="15" cy="24" rx="3.5" ry="4.5" />
-            </svg>
-        ),
-    },
-    {
-        name: 'LinkedIn',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#0288D1" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z" />
-                <path fill="#fff" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'Instagram',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <radialGradient id="ig1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stopColor="#fd5" />
-                    <stop offset=".328" stopColor="#ff543f" />
-                    <stop offset=".348" stopColor="#fc5245" />
-                    <stop offset=".504" stopColor="#e64771" />
-                    <stop offset=".643" stopColor="#d53e91" />
-                    <stop offset=".761" stopColor="#cc39a4" />
-                    <stop offset=".841" stopColor="#c837ab" />
-                </radialGradient>
-                <path fill="url(#ig1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20C42.014,38.383,38.417,41.986,34.017,41.99z" />
-                <radialGradient id="ig2" cx="11.786" cy="5.168" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stopColor="#4168c9" />
-                    <stop offset=".999" stopColor="#4168c9" stopOpacity="0" />
-                </radialGradient>
-                <path fill="url(#ig2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20C42.014,38.383,38.417,41.986,34.017,41.99z" />
-                <path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z" />
-                <circle fill="#fff" cx="31.5" cy="16.5" r="1.5" />
-                <path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'Facebook',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <linearGradient id="fb1" x1="9.993" x2="40.615" y1="9.993" y2="40.615" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stopColor="#2aa4f4" />
-                    <stop offset="1" stopColor="#007ad9" />
-                </linearGradient>
-                <path fill="url(#fb1)" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z" />
-                <path fill="#fff" d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452C22.32,43.903,23.647,44,25,44c1.218,0,2.414-0.08,3.588-0.222V29.301z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'X',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <polygon fill="#616161" points="41,6 9.929,42 6.215,42 37.287,6" />
-                <polygon fill="#fff" fillRule="evenodd" points="31.143,41 7.82,7 16.777,7 40.1,41" clipRule="evenodd" />
-                <path fill="#616161" d="M15.724,9l20.578,30h-4.106L11.618,9H15.724 M17.304,6H5.922l24.694,36h11.382L17.304,6L17.304,6z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'Zapier',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#ff4a00" d="M28.535,24l7.464-7.465c0.616-0.615,0.985-1.387,1.092-2.207c0.003-0.029,0.004-0.06,0.007-0.089c0.015-0.138,0.024-0.277,0.024-0.418c0-0.141-0.009-0.28-0.024-0.418c-0.003-0.029-0.004-0.06-0.007-0.089c-0.107-0.82-0.476-1.592-1.092-2.207l-3.106-3.106c-0.615-0.616-1.387-0.985-2.207-1.092c-0.029-0.003-0.06-0.004-0.089-0.007C30.459,6.887,30.32,6.878,30.179,6.878c-0.141,0-0.28,0.009-0.418,0.024c-0.029,0.003-0.06,0.004-0.089,0.007c-0.82,0.107-1.592,0.476-2.207,1.092L24,11.465L20.535,8.001c-0.615-0.616-1.387-0.985-2.207-1.092c-0.029-0.003-0.06-0.004-0.089-0.007C18.101,6.887,17.962,6.878,17.821,6.878c-0.141,0-0.28,0.009-0.418,0.024c-0.029,0.003-0.06,0.004-0.089,0.007c-0.82,0.107-1.592,0.476-2.207,1.092L12.001,11.107c-0.616,0.615-0.985,1.387-1.092,2.207c-0.003,0.029-0.004,0.06-0.007,0.089C10.887,13.541,10.878,13.68,10.878,13.821c0,0.141,0.009,0.28,0.024,0.418c0.003,0.029,0.004,0.06,0.007,0.089c0.107,0.82,0.476,1.592,1.092,2.207L19.465,24l-7.464,7.465c-0.616,0.615-0.985,1.387-1.092,2.207c-0.003,0.029-0.004,0.06-0.007,0.089c-0.015,0.138-0.024,0.277-0.024,0.418c0,0.141,0.009,0.28,0.024,0.418c0.003,0.029,0.004,0.06,0.007,0.089c0.107,0.82,0.476,1.592,1.092,2.207l3.106,3.106c0.615,0.616,1.387,0.985,2.207,1.092c0.029,0.003,0.06,0.004,0.089,0.007c0.138,0.015,0.277,0.024,0.418,0.024c0.141,0,0.28-0.009,0.418-0.024c0.029-0.003,0.06-0.004,0.089-0.007c0.82-0.107,1.592-0.476,2.207-1.092L24,36.535l3.465,3.464c0.615,0.616,1.387,0.985,2.207,1.092c0.029,0.003,0.06,0.004,0.089,0.007c0.138,0.015,0.277,0.024,0.418,0.024c0.141,0,0.28-0.009,0.418-0.024c0.029-0.003,0.06-0.004,0.089-0.007c0.82-0.107,1.592-0.476,2.207-1.092l3.106-3.106c0.616-0.615,0.985-1.387,1.092-2.207c0.003-0.029,0.004-0.06,0.007-0.089c0.015-0.138,0.024-0.277,0.024-0.418c0-0.141-0.009-0.28-0.024-0.418c-0.003-0.029-0.004-0.06-0.007-0.089c-0.107-0.82-0.476-1.592-1.092-2.207L28.535,24z M24,28.535L19.465,24L24,19.465L28.535,24L24,28.535z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'Slack',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#33d375" d="M33,8c0-2.209-1.791-4-4-4s-4,1.791-4,4c0,1.254,0,9.741,0,11c0,2.209,1.791,4,4,4s4-1.791,4-4C33,17.741,33,9.254,33,8z" />
-                <path fill="#33d375" d="M43,19c0,2.209-1.791,4-4,4c-1.195,0-4,0-4,0s0-2.986,0-4c0-2.209,1.791-4,4-4S43,16.791,43,19z" />
-                <path fill="#40c4ff" d="M8,14c-2.209,0-4,1.791-4,4s1.791,4,4,4c1.254,0,9.741,0,11,0c2.209,0,4-1.791,4-4s-1.791-4-4-4C17.741,14,9.254,14,8,14z" />
-                <path fill="#40c4ff" d="M19,4c2.209,0,4,1.791,4,4c0,1.195,0,4,0,4s-2.986,0-4,0c-2.209,0-4-1.791-4-4S16.791,4,19,4z" />
-                <path fill="#e91e63" d="M14,39.006C14,41.212,15.791,43,18,43s4-1.788,4-3.994c0-1.252,0-9.727,0-10.984c0-2.206-1.791-3.994-4-3.994s-4,1.788-4,3.994C14,29.279,14,37.754,14,39.006z" />
-                <path fill="#e91e63" d="M4,28.022c0-2.206,1.791-3.994,4-3.994c1.195,0,4,0,4,0s0,2.981,0,3.994c0,2.206-1.791,3.994-4,3.994S4,30.228,4,28.022z" />
-                <path fill="#ffc107" d="M39,34c2.209,0,4-1.791,4-4s-1.791-4-4-4c-1.254,0-9.741,0-11,0c-2.209,0-4,1.791-4,4s1.791,4,4,4C29.258,34,37.746,34,39,34z" />
-                <path fill="#ffc107" d="M28,44c-2.209,0-4-1.791-4-4c0-1.195,0-4,0-4s2.986,0,4,0c2.209,0,4,1.791,4,4S30.209,44,28,44z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'HubSpot',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#f57c00" d="M33.568,17.544v-4.252c1.395-0.837,2.335-2.357,2.335-4.098v-0.098c0-2.641-2.159-4.78-4.8-4.78h-0.096c-2.641,0-4.781,2.139-4.781,4.78v0.098c0,1.741,0.938,3.261,2.335,4.098v4.252c-1.695,0.312-3.265,0.95-4.639,1.882L12.27,10.09c0.092-0.359,0.146-0.731,0.146-1.116c0-2.592-2.101-4.693-4.693-4.693S3.03,6.382,3.03,8.974s2.101,4.693,4.693,4.693c0.722,0,1.407-0.163,2.019-0.454l11.552,9.267c-1.073,1.614-1.703,3.548-1.703,5.629c0,1.932,0.543,3.737,1.481,5.272l-3.777,3.777c-0.288-0.072-0.584-0.12-0.893-0.12c-2.069,0-3.746,1.677-3.746,3.746c0,2.069,1.677,3.746,3.746,3.746c2.069,0,3.746-1.677,3.746-3.746c0-0.306-0.048-0.602-0.12-0.889l3.74-3.74c1.617,1.096,3.569,1.736,5.674,1.736c5.601,0,10.141-4.54,10.141-10.141C39.583,22.477,37.107,18.737,33.568,17.544z M31.009,33.007c-2.985,0-5.407-2.411-5.407-5.398c0-2.985,2.422-5.407,5.407-5.407c2.985,0,5.395,2.422,5.395,5.407C36.404,30.596,33.994,33.007,31.009,33.007z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'Calendar',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#fff" d="M36,40H12c-2.209,0-4-1.791-4-4V12c0-2.209,1.791-4,4-4h24c2.209,0,4,1.791,4,4v24C40,38.209,38.209,40,36,40z" />
-                <path fill="#1e88e5" d="M34,42H14c-3.314,0-6-2.686-6-6V12c0-3.314,2.686-6,6-6h20c3.314,0,6,2.686,6,6v24C40,39.314,37.314,42,34,42z M14,10c-1.105,0-2,0.895-2,2v24c0,1.105,0.895,2,2,2h20c1.105,0,2-0.895,2-2V12c0-1.105-0.895-2-2-2H14z" />
-                <path fill="#1e88e5" d="M34,10H14c-1.105,0-2,0.895-2,2v4h24v-4C36,10.895,35.105,10,34,10z" />
-                <rect fill="#1565c0" x="16" y="4" width="2" height="8" rx="1" />
-                <rect fill="#1565c0" x="30" y="4" width="2" height="8" rx="1" />
-                <rect fill="#1e88e5" x="13" y="20" width="4" height="4" rx="0.5" />
-                <rect fill="#1e88e5" x="22" y="20" width="4" height="4" rx="0.5" />
-                <rect fill="#1e88e5" x="31" y="20" width="4" height="4" rx="0.5" />
-                <rect fill="#1e88e5" x="13" y="28" width="4" height="4" rx="0.5" />
-                <rect fill="#1e88e5" x="22" y="28" width="4" height="4" rx="0.5" />
-                <rect fill="#1e88e5" x="31" y="28" width="4" height="4" rx="0.5" />
-            </svg>
-        ),
-    },
-    {
-        name: 'Shopify',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#7cb342" d="M37.216,11.78c-0.023-0.211-0.211-0.305-0.351-0.305s-3.21-0.234-3.21-0.234s-2.132-2.132-2.39-2.343c-0.234-0.234-0.68-0.164-0.867-0.117c-0.023,0-0.469,0.141-1.195,0.375c-0.726-2.086-1.968-3.984-4.194-3.984h-0.211C24.187,4.375,23.391,4,22.735,4c-5.155,0-7.639,6.444-8.412,9.725c-2.015,0.633-3.445,1.054-3.609,1.125c-1.125,0.351-1.148,0.375-1.289,1.429c-0.117,0.797-3.046,23.456-3.046,23.456L29.179,44l12.373-2.671C41.575,41.282,37.24,11.991,37.216,11.78z M27.937,9.483c-0.562,0.164-1.195,0.375-1.898,0.586V9.623c0-1.359-0.188-2.46-0.469-3.351C26.789,6.624,27.492,7.866,27.937,9.483z M23.508,6.506c0.328,0.867,0.562,2.109,0.562,3.82v0.211c-1.242,0.398-2.601,0.797-3.937,1.218C20.906,8.849,22.336,7.139,23.508,6.506z M22.641,5.155c0.234,0,0.469,0.094,0.68,0.258c-1.617,0.773-3.351,2.742-4.078,6.655c-1.078,0.328-2.132,0.656-3.117,0.984C16.993,9.835,19.219,5.155,22.641,5.155z" />
-                <path fill="#558b2f" d="M36.865,11.428c-0.141,0-3.21-0.234-3.21-0.234s-2.132-2.132-2.39-2.343c-0.094-0.07-0.188-0.117-0.305-0.141l-1.781,36.29l12.373-2.671c0,0-4.335-29.291-4.359-29.502C37.169,12.569,37.005,11.475,36.865,11.428z" />
-                <path fill="#fff" d="M25.57,17.065l-1.524,4.565c0,0-1.336-0.726-2.976-0.726c-2.39,0-2.508,1.5-2.508,1.875c0,2.063,5.367,2.859,5.367,7.687c0,3.797-2.414,6.249-5.648,6.249c-3.891,0-5.882-2.414-5.882-2.414l1.031-3.445s2.039,1.758,3.773,1.758c1.125,0,1.594-0.891,1.594-1.547c0-2.695-4.406-2.813-4.406-7.242c0-3.727,2.672-7.312,8.062-7.312C24.328,16.504,25.57,17.065,25.57,17.065z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'WordPress',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#21759b" d="M24,4C12.969,4,4,12.969,4,24s8.969,20,20,20s20-8.969,20-20S35.031,4,24,4z M24,42c-9.925,0-18-8.075-18-18S14.075,6,24,6s18,8.075,18,18S33.925,42,24,42z" />
-                <path fill="#21759b" d="M24,7c-9.374,0-17,7.626-17,17s7.626,17,17,17s17-7.626,17-17S33.374,7,24,7z M8.688,24c0-2.479,0.609-4.818,1.681-6.878L16.856,35.8C11.932,33.479,8.688,29.122,8.688,24z M24,39.312c-1.486,0-2.926-0.179-4.305-0.511l4.573-13.282l4.686,12.84c0.031,0.077,0.068,0.147,0.108,0.213C27.328,39.059,25.695,39.312,24,39.312z M26.147,15.547c0.918-0.048,1.746-0.144,1.746-0.144c0.822-0.097,0.726-1.305-0.097-1.257c0,0-2.471,0.194-4.065,0.194c-1.498,0-4.017-0.194-4.017-0.194c-0.822-0.048-0.918,1.209-0.097,1.257c0,0,0.78,0.097,1.602,0.144l2.378,6.519l-3.342,10.022L15.1,15.547c0.918-0.048,1.746-0.144,1.746-0.144c0.822-0.097,0.726-1.305-0.097-1.257c0,0-2.471,0.194-4.065,0.194c-0.286,0-0.624-0.007-0.981-0.019C14.271,10.489,18.869,8.688,24,8.688c3.821,0,7.302,1.386,9.998,3.675c-0.063-0.004-0.125-0.011-0.191-0.011c-1.498,0-2.56,1.305-2.56,2.706c0,1.257,0.726,2.322,1.498,3.579c0.582,1.015,1.257,2.322,1.257,4.207c0,1.305-0.502,2.818-1.161,4.929l-1.523,5.088L26.147,15.547z M31.333,35.25l4.652-13.449c0.869-2.174,1.16-3.914,1.16-5.461c0-0.561-0.037-1.082-0.105-1.566C38.547,17.527,39.312,20.668,39.312,24C39.312,28.843,36.008,32.976,31.333,35.25z" />
-            </svg>
-        ),
-    },
-    {
-        name: 'Wix',
-        icon: (
-            <svg className="w-10 h-10" viewBox="0 0 48 48">
-                <path fill="#f9a825" d="M10.002,12.5c-0.367,0-1.03,0.391-1.03,0.391c-0.675,0.476-1.07,1.22-1.07,2.01v5.5L4.75,28.854l0,0L4.75,28.854l-3.5-9.354V14.901c0-0.791-0.395-1.534-1.07-2.01c0,0-0.155-0.143-0.18-0.157V12.5L4.75,25.146L9.5,12.5H10.002z" transform="translate(8 5) scale(1.3)" />
-                <path fill="#f9a825" d="M19.5,12.5l-4.75,12.646L10.002,12.5H9.5l4.75,12.646L19,12.734c0,0,0.155-0.234,0.5-0.234" transform="translate(8 5) scale(1.3)" />
-                <path fill="#f9a825" d="M22,12.5c-0.552,0-1,0.448-1,1v12h2v-12C23,12.948,22.552,12.5,22,12.5z" transform="translate(8 5) scale(1.3)" />
-                <circle fill="#f9a825" cx="37.6" cy="16.4" r="1.3" />
-            </svg>
-        ),
-    },
-];
+const PAGE_SIZE = 12;
 
-export default function IntegrationsBar() {
+function IntegrationLogo({ item }) {
+    const initials = (item.name || 'AI').split(/\s+/).slice(0, 2).map((word) => word[0]).join('').toUpperCase();
+
     return (
-        <section className="py-16 md:py-20 bg-white border-y border-slate-100">
+        <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-slate-50 ring-1 ring-slate-100">
+            {item.logo ? (
+                <img
+                    src={item.logo}
+                    alt=""
+                    className="h-7 w-7 object-contain"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                />
+            ) : (
+                <span className="text-xs font-extrabold text-slate-500">{initials}</span>
+            )}
+        </div>
+    );
+}
+
+export default function IntegrationsBar({ className = '' }) {
+    const [query, setQuery] = useState('');
+    const [debouncedQuery, setDebouncedQuery] = useState('');
+    const [items, setItems] = useState([]);
+    const [totalItems, setTotalItems] = useState(null);
+    const [nextCursor, setNextCursor] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [isLoadingMore, setIsLoadingMore] = useState(false);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        const timeout = window.setTimeout(() => {
+            setDebouncedQuery(query.trim());
+        }, 250);
+
+        return () => window.clearTimeout(timeout);
+    }, [query]);
+
+    const catalogUrl = useMemo(() => {
+        const params = new URLSearchParams({ limit: String(PAGE_SIZE) });
+        if (debouncedQuery) params.set('search', debouncedQuery);
+        return `/api/integrations/catalog?${params.toString()}`;
+    }, [debouncedQuery]);
+
+    useEffect(() => {
+        const controller = new AbortController();
+
+        async function loadCatalog() {
+            setIsLoading(true);
+            setError('');
+
+            try {
+                const response = await fetch(catalogUrl, {
+                    signal: controller.signal,
+                    headers: { Accept: 'application/json' },
+                });
+
+                if (!response.ok) throw new Error('Failed to fetch integrations');
+
+                const data = await response.json();
+                setItems(Array.isArray(data.items) ? data.items : []);
+                setTotalItems(Number.isFinite(data.totalItems) ? data.totalItems : null);
+                setNextCursor(data.nextCursor || null);
+            } catch (err) {
+                if (err.name !== 'AbortError') {
+                    setItems([]);
+                    setTotalItems(null);
+                    setNextCursor(null);
+                    setError('Integration search is temporarily unavailable.');
+                }
+            } finally {
+                if (!controller.signal.aborted) setIsLoading(false);
+            }
+        }
+
+        loadCatalog();
+
+        return () => controller.abort();
+    }, [catalogUrl]);
+
+    async function loadMore() {
+        if (!nextCursor || isLoadingMore) return;
+
+        const params = new URLSearchParams({ limit: String(PAGE_SIZE), cursor: nextCursor });
+        if (debouncedQuery) params.set('search', debouncedQuery);
+
+        setIsLoadingMore(true);
+        setError('');
+
+        try {
+            const response = await fetch(`/api/integrations/catalog?${params.toString()}`, {
+                headers: { Accept: 'application/json' },
+            });
+
+            if (!response.ok) throw new Error('Failed to fetch more integrations');
+
+            const data = await response.json();
+            setItems((currentItems) => [...currentItems, ...(Array.isArray(data.items) ? data.items : [])]);
+            setNextCursor(data.nextCursor || null);
+            setTotalItems(Number.isFinite(data.totalItems) ? data.totalItems : totalItems);
+        } catch {
+            setError('Could not load more integrations. Please try again.');
+        } finally {
+            setIsLoadingMore(false);
+        }
+    }
+
+    return (
+        <section className={`py-16 md:py-20 bg-white border-y border-slate-100 ${className}`}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <h2 className="text-center text-2xl md:text-3xl font-bold text-slate-900 mb-3 font-serif">Connect your AI to where work happens</h2>
                     <p className="text-center text-slate-500 mb-10 max-w-xl mx-auto">Your AI employees plug into the tools you already use — so they start delivering from day one.</p>
                 </ScrollReveal>
-                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                    {integrations.map((item) => (
-                        <div key={item.name} className="flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-200">
-                            {item.icon}
-                            <span className="font-medium text-sm text-slate-600">{item.name}</span>
+                <div className="mx-auto mb-10 max-w-xl">
+                    <label htmlFor="integration-search" className="sr-only">Search integrations</label>
+                    <div className="relative">
+                        <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+                        <input
+                            id="integration-search"
+                            type="search"
+                            value={query}
+                            onChange={(event) => setQuery(event.target.value)}
+                            placeholder="Search Gmail, Shopify, Slack, CRM..."
+                            className="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-12 pr-4 text-sm font-medium text-slate-800 shadow-sm outline-none transition focus:border-primary-300 focus:ring-4 focus:ring-primary-100"
+                        />
+                    </div>
+                </div>
+                <div className="mb-6 flex flex-col items-center justify-center gap-2 text-center text-sm text-slate-500 sm:flex-row">
+                    <span>
+                        {totalItems ? `${totalItems.toLocaleString()}+ live Composio connectors` : 'Live Composio connector catalog'}
+                    </span>
+                    <span className="hidden text-slate-300 sm:inline">•</span>
+                    <span>Custom MCP and API workflows supported separately</span>
+                </div>
+                <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                    {isLoading && Array.from({ length: PAGE_SIZE }).map((_, index) => (
+                        <div key={index} className="min-h-[132px] animate-pulse rounded-2xl bg-slate-50" />
+                    ))}
+                    {!isLoading && items.map((item) => (
+                        <div key={item.slug || item.name} className="group flex min-h-[132px] flex-col items-center justify-center gap-2 rounded-2xl border border-transparent p-4 text-center transition-all duration-200 hover:-translate-y-1 hover:border-slate-100 hover:bg-slate-50">
+                            <IntegrationLogo item={item} />
+                            <span className="font-medium text-sm text-slate-700">{item.name}</span>
+                            <span className="line-clamp-1 text-xs text-slate-400">{item.categories?.[0] || 'Integration'}</span>
+                            {item.toolsCount > 0 && (
+                                <span className="text-[11px] font-semibold text-primary-600">{item.toolsCount} tools</span>
+                            )}
                         </div>
                     ))}
                 </div>
-                <p className="text-center text-sm text-slate-400 mt-8">+ 1,000s more via Zapier</p>
+                {!isLoading && items.length === 0 && (
+                    <p className="mt-8 text-center text-sm font-medium text-slate-500">
+                        No exact match yet. Dooza can still connect custom tools through Zapier or API workflows.
+                    </p>
+                )}
+                {error && (
+                    <p className="mt-8 text-center text-sm font-semibold text-red-600">{error}</p>
+                )}
+                <div className="mt-8 flex flex-col items-center gap-4">
+                    {nextCursor && (
+                        <button
+                            type="button"
+                            onClick={loadMore}
+                            disabled={isLoadingMore}
+                            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-bold text-slate-800 shadow-sm transition hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700 disabled:cursor-not-allowed disabled:opacity-60"
+                        >
+                            {isLoadingMore ? <Loader2 className="h-4 w-4 animate-spin" /> : <ExternalLink className="h-4 w-4" />}
+                            {isLoadingMore ? 'Loading integrations' : 'See more integrations'}
+                        </button>
+                    )}
+                    <div className="inline-flex max-w-xl items-center justify-center gap-2 rounded-full bg-slate-50 px-4 py-2 text-center text-sm text-slate-500">
+                        <PlugZap className="h-4 w-4 text-primary-600" />
+                        Need a private tool? Dooza also supports custom MCP connectors and API workflows.
+                    </div>
+                </div>
             </div>
         </section>
     );
