@@ -41,8 +41,9 @@ export default function IntegrationsBar({ className = '' }) {
     const [isLoading, setIsLoading] = useState(true);
     const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [error, setError] = useState('');
+    const [isExpanded, setIsExpanded] = useState(false);
 
-    const isSearchTooShort = debouncedQuery.length > 0 && debouncedQuery.length < MIN_SEARCH_LENGTH;
+    const isSearchTooShort = isExpanded && debouncedQuery.length > 0 && debouncedQuery.length < MIN_SEARCH_LENGTH;
 
     useEffect(() => {
         const timeout = window.setTimeout(() => {
@@ -56,9 +57,9 @@ export default function IntegrationsBar({ className = '' }) {
         if (isSearchTooShort) return null;
 
         const params = new URLSearchParams({ limit: String(PAGE_SIZE) });
-        if (debouncedQuery) params.set('search', debouncedQuery);
+        if (isExpanded && debouncedQuery) params.set('search', debouncedQuery);
         return `/api/integrations/catalog?${params.toString()}`;
-    }, [debouncedQuery, isSearchTooShort]);
+    }, [debouncedQuery, isExpanded, isSearchTooShort]);
 
     useEffect(() => {
         if (!catalogUrl) {
@@ -139,20 +140,22 @@ export default function IntegrationsBar({ className = '' }) {
                     <h2 className="text-center text-2xl md:text-3xl font-bold text-slate-900 mb-3 font-serif">Connect your AI to where work happens</h2>
                     <p className="text-center text-slate-500 mb-10 max-w-xl mx-auto">Your AI employees plug into the tools you already use — so they start delivering from day one.</p>
                 </ScrollReveal>
-                <div className="mx-auto mb-10 max-w-xl">
-                    <label htmlFor="integration-search" className="sr-only">Search integrations</label>
-                    <div className="relative">
-                        <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
-                        <input
-                            id="integration-search"
-                            type="search"
-                            value={query}
-                            onChange={(event) => setQuery(event.target.value)}
-                            placeholder="Search Gmail, Shopify, Slack, CRM..."
-                            className="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-12 pr-4 text-sm font-medium text-slate-800 shadow-sm outline-none transition focus:border-primary-300 focus:ring-4 focus:ring-primary-100"
-                        />
+                {isExpanded && (
+                    <div className="mx-auto mb-10 max-w-xl">
+                        <label htmlFor="integration-search" className="sr-only">Search integrations</label>
+                        <div className="relative">
+                            <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+                            <input
+                                id="integration-search"
+                                type="search"
+                                value={query}
+                                onChange={(event) => setQuery(event.target.value)}
+                                placeholder="Search Gmail, Shopify, Slack, CRM..."
+                                className="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-12 pr-4 text-sm font-medium text-slate-800 shadow-sm outline-none transition focus:border-primary-300 focus:ring-4 focus:ring-primary-100"
+                            />
+                        </div>
                     </div>
-                </div>
+                )}
                 <div className="mb-6 flex flex-col items-center justify-center gap-2 text-center text-sm text-slate-500 sm:flex-row">
                     <span>
                         {totalItems ? `${totalItems.toLocaleString()}+ live Composio connectors` : 'Live Composio connector catalog'}
@@ -189,7 +192,17 @@ export default function IntegrationsBar({ className = '' }) {
                     <p className="mt-8 text-center text-sm font-semibold text-red-600">{error}</p>
                 )}
                 <div className="mt-8 flex flex-col items-center gap-4">
-                    {nextCursor && (
+                    {!isExpanded && (
+                        <button
+                            type="button"
+                            onClick={() => setIsExpanded(true)}
+                            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-bold text-slate-800 shadow-sm transition hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700"
+                        >
+                            <Search className="h-4 w-4" />
+                            See more integrations
+                        </button>
+                    )}
+                    {isExpanded && nextCursor && (
                         <button
                             type="button"
                             onClick={loadMore}
