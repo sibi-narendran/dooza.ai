@@ -25,6 +25,7 @@ import {
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import IntegrationsBar from '@/components/sections/IntegrationsBar';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import SignupTextLink from '@/components/buttons/SignupTextLink';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -511,6 +512,8 @@ export default function DeploymentPage() {
                         </div>
                     </div>
                 </section>
+
+                <IntegrationsBar className="border-y border-slate-100" />
 
                 <section className="relative overflow-hidden bg-slate-950 px-4 py-16 text-white md:py-24">
                     <div className="absolute inset-0 pointer-events-none">
