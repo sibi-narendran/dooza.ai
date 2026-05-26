@@ -44,6 +44,7 @@ export default function IntegrationsBar({ className = '' }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const isSearchTooShort = isExpanded && debouncedQuery.length > 0 && debouncedQuery.length < MIN_SEARCH_LENGTH;
+    const visibleItems = isExpanded ? items : items.slice(0, PAGE_SIZE);
 
     useEffect(() => {
         const timeout = window.setTimeout(() => {
@@ -137,6 +138,9 @@ export default function IntegrationsBar({ className = '' }) {
         setIsExpanded(false);
         setQuery('');
         setDebouncedQuery('');
+        setItems((currentItems) => currentItems.slice(0, PAGE_SIZE));
+        setNextCursor(null);
+        setError('');
     }
 
     return (
@@ -173,7 +177,7 @@ export default function IntegrationsBar({ className = '' }) {
                     {isLoading && Array.from({ length: PAGE_SIZE }).map((_, index) => (
                         <div key={index} className="min-h-[132px] animate-pulse rounded-2xl bg-slate-50" />
                     ))}
-                    {!isLoading && items.map((item) => (
+                    {!isLoading && visibleItems.map((item) => (
                         <div key={item.slug || item.name} className="group flex min-h-[132px] flex-col items-center justify-center gap-2 rounded-2xl border border-transparent p-4 text-center transition-all duration-200 hover:-translate-y-1 hover:border-slate-100 hover:bg-slate-50">
                             <IntegrationLogo item={item} />
                             <span className="font-medium text-sm text-slate-700">{item.name}</span>
