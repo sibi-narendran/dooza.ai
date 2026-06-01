@@ -95,8 +95,8 @@ export const metadata = {
 };
 
 // Analytics IDs from environment variables
-const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '777622852092389';
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-10872232955';
 const AHREFS_KEY = process.env.NEXT_PUBLIC_AHREFS_KEY;
 const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
@@ -191,6 +191,9 @@ export default function RootLayout({ children }) {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
+                gtag('set', 'linker', {
+                  domains: ['dooza.ai', 'www.dooza.ai', 'workforce.dooza.ai']
+                });
                 gtag('config', '${GOOGLE_ADS_ID}');
               `}
             </Script>
