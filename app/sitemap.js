@@ -4,115 +4,126 @@ import { agentPages } from '../lib/agentData';
 import { SITE_URL } from '../lib/site';
 import { supabaseServer } from '../lib/supabaseServer';
 
+const pageDate = (date) => new Date(`${date}T00:00:00.000Z`);
+
+const dedupeByUrl = (entries) => {
+    const seen = new Set();
+
+    return entries.filter((entry) => {
+        if (seen.has(entry.url)) {
+            return false;
+        }
+
+        seen.add(entry.url);
+        return true;
+    });
+};
+
 export default async function sitemap() {
     // Static pages
     const staticPages = [
         {
             url: SITE_URL,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-04-16'),
             changeFrequency: 'weekly',
             priority: 1.0,
         },
         {
             url: `${SITE_URL}/studio`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-03-29'),
             changeFrequency: 'weekly',
             priority: 0.9,
         },
         {
             url: `${SITE_URL}/deployment`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-05-26'),
             changeFrequency: 'weekly',
             priority: 0.95,
         },
         {
             url: `${SITE_URL}/partners`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-01-17'),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
             url: `${SITE_URL}/blog`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-03-29'),
             changeFrequency: 'daily',
             priority: 0.9,
         },
         {
             url: `${SITE_URL}/alternatives`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-04-20'),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
             url: `${SITE_URL}/dooza-vs-sintra`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-04-14'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
         {
             url: `${SITE_URL}/dooza-vs-marblism`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-04-13'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
         {
             url: `${SITE_URL}/sintra-alternatives`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-04-20'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
         {
             url: `${SITE_URL}/ai-solutions-for-business`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-03-31'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
         {
             url: `${SITE_URL}/marblism-alternatives`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-04-20'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
         {
             url: `${SITE_URL}/industries`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-02-23'),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
-            url: `${SITE_URL}/author`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.7,
-        },
-        {
             url: `${SITE_URL}/privacy`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-02-09'),
             changeFrequency: 'monthly',
             priority: 0.5,
         },
         {
             url: `${SITE_URL}/about`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-03-29'),
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
             url: `${SITE_URL}/terms`,
-            lastModified: new Date(),
+            lastModified: pageDate('2026-02-09'),
             changeFrequency: 'monthly',
             priority: 0.5,
         },
     ];
 
     // Static blog pages
-    const blogPages = blogPosts.map((post) => ({
-        url: `${SITE_URL}/blog/${post.slug}`,
-        lastModified: new Date(post.modifiedDate || post.date),
-        changeFrequency: 'monthly',
-        priority: 0.8,
-        images: post.image ? [`${SITE_URL}${post.image}`] : [],
-    }));
+    const blogPages = blogPosts
+        .filter((post) => !post.noindex)
+        .map((post) => ({
+            url: `${SITE_URL}/blog/${post.slug}`,
+            lastModified: new Date(post.modifiedDate || post.date),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+            images: post.image ? [`${SITE_URL}${post.image}`] : [],
+        }));
 
     // Dynamic blog pages from Supabase
     let dynamicBlogPages = [];
@@ -154,5 +165,5 @@ export default async function sitemap() {
         priority: 0.9,
     }));
 
-    return [...staticPages, ...blogPages, ...dynamicBlogPages, ...industryPageEntries, ...agentPageEntries];
+    return dedupeByUrl([...staticPages, ...blogPages, ...dynamicBlogPages, ...industryPageEntries, ...agentPageEntries]);
 }
