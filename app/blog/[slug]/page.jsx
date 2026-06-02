@@ -218,7 +218,7 @@ export default async function BlogPostPage({ params }) {
     const BlogComponent = BLOG_COMPONENTS[slug];
 
     if (staticPost && BlogComponent) {
-        // Render static blog (unchanged behavior)
+        // Render static blog with a custom component.
         const articleSchema = generateArticleSchema(staticPost, SITE_URL);
         const breadcrumbSchema = generateBreadcrumbSchema([
             { name: "Home", url: SITE_URL },
@@ -238,6 +238,31 @@ export default async function BlogPostPage({ params }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
                 />
                 <BlogComponent post={staticPost} />
+            </>
+        );
+    }
+
+    if (staticPost?.content) {
+        // Render static blog entries that use the shared dynamic article template.
+        const articleSchema = generateArticleSchema(staticPost, SITE_URL);
+        const breadcrumbSchema = generateBreadcrumbSchema([
+            { name: "Home", url: SITE_URL },
+            { name: "Blog", url: `${SITE_URL}/blog` },
+            { name: staticPost.title }
+        ]);
+
+        const schemas = [articleSchema, breadcrumbSchema];
+        if (staticPost.faqData && staticPost.faqData.length > 0) {
+            schemas.push(generateFAQSchema(staticPost.faqData));
+        }
+
+        return (
+            <>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+                />
+                <DynamicBlogContent post={staticPost} />
             </>
         );
     }
