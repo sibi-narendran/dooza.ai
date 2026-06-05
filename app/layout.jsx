@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import CalEmbedLoader from '../components/CalEmbedLoader';
+import ColdAdSignupLinkRewriter from '../components/ColdAdSignupLinkRewriter';
 
 // Resource hints for external services - improves Core Web Vitals
 const resourceHints = [
@@ -148,6 +149,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} antialiased`}>
         {children}
 
+        <ColdAdSignupLinkRewriter />
         <CalEmbedLoader />
 
         {/* Facebook Pixel */}
