@@ -14,8 +14,8 @@ export default function BookDemoButton({
     const { openModal } = useBookingModal();
 
     const sizeClasses = size === 'xl'
-        ? 'px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl'
-        : 'px-8 py-4 text-lg';
+        ? 'px-6 sm:px-8 md:px-10 py-4 md:py-5 text-base sm:text-lg md:text-xl'
+        : 'px-6 sm:px-8 py-4 text-base sm:text-lg';
 
     const variantClasses = {
         primary: 'bg-primary-700 text-white hover:bg-primary-800 shadow-lg hover:shadow-xl hover:-translate-y-0.5',
@@ -26,10 +26,10 @@ export default function BookDemoButton({
     return (
         <button
             onClick={() => { openModal(); trackDemoClick(source); }}
-            className={`group inline-flex items-center justify-center gap-2 ${variantClasses} ${sizeClasses} rounded-full font-bold transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 focus-visible:outline-none ${className}`}
+            className={`group inline-flex w-full max-w-full items-center justify-center gap-2 text-center sm:w-auto ${variantClasses} ${sizeClasses} rounded-full font-bold transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 focus-visible:outline-none ${className}`}
         >
-            <Calendar className="w-5 h-5" />
-            {children}
+            <Calendar className="h-5 w-5 shrink-0" />
+            <span>{children}</span>
         </button>
     );
 }

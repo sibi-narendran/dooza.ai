@@ -51,7 +51,7 @@ export default function DynamicBlogContent({ post }) {
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                             {post.excerpt}
                         </p>
-                        <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
+                        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
                                 <Clock className="w-4 h-4" />
                                 <span>{post.readTime}</span>
@@ -139,13 +139,13 @@ export default function DynamicBlogContent({ post }) {
                                     href={getProductSignupUrl('workforce')}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
+                                    className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all sm:w-auto"
                                 >
                                     Try Dooza Free <ArrowRight className="w-4 h-4" />
                                 </a>
                                 <a
                                     href={CAL_BOOKING_URL}
-                                    className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all"
+                                    className="inline-flex w-full items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all sm:w-auto"
                                 >
                                     <Calendar className="w-4 h-4" /> Book a Demo
                                 </a>

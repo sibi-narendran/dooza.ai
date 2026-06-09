@@ -239,7 +239,7 @@ export default function ReplaceVaWithAiContent() {
                             </div>
                             <div className="bg-slate-900 text-white p-8 rounded-2xl mt-6">
                                 <h3 className="text-xl font-semibold mb-6 text-center">Monthly Cost Comparison</h3>
-                                <div className="grid grid-cols-2 gap-6 text-center">
+                                <div className="grid gap-6 text-center sm:grid-cols-2">
                                     <div>
                                         <div className="text-slate-400 text-sm mb-1">Human Virtual Assistant</div>
                                         <div className="text-3xl font-bold">$1,500&ndash;$4,000<span className="text-base text-slate-400">/mo</span></div>

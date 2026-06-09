@@ -32,7 +32,7 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-500 mb-8 md:mb-10 max-w-2xl">
-                    Dooza Marketing gives you AI employees for content, SEO, social media, leads, and follow-up, so your growth work keeps moving every day.
+                    Dooza gives you AI employees for content, SEO, social media, leads, and follow-up, so your growth work keeps moving every day.
                 </p>
 
                 <div className="flex flex-col items-start gap-3 md:gap-4">
@@ -42,7 +42,7 @@ export default function HeroSection() {
                     <SignupTextLink source="hero" />
                 </div>
 
-                <div className="mt-10 grid max-w-2xl grid-cols-3 gap-3 rounded-3xl border border-white/70 bg-white/70 p-3 shadow-sm backdrop-blur">
+                <div className="mt-10 grid max-w-2xl gap-3 rounded-3xl border border-white/70 bg-white/70 p-3 shadow-sm backdrop-blur sm:grid-cols-3">
                     {proofStats.map((stat) => (
                         <div key={stat.label} className="rounded-2xl bg-white px-3 py-4 text-center shadow-sm">
                             <div className="text-xl font-extrabold text-slate-950 md:text-2xl">{stat.value}</div>

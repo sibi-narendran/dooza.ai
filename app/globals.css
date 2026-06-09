@@ -15,12 +15,63 @@
   --color-primary-900: #134e4a;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+*, ::before, ::after {
+  min-width: 0;
+}
+
 body {
   @apply antialiased text-slate-600 bg-warm font-sans overflow-x-hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
   @apply text-slate-900 font-bold tracking-tight font-serif;
+}
+
+a {
+  overflow-wrap: anywhere;
+}
+
+img, video, canvas, iframe {
+  max-width: 100%;
+}
+
+img, video {
+  height: auto;
+}
+
+.prose {
+  overflow-wrap: anywhere;
+}
+
+.prose :where(pre, table) {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.prose :where(table) {
+  display: block;
+}
+
+.prose :where(img, video, iframe) {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .section-label {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+  }
+
+  a.inline-flex,
+  button.inline-flex {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 /* Section labels */
@@ -367,6 +418,187 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Dooza Workflow coded visuals */
+.workflow-hero-surface {
+  contain: layout paint;
+}
+
+.workflow-canvas-line {
+  fill: none;
+  stroke: rgba(15, 118, 110, 0.48);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 10 12;
+  animation: workflow-dash 1.8s linear infinite;
+}
+
+.workflow-canvas-line-delay {
+  animation-delay: 0.45s;
+}
+
+@keyframes workflow-dash {
+  to { stroke-dashoffset: -44; }
+}
+
+.workflow-node-live {
+  animation: workflow-node-breathe 4s ease-in-out infinite;
+}
+
+@keyframes workflow-node-breathe {
+  0%, 100% { transform: translateY(0); box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08); }
+  50% { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(15, 118, 110, 0.14); }
+}
+
+.workflow-trace-bar {
+  transform-origin: left;
+  animation: workflow-trace-fill 2.8s ease-in-out infinite;
+}
+
+@keyframes workflow-trace-fill {
+  0%, 100% { transform: scaleX(0.22); opacity: 0.55; }
+  55% { transform: scaleX(1); opacity: 1; }
+}
+
+.workflow-trace-pill {
+  animation: workflow-trace-pop 2.7s ease-in-out infinite;
+}
+
+@keyframes workflow-trace-pop {
+  0%, 100% { transform: translateY(0); opacity: 0.82; }
+  50% { transform: translateY(-3px); opacity: 1; }
+}
+
+.workflow-tree-surface {
+  contain: layout paint;
+}
+
+.workflow-tree-line {
+  fill: none;
+  stroke: rgba(15, 118, 110, 0.46);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 12 12;
+  animation: workflow-tree-flow 2.4s linear infinite;
+}
+
+.workflow-tree-line-delay-1 { animation-delay: 0.2s; }
+.workflow-tree-line-delay-2 { animation-delay: 0.4s; }
+.workflow-tree-line-delay-3 { animation-delay: 0.6s; }
+.workflow-tree-line-delay-4 { animation-delay: 0.8s; }
+
+@keyframes workflow-tree-flow {
+  to { stroke-dashoffset: -48; }
+}
+
+.workflow-tree-node {
+  animation: workflow-tree-node 4.5s ease-in-out infinite;
+}
+
+@keyframes workflow-tree-node {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.workflow-tree-result {
+  animation: workflow-tree-result 2.4s ease-in-out infinite;
+}
+
+@keyframes workflow-tree-result {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+.workflow-marquee-track {
+  animation: workflow-marquee 30s linear infinite;
+}
+
+.workflow-marquee-reverse {
+  animation-direction: reverse;
+  animation-duration: 34s;
+}
+
+@keyframes workflow-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.workflow-code-scan {
+  animation: workflow-code-scan 4s ease-in-out infinite;
+}
+
+@keyframes workflow-code-scan {
+  0%, 100% { transform: translateX(-120%); opacity: 0; }
+  18%, 70% { opacity: 1; }
+  85% { transform: translateX(720%); opacity: 0; }
+}
+
+.deployment-flow-line {
+  fill: none;
+  stroke: rgba(15, 118, 110, 0.6);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 10 10;
+  animation: deployment-flow 2.2s linear infinite;
+}
+
+.deployment-flow-line-delay {
+  animation-delay: 0.45s;
+}
+
+@keyframes deployment-flow {
+  to { stroke-dashoffset: -40; }
+}
+
+.deployment-queue-item {
+  animation: deployment-queue-shift 3.6s ease-in-out infinite;
+}
+
+@keyframes deployment-queue-shift {
+  0%, 100% { transform: translateY(0); opacity: 0.72; }
+  45%, 65% { transform: translateY(-3px); opacity: 1; }
+}
+
+.deployment-automation-core {
+  animation: deployment-core-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes deployment-core-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 12px 26px rgba(15, 118, 110, 0.16); }
+  50% { transform: scale(1.06); box-shadow: 0 18px 38px rgba(15, 118, 110, 0.24); }
+}
+
+.deployment-vertical-flow {
+  animation: deployment-vertical-flow 4.5s ease-in-out infinite;
+}
+
+@keyframes deployment-vertical-flow {
+  0%, 100% { transform: translateY(0); opacity: 0.42; }
+  55% { transform: translateY(260px); opacity: 1; }
+}
+
+.deployment-trust-stack {
+  contain: layout paint;
+}
+
+.deployment-trust-card {
+  animation: deployment-trust-card 5s ease-in-out infinite;
+}
+
+@keyframes deployment-trust-card {
+  0%, 100% { transform: translateY(0); border-color: rgba(241, 245, 249, 1); box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04); }
+  50% { transform: translateY(-5px); border-color: rgba(153, 246, 228, 0.8); box-shadow: 0 18px 36px rgba(15, 118, 110, 0.1); }
+}
+
+.workflow-rise {
+  animation: workflow-rise 4s ease-in-out infinite;
+}
+
+@keyframes workflow-rise {
+  0%, 100% { transform: translateX(0); border-color: rgba(226, 232, 240, 1); }
+  50% { transform: translateX(8px); border-color: rgba(153, 246, 228, 1); }
+}
+
 /* FAQ Accordion (replaces framer-motion AnimatePresence) */
 .faq-content {
   display: grid; grid-template-rows: 0fr; opacity: 0;
@@ -403,7 +635,22 @@ h1, h2, h3, h4, h5, h6 {
   .step-ring-ripple,
   .cta-blob-1,
   .cta-blob-2,
-  .scroll-progress-bar {
+  .scroll-progress-bar,
+  .workflow-canvas-line,
+  .workflow-node-live,
+  .workflow-trace-bar,
+  .workflow-trace-pill,
+  .workflow-tree-line,
+  .workflow-tree-node,
+  .workflow-tree-result,
+  .workflow-marquee-track,
+  .workflow-code-scan,
+  .deployment-flow-line,
+  .deployment-queue-item,
+  .deployment-automation-core,
+  .deployment-vertical-flow,
+  .deployment-trust-card,
+  .workflow-rise {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;

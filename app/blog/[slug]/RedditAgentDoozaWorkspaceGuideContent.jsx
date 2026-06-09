@@ -262,7 +262,7 @@ export default function RedditAgentDoozaWorkspaceGuideContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Reddit Matters for Your Business</h2>
 
                             {/* Stats Grid */}
-                            <div className="grid grid-cols-2 gap-4 mb-8">
+                            <div className="grid gap-4 mb-8 sm:grid-cols-2">
                                 {[
                                     { stat: '1.5B+', label: 'Monthly Active Users', source: 'Reddit Inc, 2025', color: 'primary' },
                                     { stat: '100K+', label: 'Active Communities', source: 'Reddit Inc, 2025', color: 'blue' },

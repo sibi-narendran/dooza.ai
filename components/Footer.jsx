@@ -24,13 +24,13 @@ const Footer = ({ variant = 'light' }) => {
                 </div>
 
                 {/* Links */}
-                <div className={`grid grid-cols-2 md:grid-cols-5 gap-8 py-8 border-y ${isDark ? 'border-white/5' : 'border-slate-100'}`}>
+                <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-8 border-y ${isDark ? 'border-white/5' : 'border-slate-100'}`}>
                     <div>
                         <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Products</h4>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Dooza Marketing
+                                    Dooza
                                 </Link>
                             </li>
                             <li>
@@ -38,9 +38,14 @@ const Footer = ({ variant = 'light' }) => {
                                     Dooza Workflow
                                 </Link>
                             </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Services</h4>
+                        <ul className="space-y-3">
                             <li>
                                 <Link href="/deployment" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Dooza Deployment
+                                    Dooza Deployment Company
                                 </Link>
                             </li>
                         </ul>
@@ -148,10 +153,10 @@ const Footer = ({ variant = 'light' }) => {
                 </div>
 
                 <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className={`text-sm ${isDark ? 'text-gray-500' : 'text-slate-500'}`}>
+                    <p className={`text-center text-sm md:text-left ${isDark ? 'text-gray-500' : 'text-slate-500'}`}>
                         © {new Date().getFullYear()} Adam Laboratory Inc. All rights reserved.
                     </p>
-                    <p className={`text-xs ${isDark ? 'text-gray-600' : 'text-slate-400'}`}>
+                    <p className={`text-center text-xs md:text-left ${isDark ? 'text-gray-600' : 'text-slate-400'}`}>
                         Dooza.ai is a product of Adam Laboratory Inc., a Delaware corporation.
                     </p>
                     <div className={`flex gap-2 ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>

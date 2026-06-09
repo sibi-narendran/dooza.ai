@@ -314,7 +314,7 @@ export default function BuildA20xCompanyContent() {
                             </div>
 
                             {/* Stat Grid */}
-                            <div className="grid grid-cols-3 gap-4">
+                            <div className="grid gap-4 sm:grid-cols-3">
                                 {[
                                     { stat: "4-5", label: "engineers at GigaML closing enterprise deals" },
                                     { stat: "4x", label: "growth at Legion Health — zero new hires" },

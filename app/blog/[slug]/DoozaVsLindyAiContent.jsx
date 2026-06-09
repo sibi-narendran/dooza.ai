@@ -294,7 +294,7 @@ export default function DoozaVsLindyAiContent() {
 
                             <div className="bg-slate-900 text-white p-8 rounded-2xl mt-6">
                                 <h3 className="text-xl font-semibold mb-6 text-center">Monthly Cost Comparison</h3>
-                                <div className="grid grid-cols-2 gap-6 text-center">
+                                <div className="grid gap-6 text-center sm:grid-cols-2">
                                     <div className="bg-slate-800 rounded-xl p-6">
                                         <div className="text-primary-400 text-sm font-semibold mb-2 flex items-center justify-center gap-2"><Star className="w-4 h-4" /> DOOZA AI</div>
                                         <div className="text-3xl font-bold">$49<span className="text-base text-slate-400">/mo</span></div>

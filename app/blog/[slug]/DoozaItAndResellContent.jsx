@@ -342,7 +342,7 @@ export default function DoozaItAndResellContent() {
                                 </p>
                             </div>
                             <div className="bg-slate-900 text-white p-8 rounded-2xl mt-6">
-                                <div className="grid grid-cols-2 gap-6 text-center">
+                                <div className="grid gap-6 text-center sm:grid-cols-2">
                                     <div>
                                         <div className="text-slate-400 text-sm mb-1">Your cost</div>
                                         <div className="text-3xl font-bold">$29<span className="text-base text-slate-400">/mo</span></div>

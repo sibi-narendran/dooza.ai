@@ -347,7 +347,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                         <p>
                                             Research from Stanford University found that women are <strong>1.4x more likely</strong> to receive critical subjective feedback in reviews. The same assertive behavior gets described differently:
                                         </p>
-                                        <div className="grid grid-cols-2 gap-3 mt-3">
+                                        <div className="grid gap-3 mt-3 sm:grid-cols-2">
                                             <div className="bg-white p-3 rounded-lg">
                                                 <p className="text-xs font-medium text-red-600 mb-1">Describing Women</p>
                                                 <p className="text-slate-800 font-medium">"Abrasive"</p>

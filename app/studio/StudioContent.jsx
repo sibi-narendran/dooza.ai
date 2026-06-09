@@ -154,7 +154,7 @@ export default function StudioContent() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => trackSignupClick('studio_hero')}
-                                className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+                                className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:w-auto sm:text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
                             >
                                 Try Workforce Instead
                                 <ArrowRight className="w-5 h-5" />
@@ -164,7 +164,7 @@ export default function StudioContent() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => trackDemoClick('studio_hero')}
-                                className="inline-flex items-center gap-2 bg-white border-2 border-primary-600 text-primary-600 hover:bg-primary-50 px-8 py-4 rounded-full font-bold text-lg transition-all"
+                                className="inline-flex w-full items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 hover:bg-primary-50 px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:w-auto sm:text-lg transition-all"
                             >
                                 <Calendar className="w-5 h-5" />
                                 Book Free Setup
@@ -380,7 +380,7 @@ export default function StudioContent() {
                                 <p className="text-lg text-slate-600 mb-8">
                                     Deploy with confidence. Our enterprise tier includes SSO, audit logs, dedicated support, and SLA guarantees.
                                 </p>
-                                <div className="grid grid-cols-2 gap-4 mb-8">
+                                <div className="grid gap-4 mb-8 sm:grid-cols-2">
                                     {ENTERPRISE_FEATURES.map((item) => (
                                         <div key={item} className="flex items-center gap-2 text-slate-700">
                                             <Shield className="w-5 h-5 text-primary-600" />
@@ -431,7 +431,7 @@ export default function StudioContent() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => trackSignupClick('studio_bottom_cta')}
-                            className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1"
+                            className="inline-flex w-full items-center justify-center gap-2 bg-white text-primary-600 px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:w-auto sm:text-xl hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1"
                         >
                             Try Workforce Instead
                             <ArrowRight className="w-6 h-6" />

@@ -30,14 +30,14 @@ const BottomCTA = ({ openModal }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={handleSignupClick} 
-                        className="bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
+                        className="w-full sm:w-auto bg-primary-600 text-white px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                     >
                         Create free account
                     </a>
                     <a 
                         href={CAL_BOOKING_URL}
                         onClick={handleDemoClick}
-                        className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
+                        className="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                     >
                         Speak with Expert now
                     </a>

@@ -3,20 +3,31 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Calendar, Menu, X, ChevronDown } from 'lucide-react';
 import { getProductSignupUrl, getProductSigninUrl } from '@/lib/links';
-import { trackSignupClick } from '@/lib/analytics';
+import { trackDemoClick, trackSignupClick } from '@/lib/analytics';
+import { useBookingModal } from '@/components/BookingModalProvider';
 
-const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
+const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = true, ctaType = 'signup', ctaSource = 'navbar' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
+    const [servicesOpen, setServicesOpen] = useState(false);
     const [agentsOpen, setAgentsOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const servicesDropdownRef = useRef(null);
     const agentsDropdownRef = useRef(null);
+    const { openModal } = useBookingModal();
 
     const isDark = variant === 'dark';
     const solidNav = scrolled || isOpen;
+    const isDemoCta = ctaType === 'demo';
+    const ctaLabel = signupLabel || (isDemoCta ? 'Book a Demo' : 'Get Started');
+
+    const handleDemoClick = () => {
+        openModal();
+        trackDemoClick(ctaSource);
+    };
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -28,6 +39,9 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
         const handleClickOutside = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setProductsOpen(false);
+            }
+            if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
+                setServicesOpen(false);
             }
             if (agentsDropdownRef.current && !agentsDropdownRef.current.contains(event.target)) {
                 setAgentsOpen(false);
@@ -70,9 +84,12 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
     }, [isOpen]);
 
     const products = [
-        { name: 'Dooza Marketing', href: '/' },
-        { name: 'Dooza Deployment', href: '/deployment' },
+        { name: 'Dooza', href: '/' },
         { name: 'Dooza Workflow', href: '/workflow' },
+    ];
+
+    const services = [
+        { name: 'Dooza Deployment Company', href: '/deployment' },
     ];
 
     const agents = [
@@ -164,6 +181,58 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                                 )}
                             </div>
 
+                            {/* Services Dropdown */}
+                            <div className="relative" ref={servicesDropdownRef}>
+                                <button
+                                    onClick={() => setServicesOpen(!servicesOpen)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Escape') setServicesOpen(false);
+                                    }}
+                                    aria-expanded={servicesOpen}
+                                    aria-haspopup="true"
+                                    aria-controls="services-dropdown"
+                                    aria-label="Services menu"
+                                    className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
+                                        ? 'text-gray-300 hover:text-white'
+                                        : 'text-slate-600 hover:text-primary-600'
+                                        }`}
+                                >
+                                    Services
+                                    <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                {servicesOpen && (
+                                    <div
+                                        id="services-dropdown"
+                                        role="menu"
+                                        className={`absolute top-full left-0 mt-2 min-w-[250px] rounded-xl shadow-xl border overflow-hidden ${isDark
+                                            ? 'bg-[#12121a] border-white/10'
+                                            : 'bg-white border-slate-100'
+                                        }`}
+                                    >
+                                        <div className="py-2">
+                                            {services.map((service) => (
+                                                <Link
+                                                    key={service.name}
+                                                    href={service.href}
+                                                    role="menuitem"
+                                                    onClick={() => setServicesOpen(false)}
+                                                    onKeyDown={(e) => {
+                                                        if (e.key === 'Escape') setServicesOpen(false);
+                                                    }}
+                                                    className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${isDark
+                                                        ? 'text-gray-300 hover:bg-white/5 hover:text-white'
+                                                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                                                        }`}
+                                                >
+                                                    {service.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
                             {/* Agents Dropdown */}
                             <div className="relative" ref={agentsDropdownRef}>
                                 <button
@@ -217,16 +286,6 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                             </div>
 
                             <Link
-                                href="/deployment"
-                                className={`text-[15px] font-medium transition-colors ${isDark
-                                    ? 'text-gray-300 hover:text-white'
-                                    : 'text-slate-600 hover:text-primary-600'
-                                    }`}
-                            >
-                                Deployment
-                            </Link>
-
-                            <Link
                                 href="/pricing"
                                 className={`text-[15px] font-medium transition-colors ${isDark
                                     ? 'text-gray-300 hover:text-white'
@@ -259,29 +318,45 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                     </div>
 
                     <div className="hidden md:flex items-center space-x-6">
-                        <a
-                            href={loginUrl || getProductSigninUrl('workforce')}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`text-[15px] font-medium transition-colors ${isDark
-                                ? 'text-gray-300 hover:text-white'
-                                : 'text-slate-600 hover:text-primary-600'
-                                }`}
-                        >
-                            Login
-                        </a>
-                        <a
-                            href={signupUrl || getProductSignupUrl('workforce')}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => trackSignupClick('navbar')}
-                            className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all hover:shadow-lg hover:-translate-y-0.5 ${isDark
-                                ? 'bg-white text-black hover:bg-gray-100'
-                                : 'bg-slate-900 text-white hover:bg-slate-800'
-                                }`}
-                        >
-                            {signupLabel || 'Get Started'}
-                        </a>
+                        {showLogin && (
+                            <a
+                                href={loginUrl || getProductSigninUrl('workforce')}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`text-[15px] font-medium transition-colors ${isDark
+                                    ? 'text-gray-300 hover:text-white'
+                                    : 'text-slate-600 hover:text-primary-600'
+                                    }`}
+                            >
+                                Login
+                            </a>
+                        )}
+                        {isDemoCta ? (
+                            <button
+                                type="button"
+                                onClick={handleDemoClick}
+                                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[15px] font-medium transition-all hover:shadow-lg hover:-translate-y-0.5 ${isDark
+                                    ? 'bg-white text-black hover:bg-gray-100'
+                                    : 'bg-primary-700 text-white hover:bg-primary-800'
+                                    }`}
+                            >
+                                <Calendar className="h-4 w-4" />
+                                {ctaLabel}
+                            </button>
+                        ) : (
+                            <a
+                                href={signupUrl || getProductSignupUrl('workforce')}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => trackSignupClick('navbar')}
+                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all hover:shadow-lg hover:-translate-y-0.5 ${isDark
+                                    ? 'bg-white text-black hover:bg-gray-100'
+                                    : 'bg-slate-900 text-white hover:bg-slate-800'
+                                    }`}
+                            >
+                                {ctaLabel}
+                            </a>
+                        )}
                     </div>
 
                     <div className="md:hidden flex items-center">
@@ -333,6 +408,26 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 
+                        {/* Mobile Services Section */}
+                        <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
+                            Services
+                        </div>
+                        {services.map((service) => (
+                            <Link
+                                key={service.name}
+                                href={service.href}
+                                onClick={() => setIsOpen(false)}
+                                className={`block px-3 py-3 rounded-lg font-medium ${isDark
+                                    ? 'text-gray-300 hover:bg-white/5'
+                                    : 'text-slate-600 hover:bg-slate-50'
+                                    }`}
+                            >
+                                {service.name}
+                            </Link>
+                        ))}
+
+                        <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
+
                         {/* Mobile Agents Section */}
                         <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
                             Agents
@@ -353,16 +448,6 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 
-                        <Link
-                            href="/deployment"
-                            onClick={() => setIsOpen(false)}
-                            className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
-                                ? 'text-gray-300 hover:bg-white/5'
-                                : 'text-slate-600 hover:bg-slate-50'
-                                }`}
-                        >
-                            Deployment
-                        </Link>
                         <Link
                             href="/pricing"
                             onClick={() => setIsOpen(false)}
@@ -393,33 +478,52 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
                         >
                             Blog
                         </Link>
-                        <a
-                            href={loginUrl || getProductSigninUrl('workforce')}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => setIsOpen(false)}
-                            className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
-                                ? 'text-gray-300 hover:bg-white/5'
-                                : 'text-slate-600 hover:bg-slate-50'
-                                }`}
-                        >
-                            Login
-                        </a>
-                        <a
-                            href={signupUrl || getProductSignupUrl('workforce')}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => {
-                                setIsOpen(false);
-                                trackSignupClick('navbar_mobile');
-                            }}
-                            className={`block w-full text-center px-3 py-3 rounded-lg text-base font-medium ${isDark
-                                ? 'bg-white text-black'
-                                : 'bg-primary-600 text-white'
-                                }`}
-                        >
-                            {signupLabel || 'Get Started'}
-                        </a>
+                        {showLogin && (
+                            <a
+                                href={loginUrl || getProductSigninUrl('workforce')}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setIsOpen(false)}
+                                className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
+                                    ? 'text-gray-300 hover:bg-white/5'
+                                    : 'text-slate-600 hover:bg-slate-50'
+                                    }`}
+                            >
+                                Login
+                            </a>
+                        )}
+                        {isDemoCta ? (
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    handleDemoClick();
+                                }}
+                                className={`flex w-full items-center justify-center gap-2 px-3 py-3 rounded-lg text-base font-medium ${isDark
+                                    ? 'bg-white text-black'
+                                    : 'bg-primary-600 text-white'
+                                    }`}
+                            >
+                                <Calendar className="h-4 w-4" />
+                                {ctaLabel}
+                            </button>
+                        ) : (
+                            <a
+                                href={signupUrl || getProductSignupUrl('workforce')}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    trackSignupClick('navbar_mobile');
+                                }}
+                                className={`block w-full text-center px-3 py-3 rounded-lg text-base font-medium ${isDark
+                                    ? 'bg-white text-black'
+                                    : 'bg-primary-600 text-white'
+                                    }`}
+                            >
+                                {ctaLabel}
+                            </a>
+                        )}
                     </div>
                 </div>
             )}

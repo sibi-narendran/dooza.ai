@@ -579,7 +579,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-3 gap-3 mb-6">
+                            <div className="grid gap-3 mb-6 sm:grid-cols-3">
                                 {[
                                     { skill: "Save Post", icon: "📝" },
                                     { skill: "Analytics", icon: "📊" },

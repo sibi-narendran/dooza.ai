@@ -106,22 +106,22 @@ export default function PartnerSignupPage() {
                 <div className="max-w-xl mx-auto">
                     <div className="text-center mb-10">
                         <div className="flex items-center justify-center gap-1 font-bold tracking-tighter mb-6">
-                             <span className="text-5xl md:text-6xl text-primary-600">dooza</span>
-                             <span className="text-5xl md:text-6xl text-black">.ai</span>
+                             <span className="text-4xl sm:text-5xl md:text-6xl text-primary-600">dooza</span>
+                             <span className="text-4xl sm:text-5xl md:text-6xl text-black">.ai</span>
                         </div>
                         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             Become a Partner
                         </h1>
                     </div>
 
-                    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-10">
+                    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 md:p-10">
                         {submitError && (
                             <div className="mb-6 p-4 bg-red-50 text-red-600 rounded-xl text-sm font-medium border border-red-100">
                                 {submitError}
                             </div>
                         )}
                         <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid gap-6 sm:grid-cols-2">
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         First Name <span className="text-red-500">*</span>
@@ -171,8 +171,8 @@ export default function PartnerSignupPage() {
                                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     Phone Number <span className="text-red-500">*</span>
                                 </label>
-                                <div className="flex gap-2">
-                                    <div className="relative w-32">
+                                <div className="flex flex-col gap-2 sm:flex-row">
+                                    <div className="relative w-full sm:w-32">
                                         <select 
                                             name="phoneCountry"
                                             value={formData.phoneCountry}
@@ -193,7 +193,7 @@ export default function PartnerSignupPage() {
                                         placeholder="555-0123"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className="flex-1 px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all bg-gray-50 focus:bg-white"
+                                        className="min-w-0 flex-1 px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all bg-gray-50 focus:bg-white"
                                     />
                                 </div>
                             </div>

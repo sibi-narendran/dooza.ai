@@ -204,7 +204,7 @@ export default function GenericAgentContent({ page }) {
                                             Book a demo
                                         </BookDemoButton>
                                     </div>
-                                    <div className="grid grid-cols-3 gap-3 max-w-2xl">
+                                    <div className="grid gap-3 max-w-2xl sm:grid-cols-3">
                                         {page.proof.map((item) => (
                                             <div key={item.label} className="bg-white rounded-2xl border border-slate-100 p-4">
                                                 <p className="text-xs uppercase tracking-wider font-bold text-slate-600 mb-1">{item.label}</p>

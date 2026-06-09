@@ -72,11 +72,11 @@ export default function PartnersContent() {
                             <span className="text-sm font-medium text-gray-600">Partner Program Open</span>
                         </div>
                         
-                        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-8 max-w-5xl mx-auto leading-tight">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-8 max-w-5xl mx-auto leading-tight">
                             Earn <span className="text-primary-600">30% recurring</span> <br className="hidden md:block" /> commission for life.
                         </h1>
                         
-                        <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg sm:text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed">
                             Partner with Dooza to help businesses scale with AI employees. Build a predictable revenue stream.
                         </p>
                         
@@ -85,13 +85,13 @@ export default function PartnersContent() {
                                 href="https://accounts.dooza.ai/affiliate/signup"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white rounded-full font-bold text-lg hover:bg-gray-800 transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-4 bg-gray-900 text-white rounded-full font-bold text-base sm:text-lg hover:bg-gray-800 transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
                             >
                                 Join Now <ArrowRight size={20} />
                             </a>
                             <a 
                                 href="#calculator" 
-                                className="w-full sm:w-auto px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-full font-bold text-lg hover:bg-gray-50 transition-all hover:border-gray-300 flex items-center justify-center"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-full font-bold text-base sm:text-lg hover:bg-gray-50 transition-all hover:border-gray-300 flex items-center justify-center text-center"
                             >
                                 Calculate Earnings
                             </a>
@@ -183,8 +183,8 @@ export default function PartnersContent() {
                             
                             <div className="relative">
                                 <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-teal-400 rounded-3xl blur opacity-20"></div>
-                                <div className="relative bg-[#F0FDF4]/80 rounded-3xl shadow-2xl shadow-gray-200/50 border border-emerald-100/50 p-8 md:p-10">
-                                    <div className="flex items-center justify-between mb-8">
+                                <div className="relative bg-[#F0FDF4]/80 rounded-3xl shadow-2xl shadow-gray-200/50 border border-emerald-100/50 p-6 sm:p-8 md:p-10">
+                                    <div className="flex flex-col gap-3 mb-8 sm:flex-row sm:items-center sm:justify-between">
                                         <h3 className="text-2xl font-bold text-gray-900">Estimate your income</h3>
                                         <div className="text-sm font-medium text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
                                             Based on 30% commission
@@ -194,7 +194,7 @@ export default function PartnersContent() {
                                 <div className="space-y-8">
                                     {/* Slider for Customers */}
                                     <div>
-                                        <div className="flex justify-between items-end mb-4">
+                                        <div className="flex flex-col gap-2 mb-4 sm:flex-row sm:items-end sm:justify-between">
                                             <label className="text-sm font-semibold text-gray-700">
                                                 Total Customers Onboarded
                                             </label>
@@ -232,14 +232,14 @@ export default function PartnersContent() {
                                     </div>
                                     
                                     {/* Results */}
-                                    <div className="grid grid-cols-2 gap-4 pt-2">
-                                        <div className="p-5 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100 shadow-sm">
+                                    <div className="grid gap-4 pt-2 sm:grid-cols-2">
+                                        <div className="p-4 sm:p-5 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100 shadow-sm">
                                             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Your Monthly Income</p>
                                             <p className="text-2xl md:text-3xl font-bold text-gray-900">
                                                 ${parseInt(monthlyEarnings).toLocaleString()}
                                             </p>
                                         </div>
-                                        <div className="p-5 bg-gradient-to-br from-primary-50 to-white rounded-2xl border border-primary-100 shadow-sm">
+                                        <div className="p-4 sm:p-5 bg-gradient-to-br from-primary-50 to-white rounded-2xl border border-primary-100 shadow-sm">
                                             <p className="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1">Yearly Income</p>
                                             <p className="text-2xl md:text-3xl font-bold text-primary-600">
                                                 ${yearlyEarnings}

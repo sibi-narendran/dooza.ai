@@ -69,9 +69,9 @@ export function ContentClickHandler({ html }) {
     return (
         <>
             <div
-                className="prose prose-lg max-w-none
+                className="prose prose-base sm:prose-lg max-w-none
                     prose-headings:text-slate-900 prose-headings:font-bold prose-headings:tracking-tight
-                    prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:scroll-mt-28
+                    prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 sm:prose-h2:mt-12 prose-h2:mb-5 sm:prose-h2:mb-6 prose-h2:scroll-mt-28
                     prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
                     prose-p:text-slate-600 prose-p:leading-relaxed
                     prose-a:text-primary-600 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
