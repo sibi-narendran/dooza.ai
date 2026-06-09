@@ -1,12 +1,6 @@
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import SignupTextLink from '@/components/buttons/SignupTextLink';
 
-const proofStats = [
-    { value: '170+', label: 'countries' },
-    { value: '24/7', label: 'AI employees' },
-    { value: '1,000+', label: 'app connections' },
-];
-
 export default function HeroSection() {
     return (
         <section className="relative min-h-[70dvh] md:min-h-[90dvh] flex flex-col items-center justify-center px-4 md:px-8 pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden">
@@ -40,15 +34,6 @@ export default function HeroSection() {
                         Book 15 Min with Founder — Free
                     </BookDemoButton>
                     <SignupTextLink source="hero" />
-                </div>
-
-                <div className="mt-10 grid max-w-2xl gap-3 rounded-3xl border border-white/70 bg-white/70 p-3 shadow-sm backdrop-blur sm:grid-cols-3">
-                    {proofStats.map((stat) => (
-                        <div key={stat.label} className="rounded-2xl bg-white px-3 py-4 text-center shadow-sm">
-                            <div className="text-xl font-extrabold text-slate-950 md:text-2xl">{stat.value}</div>
-                            <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">{stat.label}</div>
-                        </div>
-                    ))}
                 </div>
             </div>
         </section>
