@@ -17,7 +17,7 @@ import { trackFBViewContent } from '@/lib/analytics';
 
 const comparisonRows = [
     { feature: 'Monthly Price', dooza: '$49/mo flat', competitor: '$48.50/mo (discounted from $97)', doozaWins: true },
-    { feature: 'Annual Price', dooza: '$39/mo — no lock-in required', competitor: '$15.60/mo — 12-month commitment', doozaWins: false },
+    { feature: 'Growth Price', dooza: '$79/mo — no long-term lock-in required', competitor: '$15.60/mo — 12-month commitment', doozaWins: false },
     { feature: 'Task / Usage Limits', dooza: 'Unlimited', competitor: '250 credits per month', doozaWins: true },
     { feature: 'Number of AI Agents', dooza: '7 specialized employees', competitor: '12+ helpers', doozaWins: false },
     { feature: 'Onboarding', dooza: 'Personal setup call with founder', competitor: 'Self-serve only', doozaWins: true },

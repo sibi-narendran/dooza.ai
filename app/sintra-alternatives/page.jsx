@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: 'How much does Sintra AI cost?',
-        answer: 'Sintra AI lists Sintra X at $97/mo (often discounted 50% to ~$48.50/mo) or ~$15.60/mo on an annual plan. All plans are capped at 250 credits. Alternatives like Dooza start at $49/mo monthly ($39/mo yearly) with usage-based tiers and no credit system.',
+        answer: 'Sintra AI lists Sintra X at $97/mo (often discounted 50% to ~$48.50/mo) or ~$15.60/mo on an annual plan. All plans are capped at 250 credits. Alternatives like Dooza start at $49/mo with usage-based tiers and no credit system.',
     },
     {
         question: 'Can Sintra AI helpers talk to each other?',
@@ -72,7 +72,7 @@ const faqData = [
     },
     {
         question: 'What is the cheapest Sintra AI alternative?',
-        answer: 'Cubeo AI starts at approximately \u20ac17/month, and Marblism starts at $24/month on a yearly plan. Dooza starts at $39/month yearly (or $49/month monthly) and is backed by a 7-day money-back guarantee.',
+        answer: 'Cubeo AI starts at approximately \u20ac17/month, and Marblism starts at $24/month on a yearly plan. Dooza starts at $49/month and is backed by a 7-day money-back guarantee.',
     },
     {
         question: 'Do any Sintra alternatives offer a free trial?',

@@ -70,8 +70,9 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel }) => {
     }, [isOpen]);
 
     const products = [
-        { name: 'Workforce', href: '/' },
-        { name: 'Studio', href: '/studio', comingSoon: true },
+        { name: 'Dooza Marketing', href: '/' },
+        { name: 'Dooza Deployment', href: '/deployment' },
+        { name: 'Dooza Workflow', href: '/workflow' },
     ];
 
     const agents = [

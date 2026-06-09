@@ -199,7 +199,7 @@ const budgetTiers = [
         label: 'Just Getting Started',
         color: 'primary',
         recommendation: 'Start with an all-in-one AI employee platform that covers email, social, SEO, support, and leads in one subscription.',
-        bestPick: 'Dooza Starter — $49/mo ($39/mo yearly). 5 AI employees, 1,000+ integrations, free concierge onboarding. 7-day money-back guarantee.',
+        bestPick: 'Dooza Starter — $49/mo. 5 AI employees, 1,000+ integrations, free concierge onboarding. 7-day money-back guarantee.',
         tools: ['Dooza ($49/mo — 5 AI employees)', 'Buffer ($6/mo — social only)', 'Canva Free (design only)'],
     },
     {
@@ -207,16 +207,16 @@ const budgetTiers = [
         label: 'Growing Business',
         color: 'teal',
         recommendation: 'Combine an all-in-one platform with 1-2 specialized tools for your biggest gaps. This covers 80% of needs without the tool sprawl.',
-        bestPick: 'Dooza Growth ($69/mo) + 1 specialized tool. 2× usage for scaling businesses.',
-        tools: ['Dooza Growth ($69/mo — 2× usage)', 'Semrush ($139/mo — if SEO is critical)', 'ClickUp ($7/user/mo — project management)'],
+        bestPick: 'Dooza Growth ($79/mo) + 1 specialized tool. 2× usage for scaling businesses.',
+        tools: ['Dooza Growth ($79/mo — 2× usage)', 'Semrush ($139/mo — if SEO is critical)', 'ClickUp ($7/user/mo — project management)'],
     },
     {
         tier: '$200–500/mo',
         label: 'Scaling Operations',
         color: 'slate',
         recommendation: 'Run an AI employee platform at the core with enterprise-grade specialized tools for your most impactful functions.',
-        bestPick: 'Dooza Pro ($119/mo) + 2-3 specialized tools. 10× usage for high-volume operations.',
-        tools: ['Dooza Pro ($119/mo — 10× usage)', 'HubSpot ($50/mo — CRM + marketing)', 'Intercom ($74/mo — advanced support)'],
+        bestPick: 'Dooza Pro ($199/mo) with 84 hours of done-for-you work capacity, Dooza Workflow writing workflows, and manual setup from our side.',
+        tools: ['Dooza Pro ($199/mo — manual setup + Dooza Workflow workflows)', 'HubSpot ($50/mo — CRM + marketing)', 'Intercom ($74/mo — advanced support)'],
     },
 ];
 
@@ -488,7 +488,7 @@ export default function AISolutionsContent({ faqData }) {
                                         <span className="text-primary-300 font-bold">Monthly total</span>
                                         <span className="text-2xl font-bold text-white">$49/mo</span>
                                     </div>
-                                    <p className="text-xs text-slate-400 mt-2">One login, one billing cycle, shared context across all employees. $39/mo on yearly plan.</p>
+                                    <p className="text-xs text-slate-400 mt-2">One login, one billing cycle, shared context across all employees.</p>
                                 </div>
                             </div>
 

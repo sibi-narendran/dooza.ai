@@ -17,7 +17,7 @@ import { trackFBViewContent } from '@/lib/analytics';
 
 const comparisonRows = [
     { feature: 'Monthly Price', dooza: '$49/mo flat', competitor: '$44/mo + $29/seat', doozaWins: true },
-    { feature: 'Annual Price', dooza: '$39/mo — no lock-in', competitor: '$24/mo + $14/seat', doozaWins: true },
+    { feature: 'Growth Price', dooza: '$79/mo — no per-seat fees', competitor: '$24/mo + $14/seat annually', doozaWins: true },
     { feature: 'Per-Seat Fees', dooza: 'None — whole team included', competitor: '$29/seat (monthly)', doozaWins: true },
     { feature: 'Number of AI Agents', dooza: '7 specialized employees', competitor: '6 agents', doozaWins: true },
     { feature: 'Onboarding', dooza: 'Personal setup call with founder', competitor: 'Self-serve only', doozaWins: true },

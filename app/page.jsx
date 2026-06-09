@@ -131,14 +131,14 @@ const softwareSchema = {
     ],
     "offers": {
         "@type": "Offer",
-        "price": "39",
+        "price": "49",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://workforce.dooza.ai",
         "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "39",
+            "price": "49",
             "priceCurrency": "USD",
             "billingIncrement": 1,
             "billingDuration": {
@@ -205,7 +205,7 @@ const productSchema = {
         "@type": "Offer",
         "url": "https://workforce.dooza.ai",
         "priceCurrency": "USD",
-        "price": "39",
+        "price": "49",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "seller": {
@@ -296,7 +296,7 @@ const howToSchema = {
     "estimatedCost": {
         "@type": "MonetaryAmount",
         "currency": "USD",
-        "value": "39"
+        "value": "49"
     },
     "step": [
         {

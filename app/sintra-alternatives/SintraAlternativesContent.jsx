@@ -30,7 +30,7 @@ const alternatives = [
         name: 'Dooza',
         tagline: 'Best overall Sintra alternative for SMBs',
         bestFor: 'Small businesses wanting hands-off AI employees with personal onboarding',
-        price: 'From $39/mo (yearly) or $49/mo (monthly)',
+        price: 'From $49/mo',
         trial: '7-day money-back guarantee',
         agents: '5 named AI employees — Maily (email), Somi (social media), Ranky (SEO), Stan (customer support), Linda (lead generation)',
         integrations: '1,000+ via Composio',

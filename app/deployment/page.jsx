@@ -116,6 +116,12 @@ const outcomes = [
     { icon: PhoneCall, title: 'Cleaner handoffs', desc: 'Capture next steps from calls and leads.' },
 ];
 
+const deploymentStats = [
+    { value: '170+', label: 'countries supported' },
+    { value: '1,000+', label: 'tools and app connections' },
+    { value: '7 days', label: 'guided launch window' },
+];
+
 const processSteps = [
     {
         step: '01',
@@ -330,6 +336,15 @@ export default function DeploymentPage() {
                                 <Badge icon={CalendarCheck}>Plan first</Badge>
                                 <Badge icon={ShieldCheck}>Review built in</Badge>
                                 <Badge icon={Zap}>Launch fast</Badge>
+                            </div>
+
+                            <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
+                                {deploymentStats.map((stat) => (
+                                    <div key={stat.label} className="rounded-2xl border border-white/80 bg-white/80 px-4 py-5 shadow-sm backdrop-blur">
+                                        <div className="text-2xl font-extrabold text-slate-950">{stat.value}</div>
+                                        <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">{stat.label}</div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 

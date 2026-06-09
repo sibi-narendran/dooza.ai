@@ -72,7 +72,7 @@ const faqData = [
     },
     {
         question: 'What is the cheapest Marblism alternative?',
-        answer: 'Cubeo AI starts at approximately €17/mo, making it the cheapest option — but it offers chatbots, not autonomous AI employees. For named AI employees, Marblism\'s yearly plan ($24/mo) is the cheapest single-user option. But for teams, Dooza\'s flat $49/mo (or $39/mo yearly) is cheaper than Marblism as soon as you add a second team member.',
+        answer: 'Cubeo AI starts at approximately €17/mo, making it the cheapest option — but it offers chatbots, not autonomous AI employees. For named AI employees, Marblism\'s yearly plan ($24/mo) is the cheapest single-user option. But for teams, Dooza\'s $49/mo Starter plan is cheaper than Marblism as soon as you add a second team member.',
     },
     {
         question: 'Does Marblism have a free trial?',

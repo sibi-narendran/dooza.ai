@@ -30,7 +30,7 @@ const alternatives = [
         name: 'Dooza',
         tagline: 'Best overall — flat pricing, personal onboarding, 1,000+ integrations',
         bestFor: 'SMBs and teams wanting AI employees without per-seat fees or DIY setup',
-        price: 'From $39/mo (yearly) or $49/mo (monthly)',
+        price: 'From $49/mo',
         trial: '7-day money-back guarantee',
         agents: '5 named AI employees — Maily (email), Somi (social media), Ranky (SEO), Stan (customer support), Linda (lead generation)',
         integrations: '1,000+ via Composio',
