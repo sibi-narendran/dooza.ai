@@ -26,6 +26,7 @@ import {
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import VideoSection from '@/components/sections/VideoSection';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import FAQAccordion from '@/components/FAQAccordion';
 import { getProductSignupUrl } from '@/lib/links';
@@ -684,6 +685,8 @@ export default function WorkflowPage() {
                         </div>
                     </div>
                 </section>
+
+                <VideoSection />
 
                 <section className="border-y border-slate-200 bg-white px-4 py-8">
                     <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-4">

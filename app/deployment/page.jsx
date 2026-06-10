@@ -20,6 +20,7 @@ import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import IntegrationsBar from '@/components/sections/IntegrationsBar';
+import VideoSection from '@/components/sections/VideoSection';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
@@ -539,6 +540,8 @@ export default function DeploymentPage() {
                         <DeploymentSavingsVisual />
                     </div>
                 </section>
+
+                <VideoSection />
 
                 <section className="border-y border-slate-200 bg-white px-4 py-12">
                     <div className="mx-auto max-w-7xl">
