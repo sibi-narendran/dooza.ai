@@ -34,6 +34,8 @@ import { SITE_URL } from '@/lib/site';
 import { testimonials } from '@/lib/homeData';
 
 const pageUrl = `${SITE_URL}/workflow`;
+const workflowSignupUrl = getProductSignupUrl('workflow');
+const workflowSigninUrl = 'https://accounts.dooza.ai/signin?product=workflow';
 
 export const metadata = {
     title: {
@@ -640,7 +642,7 @@ export default function WorkflowPage() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
                 />
             ))}
-            <Navbar />
+            <Navbar signupUrl={workflowSignupUrl} loginUrl={workflowSigninUrl} />
             <main id="main-content" className="bg-warm text-slate-900">
                 <section className="relative overflow-hidden px-4 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40">
                     <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#0f172a0a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a0a_1px,transparent_1px)] bg-[size:28px_28px]" />
@@ -658,7 +660,7 @@ export default function WorkflowPage() {
                             </p>
                             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                                 <a
-                                    href={getProductSignupUrl('workforce')}
+                                    href={workflowSignupUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-700 px-6 py-4 text-center text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800 hover:shadow-xl sm:w-auto sm:px-7"
@@ -1007,7 +1009,7 @@ export default function WorkflowPage() {
                         </p>
                         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                             <a
-                                href={getProductSignupUrl('workforce')}
+                                href={workflowSignupUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800"
