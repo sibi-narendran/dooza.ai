@@ -62,9 +62,9 @@ export default function IndustriesPage() {
         {
             icon: Scale,
             name: 'Legal Services',
-            description: 'AI employees for law firms and attorneys',
-            slug: 'ai-employees-transforming-small-business',
-            benefits: ['Client intake automation', 'Content marketing', 'Lead qualification']
+            description: 'AI workflows for law firm intake, onboarding, documents, and client follow-up',
+            industrySlug: 'law-firms',
+            benefits: ['Client intake automation', 'Attorney approval steps', 'Matter admin workflows']
         }
     ];
 

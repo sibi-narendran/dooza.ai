@@ -8,15 +8,17 @@ import { getProductSignupUrl, getProductSigninUrl } from '@/lib/links';
 import { trackDemoClick, trackSignupClick } from '@/lib/analytics';
 import { useBookingModal } from '@/components/BookingModalProvider';
 
-const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = true, ctaType = 'signup', ctaSource = 'navbar' }) => {
+const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = true, showIndustry = false, ctaType = 'signup', ctaSource = 'navbar' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
     const [agentsOpen, setAgentsOpen] = useState(false);
+    const [industriesOpen, setIndustriesOpen] = useState(false);
     const dropdownRef = useRef(null);
     const servicesDropdownRef = useRef(null);
     const agentsDropdownRef = useRef(null);
+    const industriesDropdownRef = useRef(null);
     const { openModal } = useBookingModal();
 
     const isDark = variant === 'dark';
@@ -45,6 +47,9 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
             }
             if (agentsDropdownRef.current && !agentsDropdownRef.current.contains(event.target)) {
                 setAgentsOpen(false);
+            }
+            if (industriesDropdownRef.current && !industriesDropdownRef.current.contains(event.target)) {
+                setIndustriesOpen(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
@@ -98,6 +103,10 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
         { name: 'Lead Gen Pro — Lead Generation', href: '/agents/lead-gen-pro' },
         { name: 'UGC Reel Creator — Video', href: '/agents/ugc-reel-creator' },
         { name: 'Voice Pro — Calls', href: '/agents/voice-pro' },
+    ];
+
+    const industries = [
+        { name: 'Law Firms', href: '/industries/law-firms' },
     ];
 
     return (
@@ -285,6 +294,59 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                 )}
                             </div>
 
+                            {showIndustry && (
+                                <div className="relative" ref={industriesDropdownRef}>
+                                    <button
+                                        onClick={() => setIndustriesOpen(!industriesOpen)}
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Escape') setIndustriesOpen(false);
+                                        }}
+                                        aria-expanded={industriesOpen}
+                                        aria-haspopup="true"
+                                        aria-controls="industries-dropdown"
+                                        aria-label="Industry menu"
+                                        className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
+                                            ? 'text-gray-300 hover:text-white'
+                                            : 'text-slate-600 hover:text-primary-600'
+                                            }`}
+                                    >
+                                        Industry
+                                        <ChevronDown className={`w-4 h-4 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
+                                    </button>
+
+                                    {industriesOpen && (
+                                        <div
+                                            id="industries-dropdown"
+                                            role="menu"
+                                            className={`absolute top-full left-0 mt-2 min-w-[180px] rounded-xl shadow-xl border overflow-hidden ${isDark
+                                                ? 'bg-[#12121a] border-white/10'
+                                                : 'bg-white border-slate-100'
+                                            }`}
+                                        >
+                                            <div className="py-2">
+                                                {industries.map((industry) => (
+                                                    <Link
+                                                        key={industry.name}
+                                                        href={industry.href}
+                                                        role="menuitem"
+                                                        onClick={() => setIndustriesOpen(false)}
+                                                        onKeyDown={(e) => {
+                                                            if (e.key === 'Escape') setIndustriesOpen(false);
+                                                        }}
+                                                        className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${isDark
+                                                            ? 'text-gray-300 hover:bg-white/5 hover:text-white'
+                                                            : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                                                            }`}
+                                                    >
+                                                        {industry.name}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
                             <Link
                                 href="/pricing"
                                 className={`text-[15px] font-medium transition-colors ${isDark
@@ -445,6 +507,29 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                 {agent.name}
                             </Link>
                         ))}
+
+                        {showIndustry && (
+                            <>
+                                <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
+
+                                <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
+                                    Industry
+                                </div>
+                                {industries.map((industry) => (
+                                    <Link
+                                        key={industry.name}
+                                        href={industry.href}
+                                        onClick={() => setIsOpen(false)}
+                                        className={`block px-3 py-3 rounded-lg font-medium ${isDark
+                                            ? 'text-gray-300 hover:bg-white/5'
+                                            : 'text-slate-600 hover:bg-slate-50'
+                                            }`}
+                                    >
+                                        {industry.name}
+                                    </Link>
+                                ))}
+                            </>
+                        )}
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 

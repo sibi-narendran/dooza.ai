@@ -642,7 +642,7 @@ export default function WorkflowPage() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
                 />
             ))}
-            <Navbar signupUrl={workflowSignupUrl} loginUrl={workflowSigninUrl} />
+            <Navbar signupUrl={workflowSignupUrl} loginUrl={workflowSigninUrl} showIndustry />
             <main id="main-content" className="bg-warm text-slate-900">
                 <section className="relative overflow-hidden px-4 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40">
                     <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#0f172a0a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a0a_1px,transparent_1px)] bg-[size:28px_28px]" />

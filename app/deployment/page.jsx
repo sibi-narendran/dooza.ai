@@ -502,7 +502,7 @@ export default function DeploymentPage() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
                 />
             ))}
-            <Navbar showLogin={false} ctaType="demo" ctaSource="deployment_nav" />
+            <Navbar showLogin={false} showIndustry ctaType="demo" ctaSource="deployment_nav" />
             <main id="main-content" className="bg-warm text-slate-900">
                 <section className="relative overflow-hidden px-4 pt-32 pb-20 md:px-8 md:pt-40 md:pb-28">
                     <div className="absolute inset-0 pointer-events-none">
