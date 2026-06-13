@@ -29,13 +29,13 @@ import Footer from '@/components/Footer';
 import VideoSection from '@/components/sections/VideoSection';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import FAQAccordion from '@/components/FAQAccordion';
-import { getProductSignupUrl } from '@/lib/links';
+import { WORKFLOW_SIGNIN_URL, WORKFLOW_SIGNUP_URL } from '@/lib/links';
 import { SITE_URL } from '@/lib/site';
 import { testimonials } from '@/lib/homeData';
 
 const pageUrl = `${SITE_URL}/workflow`;
-const workflowSignupUrl = getProductSignupUrl('workflow');
-const workflowSigninUrl = 'https://accounts.dooza.ai/signin?product=workflow';
+const workflowSignupUrl = WORKFLOW_SIGNUP_URL;
+const workflowSigninUrl = WORKFLOW_SIGNIN_URL;
 
 export const metadata = {
     title: {
