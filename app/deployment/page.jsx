@@ -8,7 +8,6 @@ import {
     DatabaseZap,
     DollarSign,
     FileCheck2,
-    Mail,
     MessageSquare,
     PhoneCall,
     ShieldCheck,
@@ -33,7 +32,7 @@ export const metadata = {
         absolute: 'AI Deployment Company for SMB Automation | Dooza.ai',
     },
     description:
-        'Dooza is an AI deployment company for SMBs that sets up managed sales, customer support, calls, email, leads, and operations automation.',
+        'Dooza Deployment helps SMBs find, build, and manage the first AI workflow that saves time, protects revenue, and stays under human control.',
     keywords: [
         'AI deployment company',
         'AI deployment services',
@@ -64,7 +63,7 @@ export const metadata = {
     openGraph: {
         title: 'AI Deployment Company for SMB Automation | Dooza.ai',
         description:
-            'Managed AI automation setup for sales, customer support, calls, email, leads, operations, and business tools.',
+            'Managed AI workflow deployment for businesses that want useful automation without figuring it out alone.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -83,16 +82,33 @@ export const metadata = {
         creator: '@sibinarendran',
         title: 'AI Deployment Company for SMB Automation | Dooza.ai',
         description:
-            'Book a call to deploy managed AI automations for sales, customer support, calls, email, leads, and operations.',
+            'Speak with the founder to find the first AI workflow worth deploying in your business.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
 
-const outcomes = [
-    { icon: TrendingUp, title: 'Sales follow-up', desc: 'Respond faster, revive stalled leads, and keep deals moving.' },
-    { icon: MessageSquare, title: 'Customer support', desc: 'Reduce response time without losing human control.' },
-    { icon: PhoneCall, title: 'Calls and missed leads', desc: 'Capture caller details, summarize intent, and create next steps.' },
-    { icon: Mail, title: 'Email and admin', desc: 'Sort messages, draft replies, route work, and update records.' },
+const ownerSignals = [
+    'Work keeps repeating, but nobody has time to turn it into a real system.',
+    'Important follow-ups still depend on memory, inbox checks, and manual reminders.',
+    'Information sits across too many tools, tabs, forms, calendars, and spreadsheets.',
+    'You know AI can help, but you are not sure what to automate first or how to trust it.',
+    'Your team is busy, but too much energy goes into work that should already be moving.',
+];
+
+const deploymentChanges = [
+    'We find one workflow with a clear business reason to automate.',
+    'We connect the tools and context your team already uses.',
+    'We add approval points where mistakes would be expensive.',
+    'We launch small, watch the workflow, and improve it over time.',
+    'You see what happened instead of wondering what the AI did.',
+];
+
+const startingPoints = [
+    'A repeated handoff that slows the team down every week.',
+    'A customer or lead response that should happen faster.',
+    'A content, research, or GTM routine that never runs consistently.',
+    'An internal admin process where the same information gets copied around.',
+    'A reporting or update workflow that takes time but rarely needs judgment.',
 ];
 
 const platformLinks = [
@@ -100,69 +116,69 @@ const platformLinks = [
         icon: Brain,
         title: 'Built on Dooza AI',
         href: '/',
-        desc: 'Ready AI employees reduce custom setup for calls, sales, email, content, and support.',
+        desc: 'Ready AI employees reduce custom setup when a workflow needs writing, reasoning, routing, or follow-up.',
     },
     {
         icon: Workflow,
         title: 'Built on Dooza Workflow',
         href: '/workflow',
-        desc: 'Reusable approvals, traces, app steps, and tests reduce engineering time for every deployment.',
+        desc: 'Reusable approvals, traces, app steps, and tests make each deployment easier to control and improve.',
     },
 ];
 
 const processSteps = [
     {
         step: '01',
-        title: 'Find the money leak',
+        title: 'Understand the messy work',
         time: 'Find',
-        desc: 'Missed leads, slow replies, repeated admin.',
+        desc: 'Map the work that repeats, slows people down, or creates avoidable risk.',
     },
     {
         step: '02',
-        title: 'Pick one workflow',
+        title: 'Choose the first workflow',
         time: 'Pick',
-        desc: 'Choose the sales or support task with clear ROI.',
+        desc: 'Start where the business value is easiest to see, not where AI sounds most impressive.',
     },
     {
         step: '03',
         title: 'Build with controls',
         time: 'Build',
-        desc: 'Connect tools, context, approvals, and tests.',
+        desc: 'Connect tools, add context, define rules, and keep approvals where they matter.',
     },
     {
         step: '04',
-        title: 'Run the automation',
+        title: 'Launch carefully',
         time: 'Run',
-        desc: 'Handle follow-ups, tickets, calls, and email.',
+        desc: 'Run the workflow with visibility into what happened and what still needs review.',
     },
     {
         step: '05',
         title: 'Improve and expand',
         time: 'Grow',
-        desc: 'Track savings, tune the flow, add the next one.',
+        desc: 'Measure the result, tune the workflow, then decide whether the next one is worth it.',
     },
 ];
 
 const trustItems = [
     {
         icon: ShieldCheck,
-        title: 'SOC 2-ready controls',
-        desc: 'Approval gates, audit evidence, access scoping, and change review for security-minded SMBs.',
+        title: 'Human approval where it matters',
+        desc: 'Sensitive replies, customer-facing actions, refunds, and important updates can wait for review.',
     },
     {
         icon: FileCheck2,
-        title: 'GDPR-aware workflows',
-        desc: 'Data minimization, deletion paths, retention planning, and privacy-aware automation design.',
+        title: 'Tested before launch',
+        desc: 'We define the workflow, test edge cases, and make sure the system behaves before it goes live.',
     },
     {
         icon: CheckCircle2,
-        title: 'Human review built in',
-        desc: 'Sensitive replies, refunds, CRM changes, and customer-facing actions can wait for approval.',
+        title: 'Clear logs and visibility',
+        desc: 'Your team can see what the automation did, what it drafted, and what still needs attention.',
     },
     {
         icon: DatabaseZap,
-        title: 'Least-privilege tool access',
-        desc: 'Automations only touch the apps, inboxes, records, and actions needed for the workflow.',
+        title: 'Existing tools first',
+        desc: 'We connect the apps your business already runs on before asking anyone to change behavior.',
     },
 ];
 
@@ -188,17 +204,22 @@ const faqData = [
     {
         question: 'What do you deploy?',
         answer:
-            'We deploy managed AI automation systems for sales, customer support, calls, email, lead handling, reporting, and repeat business work.',
+            'We deploy managed AI workflows that handle repeated business work with rules, tool connections, approvals, and ongoing improvement.',
+    },
+    {
+        question: 'What if we do not know what to automate first?',
+        answer:
+            'That is exactly where we start. We look for repeated work, slow handoffs, missed opportunities, and manual tasks where AI can create measurable value without adding risk.',
     },
     {
         question: 'What should we automate first?',
         answer:
-            'Usually sales follow-up or customer support. They are easy to measure because they affect missed revenue, response time, and team workload.',
+            'The first workflow should be small enough to launch safely and valuable enough to prove the business case. We help choose that with you.',
     },
     {
-        question: 'Can you automate sales and customer support?',
+        question: 'Can you automate customer-facing work?',
         answer:
-            'Yes. We can automate lead capture, CRM updates, follow-up, support triage, draft replies, customer summaries, escalations, and team alerts.',
+            'Yes, but we do it carefully. Customer-facing work can include human approval, escalation rules, logs, and limits so the business stays in control.',
     },
     {
         question: 'Do we need technical skills?',
@@ -208,7 +229,7 @@ const faqData = [
     {
         question: 'Is this built for SMBs?',
         answer:
-            'Yes. We start with one high-value workflow, keep pricing and scope practical, and expand only after the first automation proves value.',
+            'Yes. We start with one useful workflow, keep scope practical, and expand only after the first automation proves value.',
     },
     {
         question: 'How do you handle compliance?',
@@ -267,7 +288,7 @@ const schemas = [
         serviceType: 'AI Deployment Services',
         url: pageUrl,
         description:
-            'Managed AI deployment for sales, customer support, calls, email, leads, operations, tool integrations, and launch support.',
+            'Managed AI workflow deployment for repeated business work, tool integrations, approvals, launch support, and ongoing improvements.',
         provider: {
             '@type': 'Organization',
             name: 'Dooza',
@@ -285,11 +306,11 @@ const schemas = [
             '@type': 'OfferCatalog',
             name: 'AI Deployment Service Areas',
             itemListElement: [
-                'Sales automation',
-                'Customer support automation',
-                'Call automation',
-                'Email automation',
-                'Business operations automation',
+                'AI workflow discovery',
+                'Managed AI workflow setup',
+                'Business tool integration',
+                'Human approval workflows',
+                'AI automation monitoring',
             ].map((service, index) => ({
                 '@type': 'Offer',
                 position: index + 1,
@@ -361,32 +382,32 @@ function Badge({ icon: Icon, children }) {
 
 function DeploymentSavingsVisual() {
     const workflowSteps = [
-        ['Lead captured', 'sales'],
-        ['Reply drafted', 'support'],
+        ['Workflow found', 'sales'],
+        ['Rules defined', 'support'],
         ['Human approved', 'control'],
-        ['CRM updated', 'done'],
+        ['System improved', 'done'],
     ];
 
     return (
-        <div className="workflow-hero-surface rounded-[1.75rem] border border-white/70 bg-white/90 p-6 shadow-xl shadow-primary-100/50 backdrop-blur">
+        <div className="workflow-hero-surface mx-0 w-full max-w-[22rem] overflow-hidden rounded-[1.75rem] border border-white/70 bg-white/90 p-6 shadow-xl shadow-primary-100/50 backdrop-blur sm:mx-auto sm:max-w-full">
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-slate-100 pb-5">
                 <div className="flex items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
                         <Workflow className="h-5 w-5" />
                     </div>
                     <div>
-                        <div className="text-sm font-bold text-slate-950">SMB automation map</div>
-                        <div className="text-xs text-slate-500">workflow, savings, review</div>
+                        <div className="text-sm font-bold text-slate-950">Managed AI workflow</div>
+                        <div className="text-xs text-slate-500">find, build, review, improve</div>
                     </div>
                 </div>
                 <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">Managed</span>
             </div>
 
-            <div className="relative mb-6 grid gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+            <div className="relative mb-6 grid grid-cols-1 gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
                 <div className="rounded-2xl border border-slate-100 bg-slate-50 p-4">
                     <div className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">Before</div>
-                    <div className="font-bold text-slate-950">Manual work</div>
-                    <p className="mt-1 text-sm leading-relaxed text-slate-600">Slow replies, missed leads, repeated updates.</p>
+                    <div className="font-bold text-slate-950">Messy repeated work</div>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">Too many steps, tools, checks, and handoffs.</p>
                 </div>
 
                 <svg className="hidden h-16 w-24 sm:block" viewBox="0 0 96 64" fill="none" aria-hidden="true">
@@ -396,8 +417,8 @@ function DeploymentSavingsVisual() {
 
                 <div className="rounded-2xl border border-primary-100 bg-primary-50 p-4">
                     <div className="mb-2 text-xs font-bold uppercase tracking-wide text-primary-700">After</div>
-                    <div className="font-bold text-slate-950">AI workflow</div>
-                    <p className="mt-1 text-sm leading-relaxed text-slate-600">Drafted, routed, approved, and logged.</p>
+                    <div className="font-bold text-slate-950">Managed AI system</div>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">Drafted, routed, approved, logged, and improved.</p>
                 </div>
             </div>
 
@@ -405,14 +426,14 @@ function DeploymentSavingsVisual() {
                 <div className="mb-4 flex items-center justify-between gap-3">
                     <div>
                         <div className="text-sm font-bold text-slate-950">Automation run</div>
-                        <div className="text-xs font-semibold text-slate-500">sales and support tasks move automatically</div>
+                        <div className="text-xs font-semibold text-slate-500">one workflow starts moving with control</div>
                     </div>
                     <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">Live</span>
                 </div>
 
-                <div className="grid gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
                     <div className="grid gap-2">
-                        {['New lead', 'Support email', 'Missed call'].map((item, index) => (
+                        {['New input', 'Business rule', 'Tool context'].map((item, index) => (
                             <div key={item} className="deployment-queue-item rounded-xl border border-slate-100 bg-slate-50 px-3 py-2 text-sm font-semibold text-slate-700" style={{ animationDelay: `${index * 0.25}s` }}>
                                 {item}
                             </div>
@@ -426,7 +447,7 @@ function DeploymentSavingsVisual() {
                     </div>
 
                     <div className="grid gap-2">
-                        {['Follow-up drafted', 'Ticket routed', 'CRM updated'].map((item, index) => (
+                        {['Draft prepared', 'Owner notified', 'Record updated'].map((item, index) => (
                             <div key={item} className="deployment-queue-item rounded-xl border border-primary-100 bg-primary-50 px-3 py-2 text-sm font-semibold text-primary-900" style={{ animationDelay: `${0.45 + index * 0.25}s` }}>
                                 {item}
                             </div>
@@ -458,7 +479,7 @@ function DeploymentProcessFlow() {
                     </div>
                     <div>
                         <div className="text-sm font-bold text-slate-950">Simple AI rollout</div>
-                        <div className="text-xs text-slate-500">one workflow at a time</div>
+                        <div className="text-xs text-slate-500">start where value is clearest</div>
                     </div>
                 </div>
 
@@ -510,30 +531,32 @@ export default function DeploymentPage() {
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f766e0a_1px,transparent_1px),linear-gradient(to_bottom,#0f766e0a_1px,transparent_1px)] bg-[size:32px_32px]" />
                     </div>
 
-                    <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-                        <div>
+                    <div className="relative z-10 mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+                        <div className="min-w-0">
                             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white px-4 py-2 text-sm font-semibold text-primary-700 shadow-sm">
                                 <Sparkles className="h-4 w-4" />
-                                AI deployment for SMBs
+                                Managed AI deployment for businesses
                             </div>
-                            <h1 className="mb-7 max-w-4xl font-serif text-4xl font-extrabold leading-[1.08] tracking-tight text-slate-950 md:text-6xl lg:text-7xl">
-                                We make AI work for SMBs
+                            <h1 className="mb-7 max-w-[21.5rem] break-words font-serif text-[2rem] font-extrabold leading-[1.08] tracking-normal text-slate-950 sm:max-w-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                                <span className="block">AI is moving fast.</span>
+                                <span className="block">You don't have to</span>
+                                <span className="block">figure it out alone.</span>
                             </h1>
-                            <p className="mb-10 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl">
-                                We find one workflow that wastes time or loses money, connect your tools, add approvals, and manage the automation for your team.
+                            <p className="mb-10 max-w-[21.5rem] text-base leading-relaxed text-slate-600 sm:max-w-xl md:text-xl">
+                                Dooza Deployment helps you find, build, and manage the first AI workflow that actually saves time or protects revenue, without adding another tool your team has to babysit.
                             </p>
                             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-                                <BookDemoButton source="deployment_hero" variant="primary" size="xl">
-                                    Book a Free Call
+                                <BookDemoButton source="deployment_hero" variant="primary" size="xl" className="w-auto px-5 text-base sm:px-8 sm:text-lg md:px-10 md:text-xl">
+                                    Find My First Automation
                                 </BookDemoButton>
                             </div>
 
                             <div className="mt-9 flex flex-wrap gap-3">
-                                <Badge icon={TrendingUp}>Sales</Badge>
-                                <Badge icon={MessageSquare}>Customer support</Badge>
-                                <Badge icon={PhoneCall}>Calls</Badge>
-                                <Badge icon={Clock}>Time saved</Badge>
-                                <Badge icon={DollarSign}>Money saved</Badge>
+                                <Badge icon={TrendingUp}>Start small</Badge>
+                                <Badge icon={MessageSquare}>Human approval</Badge>
+                                <Badge icon={PhoneCall}>Existing tools</Badge>
+                                <Badge icon={Clock}>Managed setup</Badge>
+                                <Badge icon={DollarSign}>Measured value</Badge>
                             </div>
                         </div>
 
@@ -541,28 +564,72 @@ export default function DeploymentPage() {
                     </div>
                 </section>
 
-                <VideoSection />
-
-                <section className="border-y border-slate-200 bg-white px-4 py-12">
-                    <div className="mx-auto max-w-7xl">
-                        <div className="mb-8 grid gap-4 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-                            <div>
-                                <span className="section-label mb-3 block">SMB trust signals</span>
-                                <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
-                                    Built to automate without losing control
-                                </h2>
-                            </div>
-                            <p className="max-w-2xl text-base leading-relaxed text-slate-600 lg:ml-auto">
-                                Small teams need automation that is practical, affordable, and safe enough for customer-facing work.
+                <section className="bg-white px-4 py-20 md:py-28">
+                    <div className="mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+                        <div className="min-w-0">
+                            <span className="section-label mb-5 block">THE REAL PROBLEM</span>
+                            <h2 className="mb-6 max-w-[21.5rem] break-words font-serif text-[1.9rem] font-extrabold leading-tight tracking-normal text-slate-950 sm:max-w-xl md:text-5xl">
+                                <span className="block">The hard part is</span>
+                                <span className="block">knowing where</span>
+                                <span className="block">to start.</span>
+                            </h2>
+                            <p className="max-w-[21.5rem] text-base leading-relaxed text-slate-600 sm:max-w-xl md:text-lg">
+                                Most owners already know AI can help. The hard part is choosing the first workflow, setting it up correctly, and making sure it does not create more work for the team.
                             </p>
                         </div>
 
-                        <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+                            <div className="rounded-[28px] border border-slate-100 bg-warm p-6 shadow-sm">
+                                <h3 className="mb-5 font-sans text-lg font-extrabold text-slate-950">
+                                    You probably already feel the gap
+                                </h3>
+                                <div className="grid gap-3">
+                                    {ownerSignals.map((item) => (
+                                        <div key={item} className="flex gap-3 rounded-2xl bg-white p-4 text-sm font-semibold leading-relaxed text-slate-700 shadow-sm">
+                                            <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
+                                            <span>{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="rounded-[28px] border border-primary-100 bg-primary-50 p-6 shadow-sm">
+                                <h3 className="mb-5 font-sans text-lg font-extrabold text-slate-950">
+                                    What Dooza Deployment changes
+                                </h3>
+                                <div className="grid gap-3">
+                                    {deploymentChanges.map((item) => (
+                                        <div key={item} className="flex gap-3 rounded-2xl bg-white p-4 text-sm font-semibold leading-relaxed text-slate-700 shadow-sm">
+                                            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
+                                            <span>{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="border-y border-slate-200 bg-white px-4 py-12">
+                    <div className="mx-auto max-w-7xl">
+                        <div className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+                            <div>
+                                <span className="section-label mb-3 block">SMB trust signals</span>
+                                <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
+                                    Built for control, not blind automation
+                                </h2>
+                            </div>
+                            <p className="max-w-2xl text-base leading-relaxed text-slate-600 lg:ml-auto">
+                                Small teams need automation that makes work lighter without making the business feel out of control.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
                             <div className="deployment-trust-stack rounded-[28px] border border-slate-100 bg-slate-50 p-4 shadow-sm md:p-5">
                                 <div className="mb-4 flex items-center justify-between gap-3">
                                     <div>
-                                        <div className="text-sm font-bold text-slate-950">Proven automation base</div>
-                                        <div className="text-xs font-semibold text-slate-500">built for practical SMB rollout</div>
+                                        <div className="text-sm font-bold text-slate-950">Managed deployment base</div>
+                                        <div className="text-xs font-semibold text-slate-500">built for practical rollout</div>
                                     </div>
                                     <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">Trust</span>
                                 </div>
@@ -583,7 +650,7 @@ export default function DeploymentPage() {
                                 </div>
                             </div>
 
-                            <div className="grid gap-4 md:grid-cols-2">
+                            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                                 {trustItems.map((item) => {
                                     const Icon = item.icon;
                                     return (
@@ -602,25 +669,25 @@ export default function DeploymentPage() {
                 </section>
 
                 <section id="managed-plan" className="bg-warm px-4 py-20 md:py-28">
-                    <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+                    <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
                         <div>
                             <span className="section-label mb-5 block">MANAGED PLAN</span>
                             <h2 className="mb-5 font-serif text-3xl font-extrabold leading-tight text-slate-900 md:text-5xl">
-                                Priced for SMBs
+                                Managed automation without hiring an AI team
                             </h2>
                             <p className="mb-6 text-lg leading-relaxed text-slate-600">
-                                We do not rebuild every automation from zero. We use Dooza AI and Dooza Workflow behind the scenes, then customize the workflow around your tools, approvals, and business rules.
+                                Most businesses do not need another AI subscription. They need someone to choose the right workflow, connect the tools, test the logic, monitor the output, and improve it over time.
                             </p>
                             <p className="mb-8 text-sm font-semibold text-slate-500">
                                 Managed plan pricing: <Link href="/pricing" className="text-primary-700 underline underline-offset-4 hover:text-primary-900">View pricing</Link>
                             </p>
                             <BookDemoButton source="deployment_managed_plan" variant="primary">
-                                Book a Free Call
+                                Find My First Automation
                             </BookDemoButton>
                         </div>
 
-                        <div className="grid gap-4">
-                            <div className="grid gap-4 sm:grid-cols-2">
+                        <div className="grid grid-cols-1 gap-4">
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 {platformLinks.map((item) => {
                                     const Icon = item.icon;
                                     return (
@@ -638,12 +705,12 @@ export default function DeploymentPage() {
                                 })}
                             </div>
 
-                            <div className="grid gap-4 sm:grid-cols-2">
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 {[
                                     'Start with one workflow before expanding',
-                                    'Reuse proven sales and support patterns',
+                                    'Use proven workflow patterns where they fit',
                                     'Connect existing tools instead of replacing them',
-                                    'Managed improvements without a full-time AI hire',
+                                    'Managed improvements without hiring an AI team',
                                 ].map((item) => (
                                     <div key={item} className="flex items-start gap-3 rounded-3xl border border-slate-100 bg-white p-5 shadow-sm">
                                         <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
@@ -661,43 +728,43 @@ export default function DeploymentPage() {
                     <div className="absolute inset-0 pointer-events-none">
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]" />
                     </div>
-                    <div className="relative z-10 mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                    <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
                         <div>
                             <span className="section-label mb-5 block">
                                 Process
                             </span>
                             <h2 className="mb-7 max-w-xl font-serif text-4xl font-extrabold leading-[1.08] tracking-tight text-slate-900 md:text-6xl">
-                                A simple rollout for SMB automation
+                                A simple rollout when you do not know where to start
                             </h2>
                             <p className="mb-9 max-w-lg text-lg leading-relaxed text-slate-600">
-                                We start with one workflow, prove it works, then expand into the next process.
+                                We start with one workflow, prove it works, then decide together whether the next one is worth automating.
                             </p>
                             <BookDemoButton source="deployment_process" variant="primary">
-                                Book a Free Call
+                                See What We Would Automate
                             </BookDemoButton>
                         </div>
                         <DeploymentProcessFlow />
                     </div>
                 </section>
 
+                <VideoSection />
+
                 <section className="bg-warm px-4 py-20 md:py-28">
                     <div className="mx-auto max-w-7xl">
                         <SectionHeader
-                            eyebrow="WHERE IT HELPS"
-                            title="We automate more than one thing"
-                            description="Start with sales or customer support, then expand into the next repeated process once the savings are clear."
+                            eyebrow="WHERE WE LOOK"
+                            title="If you are not sure what to automate first, that is exactly where we start"
+                            description="We do not assume the answer before we understand your business. During discovery, we look for repeated work, slow handoffs, and places where a managed AI workflow can create visible value."
                         />
-                        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                            {outcomes.map((item) => {
-                                const Icon = item.icon;
-                                return (
-                                    <div key={item.title} className="rounded-3xl border border-slate-100 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                                        <Icon className="mb-7 h-7 w-7 text-primary-600" />
-                                        <h3 className="mb-3 font-serif text-xl font-bold">{item.title}</h3>
-                                        <p className="text-slate-600">{item.desc}</p>
+                        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4">
+                            {startingPoints.map((item, index) => (
+                                <div key={item} className="flex gap-4 rounded-3xl border border-slate-100 bg-white p-5 shadow-sm">
+                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-primary-50 text-sm font-extrabold text-primary-700">
+                                        {index + 1}
                                     </div>
-                                );
-                            })}
+                                    <p className="text-base font-semibold leading-relaxed text-slate-700">{item}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -708,7 +775,7 @@ export default function DeploymentPage() {
                             eyebrow="PROOF"
                             title="Teams use AI automation to save time and protect revenue"
                         />
-                        <div className="grid gap-6 md:grid-cols-2">
+                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                             {featuredTestimonials.map((item) => (
                                 <div key={item.author} className="rounded-3xl border border-slate-100 bg-white p-7 shadow-sm">
                                     <div className="mb-6 flex items-center gap-3">
@@ -752,14 +819,14 @@ export default function DeploymentPage() {
                             <Brain className="h-8 w-8" />
                         </div>
                         <h2 className="mb-6 font-serif text-4xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-6xl">
-                            Ready to make AI useful?
+                            Find the first workflow AI should take off your plate
                         </h2>
                         <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-slate-600">
-                            Bring one sales or support process. We will help turn it into a working AI system.
+                            You do not need to know the answer before the call. Bring the messy work. We will help find the first practical automation.
                         </p>
                         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                             <BookDemoButton source="deployment_final" variant="primary" size="xl">
-                                Book a Free Call
+                                Get My Automation Roadmap
                             </BookDemoButton>
                         </div>
                     </div>

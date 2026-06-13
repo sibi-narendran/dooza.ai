@@ -24,7 +24,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     const isDark = variant === 'dark';
     const solidNav = scrolled || isOpen;
     const isDemoCta = ctaType === 'demo';
-    const ctaLabel = signupLabel || (isDemoCta ? 'Book a Demo' : 'Get Started');
+    const ctaLabel = signupLabel || (isDemoCta ? 'Speak to Founder' : 'Get Started');
 
     const handleDemoClick = () => {
         openModal();
