@@ -107,6 +107,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
 
     const industries = [
         { name: 'Law Firms', href: '/industries/law-firms' },
+        { name: 'Store Customer Ops', href: '/industries/customer-support' },
     ];
 
     return (

@@ -1,15 +1,15 @@
 import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
-    title: 'AI Employees for Your Industry — Instant Setup [2026]',
-    description: 'See how 10+ industries use AI employees to save 20+ hours/week. Healthcare, real estate, salons, legal, contractors, and more. Proven results from $49/mo.',
+    title: 'AI Automation by Industry | Dooza',
+    description: 'Explore industry-specific Dooza workflow automation for stores, law firms, salons, contractors, real estate teams, healthcare practices, and other SMBs.',
     keywords: ['AI for healthcare', 'AI for real estate', 'AI for small business', 'AI for e-commerce', 'industry AI automation'],
     alternates: {
         canonical: `${SITE_URL}/industries`,
     },
     openGraph: {
-        title: 'AI Employees for Your Industry — Instant Setup [2026]',
-        description: 'See how 10+ industries use AI employees to save 20+ hours/week. Healthcare, real estate, salons, legal, and more.',
+        title: 'AI Automation by Industry | Dooza',
+        description: 'Explore managed AI workflow automation for stores, law firms, salons, contractors, real estate teams, healthcare practices, and other SMBs.',
         url: `${SITE_URL}/industries`,
         siteName: SITE_NAME,
         type: 'website',
@@ -18,14 +18,14 @@ export const metadata = {
                 url: `${SITE_URL}/logo.png`,
                 width: 512,
                 height: 512,
-                alt: 'Dooza AI Employees for Industries',
+                alt: 'Dooza AI automation for industries',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'AI Employees for Your Industry — Instant Setup [2026]',
-        description: 'See how 10+ industries use AI employees to save 20+ hours/week. Healthcare, real estate, salons, legal, and more.',
+        title: 'AI Automation by Industry | Dooza',
+        description: 'Explore managed AI workflow automation for stores, law firms, salons, contractors, real estate teams, healthcare practices, and other SMBs.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

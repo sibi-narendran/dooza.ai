@@ -109,12 +109,12 @@ const USE_CASES = [
     }
 ];
 
-const ENTERPRISE_FEATURES = ["SOC 2 Type II", "GDPR Compliant", "99.99% SLA", "24/7 Support"];
+const ENTERPRISE_FEATURES = ["Scoped Access", "Approval Flows", "Run History", "Human Review"];
 
 const ENTERPRISE_METRICS = [
-    { label: "API Requests", value: "2.4M/day" },
-    { label: "Uptime", value: "99.99%" },
-    { label: "Response Time", value: "45ms avg" }
+    { label: "Tool Connections", value: "Multi-app" },
+    { label: "Approvals", value: "Reviewable" },
+    { label: "Routines", value: "Always-on" }
 ];
 
 export default function StudioContent() {

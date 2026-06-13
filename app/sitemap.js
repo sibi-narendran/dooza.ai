@@ -90,9 +90,15 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/industries`,
-            lastModified: pageDate('2026-02-23'),
+            lastModified: pageDate('2026-06-13'),
             changeFrequency: 'weekly',
             priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/industries/customer-support`,
+            lastModified: pageDate('2026-06-13'),
+            changeFrequency: 'weekly',
+            priority: 0.85,
         },
         {
             url: `${SITE_URL}/privacy`,

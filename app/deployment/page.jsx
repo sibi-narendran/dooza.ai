@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {
     ArrowRight,
@@ -23,7 +22,6 @@ import VideoSection from '@/components/sections/VideoSection';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
-import { testimonials } from '@/lib/homeData';
 
 const pageUrl = `${SITE_URL}/deployment`;
 
@@ -182,22 +180,26 @@ const trustItems = [
     },
 ];
 
-const trustStats = [
+const trustFoundations = [
     {
-        value: '12,000+',
-        label: 'workflows built',
-        desc: 'Reusable sales, support, email, and operations patterns speed up deployment.',
+        title: 'One workflow first',
+        desc: 'We do not try to automate the whole business on day one. We choose one workflow that is clear enough to test and improve.',
     },
     {
-        value: '140+',
-        label: 'countries reached',
-        desc: 'Used across global teams and SMB use cases.',
+        title: 'Scoped access',
+        desc: 'Automations should only touch the tools, inboxes, records, and actions required for the workflow.',
     },
     {
-        value: '1,000+',
-        label: 'app connections',
-        desc: 'Connect the tools you already use instead of replacing your stack.',
+        title: 'Available connectors, not inflated claims',
+        desc: 'We deploy using available integration infrastructure and your existing stack, then confirm what is actually needed before launch.',
     },
+];
+
+const callDeliverables = [
+    'A plain-English map of the first workflow worth automating',
+    'The tools, access, and approval points needed to make it safe',
+    'A success metric so the automation can be judged honestly',
+    'A launch path that starts small before adding more workflows',
 ];
 
 const faqData = [
@@ -234,7 +236,7 @@ const faqData = [
     {
         question: 'How do you handle compliance?',
         answer:
-            'We design SOC 2-ready controls and GDPR-aware workflow patterns such as approvals, audit trails, scoped access, deletion paths, and privacy-aware data handling.',
+            'We use practical controls such as scoped access, approval steps, logs, deletion and retention planning, and privacy-aware data handling. We do not present those as a compliance certification.',
     },
     {
         question: 'Can you use our current tools?',
@@ -512,8 +514,6 @@ function DeploymentProcessFlow() {
 }
 
 export default function DeploymentPage() {
-    const featuredTestimonials = testimonials.slice(0, 2);
-
     return (
         <BookingModalProvider>
             {schemas.map((schema, index) => (
@@ -635,16 +635,15 @@ export default function DeploymentPage() {
                                 </div>
 
                                 <div className="grid gap-3">
-                                    {trustStats.map((stat, index) => (
-                                        <div key={stat.label} className="deployment-trust-card rounded-2xl border border-slate-100 bg-white p-4 shadow-sm" style={{ animationDelay: `${index * 0.35}s` }}>
-                                            <div className="flex items-start justify-between gap-4">
+                                    {trustFoundations.map((item, index) => (
+                                        <div key={item.title} className="deployment-trust-card rounded-2xl border border-slate-100 bg-white p-4 shadow-sm" style={{ animationDelay: `${index * 0.35}s` }}>
+                                            <div className="flex items-start gap-3">
+                                                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
                                                 <div>
-                                                    <div className="font-serif text-3xl font-extrabold text-slate-950">{stat.value}</div>
-                                                    <div className="mt-1 text-xs font-bold uppercase tracking-wide text-primary-700">{stat.label}</div>
+                                                    <div className="text-sm font-extrabold text-slate-950">{item.title}</div>
+                                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.desc}</p>
                                                 </div>
-                                                <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-primary-600" />
                                             </div>
-                                            <p className="mt-3 text-sm leading-relaxed text-slate-600">{stat.desc}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -770,32 +769,25 @@ export default function DeploymentPage() {
                 </section>
 
                 <section className="bg-white px-4 py-20 md:py-28">
-                    <div className="mx-auto max-w-6xl">
+                    <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
                         <SectionHeader
-                            eyebrow="PROOF"
-                            title="Teams use AI automation to save time and protect revenue"
+                            eyebrow="WHAT HAPPENS NEXT"
+                            title="The first call should produce a useful automation map"
+                            description="Before you trust us with a workflow, you should understand what we would build, where approval is needed, and how success will be measured."
+                            align="left"
                         />
-                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                            {featuredTestimonials.map((item) => (
-                                <div key={item.author} className="rounded-3xl border border-slate-100 bg-white p-7 shadow-sm">
-                                    <div className="mb-6 flex items-center gap-3">
-                                        {item.logo ? (
-                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-slate-100 bg-white">
-                                                <Image src={item.logo} alt={item.author} width={48} height={48} className="object-contain p-1" />
-                                            </div>
-                                        ) : (
-                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary-600 font-bold text-white">
-                                                {item.initials}
-                                            </div>
-                                        )}
-                                        <div>
-                                            <div className="font-bold text-slate-900">{item.author}</div>
-                                            <div className="text-xs text-slate-500">{item.role}</div>
-                                        </div>
+                        <div className="rounded-[28px] border border-slate-100 bg-warm p-6 shadow-sm">
+                            <div className="mb-5 text-sm font-extrabold uppercase tracking-[2px] text-primary-700">
+                                On the founder call
+                            </div>
+                            <div className="grid gap-4">
+                                {callDeliverables.map((item) => (
+                                    <div key={item} className="flex gap-3 rounded-2xl bg-white p-4 shadow-sm">
+                                        <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
+                                        <span className="text-sm font-semibold leading-relaxed text-slate-700">{item}</span>
                                     </div>
-                                    <p className="leading-relaxed text-slate-700">&ldquo;{item.quote}&rdquo;</p>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -41,23 +41,23 @@ export default function IndustriesPage() {
         {
             icon: Stethoscope,
             name: 'Healthcare & Medical',
-            description: 'AI employees for doctors, dentists, and medical practices',
+            description: 'Workflow automation for doctors, dentists, and medical practices',
             slug: 'seo-for-doctors-dentists',
-            benefits: ['HIPAA-aware content', 'Google Business Profile management', 'Patient acquisition']
+            benefits: ['Patient-friendly content', 'Google Business Profile management', 'Patient acquisition']
         },
         {
             icon: Briefcase,
             name: 'Small Business',
-            description: 'AI employees for SMBs and entrepreneurs',
+            description: 'Managed AI workflows for SMBs and entrepreneurs',
             slug: 'small-business-marketing-tools',
             benefits: ['All-in-one marketing', 'Cost-effective automation', 'No technical skills needed']
         },
         {
             icon: ShoppingBag,
-            name: 'E-commerce',
-            description: 'AI employees for online stores and retailers',
-            slug: 'content-marketing-tools',
-            benefits: ['Product descriptions', 'SEO optimization', 'Email marketing']
+            name: 'Store Customer Ops',
+            description: 'Managed AI for store calls, quote requests, and repetitive customer support',
+            industrySlug: 'customer-support',
+            benefits: ['Phone call handling', 'Quote request workflows', 'Email and chat support']
         },
         {
             icon: Scale,
@@ -81,11 +81,11 @@ export default function IndustriesPage() {
                             <span>Industry Solutions</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
-                            AI Employees for <span className="text-primary-600">Every Industry</span>
+                            Managed AI Automation for <span className="text-primary-600">Every Industry</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Whether you're a doctor, real estate agent, or small business owner, Dooza's AI employees
-                            adapt to your industry's unique needs. Get specialized automation without specialized prices.
+                            Whether you run a store, firm, local service business, or sales team, Dooza helps you turn
+                            repetitive customer work into managed workflows your team can trust.
                         </p>
                     </div>
                 </div>
@@ -198,15 +198,15 @@ export default function IndustriesPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "CollectionPage",
-                        "name": "AI Employees for Every Industry",
-                        "description": "Discover how Dooza AI employees help businesses in healthcare, real estate, small business, and more. Industry-specific automation guides.",
+                        "name": "Managed AI Automation by Industry",
+                        "description": "Discover how Dooza helps stores, firms, local service businesses, and SMBs automate repetitive customer work with managed workflows.",
                         "url": `${SITE_URL}/industries`,
                         "mainEntity": {
                             "@type": "ItemList",
                             "itemListElement": industries.map((industry, idx) => ({
                                 "@type": "ListItem",
                                 "position": idx + 1,
-                                "name": `AI Employees for ${industry.name}`,
+                                "name": `Managed AI for ${industry.name}`,
                                 "url": industry.industrySlug
                                     ? `${SITE_URL}/industries/${industry.industrySlug}`
                                     : `${SITE_URL}/blog/${industry.slug}`

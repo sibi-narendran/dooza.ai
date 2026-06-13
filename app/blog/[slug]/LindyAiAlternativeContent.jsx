@@ -129,8 +129,8 @@ const alternatives = [
         featured: false
     },
     {
-        name: "n8n",
-        tagline: "Open-Source Automation Framework",
+        name: "Open-Source Automation",
+        tagline: "Technical Workflow Framework",
         description: "A DIY automation framework for technical users. You build automations from scratch and can self-host for free.",
         price: "$0-50/month",
         priceNote: "Free self-hosted option",

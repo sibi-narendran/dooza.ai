@@ -51,8 +51,8 @@ export const metadata = {
         'AI governance',
         'human in the loop AI',
         'workflow diffs',
-        'SOC 2 ready AI workflows',
-        'GDPR AI workflow automation',
+        'approval based AI workflows',
+        'privacy aware workflow automation',
         'business process automation',
     ],
     alternates: {
@@ -77,9 +77,9 @@ export const metadata = {
 };
 
 const heroStats = [
-    { value: '1,000+', label: 'app connections' },
-    { value: '24/7', label: 'scheduled runs' },
-    { value: '170+', label: 'countries supported' },
+    { value: 'Tool', label: 'connections' },
+    { value: 'Run', label: 'history' },
+    { value: 'Human', label: 'approval gates' },
 ];
 
 const heroNodes = [
@@ -218,19 +218,19 @@ const enterpriseControls = [
 
 const trustItems = [
     {
-        title: 'SOC 2-ready controls',
-        desc: 'Access control, approval trails, change review, environment separation, and audit evidence workflows.',
+        title: 'Access and approval controls',
+        desc: 'Role permissions, approval trails, change review, environment separation, and evidence-friendly workflow history.',
     },
     {
-        title: 'GDPR support',
-        desc: 'Data minimization, deletion workflows, export support, retention rules, and privacy-aware automation design.',
+        title: 'Privacy-aware workflow design',
+        desc: 'Data minimization, deletion workflows, export paths, retention rules, and scoped automation design.',
     },
     {
-        title: 'ISO 27001-aligned practices',
-        desc: 'Security management patterns that support risk reviews, documentation, access policies, and incident process.',
+        title: 'Security review practices',
+        desc: 'Workflow patterns that support risk reviews, documentation, access policies, and incident process planning.',
     },
     {
-        title: 'HIPAA-style safeguards',
+        title: 'Sensitive-workflow safeguards',
         desc: 'Human review, least-privilege access, logging, and deployment scoping for sensitive workflows.',
     },
 ];
@@ -264,9 +264,9 @@ const faqData = [
             'Yes. Operators can start with triggers, AI steps, approvals, and actions. Technical teams can extend the same workflow with custom logic.',
     },
     {
-        question: 'Does Dooza claim SOC 2 or ISO certification?',
+        question: 'Does Dooza claim security certifications?',
         answer:
-            'This page describes compliance-ready controls and deployment patterns. Final certification claims should only be made when the relevant certificate or audit report is available.',
+            'No certification claim is made here. This page describes controls and deployment patterns such as approvals, scoped access, logs, and review workflows.',
     },
 ];
 

@@ -113,7 +113,7 @@ const aiTools = [
     },
     {
         name: "Automation Platform",
-        examples: "Zapier, Make (Integromat), n8n",
+        examples: "Zapier, Make, workflow automation tools",
         price: "$20-75/mo",
         icon: Zap,
         color: "orange",
