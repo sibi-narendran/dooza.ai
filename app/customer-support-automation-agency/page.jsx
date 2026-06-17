@@ -33,10 +33,10 @@ const marqueeTestimonials = [...testimonials, ...testimonials];
 
 export const metadata = {
     title: {
-        absolute: 'Customer Support Automation Agency | Dooza',
+        absolute: 'Customer Support Automation Agency for AI Workflows | Dooza',
     },
     description:
-        'Dooza is a customer support automation agency that builds AI employees and Dooza Workflow automations for support triage, replies, routing, approvals, and tool updates.',
+        'Dooza builds customer support automation with AI employees and Dooza Workflow for triage, drafted replies, approvals, routing, tool updates, and reporting.',
     keywords: [
         'customer support automation agency',
         'customer service automation agency',
@@ -61,7 +61,7 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: 'Customer Support Automation Agency | Dooza',
+        title: 'Customer Support Automation Agency for AI Workflows | Dooza',
         description:
             'Automate support triage, replies, routing, approvals, CRM updates, and follow-ups with Dooza and Dooza Workflow.',
         url: pageUrl,
@@ -71,7 +71,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Customer Support Automation Agency | Dooza',
+        title: 'Customer Support Automation Agency for AI Workflows | Dooza',
         description:
             'Book a support automation audit and see which customer support workflows Dooza can automate first.',
         images: [`${SITE_URL}/logo.png`],

@@ -35,10 +35,28 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/workflow`,
+            lastModified: pageDate('2026-06-15'),
+            changeFrequency: 'weekly',
+            priority: 0.95,
+        },
+        {
             url: `${SITE_URL}/deployment`,
             lastModified: pageDate('2026-05-26'),
             changeFrequency: 'weekly',
             priority: 0.95,
+        },
+        {
+            url: `${SITE_URL}/pricing`,
+            lastModified: pageDate('2026-06-13'),
+            changeFrequency: 'weekly',
+            priority: 0.85,
+        },
+        {
+            url: `${SITE_URL}/book`,
+            lastModified: pageDate('2026-06-13'),
+            changeFrequency: 'weekly',
+            priority: 0.75,
         },
         {
             url: `${SITE_URL}/partners`,
@@ -83,6 +101,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/customer-support-automation-agency`,
+            lastModified: pageDate('2026-06-16'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/marblism-alternatives`,
             lastModified: pageDate('2026-04-20'),
             changeFrequency: 'monthly',
@@ -97,6 +121,12 @@ export default async function sitemap() {
         {
             url: `${SITE_URL}/industries/customer-support`,
             lastModified: pageDate('2026-06-13'),
+            changeFrequency: 'weekly',
+            priority: 0.85,
+        },
+        {
+            url: `${SITE_URL}/industries/law-firms`,
+            lastModified: pageDate('2026-06-16'),
             changeFrequency: 'weekly',
             priority: 0.85,
         },

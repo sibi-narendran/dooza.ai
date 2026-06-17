@@ -153,6 +153,30 @@ async function getDynamicPost(slug) {
     }
 }
 
+const BLOG_SEO_TITLE_MAX_LENGTH = 56;
+const BLOG_SEO_DESCRIPTION_MAX_LENGTH = 155;
+
+function truncateAtWord(value, maxLength) {
+    if (!value) return value;
+
+    const normalized = value.replace(/\s+/g, ' ').trim();
+    if (normalized.length <= maxLength) return normalized;
+
+    const truncated = normalized.slice(0, maxLength + 1);
+    const lastSpace = truncated.lastIndexOf(' ');
+    const safeText = normalized.slice(0, lastSpace > 0 ? lastSpace : maxLength);
+
+    return safeText.replace(/[\s.,:;!?|—-]+$/g, '');
+}
+
+function getPostSeoTitle(post) {
+    return truncateAtWord(post.seoTitle || post.title, BLOG_SEO_TITLE_MAX_LENGTH);
+}
+
+function getPostSeoDescription(post) {
+    return truncateAtWord(post.seoDescription || post.excerpt, BLOG_SEO_DESCRIPTION_MAX_LENGTH);
+}
+
 // Generate metadata for each blog post
 export async function generateMetadata({ params }) {
     const { slug } = await params;
@@ -171,16 +195,19 @@ export async function generateMetadata({ params }) {
         };
     }
 
+    const seoTitle = getPostSeoTitle(post);
+    const seoDescription = getPostSeoDescription(post);
+
     const metadata = {
-        title: post.title,
-        description: post.excerpt,
+        title: seoTitle,
+        description: seoDescription,
         keywords: post.tags?.join(', '),
         alternates: {
             canonical: `${SITE_URL}/blog/${slug}`,
         },
         openGraph: {
-            title: post.title,
-            description: post.excerpt,
+            title: seoTitle,
+            description: seoDescription,
             url: `${SITE_URL}/blog/${slug}`,
             type: 'article',
             publishedTime: post.date,
@@ -197,8 +224,8 @@ export async function generateMetadata({ params }) {
         },
         twitter: {
             card: 'summary_large_image',
-            title: post.title,
-            description: post.excerpt,
+            title: seoTitle,
+            description: seoDescription,
             images: post.image ? [`${SITE_URL}${post.image}`] : [],
         },
     };

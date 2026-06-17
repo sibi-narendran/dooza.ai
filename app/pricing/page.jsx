@@ -38,7 +38,7 @@ export default function PricingPage() {
                 <div className="min-h-screen bg-warm text-slate-900 font-sans">
                     <Navbar />
                     <main>
-                        <PricingSection />
+                        <PricingSection headingLevel="h1" />
                         <FAQSection />
                         <FinalCTASection />
                     </main>

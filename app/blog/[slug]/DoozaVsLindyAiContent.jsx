@@ -85,7 +85,7 @@ export default function DoozaVsLindyAiContent() {
                             <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>April 29, 2026</span></div>
                         </div>
                         <div className="mt-10">
-                            <BlogHeroImage src="/blog/dooza-vs-lindy-ai.png" alt="Dooza AI vs Lindy AI comparison \u2014 side-by-side review of pricing, features, and ease of use for AI employee platforms in 2026" />
+                            <BlogHeroImage src="/blog/lindy-ai-alternative.png" alt="Dooza AI vs Lindy AI comparison \u2014 side-by-side review of pricing, features, and ease of use for AI employee platforms in 2026" />
                         </div>
                     </div>
                 </div>

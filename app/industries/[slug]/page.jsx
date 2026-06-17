@@ -14,6 +14,22 @@ const INDUSTRY_COMPONENTS = {
     'real-estate': RealEstateContent,
 };
 
+const INDUSTRY_SEO_TITLE_MAX_LENGTH = 56;
+const INDUSTRY_SEO_DESCRIPTION_MAX_LENGTH = 155;
+
+function truncateAtWord(value, maxLength) {
+    if (!value) return value;
+
+    const normalized = value.replace(/\s+/g, ' ').trim();
+    if (normalized.length <= maxLength) return normalized;
+
+    const truncated = normalized.slice(0, maxLength + 1);
+    const lastSpace = truncated.lastIndexOf(' ');
+    const safeText = normalized.slice(0, lastSpace > 0 ? lastSpace : maxLength);
+
+    return safeText.replace(/[\s.,:;!?|—-]+$/g, '');
+}
+
 // Generate static params for all industry pages
 export async function generateStaticParams() {
     return industryPages.map((page) => ({
@@ -32,16 +48,25 @@ export async function generateMetadata({ params }) {
         };
     }
 
+    const seoTitle = truncateAtWord(
+        page.seoTitle || page.title,
+        INDUSTRY_SEO_TITLE_MAX_LENGTH,
+    );
+    const seoDescription = truncateAtWord(
+        page.seoDescription || page.metaDescription,
+        INDUSTRY_SEO_DESCRIPTION_MAX_LENGTH,
+    );
+
     return {
-        title: page.title,
-        description: page.metaDescription,
+        title: seoTitle,
+        description: seoDescription,
         keywords: page.keywords?.join(', '),
         alternates: {
             canonical: `${SITE_URL}/industries/${slug}`,
         },
         openGraph: {
-            title: page.title,
-            description: page.metaDescription,
+            title: seoTitle,
+            description: seoDescription,
             url: `${SITE_URL}/industries/${slug}`,
             type: 'website',
             images: page.image ? [
@@ -55,8 +80,8 @@ export async function generateMetadata({ params }) {
         },
         twitter: {
             card: 'summary_large_image',
-            title: page.title,
-            description: page.metaDescription,
+            title: seoTitle,
+            description: seoDescription,
             images: page.image ? [`${SITE_URL}${page.image}`] : [],
         },
     };

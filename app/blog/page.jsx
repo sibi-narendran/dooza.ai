@@ -4,6 +4,8 @@ import { blogPosts } from '../../lib/blogData';
 import { supabaseServer } from '../../lib/supabaseServer';
 import { dbToPost } from '../../lib/blogTransform';
 import { SITE_URL } from '../../lib/site';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const revalidate = 60;
 
@@ -135,17 +137,35 @@ export default async function Blog() {
     };
 
     return (
-        <>
+        <div className="min-h-screen bg-white overflow-x-hidden">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify([blogListSchema, blogSchema, breadcrumbSchema])
                 }}
             />
+            <Navbar />
+            <section className="pt-24 pb-8 md:pt-32 md:pb-10 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto text-center">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 border border-primary-200 rounded-full mb-6">
+                        <span className="text-2xl">📚</span>
+                        <span className="text-sm font-medium text-primary-600">Insights & Resources</span>
+                    </div>
+
+                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                        Dooza Blog
+                    </h1>
+
+                    <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+                        Expert insights on AI employees, business automation, and scaling your operations with intelligent agents.
+                    </p>
+                </div>
+            </section>
             <Suspense fallback={<BlogLoadingSkeleton />}>
                 <BlogPage posts={allPosts} />
             </Suspense>
-        </>
+            <Footer />
+        </div>
     );
 }
 

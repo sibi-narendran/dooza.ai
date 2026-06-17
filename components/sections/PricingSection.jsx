@@ -65,8 +65,9 @@ const plans = [
     },
 ];
 
-export default function PricingSection() {
+export default function PricingSection({ headingLevel = 'h2' }) {
     const [expandedPlans, setExpandedPlans] = useState({});
+    const HeadingTag = headingLevel === 'h1' ? 'h1' : 'h2';
 
     const togglePlanFeatures = (planName) => {
         setExpandedPlans((current) => ({
@@ -80,7 +81,7 @@ export default function PricingSection() {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <div className="text-center max-w-3xl mx-auto mb-10">
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 font-serif">Simple, transparent pricing</h2>
+                        <HeadingTag className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 font-serif">Simple, transparent pricing</HeadingTag>
                     </div>
 
                     {/* Money-back guarantee badge */}

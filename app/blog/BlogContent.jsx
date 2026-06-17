@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { ArrowRight, Clock, Calendar, Loader2 } from 'lucide-react';
 import { blogPosts } from '@/lib/blogData';
 import { supabase } from '@/lib/supabase';
@@ -86,26 +84,10 @@ export default function BlogPage({ posts }) {
     });
 
     return (
-        <div className="min-h-screen bg-white overflow-x-hidden">
-            <Navbar />
-
-            {/* Hero Section */}
-            <section className="pt-24 pb-12 md:pt-32 md:pb-16 px-4 sm:px-6 lg:px-8">
+        <>
+            {/* Search Section */}
+            <section className="pb-12 md:pb-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 border border-primary-200 rounded-full mb-6">
-                        <span className="text-2xl">📚</span>
-                        <span className="text-sm font-medium text-primary-600">Insights & Resources</span>
-                    </div>
-
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight">
-                        Dooza Blog
-                    </h1>
-
-                    <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                        Expert insights on AI employees, business automation, and scaling your operations with intelligent agents.
-                    </p>
-
-                    {/* Search Bar */}
                     <div className="max-w-xl mx-auto">
                         <div className="relative">
                             <input
@@ -237,8 +219,6 @@ export default function BlogPage({ posts }) {
                     </div>
                 </div>
             </section>
-
-            <Footer />
-        </div>
+        </>
     );
 }

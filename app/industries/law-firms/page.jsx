@@ -28,7 +28,7 @@ export const metadata = {
         absolute: 'AI Workflow Automation for Law Firms | Dooza',
     },
     description:
-        'Dooza helps law firms automate client intake, conflict-review routing, onboarding, document collection, client updates, billing reminders, and attorney-approved workflows.',
+        'Dooza helps law firms automate client intake, conflict checks, onboarding, document collection, client updates, billing reminders, and attorney-approved workflows.',
     keywords: [
         'law firm workflow automation',
         'legal workflow automation',

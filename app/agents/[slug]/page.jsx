@@ -16,6 +16,22 @@ const AGENT_COMPONENTS = {
     'voice-pro': GenericAgentContent,
 };
 
+const AGENT_SEO_TITLE_MAX_LENGTH = 56;
+const AGENT_SEO_DESCRIPTION_MAX_LENGTH = 155;
+
+function truncateAtWord(value, maxLength) {
+    if (!value) return value;
+
+    const normalized = value.replace(/\s+/g, ' ').trim();
+    if (normalized.length <= maxLength) return normalized;
+
+    const truncated = normalized.slice(0, maxLength + 1);
+    const lastSpace = truncated.lastIndexOf(' ');
+    const safeText = normalized.slice(0, lastSpace > 0 ? lastSpace : maxLength);
+
+    return safeText.replace(/[\s.,:;!?|—-]+$/g, '');
+}
+
 export async function generateStaticParams() {
     return agentPages.map((page) => ({
         slug: page.slug,
@@ -30,16 +46,22 @@ export async function generateMetadata({ params }) {
         return { title: 'Page Not Found' };
     }
 
+    const seoTitle = truncateAtWord(page.seoTitle || page.title, AGENT_SEO_TITLE_MAX_LENGTH);
+    const seoDescription = truncateAtWord(
+        page.seoDescription || page.metaDescription,
+        AGENT_SEO_DESCRIPTION_MAX_LENGTH,
+    );
+
     return {
-        title: page.title,
-        description: page.metaDescription,
+        title: seoTitle,
+        description: seoDescription,
         keywords: page.keywords?.join(', '),
         alternates: {
             canonical: `${SITE_URL}/agents/${slug}`,
         },
         openGraph: {
-            title: page.title,
-            description: page.metaDescription,
+            title: seoTitle,
+            description: seoDescription,
             url: `${SITE_URL}/agents/${slug}`,
             type: 'website',
             images: page.image ? [{
@@ -51,8 +73,8 @@ export async function generateMetadata({ params }) {
         },
         twitter: {
             card: 'summary_large_image',
-            title: page.title,
-            description: page.metaDescription,
+            title: seoTitle,
+            description: seoDescription,
             images: page.image ? [`${SITE_URL}${page.image}`] : [],
         },
     };

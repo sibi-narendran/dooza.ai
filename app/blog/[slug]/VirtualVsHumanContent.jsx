@@ -83,7 +83,7 @@ export default function VirtualVsHumanContent() {
 
                     <div className="mt-8">
                         <BlogHeroImage
-                            src="/blog/efbb917e-a4b7-4c66-a43f-45e5370e6ae3.jpg"
+                            src="/blog/ai-employees-vs-virtual-assistants.png"
                             alt="Virtual employees vs human staff — cost, quality, and scalability comparison"
                         />
                     </div>

@@ -140,21 +140,21 @@ const bookingLoaderStyles = `
 `;
 
 export const metadata = {
-    title: { absolute: 'Book a Meeting | Dooza' },
-    description: 'Book a free setup call with the Dooza founder.',
+    title: { absolute: 'Book a Dooza AI Automation Setup Call | Dooza' },
+    description: 'Book a free Dooza setup call to map your AI employees, workflow automation needs, integrations, and first launch plan with the founder.',
     alternates: {
         canonical: 'https://www.dooza.ai/book',
     },
     openGraph: {
-        title: 'Book a Meeting | Dooza',
-        description: 'Pick a time for a free setup call with the Dooza founder.',
+        title: 'Book a Dooza AI Automation Setup Call | Dooza',
+        description: 'Pick a time to map your AI employees, workflow automation needs, integrations, and first launch plan.',
         url: 'https://www.dooza.ai/book',
         images: [{ url: 'https://www.dooza.ai/logo.png', width: 512, height: 512, alt: 'Dooza' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Book a Meeting | Dooza',
-        description: 'Pick a time for a free setup call with the Dooza founder.',
+        title: 'Book a Dooza AI Automation Setup Call | Dooza',
+        description: 'Pick a time to map your AI employees, workflow automation needs, integrations, and first launch plan.',
         images: ['https://www.dooza.ai/logo.png'],
     },
 };

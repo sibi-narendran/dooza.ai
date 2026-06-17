@@ -2,8 +2,8 @@ import { SITE_URL } from '../../lib/site';
 import AISolutionsContent from './AISolutionsContent';
 
 export const metadata = {
-    title: 'AI Solutions for Business in 2026: Complete Guide (Tools, Strategy & Cost)',
-    description: 'The complete guide to AI solutions for business in 2026. 12 categories, real pricing, ROI stats, and a step-by-step implementation plan. Find the right AI tools for your business.',
+    title: 'AI Tools for Business: Best AI Solutions in 2026',
+    description: 'Compare AI tools for business by use case, cost, and ROI. See how Dooza replaces separate apps with AI employees for email, SEO, support, sales, and social.',
     keywords: [
         'AI solutions for business', 'AI tools for business', 'AI for small business',
         'best AI tools for small business 2026', 'AI business solutions',
@@ -25,8 +25,8 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: 'AI Solutions for Business in 2026: Complete Guide',
-        description: '12 categories of AI tools, real pricing, ROI data, and implementation steps. Everything you need to bring AI into your business.',
+        title: 'AI Tools for Business: Best AI Solutions in 2026',
+        description: 'Compare AI tools by use case, cost, and ROI. See how Dooza replaces separate apps with AI employees.',
         url: `${SITE_URL}/ai-solutions-for-business`,
         siteName: 'Dooza',
         type: 'article',
@@ -37,8 +37,8 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: 'AI Solutions for Business in 2026: Complete Guide',
-        description: '12 categories, real pricing, ROI stats, and a step-by-step plan. The only AI guide your business needs.',
+        title: 'AI Tools for Business: Best AI Solutions in 2026',
+        description: 'Compare AI tools by use case, cost, and ROI. See how Dooza replaces separate apps with AI employees.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
