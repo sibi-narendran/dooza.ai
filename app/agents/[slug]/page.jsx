@@ -18,6 +18,49 @@ const AGENT_COMPONENTS = {
 
 const AGENT_SEO_TITLE_MAX_LENGTH = 56;
 const AGENT_SEO_DESCRIPTION_MAX_LENGTH = 155;
+const TRAILING_STOP_WORDS = new Set([
+    'a',
+    'an',
+    'and',
+    'as',
+    'at',
+    'every',
+    'for',
+    'from',
+    'in',
+    'into',
+    'no',
+    'of',
+    'on',
+    'or',
+    'the',
+    'to',
+    'with',
+    'without',
+]);
+
+function cleanTruncatedText(value) {
+    let cleaned = value
+        .replace(/\s+\([^)]*$/g, '')
+        .replace(/\s+\[[^\]]*$/g, '')
+        .replace(/[\s.,:;!?|—-]+$/g, '');
+
+    let words = cleaned.split(/\s+/);
+    while (words.length > 1) {
+        const lastWord = words[words.length - 1].toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (!TRAILING_STOP_WORDS.has(lastWord)) break;
+        words = words.slice(0, -1);
+    }
+
+    cleaned = words.join(' ').replace(/[\s.,:;!?|—-]+$/g, '');
+
+    const lastSeparator = Math.max(cleaned.lastIndexOf(':'), cleaned.lastIndexOf('—'));
+    if (lastSeparator > 0 && cleaned.length - lastSeparator <= 14) {
+        cleaned = cleaned.slice(0, lastSeparator).trim();
+    }
+
+    return cleaned;
+}
 
 function truncateAtWord(value, maxLength) {
     if (!value) return value;
@@ -29,7 +72,7 @@ function truncateAtWord(value, maxLength) {
     const lastSpace = truncated.lastIndexOf(' ');
     const safeText = normalized.slice(0, lastSpace > 0 ? lastSpace : maxLength);
 
-    return safeText.replace(/[\s.,:;!?|—-]+$/g, '');
+    return cleanTruncatedText(safeText);
 }
 
 export async function generateStaticParams() {
