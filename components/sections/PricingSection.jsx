@@ -68,6 +68,7 @@ const plans = [
 export default function PricingSection({ headingLevel = 'h2' }) {
     const [expandedPlans, setExpandedPlans] = useState({});
     const HeadingTag = headingLevel === 'h1' ? 'h1' : 'h2';
+    const PlanHeadingTag = headingLevel === 'h1' ? 'h2' : 'h3';
 
     const togglePlanFeatures = (planName) => {
         setExpandedPlans((current) => ({
@@ -93,7 +94,7 @@ export default function PricingSection({ headingLevel = 'h2' }) {
                                 </svg>
                             </span>
                             <span className="text-base font-bold text-white">Starts at $49/mo</span>
-                            <span className="text-sm text-slate-400">— 7-day money-back guarantee</span>
+                            <span className="text-sm text-slate-300">— 7-day money-back guarantee</span>
                         </div>
                     </div>
                 </ScrollReveal>
@@ -121,12 +122,12 @@ export default function PricingSection({ headingLevel = 'h2' }) {
                                     )}
 
                                     {/* Plan name */}
-                                    <h3 className="text-lg font-bold text-slate-900 font-serif mb-1 mt-1">{plan.name}</h3>
+                                    <PlanHeadingTag className="text-lg font-bold text-slate-900 font-serif mb-1 mt-1">{plan.name}</PlanHeadingTag>
 
                                     {/* Price */}
                                     <div className="flex items-baseline gap-1 mb-2">
                                         <span className="text-4xl md:text-5xl font-extrabold text-slate-900 font-serif">${plan.price}</span>
-                                        <span className="text-slate-400 text-sm">USD/ month</span>
+                                        <span className="text-slate-600 text-sm">USD/ month</span>
                                     </div>
 
                                     <p className="min-h-10 text-sm text-slate-500 mb-6">{plan.desc}</p>
@@ -147,7 +148,7 @@ export default function PricingSection({ headingLevel = 'h2' }) {
 
                                     {/* Features */}
                                     <div id={`features-${plan.name.toLowerCase()}`} className="space-y-3">
-                                        <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-2">Includes</p>
+                                        <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider mb-2">Includes</p>
                                         {visibleFeatures.map((feature) => (
                                             <div
                                                 key={feature}
@@ -187,7 +188,7 @@ export default function PricingSection({ headingLevel = 'h2' }) {
                 {/* Bottom section */}
                 <ScrollReveal delay={0.3}>
                     <div className="flex flex-col items-center mt-10 gap-3">
-                        <p className="text-sm text-slate-400">or</p>
+                        <p className="text-sm text-slate-600">or</p>
                         <BookDemoButton source="pricing">Book Free Setup with Founder</BookDemoButton>
                         <p className="text-sm font-medium text-slate-600">Free setup & walkthrough · 15 min · No commitment</p>
                     </div>

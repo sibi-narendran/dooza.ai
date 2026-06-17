@@ -370,7 +370,7 @@ export default function AISolutionsContent({ faqData }) {
                                     <div className="card-shadow bg-white rounded-2xl border border-slate-100 p-8 text-center h-full">
                                         <p className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent mb-3">{stat.value}</p>
                                         <p className="text-slate-700 font-medium mb-2">{stat.label}</p>
-                                        <p className="text-xs text-slate-400">{stat.source}</p>
+                                        <p className="text-xs text-slate-600">{stat.source}</p>
                                     </div>
                                 </StaggerItem>
                             ))}
@@ -400,7 +400,7 @@ export default function AISolutionsContent({ faqData }) {
                                                 <cat.icon className="w-6 h-6 text-primary-600" />
                                             </div>
                                             <div>
-                                                <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Category {i + 1}</span>
+                                                <span className="text-xs text-slate-600 font-semibold uppercase tracking-wider">Category {i + 1}</span>
                                                 <h3 className="text-lg font-bold text-slate-900">{cat.name}</h3>
                                             </div>
                                         </div>
@@ -408,7 +408,7 @@ export default function AISolutionsContent({ faqData }) {
                                         <p className="text-slate-600 text-sm leading-relaxed mb-5">{cat.desc}</p>
 
                                         <div className="mb-4">
-                                            <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-2">Top Tools & Pricing</p>
+                                            <p className="text-xs text-slate-600 uppercase tracking-wider font-semibold mb-2">Top Tools & Pricing</p>
                                             <div className="space-y-1.5">
                                                 {cat.topTools.map((tool, j) => (
                                                     <div key={j} className="flex items-center justify-between text-sm">
@@ -526,12 +526,12 @@ export default function AISolutionsContent({ faqData }) {
                                         <p className="text-slate-600 text-sm leading-relaxed mb-5">{tier.recommendation}</p>
 
                                         <div className="bg-primary-50/50 border border-primary-100 rounded-xl p-4 mb-5">
-                                            <p className="text-xs text-primary-600 font-bold uppercase tracking-wider mb-1">Best Pick</p>
+                                            <p className="text-xs text-primary-700 font-bold uppercase tracking-wider mb-1">Best Pick</p>
                                             <p className="text-sm text-slate-700">{tier.bestPick}</p>
                                         </div>
 
                                         <div className="mt-auto">
-                                            <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-2">Suggested Stack</p>
+                                            <p className="text-xs text-slate-600 uppercase tracking-wider font-semibold mb-2">Suggested Stack</p>
                                             <ul className="space-y-1.5">
                                                 {tier.tools.map((tool, j) => (
                                                     <li key={j} className="flex items-start gap-2 text-sm text-slate-600">
@@ -571,7 +571,7 @@ export default function AISolutionsContent({ faqData }) {
                                         <div className="flex-1 min-w-0">
                                             <div className="flex items-center gap-3 flex-wrap">
                                                 <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
-                                                <span className="text-xs bg-slate-100 text-slate-500 px-2.5 py-1 rounded-full font-medium">
+                                                <span className="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-full font-medium">
                                                     <Clock size={12} className="inline mr-1" />
                                                     {item.time}
                                                 </span>
@@ -582,7 +582,7 @@ export default function AISolutionsContent({ faqData }) {
                                     <p className="text-slate-600 leading-relaxed mb-5">{item.desc}</p>
 
                                     <div className="bg-slate-50 rounded-xl p-5">
-                                        <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-3">Action Items</p>
+                                        <p className="text-xs text-slate-600 uppercase tracking-wider font-semibold mb-3">Action Items</p>
                                         <ul className="space-y-2">
                                             {item.actionItems.map((action, j) => (
                                                 <li key={j} className="flex items-start gap-2 text-sm text-slate-600">
@@ -639,7 +639,7 @@ export default function AISolutionsContent({ faqData }) {
                                         <p className="text-sm text-slate-600 leading-relaxed mb-2">
                                             <strong className="text-slate-900">Why it happens:</strong> {item.reason}
                                         </p>
-                                        <p className="text-xs text-slate-400 italic">Source: {item.source}</p>
+                                        <p className="text-xs text-slate-600 italic">Source: {item.source}</p>
                                     </div>
                                 </StaggerItem>
                             ))}
@@ -669,7 +669,7 @@ export default function AISolutionsContent({ faqData }) {
                                         </div>
                                         <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">{industry.name}</h3>
                                         <p className="text-sm text-slate-600 leading-relaxed mb-4 flex-1">{industry.desc}</p>
-                                        <span className="inline-flex items-center gap-1 text-sm text-primary-600 font-semibold group-hover:gap-2 transition-all">
+                                        <span className="inline-flex items-center gap-1 text-sm text-primary-700 font-semibold group-hover:gap-2 transition-all">
                                             Learn more <ArrowRight size={14} />
                                         </span>
                                     </Link>
@@ -721,19 +721,19 @@ export default function AISolutionsContent({ faqData }) {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h3 className="font-bold text-slate-900 mb-4">Related Guides</h3>
                         <div className="flex flex-wrap gap-3">
-                            <Link href="/sintra-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                            <Link href="/sintra-alternatives" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Sintra AI Alternatives →
                             </Link>
-                            <Link href="/marblism-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                            <Link href="/marblism-alternatives" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Marblism Alternatives →
                             </Link>
-                            <Link href="/dooza-vs-sintra" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                            <Link href="/dooza-vs-sintra" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Dooza vs Sintra AI →
                             </Link>
-                            <Link href="/dooza-vs-marblism" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                            <Link href="/dooza-vs-marblism" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Dooza vs Marblism →
                             </Link>
-                            <Link href="/alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                            <Link href="/alternatives" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 All Comparisons →
                             </Link>
                         </div>

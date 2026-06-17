@@ -26,7 +26,7 @@ const Footer = ({ variant = 'light' }) => {
                 {/* Links */}
                 <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-8 border-y ${isDark ? 'border-white/5' : 'border-slate-100'}`}>
                     <div>
-                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Products</h4>
+                        <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Products</p>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
@@ -41,7 +41,7 @@ const Footer = ({ variant = 'light' }) => {
                         </ul>
                     </div>
                     <div>
-                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Services</h4>
+                        <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Services</p>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/deployment" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
@@ -51,7 +51,7 @@ const Footer = ({ variant = 'light' }) => {
                         </ul>
                     </div>
                     <div>
-                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Solutions · AI Employees</h4>
+                        <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Solutions · AI Employees</p>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/agents/outbound-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
@@ -81,7 +81,7 @@ const Footer = ({ variant = 'light' }) => {
                         </ul>
                     </div>
                     <div>
-                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Company</h4>
+                        <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Company</p>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/partners" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
@@ -96,7 +96,7 @@ const Footer = ({ variant = 'light' }) => {
                         </ul>
                     </div>
                     <div>
-                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Resources</h4>
+                        <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Resources</p>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/blog" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
@@ -136,7 +136,7 @@ const Footer = ({ variant = 'light' }) => {
                         </ul>
                     </div>
                     <div>
-                        <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Legal</h4>
+                        <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Legal</p>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/privacy" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
@@ -156,7 +156,7 @@ const Footer = ({ variant = 'light' }) => {
                     <p className={`text-center text-sm md:text-left ${isDark ? 'text-gray-500' : 'text-slate-500'}`}>
                         © {new Date().getFullYear()} Adam Laboratory Inc. All rights reserved.
                     </p>
-                    <p className={`text-center text-xs md:text-left ${isDark ? 'text-gray-600' : 'text-slate-400'}`}>
+                    <p className={`text-center text-xs md:text-left ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
                         Dooza.ai is a product of Adam Laboratory Inc., a Delaware corporation.
                     </p>
                     <div className={`flex gap-2 ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>

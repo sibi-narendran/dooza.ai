@@ -341,9 +341,9 @@ function HeroWorkflowVisual() {
                                             <span className="rounded-full bg-white px-2.5 py-1 text-[11px] font-bold text-primary-700 shadow-sm">
                                                 Step {index + 1}
                                             </span>
-                                            <h3 className="font-sans text-base font-extrabold text-slate-950">
+                                            <div className="font-sans text-base font-extrabold text-slate-950">
                                                 {step.label}
-                                            </h3>
+                                            </div>
                                         </div>
                                         <p className="text-sm leading-relaxed text-slate-600">{step.detail}</p>
                                     </div>
@@ -395,7 +395,7 @@ function TestimonialCard({ item, index }) {
                         <div className="font-sans text-sm font-extrabold text-slate-950">{item.author}</div>
                         <div className="mt-0.5 text-xs font-semibold leading-relaxed text-slate-500">{item.role}</div>
                     </div>
-                    <div className="hidden gap-0.5 text-yellow-400 sm:flex" aria-label="5 star testimonial">
+                    <div className="hidden gap-0.5 text-yellow-500 sm:flex" aria-hidden="true">
                         {[1, 2, 3, 4, 5].map((star) => (
                             <Star key={`${item.author}-${index}-${star}`} className="h-3.5 w-3.5 fill-current" />
                         ))}
@@ -648,7 +648,7 @@ export default function CustomerSupportAutomationAgencyPage() {
                 <section className="bg-slate-950 px-4 py-20 text-white md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
                         <div className="mb-10 max-w-3xl">
-                            <span className="section-label mb-4 block text-primary-300">Why Dooza</span>
+                            <span className="mb-4 block font-sans text-sm font-bold uppercase tracking-[3px] text-white">Why Dooza</span>
                             <h2 className="mb-5 font-serif text-3xl font-bold leading-tight text-white md:text-5xl">
                                 Better than a chatbot. More practical than hiring more people.
                             </h2>

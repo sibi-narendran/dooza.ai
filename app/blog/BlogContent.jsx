@@ -136,14 +136,14 @@ export default function BlogPage({ posts }) {
 
                                         <div className="p-6 flex flex-col flex-1">
                                             <div className="mb-3">
-                                                <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 text-xs font-semibold rounded-full">
+                                                <span className="inline-block px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full">
                                                     {post.category}
                                                 </span>
                                             </div>
 
-                                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
+                                            <h2 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary-700 transition-colors line-clamp-2">
                                                 {post.title}
-                                            </h3>
+                                            </h2>
 
                                             <p className="text-slate-600 mb-4 line-clamp-3">{post.excerpt}</p>
 
@@ -167,7 +167,7 @@ export default function BlogPage({ posts }) {
                                                     ))}
                                                 </div>
 
-                                                <span className="inline-flex items-center gap-2 text-primary-600 font-semibold">
+                                                <span className="inline-flex items-center gap-2 text-primary-700 font-semibold">
                                                     Read Article
                                                     <ArrowRight className="w-4 h-4" />
                                                 </span>
@@ -189,7 +189,7 @@ export default function BlogPage({ posts }) {
                             Stay ahead of the curve
                         </h2>
                         <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
-                            Get the latest insights on AI automation and business scaling delivered to your inbox. For more on AI trends, check out <a href="https://openai.com/news" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">OpenAI's latest updates</a>.
+                            Get the latest insights on AI automation and business scaling delivered to your inbox. For more on AI trends, check out <a href="https://openai.com/news" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary-700 hover:underline">OpenAI's latest updates</a>.
                         </p>
 
                         <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -205,7 +205,7 @@ export default function BlogPage({ posts }) {
                             <button
                                 type="submit"
                                 disabled={status === 'loading' || status === 'success'}
-                                className="px-8 py-3.5 bg-primary-600 text-white rounded-full font-semibold hover:bg-primary-700 transition-all shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center min-w-[140px]"
+                                className="px-8 py-3.5 bg-primary-700 text-white rounded-full font-semibold hover:bg-primary-800 transition-all shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center min-w-[140px]"
                             >
                                 {status === 'loading' ? <Loader2 className="w-5 h-5 animate-spin" /> : status === 'success' ? 'Subscribed!' : 'Subscribe'}
                             </button>

@@ -149,7 +149,7 @@ export default async function Blog() {
                 <div className="max-w-7xl mx-auto text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 border border-primary-200 rounded-full mb-6">
                         <span className="text-2xl">📚</span>
-                        <span className="text-sm font-medium text-primary-600">Insights & Resources</span>
+                        <span className="text-sm font-medium text-primary-700">Insights & Resources</span>
                     </div>
 
                     <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight">
