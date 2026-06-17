@@ -26,8 +26,17 @@ const formatBlogDate = (isoDate) => {
     }
 };
 
+function normalizeArticleHeadings(html) {
+    if (!html) return '';
+
+    return html
+        .replace(/<h1\b([^>]*)>/gi, '<h2$1>')
+        .replace(/<\/h1>/gi, '</h2>');
+}
+
 export default function DynamicBlogContent({ post }) {
     const tocData = post.tocData || [];
+    const articleContent = normalizeArticleHeadings(post.content);
 
     return (
         <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden">
@@ -111,7 +120,7 @@ export default function DynamicBlogContent({ post }) {
                         )}
 
                         {/* HTML Content — rendered server-side for SEO/AEO crawlers */}
-                        <ContentClickHandler html={post.content} />
+                        <ContentClickHandler html={articleContent} />
 
                         {/* FAQ Section — server-rendered for AEO/Answer Engines */}
                         {post.faqData && post.faqData.length > 0 && (

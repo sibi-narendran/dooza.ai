@@ -216,8 +216,28 @@ function getPostSeoTitle(post) {
     return truncateAtWord(post.seoTitle || post.title, BLOG_SEO_TITLE_MAX_LENGTH);
 }
 
+function getPlainTextFromHtml(html) {
+    if (!html) return '';
+
+    return html
+        .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+        .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+        .replace(/<[^>]*>/g, ' ')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/&#x27;/g, "'")
+        .replace(/&quot;/g, '"')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
 function getPostSeoDescription(post) {
-    return truncateAtWord(post.seoDescription || post.excerpt, BLOG_SEO_DESCRIPTION_MAX_LENGTH);
+    const fallbackDescription = getPlainTextFromHtml(post.content);
+
+    return truncateAtWord(
+        post.seoDescription || post.excerpt || fallbackDescription || post.title,
+        BLOG_SEO_DESCRIPTION_MAX_LENGTH,
+    );
 }
 
 // Generate metadata for each blog post
