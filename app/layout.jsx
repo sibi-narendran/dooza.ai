@@ -105,6 +105,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <meta
+          name="ahrefs-site-verification"
+          content="d24e36e2dc624015052db7f13470711f13cf0638849a33c13e6498d800e1c07e"
+        />
         {/* Resource hints for faster external resource loading */}
         {resourceHints.map((hint, index) => (
           <link key={index} rel={hint.rel} href={hint.href} />
