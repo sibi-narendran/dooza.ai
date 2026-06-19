@@ -298,7 +298,7 @@ export default function ReplaceVaWithAiContent() {
                                     <li>Schedule a 15-minute daily check-in with your AI dashboard for the first month</li>
                                     <li>Your former VA budget is now your growth budget</li>
                                 </ul>
-                                <p className="mt-6">For a broader automation playbook, see our guide on <Link href="/blog/how-to-automate-your-business-with-ai" className="text-primary-600 hover:underline font-medium">how to automate your business with AI</Link>.</p>
+                                <p className="mt-6">For a broader automation playbook, see our guide on <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">how to automate your business with AI</Link>.</p>
                             </div>
                         </section>
 
