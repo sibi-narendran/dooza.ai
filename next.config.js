@@ -77,6 +77,11 @@ const nextConfig = {
         destination: '/studio',
         permanent: true,
       },
+      {
+        source: '/blog/how-to-automate-your-business-with-ai',
+        destination: '/blog/automate-business-processes',
+        permanent: true,
+      },
     ];
   },
 };
