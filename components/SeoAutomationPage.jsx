@@ -4,21 +4,21 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import {
     ArrowRight,
-    BadgeCheck,
-    BarChart3,
     Bot,
     CheckCircle2,
-    CircleDollarSign,
+    ChevronDown,
+    ClipboardCheck,
+    Copy,
     FileText,
     GitBranch,
     Layers3,
     ListChecks,
     Rocket,
     Search,
+    Settings2,
     ShieldCheck,
     Sparkles,
     Workflow,
-    Zap,
 } from 'lucide-react';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
@@ -28,10 +28,6 @@ import FAQAccordion from '@/components/FAQAccordion';
 import { automationSeoPages } from '@/lib/seoAutomationPages';
 
 const relatedIcons = [Workflow, Search, FileText, Layers3, Rocket];
-
-function metricLabel(value) {
-    return value === 'N/A' ? 'not listed' : value;
-}
 
 function SectionHeader({ eyebrow, title, description, dark = false }) {
     return (
@@ -49,102 +45,182 @@ function SectionHeader({ eyebrow, title, description, dark = false }) {
     );
 }
 
-function SearchSignalCard({ page }) {
-    const metrics = [
-        { label: 'Target keyword', value: page.keyword, icon: Search },
-        { label: 'Keyword difficulty', value: `KD ${page.kd}`, icon: BarChart3 },
-        { label: 'US search volume', value: page.volume, icon: Zap },
-        { label: 'CPC', value: metricLabel(page.cpc), icon: CircleDollarSign },
-    ];
+function buildPlanText(page, selected, result, controlPlan) {
+    const selectedLines = Object.entries(selected)
+        .map(([key, value]) => `${key}: ${value}`)
+        .join('\n');
+    const weekPlan = result.weekPlan?.map((item, index) => `${index + 1}. ${item}`).join('\n') || '';
 
+    return [
+        page.toolTitle,
+        '',
+        'Inputs:',
+        selectedLines,
+        '',
+        `Recommended workflow: ${result.workflow}`,
+        result.summary,
+        '',
+        `Trigger: ${result.trigger}`,
+        `AI action: ${result.action}`,
+        `Connected apps: ${result.apps?.join(', ')}`,
+        `Approval rule: ${controlPlan.approval || result.approval}`,
+        `Final output: ${result.output}`,
+        `Dooza fit: ${result.employee}`,
+        `Setup complexity: ${result.effort}`,
+        '',
+        'First week plan:',
+        weekPlan,
+    ].filter(Boolean).join('\n');
+}
+
+function ToolSelect({ field, value, onChange }) {
     return (
-        <div className="grid gap-3 rounded-[28px] border border-slate-200 bg-white p-5 shadow-xl shadow-slate-200/70 md:p-6">
-            <div className="mb-2 flex items-center justify-between gap-3">
-                <div>
-                    <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-primary-600">Search opportunity</p>
-                    <h2 className="mt-2 text-xl font-extrabold text-slate-950">Low-difficulty SEO target</h2>
-                </div>
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                    <BadgeCheck className="h-6 w-6" />
+        <label className="block">
+            <span className="mb-2 block text-sm font-extrabold text-slate-900">{field.label}</span>
+            <div className="relative">
+                <select
+                    value={value}
+                    onChange={(event) => onChange(event.target.value)}
+                    className="min-h-12 w-full appearance-none rounded-xl border border-slate-200 bg-white px-4 py-3 pr-10 text-sm font-bold text-slate-950 shadow-sm outline-none transition hover:border-primary-300 focus:border-primary-500 focus:ring-4 focus:ring-primary-100"
+                >
+                    {field.options.map((option) => (
+                        <option key={option} value={option}>
+                            {option}
+                        </option>
+                    ))}
+                </select>
+                <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-500">
+                    <ChevronDown className="h-4 w-4" />
                 </div>
             </div>
-            {metrics.map((item) => {
-                const Icon = item.icon;
-                return (
-                    <div key={item.label} className="rounded-2xl border border-slate-100 bg-slate-50 p-4">
-                        <div className="flex items-start gap-3">
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-primary-700 shadow-sm">
-                                <Icon className="h-5 w-5" />
-                            </div>
-                            <div>
-                                <div className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">{item.label}</div>
-                                <div className="mt-1 text-base font-extrabold text-slate-950">{item.value}</div>
-                            </div>
-                        </div>
-                    </div>
-                );
-            })}
-            <p className="rounded-2xl border border-primary-100 bg-primary-50 p-4 text-sm font-semibold leading-relaxed text-primary-900">
-                This page is built from the video playbook: pick a realistic keyword, create a useful page or tool, then route visitors into the product.
-            </p>
-        </div>
+            {field.helper && <span className="mt-2 block text-xs font-semibold leading-relaxed text-slate-500">{field.helper}</span>}
+        </label>
     );
 }
 
-function PlannerTool({ page }) {
+function FreeAutomationTool({ page }) {
     const [selected, setSelected] = useState(() => (
         Object.fromEntries(page.toolFields.map((field) => [field.id, field.options[0]]))
     ));
+    const [copied, setCopied] = useState(false);
 
-    const primaryChoice = selected[page.toolFields[0].id];
-    const recommendation = page.recommendations[primaryChoice] || Object.values(page.recommendations)[0];
+    const primaryField = page.toolFields[0];
+    const controlField = page.toolFields[1];
+    const primaryChoice = selected[primaryField.id];
+    const controlChoice = controlField ? selected[controlField.id] : undefined;
+    const result = page.toolResults?.[primaryChoice] || Object.values(page.toolResults || {})[0];
+    const controlPlan = page.controlPlans?.[controlChoice] || {};
+    const planText = useMemo(
+        () => buildPlanText(page, selected, result, controlPlan),
+        [controlPlan, page, result, selected],
+    );
+
+    async function copyPlan() {
+        try {
+            await navigator.clipboard.writeText(planText);
+            setCopied(true);
+            window.setTimeout(() => setCopied(false), 1800);
+        } catch (error) {
+            setCopied(false);
+        }
+    }
 
     return (
-        <div className="rounded-[28px] border border-primary-100 bg-white p-5 shadow-xl shadow-primary-100/50 md:p-7">
-            <div className="mb-6 flex flex-wrap items-start justify-between gap-4 border-b border-slate-100 pb-6">
+        <div className="rounded-[28px] border border-primary-100 bg-white/95 p-4 shadow-2xl shadow-primary-100/50 backdrop-blur md:p-6">
+            <div className="flex flex-col gap-4 border-b border-slate-100 pb-4 md:flex-row md:items-center md:justify-between">
                 <div>
-                    <span className="section-label mb-3 block text-primary-600">Free planner</span>
-                    <h2 className="font-serif text-3xl font-bold text-slate-950">{page.toolTitle}</h2>
-                    <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-600">{page.toolDescription}</p>
+                    <span className="section-label mb-2 block text-primary-600">Free planner</span>
+                    <h2 className="font-serif text-2xl font-bold leading-tight text-slate-950 md:text-[1.65rem]">{page.toolTitle}</h2>
                 </div>
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-700 text-white shadow-lg shadow-primary-200">
-                    <Workflow className="h-7 w-7" />
+                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary-100 bg-primary-50 px-3 py-2 text-xs font-extrabold text-primary-800">
+                    <Workflow className="h-4 w-4" />
+                    Live workflow output
                 </div>
             </div>
 
-            <div className="grid gap-5 lg:grid-cols-[0.88fr_1.12fr]">
-                <div className="space-y-5">
+            <div className="mt-4 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
+                <div className="space-y-4">
                     {page.toolFields.map((field) => (
-                        <label key={field.id} className="block">
-                            <span className="mb-2 block text-sm font-extrabold text-slate-900">{field.label}</span>
-                            <select
-                                value={selected[field.id]}
-                                onChange={(event) => setSelected((current) => ({ ...current, [field.id]: event.target.value }))}
-                                className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-900 outline-none transition focus:border-primary-500 focus:bg-white focus:ring-4 focus:ring-primary-100"
-                            >
-                                {field.options.map((option) => (
-                                    <option key={option} value={option}>
-                                        {option}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
+                        <ToolSelect
+                            key={field.id}
+                            field={field}
+                            value={selected[field.id]}
+                            onChange={(value) => setSelected((current) => ({ ...current, [field.id]: value }))}
+                        />
                     ))}
+
+                    <div className="rounded-2xl border border-slate-100 bg-slate-50 p-4">
+                        <div className="mb-3 flex items-center gap-2 text-sm font-extrabold text-slate-950">
+                            <Settings2 className="h-4 w-4 text-primary-700" />
+                            What changes when you select
+                        </div>
+                        <div className="space-y-2">
+                            {page.toolBullets.map((item) => (
+                                <div key={item} className="flex items-start gap-2">
+                                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary-600" />
+                                    <span className="text-xs font-semibold leading-relaxed text-slate-600">{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
 
-                <div className="rounded-3xl border border-slate-200 bg-slate-950 p-5 text-white md:p-6">
-                    <div className="mb-4 flex items-center gap-2 text-sm font-extrabold text-primary-300">
-                        <Sparkles className="h-4 w-4" />
-                        Recommended first workflow
+                <div className="rounded-[24px] border border-slate-200 bg-slate-50 p-4 text-slate-950 md:p-5">
+                    <div className="grid gap-4 sm:grid-cols-[1fr_auto]">
+                        <div>
+                            <div className="mb-2 flex items-center gap-2 text-sm font-extrabold text-primary-700">
+                                <Sparkles className="h-4 w-4" />
+                                Generated workflow
+                            </div>
+                            <h3 className="text-xl font-extrabold leading-tight text-slate-950 md:text-2xl">{result.workflow}</h3>
+                        </div>
+                        <button
+                            type="button"
+                            onClick={copyPlan}
+                            className="inline-flex shrink-0 self-start items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-900 shadow-sm transition hover:border-primary-200 hover:bg-primary-50 sm:justify-self-end"
+                        >
+                            {copied ? <ClipboardCheck className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                            {copied ? 'Copied' : 'Copy plan'}
+                        </button>
                     </div>
-                    <p className="text-lg font-bold leading-relaxed">{recommendation}</p>
-                    <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                        {['Trigger', 'AI step', 'Approval'].map((item, index) => (
-                            <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-3">
-                                <div className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">Step {index + 1}</div>
-                                <div className="mt-1 font-bold text-white">{item}</div>
+                    <p className="mt-3 text-sm font-semibold leading-relaxed text-slate-600">{result.summary}</p>
+
+                    <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                        <div className="space-y-3">
+                            {[
+                                ['Trigger', result.trigger],
+                                ['AI action', result.action],
+                                ['Output', result.output],
+                            ].map(([label, value], index) => (
+                                <div key={label} className="grid gap-3 border-b border-slate-100 pb-3 last:border-0 last:pb-0 sm:grid-cols-[5.5rem_1fr]">
+                                    <div className="flex items-center gap-2 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary-50 text-primary-700">{index + 1}</span>
+                                        {label}
+                                    </div>
+                                    <div className="text-sm font-bold leading-relaxed text-slate-900">{value}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="mt-3 grid gap-3 sm:grid-cols-3">
+                        {[
+                            ['Apps', result.apps?.join(', ')],
+                            ['Approval', controlPlan.approval || result.approval],
+                            ['Setup', result.effort],
+                        ].map(([label, value]) => (
+                            <div key={label} className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+                                <div className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-primary-700">{label}</div>
+                                <div className="mt-2 text-xs font-semibold leading-relaxed text-slate-600">{value}</div>
                             </div>
                         ))}
+                    </div>
+
+                    <div className="mt-4 flex items-start gap-2 rounded-2xl border border-primary-100 bg-white p-3">
+                        <Settings2 className="mt-0.5 h-4 w-4 shrink-0 text-primary-700" />
+                        <p className="text-xs font-semibold leading-relaxed text-slate-600">
+                            Copy includes the rollout checklist, apps, approval rule, and Dooza Workflow build notes.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -154,9 +230,9 @@ function PlannerTool({ page }) {
 
 function WorkflowStrip() {
     const items = [
-        { label: 'Keyword', icon: Search },
-        { label: 'Useful tool', icon: ListChecks },
-        { label: 'Workflow demo', icon: GitBranch },
+        { label: 'Problem', icon: Search },
+        { label: 'Generated plan', icon: ListChecks },
+        { label: 'Workflow build', icon: GitBranch },
         { label: 'Dooza CTA', icon: Bot },
     ];
 
@@ -198,8 +274,11 @@ function RelatedPages({ currentSlug }) {
                             <div>
                                 <div className="font-extrabold text-slate-950 group-hover:text-primary-700">{item.title}</div>
                                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                                    KD {item.kd} | US volume {item.volume} | {item.keyword}
+                                    {item.heroText}
                                 </p>
+                                <div className="mt-3 inline-flex items-center gap-2 text-sm font-extrabold text-primary-700">
+                                    Open planner <ArrowRight className="h-4 w-4" />
+                                </div>
                             </div>
                         </div>
                     </Link>
@@ -217,25 +296,27 @@ export default function SeoAutomationPage({ page }) {
             <Navbar showLogin={false} showIndustry ctaType="demo" ctaSource={`${page.slug}_nav`} />
 
             <main id="main-content" className="bg-warm text-slate-900">
-                <section className="relative overflow-hidden px-4 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40">
+                <section className="relative overflow-hidden px-4 pb-12 pt-24 md:px-8 md:pb-16 md:pt-28">
                     <div className="pointer-events-none absolute inset-0">
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f766e0a_1px,transparent_1px),linear-gradient(to_bottom,#0f766e0a_1px,transparent_1px)] bg-[size:32px_32px]" />
                         <div className="absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-primary-100/50 blur-3xl" />
                     </div>
 
-                    <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
-                        <div>
-                            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/90 px-4 py-2 text-sm font-bold text-primary-700 shadow-sm backdrop-blur">
-                                <Sparkles className="h-4 w-4" />
-                                {page.eyebrow}
+                    <div className="relative z-10 mx-auto max-w-7xl">
+                        <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+                            <div>
+                                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/90 px-4 py-2 text-sm font-bold text-primary-700 shadow-sm backdrop-blur">
+                                    <Sparkles className="h-4 w-4" />
+                                    {page.eyebrow}
+                                </div>
+                                <h1 className="max-w-4xl font-serif text-4xl font-extrabold leading-[1.04] tracking-tight text-slate-950 md:text-6xl lg:text-[4rem]">
+                                    {page.heroTitle}
+                                </h1>
+                                <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
+                                    {page.heroText}
+                                </p>
                             </div>
-                            <h1 className="mb-7 max-w-4xl font-serif text-4xl font-extrabold leading-[1.05] tracking-tight text-slate-950 md:text-6xl lg:text-7xl">
-                                {page.heroTitle}
-                            </h1>
-                            <p className="mb-9 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
-                                {page.heroText}
-                            </p>
-                            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                            <div className="flex flex-col items-start gap-3 sm:flex-row lg:flex-col lg:items-stretch">
                                 <BookDemoButton source={`${page.slug}_hero`} variant="primary" size="xl">
                                     Book a Demo
                                 </BookDemoButton>
@@ -248,7 +329,7 @@ export default function SeoAutomationPage({ page }) {
                             </div>
                         </div>
 
-                        <SearchSignalCard page={page} />
+                        <FreeAutomationTool page={page} />
                     </div>
                 </section>
 
@@ -258,18 +339,12 @@ export default function SeoAutomationPage({ page }) {
                     </div>
                 </section>
 
-                <section className="px-4 py-20 md:px-8 md:py-28">
-                    <div className="mx-auto max-w-7xl">
-                        <PlannerTool page={page} />
-                    </div>
-                </section>
-
                 <section className="bg-white px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
                         <SectionHeader
                             eyebrow="Workflow plan"
-                            title="What this page should help the visitor understand"
-                            description="The page is useful on its own, then moves the visitor toward a Dooza workflow demo."
+                            title="What the free tool gives you"
+                            description="Each answer turns into a concrete automation plan with a trigger, action, app stack, approval rule, and next step."
                         />
                         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
                             {page.steps.map((step, index) => (
@@ -292,7 +367,7 @@ export default function SeoAutomationPage({ page }) {
                                 Practical workflows this can lead into
                             </h2>
                             <p className="text-lg leading-relaxed text-slate-600">
-                                Each page connects search intent to a business workflow that Dooza can demonstrate visually.
+                                The generated plan is designed to be simple enough to explain, then strong enough to demo in Dooza Workflow.
                             </p>
                         </div>
                         <div className="grid gap-3 sm:grid-cols-2">
@@ -309,9 +384,9 @@ export default function SeoAutomationPage({ page }) {
                 <section className="bg-slate-950 px-4 py-20 text-white md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
                         <SectionHeader
-                            eyebrow="Why this can rank"
-                            title="Built around search intent, not generic AI copy"
-                            description="The target keyword is visible in the page, the page contains a useful planner, and every CTA ties back to Dooza."
+                            eyebrow="Trust and control"
+                            title="Built for automation your team can actually trust"
+                            description="Dooza Workflow keeps every step visible: what triggered, what AI decided, which apps changed, who approved it, and what happened next."
                             dark
                         />
                         <div className="grid gap-5 md:grid-cols-3">
@@ -328,9 +403,9 @@ export default function SeoAutomationPage({ page }) {
                 <section className="px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
                         <SectionHeader
-                            eyebrow="Topic cluster"
-                            title="More AI automation pages"
-                            description="These pages internally link together so crawlers and visitors can move through the full AI automation topic cluster."
+                            eyebrow="More planners"
+                            title="Plan the next workflow"
+                            description="Pick another area of the business and generate a practical workflow plan with apps, approvals, and rollout steps."
                         />
                         <RelatedPages currentSlug={page.slug} />
                     </div>
