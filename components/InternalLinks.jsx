@@ -53,7 +53,7 @@ const InternalLinks = ({ currentSlug, position = 'sidebar' }) => {
     const relatedSlugs = relatedPostMappings[currentSlug] || [];
     const relatedPosts = relatedSlugs
         .map(slug => blogPosts.find(p => p.slug === slug))
-        .filter(Boolean)
+        .filter((post) => post && !post.noindex)
         .slice(0, 3);
 
     if (relatedPosts.length === 0) return null;

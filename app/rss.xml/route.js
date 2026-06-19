@@ -13,7 +13,7 @@ export async function GET() {
     try {
         const { data } = await supabaseServer
             .from('blog_articles')
-            .select('id, slug, title, meta_description, tags, image_url, content_html, source, created_at');
+            .select('id, slug, title, meta_description, tags, image_url, source, created_at');
 
         if (data) {
             dynamicPosts = data.map(dbToPost);
@@ -25,7 +25,7 @@ export async function GET() {
     // Merge static + dynamic, deduplicate by slug
     const staticSlugs = new Set(blogPosts.map(p => p.slug));
     const uniqueDynamic = dynamicPosts.filter(p => !staticSlugs.has(p.slug));
-    const allPosts = [...blogPosts, ...uniqueDynamic];
+    const allPosts = [...blogPosts, ...uniqueDynamic].filter((post) => !post.noindex);
 
     // Sort posts by date (newest first)
     const sortedPosts = allPosts.sort(

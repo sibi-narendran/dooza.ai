@@ -3,7 +3,7 @@ import { SITE_URL } from '../../lib/site';
 
 export const metadata = {
     title: 'Dooza Studio — Build & Deploy AI Agents in Minutes (Free)',
-    description: 'Visual drag-and-drop builder for production-ready AI agents. Connect OpenAI, Claude, or Gemini. Add RAG pipelines. Deploy with one click. No coding required.',
+    description: 'Build production-ready AI agents with a visual drag-and-drop studio. Connect LLMs, add RAG pipelines, and deploy workflows without coding.',
     keywords: ['AI studio', 'AI agent builder', 'LLM workflow', 'RAG pipeline', 'AI automation', 'no-code AI', 'visual AI builder', 'AI development platform'],
     alternates: {
         canonical: `${SITE_URL}/studio`,

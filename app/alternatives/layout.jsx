@@ -2,7 +2,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
     title: 'Dooza vs Competitors — Honest Comparisons [2026]',
-    description: 'Side-by-side comparisons of Dooza vs Sintra AI, Marblism, and Motion App. Real pricing, features, and limitations revealed. See which platform wins for your business.',
+    description: 'Compare Dooza vs Sintra AI, Marblism, Motion, and other AI employee tools with real pricing, features, limits, and use cases.',
     keywords: ['Sintra AI alternative', 'Marblism alternative', 'Motion App alternative', 'AI employees comparison', 'AI automation comparison'],
     alternates: {
         canonical: `${SITE_URL}/alternatives`,

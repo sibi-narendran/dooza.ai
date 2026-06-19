@@ -30,6 +30,14 @@ function normalizeArticleHeadings(html) {
     if (!html) return '';
 
     return html
+        .replace(/<!doctype[^>]*>/gi, '')
+        .replace(/<head\b[^>]*>[\s\S]*?<\/head>/gi, '')
+        .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '')
+        .replace(/<meta\b[^>]*>/gi, '')
+        .replace(/<link\b[^>]*rel=["']?(canonical|alternate|next|prev)["']?[^>]*>/gi, '')
+        .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
+        .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '')
+        .replace(/<\/?(html|body)\b[^>]*>/gi, '')
         .replace(/<h1\b([^>]*)>/gi, '<h2$1>')
         .replace(/<\/h1>/gi, '</h2>');
 }

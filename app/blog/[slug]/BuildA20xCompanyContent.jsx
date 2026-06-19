@@ -473,7 +473,7 @@ export default function BuildA20xCompanyContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">How Dooza Delivers 20X to Every Business</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is built on <Link href="/blog/what-is-openclaw" className="text-primary-600 hover:underline font-medium">OpenClaw</Link> — the open-source AI agent framework — and uses it to power pre-built AI employees that any business can deploy. No custom engineering. No months of R&D. Here's how Dooza's AI employees map to the exact strategies YC companies are using:
+                                    Dooza is built on OpenClaw — the open-source AI agent framework — and uses it to power pre-built AI employees that any business can deploy. No custom engineering. No months of R&D. Here's how Dooza's AI employees map to the exact strategies YC companies are using:
                                 </p>
                             </div>
 
@@ -631,11 +631,6 @@ export default function BuildA20xCompanyContent() {
                                         <p className="text-blue-700">
                                             OpenClaw is the open-source AI agent framework that powers many YC startups. Dooza uses OpenClaw as its foundation and adds the layers businesses actually need: <strong>multi-tenancy, security, cron scheduling, billing, and a managed UI</strong>. Think of OpenClaw as the engine — Dooza is the car you can drive without being a mechanic.
                                         </p>
-                                        <div className="mt-3">
-                                            <Link href="/blog/what-is-openclaw" className="text-blue-600 hover:underline font-medium inline-flex items-center gap-1">
-                                                Learn more about OpenClaw <ArrowRight className="w-4 h-4" />
-                                            </Link>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

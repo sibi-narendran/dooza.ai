@@ -73,7 +73,7 @@ export default function BlogPage({ posts }) {
         }
     };
 
-    const allPosts = posts || blogPosts;
+    const allPosts = (posts || blogPosts).filter((post) => !post.noindex);
     const sortedPosts = [...allPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const filteredPosts = sortedPosts.filter(post => {

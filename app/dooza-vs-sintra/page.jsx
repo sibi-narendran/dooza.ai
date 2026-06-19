@@ -3,7 +3,7 @@ import DoozaVsSintraContent from './DoozaVsSintraContent';
 
 export const metadata = {
     title: 'Sintra AI Alternative — Dooza vs Sintra Compared [2026]',
-    description: 'Looking for a Sintra AI alternative? Compare Dooza vs Sintra AI — unlimited tasks, flat $49/mo, free founder setup vs Sintra\'s 250 credit cap and self-serve-only model.',
+    description: 'Compare Dooza vs Sintra AI on tasks, pricing, credits, setup, onboarding, and AI employees before choosing a Sintra alternative.',
     keywords: [
         'Sintra AI alternative', 'Dooza vs Sintra AI', 'Sintra AI review',
         'Sintra AI comparison', 'best Sintra AI alternative', 'Sintra AI vs Dooza',

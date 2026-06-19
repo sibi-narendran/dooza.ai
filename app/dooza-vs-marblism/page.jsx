@@ -3,7 +3,7 @@ import DoozaVsMarblismContent from './DoozaVsMarblismContent';
 
 export const metadata = {
     title: 'Dooza vs Marblism — $49 Flat vs Per-Seat Fees [2026]',
-    description: 'Dooza vs Marblism compared: $49/mo flat vs $44/mo + per-seat fees, free founder setup vs self-serve, 17 integrations vs undocumented. See the honest breakdown.',
+    description: 'Compare Dooza vs Marblism on pricing, seats, setup, integrations, and AI employee workflows before choosing an automation platform.',
     keywords: [
         'Dooza vs Marblism', 'Marblism alternative', 'Marblism comparison',
         'AI employees comparison', 'Marblism review', 'Marblism pricing',

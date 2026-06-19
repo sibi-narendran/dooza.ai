@@ -3,7 +3,7 @@ import MarblismAlternativesContent from './MarblismAlternativesContent';
 
 export const metadata = {
     title: '7 Best Marblism Alternatives [2026] — Honest Pros & Cons',
-    description: 'Looking for Marblism alternatives? We tested 7 AI employee platforms and compared pricing, integrations, onboarding, and agent quality. Honest pros and cons for each.',
+    description: 'Compare 7 Marblism alternatives by pricing, integrations, onboarding, agent quality, and best use case for small business automation.',
     keywords: [
         'Marblism alternatives', 'Marblism alternative', 'Marblism AI alternative',
         'Marblism AI alternatives', 'best Marblism alternative 2026',

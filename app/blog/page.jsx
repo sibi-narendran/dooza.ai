@@ -11,7 +11,7 @@ export const revalidate = 60;
 
 export const metadata = {
     title: 'Dooza Blog — Proven AI Automation Strategies [2026]',
-    description: 'Actionable guides on AI employees, business automation, and scaling with AI. Real results, not theory. Updated weekly with the latest strategies and case studies.',
+    description: 'Actionable guides on AI employees, business automation, SEO, support, and scaling with AI. Real examples and updated strategies.',
     keywords: ['AI employees blog', 'business automation insights', 'AI agents tips', 'productivity automation', 'AI automation guide', 'Sintra AI comparison', 'Marblism alternative'],
     alternates: {
         canonical: `${SITE_URL}/blog`,
@@ -35,7 +35,7 @@ async function getDynamicPosts() {
     try {
         const { data, error } = await supabaseServer
             .from('blog_articles')
-            .select('id, slug, title, meta_description, tags, image_url, content_html, source, created_at')
+            .select('id, slug, title, meta_description, tags, image_url, source, created_at')
             .order('created_at', { ascending: false });
 
         if (error || !data) return [];
@@ -45,13 +45,33 @@ async function getDynamicPosts() {
     }
 }
 
+function toBlogPreview(post) {
+    return {
+        id: post.id,
+        title: post.title,
+        excerpt: post.excerpt,
+        author: post.author,
+        date: post.date,
+        modifiedDate: post.modifiedDate,
+        readTime: post.readTime,
+        readTimeMinutes: post.readTimeMinutes,
+        category: post.category,
+        tags: post.tags || [],
+        image: post.image || null,
+        imageAlt: post.imageAlt || post.title,
+        slug: post.slug,
+        noindex: post.noindex,
+    };
+}
+
 export default async function Blog() {
     const dynamicPosts = await getDynamicPosts();
 
     // Merge static + dynamic, deduplicate by slug (static wins)
     const staticSlugs = new Set(blogPosts.map(p => p.slug));
     const uniqueDynamic = dynamicPosts.filter(p => !staticSlugs.has(p.slug));
-    const allPosts = [...blogPosts, ...uniqueDynamic];
+    const allPosts = [...blogPosts, ...uniqueDynamic].map(toBlogPreview);
+    const visiblePosts = allPosts.filter((post) => !post.noindex);
 
     // CollectionPage schema for blog listing
     const blogListSchema = {
@@ -74,8 +94,8 @@ export default async function Blog() {
         ],
         "mainEntity": {
             "@type": "ItemList",
-            "numberOfItems": allPosts.length,
-            "itemListElement": allPosts.map((post, index) => ({
+            "numberOfItems": visiblePosts.length,
+            "itemListElement": visiblePosts.map((post, index) => ({
                 "@type": "ListItem",
                 "position": index + 1,
                 "url": `${SITE_URL}/blog/${post.slug}`,
@@ -100,7 +120,7 @@ export default async function Blog() {
                 "url": `${SITE_URL}/logo.png`
             }
         },
-        "blogPost": allPosts.map(post => ({
+        "blogPost": visiblePosts.map(post => ({
             "@type": "BlogPosting",
             "headline": post.title,
             "description": post.excerpt,
@@ -110,6 +130,18 @@ export default async function Blog() {
             "author": {
                 "@type": "Organization",
                 "name": post.author
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Dooza",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": `${SITE_URL}/logo.png`
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `${SITE_URL}/blog/${post.slug}`
             },
             "image": post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}/logo.png`,
             "keywords": post.tags?.join(', ')
@@ -162,7 +194,7 @@ export default async function Blog() {
                 </div>
             </section>
             <Suspense fallback={<BlogLoadingSkeleton />}>
-                <BlogPage posts={allPosts} />
+                <BlogPage posts={visiblePosts} />
             </Suspense>
             <Footer />
         </div>

@@ -11,7 +11,7 @@ import { SITE_URL } from '../../lib/site';
 export default function AlternativesPage() {
     // Filter comparison posts
     const comparisonPosts = blogPosts.filter(post =>
-        post.category === 'Comparison' || post.tags?.includes('Comparison')
+        !post.noindex && (post.category === 'Comparison' || post.tags?.includes('Comparison'))
     );
 
     const competitors = [

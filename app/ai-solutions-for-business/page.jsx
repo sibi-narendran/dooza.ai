@@ -3,7 +3,7 @@ import AISolutionsContent from './AISolutionsContent';
 
 export const metadata = {
     title: 'AI Tools for Business: Best AI Solutions in 2026',
-    description: 'Compare AI tools for business by use case, cost, and ROI. See how Dooza replaces separate apps with AI employees for email, SEO, support, sales, and social.',
+    description: 'Compare AI tools for business by use case, cost, and ROI, and see how Dooza combines email, SEO, support, sales, and social automation.',
     keywords: [
         'AI solutions for business', 'AI tools for business', 'AI for small business',
         'best AI tools for small business 2026', 'AI business solutions',

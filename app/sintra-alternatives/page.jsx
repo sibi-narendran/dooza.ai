@@ -3,7 +3,7 @@ import SintraAlternativesContent from './SintraAlternativesContent';
 
 export const metadata = {
     title: '7 Best Sintra AI Alternatives in 2026 (Honest Comparison)',
-    description: 'Looking for Sintra AI alternatives? We compared 7 platforms — pricing, features, pros, cons, and credit systems. Find the best AI employee platform for your business.',
+    description: 'Compare 7 Sintra AI alternatives by pricing, features, credit limits, onboarding, and best use case for business automation.',
     keywords: [
         'sintra ai alternatives', 'best sintra alternative 2026', 'sintra ai competitors',
         'sintra alternative', 'sintra ai replacement', 'AI employee platforms',

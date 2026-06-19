@@ -4,7 +4,7 @@ import { blogPosts } from '@/lib/blogData';
 
 const RelatedPosts = ({ currentSlug, category, tags = [], maxPosts = 2, allPosts }) => {
     // Find related posts based on category and tags, excluding current post
-    const postsPool = allPosts || blogPosts;
+    const postsPool = (allPosts || blogPosts).filter((post) => !post.noindex);
     const relatedPosts = postsPool
         .filter(post => post.slug !== currentSlug)
         .map(post => {

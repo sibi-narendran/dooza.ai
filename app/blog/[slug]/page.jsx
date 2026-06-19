@@ -260,6 +260,7 @@ export async function generateMetadata({ params }) {
 
     const seoTitle = getPostSeoTitle(post);
     const seoDescription = getPostSeoDescription(post);
+    const socialImage = post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}/logo.png`;
 
     const metadata = {
         title: seoTitle,
@@ -276,20 +277,20 @@ export async function generateMetadata({ params }) {
             publishedTime: post.date,
             modifiedTime: post.modifiedDate || post.date,
             authors: [post.author],
-            images: post.image ? [
+            images: [
                 {
-                    url: `${SITE_URL}${post.image}`,
+                    url: socialImage,
                     width: 1200,
                     height: 630,
                     alt: post.title,
                 }
-            ] : [],
+            ],
         },
         twitter: {
             card: 'summary_large_image',
             title: seoTitle,
             description: seoDescription,
-            images: post.image ? [`${SITE_URL}${post.image}`] : [],
+            images: [socialImage],
         },
     };
 

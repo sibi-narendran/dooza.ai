@@ -42,7 +42,7 @@ export const metadata = {
         absolute: 'Dooza Workflow | AI Agents and Workflow Automation',
     },
     description:
-        'Build AI agents and workflows you can see, test, govern, and control with Dooza Workflow. Connect tools, add approvals, trace decisions, and deploy with Dooza.',
+        'Build visible, testable AI workflows with tool connections, approvals, traces, and governance controls in Dooza Workflow.',
     keywords: [
         'Dooza Workflow',
         'AI agents workflow',
