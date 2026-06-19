@@ -58,6 +58,11 @@ const Footer = ({ variant = 'light' }) => {
                                     Customer Support Automation
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/ai-automation-services" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI Automation Services
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div>
@@ -136,6 +141,26 @@ const Footer = ({ variant = 'light' }) => {
                             <li>
                                 <Link href="/ai-solutions-for-business" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     AI Solutions for Business
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/ai-automation-examples" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI Automation Examples
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/ai-content-automation" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI Content Automation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/ai-blog-automation" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI Blog Automation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/start-ai-automation-agency" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Start AI Automation Agency
                                 </Link>
                             </li>
                             <li>

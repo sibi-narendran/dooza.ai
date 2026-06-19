@@ -97,6 +97,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     const services = [
         { name: 'Dooza Deployment Company', href: '/deployment' },
         { name: 'Customer Support Automation', href: '/customer-support-automation-agency' },
+        { name: 'AI Automation Services', href: '/ai-automation-services' },
     ];
 
     const agents = [

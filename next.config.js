@@ -27,7 +27,7 @@ const nextConfig = {
       "img-src 'self' data: https: blob:",
       "font-src 'self' data:",
       "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://cal.com https://app.cal.com https://platform.twitter.com https://syndication.twitter.com https://www.facebook.com",
-      "connect-src 'self' https://www.google-analytics.com https://www.google.com https://ad.doubleclick.net https://googleads.g.doubleclick.net https://analytics.ahrefs.com https://www.facebook.com https://connect.facebook.net https://*.supabase.co https://syndication.twitter.com https://accounts.dooza.ai https://app.cal.com https://cal.com https://*.clarity.ms https://cloudflareinsights.com",
+      "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://ad.doubleclick.net https://googleads.g.doubleclick.net https://analytics.ahrefs.com https://www.facebook.com https://connect.facebook.net https://*.supabase.co https://syndication.twitter.com https://accounts.dooza.ai https://app.cal.com https://cal.com https://*.clarity.ms https://cloudflareinsights.com",
       "media-src 'self'",
       "object-src 'none'",
       "base-uri 'self'",
