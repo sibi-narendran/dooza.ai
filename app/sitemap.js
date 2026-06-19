@@ -53,12 +53,6 @@ export default async function sitemap() {
             priority: 0.85,
         },
         {
-            url: `${SITE_URL}/book`,
-            lastModified: pageDate('2026-06-13'),
-            changeFrequency: 'weekly',
-            priority: 0.75,
-        },
-        {
             url: `${SITE_URL}/partners`,
             lastModified: pageDate('2026-01-17'),
             changeFrequency: 'monthly',

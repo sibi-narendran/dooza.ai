@@ -38,6 +38,11 @@ const Footer = ({ variant = 'light' }) => {
                                     Dooza Workflow
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/studio" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Dooza Studio
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div>
@@ -46,6 +51,11 @@ const Footer = ({ variant = 'light' }) => {
                             <li>
                                 <Link href="/deployment" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Dooza Deployment Company
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/customer-support-automation-agency" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Customer Support Automation
                                 </Link>
                             </li>
                         </ul>

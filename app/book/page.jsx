@@ -1,4 +1,5 @@
 import BookPageClient from './BookPageClient';
+import Link from 'next/link';
 
 const bookingLoaderStyles = `
   .dooza-booking-shell {
@@ -145,6 +146,14 @@ export const metadata = {
     alternates: {
         canonical: 'https://www.dooza.ai/book',
     },
+    robots: {
+        index: false,
+        follow: true,
+        googleBot: {
+            index: false,
+            follow: true,
+        },
+    },
     openGraph: {
         title: 'Book a Dooza AI Automation Setup Call | Dooza',
         description: 'Pick a time to map your AI employees, workflow automation needs, integrations, and first launch plan.',
@@ -169,7 +178,9 @@ export default function BookPage() {
                             Dooza
                         </p>
                         <h1 className="text-lg font-black tracking-tight text-slate-950 sm:text-xl">
-                            Book a meeting
+                            <Link href="/" className="transition hover:text-primary-700">
+                                Book a meeting
+                            </Link>
                         </h1>
                     </div>
                 </div>

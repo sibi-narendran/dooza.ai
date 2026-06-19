@@ -18,11 +18,13 @@ export const metadata = {
         url: `${SITE_URL}/dooza-vs-sintra`,
         siteName: 'Dooza',
         type: 'website',
+        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza vs Sintra AI comparison' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Sintra AI Alternative — Dooza vs Sintra [2026]',
         description: 'Looking for a Sintra AI alternative? Dooza gives you unlimited AI employees, flat pricing, and free founder onboarding.',
+        images: [`${SITE_URL}/logo.png`],
     },
 };
 

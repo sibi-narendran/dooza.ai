@@ -90,11 +90,13 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
 
     const products = [
         { name: 'Dooza', href: '/' },
+        { name: 'Dooza Studio', href: '/studio' },
         { name: 'Dooza Workflow', href: '/workflow' },
     ];
 
     const services = [
         { name: 'Dooza Deployment Company', href: '/deployment' },
+        { name: 'Customer Support Automation', href: '/customer-support-automation-agency' },
     ];
 
     const agents = [

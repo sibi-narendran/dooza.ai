@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Link from 'next/link';
 import BlogPage from './BlogContent';
 import { blogPosts } from '../../lib/blogData';
 import { supabaseServer } from '../../lib/supabaseServer';
@@ -196,8 +197,44 @@ export default async function Blog() {
             <Suspense fallback={<BlogLoadingSkeleton />}>
                 <BlogPage posts={visiblePosts} />
             </Suspense>
+            <BlogArchiveLinks posts={visiblePosts} />
             <Footer />
         </div>
+    );
+}
+
+function BlogArchiveLinks({ posts }) {
+    const sortedPosts = [...posts].sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+
+    if (sortedPosts.length === 0) return null;
+
+    return (
+        <section className="px-4 pb-16 sm:px-6 lg:px-8" aria-labelledby="all-articles-heading">
+            <div className="mx-auto max-w-7xl border-t border-slate-200 pt-10">
+                <div className="mb-6 max-w-2xl">
+                    <p className="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-primary-700">
+                        Article archive
+                    </p>
+                    <h2 id="all-articles-heading" className="text-2xl font-extrabold tracking-tight text-slate-950">
+                        All AI automation articles
+                    </h2>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                        Browse every Dooza guide on AI employees, workflow automation, lead generation, customer support, and SEO.
+                    </p>
+                </div>
+                <div className="grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
+                    {sortedPosts.map((post) => (
+                        <Link
+                            key={post.slug}
+                            href={`/blog/${post.slug}`}
+                            className="group rounded-lg border border-slate-100 bg-white px-4 py-3 text-sm font-semibold leading-5 text-slate-700 shadow-sm transition hover:border-primary-200 hover:text-primary-700 hover:shadow-md"
+                        >
+                            {post.title}
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 }
 

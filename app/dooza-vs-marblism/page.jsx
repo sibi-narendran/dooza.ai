@@ -18,11 +18,13 @@ export const metadata = {
         url: `${SITE_URL}/dooza-vs-marblism`,
         siteName: 'Dooza',
         type: 'website',
+        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza vs Marblism comparison' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Dooza vs Marblism — 2026 Comparison',
         description: 'Personal founder setup vs DIY. Flat pricing vs per-seat fees. See why businesses choose Dooza over Marblism.',
+        images: [`${SITE_URL}/logo.png`],
     },
 };
 
