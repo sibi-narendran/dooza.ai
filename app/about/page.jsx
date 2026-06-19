@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SupportEmailLink from '../../components/SupportEmailLink';
 import { Building2, Globe, Shield, Users } from 'lucide-react';
 
 const aboutFaqSchema = {
@@ -170,7 +171,7 @@ export default function AboutPage() {
                         </p>
                         <p className="text-slate-600">
                             Email:{' '}
-                            <a href="mailto:support@dooza.ai" className="text-blue-600 hover:text-blue-800 underline">support@dooza.ai</a>
+                            <SupportEmailLink className="text-blue-600 hover:text-blue-800 underline" />
                         </p>
                     </div>
                 </section>

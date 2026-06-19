@@ -2,6 +2,7 @@
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SupportEmailLink from '../../components/SupportEmailLink';
 
 export default function PrivacyPage() {
     return (
@@ -196,7 +197,7 @@ export default function PrivacyPage() {
                         <h3 className="text-xl font-medium text-slate-800 mb-3">Account Deletion</h3>
                         <p className="text-slate-600 leading-relaxed mb-4">
                             You may request deletion of your account and all associated data at any time by emailing{' '}
-                            <a href="mailto:support@dooza.ai" className="text-blue-600 hover:text-blue-800 underline">support@dooza.ai</a>.
+                            <SupportEmailLink className="text-blue-600 hover:text-blue-800 underline" />.
                             Upon receiving a valid deletion request, we will delete your data within 30 days, except where retention is required by law.
                         </p>
 
@@ -220,7 +221,7 @@ export default function PrivacyPage() {
                         <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
                             <li><strong>Disconnecting your account:</strong> Remove the connection to any social media platform from within your Dooza account settings. This immediately stops all data access from that platform.</li>
                             <li><strong>Revoking permissions:</strong> You can revoke Dooza&apos;s access directly from your Facebook, Instagram, or LinkedIn account settings at any time.</li>
-                            <li><strong>Contacting us:</strong> Email <a href="mailto:support@dooza.ai" className="text-blue-600 hover:text-blue-800 underline">support@dooza.ai</a> to request that we stop processing your data and delete all platform data associated with your account.</li>
+                            <li><strong>Contacting us:</strong> Email <SupportEmailLink className="text-blue-600 hover:text-blue-800 underline" /> to request that we stop processing your data and delete all platform data associated with your account.</li>
                         </ul>
                         <p className="text-slate-600 leading-relaxed">
                             Withdrawing consent does not affect the lawfulness of any processing carried out before the withdrawal. After consent is withdrawn, we will stop accessing your data from the relevant platform and delete the associated platform data within 30 days.
@@ -262,7 +263,7 @@ export default function PrivacyPage() {
                         </ul>
                         <p className="text-slate-600 leading-relaxed mt-4">
                             To exercise any of these rights, please contact us at{' '}
-                            <a href="mailto:support@dooza.ai" className="text-blue-600 hover:text-blue-800 underline">support@dooza.ai</a>.
+                            <SupportEmailLink className="text-blue-600 hover:text-blue-800 underline" />.
                             We will respond to your request within 30 days, or as required by applicable law.
                         </p>
                     </section>
@@ -315,7 +316,7 @@ export default function PrivacyPage() {
                         <h2 className="text-2xl font-semibold text-slate-900 mb-4">Children&apos;s Privacy</h2>
                         <p className="text-slate-600 leading-relaxed">
                             Dooza is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If we learn that we have collected personal information from a child under 13, we will take steps to delete that information promptly. If you believe a child under 13 has provided us with personal information, please contact us at{' '}
-                            <a href="mailto:support@dooza.ai" className="text-blue-600 hover:text-blue-800 underline">support@dooza.ai</a>.
+                            <SupportEmailLink className="text-blue-600 hover:text-blue-800 underline" />.
                         </p>
                     </section>
 
@@ -341,7 +342,7 @@ export default function PrivacyPage() {
                             </p>
                             <p className="text-slate-600">
                                 Email:{' '}
-                                <a href="mailto:support@dooza.ai" className="text-blue-600 hover:text-blue-800 underline">support@dooza.ai</a>
+                                <SupportEmailLink className="text-blue-600 hover:text-blue-800 underline" />
                             </p>
                             <p className="text-slate-600">
                                 Website:{' '}

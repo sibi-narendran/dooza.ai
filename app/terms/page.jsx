@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SupportEmailLink from '../../components/SupportEmailLink';
 
 export default function TermsPage() {
     return (
@@ -196,7 +197,7 @@ export default function TermsPage() {
                         </p>
                         <p className="text-slate-600 leading-relaxed mb-4">
                             You may terminate your account at any time by contacting us at{' '}
-                            <a href="mailto:support@dooza.ai" className="text-blue-600 hover:text-blue-800 underline">support@dooza.ai</a>.
+                            <SupportEmailLink className="text-blue-600 hover:text-blue-800 underline" />.
                         </p>
                         <p className="text-slate-600 leading-relaxed">
                             Upon termination: (a) your right to use the Service will immediately cease; (b) we will delete your account data in accordance with our <Link href="/privacy" className="text-blue-600 hover:text-blue-800 underline">Privacy Policy</Link>; and (c) all provisions of these Terms that by their nature should survive termination shall survive, including ownership provisions, warranty disclaimers, indemnification, and limitations of liability.
@@ -272,7 +273,7 @@ export default function TermsPage() {
                             </p>
                             <p className="text-slate-600">
                                 Email:{' '}
-                                <a href="mailto:support@dooza.ai" className="text-blue-600 hover:text-blue-800 underline">support@dooza.ai</a>
+                                <SupportEmailLink className="text-blue-600 hover:text-blue-800 underline" />
                             </p>
                             <p className="text-slate-600">
                                 Website:{' '}
