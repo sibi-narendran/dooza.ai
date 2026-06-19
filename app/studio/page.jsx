@@ -23,42 +23,27 @@ export const metadata = {
     },
 };
 
-// SoftwareApplication schema for the Studio product
-const studioSchema = {
+const studioPageSchema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "WebPage",
     "name": "Dooza Studio",
-    "alternateName": "Dooza AI Agent Builder",
-    "applicationCategory": "DeveloperApplication",
-    "applicationSubCategory": "AI Development Platform",
-    "operatingSystem": "Web",
     "description": "Visual AI workflow builder for creating production-ready AI agents. Connect OpenAI, Claude, Gemini, and other LLMs. Add RAG pipelines and deploy with one click.",
     "url": `${SITE_URL}/studio`,
-    "downloadUrl": "https://studio.dooza.ai",
-    "softwareVersion": "1.0",
-    "releaseNotes": "Visual workflow builder with multi-model support and built-in RAG",
-    "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "description": "Free tier available",
-        "availability": "https://schema.org/InStock"
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "Dooza",
+        "url": SITE_URL
     },
-    "featureList": [
-        "Visual Workflow Builder",
-        "Multi-Model Support (OpenAI, Claude, Gemini)",
-        "Built-in RAG Pipeline",
-        "One-Click Deploy",
-        "REST API endpoints",
-        "SDK libraries",
-        "No-code AI agent creation",
-        "Custom LLM integration"
+    "about": [
+        { "@type": "Thing", "name": "AI agent builder" },
+        { "@type": "Thing", "name": "Visual workflow builder" },
+        { "@type": "Thing", "name": "RAG pipeline" },
+        { "@type": "Thing", "name": "AI development platform" }
     ],
-    "screenshot": `${SITE_URL}/logo.png`,
-    "author": {
+    "publisher": {
         "@type": "Organization",
         "name": "Dooza",
-        "url": "https://www.dooza.ai"
+        "url": SITE_URL
     }
 };
 
@@ -132,7 +117,7 @@ export default function StudioPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify([studioSchema, studioProductSchema, studioHowToSchema])
+                    __html: JSON.stringify([studioPageSchema, studioProductSchema, studioHowToSchema])
                 }}
             />
             <StudioContent />

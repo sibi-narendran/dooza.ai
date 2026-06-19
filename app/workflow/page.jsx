@@ -275,30 +275,26 @@ const featuredTestimonials = testimonials.slice(0, 2);
 const schemas = [
     {
         '@context': 'https://schema.org',
-        '@type': 'SoftwareApplication',
+        '@type': 'WebPage',
         name: 'Dooza Workflow',
-        applicationCategory: 'BusinessApplication',
-        applicationSubCategory: 'AI Workflow Automation',
-        operatingSystem: 'Web',
         url: pageUrl,
         description: metadata.description,
-        featureList: [
-            ...capabilityCards.map((item) => item.title),
-            ...governanceItems.map((item) => item.title),
-            ...enterpriseControls,
+        isPartOf: {
+            '@type': 'WebSite',
+            name: 'Dooza',
+            url: SITE_URL,
+        },
+        about: [
+            { '@type': 'Thing', name: 'AI workflow automation' },
+            { '@type': 'Thing', name: 'Dooza Workflow' },
+            ...capabilityCards.map((item) => ({ '@type': 'Thing', name: item.title })),
+            ...governanceItems.map((item) => ({ '@type': 'Thing', name: item.title })),
+            ...enterpriseControls.map((item) => ({ '@type': 'Thing', name: item })),
         ],
         publisher: {
             '@type': 'Organization',
             name: 'Dooza',
             url: SITE_URL,
-        },
-        offers: {
-            '@type': 'Offer',
-            url: pageUrl,
-            price: '0',
-            priceCurrency: 'USD',
-            availability: 'https://schema.org/InStock',
-            description: 'Create and test Dooza Workflow automations with visual workflow tools.',
         },
     },
     {
