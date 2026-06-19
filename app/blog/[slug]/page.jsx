@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { cache } from 'react';
 import { SITE_URL } from '../../../lib/site';
 import { blogPosts, generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '../../../lib/blogData';
 import { supabaseServer } from '../../../lib/supabaseServer';
@@ -127,18 +128,36 @@ const BLOG_COMPONENTS = {
     'revid-ai-alternative': RevidAlternativeContent,
 };
 
-// ISR: revalidate dynamic posts every 60 seconds
-export const revalidate = 60;
+// Blog content changes deliberately through the admin flow, so keep generated
+// article pages cached long enough that crawlers do not trigger database-backed renders.
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-    return blogPosts.map((post) => ({
-        slug: post.slug,
-    }));
+    let dynamicSlugs = [];
+    try {
+        const { data, error } = await supabaseServer
+            .from('blog_articles')
+            .select('slug');
+
+        if (!error && data) {
+            dynamicSlugs = data.map((post) => post.slug).filter(Boolean);
+        }
+    } catch {
+        dynamicSlugs = [];
+    }
+
+    const slugs = new Set([
+        ...blogPosts.map((post) => post.slug),
+        ...dynamicSlugs,
+    ]);
+
+    return [...slugs].map((slug) => ({ slug }));
 }
 
 // Fetch dynamic post from Supabase
-async function getDynamicPost(slug) {
+const getDynamicPost = cache(async (slug) => {
     try {
         const { data, error } = await supabaseServer
             .from('blog_articles')
@@ -151,7 +170,7 @@ async function getDynamicPost(slug) {
     } catch {
         return null;
     }
-}
+});
 
 const BLOG_SEO_TITLE_MAX_LENGTH = 56;
 const BLOG_SEO_DESCRIPTION_MAX_LENGTH = 155;

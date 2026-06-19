@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { supabaseServer } from '../../../../lib/supabaseServer';
 import { dbToPost, postToDb } from '../../../../lib/blogTransform';
 
@@ -7,6 +8,16 @@ function authenticate(request) {
     const apiKey = process.env.DOOZA_BLOG_API_KEY;
     if (!apiKey) return false;
     return authHeader === `Bearer ${apiKey}`;
+}
+
+function revalidateBlogPaths(slug) {
+    revalidatePath('/blog');
+    revalidatePath('/sitemap.xml');
+    revalidatePath('/rss.xml');
+    revalidatePath('/llms.txt');
+    if (slug) {
+        revalidatePath(`/blog/${slug}`);
+    }
 }
 
 // GET /api/blog/[slug] — Single post (public)
@@ -61,6 +72,11 @@ export async function PATCH(request, { params }) {
         return NextResponse.json({ error: 'Post not found or update failed' }, { status: 404 });
     }
 
+    revalidateBlogPaths(slug);
+    if (data.slug && data.slug !== slug) {
+        revalidateBlogPaths(data.slug);
+    }
+
     return NextResponse.json({ post: dbToPost(data) });
 }
 
@@ -80,6 +96,8 @@ export async function DELETE(request, { params }) {
     if (error) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
+
+    revalidateBlogPaths(slug);
 
     return new Response(null, { status: 204 });
 }

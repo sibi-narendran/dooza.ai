@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import crypto from 'crypto';
 import { supabaseServer } from '../../../lib/supabaseServer';
 import { dbToPost, postToDb, generateTocFromHtml } from '../../../lib/blogTransform';
@@ -8,6 +9,16 @@ function authenticate(request) {
     const apiKey = process.env.DOOZA_BLOG_API_KEY;
     if (!apiKey) return false;
     return authHeader === `Bearer ${apiKey}`;
+}
+
+function revalidateBlogPaths(slug) {
+    revalidatePath('/blog');
+    revalidatePath('/sitemap.xml');
+    revalidatePath('/rss.xml');
+    revalidatePath('/llms.txt');
+    if (slug) {
+        revalidatePath(`/blog/${slug}`);
+    }
 }
 
 // GET /api/blog — List published posts (public)
@@ -108,6 +119,8 @@ export async function POST(request) {
         }
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
+
+    revalidateBlogPaths(row.slug);
 
     // Return exactly what Workforce expects: { ok: true, url: "..." }
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dooza.ai';
