@@ -144,7 +144,7 @@ export default async function IndustryPage({ params }) {
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: SITE_URL },
         { name: "Industries", url: `${SITE_URL}/industries` },
-        { name: page.title }
+        { name: page.title, url: `${SITE_URL}/industries/${slug}` }
     ]);
 
     const schemas = [serviceSchema, breadcrumbSchema];

@@ -13,6 +13,7 @@ export const metadata = {
         title: 'Partner Program | Earn 30% Recurring Commission',
         description: 'Join the Dooza Partner Program and earn 30% lifetime recurring commission.',
         url: `${SITE_URL}/partners`,
+        type: 'website',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Partner Program' }],
     },
     twitter: {

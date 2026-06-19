@@ -292,6 +292,14 @@ const schemas = [
             name: 'Dooza',
             url: SITE_URL,
         },
+        offers: {
+            '@type': 'Offer',
+            url: pageUrl,
+            price: '0',
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            description: 'Create and test Dooza Workflow automations with visual workflow tools.',
+        },
     },
     {
         '@context': 'https://schema.org',

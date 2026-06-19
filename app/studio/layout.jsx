@@ -14,7 +14,8 @@ export default function StudioLayout({ children }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Studio"
+                "name": "Studio",
+                "item": `${SITE_URL}/studio`
             }
         ]
     };

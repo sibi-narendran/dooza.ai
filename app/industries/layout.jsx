@@ -44,7 +44,8 @@ export default function IndustriesLayout({ children }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Industries"
+                "name": "Industries",
+                "item": `${SITE_URL}/industries`
             }
         ]
     };

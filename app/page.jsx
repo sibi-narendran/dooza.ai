@@ -26,6 +26,7 @@ export const metadata = {
         title: 'AI Employees for $49/mo — Work 24/7 | Dooza.ai',
         description: 'Get AI employees that handle email, social media, SEO, calls, and leads while you sleep. Free setup call with the founder.',
         url: 'https://www.dooza.ai',
+        type: 'website',
         images: [{ url: 'https://www.dooza.ai/logo.png', width: 512, height: 512, alt: 'Dooza - AI Employees Platform' }],
     },
     twitter: {
@@ -111,6 +112,7 @@ const softwareSchema = {
     "@type": "SoftwareApplication",
     "name": "Dooza AI Employees",
     "alternateName": "Dooza Workforce",
+    "description": "Dooza provides AI employees for email, social media, SEO, calls, leads, and business workflow automation.",
     "applicationCategory": "BusinessApplication",
     "applicationSubCategory": "AI Automation Platform",
     "operatingSystem": "Web, iOS, Android",

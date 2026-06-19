@@ -14,7 +14,8 @@ export default function PricingLayout({ children }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Pricing"
+                "name": "Pricing",
+                "item": `${SITE_URL}/pricing`
             }
         ]
     };

@@ -44,7 +44,8 @@ export default function AlternativesLayout({ children }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Alternatives"
+                "name": "Alternatives",
+                "item": `${SITE_URL}/alternatives`
             }
         ]
     };

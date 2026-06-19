@@ -44,7 +44,8 @@ export default function TermsLayout({ children }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Terms of Service"
+                "name": "Terms of Service",
+                "item": `${SITE_URL}/terms`
             }
         ]
     };

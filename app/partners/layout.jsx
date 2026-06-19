@@ -14,7 +14,8 @@ export default function PartnersLayout({ children }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Partners"
+                "name": "Partners",
+                "item": `${SITE_URL}/partners`
             }
         ]
     };

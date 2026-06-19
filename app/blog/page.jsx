@@ -101,7 +101,7 @@ export default async function Blog() {
                 "position": index + 1,
                 "url": `${SITE_URL}/blog/${post.slug}`,
                 "name": post.title,
-                "description": post.excerpt
+                "description": post.excerpt || post.title
             }))
         }
     };
@@ -124,7 +124,7 @@ export default async function Blog() {
         "blogPost": visiblePosts.map(post => ({
             "@type": "BlogPosting",
             "headline": post.title,
-            "description": post.excerpt,
+            "description": post.excerpt || post.title,
             "url": `${SITE_URL}/blog/${post.slug}`,
             "datePublished": post.date,
             "dateModified": post.modifiedDate || post.date,

@@ -44,7 +44,8 @@ export default function AboutLayout({ children }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "About"
+                "name": "About",
+                "item": `${SITE_URL}/about`
             }
         ]
     };

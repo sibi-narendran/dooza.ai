@@ -44,7 +44,8 @@ export default function PrivacyLayout({ children }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Privacy Policy"
+                "name": "Privacy Policy",
+                "item": `${SITE_URL}/privacy`
             }
         ]
     };

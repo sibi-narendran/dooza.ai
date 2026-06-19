@@ -333,7 +333,7 @@ export default async function BlogPostPage({ params }) {
         const breadcrumbSchema = generateBreadcrumbSchema([
             { name: "Home", url: SITE_URL },
             { name: "Blog", url: `${SITE_URL}/blog` },
-            { name: staticPost.title }
+            { name: staticPost.title, url: `${SITE_URL}/blog/${slug}` }
         ]);
 
         const schemas = [articleSchema, breadcrumbSchema];
@@ -358,7 +358,7 @@ export default async function BlogPostPage({ params }) {
         const breadcrumbSchema = generateBreadcrumbSchema([
             { name: "Home", url: SITE_URL },
             { name: "Blog", url: `${SITE_URL}/blog` },
-            { name: staticPost.title }
+            { name: staticPost.title, url: `${SITE_URL}/blog/${slug}` }
         ]);
 
         const schemas = [articleSchema, breadcrumbSchema];
@@ -389,7 +389,7 @@ export default async function BlogPostPage({ params }) {
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: SITE_URL },
         { name: "Blog", url: `${SITE_URL}/blog` },
-        { name: dynamicPost.title }
+        { name: dynamicPost.title, url: `${SITE_URL}/blog/${slug}` }
     ]);
 
     const schemas = [articleSchema, breadcrumbSchema];

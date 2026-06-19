@@ -12,6 +12,7 @@ export const metadata = {
         title: 'Dooza Studio — Build & Deploy AI Agents in Minutes (Free)',
         description: 'Visual drag-and-drop builder for production-ready AI agents. Connect any LLM, add RAG, deploy with one click.',
         url: `${SITE_URL}/studio`,
+        type: 'website',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Studio - AI Agent Builder' }],
     },
     twitter: {

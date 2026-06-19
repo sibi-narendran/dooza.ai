@@ -138,7 +138,7 @@ export default async function AgentPage({ params }) {
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: SITE_URL },
         { name: "AI Employees", url: `${SITE_URL}/agents` },
-        { name: `${page.name} — ${page.role}` },
+        { name: `${page.name} — ${page.role}`, url: `${SITE_URL}/agents/${slug}` },
     ]);
 
     const schemas = [agentSchema, howToSchema, breadcrumbSchema];

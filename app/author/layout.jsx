@@ -48,7 +48,8 @@ export default function AuthorLayout({ children }) {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Author"
+                "name": "Author",
+                "item": `${SITE_URL}/author`
             }
         ]
     };

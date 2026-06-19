@@ -17,6 +17,7 @@ export const metadata = {
         title: 'Dooza Pricing: AI Employees from $49/mo (No Hidden Fees)',
         description: 'Get AI employees for less than one lunch meeting. All agents included in every plan. No credits, no per-seat fees.',
         url: 'https://www.dooza.ai/pricing',
+        type: 'website',
         images: [{ url: 'https://www.dooza.ai/logo.png', width: 512, height: 512, alt: 'Dooza Pricing' }],
     },
     twitter: {
