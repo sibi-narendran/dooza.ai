@@ -82,6 +82,11 @@ const nextConfig = {
         destination: '/blog/automate-business-processes',
         permanent: true,
       },
+      {
+        source: '/blog/how-much-does-an-ai-employee-cost',
+        destination: '/blog/ai-staffing',
+        permanent: true,
+      },
     ];
   },
 };

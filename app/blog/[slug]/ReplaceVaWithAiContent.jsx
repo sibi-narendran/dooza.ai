@@ -262,7 +262,7 @@ export default function ReplaceVaWithAiContent() {
                                 <p>Let&apos;s break that down further. A mid-range VA at $2,500/month costs you $30,000/year. Dooza at $49/month costs $588/year. That&apos;s a <strong>$29,412 difference</strong> &mdash; and the AI employees work nights, weekends, and holidays.</p>
                                 <p>Even if you keep a part-time human for the strategy and relationship tasks ($1,000/month), your total cost drops from $2,500/month to $1,049/month. That&apos;s $17,412 in annual savings redirected toward growth.</p>
                                 <p>Here&apos;s the reframe that matters: <strong>you&apos;re not firing a person &mdash; you&apos;re reallocating $1,500&ndash;$3,000/month from repetitive tasks to growth.</strong> That money can fund paid ads, a product hire, or a sales initiative that actually moves the needle.</p>
-                                <p>For a deeper dive into AI employee pricing, see our <Link href="/blog/how-much-does-an-ai-employee-cost" className="text-primary-600 hover:underline font-medium">complete cost guide</Link>.</p>
+                                <p>For a deeper dive into AI employee pricing, see our <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">complete AI staffing cost guide</Link>.</p>
                             </div>
                         </section>
 

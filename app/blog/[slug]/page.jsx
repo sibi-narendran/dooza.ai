@@ -130,7 +130,7 @@ const BLOG_COMPONENTS = {
 
 // Blog content changes deliberately through the admin flow, so keep generated
 // article pages cached long enough that crawlers do not trigger database-backed renders.
-export const revalidate = 3600;
+export const revalidate = 86400;
 export const dynamicParams = true;
 
 // Generate static params for all blog posts
