@@ -59,6 +59,11 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/customer-service-automation-software" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Customer Service Software
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/ai-automation-services" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     AI Automation Services
                                 </Link>
@@ -146,6 +151,16 @@ const Footer = ({ variant = 'light' }) => {
                             <li>
                                 <Link href="/ai-automation-examples" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     AI Automation Examples
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/best-customer-service-automation-software" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Support Automation Calculator
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/customer-service-automation-solutions" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Support Automation Planner
                                 </Link>
                             </li>
                             <li>

@@ -3,6 +3,7 @@ import { industryPages } from '../lib/industryData';
 import { agentPages } from '../lib/agentData';
 import { SITE_URL } from '../lib/site';
 import { automationSeoPageSlugs } from '../lib/seoAutomationPages';
+import { customerServiceToolSlugs } from '../lib/customerServiceAutomation';
 import { supabaseServer } from '../lib/supabaseServer';
 
 const pageDate = (date) => new Date(`${date}T00:00:00.000Z`);
@@ -203,9 +204,17 @@ export default async function sitemap() {
         priority: 0.9,
     }));
 
+    const customerServiceToolPageEntries = customerServiceToolSlugs.map((slug) => ({
+        url: `${SITE_URL}/${slug}`,
+        lastModified: pageDate('2026-06-20'),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    }));
+
     return dedupeByUrl([
         ...staticPages,
         ...automationSeoPageEntries,
+        ...customerServiceToolPageEntries,
         ...blogPages,
         ...dynamicBlogPages,
         ...industryPageEntries,
