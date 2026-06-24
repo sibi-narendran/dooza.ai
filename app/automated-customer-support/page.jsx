@@ -25,6 +25,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import FAQAccordion from '@/components/FAQAccordion';
+import VideoSection from '@/components/sections/VideoSection';
 import SupportAutomationAudit from './SupportAutomationAudit';
 import { SITE_URL } from '@/lib/site';
 
@@ -859,6 +860,7 @@ export default function AutomatedCustomerSupportPage() {
                     </div>
                 </section>
 
+                <VideoSection />
                 <SupportAutomationVideo />
                 <ProblemStatement />
                 <WorkflowGraph />
