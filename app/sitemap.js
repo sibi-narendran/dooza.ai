@@ -103,6 +103,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/automated-customer-support`,
+            lastModified: pageDate('2026-06-24'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/marblism-alternatives`,
             lastModified: pageDate('2026-04-20'),
             changeFrequency: 'monthly',
