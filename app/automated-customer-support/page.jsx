@@ -225,6 +225,92 @@ const guardrails = [
     },
 ];
 
+const managedIntroCards = [
+    {
+        icon: MessageSquareText,
+        title: 'Start with real tickets',
+        text: 'We look at the support questions your team already repeats: orders, returns, FAQs, complaints, and product fit.',
+    },
+    {
+        icon: UserCheck,
+        title: 'Engineers help set it up',
+        text: 'Dooza is presented as a managed start: we help map the flow, build the first workflow, and review it with your team.',
+    },
+    {
+        icon: ShieldCheck,
+        title: 'Approval before scale',
+        text: 'Risky responses, refunds, complaints, and missing data can stay draft-only or human-approved until the workflow is trusted.',
+    },
+];
+
+const managedSteps = [
+    {
+        title: 'Approve Managed plan and send one point of contact',
+        text: 'The Managed plan starts the pilot. One owner shares name, email, and mobile number so Dooza can coordinate fast.',
+    },
+    {
+        title: 'Audit your support workflows',
+        text: 'Dooza speaks with your team, collects needs, reviews the company flow, and lists the best automation opportunities.',
+        badge: 'Inbound, support, reporting, follow-up',
+    },
+    {
+        title: 'Complete one workflow by Day 3',
+        text: 'The first target is one working support workflow, such as order status, return intake, FAQ handling, or escalation routing.',
+        badge: 'One working workflow by Day 3',
+    },
+    {
+        title: 'Run the work on Days 4-5',
+        text: 'Your team uses Dooza with real tickets while output quality, missing data, approvals, and total usage are tracked.',
+    },
+    {
+        title: 'Review by Day 7 and decide next',
+        text: 'Dooza shares usage, what was built, what it costs to run monthly, and whether to continue, upgrade, use the refund window, or move to more AI workflows.',
+        badge: 'Refund decision available until Day 7',
+    },
+];
+
+const trustPoints = [
+    {
+        icon: UserCheck,
+        title: 'Human approval stays available',
+        text: 'The workflow can draft first and wait for a support owner before anything sensitive is sent.',
+    },
+    {
+        icon: FileCheck2,
+        title: 'Clear first deliverable',
+        text: 'The first milestone is one working support workflow, not a vague promise to automate everything.',
+    },
+    {
+        icon: LockKeyhole,
+        title: 'Access is scoped',
+        text: 'Only the tools and data needed for the first workflow should be connected.',
+    },
+    {
+        icon: BarChart3,
+        title: 'Usage is reviewed before scaling',
+        text: 'The review shows what ran, what it may cost monthly, and whether more workflows make sense.',
+    },
+    {
+        icon: ShieldCheck,
+        title: 'Refund window builds confidence',
+        text: 'If the first review does not prove value inside the 7-day review window, the customer can ask for a refund.',
+    },
+    {
+        icon: Route,
+        title: 'Next workflows are based on evidence',
+        text: 'After the first workflow, the next build is chosen from real support patterns and output quality.',
+    },
+];
+
+const meetingChecklist = [
+    'Current support tools and inbox/helpdesk setup',
+    'Top repeated order, return, FAQ, and complaint questions',
+    'Where human approval is required',
+    'What customer data is safe to use',
+    'Which workflow should be built first',
+    'What success should look like after the first week',
+];
+
 const supportAutomationVideo = {
     id: 'tC1BhYRCqgE',
     title: 'What Is Customer Service Automation For eCommerce Operations?',
@@ -295,7 +381,7 @@ const schemas = [
             url: SITE_URL,
             logo: `${SITE_URL}/logo.png`,
         },
-        dateModified: '2026-06-24',
+        dateModified: '2026-06-25',
     },
     {
         '@context': 'https://schema.org',
@@ -547,6 +633,48 @@ function HeroGraph() {
     );
 }
 
+function ManagedIntro() {
+    return (
+        <section className="bg-white px-4 py-16 md:px-8 md:py-24">
+            <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+                <div>
+                    <span className="section-label mb-4 block text-primary-700">Managed support automation</span>
+                    <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
+                        This starts as a guided workflow, not a risky auto-reply switch
+                    </h2>
+                    <p className="mt-5 text-lg font-semibold leading-relaxed text-slate-600">
+                        Ecommerce support automation works best when the first workflow is small, useful, and reviewed with real tickets. Dooza helps map the support flow, build the first automation, keep humans in control, and decide what should be automated next.
+                    </p>
+                    <div className="mt-8 rounded-[24px] border border-primary-100 bg-primary-50 p-5">
+                        <div className="text-sm font-black uppercase tracking-[0.14em] text-primary-800">Good first scope</div>
+                        <p className="mt-3 text-base font-bold leading-relaxed text-slate-700">
+                            Order status, return intake, repeated FAQs, complaint escalation, and product-fit questions are practical first workflows because they happen often and can be controlled with approval rules.
+                        </p>
+                    </div>
+                </div>
+                <div className="grid gap-4">
+                    {managedIntroCards.map((item) => {
+                        const Icon = item.icon;
+                        return (
+                            <div key={item.title} className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
+                                <div className="mb-4 flex items-start gap-4">
+                                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
+                                        <Icon className="h-6 w-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-black text-slate-950">{item.title}</h3>
+                                        <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-600">{item.text}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </section>
+    );
+}
+
 function SupportAutomationVideo() {
     return (
         <section id="video" className="bg-white px-4 py-16 md:px-8 md:py-24">
@@ -584,9 +712,6 @@ function SupportAutomationVideo() {
                     <div className="mt-4 flex flex-col gap-3 rounded-2xl bg-slate-50 p-4 sm:flex-row sm:items-center sm:justify-between">
                         <div>
                             <div className="text-sm font-black text-slate-950">{supportAutomationVideo.title}</div>
-                            <div className="mt-1 text-xs font-bold text-slate-500">
-                                Transcript checked for ecommerce support automation fit
-                            </div>
                         </div>
                         <a
                             href={supportAutomationVideo.url}
@@ -597,6 +722,49 @@ function SupportAutomationVideo() {
                             Watch on YouTube
                             <ArrowRight className="h-4 w-4" />
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function ManagedProcess() {
+    return (
+        <section id="managed-process" className="bg-white px-4 py-16 md:px-8 md:py-24">
+            <div className="mx-auto max-w-7xl">
+                <SectionIntro
+                    eyebrow="How the managed start works"
+                    title="A clear 5-step path from payment to first working workflow"
+                    text="Simple steps from Managed plan start to workflow audit, first build, real usage review, and the next decision."
+                    centered
+                />
+                <div className="relative mx-auto max-w-5xl">
+                    <div className="absolute bottom-8 left-8 top-8 hidden w-px bg-primary-100 md:block" aria-hidden="true" />
+                    {managedSteps.map((step, index) => (
+                        <div key={step.title} className="relative mb-5 rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm md:ml-20 md:p-6">
+                            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-50 text-base font-black text-primary-800 md:absolute md:-left-20 md:top-6">
+                                {String(index + 1).padStart(2, '0')}
+                            </div>
+                            <h3 className="text-xl font-black leading-tight text-slate-950">{step.title}</h3>
+                            <p className="mt-3 text-base font-semibold leading-relaxed text-slate-600">{step.text}</p>
+                            {step.badge ? (
+                                <div className="mt-4 inline-flex rounded-full bg-primary-50 px-4 py-2 text-sm font-black text-primary-800">
+                                    {step.badge}
+                                </div>
+                            ) : null}
+                        </div>
+                    ))}
+                </div>
+                <div className="mx-auto mt-6 max-w-5xl rounded-[24px] border border-emerald-100 bg-emerald-50 p-5">
+                    <div className="flex flex-col gap-3 md:flex-row md:items-start">
+                        <ShieldCheck className="h-6 w-6 shrink-0 text-emerald-700" />
+                        <div>
+                            <div className="text-base font-black text-slate-950">7-day refund window</div>
+                            <p className="mt-1 text-sm font-bold leading-relaxed text-slate-700">
+                                Review the first workflow, usage report, and monthly forecast before deciding to continue. If the first workflow does not prove value, the refund window is still available.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -628,6 +796,77 @@ function ProblemStatement() {
                             </div>
                         );
                     })}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function TrustBuilder() {
+    return (
+        <section className="bg-white px-4 py-16 md:px-8 md:py-24">
+            <div className="mx-auto max-w-7xl">
+                <SectionIntro
+                    eyebrow="Why this feels safe to start"
+                    title="Trust comes from a small first build, clear ownership, and review before scale"
+                    text="The page should make buyers feel that Dooza understands support operations and will not automate sensitive replies blindly."
+                    centered
+                />
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {trustPoints.map((item) => {
+                        const Icon = item.icon;
+                        return (
+                            <div key={item.title} className="rounded-[22px] border border-slate-200 bg-white p-6 shadow-sm">
+                                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
+                                    <Icon className="h-6 w-6" />
+                                </div>
+                                <h3 className="text-xl font-black text-slate-950">{item.title}</h3>
+                                <p className="mt-3 text-sm font-semibold leading-relaxed text-slate-600">{item.text}</p>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function MeetingNextSteps() {
+    return (
+        <section className="px-4 py-16 md:px-8 md:py-24">
+            <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                <div>
+                    <span className="section-label mb-4 block text-primary-700">What happens in the first meeting</span>
+                    <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
+                        We leave the call with one practical workflow to build first
+                    </h2>
+                    <p className="mt-5 text-lg font-semibold leading-relaxed text-slate-600">
+                        The meeting is not a generic demo. It is used to understand your current support process, identify the repeated work, and decide the first workflow that can be tested safely.
+                    </p>
+                    <div className="mt-8">
+                        <BookDemoButton source="automated_customer_support_meeting_steps" variant="primary" size="lg">
+                            Book Support Automation Audit
+                        </BookDemoButton>
+                    </div>
+                </div>
+                <div className="rounded-[28px] border border-slate-200 bg-white p-5 shadow-xl shadow-slate-200/70 md:p-6">
+                    <div className="mb-5 flex items-center gap-3">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
+                            <Headphones className="h-6 w-6" />
+                        </div>
+                        <div>
+                            <div className="text-xs font-black uppercase tracking-[0.14em] text-primary-700">Meeting checklist</div>
+                            <h3 className="text-2xl font-black text-slate-950">What we collect before building</h3>
+                        </div>
+                    </div>
+                    <div className="grid gap-3">
+                        {meetingChecklist.map((item) => (
+                            <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-700" />
+                                <div className="text-sm font-bold leading-relaxed text-slate-700">{item}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
@@ -860,14 +1099,18 @@ export default function AutomatedCustomerSupportPage() {
                     </div>
                 </section>
 
-                <VideoSection />
+                <ManagedProcess />
+                <ManagedIntro />
                 <SupportAutomationVideo />
                 <ProblemStatement />
                 <WorkflowGraph />
                 <SupportAutomationAudit />
+                <TrustBuilder />
+                <VideoSection />
                 <AutomationCards />
                 <BeforeAfter />
                 <Guardrails />
+                <MeetingNextSteps />
 
                 <section className="bg-white px-4 py-16 md:px-8 md:py-24">
                     <div className="mx-auto max-w-4xl">
