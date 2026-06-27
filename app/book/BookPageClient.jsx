@@ -4,8 +4,6 @@ import { useEffect } from 'react';
 import { trackFBContact } from '@/lib/analytics';
 import { CALENDLY_URL } from '@/lib/links';
 
-const WIDGET_HEIGHT = 'calc(100vh - 72px)';
-
 export default function BookPageClient() {
     useEffect(() => {
         let tries = 0;
@@ -47,13 +45,28 @@ export default function BookPageClient() {
                 if (container) {
                     container.innerHTML = '';
                     container.classList.remove('dooza-booking-loader');
-                    container.style.cssText = `padding: 0; background: white;`;
+                    container.style.cssText = 'padding: 0; background: white;';
 
-                    const widgetDiv = document.createElement('div');
-                    widgetDiv.className = 'calendly-inline-widget';
-                    widgetDiv.setAttribute('data-url', CALENDLY_URL);
-                    widgetDiv.style.cssText = `min-width: 320px; width: 100%; height: ${WIDGET_HEIGHT}; min-height: 700px;`;
-                    container.appendChild(widgetDiv);
+                    window.Calendly.initInlineWidget({
+                        url: CALENDLY_URL,
+                        parentElement: container,
+                    });
+
+                    const applyHeight = () => {
+                        const widget = container.querySelector('.calendly-inline-widget');
+                        if (widget) widget.style.cssText = 'min-width: 320px; width: 100%; height: calc(100vh - 72px); min-height: 700px;';
+                        const iframe = container.querySelector('iframe');
+                        if (iframe) iframe.style.cssText = 'width: 100%; height: 100%; min-height: 700px; border: none;';
+                    };
+
+                    applyHeight();
+
+                    const observer = new MutationObserver(() => {
+                        applyHeight();
+                        const iframe = container.querySelector('iframe');
+                        if (iframe) observer.disconnect();
+                    });
+                    observer.observe(container, { childList: true, subtree: true });
                 }
                 return true;
             }
