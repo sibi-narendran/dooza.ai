@@ -313,7 +313,7 @@ const howToSchema = {
             "position": 2,
             "name": "Book Onboarding Call",
             "text": "Schedule a free 30-minute concierge call where our team builds your AI employees for you",
-            "url": "https://cal.com/dooza"
+            "url": "https://calendly.com/sibi-dooza/30min"
         },
         {
             "@type": "HowToStep",

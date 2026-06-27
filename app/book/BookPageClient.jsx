@@ -2,9 +2,7 @@
 
 import { useEffect } from 'react';
 import { trackFBContact } from '@/lib/analytics';
-
-const CAL_LINK = 'sibinarendran/demo';
-const NAMESPACE = 'demo';
+import { CALENDLY_URL } from '@/lib/links';
 
 export default function BookPageClient() {
     useEffect(() => {
@@ -39,12 +37,20 @@ export default function BookPageClient() {
         const openScheduler = () => {
             if (
                 typeof window !== 'undefined' &&
-                window.__calListenerRegistered &&
                 !window.__doozaBookSchedulerOpened &&
-                typeof window.Cal?.ns?.[NAMESPACE] === 'function'
+                typeof window.Calendly?.initInlineWidget === 'function'
             ) {
                 window.__doozaBookSchedulerOpened = true;
-                window.Cal.ns[NAMESPACE]('modal', { calLink: CAL_LINK });
+                const container = document.getElementById('dooza-booking-loader');
+                if (container) {
+                    container.innerHTML = '';
+                    window.Calendly.initInlineWidget({
+                        url: CALENDLY_URL,
+                        parentElement: container,
+                    });
+                    container.style.minHeight = 'calc(100vh - 72px)';
+                    container.classList.remove('dooza-booking-loader');
+                }
                 return true;
             }
             return false;
