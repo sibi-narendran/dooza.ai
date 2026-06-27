@@ -44,12 +44,16 @@ export default function BookPageClient() {
                 const container = document.getElementById('dooza-booking-loader');
                 if (container) {
                     container.innerHTML = '';
+                    container.classList.remove('dooza-booking-loader');
+                    container.style.cssText = 'min-height: calc(100vh - 72px); height: calc(100vh - 72px); display: block; padding: 0; background: white;';
                     window.Calendly.initInlineWidget({
                         url: CALENDLY_URL,
                         parentElement: container,
                     });
-                    container.style.minHeight = 'calc(100vh - 72px)';
-                    container.classList.remove('dooza-booking-loader');
+                    const iframe = container.querySelector('iframe');
+                    if (iframe) {
+                        iframe.style.cssText = 'width: 100%; height: 100%; min-height: calc(100vh - 72px); border: none;';
+                    }
                 }
                 return true;
             }
