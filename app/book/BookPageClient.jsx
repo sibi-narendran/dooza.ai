@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { trackFBContact } from '@/lib/analytics';
-import { CALENDLY_URL } from '@/lib/links';
+import { getBookingUrlWithUtm } from '@/lib/links';
 
 export default function BookPageClient() {
     useEffect(() => {
@@ -48,7 +48,7 @@ export default function BookPageClient() {
                     container.style.cssText = 'padding: 0; background: white;';
 
                     window.Calendly.initInlineWidget({
-                        url: CALENDLY_URL,
+                        url: getBookingUrlWithUtm('website', 'book_page', 'book'),
                         parentElement: container,
                     });
 

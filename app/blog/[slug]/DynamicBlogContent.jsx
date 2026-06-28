@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getProductSignupUrl, CAL_BOOKING_URL } from '../../../lib/links';
+import { getProductSignupUrl, getBookingUrlWithUtm } from '../../../lib/links';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import BottomCTA from '../../../components/BottomCTA';
@@ -161,7 +161,7 @@ export default function DynamicBlogContent({ post }) {
                                     Try Dooza Free <ArrowRight className="w-4 h-4" />
                                 </a>
                                 <a
-                                    href={CAL_BOOKING_URL}
+                                    href={getBookingUrlWithUtm('blog', 'cta', post.slug)}
                                     className="inline-flex w-full items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all sm:w-auto"
                                 >
                                     <Calendar className="w-4 h-4" /> Book a Demo

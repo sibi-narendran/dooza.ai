@@ -1,13 +1,16 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { CALENDLY_URL } from '@/lib/links';
+import { usePathname } from 'next/navigation';
+import { getBookingUrlFromPath } from '@/lib/links';
 
 const WAIT_TIMEOUT_MS = 2000;
 const POLL_INTERVAL_MS = 50;
 
 const BookingModal = ({ isOpen, onClose }) => {
     const openedRef = useRef(false);
+    const pathname = usePathname();
+    const url = getBookingUrlFromPath(pathname);
 
     useEffect(() => {
         if (!isOpen) {
@@ -22,8 +25,8 @@ const BookingModal = ({ isOpen, onClose }) => {
             return;
         }
 
-        const openPopup = () => window.Calendly.initPopupWidget({ url: CALENDLY_URL });
-        const openFallback = () => window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+        const openPopup = () => window.Calendly.initPopupWidget({ url });
+        const openFallback = () => window.open(url, '_blank', 'noopener,noreferrer');
 
         if (typeof window.Calendly?.initPopupWidget === 'function') {
             openPopup();

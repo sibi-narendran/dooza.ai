@@ -1,9 +1,11 @@
 'use client';
 
-import { CAL_BOOKING_URL, getProductSignupUrl } from '@/lib/links';
+import { getProductSignupUrl, getBookingUrlFromPath } from '@/lib/links';
+import { usePathname } from 'next/navigation';
 import { trackSignupClick, trackDemoClick } from '@/lib/analytics';
 
 const BottomCTA = ({ openModal }) => {
+    const pathname = usePathname();
     const handleSignupClick = () => {
         trackSignupClick('bottom_cta_component');
     };
@@ -35,7 +37,7 @@ const BottomCTA = ({ openModal }) => {
                         Create free account
                     </a>
                     <a 
-                        href={CAL_BOOKING_URL}
+                        href={getBookingUrlFromPath(pathname)}
                         onClick={handleDemoClick}
                         className="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                     >

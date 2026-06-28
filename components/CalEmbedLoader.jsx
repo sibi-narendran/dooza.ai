@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { trackFBSchedule, trackAdsConversion } from '@/lib/analytics';
-import { CALENDLY_URL } from '@/lib/links';
+import { getBookingUrlFromPath } from '@/lib/links';
 
 const CAL_HOST_PATTERN = /^https?:\/\/(app\.)?(cal\.com\/sibinarendran|calendly\.com\/sibi-dooza)/i;
 
@@ -22,7 +22,7 @@ export default function CalEmbedLoader() {
                 if (!CAL_HOST_PATTERN.test(href)) return;
                 if (typeof window.Calendly?.initPopupWidget !== 'function') return;
                 e.preventDefault();
-                window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+                window.Calendly.initPopupWidget({ url: getBookingUrlFromPath(window.location.pathname) });
             }, true);
         }
 
