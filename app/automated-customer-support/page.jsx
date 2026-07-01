@@ -3,21 +3,23 @@ import {
     Bot,
     CheckCircle2,
     Clock,
+    ExternalLink,
     Headphones,
     MessageSquareText,
     Plug,
+    Settings,
     ShieldCheck,
     Sparkles,
     TrendingDown,
     UserCheck,
     Users,
+    Wrench,
     Zap,
 } from 'lucide-react';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
-import PricingSection from '@/components/sections/PricingSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import VideoSection from '@/components/sections/VideoSection';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -30,7 +32,7 @@ export const metadata = {
         absolute: 'Automated Customer Service & Support Software | Dooza',
     },
     description:
-        'Automated customer service software starting at $49/mo. AI handles tickets, returns, FAQs, and escalations 24/7 with human approval where it matters. 7-day money-back guarantee.',
+        'Done-for-you automated customer service for $199/mo. We set up your AI support workflows, connect your tools, and handle everything. 7-day money-back guarantee.',
     keywords: [
         'automated customer service',
         'customer service automation',
@@ -40,6 +42,8 @@ export const metadata = {
         'customer support software',
         'customer service software',
         'automated customer support system',
+        'Gorgias alternative',
+        'Zendesk alternative',
     ],
     alternates: { canonical: pageUrl },
     robots: {
@@ -49,7 +53,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'Automated Customer Service & Support Software | Dooza',
-        description: 'AI customer service that handles tickets 24/7. Starts at $49/mo with a 7-day money-back guarantee.',
+        description: 'Done-for-you AI customer service. We set it up, you sit back. $199/mo with 7-day money-back guarantee.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -58,7 +62,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Automated Customer Service & Support Software | Dooza',
-        description: 'AI customer service that handles tickets 24/7. Starts at $49/mo with a 7-day money-back guarantee.',
+        description: 'Done-for-you AI customer service. We set it up, you sit back. $199/mo with 7-day money-back guarantee.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -85,21 +89,66 @@ const howItWorks = [
     {
         icon: Plug,
         step: '01',
-        title: 'Connect your tools',
-        text: 'Link your email, helpdesk, Shopify, CRM, or any of 1,000+ apps. Setup takes minutes, not weeks.',
+        title: 'We connect your tools',
+        text: 'Our team connects your Shopify, Zendesk, Gmail, CRM, or any of 1,000+ apps. You don\'t touch a thing.',
     },
     {
         icon: Bot,
         step: '02',
-        title: 'AI handles tickets 24/7',
-        text: 'Dooza reads every message, understands intent, drafts responses, and resolves common questions instantly.',
+        title: 'We build your AI workflows',
+        text: 'We set up support rules, draft templates, escalation paths, and approval flows based on your real tickets.',
     },
     {
         icon: UserCheck,
         step: '03',
-        title: 'Humans review edge cases',
-        text: 'Refunds, complaints, and sensitive cases get flagged for your team. You stay in control of what matters.',
+        title: 'You review, we iterate',
+        text: 'We run the first workflows on real tickets, review results with you, and optimize until it\'s working perfectly.',
     },
+];
+
+const managedFeatures = [
+    'All AI employees included',
+    '84 hours of done-for-you work capacity',
+    'Complete setup handled by our team',
+    'Dooza Workflow connected for writing workflows',
+    'Priority workflow setup and review',
+    '1,000+ app integrations',
+    'Connect Shopify, Zendesk, Freshdesk, and more',
+    '7-day money-back guarantee',
+];
+
+const competitors = [
+    {
+        name: 'Gorgias',
+        logo: '/logos/gorgias.svg',
+        desc: 'Ecommerce helpdesk for Shopify. Powerful, but you need to configure macros, rules, and automations yourself.',
+    },
+    {
+        name: 'Intercom Fin',
+        logo: '/logos/intercom.svg',
+        desc: 'AI chatbot that resolves tickets. You still need to build the knowledge base, set up workflows, and manage the AI.',
+    },
+    {
+        name: 'Freshdesk',
+        logo: '/logos/freshdesk.svg',
+        desc: 'Multi-channel helpdesk. Feature-rich, but setup means configuring ticket fields, automations, SLAs, and routing rules.',
+    },
+    {
+        name: 'Zendesk',
+        logo: '/logos/zendesk.svg',
+        desc: 'Enterprise support platform. The most customizable option — and the most time-consuming to set up properly.',
+    },
+];
+
+const integrations = [
+    { name: 'Shopify', logo: '/logos/shopify.svg', desc: 'Pull order data, track shipments, handle returns' },
+    { name: 'Zendesk', logo: '/logos/zendesk.svg', desc: 'Sync tickets, tags, and agent assignments' },
+    { name: 'Freshdesk', logo: '/logos/freshdesk.svg', desc: 'Import tickets and automate responses' },
+    { name: 'Gmail', logo: '/logos/gmail.svg', desc: 'Read, draft, label, and send support emails' },
+    { name: 'Intercom', logo: '/logos/intercom.svg', desc: 'Connect chat conversations and customer data' },
+    { name: 'HubSpot', logo: '/logos/hubspot.svg', desc: 'Sync contacts, deals, and support tickets' },
+    { name: 'Slack', logo: '/logos/slack.svg', desc: 'Get alerts, approvals, and summaries in channels' },
+    { name: 'WooCommerce', logo: '/logos/woocommerce.svg', desc: 'Connect orders, products, and customer queries' },
 ];
 
 const trustBadges = [
@@ -114,32 +163,32 @@ const faqs = [
         answer: 'Automated customer service uses AI to read support messages, understand what the customer needs, draft accurate responses, and resolve common questions without human intervention. Complex or sensitive cases are routed to your team automatically.',
     },
     {
-        question: 'How much does Dooza cost?',
-        answer: 'Dooza starts at $49/mo for the Starter plan, $79/mo for Growth (2X usage), and $199/mo for Managed (done-for-you setup with 84 hours of work capacity). All plans include every AI employee, free concierge onboarding, and 1,000+ integrations.',
+        question: 'What does "done-for-you" mean?',
+        answer: 'It means our team handles the entire setup. We connect your tools (Shopify, Zendesk, Gmail, etc.), build your AI workflows, configure approval rules, test with real tickets, and optimize until everything works. You don\'t need to spend any time on setup.',
+    },
+    {
+        question: 'How is Dooza different from Gorgias or Zendesk?',
+        answer: 'Gorgias, Zendesk, Freshdesk, and Intercom are powerful tools — but they require your team to configure automations, rules, and workflows. With Dooza\'s Managed plan, we do all of that for you. You get the automation without the setup headache.',
     },
     {
         question: 'Is there a money-back guarantee?',
-        answer: 'Yes. Every plan comes with a 7-day money-back guarantee. If Dooza doesn\'t deliver value in the first week, you get a full refund — no questions asked. You can also cancel anytime with no contracts or commitments.',
+        answer: 'Yes. The Managed plan comes with a 7-day money-back guarantee. If we don\'t deliver value in the first week, you get a full refund — no questions asked. Cancel anytime, no contracts.',
     },
     {
         question: 'Will AI send replies without my approval?',
         answer: 'Only if you allow it. Most teams start with draft-only or approval-first mode, where Dooza prepares responses but waits for a human to approve before sending. You can gradually automate more as trust builds.',
     },
     {
-        question: 'What kind of tickets can Dooza handle?',
-        answer: 'Order status, shipping questions, return requests, FAQs, product questions, appointment booking, complaint routing, and ticket summarization. Dooza works for ecommerce, SaaS, agencies, and service businesses.',
+        question: 'What tools can Dooza connect to?',
+        answer: 'Dooza integrates with 1,000+ apps including Shopify, WooCommerce, Zendesk, Freshdesk, Intercom, Gmail, HubSpot, Slack, Notion, Google Sheets, and more. We handle all the connections during setup.',
     },
     {
         question: 'How long does setup take?',
-        answer: 'Most teams are live within 15 minutes. Connect your tools, point Dooza at your knowledge base or past tickets, and the AI starts working. Every plan includes free concierge onboarding where our team helps you set up.',
-    },
-    {
-        question: 'Do I need a technical team to use Dooza?',
-        answer: 'No. Dooza is built for business owners and support managers, not engineers. The interface is simple, and our team handles the setup with you during the free onboarding call.',
+        answer: 'Our team typically has your first workflow live within 3 days. By day 7, you\'ll have a full review of what\'s working, what it costs to run monthly, and whether to continue. The entire setup is handled by us.',
     },
     {
         question: 'Can Dooza replace outsourcing?',
-        answer: 'For most small and mid-size businesses, yes. Outsourced agents cost $1,500–3,500/mo per person. Dooza starts at $49/mo total and handles the same repetitive tickets 24/7 with faster response times and no training ramp-up.',
+        answer: 'For most small and mid-size businesses, yes. Outsourced agents cost $1,500–3,500/mo per person. Dooza\'s Managed plan is $199/mo total and handles the same repetitive tickets 24/7 with faster response times and no training ramp-up.',
     },
 ];
 
@@ -166,11 +215,7 @@ const schemas = [
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         url: pageUrl,
-        offers: [
-            { '@type': 'Offer', name: 'Starter', price: '49', priceCurrency: 'USD', url: pageUrl },
-            { '@type': 'Offer', name: 'Growth', price: '79', priceCurrency: 'USD', url: pageUrl },
-            { '@type': 'Offer', name: 'Managed', price: '199', priceCurrency: 'USD', url: pageUrl },
-        ],
+        offers: { '@type': 'Offer', name: 'Managed', price: '199', priceCurrency: 'USD', url: pageUrl },
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {
@@ -211,23 +256,23 @@ export default function AutomatedCustomerSupportPage() {
                     <div className="relative z-10 mx-auto max-w-4xl text-center">
                         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/90 px-4 py-2 text-sm font-black text-primary-800 shadow-sm backdrop-blur">
                             <Sparkles className="h-4 w-4" />
-                            Starts at $49/mo · Cancel anytime
+                            Done-for-you · $199/mo · We set it up
                         </div>
                         <h1 className="font-serif text-4xl font-extrabold leading-[1.08] text-slate-950 md:text-6xl">
-                            Automated Customer Service That Works 24/7
+                            Automated Customer Service — We Set It Up For You
                         </h1>
                         <p className="mx-auto mt-5 max-w-2xl text-lg font-semibold leading-relaxed text-slate-600 md:text-xl">
-                            AI customer support software that handles tickets, returns, FAQs, and escalations around the clock — with human approval where it matters.
+                            Stop spending weeks configuring support software. Our team connects your tools, builds your AI workflows, and handles everything — so you don't have to.
                         </p>
                         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                             <BookDemoButton source="automated_customer_support_hero" variant="primary" size="xl">
-                                Get Started — $49/mo
+                                Get Started — $199/mo
                             </BookDemoButton>
                             <a
-                                href="#pricing"
+                                href="#comparison"
                                 className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-4 text-base font-black text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-200 hover:bg-primary-50"
                             >
-                                See pricing
+                                Compare with alternatives
                                 <ArrowRight className="h-5 w-5" />
                             </a>
                         </div>
@@ -265,16 +310,71 @@ export default function AutomatedCustomerSupportPage() {
                     </div>
                 </section>
 
+                {/* ── Software Comparison ── */}
+                <section id="comparison" className="scroll-mt-24 px-4 py-16 md:px-8 md:py-24">
+                    <div className="mx-auto max-w-6xl">
+                        <div className="text-center">
+                            <SectionLabel>
+                                <Settings className="h-4 w-4" />
+                                Why not just use existing tools?
+                            </SectionLabel>
+                            <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl">
+                                Even AI tools need someone to set them up
+                            </h2>
+                            <p className="mx-auto mt-4 max-w-2xl text-lg font-semibold text-slate-600">
+                                Great software still requires weeks of configuration, rule-building, and testing. That's where most teams get stuck — and where Dooza comes in.
+                            </p>
+                        </div>
+
+                        <div className="mt-12 grid gap-5 md:grid-cols-2">
+                            {competitors.map((comp) => (
+                                <div key={comp.name} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                                    <div className="mb-4 flex items-center gap-3">
+                                        <img src={comp.logo} alt={`${comp.name} logo`} className="h-10 w-10 rounded-xl" />
+                                        <h3 className="text-lg font-black text-slate-950">{comp.name}</h3>
+                                    </div>
+                                    <p className="text-sm font-semibold leading-relaxed text-slate-600">{comp.desc}</p>
+                                    <div className="mt-4 flex items-center gap-2 rounded-xl bg-amber-50 px-3 py-2 text-sm font-bold text-amber-800">
+                                        <Wrench className="h-4 w-4 shrink-0" />
+                                        You configure it yourself
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="mt-8 rounded-3xl border-2 border-primary-400 bg-white p-6 shadow-xl shadow-primary-100/50 md:p-8">
+                            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                                <div>
+                                    <div className="mb-2 inline-flex rounded-full bg-primary-50 px-3 py-1 text-xs font-black uppercase tracking-wider text-primary-800">
+                                        The Dooza difference
+                                    </div>
+                                    <h3 className="text-2xl font-black text-slate-950">Dooza Managed — $199/mo</h3>
+                                    <p className="mt-2 max-w-lg text-base font-semibold leading-relaxed text-slate-600">
+                                        We connect your tools, build your workflows, configure your rules, test with real tickets, and optimize everything. You don't spend a single hour on setup.
+                                    </p>
+                                    <div className="mt-4 flex items-center gap-2 rounded-xl bg-emerald-50 px-3 py-2 text-sm font-bold text-emerald-800">
+                                        <CheckCircle2 className="h-4 w-4 shrink-0" />
+                                        We set it up for you — completely
+                                    </div>
+                                </div>
+                                <BookDemoButton source="automated_customer_support_comparison" variant="primary" size="lg">
+                                    Get Started
+                                </BookDemoButton>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* ── How it works ── */}
-                <section className="px-4 py-16 md:px-8 md:py-24">
+                <section className="bg-slate-50 px-4 py-16 md:px-8 md:py-24">
                     <div className="mx-auto max-w-6xl">
                         <div className="text-center">
                             <SectionLabel>How it works</SectionLabel>
                             <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl">
-                                Three steps to automated customer support
+                                You sit back. We handle the setup.
                             </h2>
                             <p className="mx-auto mt-4 max-w-2xl text-lg font-semibold text-slate-600">
-                                No engineering team needed. Go live in 15 minutes with free concierge onboarding.
+                                No engineering team needed. No hours spent configuring. Our team does everything.
                             </p>
                         </div>
                         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -292,34 +392,98 @@ export default function AutomatedCustomerSupportPage() {
                     </div>
                 </section>
 
+                {/* ── Connect Your Tools ── */}
+                <section className="px-4 py-16 md:px-8 md:py-24">
+                    <div className="mx-auto max-w-6xl">
+                        <div className="text-center">
+                            <SectionLabel>
+                                <ExternalLink className="h-4 w-4" />
+                                Integrations
+                            </SectionLabel>
+                            <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl">
+                                Connect your existing tools to Dooza
+                            </h2>
+                            <p className="mx-auto mt-4 max-w-2xl text-lg font-semibold text-slate-600">
+                                Already using Zendesk, Shopify, or Freshdesk? We connect them to Dooza so your AI workflows pull real data from the tools you already use. 1,000+ integrations supported.
+                            </p>
+                        </div>
+                        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                            {integrations.map((tool) => (
+                                <div key={tool.name} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-md">
+                                    <div className="mb-3 flex items-center gap-3">
+                                        <img src={tool.logo} alt={`${tool.name} logo`} className="h-10 w-10 rounded-xl" />
+                                        <h3 className="text-base font-black text-slate-950">{tool.name}</h3>
+                                    </div>
+                                    <p className="text-sm font-semibold leading-relaxed text-slate-600">{tool.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <p className="mt-6 text-center text-sm font-bold text-slate-500">
+                            + 1,000 more apps via Zapier, Make, and native API connections
+                        </p>
+                    </div>
+                </section>
+
                 {/* ── Testimonials ── */}
                 <TestimonialsSection />
 
                 {/* ── Dooza demo video ── */}
                 <VideoSection />
 
-                {/* ── Pricing ── */}
-                <div id="pricing">
-                    <PricingSection />
-                </div>
+                {/* ── Managed Plan ── */}
+                <section id="pricing" className="scroll-mt-24 px-4 py-16 md:px-8 md:py-24">
+                    <div className="mx-auto max-w-3xl">
+                        <div className="mb-10 text-center">
+                            <SectionLabel>Pricing</SectionLabel>
+                            <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl">
+                                One plan. Everything included.
+                            </h2>
+                            <p className="mx-auto mt-4 max-w-xl text-lg font-semibold text-slate-600">
+                                No per-agent fees. No setup charges. No surprises.
+                            </p>
+                        </div>
 
-                {/* ── Guarantee ── */}
-                <section className="px-4 py-16 md:px-8 md:py-24">
-                    <div className="mx-auto max-w-4xl rounded-3xl border border-emerald-200 bg-emerald-50 p-8 text-center md:p-12">
-                        <ShieldCheck className="mx-auto mb-4 h-12 w-12 text-emerald-600" />
-                        <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-4xl">
-                            7-Day Money-Back Guarantee
-                        </h2>
-                        <p className="mx-auto mt-4 max-w-2xl text-lg font-semibold leading-relaxed text-slate-600">
-                            Try Dooza risk-free. If our customer service automation doesn't deliver value in the first 7 days, get a full refund — no questions asked. Cancel anytime, no contracts, no commitments.
-                        </p>
-                        <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm font-bold text-emerald-800">
-                            {['Full refund within 7 days', 'Cancel anytime', 'No contracts', 'Free onboarding included'].map((item) => (
-                                <div key={item} className="flex items-center gap-2">
-                                    <CheckCircle2 className="h-4 w-4" />
-                                    <span>{item}</span>
+                        <div className="rounded-3xl border-2 border-primary-400 bg-white p-8 shadow-xl shadow-primary-100/50 md:p-10">
+                            <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+                                <div>
+                                    <h3 className="text-2xl font-black text-slate-950">Managed Plan</h3>
+                                    <p className="mt-1 text-base font-semibold text-slate-600">We set up everything — you don't lift a finger</p>
                                 </div>
-                            ))}
+                                <div className="text-right">
+                                    <div className="flex items-baseline gap-1">
+                                        <span className="text-5xl font-extrabold text-slate-950 font-serif">$199</span>
+                                        <span className="text-slate-600 text-sm">USD/ month</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="grid gap-3 sm:grid-cols-2">
+                                {managedFeatures.map((feature) => (
+                                    <div key={feature} className="flex items-center gap-3 rounded-xl bg-slate-50 px-4 py-3">
+                                        <CheckCircle2 className="h-5 w-5 shrink-0 text-primary-600" />
+                                        <span className="text-sm font-bold text-slate-800">{feature}</span>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="mt-8 rounded-2xl bg-emerald-50 border border-emerald-200 p-5">
+                                <div className="flex items-start gap-3">
+                                    <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" />
+                                    <div>
+                                        <div className="text-base font-black text-slate-950">7-day money-back guarantee</div>
+                                        <p className="mt-1 text-sm font-semibold leading-relaxed text-slate-600">
+                                            Review the first workflow by day 7. If it doesn't prove value, get a full refund — no questions asked. Cancel anytime.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-8 flex flex-col items-center gap-3">
+                                <BookDemoButton source="automated_customer_support_pricing" variant="primary" size="xl">
+                                    Get Started — $199/mo
+                                </BookDemoButton>
+                                <p className="text-sm font-semibold text-slate-500">Free setup call with the founder · No commitment before the call</p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -336,7 +500,7 @@ export default function AutomatedCustomerSupportPage() {
                                 See how customer support automation works
                             </h2>
                             <p className="mt-4 text-lg font-semibold leading-relaxed text-slate-600">
-                                Watch how AI handles order questions, return requests, ticket routing, and human handoff — all without writing code.
+                                Watch how AI handles order questions, return requests, ticket routing, and human handoff — all set up by our team.
                             </p>
                             <div className="mt-6">
                                 <BookDemoButton source="automated_customer_support_video" variant="primary" size="lg">
@@ -366,7 +530,7 @@ export default function AutomatedCustomerSupportPage() {
                         <div className="mb-10 text-center">
                             <SectionLabel>FAQ</SectionLabel>
                             <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl">
-                                Common questions about customer service automation
+                                Common questions about managed customer service automation
                             </h2>
                         </div>
                         <FAQAccordion items={faqs} />
@@ -380,17 +544,17 @@ export default function AutomatedCustomerSupportPage() {
                             <div>
                                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-primary-50 px-3 py-1 text-xs font-black uppercase tracking-wider text-primary-800">
                                     <MessageSquareText className="h-4 w-4" />
-                                    Start automating today
+                                    Done-for-you setup
                                 </div>
                                 <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
-                                    Stop losing customers to slow support
+                                    Stop configuring. Start automating.
                                 </h2>
                                 <p className="mt-4 max-w-xl text-lg font-semibold leading-relaxed text-slate-600">
-                                    Automated customer service from $49/mo. 7-day money-back guarantee. Free onboarding. Cancel anytime.
+                                    $199/mo. We set up your AI support workflows, connect your tools, and handle everything. 7-day money-back guarantee.
                                 </p>
                             </div>
                             <BookDemoButton source="automated_customer_support_final" variant="primary" size="xl">
-                                Get Started — $49/mo
+                                Get Started — $199/mo
                             </BookDemoButton>
                         </div>
                     </div>
