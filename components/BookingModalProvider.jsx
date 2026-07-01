@@ -12,7 +12,7 @@ const BookingModalContext = createContext(null);
 export function useBookingModal() {
     const ctx = useContext(BookingModalContext);
     if (!ctx) {
-        return { openModal: openCal };
+        return { openModal: () => {} };
     }
     return ctx;
 }
