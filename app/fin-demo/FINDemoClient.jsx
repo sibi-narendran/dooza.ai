@@ -25,23 +25,23 @@ const CACHED_LEADS = {
   'Andy Wang::Texas': {
     summary: { zone: 'Texas', influencer: 'Andy Wang', uniqueLeads: 17 },
     leads: [
-      {"First Name":"Anne","Last Name":"Coleman","Email Address":"anne_coleman@vanguard.com","Email Status":"verified","Organization":"Vanguard","Title":"Market Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/annemcoleman26"},
-      {"First Name":"Jim","Last Name":"Entwisle","Email Address":"james_entwisle@vanguard.com","Email Status":"verified","Organization":"Vanguard","Title":"Market Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/jim-entwisle-cfp%c2%ae-48401158"},
-      {"First Name":"Kyle","Last Name":"Santander","Email Address":"kyle_santander@vanguard.com","Email Status":"verified","Organization":"Vanguard","Title":"Market Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/kyle-santander-8645a759"},
-      {"First Name":"Kristina","Last Name":"Alfano","Email Address":"kristina.alfano@fmr.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Director, Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/kristinaalfano"},
-      {"First Name":"Jarrett","Last Name":"Hollier","Email Address":"jarrett.hollier@fmr.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Vice President, Marketing Technology","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/jarretthollier"},
-      {"First Name":"Cherrel","Last Name":"Adams","Email Address":"cherrel.adams@fmr.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Director Marketing Enablement","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/cherrel-adams"},
-      {"First Name":"John","Last Name":"Scozzari","Email Address":"john.scozzari@fidelity.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Director, Marketing Automation","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/john-scozzari-08853266"},
-      {"First Name":"James","Last Name":"Wyant","Email Address":"james.wyant@fmr.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Marketing Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/jameswyant"},
-      {"First Name":"Amy","Last Name":"Heiss","Email Address":"amy.heiss@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Director, HR Talent; VP Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/amyheiss"},
-      {"First Name":"Jenny","Last Name":"Preece","Email Address":"jenny.preece@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Director, Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/jenny-preece-4a74454"},
-      {"First Name":"John","Last Name":"Cassel","Email Address":"john.cassel@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Director - Marketing Data","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/john-cassel-20878214"},
-      {"First Name":"Suzanne","Last Name":"Lazo","Email Address":"suzanne.lazo@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Director Marketing Planning & Strategy","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/suzannestull"},
-      {"First Name":"April","Last Name":"Soechting","Email Address":"april.soechting@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Marketing Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/april-soechting-sek-ting-b654a69"},
-      {"First Name":"Angel","Last Name":"Liang","Email Address":"angel.liang@tiaa.org","Email Status":"verified","Organization":"TIAA","Title":"Director, Client Lifecycle Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/angelyingliang"},
-      {"First Name":"Claire","Last Name":"Barton","Email Address":"claire.barton@tiaa.org","Email Status":"verified","Organization":"TIAA","Title":"Director, Engagement Marketing, Retirement Solutions","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/claire-piantidosi-barton-0929b712"},
-      {"First Name":"Amy","Last Name":"Mancuso","Email Address":"amy.mancuso@tiaa.org","Email Status":"verified","Organization":"TIAA","Title":"Sr. Director Wealth Lifecycle Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/amy-kaiser-mancuso"},
-      {"First Name":"Greg","Last Name":"Schultz","Email Address":"gschultz@sofi.org","Email Status":"verified","Organization":"SoFi","Title":"Vice President, Business Lead","Company Group":"Tier 3 — Opportunity Brands","LinkedIn":"http://www.linkedin.com/in/gregkschultz"},
+      {"First Name":"Anne","Last Name":"Coleman","Email Address":"anne_coleman@vanguard.com","Email Status":"verified","Organization":"Vanguard","Title":"Market Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/annemcoleman26","Rationale":"As Market Director at Vanguard, one of the largest 401(k) providers, Anne directly oversees regional marketing strategy — a natural partner for Andy Wang's retirement planning content."},
+      {"First Name":"Jim","Last Name":"Entwisle","Email Address":"james_entwisle@vanguard.com","Email Status":"verified","Organization":"Vanguard","Title":"Market Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/jim-entwisle-cfp%c2%ae-48401158","Rationale":"Jim's role as Market Director at Vanguard with CFP credentials means he understands retirement planning deeply — ideal for co-creating authentic 401(k) content with Andy Wang."},
+      {"First Name":"Kyle","Last Name":"Santander","Email Address":"kyle_santander@vanguard.com","Email Status":"verified","Organization":"Vanguard","Title":"Market Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/kyle-santander-8645a759","Rationale":"Kyle manages Vanguard's regional market presence in Texas, making him a key decision-maker for local influencer partnerships targeting retirement savers."},
+      {"First Name":"Kristina","Last Name":"Alfano","Email Address":"kristina.alfano@fmr.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Director, Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/kristinaalfano","Rationale":"As Marketing Director at Fidelity, Kristina controls partnership budgets for one of the top 401(k) providers — a high-value match for Andy Wang's retirement-focused audience."},
+      {"First Name":"Jarrett","Last Name":"Hollier","Email Address":"jarrett.hollier@fmr.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Vice President, Marketing Technology","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/jarretthollier","Rationale":"Jarrett leads marketing technology at Fidelity and would understand the measurable ROI of influencer-driven retirement content campaigns."},
+      {"First Name":"Cherrel","Last Name":"Adams","Email Address":"cherrel.adams@fmr.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Director Marketing Enablement","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/cherrel-adams","Rationale":"Cherrel's marketing enablement role at Fidelity positions her to champion new content channels like influencer partnerships for 401(k) education."},
+      {"First Name":"John","Last Name":"Scozzari","Email Address":"john.scozzari@fidelity.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Director, Marketing Automation","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/john-scozzari-08853266","Rationale":"John manages Fidelity's marketing automation — he can integrate influencer content into existing nurture campaigns targeting retirement plan participants."},
+      {"First Name":"James","Last Name":"Wyant","Email Address":"james.wyant@fmr.com","Email Status":"verified","Organization":"Fidelity Investments","Title":"Marketing Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/jameswyant","Rationale":"As Marketing Director at Fidelity, James has direct authority over campaign partnerships and brand collaborations in the retirement space."},
+      {"First Name":"Amy","Last Name":"Heiss","Email Address":"amy.heiss@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Director, HR Talent; VP Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/amyheiss","Rationale":"Amy's dual HR and Marketing VP role at Schwab gives her unique insight into both employer-sponsored retirement plans and marketing strategy — a strong fit for Andy Wang's 401(k) expertise."},
+      {"First Name":"Jenny","Last Name":"Preece","Email Address":"jenny.preece@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Director, Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/jenny-preece-4a74454","Rationale":"Jenny directs marketing at Charles Schwab, a major player in workplace retirement solutions — well-positioned to evaluate influencer partnerships."},
+      {"First Name":"John","Last Name":"Cassel","Email Address":"john.cassel@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Director - Marketing Data","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/john-cassel-20878214","Rationale":"John's data-driven marketing role at Schwab means he can measure influencer campaign impact on retirement plan enrollments and engagement."},
+      {"First Name":"Suzanne","Last Name":"Lazo","Email Address":"suzanne.lazo@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Director Marketing Planning & Strategy","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/suzannestull","Rationale":"Suzanne plans Schwab's marketing strategy — she decides where partnership dollars go and would value Andy Wang's established audience in the retirement space."},
+      {"First Name":"April","Last Name":"Soechting","Email Address":"april.soechting@schwab.com","Email Status":"verified","Organization":"Charles Schwab","Title":"Marketing Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/april-soechting-sek-ting-b654a69","Rationale":"April leads marketing at Schwab with direct influence over brand partnership decisions — a key contact for pitching influencer-led retirement content."},
+      {"First Name":"Angel","Last Name":"Liang","Email Address":"angel.liang@tiaa.org","Email Status":"verified","Organization":"TIAA","Title":"Director, Client Lifecycle Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/angelyingliang","Rationale":"Angel manages TIAA's client lifecycle marketing — influencer content from Andy Wang could drive engagement across TIAA's retirement plan participant journey."},
+      {"First Name":"Claire","Last Name":"Barton","Email Address":"claire.barton@tiaa.org","Email Status":"verified","Organization":"TIAA","Title":"Director, Engagement Marketing, Retirement Solutions","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/claire-piantidosi-barton-0929b712","Rationale":"Claire's role specifically focuses on engagement marketing for retirement solutions at TIAA — almost a perfect title match for Andy Wang's 401(k) content niche."},
+      {"First Name":"Amy","Last Name":"Mancuso","Email Address":"amy.mancuso@tiaa.org","Email Status":"verified","Organization":"TIAA","Title":"Sr. Director Wealth Lifecycle Marketing","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/amy-kaiser-mancuso","Rationale":"As Sr. Director of Wealth Lifecycle Marketing at TIAA, Amy oversees how retirement products are marketed to end consumers — Andy Wang's audience maps directly to her goals."},
+      {"First Name":"Greg","Last Name":"Schultz","Email Address":"gschultz@sofi.org","Email Status":"verified","Organization":"SoFi","Title":"Vice President, Business Lead","Company Group":"Tier 3 — Opportunity Brands","LinkedIn":"http://www.linkedin.com/in/gregkschultz","Rationale":"Greg leads business development at SoFi, which is expanding into retirement products — an emerging opportunity for Andy Wang's 401(k) content as SoFi grows in this space."},
     ],
   },
 };
@@ -51,6 +51,7 @@ const LOADING_STEPS = [
   'Finding decision-makers (VP Marketing, CMO, Partnerships)...',
   'Enriching contacts — getting verified emails...',
   'Deduplicating and formatting results...',
+  'Generating rationale for each lead...',
 ];
 
 export default function FINDemoClient() {
@@ -346,7 +347,7 @@ export default function FINDemoClient() {
               }}>
                 <thead>
                   <tr style={{ background: '#f8fafc', borderBottom: '2px solid #e2e8f0' }}>
-                    {['#', 'Name', 'Email', 'Status', 'Title', 'Organization', 'Tier', 'LinkedIn'].map(h => (
+                    {['#', 'Name', 'Email', 'Status', 'Title', 'Organization', 'Tier', 'Why This Lead', 'LinkedIn'].map(h => (
                       <th key={h} style={{
                         textAlign: 'left',
                         padding: '0.7rem 0.8rem',
@@ -419,6 +420,15 @@ export default function FINDemoClient() {
                           }}>
                             {tierShort}
                           </span>
+                        </td>
+                        <td style={{
+                          padding: '0.6rem 0.8rem',
+                          color: '#475569',
+                          fontSize: '0.78rem',
+                          maxWidth: 260,
+                          lineHeight: 1.45,
+                        }}>
+                          {lead['Rationale'] || '—'}
                         </td>
                         <td style={{ padding: '0.6rem 0.8rem' }}>
                           {linkedin ? (
