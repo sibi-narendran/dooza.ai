@@ -73,6 +73,21 @@ const Footer = ({ variant = 'light' }) => {
                                     AI Automation Services
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/workflow-automation" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Workflow Automation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/ai-customer-support" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI Customer Support
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/customer-support-ai" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Support Workflow
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div>

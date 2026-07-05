@@ -133,6 +133,24 @@ export default async function sitemap() {
             priority: 0.85,
         },
         {
+            url: `${SITE_URL}/workflow-automation`,
+            lastModified: pageDate('2026-07-05'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/ai-customer-support`,
+            lastModified: pageDate('2026-07-05'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/customer-support-ai`,
+            lastModified: pageDate('2026-07-05'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/privacy`,
             lastModified: pageDate('2026-02-09'),
             changeFrequency: 'monthly',
