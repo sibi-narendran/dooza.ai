@@ -16,14 +16,20 @@ const US_STATES = [
 ];
 
 const INFLUENCERS = [
-  { value: 'Andy Wang', label: 'Andy Wang', desc: '401(k) & Retirement', companies: 15 },
-  { value: 'Tiffany Aliche', label: 'Tiffany Aliche', desc: 'Financial Empowerment', companies: 5 },
+  { value: 'Andrew Wang', label: 'Andrew Wang', desc: '401(k) & Retirement', companies: 25 },
+  { value: 'Tiffany Aliche', label: 'Tiffany Aliche', desc: 'Financial Empowerment', companies: 13 },
   { value: 'Bernadette Joy', label: 'Bernadette Joy', desc: 'Early Retirement', companies: 3 },
+  { value: 'Marc Russell', label: 'Marc Russell', desc: 'Personal Finance & Investing', companies: 14 },
+  { value: 'Julien and Kiersten Saunders', label: 'Julien & Kiersten Saunders', desc: 'Wealth Building', companies: 11 },
+  { value: 'Reyna Gobel', label: 'Reyna Gobel', desc: 'College Funding & Pet Finance', companies: 13 },
+  { value: 'Jason Steele', label: 'Jason Steele', desc: 'Credit Cards & Travel Rewards', companies: 28 },
+  { value: 'Cullen Canazares', label: 'Cullen Canazares', desc: 'Credit Education & Workforce', companies: 15 },
+  { value: 'Dr. Preston D. Cherry', label: 'Dr. Preston Cherry', desc: 'Financial Wellness & Gen X', companies: 5 },
 ];
 
 const CACHED_LEADS = {
-  'Andy Wang::Texas': {
-    summary: { zone: 'Texas', influencer: 'Andy Wang', uniqueLeads: 17 },
+  'Andrew Wang::Texas': {
+    summary: { zone: 'Texas', influencer: 'Andrew Wang', uniqueLeads: 17 },
     leads: [
       {"First Name":"Anne","Last Name":"Coleman","Email Address":"anne_coleman@vanguard.com","Email Status":"verified","Organization":"Vanguard","Title":"Market Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/annemcoleman26","Rationale":"As Market Director at Vanguard, one of the largest 401(k) providers, Anne directly oversees regional marketing strategy — a natural partner for Andy Wang's retirement planning content."},
       {"First Name":"Jim","Last Name":"Entwisle","Email Address":"james_entwisle@vanguard.com","Email Status":"verified","Organization":"Vanguard","Title":"Market Director","Company Group":"Tier 1 — Primary Targets","LinkedIn":"http://www.linkedin.com/in/jim-entwisle-cfp%c2%ae-48401158","Rationale":"Jim's role as Market Director at Vanguard with CFP credentials means he understands retirement planning deeply — ideal for co-creating authentic 401(k) content with Andy Wang."},
@@ -55,7 +61,7 @@ const LOADING_STEPS = [
 ];
 
 export default function FINDemoClient() {
-  const [influencer, setInfluencer] = useState('Andy Wang');
+  const [influencer, setInfluencer] = useState('Andrew Wang');
   const [zone, setZone] = useState('Texas');
   const [loading, setLoading] = useState(false);
   const [loadingStep, setLoadingStep] = useState(0);
@@ -83,15 +89,13 @@ export default function FINDemoClient() {
     }, 8000);
 
     try {
+      const payload = { influencer, maxCompanies: 3, skipOutreach: true };
+      if (zone) payload.zone = zone;
+
       const res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          zone,
-          influencer,
-          maxCompanies: 3,
-          skipOutreach: true,
-        }),
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) throw new Error(`Server returned ${res.status}`);
@@ -163,7 +167,7 @@ export default function FINDemoClient() {
         }}>
           <span style={{ fontSize: '1.1rem' }}>&#9432;</span>
           <span>
-            <strong>Demo mode</strong> — Andy Wang + Texas results are pre-loaded (instant, no credits). Other combinations search the top 3 target companies.
+            <strong>Demo mode</strong> — Andrew Wang + Texas results are pre-loaded (instant). Other combinations search the top 3 target companies live.
           </span>
         </div>
 
@@ -216,7 +220,7 @@ export default function FINDemoClient() {
                 letterSpacing: '0.03em',
                 marginBottom: '0.4rem',
               }}>
-                Zone (US State)
+                Zone (US State) <span style={{ fontWeight: 400, color: '#94a3b8' }}>— optional</span>
               </label>
               <select
                 value={zone}
@@ -224,6 +228,7 @@ export default function FINDemoClient() {
                 disabled={loading}
                 style={selectStyle}
               >
+                <option value="">All zones (nationwide)</option>
                 {US_STATES.map(s => (
                   <option key={s} value={s}>{s}</option>
                 ))}
@@ -299,7 +304,7 @@ export default function FINDemoClient() {
               gap: '0.5rem',
             }}>
               <h2 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#0f172a' }}>
-                {results.summary?.influencer} — {results.summary?.zone}
+                {results.summary?.influencer} — {results.summary?.zone || 'Nationwide'}
                 {isCached && (
                   <span style={{
                     display: 'inline-block',
@@ -468,7 +473,7 @@ export default function FINDemoClient() {
           fontSize: '0.78rem',
         }}>
           <span>Powered by Dooza</span>
-          <span>FIN Lead Finder v1</span>
+          <span>FIN Lead Finder v2</span>
         </div>
       </div>
     </div>
