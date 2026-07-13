@@ -46,7 +46,9 @@ const relatedPostMappings = {
     'reddit-agent-dooza-workspace-guide': ['ai-employees-transforming-small-business', 'ai-agents-vs-agentic-ai', 'automate-business-processes'],
     'claude-cowork-vs-dooza': ['ai-employees-vs-virtual-assistants', 'automate-business-processes', 'ai-employees-transforming-small-business'],
     'perplexity-computer-vs-dooza': ['claude-cowork-vs-dooza', 'openclaw-vs-dooza', 'ai-employees-transforming-small-business'],
-    'hatrio-ai-canada-partnership': ['content-marketing-tools', 'ai-copywriting-tools', 'outrank-vs-dooza-ranky']
+    'hatrio-ai-canada-partnership': ['content-marketing-tools', 'ai-copywriting-tools', 'outrank-vs-dooza-ranky'],
+    'how-we-automate-seo-at-dooza': ['seo-tools-small-business', 'surfer-seo-vs-ahrefs', 'content-marketing-tools'],
+    'satya-reverse-information-paradox': ['ai-employees-vs-virtual-assistants', 'ai-employees-transforming-small-business', 'automate-business-processes']
 };
 
 const InternalLinks = ({ currentSlug, position = 'sidebar' }) => {
