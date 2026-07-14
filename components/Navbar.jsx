@@ -94,6 +94,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     ];
 
     const services = [
+        { name: 'Automated Customer Support', href: '/automated-customer-support' },
         { name: 'Customer Support Automation', href: '/customer-support-automation-agency' },
     ];
 

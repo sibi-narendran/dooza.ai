@@ -2,18 +2,14 @@
 
 import { useEffect } from 'react';
 import { trackFBSchedule, trackAdsConversion } from '@/lib/analytics';
+import { getBookingUrlFromPath } from '@/lib/links';
 
-const NAMESPACE = 'demo';
-const CAL_LINK = 'sibinarendran/demo';
-const CAL_HOST_PATTERN = /^https?:\/\/(app\.)?cal\.com\/sibinarendran/i;
+const CAL_HOST_PATTERN = /^https?:\/\/(app\.)?(cal\.com\/sibinarendran|calendly\.com\/sibi-dooza)/i;
 
 export default function CalEmbedLoader() {
     useEffect(() => {
         if (typeof window === 'undefined') return;
 
-        // Intercept any <a href="cal.com/sibinarendran/..."> click and route
-        // it through the Cal modal so tracking fires. Zero-touch for existing
-        // hyperlinks scattered across blog posts, industry pages, etc.
         if (!window.__calLinkInterceptorRegistered) {
             window.__calLinkInterceptorRegistered = true;
             document.addEventListener('click', (e) => {
@@ -24,55 +20,28 @@ export default function CalEmbedLoader() {
                 if (!anchor) return;
                 const href = anchor.getAttribute('href') || '';
                 if (!CAL_HOST_PATTERN.test(href)) return;
-                if (typeof window.Cal?.ns?.[NAMESPACE] !== 'function') return;
+                if (typeof window.Calendly?.initPopupWidget !== 'function') return;
                 e.preventDefault();
-                window.Cal.ns[NAMESPACE]('modal', { calLink: CAL_LINK });
+                window.Calendly.initPopupWidget({ url: getBookingUrlFromPath(window.location.pathname) });
             }, true);
         }
 
         if (window.__calListenerRegistered) return;
+        window.__calListenerRegistered = true;
 
-        let tries = 0;
-        const maxTries = 50;
-        const interval = setInterval(() => {
-            tries++;
-            if (typeof window.Cal?.ns?.[NAMESPACE] === 'function') {
-                clearInterval(interval);
-                window.__calListenerRegistered = true;
+        const handleMessage = (e) => {
+            if (e.origin !== 'https://calendly.com') return;
+            if (!e.data?.event) return;
 
-                const handleBookingSuccess = (e) => {
-                    const data = e?.detail?.data || e?.data || {};
-                    const booking = data.booking || data || {};
-                    const attendee = Array.isArray(booking.attendees) && booking.attendees.length > 0
-                        ? booking.attendees[0]
-                        : {};
-                    const nameParts = String(attendee.name || '').trim().split(/\s+/);
-                    const firstName = nameParts[0] || undefined;
-                    const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : undefined;
-
-                    trackFBSchedule(booking.uid || data.uid, {
-                        email: attendee.email,
-                        phone: attendee.phoneNumber,
-                        firstName,
-                        lastName,
-                    });
-                    trackAdsConversion();
-                };
-
-                window.Cal.ns[NAMESPACE]('on', {
-                    action: 'bookingSuccessfulV2',
-                    callback: handleBookingSuccess,
-                });
-                window.Cal.ns[NAMESPACE]('on', {
-                    action: 'bookingSuccessful',
-                    callback: handleBookingSuccess,
-                });
-            } else if (tries >= maxTries) {
-                clearInterval(interval);
+            if (e.data.event === 'calendly.event_scheduled') {
+                const payload = e.data.payload || {};
+                trackFBSchedule(payload.event?.uri);
+                trackAdsConversion();
             }
-        }, 100);
+        };
 
-        return () => clearInterval(interval);
+        window.addEventListener('message', handleMessage);
+        return () => window.removeEventListener('message', handleMessage);
     }, []);
 
     return null;

@@ -2,9 +2,7 @@
 
 import { useEffect } from 'react';
 import { trackFBContact } from '@/lib/analytics';
-
-const CAL_LINK = 'sibinarendran/demo';
-const NAMESPACE = 'demo';
+import { getBookingUrlWithUtm } from '@/lib/links';
 
 export default function BookPageClient() {
     useEffect(() => {
@@ -39,12 +37,37 @@ export default function BookPageClient() {
         const openScheduler = () => {
             if (
                 typeof window !== 'undefined' &&
-                window.__calListenerRegistered &&
                 !window.__doozaBookSchedulerOpened &&
-                typeof window.Cal?.ns?.[NAMESPACE] === 'function'
+                typeof window.Calendly?.initInlineWidget === 'function'
             ) {
                 window.__doozaBookSchedulerOpened = true;
-                window.Cal.ns[NAMESPACE]('modal', { calLink: CAL_LINK });
+                const container = document.getElementById('dooza-booking-loader');
+                if (container) {
+                    container.innerHTML = '';
+                    container.classList.remove('dooza-booking-loader');
+                    container.style.cssText = 'padding: 0; background: white;';
+
+                    window.Calendly.initInlineWidget({
+                        url: getBookingUrlWithUtm('website', 'book_page', 'book'),
+                        parentElement: container,
+                    });
+
+                    const applyHeight = () => {
+                        const widget = container.querySelector('.calendly-inline-widget');
+                        if (widget) widget.style.cssText = 'min-width: 320px; width: 100%; height: calc(100vh - 72px); min-height: 700px;';
+                        const iframe = container.querySelector('iframe');
+                        if (iframe) iframe.style.cssText = 'width: 100%; height: 100%; min-height: 700px; border: none;';
+                    };
+
+                    applyHeight();
+
+                    const observer = new MutationObserver(() => {
+                        applyHeight();
+                        const iframe = container.querySelector('iframe');
+                        if (iframe) observer.disconnect();
+                    });
+                    observer.observe(container, { childList: true, subtree: true });
+                }
                 return true;
             }
             return false;

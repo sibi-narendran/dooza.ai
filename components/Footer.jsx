@@ -44,8 +44,28 @@ const Footer = ({ variant = 'light' }) => {
                         <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Services</p>
                         <ul className="space-y-3">
                             <li>
+                                <Link href="/automated-customer-support" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Automated Customer Support
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/customer-support-automation-agency" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Customer Support Automation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/workflow-automation" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Workflow Automation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/ai-customer-support" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI Customer Support
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/customer-support-ai" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Support Workflow
                                 </Link>
                             </li>
                         </ul>

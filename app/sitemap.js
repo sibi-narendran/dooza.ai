@@ -97,6 +97,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/automated-customer-support`,
+            lastModified: pageDate('2026-06-24'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/marblism-alternatives`,
             lastModified: pageDate('2026-04-20'),
             changeFrequency: 'monthly',
@@ -119,6 +125,24 @@ export default async function sitemap() {
             lastModified: pageDate('2026-06-16'),
             changeFrequency: 'weekly',
             priority: 0.85,
+        },
+        {
+            url: `${SITE_URL}/workflow-automation`,
+            lastModified: pageDate('2026-07-05'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/ai-customer-support`,
+            lastModified: pageDate('2026-07-05'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/customer-support-ai`,
+            lastModified: pageDate('2026-07-05'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
         },
         {
             url: `${SITE_URL}/privacy`,
