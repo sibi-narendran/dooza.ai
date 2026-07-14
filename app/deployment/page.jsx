@@ -112,8 +112,8 @@ const startingPoints = [
 const platformLinks = [
     {
         icon: Brain,
-        title: 'Built on Dooza AI',
-        href: '/',
+        title: 'Built on Dooza Workforce',
+        href: '/workforce',
         desc: 'Ready AI employees reduce custom setup when a workflow needs writing, reasoning, routing, or follow-up.',
     },
     {

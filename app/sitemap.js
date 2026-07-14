@@ -26,15 +26,15 @@ export default async function sitemap() {
     const staticPages = [
         {
             url: SITE_URL,
-            lastModified: pageDate('2026-04-16'),
+            lastModified: pageDate('2026-07-15'),
             changeFrequency: 'weekly',
             priority: 1.0,
         },
         {
-            url: `${SITE_URL}/studio`,
-            lastModified: pageDate('2026-03-29'),
+            url: `${SITE_URL}/workforce`,
+            lastModified: pageDate('2026-07-15'),
             changeFrequency: 'weekly',
-            priority: 0.9,
+            priority: 0.95,
         },
         {
             url: `${SITE_URL}/workflow`,

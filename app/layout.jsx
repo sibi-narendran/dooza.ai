@@ -25,11 +25,11 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL('https://www.dooza.ai'),
   title: {
-    default: 'Dooza | AI Employees That Never Sleep',
+    default: 'Dooza | Forward Deployed AI Engineers for Small Business',
     template: '%s | Dooza',
   },
-  description: 'Build, grow, and scale your business with a team of AI employees. Automate email, social media, lead generation, calls, and more.',
-  keywords: ['AI employees', 'AI agents', 'business automation', 'AI for small business', 'email automation', 'social media AI', 'Sintra AI alternative', 'Marblism alternative'],
+  description: 'A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it — built on the Dooza Workforce and Workflow platform.',
+  keywords: ['forward deployed engineers', 'AI deployment services', 'AI employees', 'AI agents', 'business automation', 'AI for small business', 'email automation', 'social media AI'],
   authors: [{ name: 'Dooza Team' }],
   creator: 'Dooza',
   publisher: 'Dooza',
@@ -49,14 +49,14 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://www.dooza.ai',
     siteName: 'Dooza',
-    title: 'Dooza | AI Employees That Never Sleep',
-    description: 'Build, grow, and scale your business with a team of AI employees. Automate email, social media, lead generation, calls, and more.',
+    title: 'Dooza | Forward Deployed AI Engineers for Small Business',
+    description: 'A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it — built on the Dooza Workforce and Workflow platform.',
     images: [
       {
         url: 'https://www.dooza.ai/logo.png',
         width: 512,
         height: 512,
-        alt: 'Dooza - AI Employees That Never Sleep',
+        alt: 'Dooza - Forward Deployed AI Engineers',
       },
     ],
   },
@@ -64,8 +64,8 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@sibinarendran',
     creator: '@sibinarendran',
-    title: 'Dooza | AI Employees That Never Sleep',
-    description: 'Build, grow, and scale your business with a team of AI employees.',
+    title: 'Dooza | Forward Deployed AI Engineers for Small Business',
+    description: 'A Dooza engineer embeds with your business and deploys AI that handles the work that repeats.',
     images: ['https://www.dooza.ai/logo.png'],
   },
   alternates: {

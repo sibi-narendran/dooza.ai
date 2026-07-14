@@ -10,12 +10,17 @@ const staticPages = [
     {
         title: 'Home',
         url: SITE_URL,
-        description: 'Dooza homepage for AI employees and business automation.',
+        description: 'Dooza homepage — forward deployed AI engineers who deploy and run AI for small businesses.',
     },
     {
-        title: 'Studio',
-        url: `${SITE_URL}/studio`,
-        description: 'Build and manage AI employees for business workflows.',
+        title: 'Workforce',
+        url: `${SITE_URL}/workforce`,
+        description: 'AI employees for email, social, SEO, calls, and leads — from $49/mo.',
+    },
+    {
+        title: 'Workflow',
+        url: `${SITE_URL}/workflow`,
+        description: 'Workflow automation with approvals, traces, and tests.',
     },
     {
         title: 'Deployment',

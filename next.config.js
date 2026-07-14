@@ -73,8 +73,13 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/studio',
+        destination: '/workforce',
+        permanent: true,
+      },
+      {
         source: '/agent-builder',
-        destination: '/studio',
+        destination: '/workforce',
         permanent: true,
       },
       {

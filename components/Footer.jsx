@@ -29,18 +29,13 @@ const Footer = ({ variant = 'light' }) => {
                         <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Products</p>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Dooza
+                                <Link href="/workforce" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Dooza Workforce
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/workflow" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Dooza Workflow
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/studio" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Dooza Studio
                                 </Link>
                             </li>
                         </ul>

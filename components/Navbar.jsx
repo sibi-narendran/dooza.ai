@@ -89,8 +89,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     }, [isOpen]);
 
     const products = [
-        { name: 'Dooza', href: '/' },
-        { name: 'Dooza Studio', href: '/studio' },
+        { name: 'Dooza Workforce', href: '/workforce' },
         { name: 'Dooza Workflow', href: '/workflow' },
     ];
 
