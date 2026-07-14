@@ -83,6 +83,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/deployment',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/blog/how-to-automate-your-business-with-ai',
         destination: '/blog/automate-business-processes',
         permanent: true,

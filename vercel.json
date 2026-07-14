@@ -10,6 +10,11 @@
       "source": "/agent-builder",
       "destination": "/workforce",
       "permanent": true
+    },
+    {
+      "source": "/deployment",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }

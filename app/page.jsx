@@ -1,17 +1,17 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import Script from 'next/script';
 import {
     ArrowRight,
     Brain,
     CheckCircle2,
     ClipboardList,
-    LineChart,
-    Rocket,
+    Clock,
+    DollarSign,
     ShieldCheck,
     Sparkles,
-    TrendingUp,
     UserCheck,
     Workflow,
-    Wrench,
 } from 'lucide-react';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
@@ -26,9 +26,10 @@ import { SITE_URL } from '@/lib/site';
 
 export const metadata = {
     title: { absolute: 'Forward Deployed AI Engineers for Small Business | Dooza.ai' },
-    description: 'A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it — with human approval where it matters. Book a founder call.',
+    description: 'We set up AI on your business for free. Live in days. Use it, see the results, and pay only if you want to keep it. No contracts.',
     keywords: [
         'forward deployed engineers',
+        'AI deployment company',
         'AI deployment services',
         'done for you AI',
         'AI for small business',
@@ -42,7 +43,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'Forward Deployed AI Engineers for Small Business | Dooza.ai',
-        description: 'A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it — with human approval where it matters.',
+        description: 'Free AI setup by a real engineer. Live in days. Pay only if you want to keep it. No contracts.',
         url: SITE_URL,
         siteName: 'Dooza',
         type: 'website',
@@ -53,58 +54,59 @@ export const metadata = {
         site: '@sibinarendran',
         creator: '@sibinarendran',
         title: 'Forward Deployed AI Engineers for Small Business | Dooza.ai',
-        description: 'A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it. Book a founder call.',
+        description: 'Free AI setup by a real engineer. Live in days. Pay only if you want to keep it. No contracts.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
 
 const todaySignals = [
-    'Every week ends with the same manual work it started with.',
-    'Follow-ups run on memory, inbox checks, and sticky notes.',
-    'AI subscriptions were bought, tried once, and forgotten.',
-    'Tools do not talk to each other, so people copy data between them.',
-    'Nobody owns making automation actually happen.',
+    'The same manual work, every week.',
+    'Follow-ups that run on memory.',
+    'AI tools bought, tried once, forgotten.',
 ];
 
 const engineerChanges = [
-    'Maps how work actually flows through your business.',
-    'Picks the first workflow with a clear business reason to automate.',
-    'Deploys it on the Dooza platform, connected to your tools.',
-    'Adds approval points where mistakes would be expensive.',
-    'Reports what the AI did — and expands only when it pays off.',
+    'We find the right task and set up the AI. Free.',
+    'You approve anything important before it happens.',
+    'You pay only if you want to keep it.',
 ];
 
 const engagementSteps = [
     {
         step: '01',
-        title: 'Embed',
-        time: 'Week 1',
-        desc: 'Your engineer learns how work actually flows through the business — not how the org chart says it does.',
+        title: 'Map',
+        time: 'Day 1',
+        desc: 'One call. We find the task worth automating.',
     },
     {
         step: '02',
-        title: 'Map',
-        time: 'Week 1',
-        desc: 'Together we pick the first workflow with a clear business reason to automate.',
+        title: 'Build',
+        time: 'Day 2',
+        desc: 'We set everything up and connect your tools. Free.',
     },
     {
         step: '03',
-        title: 'Deploy',
-        time: 'Week 2',
-        desc: 'We build it on Dooza Workforce and Workflow — connected to your tools, with approvals where mistakes are expensive.',
+        title: 'Live',
+        time: 'Day 4',
+        desc: 'It runs on real work. You watch and approve.',
     },
     {
         step: '04',
-        title: 'Run',
-        time: 'Live',
-        desc: 'It goes live small. You see every action it takes and approve what matters.',
+        title: 'Keep',
+        time: 'You choose',
+        desc: 'Love it? Keep it and pay. If not, walk away.',
     },
-    {
-        step: '05',
-        title: 'Expand',
-        time: 'Ongoing',
-        desc: 'When the numbers prove it, we deploy the next one.',
-    },
+];
+
+const automationExamples = [
+    'Emails',
+    'Voice calls',
+    'Support inbox drafts',
+    'Missed-call follow-ups',
+    'Invoice chasing',
+    'Review replies',
+    'Daily social posts',
+    'Lead follow-ups',
 ];
 
 const platformProducts = [
@@ -112,13 +114,13 @@ const platformProducts = [
         icon: Brain,
         title: 'Dooza Workforce',
         href: '/workforce',
-        desc: 'Ready AI employees for email, social, SEO, leads, and calls. From $49/mo — also available self-serve.',
+        desc: 'AI employees for email, social, SEO, leads, and calls. From $49/mo.',
     },
     {
         icon: Workflow,
         title: 'Dooza Workflow',
         href: '/workflow',
-        desc: 'Approvals, traces, app steps, and tests that keep every deployment under control.',
+        desc: 'Approvals and logs that keep every automation under control.',
     },
 ];
 
@@ -126,42 +128,37 @@ const fdeFaqData = [
     {
         question: 'What is a forward deployed engineer?',
         answer:
-            'An engineer who works inside your business instead of behind a support desk. They learn how your work flows, pick what to automate, deploy it on the Dooza platform, and stay accountable for the result.',
+            'An engineer who works inside your business, not behind a support desk. They set up AI on your real work and stay until it delivers.',
+    },
+    {
+        question: 'Is the setup really free?',
+        answer:
+            'Yes. A Dooza engineer builds your first automation for free and puts it live on your real work. You pay only if you want to keep using it.',
+    },
+    {
+        question: 'What if we do not want to continue?',
+        answer:
+            'We switch it off. No bill, no contract, no hard feelings.',
     },
     {
         question: 'Do we need technical staff?',
         answer:
-            'No. Your engineer handles workflow design, tool connections, testing, launch, and ongoing improvements. Your team only reviews and approves.',
+            'No. We build, connect, and test everything. Your team just approves.',
     },
     {
-        question: 'What does it cost compared to hiring?',
+        question: 'How fast is it live?',
         answer:
-            'Far less than a full-time hire. There is no salary, onboarding, or management overhead — you get an engineer plus the platform they deploy on. Pricing is scoped on the founder call.',
-    },
-    {
-        question: 'What actually gets deployed?',
-        answer:
-            'AI workflows built on Dooza Workforce and Dooza Workflow — AI employees for email, social, SEO, leads, and calls, plus the approvals, traces, and tests that keep them under control.',
-    },
-    {
-        question: 'How fast do we see results?',
-        answer:
-            'The first workflow typically goes live within the first two weeks — small enough to launch safely, valuable enough to measure honestly.',
+            'Your first automation usually runs within days — day 2 to day 4 in most cases.',
     },
     {
         question: 'Can we start self-serve instead?',
         answer:
-            'Yes. Dooza Workforce is self-serve from $49/mo with free founder onboarding. Many businesses start there and add an engineer when they want to go deeper.',
+            'Yes. Dooza Workforce is $49/mo with free onboarding. Add an engineer later if you want more.',
     },
     {
         question: 'Will AI replace our team?',
         answer:
-            'No. The goal is to remove repetitive work and keep important customer-facing actions inside review steps your team controls.',
-    },
-    {
-        question: 'What tools do you work with?',
-        answer:
-            'The ones you already use — Gmail, calendars, CRMs, Shopify, WordPress, helpdesks, forms, spreadsheets, and 1000+ more through our integrations.',
+            'No. It takes over the repetitive work. Your team stays in control of anything important.',
     },
 ];
 
@@ -242,7 +239,7 @@ const fdeServiceSchema = {
     "name": "Forward Deployed AI Engineering by Dooza",
     "serviceType": "Forward Deployed AI Engineering",
     "url": SITE_URL,
-    "description": "A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI workflows that handle it — built on the Dooza Workforce and Workflow platform, with human approval where it matters.",
+    "description": "A Dooza engineer sets up AI on your business for free — live in days on the Dooza Workforce and Workflow platform. Pay only to keep it. No contracts.",
     "provider": {
         "@type": "Organization",
         "name": "Dooza",
@@ -320,27 +317,27 @@ function Badge({ icon: Icon, children }) {
 function EngagementTimelineVisual() {
     const timeline = [
         {
-            phase: 'Week 1',
-            title: 'Embed & map',
-            desc: 'Your engineer sits with the business and finds the work that repeats.',
+            phase: 'Day 1',
+            title: 'We map your work',
+            desc: 'One call to find the task AI should do first.',
             state: 'done',
         },
         {
-            phase: 'Week 2',
-            title: 'First workflow live',
-            desc: 'Built on Dooza Workforce and Workflow, connected to your tools.',
+            phase: 'Day 2',
+            title: 'AI goes live',
+            desc: 'Built free. Connected to your tools.',
             state: 'done',
         },
         {
-            phase: 'Live',
-            title: 'Run with approvals',
-            desc: 'You see every action and approve what matters.',
+            phase: 'Day 4',
+            title: 'You see results',
+            desc: 'Every action logged. You approve.',
             state: 'control',
         },
         {
-            phase: 'Ongoing',
-            title: 'Measure & expand',
-            desc: 'The next workflow ships when the first one pays off.',
+            phase: 'Then',
+            title: 'Keep it or walk away',
+            desc: 'Pay only if you continue. No contracts.',
             state: 'next',
         },
     ];
@@ -353,14 +350,14 @@ function EngagementTimelineVisual() {
                         <UserCheck className="h-5 w-5" />
                     </div>
                     <div>
-                        <div className="text-sm font-bold text-slate-950">Forward deployed engagement</div>
-                        <div className="text-xs text-slate-500">embed, deploy, run, expand</div>
+                        <div className="text-sm font-bold text-slate-950">Your free AI setup</div>
+                        <div className="text-xs text-slate-500">live in days, not months</div>
                     </div>
                 </div>
-                <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">FDE</span>
+                <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">Free</span>
             </div>
 
-            <div className="mb-6 grid gap-3">
+            <div className="grid gap-3">
                 {timeline.map((item, index) => (
                     <div key={item.title} className="deployment-queue-item flex gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-4" style={{ animationDelay: `${index * 0.25}s` }}>
                         <span className={`mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ${item.state === 'control' ? 'bg-amber-500' : item.state === 'next' ? 'bg-slate-300' : 'bg-primary-600'}`} />
@@ -373,21 +370,6 @@ function EngagementTimelineVisual() {
                         </div>
                     </div>
                 ))}
-            </div>
-
-            <div className="rounded-2xl border border-primary-100 bg-primary-50 p-4">
-                <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                        <div className="deployment-automation-core flex h-10 w-10 items-center justify-center rounded-xl bg-primary-700 text-xs font-extrabold text-white shadow-lg shadow-primary-700/20">
-                            AI
-                        </div>
-                        <div>
-                            <div className="text-sm font-bold text-slate-950">Workflow running</div>
-                            <div className="text-xs font-semibold text-slate-500">logged, approved, improving</div>
-                        </div>
-                    </div>
-                    <CheckCircle2 className="h-5 w-5 text-primary-600" />
-                </div>
             </div>
         </div>
     );
@@ -402,13 +384,13 @@ function EngagementProcessFlow() {
                         <ClipboardList className="h-6 w-6" />
                     </div>
                     <div>
-                        <div className="text-sm font-bold text-slate-950">The engagement</div>
-                        <div className="text-xs text-slate-500">one workflow at a time</div>
+                        <div className="text-sm font-bold text-slate-950">How it works</div>
+                        <div className="text-xs text-slate-500">one task at a time</div>
                     </div>
                 </div>
 
                 <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">
-                    SMB
+                    Days
                 </span>
             </div>
 
@@ -445,32 +427,50 @@ export default function Home() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
                 />
             ))}
-            <Navbar showLogin ctaType="demo" ctaSource="home_nav" />
+            <Navbar showLogin ctaType="demo" ctaSource="home_nav" signupLabel="Get Free Setup" />
             <main id="main-content" className="bg-warm text-slate-900 font-sans">
                 <section className="relative overflow-hidden px-4 pt-32 pb-20 md:px-8 md:pt-40 md:pb-28">
                     <div className="absolute inset-0 pointer-events-none">
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-50 via-warm to-warm" />
-                        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f766e0a_1px,transparent_1px),linear-gradient(to_bottom,#0f766e0a_1px,transparent_1px)] bg-[size:32px_32px]" />
                     </div>
 
                     <div className="relative z-10 mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
                         <div className="min-w-0">
                             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white px-4 py-2 text-sm font-semibold text-primary-700 shadow-sm">
                                 <Sparkles className="h-4 w-4" />
-                                Forward deployed AI engineers for small business
+                                Forward deployed AI engineers
                             </div>
-                            <h1 className="mb-7 max-w-[21.5rem] break-words font-serif text-[2rem] font-extrabold leading-[1.08] tracking-normal text-slate-950 sm:max-w-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                                <span className="block">AI won't deploy itself.</span>
-                                <span className="block">So we send</span>
-                                <span className="block">an engineer.</span>
+                            <h1 className="mb-7 max-w-[21.5rem] break-words font-serif text-[2rem] font-extrabold leading-[1.08] tracking-normal text-slate-950 sm:max-w-4xl sm:text-5xl md:text-6xl">
+                                <span className="block">Your first</span>
+                                <span className="block">AI employee</span>
+                                <span className="block">is free.</span>
                             </h1>
                             <p className="mb-10 max-w-[21.5rem] text-base leading-relaxed text-slate-600 sm:max-w-xl md:text-xl">
-                                A Dooza engineer embeds with your team, finds the work that repeats, and deploys AI that handles it — built on our own platform, with human approval where it matters.
+                                A Dooza engineer sets it up on your real work — live in days. Keep it only if you love it. No contracts.
                             </p>
                             <div className="flex flex-col items-start gap-4">
                                 <BookDemoButton source="home_hero" variant="primary" size="xl" className="w-auto px-5 text-base sm:px-8 sm:text-lg md:px-10 md:text-xl">
-                                    Book a Call with the Founder
+                                    Get My Free Setup
                                 </BookDemoButton>
+                                <p className="flex items-center gap-2 text-sm font-semibold text-slate-700">
+                                    <span className="relative flex h-2.5 w-2.5">
+                                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
+                                        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-500" />
+                                    </span>
+                                    Due to high demand, we take on 5 free setups a week.
+                                </p>
+                                <div className="flex items-center gap-3">
+                                    <Image
+                                        src="/founder-sibi.jpeg"
+                                        alt="Sibi Narendran, founder of Dooza"
+                                        width={44}
+                                        height={44}
+                                        className="rounded-full border-2 border-white shadow-md"
+                                    />
+                                    <p className="text-sm text-slate-600">
+                                        You'll talk to <strong className="text-slate-900">Sibi, Dooza's founder</strong> — not a sales rep.
+                                    </p>
+                                </div>
                                 <p className="text-sm text-slate-500">
                                     Prefer to start yourself?{' '}
                                     <Link href="/workforce" className="font-semibold text-primary-700 underline underline-offset-4 decoration-primary-200 hover:text-primary-900 hover:decoration-primary-400 transition-colors">
@@ -480,11 +480,10 @@ export default function Home() {
                             </div>
 
                             <div className="mt-9 flex flex-wrap gap-3">
+                                <Badge icon={DollarSign}>Free setup</Badge>
+                                <Badge icon={Clock}>Live in days</Badge>
+                                <Badge icon={ShieldCheck}>No contracts</Badge>
                                 <Badge icon={UserCheck}>A real engineer</Badge>
-                                <Badge icon={TrendingUp}>One workflow first</Badge>
-                                <Badge icon={ShieldCheck}>Human approval</Badge>
-                                <Badge icon={Wrench}>Your existing tools</Badge>
-                                <Badge icon={LineChart}>Measured results</Badge>
                             </div>
                         </div>
 
@@ -492,24 +491,39 @@ export default function Home() {
                     </div>
                 </section>
 
+                <section className="border-y border-slate-100 bg-white px-4 py-10">
+                    <div className="mx-auto flex max-w-5xl flex-col items-center gap-5 text-center">
+                        <span className="section-label block">Things we automate</span>
+                        <div className="flex flex-wrap justify-center gap-3">
+                            {automationExamples.map((item) => (
+                                <span key={item} className="rounded-full border border-slate-200 bg-warm px-4 py-2 text-sm font-semibold text-slate-700">
+                                    {item}
+                                </span>
+                            ))}
+                            <span className="rounded-full border border-primary-100 bg-primary-50 px-4 py-2 text-sm font-semibold text-primary-700">
+                                + whatever eats your week
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="bg-white px-4 py-20 md:py-28">
                     <div className="mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
                         <div className="min-w-0">
-                            <span className="section-label mb-5 block">THE REAL PROBLEM</span>
+                            <span className="section-label mb-5 block">THE PROBLEM</span>
                             <h2 className="mb-6 max-w-[21.5rem] break-words font-serif text-[1.9rem] font-extrabold leading-tight tracking-normal text-slate-950 sm:max-w-xl md:text-5xl">
                                 <span className="block">The tools exist.</span>
-                                <span className="block">The time to deploy</span>
-                                <span className="block">them doesn't.</span>
+                                <span className="block">The time doesn't.</span>
                             </h2>
                             <p className="max-w-[21.5rem] text-base leading-relaxed text-slate-600 sm:max-w-xl md:text-lg">
-                                Most founders don't need convincing that AI works. They need someone to sit with the business, pick the right workflow, wire it into the tools they already use, and stay accountable for the result.
+                                You know AI can help. You don't have time to set it up. So we set it up for you — free, at our risk, not yours.
                             </p>
                         </div>
 
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                             <div className="rounded-[28px] border border-slate-100 bg-warm p-6 shadow-sm">
                                 <h3 className="mb-5 font-sans text-lg font-extrabold text-slate-950">
-                                    What it feels like today
+                                    Today
                                 </h3>
                                 <div className="grid gap-3">
                                     {todaySignals.map((item) => (
@@ -523,7 +537,7 @@ export default function Home() {
 
                             <div className="rounded-[28px] border border-primary-100 bg-primary-50 p-6 shadow-sm">
                                 <h3 className="mb-5 font-sans text-lg font-extrabold text-slate-950">
-                                    What a forward deployed engineer changes
+                                    With an engineer
                                 </h3>
                                 <div className="grid gap-3">
                                     {engineerChanges.map((item) => (
@@ -539,22 +553,19 @@ export default function Home() {
                 </section>
 
                 <section className="relative overflow-hidden bg-warm px-4 py-20 text-slate-900 md:py-28">
-                    <div className="absolute inset-0 pointer-events-none">
-                        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]" />
-                    </div>
                     <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
                         <div>
                             <span className="section-label mb-5 block">
                                 How it works
                             </span>
                             <h2 className="mb-7 max-w-xl font-serif text-4xl font-extrabold leading-[1.08] tracking-tight text-slate-900 md:text-6xl">
-                                One engineer. One workflow. Then the next.
+                                Live in days. Not months.
                             </h2>
                             <p className="mb-9 max-w-lg text-lg leading-relaxed text-slate-600">
-                                No transformation roadmap, no six-month discovery. Your engineer starts with one workflow, proves it works, and expands from there.
+                                Free setup. No long projects. Your first automation runs this week.
                             </p>
                             <BookDemoButton source="home_process" variant="primary">
-                                See What We'd Deploy First
+                                Start My Free Setup
                             </BookDemoButton>
                         </div>
                         <EngagementProcessFlow />
@@ -565,8 +576,8 @@ export default function Home() {
                     <div className="mx-auto max-w-7xl">
                         <SectionHeader
                             eyebrow="THE PLATFORM"
-                            title="Deployed on products we build, not glue code"
-                            description="Your engineer doesn't stitch together fragile scripts. Every deployment runs on the same two products we build and operate ourselves."
+                            title="Built on our own products"
+                            description="No duct tape. Your automation runs on two products we build and run ourselves."
                         />
                         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-2">
                             {platformProducts.map((item) => {
@@ -594,14 +605,37 @@ export default function Home() {
 
                 <TestimonialsSection />
 
+                <section className="bg-warm px-4 py-20 md:py-28">
+                    <div className="mx-auto max-w-3xl text-center">
+                        <span className="section-label mb-4 block text-primary-600">The big picture</span>
+                        <h2 className="mb-5 font-serif text-3xl font-bold text-slate-900 md:text-5xl">
+                            What is AI going to do to the world?
+                        </h2>
+                        <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-slate-600">
+                            Watch this. Then let's talk about what it can do for your business.
+                        </p>
+                        <div className="flex justify-center">
+                            <blockquote className="twitter-tweet" data-media-max-width="560" data-dnt="true">
+                                <a href="https://twitter.com/claudeai/status/2075271759289303522">
+                                    Watch &ldquo;There&rsquo;s hope in hard questions&rdquo; on X
+                                </a>
+                            </blockquote>
+                        </div>
+                        <p className="mt-6 text-sm text-slate-500">
+                            Film by Anthropic — 5.3M views on X
+                        </p>
+                    </div>
+                </section>
+                <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />
+
                 <section className="border-y border-slate-200 bg-white px-4 py-14">
                     <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
                         <div>
                             <h2 className="mb-2 font-serif text-2xl font-bold text-slate-900 md:text-3xl">
-                                Not ready for an engineer?
+                                Want to try it yourself?
                             </h2>
                             <p className="max-w-xl text-base leading-relaxed text-slate-600">
-                                Dooza Workforce is self-serve from $49/mo, with free founder onboarding. Start there and add an engineer when you want to go deeper.
+                                Dooza Workforce is self-serve from $49/mo. Free onboarding included.
                             </p>
                         </div>
                         <div className="flex shrink-0 flex-col items-center gap-3 md:items-end">
@@ -629,19 +663,30 @@ export default function Home() {
                 <section className="relative overflow-hidden bg-warm px-4 py-20 text-slate-900 md:py-28">
                     <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-50/80 via-warm to-warm" />
                     <div className="relative z-10 mx-auto max-w-4xl text-center">
-                        <div className="mx-auto mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                            <Rocket className="h-8 w-8" />
-                        </div>
+                        <Image
+                            src="/founder-sibi.jpeg"
+                            alt="Sibi Narendran, founder of Dooza"
+                            width={72}
+                            height={72}
+                            className="mx-auto mb-7 rounded-full border-4 border-white shadow-lg"
+                        />
                         <h2 className="mb-6 font-serif text-4xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-6xl">
-                            Bring the messy work. We'll bring the engineer.
+                            Get your first automation. Free.
                         </h2>
                         <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-slate-600">
-                            You don't need a plan before the call. On a free founder call we'll map the first workflow worth deploying — and you'll know exactly what happens next.
+                            One call with Sibi, the founder. We set up AI on your real work — free. Keep it only if it earns its keep.
                         </p>
-                        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                        <div className="flex flex-col items-center justify-center gap-4">
                             <BookDemoButton source="home_final" variant="primary" size="xl">
-                                Book a Founder Call
+                                Get My Free Setup
                             </BookDemoButton>
+                            <p className="flex items-center gap-2 text-sm font-semibold text-slate-700">
+                                <span className="relative flex h-2.5 w-2.5">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
+                                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-500" />
+                                </span>
+                                Due to high demand, we take on 5 free setups a week.
+                            </p>
                         </div>
                     </div>
                 </section>

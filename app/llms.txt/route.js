@@ -23,11 +23,6 @@ const staticPages = [
         description: 'Workflow automation with approvals, traces, and tests.',
     },
     {
-        title: 'Deployment',
-        url: `${SITE_URL}/deployment`,
-        description: 'Deploy AI employees into business operations.',
-    },
-    {
         title: 'Pricing',
         url: `${SITE_URL}/pricing`,
         description: 'Dooza pricing and plan information.',

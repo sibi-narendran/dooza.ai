@@ -43,12 +43,6 @@ export default async function sitemap() {
             priority: 0.95,
         },
         {
-            url: `${SITE_URL}/deployment`,
-            lastModified: pageDate('2026-05-26'),
-            changeFrequency: 'weekly',
-            priority: 0.95,
-        },
-        {
             url: `${SITE_URL}/pricing`,
             lastModified: pageDate('2026-06-13'),
             changeFrequency: 'weekly',

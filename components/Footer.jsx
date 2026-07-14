@@ -44,23 +44,8 @@ const Footer = ({ variant = 'light' }) => {
                         <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Services</p>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/deployment" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Dooza Deployment Company
-                                </Link>
-                            </li>
-                            <li>
                                 <Link href="/customer-support-automation-agency" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Customer Support Automation
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/customer-service-automation-software" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Customer Service Software
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/ai-automation-services" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    AI Automation Services
                                 </Link>
                             </li>
                         </ul>

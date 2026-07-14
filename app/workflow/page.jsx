@@ -175,7 +175,7 @@ const deploymentOptions = [
     {
         icon: Server,
         title: 'Runs where you decide',
-        desc: 'Use Dooza-hosted workflows or have Dooza Deployment Company help set up workflows inside your stack.',
+        desc: 'Use Dooza-hosted workflows or have a Dooza engineer set up workflows inside your stack.',
     },
     {
         icon: Code2,
@@ -740,7 +740,7 @@ export default function WorkflowPage() {
                                 Start with pre-built app steps. Use custom API calls and webhooks when you need to reach internal systems, legacy software, or private databases.
                             </p>
                             <Link
-                                href="/deployment"
+                                href="/"
                                 className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-slate-900 transition hover:border-primary-200 hover:text-primary-800"
                             >
                                 Get integration help <ArrowRight className="h-4 w-4" />
