@@ -113,6 +113,11 @@ const Footer = ({ variant = 'light' }) => {
                                     About
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/brand" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Brand Resources
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div>

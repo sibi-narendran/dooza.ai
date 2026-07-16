@@ -37,6 +37,12 @@ export default async function sitemap() {
             priority: 0.95,
         },
         {
+            url: `${SITE_URL}/brand`,
+            lastModified: pageDate('2026-07-16'),
+            changeFrequency: 'monthly',
+            priority: 0.4,
+        },
+        {
             url: `${SITE_URL}/workflow`,
             lastModified: pageDate('2026-06-15'),
             changeFrequency: 'weekly',

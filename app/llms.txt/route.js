@@ -77,6 +77,44 @@ const staticPages = [
         url: `${SITE_URL}/about`,
         description: 'About Dooza.',
     },
+    {
+        title: 'Brand Resources',
+        url: `${SITE_URL}/brand`,
+        description: 'Official logos, colors, boilerplate copy, and company details for proposals, decks, and press.',
+    },
+];
+
+const brandAssets = [
+    {
+        title: 'Dooza icon logo (PNG)',
+        url: `${SITE_URL}/brand/dooza-icon.png`,
+        description: 'The Dooza mark on its own — favicons, avatars, tight spaces.',
+    },
+    {
+        title: 'Dooza wordmark, light backgrounds (PNG)',
+        url: `${SITE_URL}/brand/dooza-wordmark-light.png`,
+        description: 'Full logo lockup for white/light documents, proposals, and slides.',
+    },
+    {
+        title: 'Dooza wordmark, dark backgrounds (PNG)',
+        url: `${SITE_URL}/brand/dooza-wordmark-dark.png`,
+        description: 'Full logo lockup for dark slides and dark UI.',
+    },
+    {
+        title: 'Founder photo — Sibi Narendran (JPEG)',
+        url: `${SITE_URL}/founder-sibi.jpeg`,
+        description: 'Headshot of Sibi Narendran, founder of Dooza. Approved for press and proposals.',
+    },
+];
+
+const companyFacts = [
+    'Legal entity: Adam Laboratory Inc., a Delaware C-Corporation (Dooza.ai is its product)',
+    'Registered address: 131 Continental Dr, Suite 305, Newark, DE 19713, United States',
+    'Contact: support@dooza.ai',
+    'Founder: Sibi Narendran (https://sibinarendran.com)',
+    'Brand colors: Dooza Teal #0F766E (primary), Teal Bright #0D9488, Ink #0F172A, Warm White #FAF9F7, Signal Amber #F59E0B',
+    'Products: Dooza Workforce (AI employees, from $49/mo) and Dooza Workflow (approvals, traces, tests)',
+    'Boilerplate: Dooza provides forward deployed AI engineers who set up AI employees for small businesses — free to start, pay only to keep it.',
 ];
 
 const cleanText = (value = '') => String(value).replace(/\s+/g, ' ').trim();
@@ -160,6 +198,11 @@ export async function GET() {
         `RSS: ${SITE_URL}/rss.xml`,
         '',
         section('Core Pages', staticPages),
+        '',
+        section('Brand Assets (downloadable)', brandAssets),
+        '',
+        '## Company Facts',
+        ...companyFacts.map((fact) => `- ${fact}`),
         '',
         section('AI Employees', agentLinks),
         '',
