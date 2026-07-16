@@ -2,8 +2,8 @@ import { SITE_URL } from '../../lib/site';
 import MarblismAlternativesContent from './MarblismAlternativesContent';
 
 export const metadata = {
-    title: '7 Best Marblism Alternatives [2026] — Honest Pros & Cons',
-    description: 'Compare 7 Marblism alternatives by pricing, integrations, onboarding, agent quality, and best use case for small business automation.',
+    title: '7 Best Marblism Alternatives [2026] — #1 Sets Up Free',
+    description: 'We compared 7 Marblism alternatives on real pricing, integrations, and setup. Our #1 pick sets up your AI free — you pay only to keep it.',
     keywords: [
         'Marblism alternatives', 'Marblism alternative', 'Marblism AI alternative',
         'Marblism AI alternatives', 'best Marblism alternative 2026',
@@ -23,8 +23,8 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: '7 Best Marblism Alternatives [2026] — Honest Pros & Cons',
-        description: 'Per-seat pricing adding up? Limited integrations? We compared 7 Marblism alternatives with real pricing, pros, and cons.',
+        title: '7 Best Marblism Alternatives [2026] — #1 Sets Up Free',
+        description: 'Per-seat pricing adding up? We compared 7 Marblism alternatives with real pricing — the #1 pick includes free engineer setup.',
         url: `${SITE_URL}/marblism-alternatives`,
         siteName: 'Dooza',
         type: 'article',
@@ -35,8 +35,8 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: '7 Best Marblism Alternatives [2026]',
-        description: 'Per-seat fees, limited integrations, no free trial — 7 alternatives compared with honest pros and cons.',
+        title: '7 Best Marblism Alternatives [2026] — #1 Sets Up Free',
+        description: 'Per-seat fees, limited integrations, no free trial — 7 alternatives compared. The #1 pick sets up your AI free.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

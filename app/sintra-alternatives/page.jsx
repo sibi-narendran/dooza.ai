@@ -2,8 +2,8 @@ import { SITE_URL } from '../../lib/site';
 import SintraAlternativesContent from './SintraAlternativesContent';
 
 export const metadata = {
-    title: '7 Best Sintra AI Alternatives in 2026 (Honest Comparison)',
-    description: 'Compare 7 Sintra AI alternatives by pricing, features, credit limits, onboarding, and best use case for business automation.',
+    title: '7 Best Sintra AI Alternatives [2026] — #1 Sets Up Free',
+    description: 'No credits, no lock-in. 7 Sintra AI alternatives compared on pricing, features, and limits — the #1 pick includes free engineer setup.',
     keywords: [
         'sintra ai alternatives', 'best sintra alternative 2026', 'sintra ai competitors',
         'sintra alternative', 'sintra ai replacement', 'AI employee platforms',
@@ -23,8 +23,8 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: '7 Best Sintra AI Alternatives in 2026',
-        description: 'Honest comparison of 7 Sintra AI alternatives — pricing, features, pros, cons. No fluff, just facts.',
+        title: '7 Best Sintra AI Alternatives [2026] — #1 Sets Up Free',
+        description: 'Honest comparison of 7 Sintra AI alternatives — pricing, features, pros, cons. The #1 pick sets up your AI free.',
         url: `${SITE_URL}/sintra-alternatives`,
         siteName: 'Dooza',
         type: 'article',
@@ -35,8 +35,8 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: '7 Best Sintra AI Alternatives in 2026',
-        description: 'Credit limits, rigid helpers, no workflows. Here are 7 alternatives to Sintra AI, compared honestly.',
+        title: '7 Best Sintra AI Alternatives [2026] — #1 Sets Up Free',
+        description: 'Credit limits, rigid helpers, no workflows. 7 Sintra AI alternatives compared — the #1 pick sets up your AI free.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

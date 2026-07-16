@@ -16,12 +16,6 @@ export default function AlternativesPage() {
 
     const competitors = [
         {
-            name: 'Sintra AI',
-            slug: 'better-than-sintra-ai',
-            tagline: 'Complex setup, limited automation',
-            doozaAdvantage: 'Simpler setup, AI employees, transparent pricing'
-        },
-        {
             name: 'Sintra AI Alternatives',
             slug: null,
             directLink: '/sintra-alternatives',
@@ -29,10 +23,11 @@ export default function AlternativesPage() {
             doozaAdvantage: 'No credits, personal onboarding, 7-day money-back guarantee'
         },
         {
-            name: 'Marblism',
-            slug: 'better-than-marblism',
-            tagline: 'Developer-focused, technical setup',
-            doozaAdvantage: 'No-code setup, instant AI team deployment'
+            name: 'Marblism Alternatives',
+            slug: null,
+            directLink: '/marblism-alternatives',
+            tagline: '7 alternatives compared — pricing, integrations, setup',
+            doozaAdvantage: 'No-code setup, free engineer onboarding, we build for you'
         },
         {
             name: 'Motion App',

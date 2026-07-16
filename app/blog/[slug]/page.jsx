@@ -7,8 +7,6 @@ import { dbToPost } from '../../../lib/blogTransform';
 import DynamicBlogContent from './DynamicBlogContent';
 
 // Import all blog post components
-import BetterThanSintraAIContent from './BetterThanSintraAIContent';
-import BetterThanMarblismContent from './BetterThanMarblismContent';
 import AIEmployeesTransformingBusinessContent from './AIEmployeesTransformingBusinessContent';
 import AiAgentsVsAgenticAiContent from './AiAgentsVsAgenticAiContent';
 import SurferSeoVsAhrefsContent from './SurferSeoVsAhrefsContent';
@@ -50,7 +48,6 @@ import AiChatbotWoocommerceContent from './AiChatbotWoocommerceContent';
 import AiForShopifyStoreContent from './AiForShopifyStoreContent';
 import DoozaItAndResellContent from './DoozaItAndResellContent';
 import BestAiChatbotShopifyContent from './BestAiChatbotShopifyContent';
-import BetterThanSintraAIAgentsContent from './BetterThanSintraAIAgentsContent';
 import RedditAgentDoozaWorkspaceGuideContent from './RedditAgentDoozaWorkspaceGuideContent';
 import ClaudeCoworkVsDoozaContent from './ClaudeCoworkVsDoozaContent';
 import PerplexityComputerVsDoozaContent from './PerplexityComputerVsDoozaContent';
@@ -68,8 +65,6 @@ import RevidAlternativeContent from './RevidAlternativeContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
-    'better-than-sintra-ai': BetterThanSintraAIContent,
-    'better-than-marblism': BetterThanMarblismContent,
     'ai-employees-transforming-small-business': AIEmployeesTransformingBusinessContent,
     'ai-agents-vs-agentic-ai': AiAgentsVsAgenticAiContent,
     'surfer-seo-vs-ahrefs': SurferSeoVsAhrefsContent,
@@ -111,7 +106,6 @@ const BLOG_COMPONENTS = {
     'ai-for-shopify-store': AiForShopifyStoreContent,
     'dooza-it-and-resell': DoozaItAndResellContent,
     'best-ai-chatbot-shopify': BestAiChatbotShopifyContent,
-    'better-than-sintra-ai-agents': BetterThanSintraAIAgentsContent,
     'reddit-agent-dooza-workspace-guide': RedditAgentDoozaWorkspaceGuideContent,
     'claude-cowork-vs-dooza': ClaudeCoworkVsDoozaContent,
     'perplexity-computer-vs-dooza': PerplexityComputerVsDoozaContent,

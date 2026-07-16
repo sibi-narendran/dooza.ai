@@ -19,7 +19,7 @@ export default function CompetitorAlternatives() {
                     {competitorAlternatives.map((item, idx) => (
                         <StaggerItem key={idx}>
                             <Link
-                                href={`/blog/${item.slug}`}
+                                href={item.href}
                                 className="group bg-white hover:bg-primary-50 border border-slate-100 hover:border-primary-200 rounded-2xl p-6 transition-all card-shadow hover:card-shadow-hover block"
                             >
                                 <div className="flex items-center justify-between mb-4">

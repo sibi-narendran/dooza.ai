@@ -88,6 +88,21 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/better-than-marblism',
+        destination: '/marblism-alternatives',
+        permanent: true,
+      },
+      {
+        source: '/blog/better-than-sintra-ai',
+        destination: '/sintra-alternatives',
+        permanent: true,
+      },
+      {
+        source: '/blog/better-than-sintra-ai-agents',
+        destination: '/sintra-alternatives',
+        permanent: true,
+      },
+      {
         source: '/blog/how-to-automate-your-business-with-ai',
         destination: '/blog/automate-business-processes',
         permanent: true,
