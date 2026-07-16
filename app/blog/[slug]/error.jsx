@@ -1,12 +1,21 @@
 'use client';
 
 import { useEffect } from 'react';
-import Link from 'next/link';
 
 export default function BlogError({ error, reset }) {
     useEffect(() => {
         console.error('Blog post error:', error);
     }, [error]);
+
+    // A full reload recovers from deployment skew (stale client JS after a new
+    // deploy), which a soft reset() cannot — it would retry with the same stale code.
+    const handleRetry = () => {
+        if (typeof window !== 'undefined') {
+            window.location.reload();
+        } else {
+            reset();
+        }
+    };
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center px-4">
@@ -37,17 +46,17 @@ export default function BlogError({ error, reset }) {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button
-                        onClick={() => reset()}
+                        onClick={handleRetry}
                         className="px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors"
                     >
                         Try Again
                     </button>
-                    <Link
+                    <a
                         href="/blog"
                         className="px-6 py-3 bg-white border border-slate-300 text-slate-700 font-semibold rounded-lg hover:bg-slate-50 transition-colors"
                     >
                         Browse Articles
-                    </Link>
+                    </a>
                 </div>
 
                 <p className="mt-8 text-sm text-slate-500">
