@@ -28,6 +28,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import VideoSection from '@/components/sections/VideoSection';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
+import AgentPromptBox from './AgentPromptBox';
 import FAQAccordion from '@/components/FAQAccordion';
 import { WORKFLOW_SIGNIN_URL, WORKFLOW_SIGNUP_URL } from '@/lib/links';
 import { SITE_URL } from '@/lib/site';
@@ -39,10 +40,10 @@ const workflowSigninUrl = WORKFLOW_SIGNIN_URL;
 
 export const metadata = {
     title: {
-        absolute: 'Dooza Agents | AI Agents and Workflow Automation',
+        absolute: 'Dooza Agents | AI Agent Builder for Marketing, Sales & Support',
     },
     description:
-        'Build visible, testable AI workflows with tool connections, approvals, traces, and governance controls in Dooza Agents.',
+        'Describe the agent you want and Dooza Agents builds it — AI agents that automate your marketing, sales, and support with approvals, traces, and governance controls.',
     keywords: [
         'Dooza Agents',
         'AI agents workflow',
@@ -115,24 +116,42 @@ const heroNodes = [
 
 const teamUseCases = [
     {
-        team: 'IT Ops',
-        action: 'Onboard new employees',
-        detail: 'Create accounts, request approvals, send welcome tasks, and log every step.',
-    },
-    {
-        team: 'Sec Ops',
-        action: 'Enrich incident tickets',
-        detail: 'Pull context from alerts, classify risk, route owners, and preserve the audit trail.',
-    },
-    {
-        team: 'Dev Ops',
-        action: 'Turn natural language into API calls',
-        detail: 'Translate requests into controlled actions with schema checks before execution.',
+        team: 'Customer Support',
+        action: 'Resolve tickets around the clock',
+        detail: 'Classify intent, draft on-brand replies, check order records, and escalate the sensitive cases to a human.',
     },
     {
         team: 'Sales',
-        action: 'Generate customer insights',
-        detail: 'Summarize reviews, calls, emails, and CRM notes into useful next steps.',
+        action: 'Get qualified leads daily',
+        detail: 'Research prospects, qualify inbound leads in minutes, follow up automatically, and book the meeting.',
+    },
+    {
+        team: 'Marketing',
+        action: 'Ship content on schedule',
+        detail: 'Repurpose long-form into posts, publish SEO content weekly, and keep every channel active.',
+    },
+    {
+        team: 'Ecommerce',
+        action: 'Recover revenue automatically',
+        detail: 'Win back abandoned carts, answer product questions instantly, and follow up on every missed order.',
+    },
+];
+
+const prebuiltAgents = [
+    {
+        title: 'Abandoned cart recovery agent',
+        detail: 'Watches your store, spots abandoned carts, and wins customers back with a personal, on-brand email at the right moment.',
+        steps: ['Cart abandoned', 'Customer context pulled', 'Personal email drafted', 'Sent or held for approval'],
+    },
+    {
+        title: 'Daily qualified leads agent',
+        detail: 'Researches your ideal customers every morning, qualifies them against your criteria, and delivers a ready-to-work list.',
+        steps: ['ICP defined once', 'Prospects researched daily', 'Leads scored + qualified', 'List delivered to CRM'],
+    },
+    {
+        title: 'YouTube to LinkedIn agent',
+        detail: 'Turns every video you publish into platform-native LinkedIn posts in your voice — drafted, scheduled, and reported.',
+        steps: ['New video detected', 'Transcript analyzed', 'Posts drafted in your voice', 'Scheduled after approval'],
     },
 ];
 
@@ -267,6 +286,11 @@ const faqData = [
         question: 'Does Dooza claim security certifications?',
         answer:
             'No certification claim is made here. This page describes controls and deployment patterns such as approvals, scoped access, logs, and review workflows.',
+    },
+    {
+        question: 'What happens after I describe my agent on this page?',
+        answer:
+            'Your agent brief is saved with your Dooza account context. Sign up free and the Dooza team uses your brief to set up the agent with you — connected to your tools, in draft-and-approve mode until it earns autonomy.',
     },
 ];
 
@@ -657,11 +681,14 @@ export default function WorkflowPage() {
                                 Dooza Agents
                             </div>
                             <h1 className="mb-7 max-w-4xl font-serif text-4xl font-extrabold leading-[1.04] tracking-tight text-slate-950 md:text-6xl lg:text-7xl">
-                                AI agents and workflows you can see and control
+                                AI agents that automate your marketing, sales, and support
                             </h1>
-                            <p className="mb-9 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
-                                Build visually, extend with code, connect to business tools, and trace every AI decision before it becomes action.
+                            <p className="mb-7 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
+                                Describe the agent you want in plain language. Dooza builds it with you — connected to your tools, with approvals on everything sensitive.
                             </p>
+                            <div className="mb-8 max-w-2xl">
+                                <AgentPromptBox signupUrl={workflowSignupUrl} />
+                            </div>
                             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                                 <a
                                     href={workflowSignupUrl}
@@ -693,6 +720,44 @@ export default function WorkflowPage() {
                 </section>
 
                 <VideoSection />
+
+                <section className="bg-warm px-4 py-20 md:py-24">
+                    <div className="mx-auto max-w-7xl">
+                        <div className="mb-12 max-w-3xl">
+                            <span className="section-label mb-4 block">Pre-built agents</span>
+                            <h2 className="mb-4 font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
+                                Start from an agent that already works
+                            </h2>
+                            <p className="text-lg leading-relaxed text-slate-600">
+                                Pick a proven agent, connect your tools, and go live in days — or describe your own above and we&apos;ll build it with you.
+                            </p>
+                        </div>
+                        <div className="grid gap-6 md:grid-cols-3">
+                            {prebuiltAgents.map((agent) => (
+                                <div key={agent.title} className="flex flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                                    <h3 className="mb-3 font-sans text-xl font-extrabold text-slate-950">{agent.title}</h3>
+                                    <p className="mb-5 text-sm leading-relaxed text-slate-600">{agent.detail}</p>
+                                    <div className="mb-6 grid gap-2">
+                                        {agent.steps.map((step, stepIndex) => (
+                                            <div key={step} className="flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-2">
+                                                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-700 text-[11px] font-bold text-white">{stepIndex + 1}</span>
+                                                <span className="text-xs font-semibold text-slate-700">{step}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <a
+                                        href={workflowSignupUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary-700 transition hover:text-primary-800"
+                                    >
+                                        Start with this agent <ArrowUpRight className="h-4 w-4" />
+                                    </a>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
 
                 <section className="border-y border-slate-200 bg-white px-4 py-8">
                     <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-4">
