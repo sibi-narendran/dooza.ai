@@ -563,7 +563,7 @@ function PitchSection({ page }) {
                             Speak to Founder
                         </BookDemoButton>
                         <Link
-                            href="/workflow"
+                            href="/agents"
                             className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-extrabold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-200 hover:bg-primary-50"
                         >
                             See Dooza Agents
@@ -676,7 +676,7 @@ export default function CustomerServiceToolPage({ page }) {
                                 Use the free calculator
                             </a>
                             <Link
-                                href="/workflow"
+                                href="/agents"
                                 className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-4 text-base font-black text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-200 hover:bg-primary-50"
                             >
                                 See Dooza Agents
