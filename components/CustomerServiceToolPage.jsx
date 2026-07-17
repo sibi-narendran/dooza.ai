@@ -408,7 +408,7 @@ function ToolPanel({ page }) {
                             <div className="text-xs font-black uppercase tracking-[0.16em] text-primary-200">Your report will include</div>
                             <div className="mt-3 grid gap-3 text-sm font-bold text-slate-100">
                                 <div className="flex items-center gap-2"><Clock3 className="h-4 w-4 text-primary-300" /> Hours and cost saved per month</div>
-                                <div className="flex items-center gap-2"><Workflow className="h-4 w-4 text-primary-300" /> First workflow to build in Dooza Agent</div>
+                                <div className="flex items-center gap-2"><Workflow className="h-4 w-4 text-primary-300" /> First workflow to build in Dooza Agents</div>
                                 <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary-300" /> Approval rules for risky support cases</div>
                             </div>
                         </div>
@@ -566,7 +566,7 @@ function PitchSection({ page }) {
                             href="/workflow"
                             className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-extrabold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-200 hover:bg-primary-50"
                         >
-                            See Dooza Agent
+                            See Dooza Agents
                             <ArrowRight className="h-4 w-4" />
                         </Link>
                     </div>
@@ -574,7 +574,7 @@ function PitchSection({ page }) {
                 <div className="grid gap-4">
                     {[
                         ['AI employee', 'Classifies tickets, drafts replies, summarizes threads, and suggests next actions.'],
-                        ['Dooza Agent', 'Connects inboxes, branches logic, asks for approvals, updates tools, and logs every run.'],
+                        ['Dooza Agents', 'Connects inboxes, branches logic, asks for approvals, updates tools, and logs every run.'],
                         ['Human control', 'Sensitive replies and record-changing actions can wait for approval before going out.'],
                     ].map(([title, text], index) => {
                         const icons = [Bot, Workflow, ShieldCheck];
@@ -679,7 +679,7 @@ export default function CustomerServiceToolPage({ page }) {
                                 href="/workflow"
                                 className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-4 text-base font-black text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-200 hover:bg-primary-50"
                             >
-                                See Dooza Agent
+                                See Dooza Agents
                                 <ArrowRight className="h-5 w-5" />
                             </Link>
                         </div>
@@ -694,7 +694,7 @@ export default function CustomerServiceToolPage({ page }) {
                             </div>
                             <div className="rounded-2xl border border-primary-100 bg-white/90 p-4 shadow-sm">
                                 <div className="text-xs font-black uppercase tracking-[0.14em] text-primary-700">Powered by</div>
-                                <div className="mt-1 text-sm font-extrabold text-slate-950">Dooza + Dooza Agent</div>
+                                <div className="mt-1 text-sm font-extrabold text-slate-950">Dooza + Dooza Agents</div>
                             </div>
                         </div>
                     </div>

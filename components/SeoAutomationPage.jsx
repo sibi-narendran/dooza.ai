@@ -174,7 +174,7 @@ function buildWorkflowPrompt(page, selected, inputs, result, controlPlan, estima
         .join('\n');
 
     return [
-        `Create a Dooza Agent for: ${result.workflow}`,
+        `Create a Dooza Agents automation for: ${result.workflow}`,
         '',
         `Page/tool: ${page.toolTitle}`,
         `Selected plan: ${Object.values(selected).join(' / ')}`,
@@ -237,7 +237,7 @@ function buildFullPlanText(page, selected, inputs, result, controlPlan, estimate
         'First week plan:',
         weekPlan,
         '',
-        'Dooza Agent build prompt:',
+        'Dooza Agents build prompt:',
         prompt,
     ].filter(Boolean).join('\n');
 }
@@ -516,7 +516,7 @@ function FreeAutomationTool({ page }) {
                         <div className="mb-3 flex items-center justify-between gap-3">
                             <div className="flex items-center gap-2 text-sm font-extrabold text-slate-950">
                                 <GitBranch className="h-4 w-4 text-primary-700" />
-                                Dooza Agent build prompt
+                                Dooza Agents build prompt
                             </div>
                             <button
                                 type="button"
@@ -535,7 +535,7 @@ function FreeAutomationTool({ page }) {
                     <div className="mt-4 flex items-start gap-2 rounded-2xl border border-primary-100 bg-white p-3">
                         <Settings2 className="mt-0.5 h-4 w-4 shrink-0 text-primary-700" />
                         <p className="text-xs font-semibold leading-relaxed text-slate-600">
-                            The copied output includes your inputs, estimate, workflow plan, rollout checklist, and a build prompt for Dooza Agent.
+                            The copied output includes your inputs, estimate, workflow plan, rollout checklist, and a build prompt for Dooza Agents.
                         </p>
                     </div>
                 </div>
@@ -639,7 +639,7 @@ export default function SeoAutomationPage({ page }) {
                                         href="/workflow"
                                         className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-4 text-base font-bold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-200 hover:bg-primary-50"
                                     >
-                                        See Dooza Agent <ArrowRight className="h-4 w-4" />
+                                        See Dooza Agents <ArrowRight className="h-4 w-4" />
                                     </Link>
                                 </div>
                             </div>
@@ -683,7 +683,7 @@ export default function SeoAutomationPage({ page }) {
                                 Practical workflows this can lead into
                             </h2>
                             <p className="text-lg leading-relaxed text-slate-600">
-                                The generated plan is designed to be simple enough to explain, then strong enough to demo in Dooza Agent.
+                                The generated plan is designed to be simple enough to explain, then strong enough to demo in Dooza Agents.
                             </p>
                         </div>
                         <div className="grid gap-3 sm:grid-cols-2">
@@ -702,7 +702,7 @@ export default function SeoAutomationPage({ page }) {
                         <SectionHeader
                             eyebrow="Trust and control"
                             title="Built for automation your team can actually trust"
-                            description="Dooza Agent keeps every step visible: what triggered, what AI decided, which apps changed, who approved it, and what happened next."
+                            description="Dooza Agents keeps every step visible: what triggered, what AI decided, which apps changed, who approved it, and what happened next."
                             dark
                         />
                         <div className="grid gap-5 md:grid-cols-3">

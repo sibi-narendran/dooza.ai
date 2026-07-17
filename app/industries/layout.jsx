@@ -2,7 +2,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
     title: 'AI Automation by Industry | Dooza',
-    description: 'Explore industry-specific Dooza Agent automation for stores, law firms, salons, contractors, real estate teams, healthcare practices, and other SMBs.',
+    description: 'Explore industry-specific Dooza Agents automation for stores, law firms, salons, contractors, real estate teams, healthcare practices, and other SMBs.',
     keywords: ['AI for healthcare', 'AI for real estate', 'AI for small business', 'AI for e-commerce', 'industry AI automation'],
     alternates: {
         canonical: `${SITE_URL}/industries`,

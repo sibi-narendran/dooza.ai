@@ -340,7 +340,7 @@ export default function AiStaffingContent() {
                                         <tr className="bg-slate-100">
                                             <th className="text-left p-4 font-bold text-slate-900">Role</th>
                                             <th className="text-left p-4 font-bold text-slate-900">Human Cost/mo</th>
-                                            <th className="text-left p-4 font-bold text-primary-700 bg-primary-50">Dooza Agent</th>
+                                            <th className="text-left p-4 font-bold text-primary-700 bg-primary-50">Dooza Agents</th>
                                             <th className="text-left p-4 font-bold text-primary-700 bg-primary-50">Dooza Cost/mo</th>
                                         </tr>
                                     </thead>

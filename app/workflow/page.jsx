@@ -39,12 +39,12 @@ const workflowSigninUrl = WORKFLOW_SIGNIN_URL;
 
 export const metadata = {
     title: {
-        absolute: 'Dooza Agent | AI Agents and Workflow Automation',
+        absolute: 'Dooza Agents | AI Agents and Workflow Automation',
     },
     description:
-        'Build visible, testable AI workflows with tool connections, approvals, traces, and governance controls in Dooza Agent.',
+        'Build visible, testable AI workflows with tool connections, approvals, traces, and governance controls in Dooza Agents.',
     keywords: [
-        'Dooza Agent',
+        'Dooza Agents',
         'AI agents workflow',
         'AI workflow automation',
         'workflow automation platform',
@@ -59,17 +59,17 @@ export const metadata = {
         canonical: pageUrl,
     },
     openGraph: {
-        title: 'Dooza Agent | AI Agents and Workflow Automation',
+        title: 'Dooza Agents | AI Agents and Workflow Automation',
         description:
             'Visual AI workflows with code depth, integrations, approvals, traces, and governance controls.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
-        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Agent' }],
+        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Agents' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Dooza Agent | AI Agents and Workflow Automation',
+        title: 'Dooza Agents | AI Agents and Workflow Automation',
         description:
             'Build AI agents and workflows your team can inspect, test, approve, and deploy.',
         images: [`${SITE_URL}/logo.png`],
@@ -244,19 +244,19 @@ const feedbackLoops = [
 
 const faqData = [
     {
-        question: 'What is Dooza Agent?',
+        question: 'What is Dooza Agents?',
         answer:
-            'Dooza Agent is the automation layer for Dooza AI employees. It helps teams connect tools, run routines, add approvals, inspect reasoning, and move business work across systems.',
+            'Dooza Agents is the automation layer for Dooza AI employees. It helps teams connect tools, run routines, add approvals, inspect reasoning, and move business work across systems.',
     },
     {
-        question: 'Is Dooza Agent the same as Dooza?',
+        question: 'Is Dooza Agents the same as Dooza?',
         answer:
-            'No. Dooza is the AI employee experience. Dooza Agent is the visual and programmable automation layer used to connect tools, run routines, and control multi-step processes.',
+            'No. Dooza is the AI employee experience. Dooza Agents is the visual and programmable automation layer used to connect tools, run routines, and control multi-step processes.',
     },
     {
         question: 'Can technical teams use code?',
         answer:
-            'Yes. Dooza Agent is designed for a visual building experience with deeper code, webhook, API, and data transformation paths when teams need more control.',
+            'Yes. Dooza Agents is designed for a visual building experience with deeper code, webhook, API, and data transformation paths when teams need more control.',
     },
     {
         question: 'Can non-technical teams use it?',
@@ -276,7 +276,7 @@ const schemas = [
     {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Dooza Agent',
+        name: 'Dooza Agents',
         url: pageUrl,
         description: metadata.description,
         isPartOf: {
@@ -286,7 +286,7 @@ const schemas = [
         },
         about: [
             { '@type': 'Thing', name: 'AI workflow automation' },
-            { '@type': 'Thing', name: 'Dooza Agent' },
+            { '@type': 'Thing', name: 'Dooza Agents' },
             ...capabilityCards.map((item) => ({ '@type': 'Thing', name: item.title })),
             ...governanceItems.map((item) => ({ '@type': 'Thing', name: item.title })),
             ...enterpriseControls.map((item) => ({ '@type': 'Thing', name: item })),
@@ -314,7 +314,7 @@ const schemas = [
         '@type': 'BreadcrumbList',
         itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-            { '@type': 'ListItem', position: 2, name: 'Dooza Agent', item: pageUrl },
+            { '@type': 'ListItem', position: 2, name: 'Dooza Agents', item: pageUrl },
         ],
     },
 ];
@@ -654,7 +654,7 @@ export default function WorkflowPage() {
                         <div className="hero-entrance">
                             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/80 px-4 py-2 text-sm font-bold text-primary-700 shadow-sm backdrop-blur">
                                 <Sparkles className="h-4 w-4" />
-                                Dooza Agent
+                                Dooza Agents
                             </div>
                             <h1 className="mb-7 max-w-4xl font-serif text-4xl font-extrabold leading-[1.04] tracking-tight text-slate-950 md:text-6xl lg:text-7xl">
                                 AI agents and workflows you can see and control
@@ -789,7 +789,7 @@ export default function WorkflowPage() {
                                 Build complex AI without getting boxed in
                             </h2>
                             <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-600">
-                                Dooza Agent is built for practical business automation: AI employees, retrieval, approvals, code steps, APIs, and deployment paths that can grow with your team.
+                                Dooza Agents is built for practical business automation: AI employees, retrieval, approvals, code steps, APIs, and deployment paths that can grow with your team.
                             </p>
                             <div className="grid gap-3">
                                 {complexAiItems.map((item) => (
@@ -934,7 +934,7 @@ export default function WorkflowPage() {
                                 Compliance-ready workflow patterns
                             </h2>
                             <p className="text-lg leading-relaxed text-slate-600">
-                                Use Dooza Agent to design approval, logging, privacy, and evidence flows that support formal security and privacy reviews.
+                                Use Dooza Agents to design approval, logging, privacy, and evidence flows that support formal security and privacy reviews.
                             </p>
                         </div>
                         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -1034,7 +1034,7 @@ export default function WorkflowPage() {
                     <div className="mx-auto max-w-3xl">
                         <div className="mb-10 text-center">
                             <span className="section-label mb-4 block">FAQ</span>
-                            <h2 className="font-serif text-3xl font-bold md:text-5xl">Dooza Agent questions</h2>
+                            <h2 className="font-serif text-3xl font-bold md:text-5xl">Dooza Agents questions</h2>
                         </div>
                         <FAQAccordion items={faqData} />
                     </div>

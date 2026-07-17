@@ -36,7 +36,7 @@ export const metadata = {
         absolute: 'Customer Support Automation Agency for AI Workflows | Dooza',
     },
     description:
-        'Dooza builds customer support automation with AI employees and Dooza Agent for triage, drafted replies, approvals, routing, tool updates, and reporting.',
+        'Dooza builds customer support automation with AI employees and Dooza Agents for triage, drafted replies, approvals, routing, tool updates, and reporting.',
     keywords: [
         'customer support automation agency',
         'customer service automation agency',
@@ -63,7 +63,7 @@ export const metadata = {
     openGraph: {
         title: 'Customer Support Automation Agency for AI Workflows | Dooza',
         description:
-            'Automate support triage, replies, routing, approvals, CRM updates, and follow-ups with Dooza and Dooza Agent.',
+            'Automate support triage, replies, routing, approvals, CRM updates, and follow-ups with Dooza and Dooza Agents.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -173,7 +173,7 @@ const comparisonRows = [
     },
     {
         label: 'Dooza',
-        desc: 'Combines AI employees, Dooza Agent, integrations, approvals, and reporting into one support automation system.',
+        desc: 'Combines AI employees, Dooza Agents, integrations, approvals, and reporting into one support automation system.',
     },
 ];
 
@@ -186,12 +186,12 @@ const faqData = [
     {
         question: 'Is Dooza just a chatbot?',
         answer:
-            'No. Dooza can answer and draft messages, but Dooza Agent also routes tickets, updates systems, asks for approvals, logs actions, and triggers follow-ups across your business tools.',
+            'No. Dooza can answer and draft messages, but Dooza Agents also routes tickets, updates systems, asks for approvals, logs actions, and triggers follow-ups across your business tools.',
     },
     {
         question: 'Which tools can this connect to?',
         answer:
-            'Dooza Agent can connect common support tools such as Gmail, Slack, forms, CRMs, spreadsheets, helpdesks, webhooks, databases, and many other business apps.',
+            'Dooza Agents can connect common support tools such as Gmail, Slack, forms, CRMs, spreadsheets, helpdesks, webhooks, databases, and many other business apps.',
     },
     {
         question: 'Will AI send customer replies without review?',
@@ -226,7 +226,7 @@ const schemas = [
             { '@type': 'Thing', name: 'customer support automation agency' },
             { '@type': 'Thing', name: 'AI customer support automation' },
             { '@type': 'Thing', name: 'support workflow automation' },
-            { '@type': 'Thing', name: 'Dooza Agent' },
+            { '@type': 'Thing', name: 'Dooza Agents' },
         ],
         publisher: {
             '@type': 'Organization',
@@ -252,7 +252,7 @@ const schemas = [
             name: 'Worldwide',
         },
         description:
-            'Done-for-you customer support automation using Dooza AI employees and Dooza Agent for triage, replies, routing, approvals, and tool updates.',
+            'Done-for-you customer support automation using Dooza AI employees and Dooza Agents for triage, replies, routing, approvals, and tool updates.',
         hasOfferCatalog: {
             '@type': 'OfferCatalog',
             name: 'Support Automation Sprint',
@@ -464,7 +464,7 @@ export default function CustomerSupportAutomationAgencyPage() {
                                 Customer support automation agency that builds the system for you
                             </h1>
                             <p className="mb-9 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
-                                Dooza combines AI employees with Dooza Agent to automate repetitive support questions, triage urgent issues, draft replies, update your tools, and keep humans in control.
+                                Dooza combines AI employees with Dooza Agents to automate repetitive support questions, triage urgent issues, draft replies, update your tools, and keep humans in control.
                             </p>
                             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                                 <BookDemoButton source="support_automation_hero" variant="primary" size="xl">
@@ -474,7 +474,7 @@ export default function CustomerSupportAutomationAgencyPage() {
                                     href="/workflow"
                                     className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-4 text-base font-bold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-200 hover:bg-primary-50"
                                 >
-                                    See Dooza Agent <ArrowRight className="h-4 w-4" />
+                                    See Dooza Agents <ArrowRight className="h-4 w-4" />
                                 </Link>
                             </div>
 
@@ -573,9 +573,9 @@ export default function CustomerSupportAutomationAgencyPage() {
                 <section className="px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
                         <SectionHeader
-                            eyebrow="Dooza + Dooza Agent"
+                            eyebrow="Dooza + Dooza Agents"
                             title="AI replies are only one part of the system"
-                            description="Dooza handles the support thinking. Dooza Agent handles the routing, approvals, records, tool actions, and evidence trail."
+                            description="Dooza handles the support thinking. Dooza Agents handles the routing, approvals, records, tool actions, and evidence trail."
                         />
                         <div className="grid gap-6 lg:grid-cols-2">
                             <div className="card-interactive group rounded-[28px] border border-slate-100 bg-white p-6 shadow-sm transition-all hover:border-primary-100 hover:shadow-lg md:p-8">
@@ -591,7 +591,7 @@ export default function CustomerSupportAutomationAgencyPage() {
                                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-700 transition-transform group-hover:scale-110">
                                     <Workflow className="h-6 w-6" />
                                 </div>
-                                <h3 className="font-sans text-2xl font-extrabold text-slate-950">Dooza Agent</h3>
+                                <h3 className="font-sans text-2xl font-extrabold text-slate-950">Dooza Agents</h3>
                                 <p className="mt-4 text-base leading-relaxed text-slate-600">
                                     Connect apps, branch tickets, request human approval, update records, create tasks, and log what happened.
                                 </p>
@@ -690,7 +690,7 @@ export default function CustomerSupportAutomationAgencyPage() {
                             Bring us your support inbox. We will show what can be automated.
                         </h2>
                         <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-slate-600">
-                            In 20 minutes, we can identify the first support workflow worth automating and show how Dooza plus Dooza Agent would handle it.
+                            In 20 minutes, we can identify the first support workflow worth automating and show how Dooza plus Dooza Agents would handle it.
                         </p>
                         <BookDemoButton source="support_automation_final" variant="primary" size="xl">
                             Book a Support Automation Audit
