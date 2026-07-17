@@ -106,9 +106,6 @@ export default function PrebuiltAgents() {
                     >
                         Explore agents for free <ArrowRight className="h-4 w-4" />
                     </a>
-                    <p className="mt-4 text-sm font-semibold text-slate-500">
-                        Free pilot: your first agent is set up free by a Dooza engineer — live in days.
-                    </p>
                 </div>
             </div>
         </section>

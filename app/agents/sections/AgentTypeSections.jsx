@@ -22,9 +22,6 @@ function PrimaryCta() {
             >
                 Get started free <ArrowRight className="h-4 w-4" />
             </a>
-            <p className="mt-3 text-sm font-semibold text-slate-500">
-                Free pilot: a Dooza engineer builds your first agent. Pay only if you keep it.
-            </p>
         </div>
     );
 }

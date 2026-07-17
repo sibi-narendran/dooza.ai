@@ -39,9 +39,6 @@ export default function AgentBuilder() {
                         >
                             Build your agent <ArrowRight className="h-4 w-4" />
                         </a>
-                        <p className="mt-3 text-sm font-semibold text-slate-500">
-                            Free pilot: we build your first agent free. Pay only if you keep it.
-                        </p>
                     </div>
                 </div>
                 <div className="scroll-reveal">

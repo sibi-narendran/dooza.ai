@@ -9,7 +9,6 @@ import PrebuiltAgents from './sections/PrebuiltAgents';
 import AgentBuilder from './sections/AgentBuilder';
 import PlatformTabs from './sections/PlatformTabs';
 import AgentTypeSections from './sections/AgentTypeSections';
-import FreePilotCta from './sections/FreePilotCta';
 import FaqSection from './sections/FaqSection';
 import PricingCta from './sections/PricingCta';
 
@@ -61,11 +60,6 @@ const faqData = [
         question: 'What is Dooza Agents?',
         answer:
             'Dooza Agents is an AI-powered agent builder designed to automate inbound sales, support, and marketing processes. It can fully automate workflows, handling tasks end-to-end without manual input.',
-    },
-    {
-        question: 'Is the free pilot really free?',
-        answer:
-            'Yes. A Dooza engineer builds your first agent for free and puts it live on your real work. Use it, see the results, and pay only if you want to keep it. No contracts.',
     },
     {
         question: 'Is Dooza Agents an AI chatbot?',
@@ -148,7 +142,6 @@ export default function AgentsPage() {
                 <AgentBuilder />
                 <PlatformTabs />
                 <AgentTypeSections />
-                <FreePilotCta />
                 <FaqSection items={faqData} />
                 <PricingCta />
             </main>

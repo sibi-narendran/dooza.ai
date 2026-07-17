@@ -89,14 +89,14 @@ export default function AgentPromptBox({ signupUrl }) {
                     &ldquo;{prompt.trim().slice(0, 140)}{prompt.trim().length > 140 ? '…' : ''}&rdquo;
                 </p>
                 <p className="mb-5 text-base font-semibold text-slate-900">
-                    Book a free setup meeting and a Dooza engineer will turn it into a working agent with you.
+                    Book a meeting and a Dooza engineer will turn it into a working agent with you.
                 </p>
                 <button
                     type="button"
                     onClick={() => { trackDemoClick('agents_prompt_saved_card'); openModal(); }}
                     className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-700 px-6 py-3.5 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800 sm:w-auto"
                 >
-                    <Calendar className="h-4 w-4" /> Book my free setup
+                    <Calendar className="h-4 w-4" /> Book a meeting
                 </button>
             </div>
         );
