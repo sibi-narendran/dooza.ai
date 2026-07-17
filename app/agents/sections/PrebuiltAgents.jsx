@@ -42,7 +42,7 @@ export default function PrebuiltAgents() {
     return (
         <section className="bg-warm px-4 py-20 md:px-8 md:py-24">
             <div className="mx-auto max-w-7xl">
-                <div className="mb-12 max-w-3xl">
+                <div className="scroll-reveal mb-12 max-w-3xl">
                     <span className="section-label mb-4 block">Pre-built agents</span>
                     <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
                         Pre-built agents hub for you
@@ -51,11 +51,11 @@ export default function PrebuiltAgents() {
                         We did the tedious task of building an agent. Let them work for you.
                     </p>
                 </div>
-                <div className="grid gap-6 md:grid-cols-3">
+                <div className="scroll-stagger grid gap-6 md:grid-cols-3">
                     {cards.map((card) => (
+                        <div key={card.title} className="reveal-child">
                         <div
-                            key={card.title}
-                            className="flex flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                            className="group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-100/50"
                         >
                             <div className="mb-5 flex items-center">
                                 {card.icons.map((icon) => (
@@ -93,6 +93,7 @@ export default function PrebuiltAgents() {
                             >
                                 Use this agent <ArrowUpRight className="h-4 w-4" />
                             </a>
+                        </div>
                         </div>
                     ))}
                 </div>

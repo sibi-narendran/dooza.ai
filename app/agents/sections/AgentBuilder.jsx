@@ -12,16 +12,16 @@ export default function AgentBuilder() {
     return (
         <section className="bg-white px-4 py-20 md:px-8 md:py-24">
             <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-                <div>
-                    <span className="section-label mb-4 block">AI agent builder</span>
+                <div className="scroll-reveal">
+                    <span className="section-label mb-4 block">Build your own</span>
                     <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
                         AI agent builder
                     </h2>
-                    <div className="mt-8 grid gap-3">
+                    <div className="scroll-stagger mt-8 grid gap-3">
                         {bullets.map((bullet) => (
                             <div
                                 key={bullet}
-                                className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-warm p-4 shadow-sm"
+                                className="reveal-child flex items-start gap-3 rounded-2xl border border-slate-100 bg-warm p-4 shadow-sm transition duration-300 hover:border-primary-200"
                             >
                                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
                                 <span className="text-sm font-semibold leading-relaxed text-slate-700">
@@ -41,14 +41,22 @@ export default function AgentBuilder() {
                         </a>
                     </div>
                 </div>
-                <div className="rounded-[28px] border border-slate-200 bg-warm p-4 shadow-xl shadow-slate-200/60">
-                    <Image
-                        src="/agents/deepagent/builder.webp"
-                        width={2080}
-                        height={1743}
-                        alt="Voice and text to agent builder"
-                        className="h-auto w-full rounded-2xl"
-                    />
+                <div className="scroll-reveal overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-xl shadow-slate-200/60 transition duration-300 hover:shadow-2xl hover:shadow-primary-100/50">
+                    <div className="flex items-center gap-1.5 border-b border-slate-100 bg-slate-50/80 px-5 py-3">
+                        <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                        <span className="ml-3 text-xs font-semibold text-slate-400">Agent builder</span>
+                    </div>
+                    <div className="bg-warm p-4">
+                        <Image
+                            src="/agents/deepagent/builder.webp"
+                            width={2080}
+                            height={1743}
+                            alt="Voice and text to agent builder"
+                            className="h-auto w-full rounded-2xl"
+                        />
+                    </div>
                 </div>
             </div>
         </section>

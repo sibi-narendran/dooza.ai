@@ -4,8 +4,16 @@ import BookDemoButton from '@/components/buttons/BookDemoButton';
 
 export default function PricingCta() {
     return (
-        <section className="bg-white px-4 py-20 md:py-24">
-            <div className="mx-auto max-w-4xl rounded-[32px] border border-primary-100 bg-warm p-8 text-center shadow-xl shadow-primary-100/40 md:p-12">
+        <section className="relative overflow-hidden bg-white px-4 py-20 md:py-24">
+            <div
+                className="animate-blob pointer-events-none absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-primary-100/40 blur-3xl"
+                aria-hidden="true"
+            />
+            <div
+                className="animate-blob animation-delay-2000 pointer-events-none absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-primary-50/60 blur-3xl"
+                aria-hidden="true"
+            />
+            <div className="scroll-reveal relative z-10 mx-auto max-w-4xl rounded-[32px] border border-primary-100 bg-warm p-8 text-center shadow-xl shadow-primary-100/40 md:p-12">
                 <span className="section-label mb-4 block">Pricing</span>
                 <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
                     Choose the plan that works for you

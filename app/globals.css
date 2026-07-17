@@ -657,3 +657,25 @@ img, video {
     transform: none !important;
   }
 }
+
+/* ============================================================
+   Agents page — tab panel switch + logo marquee
+   ============================================================ */
+@keyframes tab-panel-fade {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.tab-panel-enter {
+  animation: tab-panel-fade 0.4s ease both;
+}
+
+.logo-marquee {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab-panel-enter {
+    animation: none !important;
+  }
+}
