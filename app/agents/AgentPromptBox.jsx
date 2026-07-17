@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowRight, ArrowUp, CheckCircle2, Loader2, Sparkles } from 'lucide-react';
 
 const SUGGESTIONS = [
@@ -10,10 +10,50 @@ const SUGGESTIONS = [
     'Turn YouTube videos into LinkedIn posts',
 ];
 
+const TYPED_EXAMPLES = [
+    'Watch my Shopify store and win back abandoned carts with a personal email…',
+    'Get me 20 qualified leads every morning and follow up in my voice…',
+    'Answer my support inbox 24/7 and escalate anything sensitive to me…',
+    'Turn every YouTube video I publish into LinkedIn posts…',
+];
+
+const TYPE_SPEED_MS = 42;
+const DELETE_SPEED_MS = 18;
+const HOLD_FULL_MS = 1700;
+
 export default function AgentPromptBox({ signupUrl }) {
     const [prompt, setPrompt] = useState('');
     const [status, setStatus] = useState('idle'); // idle | sending | saved | error
     const [errorMessage, setErrorMessage] = useState('');
+
+    // Typed-placeholder animation: cycles example briefs until the user focuses the box.
+    const [interacted, setInteracted] = useState(false);
+    const [typed, setTyped] = useState('');
+    const [exampleIndex, setExampleIndex] = useState(0);
+    const [deleting, setDeleting] = useState(false);
+
+    useEffect(() => {
+        if (interacted) return undefined;
+        const phrase = TYPED_EXAMPLES[exampleIndex];
+        let timer;
+        if (!deleting) {
+            if (typed.length < phrase.length) {
+                timer = setTimeout(() => setTyped(phrase.slice(0, typed.length + 1)), TYPE_SPEED_MS);
+            } else {
+                timer = setTimeout(() => setDeleting(true), HOLD_FULL_MS);
+            }
+        } else if (typed.length > 0) {
+            timer = setTimeout(() => setTyped(phrase.slice(0, typed.length - 1)), DELETE_SPEED_MS);
+        } else {
+            setDeleting(false);
+            setExampleIndex((exampleIndex + 1) % TYPED_EXAMPLES.length);
+        }
+        return () => clearTimeout(timer);
+    }, [typed, deleting, exampleIndex, interacted]);
+
+    const placeholder = interacted
+        ? 'e.g. Watch my Shopify store and win back abandoned carts with a personal email'
+        : `${typed}▍`;
 
     const submit = async () => {
         const trimmed = prompt.trim();
@@ -48,7 +88,7 @@ export default function AgentPromptBox({ signupUrl }) {
 
     if (status === 'saved') {
         return (
-            <div className="rounded-3xl border border-primary-100 bg-white p-6 shadow-lg shadow-primary-100/40">
+            <div className="rounded-3xl border-2 border-primary-200 bg-white p-7 text-left shadow-2xl shadow-primary-100/60">
                 <div className="mb-3 flex items-center gap-2 text-primary-700">
                     <CheckCircle2 className="h-5 w-5" />
                     <span className="text-sm font-bold">Your agent brief is saved</span>
@@ -72,20 +112,21 @@ export default function AgentPromptBox({ signupUrl }) {
     }
 
     return (
-        <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-lg shadow-slate-200/60">
+        <div className="rounded-3xl border-2 border-primary-200 bg-white p-5 text-left shadow-2xl shadow-primary-100/60 md:p-6">
             <div className="mb-3 flex items-center gap-2 text-slate-500">
                 <Sparkles className="h-4 w-4 text-primary-600" />
                 <span className="text-xs font-bold uppercase tracking-wide">Describe your agent</span>
             </div>
-            <div className="flex items-end gap-2 rounded-2xl border border-slate-200 bg-slate-50 p-3 focus-within:border-primary-300 focus-within:ring-4 focus-within:ring-primary-50">
+            <div className="flex items-end gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 focus-within:border-primary-300 focus-within:ring-4 focus-within:ring-primary-50">
                 <textarea
                     value={prompt}
                     onChange={(event) => setPrompt(event.target.value)}
+                    onFocus={() => setInteracted(true)}
                     onKeyDown={onKeyDown}
-                    rows={2}
+                    rows={3}
                     maxLength={2000}
-                    placeholder="e.g. Watch my Shopify store and win back abandoned carts with a personal email"
-                    className="max-h-40 w-full resize-none bg-transparent text-sm leading-relaxed text-slate-900 outline-none placeholder:text-slate-400"
+                    placeholder={placeholder}
+                    className="max-h-44 w-full resize-none bg-transparent text-base leading-relaxed text-slate-900 outline-none placeholder:text-slate-400"
                     aria-label="Describe the AI agent you want"
                 />
                 <button
@@ -93,21 +134,21 @@ export default function AgentPromptBox({ signupUrl }) {
                     onClick={submit}
                     disabled={prompt.trim().length < 3 || status === 'sending'}
                     aria-label="Save agent brief"
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-700 text-white shadow-md transition hover:bg-primary-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-700 text-white shadow-md transition hover:bg-primary-800 disabled:cursor-not-allowed disabled:bg-slate-300"
                 >
-                    {status === 'sending' ? <Loader2 className="h-4 w-4 animate-spin" /> : <ArrowUp className="h-4 w-4" />}
+                    {status === 'sending' ? <Loader2 className="h-5 w-5 animate-spin" /> : <ArrowUp className="h-5 w-5" />}
                 </button>
             </div>
             {status === 'error' && (
                 <p className="mt-2 text-xs font-semibold text-red-600">{errorMessage}</p>
             )}
-            <div className="mt-3 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap justify-center gap-2">
                 {SUGGESTIONS.map((suggestion) => (
                     <button
                         key={suggestion}
                         type="button"
-                        onClick={() => setPrompt(suggestion)}
-                        className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-600 transition hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700"
+                        onClick={() => { setInteracted(true); setPrompt(suggestion); }}
+                        className="rounded-full border border-slate-200 bg-white px-3.5 py-2 text-xs font-semibold text-slate-600 transition hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700"
                     >
                         {suggestion} ↑
                     </button>

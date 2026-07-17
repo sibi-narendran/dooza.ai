@@ -674,22 +674,22 @@ export default function WorkflowPage() {
             <main id="main-content" className="bg-warm text-slate-900">
                 <section className="relative overflow-hidden px-4 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40">
                     <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#0f172a0a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a0a_1px,transparent_1px)] bg-[size:28px_28px]" />
-                    <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.86fr_1.14fr]">
-                        <div className="hero-entrance">
+                    <div className="relative z-10 mx-auto max-w-7xl">
+                        <div className="hero-entrance mx-auto flex max-w-4xl flex-col items-center text-center">
                             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/80 px-4 py-2 text-sm font-bold text-primary-700 shadow-sm backdrop-blur">
                                 <Sparkles className="h-4 w-4" />
                                 Dooza Agents
                             </div>
-                            <h1 className="mb-7 max-w-4xl font-serif text-4xl font-extrabold leading-[1.04] tracking-tight text-slate-950 md:text-6xl lg:text-7xl">
+                            <h1 className="mb-6 font-serif text-4xl font-extrabold leading-[1.06] tracking-tight text-slate-950 md:text-6xl">
                                 AI agents that automate your marketing, sales, and support
                             </h1>
-                            <p className="mb-7 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
+                            <p className="mb-9 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
                                 Describe the agent you want in plain language. Dooza builds it with you — connected to your tools, with approvals on everything sensitive.
                             </p>
-                            <div className="mb-8 max-w-2xl">
+                            <div className="mb-8 w-full max-w-3xl">
                                 <AgentPromptBox signupUrl={workflowSignupUrl} />
                             </div>
-                            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                            <div className="flex flex-col items-center gap-4 sm:flex-row">
                                 <a
                                     href={workflowSignupUrl}
                                     target="_blank"
@@ -703,7 +703,7 @@ export default function WorkflowPage() {
                                 </BookDemoButton>
                             </div>
 
-                            <div className="mt-10 grid max-w-2xl gap-3 rounded-3xl border border-white/80 bg-white/75 p-3 shadow-sm backdrop-blur sm:grid-cols-3">
+                            <div className="mt-10 grid w-full max-w-2xl gap-3 rounded-3xl border border-white/80 bg-white/75 p-3 shadow-sm backdrop-blur sm:grid-cols-3">
                                 {heroStats.map((stat) => (
                                     <div key={stat.label} className="rounded-2xl bg-white px-3 py-4 text-center shadow-sm">
                                         <div className="text-xl font-extrabold text-slate-950 md:text-2xl">{stat.value}</div>
@@ -713,7 +713,7 @@ export default function WorkflowPage() {
                             </div>
                         </div>
 
-                        <div className="hero-entrance-right">
+                        <div className="hero-entrance-right mx-auto mt-16 max-w-5xl">
                             <HeroWorkflowCanvas />
                         </div>
                     </div>
