@@ -118,7 +118,7 @@ const platformProducts = [
     },
     {
         icon: Workflow,
-        title: 'Dooza Workflow',
+        title: 'Dooza Agent',
         href: '/workflow',
         desc: 'Approvals and logs that keep every automation under control.',
     },

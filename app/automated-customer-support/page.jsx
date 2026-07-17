@@ -110,7 +110,7 @@ const managedFeatures = [
     'All AI employees included',
     '84 hours of done-for-you work capacity',
     'Complete setup handled by our team',
-    'Dooza Workflow connected for writing workflows',
+    'Dooza Agent connected for writing workflows',
     'Priority workflow setup and review',
     '1,000+ app integrations',
     'Connect Shopify, Zendesk, Freshdesk, and more',

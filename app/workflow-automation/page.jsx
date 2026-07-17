@@ -29,7 +29,7 @@ const pageUrl = `${SITE_URL}/workflow-automation`;
 
 export const metadata = {
     title: {
-        absolute: 'Dooza Workflow Automation | The #1 Zapier Alternative with AI',
+        absolute: 'Dooza Agent Automation | The #1 Zapier Alternative with AI',
     },
     description:
         'Build AI-powered workflows that automate your business. 300+ integrations, visual builder, and AI agents. Save 70% compared to Zapier. Start free.',
@@ -52,16 +52,16 @@ export const metadata = {
         googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
     },
     openGraph: {
-        title: 'Dooza Workflow Automation | The #1 Zapier Alternative with AI',
+        title: 'Dooza Agent Automation | The #1 Zapier Alternative with AI',
         description: 'Build AI-powered workflows with 300+ integrations. Visual builder, AI agents, and human-in-the-loop controls. Save 70% vs Zapier.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
-        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Workflow Automation' }],
+        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Agent Automation' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Dooza Workflow Automation | The #1 Zapier Alternative with AI',
+        title: 'Dooza Agent Automation | The #1 Zapier Alternative with AI',
         description: 'Build AI-powered workflows with 300+ integrations. Visual builder, AI agents, and human-in-the-loop controls.',
         images: [`${SITE_URL}/logo.png`],
     },
@@ -140,8 +140,8 @@ const integrationRows = [
 
 const faqData = [
     {
-        question: 'What is Dooza Workflow?',
-        answer: 'Dooza Workflow is an AI-powered automation platform that connects your business tools and runs intelligent workflows. It combines a visual builder with AI agents that can classify, draft, decide, and act on your behalf.',
+        question: 'What is Dooza Agent?',
+        answer: 'Dooza Agent is an AI-powered automation platform that connects your business tools and runs intelligent workflows. It combines a visual builder with AI agents that can classify, draft, decide, and act on your behalf.',
     },
     {
         question: 'How is Dooza different from Zapier?',
@@ -149,7 +149,7 @@ const faqData = [
     },
     {
         question: 'How many integrations are available?',
-        answer: 'Dooza Workflow supports 300+ integrations including Gmail, Slack, Salesforce, HubSpot, Shopify, Stripe, and more. You can also connect any API through webhooks and custom code.',
+        answer: 'Dooza Agent supports 300+ integrations including Gmail, Slack, Salesforce, HubSpot, Shopify, Stripe, and more. You can also connect any API through webhooks and custom code.',
     },
     {
         question: 'Can I migrate my Zapier workflows?',
@@ -157,7 +157,7 @@ const faqData = [
     },
     {
         question: 'Is there a free plan?',
-        answer: 'Yes. Dooza Workflow offers a free plan with up to 5 workflows and 100 executions per month. No credit card required to get started.',
+        answer: 'Yes. Dooza Agent offers a free plan with up to 5 workflows and 100 executions per month. No credit card required to get started.',
     },
 ];
 
@@ -165,7 +165,7 @@ const schemas = [
     {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Dooza Workflow Automation',
+        name: 'Dooza Agent Automation',
         url: pageUrl,
         description: metadata.description,
         isPartOf: { '@type': 'WebSite', name: 'Dooza', url: SITE_URL },
@@ -180,7 +180,7 @@ const schemas = [
     {
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'Dooza Workflow',
+        name: 'Dooza Agent',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         url: pageUrl,

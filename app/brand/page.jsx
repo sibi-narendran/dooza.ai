@@ -57,7 +57,7 @@ const colors = [
 
 const boilerplate = {
     oneLiner: 'Dooza provides forward deployed AI engineers who set up AI employees for small businesses — free to start, pay only to keep it.',
-    paragraph: 'Dooza is a forward deployed AI engineering company. A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it — built on Dooza’s own platform: Dooza Workforce (AI employees for email, social, SEO, leads, and calls) and Dooza Workflow (approvals, traces, and tests that keep automation under control). Setup is free; businesses pay only to keep what works. Dooza.ai is a product of Adam Laboratory Inc., a Delaware C-Corporation.',
+    paragraph: 'Dooza is a forward deployed AI engineering company. A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it — built on Dooza’s own platform: Dooza Workforce (AI employees for email, social, SEO, leads, and calls) and Dooza Agent (approvals, traces, and tests that keep automation under control). Setup is free; businesses pay only to keep what works. Dooza.ai is a product of Adam Laboratory Inc., a Delaware C-Corporation.',
 };
 
 function SectionTitle({ children, sub }) {
@@ -175,7 +175,7 @@ export default function BrandPage() {
                                 <Link href="/workforce" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai/workforce →</Link>
                             </div>
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Workflow</h3>
+                                <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Agent</h3>
                                 <p className="mt-1 text-sm leading-relaxed text-slate-600">Approvals and logs that keep every automation under control.</p>
                                 <Link href="/workflow" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai/workflow →</Link>
                             </div>

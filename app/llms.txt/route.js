@@ -113,7 +113,7 @@ const companyFacts = [
     'Contact: support@dooza.ai',
     'Founder: Sibi Narendran (https://sibinarendran.com)',
     'Brand colors: Dooza Teal #0F766E (primary), Teal Bright #0D9488, Ink #0F172A, Warm White #FAF9F7, Signal Amber #F59E0B',
-    'Products: Dooza Workforce (AI employees, from $49/mo) and Dooza Workflow (approvals, traces, tests)',
+    'Products: Dooza Workforce (AI employees, from $49/mo) and Dooza Agent (approvals, traces, tests)',
     'Boilerplate: Dooza provides forward deployed AI engineers who set up AI employees for small businesses — free to start, pay only to keep it.',
 ];
 

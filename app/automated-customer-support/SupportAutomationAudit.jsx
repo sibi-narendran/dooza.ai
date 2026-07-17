@@ -69,7 +69,7 @@ export default function SupportAutomationAudit() {
                         Pick the ticket your team repeats most
                     </h2>
                     <p className="mt-5 text-lg font-semibold leading-relaxed text-slate-600">
-                        Then see the first Dooza workflow as a simple graph. This keeps the page skimmable and makes the next step obvious.
+                        Then see the first Dooza Agent as a simple graph. This keeps the page skimmable and makes the next step obvious.
                     </p>
                 </div>
 

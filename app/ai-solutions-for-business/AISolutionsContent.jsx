@@ -215,8 +215,8 @@ const budgetTiers = [
         label: 'Scaling Operations',
         color: 'slate',
         recommendation: 'Run an AI employee platform at the core with enterprise-grade specialized tools for your most impactful functions.',
-        bestPick: 'Dooza Pro ($199/mo) with 84 hours of done-for-you work capacity, Dooza Workflow writing workflows, and manual setup from our side.',
-        tools: ['Dooza Pro ($199/mo — manual setup + Dooza Workflow workflows)', 'HubSpot ($50/mo — CRM + marketing)', 'Intercom ($74/mo — advanced support)'],
+        bestPick: 'Dooza Pro ($199/mo) with 84 hours of done-for-you work capacity, Dooza Agent writing workflows, and manual setup from our side.',
+        tools: ['Dooza Pro ($199/mo — manual setup + Dooza Agent workflows)', 'HubSpot ($50/mo — CRM + marketing)', 'Intercom ($74/mo — advanced support)'],
     },
 ];
 
