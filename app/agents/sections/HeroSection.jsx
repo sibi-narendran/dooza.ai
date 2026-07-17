@@ -45,11 +45,7 @@ export default function HeroSection() {
                 <h1 className="mb-6 font-serif text-4xl font-extrabold leading-[1.06] tracking-tight text-slate-950 md:text-6xl">
                     AI agent builder that automates your marketing, sales and support.
                 </h1>
-                <p className="mb-9 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
-                    Answer repetitive customer questions, generate high-quality leads, and drive
-                    sales conversions without human intervention using Dooza Agents.
-                </p>
-                <div className="mb-8 w-full max-w-3xl">
+                <div className="mb-8 mt-3 w-full max-w-3xl">
                     <AgentPromptBox signupUrl={WORKFLOW_SIGNUP_URL} />
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-600">
