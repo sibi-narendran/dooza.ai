@@ -1,8 +1,14 @@
 import { NextResponse } from 'next/server';
-import { supabaseServer } from '../../../lib/supabaseServer';
+import { createClient } from '@supabase/supabase-js';
 
 const MAX_PROMPT_LENGTH = 2000;
 const MAX_EMAIL_LENGTH = 320;
+
+// Agent briefs must land in the ACCOUNTS Supabase project (agent_prompts table),
+// which is a different project from the one this site's supabaseServer/blog uses.
+const accountsUrl = process.env.ACCOUNTS_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
+const accountsServiceKey = process.env.ACCOUNTS_SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+const accountsDb = accountsUrl && accountsServiceKey ? createClient(accountsUrl, accountsServiceKey) : null;
 
 export async function POST(request) {
     let body;
@@ -25,8 +31,13 @@ export async function POST(request) {
         return NextResponse.json({ error: 'That email address does not look right.' }, { status: 400 });
     }
 
+    if (!accountsDb) {
+        console.error('agent_prompts insert skipped: accounts Supabase env not configured');
+        return NextResponse.json({ error: 'Could not save right now. Please try again.', code: 'no_env' }, { status: 500 });
+    }
+
     try {
-        const { data, error } = await supabaseServer
+        const { data, error } = await accountsDb
             .from('agent_prompts')
             .insert({
                 prompt,
