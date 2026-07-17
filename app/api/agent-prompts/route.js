@@ -38,13 +38,13 @@ export async function POST(request) {
             .single();
 
         if (error) {
-            console.error('agent_prompts insert failed', { message: error.message });
-            return NextResponse.json({ error: 'Could not save right now. Please try again.' }, { status: 500 });
+            console.error('agent_prompts insert failed', { code: error.code, message: error.message });
+            return NextResponse.json({ error: 'Could not save right now. Please try again.', code: error.code ?? null }, { status: 500 });
         }
 
         return NextResponse.json({ id: data.id }, { status: 201 });
     } catch (err) {
         console.error('agent_prompts insert crashed', { message: err instanceof Error ? err.message : String(err) });
-        return NextResponse.json({ error: 'Could not save right now. Please try again.' }, { status: 500 });
+        return NextResponse.json({ error: 'Could not save right now. Please try again.', code: 'crash' }, { status: 500 });
     }
 }
