@@ -3,30 +3,23 @@ import Link from 'next/link';
 import {
     ArrowRight,
     ArrowUpRight,
-    Boxes,
     BrainCircuit,
     CheckCircle2,
-    Code2,
     DatabaseZap,
-    Eye,
-    FileCheck2,
     GitBranch,
-    LockKeyhole,
     Mail,
+    Megaphone,
+    MessageCircle,
     MessageSquare,
-    Play,
-    RefreshCcw,
-    Server,
+    Phone,
     ShieldCheck,
     Sparkles,
-    Users,
+    Target,
     Workflow,
-    Zap,
 } from 'lucide-react';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import VideoSection from '@/components/sections/VideoSection';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import AgentPromptBox from './AgentPromptBox';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -46,23 +39,23 @@ export const metadata = {
         'Describe the agent you want and Dooza Agents builds it — AI agents that automate your marketing, sales, and support with approvals, traces, and governance controls.',
     keywords: [
         'Dooza Agents',
-        'AI agents workflow',
-        'AI workflow automation',
-        'workflow automation platform',
-        'AI governance',
+        'AI agent builder',
+        'AI agents for marketing',
+        'AI sales agent',
+        'AI customer support agent',
+        'WhatsApp AI agent',
+        'AI chatbot',
+        'text to agent',
         'human in the loop AI',
-        'workflow diffs',
-        'approval based AI workflows',
-        'privacy aware workflow automation',
         'business process automation',
     ],
     alternates: {
         canonical: pageUrl,
     },
     openGraph: {
-        title: 'Dooza Agents | AI Agents and Workflow Automation',
+        title: 'Dooza Agents | AI Agent Builder for Marketing, Sales & Support',
         description:
-            'Visual AI workflows with code depth, integrations, approvals, traces, and governance controls.',
+            'Describe the agent you want in plain language. Dooza builds it with you — connected to your tools, with approvals on everything sensitive.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -70,9 +63,9 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Dooza Agents | AI Agents and Workflow Automation',
+        title: 'Dooza Agents | AI Agent Builder for Marketing, Sales & Support',
         description:
-            'Build AI agents and workflows your team can inspect, test, approve, and deploy.',
+            'AI agents for marketing, sales, and support — built from a plain-language brief, with approvals on everything sensitive.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -155,110 +148,18 @@ const prebuiltAgents = [
     },
 ];
 
-const integrationRows = [
-    ['Gmail', 'Slack', 'Salesforce', 'HubSpot', 'Shopify', 'WordPress', 'Google Sheets', 'Notion'],
-    ['Airtable', 'Asana', 'Stripe', 'Calendly', 'Webhooks', 'Postgres', 'Drive', 'ServiceNow'],
+const marketingRunItems = [
+    ['New blog post detected', 'completed'],
+    ['3 LinkedIn posts drafted', 'completed'],
+    ['5 X posts drafted', 'completed'],
+    ['Newsletter section drafted', 'running'],
+    ['Scheduled after your approval', 'queued'],
 ];
 
-const capabilityCards = [
-    {
-        icon: Eye,
-        title: 'Trace every AI decision',
-        desc: 'Inspect inputs, prompts, model outputs, tool calls, approvals, and final actions on the same canvas.',
-    },
-    {
-        icon: BrainCircuit,
-        title: 'Build multi-agent systems',
-        desc: 'Route work between AI employees, specialist agents, retrieval steps, and business rules.',
-    },
-    {
-        icon: DatabaseZap,
-        title: 'Use your own data',
-        desc: 'Connect inboxes, CRMs, docs, stores, databases, APIs, and private knowledge sources.',
-    },
-    {
-        icon: LockKeyhole,
-        title: 'Keep humans in control',
-        desc: 'Require approvals before sensitive sends, record updates, refunds, publishing, or escalations.',
-    },
-];
-
-const complexAiItems = [
-    'Multi-agent routing for support, sales, content, and operations',
-    'RAG-style retrieval from docs, tickets, websites, and CRM records',
-    'Cloud model, private model, and offline model options by deployment scope',
-    'MCP-ready architecture for connecting future tools and internal systems',
-];
-
-const deploymentOptions = [
-    {
-        icon: Server,
-        title: 'Runs where you decide',
-        desc: 'Use Dooza-hosted workflows or have a Dooza engineer set up workflows inside your stack.',
-    },
-    {
-        icon: Code2,
-        title: 'Code when needed',
-        desc: 'Add JavaScript, Python-style logic, webhooks, custom APIs, and structured transformations when visual steps are not enough.',
-    },
-    {
-        icon: RefreshCcw,
-        title: 'Move fast, break less',
-        desc: 'Re-run single steps, replay data, test branches, review logs, and evaluate AI output before customers see it.',
-    },
-];
-
-const governanceItems = [
-    {
-        icon: Users,
-        title: 'Human-in-the-loop',
-        desc: 'Route risky work to a teammate before publishing, sending, updating, or closing a task.',
-    },
-    {
-        icon: ShieldCheck,
-        title: 'Guardrails',
-        desc: 'Use structured inputs, output schemas, role permissions, and stop rules to contain AI actions.',
-    },
-    {
-        icon: FileCheck2,
-        title: 'Evaluations',
-        desc: 'Score output quality, compare workflow runs, and catch regressions before a workflow goes live.',
-    },
-];
-
-const enterpriseControls = [
-    'Git-based control',
-    'Isolated environments',
-    'Multi-user workflows',
-    'Workflow diffs',
-    'Role-based permissions',
-    'Audit-ready run history',
-];
-
-const trustItems = [
-    {
-        title: 'Access and approval controls',
-        desc: 'Role permissions, approval trails, change review, environment separation, and evidence-friendly workflow history.',
-    },
-    {
-        title: 'Privacy-aware workflow design',
-        desc: 'Data minimization, deletion workflows, export paths, retention rules, and scoped automation design.',
-    },
-    {
-        title: 'Security review practices',
-        desc: 'Workflow patterns that support risk reviews, documentation, access policies, and incident process planning.',
-    },
-    {
-        title: 'Sensitive-workflow safeguards',
-        desc: 'Human review, least-privilege access, logging, and deployment scoping for sensitive workflows.',
-    },
-];
-
-const feedbackLoops = [
-    'Re-run one step instead of the entire workflow',
-    'Mock or replay data from previous runs',
-    'Inspect logs without hunting through tabs',
-    'Evaluate AI output against saved examples',
+const salesLeads = [
+    { who: 'Head of Ops, logistics company', score: '92', status: 'Meeting booked' },
+    { who: 'Founder, DTC skincare brand', score: '87', status: 'Follow-up sent' },
+    { who: 'VP Support, SaaS scale-up', score: '81', status: 'Draft for review' },
 ];
 
 const faqData = [
@@ -273,6 +174,11 @@ const faqData = [
             'No. Dooza is the AI employee experience. Dooza Agents is the visual and programmable automation layer used to connect tools, run routines, and control multi-step processes.',
     },
     {
+        question: 'Is Dooza Agents just a chatbot builder?',
+        answer:
+            'No. Chat is one channel. Dooza Agents run multi-step work — research, drafting, follow-ups, approvals, and record updates across your tools — and use chat, email, and WhatsApp as the places they talk to customers.',
+    },
+    {
         question: 'Can technical teams use code?',
         answer:
             'Yes. Dooza Agents is designed for a visual building experience with deeper code, webhook, API, and data transformation paths when teams need more control.',
@@ -283,18 +189,11 @@ const faqData = [
             'Yes. Operators can start with triggers, AI steps, approvals, and actions. Technical teams can extend the same workflow with custom logic.',
     },
     {
-        question: 'Does Dooza claim security certifications?',
-        answer:
-            'No certification claim is made here. This page describes controls and deployment patterns such as approvals, scoped access, logs, and review workflows.',
-    },
-    {
         question: 'What happens after I describe my agent on this page?',
         answer:
             'Your agent brief is saved with your Dooza account context. Sign up free and the Dooza team uses your brief to set up the agent with you — connected to your tools, in draft-and-approve mode until it earns autonomy.',
     },
 ];
-
-const featuredTestimonials = testimonials.slice(0, 2);
 
 const schemas = [
     {
@@ -309,11 +208,13 @@ const schemas = [
             url: SITE_URL,
         },
         about: [
-            { '@type': 'Thing', name: 'AI workflow automation' },
+            { '@type': 'Thing', name: 'AI agent builder' },
             { '@type': 'Thing', name: 'Dooza Agents' },
-            ...capabilityCards.map((item) => ({ '@type': 'Thing', name: item.title })),
-            ...governanceItems.map((item) => ({ '@type': 'Thing', name: item.title })),
-            ...enterpriseControls.map((item) => ({ '@type': 'Thing', name: item })),
+            { '@type': 'Thing', name: 'Marketing AI agent' },
+            { '@type': 'Thing', name: 'Sales AI agent' },
+            { '@type': 'Thing', name: 'Customer support AI agent' },
+            { '@type': 'Thing', name: 'Live chat and AI chatbot' },
+            { '@type': 'Thing', name: 'WhatsApp AI agent' },
         ],
         publisher: {
             '@type': 'Organization',
@@ -610,57 +511,137 @@ function CustomerSupportWorkflowTree() {
     );
 }
 
-function IntegrationMarquee() {
-    const repeatedRows = integrationRows.map((row) => [...row, ...row]);
-
+function MarketingRunCard() {
     return (
-        <div className="overflow-hidden rounded-[28px] border border-slate-200 bg-white py-6 shadow-xl shadow-slate-200/70">
-            {repeatedRows.map((row, rowIndex) => (
-                <div
-                    key={rowIndex}
-                    className={`workflow-marquee-track flex w-max gap-3 px-3 ${rowIndex === 1 ? 'workflow-marquee-reverse mt-3' : ''}`}
-                >
-                    {row.map((name, index) => (
-                        <div
-                            key={`${rowIndex}-${name}-${index}`}
-                            className="flex min-w-[148px] items-center justify-center rounded-2xl border border-slate-100 bg-slate-50 px-5 py-4 text-sm font-bold text-slate-700"
-                        >
-                            {name}
+        <div className="relative overflow-hidden rounded-[28px] border border-slate-100 bg-white p-5 shadow-xl shadow-slate-200/60">
+            <div className="mb-5 flex items-center justify-between border-b border-slate-100 pb-4">
+                <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
+                        <Megaphone className="h-6 w-6" />
+                    </div>
+                    <div>
+                        <div className="text-sm font-bold text-slate-950">Content repurposing run</div>
+                        <div className="text-xs text-slate-500">one blog post, every channel</div>
+                    </div>
+                </div>
+                <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">This morning</span>
+            </div>
+            <div className="grid gap-3">
+                {marketingRunItems.map(([label, state], index) => (
+                    <div key={label} className="workflow-rise flex items-center gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4" style={{ animationDelay: `${index * 0.18}s` }}>
+                        <span className={`h-3 w-3 rounded-full ${state === 'running' ? 'bg-amber-500' : state === 'queued' ? 'bg-slate-300' : 'bg-primary-600'}`} />
+                        <span className="flex-1 text-sm font-semibold text-slate-700">{label}</span>
+                        <span className="text-xs font-bold uppercase tracking-wide text-slate-400">{state}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+function SalesLeadCard() {
+    return (
+        <div className="relative overflow-hidden rounded-[28px] border border-slate-100 bg-white p-5 shadow-xl shadow-slate-200/60">
+            <div className="mb-5 flex items-center justify-between border-b border-slate-100 pb-4">
+                <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
+                        <Target className="h-6 w-6" />
+                    </div>
+                    <div>
+                        <div className="text-sm font-bold text-slate-950">Morning lead drop</div>
+                        <div className="text-xs text-slate-500">researched and scored overnight</div>
+                    </div>
+                </div>
+                <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">Synced to CRM</span>
+            </div>
+            <div className="grid gap-3">
+                {salesLeads.map((lead, index) => (
+                    <div key={lead.who} className="workflow-rise flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-4" style={{ animationDelay: `${index * 0.18}s` }}>
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary-700 text-sm font-extrabold text-white">
+                            {lead.score}
+                        </span>
+                        <div className="min-w-0 flex-1">
+                            <p className="truncate text-sm font-bold text-slate-800">{lead.who}</p>
+                            <p className="text-xs font-semibold text-slate-500">ICP match score {lead.score}/100</p>
                         </div>
-                    ))}
-                </div>
-            ))}
+                        <span className="shrink-0 rounded-full bg-white px-3 py-1 text-xs font-bold text-primary-700 shadow-sm">{lead.status}</span>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
 
-function CodeWindow() {
+function LiveChatCard() {
     return (
-        <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white p-5 font-mono text-sm text-slate-700 shadow-xl shadow-slate-200/60">
-            <div className="workflow-code-scan absolute inset-y-0 w-24 bg-gradient-to-r from-transparent via-primary-200/35 to-transparent" />
-            <div className="relative mb-5 flex items-center justify-between border-b border-slate-100 pb-4">
-                <div className="flex items-center gap-2">
-                    <span className="h-3 w-3 rounded-full bg-red-400" />
-                    <span className="h-3 w-3 rounded-full bg-yellow-400" />
-                    <span className="h-3 w-3 rounded-full bg-green-400" />
+        <div className="relative overflow-hidden rounded-[28px] border border-slate-100 bg-white p-5 shadow-xl shadow-slate-200/60">
+            <div className="mb-5 flex items-center justify-between border-b border-slate-100 pb-4">
+                <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
+                        <MessageCircle className="h-6 w-6" />
+                    </div>
+                    <div>
+                        <div className="text-sm font-bold text-slate-950">Website chat</div>
+                        <div className="text-xs text-slate-500">answers from your knowledge</div>
+                    </div>
                 </div>
-                <span className="text-xs text-slate-500">approved-response.js</span>
+                <span className="flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                    Online
+                </span>
             </div>
-            <div className="relative space-y-2">
-                <p><span className="text-primary-700">trigger</span>: new_support_reply</p>
-                <p><span className="text-sky-700">ai_step</span>: classify_intent(reply)</p>
-                <p><span className="text-amber-700">guardrail</span>: require_schema(output)</p>
-                <p><span className="text-primary-700">if</span>: output.risk === "high"</p>
-                <p className="pl-4">approval.request("support_lead")</p>
-                <p><span className="text-primary-700">else</span>:</p>
-                <p className="pl-4">crm.update(customer.id, summary)</p>
-                <p className="pl-4">slack.post(run.report)</p>
+            <div className="grid gap-3">
+                <div className="workflow-rise max-w-[85%] rounded-2xl rounded-bl-md border border-slate-100 bg-slate-50 p-4">
+                    <p className="text-sm font-semibold text-slate-700">Do you offer annual billing? And can I move my existing data over?</p>
+                    <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-slate-400">Visitor · 2:14 pm</p>
+                </div>
+                <div className="workflow-rise ml-auto max-w-[85%] rounded-2xl rounded-br-md bg-primary-700 p-4 text-white" style={{ animationDelay: '0.18s' }}>
+                    <p className="text-sm font-semibold">Yes — annual billing saves two months, and migration is included on every plan. Want me to set up a walkthrough?</p>
+                    <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-primary-200">Dooza agent · 2:14 pm</p>
+                </div>
+                <div className="workflow-rise flex items-center gap-3 rounded-2xl border border-primary-100 bg-primary-50 p-4" style={{ animationDelay: '0.36s' }}>
+                    <ShieldCheck className="h-5 w-5 shrink-0 text-primary-700" />
+                    <span className="text-sm font-semibold text-primary-800">Pricing negotiation detected — handed to a human with the full conversation attached.</span>
+                </div>
             </div>
         </div>
     );
 }
 
-export default function WorkflowPage() {
+function WhatsAppCard() {
+    return (
+        <div className="relative overflow-hidden rounded-[28px] border border-slate-100 bg-white p-5 shadow-xl shadow-slate-200/60">
+            <div className="mb-5 flex items-center justify-between border-b border-slate-100 pb-4">
+                <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
+                        <Phone className="h-6 w-6" />
+                    </div>
+                    <div>
+                        <div className="text-sm font-bold text-slate-950">WhatsApp</div>
+                        <div className="text-xs text-slate-500">same agent, customer&apos;s favorite channel</div>
+                    </div>
+                </div>
+                <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">Replied in 8s</span>
+            </div>
+            <div className="grid gap-3">
+                <div className="workflow-rise max-w-[85%] rounded-2xl rounded-bl-md border border-slate-100 bg-slate-50 p-4">
+                    <p className="text-sm font-semibold text-slate-700">Hi! My order #4821 hasn&apos;t arrived yet — can you check?</p>
+                    <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-slate-400">Customer · 9:02 pm</p>
+                </div>
+                <div className="workflow-rise ml-auto max-w-[85%] rounded-2xl rounded-br-md bg-emerald-600 p-4 text-white" style={{ animationDelay: '0.18s' }}>
+                    <p className="text-sm font-semibold">Found it — order #4821 cleared customs today and is out for delivery tomorrow. I&apos;ll message you the moment it&apos;s delivered.</p>
+                    <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-emerald-100">Dooza agent · 9:02 pm</p>
+                </div>
+                <div className="workflow-rise flex items-center gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4" style={{ animationDelay: '0.36s' }}>
+                    <MessageSquare className="h-5 w-5 shrink-0 text-primary-700" />
+                    <span className="text-sm font-semibold text-slate-700">Logged to the same inbox as email, chat, and DMs — one thread per customer.</span>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default function AgentsPage() {
     return (
         <BookingModalProvider>
             {schemas.map((schema, index) => (
@@ -742,8 +723,6 @@ export default function WorkflowPage() {
                         </div>
                     </div>
                 </section>
-
-                <VideoSection />
 
                 <section className="bg-warm px-4 py-20 md:py-24">
                     <div className="mx-auto max-w-7xl">
@@ -842,9 +821,65 @@ export default function WorkflowPage() {
                 </section>
 
                 <section className="bg-warm px-4 py-20 md:py-28">
+                    <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
+                        <div>
+                            <span className="section-label mb-4 block">Marketing AI agent</span>
+                            <h2 className="mb-5 font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
+                                A marketing agent that ships, not just suggests
+                            </h2>
+                            <p className="mb-8 text-lg leading-relaxed text-slate-600">
+                                Give it your voice, your channels, and your calendar. It researches, drafts, repurposes, and publishes on schedule — and you approve anything before it goes public.
+                            </p>
+                            <div className="grid gap-3">
+                                {[
+                                    'Turns one long-form piece into a week of channel-native posts',
+                                    'Keeps SEO content shipping on a fixed cadence',
+                                    'Reports what went out and how it performed',
+                                ].map((item) => (
+                                    <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+                                        <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
+                                        <span className="text-sm font-semibold leading-relaxed text-slate-700">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <MarketingRunCard />
+                    </div>
+                </section>
+
+                <section className="bg-white px-4 py-20 md:py-28">
+                    <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:items-center">
+                        <div className="order-2 lg:order-1">
+                            <SalesLeadCard />
+                        </div>
+                        <div className="order-1 lg:order-2">
+                            <span className="section-label mb-4 block">Sales AI agent</span>
+                            <h2 className="mb-5 font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
+                                Wake up to qualified leads, every day
+                            </h2>
+                            <p className="mb-8 text-lg leading-relaxed text-slate-600">
+                                It researches prospects that match your ICP overnight, scores them against your criteria, writes the first touch in your voice, and books the meeting.
+                            </p>
+                            <div className="grid gap-3">
+                                {[
+                                    'Prospect research and enrichment on autopilot',
+                                    'Follow-ups that never slip through the cracks',
+                                    'Meetings booked into your calendar, synced to CRM',
+                                ].map((item) => (
+                                    <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4">
+                                        <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
+                                        <span className="text-sm font-semibold leading-relaxed text-slate-700">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="bg-warm px-4 py-20 md:py-28">
                     <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
                         <div>
-                            <span className="section-label mb-4 block">Customer support</span>
+                            <span className="section-label mb-4 block">Customer support AI agent</span>
                             <h2 className="mb-5 font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
                                 A workflow tree your team can follow
                             </h2>
@@ -864,70 +899,25 @@ export default function WorkflowPage() {
                     </div>
                 </section>
 
-                <section className="bg-warm px-4 py-20 md:py-28">
-                    <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-                        <div>
-                            <span className="section-label mb-4 block">Integrations</span>
+                <section className="bg-white px-4 py-20 md:py-28">
+                    <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:items-center">
+                        <div className="order-2 lg:order-1">
+                            <LiveChatCard />
+                        </div>
+                        <div className="order-1 lg:order-2">
+                            <span className="section-label mb-4 block">Live chat + AI chatbot</span>
                             <h2 className="mb-5 font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
-                                Plug AI into your data and the tools your team already uses
+                                Answer every visitor in seconds, hand off like a pro
                             </h2>
                             <p className="mb-8 text-lg leading-relaxed text-slate-600">
-                                Start with pre-built app steps. Use custom API calls and webhooks when you need to reach internal systems, legacy software, or private databases.
-                            </p>
-                            <Link
-                                href="/"
-                                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-slate-900 transition hover:border-primary-200 hover:text-primary-800"
-                            >
-                                Get integration help <ArrowRight className="h-4 w-4" />
-                            </Link>
-                        </div>
-                        <IntegrationMarquee />
-                    </div>
-                </section>
-
-                <section className="bg-white px-4 py-20 md:py-28">
-                    <div className="mx-auto max-w-7xl">
-                        <div className="mb-14 max-w-3xl">
-                            <span className="section-label mb-4 block">AI agents</span>
-                            <h2 className="mb-5 font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
-                                Build AI agents you can actually follow
-                            </h2>
-                            <p className="text-lg leading-relaxed text-slate-600">
-                                Connect any model, inspect the reasoning path, and keep sensitive actions behind approvals.
-                            </p>
-                        </div>
-
-                        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                            {capabilityCards.map((item) => {
-                                const Icon = item.icon;
-                                return (
-                                    <div key={item.title} className="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                                            <Icon className="h-6 w-6" />
-                                        </div>
-                                        <h3 className="font-sans text-xl font-extrabold text-slate-950">{item.title}</h3>
-                                        <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.desc}</p>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </section>
-
-                <section className="bg-white px-4 py-20 text-slate-900 md:py-28">
-                    <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-                        <div>
-                            <span className="section-label mb-5 block">
-                                Deep automation
-                            </span>
-                            <h2 className="mb-6 max-w-2xl font-serif text-4xl font-extrabold leading-tight text-slate-950 md:text-6xl">
-                                Build complex AI without getting boxed in
-                            </h2>
-                            <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-600">
-                                Dooza Agents is built for practical business automation: AI employees, retrieval, approvals, code steps, APIs, and deployment paths that can grow with your team.
+                                A chat agent trained on your knowledge answers instantly, captures the lead, and hands complex conversations to a human — with the full context attached.
                             </p>
                             <div className="grid gap-3">
-                                {complexAiItems.map((item) => (
+                                {[
+                                    'Trained on your docs, policies, and past tickets',
+                                    'Captures leads while it answers questions',
+                                    'Human handoff with the whole conversation attached',
+                                ].map((item) => (
                                     <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4">
                                         <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
                                         <span className="text-sm font-semibold leading-relaxed text-slate-700">{item}</span>
@@ -935,202 +925,43 @@ export default function WorkflowPage() {
                                 ))}
                             </div>
                         </div>
-
-                        <div className="relative overflow-hidden rounded-[28px] border border-slate-100 bg-white p-5 shadow-xl shadow-slate-200/60">
-                            <div className="mb-5 flex items-center justify-between border-b border-slate-100 pb-4">
-                                <div className="flex items-center gap-3">
-                                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                                        <Boxes className="h-6 w-6" />
-                                    </div>
-                                    <div>
-                                        <div className="text-sm font-bold text-slate-950">AI release workflow</div>
-                                        <div className="text-xs text-slate-500">testing, rollback, notification</div>
-                                    </div>
-                                </div>
-                                <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-700">Simulated run</span>
-                            </div>
-                            <div className="grid gap-3">
-                                {[
-                                    ['Update detected', 'completed'],
-                                    ['Running custom unit testing', 'running'],
-                                    ['Custom unit testing failed', 'failed'],
-                                    ['Update rolled back automatically', 'completed'],
-                                    ['IT team notified of new ticket', 'completed'],
-                                ].map(([label, state], index) => (
-                                    <div key={label} className="workflow-rise flex items-center gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4" style={{ animationDelay: `${index * 0.18}s` }}>
-                                        <span className={`h-3 w-3 rounded-full ${state === 'failed' ? 'bg-rose-500' : state === 'running' ? 'bg-amber-500' : 'bg-primary-600'}`} />
-                                        <span className="flex-1 text-sm font-semibold text-slate-700">{label}</span>
-                                        <span className="text-xs font-bold uppercase tracking-wide text-slate-400">{state}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="bg-white px-4 py-20 md:py-28">
-                    <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
-                        {deploymentOptions.map((item) => {
-                            const Icon = item.icon;
-                            return (
-                                <div key={item.title} className="rounded-3xl border border-slate-100 bg-white p-7 shadow-sm">
-                                    <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                                        <Icon className="h-7 w-7" />
-                                    </div>
-                                    <h2 className="font-sans text-2xl font-extrabold text-slate-950">{item.title}</h2>
-                                    <p className="mt-4 leading-relaxed text-slate-600">{item.desc}</p>
-                                </div>
-                            );
-                        })}
                     </div>
                 </section>
 
                 <section className="bg-warm px-4 py-20 md:py-28">
                     <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
                         <div>
-                            <span className="section-label mb-4 block">Control</span>
+                            <span className="section-label mb-4 block">WhatsApp AI agent</span>
                             <h2 className="mb-5 font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
-                                Code when you need it, UI when you do not
+                                Be there on WhatsApp, around the clock
                             </h2>
                             <p className="mb-8 text-lg leading-relaxed text-slate-600">
-                                Operators can build on the canvas. Technical teams can add code, APIs, schema validation, and transformations without leaving the workflow.
+                                Answer order, booking, and product questions where your customers actually are — from the same agent that runs your email and chat, in one shared inbox.
                             </p>
-                            <div className="grid gap-3 sm:grid-cols-2">
-                                {feedbackLoops.map((item) => (
+                            <div className="grid gap-3">
+                                {[
+                                    'Instant replies on WhatsApp, day and night',
+                                    'One inbox across WhatsApp, email, chat, and DMs',
+                                    'Sensitive replies held for human approval',
+                                ].map((item) => (
                                     <div key={item} className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
-                                        <Zap className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
+                                        <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
                                         <span className="text-sm font-semibold leading-relaxed text-slate-700">{item}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <CodeWindow />
+                        <WhatsAppCard />
                     </div>
                 </section>
 
-                <section className="bg-white px-4 py-20 md:py-28">
-                    <div className="mx-auto max-w-7xl">
-                        <div className="mb-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-                            <div>
-                                <span className="section-label mb-4 block">Enterprise-ready</span>
-                                <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
-                                    Governance for teams that need control before scale
-                                </h2>
-                            </div>
-                            <p className="text-lg leading-relaxed text-slate-600">
-                                Give every team a shared way to retrieve data, transform it, approve risky actions, and keep a clean record of what changed.
-                            </p>
+                <section className="bg-slate-50 px-4 py-20 text-slate-900 md:py-28">
+                    <div className="mx-auto max-w-3xl">
+                        <div className="mb-10 text-center">
+                            <span className="section-label mb-4 block">FAQ</span>
+                            <h2 className="font-serif text-3xl font-bold md:text-5xl">Dooza Agents questions</h2>
                         </div>
-
-                        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-                            <div className="rounded-[28px] border border-slate-100 bg-white p-6 shadow-xl shadow-slate-200/70">
-                                <div className="mb-6 flex items-center gap-3">
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                                        <GitBranch className="h-6 w-6" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-sans text-xl font-extrabold text-slate-950">Team workflow controls</h3>
-                                        <p className="text-sm text-slate-500">Review changes before they affect production.</p>
-                                    </div>
-                                </div>
-                                <div className="grid gap-3 sm:grid-cols-2">
-                                    {enterpriseControls.map((item) => (
-                                        <div key={item} className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4">
-                                            <CheckCircle2 className="h-5 w-5 shrink-0 text-primary-600" />
-                                            <span className="text-sm font-bold text-slate-700">{item}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="grid gap-4 md:grid-cols-3">
-                                {governanceItems.map((item) => {
-                                    const Icon = item.icon;
-                                    return (
-                                        <div key={item.title} className="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm">
-                                            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                                                <Icon className="h-6 w-6" />
-                                            </div>
-                                            <h3 className="font-sans text-lg font-extrabold text-slate-950">{item.title}</h3>
-                                            <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.desc}</p>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="bg-slate-50 px-4 py-20 md:py-28">
-                    <div className="mx-auto max-w-7xl">
-                        <div className="mb-12 max-w-3xl">
-                            <span className="section-label mb-4 block">Trust and compliance</span>
-                            <h2 className="mb-5 font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
-                                Compliance-ready workflow patterns
-                            </h2>
-                            <p className="text-lg leading-relaxed text-slate-600">
-                                Use Dooza Agents to design approval, logging, privacy, and evidence flows that support formal security and privacy reviews.
-                            </p>
-                        </div>
-                        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-                            {trustItems.map((item) => (
-                                <div key={item.title} className="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm">
-                                    <div className="mb-5 inline-flex rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">
-                                        Trust control
-                                    </div>
-                                    <h3 className="font-sans text-xl font-extrabold text-slate-950">{item.title}</h3>
-                                    <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                <section className="bg-white px-4 py-20 md:py-28">
-                    <div className="mx-auto max-w-7xl">
-                        <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-                            <div>
-                                <span className="section-label mb-4 block">Results</span>
-                                <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
-                                    Teams use Dooza to turn AI into operating leverage
-                                </h2>
-                            </div>
-                            <Link href="/blog/hatrio-ai-canada-partnership" className="inline-flex items-center gap-2 text-sm font-bold text-primary-700 hover:text-primary-900">
-                                Read case studies <ArrowRight className="h-4 w-4" />
-                            </Link>
-                        </div>
-                        <div className="grid gap-6 md:grid-cols-2">
-                            {featuredTestimonials.map((item) => (
-                                <div key={item.author} className="rounded-3xl border border-slate-100 bg-white p-7 shadow-sm">
-                                    <p className="text-lg leading-relaxed text-slate-700">"{item.quote}"</p>
-                                    <div className="mt-7 flex items-center gap-3">
-                                        {item.logo ? (
-                                            <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-100 bg-white">
-                                                <Image src={item.logo} alt={item.author} width={44} height={44} className="object-contain p-1" />
-                                            </div>
-                                        ) : (
-                                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary-700 text-sm font-bold text-white">
-                                                {item.initials}
-                                            </div>
-                                        )}
-                                        <div>
-                                            <div className="font-bold text-slate-950">{item.author}</div>
-                                            <div className="text-sm text-slate-500">{item.role}</div>
-                                            {item.linkedin && (
-                                                <a
-                                                    href={item.linkedin}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-primary-600 transition-colors hover:text-primary-700"
-                                                >
-                                                    LinkedIn <ArrowUpRight className="h-3 w-3" />
-                                                </a>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <FAQAccordion items={faqData} />
                     </div>
                 </section>
 
@@ -1154,47 +985,6 @@ export default function WorkflowPage() {
                                 Talk to sales
                             </BookDemoButton>
                         </div>
-                    </div>
-                </section>
-
-                <section className="relative overflow-hidden bg-warm px-4 py-20 text-slate-900 md:py-28">
-                    <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-50/80 via-warm to-warm" />
-                    <div className="relative z-10 mx-auto max-w-4xl text-center">
-                        <div className="mx-auto mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                            <Workflow className="h-8 w-8" />
-                        </div>
-                        <h2 className="mb-6 font-serif text-4xl font-extrabold leading-tight text-slate-950 md:text-6xl">
-                            Build the workflow your AI employees can run
-                        </h2>
-                        <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-slate-600">
-                            Start with one process. Connect the data, add the agent, set the guardrails, and make every run visible.
-                        </p>
-                        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                            <a
-                                href={workflowSignupUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800"
-                            >
-                                Get started for free <ArrowRight className="h-4 w-4" />
-                            </a>
-                            <BookDemoButton source="workflow_final_sales" variant="secondary" size="lg">
-                                Talk to sales
-                            </BookDemoButton>
-                            <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">
-                                Explore Dooza <Play className="h-4 w-4" />
-                            </Link>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="bg-slate-50 px-4 py-20 text-slate-900 md:py-28">
-                    <div className="mx-auto max-w-3xl">
-                        <div className="mb-10 text-center">
-                            <span className="section-label mb-4 block">FAQ</span>
-                            <h2 className="font-serif text-3xl font-bold md:text-5xl">Dooza Agents questions</h2>
-                        </div>
-                        <FAQAccordion items={faqData} />
                     </div>
                 </section>
             </main>
