@@ -21,6 +21,7 @@ export default function BookDemoButton({
         primary: 'bg-primary-700 text-white hover:bg-primary-800 shadow-lg hover:shadow-xl hover:-translate-y-0.5',
         secondary: 'bg-white border-2 border-primary-200 text-primary-800 hover:border-primary-300 hover:bg-primary-50',
         dark: 'bg-transparent border-2 border-white/35 text-white hover:bg-white/10 hover:border-white/60',
+        white: 'bg-white text-primary-800 hover:bg-primary-50 shadow-lg hover:shadow-xl hover:-translate-y-0.5',
     }[variant] || 'bg-white border-2 border-primary-200 text-primary-800 hover:border-primary-300 hover:bg-primary-50';
 
     return (

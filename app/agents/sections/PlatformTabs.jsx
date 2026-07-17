@@ -141,13 +141,15 @@ export default function PlatformTabs() {
                             </span>
                         </div>
                         {activeTab.image ? (
-                            <Image
-                                src={activeTab.image}
-                                alt={activeTab.agent}
-                                width={5281}
-                                height={2000}
-                                className="h-auto w-full rounded-2xl"
-                            />
+                            <div className="group overflow-hidden rounded-2xl">
+                                <Image
+                                    src={activeTab.image}
+                                    alt={activeTab.agent}
+                                    width={5281}
+                                    height={2000}
+                                    className="h-auto w-full rounded-2xl transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                                />
+                            </div>
                         ) : (
                             <MarketingRunPanel />
                         )}

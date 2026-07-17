@@ -13,14 +13,19 @@ function CheckBullet({ children, cardClass = 'bg-white' }) {
 
 function PrimaryCta() {
     return (
-        <a
-            href={WORKFLOW_SIGNUP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800 hover:shadow-xl"
-        >
-            Get started free <ArrowRight className="h-4 w-4" />
-        </a>
+        <div className="mt-8">
+            <a
+                href={WORKFLOW_SIGNUP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800 hover:shadow-xl"
+            >
+                Get started free <ArrowRight className="h-4 w-4" />
+            </a>
+            <p className="mt-3 text-sm font-semibold text-slate-500">
+                Free pilot: a Dooza engineer builds your first agent. Pay only if you keep it.
+            </p>
+        </div>
     );
 }
 
@@ -37,10 +42,18 @@ function FrameChrome({ title, dark = false }) {
 
 function WhiteImageCard({ src, width, height, alt, title = 'Dooza Agents', imageClassName = 'h-auto w-full rounded-2xl' }) {
     return (
-        <div className="scroll-reveal overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-xl shadow-slate-200/60 transition duration-300 hover:shadow-2xl hover:shadow-primary-100/50">
-            <FrameChrome title={title} />
-            <div className="p-4">
-                <Image src={src} width={width} height={height} alt={alt} className={imageClassName} />
+        <div className="scroll-reveal">
+            <div className="animate-float group overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-xl shadow-slate-200/60 transition duration-300 hover:shadow-2xl hover:shadow-primary-100/50">
+                <FrameChrome title={title} />
+                <div className="p-4">
+                    <div className="relative overflow-hidden rounded-2xl">
+                        <div
+                            className="workflow-code-scan pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-transparent via-primary-200/40 to-transparent"
+                            aria-hidden="true"
+                        />
+                        <Image src={src} width={width} height={height} alt={alt} className={`${imageClassName} transition-transform duration-700 ease-out group-hover:scale-[1.03]`} />
+                    </div>
+                </div>
             </div>
         </div>
     );
@@ -48,10 +61,19 @@ function WhiteImageCard({ src, width, height, alt, title = 'Dooza Agents', image
 
 function DarkImageCard({ src, width, height, alt, title = 'Agent flow', imageClassName = 'h-auto w-full rounded-2xl' }) {
     return (
-        <div className="scroll-reveal overflow-hidden rounded-[28px] bg-slate-950 shadow-xl shadow-slate-300/50 transition duration-300 hover:shadow-2xl hover:shadow-primary-100/60">
-            <FrameChrome title={title} dark />
-            <div className="p-4">
-                <Image src={src} width={width} height={height} alt={alt} className={imageClassName} />
+        <div className="scroll-reveal">
+            <div className="animate-float group overflow-hidden rounded-[28px] bg-slate-950 shadow-xl shadow-slate-300/50 transition duration-300 hover:shadow-2xl hover:shadow-primary-100/60" style={{ animationDelay: '1.5s' }}>
+                <FrameChrome title={title} dark />
+                <div className="p-4">
+                    <div className="relative overflow-hidden rounded-2xl">
+                        <div
+                            className="workflow-code-scan pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-transparent via-primary-400/25 to-transparent"
+                            aria-hidden="true"
+                            style={{ animationDelay: '2s' }}
+                        />
+                        <Image src={src} width={width} height={height} alt={alt} className={`${imageClassName} transition-transform duration-700 ease-out group-hover:scale-[1.03]`} />
+                    </div>
+                </div>
             </div>
         </div>
     );

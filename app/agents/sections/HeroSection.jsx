@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import { CheckCircle2, Sparkles, Star } from 'lucide-react';
+import { CheckCircle2, DollarSign, Gift, Star } from 'lucide-react';
 import { WORKFLOW_SIGNUP_URL } from '@/lib/links';
+import BookDemoButton from '@/components/buttons/BookDemoButton';
 import AgentPromptBox from '../AgentPromptBox';
 
 const ratingBadges = [
@@ -42,12 +43,11 @@ export default function HeroSection() {
                 aria-hidden="true"
             />
             <div className="hero-entrance relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
-                <span className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/80 px-4 py-2 text-sm font-bold text-primary-700 shadow-sm backdrop-blur">
-                    <Sparkles className="h-4 w-4" />
-                    An AI agent to automate your daily tasks
-                </span>
                 <h1 className="mb-6 font-serif text-4xl font-extrabold leading-[1.06] tracking-tight text-slate-950 md:text-6xl">
-                    AI agent builder that automates your marketing, sales and support.
+                    AI agent builder that automates your{' '}
+                    <span className="text-primary-600">marketing</span>,{' '}
+                    <span className="text-primary-600">sales</span> and{' '}
+                    <span className="text-primary-600">support</span>.
                 </h1>
                 <div className="mb-8 mt-3 w-full max-w-3xl">
                     <AgentPromptBox signupUrl={WORKFLOW_SIGNUP_URL} />
@@ -64,6 +64,10 @@ export default function HeroSection() {
                     <span className="inline-flex items-center gap-1.5">
                         <CheckCircle2 className="h-4 w-4 text-primary-600" />
                         No credit card required
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                        <DollarSign className="h-4 w-4 text-primary-600" />
+                        Pay only if you keep it — no contracts
                     </span>
                 </div>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -89,6 +93,27 @@ export default function HeroSection() {
                             </span>
                         </div>
                     ))}
+                </div>
+                <div className="mt-10 w-full max-w-3xl rounded-3xl border border-primary-100 bg-primary-50/70 p-5 shadow-sm backdrop-blur md:p-6">
+                    <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
+                        <div className="flex items-start gap-3 text-left">
+                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary-700 text-white">
+                                <Gift className="h-5 w-5" />
+                            </div>
+                            <div>
+                                <p className="text-base font-extrabold text-slate-950 md:text-lg">
+                                    Free pilot — your first agent is set up free
+                                </p>
+                                <p className="mt-1 text-sm font-semibold leading-relaxed text-slate-600">
+                                    A Dooza engineer puts it live on your real work in days. Pay only if
+                                    you keep it. No contracts.
+                                </p>
+                            </div>
+                        </div>
+                        <BookDemoButton source="agents_hero_pilot" variant="primary" className="shrink-0">
+                            Get My Free Setup
+                        </BookDemoButton>
+                    </div>
                 </div>
             </div>
         </section>

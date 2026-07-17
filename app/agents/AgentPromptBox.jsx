@@ -1,7 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowRight, ArrowUp, CheckCircle2, Loader2, Sparkles } from 'lucide-react';
+import { ArrowUp, Calendar, CheckCircle2, Sparkles } from 'lucide-react';
+import { useBookingModal } from '@/components/BookingModalProvider';
+import { trackDemoClick } from '@/lib/analytics';
 
 const SUGGESTIONS = [
     'Get qualified leads for me daily',
@@ -22,9 +24,9 @@ const DELETE_SPEED_MS = 18;
 const HOLD_FULL_MS = 1700;
 
 export default function AgentPromptBox({ signupUrl }) {
+    const { openModal } = useBookingModal();
     const [prompt, setPrompt] = useState('');
-    const [status, setStatus] = useState('idle'); // idle | sending | saved | error
-    const [errorMessage, setErrorMessage] = useState('');
+    const [status, setStatus] = useState('idle'); // idle | saved
 
     // Typed-placeholder animation: cycles example briefs until the user focuses the box.
     const [interacted, setInteracted] = useState(false);
@@ -55,28 +57,18 @@ export default function AgentPromptBox({ signupUrl }) {
         ? 'e.g. Watch my Shopify store and win back abandoned carts with a personal email'
         : `${typed}▍`;
 
-    const submit = async () => {
+    const submit = () => {
         const trimmed = prompt.trim();
-        if (trimmed.length < 3 || status === 'sending') return;
-        setStatus('sending');
-        setErrorMessage('');
-        try {
-            const res = await fetch('/api/agent-prompts', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ prompt: trimmed }),
-            });
-            const data = await res.json().catch(() => ({}));
-            if (!res.ok) {
-                setStatus('error');
-                setErrorMessage(data.error || 'Could not save right now. Please try again.');
-                return;
-            }
-            setStatus('saved');
-        } catch {
-            setStatus('error');
-            setErrorMessage('Could not save right now. Please try again.');
-        }
+        if (trimmed.length < 3) return;
+        setStatus('saved');
+        trackDemoClick('agents_prompt_submit');
+        openModal();
+        // Best-effort save in the background — never blocks the booking flow.
+        fetch('/api/agent-prompts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: trimmed }),
+        }).catch(() => {});
     };
 
     const onKeyDown = (event) => {
@@ -97,16 +89,15 @@ export default function AgentPromptBox({ signupUrl }) {
                     &ldquo;{prompt.trim().slice(0, 140)}{prompt.trim().length > 140 ? '…' : ''}&rdquo;
                 </p>
                 <p className="mb-5 text-base font-semibold text-slate-900">
-                    Create a free account and we&apos;ll turn it into a working agent with you.
+                    Book a free setup meeting and a Dooza engineer will turn it into a working agent with you.
                 </p>
-                <a
-                    href={signupUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <button
+                    type="button"
+                    onClick={() => { trackDemoClick('agents_prompt_saved_card'); openModal(); }}
                     className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-700 px-6 py-3.5 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800 sm:w-auto"
                 >
-                    Sign up free to build it <ArrowRight className="h-4 w-4" />
-                </a>
+                    <Calendar className="h-4 w-4" /> Book my free setup
+                </button>
             </div>
         );
     }
@@ -132,16 +123,13 @@ export default function AgentPromptBox({ signupUrl }) {
                 <button
                     type="button"
                     onClick={submit}
-                    disabled={prompt.trim().length < 3 || status === 'sending'}
+                    disabled={prompt.trim().length < 3}
                     aria-label="Save agent brief"
                     className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-700 text-white shadow-md transition hover:bg-primary-800 disabled:cursor-not-allowed disabled:bg-slate-300"
                 >
-                    {status === 'sending' ? <Loader2 className="h-5 w-5 animate-spin" /> : <ArrowUp className="h-5 w-5" />}
+                    <ArrowUp className="h-5 w-5" />
                 </button>
             </div>
-            {status === 'error' && (
-                <p className="mt-2 text-xs font-semibold text-red-600">{errorMessage}</p>
-            )}
             <div className="mt-4 flex flex-wrap justify-center gap-2">
                 {SUGGESTIONS.map((suggestion) => (
                     <button
