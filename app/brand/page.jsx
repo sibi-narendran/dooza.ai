@@ -177,7 +177,7 @@ export default function BrandPage() {
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Agents</h3>
                                 <p className="mt-1 text-sm leading-relaxed text-slate-600">Approvals and logs that keep every automation under control.</p>
-                                <Link href="/workflow" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai/workflow →</Link>
+                                <Link href="/agents" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai/workflow →</Link>
                             </div>
                         </div>
                     </div>

@@ -42,7 +42,7 @@ export async function POST(request) {
             .insert({
                 prompt,
                 email: email || null,
-                source: 'dooza.ai/workflow',
+                source: 'dooza.ai/agents',
                 user_agent: request.headers.get('user-agent')?.slice(0, 500) ?? null,
             })
             .select('id')

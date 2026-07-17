@@ -43,7 +43,7 @@ export default async function sitemap() {
             priority: 0.4,
         },
         {
-            url: `${SITE_URL}/workflow`,
+            url: `${SITE_URL}/agents`,
             lastModified: pageDate('2026-06-15'),
             changeFrequency: 'weekly',
             priority: 0.95,

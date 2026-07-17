@@ -471,7 +471,7 @@ export default function CustomerSupportAutomationAgencyPage() {
                                     Book a Support Automation Audit
                                 </BookDemoButton>
                                 <Link
-                                    href="/workflow"
+                                    href="/agents"
                                     className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-4 text-base font-bold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-200 hover:bg-primary-50"
                                 >
                                     See Dooza Agents <ArrowRight className="h-4 w-4" />

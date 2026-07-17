@@ -463,7 +463,7 @@ export default function LawFirmsPage() {
                                     Book a Law Firm Workflow Call
                                 </BookDemoButton>
                                 <Link
-                                    href="/workflow"
+                                    href="/agents"
                                     className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-200 bg-white px-6 py-4 text-base font-bold text-primary-800 shadow-sm transition hover:-translate-y-0.5 hover:border-primary-300 hover:bg-primary-50"
                                 >
                                     See Dooza Agents <ArrowRight className="h-4 w-4" />

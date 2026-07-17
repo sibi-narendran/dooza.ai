@@ -73,6 +73,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/workflow',
+        destination: '/agents',
+        permanent: true,
+      },
+      {
         source: '/studio',
         destination: '/workforce',
         permanent: true,
