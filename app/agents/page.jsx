@@ -731,6 +731,14 @@ export default function WorkflowPage() {
                                     <span className="text-sm font-bold text-slate-600">{t.author}</span>
                                 </div>
                             ))}
+                            {['FIN', 'Pawan'].map((name) => (
+                                <div key={name} className="flex items-center gap-2 opacity-70 transition hover:opacity-100">
+                                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 text-[11px] font-extrabold text-slate-500">
+                                        {name.slice(0, 1)}
+                                    </span>
+                                    <span className="text-sm font-bold text-slate-600">{name}</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
