@@ -159,14 +159,39 @@
         line-height: 1.48;
       }
 
-      .widget-shell {
-        min-height: 430px;
+      .steps {
+        margin: 0;
+        padding: 0;
+        list-style: none;
         display: grid;
+        gap: 10px;
+        counter-reset: step;
+      }
+
+      .steps li {
+        display: flex;
         align-items: center;
+        gap: 12px;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: #eaf1f7;
-        padding: 16px;
+        padding: 12px 14px;
+        line-height: 1.45;
+      }
+
+      .steps li::before {
+        counter-increment: step;
+        content: counter(step);
+        flex: none;
+        width: 26px;
+        height: 26px;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        background: var(--brand-blue);
+        color: white;
+        font-size: 13px;
+        font-weight: 800;
       }
 
       .section {
@@ -312,13 +337,19 @@
           <span class="badge">Browser voice demo</span>
           <h2>Talk to the AI receptionist</h2>
           <p>
-            Allow microphone access, then call about an AC that quit in the
-            Texas heat, a tankless water heater, or a clogged drain — or just
-            start speaking Spanish and watch it follow.
+            The receptionist answers as a call bubble in the corner of this
+            page — just like it would answer the phone.
           </p>
-          <div class="widget-shell">
-            <elevenlabs-convai agent-id="agent_2701ky2gdgbkfqgvzke8df8gph9f"></elevenlabs-convai>
-          </div>
+          <ol class="steps">
+            <li>Click <strong>“Start a call”</strong> in the bottom-right corner.</li>
+            <li>Allow microphone access when the browser asks.</li>
+            <li>
+              Call about an AC that quit in the Texas heat, a tankless water
+              heater, or a clogged drain — or just start speaking Spanish and
+              watch it follow.
+            </li>
+          </ol>
+          <elevenlabs-convai agent-id="agent_2701ky2gdgbkfqgvzke8df8gph9f"></elevenlabs-convai>
         </aside>
       </section>
 
