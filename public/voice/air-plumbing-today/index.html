@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Air & Plumbing Today AI receptionist demo for AC, heating, and plumbing calls across San Antonio and Austin, TX — in English and Spanish."
+    />
+    <title>Air &amp; Plumbing Today AI Receptionist</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #14181d;
+        --muted: #5c6670;
+        --line: #d7dee5;
+        --paper: #f7f9fb;
+        --surface: #ffffff;
+        --charcoal: #1c2229;
+        --brand-blue: #1d5fa8;
+        --brand-blue-dark: #143f70;
+        --brand-red: #c93b2e;
+        --sky: #dcebf7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      .topbar {
+        min-height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 0 clamp(22px, 5vw, 84px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        color: white;
+        background: rgba(16, 26, 38, 0.9);
+      }
+
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .nav {
+        display: flex;
+        gap: 18px;
+        font-size: 14px;
+      }
+
+      .nav a {
+        color: rgba(255, 255, 255, 0.84);
+        text-decoration: none;
+      }
+
+      .hero {
+        min-height: calc(100vh - 68px);
+        display: grid;
+        grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+        gap: 52px;
+        align-items: center;
+        padding: 58px clamp(22px, 5vw, 84px) 44px;
+        background:
+          linear-gradient(90deg, rgba(16, 26, 38, 0.92), rgba(16, 26, 38, 0.6), rgba(16, 26, 38, 0.24)),
+          url("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1900&q=82");
+        background-position: center;
+        background-size: cover;
+        color: white;
+      }
+
+      .eyebrow {
+        margin: 0 0 16px;
+        color: #9ec9f0;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        font-size: clamp(42px, 5.5vw, 76px);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .lede {
+        max-width: 650px;
+        margin: 24px 0 0;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 20px;
+        line-height: 1.55;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border-radius: 8px;
+        border: 1px solid #6aa9e0;
+        background: #6aa9e0;
+        color: #0d1a28;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        background: rgba(255, 255, 255, 0.08);
+        color: white;
+      }
+
+      .voice-panel {
+        width: 100%;
+        max-width: 540px;
+        justify-self: end;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 8px;
+        background: rgba(247, 249, 251, 0.96);
+        color: var(--ink);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+        padding: 22px;
+      }
+
+      .voice-panel h2 {
+        margin: 0 0 8px;
+        font-size: 22px;
+        letter-spacing: 0;
+      }
+
+      .voice-panel p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.48;
+      }
+
+      .widget-shell {
+        min-height: 430px;
+        display: grid;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #eaf1f7;
+        padding: 16px;
+      }
+
+      .section {
+        padding: 54px clamp(22px, 5vw, 84px);
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 22px;
+      }
+
+      .section h2 {
+        margin: 0;
+        font-size: clamp(28px, 3vw, 42px);
+        letter-spacing: 0;
+      }
+
+      .section-heading p {
+        max-width: 560px;
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        min-height: 155px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 18px;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .test-lines {
+        background: var(--charcoal);
+        color: white;
+      }
+
+      .test-lines .section-heading p,
+      .test-lines .card p {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .test-lines .card {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.16);
+      }
+
+      .badge {
+        display: inline-flex;
+        margin-bottom: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: var(--sky);
+        color: var(--brand-blue-dark);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      @media (max-width: 940px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+
+        .nav {
+          flex-wrap: wrap;
+        }
+
+        .hero {
+          min-height: auto;
+          grid-template-columns: 1fr;
+          gap: 32px;
+          padding-top: 42px;
+        }
+
+        .voice-panel {
+          max-width: none;
+          justify-self: stretch;
+        }
+
+        .section-heading {
+          align-items: start;
+          flex-direction: column;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">Air &amp; Plumbing Today</div>
+      <nav class="nav" aria-label="Demo navigation">
+        <a href="#voice-demo">AI Receptionist</a>
+        <a href="#services">Services</a>
+        <a href="#test-lines">Test Lines</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">AI receptionist demo</p>
+          <h1 id="page-title">Every call answered. ¡No problema!</h1>
+          <p class="lede">
+            A 24/7 voice receptionist for Air &amp; Plumbing Today that answers
+            AC, heating, and plumbing calls across San Antonio and Austin —
+            qualifies the job, captures the caller, and books the visit. In
+            English y en español.
+          </p>
+          <div class="actions">
+            <a class="button" href="#voice-demo">Talk to the receptionist</a>
+            <a class="button secondary" href="#test-lines">Try demo prompts</a>
+          </div>
+        </div>
+
+        <aside class="voice-panel" id="voice-demo" aria-label="Voice receptionist widget">
+          <span class="badge">Browser voice demo</span>
+          <h2>Talk to the AI receptionist</h2>
+          <p>
+            Allow microphone access, then call about an AC that quit in the
+            Texas heat, a tankless water heater, or a clogged drain — or just
+            start speaking Spanish and watch it follow.
+          </p>
+          <div class="widget-shell">
+            <elevenlabs-convai agent-id="agent_2701ky2gdgbkfqgvzke8df8gph9f"></elevenlabs-convai>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="section-heading">
+          <h2 id="services-title">What the receptionist can qualify</h2>
+          <p>
+            Tuned for San Antonio's Best AC and Best Plumbing Company of 2024 —
+            flat-rate upfront pricing, no surprises, and no missed calls at 2
+            AM.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Cooling &amp; Heating</h3>
+            <p>
+              Triages no-cooling emergencies in Texas summer heat, repair vs.
+              replace questions, and seasonal tune-ups under the No Problema
+              Maintenance Plan.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Plumbing</h3>
+            <p>
+              Handles water heaters including tankless, drain cleaning, and
+              water softeners — then routes the caller to the San Antonio or
+              Austin team.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Bilingual, 24/7</h3>
+            <p>
+              Switches to Spanish the moment the caller does, and captures
+              name, phone, address, and a preferred time window on every call.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section test-lines" id="test-lines" aria-labelledby="test-title">
+        <div class="section-heading">
+          <h2 id="test-title">Try these lines</h2>
+          <p>
+            Use these as a live pitch script to show emergency triage, the
+            flat-rate pricing handoff, and the Spanish switch.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Emergency triage</h3>
+            <p>“My AC went out and it's 100 degrees here in San Antonio.”</p>
+          </article>
+          <article class="card">
+            <h3>Pricing handoff</h3>
+            <p>“How much to replace a tankless water heater?”</p>
+          </article>
+          <article class="card">
+            <h3>Spanish switch</h3>
+            <p>“¿Hablan español? Se me tapó el drenaje de la cocina.”</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+      async
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
