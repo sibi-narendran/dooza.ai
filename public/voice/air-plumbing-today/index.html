@@ -11,17 +11,16 @@
     <link rel="preconnect" href="https://unpkg.com" />
     <style>
       :root {
-        color-scheme: light;
-        --ink: #14181d;
-        --muted: #5c6670;
-        --line: #d7dee5;
-        --paper: #f7f9fb;
-        --surface: #ffffff;
-        --charcoal: #1c2229;
-        --brand-blue: #1d5fa8;
-        --brand-blue-dark: #143f70;
-        --brand-red: #c93b2e;
-        --sky: #dcebf7;
+        color-scheme: dark;
+        --bg: #050e0c;
+        --ink: #eef7f4;
+        --muted: #93a8a2;
+        --line: rgba(255, 255, 255, 0.1);
+        --glass: rgba(255, 255, 255, 0.04);
+        --teal: #14b8a6;
+        --teal-bright: #2dd4bf;
+        --teal-light: #5eead4;
+        --teal-deep: #0f766e;
       }
 
       * {
@@ -38,185 +37,383 @@
           Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
           "Segoe UI", sans-serif;
         color: var(--ink);
-        background: var(--paper);
+        background: var(--bg);
+        overflow-x: hidden;
+      }
+
+      /* Ambient background: teal glows + faint grid */
+      .backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background:
+          radial-gradient(900px 500px at 50% -10%, rgba(20, 184, 166, 0.14), transparent 65%),
+          radial-gradient(700px 420px at 85% 80%, rgba(94, 234, 212, 0.06), transparent 60%),
+          radial-gradient(700px 420px at 10% 70%, rgba(15, 118, 110, 0.12), transparent 60%),
+          var(--bg);
+      }
+
+      .backdrop::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 56px 56px;
+        mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 30%, transparent 75%);
       }
 
       .topbar {
-        min-height: 68px;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        min-height: 64px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 24px;
         padding: 0 clamp(22px, 5vw, 84px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-        color: white;
-        background: rgba(16, 26, 38, 0.9);
+        border-bottom: 1px solid var(--line);
+        background: rgba(5, 14, 12, 0.72);
+        backdrop-filter: blur(14px);
       }
 
       .brand {
         font-weight: 800;
-        letter-spacing: 0;
+      }
+
+      .brand span {
+        color: var(--teal-bright);
       }
 
       .nav {
         display: flex;
-        gap: 18px;
+        gap: 20px;
         font-size: 14px;
       }
 
       .nav a {
-        color: rgba(255, 255, 255, 0.84);
+        color: var(--muted);
         text-decoration: none;
+        transition: color 0.2s ease;
       }
 
+      .nav a:hover {
+        color: var(--ink);
+      }
+
+      /* Hero: single centered column, voice core is the star */
       .hero {
-        min-height: calc(100vh - 68px);
-        display: grid;
-        grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
-        gap: 52px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 58px clamp(22px, 5vw, 84px) 44px;
-        background:
-          linear-gradient(90deg, rgba(16, 26, 38, 0.92), rgba(16, 26, 38, 0.6), rgba(16, 26, 38, 0.24)),
-          url("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1900&q=82");
-        background-position: center;
-        background-size: cover;
-        color: white;
+        text-align: center;
+        padding: clamp(48px, 8vh, 90px) clamp(22px, 5vw, 84px) 40px;
       }
 
       .eyebrow {
-        margin: 0 0 16px;
-        color: #9ec9f0;
-        font-size: 13px;
+        margin: 0 0 18px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 14px;
+        border: 1px solid rgba(45, 212, 191, 0.35);
+        border-radius: 999px;
+        background: rgba(20, 184, 166, 0.08);
+        color: var(--teal-light);
+        font-size: 12px;
         font-weight: 800;
-        letter-spacing: 0;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
+        animation: fadeUp 0.7s ease both;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: var(--teal-bright);
+        box-shadow: 0 0 12px var(--teal-bright);
+        animation: blink 2.2s ease-in-out infinite;
       }
 
       h1 {
-        max-width: 780px;
+        max-width: 900px;
         margin: 0;
-        font-size: clamp(42px, 5.5vw, 76px);
-        line-height: 0.95;
-        letter-spacing: 0;
+        font-size: clamp(40px, 6vw, 84px);
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+        background: linear-gradient(100deg, #fff 20%, var(--teal-light) 55%, var(--teal-bright) 85%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: fadeUp 0.7s 0.08s ease both;
       }
 
       .lede {
-        max-width: 650px;
-        margin: 24px 0 0;
-        color: rgba(255, 255, 255, 0.84);
-        font-size: 20px;
-        line-height: 1.55;
+        max-width: 640px;
+        margin: 20px 0 0;
+        color: var(--muted);
+        font-size: 19px;
+        line-height: 1.6;
+        animation: fadeUp 0.7s 0.16s ease both;
       }
 
-      .actions {
+      /* ---- The voice core ---- */
+      .core-stage {
+        position: relative;
+        width: min(440px, 88vw);
+        aspect-ratio: 1;
+        margin: clamp(24px, 4vh, 44px) auto 0;
+        display: grid;
+        place-items: center;
+        animation: fadeUp 0.8s 0.24s ease both;
+      }
+
+      .ring {
+        position: absolute;
+        border-radius: 999px;
+        border: 1px solid rgba(45, 212, 191, 0.22);
+        pointer-events: none;
+      }
+
+      .ring.r1 {
+        inset: 0;
+        animation: breathe 5s ease-in-out infinite;
+      }
+
+      .ring.r2 {
+        inset: 11%;
+        border-color: rgba(45, 212, 191, 0.3);
+        animation: breathe 5s 0.6s ease-in-out infinite;
+      }
+
+      .ring.r3 {
+        inset: 22%;
+        border-color: rgba(94, 234, 212, 0.28);
+        animation: breathe 5s 1.2s ease-in-out infinite;
+      }
+
+      .orbit {
+        position: absolute;
+        inset: 5.5%;
+        border-radius: 999px;
+        animation: spin 14s linear infinite;
+        pointer-events: none;
+      }
+
+      .orbit i {
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--teal-light);
+        box-shadow: 0 0 14px var(--teal-light);
+      }
+
+      .orbit.slow {
+        inset: 16.5%;
+        animation-duration: 22s;
+        animation-direction: reverse;
+      }
+
+      .orbit.slow i {
+        background: var(--teal-bright);
+        box-shadow: 0 0 14px var(--teal-bright);
+      }
+
+      /* The core is a real button now */
+      .core {
+        position: relative;
+        width: 56%;
+        aspect-ratio: 1;
         display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-        margin-top: 32px;
-      }
-
-      .button {
-        display: inline-flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 46px;
-        padding: 0 18px;
-        border-radius: 8px;
-        border: 1px solid #6aa9e0;
-        background: #6aa9e0;
-        color: #0d1a28;
-        font-weight: 800;
-        text-decoration: none;
-      }
-
-      .button.secondary {
-        background: rgba(255, 255, 255, 0.08);
-        color: white;
-      }
-
-      .voice-panel {
-        width: 100%;
-        max-width: 540px;
-        justify-self: end;
-        border: 1px solid rgba(255, 255, 255, 0.28);
-        border-radius: 8px;
-        background: rgba(247, 249, 251, 0.96);
+        gap: 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(94, 234, 212, 0.4);
+        background:
+          radial-gradient(circle at 35% 30%, rgba(94, 234, 212, 0.4), transparent 55%),
+          radial-gradient(circle at 65% 70%, rgba(15, 118, 110, 0.85), transparent 60%),
+          radial-gradient(circle, #0a2622 0%, #06110f 70%);
+        box-shadow:
+          0 0 60px rgba(20, 184, 166, 0.35),
+          0 0 140px rgba(20, 184, 166, 0.15),
+          inset 0 0 40px rgba(20, 184, 166, 0.25);
         color: var(--ink);
-        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-        padding: 22px;
+        font: inherit;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        animation: corePulse 3.2s ease-in-out infinite;
       }
 
-      .voice-panel h2 {
-        margin: 0 0 8px;
-        font-size: 22px;
-        letter-spacing: 0;
+      .core:hover {
+        transform: scale(1.03);
       }
 
-      .voice-panel p {
-        margin: 0 0 18px;
+      .core:focus-visible {
+        outline: 2px solid var(--teal-light);
+        outline-offset: 6px;
+      }
+
+      .core .mic {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        background: rgba(94, 234, 212, 0.14);
+        border: 1px solid rgba(94, 234, 212, 0.4);
+      }
+
+      .core .mic svg {
+        width: 22px;
+        height: 22px;
+        fill: var(--teal-light);
+      }
+
+      .core .label {
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: 0.01em;
+      }
+
+      .core .sublabel {
+        font-size: 12.5px;
         color: var(--muted);
-        line-height: 1.48;
       }
 
+      .bars {
+        display: none;
+        align-items: center;
+        gap: 6px;
+        height: 40px;
+      }
+
+      .bars i {
+        width: 5px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, var(--teal-light), var(--teal));
+        animation: wave 1.3s ease-in-out infinite;
+      }
+
+      .bars i:nth-child(1) { height: 34%; animation-delay: 0s; }
+      .bars i:nth-child(2) { height: 62%; animation-delay: 0.12s; }
+      .bars i:nth-child(3) { height: 100%; animation-delay: 0.24s; }
+      .bars i:nth-child(4) { height: 58%; animation-delay: 0.36s; }
+      .bars i:nth-child(5) { height: 78%; animation-delay: 0.48s; }
+      .bars i:nth-child(6) { height: 40%; animation-delay: 0.6s; }
+      .bars i:nth-child(7) { height: 24%; animation-delay: 0.72s; }
+
+      /* Call states */
+      .core-stage[data-state="connecting"] .core {
+        animation-duration: 1.1s;
+      }
+
+      .core-stage[data-state="listening"] .bars,
+      .core-stage[data-state="speaking"] .bars {
+        display: flex;
+      }
+
+      .core-stage[data-state="listening"] .mic,
+      .core-stage[data-state="speaking"] .mic {
+        display: none;
+      }
+
+      .core-stage[data-state="speaking"] .bars i {
+        animation-duration: 0.7s;
+      }
+
+      .core-stage[data-state="listening"] .ring,
+      .core-stage[data-state="speaking"] .ring {
+        border-color: rgba(94, 234, 212, 0.5);
+      }
+
+      .core-caption {
+        min-height: 24px;
+        margin: 26px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+        animation: fadeUp 0.7s 0.34s ease both;
+      }
+
+      .core-caption strong {
+        color: var(--ink);
+      }
+
+      /* Steps as glass chips */
       .steps {
-        margin: 0;
+        margin: 30px 0 0;
         padding: 0;
         list-style: none;
-        display: grid;
-        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
         counter-reset: step;
+        animation: fadeUp 0.7s 0.4s ease both;
       }
 
       .steps li {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 10px;
+        max-width: 340px;
         border: 1px solid var(--line);
-        border-radius: 8px;
-        background: #eaf1f7;
-        padding: 12px 14px;
-        line-height: 1.45;
+        border-radius: 999px;
+        background: var(--glass);
+        backdrop-filter: blur(8px);
+        padding: 10px 18px 10px 10px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: left;
+      }
+
+      .steps li strong {
+        color: var(--ink);
       }
 
       .steps li::before {
         counter-increment: step;
         content: counter(step);
         flex: none;
-        width: 26px;
-        height: 26px;
+        width: 28px;
+        height: 28px;
         display: grid;
         place-items: center;
         border-radius: 999px;
-        background: var(--brand-blue);
-        color: white;
+        background: linear-gradient(135deg, var(--teal-bright), var(--teal-deep));
+        color: #04211d;
         font-size: 13px;
         font-weight: 800;
       }
 
       .section {
-        padding: 54px clamp(22px, 5vw, 84px);
-      }
-
-      .section-heading {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 24px;
-        margin-bottom: 22px;
+        padding: 64px clamp(22px, 5vw, 84px);
+        max-width: 1180px;
+        margin: 0 auto;
       }
 
       .section h2 {
-        margin: 0;
-        font-size: clamp(28px, 3vw, 42px);
-        letter-spacing: 0;
+        margin: 0 0 8px;
+        text-align: center;
+        font-size: clamp(26px, 3vw, 40px);
+        letter-spacing: -0.01em;
       }
 
-      .section-heading p {
-        max-width: 560px;
-        margin: 0;
+      .section .sub {
+        max-width: 620px;
+        margin: 0 auto 30px;
+        text-align: center;
         color: var(--muted);
-        line-height: 1.55;
+        line-height: 1.6;
       }
 
       .grid {
@@ -226,11 +423,30 @@
       }
 
       .card {
-        min-height: 155px;
+        position: relative;
         border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        padding: 18px;
+        border-radius: 14px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+        padding: 22px;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(45, 212, 191, 0.45);
+        box-shadow: 0 18px 50px rgba(20, 184, 166, 0.12);
+      }
+
+      .card .icon {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 14px;
+        border-radius: 10px;
+        background: rgba(20, 184, 166, 0.12);
+        border: 1px solid rgba(45, 212, 191, 0.3);
+        font-size: 19px;
       }
 
       .card h3 {
@@ -241,33 +457,91 @@
       .card p {
         margin: 0;
         color: var(--muted);
-        line-height: 1.5;
+        line-height: 1.55;
+        font-size: 15px;
       }
 
-      .test-lines {
-        background: var(--charcoal);
-        color: white;
-      }
-
-      .test-lines .section-heading p,
-      .test-lines .card p {
-        color: rgba(255, 255, 255, 0.72);
-      }
-
-      .test-lines .card {
-        background: rgba(255, 255, 255, 0.06);
-        border-color: rgba(255, 255, 255, 0.16);
-      }
-
-      .badge {
-        display: inline-flex;
-        margin-bottom: 12px;
-        padding: 6px 10px;
-        border-radius: 999px;
-        background: var(--sky);
-        color: var(--brand-blue-dark);
-        font-size: 13px;
+      .quote-mark {
+        color: var(--teal-bright);
         font-weight: 800;
+      }
+
+      footer {
+        padding: 34px clamp(22px, 5vw, 84px) 60px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes breathe {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(1.045);
+          opacity: 1;
+        }
+      }
+
+      @keyframes corePulse {
+        0%, 100% {
+          box-shadow:
+            0 0 60px rgba(20, 184, 166, 0.35),
+            0 0 140px rgba(20, 184, 166, 0.15),
+            inset 0 0 40px rgba(20, 184, 166, 0.25);
+        }
+        50% {
+          box-shadow:
+            0 0 90px rgba(20, 184, 166, 0.5),
+            0 0 180px rgba(20, 184, 166, 0.22),
+            inset 0 0 55px rgba(20, 184, 166, 0.35);
+        }
+      }
+
+      @keyframes wave {
+        0%, 100% {
+          transform: scaleY(0.55);
+        }
+        50% {
+          transform: scaleY(1);
+        }
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes blink {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.35;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
       }
 
       @media (max-width: 940px) {
@@ -275,40 +549,30 @@
           align-items: flex-start;
           flex-direction: column;
           justify-content: center;
-          padding-top: 14px;
-          padding-bottom: 14px;
+          padding-top: 12px;
+          padding-bottom: 12px;
         }
 
         .nav {
           flex-wrap: wrap;
         }
 
-        .hero {
-          min-height: auto;
-          grid-template-columns: 1fr;
-          gap: 32px;
-          padding-top: 42px;
-        }
-
-        .voice-panel {
-          max-width: none;
-          justify-self: stretch;
-        }
-
-        .section-heading {
-          align-items: start;
-          flex-direction: column;
-        }
-
         .grid {
           grid-template-columns: 1fr;
+        }
+
+        .steps {
+          flex-direction: column;
+          align-items: center;
         }
       }
     </style>
   </head>
   <body>
+    <div class="backdrop" aria-hidden="true"></div>
+
     <header class="topbar">
-      <div class="brand">Air &amp; Plumbing Today</div>
+      <div class="brand">Air &amp; Plumbing <span>Today</span></div>
       <nav class="nav" aria-label="Demo navigation">
         <a href="#voice-demo">AI Receptionist</a>
         <a href="#services">Services</a>
@@ -317,53 +581,54 @@
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="page-title">
-        <div>
-          <p class="eyebrow">AI receptionist demo</p>
-          <h1 id="page-title">Every call answered. ¡No problema!</h1>
-          <p class="lede">
-            A 24/7 voice receptionist for Air &amp; Plumbing Today that answers
-            AC, heating, and plumbing calls across San Antonio and Austin —
-            qualifies the job, captures the caller, and books the visit. In
-            English y en español.
-          </p>
-          <div class="actions">
-            <a class="button" href="#voice-demo">Talk to the receptionist</a>
-            <a class="button secondary" href="#test-lines">Try demo prompts</a>
-          </div>
+      <section class="hero" id="voice-demo" aria-labelledby="page-title">
+        <p class="eyebrow">Live AI receptionist demo</p>
+        <h1 id="page-title">Every call answered.<br />¡No problema!</h1>
+        <p class="lede">
+          A 24/7 voice receptionist for Air &amp; Plumbing Today that answers
+          AC, heating, and plumbing calls across San Antonio and Austin —
+          qualifies the job, captures the caller, and books the visit. In
+          English y en español.
+        </p>
+
+        <div class="core-stage" id="core-stage" data-state="idle">
+          <span class="ring r1"></span>
+          <span class="ring r2"></span>
+          <span class="ring r3"></span>
+          <span class="orbit"><i></i></span>
+          <span class="orbit slow"><i></i></span>
+          <button class="core" id="call-button" type="button" aria-label="Start or end the voice call">
+            <span class="mic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 15a4 4 0 0 0 4-4V6a4 4 0 1 0-8 0v5a4 4 0 0 0 4 4Zm6-4a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.94V22h2v-3.06A8 8 0 0 0 20 11h-2Z" />
+              </svg>
+            </span>
+            <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="label" id="call-label">Tap to speak</span>
+            <span class="sublabel" id="call-sublabel">the receptionist picks up instantly</span>
+          </button>
         </div>
 
-        <aside class="voice-panel" id="voice-demo" aria-label="Voice receptionist widget">
-          <span class="badge">Browser voice demo</span>
-          <h2>Talk to the AI receptionist</h2>
-          <p>
-            The receptionist answers as a call bubble in the corner of this
-            page — just like it would answer the phone.
-          </p>
-          <ol class="steps">
-            <li>Click <strong>“Start a call”</strong> in the bottom-right corner.</li>
-            <li>Allow microphone access when the browser asks.</li>
-            <li>
-              Call about an AC that quit in the Texas heat, a tankless water
-              heater, or a clogged drain — or just start speaking Spanish and
-              watch it follow.
-            </li>
-          </ol>
-          <elevenlabs-convai agent-id="agent_2701ky2gdgbkfqgvzke8df8gph9f"></elevenlabs-convai>
-        </aside>
+        <p class="core-caption" id="call-status">
+          Allow the microphone when the browser asks.
+        </p>
+
+        <ol class="steps">
+          <li><strong>Tap the orb</strong>&nbsp;to start the call.</li>
+          <li><strong>Allow the mic</strong>&nbsp;when the browser asks.</li>
+          <li><strong>Talk naturally</strong>&nbsp;— AC, heating, or plumbing. English o español.</li>
+        </ol>
       </section>
 
       <section class="section" id="services" aria-labelledby="services-title">
-        <div class="section-heading">
-          <h2 id="services-title">What the receptionist can qualify</h2>
-          <p>
-            Tuned for San Antonio's Best AC and Best Plumbing Company of 2024 —
-            flat-rate upfront pricing, no surprises, and no missed calls at 2
-            AM.
-          </p>
-        </div>
+        <h2 id="services-title">What the receptionist can qualify</h2>
+        <p class="sub">
+          Tuned for San Antonio's Best AC and Best Plumbing Company of 2024 —
+          flat-rate upfront pricing, no surprises, and no missed calls at 2 AM.
+        </p>
         <div class="grid">
           <article class="card">
+            <div class="icon">❄️</div>
             <h3>Cooling &amp; Heating</h3>
             <p>
               Triages no-cooling emergencies in Texas summer heat, repair vs.
@@ -372,6 +637,7 @@
             </p>
           </article>
           <article class="card">
+            <div class="icon">🔧</div>
             <h3>Plumbing</h3>
             <p>
               Handles water heaters including tankless, drain cleaning, and
@@ -380,6 +646,7 @@
             </p>
           </article>
           <article class="card">
+            <div class="icon">🌎</div>
             <h3>Bilingual, 24/7</h3>
             <p>
               Switches to Spanish the moment the caller does, and captures
@@ -389,35 +656,127 @@
         </div>
       </section>
 
-      <section class="section test-lines" id="test-lines" aria-labelledby="test-title">
-        <div class="section-heading">
-          <h2 id="test-title">Try these lines</h2>
-          <p>
-            Use these as a live pitch script to show emergency triage, the
-            flat-rate pricing handoff, and the Spanish switch.
-          </p>
-        </div>
+      <section class="section" id="test-lines" aria-labelledby="test-title">
+        <h2 id="test-title">Try these lines</h2>
+        <p class="sub">
+          A live pitch script — watch it triage emergencies, hand off pricing
+          to the flat-rate visit, and switch languages mid-call.
+        </p>
         <div class="grid">
           <article class="card">
-            <h3>Emergency triage</h3>
+            <h3><span class="quote-mark">“</span>Emergency triage</h3>
             <p>“My AC went out and it's 100 degrees here in San Antonio.”</p>
           </article>
           <article class="card">
-            <h3>Pricing handoff</h3>
+            <h3><span class="quote-mark">“</span>Pricing handoff</h3>
             <p>“How much to replace a tankless water heater?”</p>
           </article>
           <article class="card">
-            <h3>Spanish switch</h3>
+            <h3><span class="quote-mark">“</span>Spanish switch</h3>
             <p>“¿Hablan español? Se me tapó el drenaje de la cocina.”</p>
           </article>
         </div>
       </section>
     </main>
 
-    <script
-      src="https://unpkg.com/@elevenlabs/convai-widget-embed"
-      async
-      type="text/javascript"
-    ></script>
+    <footer>
+      AI receptionist demo · Air &amp; Plumbing Today · San Antonio + Austin, TX
+    </footer>
+
+    <script src="https://unpkg.com/@elevenlabs/client@1.15.1/dist/lib.iife.js"></script>
+    <script>
+      (function () {
+        var AGENT_ID = "agent_2701ky2gdgbkfqgvzke8df8gph9f";
+        var stage = document.getElementById("core-stage");
+        var label = document.getElementById("call-label");
+        var sublabel = document.getElementById("call-sublabel");
+        var status = document.getElementById("call-status");
+        var button = document.getElementById("call-button");
+        var conversation = null;
+        var starting = false;
+
+        var STATES = {
+          idle: {
+            label: "Tap to speak",
+            sublabel: "the receptionist picks up instantly",
+            status: "Allow the microphone when the browser asks.",
+          },
+          connecting: {
+            label: "Connecting…",
+            sublabel: "one moment",
+            status: "Dialing the receptionist…",
+          },
+          listening: {
+            label: "Listening",
+            sublabel: "tap again to hang up",
+            status: "You're live — just talk.",
+          },
+          speaking: {
+            label: "Speaking",
+            sublabel: "tap again to hang up",
+            status: "The receptionist is answering…",
+          },
+          error: {
+            label: "Tap to retry",
+            sublabel: "connection failed",
+            status: "Could not connect. Check the mic permission and try again.",
+          },
+        };
+
+        function setState(name) {
+          var s = STATES[name] || STATES.idle;
+          stage.dataset.state = name;
+          label.textContent = s.label;
+          sublabel.textContent = s.sublabel;
+          status.textContent = s.status;
+        }
+
+        async function toggleCall() {
+          if (starting) return;
+          if (conversation) {
+            var active = conversation;
+            conversation = null;
+            setState("idle");
+            try {
+              await active.endSession();
+            } catch (err) {
+              // Session already closed; nothing to clean up
+            }
+            return;
+          }
+
+          starting = true;
+          setState("connecting");
+          try {
+            conversation = await ElevenLabsClient.Conversation.startSession({
+              agentId: AGENT_ID,
+              connectionType: "websocket",
+              onConnect: function () {
+                setState("listening");
+              },
+              onDisconnect: function () {
+                conversation = null;
+                setState("idle");
+              },
+              onModeChange: function (mode) {
+                var m = mode && mode.mode ? mode.mode : mode;
+                setState(m === "speaking" ? "speaking" : "listening");
+              },
+              onError: function (message) {
+                conversation = null;
+                setState("error");
+              },
+            });
+          } catch (err) {
+            conversation = null;
+            setState("error");
+          } finally {
+            starting = false;
+          }
+        }
+
+        button.addEventListener("click", toggleCall);
+      })();
+    </script>
   </body>
 </html>
