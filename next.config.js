@@ -41,7 +41,7 @@ const nextConfig = {
     // websocket, and needs microphone access. Kept off the rest of the site.
     const voiceCspHeader = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://unpkg.com",
+      "script-src 'self' 'unsafe-inline' blob: https://unpkg.com https://*.elevenlabs.io",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https: blob:",
       "font-src 'self' data:",
