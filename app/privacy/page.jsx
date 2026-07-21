@@ -25,7 +25,7 @@ export default function PrivacyPage() {
                     <section className="mb-12">
                         <h2 className="text-2xl font-semibold text-slate-900 mb-4">Introduction</h2>
                         <p className="text-slate-600 leading-relaxed mb-4">
-                            Dooza (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is a product of Adam Laboratory Inc., a Delaware C-Corporation. Dooza is an AI-powered copilot application and service that helps users draft and post social media content across Facebook, Instagram, and LinkedIn. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our application, website, and related services (collectively, the &quot;Service&quot;).
+                            Dooza (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is a product of Adam Laboratory Inc., a Delaware C-Corporation. Dooza provides custom AI agents and AI employees for businesses — deployed and managed by our engineers — that automate work across marketing, sales, customer support, and operations. To do this, the Service connects to the platforms your business uses, which may include social media platforms (such as Facebook, Instagram, and LinkedIn), communication channels (such as email, SMS/text messaging, voice, and WhatsApp), CRMs, file storage, and other business tools. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our application, website, and related services (collectively, the &quot;Service&quot;).
                         </p>
                         <p className="text-slate-600 leading-relaxed">
                             By accessing or using the Service, you consent to the data practices described in this Privacy Policy. If you do not agree with the terms of this policy, please do not access or use the Service.
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
                         <h3 className="text-xl font-medium text-slate-800 mb-3">Content You Create</h3>
                         <p className="text-slate-600 leading-relaxed mb-4">
-                            We store the social media content you draft, edit, and publish through Dooza, including text, images, and scheduling preferences. This data is necessary to provide the AI copilot functionality.
+                            We store the content and business data you create or process through Dooza — including social media content, messages, documents, schedules, and related preferences — as needed to provide the Service and run your agents.
                         </p>
 
                         <h3 className="text-xl font-medium text-slate-800 mb-3">Connected Social Media Account Data</h3>

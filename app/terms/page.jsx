@@ -42,16 +42,16 @@ export default function TermsPage() {
                     <section className="mb-12">
                         <h2 className="text-2xl font-semibold text-slate-900 mb-4">2. Description of Service</h2>
                         <p className="text-slate-600 leading-relaxed mb-4">
-                            Dooza is an AI-powered copilot that helps users draft, manage, and publish social media content across Facebook, Instagram, and LinkedIn. The Service includes:
+                            Dooza provides custom AI agents and AI employees for businesses. Our engineers deploy and manage agents that automate work across marketing, sales, customer support, and operations. The Service includes:
                         </p>
                         <ul className="list-disc pl-6 text-slate-600 space-y-2">
-                            <li>AI-assisted content drafting and optimization for social media posts</li>
-                            <li>Integration with Facebook, Instagram, and LinkedIn APIs for content publishing</li>
-                            <li>Content scheduling and management tools</li>
-                            <li>Analytics and engagement metrics for published content</li>
+                            <li>AI agents that execute business workflows, such as content and campaigns, lead follow-up, customer support, and scheduling</li>
+                            <li>Connections to the platforms your business uses, which may include social media, email, SMS/text messaging, voice, CRM, and file-storage services</li>
+                            <li>Approvals, logs, and controls that keep sensitive actions under your review</li>
+                            <li>Ongoing deployment and management of those agents by our team</li>
                         </ul>
                         <p className="text-slate-600 leading-relaxed mt-4">
-                            Dooza acts as a copilot — all content publishing requires your explicit review and approval. We do not publish content on your behalf without your authorization.
+                            Dooza agents act under your direction — actions you mark as sensitive require your explicit review and approval. We do not take those actions on your behalf without your authorization.
                         </p>
                     </section>
 
