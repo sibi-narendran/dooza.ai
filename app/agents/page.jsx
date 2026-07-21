@@ -6,6 +6,8 @@ import { SITE_URL } from '@/lib/site';
 import HeroSection from './sections/HeroSection';
 import LogoStrip from './sections/LogoStrip';
 import PrebuiltAgents from './sections/PrebuiltAgents';
+import HowItWorksBrain from '@/components/sections/HowItWorksBrain';
+import CompanyContextSection from '@/components/sections/CompanyContextSection';
 import AgentBuilder from './sections/AgentBuilder';
 import PlatformTabs from './sections/PlatformTabs';
 import AgentTypeSections from './sections/AgentTypeSections';
@@ -139,6 +141,8 @@ export default function AgentsPage() {
                 <HeroSection />
                 <LogoStrip />
                 <PrebuiltAgents />
+                <HowItWorksBrain ctaSource="agents_how_it_works" ctaLabel="Book a Meeting" className="border-y border-slate-100 bg-white" />
+                <CompanyContextSection className="bg-warm" />
                 <AgentBuilder />
                 <PlatformTabs />
                 <AgentTypeSections />

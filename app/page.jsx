@@ -5,7 +5,6 @@ import {
     ArrowRight,
     Brain,
     CheckCircle2,
-    ClipboardList,
     Clock,
     DollarSign,
     ShieldCheck,
@@ -16,7 +15,8 @@ import {
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import IntegrationsBar from '@/components/sections/IntegrationsBar';
+import HowItWorksBrain from '@/components/sections/HowItWorksBrain';
+import CompanyContextSection from '@/components/sections/CompanyContextSection';
 import VideoSection from '@/components/sections/VideoSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
@@ -69,33 +69,6 @@ const engineerChanges = [
     'We find the right task and set up the AI. Free.',
     'You approve anything important before it happens.',
     'You pay only if you want to keep it.',
-];
-
-const engagementSteps = [
-    {
-        step: '01',
-        title: 'Map',
-        time: 'Day 1',
-        desc: 'One call. We find the task worth automating.',
-    },
-    {
-        step: '02',
-        title: 'Build',
-        time: 'Day 2',
-        desc: 'We set everything up and connect your tools. Free.',
-    },
-    {
-        step: '03',
-        title: 'Live',
-        time: 'Day 4',
-        desc: 'It runs on real work. You watch and approve.',
-    },
-    {
-        step: '04',
-        title: 'Keep',
-        time: 'You choose',
-        desc: 'Love it? Keep it and pay. If not, walk away.',
-    },
 ];
 
 const automationExamples = [
@@ -375,48 +348,6 @@ function EngagementTimelineVisual() {
     );
 }
 
-function EngagementProcessFlow() {
-    return (
-        <div className="workflow-tree-surface rounded-[28px] border border-slate-200 bg-white p-5 shadow-xl shadow-slate-200/70 md:p-6">
-            <div className="mb-6 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                        <ClipboardList className="h-6 w-6" />
-                    </div>
-                    <div>
-                        <div className="text-sm font-bold text-slate-950">How it works</div>
-                        <div className="text-xs text-slate-500">one task at a time</div>
-                    </div>
-                </div>
-
-                <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">
-                    Days
-                </span>
-            </div>
-
-            <div className="relative grid gap-4">
-                <div className="absolute bottom-12 left-5 top-6 hidden w-px bg-primary-100 sm:block" />
-                <span className="deployment-vertical-flow absolute left-[17px] top-6 hidden h-16 w-2 rounded-full bg-primary-600 sm:block" />
-
-                {engagementSteps.map((item, index) => (
-                    <div key={item.step} className="relative flex gap-4 rounded-3xl border border-slate-100 bg-white p-4 shadow-sm md:p-5">
-                        <div className={`z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold ${index === 0 ? 'bg-primary-700 text-white' : 'bg-primary-50 text-primary-700'}`}>
-                            {item.step}
-                        </div>
-                        <div className="min-w-0 flex-1">
-                            <div className="mb-1 flex flex-wrap items-center gap-2">
-                                <span className="rounded-full bg-primary-50 px-2.5 py-1 text-xs font-bold text-primary-700">{item.time}</span>
-                                <h3 className="font-sans text-base font-extrabold leading-snug text-slate-950">{item.title}</h3>
-                            </div>
-                            <p className="text-sm leading-relaxed text-slate-600">{item.desc}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-}
-
 export default function Home() {
     return (
         <BookingModalProvider>
@@ -552,25 +483,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="relative overflow-hidden bg-warm px-4 py-20 text-slate-900 md:py-28">
-                    <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-                        <div>
-                            <span className="section-label mb-5 block">
-                                How it works
-                            </span>
-                            <h2 className="mb-7 max-w-xl font-serif text-4xl font-extrabold leading-[1.08] tracking-tight text-slate-900 md:text-6xl">
-                                Live in days. Not months.
-                            </h2>
-                            <p className="mb-9 max-w-lg text-lg leading-relaxed text-slate-600">
-                                Free setup. No long projects. Your first automation runs this week.
-                            </p>
-                            <BookDemoButton source="home_process" variant="primary">
-                                Start My Free Setup
-                            </BookDemoButton>
-                        </div>
-                        <EngagementProcessFlow />
-                    </div>
-                </section>
+                <HowItWorksBrain ctaSource="home_process" className="bg-warm" />
 
                 <section className="bg-white px-4 py-20 md:py-28">
                     <div className="mx-auto max-w-7xl">
@@ -599,7 +512,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                <IntegrationsBar className="border-y border-slate-100" />
+                <CompanyContextSection className="border-y border-slate-100 bg-white" />
 
                 <VideoSection />
 
