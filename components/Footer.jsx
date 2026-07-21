@@ -203,6 +203,11 @@ const Footer = ({ variant = 'light' }) => {
                                     Terms
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/sms-opt-in" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    SMS Opt-in
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

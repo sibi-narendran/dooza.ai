@@ -152,7 +152,7 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/privacy`,
-            lastModified: pageDate('2026-02-09'),
+            lastModified: pageDate('2026-07-21'),
             changeFrequency: 'monthly',
             priority: 0.5,
         },
@@ -164,9 +164,15 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/terms`,
-            lastModified: pageDate('2026-02-09'),
+            lastModified: pageDate('2026-07-21'),
             changeFrequency: 'monthly',
             priority: 0.5,
+        },
+        {
+            url: `${SITE_URL}/sms-opt-in`,
+            lastModified: pageDate('2026-07-21'),
+            changeFrequency: 'monthly',
+            priority: 0.4,
         },
     ];
 

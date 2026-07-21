@@ -1,28 +1,23 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { CheckCircle2, Loader2 } from 'lucide-react';
-import { supabase } from '../../lib/supabase';
+import { CheckCircle2, Loader2, MessageSquareText } from 'lucide-react';
 import { countries } from '../../lib/countries';
-import { trackFBCompleteRegistration, trackFBLead } from '../../lib/analytics';
 
-export default function PartnerSignupPage() {
+export default function SmsOptInPage() {
     const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
-    const [submitError, setSubmitError] = useState(null);
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
         phoneCountry: 'US',
         phone: '',
-        industry: '',
-        website: '',
-        linkedin: '',
         consentTransactional: false,
         consentMarketing: false,
     });
@@ -32,47 +27,16 @@ export default function PartnerSignupPage() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        setSubmitError(null);
-        
-        try {
-            const dataToInsert = {
-                first_name: formData.firstName,
-                last_name: formData.lastName,
-                email: formData.email,
-                phone_country: formData.phoneCountry,
-                phone: formData.phone,
-                industry: formData.industry,
-                website: formData.website || null,
-                linkedin: formData.linkedin || null
-            };
-
-            const { error } = await supabase
-                .from('partners_signup')
-                .insert([dataToInsert]);
-
-            if (error) throw error;
-
-            // Track Facebook Pixel events
-            trackFBCompleteRegistration('partner_signup');
-            trackFBLead('partner_signup');
-            
-            setIsSuccess(true);
-        } catch (error) {
-            console.error('Error submitting partner application:', error);
-            setSubmitError('Something went wrong. Please try again later.');
-        } finally {
+        // Display-only form for carrier review — no data is stored.
+        setTimeout(() => {
             setIsSubmitting(false);
-        }
+            setIsSuccess(true);
+        }, 700);
     };
 
     const handleChange = (e) => {
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
         setFormData({ ...formData, [e.target.name]: value });
-    };
-
-    const handleLogin = (e) => {
-        e.preventDefault(); 
-        alert("Please email support@dooza.ai for partner portal access.");
     };
 
     if (isSuccess) {
@@ -84,11 +48,11 @@ export default function PartnerSignupPage() {
                         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600">
                             <CheckCircle2 size={32} />
                         </div>
-                        <h1 className="text-2xl font-bold text-gray-900 mb-4">Application Received!</h1>
+                        <h1 className="text-2xl font-bold text-gray-900 mb-4">You&apos;re subscribed!</h1>
                         <p className="text-gray-600 mb-8">
-                            Thanks for your interest in becoming a partner. We will review your application and you will receive an email shortly with next steps.
+                            Thanks for subscribing to Dooza text messages. Reply STOP at any time to cancel, or HELP for help.
                         </p>
-                        <button 
+                        <button
                             onClick={() => router.push('/')}
                             className="w-full py-3 bg-gray-900 text-white rounded-xl font-bold hover:bg-gray-800 transition-all"
                         >
@@ -108,28 +72,25 @@ export default function PartnerSignupPage() {
             <main className="pt-32 pb-24 px-4 sm:px-6">
                 <div className="max-w-xl mx-auto">
                     <div className="text-center mb-10">
-                        <div className="flex items-center justify-center gap-1 font-bold tracking-tighter mb-6">
-                             <span className="text-4xl sm:text-5xl md:text-6xl text-primary-600">dooza</span>
-                             <span className="text-4xl sm:text-5xl md:text-6xl text-black">.ai</span>
+                        <div className="w-14 h-14 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <MessageSquareText size={28} />
                         </div>
                         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Become a Partner
+                            Subscribe to Dooza Text Messages
                         </h1>
+                        <p className="text-gray-600">
+                            Get appointment reminders, account updates, and occasional offers from Dooza by text.
+                        </p>
                     </div>
 
                     <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 md:p-10">
-                        {submitError && (
-                            <div className="mb-6 p-4 bg-red-50 text-red-600 rounded-xl text-sm font-medium border border-red-100">
-                                {submitError}
-                            </div>
-                        )}
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid gap-6 sm:grid-cols-2">
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         First Name <span className="text-red-500">*</span>
                                     </label>
-                                    <input 
+                                    <input
                                         required
                                         type="text"
                                         name="firstName"
@@ -143,7 +104,7 @@ export default function PartnerSignupPage() {
                                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         Last Name <span className="text-red-500">*</span>
                                     </label>
-                                    <input 
+                                    <input
                                         required
                                         type="text"
                                         name="lastName"
@@ -159,7 +120,7 @@ export default function PartnerSignupPage() {
                                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     Email <span className="text-red-500">*</span>
                                 </label>
-                                <input 
+                                <input
                                     required
                                     type="email"
                                     name="email"
@@ -176,7 +137,7 @@ export default function PartnerSignupPage() {
                                 </label>
                                 <div className="flex flex-col gap-2 sm:flex-row">
                                     <div className="relative w-full sm:w-32">
-                                        <select 
+                                        <select
                                             name="phoneCountry"
                                             value={formData.phoneCountry}
                                             onChange={handleChange}
@@ -189,7 +150,7 @@ export default function PartnerSignupPage() {
                                             ))}
                                         </select>
                                     </div>
-                                    <input 
+                                    <input
                                         required
                                         type="tel"
                                         name="phone"
@@ -199,57 +160,6 @@ export default function PartnerSignupPage() {
                                         className="min-w-0 flex-1 px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all bg-gray-50 focus:bg-white"
                                     />
                                 </div>
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                    Industry <span className="text-red-500">*</span>
-                                </label>
-                                <div className="relative">
-                                    <select 
-                                        required
-                                        name="industry"
-                                        value={formData.industry}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all bg-gray-50 focus:bg-white appearance-none"
-                                    >
-                                        <option value="" disabled>Please Select Your Industry</option>
-                                        <option value="agency">Marketing Agency</option>
-                                        <option value="consultant">Consultant</option>
-                                        <option value="saas">SaaS / Tech</option>
-                                        <option value="content_creator">Content Creator</option>
-                                        <option value="ecommerce">E-commerce</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                    Website URL <span className="text-gray-400 font-normal">(optional)</span>
-                                </label>
-                                <input 
-                                    type="url"
-                                    name="website"
-                                    placeholder="https://yourwebsite.com"
-                                    value={formData.website}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all bg-gray-50 focus:bg-white"
-                                />
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                    LinkedIn URL <span className="text-gray-400 font-normal">(optional)</span>
-                                </label>
-                                <input 
-                                    type="url"
-                                    name="linkedin"
-                                    placeholder="https://linkedin.com/yourprofile"
-                                    value={formData.linkedin}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all bg-gray-50 focus:bg-white"
-                                />
                             </div>
 
                             <div className="rounded-xl border border-gray-200 bg-gray-50 p-5 space-y-4">
@@ -286,19 +196,19 @@ export default function PartnerSignupPage() {
                                 <p className="text-xs leading-relaxed text-gray-500">
                                     Message frequency will vary. Msg &amp; data rates may apply. Reply HELP for help or STOP to
                                     cancel. See our{' '}
-                                    <a href="/privacy" className="text-primary-600 font-semibold underline underline-offset-2 hover:text-primary-700">
+                                    <Link href="/privacy" className="text-primary-600 font-semibold underline underline-offset-2 hover:text-primary-700">
                                         Privacy Policy
-                                    </a>{' '}
+                                    </Link>{' '}
                                     and{' '}
-                                    <a href="/terms" className="text-primary-600 font-semibold underline underline-offset-2 hover:text-primary-700">
+                                    <Link href="/terms" className="text-primary-600 font-semibold underline underline-offset-2 hover:text-primary-700">
                                         Terms and Conditions
-                                    </a>
+                                    </Link>
                                     .
                                 </p>
                             </div>
 
-                            <button 
-                                type="submit" 
+                            <button
+                                type="submit"
                                 disabled={isSubmitting}
                                 className="w-full py-4 bg-primary-600 text-white rounded-xl font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-900/20 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                             >
@@ -308,22 +218,9 @@ export default function PartnerSignupPage() {
                                         Submitting...
                                     </>
                                 ) : (
-                                    'Sign Up'
+                                    'Subscribe'
                                 )}
                             </button>
-
-                            <div className="text-center pt-2">
-                                <p className="text-gray-600">
-                                    Already have an account?{' '}
-                                    <button 
-                                        type="button"
-                                        onClick={handleLogin}
-                                        className="text-primary-600 font-bold hover:underline"
-                                    >
-                                        Login
-                                    </button>
-                                </p>
-                            </div>
                         </form>
                     </div>
                 </div>

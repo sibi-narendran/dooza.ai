@@ -16,7 +16,7 @@ export default function PrivacyPage() {
                         Privacy Policy
                     </h1>
                     <p className="text-slate-500 text-lg">
-                        Effective Date: February 1, 2026
+                        Effective Date: July 21, 2026
                     </p>
                 </div>
 
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
 
                         <h3 className="text-xl font-medium text-slate-800 mb-3">Account Information</h3>
                         <p className="text-slate-600 leading-relaxed mb-4">
-                            When you create an account, we collect your name, email address, and any profile information you choose to provide. If you sign up using a third-party service (such as Google), we receive basic profile information from that provider.
+                            When you create an account, we collect your name, email address, phone number (if you choose to provide it), and any profile information you choose to provide. If you sign up using a third-party service (such as Google), we receive basic profile information from that provider.
                         </p>
 
                         <h3 className="text-xl font-medium text-slate-800 mb-3">Usage Data</h3>
@@ -132,6 +132,7 @@ export default function PrivacyPage() {
                             <li>Provide, maintain, and improve our Service</li>
                             <li>Personalize your experience and provide content recommendations</li>
                             <li>Communicate with you about your account, updates, and promotional offers</li>
+                            <li>Send you text (SMS) messages you have opted in to receive, such as appointment reminders, account and service notifications, and — with your separate consent — promotional offers</li>
                             <li>Monitor and analyze usage patterns to improve service quality</li>
                             <li>Detect, prevent, and address technical issues and security threats</li>
                             <li>Comply with legal obligations</li>
@@ -226,6 +227,21 @@ export default function PrivacyPage() {
                         <p className="text-slate-600 leading-relaxed">
                             Withdrawing consent does not affect the lawfulness of any processing carried out before the withdrawal. After consent is withdrawn, we will stop accessing your data from the relevant platform and delete the associated platform data within 30 days.
                         </p>
+                    </section>
+
+                    {/* Text Messaging (SMS) */}
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-semibold text-slate-900 mb-4">Text Messaging (SMS)</h2>
+                        <p className="text-slate-600 leading-relaxed mb-4">
+                            If you provide your phone number and opt in through our website forms, booking links, or sign-up pages, we may send you text messages related to customer care, notifications, appointments, and — where you have separately consented — marketing and promotional content.
+                        </p>
+                        <ul className="list-disc pl-6 text-slate-600 space-y-2">
+                            <li><strong>Opt-in only:</strong> We send text messages only to numbers that have expressly consented. Consent is not a condition of purchase.</li>
+                            <li><strong>Opt-out:</strong> You can cancel at any time by replying STOP to any message. Reply HELP for help.</li>
+                            <li><strong>Rates:</strong> Message frequency will vary. Message and data rates may apply.</li>
+                            <li><strong>No sharing of mobile opt-in data:</strong> We do not sell, rent, or share your mobile phone number or SMS opt-in/consent with any third parties or affiliates for their marketing or promotional purposes. Text messaging originator opt-in data and consent are not shared with any third parties, except service providers who act on our behalf solely to deliver the messages you requested (for example, our SMS platform provider).</li>
+                            <li><strong>Retention:</strong> We keep opt-in records (number, consent type, and timestamp) for as long as needed to demonstrate compliance, and delete phone numbers on request.</li>
+                        </ul>
                     </section>
 
                     {/* Data Security */}

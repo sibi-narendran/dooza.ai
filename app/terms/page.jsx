@@ -17,7 +17,7 @@ export default function TermsPage() {
                         Terms of Service
                     </h1>
                     <p className="text-slate-500 text-lg">
-                        Effective Date: February 1, 2026
+                        Effective Date: July 21, 2026
                     </p>
                 </div>
 
@@ -259,9 +259,21 @@ export default function TermsPage() {
                         </ul>
                     </section>
 
+                    {/* SMS & Text Messaging */}
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-semibold text-slate-900 mb-4">17. SMS &amp; Text Messaging</h2>
+                        <ul className="list-disc pl-6 text-slate-600 space-y-3">
+                            <li><strong>Consent:</strong> By providing your phone number and opting in through our website forms, booking links, or sign-up pages, you authorize Adam Laboratory Inc. (Dooza) to send text messages with offers and other information, possibly using automated technology, to the number you provided. Consent is not a condition of purchase.</li>
+                            <li><strong>Message types:</strong> Depending on the options you select, messages may include customer care and notification texts, or marketing and promotional texts.</li>
+                            <li><strong>Frequency and rates:</strong> Message frequency will vary. Message and data rates may apply.</li>
+                            <li><strong>Opt-out and help:</strong> Reply STOP to cancel at any time. Reply HELP for help. You may also contact us at the email below to manage your messaging preferences.</li>
+                            <li><strong>Data handling:</strong> Phone numbers and SMS consent records are handled as described in our Privacy Policy. We do not sell, rent, or share your mobile phone number or SMS opt-in/consent with third parties or affiliates for their marketing or promotional purposes.</li>
+                        </ul>
+                    </section>
+
                     {/* Contact Us */}
                     <section className="mb-12">
-                        <h2 className="text-2xl font-semibold text-slate-900 mb-4">17. Contact Us</h2>
+                        <h2 className="text-2xl font-semibold text-slate-900 mb-4">18. Contact Us</h2>
                         <p className="text-slate-600 leading-relaxed mb-4">
                             If you have any questions about these Terms, please contact us at:
                         </p>
