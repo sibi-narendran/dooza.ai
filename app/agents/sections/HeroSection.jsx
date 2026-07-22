@@ -43,7 +43,7 @@ export default function HeroSection() {
             />
             <div className="hero-entrance relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
                 <h1 className="mb-6 font-serif text-4xl font-extrabold leading-[1.06] tracking-tight text-slate-950 md:text-6xl">
-                    AI agent builder that automates your{' '}
+                    AI employees that do your{' '}
                     <span className="text-primary-600">marketing</span>,{' '}
                     <span className="text-primary-600">sales</span> and{' '}
                     <span className="text-primary-600">support</span>.
