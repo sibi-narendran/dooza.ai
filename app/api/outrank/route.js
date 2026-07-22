@@ -91,3 +91,29 @@ export async function POST(request) {
 
     return NextResponse.json({ message: 'Webhook processed successfully', results });
 }
+
+// DELETE /api/outrank?slug=<slug> — remove an article (authenticated, same token)
+export async function DELETE(request) {
+    if (!authenticate(request)) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const slug = new URL(request.url).searchParams.get('slug');
+    if (!slug) {
+        return NextResponse.json({ error: 'Missing slug parameter' }, { status: 400 });
+    }
+
+    const { data, error } = await supabaseServer
+        .from('blog_articles')
+        .delete()
+        .eq('slug', slug)
+        .select('slug');
+
+    if (error) throw error;
+    if (!data || data.length === 0) {
+        return NextResponse.json({ error: `No article with slug "${slug}"` }, { status: 404 });
+    }
+
+    revalidateBlogPaths(slug);
+    return NextResponse.json({ message: 'Article deleted', slug });
+}

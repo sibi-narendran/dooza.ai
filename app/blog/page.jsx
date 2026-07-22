@@ -144,7 +144,7 @@ export default async function Blog() {
                 "@type": "WebPage",
                 "@id": `${SITE_URL}/blog/${post.slug}`
             },
-            "image": post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}/logo.png`,
+            "image": post.image ? (post.image.startsWith('http') ? post.image : `${SITE_URL}${post.image}`) : `${SITE_URL}/logo.png`,
             "keywords": post.tags?.join(', ')
         }))
     };

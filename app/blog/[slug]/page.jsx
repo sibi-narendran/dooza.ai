@@ -273,7 +273,9 @@ export async function generateMetadata({ params }) {
 
     const seoTitle = getPostSeoTitle(post);
     const seoDescription = getPostSeoDescription(post);
-    const socialImage = post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}/logo.png`;
+    const socialImage = post.image
+        ? (post.image.startsWith('http') ? post.image : `${SITE_URL}${post.image}`)
+        : `${SITE_URL}/logo.png`;
 
     const metadata = {
         title: seoTitle,
