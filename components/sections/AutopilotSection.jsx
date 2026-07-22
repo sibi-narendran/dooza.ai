@@ -11,7 +11,7 @@ export default function AutopilotSection() {
                     <div className="flex flex-col items-center">
                         {/* Heading first */}
                         <h2 className="text-4xl md:text-5xl text-slate-900 font-bold text-center font-serif mb-12">
-                            All done while you slept.
+                            What if your to-do list finished itself overnight?
                         </h2>
 
                         {/* Checklist */}
