@@ -43,28 +43,36 @@ export default function HeroSection() {
             />
             <div className="hero-entrance relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
                 <h1 className="mb-6 font-serif text-4xl font-extrabold leading-[1.06] tracking-tight text-slate-950 md:text-6xl">
-                    AI employees that do your{' '}
-                    <span className="text-primary-600">marketing</span>,{' '}
-                    <span className="text-primary-600">sales</span> and{' '}
-                    <span className="text-primary-600">support</span>.
+                    Describe the agent you need.{' '}
+                    <span className="text-primary-600">We build it, run it, and keep it working.</span>
                 </h1>
+                <p className="mb-8 max-w-2xl text-base leading-relaxed text-slate-600 md:text-xl">
+                    Live in days. Free setup. Keep it only if it earns its keep.
+                </p>
                 <div className="mb-8 mt-3 w-full max-w-3xl">
                     <AgentPromptBox signupUrl={WORKFLOW_SIGNUP_URL} />
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-600">
                     <span className="inline-flex items-center gap-1.5">
-                        <span className="flex items-center gap-0.5">
-                            {[...Array(5)].map((_, index) => (
-                                <Star key={index} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                            ))}
-                        </span>
-                        2,000+ 5 star Reviews
+                        <CheckCircle2 className="h-4 w-4 text-primary-600" />
+                        Free setup
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                        <CheckCircle2 className="h-4 w-4 text-primary-600" />
+                        No contracts
                     </span>
                     <span className="inline-flex items-center gap-1.5">
                         <CheckCircle2 className="h-4 w-4 text-primary-600" />
                         No credit card required
                     </span>
                 </div>
+                <p className="mt-4 flex items-center gap-2 text-sm font-semibold text-slate-700">
+                    <span className="relative flex h-2.5 w-2.5">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
+                        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-500" />
+                    </span>
+                    Due to high demand, we take on 5 free setups a week.
+                </p>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                     {ratingBadges.map((badge) => (
                         <div

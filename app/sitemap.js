@@ -26,7 +26,7 @@ export default async function sitemap() {
     const staticPages = [
         {
             url: SITE_URL,
-            lastModified: pageDate('2026-07-15'),
+            lastModified: pageDate('2026-07-23'),
             changeFrequency: 'weekly',
             priority: 1.0,
         },
@@ -41,12 +41,6 @@ export default async function sitemap() {
             lastModified: pageDate('2026-07-16'),
             changeFrequency: 'monthly',
             priority: 0.4,
-        },
-        {
-            url: `${SITE_URL}/agents`,
-            lastModified: pageDate('2026-06-15'),
-            changeFrequency: 'weekly',
-            priority: 0.95,
         },
         {
             url: `${SITE_URL}/pricing`,
