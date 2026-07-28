@@ -145,6 +145,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/ai-slop-checker`,
+            lastModified: pageDate('2026-07-28'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/privacy`,
             lastModified: pageDate('2026-07-21'),
             changeFrequency: 'monthly',
