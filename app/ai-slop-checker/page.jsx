@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SlopCheckerEmbed from '@/components/SlopCheckerEmbed';
 import FAQAccordion from '@/components/FAQAccordion';
+import Link from 'next/link';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata = {
@@ -12,6 +13,8 @@ export const metadata = {
     keywords: [
         'ai slop checker', 'ai writing detector', 'ai slop detector', 'make writing sound human',
         'ai generated text detector', 'remove ai slop', 'humanize ai writing', 'ai phrase checker',
+        'ai writing checker', 'free ai detector alternative', 'ai content checker',
+        'how to make ai writing sound human', 'chatgpt writing detector',
     ],
     alternates: {
         canonical: `${SITE_URL}/ai-slop-checker`,
@@ -22,11 +25,20 @@ export const metadata = {
             'Paste your writing and flag 20+ patterns that make it sound AI-generated. Free and private, it runs entirely in your browser.',
         url: `${SITE_URL}/ai-slop-checker`,
         type: 'website',
+        images: [
+            {
+                url: `${SITE_URL}/images/ai-slop-checker-og.png`,
+                width: 1200,
+                height: 630,
+                alt: 'Dooza AI Slop Checker: flag the phrases that make writing sound AI-generated',
+            },
+        ],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Free AI Slop Checker | Dooza',
         description: 'Flag the phrases that make your writing sound AI-generated. Free, private, in-browser.',
+        images: [`${SITE_URL}/images/ai-slop-checker-og.png`],
     },
 };
 
@@ -48,7 +60,7 @@ const faqItems = [
         answer: 'More than 20, including overused AI words (delve, leverage, tapestry), throat-clearing openers, faux-insight setups, colon reveals, binary contrasts, superficial "-ing" analysis, importance puffery, weasel attribution, fake-strong verbs, negative listing, dramatic fragmentation, rhetorical setups, fake-profound endings, summary recaps, and em-dash overuse.',
     },
     {
-        question: 'How should I use it?',
+        question: 'How do I make AI writing sound more human?',
         answer: 'Write your first draft yourself, use AI (if you like) to edit for grammar and clarity, then paste the result here. Fix the flagged lines in your own words and do one final read-through by hand. Your thinking and your voice stay in the writing. The tool just points at the tells.',
     },
     {
@@ -92,6 +104,25 @@ const faqSchema = {
     })),
 };
 
+const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+        {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: SITE_URL,
+        },
+        {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'AI Slop Checker',
+            item: `${SITE_URL}/ai-slop-checker`,
+        },
+    ],
+};
+
 const patternList = [
     { name: 'Binary contrasts', example: '"It\'s not X. It\'s Y."' },
     { name: 'Throat-clearing openers', example: '"Here\'s the thing…"' },
@@ -107,6 +138,47 @@ const patternList = [
     { name: 'Fake-profound endings', example: '"The future isn\'t coming. It\'s already here."' },
 ];
 
+const beforeAfterExamples = [
+    {
+        before: 'In today\'s fast-paced digital landscape, leveraging cutting-edge AI is not just an option. It\'s a necessity.',
+        after: 'Most teams we work with already use AI every day. The ones falling behind are the ones still debating it.',
+        patterns: ['Filler phrase', 'Overused AI words', 'Binary contrast'],
+    },
+    {
+        before: 'Our transformative platform serves as a centralized hub, highlighting our unwavering commitment to innovation.',
+        after: 'The platform keeps your docs, tasks, and approvals in one place. We rebuilt it twice to get there.',
+        patterns: ['Buzzwords', 'Fake-strong verb', 'Superficial analysis'],
+    },
+    {
+        before: 'The future of content isn\'t coming. It\'s already here. In conclusion, delve into this ever-evolving realm.',
+        after: 'Content teams shipped 3x more drafts this year than last. The gap keeps widening.',
+        patterns: ['Fake-profound ending', 'Recap ending', 'Overused AI words'],
+    },
+];
+
+const internalLinks = [
+    {
+        title: 'AI Content Automation',
+        description: 'How Dooza builds content systems that sound like you, not like a model.',
+        href: '/ai-content-automation',
+    },
+    {
+        title: 'AI Blog Automation',
+        description: 'Publish SEO blog posts on a schedule without losing your voice.',
+        href: '/ai-blog-automation',
+    },
+    {
+        title: 'Workflow Automation',
+        description: 'Automate the repeat work in your business with AI workflows.',
+        href: '/workflow-automation',
+    },
+    {
+        title: 'Dooza Blog',
+        description: 'Guides on AI employees, automation, and running a business with AI.',
+        href: '/blog',
+    },
+];
+
 export default function AiSlopCheckerPage() {
     return (
         <BookingModalProvider>
@@ -117,6 +189,10 @@ export default function AiSlopCheckerPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             <div className="min-h-screen bg-slate-50">
                 <Navbar />
@@ -138,7 +214,40 @@ export default function AiSlopCheckerPage() {
                         </div>
 
                         {/* Tool — embedded from the standalone app hosted on Vercel */}
-                        <SlopCheckerEmbed />
+                        <section aria-labelledby="checker-heading">
+                            <h2 id="checker-heading" className="sr-only">
+                                Free AI writing checker: paste your text
+                            </h2>
+                            <SlopCheckerEmbed />
+                        </section>
+
+                        {/* Why it matters */}
+                        <section className="mt-20">
+                            <h2 className="text-2xl font-bold text-slate-900 text-center">
+                                Why AI-sounding writing costs you readers
+                            </h2>
+                            <div className="mt-8 space-y-4">
+                                {[
+                                    {
+                                        title: 'Readers pattern-match faster than ever',
+                                        body: 'After two years of AI-generated content flooding every feed, people recognize the shapes: the "It\'s not X. It\'s Y." constructions, the dramatic one-line paragraphs, the fake-profound endings. Once a reader spots them, they stop trusting the rest of the piece, including the parts you actually thought about.',
+                                    },
+                                    {
+                                        title: 'AI detectors guess. Patterns are evidence.',
+                                        body: 'Detector tools output a probability, and they are wrong often enough to accuse human writers. This checker takes the opposite approach: it shows you the exact line, names the exact pattern, and lets you decide. No score, no false verdicts, just specific edits you can make.',
+                                    },
+                                    {
+                                        title: 'Search engines reward writing people actually read',
+                                        body: 'Formulaic AI text tends to read the same across every site that publishes it. Writing with a real voice keeps people on the page longer, earns links, and gives Google a reason to rank you over the thousand near-identical articles on the same topic.',
+                                    },
+                                ].map((item) => (
+                                    <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-5">
+                                        <p className="font-semibold text-slate-900">{item.title}</p>
+                                        <p className="mt-1 text-sm text-slate-600 leading-relaxed">{item.body}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
 
                         {/* Patterns */}
                         <section className="mt-20">
@@ -169,6 +278,36 @@ export default function AiSlopCheckerPage() {
                                 </a>{' '}
                                 (MIT license).
                             </p>
+                        </section>
+
+                        {/* Before / after */}
+                        <section className="mt-20">
+                            <h2 className="text-2xl font-bold text-slate-900 text-center">
+                                AI slop vs human writing: real examples
+                            </h2>
+                            <p className="mt-3 text-slate-600 text-center max-w-2xl mx-auto">
+                                Same point, two ways. The first version trips the checker. The second
+                                sounds like a person with something to say.
+                            </p>
+                            <div className="mt-8 space-y-6">
+                                {beforeAfterExamples.map((ex, i) => (
+                                    <div key={i} className="bg-white border border-slate-200 rounded-xl p-5">
+                                        <div className="flex flex-wrap gap-1.5 mb-3">
+                                            {ex.patterns.map((p) => (
+                                                <span key={p} className="inline-flex items-center rounded-full bg-red-50 text-red-700 text-xs font-semibold px-2.5 py-0.5">
+                                                    {p}
+                                                </span>
+                                            ))}
+                                        </div>
+                                        <p className="text-sm text-slate-500 line-through decoration-red-300 leading-relaxed">
+                                            {ex.before}
+                                        </p>
+                                        <p className="text-sm text-slate-900 font-medium mt-3 leading-relaxed">
+                                            {ex.after}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
                         </section>
 
                         {/* How to use */}
@@ -211,6 +350,27 @@ export default function AiSlopCheckerPage() {
                                 Frequently asked questions
                             </h2>
                             <FAQAccordion items={faqItems} />
+                        </section>
+
+                        {/* Internal links */}
+                        <section className="mt-20">
+                            <h2 className="text-2xl font-bold text-slate-900 text-center mb-8">
+                                More from Dooza
+                            </h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {internalLinks.map((link) => (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        className="bg-white border border-slate-200 rounded-xl p-5 hover:border-primary-500 hover:shadow-sm transition-all group"
+                                    >
+                                        <p className="font-semibold text-slate-900 group-hover:text-primary-700">
+                                            {link.title} →
+                                        </p>
+                                        <p className="mt-1 text-sm text-slate-600">{link.description}</p>
+                                    </Link>
+                                ))}
+                            </div>
                         </section>
                     </div>
                 </main>
