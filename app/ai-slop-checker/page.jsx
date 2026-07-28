@@ -1,7 +1,7 @@
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import AiSlopChecker from '@/components/AiSlopChecker';
+import SlopCheckerEmbed from '@/components/SlopCheckerEmbed';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
 
@@ -137,8 +137,8 @@ export default function AiSlopCheckerPage() {
                             </p>
                         </div>
 
-                        {/* Tool */}
-                        <AiSlopChecker />
+                        {/* Tool — embedded from the standalone app hosted on Vercel */}
+                        <SlopCheckerEmbed />
 
                         {/* Patterns */}
                         <section className="mt-20">
