@@ -56,7 +56,7 @@ function WhiteImageCard({ src, width, height, alt, title = 'Dooza Agents', image
     );
 }
 
-function DarkImageCard({ src, width, height, alt, title = 'Agent flow', imageClassName = 'h-auto w-full rounded-2xl' }) {
+function DarkImageCard({ src, width, height, alt, title = 'AI employee flow', imageClassName = 'h-auto w-full rounded-2xl' }) {
     return (
         <div className="scroll-reveal">
             <div className="animate-float group overflow-hidden rounded-[28px] bg-slate-950 shadow-xl shadow-slate-300/50 transition duration-300 hover:shadow-2xl hover:shadow-primary-100/60" style={{ animationDelay: '1.5s' }}>
@@ -105,32 +105,32 @@ export default function AgentTypeSections() {
         <>
             <AgentTypeSection
                 label="Marketing"
-                heading="Marketing AI agent"
+                heading="Marketing AI employee"
                 bgClass="bg-white"
                 bulletCardClass="bg-warm"
                 bullets={[
                     'Collect data implicitly and enrich it using conversational intelligence — all via chat interface.',
-                    'Agent flow: automate all your marketing tasks, such as creating similar audiences, SEO site audits, and hundreds of other marketing tasks.',
+                    'AI employee flow: automate all your marketing tasks, such as creating similar audiences, SEO site audits, and hundreds of other marketing tasks.',
                 ]}
             >
                 <WhiteImageCard
                     src="/agents/deepagent/agent-marketing.png"
                     width={2454}
                     height={1830}
-                    alt="Marketing AI agent collecting data via chat"
-                    title="Marketing agent"
+                    alt="Marketing AI employee collecting data via chat"
+                    title="Marketing AI employee"
                 />
             </AgentTypeSection>
 
             <AgentTypeSection
                 label="Sales"
-                heading="Sales AI agent"
+                heading="Sales AI employee"
                 bgClass="bg-warm"
                 bulletCardClass="bg-white"
                 reverse
                 bullets={[
                     'Automatically identifies warm and hot leads and targets them via chat interface.',
-                    'Agent flow: automate all your sales tasks, such as similar audience generation, sales rep allocation, and hundreds of other sales tasks.',
+                    'AI employee flow: automate all your sales tasks, such as similar audience generation, sales rep allocation, and hundreds of other sales tasks.',
                 ]}
             >
                 <div className="grid gap-6">
@@ -138,7 +138,7 @@ export default function AgentTypeSections() {
                         src="/agents/deepagent/agent-sales-2.png"
                         width={1857}
                         height={1474}
-                        alt="Sales agent lead follow-up flow"
+                        alt="Sales AI employee lead follow-up flow"
                         title="Lead follow-up"
                     />
                     <DarkImageCard
@@ -154,12 +154,12 @@ export default function AgentTypeSections() {
 
             <AgentTypeSection
                 label="Customer support"
-                heading="Customer support AI agent"
+                heading="Customer support AI employee"
                 bgClass="bg-white"
                 bulletCardClass="bg-warm"
                 bullets={[
                     'Bot building: deploy and train the bot with your own private and public data in seconds. Then use it as a live chat interface or AI chatbot support.',
-                    'Agent flow: automate all your customer support tasks, such as support ticket creation, sales coaching, and hundreds of other support tasks.',
+                    'AI employee flow: automate all your customer support tasks, such as support ticket creation, sales coaching, and hundreds of other support tasks.',
                 ]}
             >
                 <div className="grid gap-6">
@@ -203,7 +203,7 @@ export default function AgentTypeSections() {
 
             <AgentTypeSection
                 label="WhatsApp"
-                heading="WhatsApp AI agent"
+                heading="WhatsApp AI employee"
                 bgClass="bg-white"
                 bulletCardClass="bg-warm"
                 bullets={[

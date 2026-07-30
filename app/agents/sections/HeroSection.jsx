@@ -43,8 +43,8 @@ export default function HeroSection() {
             />
             <div className="hero-entrance relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
                 <h1 className="mb-6 font-serif text-4xl font-extrabold leading-[1.06] tracking-tight text-slate-950 md:text-6xl">
-                    Describe the agent you need.{' '}
-                    <span className="text-primary-600">We build it, run it, and keep it working.</span>
+                    Describe the AI employees you need.{' '}
+                    <span className="text-primary-600">We build them, run them, and keep them working.</span>
                 </h1>
                 <p className="mb-8 max-w-2xl text-base leading-relaxed text-slate-600 md:text-xl">
                     Live in days. Free setup. Keep it only if it earns its keep.

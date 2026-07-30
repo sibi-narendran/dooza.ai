@@ -3,9 +3,9 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { WORKFLOW_SIGNUP_URL } from '@/lib/links';
 
 const bullets = [
-    "Haven't found the agent template you need? No problem.",
-    'Build custom AI agents for any task in seconds using natural language.',
-    'Voice / text-to-agents: interact seamlessly with voice or text in a natural, conversational flow to build agents.',
+    "Haven't found the AI employee template you need? No problem.",
+    'Build custom AI employees for any task in seconds using natural language.',
+    'Voice / text-to-AI employees: interact seamlessly with voice or text in a natural, conversational flow to build AI employees.',
 ];
 
 export default function AgentBuilder() {
@@ -15,7 +15,7 @@ export default function AgentBuilder() {
                 <div className="scroll-reveal">
                     <span className="section-label mb-4 block">Build your own</span>
                     <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
-                        AI agent builder
+                        AI employee builder
                     </h2>
                     <div className="scroll-stagger mt-8 grid gap-3">
                         {bullets.map((bullet) => (
@@ -37,7 +37,7 @@ export default function AgentBuilder() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800"
                         >
-                            Build your agent <ArrowRight className="h-4 w-4" />
+                            Build your AI employee <ArrowRight className="h-4 w-4" />
                         </a>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ export default function AgentBuilder() {
                             <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
                             <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
                             <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                            <span className="ml-3 text-xs font-semibold text-slate-400">Agent builder</span>
+                            <span className="ml-3 text-xs font-semibold text-slate-400">AI employee builder</span>
                         </div>
                         <div className="bg-warm p-4">
                             <div className="relative overflow-hidden rounded-2xl">
@@ -59,7 +59,7 @@ export default function AgentBuilder() {
                                     src="/agents/deepagent/builder.webp"
                                     width={2080}
                                     height={1743}
-                                    alt="Voice and text to agent builder"
+                                    alt="Voice and text to AI employee builder"
                                     className="h-auto w-full rounded-2xl transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                                 />
                             </div>

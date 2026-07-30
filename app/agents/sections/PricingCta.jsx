@@ -19,7 +19,7 @@ export default function PricingCta() {
                     Choose the plan that works for you
                 </h2>
                 <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-slate-600">
-                    Start free, add agents as they earn their keep, and get concierge onboarding on every plan — no per-resolution meters, no per-seat surprises.
+                    Start free, add AI employees as they earn their keep, and get concierge onboarding on every plan — no per-resolution meters, no per-seat surprises.
                 </p>
                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                     <Link

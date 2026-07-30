@@ -24,7 +24,7 @@ const cards = [
             { src: '/agents/deepagent/icon-gmail.webp', width: 142, height: 150, alt: 'Gmail' },
         ],
         description:
-            'When a visitor submits a demo request, the agent automatically assigns a sales representative and sends a notification to the appropriate team member.',
+            'When a visitor submits a demo request, the AI employee automatically assigns a sales representative and sends a notification to the appropriate team member.',
     },
     {
         title: 'YouTube to LinkedIn content generator',
@@ -34,7 +34,7 @@ const cards = [
             { src: '/agents/deepagent/icon-openai.webp', width: 137, height: 137, alt: 'OpenAI' },
         ],
         description:
-            'This agent transforms YouTube videos into engaging LinkedIn posts by extracting key insights, summarizing content, and optimizing for professional audiences.',
+            'This AI employee transforms YouTube videos into engaging LinkedIn posts by extracting key insights, summarizing content, and optimizing for professional audiences.',
     },
 ];
 
@@ -43,12 +43,12 @@ export default function PrebuiltAgents() {
         <section className="bg-warm px-4 py-20 md:px-8 md:py-24">
             <div className="mx-auto max-w-7xl">
                 <div className="scroll-reveal mb-12 max-w-3xl">
-                    <span className="section-label mb-4 block">Pre-built agents</span>
+                    <span className="section-label mb-4 block">Pre-built AI employees</span>
                     <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
-                        Pre-built agents hub for you
+                        Pre-built AI employees hub for you
                     </h2>
                     <p className="mt-4 text-lg leading-relaxed text-slate-600">
-                        We did the tedious task of building an agent. Let them work for you.
+                        We did the tedious task of building an AI employee. Let them work for you.
                     </p>
                 </div>
                 <div className="scroll-stagger grid gap-6 md:grid-cols-3">
@@ -91,7 +91,7 @@ export default function PrebuiltAgents() {
                                 rel="noopener noreferrer"
                                 className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-primary-700 transition hover:text-primary-800"
                             >
-                                Use this agent <ArrowUpRight className="h-4 w-4" />
+                                Use this AI employee <ArrowUpRight className="h-4 w-4" />
                             </a>
                         </div>
                         </div>
@@ -104,7 +104,7 @@ export default function PrebuiltAgents() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800"
                     >
-                        Explore agents for free <ArrowRight className="h-4 w-4" />
+                        Explore AI employees for free <ArrowRight className="h-4 w-4" />
                     </a>
                 </div>
             </div>

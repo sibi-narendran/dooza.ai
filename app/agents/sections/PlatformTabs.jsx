@@ -51,28 +51,28 @@ const tabs = [
     {
         id: 'support',
         team: 'Customer Support',
-        agent: 'Call analyzer agent',
+        agent: 'Call analyzer AI employee',
         icon: '/agents/deepagent/tab-support.png',
         image: '/agents/deepagent/hub-2.png',
     },
     {
         id: 'sales',
         team: 'Sales',
-        agent: 'Similar audience generator agent',
+        agent: 'Similar audience generator AI employee',
         icon: '/agents/deepagent/tab-sales.png',
         image: '/agents/deepagent/hub-3.png',
     },
     {
         id: 'marketing',
         team: 'Marketing',
-        agent: 'Content repurposing agent',
+        agent: 'Content repurposing AI employee',
         icon: '/agents/deepagent/tab-marketing.png',
         image: null,
     },
     {
         id: 'ecommerce',
         team: 'eCommerce',
-        agent: 'WhatsApp automation agent',
+        agent: 'WhatsApp automation AI employee',
         icon: '/agents/deepagent/tab-ecommerce.png',
         image: '/agents/deepagent/tab-extra.png',
     },
@@ -88,10 +88,10 @@ export default function PlatformTabs() {
                 <div className="scroll-reveal mb-12 mx-auto max-w-3xl text-center">
                     <span className="section-label mb-4 block">Use cases</span>
                     <h2 className="font-serif text-3xl font-bold leading-tight text-slate-950 md:text-5xl">
-                        One agentic platform, endless possibilities
+                        One AI employee platform, endless possibilities
                     </h2>
                     <p className="mt-4 text-lg leading-relaxed text-slate-600">
-                        Pick a team — there is an agent flow already working for it.
+                        Pick a team — there is an AI employee flow already working for it.
                     </p>
                 </div>
 

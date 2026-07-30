@@ -16,9 +16,9 @@ import { WORKFLOW_SIGNIN_URL, WORKFLOW_SIGNUP_URL } from '@/lib/links';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata = {
-    title: { absolute: 'Dooza Agents | AI Agents Built & Maintained for Your Business' },
+    title: { absolute: 'Dooza Agents | AI Employees Built & Maintained for Your Business' },
     description:
-        'Describe the agent you need. Dooza builds it, connects it to your tools, and keeps it working — live in days, with approvals on everything sensitive. Free setup, no contracts.',
+        'Describe the AI employees you need. Dooza builds them, connects them to your tools, and keeps them working — live in days, with approvals on everything sensitive. Free setup, no contracts.',
     keywords: [
         'Dooza Agents',
         'AI agent builder',
@@ -35,9 +35,9 @@ export const metadata = {
         canonical: SITE_URL,
     },
     openGraph: {
-        title: 'Dooza Agents | AI Agents Built & Maintained for Your Business',
+        title: 'Dooza Agents | AI Employees Built & Maintained for Your Business',
         description:
-            'Describe the agent you want in plain language. Dooza builds it, runs it, and keeps it working — live in days, free setup, no contracts.',
+            'Describe the AI employees you want in plain language. Dooza builds them, runs them, and keeps them working — live in days, free setup, no contracts.',
         url: SITE_URL,
         siteName: 'Dooza',
         type: 'website',
@@ -47,9 +47,9 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: 'Dooza Agents | AI Agents Built & Maintained for Your Business',
+        title: 'Dooza Agents | AI Employees Built & Maintained for Your Business',
         description:
-            'Describe the agent you want in plain language. Dooza builds it, runs it, and keeps it working — live in days, free setup, no contracts.',
+            'Describe the AI employees you want in plain language. Dooza builds them, runs them, and keeps them working — live in days, free setup, no contracts.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -69,27 +69,27 @@ const faqData = [
     {
         question: 'What is Dooza Agents?',
         answer:
-            'Dooza Agents is a product-led service: you describe the agent you need in plain language, and Dooza builds it, connects it to your tools, and keeps it working — automating your marketing, sales, and support end-to-end.',
+            'Dooza Agents is a product-led service: you describe the AI employees you need in plain language, and Dooza builds them, connects them to your tools, and keeps them working — automating your marketing, sales, and support end-to-end.',
     },
     {
-        question: 'Who builds and maintains my agent?',
+        question: 'Who builds and maintains my AI employee?',
         answer:
-            'Dooza engineers do. They build your agent on your real work, monitor it, and keep improving it over time. You approve anything sensitive before it happens.',
+            'Dooza engineers do. They build your AI employee on your real work, monitor it, and keep improving it over time. You approve anything sensitive before it happens.',
     },
     {
         question: 'Is the setup really free?',
         answer:
-            'Yes. A Dooza engineer builds your first agent for free and puts it live on your real work. You pay only if you want to keep using it.',
+            'Yes. A Dooza engineer builds your first AI employee for free and puts it live on your real work. You pay only if you want to keep using it.',
     },
     {
-        question: 'How fast is my agent live?',
+        question: 'How fast is my AI employee live?',
         answer:
-            'Your first agent usually runs within days — day 2 to day 4 in most cases.',
+            'Your first AI employee usually runs within days — day 2 to day 4 in most cases.',
     },
     {
         question: 'Is Dooza Agents an AI chatbot?',
         answer:
-            'Dooza Agents is an agent builder that can be used as customer support software. It can be used as a live support bot as well as an AI chatbot — and agents also run multi-step work across your tools beyond chat.',
+            'Dooza Agents is an AI employee builder that can be used as customer support software. It can be used as a live support bot as well as an AI chatbot — and AI employees also run multi-step work across your tools beyond chat.',
     },
     {
         question: 'What if we do not want to continue?',
@@ -107,7 +107,7 @@ const organizationSchema = {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description:
-        'Dooza Agents — AI agents built and maintained for small businesses. Describe the agent you need and Dooza builds it, runs it, and keeps it working.',
+        'Dooza Agents — AI employees built and maintained for small businesses. Describe the AI employees you need and Dooza builds them, runs them, and keeps them working.',
     foundingDate: '2024',
     founder: {
         '@type': 'Person',
@@ -154,7 +154,7 @@ const websiteSchema = {
     name: 'Dooza',
     alternateName: 'Dooza AI',
     url: SITE_URL,
-    description: 'AI agents built and maintained for small businesses',
+    description: 'AI employees built and maintained for small businesses',
     publisher: {
         '@type': 'Organization',
         name: 'Dooza',
@@ -174,10 +174,10 @@ const agentsServiceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Dooza Agents',
-    serviceType: 'Managed AI agents',
+    serviceType: 'Managed AI employees',
     url: SITE_URL,
     description:
-        'Describe the agent you need and Dooza builds it, connects it to your tools, and keeps it working — live in days, with approvals on everything sensitive. Pay only to keep it. No contracts.',
+        'Describe the AI employees you need and Dooza builds them, connects them to your tools, and keeps them working — live in days, with approvals on everything sensitive. Pay only to keep them. No contracts.',
     provider: {
         '@type': 'Organization',
         name: 'Dooza',
@@ -195,8 +195,8 @@ const agentsServiceSchema = {
         '@type': 'OfferCatalog',
         name: 'Dooza Agents Service Areas',
         itemListElement: [
-            'Agent design from a plain-language brief',
-            'Agent build and tool connection',
+            'AI employee design from a plain-language brief',
+            'AI employee build and tool connection',
             'Company context and knowledge setup',
             'Human approval workflow setup',
             'Ongoing monitoring, maintenance, and improvement',
@@ -243,7 +243,7 @@ export default function Home() {
                 showIndustry
                 ctaType="demo"
                 ctaSource="home_nav"
-                signupLabel="Get Your Agent Built"
+                signupLabel="Get Your AI Employee Built"
             />
             <main id="main-content" className="bg-warm text-slate-900">
                 <HeroSection />
@@ -251,7 +251,7 @@ export default function Home() {
 
                 <section className="border-y border-slate-100 bg-white px-4 py-10">
                     <div className="mx-auto flex max-w-5xl flex-col items-center gap-5 text-center">
-                        <span className="section-label block">Things our agents do</span>
+                        <span className="section-label block">Things our AI employees do</span>
                         <div className="flex flex-wrap justify-center gap-3">
                             {automationExamples.map((item) => (
                                 <span
@@ -271,7 +271,7 @@ export default function Home() {
                 <PrebuiltAgents />
                 <HowItWorksBrain
                     ctaSource="home_how_it_works"
-                    ctaLabel="Get Your Agent Built"
+                    ctaLabel="Get Your AI Employee Built"
                     className="border-y border-slate-100 bg-white"
                 />
                 <CompanyContextSection className="bg-warm" />
