@@ -62,6 +62,7 @@ import InstantlyAlternativeContent from './InstantlyAlternativeContent';
 import SmartleadAlternativeAiNativeApplicationContent from './SmartleadAlternativeAiNativeApplicationContent';
 import MakeugcAlternativeContent from './MakeugcAlternativeContent';
 import RevidAlternativeContent from './RevidAlternativeContent';
+import GraphEngineeringContent from './GraphEngineeringContent';
 
 // Map slugs to components
 const BLOG_COMPONENTS = {
@@ -120,6 +121,7 @@ const BLOG_COMPONENTS = {
     'smartlead-alternative-ai-native-application': SmartleadAlternativeAiNativeApplicationContent,
     'makeugc-alternative': MakeugcAlternativeContent,
     'revid-ai-alternative': RevidAlternativeContent,
+    'karpathy-loop-graph-engineering': GraphEngineeringContent,
 };
 
 // Blog content changes deliberately through the admin flow, so keep generated
