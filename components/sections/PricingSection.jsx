@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { CheckCircle2, ChevronDown } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
-import { getProductSignupUrl } from '@/lib/links';
 import { trackSignupClick } from '@/lib/analytics';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 
@@ -42,6 +41,7 @@ const plans = [
         cta: 'Get started',
         ctaStyle: 'primary',
         popular: false,
+        paymentUrl: 'https://buy.stripe.com/00w00j5SjfQNepugzz3AY05',
         features: starterFeatures,
     },
     {
@@ -51,6 +51,7 @@ const plans = [
         cta: 'Choose plan',
         ctaStyle: 'default',
         popular: true,
+        paymentUrl: 'https://buy.stripe.com/fZu00jdkL6gd1CIdnn3AY0a',
         features: growthFeatures,
     },
     {
@@ -61,6 +62,7 @@ const plans = [
         ctaStyle: 'default',
         popular: false,
         anchorId: 'managed-plan',
+        paymentUrl: 'https://buy.stripe.com/fZu00jdkL6gd1CIdnn3AY0a',
         features: proFeatures,
     },
 ];
@@ -134,7 +136,7 @@ export default function PricingSection({ headingLevel = 'h2' }) {
 
                                     {/* CTA */}
                                     <a
-                                        href={getProductSignupUrl('workforce')}
+                                        href={plan.paymentUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={() => trackSignupClick(`pricing_${plan.name}`)}
