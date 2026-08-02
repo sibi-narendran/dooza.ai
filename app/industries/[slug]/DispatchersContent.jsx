@@ -48,7 +48,7 @@ export default function DispatchersContent({ page }) {
         {
             icon: PhoneCall,
             title: 'Three lines ring while you close one deal',
-            description: 'You\'re negotiating a rate with a broker and your phone won\'t stop — drivers checking in, carriers asking about lanes, customers wanting ETAs. Every unanswered call is money walking away.'
+            description: 'You\'re negotiating a rate with a broker and your phone won\'t stop: drivers checking in, carriers asking about lanes, customers wanting ETAs. Every unanswered call is money walking away.'
         },
         {
             icon: Timer,
@@ -57,13 +57,13 @@ export default function DispatchersContent({ page }) {
         },
         {
             icon: Moon,
-            title: 'Freight doesn\'t sleep — but you have to',
+            title: 'Freight doesn\'t sleep, but you have to',
             description: 'Breakdowns at 2 AM, missed pickups, delivery delays. Drivers call all night. Either you burn out answering, or the calls go to voicemail and clients lose trust.'
         }
     ];
 
     const solutionBullets = [
-        'Answers every call 24/7 — drivers, brokers, and customers',
+        'Answers every call 24/7: drivers, brokers, and customers',
         'Handles driver check calls: location, ETA, and status updates',
         'Captures new carrier and owner-operator leads automatically',
         'Detects emergencies and escalates to you instantly',
@@ -74,7 +74,7 @@ export default function DispatchersContent({ page }) {
         {
             icon: Truck,
             title: 'Driver check calls handled for you',
-            description: 'Drivers call in with location, status, and ETA. The AI logs it, updates your records, and can answer shipper ETA requests — without you touching the phone.'
+            description: 'Drivers call in with location, status, and ETA. The AI logs it, updates your records, and can answer shipper ETA requests, all without you touching the phone.'
         },
         {
             icon: AlertTriangle,
@@ -89,7 +89,7 @@ export default function DispatchersContent({ page }) {
         {
             icon: FileText,
             title: 'Every call logged automatically',
-            description: 'Name, MC number, equipment, lanes, callback details — captured and texted to you in a clean summary. No more scribbled notes or forgotten callbacks.'
+            description: 'Name, MC number, equipment, lanes, callback details, captured and texted to you in a clean summary. No more scribbled notes or forgotten callbacks.'
         }
     ];
 
@@ -97,7 +97,7 @@ export default function DispatchersContent({ page }) {
         {
             number: '1',
             title: 'Connect your business number',
-            description: 'Forward your existing dispatch line to Dooza in under 5 minutes. Works with any phone provider — cell, landline, or VoIP. No new number needed.'
+            description: 'Forward your existing dispatch line to Dooza in under 5 minutes. Works with any phone provider: cell, landline, or VoIP. No new number needed.'
         },
         {
             number: '2',
@@ -106,50 +106,8 @@ export default function DispatchersContent({ page }) {
         },
         {
             number: '3',
-            title: 'Go live — every call gets answered',
+            title: 'Go live and every call gets answered',
             description: 'From the moment you flip the switch, every driver, broker, and customer call is answered professionally. You get text summaries so you stay in control.'
-        }
-    ];
-
-    const pricingComparison = [
-        {
-            title: 'Assistant Dispatcher',
-            price: '$3,500',
-            period: '/mo',
-            features: [
-                'Available 9-5 only',
-                'Sick days & turnover',
-                'Weeks of training',
-                'One person, one line'
-            ],
-            tint: 'red',
-            highlight: false
-        },
-        {
-            title: 'Answering Service',
-            price: '$600',
-            period: '/mo',
-            features: [
-                'Generic scripts',
-                'No freight knowledge',
-                'Per-minute charges add up',
-                'Takes messages only'
-            ],
-            tint: 'amber',
-            highlight: false
-        },
-        {
-            title: 'Dooza AI',
-            price: '$29',
-            period: '/mo',
-            features: [
-                '24/7/365 availability',
-                'Knows your lanes & operation',
-                'Unlimited calls included',
-                'Handles check calls & escalations'
-            ],
-            tint: 'green',
-            highlight: true
         }
     ];
 
@@ -201,7 +159,7 @@ export default function DispatchersContent({ page }) {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                             >
-                                Get Started Free — $49/mo
+                                Get Started Free
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -259,7 +217,7 @@ export default function DispatchersContent({ page }) {
                                 What Dooza AI Does for You
                             </h2>
                             <p className="text-lg text-slate-600">
-                                An AI agent that answers like your best dispatcher — but works 24/7 and costs less than a tank of fuel.
+                                An AI agent that answers like your best dispatcher, works 24/7, and never takes a day off.
                             </p>
                         </div>
 
@@ -348,94 +306,6 @@ export default function DispatchersContent({ page }) {
             </section>
 
             {/* =============================== */}
-            {/* 6. PRICING COMPARISON SECTION   */}
-            {/* =============================== */}
-            <section className="py-16 md:py-24 bg-white">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
-                            The Cost of Answering Your Phones
-                        </h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            See how Dooza AI stacks up against the alternatives.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {pricingComparison.map((plan, idx) => {
-                            const tintMap = {
-                                red: {
-                                    border: 'border-red-200',
-                                    bg: 'bg-red-50',
-                                    price: 'text-red-600',
-                                    badge: 'bg-red-100 text-red-700'
-                                },
-                                amber: {
-                                    border: 'border-amber-200',
-                                    bg: 'bg-amber-50',
-                                    price: 'text-amber-600',
-                                    badge: 'bg-amber-100 text-amber-700'
-                                },
-                                green: {
-                                    border: 'border-green-300',
-                                    bg: 'bg-green-50',
-                                    price: 'text-green-700',
-                                    badge: 'bg-green-100 text-green-700'
-                                }
-                            };
-                            const colors = tintMap[plan.tint];
-
-                            return (
-                                <div
-                                    key={idx}
-                                    className={`rounded-2xl border-2 p-6 ${colors.border} ${colors.bg} ${plan.highlight ? 'ring-2 ring-green-400 ring-offset-2 relative' : ''}`}
-                                >
-                                    {plan.highlight && (
-                                        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                                            <span className="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                                                BEST VALUE
-                                            </span>
-                                        </div>
-                                    )}
-                                    <div className="text-center mb-6">
-                                        <h3 className="text-lg font-bold text-slate-900 mb-2">{plan.title}</h3>
-                                        <div className="flex items-baseline justify-center gap-1">
-                                            <span className={`text-4xl font-bold ${colors.price}`}>{plan.price}</span>
-                                            <span className="text-slate-500 text-sm">{plan.period}</span>
-                                        </div>
-                                    </div>
-                                    <ul className="space-y-3">
-                                        {plan.features.map((feature, fIdx) => (
-                                            <li key={fIdx} className="flex items-start gap-2 text-sm text-slate-700">
-                                                {plan.highlight ? (
-                                                    <CheckCircle2 size={16} className="text-green-600 shrink-0 mt-0.5" />
-                                                ) : (
-                                                    <span className="w-4 h-4 rounded-full bg-slate-300 shrink-0 mt-0.5 flex items-center justify-center text-white text-xs">-</span>
-                                                )}
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    {plan.highlight && (
-                                        <div className="mt-6">
-                                            <a
-                                                href={getProductSignupUrl('workforce')}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="w-full inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-green-700 transition-all"
-                                            >
-                                                Start Free <ArrowRight size={16} />
-                                            </a>
-                                        </div>
-                                    )}
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
-
-            {/* =============================== */}
             {/* 7. SEGMENTS SERVED SECTION      */}
             {/* =============================== */}
             <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
@@ -472,7 +342,7 @@ export default function DispatchersContent({ page }) {
                         Stop Losing Business to a Busy Line
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
-                        Every missed call is freight your competitor books. Dooza AI answers every call, handles every check-in, and costs less than your phone bill.
+                        Every missed call is freight your competitor books. Dooza AI answers every call and handles every check-in, so you never miss an opportunity.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
@@ -481,7 +351,7 @@ export default function DispatchersContent({ page }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Get Started Free — $49/mo
+                            Get Started Free
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
