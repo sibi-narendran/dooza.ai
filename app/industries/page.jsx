@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BottomCTA from '../../components/BottomCTA';
-import { ArrowRight, Clock, Building2, Stethoscope, Home, Briefcase, ShoppingBag, Wrench, Scale, GraduationCap, Scissors } from 'lucide-react';
+import { ArrowRight, Clock, Building2, Stethoscope, Home, Briefcase, ShoppingBag, Wrench, Scale, GraduationCap, Scissors, Radio } from 'lucide-react';
 import { blogPosts } from '../../lib/blogData';
 import { SITE_URL } from '../../lib/site';
 
@@ -65,6 +65,13 @@ export default function IndustriesPage() {
             description: 'AI workflows for law firm intake, onboarding, documents, and client follow-up',
             industrySlug: 'law-firms',
             benefits: ['Client intake automation', 'Attorney approval steps', 'Matter admin workflows']
+        },
+        {
+            icon: Radio,
+            name: 'Dispatchers',
+            description: 'AI answering service that handles driver check calls, broker inquiries, and after-hours emergencies 24/7',
+            industrySlug: 'dispatchers',
+            benefits: ['24/7 call answering', 'Driver check-call handling', 'Emergency escalation to your phone']
         }
     ];
 

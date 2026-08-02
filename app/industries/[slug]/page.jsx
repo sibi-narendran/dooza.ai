@@ -6,12 +6,14 @@ import { industryPages, generateServiceSchema, generateFAQSchema, generateBreadc
 import SalonsContent from './SalonsContent';
 import ContractorsContent from './ContractorsContent';
 import RealEstateContent from './RealEstateContent';
+import DispatchersContent from './DispatchersContent';
 
 // Map slugs to components
 const INDUSTRY_COMPONENTS = {
     'salons': SalonsContent,
     'contractors': ContractorsContent,
     'real-estate': RealEstateContent,
+    'dispatchers': DispatchersContent,
 };
 
 const INDUSTRY_SEO_TITLE_MAX_LENGTH = 56;
