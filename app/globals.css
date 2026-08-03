@@ -17,6 +17,7 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  overscroll-behavior-y: none;
 }
 
 *, ::before, ::after {
