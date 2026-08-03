@@ -69,9 +69,9 @@ export default function IndustriesPage() {
         {
             icon: Radio,
             name: 'Dispatchers',
-            description: 'AI answering service that handles driver check calls, broker inquiries, and after-hours emergencies 24/7',
+            description: 'AI employee that runs the whole dispatch desk: calls, scheduling, tracking, email, and paperwork',
             industrySlug: 'dispatchers',
-            benefits: ['24/7 call answering', 'Driver check-call handling', 'Emergency escalation to your phone']
+            benefits: ['24/7 calls & texts', 'Scheduling & tracking', 'Paperwork handled']
         }
     ];
 
