@@ -412,9 +412,13 @@ export default function DispatchersContent({ page }) {
 
                     <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                         <div className="bg-white border border-slate-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all">
-                            <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-r from-primary-500 to-teal-500 flex items-center justify-center font-bold text-white text-lg mb-4">
-                                SN
-                            </div>
+                            <img
+                                src="/founder-sibi.jpeg"
+                                alt="Sibi Narendran, Founder of Dooza"
+                                width="56"
+                                height="56"
+                                className="w-14 h-14 mx-auto rounded-full object-cover mb-4"
+                            />
                             <h3 className="text-lg font-bold text-slate-900">Sibi Narendran</h3>
                             <p className="text-sm text-slate-500 mb-4">Founder, Dooza</p>
                             <a
