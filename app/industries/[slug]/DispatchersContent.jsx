@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { getProductSignupUrl, CAL_BOOKING_URL } from '../../../lib/links';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
-import BottomCTA from '../../../components/BottomCTA';
 import BookingModal from '../../../components/BookingModal';
 import Breadcrumbs from '../../../components/Breadcrumbs';
+import SupportEmailLink from '../../../components/SupportEmailLink';
 import { testimonials } from '../../../lib/homeData';
 import {
     Radio,
@@ -31,6 +32,7 @@ import {
     ShieldCheck,
     BadgeCheck,
     Handshake,
+    Building2,
     ChevronDown,
     ChevronUp
 } from 'lucide-react';
@@ -244,7 +246,7 @@ export default function DispatchersContent({ page }) {
                             How It Works
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Live the same day. No contracts. No tech skills needed.
+                            Live the same day. Cancel anytime. No tech skills needed.
                         </p>
                     </div>
 
@@ -336,6 +338,21 @@ export default function DispatchersContent({ page }) {
                         </p>
                     </div>
 
+                    <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 mb-12">
+                        {testimonials.filter(t => t.logo).map((item, idx) => (
+                            <a
+                                key={idx}
+                                href={item.website || item.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2.5 opacity-70 hover:opacity-100 transition-opacity"
+                            >
+                                <img src={item.logo} alt={item.author} width="32" height="32" className="h-8 w-auto object-contain" />
+                                <span className="text-sm font-semibold text-slate-600">{item.author}</span>
+                            </a>
+                        ))}
+                    </div>
+
                     <div className="grid md:grid-cols-3 gap-6 mb-12">
                         {trustTestimonials.map((item, idx) => (
                             <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition-all flex flex-col">
@@ -365,7 +382,7 @@ export default function DispatchersContent({ page }) {
                     <div className="flex flex-wrap justify-center gap-4">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm font-medium text-slate-700">
                             <ShieldCheck size={16} className="text-primary-600" />
-                            7-day money-back guarantee
+                            Two weeks free
                         </div>
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm font-medium text-slate-700">
                             <BadgeCheck size={16} className="text-primary-600" />
@@ -380,7 +397,66 @@ export default function DispatchersContent({ page }) {
             </section>
 
             {/* =============================== */}
-            {/* 7. CTA SECTION                  */}
+            {/* 7. PEOPLE & COMPANY SECTION     */}
+            {/* =============================== */}
+            <section className="py-16 md:py-24 bg-white">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight text-balance">
+                            Real People Behind the Product
+                        </h2>
+                        <p className="text-lg text-slate-600 max-w-2xl mx-auto text-pretty">
+                            When you book a meeting, you talk to us directly — not a sales rep.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                        <div className="bg-white border border-slate-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all">
+                            <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-r from-primary-500 to-teal-500 flex items-center justify-center font-bold text-white text-lg mb-4">
+                                SN
+                            </div>
+                            <h3 className="text-lg font-bold text-slate-900">Sibi Narendran</h3>
+                            <p className="text-sm text-slate-500 mb-4">Founder, Dooza</p>
+                            <a
+                                href="https://twitter.com/sibinarendran"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors"
+                            >
+                                Follow on X
+                                <ArrowRight className="w-4 h-4" />
+                            </a>
+                        </div>
+
+                        <div className="bg-white border border-slate-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all">
+                            <div className="w-14 h-14 mx-auto rounded-full bg-primary-100 flex items-center justify-center text-primary-600 mb-4">
+                                <Building2 size={26} />
+                            </div>
+                            <h3 className="text-lg font-bold text-slate-900">Adam Laboratory Inc.</h3>
+                            <p className="text-sm text-slate-500 mb-4">Delaware C-Corporation · Newark, DE</p>
+                            <Link
+                                href="/about"
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors"
+                            >
+                                Company details
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
+                        </div>
+
+                        <div className="bg-white border border-slate-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all">
+                            <div className="w-14 h-14 mx-auto rounded-full bg-primary-100 flex items-center justify-center text-primary-600 mb-4">
+                                <Mail size={26} />
+                            </div>
+                            <h3 className="text-lg font-bold text-slate-900">Talk to a Human</h3>
+                            <p className="text-sm text-slate-500 mb-4">Questions before you book?</p>
+                            <SupportEmailLink className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* =============================== */}
+            {/* 8. CTA SECTION                  */}
             {/* =============================== */}
             <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -409,13 +485,13 @@ export default function DispatchersContent({ page }) {
                         </a>
                     </div>
                     <p className="mt-6 text-sm text-slate-500">
-                        No credit card required · 7-day money-back guarantee · Cancel anytime
+                        Two weeks free · No credit card required · Cancel anytime
                     </p>
                 </div>
             </section>
 
             {/* =============================== */}
-            {/* 7. FAQ SECTION                  */}
+            {/* 9. FAQ SECTION                  */}
             {/* =============================== */}
             {page.faqData && page.faqData.length > 0 && (
                 <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-100">
@@ -460,9 +536,8 @@ export default function DispatchersContent({ page }) {
             )}
 
             {/* =============================== */}
-            {/* BOTTOM CTA + FOOTER + MODAL     */}
+            {/* FOOTER + MODAL                  */}
             {/* =============================== */}
-            <BottomCTA openModal={handleAction} />
             <Footer />
             <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
         </div>
