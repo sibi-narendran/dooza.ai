@@ -329,7 +329,7 @@ export default function DispatchersContent({ page }) {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight text-balance">
-                            Teams Already Run Their Operations on Dooza
+                            Trusted by 300+ Businesses
                         </h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto text-pretty">
                             Real businesses. Real AI employees. Real feedback.
