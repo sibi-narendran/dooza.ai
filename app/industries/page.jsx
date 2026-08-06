@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BottomCTA from '../../components/BottomCTA';
-import { ArrowRight, Clock, Building2, Stethoscope, Home, Briefcase, ShoppingBag, Wrench, Scale, GraduationCap, Scissors, Radio } from 'lucide-react';
+import { ArrowRight, Clock, Building2, Stethoscope, Home, Briefcase, ShoppingBag, Wrench, Scale, GraduationCap, Scissors, Radio, Shield } from 'lucide-react';
 import { blogPosts } from '../../lib/blogData';
 import { SITE_URL } from '../../lib/site';
 
@@ -72,6 +72,13 @@ export default function IndustriesPage() {
             description: 'AI employee that runs the whole dispatch desk: calls, scheduling, tracking, email, and paperwork',
             industrySlug: 'dispatchers',
             benefits: ['24/7 calls & texts', 'Scheduling & tracking', 'Paperwork handled']
+        },
+        {
+            icon: Shield,
+            name: 'Insurance Agents',
+            description: 'AI answering service that captures every quote request, handles policy questions, and escalates urgent claims 24/7',
+            industrySlug: 'insurance-agents',
+            benefits: ['Quote request capture', 'Urgent claim escalation', 'After-hours call answering']
         }
     ];
 
@@ -193,7 +200,6 @@ export default function IndustriesPage() {
                         <span className="px-4 py-2 bg-slate-200 text-slate-600 rounded-full text-sm">Accounting</span>
                         <span className="px-4 py-2 bg-slate-200 text-slate-600 rounded-full text-sm">Restaurants</span>
                         <span className="px-4 py-2 bg-slate-200 text-slate-600 rounded-full text-sm">Fitness & Gyms</span>
-                        <span className="px-4 py-2 bg-slate-200 text-slate-600 rounded-full text-sm">Insurance</span>
                     </div>
                 </div>
             </div>

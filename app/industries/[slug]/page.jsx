@@ -7,6 +7,7 @@ import SalonsContent from './SalonsContent';
 import ContractorsContent from './ContractorsContent';
 import RealEstateContent from './RealEstateContent';
 import DispatchersContent from './DispatchersContent';
+import InsuranceAgentsContent from './InsuranceAgentsContent';
 
 // Map slugs to components
 const INDUSTRY_COMPONENTS = {
@@ -14,6 +15,7 @@ const INDUSTRY_COMPONENTS = {
     'contractors': ContractorsContent,
     'real-estate': RealEstateContent,
     'dispatchers': DispatchersContent,
+    'insurance-agents': InsuranceAgentsContent,
 };
 
 const INDUSTRY_SEO_TITLE_MAX_LENGTH = 56;
