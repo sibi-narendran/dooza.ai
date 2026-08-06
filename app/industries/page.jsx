@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BottomCTA from '../../components/BottomCTA';
-import { ArrowRight, Clock, Building2, Stethoscope, Home, Briefcase, ShoppingBag, Wrench, Scale, GraduationCap, Scissors, Radio, Shield } from 'lucide-react';
+import { ArrowRight, Clock, Building2, Stethoscope, Home, Briefcase, ShoppingBag, Wrench, Scale, GraduationCap, Scissors, Radio, Shield, Flame } from 'lucide-react';
 import { blogPosts } from '../../lib/blogData';
 import { SITE_URL } from '../../lib/site';
 
@@ -79,6 +79,13 @@ export default function IndustriesPage() {
             description: 'AI answering service that captures every quote request, handles policy questions, and escalates urgent claims 24/7',
             industrySlug: 'insurance-agents',
             benefits: ['Quote request capture', 'Urgent claim escalation', 'After-hours call answering']
+        },
+        {
+            icon: Flame,
+            name: 'HVAC',
+            description: 'AI answering service that captures every emergency, estimate, and service call — even at 2 AM',
+            industrySlug: 'hvac',
+            benefits: ['Emergency call escalation', 'Estimate & service booking', '24/7 after-hours answering']
         }
     ];
 
