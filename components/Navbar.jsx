@@ -8,7 +8,7 @@ import { getProductSignupUrl, getProductSigninUrl } from '@/lib/links';
 import { trackDemoClick, trackSignupClick } from '@/lib/analytics';
 import { useBookingModal } from '@/components/BookingModalProvider';
 
-const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = true, showIndustry = false, ctaType = 'signup', ctaSource = 'navbar' }) => {
+const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = true, showIndustry = true, ctaType = 'signup', ctaSource = 'navbar' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
@@ -107,8 +107,15 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     ];
 
     const industries = [
+        { name: 'Salons & Beauty', href: '/industries/salons' },
+        { name: 'Contractors & Home Services', href: '/industries/contractors' },
+        { name: 'HVAC', href: '/industries/hvac' },
+        { name: 'Real Estate', href: '/industries/real-estate' },
+        { name: 'Dispatchers', href: '/industries/dispatchers' },
+        { name: 'Insurance Agents', href: '/industries/insurance-agents' },
         { name: 'Law Firms', href: '/industries/law-firms' },
         { name: 'Store Customer Ops', href: '/industries/customer-support' },
+        { name: 'All Industries →', href: '/industries' },
     ];
 
     return (
@@ -320,7 +327,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         <div
                                             id="industries-dropdown"
                                             role="menu"
-                                            className={`absolute top-full left-0 mt-2 min-w-[180px] rounded-xl shadow-xl border overflow-hidden ${isDark
+                                            className={`absolute top-full left-0 mt-2 min-w-[250px] rounded-xl shadow-xl border overflow-hidden ${isDark
                                                 ? 'bg-[#12121a] border-white/10'
                                                 : 'bg-white border-slate-100'
                                             }`}
