@@ -446,7 +446,7 @@ export default function CustomerSupportAutomationAgencyPage() {
                 />
             ))}
 
-            <Navbar showLogin={false} showIndustry ctaType="demo" ctaSource="support_automation_nav" />
+            <Navbar showLogin={false} ctaType="demo" ctaSource="support_automation_nav" />
 
             <main id="main-content" className="bg-warm text-slate-900">
                 <section className="relative overflow-hidden px-4 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40">

@@ -12,12 +12,10 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
-    const [servicesOpen, setServicesOpen] = useState(false);
-    const [agentsOpen, setAgentsOpen] = useState(false);
+    const [solutionsOpen, setSolutionsOpen] = useState(false);
     const [industriesOpen, setIndustriesOpen] = useState(false);
     const dropdownRef = useRef(null);
-    const servicesDropdownRef = useRef(null);
-    const agentsDropdownRef = useRef(null);
+    const solutionsDropdownRef = useRef(null);
     const industriesDropdownRef = useRef(null);
     const { openModal } = useBookingModal();
 
@@ -42,11 +40,8 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setProductsOpen(false);
             }
-            if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
-                setServicesOpen(false);
-            }
-            if (agentsDropdownRef.current && !agentsDropdownRef.current.contains(event.target)) {
-                setAgentsOpen(false);
+            if (solutionsDropdownRef.current && !solutionsDropdownRef.current.contains(event.target)) {
+                setSolutionsOpen(false);
             }
             if (industriesDropdownRef.current && !industriesDropdownRef.current.contains(event.target)) {
                 setIndustriesOpen(false);
@@ -116,6 +111,12 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
         { name: 'Law Firms', href: '/industries/law-firms' },
         { name: 'Store Customer Ops', href: '/industries/customer-support' },
         { name: 'All Industries →', href: '/industries' },
+    ];
+
+    const solutionGroups = [
+        { label: 'AI Agents', items: agents },
+        { label: 'Services', items: services },
+        { label: 'Industries', items: industries },
     ];
 
     return (
@@ -199,81 +200,29 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                 )}
                             </div>
 
-                            {/* Services Dropdown */}
-                            <div className="relative" ref={servicesDropdownRef}>
+                            {/* Solutions Dropdown */}
+                            <div className="relative" ref={solutionsDropdownRef}>
                                 <button
-                                    onClick={() => setServicesOpen(!servicesOpen)}
+                                    onClick={() => setSolutionsOpen(!solutionsOpen)}
                                     onKeyDown={(e) => {
-                                        if (e.key === 'Escape') setServicesOpen(false);
+                                        if (e.key === 'Escape') setSolutionsOpen(false);
                                     }}
-                                    aria-expanded={servicesOpen}
+                                    aria-expanded={solutionsOpen}
                                     aria-haspopup="true"
-                                    aria-controls="services-dropdown"
-                                    aria-label="Services menu"
+                                    aria-controls="solutions-dropdown"
+                                    aria-label="Solutions menu"
                                     className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
                                         ? 'text-gray-300 hover:text-white'
                                         : 'text-slate-600 hover:text-primary-600'
                                         }`}
                                 >
-                                    Services
-                                    <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                                    Solutions
+                                    <ChevronDown className={`w-4 h-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
                                 </button>
 
-                                {servicesOpen && (
+                                {solutionsOpen && (
                                     <div
-                                        id="services-dropdown"
-                                        role="menu"
-                                        className={`absolute top-full left-0 mt-2 min-w-[250px] rounded-xl shadow-xl border overflow-hidden ${isDark
-                                            ? 'bg-[#12121a] border-white/10'
-                                            : 'bg-white border-slate-100'
-                                        }`}
-                                    >
-                                        <div className="py-2">
-                                            {services.map((service) => (
-                                                <Link
-                                                    key={service.name}
-                                                    href={service.href}
-                                                    role="menuitem"
-                                                    onClick={() => setServicesOpen(false)}
-                                                    onKeyDown={(e) => {
-                                                        if (e.key === 'Escape') setServicesOpen(false);
-                                                    }}
-                                                    className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${isDark
-                                                        ? 'text-gray-300 hover:bg-white/5 hover:text-white'
-                                                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                                                        }`}
-                                                >
-                                                    {service.name}
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-
-                            {/* Agents Dropdown */}
-                            <div className="relative" ref={agentsDropdownRef}>
-                                <button
-                                    onClick={() => setAgentsOpen(!agentsOpen)}
-                                    onKeyDown={(e) => {
-                                        if (e.key === 'Escape') setAgentsOpen(false);
-                                    }}
-                                    aria-expanded={agentsOpen}
-                                    aria-haspopup="true"
-                                    aria-controls="agents-dropdown"
-                                    aria-label="Agents menu"
-                                    className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
-                                        ? 'text-gray-300 hover:text-white'
-                                        : 'text-slate-600 hover:text-primary-600'
-                                        }`}
-                                >
-                                    Agents
-                                    <ChevronDown className={`w-4 h-4 transition-transform ${agentsOpen ? 'rotate-180' : ''}`} />
-                                </button>
-
-                                {agentsOpen && (
-                                    <div
-                                        id="agents-dropdown"
+                                        id="solutions-dropdown"
                                         role="menu"
                                         className={`absolute top-full left-0 mt-2 min-w-[280px] rounded-xl shadow-xl border overflow-hidden ${isDark
                                             ? 'bg-[#12121a] border-white/10'
@@ -281,22 +230,29 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         }`}
                                     >
                                         <div className="py-2">
-                                            {agents.map((agent) => (
-                                                <Link
-                                                    key={agent.name}
-                                                    href={agent.href}
-                                                    role="menuitem"
-                                                    onClick={() => setAgentsOpen(false)}
-                                                    onKeyDown={(e) => {
-                                                        if (e.key === 'Escape') setAgentsOpen(false);
-                                                    }}
-                                                    className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${isDark
-                                                        ? 'text-gray-300 hover:bg-white/5 hover:text-white'
-                                                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                                                        }`}
-                                                >
-                                                    {agent.name}
-                                                </Link>
+                                            {solutionGroups.map((group) => (
+                                                <div key={group.label}>
+                                                    <p className={`px-4 pt-3 pb-1 text-xs font-semibold uppercase tracking-wider ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>
+                                                        {group.label}
+                                                    </p>
+                                                    {group.items.map((item) => (
+                                                        <Link
+                                                            key={item.name}
+                                                            href={item.href}
+                                                            role="menuitem"
+                                                            onClick={() => setSolutionsOpen(false)}
+                                                            onKeyDown={(e) => {
+                                                                if (e.key === 'Escape') setSolutionsOpen(false);
+                                                            }}
+                                                            className={`block px-4 py-2 text-[15px] font-medium transition-colors ${isDark
+                                                                ? 'text-gray-300 hover:bg-white/5 hover:text-white'
+                                                                : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                                                                }`}
+                                                        >
+                                                            {item.name}
+                                                        </Link>
+                                                    ))}
+                                                </div>
                                             ))}
                                         </div>
                                     </div>
@@ -479,66 +435,30 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 
-                        {/* Mobile Services Section */}
+                        {/* Mobile Solutions Section */}
                         <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
-                            Services
+                            Solutions
                         </div>
-                        {services.map((service) => (
-                            <Link
-                                key={service.name}
-                                href={service.href}
-                                onClick={() => setIsOpen(false)}
-                                className={`block px-3 py-3 rounded-lg font-medium ${isDark
-                                    ? 'text-gray-300 hover:bg-white/5'
-                                    : 'text-slate-600 hover:bg-slate-50'
-                                    }`}
-                            >
-                                {service.name}
-                            </Link>
-                        ))}
-
-                        <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
-
-                        {/* Mobile Agents Section */}
-                        <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
-                            Agents
-                        </div>
-                        {agents.map((agent) => (
-                            <Link
-                                key={agent.name}
-                                href={agent.href}
-                                onClick={() => setIsOpen(false)}
-                                className={`block px-3 py-3 rounded-lg font-medium ${isDark
-                                    ? 'text-gray-300 hover:bg-white/5'
-                                    : 'text-slate-600 hover:bg-slate-50'
-                                    }`}
-                            >
-                                {agent.name}
-                            </Link>
-                        ))}
-
-                        {showIndustry && (
-                            <>
-                                <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
-
-                                <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
-                                    Industry
+                        {solutionGroups.map((group) => (
+                            <div key={group.label}>
+                                <div className={`px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider ${isDark ? 'text-gray-500' : 'text-slate-500'}`}>
+                                    {group.label}
                                 </div>
-                                {industries.map((industry) => (
+                                {group.items.map((item) => (
                                     <Link
-                                        key={industry.name}
-                                        href={industry.href}
+                                        key={item.name}
+                                        href={item.href}
                                         onClick={() => setIsOpen(false)}
                                         className={`block px-3 py-3 rounded-lg font-medium ${isDark
                                             ? 'text-gray-300 hover:bg-white/5'
                                             : 'text-slate-600 hover:bg-slate-50'
                                             }`}
                                     >
-                                        {industry.name}
+                                        {item.name}
                                     </Link>
                                 ))}
-                            </>
-                        )}
+                            </div>
+                        ))}
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 

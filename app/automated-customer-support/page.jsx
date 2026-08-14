@@ -32,7 +32,7 @@ export const metadata = {
         absolute: 'Automated Customer Service & Support Software | Dooza',
     },
     description:
-        'Done-for-you automated customer service for $199/mo. We set up your AI support workflows, connect your tools, and handle everything. 7-day money-back guarantee.',
+        'Done-for-you automated customer service for $998/mo. We set up your AI support workflows, connect your tools, and handle everything. 7-day money-back guarantee.',
     keywords: [
         'automated customer service',
         'customer service automation',
@@ -53,7 +53,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'Automated Customer Service & Support Software | Dooza',
-        description: 'Done-for-you AI customer service. We set it up, you sit back. $199/mo with 7-day money-back guarantee.',
+        description: 'Done-for-you AI customer service. We set it up, you sit back. $998/mo with 7-day money-back guarantee.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -62,7 +62,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Automated Customer Service & Support Software | Dooza',
-        description: 'Done-for-you AI customer service. We set it up, you sit back. $199/mo with 7-day money-back guarantee.',
+        description: 'Done-for-you AI customer service. We set it up, you sit back. $998/mo with 7-day money-back guarantee.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -188,7 +188,7 @@ const faqs = [
     },
     {
         question: 'Can Dooza replace outsourcing?',
-        answer: 'For most small and mid-size businesses, yes. Outsourced agents cost $1,500–3,500/mo per person. Dooza\'s Managed plan is $199/mo total and handles the same repetitive tickets 24/7 with faster response times and no training ramp-up.',
+        answer: 'For most small and mid-size businesses, yes. Outsourced agents cost $1,500–3,500/mo per person. Dooza\'s Managed plan is $998/mo total and handles the same repetitive tickets 24/7 with faster response times and no training ramp-up.',
     },
 ];
 
@@ -215,7 +215,7 @@ const schemas = [
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         url: pageUrl,
-        offers: { '@type': 'Offer', name: 'Managed', price: '199', priceCurrency: 'USD', url: pageUrl },
+        offers: { '@type': 'Offer', name: 'Managed', price: '998', priceCurrency: 'USD', url: pageUrl },
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {
@@ -243,7 +243,7 @@ export default function AutomatedCustomerSupportPage() {
             {schemas.map((schema, i) => (
                 <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             ))}
-            <Navbar showLogin={false} showIndustry ctaType="demo" ctaSource="automated_customer_support_nav" />
+            <Navbar showLogin={false} ctaType="demo" ctaSource="automated_customer_support_nav" />
 
             <main id="main-content" className="bg-white text-slate-900">
 
@@ -256,7 +256,7 @@ export default function AutomatedCustomerSupportPage() {
                     <div className="relative z-10 mx-auto max-w-4xl text-center">
                         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/90 px-4 py-2 text-sm font-black text-primary-800 shadow-sm backdrop-blur">
                             <Sparkles className="h-4 w-4" />
-                            Done-for-you · $199/mo · We set it up
+                            Done-for-you · $998/mo · We set it up
                         </div>
                         <h1 className="font-serif text-4xl font-extrabold leading-[1.08] text-slate-950 md:text-6xl">
                             Automated Customer Service — We Set It Up For You
@@ -266,7 +266,7 @@ export default function AutomatedCustomerSupportPage() {
                         </p>
                         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                             <BookDemoButton source="automated_customer_support_hero" variant="primary" size="xl">
-                                Get Started — $199/mo
+                                Get Started — $998/mo
                             </BookDemoButton>
                             <a
                                 href="#comparison"
@@ -348,7 +348,7 @@ export default function AutomatedCustomerSupportPage() {
                                     <div className="mb-2 inline-flex rounded-full bg-primary-50 px-3 py-1 text-xs font-black uppercase tracking-wider text-primary-800">
                                         The Dooza difference
                                     </div>
-                                    <h3 className="text-2xl font-black text-slate-950">Dooza Managed — $199/mo</h3>
+                                    <h3 className="text-2xl font-black text-slate-950">Dooza Managed — $998/mo</h3>
                                     <p className="mt-2 max-w-lg text-base font-semibold leading-relaxed text-slate-600">
                                         We connect your tools, build your workflows, configure your rules, test with real tickets, and optimize everything. You don't spend a single hour on setup.
                                     </p>
@@ -451,7 +451,7 @@ export default function AutomatedCustomerSupportPage() {
                                 </div>
                                 <div className="text-right">
                                     <div className="flex items-baseline gap-1">
-                                        <span className="text-5xl font-extrabold text-slate-950 font-serif">$199</span>
+                                        <span className="text-5xl font-extrabold text-slate-950 font-serif">$998</span>
                                         <span className="text-slate-600 text-sm">USD/ month</span>
                                     </div>
                                 </div>
@@ -480,7 +480,7 @@ export default function AutomatedCustomerSupportPage() {
 
                             <div className="mt-8 flex flex-col items-center gap-3">
                                 <BookDemoButton source="automated_customer_support_pricing" variant="primary" size="xl">
-                                    Get Started — $199/mo
+                                    Get Started — $998/mo
                                 </BookDemoButton>
                                 <p className="text-sm font-semibold text-slate-500">Free setup call with the founder · No commitment before the call</p>
                             </div>
@@ -550,11 +550,11 @@ export default function AutomatedCustomerSupportPage() {
                                     Stop configuring. Start automating.
                                 </h2>
                                 <p className="mt-4 max-w-xl text-lg font-semibold leading-relaxed text-slate-600">
-                                    $199/mo. We set up your AI support workflows, connect your tools, and handle everything. 7-day money-back guarantee.
+                                    $998/mo. We set up your AI support workflows, connect your tools, and handle everything. 7-day money-back guarantee.
                                 </p>
                             </div>
                             <BookDemoButton source="automated_customer_support_final" variant="primary" size="xl">
-                                Get Started — $199/mo
+                                Get Started — $998/mo
                             </BookDemoButton>
                         </div>
                     </div>

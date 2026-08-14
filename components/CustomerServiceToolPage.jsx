@@ -649,7 +649,7 @@ function RelatedKeywordLinks({ currentSlug }) {
 export default function CustomerServiceToolPage({ page }) {
     return (
         <BookingModalProvider>
-            <Navbar showLogin={false} showIndustry ctaType="demo" ctaSource={`${page.slug}_nav`} />
+            <Navbar showLogin={false} ctaType="demo" ctaSource={`${page.slug}_nav`} />
             <main id="main-content" className="bg-warm text-slate-900">
                 <section className="relative overflow-hidden px-4 pb-14 pt-24 md:px-8 md:pb-16 md:pt-28">
                     <div className="pointer-events-none absolute inset-0">

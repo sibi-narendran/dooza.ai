@@ -649,7 +649,7 @@ export default function CustomerSupportIndustryPage() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
                 />
             ))}
-            <Navbar showIndustry ctaType="demo" ctaSource="customer_support_nav" />
+            <Navbar ctaType="demo" ctaSource="customer_support_nav" />
             <main id="main-content" className="bg-warm text-slate-900">
                 <section className="relative overflow-hidden px-4 pb-20 pt-32 md:px-8 md:pb-28 md:pt-32">
                     <div className="absolute inset-0 pointer-events-none">

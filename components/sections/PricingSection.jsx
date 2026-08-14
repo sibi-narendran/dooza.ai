@@ -56,7 +56,7 @@ const plans = [
     },
     {
         name: 'Managed',
-        price: 199,
+        price: 998,
         desc: 'For teams that want automation set up with us',
         cta: 'Choose plan',
         ctaStyle: 'default',

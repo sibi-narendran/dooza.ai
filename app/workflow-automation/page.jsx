@@ -187,7 +187,7 @@ const schemas = [
         description: 'AI-powered workflow automation platform with 300+ integrations, visual builder, and intelligent AI agents.',
         offers: {
             '@type': 'Offer',
-            price: '199',
+            price: '998',
             priceCurrency: 'USD',
             priceValidUntil: '2027-12-31',
             availability: 'https://schema.org/InStock',
@@ -403,7 +403,7 @@ export default function WorkflowAutomationPage() {
                                 </div>
                                 <div className="text-center md:text-right md:pl-8 md:border-l md:border-slate-100">
                                     <div className="flex items-baseline justify-center md:justify-end gap-1 mb-1">
-                                        <span className="text-5xl md:text-6xl font-extrabold text-slate-900">$199</span>
+                                        <span className="text-5xl md:text-6xl font-extrabold text-slate-900">$998</span>
                                         <span className="text-slate-500 text-sm">/ month</span>
                                     </div>
                                     <p className="text-xs text-slate-400 mb-6">7-day money-back guarantee</p>

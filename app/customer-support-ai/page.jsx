@@ -28,7 +28,7 @@ export const metadata = {
         absolute: 'Automate Customer Support with Dooza Agents | AI Support Done For You',
     },
     description:
-        'Build an AI-powered customer support workflow that replies to customers in seconds. Dooza Agents + AI employees handle email, chat, and tickets 24/7. $199/mo, done for you.',
+        'Build an AI-powered customer support workflow that replies to customers in seconds. Dooza Agents + AI employees handle email, chat, and tickets 24/7. $998/mo, done for you.',
     keywords: [
         'customer support workflow',
         'AI customer support automation',
@@ -49,7 +49,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'Automate Customer Support with Dooza Agents | AI Support Done For You',
-        description: 'Build a support workflow that replies in seconds. Dooza Agents + AI employees. Done-for-you at $199/mo.',
+        description: 'Build a support workflow that replies in seconds. Dooza Agents + AI employees. Done-for-you at $998/mo.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -58,7 +58,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Automate Customer Support with Dooza Agents | Dooza',
-        description: 'AI-powered support workflow that replies in seconds. Dooza Agents + AI employees. $199/mo done-for-you.',
+        description: 'AI-powered support workflow that replies in seconds. Dooza Agents + AI employees. $998/mo done-for-you.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -112,7 +112,7 @@ const schemas = [
         description: 'AI-powered customer support workflow that replies to customers in seconds. Powered by Dooza AI employees.',
         offers: {
             '@type': 'Offer',
-            price: '199',
+            price: '998',
             priceCurrency: 'USD',
             priceValidUntil: '2027-12-31',
             availability: 'https://schema.org/InStock',
@@ -276,7 +276,7 @@ export default function CustomerSupportSimplePage() {
                                         'Customers get a reply in under 30 seconds',
                                         'Workflow runs 24/7, including holidays',
                                         'AI employee handles routine questions automatically',
-                                        '$199/month — replaces a full-time hire',
+                                        '$998/month — replaces a full-time hire',
                                         'Every ticket answered, nothing falls through',
                                     ].map((item) => (
                                         <li key={item} className="flex items-start gap-3 text-sm text-primary-800">
@@ -364,7 +364,7 @@ export default function CustomerSupportSimplePage() {
                                 </div>
                                 <div className="text-center md:text-right md:pl-8 md:border-l md:border-slate-100">
                                     <div className="flex items-baseline justify-center md:justify-end gap-1 mb-1">
-                                        <span className="text-5xl md:text-6xl font-extrabold text-slate-900">$199</span>
+                                        <span className="text-5xl md:text-6xl font-extrabold text-slate-900">$998</span>
                                         <span className="text-slate-500 text-sm">/ month</span>
                                     </div>
                                     <p className="text-xs text-slate-400 mb-6">7-day money-back guarantee</p>

@@ -24,7 +24,7 @@ const Footer = ({ variant = 'light' }) => {
                 </div>
 
                 {/* Links */}
-                <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-8 border-y ${isDark ? 'border-white/5' : 'border-slate-100'}`}>
+                <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 py-8 border-y ${isDark ? 'border-white/5' : 'border-slate-100'}`}>
                     <div>
                         <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Products</p>
                         <ul className="space-y-3">
@@ -41,8 +41,33 @@ const Footer = ({ variant = 'light' }) => {
                         </ul>
                     </div>
                     <div>
-                        <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Services</p>
+                        <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Solutions</p>
                         <ul className="space-y-3">
+                            <li>
+                                <Link href="/agents/outbound-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Outbound Pro
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/agents/lead-gen-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Lead Gen Pro
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/agents/ugc-reel-creator" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    UGC Reel Creator
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/agents/voice-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Voice Pro
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/agents/ranky" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Ranky
+                                </Link>
+                            </li>
                             <li>
                                 <Link href="/automated-customer-support" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Automated Customer Support
@@ -68,34 +93,14 @@ const Footer = ({ variant = 'light' }) => {
                                     Support Workflow
                                 </Link>
                             </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Solutions · AI Employees</p>
-                        <ul className="space-y-3">
                             <li>
-                                <Link href="/agents/outbound-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Outbound Pro
+                                <Link href="/industries/law-firms" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Law Firms
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/agents/lead-gen-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Lead Gen Pro
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/agents/ugc-reel-creator" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    UGC Reel Creator
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/agents/voice-pro" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Voice Pro
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/agents/ranky" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Ranky
+                                <Link href="/industries/customer-support" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Store Customer Ops
                                 </Link>
                             </li>
                         </ul>

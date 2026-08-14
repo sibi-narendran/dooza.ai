@@ -240,7 +240,6 @@ export default function Home() {
             <Navbar
                 signupUrl={WORKFLOW_SIGNUP_URL}
                 loginUrl={WORKFLOW_SIGNIN_URL}
-                showIndustry
                 ctaType="demo"
                 ctaSource="home_nav"
                 signupLabel="Get Your AI Employee Built"
