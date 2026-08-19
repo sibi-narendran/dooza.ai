@@ -43,11 +43,10 @@ export default function HeroSection() {
             />
             <div className="hero-entrance relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
                 <h1 className="mb-6 font-serif text-4xl font-extrabold leading-[1.06] tracking-tight text-slate-950 md:text-6xl">
-                    Hire your first AI employee.{' '}
-                    <span className="text-primary-600">We train it and keep it running.</span>
+                    Hire your first <span className="text-primary-600">AI employee.</span>
                 </h1>
                 <p className="mb-8 max-w-2xl text-base leading-relaxed text-slate-600 md:text-xl">
-                    Live in days. Free setup. Keep it only if it earns its keep.
+                    We train it and keep it running. Live in days. Free setup. Keep it only if it earns its keep.
                 </p>
                 <div className="mb-8 mt-3 w-full max-w-3xl">
                     <AgentPromptBox signupUrl={WORKFLOW_SIGNUP_URL} />
