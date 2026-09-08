@@ -32,7 +32,7 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/workforce`,
-            lastModified: pageDate('2026-07-15'),
+            lastModified: pageDate('2026-09-08'),
             changeFrequency: 'weekly',
             priority: 0.95,
         },

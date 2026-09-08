@@ -144,7 +144,7 @@ export default function AccioWorkVsDoozaContent() {
                             <span>Comparison</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            Accio Work vs Dooza: <span className="text-primary-600">E-Commerce Agent</span> vs AI Employees
+                            Accio Work Review: <span className="text-primary-600">Pricing, Features</span> & Verdict
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                             Accio Work is Alibaba's e-commerce AI agent. Dooza gives you an entire AI workforce for any business. One is locked to sourcing. The other runs your entire operation. Here's the honest breakdown.
@@ -156,7 +156,7 @@ export default function AccioWorkVsDoozaContent() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
-                                <span>April 14, 2026</span>
+                                <span>Updated September 8, 2026</span>
                             </div>
                         </div>
 
@@ -262,7 +262,7 @@ export default function AccioWorkVsDoozaContent() {
                                     Accio Work is a powerful tool for e-commerce sourcing within Alibaba's ecosystem. <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline font-medium">Dooza's AI employees</Link> are built for complete business operations — email, social media, SEO, sales, legal, and phone calls — for <em>any</em> type of business.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    This is the honest comparison. No fluff.
+                                    This review separates verified capabilities from positioning claims and explains where each product fits.
                                 </p>
                             </div>
                         </section>

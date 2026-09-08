@@ -18,23 +18,23 @@ import { SITE_URL } from '@/lib/site';
 const pageUrl = `${SITE_URL}/workforce`;
 
 export const metadata = {
-    title: { absolute: 'AI Employees for $49/mo — Work 24/7 | Dooza.ai' },
-    description: 'Get AI employees that handle email, social media, SEO, calls, and leads while you sleep. Free setup call with the founder. Cancel anytime. [2026]',
+    title: { absolute: 'AI Employees for Small Business, Built for You | Dooza' },
+    description: 'Dooza builds and maintains AI employees for email, social media, SEO, calls, and lead follow-up—with human approvals for sensitive work.',
     keywords: ['AI employees', 'AI agents', 'business automation', 'Sintra AI alternative', 'Marblism alternative', 'AI for small business', 'AI automation platform', 'virtual employees'],
     alternates: {
         canonical: pageUrl,
     },
     openGraph: {
-        title: 'AI Employees for $49/mo — Work 24/7 | Dooza.ai',
-        description: 'Get AI employees that handle email, social media, SEO, calls, and leads while you sleep. Free setup call with the founder.',
+        title: 'AI Employees for Small Business, Built for You | Dooza',
+        description: 'Dooza builds and maintains AI employees for email, social media, SEO, calls, and lead follow-up—with human approvals for sensitive work.',
         url: pageUrl,
         type: 'website',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Workforce - AI Employees Platform' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'AI Employees for $49/mo — Work 24/7 | Dooza.ai',
-        description: 'Get AI employees that handle email, social media, SEO, calls, and leads while you sleep. Free setup call with the founder.',
+        title: 'AI Employees for Small Business, Built for You | Dooza',
+        description: 'Dooza builds and maintains AI employees for email, social media, SEO, calls, and lead follow-up—with human approvals for sensitive work.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -82,13 +82,6 @@ const softwareSchema = {
                 "unitCode": "MON"
             }
         }
-    },
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "150",
-        "bestRating": "5",
-        "worstRating": "1"
     },
     "review": [
         {
@@ -148,13 +141,6 @@ const productSchema = {
             "name": "Dooza"
         }
     },
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150",
-        "bestRating": "5",
-        "worstRating": "1"
-    }
 };
 
 // Service Schema for each AI Employee

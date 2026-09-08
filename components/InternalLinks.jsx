@@ -24,14 +24,14 @@ const relatedPostMappings = {
     'ai-employees-openclaw-business': ['what-is-openclaw', 'ai-employees-transforming-small-business', 'ai-employees-vs-virtual-assistants'],
     'lindy-ai-alternative': ['better-than-motion', 'accio-work-vs-dooza', 'ai-employees-transforming-small-business'],
     'ai-employees-vs-virtual-assistants': ['ai-staffing', 'ai-employees-transforming-small-business', 'ai-tools-for-solopreneurs'],
-    'ai-tools-for-solopreneurs': ['automate-business-processes', 'small-business-marketing-tools', 'ai-employees-vs-virtual-assistants'],
+    'ai-tools-for-solopreneurs': ['best-ai-sales-tools-for-startups', 'automate-business-processes', 'ai-employees-vs-virtual-assistants'],
     'automate-business-processes': ['best-ai-receptionist', 'ai-staffing', 'marketing-automation-tools'],
     'best-ai-receptionist': ['virtual-receptionist-for-small-business', 'automate-business-processes', 'ai-staffing'],
     'ai-staffing': ['automate-business-processes', 'best-ai-receptionist', 'ai-employees-vs-virtual-assistants'],
     'virtual-receptionist-for-small-business': ['best-ai-receptionist', 'automate-business-processes', 'ai-for-real-estate-agents'],
     'build-a-20x-company': ['what-is-openclaw', 'ai-staffing', 'automate-business-processes'],
     'openclaw-vs-dooza': ['what-is-openclaw', 'ai-employees-openclaw-business', 'build-a-20x-company'],
-    'ai-sales-agent-guide': ['ai-for-real-estate-agents', 'best-ai-receptionist', 'automate-business-processes'],
+    'ai-sales-agent-guide': ['best-ai-sales-tools-for-startups', 'ai-agent-linkedin-lead-generation', 'automate-business-processes'],
     'her-entire-team-was-ai': ['ai-staffing', 'ai-employees-transforming-small-business', 'automate-business-processes'],
     'ai-receptionist-for-salons': ['best-ai-receptionist', 'virtual-receptionist-for-small-business', 'automate-business-processes'],
     'ai-appointment-setter': ['ai-sales-agent-guide', 'best-ai-receptionist', 'ai-employees-vs-virtual-assistants'],
@@ -46,13 +46,24 @@ const relatedPostMappings = {
     'hatrio-ai-canada-partnership': ['content-marketing-tools', 'ai-copywriting-tools', 'outrank-vs-dooza-ranky'],
     'how-we-automate-seo-at-dooza': ['seo-tools-small-business', 'content-marketing-tools', 'automate-business-processes'],
     'satya-reverse-information-paradox': ['ai-employees-vs-virtual-assistants', 'ai-employees-transforming-small-business', 'automate-business-processes'],
-    'karpathy-loop-graph-engineering': ['ai-agents-vs-agentic-ai', 'ai-employees-transforming-small-business', 'build-a-20x-company']
+    'karpathy-loop-graph-engineering': ['ai-agents-vs-agentic-ai', 'ai-employees-transforming-small-business', 'build-a-20x-company'],
+    'ai-agent-comparison': ['ai-agents-vs-agentic-ai', 'automate-business-processes', 'ai-sales-agent-guide'],
+    'ai-social-media-management-tools': ['small-business-marketing-tools', 'marketing-automation-tools', 'content-marketing-tools'],
+    'no-code-ai-agent-builder': ['ai-agent-comparison', 'automate-business-processes', 'ai-agents-vs-agentic-ai'],
+    'best-ai-sales-tools-for-startups': ['ai-sales-agent-guide', 'ai-agent-linkedin-lead-generation', 'automate-business-processes']
+};
+
+const dynamicPostLabels = {
+    'ai-agent-comparison': 'AI Agent Comparison: How to Evaluate Platforms',
+    'ai-social-media-management-tools': 'AI Social Media Management Tools Compared',
 };
 
 const InternalLinks = ({ currentSlug, position = 'sidebar' }) => {
     const relatedSlugs = relatedPostMappings[currentSlug] || [];
     const relatedPosts = relatedSlugs
-        .map(slug => blogPosts.find(p => p.slug === slug))
+        .map(slug => blogPosts.find(p => p.slug === slug) || (dynamicPostLabels[slug]
+            ? { id: slug, slug, title: dynamicPostLabels[slug] }
+            : null))
         .filter((post) => post && !post.noindex)
         .slice(0, 3);
 
