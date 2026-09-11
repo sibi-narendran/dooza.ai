@@ -122,7 +122,7 @@ export default function BlogPage({ posts }) {
                                     className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-slate-100 hover:border-primary-200 flex flex-col h-full"
                                 >
                                     <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
-                                        <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-50 relative overflow-hidden">
+                                        <div className="aspect-[1200/630] bg-gradient-to-br from-primary-100 to-primary-50 relative overflow-hidden">
                                             {post.image && (
                                                 <Image
                                                     src={post.image}

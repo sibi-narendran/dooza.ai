@@ -117,7 +117,7 @@ export default function DynamicBlogContent({ post }) {
 
                         {/* Blog Image — server-rendered with alt text for SEO */}
                         {post.image && (
-                            <div className="aspect-video bg-slate-100 rounded-2xl overflow-hidden">
+                            <div className="aspect-[1200/630] bg-slate-100 rounded-2xl overflow-hidden">
                                 <img
                                     src={post.image}
                                     alt={post.imageAlt || post.title}
