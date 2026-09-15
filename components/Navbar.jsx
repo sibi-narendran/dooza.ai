@@ -3,26 +3,37 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, Menu, X, ChevronDown } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { ArrowRight, Calendar, ChevronDown, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
 import { getProductSignupUrl, getProductSigninUrl } from '@/lib/links';
 import { trackDemoClick, trackSignupClick } from '@/lib/analytics';
 import { useBookingModal } from '@/components/BookingModalProvider';
+
+const PRODUCT_ROUTES = ['/', '/workforce'];
+
+const isProductRoute = (pathname) => (
+    PRODUCT_ROUTES.includes(pathname)
+    || pathname?.startsWith('/agents/')
+);
 
 const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = true, showIndustry = true, ctaType = 'signup', ctaSource = 'navbar' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
-    const [solutionsOpen, setSolutionsOpen] = useState(false);
     const [industriesOpen, setIndustriesOpen] = useState(false);
     const dropdownRef = useRef(null);
-    const solutionsDropdownRef = useRef(null);
     const industriesDropdownRef = useRef(null);
+    const industryScrollerRef = useRef(null);
     const { openModal } = useBookingModal();
+    const pathname = usePathname();
 
     const isDark = variant === 'dark';
     const solidNav = scrolled || isOpen;
-    const isDemoCta = ctaType === 'demo';
-    const ctaLabel = signupLabel || (isDemoCta ? 'Speak to Founder' : 'Get Started');
+    const productPage = isProductRoute(pathname);
+    const isDemoCta = productPage ? ctaType === 'demo' : true;
+    const ctaLabel = productPage
+        ? signupLabel || (isDemoCta ? 'Speak to Founder' : 'Get Started')
+        : 'Book a Demo';
 
     const handleDemoClick = () => {
         openModal();
@@ -39,9 +50,6 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
         const handleClickOutside = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setProductsOpen(false);
-            }
-            if (solutionsDropdownRef.current && !solutionsDropdownRef.current.contains(event.target)) {
-                setSolutionsOpen(false);
             }
             if (industriesDropdownRef.current && !industriesDropdownRef.current.contains(event.target)) {
                 setIndustriesOpen(false);
@@ -88,36 +96,22 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
         { name: 'Dooza Agents', href: '/workflow' },
     ];
 
-    const services = [
-        { name: 'Automated Customer Support', href: '/automated-customer-support' },
-        { name: 'Customer Support Automation', href: '/customer-support-automation-agency' },
-    ];
-
-    const agents = [
-        { name: 'Ranky — AI Visibility', href: '/agents/ranky' },
-        { name: 'Outbound Pro — Email Automation', href: '/agents/outbound-pro' },
-        { name: 'Lead Gen Pro — Lead Generation', href: '/agents/lead-gen-pro' },
-        { name: 'UGC Reel Creator — Video', href: '/agents/ugc-reel-creator' },
-        { name: 'Voice Pro — Calls', href: '/agents/voice-pro' },
-    ];
-
     const industries = [
-        { name: 'Salons & Beauty', href: '/industries/salons' },
-        { name: 'Contractors & Home Services', href: '/industries/contractors' },
-        { name: 'HVAC', href: '/industries/hvac' },
-        { name: 'Real Estate', href: '/industries/real-estate' },
-        { name: 'Dispatchers', href: '/industries/dispatchers' },
-        { name: 'Insurance Agents', href: '/industries/insurance-agents' },
-        { name: 'Law Firms', href: '/industries/law-firms' },
-        { name: 'Store Customer Ops', href: '/industries/customer-support' },
-        { name: 'All Industries →', href: '/industries' },
+        { name: 'Salons & Beauty', detail: 'Bookings and calls', href: '/industries/salons', image: '/blog/ai-receptionist-for-salons.png' },
+        { name: 'Trades', detail: 'Calls, leads and scheduling', href: '/industries/trades', image: '/industries/home-services-ai-automation.png' },
+        { name: 'Real Estate', detail: 'Lead follow-up', href: '/industries/real-estate', image: '/blog/ai-for-real-estate-agents.png' },
+        { name: 'Truck Dispatchers', detail: 'Calls and operations', href: '/industries/dispatchers', image: '/industries/truck-dispatch-ai-employee.png' },
+        { name: 'Insurance', detail: 'Quotes and renewals', href: '/industries/insurance-agents', image: '/blog/liberate-alternative-insurance-agencies.png' },
+        { name: 'Law Firms', detail: 'Intake and follow-up', href: '/industries/law-firms', image: '/blog/ai-legal-assistant.png' },
+        { name: 'Customer Support', detail: 'Support at scale', href: '/industries/customer-support', image: '/industries/customer-support-ai-employee.png' },
     ];
 
-    const solutionGroups = [
-        { label: 'AI Agents', items: agents },
-        { label: 'Services', items: services },
-        { label: 'Industries', items: industries },
-    ];
+    const scrollIndustries = (direction) => {
+        industryScrollerRef.current?.scrollBy({
+            left: direction * 420,
+            behavior: 'smooth',
+        });
+    };
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${solidNav
@@ -146,7 +140,10 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                             {/* Products Dropdown */}
                             <div className="relative" ref={dropdownRef}>
                                 <button
-                                    onClick={() => setProductsOpen(!productsOpen)}
+                                    onClick={() => {
+                                        setProductsOpen(!productsOpen);
+                                        setIndustriesOpen(false);
+                                    }}
                                     onKeyDown={(e) => {
                                         if (e.key === 'Escape') setProductsOpen(false);
                                     }}
@@ -200,69 +197,13 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                 )}
                             </div>
 
-                            {/* Solutions Dropdown */}
-                            <div className="relative" ref={solutionsDropdownRef}>
-                                <button
-                                    onClick={() => setSolutionsOpen(!solutionsOpen)}
-                                    onKeyDown={(e) => {
-                                        if (e.key === 'Escape') setSolutionsOpen(false);
-                                    }}
-                                    aria-expanded={solutionsOpen}
-                                    aria-haspopup="true"
-                                    aria-controls="solutions-dropdown"
-                                    aria-label="Solutions menu"
-                                    className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
-                                        ? 'text-gray-300 hover:text-white'
-                                        : 'text-slate-600 hover:text-primary-600'
-                                        }`}
-                                >
-                                    Solutions
-                                    <ChevronDown className={`w-4 h-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
-                                </button>
-
-                                {solutionsOpen && (
-                                    <div
-                                        id="solutions-dropdown"
-                                        role="menu"
-                                        className={`absolute top-full left-0 mt-2 min-w-[280px] rounded-xl shadow-xl border overflow-hidden ${isDark
-                                            ? 'bg-[#12121a] border-white/10'
-                                            : 'bg-white border-slate-100'
-                                        }`}
-                                    >
-                                        <div className="py-2">
-                                            {solutionGroups.map((group) => (
-                                                <div key={group.label}>
-                                                    <p className={`px-4 pt-3 pb-1 text-xs font-semibold uppercase tracking-wider ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>
-                                                        {group.label}
-                                                    </p>
-                                                    {group.items.map((item) => (
-                                                        <Link
-                                                            key={item.name}
-                                                            href={item.href}
-                                                            role="menuitem"
-                                                            onClick={() => setSolutionsOpen(false)}
-                                                            onKeyDown={(e) => {
-                                                                if (e.key === 'Escape') setSolutionsOpen(false);
-                                                            }}
-                                                            className={`block px-4 py-2 text-[15px] font-medium transition-colors ${isDark
-                                                                ? 'text-gray-300 hover:bg-white/5 hover:text-white'
-                                                                : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                                                                }`}
-                                                        >
-                                                            {item.name}
-                                                        </Link>
-                                                    ))}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-
                             {showIndustry && (
                                 <div className="relative" ref={industriesDropdownRef}>
                                     <button
-                                        onClick={() => setIndustriesOpen(!industriesOpen)}
+                                        onClick={() => {
+                                            setIndustriesOpen(!industriesOpen);
+                                            setProductsOpen(false);
+                                        }}
                                         onKeyDown={(e) => {
                                             if (e.key === 'Escape') setIndustriesOpen(false);
                                         }}
@@ -283,29 +224,93 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         <div
                                             id="industries-dropdown"
                                             role="menu"
-                                            className={`absolute top-full left-0 mt-2 min-w-[250px] rounded-xl shadow-xl border overflow-hidden ${isDark
+                                            className={`fixed left-1/2 top-[4.25rem] w-[min(900px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl border p-4 shadow-2xl md:p-5 ${isDark
                                                 ? 'bg-[#12121a] border-white/10'
                                                 : 'bg-white border-slate-100'
                                             }`}
                                         >
-                                            <div className="py-2">
+                                            <div className="mb-4 flex items-start justify-between gap-4">
+                                                <div>
+                                                    <p className={`text-base font-semibold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                                                        Built for your industry
+                                                    </p>
+                                                    <p className={`mt-1 text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
+                                                        See how an AI employee fits the way your business works.
+                                                    </p>
+                                                </div>
+                                                <div className="flex shrink-0 gap-2">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => scrollIndustries(-1)}
+                                                        aria-label="Scroll industries left"
+                                                        className={`grid h-9 w-9 place-items-center rounded-full border transition-colors ${isDark
+                                                            ? 'border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
+                                                            : 'border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                                            }`}
+                                                    >
+                                                        <ChevronLeft className="h-4 w-4" />
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => scrollIndustries(1)}
+                                                        aria-label="Scroll industries right"
+                                                        className={`grid h-9 w-9 place-items-center rounded-full border transition-colors ${isDark
+                                                            ? 'border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
+                                                            : 'border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                                            }`}
+                                                    >
+                                                        <ChevronRight className="h-4 w-4" />
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                ref={industryScrollerRef}
+                                                className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                                            >
                                                 {industries.map((industry) => (
                                                     <Link
                                                         key={industry.name}
                                                         href={industry.href}
                                                         role="menuitem"
                                                         onClick={() => setIndustriesOpen(false)}
-                                                        onKeyDown={(e) => {
-                                                            if (e.key === 'Escape') setIndustriesOpen(false);
-                                                        }}
-                                                        className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${isDark
-                                                            ? 'text-gray-300 hover:bg-white/5 hover:text-white'
-                                                            : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                                                            }`}
+                                                        className={`group relative h-44 w-48 shrink-0 snap-start overflow-hidden rounded-xl border ${isDark ? 'border-white/10' : 'border-slate-200'}`}
                                                     >
-                                                        {industry.name}
+                                                        <Image
+                                                            src={industry.image}
+                                                            alt=""
+                                                            fill
+                                                            sizes="192px"
+                                                            className="object-cover transition duration-500 group-hover:scale-105"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
+                                                        <div className="absolute inset-x-0 bottom-0 p-3 text-white">
+                                                            <p className="text-sm font-semibold leading-tight">{industry.name}</p>
+                                                            <p className="mt-1 text-xs text-white/70">{industry.detail}</p>
+                                                        </div>
                                                     </Link>
                                                 ))}
+                                            </div>
+
+                                            <div className={`mt-3 flex items-center justify-between gap-3 border-t pt-3 ${isDark ? 'border-white/10' : 'border-slate-100'}`}>
+                                                <Link
+                                                    href="/ai-solutions-for-business"
+                                                    onClick={() => setIndustriesOpen(false)}
+                                                    className={`text-sm font-semibold transition-colors ${isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
+                                                >
+                                                    Other solutions
+                                                </Link>
+                                                <Link
+                                                    href="/industries"
+                                                    onClick={() => setIndustriesOpen(false)}
+                                                    className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${isDark
+                                                        ? 'bg-white text-black hover:bg-gray-100'
+                                                        : 'bg-primary-700 text-white hover:bg-primary-800'
+                                                        }`}
+                                                >
+                                                    View all industries
+                                                    <ArrowRight className="h-4 w-4" />
+                                                </Link>
                                             </div>
                                         </div>
                                     )}
@@ -435,30 +440,56 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 
-                        {/* Mobile Solutions Section */}
-                        <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
-                            Solutions
-                        </div>
-                        {solutionGroups.map((group) => (
-                            <div key={group.label}>
-                                <div className={`px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wider ${isDark ? 'text-gray-500' : 'text-slate-500'}`}>
-                                    {group.label}
-                                </div>
-                                {group.items.map((item) => (
+                        {showIndustry && (
+                            <>
+                                <div className="flex items-center justify-between px-3 py-2">
+                                    <div className={`text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
+                                        Industry
+                                    </div>
                                     <Link
-                                        key={item.name}
-                                        href={item.href}
+                                        href="/industries"
                                         onClick={() => setIsOpen(false)}
-                                        className={`block px-3 py-3 rounded-lg font-medium ${isDark
-                                            ? 'text-gray-300 hover:bg-white/5'
-                                            : 'text-slate-600 hover:bg-slate-50'
-                                            }`}
+                                        className={`text-xs font-semibold ${isDark ? 'text-gray-300' : 'text-primary-700'}`}
                                     >
-                                        {item.name}
+                                        View all
                                     </Link>
-                                ))}
-                            </div>
-                        ))}
+                                </div>
+                                <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto px-3 pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                                    {industries.map((industry) => (
+                                        <Link
+                                            key={industry.name}
+                                            href={industry.href}
+                                            onClick={() => setIsOpen(false)}
+                                            className={`relative h-36 w-40 shrink-0 snap-start overflow-hidden rounded-xl border ${isDark ? 'border-white/10' : 'border-slate-200'}`}
+                                        >
+                                            <Image
+                                                src={industry.image}
+                                                alt=""
+                                                fill
+                                                sizes="160px"
+                                                className="object-cover"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                                            <div className="absolute inset-x-0 bottom-0 p-3 text-white">
+                                                <p className="text-sm font-semibold leading-tight">{industry.name}</p>
+                                                <p className="mt-1 text-[11px] text-white/70">{industry.detail}</p>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                                <Link
+                                    href="/ai-solutions-for-business"
+                                    onClick={() => setIsOpen(false)}
+                                    className={`mx-3 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-semibold ${isDark
+                                        ? 'bg-white/5 text-white'
+                                        : 'bg-slate-100 text-slate-900'
+                                        }`}
+                                >
+                                    Other solutions
+                                    <ArrowRight className="h-4 w-4" />
+                                </Link>
+                            </>
+                        )}
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 

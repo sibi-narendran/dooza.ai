@@ -52,14 +52,19 @@ export const metadata = {
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
-        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza' }],
+        images: [{
+            url: `${SITE_URL}/industries/customer-support-ai-employee.png`,
+            width: 1448,
+            height: 1086,
+            alt: 'Customer-support professional working with an AI assistant across phone, email, and chat',
+        }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'AI Customer Support Automation for Stores | Dooza',
         description:
             'Dooza manages AI workflows for store calls, quote requests, and repetitive customer support.',
-        images: [`${SITE_URL}/logo.png`],
+        images: [`${SITE_URL}/industries/customer-support-ai-employee.png`],
     },
 };
 

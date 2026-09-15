@@ -260,7 +260,7 @@ const failureReasons = [
 
 const industries = [
     { name: 'Salons & Spas', slug: 'salons', desc: 'AI receptionist for bookings, reminders, and client management' },
-    { name: 'Contractors & Home Services', slug: 'contractors', desc: 'Never miss a lead while on the job site' },
+    { name: 'Trades', slug: 'trades', desc: 'Never miss a call or lead while your team is on the job' },
     { name: 'Real Estate', slug: 'real-estate', desc: 'AI follow-up on every lead, 24/7 qualification' },
 ];
 

@@ -135,6 +135,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/industries/hvac',
+        destination: '/industries/trades',
+        permanent: true,
+      },
+      {
+        source: '/industries/contractors',
+        destination: '/industries/trades',
+        permanent: true,
+      },
+      {
         source: '/agents',
         destination: '/',
         permanent: true,

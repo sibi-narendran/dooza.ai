@@ -1,10 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BottomCTA from '../../components/BottomCTA';
-import { ArrowRight, Clock, Building2, Stethoscope, Home, Briefcase, ShoppingBag, Wrench, Scale, GraduationCap, Scissors, Radio, Shield, Flame } from 'lucide-react';
+import { ArrowRight, Building2, Check, Clock, Sparkles } from 'lucide-react';
 import { blogPosts } from '../../lib/blogData';
 import { SITE_URL } from '../../lib/site';
 
@@ -18,75 +19,86 @@ export default function IndustriesPage() {
 
     const industries = [
         {
-            icon: Scissors,
             name: 'Salons & Beauty',
+            category: 'Appointments',
             description: 'AI receptionist that books appointments, sends reminders, and never misses a call',
             industrySlug: 'salons',
+            image: '/blog/ai-receptionist-for-salons.png',
+            imageAlt: 'Salon professional helping a client while AI handles incoming appointment calls',
             benefits: ['24/7 appointment booking', 'Stylist-specific scheduling', 'SMS reminders & no-show reduction']
         },
         {
-            icon: Wrench,
-            name: 'Contractors & Home Services',
-            description: 'AI answering service that captures every lead — even when you\'re on the job site',
-            industrySlug: 'contractors',
-            benefits: ['Capture leads on-site', 'Emergency dispatch', 'Estimate quoting']
+            name: 'Trades',
+            category: 'Local services',
+            description: 'AI answering service that captures every call and lead — even when your team is on the job',
+            industrySlug: 'trades',
+            image: '/industries/home-services-ai-automation.png',
+            imageAlt: 'Trade professional using AI to organize customer calls, appointments, and routes',
+            benefits: ['Capture every lead', 'Emergency routing', 'Service and estimate booking']
         },
         {
-            icon: Home,
             name: 'Real Estate',
+            category: 'Sales',
             description: 'AI sales agent that follows up on every lead 24/7 and books showings',
             industrySlug: 'real-estate',
+            image: '/blog/ai-for-real-estate-agents.png',
+            imageAlt: 'Real-estate professional and AI assistant in front of a home for sale',
             benefits: ['Instant lead response', 'Lead qualification', 'Showing scheduling']
         },
         {
-            icon: Stethoscope,
             name: 'Healthcare & Medical',
+            category: 'Patient growth',
             description: 'Workflow automation for doctors, dentists, and medical practices',
             slug: 'seo-for-doctors-dentists',
+            image: '/blog/seo-for-doctors-dentists.png',
+            imageAlt: 'Healthcare professionals using digital automation to support patient acquisition',
             benefits: ['Patient-friendly content', 'Google Business Profile management', 'Patient acquisition']
         },
         {
-            icon: Briefcase,
             name: 'Small Business',
+            category: 'Growth',
             description: 'Managed AI workflows for SMBs and entrepreneurs',
             slug: 'small-business-marketing-tools',
+            image: '/blog/small-business-marketing-tools.png',
+            imageAlt: 'Small-business owner using AI tools to manage marketing and daily operations',
             benefits: ['All-in-one marketing', 'Cost-effective automation', 'No technical skills needed']
         },
         {
-            icon: ShoppingBag,
-            name: 'Store Customer Ops',
+            name: 'Customer Support',
+            category: 'Customer experience',
             description: 'Managed AI for store calls, quote requests, and repetitive customer support',
             industrySlug: 'customer-support',
+            image: '/industries/customer-support-ai-employee.png',
+            imageAlt: 'Customer-support professional working with an AI assistant across phone, email, and chat',
             benefits: ['Phone call handling', 'Quote request workflows', 'Email and chat support']
         },
         {
-            icon: Scale,
             name: 'Legal Services',
+            category: 'Client intake',
             description: 'AI workflows for law firm intake, onboarding, documents, and client follow-up',
             industrySlug: 'law-firms',
+            image: '/blog/ai-legal-assistant.png',
+            imageAlt: 'Legal professional using an AI assistant for client intake and document workflows',
             benefits: ['Client intake automation', 'Attorney approval steps', 'Matter admin workflows']
         },
         {
-            icon: Radio,
-            name: 'Dispatchers',
+            name: 'Truck Dispatchers',
+            category: 'Logistics',
             description: 'AI employee that runs the whole dispatch desk: calls, scheduling, tracking, email, and paperwork',
             industrySlug: 'dispatchers',
+            image: '/industries/truck-dispatch-ai-employee.png',
+            imageAlt: 'Truck dispatcher coordinating drivers, routes, calls, and delivery paperwork with AI',
             benefits: ['24/7 calls & texts', 'Scheduling & tracking', 'Paperwork handled']
         },
         {
-            icon: Shield,
             name: 'Insurance Agents',
+            category: 'Policy service',
             description: 'AI answering service that captures every quote request, handles policy questions, and escalates urgent claims 24/7',
             industrySlug: 'insurance-agents',
+            image: '/blog/liberate-alternative-insurance-agencies.png',
+            imageAlt: 'Insurance agency using AI to handle policyholder calls and quote requests',
             benefits: ['Quote request capture', 'Urgent claim escalation', 'After-hours call answering']
         },
-        {
-            icon: Flame,
-            name: 'HVAC',
-            description: 'AI answering service that captures every emergency, estimate, and service call — even at 2 AM',
-            industrySlug: 'hvac',
-            benefits: ['Emergency call escalation', 'Estimate & service booking', '24/7 after-hours answering']
-        }
     ];
 
     return (
@@ -94,60 +106,97 @@ export default function IndustriesPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <div className="bg-gradient-to-br from-emerald-50 via-white to-teal-50 pt-24 pb-16 md:pt-32 md:pb-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-4xl mx-auto">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-6">
+            <section className="relative overflow-hidden border-b border-slate-100 bg-[#f7fbf9] pt-28 pb-16 md:pt-36 md:pb-20">
+                <div className="absolute -left-32 top-8 h-72 w-72 rounded-full bg-emerald-200/30 blur-3xl" />
+                <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-cyan-200/30 blur-3xl" />
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl">
+                        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-3 py-1.5 text-sm font-semibold text-emerald-700 shadow-sm backdrop-blur">
                             <Building2 size={16} />
-                            <span>Industry Solutions</span>
+                            Industry solutions
                         </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
-                            Managed AI Automation for <span className="text-primary-600">Every Industry</span>
+                        <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+                            AI employees built for the way <span className="text-primary-600">your industry works</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Whether you run a store, firm, local service business, or sales team, Dooza helps you turn
-                            repetitive customer work into managed workflows your team can trust.
+                        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
+                            Start with a proven workflow for your field. We connect it to your tools, train it on your process, and keep it running.
                         </p>
+                        <div className="mt-8 flex flex-wrap gap-3 text-sm font-medium text-slate-700">
+                            {['9 focused industries', 'Managed setup', 'Human approval controls'].map((item) => (
+                                <span key={item} className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">
+                                    <Check className="h-4 w-4 text-primary-600" />
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* Industry Grid */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Choose Your Industry</h2>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+                <div className="mb-9 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+                    <div>
+                        <p className="mb-2 text-sm font-bold uppercase tracking-[0.16em] text-primary-600">Choose your industry</p>
+                        <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Start with a workflow that already fits</h2>
+                        <p className="mt-3 max-w-2xl text-slate-600">Each solution is adapted to the calls, handoffs, approvals, and follow-up your team handles every day.</p>
+                    </div>
+                    <Link
+                        href="/ai-solutions-for-business"
+                        className="inline-flex w-fit shrink-0 items-center gap-2 rounded-full border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50"
+                    >
+                        Other solutions
+                        <ArrowRight className="h-4 w-4" />
+                    </Link>
+                </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    {industries.map((industry, idx) => {
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-20">
+                    {industries.map((industry) => {
                         const linkHref = industry.industrySlug
                             ? `/industries/${industry.industrySlug}`
-                            : industry.slug ? `/blog/${industry.slug}` : null;
+                            : `/blog/${industry.slug}`;
                         return (
-                            <div key={idx} className="bg-white border-2 border-slate-200 rounded-2xl p-6 hover:border-primary-300 hover:shadow-lg transition-all">
-                                <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center text-primary-600 mb-4">
-                                    <industry.icon size={28} />
+                            <Link
+                                key={industry.name}
+                                href={linkHref}
+                                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 last:lg:col-start-2 hover:-translate-y-1 hover:border-primary-200 hover:shadow-xl hover:shadow-slate-200/70"
+                            >
+                                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                                    <Image
+                                        src={industry.image}
+                                        alt={industry.imageAlt}
+                                        fill
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                        className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent" />
+                                    <span className="absolute left-4 top-4 rounded-full border border-white/50 bg-white/90 px-3 py-1 text-xs font-bold text-slate-800 shadow-sm backdrop-blur">
+                                        {industry.category}
+                                    </span>
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">{industry.name}</h3>
-                                <p className="text-slate-600 mb-4">{industry.description}</p>
+                                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                                    <h3 className="text-xl font-bold text-slate-950">{industry.name}</h3>
+                                    <p className="mt-2 min-h-12 text-sm leading-6 text-slate-600">{industry.description}</p>
 
-                                <ul className="space-y-2 mb-6">
-                                    {industry.benefits.map((benefit, bidx) => (
-                                        <li key={bidx} className="flex items-center gap-2 text-sm text-slate-700">
-                                            <span className="w-1.5 h-1.5 bg-primary-500 rounded-full"></span>
-                                            {benefit}
-                                        </li>
-                                    ))}
-                                </ul>
+                                    <ul className="mt-5 space-y-2.5">
+                                        {industry.benefits.slice(0, 2).map((benefit) => (
+                                            <li key={benefit} className="flex items-center gap-2 text-sm text-slate-700">
+                                                <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-50 text-emerald-700">
+                                                    <Check className="h-3 w-3" />
+                                                </span>
+                                                {benefit}
+                                            </li>
+                                        ))}
+                                    </ul>
 
-                                {linkHref && (
-                                    <Link
-                                        href={linkHref}
-                                        className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all"
-                                    >
-                                        Learn More
-                                        <ArrowRight className="w-4 h-4" />
-                                    </Link>
-                                )}
-                            </div>
+                                    <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-4 text-sm font-semibold text-primary-700">
+                                        Explore this solution
+                                        <span className="grid h-8 w-8 place-items-center rounded-full bg-primary-50 transition group-hover:bg-primary-100">
+                                            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </Link>
                         );
                     })}
                 </div>
@@ -195,19 +244,26 @@ export default function IndustriesPage() {
                     ))}
                 </div>
 
-                {/* Coming Soon */}
-                <div className="mt-16 bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">More Industry Guides Coming Soon</h3>
-                    <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-                        We're creating detailed guides for more industries including legal services,
-                        accounting, restaurants, fitness studios, and more. Sign up to be notified.
-                    </p>
-                    <div className="flex justify-center gap-4 flex-wrap">
-                        <span className="px-4 py-2 bg-slate-200 text-slate-600 rounded-full text-sm">Law Firms</span>
-                        <span className="px-4 py-2 bg-slate-200 text-slate-600 rounded-full text-sm">Accounting</span>
-                        <span className="px-4 py-2 bg-slate-200 text-slate-600 rounded-full text-sm">Restaurants</span>
-                        <span className="px-4 py-2 bg-slate-200 text-slate-600 rounded-full text-sm">Fitness & Gyms</span>
+                {/* Other industries */}
+                <div className="relative mt-16 overflow-hidden rounded-3xl bg-slate-950 px-6 py-10 text-white sm:px-10 md:flex md:items-center md:justify-between md:gap-10">
+                    <div className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-primary-500/25 blur-3xl" />
+                    <div className="relative max-w-2xl">
+                        <div className="mb-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-300">
+                            <Sparkles className="h-4 w-4" />
+                            Built around your workflow
+                        </div>
+                        <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">Don’t see your industry?</h3>
+                        <p className="mt-3 leading-7 text-slate-300">
+                            Tell us what your team repeats every day. We’ll design an AI employee around your tools, rules, and approval process.
+                        </p>
                     </div>
+                    <Link
+                        href="/ai-solutions-for-business"
+                        className="relative mt-7 inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-emerald-50 md:mt-0"
+                    >
+                        Explore other solutions
+                        <ArrowRight className="h-4 w-4" />
+                    </Link>
                 </div>
             </div>
 

@@ -3,6 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import CalEmbedLoader from '../components/CalEmbedLoader';
 import ColdAdSignupLinkRewriter from '../components/ColdAdSignupLinkRewriter';
+import BookingModalProvider from '../components/BookingModalProvider';
 
 // Resource hints for external services - improves Core Web Vitals
 const resourceHints = [
@@ -146,7 +147,9 @@ export default function RootLayout({ children }) {
         `}} />
       </head>
       <body className={`${inter.className} antialiased`}>
-        {children}
+        <BookingModalProvider>
+          {children}
+        </BookingModalProvider>
 
         <ColdAdSignupLinkRewriter />
         <CalEmbedLoader />

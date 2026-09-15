@@ -1,10 +1,9 @@
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { SITE_URL } from '../../../lib/site';
 import { industryPages, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../../../lib/industryData';
 
 // Import industry content components
 import SalonsContent from './SalonsContent';
-import ContractorsContent from './ContractorsContent';
 import RealEstateContent from './RealEstateContent';
 import DispatchersContent from './DispatchersContent';
 import InsuranceAgentsContent from './InsuranceAgentsContent';
@@ -13,11 +12,15 @@ import HvacContent from './HvacContent';
 // Map slugs to components
 const INDUSTRY_COMPONENTS = {
     'salons': SalonsContent,
-    'contractors': ContractorsContent,
     'real-estate': RealEstateContent,
     'dispatchers': DispatchersContent,
     'insurance-agents': InsuranceAgentsContent,
-    'hvac': HvacContent,
+    'trades': HvacContent,
+};
+
+const LEGACY_INDUSTRY_SLUGS = {
+    contractors: 'trades',
+    hvac: 'trades',
 };
 
 const INDUSTRY_SEO_TITLE_MAX_LENGTH = 56;
@@ -89,7 +92,8 @@ export async function generateStaticParams() {
 // Generate metadata for each industry page
 export async function generateMetadata({ params }) {
     const { slug } = await params;
-    const page = industryPages.find(p => p.slug === slug);
+    const canonicalSlug = LEGACY_INDUSTRY_SLUGS[slug] || slug;
+    const page = industryPages.find(p => p.slug === canonicalSlug);
 
     if (!page) {
         return {
@@ -111,12 +115,12 @@ export async function generateMetadata({ params }) {
         description: seoDescription,
         keywords: page.keywords?.join(', '),
         alternates: {
-            canonical: `${SITE_URL}/industries/${slug}`,
+            canonical: `${SITE_URL}/industries/${canonicalSlug}`,
         },
         openGraph: {
             title: seoTitle,
             description: seoDescription,
-            url: `${SITE_URL}/industries/${slug}`,
+            url: `${SITE_URL}/industries/${canonicalSlug}`,
             type: 'website',
             images: page.image ? [
                 {
@@ -138,6 +142,11 @@ export async function generateMetadata({ params }) {
 
 export default async function IndustryPage({ params }) {
     const { slug } = await params;
+
+    if (LEGACY_INDUSTRY_SLUGS[slug]) {
+        redirect(`/industries/${LEGACY_INDUSTRY_SLUGS[slug]}`);
+    }
+
     const page = industryPages.find(p => p.slug === slug);
     const IndustryComponent = INDUSTRY_COMPONENTS[slug];
 
