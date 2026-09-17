@@ -550,6 +550,8 @@ export default function BestAiReceptionistContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
+                                    <Link href="/ai-receptionist" className="text-primary-600 hover:underline font-medium">Hear the Dooza AI receptionist answer a call and start a free two-week pilot &rarr;</Link>
+                                    <br />
                                     <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Learn how to automate your entire business &rarr;</Link>
                                 </p>
                             </div>

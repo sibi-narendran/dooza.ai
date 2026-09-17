@@ -293,13 +293,22 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                             </div>
 
                                             <div className={`mt-3 flex items-center justify-between gap-3 border-t pt-3 ${isDark ? 'border-white/10' : 'border-slate-100'}`}>
-                                                <Link
-                                                    href="/ai-solutions-for-business"
-                                                    onClick={() => setIndustriesOpen(false)}
-                                                    className={`text-sm font-semibold transition-colors ${isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
-                                                >
-                                                    Other solutions
-                                                </Link>
+                                                <div className="flex items-center gap-4">
+                                                    <Link
+                                                        href="/ai-receptionist"
+                                                        onClick={() => setIndustriesOpen(false)}
+                                                        className={`text-sm font-semibold transition-colors ${isDark ? 'text-primary-300 hover:text-white' : 'text-primary-700 hover:text-primary-900'}`}
+                                                    >
+                                                        AI Receptionist
+                                                    </Link>
+                                                    <Link
+                                                        href="/ai-solutions-for-business"
+                                                        onClick={() => setIndustriesOpen(false)}
+                                                        className={`text-sm font-semibold transition-colors ${isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
+                                                    >
+                                                        Other solutions
+                                                    </Link>
+                                                </div>
                                                 <Link
                                                     href="/industries"
                                                     onClick={() => setIndustriesOpen(false)}
@@ -477,6 +486,17 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         </Link>
                                     ))}
                                 </div>
+                                <Link
+                                    href="/ai-receptionist"
+                                    onClick={() => setIsOpen(false)}
+                                    className={`mx-3 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-semibold ${isDark
+                                        ? 'bg-primary-500/15 text-white'
+                                        : 'bg-primary-50 text-primary-800'
+                                        }`}
+                                >
+                                    AI Receptionist
+                                    <ArrowRight className="h-4 w-4" />
+                                </Link>
                                 <Link
                                     href="/ai-solutions-for-business"
                                     onClick={() => setIsOpen(false)}

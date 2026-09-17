@@ -660,6 +660,19 @@ export default function AISolutionsContent({ faqData }) {
                             </div>
                         </ScrollReveal>
 
+                        <ScrollReveal>
+                            <Link href="/ai-receptionist" className="card-shadow group mb-6 flex flex-col gap-4 rounded-2xl border border-primary-200 bg-primary-50 p-8 transition-colors hover:border-primary-400 md:flex-row md:items-center md:justify-between">
+                                <div>
+                                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-700">Most requested</p>
+                                    <h3 className="mt-2 text-xl font-bold text-slate-900 group-hover:text-primary-700 transition-colors">AI Receptionist for the trades</h3>
+                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">For HVAC, plumbing, electrical, roofing and other trades. Answers every call in your company name while you are on the job, and books it on your calendar. Free setup and a free two-week pilot.</p>
+                                </div>
+                                <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary-700 group-hover:gap-2 transition-all">
+                                    Hear it answer a call <ArrowRight size={14} />
+                                </span>
+                            </Link>
+                        </ScrollReveal>
+
                         <StaggerContainer className="grid md:grid-cols-3 gap-6">
                             {industries.map((industry, i) => (
                                 <StaggerItem key={i}>

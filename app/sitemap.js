@@ -139,6 +139,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/ai-receptionist`,
+            lastModified: pageDate('2026-09-17'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/customer-support-ai`,
             lastModified: pageDate('2026-07-05'),
             changeFrequency: 'weekly',

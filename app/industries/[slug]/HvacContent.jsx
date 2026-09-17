@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import {
     ArrowRight,
@@ -296,7 +297,12 @@ export default function HvacContent({ page }) {
                                 <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-700">Hear it live</p>
                                 <h2 className="mt-5 text-4xl font-black uppercase leading-[.98] tracking-[-0.055em] text-slate-950 sm:text-5xl lg:text-6xl">A real business deserves more than a generic bot demo.</h2>
                             </div>
-                            <p className="text-lg leading-8 text-slate-600">These Dooza experiences are tailored around each company’s services, markets, and call rules so you can hear how the receptionist behaves in context.</p>
+                            <div>
+                                <p className="text-lg leading-8 text-slate-600">These Dooza experiences are tailored around each company’s services, markets, and call rules so you can hear how the receptionist behaves in context.</p>
+                                <Link href="/ai-receptionist" className="mt-4 inline-flex items-center gap-2 font-bold text-primary-700 underline underline-offset-4 hover:text-primary-900">
+                                    Want it answering your own number? Start a free two-week pilot
+                                </Link>
+                            </div>
                         </div>
 
                         <div className="mt-14 grid gap-6 lg:grid-cols-2">
