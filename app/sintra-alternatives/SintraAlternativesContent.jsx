@@ -20,7 +20,7 @@ const sintraPainPoints = [
     { icon: Puzzle, title: 'No Inter-Helper Communication', desc: 'Sintra helpers cannot share context. Multi-step workflows require manually copying data between helper chats.' },
     { icon: Shield, title: 'Self-Serve Onboarding Only', desc: 'No human guidance during setup. You get a login and are left to figure out 90+ Power-Ups on your own.' },
     { icon: AlertTriangle, title: 'Rigid Helper Structure', desc: 'Pre-built helpers with fixed capabilities. No way to create custom agents, modify prompts, or chain actions between helpers.' },
-    { icon: Users, title: 'Confusing Pricing Tiers', desc: 'Listed at $97/mo with a perpetual 50% discount. Credit top-ups add hidden costs. Annual lock-in required for the best rate.' },
+    { icon: Users, title: 'Confusing Pricing Tiers', desc: 'Listed at $97/mo, sold at $48.50/mo month to month. The $15.60/mo rate means paying $187.20 for 12 months up front, and credit top-ups cost extra.' },
     { icon: Bot, title: 'Output Quality Concerns', desc: 'Multiple independent reviews note that AI outputs require significant editing before they are usable for real business tasks.' },
 ];
 
@@ -57,22 +57,23 @@ const alternatives = [
         bestFor: 'Budget-conscious solopreneurs who want an affordable AI team',
         price: 'From $24/mo (yearly) or $44/mo (monthly)',
         trial: '7-day money-back guarantee (no free trial)',
-        agents: '6 named AI employees — Eva (assistant), Sonny (social), Penny (SEO), Stan (leads), Rachel (receptionist), Linda (legal)',
+        agents: '7 named AI employees — Eva (assistant), Sonny (social), Penny (SEO), Stan (leads), Rachel (receptionist), Walter (websites), Linda (legal)',
         integrations: 'Limited — Gmail, Instagram, Facebook, WordPress, Wix',
         creditSystem: false,
         namedAgents: true,
         highlight: false,
         pros: [
-            'Cheapest starting price at $24/mo yearly',
+            'Low starting price at $24/mo yearly',
             '4.7/5 on Trustpilot from 765+ reviews',
-            '6 named agents including a phone receptionist (Rachel)',
+            '7 named agents including a phone receptionist (Rachel)',
+            'Unlimited team members on every plan',
             'No credit system — all features included in every plan',
         ],
         cons: [
             'Limited integrations compared to competitors',
             'No free trial — relies on 7-day refund guarantee',
             'Some users report agents occasionally ignore prompts',
-            'Per-seat pricing ($14-29/mo) adds up for teams',
+            'Work is capped at 50 hours per month on every plan',
         ],
     },
     {
@@ -105,8 +106,8 @@ const alternatives = [
         name: 'NoimosAI',
         tagline: 'Marketing-only AI agents (deep but narrow)',
         bestFor: 'Marketing teams and agencies wanting specialized marketing automation',
-        price: 'From ~$79/mo (Pro) or ~$174/mo annually (Team)',
-        trial: 'Free to start with limited features',
+        price: 'From $99/user/mo (Pro) or $249/user/mo (Team)',
+        trial: 'No free plan listed — cancel anytime',
         agents: '11 marketing agents — SEO, Social, Competitor, GEO, Social Listening, CVR, Ads, and more',
         integrations: 'Marketing-focused — social platforms, analytics tools',
         creditSystem: true,
@@ -116,13 +117,13 @@ const alternatives = [
             'Deepest marketing agent roster — 11 specialized agents',
             'Unique GEO agent for AI search engine optimization',
             'Social Listening agent tracks brand mentions across the web',
-            'No credit system on base features',
+            'Clear credit allowances (30,000/mo on Pro) with $3 per 1,000 extra',
         ],
         cons: [
             'Marketing-only — no email management, legal, receptionist, or general business agents',
-            'Expensive starting point at ~$79/mo',
+            'Expensive starting point at $99 per user per month',
             'Smaller company with limited public reviews',
-            'Credit system applies to advanced features',
+            'Credit system with daily limits (100 per day on Pro)',
         ],
     },
     {
@@ -130,7 +131,7 @@ const alternatives = [
         name: 'Lindy AI',
         tagline: 'Custom agent builder with massive integrations',
         bestFor: 'Technical users who want to build their own AI agents from scratch',
-        price: 'From $49.99/mo (Plus) or $59.99/mo (Pro)',
+        price: 'From $29.99/user/mo (Plus) or $99.99/user/mo (Pro)',
         trial: '7-day free trial',
         agents: 'No pre-built agents — build your own custom "Lindies" from 50+ templates',
         integrations: '5,000+ via Pipedream',
@@ -141,7 +142,7 @@ const alternatives = [
             '5,000+ integrations — the largest library in this category',
             'Voice agent capabilities (inbound and outbound calling)',
             'Enterprise-grade security (HIPAA, SOC 2, GDPR)',
-            '7-day free trial with full access',
+            '7-day free trial when you sign up through Slack',
         ],
         cons: [
             '2.0/5 on Trustpilot — major complaints about billing and unauthorized charges',
@@ -155,7 +156,7 @@ const alternatives = [
         name: 'Relevance AI',
         tagline: 'Enterprise-grade AI workforce platform',
         bestFor: 'Mid-market companies and GTM teams (Canva, KPMG use it)',
-        price: 'Free tier, then $19/mo (Pro) up to $234/mo (Team)',
+        price: 'Free tier, Pro from $19/mo and Team from $234/mo (billed yearly)',
         trial: 'Free plan with 200 actions/month',
         agents: 'Custom agent builder — design your own AI workforce',
         integrations: 'Enterprise integrations with CRM and sales tools',
@@ -180,7 +181,7 @@ const alternatives = [
         name: 'Cubeo AI',
         tagline: 'No-code chatbot builder (not autonomous agents)',
         bestFor: 'Businesses wanting simple AI chatbots on their website',
-        price: 'From ~\u20ac17/mo (Starter) — pricing in euros',
+        price: 'From \u20ac17/mo (\u20ac14.17/mo billed yearly) — pricing in euros',
         trial: 'Free plan with 100 credits',
         agents: 'No-code builder — create chatbots and AI assistants (not autonomous employees)',
         integrations: 'Basic — Salesforce, HubSpot, Slack, Zapier, Make',
@@ -188,7 +189,7 @@ const alternatives = [
         namedAgents: false,
         highlight: false,
         pros: [
-            'Very affordable entry point (~\u20ac17/mo)',
+            'Very affordable entry point (\u20ac17/mo, or \u20ac14.17/mo yearly)',
             'No-code builder — easy for non-technical users',
             'Free plan available with no credit card required',
             'GPT-4 and Claude models under the hood',
@@ -202,9 +203,18 @@ const alternatives = [
     },
 ];
 
+// Sintra X pricing checked on sintra.ai/pricing, September 24, 2026.
+const sintraCostRows = [
+    { plan: 'Sintra X, 1-month plan', shown: '$48.50/mo (list $97)', upfront: '$48.50', credits: '250 per month' },
+    { plan: 'Sintra X, 3-month plan', shown: '$23.60/mo', upfront: '$70.80', credits: '250 per month' },
+    { plan: 'Sintra X, 12-month plan', shown: '$15.60/mo', upfront: '$187.20', credits: '250 per month' },
+    { plan: 'One Sintra helper only', shown: '$39/mo per helper', upfront: '$39', credits: 'Single helper' },
+    { plan: 'Dooza Starter', shown: '$49/mo', upfront: '$49', credits: 'No credits', dooza: true },
+];
+
 const decisionGuide = [
     { need: 'Best overall alternative', pick: 'Dooza', reason: 'Named AI employees, 7-day money-back guarantee, personal founder onboarding, no credit system, 1,000+ integrations' },
-    { need: 'Lowest price', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 6 named agents and no credit system' },
+    { need: 'Lowest price', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 7 named agents, unlimited team members, and no credit system' },
     { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations — but beware of the 2.0/5 Trustpilot rating and credit system' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG, multi-agent orchestration, $37M funded' },
     { need: 'Marketing only', pick: 'NoimosAI', reason: '11 specialized marketing agents including unique GEO and Social Listening agents' },
@@ -239,7 +249,7 @@ export default function SintraAlternativesContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Updated March 2026
+                                    Updated September 2026
                                 </div>
                             </div>
 
@@ -345,7 +355,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Pricing as of March 2026. Visit each platform for current rates. Green check = no credit system / has named agents. Red X = uses credits / no named agents.
+                                Prices checked September 24, 2026 on each platform’s pricing page. Visit each platform for current rates. Green check = no credit system / has named agents. Red X = uses credits / no named agents.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -449,6 +459,68 @@ export default function SintraAlternativesContent({ faqData }) {
                                 </div>
                             </ScrollReveal>
                         ))}
+                    </div>
+                </section>
+
+                {/* ── Sintra Cost Breakdown ── */}
+                <section className="py-20 lg:py-28 bg-white">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <ScrollReveal>
+                            <div className="text-center mb-12">
+                                <p className="section-label mb-3">The Math</p>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">What Sintra AI Actually Costs</h2>
+                                <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
+                                    Sintra X lists at $97/mo. What you pay depends on how long you commit up front, and every plan shares the same 250 monthly credits.
+                                </p>
+                            </div>
+                        </ScrollReveal>
+
+                        <ScrollReveal>
+                            <div className="overflow-x-auto -mx-4 px-4">
+                                <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white min-w-[620px] card-shadow">
+                                    <table className="w-full border-collapse text-left">
+                                        <thead>
+                                            <tr className="bg-slate-50">
+                                                <th className="p-4 md:p-5 border-b font-bold text-slate-900">Plan</th>
+                                                <th className="p-4 md:p-5 border-b font-bold text-slate-600">Monthly price</th>
+                                                <th className="p-4 md:p-5 border-b font-bold text-slate-600">Paid up front</th>
+                                                <th className="p-4 md:p-5 border-b font-bold text-slate-600">Usage limit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="text-sm text-slate-600">
+                                            {sintraCostRows.map((row) => (
+                                                <tr key={row.plan} className={`border-b border-slate-100 last:border-0 ${row.dooza ? 'bg-primary-50/30' : ''}`}>
+                                                    <td className="p-4 md:p-5 font-bold text-slate-900">{row.plan}</td>
+                                                    <td className="p-4 md:p-5">{row.shown}</td>
+                                                    <td className="p-4 md:p-5 font-medium text-slate-800">{row.upfront}</td>
+                                                    <td className="p-4 md:p-5">{row.credits}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </ScrollReveal>
+
+                        <ScrollReveal>
+                            <div className="grid md:grid-cols-3 gap-6 mt-10">
+                                <div className="bg-slate-50 rounded-2xl border border-slate-100 p-6">
+                                    <h3 className="font-bold text-slate-900 mb-2">The cheap rate needs a year</h3>
+                                    <p className="text-sm text-slate-600 leading-relaxed">$15.60/mo only applies if you pay $187.20 for 12 months at once. Month to month, Sintra X is $48.50.</p>
+                                </div>
+                                <div className="bg-slate-50 rounded-2xl border border-slate-100 p-6">
+                                    <h3 className="font-bold text-slate-900 mb-2">Credits are shared</h3>
+                                    <p className="text-sm text-slate-600 leading-relaxed">All 12+ helpers draw from the same 250 credits a month. Advanced actions use more, and top-ups are extra.</p>
+                                </div>
+                                <div className="bg-slate-50 rounded-2xl border border-slate-100 p-6">
+                                    <h3 className="font-bold text-slate-900 mb-2">Refund windows differ</h3>
+                                    <p className="text-sm text-slate-600 leading-relaxed">Sintra offers a 14-day money-back guarantee. Dooza is month to month at $49 with a 7-day money-back guarantee and no credits.</p>
+                                </div>
+                            </div>
+                            <p className="text-sm text-slate-500 mt-6 italic text-center">
+                                Sintra prices checked September 24, 2026 on sintra.ai/pricing. On a 12-month plan Sintra costs less per month than Dooza; the difference is the up-front payment and the credit cap.
+                            </p>
+                        </ScrollReveal>
                     </div>
                 </section>
 
