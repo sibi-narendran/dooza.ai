@@ -28,7 +28,7 @@ export const metadata = {
         url: `${SITE_URL}/sintra-alternatives`,
         siteName: 'Dooza',
         type: 'article',
-        modifiedTime: '2026-03-30T00:00:00.000Z',
+        modifiedTime: '2026-09-24T00:00:00.000Z',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Sintra AI Alternatives — Dooza' }],
     },
     twitter: {
@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: 'How much does Sintra AI cost?',
-        answer: 'Sintra AI lists Sintra X at $97/mo (often discounted 50% to ~$48.50/mo) or ~$15.60/mo on an annual plan. All plans are capped at 250 credits. Alternatives like Dooza start at $49/mo with usage-based tiers and no credit system.',
+        answer: 'Sintra X has a $97/mo list price but sells at $48.50/mo month to month, $23.60/mo on a 3-month plan ($70.80 up front), or $15.60/mo on a 12-month plan ($187.20 up front). Every plan includes 250 credits a month, with paid top-ups for advanced actions. Single helpers cost $39/mo each. Dooza starts at $49/mo month to month with no credit system. Prices checked September 2026.',
     },
     {
         question: 'Can Sintra AI helpers talk to each other?',
@@ -72,11 +72,11 @@ const faqData = [
     },
     {
         question: 'What is the cheapest Sintra AI alternative?',
-        answer: 'Cubeo AI starts at approximately \u20ac17/month, and Marblism starts at $24/month on a yearly plan. Dooza starts at $49/month and is backed by a 7-day money-back guarantee.',
+        answer: 'Cubeo AI starts at \u20ac17/month (\u20ac14.17/month billed yearly), and Marblism starts at $24/month on a yearly plan. Sintra itself drops to $15.60/month if you pay $187.20 for a year up front. Dooza starts at $49/month, month to month, and is backed by a 7-day money-back guarantee.',
     },
     {
         question: 'Do any Sintra alternatives offer a free trial?',
-        answer: 'Dooza starts at $49/month with a 7-day money-back guarantee — pay full price and get a refund within 7 days if it is not the right fit. Relevance AI and Cubeo AI have free tiers with limited usage. Motion offers a seven-day free trial. Marblism has a 7-day money-back guarantee.',
+        answer: 'Dooza starts at $49/month with a 7-day money-back guarantee — pay full price and get a refund within 7 days if it is not the right fit. Relevance AI and Cubeo AI have free tiers with limited usage. Motion offers a 7-day free trial, and Lindy offers one when you sign up through Slack. Marblism has a 7-day money-back guarantee, and Sintra has a 14-day one.',
     },
     {
         question: 'How do I switch from Sintra AI to another platform?',
@@ -91,7 +91,7 @@ const schemas = [
         name: '7 Best Sintra AI Alternatives in 2026',
         description: metadata.description,
         url: `${SITE_URL}/sintra-alternatives`,
-        dateModified: '2026-03-30',
+        dateModified: '2026-09-24',
         publisher: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {

@@ -194,6 +194,16 @@ const nextConfig = {
         destination: '/blog/ai-staffing',
         permanent: true,
       },
+      {
+        source: '/blog/ai-answering-service-for-business',
+        destination: '/blog/ai-answering-service-for-small-business',
+        permanent: true,
+      },
+      {
+        source: '/features',
+        destination: '/workforce',
+        permanent: true,
+      },
     ];
   },
 };
