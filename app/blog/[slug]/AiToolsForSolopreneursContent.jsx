@@ -73,7 +73,16 @@ const aiTools = [
         icon: FileText,
         color: "purple",
         description: "Write blog posts, emails, social captions, ad copy, and more. The backbone of modern content marketing.",
-        features: ["Blog writing", "Email drafts", "Social posts", "Ad copy"]
+        features: ["Blog writing", "Email drafts", "Social posts", "Ad copy"],
+        note: (
+            <>
+                <strong>For a weekly newsletter:</strong>{' '}
+                <a href="https://heynews.co" className="text-primary-600 hover:underline" target="_blank" rel="noopener">HeyNews</a>{' '}
+                is an AI newsletter writer that trains on your past issues and drafts new ones in your voice. It watches the
+                sources you pick (RSS, blogs, social, Reddit), scores the stories, and hands you a draft to review before
+                anything is sent, so you can publish every week without giving up the whole afternoon to it.
+            </>
+        )
     },
     {
         name: "Visual Design AI",
@@ -433,6 +442,9 @@ export default function AiToolsForSolopreneursContent() {
                                                     <span key={i} className={`text-xs ${colors.tag} px-2 py-1 rounded`}>{feature}</span>
                                                 ))}
                                             </div>
+                                            {tool.note && (
+                                                <p className="text-slate-600 text-sm mt-4 pt-4 border-t border-slate-100">{tool.note}</p>
+                                            )}
                                         </div>
                                     );
                                 })}
