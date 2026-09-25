@@ -302,6 +302,13 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                                         AI Receptionist
                                                     </Link>
                                                     <Link
+                                                        href="/generative-engine-optimization"
+                                                        onClick={() => setIndustriesOpen(false)}
+                                                        className={`text-sm font-semibold transition-colors ${isDark ? 'text-primary-300 hover:text-white' : 'text-primary-700 hover:text-primary-900'}`}
+                                                    >
+                                                        GEO Services
+                                                    </Link>
+                                                    <Link
                                                         href="/ai-solutions-for-business"
                                                         onClick={() => setIndustriesOpen(false)}
                                                         className={`text-sm font-semibold transition-colors ${isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
@@ -495,6 +502,17 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         }`}
                                 >
                                     AI Receptionist
+                                    <ArrowRight className="h-4 w-4" />
+                                </Link>
+                                <Link
+                                    href="/generative-engine-optimization"
+                                    onClick={() => setIsOpen(false)}
+                                    className={`mx-3 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-semibold ${isDark
+                                        ? 'bg-primary-500/15 text-white'
+                                        : 'bg-primary-50 text-primary-800'
+                                        }`}
+                                >
+                                    GEO Services
                                     <ArrowRight className="h-4 w-4" />
                                 </Link>
                                 <Link

@@ -64,7 +64,8 @@ const categories = [
             { name: 'Jasper AI', price: '$49–125/mo' },
         ],
         doozaAgent: 'Ranky',
-        doozaNote: 'Researches keywords, writes SEO-optimized blog posts, and tracks rankings weekly.',
+        doozaNote: 'Researches keywords, writes SEO- and GEO-optimized blog posts, and gets you cited by ChatGPT, Perplexity, and Google AI Overviews.',
+        doozaLink: '/generative-engine-optimization',
     },
     {
         icon: Headphones,
@@ -424,6 +425,12 @@ export default function AISolutionsContent({ faqData }) {
                                                 <p className="text-sm">
                                                     <span className="font-bold text-primary-700">Dooza — {cat.doozaAgent}:</span>{' '}
                                                     <span className="text-slate-600">{cat.doozaNote}</span>
+                                                    {cat.doozaLink && (
+                                                        <>
+                                                            {' '}
+                                                            <Link href={cat.doozaLink} className="font-semibold text-primary-700 hover:text-primary-900">Learn more →</Link>
+                                                        </>
+                                                    )}
                                                 </p>
                                             </div>
                                         )}
@@ -745,6 +752,15 @@ export default function AISolutionsContent({ faqData }) {
                             </Link>
                             <Link href="/dooza-vs-marblism" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Dooza vs Marblism →
+                            </Link>
+                            <Link href="/generative-engine-optimization" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                GEO Services →
+                            </Link>
+                            <Link href="/profound-alternatives" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                Profound Alternatives →
+                            </Link>
+                            <Link href="/dooza-vs-profound" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                Dooza vs Profound →
                             </Link>
                             <Link href="/alternatives" className="text-sm font-semibold text-primary-700 hover:text-primary-900 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 All Comparisons →

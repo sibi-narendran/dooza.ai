@@ -54,6 +54,21 @@ const staticPages = [
         description: 'Comparison of Dooza and Marblism.',
     },
     {
+        title: 'Generative Engine Optimization (GEO) Services',
+        url: `${SITE_URL}/generative-engine-optimization`,
+        description: 'Done-for-you GEO: Ranky, Dooza\'s AI Visibility employee, gets businesses cited by ChatGPT, Perplexity, Gemini, and Google AI Overviews.',
+    },
+    {
+        title: 'Dooza vs Profound',
+        url: `${SITE_URL}/dooza-vs-profound`,
+        description: 'Comparison of Dooza and Profound (tryprofound.com): AI visibility monitoring vs done-for-you GEO execution.',
+    },
+    {
+        title: 'Profound Alternatives',
+        url: `${SITE_URL}/profound-alternatives`,
+        description: 'Best Profound alternatives for AI visibility, AEO, and GEO in 2026.',
+    },
+    {
         title: 'Sintra Alternatives',
         url: `${SITE_URL}/sintra-alternatives`,
         description: 'Alternatives to Sintra AI.',

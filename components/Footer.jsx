@@ -159,6 +159,21 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/generative-engine-optimization" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    GEO Services
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/dooza-vs-profound" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Dooza vs Profound
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/profound-alternatives" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Profound Alternatives
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/ai-solutions-for-business" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     AI Solutions for Business
                                 </Link>

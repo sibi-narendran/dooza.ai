@@ -30,6 +30,20 @@ export default function AlternativesPage() {
             doozaAdvantage: 'No-code setup, free engineer onboarding, we build for you'
         },
         {
+            name: 'Profound Alternatives',
+            slug: null,
+            directLink: '/profound-alternatives',
+            tagline: 'AI visibility & GEO tools compared — pricing, engines, execution',
+            doozaAdvantage: 'GEO done for you by Ranky at $49/mo, not another dashboard'
+        },
+        {
+            name: 'Dooza vs Profound',
+            slug: null,
+            directLink: '/dooza-vs-profound',
+            tagline: 'Enterprise AI visibility monitoring with custom pricing',
+            doozaAdvantage: 'Ranky publishes, earns citations, and fixes schema daily'
+        },
+        {
             name: 'Motion App',
             slug: 'better-than-motion',
             tagline: '$348/year for limited AI features',

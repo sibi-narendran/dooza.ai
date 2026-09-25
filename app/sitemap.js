@@ -80,6 +80,24 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/dooza-vs-profound`,
+            lastModified: pageDate('2026-09-25'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/profound-alternatives`,
+            lastModified: pageDate('2026-09-25'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/generative-engine-optimization`,
+            lastModified: pageDate('2026-09-25'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/sintra-alternatives`,
             lastModified: pageDate('2026-04-20'),
             changeFrequency: 'monthly',
