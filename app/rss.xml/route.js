@@ -2,6 +2,7 @@ import { blogPosts } from '../../lib/blogData';
 import { SITE_URL, SITE_NAME } from '../../lib/site';
 import { supabaseServer } from '../../lib/supabaseServer';
 import { dbToPost } from '../../lib/blogTransform';
+import mergedBlogPosts from '../../lib/mergedBlogPosts.json';
 
 export const revalidate = 60;
 
@@ -24,7 +25,7 @@ export async function GET() {
 
     // Merge static + dynamic, deduplicate by slug
     const staticSlugs = new Set(blogPosts.map(p => p.slug));
-    const uniqueDynamic = dynamicPosts.filter(p => !staticSlugs.has(p.slug));
+    const uniqueDynamic = dynamicPosts.filter(p => !staticSlugs.has(p.slug) && !mergedBlogPosts[p.slug]);
     const allPosts = [...blogPosts, ...uniqueDynamic].filter((post) => !post.noindex);
 
     // Sort posts by date (newest first)

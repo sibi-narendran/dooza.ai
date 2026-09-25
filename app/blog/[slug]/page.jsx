@@ -3,6 +3,7 @@ import { cache } from 'react';
 import { SITE_URL } from '../../../lib/site';
 import { blogPosts, generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '../../../lib/blogData';
 import { supabaseServer } from '../../../lib/supabaseServer';
+import mergedBlogPosts from '../../../lib/mergedBlogPosts.json';
 import { dbToPost } from '../../../lib/blogTransform';
 import DynamicBlogContent from './DynamicBlogContent';
 
@@ -138,7 +139,7 @@ export async function generateStaticParams() {
             .select('slug');
 
         if (!error && data) {
-            dynamicSlugs = data.map((post) => post.slug).filter(Boolean);
+            dynamicSlugs = data.map((post) => post.slug).filter((slug) => slug && !mergedBlogPosts[slug]);
         }
     } catch {
         dynamicSlugs = [];
@@ -267,10 +268,11 @@ export async function generateMetadata({ params }) {
         post = await getDynamicPost(slug);
     }
 
+    // Missing posts must return a real 404, not a 200 "not found" page.
+    // Don't add a loading.jsx above this route: its Suspense boundary starts
+    // streaming a 200 before notFound() can set the status.
     if (!post) {
-        return {
-            title: 'Post Not Found',
-        };
+        notFound();
     }
 
     const seoTitle = getPostSeoTitle(post);

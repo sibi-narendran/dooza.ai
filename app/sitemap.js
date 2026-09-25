@@ -5,6 +5,7 @@ import { SITE_URL } from '../lib/site';
 import { automationSeoPageSlugs } from '../lib/seoAutomationPages';
 import { customerServiceToolSlugs } from '../lib/customerServiceAutomation';
 import { supabaseServer } from '../lib/supabaseServer';
+import mergedBlogPosts from '../lib/mergedBlogPosts.json';
 
 const pageDate = (date) => new Date(`${date}T00:00:00.000Z`);
 
@@ -203,7 +204,7 @@ export default async function sitemap() {
         if (data) {
             const staticSlugs = new Set(blogPosts.map(p => p.slug));
             dynamicBlogPages = data
-                .filter(p => !staticSlugs.has(p.slug))
+                .filter(p => !staticSlugs.has(p.slug) && !mergedBlogPosts[p.slug])
                 .map((post) => ({
                     url: `${SITE_URL}/blog/${post.slug}`,
                     lastModified: new Date(post.created_at),

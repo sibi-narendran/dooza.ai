@@ -1,3 +1,7 @@
+// Duplicate Supabase blog posts merged into one canonical post (old slug -> kept slug).
+// Also excluded from the sitemap, RSS, llms.txt and the blog index.
+const mergedBlogPosts = require('./lib/mergedBlogPosts.json');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Redirect trailing slashes
@@ -204,6 +208,21 @@ const nextConfig = {
         destination: '/workforce',
         permanent: true,
       },
+      {
+        source: '/blog/10-best-ai-agents-for-business',
+        destination: '/blog/best-ai-agents-for-business',
+        permanent: true,
+      },
+      {
+        source: '/blog/automate-invoice-management-with-ai',
+        destination: '/ai-automation-examples',
+        permanent: true,
+      },
+      ...Object.entries(mergedBlogPosts).map(([from, to]) => ({
+        source: `/blog/${from}`,
+        destination: `/blog/${to}`,
+        permanent: true,
+      })),
     ];
   },
 };

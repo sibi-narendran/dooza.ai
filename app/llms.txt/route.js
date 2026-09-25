@@ -3,6 +3,7 @@ import { agentPages } from '../../lib/agentData';
 import { blogPosts } from '../../lib/blogData';
 import { industryPages } from '../../lib/industryData';
 import { supabaseServer } from '../../lib/supabaseServer';
+import mergedBlogPosts from '../../lib/mergedBlogPosts.json';
 
 export const revalidate = 3600;
 
@@ -149,7 +150,7 @@ async function getDynamicBlogPages(staticSlugs) {
         }
 
         return data
-            .filter((post) => post.slug && !staticSlugs.has(post.slug))
+            .filter((post) => post.slug && !staticSlugs.has(post.slug) && !mergedBlogPosts[post.slug])
             .map((post) => ({
                 title: post.title,
                 url: `${SITE_URL}/blog/${post.slug}`,

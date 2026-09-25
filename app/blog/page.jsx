@@ -4,6 +4,7 @@ import BlogPage from './BlogContent';
 import { blogPosts } from '../../lib/blogData';
 import { supabaseServer } from '../../lib/supabaseServer';
 import { dbToPost } from '../../lib/blogTransform';
+import mergedBlogPosts from '../../lib/mergedBlogPosts.json';
 import { SITE_URL } from '../../lib/site';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -70,7 +71,7 @@ export default async function Blog() {
 
     // Merge static + dynamic, deduplicate by slug (static wins)
     const staticSlugs = new Set(blogPosts.map(p => p.slug));
-    const uniqueDynamic = dynamicPosts.filter(p => !staticSlugs.has(p.slug));
+    const uniqueDynamic = dynamicPosts.filter(p => !staticSlugs.has(p.slug) && !mergedBlogPosts[p.slug]);
     const allPosts = [...blogPosts, ...uniqueDynamic].map(toBlogPreview);
     const visiblePosts = allPosts.filter((post) => !post.noindex);
 
