@@ -53,7 +53,7 @@ const faqData = [
     },
     {
         question: "Which tool is easier for non-technical founders?",
-        answer: "Dooza is easier for most non-technical founders because it uses pre-built AI employees and concierge onboarding. Instantly requires more outbound setup knowledge, including domains, inboxes, warmup, campaign limits, lead credits, deliverability checks, and reply workflows."
+        answer: "Dooza is easier for most non-technical founders because it uses pre-built AI employees and a Dooza engineer scopes your refundable pilot on a free 30-minute call. Instantly requires more outbound setup knowledge, including domains, inboxes, warmup, campaign limits, lead credits, deliverability checks, and reply workflows."
     }
 ];
 
@@ -72,11 +72,11 @@ const tocItems = [
 const comparisonRows = [
     ['Primary use case', 'Cold email outreach, warmup, lead database, campaign sending', 'AI-native business operations across sales, inbox, SEO, social, and calls', 'Dooza'],
     ['Best user', 'Outbound teams and agencies focused on email volume', 'Founders, SMBs, agencies, local businesses, and lean teams', 'Dooza'],
-    ['Setup model', 'Configure domains, inboxes, leads, campaigns, warmup, and deliverability', 'Start with specialist AI employees and concierge onboarding', 'Dooza'],
+    ['Setup model', 'Configure domains, inboxes, leads, campaigns, warmup, and deliverability', 'Start with specialist AI employees and an engineer-scoped refundable pilot', 'Dooza'],
     ['AI depth', 'AI writing, credits, reply agent, sales agent, and research features', 'Role-based AI employees that own recurring business functions', 'Dooza'],
     ['Channels', 'Mostly email-led, with CRM and related sales tools available separately', 'Email, social, SEO, sales follow-up, and phone workflows', 'Dooza'],
     ['Cold email scale', 'Strong for large outbound sending volume', 'Better for practical follow-up and business automation', 'Instantly'],
-    ['Pricing clarity', 'Multiple product tabs and add-ons for outreach, credits, CRM, visitors, inbox placement, and accounts', 'Flat AI employee plans with broader business coverage', 'Dooza'],
+    ['Pricing clarity', 'Multiple product tabs and add-ons for outreach, credits, CRM, visitors, inbox placement, and accounts', 'Pricing by product, every product starts with a refundable pilot (100% refund within 14 days)', 'Dooza'],
     ['Best final choice', 'Use when cold email infrastructure is the whole job', 'Use when revenue operations need an AI-native team', 'Dooza']
 ];
 
@@ -180,7 +180,7 @@ export default function InstantlyAlternativeContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -343,6 +343,9 @@ export default function InstantlyAlternativeContent() {
                                 <p>
                                     Dooza&apos;s value is not "we send more cold emails." The value is that your business gets an AI workforce: Maily for email, Stan for sales, Ranky for SEO, Somi for social media, and Rachel for phone calls. That is a bigger operational win than another sending dashboard.
                                 </p>
+                                <p>
+                                    Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days. See <Link href="/pricing" className="text-primary-600 hover:underline">Dooza pricing</Link> for current plans.
+                                </p>
                             </div>
 
                             <div className="mt-8 bg-emerald-50 border border-emerald-100 rounded-2xl p-6 flex gap-4">
@@ -360,7 +363,7 @@ export default function InstantlyAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Relevant YouTube Video: See Dooza&apos;s AI Employees in Action</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    This comparison is easier to understand when you see the category difference. Instantly is a cold email platform. Dooza is an AI employee platform. Watch how Dooza&apos;s AI-native workforce is designed to handle real business work beyond outbound campaigns.
+                                    This comparison is easier to understand when you see the category difference. Instantly is a cold email platform. Dooza is an AI-native company that builds AI products and services for small businesses, including the Dooza Workforce app of AI employees. Watch how Dooza&apos;s AI-native workforce is designed to handle real business work beyond outbound campaigns.
                                 </p>
                             </div>
                             <YouTubeEmbed videoId="NgBAXFK6nk4" title="AI Era with DOOZA.AI" />
@@ -384,7 +387,7 @@ export default function InstantlyAlternativeContent() {
                                 <Zap className="w-10 h-10 text-emerald-300 mx-auto mb-4" />
                                 <h3 className="text-2xl font-bold text-white mb-3">Choose the AI-native app, not another cold email silo</h3>
                                 <p className="text-white/75 mb-6 max-w-2xl mx-auto">
-                                    Use Dooza to run the work that turns leads into conversations: sales follow-up, inbox management, SEO content, social distribution, and phone coverage.
+                                    Use Dooza to run the work that turns leads into conversations: sales follow-up, inbox management, SEO content, social distribution, and phone coverage. Start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                                 <a
                                     href={getProductSignupUrl('stan')}
@@ -392,7 +395,7 @@ export default function InstantlyAlternativeContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-full transition-colors"
                                 >
-                                    Try Dooza <ArrowRight className="w-5 h-5" />
+                                    Start your pilot <ArrowRight className="w-5 h-5" />
                                 </a>
                             </div>
                         </section>

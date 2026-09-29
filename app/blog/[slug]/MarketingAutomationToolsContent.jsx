@@ -44,7 +44,7 @@ const faqData = [
     },
     {
         question: "Is marketing automation worth it for small businesses?",
-        answer: "Yes—small businesses using marketing automation see 25% higher ROI and 451% more qualified leads according to industry research. The key is choosing the right tool. Enterprise platforms like HubSpot or Marketo are overkill (and overpriced) for most SMBs. AI-powered automation like Dooza provides similar benefits at SMB-friendly prices."
+        answer: "Yes—small businesses using marketing automation see 25% higher ROI and 451% more qualified leads according to industry research. The key is choosing the right tool. Enterprise platforms like HubSpot or Marketo are overkill (and overpriced) for most SMBs. AI-powered automation like Dooza provides similar benefits without the enterprise setup, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "What's the difference between marketing automation and AI automation?",
@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: "How long does it take to set up marketing automation?",
-        answer: "Traditional automation platforms like HubSpot or ActiveCampaign can take weeks or months to set up properly—building workflows, writing email sequences, creating triggers. AI automation like Dooza sets up in a single 30-minute onboarding call because the AI handles the complexity."
+        answer: "Traditional automation platforms like HubSpot or ActiveCampaign can take weeks or months to set up properly—building workflows, writing email sequences, creating triggers. With Dooza, an engineer scopes your pilot on a free 30-minute call, and Workforce employees can start working the same day."
     },
     {
         question: "Will automation make my marketing feel impersonal?",
@@ -184,7 +184,7 @@ export default function MarketingAutomationToolsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get AI Automation - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -232,8 +232,9 @@ export default function MarketingAutomationToolsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -492,8 +493,8 @@ export default function MarketingAutomationToolsContent() {
                                         <p className="text-sm text-slate-600">ActiveCampaign Plus</p>
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
-                                        <div className="text-2xl font-bold text-green-700">$49/mo</div>
-                                        <p className="text-sm text-green-600">Dooza (AI employees)</p>
+                                        <div className="text-2xl font-bold text-green-700">14-day</div>
+                                        <p className="text-sm text-green-600">Dooza refundable pilot (<a href="/pricing" className="underline">see pricing</a>)</p>
                                     </div>
                                 </div>
                             </div>
@@ -538,14 +539,14 @@ export default function MarketingAutomationToolsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Automate Smarter?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Skip the complex workflows and expensive platforms. Get AI employees that actually do the work for less than most basic automation tools cost.
+                                    Skip the complex workflows and expensive platforms. Get AI employees that actually do the work. Pricing depends on the product; every Dooza product starts with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started - $49/month <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

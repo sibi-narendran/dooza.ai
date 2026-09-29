@@ -87,7 +87,7 @@ function HeroPreview({ page }) {
                         <span className="w-3 h-3 rounded-full bg-yellow-400" />
                         <span className="w-3 h-3 rounded-full bg-green-400" />
                     </div>
-                    <span className="text-xs font-mono text-slate-300">{page.sourceAgent}.dooza</span>
+                    <span className="text-xs font-mono text-slate-300">dooza.ai/agents/{page.slug}</span>
                 </div>
                 <div className="p-6 md:p-8">
                     <div className="flex items-start gap-4 mb-6">
@@ -201,7 +201,7 @@ export default function GenericAgentContent({ page }) {
                                             {page.primaryCta}
                                         </SignupButton>
                                         <BookDemoButton source={`${page.slug}_hero`} size="xl" variant="secondary">
-                                            Book a demo
+                                            Book a free pilot call
                                         </BookDemoButton>
                                     </div>
                                     <div className="grid gap-3 max-w-2xl sm:grid-cols-3">
@@ -227,7 +227,7 @@ export default function GenericAgentContent({ page }) {
                             <div className="text-center max-w-3xl mx-auto mb-14">
                                 <p className="section-label mb-3">What It Handles</p>
                                 <h2 className="text-3xl md:text-5xl mb-5">{page.name} is built for a real workflow</h2>
-                                <p className="text-lg text-slate-600">Every claim on this page is limited to current repo evidence or existing Dooza marketing evidence.</p>
+                                <p className="text-lg text-slate-600">{page.name} works inside clear rules you set, with your approval on anything sensitive.</p>
                             </div>
                         </ScrollReveal>
                         <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.08}>
@@ -265,10 +265,10 @@ export default function GenericAgentContent({ page }) {
                                     <p className={`section-label mb-3 ${page.accent.text}`}>How It Works</p>
                                     <h2 className="text-3xl md:text-5xl mb-5">From setup to output in a controlled flow</h2>
                                     <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                                        The page is written to sell the workflow without inventing capabilities that are not present in the product evidence.
+                                        A Dooza engineer scopes your pilot with you on a free 30-minute call, then it runs the same steps every time and reports what it did. Every pilot comes with a 100% refund within 14 days.
                                     </p>
                                     <SignupButton source={`${page.slug}_workflow`}>
-                                        Get started
+                                        Start your pilot
                                     </SignupButton>
                                 </div>
                             </ScrollReveal>
@@ -314,8 +314,8 @@ export default function GenericAgentContent({ page }) {
                             </ScrollReveal>
                             <ScrollReveal delay={0.1}>
                                 <div className="rounded-3xl bg-warm border border-slate-100 p-8 md:p-10 h-full">
-                                    <p className="section-label mb-4">Evidence Boundaries</p>
-                                    <h2 className="text-3xl md:text-4xl mb-8">What this page will not overclaim</h2>
+                                    <p className="section-label mb-4">Guardrails</p>
+                                    <h2 className="text-3xl md:text-4xl mb-8">How {page.name} stays within bounds</h2>
                                     <div className="space-y-4">
                                         {page.safety.map((item) => (
                                             <div key={item} className="flex items-start gap-3">
@@ -354,14 +354,14 @@ export default function GenericAgentContent({ page }) {
                         <ScrollReveal>
                             <h2 className="text-3xl md:text-5xl text-white mb-6">Put {page.name} to work inside Dooza</h2>
                             <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-                                Start with the focused workflow, then connect it to the rest of your AI workforce.
+                                Start with a refundable pilot on the focused workflow — 100% refund within 14 days — then connect it to the rest of your AI workforce.
                             </p>
                             <div className="flex flex-col sm:flex-row justify-center gap-4">
                                 <SignupButton source={`${page.slug}_final`} variant="inverse">
                                     {page.primaryCta}
                                 </SignupButton>
                                 <BookDemoButton source={`${page.slug}_final`} variant="dark">
-                                    Book a demo
+                                    Book a free pilot call
                                 </BookDemoButton>
                             </div>
                         </ScrollReveal>

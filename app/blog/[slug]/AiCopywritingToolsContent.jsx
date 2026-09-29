@@ -53,11 +53,11 @@ const faqData = [
     },
     {
         question: "How much do AI copywriting tools cost?",
-        answer: "Standalone AI copywriting tools like Jasper AI ($49-$125/month) and Copy.ai ($49-$249/month) focus only on writing. Dooza includes AI copywriting through Somi (social media) and Ranky (SEO/blogs) as part of a complete AI employee suite for just $49/month—along with email management, phone answering, and lead generation."
+        answer: "Standalone AI copywriting tools like Jasper AI ($49-$125/month) and Copy.ai ($49-$249/month) focus only on writing. Dooza includes AI copywriting through Somi (social media) and Ranky (SEO/blogs) as part of Dooza Workforce, an AI workforce app that also covers email management, phone answering, and lead generation. Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Can AI write in my brand voice?",
-        answer: "Yes. Modern AI tools learn your brand voice, tone, and style preferences. During Dooza's onboarding, we configure your AI employees to match your brand personality, industry terminology, and communication style. Most users find the content needs minimal editing to sound authentic."
+        answer: "Yes. Modern AI tools learn your brand voice, tone, and style preferences. During your Dooza pilot, a Dooza engineer configures your AI employees to match your brand personality, industry terminology, and communication style, and you approve content before it goes live."
     },
     {
         question: "Is AI copywriting ethical?",
@@ -65,7 +65,7 @@ const faqData = [
     },
     {
         question: "How do I get started with AI copywriting?",
-        answer: "Start by identifying your biggest content bottleneck—social media, blogs, emails, or ads. Then choose a tool that addresses that need. With Dooza, our free concierge onboarding configures everything for you in 30 minutes. Your AI employees start creating content immediately, and you approve before publishing."
+        answer: "Start by identifying your biggest content bottleneck—social media, blogs, emails, or ads. Then choose a tool that addresses that need. With Dooza, a Dooza engineer scopes your pilot on a free 30-minute call and configures everything for you, and the pilot is refundable: 100% refund within 14 days. Your AI employees start creating content immediately, and you approve before publishing."
     }
 ];
 
@@ -190,7 +190,7 @@ export default function AiCopywritingToolsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try AI Copywriting - $49/month
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -239,8 +239,9 @@ export default function AiCopywritingToolsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Get Started
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -490,7 +491,7 @@ export default function AiCopywritingToolsContent() {
                                         </tr>
                                         <tr className="bg-primary-50">
                                             <td className="p-4 font-bold text-primary-700">Dooza</td>
-                                            <td className="p-4 font-bold text-primary-700">$49/mo</td>
+                                            <td className="p-4 font-bold text-primary-700">Refundable pilot (<Link href="/pricing" className="underline">see pricing</Link>)</td>
                                             <td className="p-4 text-primary-700">Full automation + publishing</td>
                                             <td className="p-4 text-primary-700">Includes AI employees</td>
                                         </tr>
@@ -585,13 +586,13 @@ export default function AiCopywritingToolsContent() {
                                     },
                                     {
                                         step: "2",
-                                        title: "Book Your Free Onboarding (30 minutes)",
-                                        desc: "Tell us about your business, brand voice, and content goals. We'll configure your AI employees to match your style and start creating immediately."
+                                        title: "Book a Free Pilot Call (30 minutes)",
+                                        desc: "Tell us about your business, brand voice, and content goals. We'll scope your refundable pilot and configure your AI employees to match your style."
                                     },
                                     {
                                         step: "3",
                                         title: "Review and Approve",
-                                        desc: "Your AI employees create content; you review and approve. Most users find they only need to make minor tweaks—if any—before publishing."
+                                        desc: "Your AI employees create content; you review and approve. Tweak anything you like before it publishes."
                                     },
                                     {
                                         step: "4",
@@ -612,14 +613,14 @@ export default function AiCopywritingToolsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Try AI Copywriting?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Join the 78% of marketers already using AI to create better content faster. Start with Dooza's AI employees and see results within days—not months.
+                                    Join the 78% of marketers already using AI to create better content faster. Start with a refundable pilot of Dooza's AI employees — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Start AI Copywriting - $49/month <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

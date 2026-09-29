@@ -36,41 +36,6 @@ const logos = [
         height: 560,
         href: 'https://acedreamersmotive.com/',
     },
-    {
-        name: 'United Nations',
-        src: '/logos/un.svg',
-        width: 470,
-        height: 400,
-        href: 'https://www.un.org/',
-    },
-    {
-        name: 'Harvard University',
-        src: '/logos/harvard.svg',
-        width: 600,
-        height: 165,
-        href: 'https://www.harvard.edu/',
-    },
-    {
-        name: 'HubSpot',
-        src: '/logos/hubspot.svg',
-        width: 120,
-        height: 120,
-        href: 'https://www.hubspot.com/',
-    },
-    {
-        name: 'Slack',
-        src: '/logos/slack.svg',
-        width: 120,
-        height: 120,
-        href: 'https://slack.com/',
-    },
-    {
-        name: 'Zendesk',
-        src: '/logos/zendesk.svg',
-        width: 120,
-        height: 120,
-        href: 'https://www.zendesk.com/',
-    },
 ];
 
 export default function LogoStrip() {
@@ -80,7 +45,7 @@ export default function LogoStrip() {
         <section className="border-y border-slate-200 bg-white px-4 py-12 md:px-8">
             <div className="mx-auto max-w-7xl">
                 <h2 className="mb-10 text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
-                    40+ countries served. 50,000+ Businesses trust us
+                    Businesses that run on Dooza
                 </h2>
                 <div className="logo-marquee overflow-hidden">
                     <div className="workflow-marquee-track flex w-max items-start gap-x-14 hover:[animation-play-state:paused]">

@@ -46,15 +46,15 @@ export const metadata = {
 const faqData = [
     {
         question: 'What are AI solutions for business?',
-        answer: 'AI solutions for business are software tools and platforms that use artificial intelligence to automate specific business functions — email management, social media posting, SEO content, customer support, lead generation, accounting, HR, and more. They range from single-function tools like Mailchimp (email) to all-in-one platforms like Dooza (5 AI employees covering multiple functions).',
+        answer: 'AI solutions for business are software tools and platforms that use artificial intelligence to automate specific business functions — email management, social media posting, SEO content, customer support, lead generation, accounting, HR, and more. They range from single-function tools like Mailchimp (email) to all-in-one providers like Dooza (AI employees covering email, social media, SEO, leads, legal, and calls).',
     },
     {
         question: 'How much does AI cost for a small business?',
-        answer: 'Individual AI tools range from $20-140/month each. Buying separate tools for email, social, SEO, support, and leads costs $200-450/month total. All-in-one platforms like Dooza bundle multiple AI employees for $49/month (Starter), making them 4-9x cheaper than building a tool stack.',
+        answer: 'Individual AI tools range from $20-140/month each. Buying separate tools for email, social, SEO, support, and leads costs $200-450/month total. All-in-one platforms like Dooza bundle multiple AI employees in one product. Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days (see dooza.ai/pricing).',
     },
     {
         question: 'What is the best AI tool for business in 2026?',
-        answer: 'It depends on your needs. For all-in-one AI employees: Dooza ($49/mo). For email marketing: Mailchimp or Klaviyo. For SEO: Semrush ($139/mo). For customer support: Intercom. For project management: ClickUp with AI. For the best value across multiple functions, an all-in-one platform eliminates the cost and complexity of managing separate tools.',
+        answer: 'It depends on your needs. For all-in-one AI employees: Dooza Workforce. For email marketing: Mailchimp or Klaviyo. For SEO: Semrush ($139/mo). For customer support: Intercom. For project management: ClickUp with AI. For the best value across multiple functions, an all-in-one platform eliminates the cost and complexity of managing separate tools.',
     },
     {
         question: 'Is AI worth it for small businesses?',
@@ -62,7 +62,7 @@ const faqData = [
     },
     {
         question: 'How do I start using AI in my business?',
-        answer: 'Step 1: Audit which tasks consume the most time (email, social media, content, support). Step 2: Trial one AI tool for your biggest time sink. Step 3: Measure results after 2-4 weeks. Step 4: Expand to other areas. Platforms like Dooza offer free concierge onboarding where the founder sets everything up in ~20 minutes.',
+        answer: 'Step 1: Audit which tasks consume the most time (email, social media, content, support). Step 2: Trial one AI tool for your biggest time sink. Step 3: Measure results after 2-4 weeks. Step 4: Expand to other areas. With Dooza, a Dooza engineer scopes your pilot on a free 30-minute call, and every product starts with a refundable pilot: 100% refund within 14 days.',
     },
     {
         question: 'Will AI replace my employees?',
@@ -74,7 +74,7 @@ const faqData = [
     },
     {
         question: 'How long does it take to implement AI?',
-        answer: 'Simple tools (chatbots, email automation) take hours to set up. Complex enterprise implementations take weeks or months. All-in-one platforms like Dooza offer free concierge setup — the founder personally configures your AI employees in a 20-minute call.',
+        answer: 'Simple tools (chatbots, email automation) take hours to set up. Complex enterprise implementations take weeks or months. With Dooza, a Dooza engineer scopes your pilot on a free 30-minute call; Workforce employees can start working the same day, and custom agents are live in days.',
     },
     {
         question: 'What are the risks of using AI in business?',
@@ -148,7 +148,7 @@ const schemas = [
         totalTime: 'PT4W',
         step: [
             { '@type': 'HowToStep', position: 1, name: 'Audit Your Workflows', text: 'Identify which tasks consume the most time — email, social media, content creation, customer support, or lead generation.' },
-            { '@type': 'HowToStep', position: 2, name: 'Trial One AI Tool', text: 'Start with a single AI solution for your biggest time sink. Use free trials or low-cost entry points to test before committing.' },
+            { '@type': 'HowToStep', position: 2, name: 'Trial One AI Tool', text: 'Start with a single AI solution for your biggest time sink. Use a low-cost entry point or a refundable pilot to test before committing.' },
             { '@type': 'HowToStep', position: 3, name: 'Implement and Integrate', text: 'Connect the AI tool to your existing workflows. Set up automations, review initial outputs, and refine configurations.' },
             { '@type': 'HowToStep', position: 4, name: 'Measure and Expand', text: 'Track time saved, cost reduction, and output quality after 2-4 weeks. Once validated, expand AI to additional business functions.' },
         ],

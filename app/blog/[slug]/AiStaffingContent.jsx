@@ -40,7 +40,7 @@ const faqData = [
     },
     {
         question: "How much does AI staffing cost compared to hiring?",
-        answer: "Traditional hiring costs $4,700 per hire plus $3,500-6,000/month per employee in salary alone. Dooza provides AI employees for $49/month — a 99.88% cost reduction compared to hiring the equivalent human team ($24,700/month)."
+        answer: "Traditional hiring costs $4,700 per hire plus $3,500-6,000/month per employee in salary alone. Hiring the equivalent six-person human team runs about $24,700/month. Dooza Workforce, the AI workforce app from Dooza, covers those roles with AI employees for a fraction of that. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Can AI employees really replace human workers?",
@@ -48,7 +48,7 @@ const faqData = [
     },
     {
         question: "How fast can I onboard AI employees?",
-        answer: "Unlike the 42-day average for traditional hiring, AI employees can be onboarded in a single 30-minute call. Dooza's concierge team configures your AI employees to match your business, brand voice, and workflows."
+        answer: "Traditional hiring averages 42 days. With Dooza, an engineer scopes your pilot on a free 30-minute call, then configures your AI employees to match your business, brand voice, and workflows. Workforce employees can start working the same day."
     },
     {
         question: "Is AI staffing only for large companies?",
@@ -118,7 +118,7 @@ export default function AiStaffingContent() {
                             <span className="text-primary-600">AI Staffing</span>: Building a Workforce That Runs 24/7
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            The average hire costs $4,700 and takes 42 days. What if you could hire 6 roles in 30 minutes for $49/month? AI staffing is replacing traditional hiring for small businesses.
+                            The average hire costs $4,700 and takes 42 days. What if you could fill 6 roles the same day, starting with a refundable pilot? AI staffing is replacing traditional hiring for small businesses.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -138,10 +138,11 @@ export default function AiStaffingContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Hire Your AI Team - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
+                        <p className="mt-3 text-sm text-slate-500">Refundable pilot — 100% refund within 14 days</p>
                     </div>
                 </div>
             </div>
@@ -188,8 +189,9 @@ export default function AiStaffingContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="mt-2 text-xs text-slate-500 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -205,7 +207,7 @@ export default function AiStaffingContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    According to SHRM, the average cost-per-hire is <strong>$4,700</strong> and it takes <strong>42 days</strong> to fill a position. What if you could hire 6 roles in 30 minutes for $49/month?
+                                    According to SHRM, the average cost-per-hire is <strong>$4,700</strong> and it takes <strong>42 days</strong> to fill a position. What if you could fill 6 roles the same day, with a refundable pilot?
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     AI staffing isn't about replacing humans. It's about filling the operational gaps that small businesses can't afford to fill with traditional hiring.
@@ -228,7 +230,7 @@ export default function AiStaffingContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">The Staffing Reality</h4>
                                             <p className="text-slate-700">
-                                                Small businesses need help with email, social media, phones, lead gen, SEO, and legal — but hiring 6 employees would cost <strong>$24,700+/month</strong>. AI staffing fills these roles for <strong>$49/month</strong>.
+                                                Small businesses need help with email, social media, phones, lead gen, SEO, and legal — but hiring 6 employees would cost <strong>$24,700+/month</strong>. AI staffing fills these roles for <strong>a fraction of that</strong>, and Dooza starts every product with a <strong>refundable pilot</strong> (100% refund within 14 days).
                                             </p>
                                         </div>
                                     </div>
@@ -340,8 +342,8 @@ export default function AiStaffingContent() {
                                         <tr className="bg-slate-100">
                                             <th className="text-left p-4 font-bold text-slate-900">Role</th>
                                             <th className="text-left p-4 font-bold text-slate-900">Human Cost/mo</th>
-                                            <th className="text-left p-4 font-bold text-primary-700 bg-primary-50">Dooza Agents</th>
-                                            <th className="text-left p-4 font-bold text-primary-700 bg-primary-50">Dooza Cost/mo</th>
+                                            <th className="text-left p-4 font-bold text-primary-700 bg-primary-50">Dooza AI Employee</th>
+                                            <th className="text-left p-4 font-bold text-primary-700 bg-primary-50">Dooza Cost</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -364,7 +366,7 @@ export default function AiStaffingContent() {
                                             <td className="p-4 text-slate-900">Total</td>
                                             <td className="p-4 text-slate-900">$24,700/mo</td>
                                             <td className="p-4 text-primary-700 bg-primary-100">AI Employees</td>
-                                            <td className="p-4 text-primary-700 bg-primary-100">$49/mo</td>
+                                            <td className="p-4 text-primary-700 bg-primary-100"><Link href="/pricing" className="underline">Refundable pilot (see pricing)</Link></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -372,7 +374,7 @@ export default function AiStaffingContent() {
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
                                 <p className="text-xl font-bold text-green-800">
-                                    That's a <span className="text-3xl">99.88%</span> cost reduction. Same roles. Same functions. Available 24/7.
+                                    A fraction of the cost of <span className="text-3xl">$24,700/mo</span> in salaries. Same roles. Same functions. Available 24/7.
                                 </p>
                             </div>
                         </section>
@@ -413,8 +415,8 @@ export default function AiStaffingContent() {
                                         <p className="text-sm text-red-600 mt-1">Traditional: 1 employee total cost</p>
                                     </div>
                                     <div className="bg-green-100 p-4 rounded-lg">
-                                        <div className="text-2xl font-bold text-green-700">$348/yr</div>
-                                        <p className="text-sm text-green-600 mt-1">Dooza: AI employees total cost</p>
+                                        <div className="text-2xl font-bold text-green-700">14-day</div>
+                                        <p className="text-sm text-green-600 mt-1">Dooza: refundable pilot, 100% refund within 14 days. <Link href="/pricing" className="underline">See pricing</Link></p>
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +444,7 @@ export default function AiStaffingContent() {
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />Manages your calendar and scheduling</li>
                                     </ul>
                                     <div className="bg-blue-50 p-3 rounded-lg text-center">
-                                        <p className="text-sm font-bold text-blue-700">Saves 10+ hours/week on email</p>
+                                        <p className="text-sm font-bold text-blue-700">Takes inbox triage off your plate</p>
                                     </div>
                                 </div>
 
@@ -463,7 +465,7 @@ export default function AiStaffingContent() {
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />Monitors engagement and trends</li>
                                     </ul>
                                     <div className="bg-purple-50 p-3 rounded-lg text-center">
-                                        <p className="text-sm font-bold text-purple-700">67% more leads with consistent posting</p>
+                                        <p className="text-sm font-bold text-purple-700">Keeps your channels posting consistently</p>
                                     </div>
                                 </div>
 
@@ -484,7 +486,7 @@ export default function AiStaffingContent() {
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />Books appointments directly in your calendar</li>
                                     </ul>
                                     <div className="bg-green-50 p-3 rounded-lg text-center">
-                                        <p className="text-sm font-bold text-green-700">Captures 85% of leads that voicemail misses</p>
+                                        <p className="text-sm font-bold text-green-700">Picks up the callers voicemail would lose</p>
                                     </div>
                                     <div className="mt-3 text-center">
                                         <Link href="/blog/best-ai-receptionist" className="text-primary-600 hover:underline text-sm font-medium inline-flex items-center gap-1">
@@ -510,7 +512,7 @@ export default function AiStaffingContent() {
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />Nurtures leads through your pipeline</li>
                                     </ul>
                                     <div className="bg-orange-50 p-3 rounded-lg text-center">
-                                        <p className="text-sm font-bold text-orange-700">Generates 3x more qualified leads</p>
+                                        <p className="text-sm font-bold text-orange-700">Keeps your pipeline filled with prospects</p>
                                     </div>
                                 </div>
 
@@ -522,7 +524,7 @@ export default function AiStaffingContent() {
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-slate-900 text-lg">Ranky</h3>
-                                            <p className="text-sm text-slate-500">AI SEO Specialist</p>
+                                            <p className="text-sm text-slate-500">AI SEO & Visibility Employee</p>
                                         </div>
                                     </div>
                                     <ul className="space-y-2 text-slate-600 mb-4">
@@ -531,7 +533,7 @@ export default function AiStaffingContent() {
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />Monitors rankings and competitor activity</li>
                                     </ul>
                                     <div className="bg-teal-50 p-3 rounded-lg text-center">
-                                        <p className="text-sm font-bold text-teal-700">120% increase in organic traffic in 6 months</p>
+                                        <p className="text-sm font-bold text-teal-700">Keeps your SEO work running every week</p>
                                     </div>
                                 </div>
 
@@ -552,7 +554,7 @@ export default function AiStaffingContent() {
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />Monitors regulatory changes</li>
                                     </ul>
                                     <div className="bg-indigo-50 p-3 rounded-lg text-center">
-                                        <p className="text-sm font-bold text-indigo-700">Saves $4,000+/month vs outside counsel</p>
+                                        <p className="text-sm font-bold text-indigo-700">Drafts and reviews before you pay for counsel</p>
                                     </div>
                                 </div>
                             </div>
@@ -634,7 +636,7 @@ export default function AiStaffingContent() {
                                     {
                                         step: "3",
                                         title: "Onboard Your First AI Employee",
-                                        desc: "Sign up for Dooza. Our concierge team configures your AI employee in a 30-minute call. They start working immediately."
+                                        desc: "Book a free 30-minute call to scope your pilot. A Dooza engineer configures your AI employee, and it can start working the same day. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
                                     },
                                     {
                                         step: "4",
@@ -655,14 +657,14 @@ export default function AiStaffingContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Build Your AI Workforce?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop spending months hiring. Get AI employees working for your business in 30 minutes.
+                                    Stop spending months hiring. Get AI employees working for your business the same day. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started - $49/month <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>
@@ -715,14 +717,14 @@ export default function AiStaffingContent() {
                         <section className="scroll-mt-28">
                             <div className="bg-gradient-to-br from-primary-50 to-blue-50 border-2 border-primary-200 p-8 rounded-2xl text-center">
                                 <p className="text-2xl font-bold text-slate-900 mb-4">
-                                    $49/month. AI employees. 24/7. No interviews. No PTO. No turnover.
+                                    AI employees. 24/7. No interviews. No PTO. No turnover. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Hire Your AI Team <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

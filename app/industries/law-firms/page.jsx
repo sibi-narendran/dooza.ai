@@ -572,7 +572,7 @@ export default function LawFirmsPage() {
                             Bring one workflow your firm keeps hiring around
                         </h2>
                         <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-slate-600">
-                            We will map the process, connect the tools, add approvals, and show what can be automated without losing attorney control.
+                            We will map the process, connect the tools, add approvals, and show what can be automated without losing attorney control. Start with a refundable pilot — 100% refund within 14 days.
                         </p>
                         <BookDemoButton source="law_firms_final" variant="primary" size="xl">
                             Book a Law Firm Workflow Call

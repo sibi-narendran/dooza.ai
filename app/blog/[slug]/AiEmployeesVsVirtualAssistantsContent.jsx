@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "How much cheaper is AI than a virtual assistant?",
-        answer: "AI can be up to 80% more cost-efficient than human assistants for repetitive tasks. A US-based VA costs $25-65/hour ($4,000-10,000+/month full-time), while offshore VAs cost $7-20/hour. AI platforms like Dooza cost $49/month with unlimited use, making them dramatically cheaper for high-volume work."
+        answer: "AI can be up to 80% more cost-efficient than human assistants for repetitive tasks. A US-based VA costs $25-65/hour ($4,000-10,000+/month full-time), while offshore VAs cost $7-20/hour. AI platforms cost a fraction of that, making them dramatically cheaper for high-volume work. Dooza's pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Will AI replace virtual assistants?",
@@ -193,7 +193,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -346,7 +346,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Cost (Full-time equivalent)</td>
                                             <td className="p-4 border-b">$1,120-10,400/month</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$29-200/month</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">A fraction of VA cost (<a href="/pricing" className="underline">see pricing</a>)</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Response Speed</td>
@@ -552,14 +552,14 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                         </tr>
                                         <tr className="bg-primary-50/50">
                                             <td className="p-4 border-b font-medium text-primary-700">Dooza AI Employees</td>
-                                            <td className="p-4 border-b font-bold text-primary-700">$29</td>
-                                            <td className="p-4 border-b font-bold text-primary-700">$348</td>
+                                            <td className="p-4 border-b font-bold text-primary-700">Varies by product — refundable pilot</td>
+                                            <td className="p-4 border-b font-bold text-primary-700"><a href="/pricing" className="underline">See pricing</a></td>
                                             <td className="p-4 border-b text-primary-700">24/7 automation needs</td>
                                         </tr>
                                         <tr className="bg-primary-50/50">
                                             <td className="p-4 border-b font-medium text-primary-700">Dooza + Part-time VA (Hybrid)</td>
-                                            <td className="p-4 border-b font-bold text-primary-700">$589-1,329</td>
-                                            <td className="p-4 border-b font-bold text-primary-700">$7,068-15,948</td>
+                                            <td className="p-4 border-b font-bold text-primary-700">Part-time VA cost + Dooza</td>
+                                            <td className="p-4 border-b font-bold text-primary-700">VA cost + Dooza (<a href="/pricing" className="underline">see pricing</a>)</td>
                                             <td className="p-4 border-b text-primary-700">Best of both worlds</td>
                                         </tr>
                                     </tbody>
@@ -571,7 +571,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     <div>
                                         <h4 className="font-bold text-green-800 mb-2">Potential Savings with AI</h4>
                                         <p className="text-green-700">
-                                            According to <a href="https://www.zirtual.com/blog/ai-virtual-assistants/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Zirtual</a>, AI can be up to <strong>80% more cost-efficient</strong> compared to human assistants for repetitive tasks. A business spending $5,000/month on a VA for scheduling, email, and data entry could potentially spend $49/month on AI for the same work.
+                                            According to <a href="https://www.zirtual.com/blog/ai-virtual-assistants/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Zirtual</a>, AI can be up to <strong>80% more cost-efficient</strong> compared to human assistants for repetitive tasks. A business spending $5,000/month on a VA for scheduling, email, and data entry could potentially hand that same work to AI for a small fraction of the cost.
                                         </p>
                                     </div>
                                 </div>
@@ -646,9 +646,9 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { icon: Bot, title: "Pre-built AI Employees", desc: "Email assistant, social media manager, SEO specialist, sales rep—all ready to work on day one." },
-                                    { icon: DollarSign, title: "Predictable $49/month", desc: "No per-task costs, no credit limits, no surprises. Know exactly what you'll pay." },
-                                    { icon: Zap, title: "5-Minute Setup", desc: "Connect your tools and start automating. No coding, no configuration headaches." },
-                                    { icon: Shield, title: "Enterprise Security", desc: "Your data is protected. We handle compliance so you don't have to." }
+                                    { icon: DollarSign, title: "Refundable Pilot", desc: "Every Dooza product starts with a refundable pilot: 100% refund within 14 days. Pricing depends on the product." },
+                                    { icon: Zap, title: "Guided Setup", desc: "A Dooza engineer scopes your pilot on a free 30-minute call. Connect your tools and start automating, with no coding." },
+                                    { icon: Shield, title: "Secure by Design", desc: "Encrypted connections and your approval on anything sensitive." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-primary-50 border border-primary-100 p-5 rounded-xl">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-3">
@@ -670,7 +670,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-500 transition-all"
                                 >
-                                    Get Started <ArrowRight className="w-4 h-4" />
+                                    Start your pilot <ArrowRight className="w-4 h-4" />
                                 </a>
                             </div>
                         </section>
@@ -688,20 +688,20 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     <strong>If you're scaling:</strong> A hybrid model lets AI handle volume while humans focus on relationships.
                                 </p>
                                 <p>
-                                    <strong>If budget is tight:</strong> Start with AI for $49/month, add a part-time VA when you need the human touch.
+                                    <strong>If budget is tight:</strong> Start with an AI pilot (100% refund within 14 days), then add a part-time VA when you need the human touch.
                                 </p>
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Build Your Hybrid Workforce?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Start with Dooza's AI employees from $49/mo. 7-day money-back guarantee.
+                                    Start with Dooza's AI employees on a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book a Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

@@ -41,11 +41,11 @@ import {
 const faqData = [
     {
         question: "What AI tools do solopreneurs need in 2026?",
-        answer: "Solopreneurs in 2026 need AI tools for content creation (ChatGPT, Jasper), visual design (Canva AI, Midjourney), email management (Superhuman), social media scheduling (Buffer, Hootsuite), meeting transcription (Otter.ai), automation (Zapier, Make), and accounting (QuickBooks). However, managing 7+ subscriptions can cost $200-500/month. Platforms like Dooza consolidate these functions into pre-built AI employees for $49/month."
+        answer: "Solopreneurs in 2026 need AI tools for content creation (ChatGPT, Jasper), visual design (Canva AI, Midjourney), email management (Superhuman), social media scheduling (Buffer, Hootsuite), meeting transcription (Otter.ai), automation (Zapier, Make), and accounting (QuickBooks). However, managing 7+ subscriptions can cost $200-500/month. Platforms like Dooza consolidate these functions into pre-built AI employees in one app. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "How much do AI tools cost for a solopreneur?",
-        answer: "Individual AI tools typically cost $10-50/month each. A full stack including content creation, design, email, social media, automation, and accounting tools can run $200-500/month. All-in-one platforms like Dooza offer multiple AI employees for $49/month, potentially saving solopreneurs hundreds of dollars monthly while reducing tool fatigue."
+        answer: "Individual AI tools typically cost $10-50/month each. A full stack including content creation, design, email, social media, automation, and accounting tools can run $200-500/month. All-in-one platforms like Dooza bundle multiple AI employees into one app, which can replace several overlapping subscriptions and reduce tool fatigue. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "Can AI replace a virtual assistant for solopreneurs?",
@@ -57,7 +57,7 @@ const faqData = [
     },
     {
         question: "Is Dooza good for solopreneurs?",
-        answer: "Dooza is designed specifically for small businesses and solopreneurs who need AI automation without technical complexity. For $49/month, you get pre-built AI employees for email, social media, SEO, sales, and more. Unlike building your own tool stack or using developer-focused platforms like MoltBot, Dooza requires no coding, no integrations, and no maintenance—making it ideal for one-person businesses."
+        answer: "Dooza is an AI-native company that builds AI products and services for small businesses, including solopreneurs who need AI automation without technical complexity. The Dooza Workforce app gives you pre-built AI employees for email, social media, SEO, sales, and more. Unlike building your own tool stack or using developer-focused platforms like MoltBot, Dooza requires no coding, no integrations, and no maintenance—making it ideal for one-person businesses. Every Dooza product starts with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "How much time can AI tools save solopreneurs?",
@@ -227,7 +227,7 @@ export default function AiToolsForSolopreneursContent() {
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                             Drowning in subscriptions? You're juggling content creation, email, social media,
                             accounting, and more—all by yourself. See the essential AI tools, then discover
-                            how one platform can replace your entire tech stack for $49/month.
+                            how one platform can replace your entire tech stack — starting with a refundable pilot.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -291,8 +291,9 @@ export default function AiToolsForSolopreneursContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -583,8 +584,8 @@ export default function AiToolsForSolopreneursContent() {
                                 <div className="mt-6 pt-6 border-t border-primary-200">
                                     <div className="flex items-center justify-between flex-wrap gap-4">
                                         <div>
-                                            <span className="text-sm text-slate-600">All of this for</span>
-                                            <div className="text-3xl font-bold text-primary-600">$29<span className="text-lg font-normal text-slate-500">/month</span></div>
+                                            <span className="text-sm text-slate-600">Start with a</span>
+                                            <div className="text-3xl font-bold text-primary-600">14-day<span className="text-lg font-normal text-slate-500"> refundable pilot</span></div>
                                         </div>
                                         <a
                                             href={getProductSignupUrl('workforce')}
@@ -592,7 +593,7 @@ export default function AiToolsForSolopreneursContent() {
                                             rel="noopener noreferrer"
                                             className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors"
                                         >
-                                            Get Started
+                                            Start your pilot
                                         </a>
                                     </div>
                                 </div>
@@ -660,12 +661,12 @@ export default function AiToolsForSolopreneursContent() {
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Monthly Cost</td>
                                             <td className="p-4">$157-400</td>
-                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">$29</td>
+                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">Varies by product — <Link href="/pricing" className="underline">see pricing</Link></td>
                                         </tr>
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Annual Cost</td>
                                             <td className="p-4">$1,884-4,800</td>
-                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">$348</td>
+                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">Refundable pilot (100% refund within 14 days)</td>
                                         </tr>
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Number of Logins</td>
@@ -708,15 +709,15 @@ export default function AiToolsForSolopreneursContent() {
                             <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
                                 <h4 className="font-bold text-green-900 mb-3 flex items-center gap-2">
                                     <TrendingUp className="w-5 h-5" />
-                                    Annual Savings with Dooza
+                                    What You Get Back with Dooza
                                 </h4>
                                 <p className="text-green-800 mb-4">
-                                    Switching from a 7-tool stack to Dooza saves you:
+                                    Switching from a 7-tool stack to one platform gives you:
                                 </p>
                                 <div className="grid sm:grid-cols-3 gap-4">
                                     <div className="bg-white rounded-xl p-4 text-center">
-                                        <div className="text-2xl font-bold text-green-600">$1,500+</div>
-                                        <div className="text-sm text-slate-600">Per year minimum</div>
+                                        <div className="text-2xl font-bold text-green-600">1 bill</div>
+                                        <div className="text-sm text-slate-600">Instead of 7 subscriptions</div>
                                     </div>
                                     <div className="bg-white rounded-xl p-4 text-center">
                                         <div className="text-2xl font-bold text-green-600">5-10 hrs</div>
@@ -749,18 +750,18 @@ export default function AiToolsForSolopreneursContent() {
                                     },
                                     {
                                         step: "2",
-                                        title: "Get Started with Dooza",
-                                        desc: "Starts at $49/mo with a 7-day money-back guarantee. See how the AI employees work on real tasks—an email, a social post, a blog outline."
+                                        title: "Start a Dooza Pilot",
+                                        desc: "Every Dooza product starts with a refundable pilot — 100% refund within 14 days. See how the AI employees work on real tasks—an email, a social post, a blog outline."
                                     },
                                     {
                                         step: "3",
                                         title: "Cancel the Overlap",
-                                        desc: "Once you see Dooza handling your content, email, and social—cancel the redundant subscriptions. Most solopreneurs eliminate 4-5 tools immediately."
+                                        desc: "Once you see Dooza handling your content, email, and social—cancel the redundant subscriptions you no longer need."
                                     },
                                     {
                                         step: "4",
                                         title: "Reinvest the Savings",
-                                        desc: "That $150+/month you're saving? Put it toward advertising, product development, or—radical idea—pay yourself more."
+                                        desc: "Whatever you stop paying for overlapping tools? Put it toward advertising, product development, or—radical idea—pay yourself more."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-primary-50 border border-primary-100 rounded-xl p-5">
@@ -779,8 +780,8 @@ export default function AiToolsForSolopreneursContent() {
                                     Stop Managing Tools. Start Building Your Business.
                                 </h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Join thousands of solopreneurs who've replaced their tool stack chaos with
-                                    one platform. AI employees that work 24/7—for less than one coffee per day.
+                                    Replace your tool stack chaos with one platform. AI employees that work 24/7.
+                                    Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a
@@ -789,10 +790,10 @@ export default function AiToolsForSolopreneursContent() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

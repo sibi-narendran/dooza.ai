@@ -690,7 +690,7 @@ export default function CustomerSupportAutomationAgencyPage() {
                             Bring us your support inbox. We will show what can be automated.
                         </h2>
                         <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-slate-600">
-                            In 20 minutes, we can identify the first support workflow worth automating and show how Dooza plus Dooza Agents would handle it.
+                            In 20 minutes, we can identify the first support workflow worth automating and show how Dooza plus Dooza Agents would handle it. Start with a refundable pilot — 100% refund within 14 days.
                         </p>
                         <BookDemoButton source="support_automation_final" variant="primary" size="xl">
                             Book a Support Automation Audit

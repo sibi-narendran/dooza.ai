@@ -11,22 +11,17 @@ const staticPages = [
     {
         title: 'Home',
         url: SITE_URL,
-        description: 'Dooza homepage — forward deployed AI engineers who deploy and run AI for small businesses.',
+        description: 'Dooza Agents: the AI agentic platform. Custom AI agents built and maintained by Dooza engineers. Starts with a refundable pilot: 100% refund within 14 days.',
     },
     {
         title: 'Workforce',
         url: `${SITE_URL}/workforce`,
-        description: 'AI employees for email, social, SEO, calls, and leads — from $49/mo.',
-    },
-    {
-        title: 'Workflow',
-        url: `${SITE_URL}/workflow`,
-        description: 'Workflow automation with approvals, traces, and tests.',
+        description: 'Dooza Workforce: the AI workforce app. Ready-made AI employees for email, social, SEO, calls, and leads. Starts with a refundable pilot: 100% refund within 14 days.',
     },
     {
         title: 'Pricing',
         url: `${SITE_URL}/pricing`,
-        description: 'Dooza pricing and plan information.',
+        description: 'Current Dooza plans and prices. Pricing depends on the product. Every plan starts as a refundable pilot: 100% refund within 14 days. No contracts.',
     },
     {
         title: 'Partners',
@@ -56,12 +51,12 @@ const staticPages = [
     {
         title: 'Generative Engine Optimization (GEO) Services',
         url: `${SITE_URL}/generative-engine-optimization`,
-        description: 'Done-for-you GEO: Ranky, Dooza\'s AI Visibility employee, gets businesses cited by ChatGPT, Perplexity, Gemini, and Google AI Overviews.',
+        description: 'Done-for-you GEO: Ranky, Dooza\'s AI SEO & Visibility Employee, gets businesses cited by ChatGPT, Perplexity, Gemini, and Google AI Overviews.',
     },
     {
         title: 'Dooza vs Profound',
         url: `${SITE_URL}/dooza-vs-profound`,
-        description: 'Comparison of Dooza and Profound (tryprofound.com): AI visibility monitoring vs done-for-you GEO execution.',
+        description: 'Comparison of Dooza and Profound (tryprofound.com): enterprise AI visibility analytics vs AI visibility tracking plus done-for-you GEO execution.',
     },
     {
         title: 'Profound Alternatives',
@@ -91,12 +86,53 @@ const staticPages = [
     {
         title: 'About',
         url: `${SITE_URL}/about`,
-        description: 'About Dooza.',
+        description: 'About Dooza, an AI-native company, and Adam Laboratory Inc.',
     },
     {
         title: 'Brand Resources',
         url: `${SITE_URL}/brand`,
         description: 'Official logos, colors, boilerplate copy, and company details for proposals, decks, and press.',
+    },
+];
+
+const productPages = [
+    {
+        title: 'Dooza Workforce (AI workforce app)',
+        url: `${SITE_URL}/workforce`,
+        description: 'Ready-made AI employees: Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation & sales outreach), Linda (legal documents), Rachel (phone calls & receptionist). Starts with a refundable pilot.',
+    },
+    {
+        title: 'Dooza Agents (AI agentic platform)',
+        url: SITE_URL,
+        description: 'Custom AI agents built and maintained by Dooza engineers, live in days, with your approval on anything sensitive. Starts with a refundable pilot.',
+    },
+];
+
+const servicePages = [
+    {
+        title: 'AI Receptionist',
+        url: `${SITE_URL}/ai-receptionist`,
+        description: 'Done-for-you AI receptionist that answers calls, books appointments, and routes callers.',
+    },
+    {
+        title: 'AI Customer Support',
+        url: `${SITE_URL}/ai-customer-support`,
+        description: 'Done-for-you AI customer support built and maintained by Dooza engineers.',
+    },
+    {
+        title: 'AI Visibility / GEO',
+        url: `${SITE_URL}/generative-engine-optimization`,
+        description: 'Done-for-you generative engine optimization so ChatGPT, Perplexity, Gemini, and Google AI Overviews cite your business.',
+    },
+    {
+        title: 'Workflow Automation',
+        url: `${SITE_URL}/workflow-automation`,
+        description: 'Done-for-you workflow automation across your existing tools.',
+    },
+    {
+        title: 'Industry solutions',
+        url: `${SITE_URL}/industries`,
+        description: 'AI products and services packaged for specific industries.',
     },
 ];
 
@@ -129,8 +165,13 @@ const companyFacts = [
     'Contact: support@dooza.ai',
     'Founder: Sibi Narendran (https://sibinarendran.com)',
     'Brand colors: Dooza Teal #0F766E (primary), Teal Bright #0D9488, Ink #0F172A, Warm White #FAF9F7, Signal Amber #F59E0B',
-    'Products: Dooza Workforce (AI employees, from $49/mo) and Dooza Agents (approvals, traces, tests)',
-    'Boilerplate: Dooza provides forward deployed AI engineers who set up AI employees for small businesses — free to start, pay only to keep it.',
+    'What Dooza is: an AI-native company that builds AI products and services for small businesses',
+    'Products: Dooza Workforce (AI workforce app with ready-made AI employees) and Dooza Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
+    'Services (done for you): AI Receptionist, AI Customer Support, AI Visibility / GEO, Workflow Automation, industry solutions',
+    'Offer: every product starts with a refundable pilot. The pilot is paid; ask within 14 days for a 100% refund. A Dooza engineer scopes it on a free 30-minute call.',
+    `Pricing: depends on the product; current prices are listed only at ${SITE_URL}/pricing`,
+    'Integrations: 1,000+ app integrations',
+    `Boilerplate: ${SITE_DESCRIPTION}`,
 ];
 
 const cleanText = (value = '') => String(value).replace(/\s+/g, ' ').trim();
@@ -212,6 +253,15 @@ export async function GET() {
         '',
         `Sitemap: ${SITE_URL}/sitemap.xml`,
         `RSS: ${SITE_URL}/rss.xml`,
+        '',
+        '## Refundable Pilot',
+        '- Every Dooza product starts with a refundable pilot: 100% refund within 14 days.',
+        '- The pilot is paid. The 30-minute call to scope it is free.',
+        `- Prices are listed only at ${SITE_URL}/pricing.`,
+        '',
+        section('Products', productPages),
+        '',
+        section('Services (done for you)', servicePages),
         '',
         section('Core Pages', staticPages),
         '',

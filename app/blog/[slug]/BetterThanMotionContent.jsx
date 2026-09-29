@@ -36,15 +36,15 @@ import {
 const faqData = [
     {
         question: "Is Dooza really better than Motion for AI employees?",
-        answer: "Yes. Motion focuses primarily on calendar scheduling with AI employees as an add-on. Dooza is purpose-built for AI employees that handle real business tasks—email, social media, calls, sales, and more—24/7 without you needing to manage a calendar."
+        answer: "Yes. Motion focuses primarily on calendar scheduling with AI employees as an add-on. Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app is purpose-built for AI employees that handle real business tasks—email, social media, calls, sales, and more—24/7 without you needing to manage a calendar."
     },
     {
         question: "Can I customize AI employees in Dooza like I can in Motion?",
-        answer: "Absolutely—and it's much easier. Dooza lets you create custom AI employees tailored to your exact workflow. Plus, our concierge team will build them FOR you during your free onboarding call."
+        answer: "Absolutely—and it's much easier. Dooza lets you create custom AI employees tailored to your exact workflow. Plus, a Dooza engineer scopes your pilot on a free 30-minute call and builds them FOR you."
     },
     {
         question: "How does Dooza pricing compare to Motion?",
-        answer: "Motion starts at $29/month but AI Employees require the $49/month plan with limited credits. Dooza starts at $49/month with ALL AI employees included and unlimited conversations. No credit limits, no surprises."
+        answer: "Motion starts at $29/month but AI Employees require the $49/month plan with limited credits. Dooza does not meter work in credits. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Does Dooza work if I already use Google Calendar?",
@@ -52,7 +52,7 @@ const faqData = [
     },
     {
         question: "What if I need help setting up my AI employees?",
-        answer: "This is where Dooza shines. We offer FREE concierge onboarding where our team builds your custom AI employees for you. Motion leaves you to figure it out yourself with documentation."
+        answer: "This is where Dooza shines. A Dooza engineer scopes your pilot on a free 30-minute call and builds your custom AI employees for you. Motion leaves you to figure it out yourself with documentation."
     },
     {
         question: "Can Dooza AI employees make phone calls?",
@@ -189,7 +189,7 @@ export default function BetterThanMotionContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -305,8 +305,8 @@ export default function BetterThanMotionContent() {
                                     { icon: Bot, title: "Purpose-Built AI Employees", desc: "Unlike Motion's add-on AI agents, Dooza's AI employees are our core product—trained specifically for business automation.", color: "primary" },
                                     { icon: Sliders, title: "Fully Customizable", desc: "Create AI employees tailored to YOUR workflow. Name them, train them on your data, and deploy them in minutes.", color: "blue" },
                                     { icon: Phone, title: "Phone Call Capabilities", desc: "Our AI receptionist Rachel can make and receive calls 24/7. Motion can't do this at all.", color: "green" },
-                                    { icon: HeadphonesIcon, title: "Free Concierge Onboarding", desc: "We don't just give you software—our team builds your custom AI employees FOR you during a free onboarding call.", color: "purple" },
-                                    { icon: DollarSign, title: "Transparent Pricing", desc: "$49/month for ALL AI employees. No credit limits. No surprise fees. No complex tier structures.", color: "emerald" },
+                                    { icon: HeadphonesIcon, title: "Built With a Dooza Engineer", desc: "We don't just give you software—a Dooza engineer scopes your pilot on a free 30-minute call and builds your custom AI employees FOR you.", color: "purple" },
+                                    { icon: DollarSign, title: "Refundable Pilot", desc: "Every Dooza product starts with a refundable pilot—100% refund within 14 days. No credit meter to watch. Pricing depends on the product.", color: "emerald" },
                                     { icon: Zap, title: "Works With Your Stack", desc: "Dooza integrates with your existing tools—Gmail, Outlook, social platforms, CRMs—without forcing you to change how you work.", color: "orange" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -371,10 +371,10 @@ export default function BetterThanMotionContent() {
                                             "Maily - Email Manager (drafts AND sends replies)",
                                             "Somi - Social Media Manager (posts autonomously)",
                                             "Stan - Lead Generator (finds and qualifies leads)",
-                                            "Penny - SEO Specialist (optimizes your content)",
+                                            "Ranky - SEO & Visibility (optimizes your content)",
                                             "Rachel - AI Receptionist (makes/receives calls)",
                                             "Linda - Legal Assistant (reviews contracts)",
-                                            "Custom Employees - Build your own!"
+                                            "Custom Employees - built with a Dooza engineer"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-slate-700 text-sm">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
@@ -383,10 +383,10 @@ export default function BetterThanMotionContent() {
                                         ))}
                                     </ul>
                                     <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                                        <p className="text-green-700 text-sm font-medium">Included in $49/mo:</p>
+                                        <p className="text-green-700 text-sm font-medium">What you get:</p>
                                         <ul className="text-green-600 text-sm mt-2 space-y-1">
-                                            <li>• ALL AI employees included</li>
-                                            <li>• Unlimited conversations</li>
+                                            <li>• Six ready-made AI employees</li>
+                                            <li>• No credit meter</li>
                                             <li>• Phone call capabilities</li>
                                             <li>• Autonomous execution</li>
                                         </ul>
@@ -407,14 +407,14 @@ export default function BetterThanMotionContent() {
                                         </tr>
                                     </thead>
                                     <tbody className="text-slate-600">
-                                        <tr><td className="p-4 border-b font-medium">Starting Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/month</td><td className="p-4 border-b">$29/month (no AI)</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">AI Employees Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Included in $49</td><td className="p-4 border-b text-red-500">Requires $49/mo plan</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Usage Limits</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Unlimited</td><td className="p-4 border-b text-red-500">10,000 credits/month</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Starting Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Varies by product — refundable pilot (see /pricing)</td><td className="p-4 border-b">$29/month (no AI)</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">AI Employees Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">100% refund within 14 days</td><td className="p-4 border-b text-red-500">Requires $49/mo plan</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Usage Limits</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">No credits</td><td className="p-4 border-b text-red-500">10,000 credits/month</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Phone Calls</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes (Rachel AI)</td><td className="p-4 border-b text-red-500">No</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Autonomous Actions</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - sends, posts, calls</td><td className="p-4 border-b text-red-500">No - drafts only</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Custom AI Employees</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - fully customizable</td><td className="p-4 border-b">Limited customization</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Onboarding</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Free concierge call</td><td className="p-4 border-b text-red-500">Self-serve only</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Setup Time</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">5 minutes</td><td className="p-4 border-b">Days to weeks</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Onboarding</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Dooza engineer (free 30-min scoping call)</td><td className="p-4 border-b text-red-500">Self-serve only</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Setup Time</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Same day</td><td className="p-4 border-b">Days to weeks</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Mobile App</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Full-featured</td><td className="p-4 border-b text-red-500">Limited features</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Support Response</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">&lt;2 hours</td><td className="p-4 border-b">24-48 hours</td></tr>
                                     </tbody>
@@ -425,21 +425,21 @@ export default function BetterThanMotionContent() {
                         <section id="pricing" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Real Cost: Motion vs Dooza</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                Let's break down what you'll actually pay over a year:
+                                Here's how the two pricing models compare:
                             </p>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="bg-primary-50 border-2 border-primary-200 p-6 rounded-xl">
                                     <div className="text-primary-600 font-bold text-sm mb-2">DOOZA</div>
-                                    <div className="text-4xl font-bold text-slate-900 mb-2">$29<span className="text-lg font-normal text-slate-500">/month</span></div>
-                                    <div className="text-lg text-slate-600 mb-4">$348/year total</div>
+                                    <div className="text-4xl font-bold text-slate-900 mb-2">14-day<span className="text-lg font-normal text-slate-500"> refundable pilot</span></div>
+                                    <div className="text-lg text-slate-600 mb-4">Pricing depends on the product &mdash; <a href="/pricing" className="text-primary-600 hover:underline">see pricing</a></div>
                                     <ul className="space-y-3">
                                         {[
-                                            "ALL AI employees included",
-                                            "Unlimited conversations & actions",
+                                            "Six ready-made AI employees",
+                                            "No credit meter",
                                             "Phone call capabilities",
-                                            "Custom AI employee builder",
-                                            "Free concierge onboarding",
-                                            "Priority support (<2hr response)"
+                                            "Custom AI employees built with a Dooza engineer",
+                                            "Pilot scoped on a free 30-minute call",
+                                            "100% refund within 14 days"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /><span className="text-slate-700">{item}</span></li>
                                         ))}
@@ -464,8 +464,8 @@ export default function BetterThanMotionContent() {
                                 </div>
                             </div>
                             <div className="mt-6 bg-green-50 border border-green-200 p-6 rounded-xl text-center">
-                                <p className="text-2xl font-bold text-green-700">Save $240/year with Dooza</p>
-                                <p className="text-green-600 mt-2">Plus get MORE features, unlimited usage, and human support</p>
+                                <p className="text-2xl font-bold text-green-700">Start with a refundable pilot &mdash; 100% refund within 14 days</p>
+                                <p className="text-green-600 mt-2">Test real AI employees on real work, with no credit meter and human support</p>
                             </div>
                         </section>
 
@@ -502,10 +502,10 @@ export default function BetterThanMotionContent() {
                             </p>
                             <div className="space-y-4">
                                 {[
-                                    { step: "1", title: "Book Your Free Onboarding Call", desc: "Schedule a 30-minute call with our concierge team. We'll learn about your business and build your AI employees for you." },
+                                    { step: "1", title: "Book a Free Pilot Call", desc: "Schedule a free 30-minute call with a Dooza engineer. We'll learn about your business, scope your refundable pilot, and build your AI employees for you." },
                                     { step: "2", title: "Connect Your Tools", desc: "One-click integrations with Gmail, Outlook, social platforms, CRMs, and more. Keep using what you love." },
                                     { step: "3", title: "Activate Your AI Employees", desc: "Your custom AI employees start working immediately—handling email, social media, calls, and more." },
-                                    { step: "4", title: "Cancel Motion (and Save $240/year)", desc: "Once you see Dooza in action, you'll wonder why you ever paid for Motion's limited AI." }
+                                    { step: "4", title: "Cancel Motion", desc: "Once you see Dooza in action, you'll wonder why you ever paid for Motion's limited AI." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold shrink-0">{item.step}</div>
@@ -522,24 +522,24 @@ export default function BetterThanMotionContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Verdict: Why Dooza Wins</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Motion is a decent calendar app that added AI employees as an afterthought. Dooza is a <strong>purpose-built AI employees platform</strong> that integrates with your existing calendar.
+                                    Motion is a decent calendar app that added AI employees as an afterthought. Dooza is an AI-native company that builds AI products and services for small businesses, and its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app is a <strong>purpose-built AI workforce</strong> that integrates with your existing calendar.
                                 </p>
                                 <p>
                                     If you want AI that can actually execute tasks autonomously—sending emails, posting to social media, making phone calls, generating leads—Dooza is the clear choice.
                                 </p>
                                 <p>
-                                    And with transparent pricing ($49/month for everything), free concierge onboarding, and unlimited usage, you'll save money while getting more done.
+                                    And with no credit meter, a Dooza engineer scoping your setup, and a refundable pilot (100% refund within 14 days), you can prove it works before you commit. Pricing depends on the product&mdash;see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>.
                                 </p>
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Experience Real AI Employees?</h3>
-                                <p className="text-slate-600 mb-6 max-w-xl mx-auto">Book a free onboarding call and we'll build your custom AI employees for you.</p>
+                                <p className="text-slate-600 mb-6 max-w-xl mx-auto">Book a free pilot call and we'll build your custom AI employees for you. 100% refund within 14 days.</p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

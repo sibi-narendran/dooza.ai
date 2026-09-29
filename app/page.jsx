@@ -16,9 +16,9 @@ import { WORKFLOW_SIGNIN_URL, WORKFLOW_SIGNUP_URL } from '@/lib/links';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata = {
-    title: { absolute: 'Dooza Agents | AI Employees Built & Maintained for Your Business' },
+    title: { absolute: 'Dooza Agents | AI Agentic Platform: Custom AI Agents Built & Maintained for You' },
     description:
-        'Describe the AI employees you need. Dooza builds them, connects them to your tools, and keeps them working — live in days, with approvals on everything sensitive. Free setup, no contracts.',
+        'Dooza Agents is the AI agentic platform from Dooza, an AI-native company. Describe the AI agents you need and Dooza engineers build, connect, and maintain them — live in days, with approvals on everything sensitive. Start with a refundable pilot: 100% refund within 14 days.',
     keywords: [
         'Dooza Agents',
         'AI agent builder',
@@ -35,9 +35,9 @@ export const metadata = {
         canonical: SITE_URL,
     },
     openGraph: {
-        title: 'Dooza Agents | AI Employees Built & Maintained for Your Business',
+        title: 'Dooza Agents | AI Agentic Platform: Custom AI Agents Built & Maintained for You',
         description:
-            'Describe the AI employees you want in plain language. Dooza builds them, runs them, and keeps them working — live in days, free setup, no contracts.',
+            'Describe the AI agents you want in plain language. Dooza engineers build, run, and maintain them — live in days. Start with a refundable pilot: 100% refund within 14 days.',
         url: SITE_URL,
         siteName: 'Dooza',
         type: 'website',
@@ -47,9 +47,9 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: 'Dooza Agents | AI Employees Built & Maintained for Your Business',
+        title: 'Dooza Agents | AI Agentic Platform: Custom AI Agents Built & Maintained for You',
         description:
-            'Describe the AI employees you want in plain language. Dooza builds them, runs them, and keeps them working — live in days, free setup, no contracts.',
+            'Describe the AI agents you want in plain language. Dooza engineers build, run, and maintain them — live in days. Start with a refundable pilot: 100% refund within 14 days.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -69,7 +69,7 @@ const faqData = [
     {
         question: 'What is Dooza Agents?',
         answer:
-            'Dooza Agents is a product-led service: you describe the AI employees you need in plain language, and Dooza builds them, connects them to your tools, and keeps them working — automating your marketing, sales, and support end-to-end.',
+            'Dooza Agents is the AI agentic platform from Dooza, an AI-native company. You describe the AI agents you need in plain language, and Dooza engineers build them, connect them to your tools, and keep them working across your marketing, sales, and support.',
     },
     {
         question: 'Who builds and maintains my AI employee?',
@@ -77,14 +77,14 @@ const faqData = [
             'Dooza engineers do. They build your AI employee on your real work, monitor it, and keep improving it over time. You approve anything sensitive before it happens.',
     },
     {
-        question: 'Is the setup really free?',
+        question: 'How does the refundable pilot work?',
         answer:
-            'Yes. A Dooza engineer builds your first AI employee for free and puts it live on your real work. You pay only if you want to keep using it.',
+            'Every Dooza product starts with a refundable pilot. A Dooza engineer scopes it with you on a free 30-minute call, then builds your first AI agent and puts it live on your real work. The pilot is paid, and if you ask within 14 days you get a 100% refund. Pricing depends on the product; see dooza.ai/pricing.',
     },
     {
         question: 'How fast is my AI employee live?',
         answer:
-            'Your first AI employee usually runs within days — day 2 to day 4 in most cases.',
+            'Custom agents are live in days, usually within your pilot’s first week.',
     },
     {
         question: 'Is Dooza Agents an AI chatbot?',
@@ -94,7 +94,7 @@ const faqData = [
     {
         question: 'What if we do not want to continue?',
         answer:
-            'We switch it off. No bill, no contract, no hard feelings.',
+            'Ask within 14 days of starting your pilot and you get a 100% refund. There is no long-term contract, so you can also switch it off later.',
     },
 ];
 
@@ -103,12 +103,12 @@ const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Dooza',
-    legalName: 'Dooza AI',
+    legalName: 'Adam Laboratory Inc.',
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description:
-        'Dooza Agents — AI employees built and maintained for small businesses. Describe the AI employees you need and Dooza builds them, runs them, and keeps them working.',
-    foundingDate: '2024',
+        'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.',
+    foundingDate: '2025',
     founder: {
         '@type': 'Person',
         name: 'Sibi Narendran',
@@ -154,7 +154,7 @@ const websiteSchema = {
     name: 'Dooza',
     alternateName: 'Dooza AI',
     url: SITE_URL,
-    description: 'AI employees built and maintained for small businesses',
+    description: 'Dooza is an AI-native company building AI products and services for small businesses: Dooza Workforce (AI workforce app) and Dooza Agents (AI agentic platform).',
     publisher: {
         '@type': 'Organization',
         name: 'Dooza',
@@ -174,10 +174,10 @@ const agentsServiceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Dooza Agents',
-    serviceType: 'Managed AI employees',
+    serviceType: 'AI agentic platform with custom AI agents built and maintained by Dooza engineers',
     url: SITE_URL,
     description:
-        'Describe the AI employees you need and Dooza builds them, connects them to your tools, and keeps them working — live in days, with approvals on everything sensitive. Pay only to keep them. No contracts.',
+        'Dooza Agents is an AI agentic platform: describe the AI agents you need and Dooza engineers build them, connect them to your tools, and keep them working — live in days, with approvals on everything sensitive. Start with a refundable pilot: 100% refund within 14 days.',
     provider: {
         '@type': 'Organization',
         name: 'Dooza',

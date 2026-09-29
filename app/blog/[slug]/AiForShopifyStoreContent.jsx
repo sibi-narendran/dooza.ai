@@ -17,7 +17,7 @@ const faqData = [
     { question: "What is the best AI chatbot for Shopify?", answer: "The best AI chatbot Shopify merchants use depends on the job. For support and order tracking, look for a bot trained on your product catalog and policies. For sales recovery, pick one that can recommend products and recover abandoned carts. Dooza's AI employees can be configured for both inside a single workflow." },
     { question: "How does Shopify AI integration work?", answer: "Most Shopify AI tools install as an app from the Shopify App Store and connect to your store via Shopify's API. Once connected, the AI can read products, orders, and customers, and write back updates — descriptions, tags, replies, emails — automatically." },
     { question: "Can AI write Shopify product descriptions?", answer: "Yes. AI copywriting tools generate SEO-optimized product descriptions in bulk from a few inputs (title, features, target keyword). This is one of the highest-ROI use cases for AI in ecommerce — a store with 500 SKUs can finish a full rewrite in an afternoon." },
-    { question: "Is AI for Shopify worth it for small stores?", answer: "Especially for small stores. A solo founder can't answer support tickets, write descriptions, run email campaigns, and publish SEO blogs at the same time. AI for Shopify store owners removes that bottleneck for ~$29/month — cheaper than a single hour of a virtual assistant." },
+    { question: "Is AI for Shopify worth it for small stores?", answer: "Especially for small stores. A solo founder can't answer support tickets, write descriptions, run email campaigns, and publish SEO blogs at the same time. AI for Shopify store owners removes that bottleneck for a fraction of what a virtual assistant costs. With Dooza, pricing depends on the product, and every product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "What tasks can AI automate in a Shopify store?", answer: "Product descriptions, SEO blog content, customer support chat, abandoned cart recovery, email marketing, review responses, inventory alerts, ad copy, and order status updates. The point of ecommerce automation is to let the founder focus on product and brand, not admin." },
 ];
 
@@ -200,7 +200,7 @@ export default function AiForShopifyStoreContent() {
                                     The Shopify App Store is now flooded with single-purpose AI apps — one for descriptions, one for support, one for SEO, one for email. The problem with stitching together five of them is that nothing talks to each other and your monthly bill creeps past $300.
                                 </p>
                                 <p>
-                                    The cleaner pattern in 2026 is a single AI employee platform that covers multiple jobs at once. <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> ships AI employees for SEO writing, customer support, lead generation, and email — all configurable for a Shopify workflow, all under one $29/month plan. For most stores, that&apos;s a better starting point than five separate apps.
+                                    The cleaner pattern in 2026 is a single AI employee platform that covers multiple jobs at once. <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> ships AI employees for SEO writing, customer support, lead generation, and email — all configurable for a Shopify workflow, and every product starts with a refundable pilot (100% refund within 14 days; <Link href="/pricing" className="text-primary-600 hover:underline">see pricing</Link>). For most stores, that&apos;s a better starting point than five separate apps.
                                 </p>
                                 <p>If you want a deeper comparison of platforms, see our breakdowns of <Link href="/blog/ai-tools-for-solopreneurs" className="text-primary-600 hover:underline">AI tools for solopreneurs</Link> and the <Link href="/blog/best-ai-receptionist" className="text-primary-600 hover:underline">best AI receptionist tools</Link>.</p>
                             </div>
@@ -235,10 +235,10 @@ export default function AiForShopifyStoreContent() {
                                     </div>
                                     <div>
                                         <div className="text-slate-400 text-sm mb-1">AI for Shopify</div>
-                                        <div className="text-3xl font-bold text-primary-400">$29<span className="text-base text-slate-400">/mo</span></div>
+                                        <div className="text-3xl font-bold text-primary-400">14-day<span className="text-base text-slate-400"> refundable pilot</span></div>
                                     </div>
                                 </div>
-                                <p className="text-slate-300 text-center mt-6 italic">Same output. 50× cheaper. Always on.</p>
+                                <p className="text-slate-300 text-center mt-6 italic">Same output. A fraction of the cost. Always on.</p>
                             </div>
                             <div className="prose md:prose-lg text-slate-600 mt-6">
                                 <p>

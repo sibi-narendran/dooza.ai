@@ -3,7 +3,7 @@
 import { getProductSignupUrl } from '@/lib/links';
 import { trackSignupClick, trackFBLead } from '@/lib/analytics';
 
-export default function SignupTextLink({ source = 'unknown', children = 'Or try Dooza yourself →', className = '' }) {
+export default function SignupTextLink({ source = 'unknown', children = 'Or start your pilot yourself →', className = '' }) {
     return (
         <a
             href={getProductSignupUrl('workforce')}

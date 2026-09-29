@@ -39,7 +39,7 @@ import {
 const faqData = [
     {
         question: "What is the best MoltBot alternative for businesses?",
-        answer: "Dooza is the top MoltBot alternative for businesses. It offers pre-built AI employees for email, social media, SEO, and sales with enterprise-grade security, predictable pricing ($49/month), and zero coding required - unlike MoltBot which requires extensive technical expertise."
+        answer: "Dooza is the top MoltBot alternative for businesses. Dooza is an AI-native company that builds AI products and services for small businesses. Its Dooza Workforce app offers ready-made AI employees for email, social media, SEO, and sales with encrypted connections, your approval on anything sensitive, and zero coding required - unlike MoltBot which requires extensive technical expertise. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Why should I consider alternatives to MoltBot?",
@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "How much do MoltBot alternatives cost?",
-        answer: "Costs vary significantly. Dooza starts at $49/month with all features included. ChatGPT Plus is $20/month but lacks automation features. MoltBot itself is 'free' but API costs run $100-300+/day for active use."
+        answer: "Costs vary significantly. Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot (100% refund within 14 days); see dooza.ai/pricing. ChatGPT Plus is $20/month but lacks automation features. MoltBot itself is 'free' but API costs run $100-300+/day for active use."
     },
     {
         question: "Can developers bring their MoltBot agents to other platforms?",
@@ -67,16 +67,15 @@ const alternatives = [
     {
         name: "Dooza",
         tagline: "Pre-built AI Employees for Business",
-        description: "Dooza offers ready-to-use AI employees that handle email, social media, SEO, sales, and customer support. No coding required, enterprise-grade security, and predictable monthly pricing.",
-        price: "$49/month",
-        priceNote: "All features included",
-        rating: 4.9,
+        description: "Dooza offers ready-to-use AI employees that handle email, social media, SEO, sales, and customer support. No coding required, encrypted connections with your approval on anything sensitive, and no surprise API bills.",
+        price: "Refundable pilot",
+        priceNote: "100% refund within 14 days",
         pros: [
-            "5-minute setup, no coding required",
+            "Free 30-minute call to scope your pilot, no coding required",
             "Pre-built AI employees for all business functions",
-            "Enterprise-grade security (SOC 2 compliant)",
-            "Predictable pricing - no surprise API costs",
-            "Free concierge onboarding support",
+            "Secure OAuth connections and approval steps",
+            "No surprise API costs",
+            "A Dooza engineer sets up and maintains your AI employees",
             "Native integrations with popular tools"
         ],
         cons: [
@@ -283,8 +282,9 @@ export default function MoltbotAlternativesContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -366,7 +366,7 @@ export default function MoltbotAlternativesContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">What to Look for in an AI Assistant</h2>
                             <div className="grid md:grid-cols-2 gap-6">
                                 {[
-                                    { icon: Lock, title: "Security First", desc: "Enterprise-grade security with proper authentication, encryption, and compliance certifications." },
+                                    { icon: Lock, title: "Security First", desc: "Proper authentication, encrypted connections, and your approval on anything sensitive." },
                                     { icon: DollarSign, title: "Predictable Pricing", desc: "Know what you'll pay each month. No surprise API bills or usage-based cost explosions." },
                                     { icon: Zap, title: "Easy Setup", desc: "Get running in minutes, not hours or days. No coding or technical expertise required." },
                                     { icon: Headphones, title: "Real Support", desc: "Professional support team to help when things go wrong, not just community forums." },
@@ -403,10 +403,12 @@ export default function MoltbotAlternativesContent() {
                                                 <div className="text-right">
                                                     <div className="text-2xl font-bold text-primary-600">{alt.price}</div>
                                                     <div className="text-sm text-slate-500">{alt.priceNote}</div>
-                                                    <div className="flex items-center gap-1 mt-2 justify-end">
-                                                        <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-                                                        <span className="font-medium">{alt.rating}</span>
-                                                    </div>
+                                                    {alt.rating && (
+                                                        <div className="flex items-center gap-1 mt-2 justify-end">
+                                                            <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
+                                                            <span className="font-medium">{alt.rating}</span>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
 
@@ -455,7 +457,7 @@ export default function MoltbotAlternativesContent() {
                                                         rel="noopener noreferrer"
                                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors"
                                                     >
-                                                        Try Free <ArrowRight className="w-4 h-4" />
+                                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                                     </a>
                                                 )}
                                             </div>
@@ -482,14 +484,14 @@ export default function MoltbotAlternativesContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Monthly Cost</td>
                                             <td className="p-4 border-b text-red-500">$3,000-9,000+</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$29</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold"><a href="/pricing" className="underline">Refundable pilot</a></td>
                                             <td className="p-4 border-b">$20-200</td>
                                             <td className="p-4 border-b">$19-99+</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Setup Time</td>
                                             <td className="p-4 border-b text-red-500">Hours-Days</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">5 min</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Same day</td>
                                             <td className="p-4 border-b text-green-600">Instant</td>
                                             <td className="p-4 border-b">30+ min</td>
                                         </tr>
@@ -510,7 +512,7 @@ export default function MoltbotAlternativesContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Security</td>
                                             <td className="p-4 border-b text-red-500">Self-managed</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Enterprise-grade</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Managed, encrypted</td>
                                             <td className="p-4 border-b text-green-600">Managed</td>
                                             <td className="p-4 border-b text-green-600">Managed</td>
                                         </tr>
@@ -524,7 +526,7 @@ export default function MoltbotAlternativesContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Pre-built AI Employees</td>
                                             <td className="p-4 border-b text-red-500">No</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - 10+ roles</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - ready-made roles</td>
                                             <td className="p-4 border-b text-red-500">No</td>
                                             <td className="p-4 border-b text-red-500">No</td>
                                         </tr>
@@ -539,13 +541,13 @@ export default function MoltbotAlternativesContent() {
                                 {[
                                     {
                                         icon: Shield,
-                                        title: "Enterprise Security",
-                                        desc: "Your data is protected with encryption, access controls, and regular security audits. No exposed control panels or leaked credentials."
+                                        title: "Managed Security",
+                                        desc: "Encrypted connections and your approval on anything sensitive. No exposed control panels or leaked credentials."
                                     },
                                     {
                                         icon: DollarSign,
-                                        title: "Predictable Pricing",
-                                        desc: "$49/month covers everything. No API costs, no usage surprises, no $300/day bills. Budget with confidence."
+                                        title: "Refundable Pilot",
+                                        desc: "Start with a refundable pilot — 100% refund within 14 days. No self-managed API keys, no $300/day bills."
                                     },
                                     {
                                         icon: Bot,
@@ -554,13 +556,13 @@ export default function MoltbotAlternativesContent() {
                                     },
                                     {
                                         icon: Zap,
-                                        title: "5-Minute Setup",
+                                        title: "Guided Setup",
                                         desc: "Connect your accounts, activate your AI employees, and start automating. No Docker, no security hardening, no coding."
                                     },
                                     {
                                         icon: Headphones,
                                         title: "Dedicated Support",
-                                        desc: "Real humans who respond in hours, not days. Free concierge onboarding to help you get maximum value."
+                                        desc: "Real humans who respond in hours, not days. A Dooza engineer scopes your pilot on a free 30-minute call."
                                     },
                                     {
                                         icon: Wrench,
@@ -595,7 +597,7 @@ export default function MoltbotAlternativesContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-500 transition-all"
                                 >
-                                    Get Started <ArrowRight className="w-4 h-4" />
+                                    Start your pilot <ArrowRight className="w-4 h-4" />
                                 </a>
                             </div>
                         </section>
@@ -698,14 +700,14 @@ export default function MoltbotAlternativesContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Experience the Difference?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Join thousands of businesses using Dooza's AI employees. From $49/mo with a 7-day money-back guarantee.
+                                    Put Dooza's AI employees to work. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book a Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

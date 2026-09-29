@@ -20,21 +20,21 @@ export default function AlternativesPage() {
             slug: null,
             directLink: '/sintra-alternatives',
             tagline: '7 alternatives compared — pricing, features, pros & cons',
-            doozaAdvantage: 'No credits, personal onboarding, 7-day money-back guarantee'
+            doozaAdvantage: 'No credits, personal onboarding, refundable pilot'
         },
         {
             name: 'Marblism Alternatives',
             slug: null,
             directLink: '/marblism-alternatives',
             tagline: '7 alternatives compared — pricing, integrations, setup',
-            doozaAdvantage: 'No-code setup, free engineer onboarding, we build for you'
+            doozaAdvantage: 'No-code setup, engineer-led onboarding, no per-seat fees'
         },
         {
             name: 'Profound Alternatives',
             slug: null,
             directLink: '/profound-alternatives',
             tagline: 'AI visibility & GEO tools compared — pricing, engines, execution',
-            doozaAdvantage: 'GEO done for you by Ranky at $49/mo, not another dashboard'
+            doozaAdvantage: 'GEO done for you by Ranky, not another dashboard'
         },
         {
             name: 'Dooza vs Profound',
@@ -47,7 +47,7 @@ export default function AlternativesPage() {
             name: 'Motion App',
             slug: 'better-than-motion',
             tagline: '$348/year for limited AI features',
-            doozaAdvantage: '$348/year for full AI employees'
+            doozaAdvantage: 'Full AI employees, starting with a refundable pilot'
         },
         {
             name: 'Surfer SEO vs Ahrefs',
@@ -70,7 +70,7 @@ export default function AlternativesPage() {
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                             See how Dooza compares to other AI tools and marketing platforms.
-                            Get AI employees for $49/month—less than most competitors charge for a single feature.
+                            Dooza is an AI-native company that builds AI products and services for small businesses. Every product starts with a refundable pilot — 100% refund within 14 days.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 mb-8">
                             <div className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full">
@@ -79,7 +79,7 @@ export default function AlternativesPage() {
                             </div>
                             <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full">
                                 <DollarSign className="w-5 h-5" />
-                                <span className="font-medium">$49/month</span>
+                                <span className="font-medium">Refundable pilot</span>
                             </div>
                             <div className="flex items-center gap-2 bg-purple-50 text-purple-700 px-4 py-2 rounded-full">
                                 <Zap className="w-5 h-5" />

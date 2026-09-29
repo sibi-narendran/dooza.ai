@@ -165,8 +165,9 @@ export default function SurferSeoVsAhrefsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Get Started Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -297,14 +298,14 @@ export default function SurferSeoVsAhrefsContent() {
                                     </p>
                                     <div className="bg-white/80 backdrop-blur-sm rounded-xl p-5 mb-6">
                                         <ul className="space-y-3">
-                                            {["Uses the Best Tools: Ranky analyzes data from top SEO sources.", "Zero Management: She works autonomously.", "Agency Quality, Software Price: Results that usually cost $2,000/mo."].map((item, idx) => (
+                                            {["Uses the Best Tools: Ranky analyzes data from top SEO sources.", "Zero Management: She works autonomously.", "Refundable Pilot: Start with a pilot — 100% refund within 14 days."].map((item, idx) => (
                                                 <li key={idx} className="flex gap-3 text-slate-700"><CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" /><span>{item}</span></li>
                                             ))}
                                         </ul>
                                     </div>
                                     <div className="flex flex-col sm:flex-row gap-4">
                                         <a href={getProductSignupUrl('ranky')} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-primary-600 text-white font-bold rounded-lg hover:bg-primary-700 transition-colors text-center shadow-lg shadow-primary-600/20">
-                                            Start with Ranky Free
+                                            Start your pilot
                                         </a>
                                         <Link href="/partners" className="px-6 py-3 bg-white text-primary-700 font-bold rounded-lg border border-primary-200 hover:bg-primary-50 transition-colors text-center">
                                             Partner with Dooza (Agencies)

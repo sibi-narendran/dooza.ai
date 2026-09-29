@@ -43,7 +43,7 @@ import {
 const faqData = [
     {
         question: "What marketing tools do small businesses actually need?",
-        answer: "At minimum, small businesses need: email marketing, social media management, SEO/website optimization, and analytics. Many businesses also benefit from CRM, paid ads management, and content creation tools. The challenge is these often require 5-10 separate subscriptions costing $200-500/month combined. Dooza consolidates these into AI employees for $49/month."
+        answer: "At minimum, small businesses need: email marketing, social media management, SEO/website optimization, and analytics. Many businesses also benefit from CRM, paid ads management, and content creation tools. The challenge is these often require 5-10 separate subscriptions costing $200-500/month combined. Dooza consolidates these into AI employees, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "How much should a small business spend on marketing tools?",
@@ -194,7 +194,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get All-in-One AI Marketing - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -242,8 +242,9 @@ export default function SmallBusinessMarketingToolsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -430,7 +431,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                                     <div className="bg-primary-50 p-3 rounded-lg">
                                                         <div className="text-xs font-bold text-primary-600 mb-2">DOOZA ALTERNATIVE</div>
                                                         <p className="text-sm text-primary-700 font-medium">{category.dooza}</p>
-                                                        <p className="text-xs text-primary-600 mt-1">Included in $49/mo</p>
+                                                        <p className="text-xs text-primary-600 mt-1">Starts with a refundable pilot</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -493,16 +494,16 @@ export default function SmallBusinessMarketingToolsContent() {
                                         </div>
                                     ))}
                                     <div className="flex justify-between items-center pt-2">
-                                        <span className="font-bold text-slate-900">Monthly Total</span>
-                                        <span className="font-bold text-green-700 text-xl">$49/mo</span>
+                                        <span className="font-bold text-slate-900">Start with</span>
+                                        <span className="font-bold text-green-700 text-xl">Refundable pilot</span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="font-bold text-slate-900">Annual Total</span>
-                                        <span className="font-bold text-green-700 text-xl">$348/year</span>
+                                        <span className="font-bold text-slate-900">Refund window</span>
+                                        <span className="font-bold text-green-700 text-xl">100% within 14 days</span>
                                     </div>
                                 </div>
                                 <p className="text-green-700 font-bold text-lg text-center">
-                                    Save $3,888/year + 10+ hours/week
+                                    One platform instead of 6 subscriptions. <a href="/pricing" className="underline">See pricing</a>
                                 </p>
                             </div>
                         </section>
@@ -548,7 +549,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                     The Small Business AI Advantage
                                 </h4>
                                 <p className="text-blue-700">
-                                    According to <a href="https://localiq.com/blog/small-business-marketing-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">LocaliQ</a>, small businesses using AI see a <strong>25% increase in marketing ROI</strong>. Unlike enterprise solutions that cost thousands, Dooza brings enterprise-level AI marketing to small businesses at a price that makes sense: <strong>$49/month for AI employees</strong>.
+                                    According to <a href="https://localiq.com/blog/small-business-marketing-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">LocaliQ</a>, small businesses using AI see a <strong>25% increase in marketing ROI</strong>. Dooza is an AI-native company that builds AI products and services for small businesses, and <strong>every Dooza product starts with a refundable pilot — 100% refund within 14 days</strong>.
                                 </p>
                             </div>
                         </section>
@@ -565,8 +566,8 @@ export default function SmallBusinessMarketingToolsContent() {
                                     },
                                     {
                                         step: "2",
-                                        title: "Book a Free Onboarding Call",
-                                        desc: "In 30 minutes, we'll understand your business, configure your AI employees to match your brand, and connect your accounts."
+                                        title: "Book a Free Pilot Call",
+                                        desc: "In 30 minutes, a Dooza engineer will scope your pilot, understand your business, configure your AI employees to match your brand, and connect your accounts."
                                     },
                                     {
                                         step: "3",
@@ -576,7 +577,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                     {
                                         step: "4",
                                         title: "Cancel the Subscriptions You Don't Need",
-                                        desc: "Once Dooza is handling your marketing, you can cancel the individual tools you no longer need. Most customers consolidate 4-6 subscriptions."
+                                        desc: "Once Dooza is handling your marketing, you can cancel the individual tools you no longer need."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -592,14 +593,14 @@ export default function SmallBusinessMarketingToolsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Simplify Your Marketing?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop juggling 5 different tools and spending hours on tasks AI can handle. Get AI employees for less than most businesses pay for a single tool.
+                                    Stop juggling 5 different tools and spending hours on tasks AI can handle. Get AI employees that do the work, starting with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started - $49/month <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

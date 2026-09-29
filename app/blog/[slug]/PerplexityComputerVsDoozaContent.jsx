@@ -60,11 +60,11 @@ const faqData = [
     },
     {
         question: "How much does Perplexity Computer cost?",
-        answer: "Perplexity Computer requires the Max plan at $200/month (or $2,000/year). Tasks consume credits — simple tasks use ~30 credits, but complex coding sessions can burn thousands. Monthly spending caps default to $200. Dooza starts at just $29/month with no usage caps."
+        answer: "Perplexity Computer requires the Max plan at $200/month (or $2,000/year). Tasks consume credits — simple tasks use ~30 credits, but complex coding sessions can burn thousands. Monthly spending caps default to $200. Dooza pricing depends on the product, there are no credits to manage, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Is Perplexity Computer better than Dooza for business?",
-        answer: "They solve different problems. Perplexity Computer is a multi-model research and execution tool for tech-savvy users who want to orchestrate complex workflows. Dooza provides purpose-built AI employees that handle specific business functions (email, social media, SEO, sales, phone calls) autonomously 24/7. For business operations, Dooza is more practical and 7x cheaper."
+        answer: "They solve different problems. Perplexity Computer is a multi-model research and execution tool for tech-savvy users who want to orchestrate complex workflows. Dooza provides purpose-built AI employees that handle specific business functions (email, social media, SEO, sales, phone calls) autonomously 24/7. For business operations, Dooza is more practical and 4x cheaper."
     },
     {
         question: "Can Perplexity Computer answer phone calls?",
@@ -80,7 +80,7 @@ const faqData = [
     },
     {
         question: "Does Dooza require technical skills to set up?",
-        answer: "Zero technical skills required. Dooza includes free concierge onboarding — our team configures your AI employees for your business in a 30-minute call. Perplexity Computer requires understanding of prompt engineering and credit management for best results."
+        answer: "Zero technical skills required. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business. Perplexity Computer requires understanding of prompt engineering and credit management for best results."
     }
 ];
 
@@ -147,7 +147,7 @@ export default function PerplexityComputerVsDoozaContent() {
                             Perplexity Computer vs Dooza: <span className="text-primary-600">19 Models</span> or 6 AI Employees?
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Perplexity Computer orchestrates 19 AI models for $200/month. Dooza gives you 6 AI employees that run your business for $29/month. One is a tech power tool. The other is a workforce. Here's the honest breakdown.
+                            Perplexity Computer orchestrates 19 AI models for $200/month. Dooza gives you 6 AI employees that run your business, starting with a refundable pilot. One is a tech power tool. The other is a workforce. Here's the honest breakdown.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -163,7 +163,7 @@ export default function PerplexityComputerVsDoozaContent() {
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
                                 src="/blog/perplexity-computer-vs-dooza.png"
-                                alt="Perplexity Computer vs Dooza comparison — multi-model AI agent platform at $200/month versus 6 AI employees at $29/month"
+                                alt="Perplexity Computer vs Dooza comparison — multi-model AI agent platform at $200/month versus 6 AI employees with a refundable pilot"
                                 priority={true}
                             />
                         </div>
@@ -175,7 +175,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try Dooza Free — No Card Required
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -183,7 +183,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                 onClick={handleAction}
                                 className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-full font-bold text-lg border-2 border-primary-200 hover:border-primary-400 transition-all"
                             >
-                                Book Free Demo
+                                Book a free pilot call
                             </a>
                         </div>
 
@@ -244,8 +244,9 @@ export default function PerplexityComputerVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -267,7 +268,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     But here's the question that matters: <strong>does orchestrating 19 models actually help your business run better?</strong>
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    At $200/month with unpredictable credit consumption, Perplexity Computer is built for AI power users who want raw capability. <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline font-medium">Dooza's AI employees</Link> are built for business owners who want their operations handled — emails, social media, SEO, sales, and phone calls — at a fraction of the cost.
+                                    At $200/month with unpredictable credit consumption, Perplexity Computer is built for AI power users who want raw capability. <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline font-medium">Dooza's AI employees</Link> are built for business owners who want their operations handled — emails, social media, SEO, sales, and phone calls — starting with a refundable pilot.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     They're solving fundamentally different problems. Pick the wrong one, and you'll waste hundreds of dollars finding out.
@@ -331,7 +332,7 @@ export default function PerplexityComputerVsDoozaContent() {
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Where Perplexity Computer Falls Short</h3>
                             <div className="space-y-3 mb-8">
                                 {[
-                                    "$200/month price barrier — 7x more expensive than Dooza",
+                                    "$200/month price barrier before you see results",
                                     "Unpredictable credit consumption — vague prompts waste hundreds of credits",
                                     "Watermark branding on all generated outputs",
                                     "No phone call capability — cannot answer or make calls",
@@ -467,7 +468,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                         {[
                                             "AI employees have defined roles & daily routines",
                                             "Built for ongoing, autonomous business operations",
-                                            "Flat $29/month — no usage caps or credits",
+                                            "No credits to manage — starts with a refundable pilot",
                                             "Zero learning curve — we configure everything",
                                             "Purpose-built — each employee excels at one job",
                                             "Best for: businesses needing autonomous operations",
@@ -516,10 +517,10 @@ export default function PerplexityComputerVsDoozaContent() {
                                             { feature: "Sales Outreach", perplexity: "Research & drafting", dooza: "Automated pipeline (Stan)" },
                                             { feature: "Scheduling", perplexity: "Task-based (no cron)", dooza: "Built-in cron scheduling" },
                                             { feature: "Memory", perplexity: "Persistent across sessions", dooza: "Persistent — learns your business" },
-                                            { feature: "Setup & Onboarding", perplexity: "No setup help — self-serve only", dooza: "Free concierge onboarding included" },
+                                            { feature: "Setup & Onboarding", perplexity: "No setup help — self-serve only", dooza: "Dooza engineer scopes your pilot on a free call" },
                                             { feature: "Customer Support", perplexity: "Nowhere to be found", dooza: "Direct founder access & email support" },
-                                            { feature: "Price", perplexity: "$200/mo + credit uncertainty", dooza: "$29/mo — all employees, no caps" },
-                                            { feature: "Credits/Limits", perplexity: "10,000 credits/mo (expire monthly)", dooza: "Unlimited — no credit system" },
+                                            { feature: "Price", perplexity: "$200/mo + credit uncertainty", dooza: "Depends on product — refundable pilot (see /pricing)" },
+                                            { feature: "Credits/Limits", perplexity: "10,000 credits/mo (expire monthly)", dooza: "No credit system" },
                                             { feature: "Best For", perplexity: "AI researchers, developers, power users", dooza: "Business owners needing AI operations" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -588,13 +589,13 @@ export default function PerplexityComputerVsDoozaContent() {
                                 {/* Dooza */}
                                 <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
                                     <h3 className="font-bold text-green-800 mb-1">Dooza</h3>
-                                    <p className="text-3xl font-bold text-green-600 mb-3">$29<span className="text-lg text-green-400">/mo</span></p>
+                                    <p className="text-3xl font-bold text-green-600 mb-3">14-day<span className="text-lg text-green-400"> refundable pilot</span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
                                             { text: "All 6 AI employees included", good: true },
                                             { text: "No usage caps or credits", good: true },
                                             { text: "Runs 24/7 in the cloud", good: true },
-                                            { text: "Free concierge onboarding", good: true }
+                                            { text: "100% refund within 14 days", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -608,7 +609,7 @@ export default function PerplexityComputerVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    One month of Perplexity Computer ($200) buys you <strong className="text-white">nearly 7 months of Dooza</strong> — with 6 AI employees handling your email, social media, SEO, sales, legal, and phone calls around the clock. No credits to manage. No prompts to engineer. No watermarks on your content.
+                                    Perplexity Computer costs $200/month before you see results. Dooza starts with a <strong className="text-white">refundable pilot — 100% refund within 14 days</strong> — with 6 AI employees handling your email, social media, SEO, sales, legal, and phone calls around the clock. No credits to manage. No prompts to engineer. No watermarks on your content.
                                 </p>
                             </div>
                         </section>
@@ -649,7 +650,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     <p>You get 10,000 credits/month on the $200 Max plan.</p>
                                     <p>If you run just <strong>3-4 complex projects per month</strong>, you could blow through your entire credit allowance.</p>
                                     <p>Auto-refill is off by default, but if you enable it, monthly spending can spike to $2,000.</p>
-                                    <p className="font-bold">Meanwhile, Dooza's $29/month has no credits, no caps, and no surprises.</p>
+                                    <p className="font-bold">Meanwhile, Dooza has no credits to manage, and every product starts with a refundable pilot.</p>
                                 </div>
                             </div>
 
@@ -716,7 +717,7 @@ export default function PerplexityComputerVsDoozaContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-900 mb-2">Real Talk</h4>
                                 <p className="text-blue-800">
-                                    If you're a tech-savvy power user who wants to harness 19 AI models for ambitious projects, Perplexity Computer is genuinely impressive. If you're a business owner who needs AI running your operations while you focus on growth, <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Dooza is the smarter investment</Link> — at 1/7th the price.
+                                    If you're a tech-savvy power user who wants to harness 19 AI models for ambitious projects, Perplexity Computer is genuinely impressive. If you're a business owner who needs AI running your operations while you focus on growth, <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Dooza is the smarter investment</Link> — at about a quarter of the price.
                                 </p>
                             </div>
                         </section>
@@ -730,7 +731,7 @@ export default function PerplexityComputerVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    The smartest businesses don't choose one. They use Perplexity Computer for research and complex projects, and Dooza for daily operations. The industry calls it the "Triple Stack" approach — and it delivers 40% productivity gains.
+                                    The smartest businesses don't choose one. They use Perplexity Computer for research and complex projects, and Dooza for daily operations. Research for the hard, one-off problems; AI employees for the daily work.
                                 </p>
                             </div>
 
@@ -788,7 +789,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     Perplexity Computer is the most technically ambitious AI agent platform on the market. Coordinating 19 models, persistent memory, 400+ integrations — it's an engineering marvel. For AI researchers, developers, and power users, it's a dream tool.
                                 </p>
                                 <p>
-                                    But for <strong>business operations</strong> — the kind of work that needs to happen every day, on schedule, without human intervention — Dooza delivers more value at a fraction of the cost.
+                                    But for <strong>business operations</strong> — the kind of work that needs to happen every day, on schedule, without human intervention — Dooza delivers more value, and every product starts with a refundable pilot — 100% refund within 14 days.
                                 </p>
                             </div>
 
@@ -796,11 +797,11 @@ export default function PerplexityComputerVsDoozaContent() {
                                 <h3 className="font-bold text-slate-900 text-xl mb-4">Why Businesses Choose Dooza Over Perplexity Computer</h3>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
-                                        { icon: DollarSign, text: "$29/mo vs $200/mo — 7x cheaper, no credit anxiety" },
+                                        { icon: DollarSign, text: "Refundable pilot — 100% refund within 14 days, no credit anxiety" },
                                         { icon: Users, text: "6 specialized AI employees, not one general agent" },
                                         { icon: Phone, text: "AI phone answering — Perplexity can't do this" },
                                         { icon: Repeat, text: "Always-on operations — no prompt required" },
-                                        { icon: HeartHandshake, text: "Free concierge onboarding — we set it up for you" },
+                                        { icon: HeartHandshake, text: "A Dooza engineer scopes your pilot and sets it up for you" },
                                         { icon: Brain, text: "Purpose-built for business — not research" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-start gap-3">
@@ -820,7 +821,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Start Free with Dooza
+                                    Start your pilot
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                                 <a
@@ -828,7 +829,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     onClick={handleAction}
                                     className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-full font-bold text-lg border-2 border-primary-200 hover:border-primary-400 transition-all"
                                 >
-                                    Book a Free Demo
+                                    Book a free pilot call
                                 </a>
                             </div>
                         </section>

@@ -20,7 +20,7 @@ function PrimaryCta() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800 hover:shadow-xl"
             >
-                Get started free <ArrowRight className="h-4 w-4" />
+                Start your pilot <ArrowRight className="h-4 w-4" />
             </a>
         </div>
     );
@@ -158,7 +158,7 @@ export default function AgentTypeSections() {
                 bgClass="bg-white"
                 bulletCardClass="bg-warm"
                 bullets={[
-                    'Bot building: deploy and train the bot with your own private and public data in seconds. Then use it as a live chat interface or AI chatbot support.',
+                    'Bot building: train the bot on your own private and public data, set up with a Dooza engineer. Then use it as a live chat interface or AI chatbot support.',
                     'AI employee flow: automate all your customer support tasks, such as support ticket creation, sales coaching, and hundreds of other support tasks.',
                 ]}
             >

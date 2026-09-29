@@ -18,23 +18,23 @@ import { SITE_URL } from '@/lib/site';
 const pageUrl = `${SITE_URL}/workforce`;
 
 export const metadata = {
-    title: { absolute: 'AI Employees for Small Business, Built for You | Dooza' },
-    description: 'Dooza builds and maintains AI employees for email, social media, SEO, calls, and lead follow-up—with human approvals for sensitive work.',
+    title: { absolute: 'Dooza Workforce: AI Workforce App for Small Business | Dooza' },
+    description: 'Dooza Workforce is the AI workforce app from Dooza: ready-made AI employees for email, social media, SEO, calls, and leads, with approvals on sensitive work. Start with a refundable pilot.',
     keywords: ['AI employees', 'AI agents', 'business automation', 'Sintra AI alternative', 'Marblism alternative', 'AI for small business', 'AI automation platform', 'virtual employees'],
     alternates: {
         canonical: pageUrl,
     },
     openGraph: {
-        title: 'AI Employees for Small Business, Built for You | Dooza',
-        description: 'Dooza builds and maintains AI employees for email, social media, SEO, calls, and lead follow-up—with human approvals for sensitive work.',
+        title: 'Dooza Workforce: AI Workforce App for Small Business | Dooza',
+        description: 'Dooza Workforce is the AI workforce app from Dooza: ready-made AI employees for email, social media, SEO, calls, and leads, with approvals on sensitive work. Start with a refundable pilot.',
         url: pageUrl,
         type: 'website',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Workforce - AI Employees Platform' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'AI Employees for Small Business, Built for You | Dooza',
-        description: 'Dooza builds and maintains AI employees for email, social media, SEO, calls, and lead follow-up—with human approvals for sensitive work.',
+        title: 'Dooza Workforce: AI Workforce App for Small Business | Dooza',
+        description: 'Dooza Workforce is the AI workforce app from Dooza: ready-made AI employees for email, social media, SEO, calls, and leads, with approvals on sensitive work. Start with a refundable pilot.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -45,12 +45,12 @@ const softwareSchema = {
     "@type": "SoftwareApplication",
     "name": "Dooza AI Employees",
     "alternateName": "Dooza Workforce",
-    "description": "Dooza provides AI employees for email, social media, SEO, calls, leads, and business workflow automation.",
+    "description": "Dooza Workforce is the AI workforce app from Dooza, an AI-native company: ready-made AI employees for email, social media, SEO, calls, and leads. Every plan starts with a refundable pilot: 100% refund within 14 days.",
     "applicationCategory": "BusinessApplication",
     "applicationSubCategory": "AI Automation Platform",
     "operatingSystem": "Web, iOS, Android",
     "url": pageUrl,
-    "downloadUrl": "https://workforce.dooza.ai",
+    "downloadUrl": "https://accounts.dooza.ai/signup?product=workforce",
     "screenshot": `${SITE_URL}/logo.png`,
     "softwareVersion": "2.0",
     "releaseNotes": "AI Employees for business automation including email, social media, SEO, and lead generation",
@@ -58,39 +58,15 @@ const softwareSchema = {
         "AI Email Manager (Maily)",
         "AI Social Media Manager (Somi)",
         "AI Lead Generator (Stan)",
-        "AI SEO Specialist (Ranky)",
+        "AI SEO & Visibility Employee (Ranky)",
         "AI Legal Assistant (Linda)",
         "Custom AI Employee Builder",
         "Google Business Profile Automation",
-        "24/7 Autonomous Operation"
+        "Works 24/7 with approvals on anything sensitive"
     ],
-    "offers": {
-        "@type": "Offer",
-        "price": "49",
-        "priceCurrency": "USD",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://workforce.dooza.ai",
-        "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "49",
-            "priceCurrency": "USD",
-            "billingIncrement": 1,
-            "billingDuration": {
-                "@type": "QuantitativeValue",
-                "value": 1,
-                "unitCode": "MON"
-            }
-        }
-    },
     "review": [
         {
             "@type": "Review",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-            },
             "author": {
                 "@type": "Organization",
                 "name": "Interio Square"
@@ -99,16 +75,11 @@ const softwareSchema = {
         },
         {
             "@type": "Review",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-            },
             "author": {
                 "@type": "Organization",
                 "name": "Suresh Timbers"
             },
-            "reviewBody": "Our social pages used to be dead. Now Ranky posts daily updates and we're actually growing."
+            "reviewBody": "Our social pages used to be dead. Now Somi posts daily updates and we're actually growing."
         }
     ]
 };
@@ -118,7 +89,7 @@ const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Dooza AI Employees Platform",
-    "description": "AI-powered virtual employees that automate your business operations 24/7. Includes email management, social media posting, SEO optimization, lead generation, and legal review.",
+    "description": "Dooza Workforce is an AI workforce app with ready-made AI employees for email, social media, SEO, lead generation, and legal review. They work 24/7 with your approval on anything sensitive. Every plan starts with a refundable pilot: 100% refund within 14 days.",
     "brand": {
         "@type": "Brand",
         "name": "Dooza"
@@ -128,19 +99,7 @@ const productSchema = {
     "url": pageUrl,
     "sku": "DOOZA-WORKFORCE",
     "mpn": "DOOZA-AI-2024",
-    "category": "Business Software > Automation > AI Assistants",
-    "offers": {
-        "@type": "Offer",
-        "url": "https://workforce.dooza.ai",
-        "priceCurrency": "USD",
-        "price": "49",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-            "@type": "Organization",
-            "name": "Dooza"
-        }
-    },
+    "category": "Business Software > Automation > AI Assistants"
 };
 
 // Service Schema for each AI Employee
@@ -149,7 +108,7 @@ const serviceSchema = {
     "@type": "Service",
     "serviceType": "AI Business Automation",
     "name": "Dooza AI Employees",
-    "description": "Automated AI employees that handle business tasks 24/7 including email, social media, SEO, sales, and customer support",
+    "description": "AI employees in the Dooza Workforce app that handle email, social media, SEO, sales, and customer support, working 24/7 with your approval on anything sensitive",
     "provider": {
         "@type": "Organization",
         "name": "Dooza",
@@ -183,7 +142,7 @@ const serviceSchema = {
                 "@type": "Offer",
                 "itemOffered": {
                     "@type": "Service",
-                    "name": "Ranky - AI SEO Specialist",
+                    "name": "Ranky - AI SEO & Visibility Employee",
                     "description": "AI employee that writes blog posts, optimizes Google Business Profile, and improves search rankings"
                 }
             },
@@ -212,26 +171,21 @@ const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
     "name": "How to Get Started with Dooza AI Employees",
-    "description": "Set up your AI employees in 5 minutes with free concierge onboarding",
-    "totalTime": "PT5M",
-    "estimatedCost": {
-        "@type": "MonetaryAmount",
-        "currency": "USD",
-        "value": "49"
-    },
+    "description": "Start Dooza Workforce with a refundable pilot (100% refund within 14 days), scoped on a free 30-minute call with a Dooza engineer",
+    "totalTime": "PT30M",
     "step": [
         {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Sign Up",
-            "text": "Create your free Dooza account in under 2 minutes",
-            "url": "https://workforce.dooza.ai"
+            "name": "Start Your Pilot",
+            "text": "Create your Dooza account and start with a refundable pilot: 100% refund within 14 days. See plans at dooza.ai/pricing.",
+            "url": "https://accounts.dooza.ai/signup?product=workforce"
         },
         {
             "@type": "HowToStep",
             "position": 2,
             "name": "Book Onboarding Call",
-            "text": "Schedule a free 30-minute concierge call where our team builds your AI employees for you",
+            "text": "Book a free 30-minute pilot call where a Dooza engineer scopes your pilot and sets up your AI employees with you",
             "url": "https://calendly.com/sibi-dooza/30min"
         },
         {
@@ -244,7 +198,7 @@ const howToSchema = {
             "@type": "HowToStep",
             "position": 4,
             "name": "Activate AI Employees",
-            "text": "Choose which AI employees you need and they start working immediately 24/7"
+            "text": "Choose which AI employees you need and they start working the same day, with your approval on anything sensitive"
         }
     ]
 };
@@ -273,7 +227,7 @@ const aiEmployeesListSchema = {
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Ranky - AI SEO Specialist",
+            "name": "Ranky - AI SEO & Visibility Employee",
             "description": "Writes blogs, optimizes Google Business Profile, improves rankings",
             "url": pageUrl
         },
@@ -314,7 +268,7 @@ export default function WorkforcePage() {
                         <VideoSection />
                         <TestimonialsSection />
                         <HowItWorksSection />
-                        <PricingSection />
+                        <PricingSection showPrices={false} />
                         <ComparisonSection />
                         <CompetitorAlternatives />
                         <FAQSection />

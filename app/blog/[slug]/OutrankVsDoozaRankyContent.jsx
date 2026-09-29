@@ -32,7 +32,7 @@ const faqData = [
     },
     {
         question: "How much does Dooza Ranky cost compared to Outrank?",
-        answer: "Ranky is significantly cheaper. Outrank starts at $99/month. Ranky costs a fraction of that while giving you more control and features including unlimited daily posts, YouTube embeds, custom tools, and deep research capabilities."
+        answer: "Outrank starts at $99/month. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product, including Ranky, starts with a refundable pilot: 100% refund within 14 days. Ranky gives you more control and features including unlimited daily posts, YouTube embeds, custom tools, and deep research capabilities."
     },
     {
         question: "Can Dooza Ranky publish multiple blogs per day?",
@@ -185,8 +185,9 @@ export default function OutrankVsDoozaRankyContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Ranky Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -314,7 +315,7 @@ export default function OutrankVsDoozaRankyContent() {
                                     { icon: Zap, title: "Unlimited Daily Publishing", desc: "Publish as many blog posts as you want per day. No artificial limits, no queue. You control the timing and cadence.", color: "primary" },
                                     { icon: Settings, title: "Full Content Customization", desc: "Add tone of voice documents, experience docs, sitemaps, and custom instructions. Like Claude Skills, but for SEO content.", color: "green" },
                                     { icon: Bot, title: "Deep Research + YouTube", desc: "Ranky does deep research, reads YouTube transcripts, and embeds videos directly in your posts for richer content.", color: "blue" },
-                                    { icon: DollarSign, title: "Fraction of the Cost", desc: "Get more features, more control, and better results at a fraction of Outrank's $99/month price tag.", color: "purple" }
+                                    { icon: DollarSign, title: "Refundable Pilot", desc: "Start with a refundable pilot — 100% refund within 14 days — instead of committing to Outrank's $99/month plan up front.", color: "purple" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-6 rounded-xl shadow-sm">
                                         <div className={`w-12 h-12 bg-${item.color}-50 rounded-lg flex items-center justify-center text-${item.color}-600 mb-4`}>
@@ -364,12 +365,12 @@ export default function OutrankVsDoozaRankyContent() {
                                     <tbody className="text-slate-600">
                                         <tr>
                                             <td className="p-4 border-b font-medium">Blog posts per day</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Unlimited</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">No credits</td>
                                             <td className="p-4 border-b text-red-500">1</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Starting price</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Fraction of $99</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold"><a href="/pricing" className="underline">Refundable pilot</a></td>
                                             <td className="p-4 border-b text-red-500">$99/month</td>
                                         </tr>
                                         <tr>
@@ -427,14 +428,14 @@ export default function OutrankVsDoozaRankyContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing Comparison</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Pricing matters, but value matters more. When you compare what you actually get for your money, the difference between Outrank and Ranky becomes stark. Outrank charges a premium for a basic, rigid tool. Ranky gives you enterprise-level capabilities at a fraction of the cost.
+                                    Pricing matters, but value matters more. When you compare what you actually get for your money, the difference between Outrank and Ranky becomes stark. Outrank charges a premium for a basic, rigid tool. Ranky gives you far more control, and every Dooza product starts with a refundable pilot — 100% refund within 14 days.
                                 </p>
                             </div>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="bg-primary-50 border-2 border-primary-200 p-6 rounded-xl">
                                     <div className="text-primary-600 font-bold text-sm mb-2">DOOZA RANKY</div>
-                                    <div className="text-4xl font-bold text-slate-900 mb-2">Fraction<span className="text-lg font-normal text-slate-500"> of $99/mo</span></div>
-                                    <p className="text-slate-500 text-sm mb-4">More features, more control, better results</p>
+                                    <div className="text-4xl font-bold text-slate-900 mb-2">14-day<span className="text-lg font-normal text-slate-500"> refundable pilot</span></div>
+                                    <p className="text-slate-500 text-sm mb-4">100% refund within 14 days. <a href="/pricing" className="text-primary-600 hover:underline">See pricing</a></p>
                                     <ul className="space-y-3">
                                         {[
                                             "Unlimited blog posts per day",
@@ -470,7 +471,7 @@ export default function OutrankVsDoozaRankyContent() {
                             </div>
                             <div className="prose md:prose-lg text-slate-600 mt-8">
                                 <p>
-                                    When you're paying $99 or more per month for Outrank, you're paying for convenience, not capability. You get a tool that publishes one blog post per day using templates you can't customize, with backlinks from sites that might hurt your SEO. With Ranky, every dollar goes toward features that give you real control and produce content that actually ranks.
+                                    When you're paying $99 or more per month for Outrank, you're paying for convenience, not capability. You get a tool that publishes one blog post per day using templates you can't customize, with backlinks from sites that might hurt your SEO. With Ranky, you get features that give you real control and produce content that actually ranks, and you start with a refundable pilot.
                                 </p>
                             </div>
                         </section>
@@ -513,7 +514,7 @@ export default function OutrankVsDoozaRankyContent() {
                                             "You want content that ranks in AI search engines",
                                             "You want to inject your expertise into every post",
                                             "You need custom tools and integrations",
-                                            "You want better results at a fraction of the cost"
+                                            "You want to start with a refundable pilot (100% refund within 14 days)"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex gap-3 text-slate-700">
                                                 <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
@@ -538,7 +539,7 @@ export default function OutrankVsDoozaRankyContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Verdict</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p className="mb-6">
-                                    Outrank.so serves a purpose for complete beginners who want zero involvement in their content strategy. But for anyone who understands that SEO success requires strategy, expertise, and control, Dooza Ranky is the clear winner. It's cheaper, more powerful, more flexible, and built for the future of search where AI engines reward depth, authenticity, and expertise.
+                                    Outrank.so serves a purpose for complete beginners who want zero involvement in their content strategy. But for anyone who understands that SEO success requires strategy, expertise, and control, Dooza Ranky is the clear winner. It's more powerful, more flexible, starts with a refundable pilot, and built for the future of search where AI engines reward depth, authenticity, and expertise.
                                 </p>
                                 <p className="mb-6">
                                     The backlink exchange alone is reason enough to be cautious about Outrank. When your domain authority is on the line, linking yourself to zero-traffic, low-DR sites through an automated exchange is a gamble you don't need to take. With Ranky, you maintain full control over your linking strategy and build authority the right way.
@@ -549,13 +550,13 @@ export default function OutrankVsDoozaRankyContent() {
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Take Control of Your SEO Content?</h3>
-                                <p className="text-slate-600 mb-6 max-w-xl mx-auto">Stop settling for rigid automation. Try Dooza Ranky and experience the difference real AI-powered content control makes.</p>
+                                <p className="text-slate-600 mb-6 max-w-xl mx-auto">Stop settling for rigid automation. Start a Ranky pilot and experience the difference real AI-powered content control makes. 100% refund within 14 days.</p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('ranky')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Try Ranky Free <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book a Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

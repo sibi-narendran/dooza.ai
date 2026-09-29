@@ -2,8 +2,8 @@ import { SITE_URL } from '../../lib/site';
 import SintraAlternativesContent from './SintraAlternativesContent';
 
 export const metadata = {
-    title: '7 Best Sintra AI Alternatives [2026] — #1 Sets Up Free',
-    description: 'No credits, no lock-in. 7 Sintra AI alternatives compared on pricing, features, and limits — the #1 pick includes free engineer setup.',
+    title: '7 Best Sintra AI Alternatives [2026] — No Credit Caps',
+    description: 'No credits, no lock-in. 7 Sintra AI alternatives compared on pricing, features, and limits — the #1 pick starts with a refundable pilot.',
     keywords: [
         'sintra ai alternatives', 'best sintra alternative 2026', 'sintra ai competitors',
         'sintra alternative', 'sintra ai replacement', 'AI employee platforms',
@@ -23,8 +23,8 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: '7 Best Sintra AI Alternatives [2026] — #1 Sets Up Free',
-        description: 'Honest comparison of 7 Sintra AI alternatives — pricing, features, pros, cons. The #1 pick sets up your AI free.',
+        title: '7 Best Sintra AI Alternatives [2026] — No Credit Caps',
+        description: 'Honest comparison of 7 Sintra AI alternatives — pricing, features, pros, cons. The #1 pick starts with a refundable pilot and engineer-led setup.',
         url: `${SITE_URL}/sintra-alternatives`,
         siteName: 'Dooza',
         type: 'article',
@@ -35,8 +35,8 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: '7 Best Sintra AI Alternatives [2026] — #1 Sets Up Free',
-        description: 'Credit limits, rigid helpers, no workflows. 7 Sintra AI alternatives compared — the #1 pick sets up your AI free.',
+        title: '7 Best Sintra AI Alternatives [2026] — No Credit Caps',
+        description: 'Credit limits, rigid helpers, no workflows. 7 Sintra AI alternatives compared — the #1 pick starts with a refundable pilot.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -44,7 +44,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is the best alternative to Sintra AI?',
-        answer: 'It depends on your needs. Dooza is the best all-around alternative for SMBs — it offers named AI employees from $49/mo with a 7-day money-back guarantee, personal founder onboarding, and no credit system. Marblism is the cheapest at $24/mo. Lindy AI has the most integrations (5,000+) but has a 2.0/5 Trustpilot rating.',
+        answer: 'It depends on your needs. Dooza is the best all-around alternative for SMBs — it offers named AI employees with no credit system, a Dooza engineer who scopes your pilot on a free 30-minute call, and a refundable pilot (100% refund within 14 days). Marblism is the cheapest at $24/mo. Lindy AI has the most integrations (5,000+) but has a 2.0/5 Trustpilot rating.',
     },
     {
         question: 'Why are people leaving Sintra AI?',
@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: 'How much does Sintra AI cost?',
-        answer: 'Sintra X has a $97/mo list price but sells at $48.50/mo month to month, $23.60/mo on a 3-month plan ($70.80 up front), or $15.60/mo on a 12-month plan ($187.20 up front). Every plan includes 250 credits a month, with paid top-ups for advanced actions. Single helpers cost $39/mo each. Dooza starts at $49/mo month to month with no credit system. Prices checked September 2026.',
+        answer: 'Sintra X has a $97/mo list price but sells at $48.50/mo month to month, $23.60/mo on a 3-month plan ($70.80 up front), or $15.60/mo on a 12-month plan ($187.20 up front). Every plan includes 250 credits a month, with paid top-ups for advanced actions. Single helpers cost $39/mo each. Dooza has no credit system; pricing depends on the product and every Dooza product starts with a refundable pilot (see dooza.ai/pricing). Sintra prices checked September 2026.',
     },
     {
         question: 'Can Sintra AI helpers talk to each other?',
@@ -68,19 +68,19 @@ const faqData = [
     },
     {
         question: 'Is Dooza better than Sintra AI?',
-        answer: 'For businesses wanting personal founder onboarding, no credit caps, and usage-based pricing without a confusing credit system — yes. Sintra offers more helpers (12+) but caps usage at 250 credits. Dooza has 5 named AI employees with 1,000+ integrations, starting at $49/mo with a 7-day money-back guarantee.',
+        answer: 'For businesses wanting engineer-led setup and no credit caps — yes. Sintra offers more helpers (12+) but caps usage at 250 credits. Dooza has named AI employees for email, social media, SEO, leads, legal, and calls, with 1,000+ app integrations, and every Dooza product starts with a refundable pilot — 100% refund within 14 days.',
     },
     {
         question: 'What is the cheapest Sintra AI alternative?',
-        answer: 'Cubeo AI starts at \u20ac17/month (\u20ac14.17/month billed yearly), and Marblism starts at $24/month on a yearly plan. Sintra itself drops to $15.60/month if you pay $187.20 for a year up front. Dooza starts at $49/month, month to month, and is backed by a 7-day money-back guarantee.',
+        answer: 'Cubeo AI starts at \u20ac17/month (\u20ac14.17/month billed yearly), and Marblism starts at $24/month on a yearly plan. Sintra itself drops to $15.60/month if you pay $187.20 for a year up front. Dooza is not the lowest-priced option; it has no credits and no per-seat fees, and every Dooza product starts with a refundable pilot (see dooza.ai/pricing).',
     },
     {
         question: 'Do any Sintra alternatives offer a free trial?',
-        answer: 'Dooza starts at $49/month with a 7-day money-back guarantee — pay full price and get a refund within 7 days if it is not the right fit. Relevance AI and Cubeo AI have free tiers with limited usage. Motion offers a 7-day free trial, and Lindy offers one when you sign up through Slack. Marblism has a 7-day money-back guarantee, and Sintra has a 14-day one.',
+        answer: 'Dooza does not offer a free trial; every Dooza product starts with a paid, refundable pilot — 100% refund if you ask within 14 days. Relevance AI and Cubeo AI have free tiers with limited usage. Motion offers a 7-day free trial, and Lindy offers one when you sign up through Slack. Marblism has a 7-day money-back guarantee, and Sintra has a 14-day one.',
     },
     {
         question: 'How do I switch from Sintra AI to another platform?',
-        answer: 'Most alternatives let you run both platforms side by side during the transition. Dooza offers a free concierge onboarding call where the founder personally walks you through setup and configuration.',
+        answer: 'Most alternatives let you run both platforms side by side during the transition. Dooza offers a free 30-minute call where a Dooza engineer scopes your refundable pilot and walks you through setup and configuration.',
     },
 ];
 

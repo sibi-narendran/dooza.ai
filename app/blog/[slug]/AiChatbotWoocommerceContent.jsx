@@ -14,11 +14,11 @@ import { Clock, Calendar, MessageCircle } from 'lucide-react';
 
 const faqData = [
     { question: "What is an AI chatbot for WooCommerce?", answer: "An AI chatbot for WooCommerce is an AI assistant that lives on your WordPress storefront and handles customer service, product recommendations, and order tracking automatically. It's trained on your product catalog, shipping policies, and FAQs so it can resolve most tickets without a human in the loop." },
-    { question: "What is the best AI chatbot for WooCommerce in 2026?", answer: "The best WooCommerce chatbot depends on the job. For 24/7 support and order tracking, look for one trained on your catalog. For sales, pick one that recommends products and recovers abandoned carts. Dooza's AI employees do both inside one workflow for $29/month." },
+    { question: "What is the best AI chatbot for WooCommerce in 2026?", answer: "The best WooCommerce chatbot depends on the job. For 24/7 support and order tracking, look for one trained on your catalog. For sales, pick one that recommends products and recovers abandoned carts. Dooza's AI employees do both inside one workflow. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "Can an AI chatbot replace my WooCommerce customer support team?", answer: "It can handle 70–90% of repetitive tickets — order status, returns, sizing, shipping. Humans still own complex cases, refunds outside policy, and VIP escalations. The winning setup is AI on the front line, humans on exceptions." },
     { question: "How does a WooCommerce chatbot increase sales?", answer: "By answering buying-intent questions in real time (sizing, stock, shipping ETA), recommending the right product, and recovering abandoned carts via chat. Stores running an AI assistant typically see a 10–30% lift in conversion on chat sessions." },
     { question: "Is it hard to install an AI chatbot on WooCommerce?", answer: "No. Most modern WooCommerce chatbots install as a WordPress plugin or connect via the WooCommerce REST API in a few clicks. Training takes another 30 minutes — upload your FAQs, brand voice, and shipping policy, and you're live." },
-    { question: "How much does an AI chatbot for WooCommerce cost?", answer: "Single-purpose WooCommerce chatbots run $20–$200/month depending on volume. A bundled AI employee platform like Dooza covers chat, email, SEO, and lead gen for $29/month flat — usually cheaper than buying chat alone." },
+    { question: "How much does an AI chatbot for WooCommerce cost?", answer: "Single-purpose WooCommerce chatbots run $20–$200/month depending on volume. A bundled AI employee platform like Dooza covers chat, email, SEO, and lead gen in one place — often simpler than stitching several single-purpose bots together. Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days." },
 ];
 
 export default function AiChatbotWoocommerceContent() {
@@ -146,7 +146,7 @@ export default function AiChatbotWoocommerceContent() {
                                     Every WooCommerce store hits the same wall: tickets pile up, carts get abandoned, and the founder ends up answering &quot;where&apos;s my order&quot; at midnight. An <strong>AI chatbot for WooCommerce</strong> closes that gap — handling support, recommending products, and recovering carts on autopilot, without hiring a single agent.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    This guide breaks down the best AI chatbots for WooCommerce in 2026, what they actually automate, how to install one in under an hour, and the math on why a $29/month bot beats a $1,500/month VA every time.
+                                    This guide breaks down the best AI chatbots for WooCommerce in 2026, what they actually automate, how to install one in under an hour, and the math on why a $29–$99/month bot beats a $1,500/month VA every time.
                                 </p>
                             </div>
                         </section>
@@ -199,7 +199,7 @@ export default function AiChatbotWoocommerceContent() {
                                     The WordPress plugin directory is full of single-purpose chatbots — one for support, one for recommendations, one for email capture. Stitching five of them together is a maintenance nightmare and your bill creeps past $300/month fast.
                                 </p>
                                 <p>
-                                    The cleaner pattern in 2026 is a single AI employee platform that covers all the chatbot jobs at once. <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> ships AI employees for customer support, product recommendations, lead generation, and email — all configurable for a WooCommerce workflow, all under one $29/month plan.
+                                    The cleaner pattern in 2026 is a single AI employee platform that covers all the chatbot jobs at once. <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> ships AI employees for customer support, product recommendations, lead generation, and email — all configurable for a WooCommerce workflow. Pricing depends on the product (<Link href="/pricing" className="text-primary-600 hover:underline font-medium">see pricing</Link>), and every Dooza product starts with a refundable pilot: 100% refund within 14 days.
                                 </p>
                                 <p>For broader context, see our guide on <Link href="/blog/ai-for-woocommerce-store" className="text-primary-600 hover:underline">AI for WooCommerce stores</Link>.</p>
                             </div>
@@ -233,10 +233,10 @@ export default function AiChatbotWoocommerceContent() {
                                     </div>
                                     <div>
                                         <div className="text-slate-400 text-sm mb-1">AI Chatbot</div>
-                                        <div className="text-3xl font-bold text-primary-400">$29<span className="text-base text-slate-400">/mo</span></div>
+                                        <div className="text-3xl font-bold text-primary-400">$29–$99<span className="text-base text-slate-400">/mo</span></div>
                                     </div>
                                 </div>
-                                <p className="text-slate-300 text-center mt-6 italic">Same coverage. 50× cheaper. Always on.</p>
+                                <p className="text-slate-300 text-center mt-6 italic">Same coverage. A fraction of the cost. Always on.</p>
                             </div>
                         </section>
 

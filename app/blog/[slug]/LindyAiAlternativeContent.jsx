@@ -37,7 +37,7 @@ import {
 const faqData = [
     {
         question: "What is the best Lindy AI alternative?",
-        answer: "Dooza is the top Lindy AI alternative for businesses seeking predictable pricing. Unlike Lindy's credit-based system that can lead to surprise costs, Dooza offers flat-rate pricing at $49/month with all AI employees included. Other alternatives include Gumloop for cheaper automation and Zapier for backend workflows."
+        answer: "Dooza is the top Lindy AI alternative for businesses seeking predictable pricing. Unlike Lindy's credit-based system that can lead to surprise costs, Dooza has no credit system: pricing depends on the product, and every Dooza product starts with a refundable pilot (100% refund within 14 days). Other alternatives include Gumloop for cheaper automation and Zapier for backend workflows."
     },
     {
         question: "Why are users switching from Lindy AI?",
@@ -45,7 +45,7 @@ const faqData = [
     },
     {
         question: "How much does Lindy AI cost compared to alternatives?",
-        answer: "Lindy AI uses a credit-based system starting at $50/month for 5,000 credits, but costs vary based on task complexity ($0.01-$0.10+ per task). Dooza offers fixed pricing at $49/month with unlimited use. Gumloop offers similar capabilities at lower price points, and Zapier starts at $19/month for basic automation."
+        answer: "Lindy AI uses a credit-based system starting at $50/month for 5,000 credits, but costs vary based on task complexity ($0.01-$0.10+ per task). Dooza uses no credits; pricing depends on the product, and every Dooza product starts with a refundable pilot (see dooza.ai/pricing). Gumloop offers similar capabilities at lower price points, and Zapier starts at $19/month for basic automation."
     },
     {
         question: "Is Lindy AI good for small businesses?",
@@ -57,7 +57,7 @@ const faqData = [
     },
     {
         question: "What does Dooza offer that Lindy AI doesn't?",
-        answer: "Dooza offers: predictable flat-rate pricing ($49/month), pre-built AI employees for specific roles (email, social, SEO, sales), free concierge onboarding, no credit system or usage limits, and dedicated support. Lindy requires building agents from scratch and uses variable credit-based pricing."
+        answer: "Dooza offers: pre-built AI employees for specific roles (email, social, SEO, sales), a refundable pilot with a 100% refund within 14 days, engineer-led setup, no credit system, and dedicated support. Lindy requires building agents from scratch and uses variable credit-based pricing."
     }
 ];
 
@@ -65,17 +65,16 @@ const alternatives = [
     {
         name: "Dooza",
         tagline: "Pre-built AI Employees with Fixed Pricing",
-        description: "Dooza offers ready-to-use AI employees for email, social media, SEO, sales, and customer support. No credit system, no usage limits, just predictable monthly pricing.",
-        price: "$49/month",
-        priceNote: "All AI employees included",
-        rating: 4.9,
+        description: "Dooza offers ready-to-use AI employees for email, social media, SEO, sales, and customer support. No credit system to track. Every Dooza product starts with a refundable pilot.",
+        price: "14-day",
+        priceNote: "refundable pilot",
         pros: [
             "Fixed pricing - no surprise credit costs",
             "Pre-built AI employees ready to work day one",
-            "5-minute setup, zero coding required",
-            "Free concierge onboarding support",
-            "Enterprise-grade security included",
-            "Unlimited usage within your plan"
+            "Free 30-minute call to scope your pilot, zero coding required",
+            "Refundable pilot: 100% refund within 14 days",
+            "Encrypted connections and your approval on anything sensitive",
+            "1,000+ app integrations"
         ],
         cons: [
             "Less DIY customization than Lindy",
@@ -279,7 +278,7 @@ export default function LindyAiAlternativeContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -426,10 +425,12 @@ export default function LindyAiAlternativeContent() {
                                                 <div className="text-right">
                                                     <div className="text-2xl font-bold text-primary-600">{alt.price}</div>
                                                     <div className="text-sm text-slate-500">{alt.priceNote}</div>
-                                                    <div className="flex items-center gap-1 mt-2 justify-end">
-                                                        <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-                                                        <span className="font-medium">{alt.rating}</span>
-                                                    </div>
+                                                    {alt.rating && (
+                                                        <div className="flex items-center gap-1 mt-2 justify-end">
+                                                            <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
+                                                            <span className="font-medium">{alt.rating}</span>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
 
@@ -478,7 +479,7 @@ export default function LindyAiAlternativeContent() {
                                                         rel="noopener noreferrer"
                                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors"
                                                     >
-                                                        Try Free <ArrowRight className="w-4 h-4" />
+                                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                                     </a>
                                                 )}
                                             </div>
@@ -505,21 +506,21 @@ export default function LindyAiAlternativeContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Pricing Model</td>
                                             <td className="p-4 border-b text-amber-600">Credit-based</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Fixed monthly</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">No credits</td>
                                             <td className="p-4 border-b">Fixed monthly</td>
                                             <td className="p-4 border-b">Task-based</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Starting Price</td>
                                             <td className="p-4 border-b">$50/month</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/month</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold"><Link href="/pricing" className="hover:underline">Refundable pilot (see /pricing)</Link></td>
                                             <td className="p-4 border-b">$0 (free tier)</td>
                                             <td className="p-4 border-b">$19/month</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Pre-built AI Employees</td>
                                             <td className="p-4 border-b text-red-500">No - build yourself</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - 10+ roles</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - six AI employees</td>
                                             <td className="p-4 border-b text-red-500">No</td>
                                             <td className="p-4 border-b text-red-500">No</td>
                                         </tr>
@@ -533,14 +534,14 @@ export default function LindyAiAlternativeContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Predictable Costs</td>
                                             <td className="p-4 border-b text-red-500">No - variable</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - fixed</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - no credits</td>
                                             <td className="p-4 border-b text-green-600">Yes</td>
                                             <td className="p-4 border-b text-amber-600">Somewhat</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Onboarding Support</td>
                                             <td className="p-4 border-b">Self-serve</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Free Concierge</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Engineer-led pilot</td>
                                             <td className="p-4 border-b">Self-serve</td>
                                             <td className="p-4 border-b">Tiered support</td>
                                         </tr>
@@ -565,7 +566,7 @@ export default function LindyAiAlternativeContent() {
                                     <h3 className="font-bold text-primary-800 mb-4">Choose Dooza if you...</h3>
                                     <ul className="space-y-2 text-slate-700">
                                         <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want AI employees ready to work immediately</li>
-                                        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Need predictable, fixed monthly pricing</li>
+                                        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want predictable costs with no credit system</li>
                                         <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Don't want to build agents from scratch</li>
                                         <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Value onboarding support and guidance</li>
                                     </ul>
@@ -593,10 +594,10 @@ export default function LindyAiAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">How to Switch from Lindy AI to Dooza</h2>
                             <div className="space-y-4">
                                 {[
-                                    { step: "1", title: "Sign Up for Dooza", desc: "Create your account in under 2 minutes. Starts at $49/mo with a 7-day money-back guarantee." },
+                                    { step: "1", title: "Start Your Dooza Pilot", desc: "Create your account in under 2 minutes. Every Dooza product starts with a refundable pilot: 100% refund within 14 days." },
                                     { step: "2", title: "Choose Your AI Employees", desc: "Select from pre-built roles: email assistant, social media manager, SEO specialist, sales rep, and more." },
                                     { step: "3", title: "Connect Your Tools", desc: "Link your email, calendar, CRM, and social accounts with one-click integrations." },
-                                    { step: "4", title: "Get Onboarding Help", desc: "Our concierge team will help you replicate your Lindy workflows in Dooza—for free." },
+                                    { step: "4", title: "Get Onboarding Help", desc: "A Dooza engineer will help you replicate your Lindy workflows during your pilot." },
                                     { step: "5", title: "Run Both in Parallel", desc: "Test Dooza alongside Lindy until you're confident, then cancel Lindy when ready." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl">
@@ -620,20 +621,20 @@ export default function LindyAiAlternativeContent() {
                                     But if you're a business owner who wants AI automation without the credit anxiety, unpredictable costs, or need to build everything yourself—there are better options.
                                 </p>
                                 <p>
-                                    <strong>Dooza</strong> gives you pre-built AI employees ready to work on day one, with fixed pricing you can actually budget for.
+                                    <strong>Dooza</strong> gives you pre-built AI employees ready to work on day one, with no credits to track and a refundable pilot to start.
                                 </p>
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Try a Lindy Alternative?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Starts at $49/mo with a 7-day money-back guarantee. Predictable pricing you can actually budget for.
+                                    Start with a refundable pilot: 100% refund within 14 days. Pricing depends on the product; see <Link href="/pricing" className="text-primary-600 hover:underline">pricing</Link>.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book a Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

@@ -538,7 +538,7 @@ function ToolPanel({ page }) {
                         </p>
                         <div className="mt-5">
                             <BookDemoButton source={`${page.slug}_submitted`} variant="primary" size="xl">
-                                Book a Demo
+                                Book a free pilot call
                             </BookDemoButton>
                         </div>
                     </div>
@@ -560,7 +560,7 @@ function PitchSection({ page }) {
                     <p className="text-lg leading-relaxed text-slate-600">{page.pitchText}</p>
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                         <BookDemoButton source={`${page.slug}_pitch`} variant="primary" size="lg">
-                            Speak to Founder
+                            Book a free pilot call
                         </BookDemoButton>
                         <Link
                             href="/"
@@ -772,10 +772,10 @@ export default function CustomerServiceToolPage({ page }) {
                             Want the workflow built after the report?
                         </h2>
                         <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-slate-300">
-                            Book a demo and we will show how Dooza turns customer support automation from a calculator result into a working workflow.
+                            Book a demo and we will show how Dooza turns customer support automation from a calculator result into a working workflow. Start with a refundable pilot — 100% refund within 14 days.
                         </p>
                         <BookDemoButton source={`${page.slug}_bottom`} variant="primary" size="xl">
-                            Book a Demo
+                            Book a free pilot call
                         </BookDemoButton>
                     </div>
                 </section>

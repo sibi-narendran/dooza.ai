@@ -72,7 +72,7 @@ function StepIcon({ url }) {
 export default function HowItWorksBrain({
     className = 'bg-warm',
     ctaSource = 'how_it_works',
-    ctaLabel = 'Start My Free Setup',
+    ctaLabel = 'Book a free pilot call',
 }) {
     const reduceMotion = useReducedMotion();
 

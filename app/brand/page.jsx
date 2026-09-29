@@ -56,8 +56,8 @@ const colors = [
 ];
 
 const boilerplate = {
-    oneLiner: 'Dooza provides forward deployed AI engineers who set up AI employees for small businesses — free to start, pay only to keep it.',
-    paragraph: 'Dooza is a forward deployed AI engineering company. A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it — built on Dooza’s own platform: Dooza Workforce (AI employees for email, social, SEO, leads, and calls) and Dooza Agents (approvals, traces, and tests that keep automation under control). Setup is free; businesses pay only to keep what works. Dooza.ai is a product of Adam Laboratory Inc., a Delaware C-Corporation.',
+    oneLiner: 'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.',
+    paragraph: 'Dooza is an AI-native company that builds AI products and services for small businesses. Dooza Workforce is an AI workforce app with ready-made AI employees for email, social media, SEO, leads, legal documents, and calls. Dooza Agents is an AI agentic platform with custom AI agents built and maintained by Dooza engineers. Dooza also runs done-for-you services, including AI receptionist, AI customer support, AI visibility (GEO), and workflow automation. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza.ai is a product of Adam Laboratory Inc., a Delaware C-Corporation.',
 };
 
 function SectionTitle({ children, sub }) {
@@ -171,13 +171,13 @@ export default function BrandPage() {
                         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Workforce</h3>
-                                <p className="mt-1 text-sm leading-relaxed text-slate-600">AI employees for email, social, SEO, leads, and calls. From $49/mo.</p>
+                                <p className="mt-1 text-sm leading-relaxed text-slate-600">AI workforce app: ready-made AI employees for email, social, SEO, leads, and calls. Starts with a refundable pilot.</p>
                                 <Link href="/workforce" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai/workforce →</Link>
                             </div>
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Agents</h3>
-                                <p className="mt-1 text-sm leading-relaxed text-slate-600">Approvals and logs that keep every automation under control.</p>
-                                <Link href="/" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai/workflow →</Link>
+                                <p className="mt-1 text-sm leading-relaxed text-slate-600">AI agentic platform: custom AI agents built and maintained by Dooza engineers. Starts with a refundable pilot.</p>
+                                <Link href="/" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai →</Link>
                             </div>
                         </div>
                     </div>

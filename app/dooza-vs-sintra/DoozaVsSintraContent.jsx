@@ -16,23 +16,22 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const comparisonRows = [
-    { feature: 'Monthly Price', dooza: '$49/mo flat', competitor: '$48.50/mo (discounted from $97)', doozaWins: true },
-    { feature: 'Growth Price', dooza: '$79/mo — no long-term lock-in required', competitor: '$15.60/mo — 12-month commitment', doozaWins: false },
-    { feature: 'Task / Usage Limits', dooza: 'Unlimited', competitor: '250 credits per month', doozaWins: true },
-    { feature: 'Number of AI Agents', dooza: '7 specialized employees', competitor: '12+ helpers', doozaWins: false },
-    { feature: 'Onboarding', dooza: 'Personal setup call with founder', competitor: 'Self-serve only', doozaWins: true },
-    { feature: 'Integrations', dooza: '17 direct (Gmail, Slack, LinkedIn, Shopify…)', competitor: '15+ direct integrations', doozaWins: false },
-    { feature: 'Setup Time', dooza: '~20 min (guided)', competitor: 'Hours to days (DIY)', doozaWins: true },
-    { feature: 'Money-Back Guarantee', dooza: '7 days', competitor: '14 days', doozaWins: false },
+    { feature: 'Price', dooza: 'Refundable pilot (see /pricing)', competitor: '$48.50/mo (discounted from $97); $15.60/mo on a 12-month commitment', doozaWins: false },
+    { feature: 'Task / Usage Limits', dooza: 'No credits', competitor: '250 credits per month', doozaWins: true },
+    { feature: 'Number of AI Agents', dooza: 'Maily, Somi, Ranky, Stan, Linda, Rachel', competitor: '12+ helpers', doozaWins: false },
+    { feature: 'Onboarding', dooza: 'Dooza engineer scopes your pilot on a free 30-min call', competitor: 'Self-serve only', doozaWins: true },
+    { feature: 'Integrations', dooza: '1,000+ app integrations', competitor: '15+ direct integrations', doozaWins: false },
+    { feature: 'Setup Time', dooza: 'One 30-min guided call', competitor: 'Hours to days (DIY)', doozaWins: true },
+    { feature: 'Refund Window', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: '14-day money-back guarantee', doozaWins: false },
     { feature: 'Brand Personalization', dooza: 'Auto-extracted from your site', competitor: 'Brain AI knowledge base', doozaWins: false },
-    { feature: 'Free Plan', dooza: 'Yes — free to start', competitor: 'No free tier', doozaWins: true },
+    { feature: 'Try Before Committing', dooza: 'Refundable pilot scoped with an engineer on a free call', competitor: 'Self-serve; 14-day money-back guarantee', doozaWins: true },
 ];
 
 const doozaAdvantages = [
     { icon: Infinity, title: 'No Credit Caps', desc: 'Dooza has no 250-credit ceiling. Use your AI employees as much as you need without rationing.' },
-    { icon: Zap, title: 'Personal Setup Call', desc: 'A free 20-minute call with the founder to configure your workspace together. Not a chatbot — a real person.' },
-    { icon: Shield, title: 'Flat $49/mo Pricing', desc: 'No "original price" vs "discounted" confusion. One price, everything included, cancel anytime.' },
-    { icon: Puzzle, title: 'Free Plan Available', desc: 'Try Dooza before committing. No credit card required to get started.' },
+    { icon: Zap, title: 'A Real Engineer', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call and sets up your AI employees with you. Not a chatbot — a real person.' },
+    { icon: Shield, title: 'No Credits, No Per-Seat Fees', desc: 'No "original price" vs "discounted" confusion and no credit meter. Pricing depends on the product — see /pricing.' },
+    { icon: Puzzle, title: 'Refundable Pilot', desc: 'Every Dooza product starts with a refundable pilot. If it is not right for you, ask within 14 days for a 100% refund.' },
 ];
 
 const userQuotes = [
@@ -45,9 +44,9 @@ const userQuotes = [
 
 const switchReasons = [
     { title: 'The credit cap creates anxiety', desc: 'When every AI action burns a credit, you start rationing usage instead of letting agents work freely. Dooza removes that mental overhead entirely.' },
-    { title: 'Setup took too long without help', desc: 'Sintra\'s self-serve approach means hours configuring agents. With Dooza, the founder walks you through setup in a free 20-minute call.' },
+    { title: 'Setup took too long without help', desc: 'Sintra\'s self-serve approach means hours configuring agents. With Dooza, a Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you.' },
     { title: 'Copy-pasting between helpers was exhausting', desc: 'Because Sintra helpers don\'t share context, multi-step workflows require manually moving data between agents.' },
-    { title: 'The free plan removed the risk', desc: 'Dooza offers a free plan so you can evaluate the platform before committing. Sintra has no free tier.' },
+    { title: 'The refundable pilot removed the risk', desc: 'Every Dooza product starts with a refundable pilot — 100% refund within 14 days — and a Dooza engineer scopes it with you instead of leaving you to self-serve.' },
 ];
 
 export default function DoozaVsSintraContent({ faqData }) {
@@ -76,7 +75,7 @@ export default function DoozaVsSintraContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Comparison — Updated March 2026
+                                    Comparison — Updated September 2026
                                 </div>
                             </div>
 
@@ -85,16 +84,16 @@ export default function DoozaVsSintraContent({ faqData }) {
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                The #1 Sintra AI alternative for unlimited AI employees.
+                                The #1 Sintra AI alternative with no credit caps.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Looking for a Sintra AI alternative? Sintra AI offers 12+ helpers capped at 250 credits/month. Dooza offers 7 purpose-built agents with unlimited tasks and a free personal founder setup call. Here is the full breakdown.
+                                Looking for a Sintra AI alternative? Sintra AI offers 12+ helpers capped at 250 credits/month. Dooza has no credits, a Dooza engineer who scopes your pilot on a free 30-minute call, and a refundable pilot — 100% refund within 14 days. Here is the full breakdown.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="sintra_hero">Try Dooza Free</SignupButton>
-                                <BookDemoButton source="sintra_hero" />
+                                <SignupButton source="sintra_hero">Start your pilot</SignupButton>
+                                <BookDemoButton source="sintra_hero">Book a free pilot call</BookDemoButton>
                             </div>
                         </div>
                     </div>
@@ -135,7 +134,7 @@ export default function DoozaVsSintraContent({ faqData }) {
                                     Sintra AI offers more helpers (12+), but caps every plan at <strong>250 credits per month</strong>. Once those credits run out, you pay for top-ups or wait. Helpers also <strong>cannot share context</strong> — you copy-paste between them manually.
                                 </p>
                                 <p className="text-lg text-slate-600 leading-relaxed">
-                                    Dooza takes the opposite approach: 7 purpose-built agents, <strong>unlimited tasks</strong>, a <strong>personal setup call with the founder</strong>, and a <strong>flat $49/month</strong> with no credit meters. It also offers a free plan to get started.
+                                    Dooza takes the opposite approach: AI employees with one clear job each, <strong>no credits</strong>, a <strong>free 30-minute call with a Dooza engineer</strong> to scope your pilot, and a <strong>refundable pilot</strong> — 100% refund within 14 days.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -209,7 +208,7 @@ export default function DoozaVsSintraContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Pricing and features as of March 2026. Sintra AI pricing reflects their displayed discounted rates.
+                                Competitor pricing and features as of March 2026. Sintra AI pricing reflects their displayed discounted rates.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -235,10 +234,10 @@ export default function DoozaVsSintraContent({ faqData }) {
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="bg-primary-500/10 backdrop-blur-sm border border-primary-400/20 rounded-2xl p-8">
                                     <p className="text-primary-300 font-bold text-sm uppercase tracking-wider mb-2">Dooza</p>
-                                    <div className="text-4xl font-bold text-white mb-1">$49<span className="text-base font-normal text-slate-400">/month</span></div>
-                                    <p className="text-sm text-slate-400 mb-5">No contracts. Cancel anytime.</p>
+                                    <div className="text-3xl font-bold text-white mb-1">Refundable pilot</div>
+                                    <p className="text-sm text-slate-400 mb-5">100% refund within 14 days. Pricing depends on the product — <Link href="/pricing" className="underline text-primary-300">see /pricing</Link>.</p>
                                     <ul className="space-y-2.5 text-sm">
-                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '7-day money-back guarantee'].map((item, i) => (
+                                        {['AI employees with one job each', 'No credits', 'No per-seat fees', '1,000+ app integrations', 'Free 30-minute call to scope your pilot', '100% refund within 14 days'].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {item}
@@ -358,11 +357,11 @@ export default function DoozaVsSintraContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Ready to Switch?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Book a free 20-minute call with the founder. No sales pitch — we will walk through your needs and show you exactly what Dooza would handle.
+                                Book a free 30-minute call with a Dooza engineer to scope your refundable pilot. No sales pitch — we will walk through your needs and show you exactly what Dooza would handle.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="sintra_cta">Try Dooza Free</SignupButton>
-                                <BookDemoButton source="sintra_cta" />
+                                <SignupButton source="sintra_cta">Start your pilot</SignupButton>
+                                <BookDemoButton source="sintra_cta">Book a free pilot call</BookDemoButton>
                             </div>
                         </ScrollReveal>
                     </div>

@@ -237,7 +237,7 @@ export default function VirtualVsHumanContent() {
                                     A two-person founding team in 2026 can ship the output of a 20-person team in 2022. That&apos;s not a prediction — it&apos;s the new baseline. The companies that figure out the layering early are the ones that pull away.
                                 </p>
                                 <p>
-                                    If you want to see what an AI employee actually does day-to-day before committing to anything, <Link href="/" className="text-primary-600 underline">try Dooza</Link> — the same workflow this comparison describes, running live.
+                                    If you want to see what an AI employee actually does day-to-day before committing to anything, <Link href="/" className="text-primary-600 underline">start a Dooza pilot</Link> — the same workflow this comparison describes, running live, with a 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>

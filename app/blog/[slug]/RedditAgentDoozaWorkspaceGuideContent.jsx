@@ -45,7 +45,7 @@ const faqData = [
     },
     {
         question: "How much does the Reddit Agent cost?",
-        answer: "Dooza's Reddit Agent is included in the $29/month plan, which also gives you access to all other AI employees — social media, SEO, email, and more. No per-agent fees or usage caps."
+        answer: "Pricing depends on the product; see dooza.ai/pricing. Every Dooza product, including the Reddit Agent, starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Can I control what the Reddit Agent posts?",
@@ -53,7 +53,7 @@ const faqData = [
     },
     {
         question: "How long does it take to set up the Reddit Agent?",
-        answer: "Most users are live in under 10 minutes. As shown in the video tutorial above, it's a simple step-by-step process — sign in, configure your subreddits and keywords, set your tone, and activate. Free onboarding support is included."
+        answer: "A Dooza engineer scopes your pilot on a free 30-minute call, and the agent can start working the same day. As shown in the video tutorial above, it's a simple step-by-step process — sign in, configure your subreddits and keywords, set your tone, and activate."
     },
     {
         question: "Does the Reddit Agent work for any subreddit or niche?",
@@ -143,7 +143,7 @@ export default function RedditAgentDoozaWorkspaceGuideContent() {
                             className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-xl"
                         >
                             <Bot size={20} />
-                            Get Reddit Agent — $29/mo
+                            Start your pilot
                         </a>
                     </div>
                 </div>
@@ -190,7 +190,7 @@ export default function RedditAgentDoozaWorkspaceGuideContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Get Started Free
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -312,7 +312,7 @@ export default function RedditAgentDoozaWorkspaceGuideContent() {
                                     {
                                         step: '1',
                                         title: 'Log Into Dooza Workspace',
-                                        desc: 'Head to your Dooza Workspace dashboard. If you don\'t have an account yet, sign up — it takes under 2 minutes and includes a free onboarding call with our team.'
+                                        desc: 'Head to your Dooza Workspace dashboard. If you don\'t have an account yet, start your pilot — a Dooza engineer scopes it with you on a free 30-minute call.'
                                     },
                                     {
                                         step: '2',
@@ -472,8 +472,8 @@ export default function RedditAgentDoozaWorkspaceGuideContent() {
                                 {[
                                     {
                                         step: '1',
-                                        title: 'Sign Up for Dooza',
-                                        desc: 'Create your free account in under 2 minutes. No credit card required to start.'
+                                        title: 'Start Your Pilot',
+                                        desc: 'Start with a refundable pilot — 100% refund within 14 days.'
                                     },
                                     {
                                         step: '2',
@@ -498,9 +498,9 @@ export default function RedditAgentDoozaWorkspaceGuideContent() {
 
                             <div className="bg-primary-50 border border-primary-100 p-6 rounded-xl text-center">
                                 <p className="text-slate-600 mb-2">
-                                    <strong className="text-slate-900">$29/month</strong> — includes Reddit Agent + all AI employees
+                                    <strong className="text-slate-900">Refundable pilot</strong> — 100% refund within 14 days
                                 </p>
-                                <p className="text-sm text-slate-500">Free onboarding call included. Cancel anytime.</p>
+                                <p className="text-sm text-slate-500">Pricing depends on the product. <a href="/pricing" className="text-primary-600 hover:underline">See pricing</a>.</p>
                             </div>
                         </section>
 
@@ -528,14 +528,14 @@ export default function RedditAgentDoozaWorkspaceGuideContent() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a
                                         href={CAL_BOOKING_URL}
                                         onClick={handleAction}
                                         className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all"
                                     >
-                                        <Calendar className="w-4 h-4" /> Book a Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

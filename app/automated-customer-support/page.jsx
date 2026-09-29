@@ -16,6 +16,7 @@ import {
     Wrench,
     Zap,
 } from 'lucide-react';
+import Link from 'next/link';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -32,7 +33,7 @@ export const metadata = {
         absolute: 'Automated Customer Service & Support Software | Dooza',
     },
     description:
-        'Done-for-you automated customer service for $998/mo. We set up your AI support workflows, connect your tools, and handle everything. 7-day money-back guarantee.',
+        'Done-for-you automated customer service from Dooza. We set up your AI support workflows, connect your tools, and handle everything. Start with a refundable pilot: 100% refund within 14 days.',
     keywords: [
         'automated customer service',
         'customer service automation',
@@ -53,7 +54,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'Automated Customer Service & Support Software | Dooza',
-        description: 'Done-for-you AI customer service. We set it up, you sit back. $998/mo with 7-day money-back guarantee.',
+        description: 'Done-for-you AI customer service. We set it up, you sit back. Start with a refundable pilot: 100% refund within 14 days.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -62,7 +63,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Automated Customer Service & Support Software | Dooza',
-        description: 'Done-for-you AI customer service. We set it up, you sit back. $998/mo with 7-day money-back guarantee.',
+        description: 'Done-for-you AI customer service. We set it up, you sit back. Start with a refundable pilot: 100% refund within 14 days.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -107,14 +108,14 @@ const howItWorks = [
 ];
 
 const managedFeatures = [
-    'All AI employees included',
-    '84 hours of done-for-you work capacity',
+    'Scoped with a Dooza engineer on a free pilot call',
+    'Built and maintained by Dooza engineers',
     'Complete setup handled by our team',
     'Dooza Agents connected for writing workflows',
     'Priority workflow setup and review',
     '1,000+ app integrations',
     'Connect Shopify, Zendesk, Freshdesk, and more',
-    '7-day money-back guarantee',
+    '100% refund within 14 days',
 ];
 
 const competitors = [
@@ -154,7 +155,7 @@ const integrations = [
 const trustBadges = [
     { icon: Zap, text: '24/7 operation' },
     { icon: Plug, text: '1,000+ integrations' },
-    { icon: ShieldCheck, text: '7-day money-back guarantee' },
+    { icon: ShieldCheck, text: 'Refundable pilot: 100% refund within 14 days' },
 ];
 
 const faqs = [
@@ -168,11 +169,11 @@ const faqs = [
     },
     {
         question: 'How is Dooza different from Gorgias or Zendesk?',
-        answer: 'Gorgias, Zendesk, Freshdesk, and Intercom are powerful tools — but they require your team to configure automations, rules, and workflows. With Dooza\'s Managed plan, we do all of that for you. You get the automation without the setup headache.',
+        answer: 'Gorgias, Zendesk, Freshdesk, and Intercom are powerful tools — but they require your team to configure automations, rules, and workflows. With Dooza, our engineers do all of that for you. You get the automation without the setup headache.',
     },
     {
-        question: 'Is there a money-back guarantee?',
-        answer: 'Yes. The Managed plan comes with a 7-day money-back guarantee. If we don\'t deliver value in the first week, you get a full refund — no questions asked. Cancel anytime, no contracts.',
+        question: 'Can I get a refund?',
+        answer: 'Yes. Every Dooza product starts with a refundable pilot: you pay for the pilot, and if you ask within 14 days you get a 100% refund. Pricing depends on the product; see dooza.ai/pricing.',
     },
     {
         question: 'Will AI send replies without my approval?',
@@ -184,11 +185,11 @@ const faqs = [
     },
     {
         question: 'How long does setup take?',
-        answer: 'Our team typically has your first workflow live within 3 days. By day 7, you\'ll have a full review of what\'s working, what it costs to run monthly, and whether to continue. The entire setup is handled by us.',
+        answer: 'Our team typically has your first workflow live within 3 days. Within the 14-day pilot, you\'ll have a full review of what\'s working and whether to continue, with a 100% refund if you ask within 14 days. The entire setup is handled by us.',
     },
     {
         question: 'Can Dooza replace outsourcing?',
-        answer: 'For most small and mid-size businesses, yes. Outsourced agents cost $1,500–3,500/mo per person. Dooza\'s Managed plan is $998/mo total and handles the same repetitive tickets 24/7 with faster response times and no training ramp-up.',
+        answer: 'For most small and mid-size businesses, yes. Outsourced agents cost $1,500–3,500/mo per person. Dooza handles the same repetitive tickets 24/7 with faster response times and no training ramp-up, and you can start with a refundable pilot to test it on your own tickets.',
     },
 ];
 
@@ -215,7 +216,7 @@ const schemas = [
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         url: pageUrl,
-        offers: { '@type': 'Offer', name: 'Managed', price: '998', priceCurrency: 'USD', url: pageUrl },
+        offers: { '@type': 'Offer', name: 'Refundable pilot', description: 'Refundable pilot, 100% refund within 14 days. Pricing depends on the product; see https://www.dooza.ai/pricing.', url: pageUrl },
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {
@@ -256,7 +257,7 @@ export default function AutomatedCustomerSupportPage() {
                     <div className="relative z-10 mx-auto max-w-4xl text-center">
                         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/90 px-4 py-2 text-sm font-black text-primary-800 shadow-sm backdrop-blur">
                             <Sparkles className="h-4 w-4" />
-                            Done-for-you · $998/mo · We set it up
+                            Done-for-you · Refundable pilot · We set it up
                         </div>
                         <h1 className="font-serif text-4xl font-extrabold leading-[1.08] text-slate-950 md:text-6xl">
                             Automated Customer Service — We Set It Up For You
@@ -266,7 +267,7 @@ export default function AutomatedCustomerSupportPage() {
                         </p>
                         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                             <BookDemoButton source="automated_customer_support_hero" variant="primary" size="xl">
-                                Get Started — $998/mo
+                                Book a free pilot call
                             </BookDemoButton>
                             <a
                                 href="#comparison"
@@ -348,7 +349,7 @@ export default function AutomatedCustomerSupportPage() {
                                     <div className="mb-2 inline-flex rounded-full bg-primary-50 px-3 py-1 text-xs font-black uppercase tracking-wider text-primary-800">
                                         The Dooza difference
                                     </div>
-                                    <h3 className="text-2xl font-black text-slate-950">Dooza Managed — $998/mo</h3>
+                                    <h3 className="text-2xl font-black text-slate-950">Dooza, done for you</h3>
                                     <p className="mt-2 max-w-lg text-base font-semibold leading-relaxed text-slate-600">
                                         We connect your tools, build your workflows, configure your rules, test with real tickets, and optimize everything. You don't spend a single hour on setup.
                                     </p>
@@ -358,7 +359,7 @@ export default function AutomatedCustomerSupportPage() {
                                     </div>
                                 </div>
                                 <BookDemoButton source="automated_customer_support_comparison" variant="primary" size="lg">
-                                    Get Started
+                                    Book a free pilot call
                                 </BookDemoButton>
                             </div>
                         </div>
@@ -430,30 +431,28 @@ export default function AutomatedCustomerSupportPage() {
                 {/* ── Dooza demo video ── */}
                 <VideoSection />
 
-                {/* ── Managed Plan ── */}
+                {/* ── Refundable pilot ── */}
                 <section id="pricing" className="scroll-mt-24 px-4 py-16 md:px-8 md:py-24">
                     <div className="mx-auto max-w-3xl">
                         <div className="mb-10 text-center">
                             <SectionLabel>Pricing</SectionLabel>
                             <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl">
-                                One plan. Everything included.
+                                Start with a refundable pilot.
                             </h2>
                             <p className="mx-auto mt-4 max-w-xl text-lg font-semibold text-slate-600">
-                                No per-agent fees. No setup charges. No surprises.
+                                Pricing depends on the product; every Dooza product starts with a refundable pilot.{' '}
+                                <Link href="/pricing" className="text-primary-700 underline">See pricing</Link>
                             </p>
                         </div>
 
                         <div className="rounded-3xl border-2 border-primary-400 bg-white p-8 shadow-xl shadow-primary-100/50 md:p-10">
                             <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
                                 <div>
-                                    <h3 className="text-2xl font-black text-slate-950">Managed Plan</h3>
+                                    <h3 className="text-2xl font-black text-slate-950">Refundable pilot</h3>
                                     <p className="mt-1 text-base font-semibold text-slate-600">We set up everything — you don't lift a finger</p>
                                 </div>
                                 <div className="text-right">
-                                    <div className="flex items-baseline gap-1">
-                                        <span className="text-5xl font-extrabold text-slate-950 font-serif">$998</span>
-                                        <span className="text-slate-600 text-sm">USD/ month</span>
-                                    </div>
+                                    <span className="text-lg font-extrabold text-slate-950">100% refund within 14 days</span>
                                 </div>
                             </div>
 
@@ -470,9 +469,9 @@ export default function AutomatedCustomerSupportPage() {
                                 <div className="flex items-start gap-3">
                                     <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" />
                                     <div>
-                                        <div className="text-base font-black text-slate-950">7-day money-back guarantee</div>
+                                        <div className="text-base font-black text-slate-950">100% refund within 14 days</div>
                                         <p className="mt-1 text-sm font-semibold leading-relaxed text-slate-600">
-                                            Review the first workflow by day 7. If it doesn't prove value, get a full refund — no questions asked. Cancel anytime.
+                                            You pay for the pilot. Review the first workflows on your real tickets, and if you ask within 14 days, you get a 100% refund.
                                         </p>
                                     </div>
                                 </div>
@@ -480,9 +479,9 @@ export default function AutomatedCustomerSupportPage() {
 
                             <div className="mt-8 flex flex-col items-center gap-3">
                                 <BookDemoButton source="automated_customer_support_pricing" variant="primary" size="xl">
-                                    Get Started — $998/mo
+                                    Book a free pilot call
                                 </BookDemoButton>
-                                <p className="text-sm font-semibold text-slate-500">Free setup call with the founder · No commitment before the call</p>
+                                <p className="text-sm font-semibold text-slate-500">Free 30-minute call with a Dooza engineer to scope your pilot</p>
                             </div>
                         </div>
                     </div>
@@ -504,7 +503,7 @@ export default function AutomatedCustomerSupportPage() {
                             </p>
                             <div className="mt-6">
                                 <BookDemoButton source="automated_customer_support_video" variant="primary" size="lg">
-                                    Get Started
+                                    Book a free pilot call
                                 </BookDemoButton>
                             </div>
                         </div>
@@ -550,11 +549,11 @@ export default function AutomatedCustomerSupportPage() {
                                     Stop configuring. Start automating.
                                 </h2>
                                 <p className="mt-4 max-w-xl text-lg font-semibold leading-relaxed text-slate-600">
-                                    $998/mo. We set up your AI support workflows, connect your tools, and handle everything. 7-day money-back guarantee.
+                                    We set up your AI support workflows, connect your tools, and handle everything. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                             </div>
                             <BookDemoButton source="automated_customer_support_final" variant="primary" size="xl">
-                                Get Started — $998/mo
+                                Book a free pilot call
                             </BookDemoButton>
                         </div>
                     </div>

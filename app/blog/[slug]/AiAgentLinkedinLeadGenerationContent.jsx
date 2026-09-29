@@ -59,7 +59,7 @@ const faqData = [
     },
     {
         question: "How long does it take to see results from AI LinkedIn outreach?",
-        answer: "Most businesses see their first qualified leads within 1-2 weeks. Pipeline impact becomes significant within 30-60 days as the AI optimizes messaging based on response patterns. By month two, most users report a steady stream of qualified conversations entering their pipeline."
+        answer: "Most businesses see their first qualified leads within 1-2 weeks. Pipeline impact becomes significant within 30-60 days as the AI optimizes messaging based on response patterns. By month two, the goal is a steady stream of qualified conversations entering your pipeline."
     }
 ];
 
@@ -145,7 +145,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get AI Lead Generation - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -194,7 +194,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Stan Free
+                                    Get Stan
                                 </a>
                             </div>
 
@@ -642,7 +642,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Five new customers per month from LinkedIn alone — at a cost of $49/month for the AI agent doing the work. If your average deal size is $5,000, that's <strong>$25,000 in new revenue per month</strong> from a $29 investment. Even at a $1,000 deal size, the ROI is 172x.
+                                    Five new customers per month from LinkedIn alone, with an AI agent doing the prospecting and follow-up. If your average deal size is $5,000, that's <strong>$25,000 in new revenue per month</strong> — for a fraction of what a human SDR or agency costs.
                                 </p>
                                 <p>
                                     Compare that to hiring an SDR at $5,000-7,000/month who might book 15-20 meetings — with 3-6 months of ramp-up time before they hit those numbers. The AI starts producing results in week one.
@@ -661,9 +661,9 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     <p className="text-xs text-slate-500 mt-1">Shared reps, generic outreach</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
-                                    <p className="text-sm text-green-800 font-medium">Stan + AI Team (Dooza)</p>
-                                    <p className="text-xs text-green-600 mt-1">24/7, personalized at scale</p>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
+                                    <p className="text-sm text-green-800 font-medium">Stan + AI Team (Dooza) refundable pilot</p>
+                                    <p className="text-xs text-green-600 mt-1">24/7, personalized at scale. <Link href="/pricing" className="underline">See pricing</Link></p>
                                 </div>
                             </div>
                         </section>
@@ -734,7 +734,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     Stan doesn't work alone. He's part of your <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">full AI workforce</Link> — working alongside Rachel (AI receptionist for inbound calls), Maily (email management), Somi (social media), Ranky (SEO), and Linda (legal compliance). When Stan generates a lead, the rest of the team supports the relationship — answering calls, sending emails, nurturing on social.
                                 </p>
                                 <p>
-                                    The entire team costs <strong>$49/month</strong>. That's less than a single LinkedIn Premium subscription — and you get AI employees working 24/7.
+                                    Pricing depends on the product (<Link href="/pricing" className="text-primary-600 hover:underline font-medium">see pricing</Link>), and every Dooza product starts with a <strong>refundable pilot: 100% refund within 14 days</strong> — with AI employees working 24/7.
                                 </p>
                             </div>
 
@@ -763,8 +763,8 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Sign Up & Book Your Free Onboarding Call",
-                                        desc: "Create your Dooza account and schedule a 30-minute onboarding session. Our concierge team will configure Stan to match your business, target market, and sales process. Tell us who your ideal customers are, what you sell, and how you qualify leads."
+                                        title: "Book a Free Pilot Call",
+                                        desc: "Book a free 30-minute call where a Dooza engineer scopes your pilot and configures Stan to match your business, target market, and sales process. Tell us who your ideal customers are, what you sell, and how you qualify leads."
                                     },
                                     {
                                         step: "2",
@@ -799,14 +799,14 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Put LinkedIn on Auto-Pilot?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Every day without AI-powered outreach is 20 personalized messages you didn't send, connections you didn't make, and deals your competitors closed instead. Stan starts working in 30 minutes.
+                                    Every day without AI-powered outreach is 20 personalized messages you didn't send, connections you didn't make, and deals your competitors closed instead. Stan can start working the same day, and your pilot is 100% refundable within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

@@ -36,11 +36,11 @@ const faqData = [
     },
     {
         question: 'What is the best email automation tool for small businesses?',
-        answer: 'For small businesses that want email handled without building complicated workflows, Dooza is the clear winner. Maily, Dooza\'s AI email employee, can triage inboxes, draft replies, send follow-ups, and support sales or customer workflows for a flat monthly price.'
+        answer: 'For small businesses that want email handled without building complicated workflows, Dooza is the clear winner. Maily, Dooza\'s AI email employee, can triage inboxes, draft replies, send follow-ups, and support sales or customer workflows. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.'
     },
     {
         question: 'How is Dooza different from Mailchimp or ActiveCampaign?',
-        answer: 'Mailchimp and ActiveCampaign are primarily campaign and sequence tools. Dooza is an AI employee platform. Instead of only sending preset campaigns, Dooza can understand context, draft replies, follow up with leads, and coordinate email with sales, social, SEO, and phone workflows.'
+        answer: 'Mailchimp and ActiveCampaign are primarily campaign and sequence tools. Dooza is an AI-native company that builds AI products and services for small businesses, including Maily in the Dooza Workforce app. Instead of only sending preset campaigns, Dooza can understand context, draft replies, follow up with leads, and coordinate email with sales, social, SEO, and phone workflows.'
     },
     {
         question: 'Can Dooza automate email follow-ups?',
@@ -59,8 +59,8 @@ const faqData = [
 const tools = [
     {
         name: 'Dooza',
-        price: '$49/mo+',
-        setup: 'Concierge onboarding',
+        price: 'Refundable pilot',
+        setup: 'Engineer-scoped pilot',
         bestFor: 'AI email employee plus full business automation',
         weakness: 'Not built as a deep enterprise newsletter platform',
         winner: true
@@ -105,9 +105,9 @@ const tools = [
 const scoreRows = [
     ['Inbox triage and reply drafting', 'Excellent', 'Weak to limited', 'Dooza'],
     ['Lead follow-up', 'Context-aware AI follow-up', 'Template or workflow based', 'Dooza'],
-    ['Setup time', 'One onboarding call', 'Hours to weeks of workflow setup', 'Dooza'],
+    ['Setup time', 'One free pilot scoping call', 'Hours to weeks of workflow setup', 'Dooza'],
     ['Campaign newsletters', 'Good for practical business email', 'Strong in dedicated ESPs', 'Tie'],
-    ['Pricing predictability', 'Flat monthly pricing', 'Often contact, seat, or feature based', 'Dooza'],
+    ['Pricing predictability', 'Refundable pilot, 100% refund within 14 days', 'Often contact, seat, or feature based', 'Dooza'],
     ['Cross-channel automation', 'Email, sales, social, SEO, calls', 'Usually email first', 'Dooza'],
     ['Technical learning curve', 'Low', 'Medium to high', 'Dooza']
 ];
@@ -216,7 +216,7 @@ export default function EmailAutomationDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -395,7 +395,7 @@ export default function EmailAutomationDoozaContent() {
                                     {
                                         icon: DollarSign,
                                         title: '3. Pricing is easier to understand',
-                                        desc: 'Email platforms often become more expensive as contacts, seats, or advanced features increase. Dooza starts at a simple flat monthly price and includes AI employees beyond email, which makes the total value stronger.'
+                                        desc: 'Email platforms often become more expensive as contacts, seats, or advanced features increase. Dooza pricing depends on the product, every product starts with a refundable pilot (100% refund within 14 days), and the Workforce app includes AI employees beyond email, which makes the total value stronger.'
                                     },
                                     {
                                         icon: ShieldCheck,
@@ -486,14 +486,14 @@ export default function EmailAutomationDoozaContent() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
-                                        Automate Email with Dooza <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a
                                         href={CAL_BOOKING_URL}
                                         onClick={handleAction}
                                         className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all"
                                     >
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

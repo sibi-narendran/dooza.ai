@@ -59,7 +59,7 @@ const faqData = [
     },
     {
         question: "What are the best alternatives to OpenClaw?",
-        answer: "For non-technical users and businesses, managed AI platforms like Dooza offer similar automation capabilities (email, social media, SEO, content creation) without the security risks, technical complexity, or unpredictable costs. Dooza provides pre-built AI employees starting at $49/month with enterprise-grade security."
+        answer: "For non-technical users and businesses, Dooza is a managed alternative to self-hosting OpenClaw, with similar automation capabilities (email, social media, SEO, content creation) without the security risks, technical complexity, or unpredictable API bills. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Workforce app provides pre-built AI employees with encrypted connections and your approval on anything sensitive, and every product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Why did ClawdBot change its name to OpenClaw?",
@@ -204,8 +204,9 @@ export default function WhatIsOpenClawContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -836,7 +837,7 @@ export default function WhatIsOpenClawContent() {
                                     OpenClaw's vision is right: AI should <em>do</em> things, not just talk about them. The problem is the execution - self-hosting an AI agent with full system access puts the entire burden of security, maintenance, and cost control on you.
                                 </p>
                                 <p>
-                                    That's exactly the gap that managed AI platforms are filling. Instead of building and securing everything yourself, you get pre-built AI employees that take action on real business tasks - with enterprise-grade security already handled for you.
+                                    That's exactly the gap that managed AI platforms are filling. Instead of building and securing everything yourself, you get pre-built AI employees that take action on real business tasks - with encrypted connections and your approval on anything sensitive.
                                 </p>
                             </div>
 
@@ -853,7 +854,7 @@ export default function WhatIsOpenClawContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Setup Time</td>
                                             <td className="p-4 border-b text-amber-600">30-60 minutes</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">5 minutes</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Same day</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Technical Expertise</td>
@@ -863,12 +864,12 @@ export default function WhatIsOpenClawContent() {
                                         <tr>
                                             <td className="p-4 border-b font-medium">Security</td>
                                             <td className="p-4 border-b text-red-500">You manage everything</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Enterprise-grade, managed</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Managed, encrypted, your approval on sensitive actions</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Monthly Cost</td>
                                             <td className="p-4 border-b text-red-500">$10-1,000+/mo (unpredictable)</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/mo (flat rate)</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold"><a href="/pricing" className="underline">Refundable pilot</a> (100% refund within 14 days)</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Takes Real Actions</td>
@@ -897,14 +898,14 @@ export default function WhatIsOpenClawContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Get AI Employees That Just Work</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Dooza gives you 6 pre-built AI employees for email, social media, SEO, content, sales, and customer support. Enterprise security. Predictable pricing. No terminal required.
+                                    Dooza gives you 6 pre-built AI employees for email, social media, SEO, content, sales, and customer support. Encrypted connections. No terminal required. Start with a refundable pilot - 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book a Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

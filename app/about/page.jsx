@@ -12,6 +12,14 @@ const aboutFaqSchema = {
     "mainEntity": [
         {
             "@type": "Question",
+            "name": "What is Dooza?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days."
+            }
+        },
+        {
+            "@type": "Question",
             "name": "Who is behind Dooza.ai?",
             "acceptedAnswer": {
                 "@type": "Answer",
@@ -54,7 +62,7 @@ export default function AboutPage() {
                         About Us
                     </h1>
                     <p className="text-xl text-slate-600 leading-relaxed max-w-3xl">
-                        Dooza.ai is built and operated by <strong>Adam Laboratory Inc.</strong>, a Delaware C-Corporation on a mission to empower businesses with intelligent AI tools.
+                        Dooza is an AI-native company that builds AI products and services for small businesses. Dooza.ai is built and operated by <strong>Adam Laboratory Inc.</strong>, a Delaware C-Corporation.
                     </p>
                 </div>
 
@@ -75,7 +83,7 @@ export default function AboutPage() {
                             Adam Laboratory Inc. is a technology company incorporated in the state of Delaware, United States. We build AI-powered products that help businesses grow, automate workflows, and scale operations efficiently.
                         </p>
                         <p className="text-slate-600 leading-relaxed">
-                            <strong>Dooza.ai</strong> is the flagship product of Adam Laboratory Inc. — an AI-powered copilot that helps users draft, manage, and publish social media content across platforms like Facebook, Instagram, and LinkedIn.
+                            <strong>Dooza.ai</strong> is the flagship product of Adam Laboratory Inc. — Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza AI employees handle email, social media publishing on Facebook, Instagram, and LinkedIn, SEO, lead generation, legal documents, and phone calls, with your approval on anything sensitive.
                         </p>
                     </div>
                 </section>
@@ -88,18 +96,18 @@ export default function AboutPage() {
                             <div className="p-3 bg-slate-50 rounded-xl w-fit mb-4">
                                 <Globe className="w-5 h-5 text-primary-600" />
                             </div>
-                            <h3 className="text-lg font-semibold text-slate-900 mb-2">AI Social Media Copilot</h3>
+                            <h3 className="text-lg font-semibold text-slate-900 mb-2">AI Social Media Publishing</h3>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                Dooza helps you draft, refine, and publish social media content across Facebook, Instagram, and LinkedIn — all from one place, powered by AI.
+                                Somi, Dooza's social media AI employee, helps you draft, refine, and publish content across Facebook, Instagram, and LinkedIn. You approve every post before it goes live.
                             </p>
                         </div>
                         <div className="border border-slate-200 rounded-xl p-6">
                             <div className="p-3 bg-slate-50 rounded-xl w-fit mb-4">
                                 <Users className="w-5 h-5 text-primary-600" />
                             </div>
-                            <h3 className="text-lg font-semibold text-slate-900 mb-2">AI Workforce</h3>
+                            <h3 className="text-lg font-semibold text-slate-900 mb-2">AI Employees</h3>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                Build, grow, and scale your business with a team of AI employees that handle marketing, content creation, and automation around the clock.
+                                Dooza Workforce is an AI workforce app with ready-made AI employees. Dooza Agents is an AI agentic platform with custom AI agents built and maintained by Dooza engineers. Every product starts with a refundable pilot; see <a href="/pricing" className="font-medium text-primary-700 underline">pricing</a>.
                             </p>
                         </div>
                     </div>
@@ -133,7 +141,7 @@ export default function AboutPage() {
                                 </tr>
                                 <tr>
                                     <td className="px-6 py-4 text-sm font-medium text-slate-500 bg-slate-50">Product</td>
-                                    <td className="px-6 py-4 text-sm text-slate-900">Dooza.ai — AI-Powered Social Media Copilot</td>
+                                    <td className="px-6 py-4 text-sm text-slate-900">Dooza.ai — AI employees for small businesses (Dooza Workforce and Dooza Agents)</td>
                                 </tr>
                             </tbody>
                         </table>

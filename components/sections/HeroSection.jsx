@@ -26,12 +26,12 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-500 mb-8 md:mb-10 max-w-2xl">
-                    Dooza gives you AI employees for content, SEO, social media, leads, and follow-up, so your growth work keeps moving every day.
+                    Dooza gives you AI employees for content, SEO, social media, leads, and follow-up, so your growth work keeps moving every day. Start with a refundable pilot — 100% refund within 14 days.
                 </p>
 
                 <div className="flex flex-col items-start gap-3 md:gap-4">
                     <BookDemoButton source="hero" variant="primary" size="xl">
-                        Book 15 Min with Founder — Free
+                        Book a free pilot call
                     </BookDemoButton>
                     <SignupTextLink source="hero" />
                 </div>

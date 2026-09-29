@@ -2,14 +2,14 @@ import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
     title: 'Privacy Policy - Dooza',
-    description: 'Learn how Dooza collects, uses, and protects your data when using our AI-powered social media copilot for Facebook, Instagram, and LinkedIn.',
+    description: 'Learn how Dooza, an AI-native company, collects, uses, and protects your data across its AI products and services, including social media publishing for Facebook, Instagram, and LinkedIn.',
     keywords: ['privacy policy', 'data protection', 'Dooza privacy', 'social media data', 'Facebook API', 'Instagram API', 'LinkedIn API'],
     alternates: {
         canonical: `${SITE_URL}/privacy`,
     },
     openGraph: {
         title: 'Privacy Policy - Dooza',
-        description: 'Learn how Dooza collects, uses, and protects your data when using our AI-powered social media copilot.',
+        description: 'Learn how Dooza, an AI-native company, collects, uses, and protects your data across its AI products and services.',
         url: `${SITE_URL}/privacy`,
         siteName: SITE_NAME,
         type: 'website',
@@ -25,7 +25,7 @@ export const metadata = {
     twitter: {
         card: 'summary',
         title: 'Privacy Policy - Dooza',
-        description: 'Learn how Dooza collects, uses, and protects your data when using our AI-powered social media copilot.',
+        description: 'Learn how Dooza, an AI-native company, collects, uses, and protects your data across its AI products and services.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

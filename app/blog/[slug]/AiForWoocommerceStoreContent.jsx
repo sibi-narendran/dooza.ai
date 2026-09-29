@@ -17,7 +17,7 @@ const faqData = [
     { question: "What is the best AI plugin for WooCommerce?", answer: "It depends on the job. For support and order tracking, pick an AI chatbot trained on your catalog and policies. For content and SEO, pick a writer that publishes directly into WordPress. For sales recovery, pick one that handles abandoned carts via email and chat. Dooza's AI employees cover all three inside one workflow." },
     { question: "How does WooCommerce AI integration work?", answer: "Most WooCommerce AI tools install as a WordPress plugin or connect via the WooCommerce REST API. Once authenticated, the AI can read products, orders, and customers and push updates back — descriptions, tags, replies, emails, blog posts — without manual work." },
     { question: "Can AI write WooCommerce product descriptions?", answer: "Yes. AI copywriters generate SEO-optimized descriptions in bulk from a few inputs (title, features, target keyword) and publish them straight into WooCommerce. A store with 500 SKUs can finish a full rewrite in an afternoon — one of the highest-ROI AI use cases in WordPress ecommerce." },
-    { question: "Is AI for WooCommerce worth it for small stores?", answer: "Especially for small stores. A solo founder can't write descriptions, answer tickets, run email campaigns, and publish SEO blogs at once. WooCommerce automation removes that bottleneck for around $29/month — cheaper than a single hour of a virtual assistant, and always on." },
+    { question: "Is AI for WooCommerce worth it for small stores?", answer: "Especially for small stores. A solo founder can't write descriptions, answer tickets, run email campaigns, and publish SEO blogs at once. WooCommerce automation removes that bottleneck for a fraction of what a virtual assistant costs, and it is always on. With Dooza, pricing depends on the product, and every product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "What tasks can AI automate in a WooCommerce store?", answer: "Product descriptions, SEO blog content, customer support chat, abandoned cart recovery, email marketing, review responses, low-stock inventory alerts, ad copy, and order status updates. Online store automation lets the founder focus on product and brand instead of admin." },
 ];
 
@@ -200,7 +200,7 @@ export default function AiForWoocommerceStoreContent() {
                                     The WordPress plugin directory is now flooded with single-purpose AI plugins — one for descriptions, one for support, one for SEO, one for email. The problem with stitching together five of them is that nothing talks to each other and your monthly bill creeps past $300.
                                 </p>
                                 <p>
-                                    The cleaner pattern in 2026 is a single AI employee platform that covers multiple jobs at once. <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> ships AI employees for SEO writing, customer support, lead generation, and email — all configurable for a WooCommerce workflow, all under one $29/month plan. For most stores, that&apos;s a better starting point than five separate plugins.
+                                    The cleaner pattern in 2026 is a single AI employee platform that covers multiple jobs at once. <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> ships AI employees for SEO writing, customer support, lead generation, and email — all configurable for a WooCommerce workflow, and every product starts with a refundable pilot (100% refund within 14 days; <Link href="/pricing" className="text-primary-600 hover:underline">see pricing</Link>). For most stores, that&apos;s a better starting point than five separate plugins.
                                 </p>
                                 <p>For deeper comparisons, see our breakdowns of <Link href="/blog/ai-tools-for-solopreneurs" className="text-primary-600 hover:underline">AI tools for solopreneurs</Link> and <Link href="/blog/ai-for-shopify-store" className="text-primary-600 hover:underline">AI for Shopify stores</Link>.</p>
                             </div>
@@ -235,10 +235,10 @@ export default function AiForWoocommerceStoreContent() {
                                     </div>
                                     <div>
                                         <div className="text-slate-400 text-sm mb-1">AI for WooCommerce</div>
-                                        <div className="text-3xl font-bold text-primary-400">$29<span className="text-base text-slate-400">/mo</span></div>
+                                        <div className="text-3xl font-bold text-primary-400">14-day<span className="text-base text-slate-400"> refundable pilot</span></div>
                                     </div>
                                 </div>
-                                <p className="text-slate-300 text-center mt-6 italic">Same output. 50× cheaper. Always on.</p>
+                                <p className="text-slate-300 text-center mt-6 italic">Same output. A fraction of the cost. Always on.</p>
                             </div>
                             <div className="prose md:prose-lg text-slate-600 mt-6">
                                 <p>

@@ -6,6 +6,21 @@ import { blogPosts } from '@/lib/blogData';
 
 // Define related post mappings for better internal linking
 const relatedPostMappings = {
+    'profound-ai-alternative': ['profound-vs-peec-ai', 'profound-ai-pricing', 'ai-visibility-tools'],
+    'profound-vs-peec-ai': ['profound-ai-alternative', 'ai-visibility-tools', 'profound-ai-pricing'],
+    'ai-visibility-tools': ['profound-ai-alternative', 'ai-overviews-tracking', 'ai-citations'],
+    'answer-engine-optimization': ['llm-seo', 'ai-citations', 'geo-vs-seo'],
+    'aeo-agency': ['answer-engine-optimization', 'ai-visibility-tools', 'profound-ai-alternative'],
+    'ai-overviews-tracking': ['ai-citations', 'ai-visibility-tools', 'answer-engine-optimization'],
+    'ai-citations': ['llm-seo', 'ai-overviews-tracking', 'how-to-rank-in-chatgpt'],
+    'gptbot-claudebot-ai-crawlers': ['llm-seo', 'ai-citations', 'answer-engine-optimization'],
+    'chatgpt-shopping': ['ai-citations', 'ai-for-shopify-store', 'llm-seo'],
+    'llm-seo': ['answer-engine-optimization', 'gptbot-claudebot-ai-crawlers', 'how-to-rank-in-chatgpt'],
+    'profound-ai-pricing': ['profound-ai-alternative', 'profound-vs-peec-ai', 'ai-visibility-tools'],
+    'best-geo-tools': ['ai-visibility-tools', 'profound-ai-alternative', 'profound-vs-peec-ai'],
+    'geo-vs-seo': ['answer-engine-optimization', 'llm-seo', 'what-is-generative-engine-optimization'],
+    'how-to-rank-in-chatgpt': ['ai-citations', 'llm-seo', 'chatgpt-shopping'],
+    'what-is-generative-engine-optimization': ['answer-engine-optimization', 'ai-visibility-tools', 'geo-vs-seo'],
     'ai-employees-transforming-small-business': ['automate-business-processes', 'ai-staffing', 'marketing-automation-tools'],
     'ai-agents-vs-agentic-ai': ['ai-copywriting-tools', 'marketing-automation-tools', 'ai-employees-transforming-small-business'],
     'surfer-seo-vs-ahrefs': ['seo-tools-small-business', 'seo-for-doctors-dentists', 'content-marketing-tools'],

@@ -4,7 +4,7 @@ import { generateFAQSchema } from '../../lib/blogData';
 
 export const metadata = {
     title: 'Partner Program | Earn 30% Recurring Commission',
-    description: 'Join the Dooza Partner Program and earn 30% lifetime recurring commission. Partner with the leading AI workforce platform. Free to join, no minimums.',
+    description: 'Join the Dooza Partner Program and earn 30% lifetime recurring commission referring Dooza\'s AI products and services. Free to join, no minimums.',
     keywords: ['affiliate program', 'partner program', 'SaaS affiliate', 'recurring commission', 'software partner', 'AI affiliate program', 'referral program'],
     alternates: {
         canonical: `${SITE_URL}/partners`,

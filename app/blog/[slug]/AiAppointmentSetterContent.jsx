@@ -43,11 +43,11 @@ const faqData = [
     },
     {
         question: "How many more meetings does an AI appointment setter book compared to an agency?",
-        answer: "AI appointment setters typically book 3-5x more meetings per dollar. Agencies average $150-250 per booked meeting. AI appointment setters average $1.93 per booked meeting with Dooza — because there's no per-meeting fee, just a flat $49/month."
+        answer: "AI appointment setters typically book more meetings per dollar because they respond instantly and never skip a follow-up. Agencies average $150-250 per booked meeting. With Dooza there's no per-meeting fee, so your cost per meeting keeps falling as volume grows. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How much does an AI appointment setter cost per meeting?",
-        answer: "With Dooza, the cost per meeting approaches $1.93 (based on 15 meetings/month at $49/month). Agencies charge $2,000-5,000/month, working out to $150-250 per booked meeting at typical volumes."
+        answer: "Agencies charge $2,000-5,000/month, working out to $150-250 per booked meeting at typical volumes. Dooza charges no per-meeting fee, so the cost per meeting is a fraction of an agency's. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Do I still need an appointment setting agency if I use AI?",
@@ -137,7 +137,7 @@ export default function AiAppointmentSetterContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try AI Appointment Setting - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -187,7 +187,7 @@ export default function AiAppointmentSetterContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Get Started
                                 </a>
                             </div>
 
@@ -424,13 +424,13 @@ export default function AiAppointmentSetterContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { metric: "Monthly Cost", ai: "$49/mo", agency: "$2,000-5,000", sdr: "$4,000-6,500", diy: "$0 (your time)" },
-                                            { metric: "Cost Per Meeting", ai: "~$1.93", agency: "$150-250", sdr: "$100-150", diy: "Hours of your time" },
+                                            { metric: "Monthly Cost", ai: "Varies by product — refundable pilot (see /pricing)", agency: "$2,000-5,000", sdr: "$4,000-6,500", diy: "$0 (your time)" },
+                                            { metric: "Cost Per Meeting", ai: "No per-meeting fee", agency: "$150-250", sdr: "$100-150", diy: "Hours of your time" },
                                             { metric: "Response Time", ai: "Under 60 seconds", agency: "1-14 hours", sdr: "5-60 minutes", diy: "When you're free" },
                                             { metric: "Availability", ai: "24/7/365", agency: "Business hours (M-F)", sdr: "Business hours (M-F)", diy: "Whenever you check" },
                                             { metric: "Show Rate", ai: "80-90%", agency: "60-70%", sdr: "70-80%", diy: "50-60%" },
                                             { metric: "Scalability", ai: "Unlimited leads", agency: "Limited by headcount", sdr: "1 person's capacity", diy: "Your bandwidth" },
-                                            { metric: "Setup Time", ai: "30 minutes", agency: "2-4 weeks", sdr: "4-8 weeks hiring + training", diy: "Ongoing" },
+                                            { metric: "Setup Time", ai: "Same day", agency: "2-4 weeks", sdr: "4-8 weeks hiring + training", diy: "Ongoing" },
                                             { metric: "Consistency", ai: "100% consistent", agency: "Varies by rep", sdr: "Varies by day", diy: "Inconsistent" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -516,7 +516,7 @@ export default function AiAppointmentSetterContent() {
                                         { label: "Agency: $3,000/mo / 12 meetings", value: "$250/meeting", highlight: false },
                                         { label: "In-House SDR: $5,000/mo / 20 meetings", value: "$250/meeting", highlight: false },
                                         { label: "SDR (adjusted for benefits + tools)", value: "~$150/meeting", highlight: false },
-                                        { label: "AI Appointment Setter: $49/mo / 15 meetings", value: "$1.93/meeting", highlight: true }
+                                        { label: "AI Appointment Setter (Dooza): no per-meeting fee", value: "A fraction", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>
                                             <span className="text-slate-700">{item.label}</span>
@@ -526,7 +526,7 @@ export default function AiAppointmentSetterContent() {
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-primary-200 text-center">
                                     <p className="text-lg font-bold text-primary-800">
-                                        AI is 129x more cost-efficient per booked meeting.
+                                        AI removes per-meeting fees, so cost per meeting falls as volume grows.
                                     </p>
                                 </div>
                             </div>
@@ -543,15 +543,15 @@ export default function AiAppointmentSetterContent() {
                                     <p className="text-xs text-slate-500 mt-1">$5,000+/mo total cost</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$1.93/meeting</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">No per-meeting fee</div>
                                     <p className="text-sm text-green-800 font-medium">AI Appointment Setter (Dooza)</p>
-                                    <p className="text-xs text-green-600 mt-1">$49/mo, unlimited capacity</p>
+                                    <p className="text-xs text-green-600 mt-1">Refundable pilot, unlimited capacity. <Link href="/pricing" className="underline">See pricing</Link></p>
                                 </div>
                             </div>
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Even if we double the AI price and halve the meetings — $58/month for 7 meetings — you're at <strong>$8.29 per meeting</strong>. Still 30x cheaper than an agency. The math doesn't lie: for straightforward appointment setting, AI wins by an order of magnitude.
+                                    Even if the AI books half as many meetings as you expect, you're still paying <strong>no per-meeting fee</strong> and none of the setup charges, lock-ins, or surcharges agencies add on. The math doesn't lie: for straightforward appointment setting, AI wins by an order of magnitude.
                                 </p>
                             </div>
                         </section>
@@ -651,8 +651,8 @@ export default function AiAppointmentSetterContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Sign Up for Dooza",
-                                        desc: "Create your account and meet Stan and Rachel — your AI sales agent and AI receptionist. No credit card required."
+                                        title: "Start Your Dooza Pilot",
+                                        desc: "Create your account and meet Stan and Rachel — your AI sales agent and AI receptionist. Every pilot is refundable: 100% refund within 14 days."
                                     },
                                     {
                                         step: "2",
@@ -678,14 +678,14 @@ export default function AiAppointmentSetterContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Book More Meetings for Less?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop overpaying agencies for slow follow-up and inconsistent results. Dooza's AI appointment setter responds in seconds, follows up automatically, and books meetings 24/7 — for $49/month.
+                                    Stop overpaying agencies for slow follow-up and inconsistent results. Dooza's AI appointment setter responds in seconds, follows up automatically, and books meetings 24/7. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

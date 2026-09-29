@@ -203,10 +203,11 @@ export default function ContentMarketingToolsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get AI Content Creation - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
+                        <p className="mt-3 text-sm text-slate-500">Refundable pilot — 100% refund within 14 days</p>
                     </div>
                 </div>
             </div>
@@ -251,8 +252,9 @@ export default function ContentMarketingToolsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="mt-2 text-xs text-slate-500 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -509,12 +511,12 @@ export default function ContentMarketingToolsContent() {
                                     </div>
                                     <div className="bg-green-100 p-6 rounded-lg">
                                         <div className="text-sm font-bold text-green-600 mb-2">DOOZA AI EMPLOYEES</div>
-                                        <div className="text-3xl font-bold text-green-700 mb-1">$49/mo</div>
-                                        <p className="text-sm text-green-600">AI employees, they do the work</p>
+                                        <div className="text-3xl font-bold text-green-700 mb-1">14-day</div>
+                                        <p className="text-sm text-green-600">refundable pilot — AI employees do the work. <Link href="/pricing" className="underline">See pricing</Link></p>
                                     </div>
                                 </div>
                                 <p className="text-center text-green-700 font-bold mt-6 text-lg">
-                                    Save $3,288/year + 10+ hours/week
+                                    Consolidate your tool stack and get your hours back — pricing depends on the product, and every Dooza product starts with a refundable pilot
                                 </p>
                             </div>
                         </section>
@@ -536,13 +538,13 @@ export default function ContentMarketingToolsContent() {
                                     },
                                     {
                                         step: "3",
-                                        title: "Book a Free Onboarding Call",
-                                        desc: "In 30 minutes, we'll understand your content needs, configure your AI employees to match your brand voice, and get them creating content immediately."
+                                        title: "Book a Free Pilot Call",
+                                        desc: "On a free 30-minute call, a Dooza engineer scopes your pilot, learns your content needs, and configures your AI employees to match your brand voice. They can start creating content the same day, with a 100% refund within 14 days if it is not a fit."
                                     },
                                     {
                                         step: "4",
                                         title: "Approve and Watch Content Flow",
-                                        desc: "Your AI employees create content; you review and approve. Most clients find they can cancel multiple subscriptions within the first month."
+                                        desc: "Your AI employees create content; you review and approve. Once the content is flowing, review which overlapping subscriptions you still need."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -558,14 +560,14 @@ export default function ContentMarketingToolsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Create Content Consistently?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop paying for tools you don't have time to use. Get AI employees that create and publish content while you focus on your business.
+                                    Stop paying for tools you don't have time to use. Get AI employees that create and publish content while you focus on your business. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started - $49/month <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

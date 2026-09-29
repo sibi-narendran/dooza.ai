@@ -55,11 +55,11 @@ const faqData = [
     },
     {
         question: "How fast is the setup?",
-        answer: "Most businesses are live within 30 minutes. During your free onboarding call, our team configures the voice agent with your business info, qualification questions, FAQs, and CRM integration."
+        answer: "A Dooza engineer scopes your pilot on a free 30-minute call, then configures the voice agent with your business info, qualification questions, FAQs, and CRM integration. Most businesses can start taking calls the same day. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "What's the ROI of an AI voice agent?",
-        answer: "If you capture just 5 additional leads per month that would have gone to voicemail, and your average deal value is $500, that's $2,500/month in recovered revenue — an 86x return on a $49/month investment."
+        answer: "If you capture just 5 additional leads per month that would have gone to voicemail, and your average deal value is $500, that's $2,500/month in recovered revenue. Pricing depends on the product, and every Dooza product starts with a refundable pilot (100% refund within 14 days), so you can measure recovered leads before committing."
     }
 ];
 
@@ -145,10 +145,11 @@ export default function AiVoiceAgentMissedCallsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Your AI Voice Agent - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
+                        <p className="mt-3 text-sm text-slate-500">Refundable pilot — 100% refund within 14 days</p>
                     </div>
                 </div>
             </div>
@@ -194,8 +195,9 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Rachel Free
+                                    Start your pilot
                                 </a>
+                                <p className="mt-2 text-xs text-slate-500 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -243,7 +245,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     You've probably thought about this before. Maybe you've tried hiring someone to answer the phones, or looked into virtual receptionist services, or just accepted that voicemail is "good enough." It's not. An AI voice agent is different. It doesn't just answer — it <strong>qualifies, captures, and converts</strong> every caller into a lead record in your CRM, 24 hours a day, 7 days a week.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <Link href="/blog/best-ai-receptionist" className="text-primary-600 hover:underline font-medium">We've covered AI receptionists</Link> for answering and routing calls. <Link href="/blog/virtual-receptionist-for-small-business" className="text-primary-600 hover:underline font-medium">We've compared virtual receptionist services</Link> and their costs. This guide is about something more specific: using an AI voice agent as a <strong>revenue-capture tool</strong> — one that pays for itself hundreds of times over.
+                                    <Link href="/blog/best-ai-receptionist" className="text-primary-600 hover:underline font-medium">We've covered AI receptionists</Link> for answering and routing calls. <Link href="/blog/virtual-receptionist-for-small-business" className="text-primary-600 hover:underline font-medium">We've compared virtual receptionist services</Link> and their costs. This guide is about something more specific: using an AI voice agent as a <strong>revenue-capture tool</strong> — one that can recover far more revenue than it costs.
                                 </p>
                             </div>
 
@@ -390,15 +392,15 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", voicemail: "Free", human: "$3,500-4,200", virtual: "$300-935", ai: "$29" },
+                                            { feature: "Monthly Cost", voicemail: "Free", human: "$3,500-4,200", virtual: "$300-935", ai: "Refundable pilot (see /pricing)" },
                                             { feature: "Availability", voicemail: "24/7 (no one answers)", human: "40-45 hrs/week", virtual: "Business hours mostly", ai: "24/7/365" },
                                             { feature: "Lead Qualification", voicemail: "None", human: "If trained", virtual: "Basic scripting", ai: "Custom AI qualification" },
                                             { feature: "CRM Integration", voicemail: "None", human: "Manual entry", virtual: "Limited / extra cost", ai: "Automatic, real-time" },
                                             { feature: "Follow-Up Trigger", voicemail: "None", human: "Manual", virtual: "None", ai: "Automated sequences" },
                                             { feature: "Data Capture", voicemail: "Maybe a message", human: "Depends on person", virtual: "Name & number", ai: "Full qualification data" },
-                                            { feature: "Setup Time", voicemail: "5 minutes", human: "2-4 weeks hire", virtual: "1-2 weeks", ai: "30 minutes" },
-                                            { feature: "Scales With Volume", voicemail: "No", human: "Hire more", virtual: "Pay per minute", ai: "Unlimited, same cost" },
-                                            { feature: "Cost Per Captured Lead", voicemail: "N/A (no capture)", human: "$15-25+", virtual: "$8-15", ai: "$0.19*" }
+                                            { feature: "Setup Time", voicemail: "5 minutes", human: "2-4 weeks hire", virtual: "1-2 weeks", ai: "Same day" },
+                                            { feature: "Scales With Volume", voicemail: "No", human: "Hire more", virtual: "Pay per minute", ai: "Handles call spikes without extra hires" },
+                                            { feature: "Cost Per Captured Lead", voicemail: "N/A (no capture)", human: "$15-25+", virtual: "$8-15", ai: "Varies by product — refundable pilot*" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -410,7 +412,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         ))}
                                     </tbody>
                                 </table>
-                                <p className="text-xs text-slate-500 mt-2">*Based on 150 captured leads/month at $49/month</p>
+                                <p className="text-xs text-slate-500 mt-2">*Dooza pricing depends on the product; see <Link href="/pricing" className="text-primary-600 hover:underline">pricing</Link>. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -492,7 +494,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         step: "2",
                                         title: "Qualify the Caller",
                                         icon: Target,
-                                        desc: "The agent asks your custom screening questions: What service do you need? What's your timeline? What's your budget range? Is this for a residential or commercial property? These questions are configured during your 30-minute onboarding.",
+                                        desc: "The agent asks your custom screening questions: What service do you need? What's your timeline? What's your budget range? Is this for a residential or commercial property? These questions are configured during your pilot setup.",
                                         detail: "Unlike a receptionist who might forget a question or go off-script, the AI asks every qualifying question, every time, in the optimal order."
                                     },
                                     {
@@ -507,7 +509,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         title: "Push to CRM Pipeline",
                                         icon: BarChart3,
                                         desc: "Within seconds of the call ending, a new lead record appears in your CRM with the full conversation transcript, qualification data, and a priority score. No manual data entry. No sticky notes. No lost information.",
-                                        detail: "Integration works with popular CRMs. Your onboarding team configures the field mappings so data lands exactly where your sales team expects it."
+                                        detail: "Integration works with popular CRMs. A Dooza engineer configures the field mappings so data lands exactly where your sales team expects it."
                                     },
                                     {
                                         step: "5",
@@ -799,7 +801,6 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         captured: "5 extra leads/month",
                                         avgDeal: "$500",
                                         revenue: "$2,500/mo",
-                                        roi: "86x",
                                         color: "green"
                                     },
                                     {
@@ -807,7 +808,6 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         captured: "15 extra leads/month",
                                         avgDeal: "$500",
                                         revenue: "$7,500/mo",
-                                        roi: "259x",
                                         color: "blue"
                                     },
                                     {
@@ -815,7 +815,6 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         captured: "30 extra leads/month",
                                         avgDeal: "$500",
                                         revenue: "$15,000/mo",
-                                        roi: "517x",
                                         color: "purple"
                                     }
                                 ].map((item, idx) => {
@@ -831,10 +830,6 @@ export default function AiVoiceAgentMissedCallsContent() {
                                             <div className={`text-3xl font-bold ${c.stat} mb-1`}>{item.revenue}</div>
                                             <p className="text-sm text-slate-600 mb-1">recovered revenue</p>
                                             <p className="text-xs text-slate-500 mb-3">{item.captured} x {item.avgDeal}</p>
-                                            <div className="pt-3 border-t border-slate-200">
-                                                <div className={`text-2xl font-bold ${c.stat}`}>{item.roi} ROI</div>
-                                                <p className="text-xs text-slate-500">on $49/month investment</p>
-                                            </div>
                                         </div>
                                     );
                                 })}
@@ -848,28 +843,28 @@ export default function AiVoiceAgentMissedCallsContent() {
                                             industry: "HVAC Company",
                                             detail: "Captures 10 after-hours emergency calls/month that previously went to voicemail",
                                             calculation: "10 calls x $400 avg job = $4,000/month recovered",
-                                            roi: "138x return on $49/month",
+                                            roi: "$4,000/month recovered",
                                             roiColor: "text-green-400"
                                         },
                                         {
                                             industry: "Law Firm",
                                             detail: "Captures 3 potential client calls/month that competitors would have gotten",
                                             calculation: "3 calls x $1,500 avg case = $4,500/month recovered",
-                                            roi: "155x return on $49/month",
+                                            roi: "$4,500/month recovered",
                                             roiColor: "text-green-400"
                                         },
                                         {
                                             industry: "Dental Practice",
                                             detail: "Captures 8 new patient inquiries/month during lunch and after hours",
                                             calculation: "8 calls x $600 first-year value = $4,800/month recovered",
-                                            roi: "166x return on $49/month",
+                                            roi: "$4,800/month recovered",
                                             roiColor: "text-green-400"
                                         },
                                         {
                                             industry: "Real Estate Agent",
                                             detail: "Captures 2 buyer leads/month from weekend and evening calls",
                                             calculation: "2 calls x $3,500 expected commission = $7,000/month recovered",
-                                            roi: "241x return on $49/month",
+                                            roi: "$7,000/month recovered",
                                             roiColor: "text-green-400"
                                         }
                                     ].map((item, idx) => (
@@ -887,7 +882,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                 <div className="text-center">
                                     <h4 className="font-bold text-green-800 mb-2 text-lg">The Bottom Line</h4>
                                     <p className="text-green-700 text-lg">
-                                        At <strong>$49/month</strong>, an AI voice agent needs to capture <strong>one single lead</strong> that would have otherwise gone to voicemail to pay for itself <strong>many times over</strong>. For most businesses, that happens on day one.
+                                        For most service businesses, <strong>one captured lead</strong> that would otherwise have gone to voicemail is worth more than a month of answering-service fees. Start with a <strong>refundable pilot — 100% refund within 14 days</strong> — and measure recovered leads before you commit. <Link href="/pricing" className="underline font-medium">See pricing</Link>.
                                     </p>
                                 </div>
                             </div>
@@ -895,11 +890,11 @@ export default function AiVoiceAgentMissedCallsContent() {
 
                         {/* Section 8: Getting Started */}
                         <section id="getting-started" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Deploy Your AI Voice Agent in 30 Minutes</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Deploy Your AI Voice Agent the Same Day</h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    You don't need an IT department, a phone system overhaul, or weeks of setup. Most businesses are live and capturing leads within a single 30-minute onboarding call. Here's the process.
+                                    You don't need an IT department, a phone system overhaul, or weeks of setup. A Dooza engineer scopes your pilot on a free 30-minute call, and most businesses can start capturing leads the same day. Here's the process.
                                 </p>
                             </div>
 
@@ -907,21 +902,21 @@ export default function AiVoiceAgentMissedCallsContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Sign Up & Book Your Free Onboarding",
-                                        desc: "Create your Dooza account ($49/month for your full AI workforce including voice agent, sales agent, email, social media, SEO, and legal). Book a free 30-minute onboarding call with our concierge team.",
-                                        detail: "You'll also get Rachel (AI receptionist), Stan (sales agent), Maily (email), Somi (social media), Ranky (SEO), and Linda (legal) — all configured during onboarding."
+                                        title: "Book a Free Pilot Call & Start Your Pilot",
+                                        desc: "Dooza is an AI-native company that builds AI products and services for small businesses. Book a free 30-minute call to scope your pilot of Dooza Workforce, the AI workforce app that includes the voice agent. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.",
+                                        detail: "You'll also get Rachel (AI receptionist), Stan (sales agent), Maily (email), Somi (social media), Ranky (SEO), and Linda (legal) — six AI employees, configured during your pilot setup."
                                     },
                                     {
                                         step: "2",
                                         title: "Configure Your Voice Agent",
-                                        desc: "During the onboarding call, our team sets up your voice agent with your business info, greeting script, qualification questions, FAQs, calendar integration, and CRM connection. You tell us what questions to ask — we handle the technical setup.",
+                                        desc: "During pilot setup, a Dooza engineer sets up your voice agent with your business info, greeting script, qualification questions, FAQs, calendar integration, and CRM connection. You tell us what questions to ask — we handle the technical setup.",
                                         detail: "Your qualification criteria, business hours, appointment types, and escalation rules are all customized to match how your business operates."
                                     },
                                     {
                                         step: "3",
                                         title: "Go Live & Start Capturing Revenue",
                                         desc: "Forward your business phone to your AI voice agent. Every call is answered, every caller is qualified, every lead hits your CRM, and every follow-up is triggered automatically. Check your dashboard the next morning — you'll see leads that would have been voicemails.",
-                                        detail: "Most businesses see their first captured lead within 24 hours of going live. The AI works while you sleep."
+                                        detail: "Check your dashboard after the first night and you will see calls that would have gone to voicemail. The AI works while you sleep."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-6 rounded-xl hover:border-primary-200 transition-colors">
@@ -940,7 +935,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     Want to see how this fits into a broader automation strategy? <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Read our complete guide to automating business processes</Link> — covering email, social media, phone, leads, and more.
                                 </p>
                                 <p>
-                                    Interested in the full AI workforce approach? <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">See how AI staffing replaces traditional hiring</Link> — AI employees for less than the cost of one human hire's first day.
+                                    Interested in the full AI workforce approach? <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">See how AI staffing replaces traditional hiring</Link> — AI employees that cost a fraction of a human hire.
                                 </p>
                             </div>
 
@@ -951,12 +946,13 @@ export default function AiVoiceAgentMissedCallsContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
+                                <p className="text-sm text-slate-500 mt-4">Refundable pilot — 100% refund within 14 days</p>
                             </div>
                         </section>
 

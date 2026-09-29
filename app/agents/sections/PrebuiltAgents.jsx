@@ -104,7 +104,7 @@ export default function PrebuiltAgents() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800"
                     >
-                        Explore AI employees for free <ArrowRight className="h-4 w-4" />
+                        Explore AI employees <ArrowRight className="h-4 w-4" />
                     </a>
                 </div>
             </div>

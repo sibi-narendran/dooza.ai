@@ -34,10 +34,10 @@ import {
 } from 'lucide-react';
 
 const faqData = [
-    { question: "What business processes can I automate without coding?", answer: "You can automate email management, social media posting, inbound call handling, lead generation, SEO content, and legal compliance — all without writing a single line of code. Dooza's AI employees handle these end-to-end for $49/month." },
+    { question: "What business processes can I automate without coding?", answer: "You can automate email management, social media posting, inbound call handling, lead generation, SEO content, and legal compliance — all without writing a single line of code. Dooza's AI employees handle these end-to-end, and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
     { question: "How much time can business automation actually save?", answer: "Most small business owners save 15-25 hours per week. Specifically: 10+ hours on email, 6+ hours on social media, and 5+ hours on missed call follow-ups. That's roughly $6,200+/month in recovered productivity." },
     { question: "How is Dooza different from Zapier or Make?", answer: "Zapier and Make connect apps with if-then rules — you still build and maintain every workflow. Dooza gives you AI employees that autonomously handle entire job functions like email, social media, and calls. No workflow building required." },
-    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides AI employees handling email, social, calls, leads, SEO, and legal for just $49/month." },
+    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides AI employees handling email, social, calls, leads, SEO, and legal. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
     { question: "Which business processes should I automate first?", answer: "Start with your biggest time drain. For most businesses, that's email management or social media. Audit where you spend the most hours, automate that first, then expand to calls, leads, and SEO." }
 ];
 
@@ -116,16 +116,17 @@ export default function AutomateBusinessProcessesContent() {
                             </div>
                         </div>
 
-                        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                        <div className="mt-10 flex flex-col items-center gap-2">
                             <a
                                 href={getProductSignupUrl('workforce')}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get AI Employees - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
+                            <span className="text-sm text-slate-500">Refundable pilot — 100% refund within 14 days</span>
                         </div>
                     </div>
                 </div>
@@ -173,8 +174,9 @@ export default function AutomateBusinessProcessesContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -216,7 +218,7 @@ export default function AutomateBusinessProcessesContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">The Bottom Line</h4>
                                             <p className="text-slate-700">
-                                                Small businesses that automate save <strong>15-25 hours/week</strong> and see <strong>213x ROI</strong> on their automation investment.
+                                                Small businesses that automate save <strong>15-25 hours/week</strong> on repetitive work like email, social media, and call follow-up.
                                             </p>
                                         </div>
                                     </div>
@@ -407,7 +409,7 @@ export default function AutomateBusinessProcessesContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { label: "Monthly Cost", diy: "$0 (your time)", zapier: "$100-500", va: "$1,500-2,400", dooza: "$29" },
+                                            { label: "Monthly Cost", diy: "$0 (your time)", zapier: "$100-500", va: "$1,500-2,400", dooza: "Varies by product — refundable pilot" },
                                             { label: "Setup Time", diy: "N/A", zapier: "Days-weeks", va: "1-2 weeks", dooza: "30 minutes" },
                                             { label: "Maintenance", diy: "Constant", zapier: "Weekly tweaks", va: "Ongoing management", dooza: "None" },
                                             { label: "Autonomy", diy: "None — it's all you", zapier: "Rules-based only", va: "Human judgment", dooza: "AI-powered autonomous" },
@@ -439,7 +441,7 @@ export default function AutomateBusinessProcessesContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-4">Stop Using Tools. Hire AI Employees.</h3>
                                         <p className="text-lg text-slate-700 mb-4">
-                                            Most automation tools give you building blocks and expect you to assemble them. Dooza gives you AI employees who own entire job functions — just like hiring a real team member, except they work 24/7 and cost $49/month.
+                                            Most automation tools give you building blocks and expect you to assemble them. Dooza gives you AI employees who own entire job functions — just like hiring a real team member, except they work 24/7 and start with a refundable pilot (100% refund within 14 days).
                                         </p>
                                         <p className="text-slate-700">
                                             Learn more about <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline font-medium">how AI employees are transforming small business</Link> and explore our <Link href="/blog/marketing-automation-tools" className="text-primary-600 hover:underline font-medium">marketing automation tools guide</Link>.
@@ -454,7 +456,7 @@ export default function AutomateBusinessProcessesContent() {
                                     { name: "Somi", role: "AI Social Media Manager", desc: "Creates and posts content across all platforms.", icon: Share2 },
                                     { name: "Rachel", role: "AI Receptionist", desc: "Answers calls, qualifies leads, books appointments.", icon: Phone },
                                     { name: "Stan", role: "AI Lead Generator", desc: "Finds and qualifies prospects while you sleep.", icon: Target },
-                                    { name: "Ranky", role: "AI SEO Specialist", desc: "Writes blogs, optimizes Google, builds rankings.", icon: TrendingUp },
+                                    { name: "Ranky", role: "AI SEO & Visibility Employee", desc: "Writes blogs, optimizes Google, builds rankings.", icon: TrendingUp },
                                     { name: "Linda", role: "AI Legal Assistant", desc: "Handles compliance, contracts, and legal docs.", icon: Users }
                                 ].map((agent, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -483,8 +485,8 @@ export default function AutomateBusinessProcessesContent() {
                                         <p className="text-sm text-slate-600">DIY Tool Stack</p>
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
-                                        <div className="text-2xl font-bold text-green-700">$49/mo</div>
-                                        <p className="text-sm text-green-600">Dooza (AI Employees)</p>
+                                        <div className="text-2xl font-bold text-green-700">14-day</div>
+                                        <p className="text-sm text-green-600">Dooza refundable pilot (<Link href="/pricing" className="underline">see pricing</Link>)</p>
                                     </div>
                                 </div>
                             </div>
@@ -512,13 +514,13 @@ export default function AutomateBusinessProcessesContent() {
                                     },
                                     {
                                         step: "3",
-                                        title: "Get Started",
-                                        desc: "Sign up for Dooza. Our concierge team configures your AI employees in a single 30-minute onboarding call."
+                                        title: "Start Your Pilot",
+                                        desc: "A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees. Every pilot is refundable — 100% refund within 14 days."
                                     },
                                     {
                                         step: "4",
                                         title: "Expand Your AI Team",
-                                        desc: "Once you see results from your first AI employee, activate more. Most businesses have all 6 running within the first month."
+                                        desc: "Once you see results from your first AI employee, activate more, one bottleneck at a time. There are six AI employees to choose from."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -534,14 +536,14 @@ export default function AutomateBusinessProcessesContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Automate Your Business?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop wasting 20+ hours a week on tasks AI employees can handle. Get started in 30 minutes — no coding required.
+                                    Stop wasting 20+ hours a week on tasks AI employees can handle. Start with a refundable pilot — 100% refund within 14 days. No coding required.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>
@@ -621,16 +623,16 @@ export default function AutomateBusinessProcessesContent() {
                                     <div className="border-t border-primary-200 pt-6">
                                         <div className="grid md:grid-cols-3 gap-4 text-center">
                                             <div className="bg-white p-4 rounded-xl border border-primary-100">
-                                                <p className="text-sm text-slate-500 mb-1">Dooza Cost</p>
-                                                <div className="text-2xl font-bold text-slate-900">$49/mo</div>
+                                                <p className="text-sm text-slate-500 mb-1">Dooza Pilot</p>
+                                                <div className="text-2xl font-bold text-slate-900">14-day refundable</div>
                                             </div>
                                             <div className="bg-white p-4 rounded-xl border border-primary-100">
                                                 <p className="text-sm text-slate-500 mb-1">Value Generated</p>
                                                 <div className="text-2xl font-bold text-green-600">$6,200+/mo</div>
                                             </div>
                                             <div className="bg-primary-600 p-4 rounded-xl text-white">
-                                                <p className="text-sm text-primary-100 mb-1">Your ROI</p>
-                                                <div className="text-3xl font-bold">213x</div>
+                                                <p className="text-sm text-primary-100 mb-1">Your Risk</p>
+                                                <div className="text-3xl font-bold">100% refund</div>
                                             </div>
                                         </div>
                                     </div>
@@ -639,7 +641,7 @@ export default function AutomateBusinessProcessesContent() {
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl">
                                 <p className="text-green-800 text-lg font-bold text-center">
-                                    For every $1 you spend on Dooza, you get $213 back in saved time and captured revenue.
+                                    Compare that value against a Dooza pilot on the <Link href="/pricing" className="underline">pricing page</Link>. If it doesn&apos;t pay off, you get a 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>

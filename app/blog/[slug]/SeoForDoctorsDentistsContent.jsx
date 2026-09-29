@@ -61,7 +61,7 @@ const faqData = [
     },
     {
         question: "How much does medical SEO typically cost?",
-        answer: "According to PatientGain and industry surveys, traditional medical SEO agencies charge $999-$5,000/month. With Dooza, Ranky handles your SEO for just $49/month—daily blog posts, Google Business Profile updates, and AI optimization included. No hidden fees, no long-term contracts."
+        answer: "According to PatientGain and industry surveys, traditional medical SEO agencies charge $999-$5,000/month. With Dooza, Ranky handles your SEO—daily blog posts, Google Business Profile updates, and AI optimization included. Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How long until I see results from SEO?",
@@ -184,7 +184,7 @@ export default function SeoForDoctorsDentistsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Meet Ranky - Your AI SEO Specialist
+                                Meet Ranky - Your AI SEO & Visibility Employee
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -235,8 +235,9 @@ export default function SeoForDoctorsDentistsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Get Ranky Now
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -520,7 +521,7 @@ export default function SeoForDoctorsDentistsContent() {
                         </section>
 
                         <section id="ranky-solution" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Meet Ranky: Your AI SEO Specialist Who Never Sleeps</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Meet Ranky: Your AI SEO & Visibility Employee Who Never Sleeps</h2>
                             <div className="bg-gradient-to-br from-primary-50 to-blue-50 border-2 border-primary-200 p-8 rounded-2xl mb-8">
                                 <div className="flex flex-col md:flex-row items-center gap-8">
                                     <div className="w-24 h-24 bg-primary-600 rounded-2xl flex items-center justify-center text-white shrink-0">
@@ -660,17 +661,17 @@ export default function SeoForDoctorsDentistsContent() {
                                     </ul>
                                 </div>
                                 <div className="bg-primary-50 border-2 border-primary-200 p-6 rounded-xl">
-                                    <div className="text-primary-600 font-bold text-sm mb-2">DOOZA + SEOMI</div>
-                                    <div className="text-4xl font-bold text-slate-900 mb-2">$29<span className="text-lg font-normal text-slate-500">/month</span></div>
-                                    <div className="text-lg text-slate-600 mb-4">$348/year total</div>
+                                    <div className="text-primary-600 font-bold text-sm mb-2">DOOZA + RANKY</div>
+                                    <div className="text-4xl font-bold text-slate-900 mb-2">14-day<span className="text-lg font-normal text-slate-500"> refundable pilot</span></div>
+                                    <div className="text-lg text-slate-600 mb-4">100% refund within 14 days &middot; <a href="/pricing" className="text-primary-600 hover:underline">see pricing</a></div>
                                     <ul className="space-y-3">
                                         {[
                                             "Daily blog posts (30+/month)",
                                             "Weekly GBP updates",
                                             "AI recommendation optimization",
-                                            "No contracts, cancel anytime",
-                                            "Free concierge onboarding",
-                                            "All AI employees included"
+                                            "Refundable pilot — 100% refund within 14 days",
+                                            "Free 30-minute call to scope your pilot",
+                                            "Set up and maintained by Dooza engineers"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /><span className="text-slate-700">{item}</span></li>
                                         ))}
@@ -679,8 +680,8 @@ export default function SeoForDoctorsDentistsContent() {
                             </div>
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
-                                <p className="text-2xl font-bold text-green-700">Save $11,652-$35,652/year</p>
-                                <p className="text-green-600 mt-2">While getting MORE content, MORE updates, and AI optimization included</p>
+                                <p className="text-2xl font-bold text-green-700">Try it before you commit</p>
+                                <p className="text-green-600 mt-2">More content, more updates, and AI optimization included &mdash; starting with a refundable pilot, not a 6-12 month agency contract</p>
                             </div>
                         </section>
 
@@ -694,7 +695,7 @@ export default function SeoForDoctorsDentistsContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Book a Free Onboarding Call (30 minutes)",
+                                        title: "Book a Free Pilot Call (30 minutes)",
                                         desc: "Tell us about your practice, your patients, and your goals. We'll set up Ranky to understand your specialty and local market."
                                     },
                                     {
@@ -710,7 +711,7 @@ export default function SeoForDoctorsDentistsContent() {
                                     {
                                         step: "4",
                                         title: "Watch Patients Find You",
-                                        desc: "Within 90 days, most practices see measurable improvements in rankings, website traffic, and patient inquiries. SEO compounds over time."
+                                        desc: "According to Moz and Ahrefs research, most practices see measurable SEO improvements in 3-6 months. SEO compounds over time."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -730,10 +731,10 @@ export default function SeoForDoctorsDentistsContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Start With Ranky - $49/month <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

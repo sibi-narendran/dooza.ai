@@ -44,19 +44,19 @@ const faqData = [
     },
     {
         question: "How can a small business compete with larger companies using AI?",
-        answer: "By deploying AI employees across every operational function — email, social media, phone calls, lead generation, SEO, and legal compliance. Platforms like Dooza give small businesses the same AI superpowers that elite YC startups build with engineering teams, but without needing any technical skills. Six AI employees cost $49/month."
+        answer: "By deploying AI employees across every operational function — email, social media, phone calls, lead generation, SEO, and legal compliance. Platforms like Dooza give small businesses the same AI superpowers that elite YC startups build with engineering teams, but without needing any technical skills. Dooza is an AI-native company that builds AI products and services for small businesses, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
-        question: "How does Dooza use OpenClaw?",
-        answer: "OpenClaw is the open-source AI agent framework that many YC startups build on. Dooza uses OpenClaw as its foundation and adds the managed infrastructure businesses need — multi-tenancy, security, cron scheduling, billing, and a dashboard UI. You get enterprise-grade AI employees powered by the same technology YC companies use, without needing to build or maintain anything yourself."
+        question: "How does Dooza relate to OpenClaw?",
+        answer: "OpenClaw is an open-source AI agent framework you can self-host. Dooza is a managed alternative to self-hosting OpenClaw: instead of running servers, scheduling, security, and a dashboard yourself, you get ready-made AI employees in Dooza Workforce, the AI workforce app, or custom agents on Dooza Agents, the AI agentic platform. Nothing to build or maintain yourself."
     },
     {
         question: "Do I need technical skills to use AI employees?",
-        answer: "Not at all. Dooza is designed for non-technical business owners. You book a free 30-minute onboarding call, and our concierge team configures your AI employees to match your business, brand voice, and workflows. They start working immediately."
+        answer: "Not at all. Dooza is designed for non-technical business owners. You book a free 30-minute call to scope your pilot, and a Dooza engineer configures your AI employees to match your business, brand voice, and workflows. Workforce employees can start working the same day."
     },
     {
         question: "How is this different from hiring a virtual assistant?",
-        answer: "A human virtual assistant costs $1,000-2,600/month and works limited hours. Dooza's AI employees work 24/7, handle six different job functions simultaneously, never take PTO, and cost $49/month total. They handle the repetitive 80% of work so humans can focus on the 20% requiring judgment and creativity."
+        answer: "A human virtual assistant costs $1,000-2,600/month and works limited hours. Dooza's AI employees work 24/7, handle six different job functions simultaneously, never take PTO, and start with a refundable pilot (100% refund within 14 days). They handle the repetitive 80% of work so humans can focus on the 20% requiring judgment and creativity."
     }
 ];
 
@@ -150,7 +150,7 @@ export default function BuildA20xCompanyContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Your 20X Advantage
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -159,9 +159,10 @@ export default function BuildA20xCompanyContent() {
                                 className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-50 transition-all"
                             >
                                 <Calendar className="w-5 h-5" />
-                                Book Free Demo
+                                Book a free pilot call
                             </a>
                         </div>
+                        <p className="mt-3 text-sm text-slate-500">Refundable pilot — 100% refund within 14 days</p>
                     </div>
                 </div>
             </div>
@@ -206,8 +207,9 @@ export default function BuildA20xCompanyContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="mt-2 text-xs text-slate-500 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -241,7 +243,7 @@ export default function BuildA20xCompanyContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">Dooza's Mission</h4>
                                             <p className="text-slate-700">
-                                                Dooza is built on OpenClaw — the same open-source AI agent framework powering YC startups — and packages it into <strong>ready-to-deploy AI employees</strong> for any business. No engineering team. No YC backing required. Six AI employees. $49/month.
+                                                Dooza is an AI-native company that builds AI products and services for small businesses. Dooza Workforce packages <strong>ready-to-deploy AI employees</strong> for any business, a managed alternative to self-hosting open-source agent frameworks like OpenClaw. No engineering team. No YC backing required. Six AI employees, starting with a refundable pilot.
                                             </p>
                                         </div>
                                     </div>
@@ -463,7 +465,7 @@ export default function BuildA20xCompanyContent() {
                                     This is the gap Dooza was built to close.
                                 </p>
                                 <p className="text-slate-600 mt-2">
-                                    Dooza takes OpenClaw — the same AI agent framework YC companies use — and wraps it in a managed platform any business can use. No YC deal required.
+                                    Dooza gives any business managed AI employees and agents, a managed alternative to self-hosting an agent framework like OpenClaw. No YC deal required.
                                 </p>
                             </div>
                         </section>
@@ -473,7 +475,7 @@ export default function BuildA20xCompanyContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">How Dooza Delivers 20X to Every Business</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is built on OpenClaw — the open-source AI agent framework — and uses it to power pre-built AI employees that any business can deploy. No custom engineering. No months of R&D. Here's how Dooza's AI employees map to the exact strategies YC companies are using:
+                                    Dooza Workforce gives you pre-built AI employees that any business can deploy, fully managed, so you never self-host an agent framework like OpenClaw. No custom engineering. No months of R&D. Here's how Dooza's AI employees map to the exact strategies YC companies are using:
                                 </p>
                             </div>
 
@@ -554,7 +556,7 @@ export default function BuildA20xCompanyContent() {
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-slate-900 text-lg">Ranky</h3>
-                                            <p className="text-sm text-slate-500">AI SEO Specialist</p>
+                                            <p className="text-sm text-slate-500">AI SEO & Visibility Employee</p>
                                         </div>
                                     </div>
                                     <p className="text-slate-600 text-sm mb-3">Writes optimized content, manages Google Business Profile, monitors rankings.</p>
@@ -583,10 +585,10 @@ export default function BuildA20xCompanyContent() {
 
                             <div className="bg-green-50 border-2 border-green-200 p-8 rounded-xl text-center">
                                 <p className="text-2xl font-bold text-green-800 mb-2">
-                                    AI employees. $49/month. No engineers required.
+                                    AI employees. Refundable pilot. No engineers required.
                                 </p>
                                 <p className="text-green-700">
-                                    The same automation YC companies spend months building — ready in 30 minutes.
+                                    The same automation YC companies spend months building — working the same day. 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>
@@ -599,8 +601,8 @@ export default function BuildA20xCompanyContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Book a Free Concierge Call",
-                                        desc: "In 30 minutes, our team learns your business, identifies which AI employees you need, and configures them to match your brand voice and workflows."
+                                        title: "Book a Free Pilot Call",
+                                        desc: "On a free 30-minute call, a Dooza engineer scopes your pilot, learns your business, identifies which AI employees you need, and configures them to match your brand voice and workflows."
                                     },
                                     {
                                         step: "2",
@@ -610,7 +612,7 @@ export default function BuildA20xCompanyContent() {
                                     {
                                         step: "3",
                                         title: "Monitor, Adjust, and Scale",
-                                        desc: "Track performance through your dashboard. Adjust instructions as needed. Add more AI employees as your business grows — all at the same flat rate."
+                                        desc: "Track performance through your dashboard. Adjust instructions as needed. Add more AI employees as your business grows."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -627,9 +629,9 @@ export default function BuildA20xCompanyContent() {
                                 <div className="flex items-start gap-3">
                                     <Lightbulb className="w-6 h-6 text-blue-600 shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="font-bold text-blue-800 mb-2">How Dooza Uses OpenClaw</h4>
+                                        <h4 className="font-bold text-blue-800 mb-2">Dooza vs Self-Hosting OpenClaw</h4>
                                         <p className="text-blue-700">
-                                            OpenClaw is the open-source AI agent framework that powers many YC startups. Dooza uses OpenClaw as its foundation and adds the layers businesses actually need: <strong>multi-tenancy, security, cron scheduling, billing, and a managed UI</strong>. Think of OpenClaw as the engine — Dooza is the car you can drive without being a mechanic.
+                                            OpenClaw is an open-source AI agent framework you can self-host. Doing that means running your own servers, security, scheduling, and UI. Dooza is a <strong>managed alternative to self-hosting OpenClaw</strong>: ready-made AI employees and agents, maintained by Dooza engineers, with encrypted connections and your approval on anything sensitive.
                                         </p>
                                     </div>
                                 </div>
@@ -657,14 +659,14 @@ export default function BuildA20xCompanyContent() {
                                     {
                                         step: "Week 2",
                                         title: "Deploy",
-                                        desc: "Start with your biggest bottleneck. For most businesses, that's email (Maily) or missed calls (Rachel). Book your free onboarding call and go live.",
+                                        desc: "Start with your biggest bottleneck. For most businesses, that's email (Maily) or missed calls (Rachel). Book a free pilot call and start your refundable pilot.",
                                         color: "bg-blue-50 border-blue-200",
                                         stepColor: "bg-blue-100 text-blue-700"
                                     },
                                     {
                                         step: "Week 3-4",
                                         title: "Measure",
-                                        desc: "Track hours saved, leads captured, and response times. Most businesses see 15-25 hours/week back immediately. Use those hours on high-value work.",
+                                        desc: "Track hours saved, leads captured, and response times. Use the hours you get back on high-value work.",
                                         color: "bg-green-50 border-green-200",
                                         stepColor: "bg-green-100 text-green-700"
                                     },
@@ -690,14 +692,14 @@ export default function BuildA20xCompanyContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Build Your 20X Business?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop competing with one hand tied behind your back. Get the same AI superpowers YC companies use — in 30 minutes, for $49/month.
+                                    Stop competing with one hand tied behind your back. Get the same AI superpowers YC companies use — the same day, with a refundable pilot (100% refund within 14 days).
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('20x')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Your 20X Advantage <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>
@@ -722,13 +724,13 @@ export default function BuildA20xCompanyContent() {
                                 <p className="text-2xl font-bold text-slate-900 mb-4">
                                     You don't need YC. You don't need engineers. You need Dooza.
                                 </p>
-                                <p className="text-slate-600 mb-6">Built on OpenClaw. AI employees. $49/month. 24/7. The 20X playbook — for everyone.</p>
+                                <p className="text-slate-600 mb-6">AI employees. 24/7. Refundable pilot — 100% refund within 14 days. The 20X playbook — for everyone.</p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('20x')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started - $49/month <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

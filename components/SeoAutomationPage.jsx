@@ -633,7 +633,7 @@ export default function SeoAutomationPage({ page }) {
                                 </p>
                                 <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
                                     <BookDemoButton source={`${page.slug}_hero`} variant="primary" size="xl">
-                                        Book a Demo
+                                        Book a free pilot call
                                     </BookDemoButton>
                                     <Link
                                         href="/"
@@ -740,9 +740,9 @@ export default function SeoAutomationPage({ page }) {
                             <Rocket className="h-7 w-7" />
                         </div>
                         <h2 className="mx-auto mb-4 max-w-3xl font-serif text-3xl font-bold text-white md:text-5xl">{page.ctaTitle}</h2>
-                        <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-slate-300">{page.ctaText}</p>
+                        <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-slate-300">{page.ctaText} Start with a refundable pilot — 100% refund within 14 days.</p>
                         <BookDemoButton source={`${page.slug}_bottom`} variant="primary" size="xl">
-                            Book a Demo
+                            Book a free pilot call
                         </BookDemoButton>
                     </div>
                 </section>

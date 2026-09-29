@@ -121,11 +121,11 @@ export default function SalonsContent({ page }) {
         },
         {
             name: 'Dooza AI',
-            price: '$29',
-            period: '/mo',
+            price: 'Pilot',
+            period: ' · 100% refund in 14 days',
             tint: 'bg-green-50 border-green-300 ring-2 ring-green-200',
             priceColor: 'text-green-600',
-            features: ['24/7 unlimited calls', 'Books by stylist & service', 'SMS reminders included', 'Salon-trained from day one'],
+            features: ['24/7 call answering', 'Books by stylist & service', 'SMS reminders included', 'Salon-trained from day one'],
             crossed: false,
             highlight: true
         }
@@ -169,14 +169,14 @@ export default function SalonsContent({ page }) {
                                 rel="noopener noreferrer"
                                 className="bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                             >
-                                Get Started Free — $49/mo
+                                Start your pilot
                             </a>
                             <a
                                 href={CAL_BOOKING_URL}
                                 onClick={handleAction}
                                 className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                             >
-                                Book a Demo
+                                Book a free pilot call
                             </a>
                         </div>
                     </div>
@@ -305,13 +305,14 @@ export default function SalonsContent({ page }) {
                             >
                                 {plan.highlight && (
                                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-600 text-white text-xs font-bold px-4 py-1 rounded-full">
-                                        Best Value
+                                        Recommended
                                     </div>
                                 )}
                                 <h3 className="text-lg font-bold text-slate-900 mb-4">{plan.name}</h3>
                                 <div className="mb-6">
                                     <span className={`text-4xl font-bold ${plan.priceColor}`}>{plan.price}</span>
                                     <span className="text-slate-500 text-sm">{plan.period}</span>
+                                    {plan.highlight && <a href="/pricing" className="mt-1 block text-xs font-semibold text-primary-700 underline">Pricing depends on the product. See pricing</a>}
                                 </div>
                                 <ul className="space-y-3">
                                     {plan.features.map((feature, fidx) => (
@@ -338,7 +339,7 @@ export default function SalonsContent({ page }) {
                         Ready to Stop Missing Bookings?
                     </h2>
                     <p className="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                        Join hundreds of salons already using Dooza AI to fill every chair, every day.
+                        Let Dooza's AI receptionist fill every chair, every day.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a
@@ -347,7 +348,7 @@ export default function SalonsContent({ page }) {
                             rel="noopener noreferrer"
                             className="bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1 inline-flex items-center justify-center gap-2"
                         >
-                            Get Started Free
+                            Start your pilot
                             <ArrowRight size={20} />
                         </a>
                         <a
@@ -355,7 +356,7 @@ export default function SalonsContent({ page }) {
                             onClick={handleAction}
                             className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                         >
-                            Book a Demo
+                            Book a free pilot call
                         </a>
                     </div>
                 </div>

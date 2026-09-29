@@ -16,7 +16,7 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const quickAnswer = [
-    { pick: 'Dooza', why: 'Best overall for teams that need GEO done, not just measured — Ranky does the work from $49/mo, engineers set it up free.' },
+    { pick: 'Dooza', why: 'Best overall for teams that need GEO done, not just measured — Ranky does the work, engineers set it up with you, and it starts with a refundable pilot.' },
     { pick: 'Otterly.ai', why: 'Best budget AI visibility tracker — third-party reviews report plans from about $29/mo.' },
     { pick: 'Peec AI', why: 'Best mid-priced AI search analytics for marketing teams.' },
     { pick: 'Semrush / Ahrefs', why: 'Best if you already pay for one and want AI visibility next to your SEO data.' },
@@ -35,23 +35,23 @@ const alternatives = [
         name: 'Dooza',
         tagline: 'Best overall for teams that need GEO done, not just measured',
         bestFor: 'Small and mid-sized businesses, founders, local businesses, lean marketing teams, and agencies that need outcomes, not dashboards',
-        price: 'Ranky from $49/mo (Growth $79/mo); first AI employee setup free',
-        trial: '7-day money-back guarantee',
-        type: 'Execution (AI employee + engineers)',
+        price: 'Refundable pilot (see /pricing)',
+        trial: 'Refundable pilot — 100% refund within 14 days',
+        type: 'AI visibility tracking + execution',
         doesWork: true,
         highlight: true,
-        what: 'Dooza is a Forward Deployed Engineer company. Its AI Visibility & Growth Employee, Ranky, combines Google SEO and generative engine optimization in one: topic research with real search data, on-page SEO and schema, GEO-ready content built to be cited by ChatGPT, Perplexity, Claude, and Gemini, and live monitoring of who is mentioning you.',
+        what: 'Dooza is an AI-native company that builds AI products and services for small businesses. For AI search, Ranky tracks how ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews answer your buyers\' prompts, maps which sources they cite, and then does the work: topic research with real search data, on-page SEO and schema, GEO-ready content built to be cited, and live monitoring of who is mentioning you.',
         pros: [
             'Does the work: researches, writes, optimizes, and publishes to Shopify, WordPress, Wix, or custom sites',
             'GEO method built in: citable claims, third-party citations, schema, Reddit and Quora presence, consistent NAP',
             'Social listening and brand-voice comments on LinkedIn, YouTube, and Reddit (approve or auto-send)',
-            'Engineers set up your first AI employee free — live in days, no contracts',
-            'Published price: $49/mo with a 7-day money-back guarantee',
+            'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you — no contracts',
+            'Refundable pilot — 100% refund within 14 days',
         ],
         cons: [
-            'Not an enterprise analytics suite — no 9-engine tracking or prompt-volume data',
-            'Not positioned for SOC 2 procurement requirements',
-            'Teams that want deep dashboards should pair Ranky with a tracker',
+            'Not an enterprise analytics suite: no 9-engine coverage, Prompt Volumes, or ongoing AI crawler analytics',
+            'Not SOC 2 certified (encrypted connections and your approval on anything sensitive)',
+            'Tracks your core prompt set, not thousands of prompts across many languages and regions',
         ],
     },
     {
@@ -180,7 +180,7 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'GEO work actually done', pick: 'Dooza', reason: 'Ranky researches, writes, optimizes, and publishes; engineers set it up free. From $49/mo.' },
+    { need: 'GEO work actually done', pick: 'Dooza', reason: 'Ranky researches, writes, optimizes, and publishes; engineers set it up with you. Starts with a refundable pilot.' },
     { need: 'Cheapest AI visibility tracking', pick: 'Otterly.ai', reason: 'Lowest reported entry price among dedicated trackers (~$29/mo, third-party reported).' },
     { need: 'Mid-market AI search analytics', pick: 'Peec AI', reason: 'Mid-priced AI search analytics (~$89–95/mo, third-party reported).' },
     { need: 'AI visibility inside your SEO suite', pick: 'Semrush or Ahrefs', reason: 'Semrush AI Toolkit or Ahrefs Brand Radar next to the SEO data you already use.' },
@@ -199,9 +199,9 @@ const howToChoose = [
 
 const whyDooza = [
     { icon: Wrench, title: 'Execution, not just insight', desc: 'Every other tool on this list tells you what to fix. Ranky fixes it: content, on-page SEO, schema, internal links, and off-site presence.' },
-    { icon: Users, title: 'Humans set it up', desc: 'A Dooza engineer maps your workflow on Day 1, builds on Day 2, and your AI employee is live by Day 4. Your first AI employee is free.' },
+    { icon: Users, title: 'Humans set it up', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds it with you. Ranky can start working the same day.' },
     { icon: Quote, title: 'Built for how AI cites', desc: 'Specific citable claims, third-party citations, schema, Reddit and Quora presence, and consistent NAP — the inputs answer engines use.' },
-    { icon: CreditCard, title: 'Priced for SMBs', desc: 'Ranky starts at $49/mo on Dooza Workforce with a 7-day money-back guarantee and no contracts. No demo required to see a price.' },
+    { icon: CreditCard, title: 'A refundable pilot, not a sales cycle', desc: 'Every Dooza product starts with a refundable pilot — 100% refund within 14 days — with no contracts. Pricing is listed on /pricing; no demo required to see it.' },
 ];
 
 export default function ProfoundAlternativesContent({ faqData }) {
@@ -243,12 +243,12 @@ export default function ProfoundAlternativesContent({ faqData }) {
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Profound (tryprofound.com) is an enterprise AI visibility platform with custom pricing. The best Profound alternative for most small and mid-sized teams is Dooza: Ranky does the generative engine optimization work from $49/mo, and Dooza engineers set up your first AI employee free. For cheaper monitoring only, look at Otterly.ai or Peec AI.
+                                Profound (tryprofound.com) is an enterprise AI visibility platform with custom pricing. The best Profound alternative for most small and mid-sized teams is Dooza: Ranky does the generative engine optimization work, Dooza engineers set it up with you, and it starts with a refundable pilot — 100% refund within 14 days. For cheaper monitoring only, look at Otterly.ai or Peec AI.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <BookDemoButton source="profound_alt_hero" variant="primary">Get Your First AI Employee Free</BookDemoButton>
-                                <SignupButton source="profound_alt_hero" variant="inverse">Hire Ranky — $49/mo</SignupButton>
+                                <BookDemoButton source="profound_alt_hero" variant="primary">Book a free pilot call</BookDemoButton>
+                                <SignupButton source="profound_alt_hero" variant="inverse">Start your pilot</SignupButton>
                             </div>
                         </div>
                     </div>
@@ -453,8 +453,8 @@ export default function ProfoundAlternativesContent({ faqData }) {
 
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <BookDemoButton source="profound_alt_dooza_card" variant="primary">Get Your First AI Employee Free</BookDemoButton>
-                                            <SignupButton source="profound_alt_dooza_card" variant="inverse">Hire Ranky — $49/mo</SignupButton>
+                                            <BookDemoButton source="profound_alt_dooza_card" variant="primary">Book a free pilot call</BookDemoButton>
+                                            <SignupButton source="profound_alt_dooza_card" variant="inverse">Start your pilot</SignupButton>
                                         </div>
                                     )}
                                 </div>
@@ -595,11 +595,11 @@ export default function ProfoundAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Get GEO Done, Not Just Measured</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-                                Book a call and a Dooza engineer will set up your first AI employee free — live in days, no contracts. Or hire Ranky self-serve for $49/mo with a 7-day money-back guarantee.
+                                Book a free 30-minute call and a Dooza engineer will scope your pilot — no contracts. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <BookDemoButton source="profound_alt_cta" variant="primary">Get Your First AI Employee Free</BookDemoButton>
-                                <SignupButton source="profound_alt_cta" variant="inverse">Hire Ranky — $49/mo</SignupButton>
+                                <BookDemoButton source="profound_alt_cta" variant="primary">Book a free pilot call</BookDemoButton>
+                                <SignupButton source="profound_alt_cta" variant="inverse">Start your pilot</SignupButton>
                             </div>
                             <p className="text-sm text-slate-500 mt-6">
                                 <Link href="/agents/ranky" className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-medium">

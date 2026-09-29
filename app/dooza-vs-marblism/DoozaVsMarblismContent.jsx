@@ -16,31 +16,30 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const comparisonRows = [
-    { feature: 'Monthly Price', dooza: '$49/mo flat', competitor: '$44/mo + $29/seat', doozaWins: true },
-    { feature: 'Growth Price', dooza: '$79/mo — no per-seat fees', competitor: '$24/mo + $14/seat annually', doozaWins: true },
-    { feature: 'Per-Seat Fees', dooza: 'None — whole team included', competitor: '$29/seat (monthly)', doozaWins: true },
-    { feature: 'Number of AI Agents', dooza: '7 specialized employees', competitor: '6 agents', doozaWins: true },
-    { feature: 'Onboarding', dooza: 'Personal setup call with founder', competitor: 'Self-serve only', doozaWins: true },
-    { feature: 'Integrations', dooza: '17 direct (Gmail, Slack, LinkedIn, Shopify…)', competitor: 'Limited / undocumented', doozaWins: true },
+    { feature: 'Price', dooza: 'Refundable pilot (see /pricing)', competitor: '$44/mo + $29/seat monthly; $24/mo + $14/seat annually', doozaWins: false },
+    { feature: 'Per-Seat Fees', dooza: 'None', competitor: '$29/seat (monthly)', doozaWins: true },
+    { feature: 'Number of AI Agents', dooza: 'Maily, Somi, Ranky, Stan, Linda, Rachel', competitor: '6 agents', doozaWins: true },
+    { feature: 'Onboarding', dooza: 'Dooza engineer scopes your pilot on a free 30-min call', competitor: 'Self-serve only', doozaWins: true },
+    { feature: 'Integrations', dooza: '1,000+ app integrations', competitor: 'Limited / undocumented', doozaWins: true },
     { feature: 'Inter-Agent Comms', dooza: 'Coming soon', competitor: 'Yes (2026 update)', doozaWins: false },
-    { feature: 'Free Plan', dooza: 'Yes — free to start', competitor: 'No free tier', doozaWins: true },
-    { feature: 'Setup Time', dooza: '~20 min (guided)', competitor: 'Hours (DIY)', doozaWins: true },
+    { feature: 'Try Before Committing', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: 'No free tier', doozaWins: true },
+    { feature: 'Setup Time', dooza: 'One 30-min guided call', competitor: 'Hours (DIY)', doozaWins: true },
     { feature: 'Brand Personalization', dooza: 'Auto-extracted from your site', competitor: 'Manual config', doozaWins: true },
     { feature: 'Platform Origin', dooza: 'Built for AI employees from day one', competitor: 'Pivoted from app code generator', doozaWins: true },
 ];
 
 const teamPricing = [
-    ['1 person', '$49/mo', '$44/mo', '-$5/mo'],
-    ['2 people', '$49/mo', '$73/mo', '$24/mo'],
-    ['3 people', '$49/mo', '$102/mo', '$53/mo'],
-    ['5 people', '$49/mo', '$160/mo', '$111/mo'],
+    ['1 person', 'No per-seat fees', '$44/mo'],
+    ['2 people', 'No per-seat fees', '$73/mo'],
+    ['3 people', 'No per-seat fees', '$102/mo'],
+    ['5 people', 'No per-seat fees', '$160/mo'],
 ];
 
 const doozaAdvantages = [
-    { icon: Users, title: 'No Per-Seat Fees', desc: 'Your whole team gets access for one flat price. No surprise charges when your VA or co-founder needs in.' },
-    { icon: Zap, title: 'Personal Setup Call', desc: 'A free 20-minute call with the founder to configure your workspace together. Not a chatbot — a real person.' },
-    { icon: Puzzle, title: '17 Direct Integrations', desc: 'Gmail, Slack, LinkedIn, Shopify, Notion, YouTube and more — connected via Composio with clear setup flows.' },
-    { icon: Shield, title: 'Free Plan Available', desc: 'Try Dooza before committing. No credit card required to get started.' },
+    { icon: Users, title: 'No Per-Seat Fees', desc: 'Adding a teammate does not add a seat fee. No surprise charges when your VA or co-founder needs in.' },
+    { icon: Zap, title: 'A Real Engineer', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees with you. Not a chatbot — a real person.' },
+    { icon: Puzzle, title: '1,000+ App Integrations', desc: 'Gmail, Slack, LinkedIn, Shopify, Notion, YouTube and more, connected for you during setup.' },
+    { icon: Shield, title: 'Refundable Pilot', desc: 'Every Dooza product starts with a refundable pilot. If it is not right for you, ask within 14 days for a 100% refund.' },
 ];
 
 const userQuotes = [
@@ -77,7 +76,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Comparison — Updated March 2026
+                                    Comparison — Updated September 2026
                                 </div>
                             </div>
 
@@ -90,12 +89,12 @@ export default function DoozaVsMarblismContent({ faqData }) {
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Dooza offers AI employees, flat pricing, and a personal founder setup call. Marblism offers 6 agents with per-seat fees and self-serve setup. Here is the full breakdown.
+                                Dooza offers AI employees with no per-seat fees, a free 30-minute call with a Dooza engineer to scope your pilot, and a 100% refund within 14 days. Marblism offers 6 agents with per-seat fees and self-serve setup. Here is the full breakdown.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="marblism_hero">Try Dooza Free</SignupButton>
-                                <BookDemoButton source="marblism_hero" />
+                                <SignupButton source="marblism_hero">Start your pilot</SignupButton>
+                                <BookDemoButton source="marblism_hero">Book a free pilot call</BookDemoButton>
                             </div>
                         </div>
                     </div>
@@ -116,7 +115,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                     Marblism charges <strong>$44/month + $29 per additional seat</strong>, offers no human onboarding, and has an undocumented integration ecosystem.
                                 </p>
                                 <p className="text-lg text-slate-600 leading-relaxed">
-                                    Dooza charges a <strong>flat $49/month</strong> for your whole team, offers a <strong>personal setup call with the founder</strong>, and connects to <strong>17 integrations</strong> directly. It also has a free plan to get started. For businesses that want guided setup and flat pricing, the difference is significant.
+                                    Dooza has <strong>no per-seat fees</strong> and no credits, a Dooza engineer scopes your <strong>refundable pilot</strong> (100% refund within 14 days) on a free 30-minute call, and it connects to <strong>1,000+ apps</strong>. For businesses that want guided setup and no seat math, the difference is significant.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -190,7 +189,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Pricing and features as of March 2026.
+                                Competitor pricing and features as of March 2026.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -220,16 +219,14 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                             <th className="text-left py-4 px-6 font-bold text-white">Team Size</th>
                                             <th className="text-left py-4 px-6 font-bold text-primary-300">Dooza</th>
                                             <th className="text-left py-4 px-6 font-bold text-slate-400">Marblism</th>
-                                            <th className="text-left py-4 px-6 font-bold text-emerald-400">You Save</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {teamPricing.map(([team, dooza, marblism, save], i) => (
+                                        {teamPricing.map(([team, dooza, marblism], i) => (
                                             <tr key={i} className="border-b border-white/5 last:border-0">
                                                 <td className="py-4 px-6 font-medium text-white">{team}</td>
                                                 <td className="py-4 px-6 text-primary-300 font-semibold">{dooza}</td>
                                                 <td className="py-4 px-6 text-slate-400">{marblism}</td>
-                                                <td className="py-4 px-6 text-emerald-400 font-semibold">{save}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -241,10 +238,10 @@ export default function DoozaVsMarblismContent({ faqData }) {
                             <div className="grid md:grid-cols-2 gap-6 mt-12">
                                 <div className="bg-primary-500/10 backdrop-blur-sm border border-primary-400/20 rounded-2xl p-8">
                                     <p className="text-primary-300 font-bold text-sm uppercase tracking-wider mb-2">Dooza</p>
-                                    <div className="text-4xl font-bold text-white mb-1">$49<span className="text-base font-normal text-slate-400">/month</span></div>
-                                    <p className="text-sm text-slate-400 mb-5">Entire team. No per-seat fees.</p>
+                                    <div className="text-3xl font-bold text-white mb-1">Refundable pilot</div>
+                                    <p className="text-sm text-slate-400 mb-5">No per-seat fees. 100% refund within 14 days. Pricing depends on the product — <Link href="/pricing" className="underline text-primary-300">see /pricing</Link>.</p>
                                     <ul className="space-y-2.5 text-sm">
-                                        {['All AI employees', 'Unlimited tasks', '17 direct integrations', 'Personal setup call with founder', 'Free plan available', '7-day money-back guarantee'].map((item, i) => (
+                                        {['AI employees with one job each', 'No credits', 'No per-seat fees', '1,000+ app integrations', 'Free 30-minute call to scope your pilot', '100% refund within 14 days'].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {item}
@@ -341,11 +338,11 @@ export default function DoozaVsMarblismContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Ready to Switch?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Book a free 20-minute call with the founder. No sales pitch — we will walk through your needs and show you exactly what Dooza would handle.
+                                Book a free 30-minute call with a Dooza engineer to scope your refundable pilot. No sales pitch — we will walk through your needs and show you exactly what Dooza would handle.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="marblism_cta">Try Dooza Free</SignupButton>
-                                <BookDemoButton source="marblism_cta" />
+                                <SignupButton source="marblism_cta">Start your pilot</SignupButton>
+                                <BookDemoButton source="marblism_cta">Book a free pilot call</BookDemoButton>
                             </div>
                         </ScrollReveal>
                     </div>

@@ -149,16 +149,17 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                             </div>
                         </div>
 
-                        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                        <div className="mt-10 flex flex-col items-center gap-2">
                             <a
                                 href={getProductSignupUrl('workforce')}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try AI-Powered Workforce Tools
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
+                            <span className="text-sm text-slate-500">Refundable pilot — 100% refund within 14 days</span>
                         </div>
                     </div>
                 </div>
@@ -207,8 +208,9 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -945,7 +947,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza's <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">AI employees</Link> are designed to handle the operational tasks that drain your team's time — including the data collection and analysis that powers better performance management.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses. Its <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">AI employees</Link> are designed to handle the operational tasks that drain your team's time — including the data collection and analysis that powers better performance management.
                                 </p>
                             </div>
 
@@ -985,14 +987,14 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Make Performance Reviews Fair, Fast, and Data-Driven?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Dooza's AI workforce handles the operational heavy lifting so your managers can focus on what matters: coaching their teams. Get started from $49/mo with a 7-day money-back guarantee and see the difference AI-powered data collection makes.
+                                    Dooza's AI workforce handles the operational heavy lifting so your managers can focus on what matters: coaching their teams. Start with a refundable pilot — 100% refund within 14 days — and see the difference AI-powered data collection makes.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

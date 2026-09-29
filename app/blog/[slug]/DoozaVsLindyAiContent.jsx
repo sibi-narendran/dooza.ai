@@ -13,11 +13,11 @@ import BlogHeroImage from '../../../components/BlogHeroImage';
 import { Clock, Calendar, ArrowRightLeft, CheckCircle2, XCircle, AlertTriangle, DollarSign, Zap, Users, Shield, Settings, Star } from 'lucide-react';
 
 const faqData = [
-    { question: "Is Dooza AI better than Lindy AI for small businesses?", answer: "For most small businesses, yes. Dooza offers flat-rate pricing at $49/month with all AI employees included, while Lindy uses a credit-based system that starts at $49.99/month but charges extra per task. Dooza's pre-built AI employees (Maily, Somi, Ranky, Stan, Rachel) are ready to work immediately without complex workflow building, making it ideal for founders who want results without a learning curve." },
-    { question: "Why is Dooza cheaper than Lindy AI?", answer: "Lindy AI uses a credit-based pricing model where each action consumes credits, and premium actions cost even more. Monthly bills become unpredictable as usage scales. Dooza charges a flat $49/month for the Starter plan or $119/month for Pro \u2014 no credits, no per-task fees, no surprises. You get all AI employees with unlimited conversations included." },
+    { question: "Is Dooza AI better than Lindy AI for small businesses?", answer: "For most small businesses, yes. Dooza is an AI-native company that builds AI products and services for small businesses, and every Dooza product starts with a refundable pilot (100% refund within 14 days), while Lindy uses a credit-based system that starts at $49.99/month and charges extra per task. Dooza's pre-built AI employees (Maily, Somi, Ranky, Stan, Rachel) are ready to work immediately without complex workflow building, making it ideal for founders who want results without a learning curve." },
+    { question: "How does Dooza pricing compare to Lindy AI?", answer: "Lindy AI uses a credit-based pricing model where each action consumes credits, and premium actions cost even more. Monthly bills become unpredictable as usage scales. Dooza does not meter work in credits. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "Can Dooza AI replace Lindy AI for email and calendar automation?", answer: "Yes. Dooza's Maily AI employee handles email triage, drafting, categorization, and follow-ups 24/7. While Lindy is strong at calendar management and meeting notes, Dooza covers email automation plus social media, SEO, sales outreach, and phone calls \u2014 all in one subscription. For calendar-heavy workflows, you can pair Dooza with a free calendar tool." },
-    { question: "Does Lindy AI have features Dooza doesn't?", answer: "Lindy has some enterprise features Dooza doesn't yet offer: SOC 2/HIPAA compliance, SSO/SCIM, audit logs, and iMessage integration. Lindy also has 4,000+ app integrations compared to Dooza's 1,000+. However, for the core AI employee tasks most small businesses need \u2014 email, social media, SEO, sales, and phone calls \u2014 Dooza delivers more value at a lower, predictable price." },
-    { question: "How do I switch from Lindy AI to Dooza?", answer: "Start a Dooza free trial at dooza.ai, set up the AI employees that match your Lindy workflows, and run both platforms in parallel for a week. Once you're confident Dooza handles your tasks, cancel Lindy. Dooza's onboarding team provides free concierge setup to help you migrate. Most users complete the switch within 7\u201310 days." }
+    { question: "Does Lindy AI have features Dooza doesn't?", answer: "Lindy has some enterprise features Dooza doesn't offer: SOC 2/HIPAA compliance, SSO/SCIM, audit logs, and iMessage integration. Dooza uses encrypted connections and asks for your approval on anything sensitive. Lindy also has 4,000+ app integrations compared to Dooza's 1,000+. However, for the core AI employee tasks most small businesses need \u2014 email, social media, SEO, sales, and phone calls \u2014 Dooza delivers more ready-made value, with a refundable pilot to prove it." },
+    { question: "How do I switch from Lindy AI to Dooza?", answer: "Book a free 30-minute call at dooza.ai so a Dooza engineer can scope your pilot, then start a refundable pilot (100% refund within 14 days). Set up the AI employees that match your Lindy workflows and run both platforms in parallel. Once you're confident Dooza handles your tasks, cancel Lindy. Workforce employees can start working the same day." }
 ];
 
 export default function DoozaVsLindyAiContent() {
@@ -136,7 +136,7 @@ export default function DoozaVsLindyAiContent() {
                                     This isn&apos;t a surface-level comparison. We dug into pricing models, real user complaints, integration ecosystems, and hands-on ease of use to give you the honest breakdown. Whether you&apos;re looking for the <strong>best Lindy AI alternative</strong>, comparing <strong>AI assistant platforms for small business</strong>, or just trying to figure out which tool won&apos;t blow up your monthly bill &mdash; this is the guide.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>TL;DR:</strong> Lindy AI is a powerful workflow builder for technical users who want maximum customization. Dooza AI is a pre-built AI employee platform for founders who want things working today &mdash; at a predictable price. For most small businesses, Dooza wins on value, simplicity, and total cost of ownership.
+                                    <strong>TL;DR:</strong> Lindy AI is a powerful workflow builder for technical users who want maximum customization. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Workforce app gives founders pre-built AI employees that work today, starting with a refundable pilot. For most small businesses, Dooza wins on value, simplicity, and predictability.
                                 </p>
                             </div>
                         </section>
@@ -171,7 +171,7 @@ export default function DoozaVsLindyAiContent() {
                                     <li><strong>Stan</strong> &mdash; Sales outreach and lead follow-up. Responds to leads instantly, sends personalized sequences, books meetings.</li>
                                     <li><strong>Rachel</strong> &mdash; AI receptionist. Answers phone calls 24/7, books appointments, handles FAQs without transfers.</li>
                                 </ul>
-                                <p className="mt-4">The pricing is flat: <strong>$49/month</strong> for Starter, <strong>$119/month</strong> for Pro. No credits. No per-task fees. No bill anxiety. All AI employees are included in every plan with unlimited conversations.</p>
+                                <p className="mt-4">Dooza is an AI-native company that builds AI products and services for small businesses: <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> (the AI workforce app with these employees) and <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza Agents</Link> (the AI agentic platform for custom agents). No credits to track. Pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>), and every product starts with a <strong>refundable pilot &mdash; 100% refund within 14 days</strong>.</p>
                             </div>
 
                             {/* YouTube Video - Dooza AI */}
@@ -203,7 +203,7 @@ export default function DoozaVsLindyAiContent() {
                                     <tbody className="divide-y divide-slate-100">
                                         <tr className="bg-white">
                                             <td className="py-3 px-5 font-medium text-slate-900">Pricing Model</td>
-                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Flat rate &mdash; $49&ndash;$119/mo</td>
+                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Refundable pilot (see /pricing), no credits</td>
                                             <td className="py-3 px-5 text-center text-sm text-slate-600">Credits &mdash; $49.99&ndash;$199.99/mo + per-task fees</td>
                                             <td className="py-3 px-5 text-center"><span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">Dooza</span></td>
                                         </tr>
@@ -263,13 +263,13 @@ export default function DoozaVsLindyAiContent() {
                                         </tr>
                                         <tr className="bg-white">
                                             <td className="py-3 px-5 font-medium text-slate-900">Enterprise Compliance</td>
-                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Standard security</td>
+                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Encrypted connections + your approval on anything sensitive</td>
                                             <td className="py-3 px-5 text-center text-sm text-slate-600">SOC 2, HIPAA, GDPR</td>
                                             <td className="py-3 px-5 text-center"><span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Lindy</span></td>
                                         </tr>
                                         <tr className="bg-slate-50">
                                             <td className="py-3 px-5 font-medium text-slate-900">Onboarding Support</td>
-                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Free concierge onboarding</td>
+                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Dooza engineer scopes your pilot (free 30-min call)</td>
                                             <td className="py-3 px-5 text-center text-sm text-slate-600">Self-serve docs</td>
                                             <td className="py-3 px-5 text-center"><span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">Dooza</span></td>
                                         </tr>
@@ -287,22 +287,22 @@ export default function DoozaVsLindyAiContent() {
 
                         {/* Pricing Breakdown */}
                         <section id="pricing" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing: Why Dooza&apos;s Flat Rate Beats Lindy&apos;s Credit System</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing: Dooza&apos;s Refundable Pilot vs Lindy&apos;s Credit System</h2>
                             <div className="prose md:prose-lg text-slate-600">
-                                <p>Pricing is the single biggest differentiator &mdash; and the #1 reason users switch from Lindy to Dooza. Let&apos;s break it down with real numbers.</p>
+                                <p>Pricing is the single biggest differentiator. Let&apos;s break down how the two models work.</p>
                             </div>
 
                             <div className="bg-slate-900 text-white p-8 rounded-2xl mt-6">
-                                <h3 className="text-xl font-semibold mb-6 text-center">Monthly Cost Comparison</h3>
+                                <h3 className="text-xl font-semibold mb-6 text-center">Pricing Model Comparison</h3>
                                 <div className="grid gap-6 text-center sm:grid-cols-2">
                                     <div className="bg-slate-800 rounded-xl p-6">
                                         <div className="text-primary-400 text-sm font-semibold mb-2 flex items-center justify-center gap-2"><Star className="w-4 h-4" /> DOOZA AI</div>
-                                        <div className="text-3xl font-bold">$49<span className="text-base text-slate-400">/mo</span></div>
+                                        <div className="text-3xl font-bold">14-day<span className="text-base text-slate-400"> refundable pilot</span></div>
                                         <div className="text-slate-400 text-sm mt-3 space-y-1">
-                                            <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-emerald-400" /> All 5 AI employees included</div>
-                                            <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-emerald-400" /> Unlimited conversations</div>
+                                            <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-emerald-400" /> All AI employees included</div>
+                                            <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-emerald-400" /> 100% refund within 14 days</div>
                                             <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-emerald-400" /> No per-task fees</div>
-                                            <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-emerald-400" /> Predictable monthly bill</div>
+                                            <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-emerald-400" /> Pricing by product &mdash; see /pricing</div>
                                         </div>
                                     </div>
                                     <div className="bg-slate-800 rounded-xl p-6">
@@ -318,19 +318,19 @@ export default function DoozaVsLindyAiContent() {
                                 </div>
                                 <div className="border-t border-slate-700 mt-8 pt-6">
                                     <div className="text-center">
-                                        <div className="text-slate-400 text-sm mb-1">Estimated Annual Savings (Dooza vs Lindy Plus)</div>
-                                        <div className="text-3xl font-bold text-emerald-400">$600&ndash;$2,400+<span className="text-base text-slate-400">/year</span></div>
-                                        <div className="text-slate-500 text-sm mt-2">Based on typical small business usage with credit overages</div>
+                                        <div className="text-slate-400 text-sm mb-1">The practical difference</div>
+                                        <div className="text-xl font-bold text-emerald-400">No credit meter to watch</div>
+                                        <div className="text-slate-500 text-sm mt-2">Credit overages are the main source of surprise Lindy bills</div>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="prose md:prose-lg text-slate-600 mt-8">
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3">The Credit Trap Explained</h3>
-                                <p>Lindy&apos;s pricing looks competitive on paper. $49.99/month for the Plus plan &mdash; similar to Dooza. But here&apos;s what the pricing page doesn&apos;t emphasize: <strong>every action your AI agent takes burns credits</strong>. Send an email? Credits. Check a calendar? Credits. Run a &quot;premium action&quot; like summarizing a meeting or querying a database? That&apos;s 3&ndash;10x more credits.</p>
+                                <p>Lindy&apos;s pricing looks competitive on paper. $49.99/month for the Plus plan. But here&apos;s what the pricing page doesn&apos;t emphasize: <strong>every action your AI agent takes burns credits</strong>. Send an email? Credits. Check a calendar? Credits. Run a &quot;premium action&quot; like summarizing a meeting or querying a database? That&apos;s 3&ndash;10x more credits.</p>
                                 <p>Users consistently report that <strong>5,000 credits disappear within the first two weeks</strong> of moderate use. You&apos;re then faced with a choice: stop your automations mid-month, or upgrade to the $99.99 Business plan (20,000 credits) or the $199.99 Max plan (50,000 credits). For heavy users, even the Max plan runs dry.</p>
                                 <p>&quot;Expensive&quot; is the <strong>#1 complaint</strong> in Lindy AI user reviews &mdash; appearing over 40 times in user feedback aggregated across review platforms. This isn&apos;t a minor gripe. It&apos;s the defining friction point of the product.</p>
-                                <p>Dooza eliminates this entirely. $49/month. All employees. Unlimited use. Your bill next month is the same as this month &mdash; whether you process 100 emails or 10,000.</p>
+                                <p>Dooza eliminates the credit meter entirely. Pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>), and you start with a refundable pilot &mdash; 100% refund within 14 days &mdash; so you can test it on real work before committing.</p>
                             </div>
                         </section>
 
@@ -346,14 +346,14 @@ export default function DoozaVsLindyAiContent() {
                                     <li>Workflows that &quot;stop halfway or misunderstand&quot; &mdash; requiring manual intervention</li>
                                     <li>The web builder Lindy ships has been described as &quot;glitchy&quot; with outputs that lack proper CSS</li>
                                 </ul>
-                                <p className="mt-4">Dooza takes the opposite approach: <strong>you don&apos;t build agents &mdash; you hire employees</strong>. Maily, Somi, Ranky, Stan, and Rachel are pre-configured, pre-trained, and ready to go. You connect your accounts, set preferences, and they start working. If you need help, Dooza&apos;s free concierge onboarding team walks you through setup &mdash; typically completed in under 30 minutes.</p>
+                                <p className="mt-4">Dooza takes the opposite approach: <strong>you don&apos;t build agents &mdash; you hire employees</strong>. Maily, Somi, Ranky, Stan, and Rachel are pre-configured, pre-trained, and ready to go. You connect your accounts, set preferences, and they start working. A Dooza engineer scopes your pilot on a free 30-minute call, and Workforce employees can start working the same day.</p>
 
                                 <div className="bg-primary-50 border border-primary-100 p-6 rounded-2xl mt-6">
                                     <div className="flex items-start gap-3">
                                         <Zap className="w-6 h-6 text-primary-600 mt-1 flex-shrink-0" />
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">Setup Time Comparison</h4>
-                                            <p className="text-slate-700 text-sm mb-0"><strong>Dooza:</strong> Sign up &rarr; connect accounts &rarr; AI employees start working. ~15&ndash;30 minutes.</p>
+                                            <p className="text-slate-700 text-sm mb-0"><strong>Dooza:</strong> Free 30-minute call to scope your pilot &rarr; connect accounts &rarr; AI employees start working the same day.</p>
                                             <p className="text-slate-700 text-sm mb-0"><strong>Lindy:</strong> Sign up &rarr; learn the workflow builder &rarr; build each agent &rarr; test &rarr; debug &rarr; iterate. Hours to days, depending on complexity.</p>
                                         </div>
                                     </div>
@@ -367,7 +367,7 @@ export default function DoozaVsLindyAiContent() {
                         <section id="integrations" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Integrations: Breadth vs Ecosystem Freedom</h2>
                             <div className="prose md:prose-lg text-slate-600">
-                                <p>Lindy wins on raw numbers: <strong>4,000+ integrations</strong> vs Dooza&apos;s <strong>1,000+</strong>. But there&apos;s an important nuance.</p>
+                                <p>Lindy wins on raw numbers: <strong>4,000+ integrations</strong> vs Dooza&apos;s <strong>1,000+ app integrations</strong>. But there&apos;s an important nuance.</p>
                                 <p>Lindy is <strong>hyper-reliant on Google products</strong>. Users report that the platform requires extensive Google permissions before you can even try the product. If your business runs on Microsoft 365, Outlook, or a mixed ecosystem, Lindy&apos;s Google-first design creates friction from day one.</p>
                                 <p>Dooza integrates across ecosystems without lock-in: <strong>Gmail, Outlook, LinkedIn, Shopify, WordPress, Wix, WooCommerce, and more</strong>. The integration count is smaller, but the ones that matter for small business operations are all there &mdash; and they work without requiring you to migrate your entire tech stack to Google.</p>
                                 <p>For enterprise teams already deep in the Google ecosystem, Lindy&apos;s integration depth is a real advantage. For everyone else, Dooza&apos;s cross-ecosystem flexibility is more practical.</p>
@@ -380,14 +380,14 @@ export default function DoozaVsLindyAiContent() {
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>Here are the areas where Dooza isn&apos;t just slightly better &mdash; it&apos;s in a different category.</p>
 
-                                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3 flex items-center gap-2"><DollarSign className="w-5 h-5 text-emerald-600" /> 1. Predictable Pricing (No Credit Anxiety)</h3>
-                                <p>Dooza&apos;s flat-rate pricing eliminates the single biggest pain point of AI agent platforms. You know exactly what you&apos;re paying &mdash; this month, next month, and every month after. No mental math calculating whether that next workflow will push you over your credit limit. No mid-month surprises. No &quot;should I upgrade?&quot; anxiety loops.</p>
+                                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3 flex items-center gap-2"><DollarSign className="w-5 h-5 text-emerald-600" /> 1. No Credit Anxiety</h3>
+                                <p>Dooza doesn&apos;t meter work in credits, which removes the single biggest pain point of AI agent platforms. And every product starts with a refundable pilot &mdash; 100% refund within 14 days. No mental math calculating whether that next workflow will push you over your credit limit. No mid-month surprises. No &quot;should I upgrade?&quot; anxiety loops.</p>
 
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3 flex items-center gap-2"><Zap className="w-5 h-5 text-amber-600" /> 2. Specialist AI Employees vs Generic Agents</h3>
                                 <p>Lindy gives you a blank canvas. Dooza gives you trained employees. The difference is like hiring a general contractor vs hiring a plumber &mdash; when your pipes are leaking, you want the specialist. <strong>Maily knows email. Somi knows social. Ranky knows SEO. Stan knows sales. Rachel knows phones.</strong> Each employee is purpose-built for its domain, not a generic agent you have to train yourself.</p>
 
-                                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3 flex items-center gap-2"><Users className="w-5 h-5 text-blue-600" /> 3. Concierge Onboarding (Free)</h3>
-                                <p>Dooza includes free setup assistance with a real human who walks you through connecting your accounts, configuring preferences, and making sure your AI employees are working correctly. Lindy offers documentation and a community forum. When you&apos;re a founder trying to automate operations at 11pm on a Tuesday, the difference between &quot;here&apos;s a doc&quot; and &quot;let me set this up for you&quot; is significant.</p>
+                                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3 flex items-center gap-2"><Users className="w-5 h-5 text-blue-600" /> 3. Hands-On Setup by a Dooza Engineer</h3>
+                                <p>A Dooza engineer scopes your pilot on a free 30-minute call and walks you through connecting your accounts, configuring preferences, and making sure your AI employees are working correctly. Lindy offers documentation and a community forum. When you&apos;re a founder trying to automate operations at 11pm on a Tuesday, the difference between &quot;here&apos;s a doc&quot; and &quot;let me set this up for you&quot; is significant.</p>
 
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3 flex items-center gap-2"><Shield className="w-5 h-5 text-purple-600" /> 4. True 24/7 Autonomous Operation</h3>
                                 <p>Both platforms claim 24/7 operation. But Lindy&apos;s AI agents stop working when credits run out. Dooza&apos;s AI employees work around the clock, every day, without interruption &mdash; because there&apos;s no credit meter ticking down. &quot;AI Employees That Get Work Done While You Sleep&quot; isn&apos;t just a tagline &mdash; it&apos;s literally how the platform works.</p>
@@ -410,7 +410,7 @@ export default function DoozaVsLindyAiContent() {
                                 <p>Lindy&apos;s calendar management goes beyond basic scheduling. It can understand meeting context, suggest optimal times based on your patterns, and handle complex rescheduling. For executives with packed calendars, this is a meaningful advantage.</p>
 
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3">Enterprise Compliance</h3>
-                                <p>SOC 2, HIPAA, and GDPR certifications matter for healthcare, finance, and enterprise teams. Lindy has these. Dooza is built for small businesses and startups where these certifications aren&apos;t typically required &mdash; but if compliance is non-negotiable for your industry, Lindy has the edge.</p>
+                                <p>SOC 2, HIPAA, and GDPR certifications matter for healthcare, finance, and enterprise teams. Lindy has these. Dooza is not SOC 2 certified; it uses encrypted connections and your approval on anything sensitive, which suits many small businesses &mdash; but if compliance is non-negotiable for your industry, Lindy has the edge.</p>
 
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3">Integration Volume</h3>
                                 <p>4,000+ integrations vs 1,000+. If you use niche tools (obscure CRMs, specialized databases, uncommon project management tools), Lindy is more likely to support them natively. For mainstream small business tools, both platforms cover the essentials.</p>
@@ -434,7 +434,7 @@ export default function DoozaVsLindyAiContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-1">&quot;Credits run out too fast&quot;</h4>
                                             <p className="text-slate-600 text-sm mb-2">The #1 complaint. Users report 5,000 credits lasting &lt;2 weeks with moderate use. Premium actions drain credits 3&ndash;10x faster than basic ones.</p>
-                                            <p className="text-emerald-700 text-sm font-medium">Dooza fix: Flat pricing. No credits. Unlimited use.</p>
+                                            <p className="text-emerald-700 text-sm font-medium">Dooza fix: No credits to track. Refundable pilot to prove it works.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -474,7 +474,7 @@ export default function DoozaVsLindyAiContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-1">&quot;Free tier is essentially worthless&quot;</h4>
                                             <p className="text-slate-600 text-sm mb-2">Lindy&apos;s free plan gives 400 credits with no premium actions. Users can barely test the product before being asked to pay.</p>
-                                            <p className="text-emerald-700 text-sm font-medium">Dooza fix: 7-day money-back guarantee. Full access from day one so you can actually evaluate the platform.</p>
+                                            <p className="text-emerald-700 text-sm font-medium">Dooza fix: Refundable pilot &mdash; 100% refund within 14 days. Real work from day one so you can actually evaluate the platform.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -509,7 +509,7 @@ export default function DoozaVsLindyAiContent() {
                                     </ul>
                                     <div className="mt-6">
                                         <Link href="/" onClick={handleAction} className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors text-sm">
-                                            Try Dooza Free <Zap className="w-4 h-4" />
+                                            Start your pilot <Zap className="w-4 h-4" />
                                         </Link>
                                     </div>
                                 </div>
@@ -526,9 +526,9 @@ export default function DoozaVsLindyAiContent() {
                             </div>
 
                             <div className="prose md:prose-lg text-slate-600 mt-8">
-                                <p>For the vast majority of founders, solopreneurs, and small business owners looking for an <strong>affordable AI employee platform that actually works out of the box</strong> &mdash; Dooza is the clear winner. You get more functionality at a lower price, with zero technical overhead and support that&apos;s actually responsive.</p>
+                                <p>For the vast majority of founders, solopreneurs, and small business owners looking for an <strong>affordable AI employee platform that actually works out of the box</strong> &mdash; Dooza is the clear winner. You get more ready-made functionality, zero technical overhead, and a refundable pilot to prove it.</p>
                                 <p>Lindy is a good product with real strengths. But its credit-based pricing model, workflow complexity, and Google dependency make it a harder sell for the business owner who just wants their email managed, social media posted, leads followed up, and phones answered &mdash; without becoming an automation engineer in the process.</p>
-                                <p className="mt-6"><strong>Ready to see the difference?</strong> <Link href="/" onClick={handleAction} className="text-primary-600 hover:underline font-medium">Start your free Dooza trial</Link> and have your AI employees working within 30 minutes. No credit card required. No credits to track. Just results.</p>
+                                <p className="mt-6"><strong>Ready to see the difference?</strong> <Link href="/" onClick={handleAction} className="text-primary-600 hover:underline font-medium">Start your pilot</Link> and have your AI employees working the same day. Start with a refundable pilot &mdash; 100% refund within 14 days. No credits to track. Just results.</p>
                             </div>
                         </section>
 

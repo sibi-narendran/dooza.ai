@@ -152,11 +152,11 @@ function InstagramEmbed({ permalink }) {
 
 // ─── FAQ Data ────────────────────────────────────────────────────────────────
 const faqData = [
-    { question: "How can I make money with AI in 2026?", answer: "The fastest way is the reseller model: pick one service (social media, SEO, email, lead generation, or phone answering), use an AI tool to deliver it on autopilot, and charge small businesses a flat monthly retainer. You keep the margin between the tool's cost ($29/month) and the client's retainer ($500–$2,000/month)." },
-    { question: "Can I really resell AI tools as a service?", answer: "Yes — and it's how most modern AI agencies operate. You're not selling the tool; you're selling the outcome (posts published, leads booked, calls answered). Tools like Dooza are explicitly designed for operators and agencies to white-label the work under their own brand." },
-    { question: "Do I need technical skills to start an AI side hustle?", answer: "No. Modern AI platforms include concierge onboarding that configures everything for you. You focus on finding clients and managing relationships. The AI handles execution. No coding, no prompt engineering, no infrastructure." },
+    { question: "How can I make money with AI in 2026?", answer: "The fastest way is the reseller model: pick one service (social media, SEO, email, lead generation, or phone answering), use an AI tool to deliver it on autopilot, and charge small businesses a flat monthly retainer. You keep the margin between the tool's cost and the client's retainer ($500–$2,000/month). With Dooza, pricing depends on the product, and every product starts with a refundable pilot: 100% refund within 14 days." },
+    { question: "Can I really resell AI tools as a service?", answer: "Yes — and it's how most modern AI agencies operate. You're not selling the tool; you're selling the outcome (posts published, leads booked, calls answered). Dooza, an AI-native company that builds AI products and services for small businesses, is designed so operators and agencies can deliver the work under their own brand." },
+    { question: "Do I need technical skills to start an AI side hustle?", answer: "No. With Dooza, an engineer scopes your pilot on a free 30-minute call and configures everything for you. You focus on finding clients and managing relationships. The AI handles execution. No coding, no prompt engineering, no infrastructure." },
     { question: "What services sell best for an AI reseller business?", answer: "Six proven categories: social media management ($500–$2,000/mo), SEO content ($1,000–$5,000/mo), AI receptionist / call answering ($300–$800/mo), lead generation ($500–$1,500/mo), email management ($400–$1,000/mo), and appointment setting ($500–$1,200/mo)." },
-    { question: "How much money can you make reselling AI tools?", answer: "Three small clients on retainer = $2,800/month gross on a $29/month tool cost. Scale to ten clients and you're at $10,000+/month. The constraint isn't execution (AI handles it) — it's sales." },
+    { question: "How much money can you make reselling AI tools?", answer: "Three small clients on retainer can mean $2,800/month gross, and the AI tool is a small fraction of that. Scale to ten clients and you're at $10,000+/month. The constraint isn't execution (AI handles it) — it's sales." },
     { question: "Is reselling AI tools legal and allowed?", answer: "Yes. Most AI employee platforms (including Dooza) explicitly encourage agencies, freelancers, and operators to use the service for client work. You own the client relationship; the AI does the work in the background." },
 ];
 
@@ -285,7 +285,7 @@ export default function DoozaItAndResellContent() {
                                     Everyone wants to know how to make money with AI in 2026. Most of the advice is bad — build a wrapper app, sell a course, post AI-generated videos. The model that actually works is older and quieter: <strong>resell AI tools as a service</strong>.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    The idea is simple. Small businesses (dentists, salons, real estate agents, coaches, e-commerce shops) already pay humans $500–$5,000/month for tasks like social media, SEO, lead generation, and answering the phone. Modern AI tools can do those exact jobs for $29/month. The gap between those two numbers is your business.
+                                    The idea is simple. Small businesses (dentists, salons, real estate agents, coaches, e-commerce shops) already pay humans $500–$5,000/month for tasks like social media, SEO, lead generation, and answering the phone. Modern AI tools can do those exact jobs for a fraction of that. The gap between those two numbers is your business.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     An influencer named Hamza (@hamza_clipss) summed up the whole model in a 20-second reel: <em>don&apos;t do the work yourself — let AI do it, and sell the output to other people</em>. We&apos;re going to expand that into a real playbook, with the math, the services that sell, and the exact tool we recommend (<Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>) for delivering the work.
@@ -309,9 +309,9 @@ export default function DoozaItAndResellContent() {
                                 <p>The agency model used to require a team. Hamza&apos;s clip flips it:</p>
                                 <ol className="list-decimal pl-6 space-y-2">
                                     <li><strong>Pick a service small businesses already pay for.</strong> Social media. SEO. Cold outbound. Receptionist. Email triage.</li>
-                                    <li><strong>Configure a Dooza AI employee to do that one thing well.</strong> Onboarding is free and concierge — you don&apos;t touch code.</li>
+                                    <li><strong>Configure a Dooza AI employee to do that one thing well.</strong> A Dooza engineer scopes it on a free 30-minute call, and you start with a refundable pilot — 100% refund within 14 days. You don&apos;t touch code.</li>
                                     <li><strong>Sell the output, not the tool.</strong> Your client doesn&apos;t need to know what&apos;s under the hood. They get posts, leads, blog articles, answered calls.</li>
-                                    <li><strong>Charge a service retainer.</strong> $500–$2,000/month is normal. Your input is $29/month.</li>
+                                    <li><strong>Charge a service retainer.</strong> $500–$2,000/month is normal. Your tool cost is a fraction of that (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>).</li>
                                     <li><strong>Repeat.</strong> One Dooza account can power the workflow for many clients if you keep configurations clean.</li>
                                 </ol>
                                 <p>That&apos;s it. That&apos;s the entire reel, expanded.</p>
@@ -338,21 +338,21 @@ export default function DoozaItAndResellContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Margin Nobody Talks About</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Most service businesses have ugly margins because labor eats the revenue. With Dooza, the labor cost is fixed at $29/month no matter how much output you ship.
+                                    Most service businesses have ugly margins because labor eats the revenue. With Dooza, the labor cost is a software cost, not a headcount cost. Pricing depends on the product, and every product starts with a refundable pilot &mdash; 100% refund within 14 days.
                                 </p>
                             </div>
                             <div className="bg-slate-900 text-white p-8 rounded-2xl mt-6">
                                 <div className="grid gap-6 text-center sm:grid-cols-2">
                                     <div>
-                                        <div className="text-slate-400 text-sm mb-1">Your cost</div>
-                                        <div className="text-3xl font-bold">$29<span className="text-base text-slate-400">/mo</span></div>
+                                        <div className="text-slate-400 text-sm mb-1">Your start</div>
+                                        <div className="text-3xl font-bold">14-day<span className="text-base text-slate-400"> refundable pilot</span></div>
                                     </div>
                                     <div>
                                         <div className="text-slate-400 text-sm mb-1">Client retainer</div>
                                         <div className="text-3xl font-bold text-primary-400">$500–$2,000<span className="text-base text-slate-400">/mo</span></div>
                                     </div>
                                 </div>
-                                <p className="text-slate-300 text-center mt-6 italic">One client pays back the year. Everything after is margin.</p>
+                                <p className="text-slate-300 text-center mt-6 italic">Prove it on your first client with a refundable pilot. Everything after is margin.</p>
                             </div>
                         </section>
 
@@ -363,7 +363,7 @@ export default function DoozaItAndResellContent() {
                                     Freelancers tired of trading hours for dollars. Side-hustlers who want recurring revenue instead of one-off gigs. Existing agencies who are bleeding margin on junior staff. Operators who like sales but hate execution.
                                 </p>
                                 <p>
-                                    If that&apos;s you, the reel wasn&apos;t a hype clip — it was a memo. The tools to run a one-person agency that looks like a ten-person one already exist. Dooza is one of them. Hamza just told you out loud.
+                                    If that&apos;s you, the reel wasn&apos;t a hype clip — it was a memo. The tools to run a one-person agency that looks like a ten-person one already exist. Dooza is an AI-native company that builds AI products and services for small businesses, and its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app is one of them. Hamza just told you out loud.
                                 </p>
                                 <p>
                                     Don&apos;t do it. <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza it</Link>. Sell it to other people.

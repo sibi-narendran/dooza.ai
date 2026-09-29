@@ -30,24 +30,23 @@ const alternatives = [
         name: 'Dooza',
         tagline: 'Best overall Sintra alternative for SMBs',
         bestFor: 'Small businesses wanting hands-off AI employees with personal onboarding',
-        price: 'From $49/mo',
-        trial: '7-day money-back guarantee',
-        agents: '5 named AI employees — Maily (email), Somi (social media), Ranky (SEO), Stan (customer support), Linda (lead generation)',
-        integrations: '1,000+ via Composio',
+        price: 'Refundable pilot (see /pricing)',
+        trial: 'Refundable pilot — 100% refund within 14 days',
+        agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents), Rachel (phone calls)',
+        integrations: '1,000+ app integrations',
         creditSystem: false,
         namedAgents: true,
         highlight: true,
         pros: [
-            '5 named AI employees included in every plan',
-            '7-day money-back guarantee — full refund if it is not the right fit',
-            'Free concierge onboarding — founder personally sets up your workspace',
-            'No credit system — usage-based tiers instead of confusing credits',
-            '1,000+ app integrations via Composio',
+            'Refundable pilot — 100% refund within 14 days if it is not the right fit',
+            'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you',
+            'No credit system and no per-seat fees',
+            '1,000+ app integrations',
         ],
         cons: [
-            'Fewer named agents than Sintra (5 vs 12+)',
+            'Fewer named AI employees than Sintra\'s 12+ helpers',
             'Newer platform with a smaller user base',
-            'No free plan — paid from day one, backed by 7-day refund',
+            'No free tier — the pilot is paid, with a 100% refund within 14 days',
         ],
     },
     {
@@ -209,18 +208,18 @@ const sintraCostRows = [
     { plan: 'Sintra X, 3-month plan', shown: '$23.60/mo', upfront: '$70.80', credits: '250 per month' },
     { plan: 'Sintra X, 12-month plan', shown: '$15.60/mo', upfront: '$187.20', credits: '250 per month' },
     { plan: 'One Sintra helper only', shown: '$39/mo per helper', upfront: '$39', credits: 'Single helper' },
-    { plan: 'Dooza Starter', shown: '$49/mo', upfront: '$49', credits: 'No credits', dooza: true },
+    { plan: 'Dooza', shown: 'Refundable pilot (see /pricing)', upfront: 'Pilot, 100% refundable within 14 days', credits: 'No credits', dooza: true },
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Named AI employees, 7-day money-back guarantee, personal founder onboarding, no credit system, 1,000+ integrations' },
+    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Named AI employees, refundable pilot, engineer-led setup, no credit system, 1,000+ integrations' },
     { need: 'Lowest price', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 7 named agents, unlimited team members, and no credit system' },
     { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations — but beware of the 2.0/5 Trustpilot rating and credit system' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG, multi-agent orchestration, $37M funded' },
     { need: 'Marketing only', pick: 'NoimosAI', reason: '11 specialized marketing agents including unique GEO and Social Listening agents' },
     { need: 'PM + AI in one tool', pick: 'Motion', reason: 'Calendar, task management, and AI employees in a single platform' },
     { need: 'Best user reviews', pick: 'Marblism', reason: '4.7/5 on Trustpilot from 765+ reviews — highest rated in this list' },
-    { need: 'Personal onboarding', pick: 'Dooza', reason: 'The only platform offering a free founder setup call with concierge onboarding' },
+    { need: 'Personal onboarding', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you' },
 ];
 
 export default function SintraAlternativesContent({ faqData }) {
@@ -266,8 +265,8 @@ export default function SintraAlternativesContent({ faqData }) {
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="sintra_alt_hero">Get started with Dooza</SignupButton>
-                                <BookDemoButton source="sintra_alt_hero" />
+                                <SignupButton source="sintra_alt_hero">Start your pilot</SignupButton>
+                                <BookDemoButton source="sintra_alt_hero">Book a free pilot call</BookDemoButton>
                             </div>
                         </div>
                     </div>
@@ -452,8 +451,8 @@ export default function SintraAlternativesContent({ faqData }) {
                                     {/* CTA for Dooza only */}
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <SignupButton source="sintra_alt_dooza_card">Get started with Dooza</SignupButton>
-                                            <BookDemoButton source="sintra_alt_dooza_card" />
+                                            <SignupButton source="sintra_alt_dooza_card">Start your pilot</SignupButton>
+                                            <BookDemoButton source="sintra_alt_dooza_card">Book a free pilot call</BookDemoButton>
                                         </div>
                                     )}
                                 </div>
@@ -514,11 +513,11 @@ export default function SintraAlternativesContent({ faqData }) {
                                 </div>
                                 <div className="bg-slate-50 rounded-2xl border border-slate-100 p-6">
                                     <h3 className="font-bold text-slate-900 mb-2">Refund windows differ</h3>
-                                    <p className="text-sm text-slate-600 leading-relaxed">Sintra offers a 14-day money-back guarantee. Dooza is month to month at $49 with a 7-day money-back guarantee and no credits.</p>
+                                    <p className="text-sm text-slate-600 leading-relaxed">Sintra offers a 14-day money-back guarantee. Dooza has no credits, and every Dooza product starts with a refundable pilot — 100% refund within 14 days.</p>
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-6 italic text-center">
-                                Sintra prices checked September 24, 2026 on sintra.ai/pricing. On a 12-month plan Sintra costs less per month than Dooza; the difference is the up-front payment and the credit cap.
+                                Sintra prices checked September 24, 2026 on sintra.ai/pricing. On a 12-month plan Sintra is one of the lowest-cost options here; the trade-off is the up-front payment and the credit cap. Dooza pricing is listed on /pricing.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -590,11 +589,11 @@ export default function SintraAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Sintra Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start today for $49/mo — full access backed by a 7-day money-back guarantee. Or book a free setup call with the founder. No sales pitch, just a walkthrough of what Dooza handles for your business.
+                                Start with a refundable pilot — 100% refund within 14 days. Book a free 30-minute call with a Dooza engineer to scope it. No sales pitch, just a walkthrough of what Dooza handles for your business.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="sintra_alt_cta">Get started with Dooza</SignupButton>
-                                <BookDemoButton source="sintra_alt_cta" />
+                                <SignupButton source="sintra_alt_cta">Start your pilot</SignupButton>
+                                <BookDemoButton source="sintra_alt_cta">Book a free pilot call</BookDemoButton>
                             </div>
                         </ScrollReveal>
                     </div>

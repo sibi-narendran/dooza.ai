@@ -14,7 +14,7 @@ export const metadata = {
     alternates: { canonical: `${SITE_URL}/dooza-vs-sintra` },
     openGraph: {
         title: 'Sintra AI Alternative — Dooza vs Sintra Compared [2026]',
-        description: 'The #1 Sintra AI alternative. Unlimited tasks at $49/mo flat, free founder setup call — no 250 credit caps, no DIY setup.',
+        description: 'A Sintra AI alternative with no credits and no 250-credit cap. A Dooza engineer scopes your refundable pilot on a free 30-minute call — 100% refund within 14 days.',
         url: `${SITE_URL}/dooza-vs-sintra`,
         siteName: 'Dooza',
         type: 'website',
@@ -23,7 +23,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Sintra AI Alternative — Dooza vs Sintra [2026]',
-        description: 'Looking for a Sintra AI alternative? Dooza gives you unlimited AI employees, flat pricing, and free founder onboarding.',
+        description: 'Looking for a Sintra AI alternative? Dooza gives you AI employees with no credits, set up with a Dooza engineer, and a refundable pilot.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -31,11 +31,11 @@ export const metadata = {
 const faqData = [
     {
         question: 'Is Dooza really better than Sintra AI?',
-        answer: 'It depends on your needs. Dooza offers unlimited tasks with no credit caps, a personal setup call with the founder, and a flat $49/month price with AI employees. Sintra AI offers more helpers (12+) but limits you to 250 credits per month and has no human onboarding support. If you need unlimited usage and guided setup, Dooza is the stronger choice.',
+        answer: 'It depends on your needs. Dooza has no credits, a free 30-minute call with a Dooza engineer to scope your pilot, and every product starts with a refundable pilot (100% refund within 14 days). Sintra AI offers more helpers (12+) but limits you to 250 credits per month and has no human onboarding support. If you want no credit meters and guided setup, Dooza is the stronger choice.',
     },
     {
         question: 'Does Sintra AI have a credit limit?',
-        answer: 'Yes. All Sintra AI plans include 250 monthly credits. Advanced AI actions consume credits, and when they run out, you need to purchase top-ups. Dooza has no credit limits — every task and conversation is unlimited.',
+        answer: 'Yes. All Sintra AI plans include 250 monthly credits. Advanced AI actions consume credits, and when they run out, you need to purchase top-ups. Dooza has no credits — you are never blocked mid-month by a credit balance.',
     },
     {
         question: 'Can Sintra AI helpers talk to each other?',
@@ -43,15 +43,15 @@ const faqData = [
     },
     {
         question: 'What AI employees does Dooza offer?',
-        answer: 'Dooza has 7 specialized AI employees. Maily writes, personalizes, and sends email campaigns through your Gmail or Outlook. Somi creates and schedules posts across Facebook, Instagram, and other social platforms. Linky handles LinkedIn outreach — connection requests, messages, and content publishing. Tweety manages your Twitter/X presence with tweets, threads, and engagement. Utumy helps with YouTube — scripts, titles, descriptions, and SEO for your videos. Ranky is your SEO specialist — keyword research, site audits, content briefs, and blog writing to get you ranking. Lex drafts legal documents like NDAs, contracts, and terms of service. Each agent connects directly to your tools and works autonomously.',
+        answer: 'Dooza\'s AI employees each own one job. Maily handles email through your Gmail or Outlook. Somi creates and schedules social media posts across Facebook, Instagram, and LinkedIn. Ranky handles SEO and AI visibility: keyword research, blog writing, and getting you cited by ChatGPT and Google. Stan finds and follows up with leads. Linda drafts legal documents like NDAs and contracts. Rachel (Voice Pro) answers calls and books appointments. Each one connects to your tools and works 24/7, with your approval on anything sensitive.',
     },
     {
         question: 'How do I switch from Sintra AI to Dooza?',
-        answer: 'You can start with Dooza\'s free plan to test the platform. When ready, book a free 20-minute setup call with the founder, who will walk you through configuration. You can run both platforms side by side during the transition.',
+        answer: 'Book a free 30-minute call and a Dooza engineer scopes your pilot with you. Every Dooza product starts with a refundable pilot — 100% refund within 14 days. You can run both platforms side by side during the transition. See /pricing for current plans.',
     },
     {
-        question: 'Which is cheaper — Dooza or Sintra AI?',
-        answer: 'Dooza is $49/month flat with everything included and no credit limits. Sintra AI starts at $48.50/month (monthly) or $15.60/month on an annual commitment — but all plans are capped at 250 credits. Sintra is cheaper annually; Dooza is cheaper monthly and has no usage caps.',
+        question: 'How does Dooza pricing compare to Sintra AI?',
+        answer: 'Sintra AI starts at $48.50/month (monthly) or $15.60/month on an annual commitment — but all plans are capped at 250 credits. Dooza has no credits and no per-seat fees, and every Dooza product starts with a refundable pilot (100% refund within 14 days). Pricing depends on the product; current plans are listed at dooza.ai/pricing.',
     },
     {
         question: 'What is an AI employee and how does it work?',
@@ -63,19 +63,19 @@ const faqData = [
     },
     {
         question: 'Is my business data safe with AI employee platforms?',
-        answer: 'Dooza connects to your tools via Composio with OAuth-based authentication — your credentials are never stored directly. All data is encrypted in transit and at rest. You control which integrations are active and can revoke access at any time.',
+        answer: 'Dooza connects to your tools with OAuth-based authentication — your credentials are never stored directly. All data is encrypted in transit and at rest. You control which integrations are active and can revoke access at any time.',
     },
     {
         question: 'How long does it take to see results with AI employees?',
-        answer: 'Most Dooza users see their first automated outputs within the first day. The founder personally walks you through setup in a 20-minute call, and your brand info is auto-extracted from your website. SEO results build over weeks, but email, social media, and content tasks start producing immediately.',
+        answer: 'Workforce employees can start working the same day. A Dooza engineer scopes your pilot on a free 30-minute call, and your brand info is auto-extracted from your website. SEO results build over weeks, but email, social media, and content tasks start producing immediately.',
     },
     {
         question: 'Do I need to be technical to use AI employees?',
-        answer: 'Not at all. Dooza is designed for non-technical business owners and small teams. The founder personally sets up your workspace, connects your tools, and shows you how everything works. If you can send an email, you can use Dooza.',
+        answer: 'Not at all. Dooza is designed for non-technical business owners and small teams. A Dooza engineer sets up your workspace, connects your tools, and shows you how everything works. If you can send an email, you can use Dooza.',
     },
     {
         question: 'What happens if I run out of Sintra AI credits?',
-        answer: 'When your 250 monthly credits on Sintra AI run out, you either wait until next month or purchase credit top-ups at additional cost. This can be frustrating if you rely on your AI helpers daily. Dooza has no credit system — usage is unlimited on all plans.',
+        answer: 'When your 250 monthly credits on Sintra AI run out, you either wait until next month or purchase credit top-ups at additional cost. This can be frustrating if you rely on your AI helpers daily. Dooza has no credit system, so you are never locked out mid-month.',
     },
 ];
 

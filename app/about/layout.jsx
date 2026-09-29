@@ -2,14 +2,14 @@ import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
     title: 'About Us - Dooza | Adam Laboratory Inc.',
-    description: 'Dooza.ai is built by Adam Laboratory Inc., a Delaware C-Corporation. Learn about our mission to empower businesses with AI-powered social media tools.',
-    keywords: ['about Dooza', 'Adam Laboratory Inc', 'AI company', 'social media AI', 'Delaware corporation'],
+    description: 'Dooza is an AI-native company, built by Adam Laboratory Inc. (Delaware C-Corp), making AI products and services for small businesses: Dooza Workforce and Dooza Agents.',
+    keywords: ['about Dooza', 'Adam Laboratory Inc', 'AI company', 'AI-native company', 'Delaware corporation'],
     alternates: {
         canonical: `${SITE_URL}/about`,
     },
     openGraph: {
         title: 'About Us - Dooza | Adam Laboratory Inc.',
-        description: 'Dooza.ai is built by Adam Laboratory Inc., a Delaware C-Corporation. Learn about our mission to empower businesses with AI-powered tools.',
+        description: 'Dooza is an AI-native company, built by Adam Laboratory Inc., that makes AI products and services for small businesses. Every product starts with a refundable pilot.',
         url: `${SITE_URL}/about`,
         siteName: SITE_NAME,
         type: 'website',
@@ -25,7 +25,7 @@ export const metadata = {
     twitter: {
         card: 'summary',
         title: 'About Us - Dooza | Adam Laboratory Inc.',
-        description: 'Dooza.ai is built by Adam Laboratory Inc., a Delaware C-Corporation. Learn about our mission.',
+        description: 'Dooza is an AI-native company, built by Adam Laboratory Inc. Every product starts with a refundable pilot.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -57,7 +57,7 @@ export default function AboutLayout({ children }) {
         "legalName": "Adam Laboratory Inc.",
         "url": SITE_URL,
         "logo": `${SITE_URL}/logo.png`,
-        "description": "Adam Laboratory Inc. is a Delaware C-Corporation that builds AI-powered products for businesses. Dooza.ai is its flagship product.",
+        "description": "Adam Laboratory Inc. is a Delaware C-Corporation and the company behind Dooza. Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.",
         "foundingDate": "2025",
         "address": {
             "@type": "PostalAddress",

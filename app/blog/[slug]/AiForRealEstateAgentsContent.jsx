@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: "I'm not tech-savvy. Can I still use AI tools?",
-        answer: "Absolutely. Dooza's AI employees are designed for busy agents, not tech experts. Our free concierge onboarding sets everything up for you in a 30-minute call. You don't need to configure anything—just tell us about your business and we handle the rest. If you can use email, you can use Dooza."
+        answer: "Absolutely. Dooza's AI employees are designed for busy agents, not tech experts. A Dooza engineer scopes your setup on a free 30-minute call, and every product starts with a refundable pilot (100% refund within 14 days). You don't need to configure anything—just tell us about your business and we handle the rest. If you can use email, you can use Dooza."
     },
     {
         question: "How does AI help with lead response time?",
@@ -63,11 +63,11 @@ const faqData = [
     },
     {
         question: "What about my existing CRM and tools?",
-        answer: "Dooza integrates with popular real estate CRMs and tools. Our AI employees work alongside your existing tech stack, not replace it. During onboarding, we'll connect everything so leads flow seamlessly into your pipeline."
+        answer: "Dooza integrates with popular real estate CRMs and tools. Our AI employees work alongside your existing tech stack, not replace it. During your pilot, we'll connect everything so leads flow seamlessly into your pipeline."
     },
     {
         question: "How much does a traditional real estate VA cost compared to Dooza?",
-        answer: "According to industry data, human virtual assistants for real estate cost $1,000-$2,600/month for full-time help, or $20-40/hour in the US. Dooza gives you AI employees working 24/7 for just $49/month—that's roughly 97% less than a single part-time VA, with no contracts or hourly limits."
+        answer: "According to industry data, human virtual assistants for real estate cost $1,000-$2,600/month for full-time help, or $20-40/hour in the US. Dooza gives you AI employees working 24/7 for a fraction of that cost, with no hourly limits. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How quickly will I see results?",
@@ -190,7 +190,7 @@ export default function AiForRealEstateAgentsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Your AI Team - $49/month
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -240,7 +240,7 @@ export default function AiForRealEstateAgentsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Get Started
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -609,7 +609,7 @@ export default function AiForRealEstateAgentsContent() {
                                             <Search size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-slate-900 text-xl mb-2">Ranky - AI SEO Specialist</h3>
+                                            <h3 className="font-bold text-slate-900 text-xl mb-2">Ranky - AI SEO & Visibility Employee</h3>
                                             <p className="text-slate-600 mb-4">
                                                 Ranky writes and publishes SEO-optimized blog posts, neighborhood guides, and market reports. She optimizes your Google Business Profile and ensures you rank when buyers search for agents in your area.
                                             </p>
@@ -696,8 +696,8 @@ export default function AiForRealEstateAgentsContent() {
                                 </div>
                                 <div className="bg-primary-50 border-2 border-primary-200 p-6 rounded-xl">
                                     <div className="text-primary-600 font-bold text-sm mb-2">DOOZA AI EMPLOYEES</div>
-                                    <div className="text-4xl font-bold text-slate-900 mb-2">$29<span className="text-lg font-normal text-slate-500">/month</span></div>
-                                    <div className="text-lg text-slate-600 mb-4">$348/year for AI employees</div>
+                                    <div className="text-4xl font-bold text-slate-900 mb-2">14-day<span className="text-lg font-normal text-slate-500"> refundable pilot</span></div>
+                                    <div className="text-lg text-slate-600 mb-4">Pricing depends on the product. <a href="/pricing" className="text-primary-600 hover:underline">See pricing</a></div>
                                     <ul className="space-y-3">
                                         {[
                                             "24/7 phone answering & lead qualification",
@@ -707,7 +707,7 @@ export default function AiForRealEstateAgentsContent() {
                                             "Lead generation & nurturing",
                                             "Contract review assistance",
                                             "No contracts, cancel anytime",
-                                            "Free concierge onboarding"
+                                            "Refundable pilot: 100% refund within 14 days"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /><span className="text-slate-700">{item}</span></li>
                                         ))}
@@ -716,14 +716,14 @@ export default function AiForRealEstateAgentsContent() {
                             </div>
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
-                                <p className="text-2xl font-bold text-green-700">That's 97% less than a part-time VA</p>
+                                <p className="text-2xl font-bold text-green-700">A fraction of what a part-time VA costs</p>
                                 <p className="text-green-600 mt-2">With AI employees working 24/7—no sick days, no training time, no management needed</p>
                             </div>
 
                             <div className="mt-8 bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-800 mb-3">The ROI Math:</h4>
                                 <p className="text-blue-700">
-                                    According to <a href="https://www.nar.realtor/agent-income" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">NAR</a>, the median agent commission on a $367,711 home is about $10,000. If Dooza helps you close just <strong>one extra deal per year</strong> through faster lead response, better follow-up, or improved online presence, that's a <strong>2,774% ROI</strong> on your $348 annual investment.
+                                    According to <a href="https://www.nar.realtor/agent-income" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">NAR</a>, the median agent commission on a $367,711 home is about $10,000. If Dooza helps you close just <strong>one extra deal per year</strong> through faster lead response, better follow-up, or improved online presence, that one commission alone covers many years of AI support. Start with a refundable pilot and judge the results yourself.
                                 </p>
                             </div>
                         </section>
@@ -738,13 +738,13 @@ export default function AiForRealEstateAgentsContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Book a Free Onboarding Call (30 minutes)",
+                                        title: "Book a Free Pilot Call (30 minutes)",
                                         desc: "Tell us about your market, your specialties, and your goals. We'll configure your AI employees to match your brand voice and business needs."
                                     },
                                     {
                                         step: "2",
                                         title: "Connect Your Accounts",
-                                        desc: "Link your email, social media, and phone with one-click integrations. We handle all the technical setup during your onboarding call."
+                                        desc: "Link your email, social media, and phone with one-click integrations. We handle all the technical setup during your pilot."
                                     },
                                     {
                                         step: "3",
@@ -774,10 +774,10 @@ export default function AiForRealEstateAgentsContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Your AI Team - $49/month <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

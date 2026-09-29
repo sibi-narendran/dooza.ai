@@ -40,7 +40,7 @@ const faqData = [
     },
     {
         question: "How much does an AI receptionist cost compared to a human?",
-        answer: "A human receptionist costs $3,500-4,200/month. Virtual receptionist services like Ruby or Smith.ai cost $300-935/month. Dooza's Rachel (AI Receptionist) costs $49/month and handles unlimited calls 24/7."
+        answer: "A human receptionist costs $3,500-4,200/month. Virtual receptionist services like Ruby or Smith.ai cost $300-935/month. Dooza's Rachel (AI Receptionist) handles unlimited calls 24/7 for a fraction of either. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "Can an AI receptionist handle complex conversations?",
@@ -118,7 +118,7 @@ export default function BestAiReceptionistContent() {
                             The Best <span className="text-primary-600">AI Receptionist</span>: Why You Should Fire Your Voicemail
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            85% of callers won't leave a voicemail — they just call your competitor. Discover why an AI receptionist captures more leads, books more appointments, and costs 99% less than a human receptionist.
+                            85% of callers won't leave a voicemail — they just call your competitor. Discover why an AI receptionist captures more leads, books more appointments, and costs a fraction of a human receptionist.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -131,16 +131,17 @@ export default function BestAiReceptionistContent() {
                             </div>
                         </div>
 
-                        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                        <div className="mt-10 flex flex-col items-center gap-2">
                             <a
                                 href={getProductSignupUrl('workforce')}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Rachel AI - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
+                            <span className="text-sm text-slate-500">Refundable pilot — 100% refund within 14 days</span>
                         </div>
                     </div>
                 </div>
@@ -187,8 +188,9 @@ export default function BestAiReceptionistContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Rachel Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -351,7 +353,7 @@ export default function BestAiReceptionistContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", voicemail: "$0", virtual: "$300-935", inhouse: "$3,500-4,200", rachel: "$29" },
+                                            { feature: "Monthly Cost", voicemail: "$0", virtual: "$300-935", inhouse: "$3,500-4,200", rachel: "Refundable pilot (see /pricing)" },
                                             { feature: "Availability", voicemail: "Always (but useless)", virtual: "Business hours + limited after-hours", inhouse: "Business hours", rachel: "24/7/365" },
                                             { feature: "Call Capacity", voicemail: "Unlimited", virtual: "50-200 calls/mo", inhouse: "~40 calls/day", rachel: "Unlimited" },
                                             { feature: "Lead Qualification", voicemail: "None", virtual: "Basic scripting", inhouse: "Trained judgment", rachel: "Custom AI qualification" },
@@ -384,7 +386,7 @@ export default function BestAiReceptionistContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Rachel — AI Receptionist</h3>
                                         <p className="text-lg text-slate-700">
-                                            Rachel answers your business calls like your best employee — but she never takes a break, never calls in sick, and costs less than your daily coffee.
+                                            Rachel answers your business calls like your best employee — but she never takes a break, never calls in sick, and costs a fraction of a human hire.
                                         </p>
                                     </div>
                                 </div>
@@ -505,14 +507,14 @@ export default function BestAiReceptionistContent() {
                                     <p className="text-xs text-slate-500 mt-1">200 calls/month limit</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
                                     <p className="text-sm text-green-800 font-medium">Rachel (Dooza)</p>
-                                    <p className="text-xs text-green-600 mt-1">Unlimited calls, 24/7</p>
+                                    <p className="text-xs text-green-600 mt-1">Refundable pilot. Unlimited calls, 24/7. <Link href="/pricing" className="underline">See pricing</Link></p>
                                 </div>
                             </div>
 
                             <p className="text-lg font-bold text-slate-900 text-center">
-                                Rachel pays for herself with a single captured lead.
+                                One captured lead can be worth more than a month of missed-call losses.
                             </p>
                         </section>
 
@@ -524,8 +526,8 @@ export default function BestAiReceptionistContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Sign Up for Dooza",
-                                        desc: "Create your account and meet your AI team. No credit card required."
+                                        title: "Start Your Pilot",
+                                        desc: "Create your account and meet your AI team. Every Dooza product starts with a refundable pilot — 100% refund within 14 days."
                                     },
                                     {
                                         step: "2",
@@ -550,7 +552,7 @@ export default function BestAiReceptionistContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    <Link href="/ai-receptionist" className="text-primary-600 hover:underline font-medium">Hear the Dooza AI receptionist answer a call and start a free two-week pilot &rarr;</Link>
+                                    <Link href="/ai-receptionist" className="text-primary-600 hover:underline font-medium">Hear the Dooza AI receptionist answer a call and start a refundable pilot &rarr;</Link>
                                     <br />
                                     <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Learn how to automate your entire business &rarr;</Link>
                                 </p>
@@ -559,14 +561,14 @@ export default function BestAiReceptionistContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Fire Your Voicemail?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop losing leads to voicemail. Rachel answers every call, qualifies every lead, and books appointments — all for less than your daily coffee.
+                                    Stop losing leads to voicemail. Rachel answers every call, qualifies every lead, and books appointments. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

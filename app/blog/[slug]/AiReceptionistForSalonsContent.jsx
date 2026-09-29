@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "How much does an AI receptionist cost for a salon?",
-        answer: "Dooza's Rachel costs $49/month — unlimited calls, 24/7. Compare that to a front desk receptionist at $2,500-3,500/month or a virtual receptionist service at $300-900/month."
+        answer: "Dooza's Rachel gives you 24/7 call answering for a fraction of a human receptionist. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days. Compare that to a front desk receptionist at $2,500-3,500/month or a virtual receptionist service at $300-900/month."
     },
     {
         question: "Does the AI send appointment confirmations via text?",
@@ -141,7 +141,7 @@ export default function AiReceptionistForSalonsContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Rachel AI - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -190,7 +190,7 @@ export default function AiReceptionistForSalonsContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Rachel Free
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -387,7 +387,7 @@ export default function AiReceptionistForSalonsContent() {
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    No human receptionist can deliver all of this at $49/month. No voicemail box can do any of it. And no generic answering service knows the difference between balayage and an ombre. This is where AI changes the game for salons specifically.
+                                    No human receptionist can deliver all of this 24/7. No voicemail box can do any of it. And no generic answering service knows the difference between balayage and an ombre. This is where AI changes the game for salons specifically.
                                 </p>
                             </div>
                         </section>
@@ -681,7 +681,7 @@ export default function AiReceptionistForSalonsContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { factor: "Monthly Cost", desk: "$2,500-3,500", virtual: "$300-900", rachel: "$29" },
+                                            { factor: "Monthly Cost", desk: "$2,500-3,500", virtual: "$300-900", rachel: "Refundable pilot (see /pricing)" },
                                             { factor: "Availability", desk: "Business hours only", virtual: "Business hours + limited after-hours", rachel: "24/7/365" },
                                             { factor: "Salon Knowledge", desk: "Requires training", virtual: "Generic scripts", rachel: "Configured with your full menu" },
                                             { factor: "Stylist Matching", desk: "If trained properly", virtual: "Not available", rachel: "Automatic, rules-based" },
@@ -713,9 +713,11 @@ export default function AiReceptionistForSalonsContent() {
                                     <p className="text-xs text-slate-500 mt-1">Limited calls, takes messages only</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
+                                    <p className="text-xs text-green-700 font-bold mb-2">refundable pilot</p>
                                     <p className="text-sm text-green-800 font-medium">Rachel AI (Dooza)</p>
                                     <p className="text-xs text-green-600 mt-1">Unlimited calls, 24/7, books appointments</p>
+                                    <p className="text-xs text-green-700 font-bold mt-2"><a href="/pricing" className="underline">Pricing depends on the product</a></p>
                                 </div>
                             </div>
 
@@ -730,13 +732,12 @@ export default function AiReceptionistForSalonsContent() {
                             </div>
 
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl mb-8">
-                                <h3 className="font-bold text-slate-900 mb-4 text-lg">ROI Math: Rachel Pays for Herself Instantly</h3>
+                                <h3 className="font-bold text-slate-900 mb-4 text-lg">ROI Math: What Captured Calls Are Worth</h3>
                                 <div className="space-y-3">
                                     {[
-                                        { label: "Rachel's monthly cost", value: "$29" },
+                                        { label: "Rachel's cost", value: "Refundable pilot (see /pricing)" },
                                         { label: "Average salon booking value", value: "$100" },
-                                        { label: "Bookings needed to break even", value: "1 booking", highlight: false },
-                                        { label: "Extra bookings Rachel captures/month (conservative)", value: "15-30" },
+                                        { label: "Example: extra bookings captured per month", value: "15-30" },
                                         { label: "Additional monthly revenue", value: "$1,500-3,000", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>
@@ -748,7 +749,7 @@ export default function AiReceptionistForSalonsContent() {
                             </div>
 
                             <p className="text-lg font-bold text-slate-900 text-center">
-                                Rachel pays for herself with a single captured booking. Everything after that is pure profit.
+                                A handful of captured bookings can cover the cost. Start with a refundable pilot (100% refund within 14 days) and measure it yourself.
                             </p>
                         </section>
 
@@ -764,7 +765,7 @@ export default function AiReceptionistForSalonsContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Rachel — AI Receptionist for Salons</h3>
                                         <p className="text-lg text-slate-700">
-                                            Rachel answers your salon calls like your best front desk person — but she never calls in sick, never puts a client on hold, and costs less than a single blowout per month. She knows your services, your stylists, and your schedule.
+                                            Rachel answers your salon calls like your best front desk person — but she never calls in sick, never puts a client on hold, and costs a fraction of a front desk salary. She knows your services, your stylists, and your schedule.
                                         </p>
                                     </div>
                                 </div>
@@ -812,8 +813,8 @@ export default function AiReceptionistForSalonsContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Sign Up for Dooza",
-                                        desc: "Create your account in under 2 minutes. No credit card required. You'll meet Rachel and the rest of your AI team."
+                                        title: "Start Your Dooza Pilot",
+                                        desc: "Create your account in under 2 minutes. Every Dooza product starts with a refundable pilot: 100% refund within 14 days. You'll meet Rachel and the rest of your AI team."
                                     },
                                     {
                                         step: "2",
@@ -839,14 +840,14 @@ export default function AiReceptionistForSalonsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Stop Missing Bookings?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Every missed call is a client who booked somewhere else. Rachel answers every call, knows your services, and books appointments — all for $49/month.
+                                    Every missed call is a client who booked somewhere else. Rachel answers every call, knows your services, and books appointments. Start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

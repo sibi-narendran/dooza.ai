@@ -109,7 +109,7 @@ const voiceDemos = [
     {
         name: 'Air & Plumbing Today',
         location: 'San Antonio + Austin, TX',
-        services: 'AC, heating and plumbing calls in English and Spanish',
+        services: 'AC, heating and plumbing calls',
         logo: '/voice/air-plumbing-today/logo.jpg',
         href: '/voice/air-plumbing-today/',
     },
@@ -197,7 +197,7 @@ export default function HvacContent({ page }) {
                                 </p>
                                 <div className="flex flex-col gap-3 sm:flex-row">
                                     <a href={CAL_BOOKING_URL} onClick={openBooking} className="inline-flex min-h-12 items-center justify-center gap-2 bg-primary-700 px-6 py-3 font-bold text-white transition hover:bg-primary-800">
-                                        Book a 20-minute demo
+                                        Book a free pilot call
                                         <ArrowRight className="h-5 w-5" />
                                     </a>
                                     <a href="#voice-demos" className="inline-flex min-h-12 items-center justify-center gap-2 border border-primary-300 bg-white/60 px-6 py-3 font-bold text-primary-800 transition hover:bg-white">
@@ -300,7 +300,7 @@ export default function HvacContent({ page }) {
                             <div>
                                 <p className="text-lg leading-8 text-slate-600">These Dooza experiences are tailored around each company’s services, markets, and call rules so you can hear how the receptionist behaves in context.</p>
                                 <Link href="/ai-receptionist" className="mt-4 inline-flex items-center gap-2 font-bold text-primary-700 underline underline-offset-4 hover:text-primary-900">
-                                    Want it answering your own number? Start a free two-week pilot
+                                    Want it answering your own number? Start your refundable pilot
                                 </Link>
                             </div>
                         </div>
@@ -368,9 +368,9 @@ export default function HvacContent({ page }) {
                 <section className="bg-slate-50 py-24 md:py-32">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl">
-                            <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-700">What trade teams say after adopting AI</p>
+                            <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-700">Industry examples: Avoca customer stories</p>
                             <h2 className="mt-5 text-4xl font-black uppercase leading-[.98] tracking-[-0.055em] text-slate-950 sm:text-5xl">More coverage for customers. More breathing room for the team.</h2>
-                            <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600">Experiences shared by trade operators in Avoca’s published customer stories.</p>
+                            <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600">These are Avoca customers, not Dooza customers. The quotes come from Avoca’s published customer stories and show what trade teams report after adopting an AI receptionist in general.</p>
                         </div>
 
                         <div className="mt-14 grid gap-px overflow-hidden border border-primary-100 bg-primary-100 lg:grid-cols-3">
@@ -393,7 +393,7 @@ export default function HvacContent({ page }) {
                                                 <div><p className="font-bold text-slate-900">{testimonial.author}</p><p className="mt-1 text-xs leading-5 text-slate-500">{testimonial.role}</p></div>
                                             </div>
                                             <a href={testimonial.href} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400 transition hover:text-primary-700">
-                                                by Avoca <ArrowUpRight className="h-3 w-3" />
+                                                Source: Avoca customer story <ArrowUpRight className="h-3 w-3" />
                                             </a>
                                         </div>
                                     </div>
@@ -436,11 +436,11 @@ export default function HvacContent({ page }) {
                             <div className="max-w-4xl">
                                 <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-100">Your next busy day is coming</p>
                                 <h2 className="mt-5 text-4xl font-black uppercase leading-[.96] tracking-[-0.055em] text-white sm:text-5xl lg:text-6xl">Build the coverage before the phones pile up.</h2>
-                                <p className="mt-6 max-w-2xl text-lg leading-8 text-primary-100">See how Dooza can answer, qualify, book, and hand off work using your real business rules.</p>
+                                <p className="mt-6 max-w-2xl text-lg leading-8 text-primary-100">See how Dooza can answer, qualify, book, and hand off work using your real business rules. Start with a refundable pilot — 100% refund within 14 days.</p>
                             </div>
                             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-                                <a href={CAL_BOOKING_URL} onClick={openBooking} className="inline-flex min-h-12 items-center justify-center gap-2 bg-white px-7 py-3 font-bold text-primary-800 transition hover:bg-primary-50">Book a demo<ArrowRight className="h-5 w-5" /></a>
-                                <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center border border-white/50 bg-white/10 px-7 py-3 font-bold text-white transition hover:bg-white/20">Start free</a>
+                                <a href={CAL_BOOKING_URL} onClick={openBooking} className="inline-flex min-h-12 items-center justify-center gap-2 bg-white px-7 py-3 font-bold text-primary-800 transition hover:bg-primary-50">Book a free pilot call<ArrowRight className="h-5 w-5" /></a>
+                                <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center border border-white/50 bg-white/10 px-7 py-3 font-bold text-white transition hover:bg-white/20">Get started</a>
                             </div>
                         </div>
                     </div>

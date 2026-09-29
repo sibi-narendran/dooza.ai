@@ -61,7 +61,7 @@ export async function GET() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>${SITE_NAME} Blog</title>
-    <description>Expert insights on AI employees, business automation, and scaling your operations with intelligent agents.</description>
+    <description>Guides from Dooza, an AI-native company that builds AI products and services for small businesses: AI employees, AI agents, automation, SEO, and GEO.</description>
     <link>${baseUrl}/blog</link>
     <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>

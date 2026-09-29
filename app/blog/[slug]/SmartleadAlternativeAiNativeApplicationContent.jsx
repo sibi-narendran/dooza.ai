@@ -211,8 +211,9 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -377,7 +378,7 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                                     The practical cost question is broader. Cold email infrastructure often includes domains, inboxes, email verification, deliverability testing, dedicated IPs or servers, copywriting, lead data, CRM cleanup, and someone to monitor replies. Smartlead offers several add-ons for parts of that system, but the total cost depends on how you operate.
                                 </p>
                                 <p>
-                                    Dooza's value is different. You are not buying one sender. You are buying an AI-native workforce that can help with email, SEO, social media, sales follow-up, and phone calls. For small businesses, that is usually the better ROI because the same platform solves multiple bottlenecks.
+                                    Dooza's value is different. You are not buying one sender. You are buying an AI-native workforce that can help with email, SEO, social media, sales follow-up, and phone calls. For small businesses, that is usually the better value because the same platform solves multiple bottlenecks. Dooza pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline">pricing</Link>), and every product starts with a refundable pilot.
                                 </p>
                             </div>
 
@@ -460,7 +461,7 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                                 <Phone className="w-10 h-10 text-emerald-300 mx-auto mb-4" />
                                 <h3 className="text-2xl font-bold text-white mb-3">Move from cold email software to an AI workforce</h3>
                                 <p className="text-white/75 mb-6 max-w-2xl mx-auto">
-                                    Use Dooza to automate email, SEO, social media, sales follow-up, and calls from one AI-native application.
+                                    Use Dooza to automate email, SEO, social media, sales follow-up, and calls from one AI-native application. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                                     <a
@@ -469,14 +470,14 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-full transition-colors"
                                     >
-                                        Try Dooza <ArrowRight className="w-5 h-5" />
+                                        Start your pilot <ArrowRight className="w-5 h-5" />
                                     </a>
                                     <a
                                         href={CAL_BOOKING_URL}
                                         onClick={handleAction}
                                         className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-900 font-bold rounded-full hover:bg-slate-100 transition-colors"
                                     >
-                                        <Calendar className="w-5 h-5" /> Book Onboarding
+                                        <Calendar className="w-5 h-5" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

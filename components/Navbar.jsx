@@ -32,8 +32,8 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     const productPage = isProductRoute(pathname);
     const isDemoCta = productPage ? ctaType === 'demo' : true;
     const ctaLabel = productPage
-        ? signupLabel || (isDemoCta ? 'Speak to Founder' : 'Get Started')
-        : 'Book a Demo';
+        ? signupLabel || (isDemoCta ? 'Book a free pilot call' : 'Start your pilot')
+        : 'Book a free pilot call';
 
     const handleDemoClick = () => {
         openModal();

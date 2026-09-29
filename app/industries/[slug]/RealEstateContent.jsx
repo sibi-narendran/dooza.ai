@@ -140,8 +140,8 @@ export default function RealEstateContent({ page }) {
         },
         {
             name: 'Dooza AI',
-            price: '$29',
-            period: '/mo',
+            price: 'Pilot',
+            period: ' · 100% refund in 14 days',
             description: 'AI sales agent that never sleeps',
             features: [
                 'Works 24/7/365',
@@ -200,7 +200,7 @@ export default function RealEstateContent({ page }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Get Started Free — $49/mo
+                            Start your pilot
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
@@ -208,7 +208,7 @@ export default function RealEstateContent({ page }) {
                             onClick={handleAction}
                             className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                         >
-                            Book a Demo
+                            Book a free pilot call
                         </a>
                     </div>
                 </div>
@@ -373,7 +373,7 @@ export default function RealEstateContent({ page }) {
                                 >
                                     {plan.highlight && (
                                         <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide">
-                                            Best Value
+                                            Recommended
                                         </span>
                                     )}
                                     <div className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 ${t.badge}`}>
@@ -384,6 +384,7 @@ export default function RealEstateContent({ page }) {
                                             {plan.price}
                                         </span>
                                         <span className="text-slate-500 text-lg">{plan.period}</span>
+                                        {plan.highlight && <a href="/pricing" className="mt-1 block text-xs font-semibold text-primary-700 underline">Pricing depends on the product. See pricing</a>}
                                     </div>
                                     <p className="text-slate-600 text-sm mb-6">{plan.description}</p>
                                     <ul className="space-y-3">
@@ -421,7 +422,7 @@ export default function RealEstateContent({ page }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Get Started Free — $49/mo
+                            Start your pilot
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
@@ -429,7 +430,7 @@ export default function RealEstateContent({ page }) {
                             onClick={handleAction}
                             className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                         >
-                            Book a Demo
+                            Book a free pilot call
                         </a>
                     </div>
                 </div>

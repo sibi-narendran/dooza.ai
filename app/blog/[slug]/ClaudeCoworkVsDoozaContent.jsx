@@ -56,15 +56,15 @@ const faqData = [
     },
     {
         question: "How is Dooza different from Claude Cowork?",
-        answer: "Dooza provides purpose-built AI employees that run autonomously 24/7 — handling email, social media, SEO, sales, and phone calls without your involvement. Claude Cowork is a general-purpose desktop assistant that requires your computer to be on and you to assign each task. Dooza is set-and-forget; Cowork is hands-on."
+        answer: "Dooza is an AI-native company that builds AI products and services for small businesses. Its Dooza Workforce app provides purpose-built AI employees that run autonomously 24/7 — handling email, social media, SEO, sales, and phone calls without your involvement. Claude Cowork is a general-purpose desktop assistant that requires your computer to be on and you to assign each task. Dooza is set-and-forget; Cowork is hands-on."
     },
     {
         question: "Can Claude Cowork run tasks while I sleep?",
         answer: "Not reliably. If your computer goes to sleep or the Claude desktop app closes, all running tasks stop — including scheduled ones. Dooza's AI employees run on cloud infrastructure 24/7, regardless of whether your device is on."
     },
     {
-        question: "Which is cheaper — Claude Cowork or Dooza?",
-        answer: "Dooza starts at $29/month for all AI employees with no usage caps. Claude Cowork's Pro plan ($20/month) has strict usage limits that run out fast during complex tasks. For meaningful Cowork usage, you need the Max plan at $100-200/month — 3x to 7x the cost of Dooza."
+        question: "How does pricing compare — Claude Cowork or Dooza?",
+        answer: "Claude Cowork's Pro plan ($20/month) has strict usage limits that run out fast during complex tasks. For meaningful Cowork usage, you need the Max plan at $100-200/month. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Does Claude Cowork handle phone calls or customer support?",
@@ -76,7 +76,7 @@ const faqData = [
     },
     {
         question: "Does Dooza require technical skills?",
-        answer: "Zero technical skills required. Dooza includes free concierge onboarding — our team configures your AI employees for your business in a 30-minute call. Claude Cowork also doesn't require coding, but you do need to manage tasks manually and troubleshoot when things break."
+        answer: "Zero technical skills required. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business, and Workforce employees can start working the same day. Claude Cowork also doesn't require coding, but you do need to manage tasks manually and troubleshoot when things break."
     }
 ];
 
@@ -163,7 +163,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try Dooza Free — No Card Required
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -171,7 +171,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 onClick={handleAction}
                                 className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-full font-bold text-lg border-2 border-primary-200 hover:border-primary-400 transition-all"
                             >
-                                Book Free Demo
+                                Book a free pilot call
                             </a>
                         </div>
 
@@ -228,7 +228,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -352,7 +352,7 @@ export default function ClaudeCoworkVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is a platform of <strong>purpose-built AI employees</strong> that handle specific business functions autonomously. Not a general-purpose chatbot. Not a desktop assistant. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses. Its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app gives you <strong>purpose-built AI employees</strong> that handle specific business functions autonomously, and <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza Agents</Link> is its AI agentic platform for custom agents. Not a general-purpose chatbot. Not a desktop assistant. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows.
                                 </p>
                                 <p>
                                     Each AI employee runs in the cloud 24/7. They don't need your computer. They don't need you to assign tasks. They wake up, do their job, and report back — just like a real employee.
@@ -487,10 +487,10 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             { feature: "SEO Content", cowork: "Can research & draft", dooza: "Full pipeline (Ranky)" },
                                             { feature: "Sales Outreach", cowork: "Manual assistance", dooza: "Automated pipeline (Stan)" },
                                             { feature: "Cron/Scheduling", cowork: "Limited (requires PC on)", dooza: "Built-in, cloud-based" },
-                                            { feature: "Setup Time", cowork: "Download app, connect accounts", dooza: "30 min (free onboarding call)" },
+                                            { feature: "Setup Time", cowork: "Download app, connect accounts", dooza: "Same day (pilot scoped on a free 30-min call)" },
                                             { feature: "Technical Skill", cowork: "Low (but you manage tasks)", dooza: "None (we configure everything)" },
-                                            { feature: "Starting Price", cowork: "$20/mo (limited usage)", dooza: "$29/mo (all employees, no caps)" },
-                                            { feature: "Full Usage Price", cowork: "$100-200/mo (Max plan)", dooza: "$29/mo" },
+                                            { feature: "Starting Price", cowork: "$20/mo (limited usage)", dooza: "Varies by product — refundable pilot (see /pricing)" },
+                                            { feature: "Full Usage Price", cowork: "$100-200/mo (Max plan)", dooza: "100% refund within 14 days if the pilot doesn't fit" },
                                             { feature: "Best For", cowork: "Individual knowledge workers", dooza: "Businesses needing AI operations" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -546,7 +546,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             { text: "5x or 20x more usage", good: true },
                                             { text: "Full Cowork functionality", good: true },
                                             { text: "Still usage-capped", good: false },
-                                            { text: "3x-7x the cost of Dooza", good: false }
+                                            { text: "Tied to your desktop being on", good: false }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 {item.good ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <XCircle className="w-4 h-4 text-red-400" />}
@@ -559,13 +559,13 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 {/* Dooza */}
                                 <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
                                     <h3 className="font-bold text-green-800 mb-1">Dooza</h3>
-                                    <p className="text-3xl font-bold text-green-600 mb-3">$29<span className="text-lg text-green-400">/mo</span></p>
+                                    <p className="text-3xl font-bold text-green-600 mb-3">14-day<span className="text-lg text-green-400"> refundable pilot</span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
-                                            { text: "All 6 AI employees included", good: true },
-                                            { text: "No usage caps", good: true },
+                                            { text: "Six ready-made AI employees", good: true },
+                                            { text: "100% refund within 14 days", good: true },
                                             { text: "Runs 24/7 in the cloud", good: true },
-                                            { text: "Free concierge onboarding", good: true }
+                                            { text: "Pricing by product — see /pricing", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -579,7 +579,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    For the price of Claude Cowork's Max plan ($200/month), you could run <strong className="text-white">6+ months of Dooza</strong> — with 6 AI employees working around the clock, no usage caps, and zero dependency on your laptop being open. The math doesn't lie.
+                                    Claude Cowork's Max plan ($100-200/month) still ties your AI to your laptop. Dooza gives you <strong className="text-white">six AI employees working around the clock in the cloud</strong>, with zero dependency on your laptop being open. Pricing depends on the product (see <Link href="/pricing" className="text-white underline">pricing</Link>), and every product starts with a refundable pilot &mdash; 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>
@@ -719,8 +719,8 @@ export default function ClaudeCoworkVsDoozaContent() {
                                         { icon: Repeat, text: "Always-on operations — no laptop dependency" },
                                         { icon: Users, text: "6 specialized AI employees, not one generalist" },
                                         { icon: Phone, text: "AI phone answering — Cowork can't do this" },
-                                        { icon: DollarSign, text: "$29/mo flat — no usage caps or surprises" },
-                                        { icon: HeartHandshake, text: "Free concierge onboarding — we set it up for you" },
+                                        { icon: DollarSign, text: "Refundable pilot — 100% refund within 14 days" },
+                                        { icon: HeartHandshake, text: "A Dooza engineer scopes your pilot on a free 30-min call" },
                                         { icon: Brain, text: "Persistent memory — your AI learns your business" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-start gap-3">
@@ -740,7 +740,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Start Free with Dooza
+                                    Start your pilot
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                                 <a
@@ -748,7 +748,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     onClick={handleAction}
                                     className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-full font-bold text-lg border-2 border-primary-200 hover:border-primary-400 transition-all"
                                 >
-                                    Book a Free Demo
+                                    Book a free pilot call
                                 </a>
                             </div>
                         </section>

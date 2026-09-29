@@ -2,7 +2,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
     title: 'AI Employee Tools Compared [2026]: Sintra, Marblism & More',
-    description: 'Side-by-side comparisons of AI employee platforms — Sintra AI, Marblism, Motion, Accio Work, and more. Real pricing, honest pros and cons.',
+    description: 'Side-by-side comparisons of AI employee platforms — Sintra AI, Marblism, Motion, Profound, and more. Real pricing, honest pros and cons.',
     keywords: ['Sintra AI alternative', 'Marblism alternative', 'Motion App alternative', 'AI employees comparison', 'AI automation comparison'],
     alternates: {
         canonical: `${SITE_URL}/alternatives`,

@@ -4,7 +4,7 @@ import { WORKFLOW_SIGNUP_URL } from '@/lib/links';
 
 const bullets = [
     "Haven't found the AI employee template you need? No problem.",
-    'Build custom AI employees for any task in seconds using natural language.',
+    'Describe the AI employee you need in plain English, and a Dooza engineer builds it with you.',
     'Voice / text-to-AI employees: interact seamlessly with voice or text in a natural, conversational flow to build AI employees.',
 ];
 

@@ -37,7 +37,7 @@ export const metadata = {
         absolute: 'AI Customer Support Automation | The #1 Zendesk Alternative | Dooza',
     },
     description:
-        'AI-powered customer support that handles 80% of tickets automatically. Replace Zendesk and Intercom with smarter AI agents. Respond in seconds, not hours. $998/month done-for-you.',
+        'AI customer support built and run by Dooza engineers. Answer routine tickets automatically, route sensitive ones to your team, and respond in seconds. Start with a refundable pilot: 100% refund within 14 days.',
     keywords: [
         'AI customer support',
         'customer support automation',
@@ -58,7 +58,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'AI Customer Support Automation | The #1 Zendesk Alternative | Dooza',
-        description: 'AI agents that handle customer support 24/7. Automate 80% of tickets, respond in seconds, and cut support costs by 80%.',
+        description: 'AI agents that handle customer support 24/7. Answer routine tickets automatically and respond in seconds. Start with a refundable pilot.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -67,16 +67,16 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'AI Customer Support Automation | Dooza',
-        description: 'AI agents that handle 80% of tickets automatically. Respond in seconds, not hours.',
+        description: 'AI agents that answer routine tickets automatically. Respond in seconds, not hours.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
 
 const stats = [
-    { value: '80%', label: 'Tickets auto-resolved' },
+    { value: 'Auto', label: 'Routine tickets answered' },
     { value: '<30s', label: 'Average response time' },
     { value: '24/7', label: 'Always available' },
-    { value: '80%', label: 'Cost savings' },
+    { value: '1,000+', label: 'App integrations' },
 ];
 
 const steps = [
@@ -110,7 +110,7 @@ const features = [
     {
         icon: Mail,
         title: 'AI Email Agent',
-        desc: 'Automatically reads, classifies, and responds to support emails. Handles refunds, order status, and FAQs without human involvement.',
+        desc: 'Automatically reads, classifies, and responds to support emails. Handles order status and FAQs on its own and sends refunds to your team for approval.',
         color: 'bg-primary-50 text-primary-700',
     },
     {
@@ -174,7 +174,7 @@ const faqData = [
     },
     {
         question: 'How long does setup take?',
-        answer: 'Most teams are up and running in under 10 minutes. Upload your knowledge base, connect your email, and the AI starts handling tickets immediately. Our team can help with setup for free.',
+        answer: 'A Dooza engineer scopes your pilot on a free 30-minute call, then sets it up: we upload your knowledge base, connect your email, and set your approval rules. Most teams are handling real tickets within days.',
     },
 ];
 
@@ -201,19 +201,12 @@ const schemas = [
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         url: pageUrl,
-        description: 'AI-powered customer support platform that resolves 80% of tickets automatically across email, chat, WhatsApp, and more.',
+        description: 'AI customer support that answers routine tickets automatically across email, chat, WhatsApp, and more, built and maintained by Dooza engineers.',
         offers: {
             '@type': 'Offer',
-            price: '998',
-            priceCurrency: 'USD',
-            priceValidUntil: '2027-12-31',
+            name: 'Refundable pilot',
+            description: 'Refundable pilot, 100% refund within 14 days. Pricing depends on the product; see https://www.dooza.ai/pricing.',
             availability: 'https://schema.org/InStock',
-        },
-        aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.9',
-            ratingCount: '85',
-            bestRating: '5',
         },
     },
     {
@@ -251,7 +244,7 @@ export default function AICustomerSupportPage() {
                                     AI support agents that <span className="text-primary-600">never sleep</span>
                                 </h1>
                                 <p className="mb-9 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl">
-                                    Handle 80% of customer tickets automatically. Instant replies, smart routing, and human handoff when needed. Save 80% compared to Zendesk.
+                                    Answer routine customer tickets automatically. Instant replies, smart routing, and human handoff when needed. Start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                                     <a
@@ -260,7 +253,7 @@ export default function AICustomerSupportPage() {
                                         rel="noopener noreferrer"
                                         className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800 hover:shadow-xl sm:w-auto"
                                     >
-                                        Start Free Trial <ArrowRight className="h-4 w-4" />
+                                        Start your pilot <ArrowRight className="h-4 w-4" />
                                     </a>
                                     <BookDemoButton source="support_hero" variant="secondary" size="lg">
                                         Talk to Sales
@@ -268,8 +261,8 @@ export default function AICustomerSupportPage() {
                                 </div>
                                 <p className="mt-8 flex flex-wrap items-start gap-x-5 gap-y-2 text-sm text-slate-500">
                                     <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> Responds in under 30 seconds</span>
-                                    <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> No credit card required</span>
-                                    <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> 7-day guarantee</span>
+                                    <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> Set up by a Dooza engineer</span>
+                                    <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> 100% refund within 14 days</span>
                                 </p>
                             </ScrollReveal>
                         </div>
@@ -297,7 +290,7 @@ export default function AICustomerSupportPage() {
                                     </div>
                                     <div className="flex items-center gap-2 text-xs text-slate-400 pl-11">
                                         <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />
-                                        Resolved in 12 seconds &bull; No human needed
+                                        Resolved in 12 seconds &bull; Within your approval rules
                                     </div>
                                 </div>
                             </div>
@@ -346,7 +339,7 @@ export default function AICustomerSupportPage() {
                         <ScrollReveal>
                             <div className="text-center mb-16">
                                 <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl mb-4">AI Support in 3 Simple Steps</h2>
-                                <p className="text-lg text-slate-600 max-w-2xl mx-auto">From setup to handling real customer tickets in under 10 minutes</p>
+                                <p className="text-lg text-slate-600 max-w-2xl mx-auto">From a free pilot call to handling real customer tickets in days</p>
                             </div>
                         </ScrollReveal>
                         <StaggerContainer className="grid gap-8 md:grid-cols-3" staggerDelay={0.15}>
@@ -443,41 +436,41 @@ export default function AICustomerSupportPage() {
                             </div>
                             <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
                                 <div>
-                                    <h3 className="font-sans text-2xl font-extrabold text-slate-900 mb-2">Managed</h3>
+                                    <h3 className="font-sans text-2xl font-extrabold text-slate-900 mb-2">Refundable pilot</h3>
                                     <p className="text-sm text-slate-500 mb-6">We set up your AI support workflows, connect your tools, and handle everything for you.</p>
                                     <ul className="space-y-3">
                                         {[
-                                            'All AI employees included',
-                                            '84 hours of done-for-you work capacity',
+                                            'Support workflows scoped on a free pilot call',
+                                            'Built and maintained by Dooza engineers',
                                             'Managed sales and support automation setup',
                                             'Calls, email, leads, and operations setup',
                                             'Priority workflow review and improvements',
                                             '1000+ app integrations',
                                         ].map((f) => (
-                                            <li key={f} className={`flex items-center gap-2.5 ${f.includes('84 hours') ? 'rounded-2xl border border-primary-200 bg-primary-50 px-3 py-2.5 shadow-sm' : ''}`}>
-                                                <CheckCircle2 className={`w-4 h-4 shrink-0 ${f.includes('84 hours') ? 'text-primary-700' : 'text-primary-500'}`} />
-                                                <span className={`text-sm ${f.includes('84 hours') ? 'font-extrabold text-primary-900' : 'text-slate-600'}`}>{f}</span>
+                                            <li key={f} className={`flex items-center gap-2.5 ${f.includes('scoped on a free pilot call') ? 'rounded-2xl border border-primary-200 bg-primary-50 px-3 py-2.5 shadow-sm' : ''}`}>
+                                                <CheckCircle2 className={`w-4 h-4 shrink-0 ${f.includes('scoped on a free pilot call') ? 'text-primary-700' : 'text-primary-500'}`} />
+                                                <span className={`text-sm ${f.includes('scoped on a free pilot call') ? 'font-extrabold text-primary-900' : 'text-slate-600'}`}>{f}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                                 <div className="text-center md:text-right md:pl-8 md:border-l md:border-slate-100">
-                                    <div className="flex items-baseline justify-center md:justify-end gap-1 mb-1">
-                                        <span className="text-5xl md:text-6xl font-extrabold text-slate-900">$998</span>
-                                        <span className="text-slate-500 text-sm">/ month</span>
-                                    </div>
-                                    <p className="text-xs text-slate-400 mb-6">7-day money-back guarantee</p>
+                                    <p className="text-2xl font-extrabold text-slate-900 mb-1">100% refund within 14 days</p>
+                                    <p className="text-xs text-slate-500 mb-6">
+                                        Pricing depends on the product; every Dooza product starts with a refundable pilot.{' '}
+                                        <Link href="/pricing" className="font-semibold text-primary-700 underline">See pricing</Link>
+                                    </p>
                                     <a
                                         href={getProductSignupUrl('workforce')}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-full bg-slate-900 px-7 py-3.5 text-base font-bold text-white shadow-lg transition hover:bg-slate-800 hover:shadow-xl hover:-translate-y-0.5"
                                     >
-                                        Get Started <ArrowRight className="h-4 w-4" />
+                                        Start your pilot <ArrowRight className="h-4 w-4" />
                                     </a>
                                     <div className="mt-4">
                                         <BookDemoButton source="support_pricing" variant="secondary" size="lg">
-                                            Book Free Setup Call
+                                            Book a free pilot call
                                         </BookDemoButton>
                                     </div>
                                 </div>
@@ -501,7 +494,7 @@ export default function AICustomerSupportPage() {
                                 Stop paying for support agents that sleep
                             </h2>
                             <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-slate-600">
-                                Your AI support agent resolves 80% of tickets instantly, never takes breaks, and costs a fraction of a human team. Start free today.
+                                Your AI support agent answers routine tickets instantly, never takes breaks, and costs a fraction of a human team. Start with a refundable pilot: 100% refund within 14 days.
                             </p>
                             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                 <a
@@ -513,10 +506,10 @@ export default function AICustomerSupportPage() {
                                     START RESOLVING TICKETS <ArrowRight className="h-4 w-4" />
                                 </a>
                                 <BookDemoButton source="support_final" variant="secondary" size="lg">
-                                    Book a Demo
+                                    Book a free pilot call
                                 </BookDemoButton>
                             </div>
-                            <p className="mt-6 text-sm text-slate-500">Join businesses saving 80% on customer support with Dooza AI</p>
+                            <p className="mt-6 text-sm text-slate-500">Start with a refundable pilot — 100% refund within 14 days.</p>
                         </ScrollReveal>
                     </div>
                 </section>

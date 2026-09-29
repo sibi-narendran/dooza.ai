@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: "Is Accio Work free?",
-        answer: "Accio Work offers a freemium model with a 14-day free trial. However, pricing details beyond that aren't publicly transparent. Dooza starts at $49/month with all AI employees included, backed by a 7-day money-back guarantee."
+        answer: "Accio Work offers a freemium model with a 14-day free trial. However, pricing details beyond that aren't publicly transparent. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Does Accio Work handle social media and email?",
@@ -80,7 +80,7 @@ const faqData = [
     },
     {
         question: "Does Dooza require technical skills?",
-        answer: "Zero technical skills required. Dooza includes free concierge onboarding — our team configures your AI employees for your business in a 30-minute call. Accio Work requires you to manage agent orchestration yourself and write clear, outcome-focused prompts."
+        answer: "Zero technical skills required. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business, and every product starts with a refundable pilot: 100% refund within 14 days. Accio Work requires you to manage agent orchestration yourself and write clear, outcome-focused prompts."
     }
 ];
 
@@ -167,7 +167,7 @@ export default function AccioWorkVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try Dooza Free — No Card Required
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -175,7 +175,7 @@ export default function AccioWorkVsDoozaContent() {
                                 onClick={handleAction}
                                 className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-full font-bold text-lg border-2 border-primary-200 hover:border-primary-400 transition-all"
                             >
-                                Book Free Demo
+                                Book a free pilot call
                             </a>
                         </div>
 
@@ -233,7 +233,7 @@ export default function AccioWorkVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Get Started
                                 </a>
                             </div>
 
@@ -365,7 +365,7 @@ export default function AccioWorkVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is a platform of <strong>purpose-built AI employees</strong> that handle specific business functions autonomously. Not a sourcing tool. Not a desktop agent. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows — for any industry.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses. Its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app gives you <strong>purpose-built AI employees</strong> that handle specific business functions autonomously. Not a sourcing tool. Not a desktop agent. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows — for any industry.
                                 </p>
                                 <p>
                                     Each AI employee runs in the cloud 24/7. They don't need your computer. They don't need you to assign tasks. They wake up, do their job, and report back — just like a real employee.
@@ -454,7 +454,7 @@ export default function AccioWorkVsDoozaContent() {
                                             "Works with 1,000+ apps via integrations",
                                             "Runs on cloud infrastructure 24/7",
                                             "Works while you sleep, travel, or vacation",
-                                            "Production-ready — businesses rely on it daily",
+                                            "Production-ready and managed by Dooza engineers",
                                             "Best for: SMBs needing autonomous operations",
                                             "Model: proactive — employees execute on schedule"
                                         ].map((item, idx) => (
@@ -502,10 +502,10 @@ export default function AccioWorkVsDoozaContent() {
                                             { feature: "Legal Review", accio: "Not supported", dooza: "Contract review (Linda)" },
                                             { feature: "Supplier Sourcing", accio: "Core strength (Alibaba network)", dooza: "Not built-in" },
                                             { feature: "Product Listing", accio: "Automated via Alibaba", dooza: "Via integrations (Shopify, etc.)" },
-                                            { feature: "Integrations", accio: "Telegram, Discord, DingTalk, Lark", dooza: "1,000+ via Zapier" },
+                                            { feature: "Integrations", accio: "Telegram, Discord, DingTalk, Lark", dooza: "1,000+ app integrations" },
                                             { feature: "Status", accio: "Beta (v0.6.2)", dooza: "Production-ready" },
-                                            { feature: "Setup & Onboarding", accio: "Desktop install — no onboarding offered", dooza: "30 min free onboarding call with founder" },
-                                            { feature: "Starting Price", accio: "Freemium (unclear pricing)", dooza: "$49/mo (all employees included)" },
+                                            { feature: "Setup & Onboarding", accio: "Desktop install — no onboarding offered", dooza: "Free 30-min call to scope your pilot" },
+                                            { feature: "Starting Price", accio: "Freemium (unclear pricing)", dooza: "Varies by product — refundable pilot (see /pricing)" },
                                             { feature: "Best For", accio: "E-commerce & dropshipping", dooza: "Any business needing AI operations" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -574,15 +574,15 @@ export default function AccioWorkVsDoozaContent() {
                                 {/* Dooza */}
                                 <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-xs font-bold text-green-700 bg-green-200 px-2 py-0.5 rounded-full w-fit mb-2">BEST VALUE</div>
-                                    <h3 className="font-bold text-green-800 mb-1">Dooza Starter</h3>
-                                    <p className="text-3xl font-bold text-green-600 mb-3">$49<span className="text-lg text-green-400">/mo</span></p>
+                                    <h3 className="font-bold text-green-800 mb-1">Dooza Pilot</h3>
+                                    <p className="text-3xl font-bold text-green-600 mb-3">14-day<span className="text-lg text-green-400"> refundable pilot</span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
-                                            { text: "All 6 AI employees included", good: true },
-                                            { text: "1,000+ integrations", good: true },
+                                            { text: "Six AI employees in Dooza Workforce", good: true },
+                                            { text: "1,000+ app integrations", good: true },
                                             { text: "Cloud-based — works 24/7", good: true },
-                                            { text: "Free concierge onboarding", good: true },
-                                            { text: "7-day money-back guarantee", good: true }
+                                            { text: "Free 30-min pilot scoping call", good: true },
+                                            { text: "100% refund within 14 days", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -596,7 +596,7 @@ export default function AccioWorkVsDoozaContent() {
                             <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-slate-900 mb-2">The Transparency Factor</h4>
                                 <p className="text-slate-700 text-sm">
-                                    Dooza publishes its pricing clearly: $49/month Starter, $69/month Growth, $119/month Pro — with a 20% yearly discount and a 7-day money-back guarantee. Accio Work's pricing beyond the free trial isn't publicly available, making it hard to budget for. When you're running a business, <strong>predictable costs matter</strong>.
+                                    Dooza publishes its pricing on <Link href="/pricing" className="text-primary-600 hover:underline font-medium">its pricing page</Link>. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days. Accio Work's pricing beyond the free trial isn't publicly available, making it hard to budget for. When you're running a business, <strong>predictable costs matter</strong>.
                                 </p>
                             </div>
                         </section>
@@ -731,7 +731,7 @@ export default function AccioWorkVsDoozaContent() {
                                     <strong>Accio Work</strong> is a powerful e-commerce sourcing agent built by Alibaba, for Alibaba's ecosystem. If you're launching a dropshipping business or scaling cross-border trade, it's worth exploring — once it exits beta. But it doesn't handle email, social media, SEO, sales outreach, legal review, or phone calls. It's a single department head, not a workforce.
                                 </p>
                                 <p>
-                                    <strong>Dooza</strong> gives you six AI employees that handle your entire business operation — autonomously, 24/7, in the cloud. Email gets answered. Social media gets posted. Blog content gets published. Phone calls get picked up. Leads get qualified. Contracts get reviewed. All for $49/month with transparent pricing and free onboarding.
+                                    <strong>Dooza</strong> gives you six AI employees that handle your entire business operation — autonomously, 24/7, in the cloud. Email gets answered. Social media gets posted. Blog content gets published. Phone calls get picked up. Leads get qualified. Contracts get reviewed. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
 
@@ -753,7 +753,7 @@ export default function AccioWorkVsDoozaContent() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-slate-900">Business operations?</p>
-                                            <p className="text-slate-600">Use Dooza. Six AI employees, 24/7 cloud operations, 1,000+ integrations, transparent pricing, and zero technical skills required.</p>
+                                            <p className="text-slate-600">Use Dooza. Six AI employees, 24/7 cloud operations, 1,000+ app integrations, transparent pricing, and zero technical skills required.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
@@ -775,10 +775,10 @@ export default function AccioWorkVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Try Dooza Free — Hire Your AI Team Today
+                                    Start your pilot
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
-                                <p className="text-sm text-slate-500 mt-3">$49/month with a 7-day money-back guarantee. No commitment. Free concierge onboarding included.</p>
+                                <p className="text-sm text-slate-500 mt-3">Refundable pilot — 100% refund within 14 days. <Link href="/pricing" className="text-primary-600 hover:underline">See pricing</Link>.</p>
                             </div>
                         </section>
 

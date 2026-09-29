@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { CheckCircle2, ChevronDown } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
-import { trackSignupClick } from '@/lib/analytics';
+import { trackSignupClick, trackDemoClick } from '@/lib/analytics';
+import { useBookingModal } from '@/components/BookingModalProvider';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 
 const visibleFeatureCount = 4;
@@ -11,16 +12,16 @@ const visibleFeatureCount = 4;
 const starterFeatures = [
     "All AI employees included",
     "Base usage",
-    "Free concierge onboarding",
-    "24/7 autonomous operation",
+    "Concierge onboarding included",
+    "Works 24/7, with your approval on anything sensitive",
     "1000+ app integrations",
 ];
 
 const growthFeatures = [
     "All AI employees included",
     "2X usage vs Starter",
-    "Free concierge onboarding",
-    "24/7 autonomous operation",
+    "Concierge onboarding included",
+    "Works 24/7, with your approval on anything sensitive",
     "1000+ app integrations",
 ];
 
@@ -38,7 +39,7 @@ const plans = [
         name: 'Starter',
         price: 49,
         desc: 'For businesses getting started',
-        cta: 'Get started',
+        cta: 'Start your pilot',
         ctaStyle: 'primary',
         popular: false,
         paymentUrl: 'https://buy.stripe.com/00w00j5SjfQNepugzz3AY05',
@@ -48,7 +49,7 @@ const plans = [
         name: 'Growth',
         price: 79,
         desc: 'Scaling with multiple AI employees',
-        cta: 'Choose plan',
+        cta: 'Start your pilot',
         ctaStyle: 'default',
         popular: true,
         paymentUrl: 'https://buy.stripe.com/fZu00jdkL6gd1CIdnn3AY0a',
@@ -57,18 +58,22 @@ const plans = [
     {
         name: 'Managed',
         price: 998,
-        desc: 'For teams that want automation set up with us',
-        cta: 'Choose plan',
+        desc: 'Custom AI employees built and run with Dooza engineers',
+        cta: 'Book a free pilot call',
         ctaStyle: 'default',
         popular: false,
         anchorId: 'managed-plan',
-        paymentUrl: 'https://buy.stripe.com/fZu00jdkL6gd1CIdnn3AY0a',
+        // Managed is set up with a Dooza engineer, so it starts with a call rather than checkout.
+        bookCall: true,
         features: proFeatures,
     },
 ];
 
-export default function PricingSection({ headingLevel = 'h2' }) {
+// showPrices: plan prices render only on /pricing. Other pages (e.g. /workforce) pass
+// showPrices={false} and link to /pricing instead, per doc/positioning.md.
+export default function PricingSection({ headingLevel = 'h2', showPrices = true }) {
     const [expandedPlans, setExpandedPlans] = useState({});
+    const { openModal } = useBookingModal();
     const HeadingTag = headingLevel === 'h1' ? 'h1' : 'h2';
     const PlanHeadingTag = headingLevel === 'h1' ? 'h2' : 'h3';
 
@@ -87,7 +92,7 @@ export default function PricingSection({ headingLevel = 'h2' }) {
                         <HeadingTag className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 font-serif">Simple, transparent pricing</HeadingTag>
                     </div>
 
-                    {/* Money-back guarantee badge */}
+                    {/* Refundable pilot badge */}
                     <div className="flex justify-center mb-12">
                         <div className="inline-flex items-center gap-3 bg-slate-900 rounded-full px-7 py-3.5 shadow-lg shadow-slate-900/20">
                             <span className="flex items-center justify-center w-8 h-8 bg-white rounded-full">
@@ -95,8 +100,8 @@ export default function PricingSection({ headingLevel = 'h2' }) {
                                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </span>
-                            <span className="text-base font-bold text-white">Starts at $49/mo</span>
-                            <span className="text-sm text-slate-300">— 7-day money-back guarantee</span>
+                            <span className="text-base font-bold text-white">Every plan starts as a refundable pilot</span>
+                            <span className="text-sm text-slate-300">— 100% refund within 14 days</span>
                         </div>
                     </div>
                 </ScrollReveal>
@@ -127,14 +132,29 @@ export default function PricingSection({ headingLevel = 'h2' }) {
                                     <PlanHeadingTag className="text-lg font-bold text-slate-900 font-serif mb-1 mt-1">{plan.name}</PlanHeadingTag>
 
                                     {/* Price */}
-                                    <div className="flex items-baseline gap-1 mb-2">
-                                        <span className="text-4xl md:text-5xl font-extrabold text-slate-900 font-serif">${plan.price}</span>
-                                        <span className="text-slate-600 text-sm">USD/ month</span>
-                                    </div>
+                                    {showPrices ? (
+                                        <div className="flex items-baseline gap-1 mb-2">
+                                            <span className="text-4xl md:text-5xl font-extrabold text-slate-900 font-serif">${plan.price}</span>
+                                            <span className="text-slate-600 text-sm">USD/ month</span>
+                                        </div>
+                                    ) : (
+                                        <div className="mb-2">
+                                            <a href="/pricing" className="text-base font-bold text-primary-700 underline underline-offset-4 hover:text-primary-900">See pricing</a>
+                                        </div>
+                                    )}
 
                                     <p className="min-h-10 text-sm text-slate-500 mb-6">{plan.desc}</p>
 
                                     {/* CTA */}
+                                    {plan.bookCall ? (
+                                        <button
+                                            type="button"
+                                            onClick={() => { openModal(); trackDemoClick('pricing_managed'); }}
+                                            className="block w-full text-center py-3 rounded-xl font-semibold transition-all mb-6 bg-slate-100 text-slate-700 hover:bg-slate-200"
+                                        >
+                                            {plan.cta}
+                                        </button>
+                                    ) : (
                                     <a
                                         href={plan.paymentUrl}
                                         target="_blank"
@@ -147,6 +167,7 @@ export default function PricingSection({ headingLevel = 'h2' }) {
                                     >
                                         {plan.cta}
                                     </a>
+                                    )}
 
                                     {/* Features */}
                                     <div id={`features-${plan.name.toLowerCase()}`} className="space-y-3">
@@ -191,8 +212,8 @@ export default function PricingSection({ headingLevel = 'h2' }) {
                 <ScrollReveal delay={0.3}>
                     <div className="flex flex-col items-center mt-10 gap-3">
                         <p className="text-sm text-slate-600">or</p>
-                        <BookDemoButton source="pricing">Book Free Setup with Founder</BookDemoButton>
-                        <p className="text-sm font-medium text-slate-600">Free setup & walkthrough · 15 min · No commitment</p>
+                        <BookDemoButton source="pricing">Book a free pilot call</BookDemoButton>
+                        <p className="text-sm font-medium text-slate-600">Free 30-min pilot call · 100% refund within 14 days</p>
                     </div>
                 </ScrollReveal>
             </div>

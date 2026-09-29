@@ -32,7 +32,7 @@ export const metadata = {
         absolute: 'Dooza Agents Automation | The #1 Zapier Alternative with AI',
     },
     description:
-        'Build AI-powered workflows that automate your business. 300+ integrations, visual builder, and AI agents. Save 70% compared to Zapier. Start free.',
+        'Workflow automation is a Dooza Agents service: Dooza engineers build and maintain AI-powered workflows across 1,000+ app integrations. Start with a refundable pilot: 100% refund within 14 days.',
     keywords: [
         'workflow automation',
         'Zapier alternative',
@@ -53,7 +53,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'Dooza Agents Automation | The #1 Zapier Alternative with AI',
-        description: 'Build AI-powered workflows with 300+ integrations. Visual builder, AI agents, and human-in-the-loop controls. Save 70% vs Zapier.',
+        description: 'Build AI-powered workflows with 1,000+ app integrations. Visual builder, AI agents, and human-in-the-loop controls. Start with a refundable pilot.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -62,7 +62,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Dooza Agents Automation | The #1 Zapier Alternative with AI',
-        description: 'Build AI-powered workflows with 300+ integrations. Visual builder, AI agents, and human-in-the-loop controls.',
+        description: 'Build AI-powered workflows with 1,000+ app integrations. Visual builder, AI agents, and human-in-the-loop controls.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -72,7 +72,7 @@ const steps = [
         icon: Link2,
         step: 'Step 1',
         title: 'Connect Your Apps',
-        desc: 'Link Gmail, Slack, Salesforce, Shopify, and 300+ other apps in one dashboard.',
+        desc: 'Link Gmail, Slack, Salesforce, Shopify, and 1,000+ other apps in one dashboard.',
         color: 'bg-primary-50 text-primary-700',
         badge: 'text-primary-700 bg-primary-50',
     },
@@ -141,23 +141,23 @@ const integrationRows = [
 const faqData = [
     {
         question: 'What is Dooza Agents?',
-        answer: 'Dooza Agents is an AI-powered automation platform that connects your business tools and runs intelligent workflows. It combines a visual builder with AI agents that can classify, draft, decide, and act on your behalf.',
+        answer: 'Dooza Agents is Dooza\'s AI agentic platform: custom AI agents built and maintained by Dooza engineers. Workflow automation is one Dooza Agents use case, where agents connect your business tools and run intelligent workflows that classify, draft, decide, and act on your behalf. Dooza is an AI-native company that builds AI products and services for small businesses.',
     },
     {
         question: 'How is Dooza different from Zapier?',
-        answer: 'Unlike Zapier, Dooza includes built-in AI agents that can make decisions, not just pass data. You also get human-in-the-loop approvals, full run tracing, and the ability to add custom code — all at 70% less cost.',
+        answer: 'Unlike Zapier, Dooza includes built-in AI agents that can make decisions, not just pass data. You also get human-in-the-loop approvals, full run tracing, and the ability to add custom code, with Dooza engineers building and maintaining the workflows for you.',
     },
     {
         question: 'How many integrations are available?',
-        answer: 'Dooza Agents supports 300+ integrations including Gmail, Slack, Salesforce, HubSpot, Shopify, Stripe, and more. You can also connect any API through webhooks and custom code.',
+        answer: 'Dooza Agents supports 1,000+ app integrations including Gmail, Slack, Salesforce, HubSpot, Shopify, Stripe, and more. You can also connect any API through webhooks and custom code.',
     },
     {
         question: 'Can I migrate my Zapier workflows?',
-        answer: 'Yes. You can recreate your existing Zapier workflows in Dooza\'s visual builder in minutes. Our team can also help migrate your workflows for free during onboarding.',
+        answer: 'Yes. You can recreate your existing Zapier workflows in Dooza\'s visual builder in minutes. Our engineers can also migrate your workflows for you during the pilot.',
     },
     {
         question: 'Is there a free plan?',
-        answer: 'Yes. Dooza Agents offers a free plan with up to 5 workflows and 100 executions per month. No credit card required to get started.',
+        answer: 'No. Every Dooza product starts with a refundable pilot: you pay for the pilot, and if you ask within 14 days you get a 100% refund. A Dooza engineer scopes your pilot on a free 30-minute call. Pricing depends on the product; see dooza.ai/pricing.',
     },
 ];
 
@@ -184,19 +184,12 @@ const schemas = [
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         url: pageUrl,
-        description: 'AI-powered workflow automation platform with 300+ integrations, visual builder, and intelligent AI agents.',
+        description: 'Workflow automation built on Dooza Agents, Dooza\'s AI agentic platform: custom AI agents built and maintained by Dooza engineers, with 1,000+ app integrations.',
         offers: {
             '@type': 'Offer',
-            price: '998',
-            priceCurrency: 'USD',
-            priceValidUntil: '2027-12-31',
+            name: 'Refundable pilot',
+            description: 'Refundable pilot, 100% refund within 14 days. Pricing depends on the product; see https://www.dooza.ai/pricing.',
             availability: 'https://schema.org/InStock',
-        },
-        aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.8',
-            ratingCount: '120',
-            bestRating: '5',
         },
     },
     {
@@ -233,7 +226,7 @@ export default function WorkflowAutomationPage() {
                                 Automate everything with <span className="text-primary-600">AI workflows</span>
                             </h1>
                             <p className="mb-9 max-w-2xl mx-auto text-lg leading-relaxed text-slate-600 md:text-xl">
-                                Connect 300+ apps, build AI-powered automations, and run your business on autopilot. No code required. Save 70% compared to Zapier.
+                                Connect 1,000+ apps, build AI-powered automations, and run your business on autopilot. Dooza engineers build and maintain the workflows on Dooza Agents. Start with a refundable pilot.
                             </p>
                             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                 <a
@@ -242,16 +235,16 @@ export default function WorkflowAutomationPage() {
                                     rel="noopener noreferrer"
                                     className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-700 px-7 py-4 text-center text-base font-bold text-white shadow-lg shadow-primary-700/20 transition hover:-translate-y-0.5 hover:bg-primary-800 hover:shadow-xl sm:w-auto"
                                 >
-                                    Start Free Trial <ArrowRight className="h-4 w-4" />
+                                    Start your pilot <ArrowRight className="h-4 w-4" />
                                 </a>
                                 <BookDemoButton source="workflow_auto_hero" variant="secondary" size="lg">
                                     Talk to Sales
                                 </BookDemoButton>
                             </div>
                             <p className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-500">
-                                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> No credit card required</span>
-                                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> Setup in 5 minutes</span>
-                                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> 7-day guarantee</span>
+                                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> Built by Dooza engineers</span>
+                                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> Refundable pilot</span>
+                                <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> 100% refund within 14 days</span>
                             </p>
                         </ScrollReveal>
                     </div>
@@ -286,7 +279,7 @@ export default function WorkflowAutomationPage() {
                         <ScrollReveal>
                             <div className="text-center mb-16">
                                 <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl mb-4">Automate Your Business in 3 Steps</h2>
-                                <p className="text-lg text-slate-600 max-w-2xl mx-auto">From setup to running AI workflows across all your tools in under 5 minutes</p>
+                                <p className="text-lg text-slate-600 max-w-2xl mx-auto">From a free pilot call to AI workflows running across your tools in days</p>
                             </div>
                         </ScrollReveal>
                         <StaggerContainer className="grid gap-8 md:grid-cols-3" staggerDelay={0.15}>
@@ -343,7 +336,7 @@ export default function WorkflowAutomationPage() {
                     <div className="max-w-7xl mx-auto">
                         <ScrollReveal>
                             <div className="text-center mb-14">
-                                <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl mb-4">300+ Integrations, One Platform</h2>
+                                <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl mb-4">1,000+ Integrations, One Platform</h2>
                                 <p className="text-lg text-slate-600 max-w-2xl mx-auto">Connect every tool your team uses — CRM, email, databases, payment, messaging, and more</p>
                             </div>
                         </ScrollReveal>
@@ -383,41 +376,41 @@ export default function WorkflowAutomationPage() {
                             </div>
                             <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
                                 <div>
-                                    <h3 className="font-sans text-2xl font-extrabold text-slate-900 mb-2">Managed</h3>
+                                    <h3 className="font-sans text-2xl font-extrabold text-slate-900 mb-2">Refundable pilot</h3>
                                     <p className="text-sm text-slate-500 mb-6">We set up your workflows, connect your tools, and handle everything for you.</p>
                                     <ul className="space-y-3">
                                         {[
-                                            'All AI employees included',
-                                            '84 hours of done-for-you work capacity',
+                                            'Scoped with a Dooza engineer on a free pilot call',
+                                            'Built and maintained by Dooza engineers',
                                             'Managed sales and support automation setup',
                                             'Calls, email, leads, and operations setup',
                                             'Priority workflow review and improvements',
                                             '1000+ app integrations',
                                         ].map((f) => (
-                                            <li key={f} className={`flex items-center gap-2.5 ${f.includes('84 hours') ? 'rounded-2xl border border-primary-200 bg-primary-50 px-3 py-2.5 shadow-sm' : ''}`}>
-                                                <CheckCircle2 className={`w-4 h-4 shrink-0 ${f.includes('84 hours') ? 'text-primary-700' : 'text-primary-500'}`} />
-                                                <span className={`text-sm ${f.includes('84 hours') ? 'font-extrabold text-primary-900' : 'text-slate-600'}`}>{f}</span>
+                                            <li key={f} className={`flex items-center gap-2.5 ${f.includes('free pilot call') ? 'rounded-2xl border border-primary-200 bg-primary-50 px-3 py-2.5 shadow-sm' : ''}`}>
+                                                <CheckCircle2 className={`w-4 h-4 shrink-0 ${f.includes('free pilot call') ? 'text-primary-700' : 'text-primary-500'}`} />
+                                                <span className={`text-sm ${f.includes('free pilot call') ? 'font-extrabold text-primary-900' : 'text-slate-600'}`}>{f}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                                 <div className="text-center md:text-right md:pl-8 md:border-l md:border-slate-100">
-                                    <div className="flex items-baseline justify-center md:justify-end gap-1 mb-1">
-                                        <span className="text-5xl md:text-6xl font-extrabold text-slate-900">$998</span>
-                                        <span className="text-slate-500 text-sm">/ month</span>
-                                    </div>
-                                    <p className="text-xs text-slate-400 mb-6">7-day money-back guarantee</p>
+                                    <p className="text-2xl font-extrabold text-slate-900 mb-1">100% refund within 14 days</p>
+                                    <p className="text-xs text-slate-500 mb-6">
+                                        Pricing depends on the product; every Dooza product starts with a refundable pilot.{' '}
+                                        <Link href="/pricing" className="font-semibold text-primary-700 underline">See pricing</Link>
+                                    </p>
                                     <a
                                         href={getProductSignupUrl('workforce')}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-full bg-slate-900 px-7 py-3.5 text-base font-bold text-white shadow-lg transition hover:bg-slate-800 hover:shadow-xl hover:-translate-y-0.5"
                                     >
-                                        Get Started <ArrowRight className="h-4 w-4" />
+                                        Start your pilot <ArrowRight className="h-4 w-4" />
                                     </a>
                                     <div className="mt-4">
                                         <BookDemoButton source="workflow_auto_pricing" variant="secondary" size="lg">
-                                            Book Free Setup Call
+                                            Book a free pilot call
                                         </BookDemoButton>
                                     </div>
                                 </div>
@@ -441,7 +434,7 @@ export default function WorkflowAutomationPage() {
                                 Stop paying Zapier prices for simple automations
                             </h2>
                             <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-slate-600">
-                                Build AI-powered workflows that actually think, decide, and act. Start free and automate your first process in 5 minutes.
+                                Build AI-powered workflows that actually think, decide, and act. Start with a refundable pilot — 100% refund within 14 days.
                             </p>
                             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                 <a
@@ -453,10 +446,10 @@ export default function WorkflowAutomationPage() {
                                     START AUTOMATING NOW <ArrowRight className="h-4 w-4" />
                                 </a>
                                 <BookDemoButton source="workflow_auto_final" variant="secondary" size="lg">
-                                    Book a Demo
+                                    Book a free pilot call
                                 </BookDemoButton>
                             </div>
-                            <p className="mt-6 text-sm text-slate-500">Join businesses saving 70% on workflow automation with Dooza</p>
+                            <p className="mt-6 text-sm text-slate-500">Pricing depends on the product; every Dooza product starts with a refundable pilot. <Link href="/pricing" className="font-semibold text-primary-700 underline">See pricing</Link></p>
                         </ScrollReveal>
                     </div>
                 </section>

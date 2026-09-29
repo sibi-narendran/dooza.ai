@@ -28,7 +28,7 @@ export const metadata = {
         absolute: 'Automate Customer Support with Dooza Agents | AI Support Done For You',
     },
     description:
-        'Build an AI-powered customer support workflow that replies to customers in seconds. Dooza Agents + AI employees handle email, chat, and tickets 24/7. $998/mo, done for you.',
+        'Build an AI-powered customer support workflow that replies to customers in seconds. Dooza Agents + AI employees handle email, chat, and tickets 24/7, done for you. Start with a refundable pilot: 100% refund within 14 days.',
     keywords: [
         'customer support workflow',
         'AI customer support automation',
@@ -49,7 +49,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'Automate Customer Support with Dooza Agents | AI Support Done For You',
-        description: 'Build a support workflow that replies in seconds. Dooza Agents + AI employees. Done-for-you at $998/mo.',
+        description: 'Build a support workflow that replies in seconds. Dooza Agents + AI employees, done for you. Start with a refundable pilot.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -58,7 +58,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Automate Customer Support with Dooza Agents | Dooza',
-        description: 'AI-powered support workflow that replies in seconds. Dooza Agents + AI employees. $998/mo done-for-you.',
+        description: 'AI-powered support workflow that replies in seconds. Dooza Agents + AI employees, done for you. Start with a refundable pilot.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -66,7 +66,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is Dooza Agents?',
-        answer: 'Dooza Agents is an automation platform that connects your business tools and runs AI-powered processes. For customer support, it detects new emails or messages, sends them to a Dooza AI employee for understanding and drafting, and delivers instant replies to your customers.',
+        answer: 'Dooza Agents is Dooza\'s AI agentic platform: custom AI agents built and maintained by Dooza engineers that connect your business tools and run AI-powered processes. For customer support, it detects new emails or messages, sends them to a Dooza AI employee for understanding and drafting, and delivers instant replies to your customers.',
     },
     {
         question: 'How is this different from a chatbot?',
@@ -81,8 +81,8 @@ const faqData = [
         answer: 'We do it for you. Our team connects your email, uploads your knowledge base, configures the workflow, and tests it — usually within 24-48 hours. You don\'t touch any code or settings.',
     },
     {
-        question: 'Can I cancel if it\'s not working?',
-        answer: 'Yes. We offer a 7-day money-back guarantee. If you\'re not happy with the results, you get a full refund — no questions asked.',
+        question: 'Can I get a refund if it\'s not working?',
+        answer: 'Yes. Every Dooza product starts with a refundable pilot: you pay for the pilot, and if you ask within 14 days you get a 100% refund.',
     },
 ];
 
@@ -112,16 +112,9 @@ const schemas = [
         description: 'AI-powered customer support workflow that replies to customers in seconds. Powered by Dooza AI employees.',
         offers: {
             '@type': 'Offer',
-            price: '998',
-            priceCurrency: 'USD',
-            priceValidUntil: '2027-12-31',
+            name: 'Refundable pilot',
+            description: 'Refundable pilot, 100% refund within 14 days. Pricing depends on the product; see https://www.dooza.ai/pricing.',
             availability: 'https://schema.org/InStock',
-        },
-        aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.9',
-            ratingCount: '85',
-            bestRating: '5',
         },
     },
     {
@@ -276,7 +269,7 @@ export default function CustomerSupportSimplePage() {
                                         'Customers get a reply in under 30 seconds',
                                         'Workflow runs 24/7, including holidays',
                                         'AI employee handles routine questions automatically',
-                                        '$998/month — replaces a full-time hire',
+                                        'Costs a fraction of a full-time hire',
                                         'Every ticket answered, nothing falls through',
                                     ].map((item) => (
                                         <li key={item} className="flex items-start gap-3 text-sm text-primary-800">
@@ -344,41 +337,41 @@ export default function CustomerSupportSimplePage() {
                             </div>
                             <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
                                 <div>
-                                    <h3 className="font-sans text-2xl font-extrabold text-slate-900 mb-2">Managed</h3>
+                                    <h3 className="font-sans text-2xl font-extrabold text-slate-900 mb-2">Refundable pilot</h3>
                                     <p className="text-sm text-slate-500 mb-6">We build your support workflow, connect your tools, train the AI employee on your business, and keep it running.</p>
                                     <ul className="space-y-3">
                                         {[
-                                            'All AI employees included',
-                                            '84 hours of done-for-you work capacity',
+                                            'Scoped with a Dooza engineer on a free pilot call',
+                                            'Built and maintained by Dooza engineers',
                                             'Managed sales and support automation setup',
                                             'Calls, email, leads, and operations setup',
                                             'Priority workflow review and improvements',
                                             '1000+ app integrations',
                                         ].map((f) => (
-                                            <li key={f} className={`flex items-center gap-2.5 ${f.includes('84 hours') ? 'rounded-2xl border border-primary-200 bg-primary-50 px-3 py-2.5 shadow-sm' : ''}`}>
-                                                <CheckCircle2 className={`w-4 h-4 shrink-0 ${f.includes('84 hours') ? 'text-primary-700' : 'text-primary-500'}`} />
-                                                <span className={`text-sm ${f.includes('84 hours') ? 'font-extrabold text-primary-900' : 'text-slate-600'}`}>{f}</span>
+                                            <li key={f} className={`flex items-center gap-2.5 ${f.includes('free pilot call') ? 'rounded-2xl border border-primary-200 bg-primary-50 px-3 py-2.5 shadow-sm' : ''}`}>
+                                                <CheckCircle2 className={`w-4 h-4 shrink-0 ${f.includes('free pilot call') ? 'text-primary-700' : 'text-primary-500'}`} />
+                                                <span className={`text-sm ${f.includes('free pilot call') ? 'font-extrabold text-primary-900' : 'text-slate-600'}`}>{f}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                                 <div className="text-center md:text-right md:pl-8 md:border-l md:border-slate-100">
-                                    <div className="flex items-baseline justify-center md:justify-end gap-1 mb-1">
-                                        <span className="text-5xl md:text-6xl font-extrabold text-slate-900">$998</span>
-                                        <span className="text-slate-500 text-sm">/ month</span>
-                                    </div>
-                                    <p className="text-xs text-slate-400 mb-6">7-day money-back guarantee</p>
+                                    <p className="text-2xl font-extrabold text-slate-900 mb-1">100% refund within 14 days</p>
+                                    <p className="text-xs text-slate-500 mb-6">
+                                        Pricing depends on the product; every Dooza product starts with a refundable pilot.{' '}
+                                        <Link href="/pricing" className="font-semibold text-primary-700 underline">See pricing</Link>
+                                    </p>
                                     <a
                                         href={getProductSignupUrl('workforce')}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-full bg-slate-900 px-7 py-3.5 text-base font-bold text-white shadow-lg transition hover:bg-slate-800 hover:shadow-xl hover:-translate-y-0.5"
                                     >
-                                        Get Started <ArrowRight className="h-4 w-4" />
+                                        Start your pilot <ArrowRight className="h-4 w-4" />
                                     </a>
                                     <div className="mt-4">
                                         <BookDemoButton source="support_wf_pricing" variant="secondary" size="lg">
-                                            Book Free Setup Call
+                                            Book a free pilot call
                                         </BookDemoButton>
                                     </div>
                                 </div>
@@ -412,7 +405,7 @@ export default function CustomerSupportSimplePage() {
                                 Stop replying manually. Build a workflow that does it for you.
                             </h2>
                             <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-slate-600">
-                                Dooza Agents + AI employees = customer support on autopilot. Try it free, cancel within 7 days if it&apos;s not for you.
+                                Dooza Agents + AI employees = customer support on autopilot. Start with a refundable pilot — 100% refund within 14 days.
                             </p>
                             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                 <a

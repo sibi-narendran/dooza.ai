@@ -187,8 +187,9 @@ export default function WhatIsClawdbotContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -493,7 +494,7 @@ export default function WhatIsClawdbotContent() {
                                             <td className="p-4 border-b font-medium">Setup Difficulty</td>
                                             <td className="p-4 border-b text-red-500">Complex (hours)</td>
                                             <td className="p-4 border-b text-green-600">Easy</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">5 minutes</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Same day</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Take Real Actions</td>
@@ -511,7 +512,7 @@ export default function WhatIsClawdbotContent() {
                                             <td className="p-4 border-b font-medium">Monthly Cost</td>
                                             <td className="p-4 border-b text-red-500">$100-300+/day</td>
                                             <td className="p-4 border-b">$20-200/mo</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">$49/mo</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold"><a href="/pricing" className="underline">Refundable pilot</a></td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Technical Expertise</td>
@@ -540,14 +541,14 @@ export default function WhatIsClawdbotContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Want AI Employees Without the Risk?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Dooza offers pre-built AI employees for email, social media, SEO, and sales - all secured and maintained for you.
+                                    Dooza offers pre-built AI employees for email, social media, SEO, and sales - all secured and maintained for you. Start with a refundable pilot - 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book a Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

@@ -40,7 +40,7 @@ import {
 const faqData = [
     { question: "What is an AI legal assistant for law firms?", answer: "An AI legal assistant is software that handles client intake calls — answering the phone 24/7, screening potential cases by practice area, gathering key facts, scheduling consultations, and following up with leads. It performs the administrative work of intake, not legal advice." },
     { question: "Is an AI legal assistant practicing law or violating ethics rules?", answer: "No. An AI legal assistant handles administrative intake tasks — the same work a receptionist or intake coordinator does. It doesn't give legal advice, interpret statutes, or recommend legal strategies. It screens, schedules, and gathers facts. Bar associations distinguish clearly between administrative support and the practice of law." },
-    { question: "How much does an AI legal assistant cost compared to a paralegal?", answer: "A paralegal or intake coordinator costs $3,500-5,500/month in salary alone, plus benefits. A legal answering service runs $500-1,500/month with limited hours. Dooza's Rachel costs $49/month — 24/7, unlimited calls, with law-firm-specific configuration." },
+    { question: "How much does an AI legal assistant cost compared to a paralegal?", answer: "A paralegal or intake coordinator costs $3,500-5,500/month in salary alone, plus benefits. A legal answering service runs $500-1,500/month with limited hours. Dooza's Rachel gives you 24/7 call answering with law-firm-specific configuration for a fraction of either. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
     { question: "Can the AI screen cases by practice area?", answer: "Yes. Rachel is configured with your firm's practice areas and screening criteria. She asks the right questions for PI, family law, criminal defense, estate planning, and more — then classifies urgency and routes to the appropriate attorney." },
     { question: "Does the AI disclose that it's not a human attorney?", answer: "Absolutely. Rachel introduces herself by name and is transparent about being an AI assistant when asked. She never represents herself as an attorney and clearly communicates that she's helping with scheduling and intake, not providing legal advice." },
     { question: "What happens when someone calls after hours?", answer: "Rachel answers 24/7 with the same quality as business hours. She screens the case, gathers facts, assesses urgency, and either books a next-day consultation or escalates urgent matters to the on-call attorney. 60%+ of legal intake calls happen outside business hours." }
@@ -108,7 +108,7 @@ export default function AiLegalAssistantContent() {
                             Why Law Firms Are Replacing Paralegals with <span className="text-primary-600">AI Legal Assistants</span> for Intake & Scheduling
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            79% of clients hire the first attorney who responds. An AI legal assistant handles intake calls, screens cases, gathers facts, and books consultations — 24/7, for $49/month. The paralegal that never sleeps.
+                            79% of clients hire the first attorney who responds. An AI legal assistant handles intake calls, screens cases, gathers facts, and books consultations — 24/7, starting with a refundable pilot. The paralegal that never sleeps.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -121,16 +121,17 @@ export default function AiLegalAssistantContent() {
                             </div>
                         </div>
 
-                        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                        <div className="mt-10 flex flex-col items-center gap-2">
                             <a
                                 href={getProductSignupUrl('workforce')}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Rachel AI - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
+                            <span className="text-sm text-slate-500">Refundable pilot — 100% refund within 14 days</span>
                         </div>
                     </div>
                 </div>
@@ -178,8 +179,9 @@ export default function AiLegalAssistantContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Rachel Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -314,7 +316,7 @@ export default function AiLegalAssistantContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The Ideal State</h4>
                                         <p className="text-slate-700">
-                                            Imagine every intake call answered instantly. Every case screened with the right questions. Every fact gathered while it's fresh. Every consultation booked with the right attorney. Every prospect followed up with systematically. All without hiring additional staff, paying overtime, or losing cases to after-hours voicemail. That's what law firms need — and an AI legal assistant makes it possible for $49/month.
+                                            Imagine every intake call answered instantly. Every case screened with the right questions. Every fact gathered while it's fresh. Every consultation booked with the right attorney. Every prospect followed up with systematically. All without hiring additional staff, paying overtime, or losing cases to after-hours voicemail. That's what law firms need — and an AI legal assistant makes it possible without adding headcount.
                                         </p>
                                     </div>
                                 </div>
@@ -649,7 +651,7 @@ export default function AiLegalAssistantContent() {
                                     {
                                         icon: FileText,
                                         title: "Confidentiality by Design",
-                                        desc: "All conversations are encrypted. Rachel collects only intake-relevant information. She doesn't store case files or legal documents. Data handling follows best practices for law firm confidentiality."
+                                        desc: "Encrypted connections and your approval on anything sensitive. Rachel collects only intake-relevant information. She doesn't store case files or legal documents. Data handling follows best practices for law firm confidentiality."
                                     },
                                     {
                                         icon: Scale,
@@ -702,7 +704,7 @@ export default function AiLegalAssistantContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", desk: "$3,500-5,500", service: "$500-1,500", rachel: "$29" },
+                                            { feature: "Monthly Cost", desk: "$3,500-5,500", service: "$500-1,500", rachel: "Refundable pilot (see /pricing)" },
                                             { feature: "Availability", desk: "Business hours only", service: "Extended hours (varies)", rachel: "24/7/365" },
                                             { feature: "Case Screening", desk: "Trained judgment", service: "Basic script only", rachel: "Practice-area protocols" },
                                             { feature: "Fact Gathering", desk: "Thorough", service: "Name & number only", rachel: "Structured intake forms" },
@@ -739,16 +741,16 @@ export default function AiLegalAssistantContent() {
                                     <p className="text-xs text-amber-500 mt-2">$6,000-18,000/year</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
                                     <p className="text-sm text-green-800 font-medium">Rachel AI (Dooza)</p>
                                     <p className="text-xs text-green-600 mt-1">Unlimited calls, 24/7</p>
                                     <p className="text-xs text-green-600">Case screening + booking</p>
-                                    <p className="text-xs text-green-700 font-bold mt-2">$348/year total</p>
+                                    <p className="text-xs text-green-700 font-bold mt-2">Refundable pilot — <Link href="/pricing" className="underline">see pricing</Link></p>
                                 </div>
                             </div>
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
-                                <p className="text-2xl font-bold text-green-700">Save $41,652-$65,652/year vs. a full-time hire</p>
+                                <p className="text-2xl font-bold text-green-700">A fraction of the $42,000-66,000/year cost of a full-time hire</p>
                                 <p className="text-green-600 mt-2">And get 24/7 coverage, case screening, fact gathering, and automated follow-up included</p>
                             </div>
                         </section>
@@ -765,7 +767,7 @@ export default function AiLegalAssistantContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Rachel — AI Legal Assistant for Law Firms</h3>
                                         <p className="text-lg text-slate-700">
-                                            Rachel answers your firm's phone like your best intake coordinator — but she never takes a day off, never puts a caller on hold, and costs less than a single billable hour. She's specifically configurable for law firms with practice-area screening, urgency classification, and smart attorney matching.
+                                            Rachel answers your firm's phone like your best intake coordinator — but she never takes a day off, never puts a caller on hold, and costs a fraction of a full-time hire. She's specifically configurable for law firms with practice-area screening, urgency classification, and smart attorney matching.
                                         </p>
                                     </div>
                                 </div>
@@ -810,13 +812,13 @@ export default function AiLegalAssistantContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Sign Up for Dooza",
-                                        desc: "Create your account at dooza.ai. You'll get instant access to Rachel and your full AI employee team. No credit card required to start."
+                                        title: "Start Your Pilot",
+                                        desc: "Create your account at dooza.ai. You'll get access to Rachel and your full AI employee team. Every Dooza product starts with a refundable pilot — 100% refund within 14 days."
                                     },
                                     {
                                         step: "2",
                                         title: "Configure Your Practice Areas",
-                                        desc: "Set up your specific practice areas (PI, family law, criminal defense, estate planning, etc.), attorney assignments and schedules, screening criteria for each case type, and urgency classification rules. Our free concierge onboarding team handles this for you if you prefer."
+                                        desc: "Set up your specific practice areas (PI, family law, criminal defense, estate planning, etc.), attorney assignments and schedules, screening criteria for each case type, and urgency classification rules. A Dooza engineer can scope and set this up with you on a free 30-minute pilot call."
                                     },
                                     {
                                         step: "3",
@@ -837,14 +839,14 @@ export default function AiLegalAssistantContent() {
                             <div className="bg-indigo-50 border border-indigo-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Stop Losing Cases to Voicemail?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    79% of clients hire the first attorney who responds. Every missed call is a missed case — and potentially $10,000-$50,000 in fees. Rachel answers every call, screens every case, and books every consultation — for $49/month.
+                                    79% of clients hire the first attorney who responds. Every missed call is a missed case — and potentially $10,000-$50,000 in fees. Rachel answers every call, screens every case, and books every consultation. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Rachel AI - $49/mo <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

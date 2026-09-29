@@ -82,7 +82,7 @@ const faqData = [
     },
     {
         question: "How much does an AI team cost compared to hiring?",
-        answer: "Hiring six human employees for email, social media, SEO, phone, sales, and legal would cost ₹1.75–2.95 lakh/month in India. AI employee platforms like Dooza offer all six roles for $49/month (~₹2,400)."
+        answer: "Hiring six human employees for email, social media, SEO, phone, sales, and legal would cost ₹1.75–2.95 lakh/month in India. An AI workforce app like Dooza Workforce covers all six roles for a small fraction of that; pricing depends on the product, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Is this only for tech companies?",
@@ -253,7 +253,7 @@ export default function HerEntireTeamWasAiContent() {
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    The platform was <a href="https://www.dooza.ai" className="text-primary-600 hover:underline font-medium">Dooza</a> — an AI employee platform that provides businesses with autonomous agents for email, social media, phone calls, lead generation, SEO, and legal work. The friend had deployed a full team of AI agents for her expanding business.
+                                    The platform was <a href="https://www.dooza.ai" className="text-primary-600 hover:underline font-medium">Dooza</a> — an AI-native company that builds AI products and services for small businesses, including the Dooza Workforce app with autonomous AI employees for email, social media, phone calls, lead generation, SEO, and legal work. The friend had deployed a full team of AI agents for her expanding business.
                                 </p>
                             </div>
                         </section>
@@ -317,7 +317,7 @@ export default function HerEntireTeamWasAiContent() {
                                     Hiring is expensive relative to revenue. A social media manager, an email administrator, a receptionist, an SEO specialist, a sales representative, and a legal assistant would collectively cost &#8377;1.75 to 2.95 lakh per month. For most MSMEs, that&apos;s not a budget line — it&apos;s a fantasy.
                                 </p>
                                 <p>
-                                    AI employee platforms like Dooza are changing that equation. For $49/month — roughly &#8377;2,400 — a business owner gets six AI agents that handle each of those functions autonomously. They work around the clock. They don&apos;t take leave. They respond instantly.
+                                    AI workforce apps like Dooza Workforce are changing that equation. For a small fraction of that payroll, a business owner gets six AI employees that handle each of those functions autonomously, starting with a refundable pilot (100% refund within 14 days; see <a href="/pricing" className="text-primary-600 hover:underline">pricing</a>). They work around the clock. They don&apos;t take leave. They respond instantly.
                                 </p>
                                 <p>
                                     Indian entrepreneurs in cities like Bangalore, Mumbai, Delhi, Hyderabad, and Pune are early movers. They&apos;re not waiting for AI to become mainstream — they&apos;re deploying it now, while competitors are still debating whether to try ChatGPT.

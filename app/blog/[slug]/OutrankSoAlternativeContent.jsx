@@ -76,7 +76,7 @@ const comparisonRows = [
     ['YouTube support', 'Publicly lists relevant YouTube videos in articles', 'Relevant YouTube embeds plus article strategy around the video', 'Tie'],
     ['Backlinks', 'Backlink exchange network', 'Focuses on owned content quality and internal authority', 'Depends'],
     ['Business automation', 'SEO content only', 'SEO, email, social, sales, and phone AI employees', 'Dooza'],
-    ['Price/value', '$99/month public plan', 'Lower-cost AI workforce entry point with Ranky included', 'Dooza']
+    ['Price/value', '$99/month public plan', 'Refundable pilot (100% refund within 14 days); pricing depends on the product', 'Dooza']
 ];
 
 export default function OutrankSoAlternativeContent() {
@@ -179,8 +179,9 @@ export default function OutrankSoAlternativeContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Ranky
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -362,7 +363,7 @@ export default function OutrankSoAlternativeContent() {
                                     Outrank.so publicly lists its all-in-one plan at <strong>$99/month</strong>. For that, you get a dedicated SEO content automation platform. That can be reasonable if you only need SEO articles.
                                 </p>
                                 <p>
-                                    The stronger value case for Dooza is that Ranky is part of a broader AI workforce. You are not buying one content tool. You are buying a system that can help with SEO, email, social media, sales follow-up, and phone calls. For small businesses, that matters because SEO is rarely the only bottleneck.
+                                    The stronger value case for Dooza is that Ranky is part of a broader AI workforce. You are not buying one content tool. You are buying a system that can help with SEO, email, social media, sales follow-up, and phone calls. For small businesses, that matters because SEO is rarely the only bottleneck. Dooza pricing depends on the product (see <a href="/pricing" className="text-primary-600 hover:underline">pricing</a>), and every Dooza product starts with a refundable pilot — 100% refund within 14 days.
                                 </p>
                             </div>
 
@@ -413,7 +414,7 @@ export default function OutrankSoAlternativeContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-full transition-colors"
                                 >
-                                    Try Dooza Ranky <ArrowRight className="w-5 h-5" />
+                                    Start your pilot <ArrowRight className="w-5 h-5" />
                                 </a>
                             </div>
                         </section>

@@ -140,12 +140,12 @@ export default function ContractorsContent({ page }) {
         },
         {
             title: 'Dooza AI',
-            price: '$29',
-            period: '/mo',
+            price: 'Pilot',
+            period: ' · 100% refund in 14 days',
             features: [
                 '24/7/365 availability',
                 'Knows your trade & pricing',
-                'Unlimited calls included',
+                'Answers calls in parallel',
                 'Captures leads & dispatches'
             ],
             tint: 'green',
@@ -201,7 +201,7 @@ export default function ContractorsContent({ page }) {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                             >
-                                Get Started Free — $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -209,7 +209,7 @@ export default function ContractorsContent({ page }) {
                                 onClick={handleAction}
                                 className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                             >
-                                Book a Demo
+                                Book a free pilot call
                             </a>
                         </div>
                     </div>
@@ -323,7 +323,7 @@ export default function ContractorsContent({ page }) {
                             How It Works
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Live in under 10 minutes. No contracts. No tech skills needed.
+                            A Dooza engineer scopes your pilot on a free call. Start with a refundable pilot — 100% refund within 14 days.
                         </p>
                     </div>
 
@@ -393,7 +393,7 @@ export default function ContractorsContent({ page }) {
                                     {plan.highlight && (
                                         <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                                             <span className="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                                                BEST VALUE
+                                                RECOMMENDED
                                             </span>
                                         </div>
                                     )}
@@ -403,6 +403,7 @@ export default function ContractorsContent({ page }) {
                                             <span className={`text-4xl font-bold ${colors.price}`}>{plan.price}</span>
                                             <span className="text-slate-500 text-sm">{plan.period}</span>
                                         </div>
+                                        {plan.highlight && <a href="/pricing" className="mt-1 block text-xs font-semibold text-primary-700 underline">Pricing depends on the product. See pricing</a>}
                                     </div>
                                     <ul className="space-y-3">
                                         {plan.features.map((feature, fIdx) => (
@@ -424,7 +425,7 @@ export default function ContractorsContent({ page }) {
                                                 rel="noopener noreferrer"
                                                 className="w-full inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-green-700 transition-all"
                                             >
-                                                Start Free <ArrowRight size={16} />
+                                                Start your pilot <ArrowRight size={16} />
                                             </a>
                                         </div>
                                     )}
@@ -481,7 +482,7 @@ export default function ContractorsContent({ page }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Get Started Free — $49/mo
+                            Start your pilot
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
@@ -489,7 +490,7 @@ export default function ContractorsContent({ page }) {
                             onClick={handleAction}
                             className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                         >
-                            Book a Demo
+                            Book a free pilot call
                         </a>
                     </div>
                 </div>

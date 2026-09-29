@@ -184,7 +184,7 @@ export default function DispatchersContent({ page }) {
                                 onClick={handleAction}
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                             >
-                                Book a Meeting
+                                Book a free pilot call
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -193,12 +193,12 @@ export default function DispatchersContent({ page }) {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                             >
-                                Start Free for 2 Weeks
+                                Start your pilot
                             </a>
                         </div>
 
                         <p className="mt-6 text-sm text-slate-500">
-                            Two weeks free · Then decide · Cancel anytime
+                            Start with a refundable pilot — 100% refund within 14 days
                         </p>
                     </div>
                 </div>
@@ -246,7 +246,7 @@ export default function DispatchersContent({ page }) {
                             How It Works
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Live the same day. Cancel anytime. No tech skills needed.
+                            Live the same day. Refundable pilot. No tech skills needed.
                         </p>
                     </div>
 
@@ -331,7 +331,7 @@ export default function DispatchersContent({ page }) {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight text-balance">
-                            Trusted by 300+ Businesses
+                            What Dooza Customers Say
                         </h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto text-pretty">
                             Real businesses. Real AI employees. Real feedback.
@@ -382,15 +382,15 @@ export default function DispatchersContent({ page }) {
                     <div className="flex flex-wrap justify-center gap-4">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm font-medium text-slate-700">
                             <ShieldCheck size={16} className="text-primary-600" />
-                            Two weeks free
+                            100% refund within 14 days
                         </div>
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm font-medium text-slate-700">
                             <BadgeCheck size={16} className="text-primary-600" />
-                            No credit card required
+                            Set up by a Dooza engineer
                         </div>
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm font-medium text-slate-700">
                             <Handshake size={16} className="text-primary-600" />
-                            Free concierge onboarding
+                            Free 30-minute pilot call
                         </div>
                     </div>
                 </div>
@@ -465,7 +465,7 @@ export default function DispatchersContent({ page }) {
             <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight text-balance">
-                        Book a Meeting. Try It Free for Two Weeks. Then Decide.
+                        Book a Free Pilot Call. Then Start a Refundable Pilot.
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-10 text-pretty">
                         Talk to us about your dispatch desk. If it&apos;s not a fit, you&apos;ll know in 15 minutes.
@@ -476,7 +476,7 @@ export default function DispatchersContent({ page }) {
                             onClick={handleAction}
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Book a Meeting
+                            Book a free pilot call
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
@@ -485,11 +485,11 @@ export default function DispatchersContent({ page }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                         >
-                            Start Free for 2 Weeks
+                            Start your pilot
                         </a>
                     </div>
                     <p className="mt-6 text-sm text-slate-500">
-                        Two weeks free · No credit card required · Cancel anytime
+                        Start with a refundable pilot — 100% refund within 14 days
                     </p>
                 </div>
             </section>

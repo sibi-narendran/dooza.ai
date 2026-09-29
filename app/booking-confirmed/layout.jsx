@@ -1,6 +1,6 @@
 export const metadata = {
     title: 'Booking Confirmed - Dooza',
-    description: 'Your free setup call with the founder is confirmed.',
+    description: 'Your free pilot call with a Dooza engineer is confirmed.',
     robots: {
         index: false,
         follow: false,

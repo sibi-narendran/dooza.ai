@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { trackFBSchedule, trackAdsConversion } from '@/lib/analytics';
 import { getBookingUrlFromPath } from '@/lib/links';
 
-const CAL_HOST_PATTERN = /^https?:\/\/(app\.)?(cal\.com\/sibinarendran|calendly\.com\/sibi-dooza)/i;
+const CAL_HOST_PATTERN = /^https?:\/\/calendly\.com\/sibi-dooza/i;
 
 export default function CalEmbedLoader() {
     useEffect(() => {

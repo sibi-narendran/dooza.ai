@@ -37,7 +37,7 @@ const faqData = [
     { question: 'What makes an AI tool agentic?', answer: 'An agentic AI tool does more than generate text. It can understand a goal, use connected tools, take multi-step actions, and complete workflows such as replying to leads, writing SEO content, posting updates, or booking appointments.' },
     { question: 'Can agentic AI automate a small business?', answer: 'Yes. Agentic AI can automate repeatable workflows like inbox triage, lead follow-up, blog publishing, social media scheduling, appointment booking, customer FAQs, and reporting. The best results come from using specialized agents with clear guardrails.' },
     { question: 'Is Dooza built for USA businesses?', answer: 'Yes. Dooza is designed for businesses that sell, book, market, and communicate online in the United States, including local service businesses, agencies, consultants, medical practices, real estate agents, and e-commerce teams.' },
-    { question: 'How is Dooza different from generic AI chatbots?', answer: 'Generic AI chatbots answer prompts. Dooza provides AI employees that are assigned to business roles, connected to workflows, and built to perform recurring automation across marketing, sales, email, SEO, and phone operations.' }
+    { question: 'How is Dooza different from generic AI chatbots?', answer: 'Generic AI chatbots answer prompts. Dooza is an AI-native company that builds AI products and services for small businesses. It provides AI employees that are assigned to business roles, connected to workflows, and built to perform recurring automation across marketing, sales, email, SEO, and phone operations.' }
 ];
 
 const employeeRoles = [
@@ -75,8 +75,8 @@ const employeeRoles = [
 
 const comparisonRows = [
     ['Business roles', 'Pre-built AI employees', 'Generic agents or blank workflow builders'],
-    ['Pricing', 'Predictable monthly plans', 'Often usage-based, credit-based, or tool-by-tool'],
-    ['Setup', 'Fast setup with guided onboarding', 'Manual prompt and workflow design'],
+    ['Pricing', 'Varies by product; every product starts with a refundable pilot (100% refund within 14 days)', 'Often usage-based, credit-based, or tool-by-tool'],
+    ['Setup', 'A Dooza engineer scopes your pilot on a free 30-minute call', 'Manual prompt and workflow design'],
     ['Best use case', 'Small business operations in the USA', 'Technical experiments or narrow single-task automations'],
     ['Outcome', 'Email, SEO, social, sales, and calls handled together', 'Usually one workflow at a time']
 ];
@@ -204,8 +204,9 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -226,7 +227,7 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                                 <div className="bg-primary-50 border border-primary-100 rounded-xl p-6 not-prose">
                                     <p className="text-primary-900 font-semibold mb-2">Quick answer</p>
                                     <p className="text-slate-700">
-                                        If you want agentic AI automation for a USA business, choose a platform that combines role-based agents, predictable pricing, real workflow execution, GEO/SEO support, and fast setup. Dooza is the strongest fit for small businesses that want practical automation across email, SEO, social media, sales, and phone calls.
+                                        If you want agentic AI automation for a USA business, choose a platform that combines role-based agents, a low-risk way to start, real workflow execution, GEO/SEO support, and fast setup. Dooza is the strongest fit for small businesses that want practical automation across email, SEO, social media, sales, and phone calls.
                                     </p>
                                 </div>
                             </div>
@@ -412,14 +413,14 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center mt-8">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Automate Your Business With Dooza</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Start with AI employees built for real business operations: email, SEO, social media, sales, and phone calls.
+                                    Start with AI employees built for real business operations: email, SEO, social media, sales, and phone calls. Every Dooza product starts with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book a Demo
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

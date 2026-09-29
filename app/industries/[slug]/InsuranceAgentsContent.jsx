@@ -157,7 +157,7 @@ export default function InsuranceAgentsContent({ page }) {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                             >
-                                Get Started Free
+                                Get Started
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -165,7 +165,7 @@ export default function InsuranceAgentsContent({ page }) {
                                 onClick={handleAction}
                                 className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                             >
-                                Book a Demo
+                                Book a free pilot call
                             </a>
                         </div>
                     </div>
@@ -279,7 +279,7 @@ export default function InsuranceAgentsContent({ page }) {
                             How It Works
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Live in under 10 minutes. No contracts. No tech skills needed.
+                            A Dooza engineer scopes your pilot on a free call. Start with a refundable pilot — 100% refund within 14 days.
                         </p>
                     </div>
 
@@ -349,7 +349,7 @@ export default function InsuranceAgentsContent({ page }) {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Get Started Free
+                            Get Started
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
@@ -357,7 +357,7 @@ export default function InsuranceAgentsContent({ page }) {
                             onClick={handleAction}
                             className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                         >
-                            Book a Demo
+                            Book a free pilot call
                         </a>
                     </div>
                 </div>

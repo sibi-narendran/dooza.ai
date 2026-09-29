@@ -26,7 +26,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'Profound AI Alternative — Dooza vs Profound Compared [2026]',
-        description: 'Profound shows you where you are invisible in AI answers. Dooza fixes it — Ranky does the GEO work from $49/mo, and engineers set it up free.',
+        description: 'Profound shows you where you are invisible in AI answers. Dooza fixes it — Ranky does the GEO work, engineers set it up with you, and it starts with a refundable pilot.',
         url: PAGE_URL,
         siteName: 'Dooza',
         type: 'article',
@@ -54,7 +54,7 @@ const faqData = [
     },
     {
         question: 'Is Dooza a Profound alternative?',
-        answer: 'Yes, for teams that need GEO work done rather than measured. Profound is a monitoring and analytics platform. Dooza is an execution alternative: Ranky, Dooza\'s AI Visibility & Growth Employee, researches topics, fixes on-page SEO and schema, publishes GEO-ready content, and monitors brand mentions from $49/mo, and Dooza engineers set up your first AI employee free.',
+        answer: 'Yes, for teams that need GEO work done, not just measured. Profound is an enterprise monitoring and analytics platform. Dooza measures and executes: Ranky, Dooza\'s AI SEO & visibility employee, tracks your core prompts, researches topics, fixes on-page SEO and schema, publishes GEO-ready content, and monitors brand mentions, and Dooza engineers set it up with you. Every Dooza product starts with a refundable pilot — 100% refund within 14 days.',
     },
     {
         question: 'What is the difference between Dooza and Profound?',
@@ -62,7 +62,7 @@ const faqData = [
     },
     {
         question: 'Does Dooza track as many AI engines as Profound?',
-        answer: 'No. Profound Enterprise tracks 9 answer engines and offers prompt-volume data, which Dooza does not replicate. Ranky writes content built to be cited by ChatGPT, Perplexity, Claude, and Gemini and monitors who is mentioning you and where. Teams that want deep AI visibility dashboards can pair Ranky with a dedicated tracker.',
+        answer: 'Not at the same scale. Profound Enterprise tracks up to 9 answer engines across many regions and offers prompt-volume data, which Dooza does not replicate. Ranky tracks your core prompt set across ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews, with share of voice and citation maps, then does the fixes: it writes content built to be cited and monitors who is mentioning you and where.',
     },
     {
         question: 'Is Profound worth it for a small business?',
@@ -78,11 +78,11 @@ const faqData = [
     },
     {
         question: 'How much does Dooza cost?',
-        answer: 'Ranky is part of Dooza Workforce, which starts at $49/mo (Growth is $79/mo), with a 7-day money-back guarantee and no contracts. If you want engineers to build it with you, Dooza Agents sets up your first AI employee free — you only pay to keep it running.',
+        answer: 'Pricing depends on the product; every Dooza product starts with a refundable pilot — 100% refund within 14 days. Ranky is part of Dooza Workforce, and if you want engineers to build a custom agent with you, that runs on Dooza Agents. Current plans are listed at dooza.ai/pricing, and a free 30-minute call scopes your pilot.',
     },
     {
         question: 'Does Dooza have SOC 2 like Profound?',
-        answer: 'Profound Enterprise lists SSO/SAML and SOC 2. Dooza does not market itself as a SOC 2 enterprise analytics suite. If a formal SOC 2 report is a procurement requirement, confirm directly with Dooza on a call before buying.',
+        answer: 'Profound Enterprise lists SSO/SAML and SOC 2. Dooza is not SOC 2 certified; it uses encrypted connections and asks for your approval on anything sensitive. If a formal SOC 2 report is a procurement requirement, Profound is the better fit.',
     },
     {
         question: 'Can Dooza guarantee my brand gets cited in ChatGPT?',
@@ -90,7 +90,7 @@ const faqData = [
     },
     {
         question: 'How fast can I get started with Dooza?',
-        answer: 'You can hire Ranky self-serve today. With Dooza Agents, an engineer maps your workflow on Day 1, builds it on Day 2, and your AI employee is live by Day 4. Profound Enterprise requires a sales demo before pricing is shared.',
+        answer: 'Book a free 30-minute call and a Dooza engineer scopes your refundable pilot. Workforce employees like Ranky can start working the same day, and custom agents on Dooza Agents are live in days. Profound Enterprise requires a sales demo before pricing is shared.',
     },
 ];
 

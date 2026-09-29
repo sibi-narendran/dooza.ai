@@ -73,10 +73,10 @@ try {
 
     } else if (cmd === 'volume') {
         if (!args.length) throw new Error('Usage: dfs.mjs volume <keyword> [keyword...]');
-        const [r] = await api('/keywords_data/google_ads/search_volume/live', [
+        const r = await api('/keywords_data/google_ads/search_volume/live', [
             { keywords: args, location_code: LOCATION, language_code: LANGUAGE },
         ]);
-        const rows = (r || []).sort((a, b) => (b.search_volume || 0) - (a.search_volume || 0));
+        const rows = [...(r || [])].sort((a, b) => (b.search_volume || 0) - (a.search_volume || 0));
         console.log(`\n${pad('KEYWORD', 46)} ${pad('VOLUME', 9)} ${pad('CPC', 8)} COMP`);
         for (const k of rows) {
             console.log(`${pad(k.keyword, 46)} ${pad(num(k.search_volume), 9)} ${pad(k.cpc ? '$' + k.cpc.toFixed(2) : '—', 8)} ${k.competition || '—'}`);

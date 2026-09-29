@@ -4,9 +4,6 @@ import { createContext, useContext } from 'react';
 import { usePathname } from 'next/navigation';
 import { getBookingUrlFromPath } from '@/lib/links';
 
-const CAL_LINK = 'sibinarendran/demo';
-const NAMESPACE = 'demo';
-
 const BookingModalContext = createContext(null);
 
 export function useBookingModal() {
@@ -20,16 +17,12 @@ export function useBookingModal() {
 export default function BookingModalProvider({ children }) {
     const pathname = usePathname();
 
-    const openCal = () => {
+    const openBooking = () => {
         if (typeof window === 'undefined') return;
-        if (typeof window.Cal?.ns?.[NAMESPACE] === 'function') {
-            window.Cal.ns[NAMESPACE]('modal', { calLink: CAL_LINK });
-            return;
-        }
         window.open(getBookingUrlFromPath(pathname), '_blank', 'noopener,noreferrer');
     };
 
-    const value = { openModal: openCal };
+    const value = { openModal: openBooking };
 
     return (
         <BookingModalContext.Provider value={value}>

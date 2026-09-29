@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: "How much does an AI sales agent cost compared to hiring an SDR?",
-        answer: "A human SDR costs $4,000-$7,000/month in base salary alone, plus commission, benefits, and management overhead. Dooza's AI sales agent (Stan) costs $49/month as part of a 6-employee AI team — that's 99% less than a single junior hire."
+        answer: "A human SDR costs $4,000-$7,000/month in base salary alone, plus commission, benefits, and management overhead. Dooza's AI sales agent (Stan) works as part of a six-employee AI team for a fraction of a single junior hire. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Will prospects know they're talking to an AI?",
@@ -63,7 +63,7 @@ const faqData = [
     },
     {
         question: "How does an AI sales agent integrate with my CRM?",
-        answer: "Dooza's AI employees integrate with popular CRMs and tools. During your free onboarding call, our concierge team connects everything so qualified leads flow directly into your pipeline with full conversation history and qualification notes."
+        answer: "Dooza's AI employees integrate with popular CRMs and tools. A Dooza engineer scopes your pilot on a free 30-minute call and connects everything so qualified leads flow directly into your pipeline with full conversation history and qualification notes."
     }
 ];
 
@@ -149,7 +149,7 @@ export default function AiSalesAgentGuideContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Your AI Sales Agent - $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -200,7 +200,7 @@ export default function AiSalesAgentGuideContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Stan Free
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -461,13 +461,13 @@ export default function AiSalesAgentGuideContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", sdr: "$4,000-7,000", outsourced: "$2,000-5,000", chatbot: "$50-300", ai: "$29" },
+                                            { feature: "Monthly Cost", sdr: "$4,000-7,000", outsourced: "$2,000-5,000", chatbot: "$50-300", ai: "Refundable pilot (see /pricing)" },
                                             { feature: "Availability", sdr: "8 hours/day", outsourced: "Business hours", chatbot: "24/7 (website only)", ai: "24/7 (all channels)" },
                                             { feature: "Response Time", sdr: "Minutes to hours", outsourced: "Hours", chatbot: "Instant (scripted)", ai: "Instant (intelligent)" },
                                             { feature: "Follow-Up Consistency", sdr: "Drops off after 1-2", outsourced: "Inconsistent", chatbot: "None", ai: "5+ touches, never misses" },
                                             { feature: "Lead Qualification", sdr: "Varies by person", outsourced: "Basic scripting", chatbot: "Pre-set forms only", ai: "Custom AI qualification" },
                                             { feature: "Appointment Booking", sdr: "Manual", outsourced: "Manual", chatbot: "Basic form redirect", ai: "Automatic calendar sync" },
-                                            { feature: "Ramp-Up Time", sdr: "3-6 months", outsourced: "2-4 weeks", chatbot: "1-2 weeks config", ai: "30 minutes" },
+                                            { feature: "Ramp-Up Time", sdr: "3-6 months", outsourced: "2-4 weeks", chatbot: "1-2 weeks config", ai: "Same day" },
                                             { feature: "Scales With Volume", sdr: "Hire more people", outsourced: "Pay more", chatbot: "Yes", ai: "Yes, no extra cost" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -622,16 +622,18 @@ export default function AiSalesAgentGuideContent() {
                                     <p className="text-xs text-slate-500 mt-1">Business hours only, shared reps</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
+                                    <p className="text-xs text-green-700 font-bold mb-2">refundable pilot</p>
                                     <p className="text-sm text-green-800 font-medium">Stan + All AI Employees (Dooza)</p>
                                     <p className="text-xs text-green-600 mt-1">24/7, unlimited leads, instant response</p>
+                                    <p className="text-xs text-green-700 font-bold mt-2"><a href="/pricing" className="underline">Pricing depends on the product</a></p>
                                 </div>
                             </div>
 
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-800 mb-3">The ROI Math:</h4>
                                 <p className="text-blue-700">
-                                    If Stan helps you close just <strong>one extra deal per quarter</strong> — whether that's a $5,000 service contract, a $10,000 insurance policy, or a $300,000 home sale — your $348/year Dooza investment pays for itself <strong>14x to 862x over</strong>. Most businesses see ROI within the first week.
+                                    If Stan helps you close just <strong>one extra deal per quarter</strong> — whether that's a $5,000 service contract, a $10,000 insurance policy, or a $300,000 home sale — that single deal is worth more than a full year of AI sales support. Start with a refundable pilot (100% refund within 14 days) and measure it yourself.
                                 </p>
                             </div>
                         </section>
@@ -644,8 +646,8 @@ export default function AiSalesAgentGuideContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Sign Up & Book Your Free Onboarding",
-                                        desc: "Tell us about your sales process, your ideal customer, and your qualification criteria. Our concierge team configures Stan to match your exact playbook."
+                                        title: "Book a Free Pilot Call",
+                                        desc: "Tell us about your sales process, your ideal customer, and your qualification criteria. A Dooza engineer scopes your refundable pilot and configures Stan to match your exact playbook."
                                     },
                                     {
                                         step: "2",
@@ -677,14 +679,14 @@ export default function AiSalesAgentGuideContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Clone Your Best Salesperson?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Every hour without an AI sales agent is leads going cold, follow-ups getting missed, and revenue walking to your competitors. Stan starts working in 30 minutes.
+                                    Every hour without an AI sales agent is leads going cold, follow-ups getting missed, and revenue walking to your competitors. Stan can start working the same day, and your pilot is 100% refundable within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

@@ -22,8 +22,8 @@ const BottomCTA = ({ openModal }) => {
                     Ready to scale your business?
                 </h2>
                 <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-                    Join thousands of companies using Workforce to automate their work.
-                    Get started for free today.
+                    Start with a refundable pilot — 100% refund within 14 days.
+                    A Dooza engineer scopes it with you on a free 30-minute call. Pricing depends on the product; see <a href="/pricing" className="font-semibold text-primary-700 underline underline-offset-4">pricing</a>.
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -34,19 +34,19 @@ const BottomCTA = ({ openModal }) => {
                         onClick={handleSignupClick} 
                         className="w-full sm:w-auto bg-primary-600 text-white px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                     >
-                        Create free account
+                        Start your pilot
                     </a>
                     <a 
                         href={getBookingUrlFromPath(pathname)}
                         onClick={handleDemoClick}
                         className="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                     >
-                        Speak with Expert now
+                        Book a free pilot call
                     </a>
                 </div>
 
                 <p className="mt-8 text-sm text-slate-500">
-                    No credit card required · 7-day money-back guarantee · Cancel anytime
+                    Refundable pilot · 100% refund within 14 days · No contracts
                 </p>
             </div>
         </div>

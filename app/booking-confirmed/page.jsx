@@ -25,7 +25,7 @@ export default function BookingConfirmedPage() {
                         You&apos;re booked in
                     </h1>
                     <p className="text-lg text-slate-600 mb-10">
-                        Your free setup call with the founder is confirmed. Check your email for the calendar invite and meeting link.
+                        Your free 30-minute pilot call with a Dooza engineer is confirmed. Check your email for the calendar invite and meeting link. We will scope your refundable pilot on the call — 100% refund within 14 days.
                     </p>
 
                     <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 text-left space-y-4 mb-10">

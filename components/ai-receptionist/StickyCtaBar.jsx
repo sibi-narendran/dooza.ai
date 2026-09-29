@@ -49,7 +49,7 @@ export default function StickyCtaBar({ demoPhone = null, bookHref = '/ai-recepti
                     onClick={() => trackReceptionistEvent('sticky_book_click')}
                     className="flex flex-1 items-center justify-center rounded-xl bg-primary-700 px-4 py-3 text-sm font-bold text-white"
                 >
-                    Book Free Pilot
+                    Start your refundable pilot
                 </Link>
             </div>
         </div>

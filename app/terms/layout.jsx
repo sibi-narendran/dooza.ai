@@ -2,14 +2,14 @@ import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
     title: 'Terms of Service - Dooza',
-    description: 'Terms of Service for Dooza, an AI-powered social media copilot by Adam Laboratory Inc. Read the terms governing your use of our platform and services.',
+    description: 'Terms of Service for Dooza, an AI-native company by Adam Laboratory Inc. that builds AI products and services for small businesses. Read the terms governing our platform and services.',
     keywords: ['terms of service', 'user agreement', 'Dooza terms', 'Adam Laboratory Inc', 'social media terms'],
     alternates: {
         canonical: `${SITE_URL}/terms`,
     },
     openGraph: {
         title: 'Terms of Service - Dooza',
-        description: 'Terms of Service for Dooza, an AI-powered social media copilot by Adam Laboratory Inc.',
+        description: 'Terms of Service for Dooza, an AI-native company by Adam Laboratory Inc. building AI products and services for small businesses.',
         url: `${SITE_URL}/terms`,
         siteName: SITE_NAME,
         type: 'website',
@@ -25,7 +25,7 @@ export const metadata = {
     twitter: {
         card: 'summary',
         title: 'Terms of Service - Dooza',
-        description: 'Terms of Service for Dooza, an AI-powered social media copilot by Adam Laboratory Inc.',
+        description: 'Terms of Service for Dooza, an AI-native company by Adam Laboratory Inc. building AI products and services for small businesses.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

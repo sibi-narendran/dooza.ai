@@ -11,14 +11,14 @@ import { CALLBACK_NUMBER_DISPLAY, PILOT_PROMISE, getReceptionistVariant } from '
 const pageUrl = `${SITE_URL}/ai-receptionist/book`;
 
 export const metadata = {
-    title: { absolute: 'Book Your Free AI Receptionist Pilot | Dooza' },
+    title: { absolute: 'Book Your Free AI Receptionist Pilot Call | Dooza' },
     description:
-        'Book a 15-minute meeting. Your AI receptionist is set up and live on your line within 48 hours, then you run it free for two weeks. Only pay if you find it useful.',
+        'Book a free 15-minute pilot call. Then start a refundable pilot: your AI receptionist is set up and live on your line within 48 hours, with a 100% refund within 14 days.',
     alternates: { canonical: pageUrl },
     robots: { index: false, follow: true },
     openGraph: {
-        title: 'Book Your Free AI Receptionist Pilot | Dooza',
-        description: 'A 15-minute meeting, then a free two-week pilot on your real calls. Only pay if you find it useful.',
+        title: 'Book Your Free AI Receptionist Pilot Call | Dooza',
+        description: 'A free 15-minute pilot call, then a refundable pilot on your real calls: 100% refund within 14 days.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -28,7 +28,7 @@ export const metadata = {
 const PROMISES = [
     { icon: Timer, text: '15-minute meeting to collect your questions, hours, and calendar.' },
     { icon: CalendarClock, text: 'Set up and live on your line within 48 hours. Works with any phone.' },
-    { icon: CreditCard, text: 'No card. Two weeks free. Only pay if you find it useful.' },
+    { icon: CreditCard, text: 'The call is free. The pilot is paid, with a 100% refund within 14 days.' },
 ];
 
 export default function AiReceptionistBookPage({ searchParams }) {
@@ -42,7 +42,7 @@ export default function AiReceptionistBookPage({ searchParams }) {
             <main id="main-content" className="bg-slate-50 text-slate-900">
                 <section className={`px-4 pb-20 sm:px-6 ${adsMode ? 'pt-10 sm:pt-14' : 'pt-28 sm:pt-32'}`}>
                     <div className="mx-auto max-w-3xl text-center">
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-700">Free two-week pilot</p>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-700">Free pilot call</p>
                         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl md:text-5xl">
                             Book a meeting here.
                         </h1>

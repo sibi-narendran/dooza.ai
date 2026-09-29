@@ -4,7 +4,7 @@ import GeoServicesContent from './GeoServicesContent';
 const pageUrl = `${SITE_URL}/generative-engine-optimization`;
 const pageTitle = 'Generative Engine Optimization (GEO) Services | Get Cited by AI | Dooza';
 const pageDescription =
-    'Dooza GEO services get your business cited by ChatGPT, Perplexity, Gemini and Google AI Overviews. Ranky, the AI Visibility employee, does the work daily from $49/mo. Engineers set it up free.';
+    'Dooza GEO services get your business cited by ChatGPT, Perplexity, Gemini and Google AI Overviews. Ranky, the AI SEO & Visibility Employee, does the work daily. Engineers set it up, and it starts with a refundable pilot — 100% refund within 14 days.';
 
 export const metadata = {
     title: { absolute: pageTitle },
@@ -34,7 +34,7 @@ export const metadata = {
     openGraph: {
         title: 'Generative Engine Optimization (GEO) Services | Dooza',
         description:
-            'Get cited by ChatGPT, Perplexity and Google AI. Ranky publishes citable content, fixes schema and builds your presence daily. First AI employee set up free.',
+            'Get cited by ChatGPT, Perplexity and Google AI. Ranky publishes citable content, fixes schema and builds your presence daily. Start with a refundable pilot — 100% refund within 14 days.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -43,7 +43,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Generative Engine Optimization (GEO) Services | Dooza',
-        description: 'Dashboards show where you are invisible in AI search. Dooza does the work to fix it. From $49/mo, setup free.',
+        description: 'Dashboards show where you are invisible in AI search. Dooza does the work to fix it. Start with a refundable pilot — 100% refund within 14 days.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -57,12 +57,12 @@ const faqData = [
     {
         question: 'What do Dooza GEO services include?',
         answer:
-            'Dooza GEO services pair Ranky, Dooza\'s AI Visibility employee, with a Dooza engineer. Ranky researches topics with real search data, publishes citable blog content on your cadence, adds schema and internal links, builds presence on Reddit, LinkedIn and YouTube, keeps your name, address and phone consistent, monitors who is mentioning you, and sends a nightly recap. The engineer sets it up and checks that AI crawlers can reach your site.',
+            'Dooza GEO services pair Ranky, Dooza\'s AI SEO & Visibility Employee, with a Dooza engineer. Ranky researches topics with real search data, publishes citable blog content on your cadence, adds schema and internal links, builds presence on Reddit, LinkedIn and YouTube, keeps your name, address and phone consistent, monitors who is mentioning you, and sends a nightly recap. The engineer sets it up and checks that AI crawlers can reach your site.',
     },
     {
         question: 'How much do GEO services from Dooza cost?',
         answer:
-            'Ranky is part of Dooza Workforce, which starts at $49/month (a $79/month growth plan is also available) with a 7-day money-back guarantee. Through Dooza Agents, a Dooza engineer sets up your first AI employee for free, and you pay only if you want to keep it. There are no long-term contracts.',
+            'Pricing depends on the product, and every Dooza product starts with a refundable pilot — 100% refund within 14 days. Ranky is part of Dooza Workforce; a Dooza engineer scopes your pilot on a free 30-minute call. There are no long-term contracts, and current plans are listed at dooza.ai/pricing.',
     },
     {
         question: 'Is GEO different from SEO?',
@@ -82,12 +82,12 @@ const faqData = [
     {
         question: 'Is Dooza a Profound alternative?',
         answer:
-            'For many small and mid-sized businesses, yes. Profound is an AI visibility analytics platform that tracks share of voice and citations across answer engines, and it is strong for large brands with analytics teams. Dooza is an execution service: it publishes content, fixes schema and builds mentions. Teams that want deep dashboards can pair Ranky with a tracker such as Profound, Otterly or Peec AI.',
+            'For many small and mid-sized businesses, yes. Profound is an AI visibility analytics platform that tracks share of voice and citations across answer engines, and it is strong for large brands with analytics teams. Dooza measures and executes: Ranky tracks your core prompts and citations, then publishes content, fixes schema and builds mentions. Enterprises that need nine-engine, multi-region dashboards can still use Profound for reporting.',
     },
     {
         question: 'Does Dooza track my brand across every AI answer engine?',
         answer:
-            'Dooza is not an enterprise analytics suite and does not provide prompt-volume data or Profound-scale dashboards. Ranky monitors who is mentioning you and where, including social and community conversations, and reports back in a nightly recap. If you need prompt-level tracking across many engines, use a dedicated GEO tool alongside Ranky.',
+            'Yes, for your core prompts. Ranky tracks your core prompt set across ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews, with share of voice and citation maps, then does the fixes, and monitors who is mentioning you in social and community conversations, with a nightly recap. Dooza is not an enterprise analytics suite: it does not provide prompt-volume data or nine-engine, multi-region dashboards.',
     },
     {
         question: 'What is llms.txt and do I need it for GEO?',
@@ -97,7 +97,7 @@ const faqData = [
     {
         question: 'Which platforms can Ranky publish to?',
         answer:
-            'Ranky publishes to Shopify, WordPress, Wix and custom sites via API or Zapier. It connects to 1,000+ apps through Zapier and can use context from Close CRM, Notion and Google Drive to write in your brand voice.',
+            'Ranky publishes to Shopify, WordPress, Wix and custom sites via API or Zapier. It connects to 1,000+ apps and can use context from Close CRM, Notion and Google Drive to write in your brand voice.',
     },
     {
         question: 'Why do Reddit, LinkedIn and YouTube matter for AI visibility?',
@@ -123,14 +123,6 @@ const schemas = [
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL, logo: `${SITE_URL}/logo.png` },
         areaServed: 'Worldwide',
         audience: { '@type': 'BusinessAudience', name: 'Small and mid-sized businesses, local businesses, SaaS, ecommerce and agencies' },
-        offers: {
-            '@type': 'Offer',
-            name: 'Ranky — AI Visibility Employee (Dooza Workforce)',
-            price: '49',
-            priceCurrency: 'USD',
-            url: `${SITE_URL}/pricing`,
-            availability: 'https://schema.org/InStock',
-        },
     },
     {
         '@context': 'https://schema.org',

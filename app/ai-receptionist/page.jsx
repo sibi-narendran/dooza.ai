@@ -71,8 +71,8 @@ const WHAT_IT_DOES = [
 const PILOT_STEPS = [
     'Book a 15-minute meeting. We collect your questions, hours, and calendar.',
     'We set it up for you within 48 hours. Nothing for you to build.',
-    'Two weeks on your real calls, free.',
-    'You listen to the recordings. Only pay if you find it useful.',
+    'It runs on your real calls. You listen to the recordings.',
+    'Not useful? Ask within 14 days and you get a 100% refund.',
 ];
 
 const primaryButton =
@@ -102,9 +102,8 @@ export default function AiReceptionistPage({ searchParams }) {
         },
         offers: {
             '@type': 'Offer',
-            name: 'Free two-week pilot',
-            price: '0',
-            priceCurrency: 'USD',
+            name: 'Refundable pilot',
+            description: 'Refundable pilot: set up and live on your line within 48 hours; 100% refund within 14 days. Pricing depends on the product; see https://www.dooza.ai/pricing.',
             availability: 'https://schema.org/InStock',
         },
     };
@@ -132,11 +131,11 @@ export default function AiReceptionistPage({ searchParams }) {
                                 Hear It Answer A Call
                             </PlayDemoButton>
                             <Link href={bookHref} className={secondaryButton}>
-                                Start Free Pilot
+                                Start your refundable pilot
                             </Link>
                         </div>
                         <p className="mt-5 text-sm font-medium text-slate-600">
-                            Free setup. Free two-week pilot. No contract. Only pay if you find it useful.
+                            Refundable pilot: live on your line within 48 hours. 100% refund within 14 days.
                         </p>
                     </div>
                 </section>
@@ -215,7 +214,7 @@ export default function AiReceptionistPage({ searchParams }) {
                 {/* 5. How the pilot works */}
                 <section id="how-it-works" className="bg-primary-50 px-4 py-16 sm:px-6 sm:py-24">
                     <div className="mx-auto max-w-4xl">
-                        <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">How the free pilot works</h2>
+                        <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">How the refundable pilot works</h2>
                         <ol className="mt-8 grid gap-4 sm:grid-cols-2">
                             {PILOT_STEPS.map((step, index) => (
                                 <li key={step} className="flex gap-4 rounded-2xl border border-primary-100 bg-white p-5 shadow-sm">
@@ -258,14 +257,14 @@ export default function AiReceptionistPage({ searchParams }) {
                 {/* 6. Book the pilot meeting */}
                 <section id="pilot" className="scroll-mt-16 bg-slate-950 px-4 pb-24 pt-16 text-white sm:px-6 sm:pb-28 sm:pt-24">
                     <div className="mx-auto max-w-2xl text-center">
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">Free two-week pilot</p>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">Refundable pilot</p>
                         <h2 className="mt-4 text-3xl font-extrabold tracking-tight !text-white sm:text-4xl">Book a meeting here.</h2>
                         <p className="mt-4 text-lg leading-relaxed text-slate-200 sm:text-xl">
                             {PILOT_PROMISE}
                         </p>
                         <div className="mt-8">
                             <Link href={bookHref} className="inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-8 py-4 text-lg font-bold text-slate-950 shadow-lg shadow-primary-900/30 transition hover:bg-primary-400 sm:w-auto">
-                                Book My Free Pilot Meeting
+                                Book a free pilot call
                             </Link>
                         </div>
                         <p className="mt-4 text-sm text-slate-300">15 minutes. No card needed. Works with any phone.</p>

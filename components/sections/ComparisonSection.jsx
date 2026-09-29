@@ -13,7 +13,7 @@ export default function ComparisonSection() {
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="section-label block mb-4 text-orange-500">COMPARE</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">Doing It Yourself vs AI Employees</h2>
-                        <p className="text-xl text-slate-600">Stop doing. Start Dooza-ing.</p>
+                        <p className="text-xl text-slate-600">AI employees that work 24/7, with your approval on anything sensitive.</p>
                     </div>
                 </ScrollReveal>
 
@@ -91,8 +91,8 @@ export default function ComparisonSection() {
 
                 <ScrollReveal delay={0.3}>
                     <div className="text-center mt-10">
-                        <BookDemoButton source="comparison">Book Free Setup with Founder</BookDemoButton>
-                        <p className="text-sm font-medium text-slate-600 mt-3">Free 15-min call · No commitment</p>
+                        <BookDemoButton source="comparison">Book a free pilot call</BookDemoButton>
+                        <p className="text-sm font-medium text-slate-600 mt-3">Free 30-min pilot call · 100% refund within 14 days</p>
                     </div>
                 </ScrollReveal>
             </div>

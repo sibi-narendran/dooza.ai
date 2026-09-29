@@ -556,10 +556,10 @@ export default function RankyContent({ page }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Ready to Be Everywhere?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Hire Ranky and automate your visibility — from Google and ChatGPT to LinkedIn, YouTube, and Reddit.
+                                Hire Ranky and automate your visibility — from Google and ChatGPT to LinkedIn, YouTube, and Reddit. Start with a refundable pilot — 100% refund within 14 days. <a href="/pricing" className="font-semibold text-emerald-700 underline underline-offset-2">See pricing</a>.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="ranky_cta">Hire Ranky — $49/mo</SignupButton>
+                                <SignupButton source="ranky_cta">Start your Ranky pilot</SignupButton>
                                 <BookDemoButton source="ranky_cta" />
                             </div>
                         </ScrollReveal>

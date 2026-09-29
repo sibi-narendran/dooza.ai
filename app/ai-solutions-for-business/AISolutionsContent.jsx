@@ -38,7 +38,7 @@ const categories = [
             { name: 'Superhuman', price: '$30/mo' },
         ],
         doozaAgent: 'Maily',
-        doozaNote: 'Handles email campaigns, replies, and inbox management as part of every Dooza plan.',
+        doozaNote: 'Handles email campaigns, replies, and inbox management as part of Dooza Workforce.',
     },
     {
         icon: Share2,
@@ -77,8 +77,8 @@ const categories = [
             { name: 'Zendesk', price: '$55–115/agent/mo' },
             { name: 'Freshdesk', price: '$15–79/agent/mo' },
         ],
-        doozaAgent: 'Stan',
-        doozaNote: 'Handles customer tickets, live chat, and support emails around the clock.',
+        doozaAgent: 'Maily',
+        doozaNote: 'Handles support emails around the clock and escalates complex issues to your team.',
     },
     {
         icon: Target,
@@ -90,8 +90,8 @@ const categories = [
             { name: 'Instantly', price: '$37–97/mo' },
             { name: 'HubSpot Sales', price: '$50–150/mo' },
         ],
-        doozaAgent: 'Linda',
-        doozaNote: 'Finds leads, sends outreach emails, and qualifies prospects automatically.',
+        doozaAgent: 'Stan',
+        doozaNote: 'Finds leads, sends outreach emails you approve, and qualifies prospects.',
     },
     {
         icon: Scale,
@@ -103,8 +103,8 @@ const categories = [
             { name: 'Ironclad', price: 'From $50/user/mo' },
             { name: 'ContractPodAi', price: 'Enterprise pricing' },
         ],
-        doozaAgent: null,
-        doozaNote: null,
+        doozaAgent: 'Linda',
+        doozaNote: 'Drafts NDAs and contracts and flags risky clauses for your lawyer to review.',
     },
     {
         icon: Calculator,
@@ -196,28 +196,28 @@ const fragmentationComparison = [
 
 const budgetTiers = [
     {
-        tier: '$0–50/mo',
+        tier: 'Lean budget',
         label: 'Just Getting Started',
         color: 'primary',
         recommendation: 'Start with an all-in-one AI employee platform that covers email, social, SEO, support, and leads in one subscription.',
-        bestPick: 'Dooza Starter — $49/mo. 5 AI employees, 1,000+ integrations, free concierge onboarding. 7-day money-back guarantee.',
-        tools: ['Dooza ($49/mo — 5 AI employees)', 'Buffer ($6/mo — social only)', 'Canva Free (design only)'],
+        bestPick: 'Dooza Workforce: ready-made AI employees for email, social, SEO, leads, legal, and calls, with 1,000+ integrations. Starts with a refundable pilot: 100% refund within 14 days.',
+        tools: ['Dooza Workforce (all AI employees)', 'Buffer ($6/mo — social only)', 'Canva Free (design only)'],
     },
     {
-        tier: '$50–200/mo',
+        tier: 'Mid budget',
         label: 'Growing Business',
         color: 'teal',
-        recommendation: 'Combine an all-in-one platform with 1-2 specialized tools for your biggest gaps. This covers 80% of needs without the tool sprawl.',
-        bestPick: 'Dooza Growth ($79/mo) + 1 specialized tool. 2× usage for scaling businesses.',
-        tools: ['Dooza Growth ($79/mo — 2× usage)', 'Semrush ($139/mo — if SEO is critical)', 'ClickUp ($7/user/mo — project management)'],
+        recommendation: 'Combine an all-in-one platform with 1-2 specialized tools for your biggest gaps. This covers most needs without the tool sprawl.',
+        bestPick: 'Dooza Workforce + 1 specialized tool for your biggest gap.',
+        tools: ['Dooza Workforce (AI employees)', 'Semrush ($139/mo — if SEO is critical)', 'ClickUp ($7/user/mo — project management)'],
     },
     {
-        tier: '$200–500/mo',
+        tier: 'Larger budget',
         label: 'Scaling Operations',
         color: 'slate',
         recommendation: 'Run an AI employee platform at the core with enterprise-grade specialized tools for your most impactful functions.',
-        bestPick: 'Dooza Pro ($998/mo) with 84 hours of done-for-you work capacity, Dooza Agents writing workflows, and manual setup from our side.',
-        tools: ['Dooza Pro ($998/mo — manual setup + Dooza Agents workflows)', 'HubSpot ($50/mo — CRM + marketing)', 'Intercom ($74/mo — advanced support)'],
+        bestPick: 'Dooza Agents: custom AI agents built and maintained by Dooza engineers, done for you.',
+        tools: ['Dooza Agents (custom agents built by engineers)', 'HubSpot ($50/mo — CRM + marketing)', 'Intercom ($74/mo — advanced support)'],
     },
 ];
 
@@ -233,8 +233,8 @@ const implementationSteps = [
         step: 2,
         title: 'Trial One AI Tool',
         time: 'Week 1',
-        desc: 'Start with a single AI solution for your biggest time sink. Use free trials or low-cost entry points. Do not try to automate everything at once — that is the #1 cause of AI failure.',
-        actionItems: ['Pick one function (email, social, or SEO)', 'Sign up (Dooza starts at $49/mo with a 7-day money-back guarantee)', 'Set up the AI with your brand voice and guidelines'],
+        desc: 'Start with a single AI solution for your biggest time sink. Use a low-cost entry point or a refundable pilot. Do not try to automate everything at once — that is the #1 cause of AI failure.',
+        actionItems: ['Pick one function (email, social, or SEO)', 'Start a pilot (every Dooza product starts with a refundable pilot: 100% refund within 14 days)', 'Set up the AI with your brand voice and guidelines'],
     },
     {
         step: 3,
@@ -315,7 +315,7 @@ export default function AISolutionsContent({ faqData }) {
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="ai_solutions_hero">Get started with Dooza</SignupButton>
+                                <SignupButton source="ai_solutions_hero">Start your pilot</SignupButton>
                                 <BookDemoButton source="ai_solutions_hero" />
                             </div>
                         </div>
@@ -484,7 +484,7 @@ export default function AISolutionsContent({ faqData }) {
                                 <div className="bg-primary-500/10 backdrop-blur-sm border border-primary-400/20 rounded-2xl p-8">
                                     <p className="text-primary-300 font-bold text-sm uppercase tracking-wider mb-2">Dooza All-in-One</p>
                                     <div className="space-y-3 mb-6">
-                                        {['Maily — Email management', 'Somi — Social media', 'Ranky — SEO & content', 'Stan — Customer support', 'Linda — Lead generation'].map((agent, i) => (
+                                        {['Maily — Email & support inbox', 'Somi — Social media', 'Ranky — SEO & AI visibility', 'Stan — Lead generation', 'Linda — Legal documents', 'Rachel — Phone calls'].map((agent, i) => (
                                             <div key={i} className="flex items-center gap-2.5 text-sm text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {agent}
@@ -492,8 +492,8 @@ export default function AISolutionsContent({ faqData }) {
                                         ))}
                                     </div>
                                     <div className="border-t border-primary-400/20 pt-4 flex items-center justify-between">
-                                        <span className="text-primary-300 font-bold">Monthly total</span>
-                                        <span className="text-2xl font-bold text-white">$49/mo</span>
+                                        <span className="text-primary-300 font-bold">Pricing</span>
+                                        <Link href="/pricing" className="text-sm font-bold text-white underline">Depends on the product, see pricing</Link>
                                     </div>
                                     <p className="text-xs text-slate-400 mt-2">One login, one billing cycle, shared context across all employees.</p>
                                 </div>
@@ -501,7 +501,7 @@ export default function AISolutionsContent({ faqData }) {
 
                             <div className="mt-8 text-center">
                                 <p className="text-slate-300 text-lg">
-                                    That is <strong className="text-white">${totalFragmented - 49}/month saved</strong> — and you get AI employees that work autonomously, not just tools that wait for prompts.
+                                    One subscription instead of five tools <strong className="text-white">and a refundable pilot to start: 100% refund within 14 days</strong>. You get AI employees that work autonomously, not just tools that wait for prompts.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -606,10 +606,10 @@ export default function AISolutionsContent({ faqData }) {
                         <ScrollReveal>
                             <div className="bg-primary-50 border border-primary-100 rounded-2xl p-8 text-center mt-8">
                                 <p className="text-slate-700 mb-4">
-                                    <strong>Skip the setup complexity.</strong> Dooza offers free concierge onboarding — the founder personally configures your AI employees in a 20-minute call.
+                                    <strong>Skip the setup complexity.</strong> A Dooza engineer scopes your pilot on a free 30-minute call. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                    <SignupButton source="ai_solutions_implementation">Get started with Dooza</SignupButton>
+                                    <SignupButton source="ai_solutions_implementation">Start your pilot</SignupButton>
                                     <BookDemoButton source="ai_solutions_implementation" />
                                 </div>
                             </div>
@@ -672,7 +672,7 @@ export default function AISolutionsContent({ faqData }) {
                                 <div>
                                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-700">Most requested</p>
                                     <h3 className="mt-2 text-xl font-bold text-slate-900 group-hover:text-primary-700 transition-colors">AI Receptionist for the trades</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">For HVAC, plumbing, electrical, roofing and other trades. Answers every call in your company name while you are on the job, and books it on your calendar. Free setup and a free two-week pilot.</p>
+                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">For HVAC, plumbing, electrical, roofing and other trades. Answers every call in your company name while you are on the job, and books it on your calendar. Start with a refundable pilot: live on your line within 48 hours, 100% refund within 14 days.</p>
                                 </div>
                                 <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary-700 group-hover:gap-2 transition-all">
                                     Hear it answer a call <ArrowRight size={14} />
@@ -726,10 +726,10 @@ export default function AISolutionsContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Bring AI into Your Business?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Stop paying $200-450/month for 5 separate tools. Get 5 AI employees for $49/month — backed by a 7-day money-back guarantee.
+                                Stop paying $200-450/month for 5 separate tools. Dooza is an AI-native company that builds AI products and services for small businesses. Start with a refundable pilot — 100% refund within 14 days.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="ai_solutions_cta">Get started with Dooza</SignupButton>
+                                <SignupButton source="ai_solutions_cta">Start your pilot</SignupButton>
                                 <BookDemoButton source="ai_solutions_cta" />
                             </div>
                         </ScrollReveal>

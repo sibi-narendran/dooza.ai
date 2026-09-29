@@ -36,11 +36,11 @@ import {
 } from 'lucide-react';
 
 const faqData = [
-    { question: "What is a virtual receptionist for small business?", answer: "A virtual receptionist answers your business calls remotely — greeting callers, taking messages, booking appointments, and routing urgent calls. Traditional services use human agents; AI virtual receptionists like Rachel do it with AI for a fraction of the cost." },
-    { question: "How much does a virtual receptionist cost?", answer: "Traditional virtual receptionist services cost $230–$1,640/month (Ruby) or $255–$1,500/month (Smith.ai) depending on call volume. Dooza's AI receptionist Rachel costs $49/month with unlimited calls, 24/7." },
+    { question: "What is a virtual receptionist for small business?", answer: "A virtual receptionist answers your business calls remotely — greeting callers, taking messages, booking appointments, and routing urgent calls. Traditional services use human agents; AI virtual receptionists like Rachel do it with AI, 24/7." },
+    { question: "How much does a virtual receptionist cost?", answer: "Traditional virtual receptionist services cost $230–$1,640/month (Ruby) or $255–$1,500/month (Smith.ai) depending on call volume. Dooza's AI receptionist Rachel answers calls 24/7; Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "Can an AI virtual receptionist handle real conversations?", answer: "Yes. Rachel uses natural language processing for multi-turn conversations — she asks qualifying questions, answers FAQs about your business, books appointments, and knows when to route calls to you directly." },
     { question: "Is an AI receptionist reliable for a small business?", answer: "More reliable than human services. Rachel answers every call in under 1 second, never calls in sick, and works nights, weekends, and holidays. She handles the calls that human virtual receptionists miss after-hours." },
-    { question: "How do I switch from my current answering service to AI?", answer: "Sign up for Dooza ($49/month), book a free 30-minute onboarding call, and our team configures Rachel with your business info, FAQs, and calendar. Most businesses switch in a single day." }
+    { question: "How do I switch from my current answering service to AI?", answer: "Book a free 30-minute call to scope your pilot, and a Dooza engineer configures Rachel with your business info, FAQs, and calendar. Most businesses switch in a single day." }
 ];
 
 export default function VirtualReceptionistSmallBusinessContent() {
@@ -106,7 +106,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                             Virtual Receptionist for <span className="text-primary-600">Small Business</span>: Why AI Beats Traditional Services
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Traditional virtual receptionists cost $300–$900/month and still miss after-hours calls. An AI receptionist answers 24/7 for $49/month — here's why small businesses are switching.
+                            Traditional virtual receptionists cost $300–$900/month and still miss after-hours calls. An AI receptionist answers 24/7 and starts with a refundable pilot — here's why small businesses are switching.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -130,7 +130,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get Rachel AI — $49/mo
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -139,7 +139,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-50 transition-all"
                             >
                                 <Calendar className="w-5 h-5" />
-                                Book Free Demo
+                                Book a free pilot call
                             </a>
                         </div>
                     </div>
@@ -188,8 +188,9 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Rachel Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -227,7 +228,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 </div>
 
                                 <p className="text-lg leading-relaxed">
-                                    There's a better way. AI virtual receptionists answer every call, 24/7/365, for a flat $49/month. No per-minute billing. No after-hours gaps. No hold queues. Here's why small businesses are making the switch.
+                                    There's a better way. AI virtual receptionists answer every call, 24/7/365. No per-minute billing. No after-hours gaps. No hold queues. Here's why small businesses are making the switch.
                                 </p>
                             </div>
                         </section>
@@ -337,7 +338,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { label: "Availability", traditional: "Business hours (8am–8pm)", ai: "24/7/365 — nights, weekends, holidays" },
-                                    { label: "Cost", traditional: "$300–$900/mo + per-minute overages", ai: "Flat $49/mo — unlimited calls" },
+                                    { label: "Cost", traditional: "$300–$900/mo + per-minute overages", ai: "No per-minute overages — starts with a refundable pilot" },
                                     { label: "Consistency", traditional: "Different agent each call", ai: "Same voice, same quality, every call" },
                                     { label: "Speed", traditional: "15–30 second hold time", ai: "Answers in under 1 second" }
                                 ].map((item, idx) => (
@@ -384,13 +385,13 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", ruby: "$230–$1,640", smith: "$255–$1,500", patlive: "$235–$1,110", rachel: "$29" },
-                                            { feature: "Per-Minute Overage", ruby: "$1.75–$2.20/min", smith: "$7–$9/call", patlive: "$1.63–$2.19/min", rachel: "None — unlimited" },
+                                            { feature: "Monthly Cost", ruby: "$230–$1,640", smith: "$255–$1,500", patlive: "$235–$1,110", rachel: "Refundable pilot (see /pricing)" },
+                                            { feature: "Per-Minute Overage", ruby: "$1.75–$2.20/min", smith: "$7–$9/call", patlive: "$1.63–$2.19/min", rachel: "None" },
                                             { feature: "Hours of Operation", ruby: "Mon–Fri 5am–9pm PT", smith: "Mon–Fri 6am–6pm PT", patlive: "24/7 (premium plan)", rachel: "24/7/365" },
                                             { feature: "Appointment Booking", ruby: "Yes (extra cost)", smith: "Yes (extra cost)", patlive: "Basic", rachel: "Included" },
                                             { feature: "Lead Qualification", ruby: "Basic scripting", smith: "Intake forms", patlive: "Basic scripting", rachel: "Custom AI questions" },
                                             { feature: "Call Summaries", ruby: "Basic notes", smith: "Email summaries", patlive: "Basic notes", rachel: "Detailed AI summaries" },
-                                            { feature: "Setup Time", ruby: "1–2 weeks", smith: "3–5 days", patlive: "1–2 weeks", rachel: "30 minutes" },
+                                            { feature: "Setup Time", ruby: "1–2 weeks", smith: "3–5 days", patlive: "1–2 weeks", rachel: "Same day" },
                                             { feature: "Languages", ruby: "English, Spanish", smith: "English, Spanish", patlive: "English, Spanish", rachel: "English, Spanish, and more" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -418,7 +419,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Rachel — AI Receptionist by Dooza</h3>
                                         <p className="text-lg text-slate-700">
-                                            Rachel answers your business calls the way your best employee would — but she never takes a break, never calls in sick, and costs less than your daily coffee. She's the virtual receptionist built for small businesses that can't afford to miss a single lead.
+                                            Rachel answers your business calls the way your best employee would — but she never takes a break, never calls in sick, and starts with a refundable pilot. She's the virtual receptionist built for small businesses that can't afford to miss a single lead.
                                         </p>
                                     </div>
                                 </div>
@@ -533,19 +534,19 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     <p className="text-xs text-slate-500 mt-1">$255/mo for 30 calls</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$348/yr</div>
-                                    <p className="text-sm text-green-800 font-medium">Rachel (Dooza)</p>
-                                    <p className="text-xs text-green-600 mt-1">$49/mo — unlimited calls, 24/7</p>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
+                                    <p className="text-sm text-green-800 font-medium">Rachel (Dooza) refundable pilot</p>
+                                    <p className="text-xs text-green-600 mt-1">100% refund within 14 days &middot; <a href="/pricing" className="underline">see pricing</a></p>
                                 </div>
                             </div>
 
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl mb-8">
-                                <h3 className="font-bold text-slate-900 mb-4 text-lg text-center">Annual Savings by Switching to Rachel</h3>
+                                <h3 className="font-bold text-slate-900 mb-4 text-lg text-center">What You Pay Today for Call Coverage</h3>
                                 <div className="space-y-3">
                                     {[
-                                        { label: "vs Ruby Receptionist", value: "$3,360/year saved", highlight: false },
-                                        { label: "vs Smith.ai", value: "$2,712/year saved", highlight: false },
-                                        { label: "vs In-House Receptionist", value: "$41,652/year saved", highlight: true }
+                                        { label: "Ruby Receptionist (50 calls/mo)", value: "$3,708/year", highlight: false },
+                                        { label: "Smith.ai (30 calls/mo)", value: "$3,060/year", highlight: false },
+                                        { label: "In-House Receptionist", value: "$42,000+/year", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>
                                             <span className="text-slate-700">{item.label}</span>
@@ -557,7 +558,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl">
                                 <p className="text-green-800 font-bold text-center text-lg">
-                                    That's $2,712–$3,360 per year back in your pocket — enough to fund your entire marketing budget.
+                                    Test Rachel on your real calls first: every Dooza product starts with a refundable pilot — 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>
@@ -570,18 +571,18 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Sign Up for Dooza",
-                                        desc: "$49/month. 7-day money-back guarantee. No long-term contract."
+                                        title: "Start Your Pilot",
+                                        desc: "Start with a refundable pilot — 100% refund within 14 days. Pricing depends on the product; see /pricing."
                                     },
                                     {
                                         step: "2",
-                                        title: "Book Your Free Onboarding Call",
-                                        desc: "Our team configures Rachel with your business info, FAQs, calendar, and call routing preferences in 30 minutes."
+                                        title: "Book a Free Pilot Call",
+                                        desc: "A Dooza engineer configures Rachel with your business info, FAQs, calendar, and call routing preferences in 30 minutes."
                                     },
                                     {
                                         step: "3",
                                         title: "Forward Your Calls",
-                                        desc: "Rachel starts answering immediately. You get detailed summaries after every call. Leads get booked. Revenue goes up."
+                                        desc: "Rachel starts answering immediately. You get detailed summaries after every call. Leads get booked."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -597,14 +598,14 @@ export default function VirtualReceptionistSmallBusinessContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Replace Your Answering Service?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop overpaying for limited-hour receptionists. Rachel answers every call, qualifies every lead, and books appointments — 24/7, for less than the cost of your cheapest plan.
+                                    Stop overpaying for limited-hour receptionists. Rachel answers every call, qualifies every lead, and books appointments — 24/7, starting with a refundable pilot.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

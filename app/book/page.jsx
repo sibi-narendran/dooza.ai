@@ -141,8 +141,8 @@ const bookingLoaderStyles = `
 `;
 
 export const metadata = {
-    title: { absolute: 'Book a Dooza AI Automation Setup Call | Dooza' },
-    description: 'Book a free Dooza setup call to map your AI employees, workflow automation needs, integrations, and first launch plan with the founder.',
+    title: { absolute: 'Book a Free Dooza Pilot Call | Dooza' },
+    description: 'Book a free 30-minute pilot call with a Dooza engineer to scope your refundable pilot: AI employees, automations, integrations, and launch plan. 100% refund within 14 days.',
     alternates: {
         canonical: 'https://www.dooza.ai/book',
     },
@@ -155,14 +155,14 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: 'Book a Dooza AI Automation Setup Call | Dooza',
+        title: 'Book a Free Dooza Pilot Call | Dooza',
         description: 'Pick a time to map your AI employees, workflow automation needs, integrations, and first launch plan.',
         url: 'https://www.dooza.ai/book',
         images: [{ url: 'https://www.dooza.ai/logo.png', width: 512, height: 512, alt: 'Dooza' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Book a Dooza AI Automation Setup Call | Dooza',
+        title: 'Book a Free Dooza Pilot Call | Dooza',
         description: 'Pick a time to map your AI employees, workflow automation needs, integrations, and first launch plan.',
         images: ['https://www.dooza.ai/logo.png'],
     },
@@ -195,7 +195,7 @@ export default function BookPage() {
                             </div>
                             <p className="dooza-loader-title">Getting Dooza ready</p>
                             <p className="dooza-loader-copy">
-                                Your setup call is opening. We are lining up the workspace, automations, and next steps.
+                                Your pilot call is opening. We are lining up the workspace, automations, and next steps.
                             </p>
                             <div className="dooza-loader-steps" aria-hidden="true">
                                 <div className="dooza-loader-step">
@@ -208,7 +208,7 @@ export default function BookPage() {
                                 </div>
                                 <div className="dooza-loader-step">
                                     <span className="dooza-loader-dot" />
-                                    Founder call preparing
+                                    Pilot call preparing
                                 </div>
                             </div>
                         </div>

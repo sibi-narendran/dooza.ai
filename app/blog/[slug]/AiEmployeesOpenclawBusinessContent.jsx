@@ -53,11 +53,11 @@ const faqData = [
     },
     {
         question: "Can I build a business on OpenClaw?",
-        answer: "Yes, but OpenClaw is an agent runtime, not a business platform. You'll need to solve multi-tenancy, security, cron scheduling, UI workspaces, and billing yourself. Alternatively, platforms like Dooza solve these 7 infrastructure problems so you can focus on building the AI employee's brain."
+        answer: "Yes, but OpenClaw is an agent runtime, not a business platform. You'll need to solve multi-tenancy, security, cron scheduling, UI workspaces, and billing yourself. Alternatively, Dooza is a managed alternative to self-hosting OpenClaw: Dooza engineers handle the infrastructure so you can focus on the job you want the AI employee to do."
     },
     {
         question: "How much does it cost to run an AI employee platform?",
-        answer: "With OpenClaw's open-source framework, total infrastructure can run under $15/month (one server ~$7, free-tier database, free-tier frontend) serving hundreds of customers. Compare this to funded AI startups spending $30-50K/month on infrastructure."
+        answer: "With OpenClaw's open-source framework, total infrastructure can run under $15/month (one server ~$7, free-tier database, free-tier frontend) able to serve hundreds of customers. Compare this to funded AI startups spending $30-50K/month on infrastructure."
     },
     {
         question: "What is multi-tenancy and why does it matter?",
@@ -68,8 +68,8 @@ const faqData = [
         answer: "Without cron, your agent only works when a human talks to it - that's an assistant worth $20/month (the ChatGPT price anchor). With cron, your agent wakes up at 9am, generates posts, monitors reviews, and sends reports autonomously - that's an employee worth $50-200/month."
     },
     {
-        question: "How does Dooza's marketplace work?",
-        answer: "Dooza is opening a marketplace where anyone can build and publish AI employees. You define the personality in SOUL.md, write instructions in AGENTS.md, and add YAML tools. Dooza handles tenancy, auth, billing, and deployment. You build the brain, Dooza runs the body."
+        question: "Can Dooza build a custom AI employee for me?",
+        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses. On Dooza Agents, its AI agentic platform, Dooza engineers build and maintain custom AI agents for you and handle hosting, tenancy, security, and deployment, which makes it a managed alternative to self-hosting OpenClaw. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Is it safe to give AI employees access to business data?",
@@ -214,8 +214,9 @@ export default function AiEmployeesOpenclawBusinessContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -312,7 +313,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Platform Play</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    You could build one AI employee on OpenClaw. A social media agent. Sell it for $49/month. Good business. Real money.
+                                    You could build one AI employee on OpenClaw. A social media agent. Sell it for $50/month. Good business. Real money.
                                 </p>
                                 <p>
                                     <strong>But it has a ceiling.</strong>
@@ -360,7 +361,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                                     <Link href="/blog/what-is-openclaw" className="text-primary-600 hover:underline">OpenClaw</Link> is powerful. But it's an agent runtime. Not a business platform.
                                 </p>
                                 <p>
-                                    Here are the 7 problems standing between your OpenClaw agent and paying customers. We solved all of them. The hard way.
+                                    Here are the 7 problems standing between your OpenClaw agent and paying customers. We hit every one of them. The hard way.
                                 </p>
                             </div>
                         </section>
@@ -741,7 +742,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                                         <span className="text-2xl font-bold text-green-400">Under $15/month</span>
                                     </div>
                                 </div>
-                                <p className="text-slate-400 text-sm">Serves hundreds of customers.</p>
+                                <p className="text-slate-400 text-sm">Can serve hundreds of customers.</p>
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6">
@@ -760,30 +761,30 @@ export default function AiEmployeesOpenclawBusinessContent() {
 
                         {/* Dooza Solution */}
                         <section id="dooza-solution" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">We Built This. It's Called Dooza.</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Skip the Infrastructure: Dooza</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Every problem in this article is one we hit while building on OpenClaw. Solved it. Shipped it. The platform is <strong>Dooza.ai</strong>.
+                                    Every problem in this article is one we hit while experimenting with OpenClaw. If you&apos;d rather not solve them yourself, <strong>Dooza</strong> is a managed alternative to self-hosting OpenClaw. Dooza is an AI-native company that builds AI products and services for small businesses.
                                 </p>
                                 <p>
-                                    Businesses hire AI employees that work as a team. Social media. Customer support. SEO. Business development. Each agent with its own workspace. Real-time chat. Scheduled tasks. No-code tools.
+                                    With <Link href="/workforce" className="text-primary-600 hover:underline">Dooza Workforce</Link>, businesses hire AI employees that work as a team. Social media. Customer support. SEO. Business development. Each agent with its own workspace. Real-time chat. Scheduled tasks. No-code tools.
                                 </p>
                                 <p>
-                                    All running on OpenClaw.
+                                    No servers to run, no tenancy to build, no security layers to wire up yourself. Encrypted connections and your approval on anything sensitive.
                                 </p>
                             </div>
 
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl mb-8">
-                                <h3 className="text-xl font-bold text-slate-900 mb-4">And We're Opening It Up</h3>
+                                <h3 className="text-xl font-bold text-slate-900 mb-4">Need a Custom AI Employee?</h3>
                                 <p className="text-slate-600 mb-6">
-                                    Soon anyone can build and publish AI employees on our infrastructure. Here's how it works:
+                                    On <Link href="/" className="text-primary-600 hover:underline">Dooza Agents</Link>, Dooza engineers build and maintain custom AI agents for your business. Here&apos;s how it works:
                                 </p>
                                 <div className="space-y-3">
                                     {[
-                                        "Define the personality in SOUL.md",
-                                        "Write instructions in AGENTS.md",
-                                        "Add YAML tools",
-                                        "We handle tenancy, auth, billing, deployment"
+                                        "Describe the job on a free 30-minute pilot call",
+                                        "Dooza engineers build the agent, usually live in days",
+                                        "We handle hosting, tenancy, security, and updates",
+                                        "Start with a refundable pilot — 100% refund within 14 days"
                                     ].map((step, idx) => (
                                         <div key={idx} className="flex items-center gap-3">
                                             <CheckCircle2 className="w-5 h-5 text-primary-600 shrink-0" />
@@ -792,16 +793,16 @@ export default function AiEmployeesOpenclawBusinessContent() {
                                     ))}
                                 </div>
                                 <p className="text-lg font-bold text-slate-900 mt-6">
-                                    You build the brain on OpenClaw. We run the body.
+                                    You describe the job. We build and run the agent.
                                 </p>
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold hover:bg-primary-700 transition-all text-lg">
-                                    Start Building on Dooza <ArrowRight className="w-5 h-5" />
+                                    Start your pilot <ArrowRight className="w-5 h-5" />
                                 </a>
                                 <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-full font-bold hover:bg-primary-50 transition-all text-lg">
-                                    <Calendar className="w-5 h-5" /> Book a Demo
+                                    <Calendar className="w-5 h-5" /> Book a free pilot call
                                 </a>
                             </div>
                         </section>
@@ -821,7 +822,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                                 <div className="bg-white border-l-4 border-green-500 p-6 rounded-r-xl shadow-sm">
                                     <h4 className="font-bold text-slate-900 mb-2">If you want to skip the infrastructure:</h4>
                                     <p className="text-slate-600">
-                                        Build your AI employee on Dooza instead. We solved the 7 problems. You focus on the agent. <strong>Marketplace coming soon.</strong>
+                                        Use Dooza, a managed alternative to self-hosting OpenClaw. Dooza engineers handle the 7 problems; you focus on the job. <strong>Start with a refundable pilot — 100% refund within 14 days.</strong>
                                     </p>
                                 </div>
 

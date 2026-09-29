@@ -38,14 +38,14 @@ export default function FinalCTASection() {
 
                 <ScrollReveal delay={0.3}>
                     <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-                        The world isn&apos;t doing anymore. It&apos;s Dooza-ing.
+                        Start with a refundable pilot — 100% refund within 14 days.
                     </p>
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.4}>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <SignupButton source="bottom_cta" size="xl" />
-                        <BookDemoButton source="bottom_cta" size="xl">Book Free Setup with Founder</BookDemoButton>
+                        <BookDemoButton source="bottom_cta" size="xl">Book a free pilot call</BookDemoButton>
                     </div>
                 </ScrollReveal>
             </div>

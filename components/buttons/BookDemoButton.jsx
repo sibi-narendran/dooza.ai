@@ -6,7 +6,7 @@ import { trackDemoClick } from '@/lib/analytics';
 
 export default function BookDemoButton({
     source = 'unknown',
-    children = 'Book Free Setup with Founder',
+    children = 'Book a free pilot call',
     className = '',
     size = 'lg',
     variant = 'secondary',

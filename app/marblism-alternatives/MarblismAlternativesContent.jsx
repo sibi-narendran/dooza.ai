@@ -30,24 +30,24 @@ const alternatives = [
         name: 'Dooza',
         tagline: 'Best overall — flat pricing, personal onboarding, 1,000+ integrations',
         bestFor: 'SMBs and teams wanting AI employees without per-seat fees or DIY setup',
-        price: 'From $49/mo',
-        trial: '7-day money-back guarantee',
-        agents: '5 named AI employees — Maily (email), Somi (social media), Ranky (SEO), Stan (customer support), Linda (lead generation)',
-        integrations: '1,000+ via Composio',
+        price: 'Refundable pilot (see /pricing)',
+        trial: 'Refundable pilot — 100% refund within 14 days',
+        agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents), Rachel (phone calls)',
+        integrations: '1,000+ app integrations',
         creditSystem: false,
         namedAgents: true,
         highlight: true,
         pros: [
-            'Flat pricing — $49/mo for the whole team, no per-seat fees',
-            '7-day money-back guarantee — full refund if it is not the right fit',
-            'Free concierge onboarding — founder personally sets up your workspace',
-            '1,000+ app integrations via Composio (vs Marblism\'s ~5 platforms)',
+            'No per-seat fees and no credits',
+            'Refundable pilot — 100% refund within 14 days if it is not the right fit',
+            'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you',
+            '1,000+ app integrations (vs Marblism\'s ~5 platforms)',
             'Purpose-built for AI employees from day one (not a pivot)',
         ],
         cons: [
-            'Fewer named agents than Sintra (5 vs 12+)',
+            'Fewer named AI employees than Sintra\'s 12+ helpers',
             'Newer platform with a smaller user base',
-            'No free plan — paid from day one, backed by 7-day refund',
+            'No free tier — the pilot is paid, with a 100% refund within 14 days',
         ],
     },
     {
@@ -203,14 +203,14 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Flat pricing (no per-seat fees), 7-day money-back guarantee, personal founder onboarding, 1,000+ integrations' },
+    { need: 'Best overall alternative', pick: 'Dooza', reason: 'No per-seat fees, refundable pilot, engineer-led setup, 1,000+ integrations' },
     { need: 'Most AI agents', pick: 'Sintra AI', reason: '12+ named helpers — the widest roster. But capped at 250 credits/month' },
     { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations — but 2.0/5 Trustpilot and requires technical setup' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG. Multi-agent orchestration. But not SMB-friendly' },
     { need: 'Marketing only', pick: 'NoimosAI', reason: '11 specialized marketing agents including unique GEO and Social Listening' },
     { need: 'PM + AI in one tool', pick: 'Motion', reason: 'Calendar, tasks, and AI employees in one platform. But still per-seat pricing' },
     { need: 'Cheapest single user', pick: 'Marblism ($24/mo yearly)', reason: 'Still the cheapest for one person on a yearly plan — but per-seat fees kick in fast' },
-    { need: 'Personal onboarding', pick: 'Dooza', reason: 'The only platform where the founder personally sets up your AI employees in a free call' },
+    { need: 'Personal onboarding', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you' },
 ];
 
 export default function MarblismAlternativesContent({ faqData }) {
@@ -256,8 +256,8 @@ export default function MarblismAlternativesContent({ faqData }) {
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="marblism_alt_hero">Get started with Dooza</SignupButton>
-                                <BookDemoButton source="marblism_alt_hero" />
+                                <SignupButton source="marblism_alt_hero">Start your pilot</SignupButton>
+                                <BookDemoButton source="marblism_alt_hero">Book a free pilot call</BookDemoButton>
                             </div>
                         </div>
                     </div>
@@ -442,8 +442,8 @@ export default function MarblismAlternativesContent({ faqData }) {
                                     {/* CTA for Dooza only */}
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <SignupButton source="marblism_alt_dooza_card">Get started with Dooza</SignupButton>
-                                            <BookDemoButton source="marblism_alt_dooza_card" />
+                                            <SignupButton source="marblism_alt_dooza_card">Start your pilot</SignupButton>
+                                            <BookDemoButton source="marblism_alt_dooza_card">Book a free pilot call</BookDemoButton>
                                         </div>
                                     )}
                                 </div>
@@ -476,23 +476,21 @@ export default function MarblismAlternativesContent({ faqData }) {
                                             <tr className="bg-white/5">
                                                 <th className="p-4 md:p-5 border-b border-white/10 font-bold text-white">Team Size</th>
                                                 <th className="p-4 md:p-5 border-b border-white/10 font-bold text-slate-400">Marblism (monthly)</th>
-                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-primary-300">Dooza (monthly)</th>
-                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-green-400">You Save</th>
+                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-primary-300">Dooza</th>
                                             </tr>
                                         </thead>
                                         <tbody className="text-sm">
                                             {[
-                                                { team: '1 person', marblism: '$44/mo', dooza: '$49/mo', save: '—', doozaWins: false },
-                                                { team: '2 people', marblism: '$73/mo', dooza: '$49/mo', save: '$24/mo', doozaWins: true },
-                                                { team: '3 people', marblism: '$102/mo', dooza: '$49/mo', save: '$53/mo', doozaWins: true },
-                                                { team: '5 people', marblism: '$160/mo', dooza: '$49/mo', save: '$111/mo', doozaWins: true },
-                                                { team: '10 people', marblism: '$305/mo', dooza: '$49/mo', save: '$256/mo', doozaWins: true },
+                                                { team: '1 person', marblism: '$44/mo', dooza: 'No per-seat fees' },
+                                                { team: '2 people', marblism: '$73/mo', dooza: 'No per-seat fees' },
+                                                { team: '3 people', marblism: '$102/mo', dooza: 'No per-seat fees' },
+                                                { team: '5 people', marblism: '$160/mo', dooza: 'No per-seat fees' },
+                                                { team: '10 people', marblism: '$305/mo', dooza: 'No per-seat fees' },
                                             ].map((row, i) => (
                                                 <tr key={i} className="border-b border-white/5 last:border-0">
                                                     <td className="p-4 md:p-5 text-white font-medium">{row.team}</td>
                                                     <td className="p-4 md:p-5 text-slate-400">{row.marblism}</td>
                                                     <td className="p-4 md:p-5 text-primary-300 font-medium">{row.dooza}</td>
-                                                    <td className={`p-4 md:p-5 font-bold ${row.doozaWins ? 'text-green-400' : 'text-slate-500'}`}>{row.save}</td>
                                                 </tr>
                                             ))}
                                         </tbody>
@@ -500,7 +498,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Marblism monthly pricing: $44 base + $29/seat. Dooza charges a flat rate with no per-seat fees on any plan.
+                                Marblism monthly pricing: $44 base + $29/seat. Dooza has no per-seat fees; pricing depends on the product and every product starts with a refundable pilot (see /pricing).
                             </p>
                         </ScrollReveal>
                     </div>
@@ -569,11 +567,11 @@ export default function MarblismAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Marblism Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start today for $49/mo — full access backed by a 7-day money-back guarantee. No per-seat fees. Or book a free setup call with the founder.
+                                Start with a refundable pilot — 100% refund within 14 days. No per-seat fees. Book a free 30-minute call with a Dooza engineer to scope it.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="marblism_alt_cta">Get started with Dooza</SignupButton>
-                                <BookDemoButton source="marblism_alt_cta" />
+                                <SignupButton source="marblism_alt_cta">Start your pilot</SignupButton>
+                                <BookDemoButton source="marblism_alt_cta">Book a free pilot call</BookDemoButton>
                             </div>
                         </ScrollReveal>
                     </div>

@@ -38,7 +38,7 @@ export const metadata = {
         site: '@sibinarendran',
         creator: '@sibinarendran',
         title: '7 Best Profound Alternatives [2026] — Cheaper AI Visibility & GEO',
-        description: 'Profound is custom-priced and built for enterprise. 7 alternatives compared — the #1 pick does the GEO work from $49/mo.',
+        description: 'Profound is custom-priced and built for enterprise. 7 alternatives compared — the #1 pick does the GEO work and starts with a refundable pilot.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -46,7 +46,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is the best Profound alternative?',
-        answer: 'For small and mid-sized businesses that need GEO done, not just measured, Dooza is the best Profound alternative: Ranky, Dooza\'s AI Visibility & Growth Employee, researches, writes, optimizes, and publishes GEO-ready content from $49/mo, and Dooza engineers set up your first AI employee free. If you only want cheaper monitoring, Otterly.ai and Peec AI are the most common picks.',
+        answer: 'For small and mid-sized businesses that need GEO done, not just measured, Dooza is the best Profound alternative: Ranky, Dooza\'s AI SEO & Visibility Employee, researches, writes, optimizes, and publishes GEO-ready content, Dooza engineers set it up with you, and it starts with a refundable pilot (100% refund within 14 days). If you only want cheaper monitoring, Otterly.ai and Peec AI are the most common picks.',
     },
     {
         question: 'Why do people look for Profound alternatives?',
@@ -58,11 +58,11 @@ const faqData = [
     },
     {
         question: 'What is the cheapest Profound alternative?',
-        answer: 'Among dedicated AI visibility trackers, third-party reviews report Otterly.ai starting around $29/mo (Lite). Dooza starts at $49/mo but includes the execution work — content, schema, and citations — that trackers leave to you. Check each vendor\'s site for current pricing.',
+        answer: 'Among dedicated AI visibility trackers, third-party reviews report Otterly.ai starting around $29/mo (Lite). Dooza is not a cheapest-tracker play: pricing depends on the product (see dooza.ai/pricing), it starts with a refundable pilot, and it includes the execution work — content, schema, and citations — that trackers leave to you. Check each vendor\'s site for current pricing.',
     },
     {
         question: 'Is there a free Profound alternative?',
-        answer: 'Profound itself offers a free 7-day trial. Most alternatives offer trials or entry plans rather than permanent free tiers; check each vendor\'s site. Dooza sets up your first AI employee free through its engineers and offers a 7-day money-back guarantee on Workforce plans.',
+        answer: 'Profound itself offers a free 7-day trial. Most alternatives offer trials or entry plans rather than permanent free tiers; check each vendor\'s site. Dooza does not offer a free trial; every Dooza product starts with a paid, refundable pilot — 100% refund within 14 days.',
     },
     {
         question: 'What is the difference between an AI visibility tool and a GEO service?',
@@ -70,7 +70,7 @@ const faqData = [
     },
     {
         question: 'Is Dooza a monitoring tool like Profound?',
-        answer: 'No. Dooza is an execution alternative. Ranky monitors who is mentioning you and where, but it does not replicate Profound-scale dashboards, 9-engine tracking, or prompt-volume data. Teams that want deep dashboards can pair Ranky with a tracker like Otterly.ai or Peec AI.',
+        answer: 'Partly. Ranky tracks your core prompt set across ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews, with share of voice and citation maps, then does the fixes. It does not replicate Profound\'s enterprise scale: no 9-engine, multi-region coverage and no prompt-volume data.',
     },
     {
         question: 'Should I use Semrush or Ahrefs instead of Profound?',
@@ -78,7 +78,7 @@ const faqData = [
     },
     {
         question: 'Should I hire a GEO agency instead of buying a tool?',
-        answer: 'A GEO agency makes sense if you want a fully managed service and have agency-level budget. Dooza sits between a tool and an agency: engineers set up your AI employee free, and Ranky does the ongoing SEO and GEO work from $49/mo, with no contracts.',
+        answer: 'A GEO agency makes sense if you want a fully managed service and have agency-level budget. Dooza sits between a tool and an agency: engineers set up your AI employee with you, Ranky does the ongoing SEO and GEO work with no contracts, and it starts with a refundable pilot — 100% refund within 14 days.',
     },
     {
         question: 'Can any tool guarantee I get cited in ChatGPT or Perplexity?',
@@ -121,7 +121,7 @@ const schemas = [
         itemListOrder: 'https://schema.org/ItemListOrderAscending',
         numberOfItems: 7,
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Dooza (Ranky + Forward Deployed Engineers)', url: `${SITE_URL}/agents/ranky` },
+            { '@type': 'ListItem', position: 1, name: 'Dooza (Ranky + Dooza engineers)', url: `${SITE_URL}/agents/ranky` },
             { '@type': 'ListItem', position: 2, name: 'Otterly.ai', url: 'https://otterly.ai' },
             { '@type': 'ListItem', position: 3, name: 'Peec AI', url: 'https://peec.ai' },
             { '@type': 'ListItem', position: 4, name: 'Scrunch AI' },

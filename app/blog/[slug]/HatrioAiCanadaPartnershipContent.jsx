@@ -160,7 +160,7 @@ export default function HatrioAiCanadaPartnershipContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try Dooza Free
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -219,7 +219,7 @@ export default function HatrioAiCanadaPartnershipContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
                             </div>
 
@@ -616,7 +616,7 @@ export default function HatrioAiCanadaPartnershipContent() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-slate-900">Need the business to run itself?</p>
-                                            <p className="text-slate-600">Hire Dooza's AI workforce — email, social, SEO, sales, legal, and phone calls. $49/month, all included, free onboarding.</p>
+                                            <p className="text-slate-600">Hire Dooza's AI workforce — email, social, SEO, sales, legal, and phone calls. Start with a refundable pilot: 100% refund within 14 days (<Link href="/pricing" className="text-primary-600 hover:underline">see pricing</Link>).</p>
                                         </div>
                                     </div>
                                 </div>
@@ -629,10 +629,10 @@ export default function HatrioAiCanadaPartnershipContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Try Dooza Free — Hire Your AI Team Today
+                                    Start your pilot — Hire Your AI Team
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
-                                <p className="text-sm text-slate-500 mt-3">$1 trial for 3 days. No commitment. Free concierge onboarding included.</p>
+                                <p className="text-sm text-slate-500 mt-3">Refundable pilot: 100% refund within 14 days. Free 30-minute call to scope it.</p>
                             </div>
                         </section>
 

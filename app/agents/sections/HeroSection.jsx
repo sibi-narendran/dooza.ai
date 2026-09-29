@@ -1,34 +1,6 @@
-import Image from 'next/image';
-import { CheckCircle2, Star } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import { WORKFLOW_SIGNUP_URL } from '@/lib/links';
 import AgentPromptBox from '../AgentPromptBox';
-
-const ratingBadges = [
-    {
-        name: 'G2 Crowd',
-        logo: '/agents/deepagent/hero-main.webp',
-        width: 303,
-        height: 160,
-    },
-    {
-        name: 'Capterra',
-        logo: '/agents/deepagent/hero-side.webp',
-        width: 361,
-        height: 160,
-    },
-    {
-        name: 'Trustpilot',
-        logo: '/agents/deepagent/logo-white.webp',
-        width: 427,
-        height: 96,
-    },
-    {
-        name: 'Google',
-        logo: '/agents/deepagent/google-logo.webp',
-        width: 397,
-        height: 131,
-    },
-];
 
 export default function HeroSection() {
     return (
@@ -46,7 +18,7 @@ export default function HeroSection() {
                     Hire your first <span className="text-primary-600">AI employee.</span>
                 </h1>
                 <p className="mb-8 max-w-2xl text-base leading-relaxed text-slate-600 md:text-xl">
-                    We train it and keep it running. Live in days. Free setup. Keep it only if it earns its keep.
+                    Dooza engineers build it, train it, and keep it running. Live in days. Start with a refundable pilot — 100% refund within 14 days.
                 </p>
                 <div className="mb-8 mt-3 w-full max-w-3xl">
                     <AgentPromptBox signupUrl={WORKFLOW_SIGNUP_URL} />
@@ -54,7 +26,7 @@ export default function HeroSection() {
                 <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-600">
                     <span className="inline-flex items-center gap-1.5">
                         <CheckCircle2 className="h-4 w-4 text-primary-600" />
-                        Free setup
+                        Refundable pilot
                     </span>
                     <span className="inline-flex items-center gap-1.5">
                         <CheckCircle2 className="h-4 w-4 text-primary-600" />
@@ -62,40 +34,13 @@ export default function HeroSection() {
                     </span>
                     <span className="inline-flex items-center gap-1.5">
                         <CheckCircle2 className="h-4 w-4 text-primary-600" />
-                        No credit card required
+                        100% refund within 14 days
                     </span>
                 </div>
                 <p className="mt-4 flex items-center gap-2 text-sm font-semibold text-slate-700">
-                    <span className="relative flex h-2.5 w-2.5">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
-                        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-500" />
-                    </span>
-                    Due to high demand, we take on 5 free setups a week.
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary-500" />
+                    A Dooza engineer scopes your pilot on a free 30-minute call.
                 </p>
-                <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                    {ratingBadges.map((badge) => (
-                        <div
-                            key={badge.name}
-                            className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-3 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-md"
-                        >
-                            <Image
-                                src={badge.logo}
-                                alt={`${badge.name} logo`}
-                                width={badge.width}
-                                height={badge.height}
-                                className="h-6 w-auto"
-                            />
-                            <span className="flex items-center gap-0.5">
-                                {[...Array(5)].map((_, index) => (
-                                    <Star
-                                        key={index}
-                                        className="h-3.5 w-3.5 fill-amber-400 text-amber-400"
-                                    />
-                                ))}
-                            </span>
-                        </div>
-                    ))}
-                </div>
             </div>
         </section>
     );

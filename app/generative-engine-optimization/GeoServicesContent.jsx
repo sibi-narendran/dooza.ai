@@ -41,8 +41,8 @@ const PRINCETON_GEO_PAPER = 'https://arxiv.org/abs/2311.09735';
 const summary = [
     'GEO gets your business mentioned and cited inside AI answers from ChatGPT, Perplexity, Gemini, Claude and Google AI Overviews.',
     'GEO tools such as Profound, Otterly and Peec AI measure your AI visibility. They do not write the content or earn the citations for you.',
-    'Dooza does the work: Ranky, the AI Visibility employee, publishes citable content, fixes schema and builds third-party presence every day.',
-    'A Dooza forward-deployed engineer sets it up. Your first AI employee is free, and Ranky runs from $49/month with no contracts.',
+    'Dooza does the work: Ranky, the AI SEO & Visibility Employee, publishes citable content, fixes schema and builds third-party presence every day.',
+    'A Dooza engineer scopes it on a free 30-minute call and sets it up. It starts with a refundable pilot — 100% refund within 14 days — with no contracts.',
 ];
 
 const geoVsSeoRows = [
@@ -126,7 +126,7 @@ const steps = [
         icon: Rocket,
         step: 'Day 4',
         title: 'Live',
-        desc: 'Ranky starts publishing, commenting and monitoring on your real accounts. You get a nightly recap and pay only if you want to keep it.',
+        desc: 'Ranky starts publishing, commenting and monitoring on your real accounts. You get a nightly recap, and if the pilot is not right for you, ask within 14 days for a 100% refund.',
         color: 'bg-amber-50 text-amber-700',
         badge: 'text-amber-700 bg-amber-50',
     },
@@ -173,7 +173,7 @@ const signals = [
 const comparisonRows = [
     {
         feature: 'What you get',
-        dooza: 'The work done: content, schema, mentions and monitoring',
+        dooza: 'Prompt tracking plus the work done: content, schema, mentions and monitoring',
         tools: 'Dashboards that measure AI visibility, citations and share of voice',
         agency: 'A team that plans and delivers GEO work',
     },
@@ -185,7 +185,7 @@ const comparisonRows = [
     },
     {
         feature: 'Price',
-        dooza: 'Ranky from $49/mo; first AI employee set up free',
+        dooza: 'Refundable pilot (see /pricing)',
         tools: 'Otterly.ai ~$29/mo Lite, Peec AI ~$89–95/mo (third-party reported); Profound Enterprise is custom-priced',
         agency: 'Monthly retainer; varies by agency and scope',
     },
@@ -203,13 +203,13 @@ const comparisonRows = [
     },
     {
         feature: 'Answer-engine tracking depth',
-        dooza: 'Mention monitoring and nightly recap, not prompt-level dashboards',
+        dooza: 'Prompt-level tracking for your core prompt set, with share of voice and citation maps; not a 9-engine enterprise suite',
         tools: 'Strongest: prompt tracking across engines (Profound Enterprise lists 9 answer engines)',
         agency: 'Depends on the tools the agency uses',
     },
     {
         feature: 'Contract',
-        dooza: 'No contracts, 7-day money-back guarantee on Workforce',
+        dooza: 'No contracts; refundable pilot — 100% refund within 14 days',
         tools: 'Monthly plans; Profound Enterprise requires a demo',
         agency: 'Usually a retainer agreement',
     },
@@ -233,7 +233,7 @@ const audiences = [
 const relatedLinks = [
     { href: '/dooza-vs-profound', label: 'Dooza vs Profound' },
     { href: '/profound-alternatives', label: 'Best Profound alternatives' },
-    { href: '/agents/ranky', label: 'Meet Ranky, the AI Visibility employee' },
+    { href: '/agents/ranky', label: 'Meet Ranky, the AI SEO & Visibility Employee' },
     { href: '/blog/what-is-generative-engine-optimization', label: 'What is generative engine optimization?' },
     { href: '/blog/geo-vs-seo', label: 'GEO vs SEO explained' },
     { href: '/blog/how-to-rank-in-chatgpt', label: 'How to rank in ChatGPT' },
@@ -267,18 +267,18 @@ export default function GeoServicesContent({ faqData }) {
                             <strong>Generative engine optimization (GEO)</strong> is the work of making your business easy for AI answer engines such as ChatGPT, Perplexity, Gemini, Claude and Google AI Overviews to find, trust and cite. It is also called answer engine optimization (AEO) or LLM SEO.
                         </p>
                         <p className="mb-9 max-w-3xl text-lg leading-relaxed text-slate-600">
-                            Dooza does GEO for you. <Link href="/agents/ranky" className="font-semibold text-primary-700 underline decoration-primary-200 underline-offset-4 hover:decoration-primary-500">Ranky</Link>, Dooza&apos;s AI Visibility employee, publishes citable content, fixes schema, builds your presence on Reddit, LinkedIn and YouTube, and monitors your mentions every day. Dooza forward-deployed engineers set it up, and your first AI employee is free.
+                            Dooza does GEO for you. <Link href="/agents/ranky" className="font-semibold text-primary-700 underline decoration-primary-200 underline-offset-4 hover:decoration-primary-500">Ranky</Link>, Dooza&apos;s AI Visibility employee, publishes citable content, fixes schema, builds your presence on Reddit, LinkedIn and YouTube, and monitors your mentions every day. Dooza engineers set it up, and it starts with a refundable pilot — 100% refund within 14 days.
                         </p>
                         <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-                            <BookDemoButton source="geo_hero" variant="primary">Get Your Free GEO Setup</BookDemoButton>
+                            <BookDemoButton source="geo_hero" variant="primary">Book a free pilot call</BookDemoButton>
                             <SignupButton source="geo_hero" variant="primary" className="!bg-white !text-primary-800 border-2 border-primary-200 !shadow-none hover:!bg-primary-50">
-                                Start Ranky at $49/mo
+                                Start your pilot
                             </SignupButton>
                         </div>
                         <p className="mt-8 flex flex-wrap items-start gap-x-5 gap-y-2 text-sm text-slate-500">
                             <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> Live in days</span>
                             <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> No contracts</span>
-                            <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> 7-day money-back guarantee</span>
+                            <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-primary-500" /> 100% refund within 14 days</span>
                         </p>
                     </div>
                 </section>
@@ -423,7 +423,7 @@ export default function GeoServicesContent({ faqData }) {
                                 <span className="section-label mb-4 block">How it works</span>
                                 <h2 className="mb-4 font-serif text-3xl font-bold text-slate-950 md:text-5xl">How does Dooza set up GEO?</h2>
                                 <p className="mx-auto max-w-2xl text-lg text-slate-600">
-                                    A forward-deployed engineer does the setup with you. Your first AI employee is free, and you pay only if you want to keep it.
+                                    A Dooza engineer scopes your pilot on a free 30-minute call and does the setup with you. Every pilot is refundable — 100% refund within 14 days.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -594,8 +594,8 @@ export default function GeoServicesContent({ faqData }) {
                         <div className="grid gap-6 md:grid-cols-2">
                             <div className="rounded-2xl border border-primary-400/20 bg-primary-500/10 p-8">
                                 <p className="mb-2 text-sm font-bold uppercase tracking-wider text-primary-300">Ranky on Dooza Workforce</p>
-                                <div className="mb-1 text-4xl font-bold text-white">$49<span className="text-base font-normal text-slate-400">/month</span></div>
-                                <p className="mb-5 text-sm text-slate-400">Growth plan $79/month. 7-day money-back guarantee.</p>
+                                <div className="mb-1 text-3xl font-bold text-white">Refundable pilot</div>
+                                <p className="mb-5 text-sm text-slate-400">100% refund within 14 days. Pricing depends on the product — see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.</p>
                                 <ul className="space-y-2.5 text-sm">
                                     {['Daily or 3x-a-week publishing', 'Schema, meta and internal links', 'Reddit, LinkedIn and YouTube comments', 'Mention monitoring and nightly recap'].map((item) => (
                                         <li key={item} className="flex items-center gap-2.5 text-slate-300">
@@ -605,9 +605,9 @@ export default function GeoServicesContent({ faqData }) {
                                 </ul>
                             </div>
                             <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
-                                <p className="mb-2 text-sm font-bold uppercase tracking-wider text-slate-300">Dooza Agents setup</p>
-                                <div className="mb-1 text-4xl font-bold text-white">Free<span className="text-base font-normal text-slate-400"> first AI employee</span></div>
-                                <p className="mb-5 text-sm text-slate-400">Pay only if you keep it. No contracts.</p>
+                                <p className="mb-2 text-sm font-bold uppercase tracking-wider text-slate-300">Engineer-led setup</p>
+                                <div className="mb-1 text-3xl font-bold text-white">Free pilot call</div>
+                                <p className="mb-5 text-sm text-slate-400">A Dooza engineer scopes your pilot in 30 minutes. No contracts.</p>
                                 <ul className="space-y-2.5 text-sm">
                                     {['A Dooza engineer maps and builds with you', 'Live in days: Day 1 map, Day 2 build, Day 4 live', 'Brand-voice training in plain English', 'Ongoing tuning by the Dooza team'].map((item) => (
                                         <li key={item} className="flex items-center gap-2.5 text-slate-300">
@@ -618,7 +618,7 @@ export default function GeoServicesContent({ faqData }) {
                             </div>
                         </div>
                         <p className="mt-6 text-center text-sm text-slate-400">
-                            See all plans on the <Link href="/pricing" className="font-semibold text-primary-300 hover:underline">pricing page</Link>.
+                            Pricing depends on the product. Every Dooza product starts with a refundable pilot. See current plans on the <Link href="/pricing" className="font-semibold text-primary-300 hover:underline">pricing page</Link>.
                         </p>
                     </div>
                 </section>
@@ -648,12 +648,12 @@ export default function GeoServicesContent({ faqData }) {
                                 Stop watching the dashboard. Start getting cited.
                             </h2>
                             <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-slate-600">
-                                Book a call with a Dooza engineer. We will map the questions your buyers ask AI, set up Ranky for free, and have it publishing within days.
+                                Book a call with a Dooza engineer. We will map the questions your buyers ask AI, scope your refundable pilot, and have Ranky publishing within days. 100% refund within 14 days.
                             </p>
                             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                                <BookDemoButton source="geo_final" variant="primary">Book Your Free GEO Setup</BookDemoButton>
+                                <BookDemoButton source="geo_final" variant="primary">Book a free pilot call</BookDemoButton>
                                 <SignupButton source="geo_final" className="!bg-white !text-primary-800 border-2 border-primary-200 !shadow-none hover:!bg-primary-50">
-                                    Start Ranky at $49/mo
+                                    Start your pilot
                                 </SignupButton>
                             </div>
                         </ScrollReveal>

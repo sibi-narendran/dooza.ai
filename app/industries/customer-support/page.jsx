@@ -736,7 +736,7 @@ export default function CustomerSupportIndustryPage() {
                             Get My Store Automated
                         </BookDemoButton>
                         <p className="mx-auto mt-4 max-w-md text-sm font-semibold text-slate-500">
-                            A short call to find the first workflow worth deploying. No prep needed.
+                            A free call to scope your first workflow. Start with a refundable pilot — 100% refund within 14 days.
                         </p>
                     </div>
                 </section>

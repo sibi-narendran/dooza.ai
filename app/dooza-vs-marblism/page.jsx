@@ -2,7 +2,7 @@ import { SITE_URL } from '../../lib/site';
 import DoozaVsMarblismContent from './DoozaVsMarblismContent';
 
 export const metadata = {
-    title: 'Dooza vs Marblism — $49 Flat vs Per-Seat Fees [2026]',
+    title: 'Dooza vs Marblism — No Per-Seat Fees vs Per-Seat Pricing [2026]',
     description: 'Compare Dooza vs Marblism on pricing, seats, setup, integrations, and AI employee workflows before choosing an automation platform.',
     keywords: [
         'Dooza vs Marblism', 'Marblism alternative', 'Marblism comparison',
@@ -14,7 +14,7 @@ export const metadata = {
     alternates: { canonical: `${SITE_URL}/dooza-vs-marblism` },
     openGraph: {
         title: 'Dooza vs Marblism — We Build It For You',
-        description: 'Head-to-head comparison: Dooza offers a free personal setup call with the founder and $49/mo flat pricing. Marblism charges $44/mo + per-seat fees. See the full breakdown.',
+        description: 'Head-to-head comparison: a Dooza engineer scopes your refundable pilot on a free 30-minute call, with no per-seat fees and a 100% refund within 14 days. Marblism charges $44/mo + per-seat fees. See the full breakdown.',
         url: `${SITE_URL}/dooza-vs-marblism`,
         siteName: 'Dooza',
         type: 'website',
@@ -23,7 +23,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Dooza vs Marblism — 2026 Comparison',
-        description: 'Personal founder setup vs DIY. Flat pricing vs per-seat fees. See why businesses choose Dooza over Marblism.',
+        description: 'Engineer-led setup vs DIY. No per-seat fees vs per-seat pricing. A refundable pilot vs self-serve. See the full comparison.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -31,27 +31,27 @@ export const metadata = {
 const faqData = [
     {
         question: 'Is Dooza better than Marblism for AI employees?',
-        answer: 'For businesses that want a hands-off experience, yes. Dooza provides a free personal setup call with the founder who configures everything for you. Marblism is entirely self-serve — you set up and manage agents yourself. Dooza has 17 direct integrations via Composio, while Marblism\'s integration ecosystem is limited and undocumented.',
+        answer: 'For businesses that want a hands-off experience, yes. A Dooza engineer scopes your pilot on a free 30-minute call and configures everything with you. Marblism is entirely self-serve — you set up and manage agents yourself. Dooza offers 1,000+ app integrations, while Marblism\'s integration ecosystem is limited and undocumented.',
     },
     {
         question: 'How are Dooza and Marblism different?',
-        answer: 'Dooza was built as a purpose-built AI employee platform from day one with specialized agents (Maily, Somi, Linky, Tweety, Utumy, Ranky, Lex). Marblism pivoted from being an app code generator to AI employees in 2025-2026 and offers 6 agents. The biggest differences are in pricing (flat vs per-seat), onboarding (personal founder call vs self-serve), and integrations (17 documented vs undocumented).',
+        answer: 'Dooza is an AI-native company that builds AI products and services for small businesses. Its AI employees each have one job (Maily, Somi, Ranky, Stan, Linda, and Rachel). Marblism pivoted from being an app code generator to AI employees in 2025-2026 and offers 6 agents. The biggest differences are in pricing (flat vs per-seat), onboarding (engineer-led setup vs self-serve), and integrations (1,000+ vs undocumented).',
     },
     {
         question: 'Does Marblism charge per seat?',
-        answer: 'Yes. Marblism charges $44/month for the first user on the monthly plan, then $29/month for each additional seat. On the annual plan it is $24/month + $14/seat. Dooza charges a flat $49/month with no per-seat fees — your entire team can access all AI employees.',
+        answer: 'Yes. Marblism charges $44/month for the first user on the monthly plan, then $29/month for each additional seat. On the annual plan it is $24/month + $14/seat. Dooza has no per-seat fees and no credits, so adding a teammate does not change your bill; every Dooza product starts with a refundable pilot (100% refund within 14 days). Pricing depends on the product — see dooza.ai/pricing.',
     },
     {
         question: 'Which has better integrations — Dooza or Marblism?',
-        answer: 'Dooza connects to 17 tools directly via Composio, including Gmail, LinkedIn, Slack, WordPress, Shopify, and YouTube. Marblism\'s integration options are limited and not well-documented — users report difficulty connecting to tools like Notion and other common platforms.',
+        answer: 'Dooza offers 1,000+ app integrations, including Gmail, LinkedIn, Slack, WordPress, Shopify, and YouTube. Marblism\'s integration options are limited and not well-documented — users report difficulty connecting to tools like Notion and other common platforms.',
     },
     {
         question: 'How do I switch from Marblism to Dooza?',
-        answer: 'You can start with Dooza\'s free plan to test the platform. When ready, book a free 20-minute setup call with the founder, who will walk you through configuration and connect your tools.',
+        answer: 'Book a free 30-minute call and a Dooza engineer will scope your pilot, configure your AI employees, and connect your tools. Every Dooza product starts with a refundable pilot — 100% refund within 14 days. See /pricing for current plans.',
     },
     {
         question: 'What AI employees does Dooza offer?',
-        answer: 'Dooza has 7 specialized AI employees. Maily writes, personalizes, and sends email campaigns through your Gmail or Outlook. Somi creates and schedules posts across Facebook, Instagram, and other social platforms. Linky handles LinkedIn outreach — connection requests, messages, and content publishing. Tweety manages your Twitter/X presence with tweets, threads, and engagement. Utumy helps with YouTube — scripts, titles, descriptions, and SEO for your videos. Ranky is your SEO specialist — keyword research, site audits, content briefs, and blog writing to get you ranking. Lex drafts legal documents like NDAs, contracts, and terms of service. Each agent connects directly to your tools and works autonomously.',
+        answer: 'Dooza\'s AI employees each own one job. Maily handles email through your Gmail or Outlook. Somi creates and schedules social media posts across Facebook, Instagram, and LinkedIn. Ranky handles SEO and AI visibility: keyword research, blog writing, and getting you cited by ChatGPT and Google. Stan finds and follows up with leads. Linda drafts legal documents like NDAs and contracts. Rachel (Voice Pro) answers calls and books appointments. Each one connects to your tools and works 24/7, with your approval on anything sensitive.',
     },
     {
         question: 'Can AI employees really replace human workers?',
@@ -63,11 +63,11 @@ const faqData = [
     },
     {
         question: 'Is Dooza safe to use with my business data?',
-        answer: 'Yes. Dooza connects to your tools via Composio with OAuth-based authentication. Your credentials are never stored directly. All data is encrypted in transit and at rest. You control which integrations are active and can disconnect them at any time.',
+        answer: 'Yes. Dooza connects to your tools with OAuth-based authentication. Your credentials are never stored directly. All data is encrypted in transit and at rest. You control which integrations are active and can disconnect them at any time.',
     },
     {
         question: 'How long does it take to set up Dooza?',
-        answer: 'Most businesses are fully set up in about 20 minutes. You book a free call with the founder, who walks you through configuration, connects your tools, and makes sure everything is running. Your brand info is auto-extracted from your website to personalize outputs from day one.',
+        answer: 'A Dooza engineer scopes your pilot on a free 30-minute call, then walks you through configuration, connects your tools, and makes sure everything is running. Your brand info is auto-extracted from your website to personalize outputs from day one.',
     },
     {
         question: 'What makes AI employees different from ChatGPT or other AI chatbots?',
@@ -75,7 +75,7 @@ const faqData = [
     },
     {
         question: 'Do I need technical skills to use Dooza?',
-        answer: 'No. Dooza is designed for non-technical business owners. The founder personally walks you through setup in a free call, and the platform auto-extracts your brand info from your website. If you can use email, you can use Dooza.',
+        answer: 'No. Dooza is designed for non-technical business owners. A Dooza engineer scopes your pilot on a free call and sets it up with you, and the platform auto-extracts your brand info from your website. If you can use email, you can use Dooza.',
     },
 ];
 

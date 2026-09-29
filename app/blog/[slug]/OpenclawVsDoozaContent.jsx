@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "Why is Dooza better than building on OpenClaw?",
-        answer: "Dooza solves the 7 infrastructure problems that OpenClaw doesn't: multi-tenancy, workstation UIs, real-time chat, cron scheduling, prebuilt skills, memory management, and security. You get all of this for $49/month instead of spending weeks building it yourself."
+        answer: "Dooza solves the 7 infrastructure problems that OpenClaw doesn't: multi-tenancy, workstation UIs, real-time chat, cron scheduling, prebuilt skills, memory management, and security. You get all of this as a managed service instead of spending weeks building it yourself, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Can I use OpenClaw for business?",
@@ -66,12 +66,12 @@ const faqData = [
         answer: "Based on real-world builds: 2-4 weeks for basic setup, 2-3 months for production infrastructure (multi-tenancy, security, cron), and ongoing maintenance. At $150/hour developer rates, that's $50,000-100,000+ before your first customer."
     },
     {
-        question: "Does Dooza use OpenClaw?",
-        answer: "Yes. Dooza is built on OpenClaw's open-source framework and adds all the managed infrastructure businesses need — multi-tenancy, security, cron scheduling, billing, and a dashboard UI. You get the power of OpenClaw without the complexity."
+        question: "Is Dooza an alternative to self-hosting OpenClaw?",
+        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app is a managed alternative to self-hosting OpenClaw. It comes with the infrastructure businesses need — multi-tenancy, security, scheduling, and a dashboard UI — so you get agents that take real actions without running the stack yourself."
     },
     {
         question: "What if I want to customize my AI employees?",
-        answer: "Dooza offers full customization through free concierge onboarding. Our team configures AI employees to match your business, brand voice, and workflows. For builders, Dooza's upcoming marketplace lets you create custom AI employees using SOUL.md and AGENTS.md files."
+        answer: "Yes. A Dooza engineer scopes your pilot on a free 30-minute call and configures AI employees to match your business, brand voice, and workflows. If you need something the ready-made employees don't cover, Dooza Agents is the AI agentic platform where Dooza engineers build and maintain custom agents for you."
     }
 ];
 
@@ -157,7 +157,7 @@ export default function OpenclawVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Skip the Build. Try Dooza Free
+                                Skip the Build. Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -215,8 +215,9 @@ export default function OpenclawVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Try Dooza Free
+                                    Start your pilot
                                 </a>
+                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
                             </div>
 
                             <div className="mt-6">
@@ -282,7 +283,7 @@ export default function OpenclawVsDoozaContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-900 mb-2">So What's the Problem?</h4>
                                 <p className="text-blue-800">
-                                    OpenClaw gives you the engine. But an engine isn't a car. You still need the chassis, the steering wheel, the brakes, the doors, and the road to drive on. <strong>That's the gap this article is about.</strong>
+                                    OpenClaw gives you an agent runtime. But a runtime isn't a business platform. You still need user management, security, scheduling, a usable interface, and someone to keep it all running. <strong>That's the gap this article is about.</strong>
                                 </p>
                             </div>
                         </section>
@@ -473,7 +474,7 @@ export default function OpenclawVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is built on OpenClaw. Same powerful framework underneath. But we've already solved every problem listed above — and wrapped it in a platform that's ready for paying customers on day one.
+                                    Dooza is a managed alternative to self-hosting OpenClaw. We've already solved every problem listed above — and wrapped it in a platform that's ready for your business on day one.
                                 </p>
                             </div>
 
@@ -481,10 +482,10 @@ export default function OpenclawVsDoozaContent() {
                                 {[
                                     { icon: Users, title: "6 Pre-Built AI Employees", desc: "Maily (Email), Somi (Social Media), Ranky (SEO), Rachel (Receptionist), Stan (Sales), Linda (Legal). All configured and working from day one." },
                                     { icon: Timer, title: "Autonomous Cron Jobs", desc: "AI employees wake up on schedule, do their work, and report back. Social posts at 9am. Review monitoring at noon. Weekly reports on Monday." },
-                                    { icon: ShieldCheck, title: "Enterprise Security", desc: "Three-layer security: agent whitelists, global blacklists, and sandbox isolation. All active by default. Zero configuration." },
+                                    { icon: ShieldCheck, title: "Security by Default", desc: "Encrypted connections and your approval on anything sensitive. Active by default. Zero configuration." },
                                     { icon: Database, title: "Multi-Tenancy Built In", desc: "Row-level database security, filesystem sandboxing, runtime identity tracking. Each customer's data is completely isolated." },
                                     { icon: Sparkles, title: "Dashboard & Workstations", desc: "Each AI employee gets a purpose-built workspace. Content calendars, analytics, conversation history. Not a blank chat window." },
-                                    { icon: HeartHandshake, title: "Free Concierge Onboarding", desc: "Our team configures your AI employees in a 30-minute call. Your brand voice, your workflows, your tools. You don't lift a finger." }
+                                    { icon: HeartHandshake, title: "Refundable Pilot", desc: "A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees. Your brand voice, your workflows, your tools. 100% refund within 14 days." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-3">
@@ -500,9 +501,9 @@ export default function OpenclawVsDoozaContent() {
                                 <div className="flex items-start gap-3">
                                     <Rocket className="w-6 h-6 text-primary-600 shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="font-bold text-slate-900 mb-2">Setup Time: 30 Minutes</h4>
+                                        <h4 className="font-bold text-slate-900 mb-2">Setup: Same Day</h4>
                                         <p className="text-slate-700">
-                                            Sign up. Book your free onboarding call. Our team configures everything. Your AI employees start working the same day. Compare that to 3-4 months of building infrastructure from scratch.
+                                            Book a free call to scope your pilot. Our team configures everything. Your AI employees start working the same day. Compare that to 3-4 months of building infrastructure from scratch.
                                         </p>
                                     </div>
                                 </div>
@@ -524,17 +525,17 @@ export default function OpenclawVsDoozaContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Setup Time", openclaw: "3-4 months", dooza: "30 minutes" },
-                                            { feature: "Upfront Cost", openclaw: "$45,000-67,500 (dev time)", dooza: "$49/mo, 7-day money-back" },
-                                            { feature: "Monthly Cost", openclaw: "$100-300+/day in API + hosting", dooza: "$49/month flat" },
+                                            { feature: "Setup Time", openclaw: "3-4 months", dooza: "Same day" },
+                                            { feature: "Upfront Cost", openclaw: "$45,000-67,500 (dev time)", dooza: "Refundable pilot — 100% refund within 14 days" },
+                                            { feature: "Monthly Cost", openclaw: "$100-300+/day in API + hosting", dooza: "Depends on the product (see /pricing)" },
                                             { feature: "Multi-Tenancy", openclaw: "Build from scratch", dooza: "Built in" },
-                                            { feature: "Security Layers", openclaw: "Build from scratch", dooza: "3 layers, active by default" },
+                                            { feature: "Security Layers", openclaw: "Build from scratch", dooza: "Encrypted, with your approval on sensitive actions" },
                                             { feature: "Cron Scheduling", openclaw: "Build from scratch", dooza: "Built in" },
                                             { feature: "Dashboard UI", openclaw: "Build from scratch", dooza: "Per-agent workstations" },
                                             { feature: "Real-Time Chat", openclaw: "Build from scratch", dooza: "Slack-like, built in" },
                                             { feature: "AI Employees", openclaw: "Build each one", dooza: "6 pre-built, ready to go" },
                                             { feature: "Memory Management", openclaw: "Manual, fragile", dooza: "Auto-preserved on updates" },
-                                            { feature: "Onboarding Help", openclaw: "GitHub docs + Discord", dooza: "Free concierge team" },
+                                            { feature: "Onboarding Help", openclaw: "GitHub docs + Discord", dooza: "Dooza engineer scopes your pilot" },
                                             { feature: "Technical Skill Required", openclaw: "Senior developer", dooza: "None" },
                                             { feature: "Ongoing Maintenance", openclaw: "You maintain everything", dooza: "We handle it" },
                                             { feature: "Time to First Customer", openclaw: "3-6 months", dooza: "Same day" }
@@ -598,12 +599,12 @@ export default function OpenclawVsDoozaContent() {
                                     <div className="space-y-2">
                                         {[
                                             { label: "Infrastructure development", value: "$0" },
-                                            { label: "Subscription ($49/mo)", value: "$348/year" },
+                                            { label: "Subscription", value: "Depends on product" },
                                             { label: "API costs", value: "Included" },
                                             { label: "Server hosting", value: "Included" },
                                             { label: "Maintenance & updates", value: "Included" },
                                             { label: "Security", value: "Included" },
-                                            { label: "Concierge onboarding", value: "Free" }
+                                            { label: "Pilot scoping call", value: "Free" }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex justify-between items-center py-1.5 text-sm">
                                                 <span className="text-slate-700">{item.label}</span>
@@ -612,8 +613,8 @@ export default function OpenclawVsDoozaContent() {
                                         ))}
                                         <div className="border-t border-green-200 pt-2 mt-2">
                                             <div className="flex justify-between items-center">
-                                                <span className="font-bold text-green-800">Total Year 1</span>
-                                                <span className="text-xl font-bold text-green-600">$348</span>
+                                                <span className="font-bold text-green-800">Start with</span>
+                                                <span className="text-xl font-bold text-green-600"><a href="/pricing" className="hover:underline">Refundable pilot</a></span>
                                             </div>
                                         </div>
                                     </div>
@@ -622,8 +623,8 @@ export default function OpenclawVsDoozaContent() {
 
                             <div className="bg-slate-900 text-white p-8 rounded-xl text-center">
                                 <p className="text-slate-400 text-sm mb-2">The difference</p>
-                                <p className="text-4xl font-bold mb-2">527x - 621x more expensive</p>
-                                <p className="text-slate-400">to build it yourself. And that's assuming everything goes right on the first try.</p>
+                                <p className="text-4xl font-bold mb-2">$183K+ to build it yourself</p>
+                                <p className="text-slate-400">And that's assuming everything goes right on the first try. Dooza pricing depends on the product, and every product starts with a refundable pilot — 100% refund within 14 days.</p>
                             </div>
                         </section>
 
@@ -669,7 +670,7 @@ export default function OpenclawVsDoozaContent() {
                                             "You want AI employees working for your business today",
                                             "You're a business owner, not a developer",
                                             "You need email, social media, SEO, calls, sales, and legal handled",
-                                            "You want predictable $49/month pricing, no surprises",
+                                            "You want to start with a refundable pilot (100% refund within 14 days)",
                                             "You'd rather spend time on your business than building infrastructure"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-sm text-slate-700">
@@ -687,7 +688,7 @@ export default function OpenclawVsDoozaContent() {
                                     For Builders: The Best of Both Worlds
                                 </h4>
                                 <p className="text-slate-700">
-                                    If you're a developer who wants to <strong>build AI employees</strong> but doesn't want to build the <strong>platform</strong>, Dooza's upcoming marketplace is the answer. Define the agent's personality in SOUL.md, write instructions in AGENTS.md, add YAML tools. We handle tenancy, auth, billing, and deployment. <strong>You build the brain. We run the body.</strong>
+                                    If you want <strong>custom AI agents</strong> but don't want to build the <strong>platform</strong>, Dooza Agents is the answer. It's Dooza's AI agentic platform: Dooza engineers build and maintain custom agents around your workflows, and we handle hosting, security, and deployment. <strong>You define the job. We run the agent.</strong>
                                 </p>
                                 <p className="text-slate-600 text-sm mt-3">
                                     <Link href="/blog/ai-employees-openclaw-business" className="text-primary-600 hover:underline font-medium">Read our full guide to building AI employees on OpenClaw &rarr;</Link>
@@ -715,13 +716,13 @@ export default function OpenclawVsDoozaContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Sign Up for Dooza",
-                                        desc: "Starts at $49/mo with a 7-day money-back guarantee. No long-term commitment."
+                                        title: "Start Your Pilot",
+                                        desc: "Every Dooza product starts with a refundable pilot — 100% refund within 14 days. Pricing depends on the product; see /pricing."
                                     },
                                     {
                                         step: "2",
-                                        title: "Book Your Free Onboarding Call",
-                                        desc: "Our concierge team configures your AI employees — Maily (email), Somi (social), Ranky (SEO), Rachel (receptionist), Stan (sales), and Linda (legal) — to match your business, brand voice, and workflows."
+                                        title: "Book a Free Pilot Call",
+                                        desc: "A Dooza engineer configures your AI employees — Maily (email), Somi (social), Ranky (SEO), Rachel (receptionist), Stan (sales), and Linda (legal) — to match your business, brand voice, and workflows."
                                     },
                                     {
                                         step: "3",
@@ -748,14 +749,14 @@ export default function OpenclawVsDoozaContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Stop Building Infrastructure. Start Building Your Business.</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Every week you spend building platform infrastructure is a week your competitors are serving customers. Dooza gives you the same OpenClaw power — without the months of development.
+                                    Every week you spend building platform infrastructure is a week your competitors are serving customers. Dooza is a managed alternative to self-hosting OpenClaw — agents that take real actions, without the months of development.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get Started <ArrowRight className="w-4 h-4" />
+                                        Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book Free Onboarding
+                                        <Calendar className="w-4 h-4" /> Book a free pilot call
                                     </a>
                                 </div>
                             </div>

@@ -26,11 +26,11 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL('https://www.dooza.ai'),
   title: {
-    default: 'Dooza | Forward Deployed AI Engineers for Small Business',
+    default: 'Dooza | AI-Native Company: AI Workforce App & AI Agents Platform',
     template: '%s | Dooza',
   },
-  description: 'A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it — built on the Dooza Workforce and Workflow platform.',
-  keywords: ['forward deployed engineers', 'AI deployment services', 'AI employees', 'AI agents', 'business automation', 'AI for small business', 'email automation', 'social media AI'],
+  description: 'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.',
+  keywords: ['AI employees', 'AI employees for small business', 'forward deployed engineers', 'AI deployment services', 'AI agents', 'business automation', 'AI for small business', 'email automation', 'social media AI'],
   authors: [{ name: 'Dooza Team' }],
   creator: 'Dooza',
   publisher: 'Dooza',
@@ -50,14 +50,14 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://www.dooza.ai',
     siteName: 'Dooza',
-    title: 'Dooza | Forward Deployed AI Engineers for Small Business',
-    description: 'A Dooza engineer embeds with your business, finds the work that repeats, and deploys AI that handles it — built on the Dooza Workforce and Workflow platform.',
+    title: 'Dooza | AI-Native Company: AI Workforce App & AI Agents Platform',
+    description: 'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.',
     images: [
       {
         url: 'https://www.dooza.ai/logo.png',
         width: 512,
         height: 512,
-        alt: 'Dooza - Forward Deployed AI Engineers',
+        alt: 'Dooza - AI-native company building AI products and services for small businesses',
       },
     ],
   },
@@ -65,8 +65,8 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@sibinarendran',
     creator: '@sibinarendran',
-    title: 'Dooza | Forward Deployed AI Engineers for Small Business',
-    description: 'A Dooza engineer embeds with your business and deploys AI that handles the work that repeats.',
+    title: 'Dooza | AI-Native Company: AI Workforce App & AI Agents Platform',
+    description: 'Dooza is an AI-native company: the Dooza Workforce app and the Dooza Agents platform. Every product starts with a refundable pilot — 100% refund within 14 days.',
     images: ['https://www.dooza.ai/logo.png'],
   },
   alternates: {
@@ -196,7 +196,7 @@ export default function RootLayout({ children }) {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('set', 'linker', {
-                  domains: ['dooza.ai', 'www.dooza.ai', 'workforce.dooza.ai']
+                  domains: ['dooza.ai', 'www.dooza.ai', 'accounts.dooza.ai', 'workflow.dooza.ai', 'workforce.dooza.ai']
                 });
                 gtag('config', '${GOOGLE_ADS_ID}');
               `}
