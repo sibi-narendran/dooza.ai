@@ -16,7 +16,7 @@ const isProductRoute = (pathname) => (
     || pathname?.startsWith('/agents/')
 );
 
-const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = true, showIndustry = true, ctaType = 'signup', ctaSource = 'navbar' }) => {
+const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = true, showIndustry = true, ctaType = 'signup', ctaSource = 'navbar', ctaLabel: ctaLabelOverride }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
@@ -31,9 +31,9 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     const solidNav = scrolled || isOpen;
     const productPage = isProductRoute(pathname);
     const isDemoCta = productPage ? ctaType === 'demo' : true;
-    const ctaLabel = productPage
+    const ctaLabel = ctaLabelOverride || (productPage
         ? signupLabel || (isDemoCta ? 'Book a free pilot call' : 'Start your pilot')
-        : 'Book a free pilot call';
+        : 'Book a free pilot call');
 
     const handleDemoClick = () => {
         openModal();
@@ -302,6 +302,13 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                                         AI Receptionist
                                                     </Link>
                                                     <Link
+                                                        href="/grow"
+                                                        onClick={() => setIndustriesOpen(false)}
+                                                        className={`text-sm font-semibold transition-colors ${isDark ? 'text-primary-300 hover:text-white' : 'text-primary-700 hover:text-primary-900'}`}
+                                                    >
+                                                        Dooza Grow
+                                                    </Link>
+                                                    <Link
                                                         href="/generative-engine-optimization"
                                                         onClick={() => setIndustriesOpen(false)}
                                                         className={`text-sm font-semibold transition-colors ${isDark ? 'text-primary-300 hover:text-white' : 'text-primary-700 hover:text-primary-900'}`}
@@ -502,6 +509,17 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         }`}
                                 >
                                     AI Receptionist
+                                    <ArrowRight className="h-4 w-4" />
+                                </Link>
+                                <Link
+                                    href="/grow"
+                                    onClick={() => setIsOpen(false)}
+                                    className={`mx-3 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-semibold ${isDark
+                                        ? 'bg-primary-500/15 text-white'
+                                        : 'bg-primary-50 text-primary-800'
+                                        }`}
+                                >
+                                    Dooza Grow
                                     <ArrowRight className="h-4 w-4" />
                                 </Link>
                                 <Link

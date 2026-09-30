@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import PricingSection from '@/components/sections/PricingSection';
+import GrowPricingSection from '@/components/sections/GrowPricingSection';
 import FAQSection from '@/components/sections/FAQSection';
 import FinalCTASection from '@/components/sections/FinalCTASection';
 import { faqSchema } from '@/lib/homeData';
@@ -40,6 +41,7 @@ export default function PricingPage() {
                     <Navbar />
                     <main>
                         <PricingSection headingLevel="h1" />
+                        <GrowPricingSection />
                         <FAQSection />
                         <FinalCTASection />
                     </main>

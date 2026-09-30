@@ -64,6 +64,41 @@ const staticPages = [
         description: 'Best Profound alternatives for AI visibility, AEO, and GEO in 2026.',
     },
     {
+        title: 'Customer Service Outsourcing Guide',
+        url: `${SITE_URL}/customer-service-outsourcing`,
+        description: 'Customer service and customer support outsourcing in 2026: the four models, costs per hour and per ticket, pros and cons, and how to start.',
+    },
+    {
+        title: 'Customer Service Outsourcing for Small Business',
+        url: `${SITE_URL}/customer-service-outsourcing-for-small-business`,
+        description: 'How small businesses outsource customer service without minimum seats or long contracts.',
+    },
+    {
+        title: 'Ecommerce Customer Service Outsourcing',
+        url: `${SITE_URL}/ecommerce-customer-service-outsourcing`,
+        description: 'What online stores should outsource, 2026 costs, and BPO vs VA vs AI plus human.',
+    },
+    {
+        title: 'Customer Service Virtual Assistant',
+        url: `${SITE_URL}/customer-service-virtual-assistant`,
+        description: 'What a customer service VA does and costs, where to hire, and when AI plus human review is the better hire.',
+    },
+    {
+        title: 'Ecommerce Virtual Assistant',
+        url: `${SITE_URL}/ecommerce-virtual-assistant`,
+        description: 'Ecommerce VA tasks, 2026 costs, and which store tasks to delegate vs automate.',
+    },
+    {
+        title: 'Shopify Virtual Assistant',
+        url: `${SITE_URL}/shopify-virtual-assistant`,
+        description: 'Shopify VA tasks, costs, safe staff permissions, and AI for Shopify support.',
+    },
+    {
+        title: 'Gorgias Alternatives',
+        url: `${SITE_URL}/gorgias-alternatives`,
+        description: 'Eight Gorgias alternatives compared on September 2026 pricing and AI fees.',
+    },
+    {
         title: 'Sintra Alternatives',
         url: `${SITE_URL}/sintra-alternatives`,
         description: 'Alternatives to Sintra AI.',

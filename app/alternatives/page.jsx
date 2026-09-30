@@ -37,6 +37,13 @@ export default function AlternativesPage() {
             doozaAdvantage: 'GEO done for you by Ranky, not another dashboard'
         },
         {
+            name: 'Gorgias Alternatives',
+            slug: null,
+            directLink: '/gorgias-alternatives',
+            tagline: '8 Shopify helpdesks compared — ticket pricing, AI fees, fit',
+            doozaAdvantage: 'Support done for you, inside Gorgias or your inbox'
+        },
+        {
             name: 'Dooza vs Profound',
             slug: null,
             directLink: '/dooza-vs-profound',

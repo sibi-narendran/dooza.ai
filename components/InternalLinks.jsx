@@ -6,6 +6,10 @@ import { blogPosts } from '@/lib/blogData';
 
 // Define related post mappings for better internal linking
 const relatedPostMappings = {
+    'gorgias-pricing': ['gorgias-ai', 'best-ai-chatbot-shopify', 'customer-service-outsourcing-cost'],
+    'gorgias-ai': ['gorgias-pricing', 'best-ai-chatbot-shopify', 'ai-for-shopify-store'],
+    'customer-service-outsourcing-cost': ['best-customer-service-outsourcing-companies', 'gorgias-pricing', 'replace-va-with-ai'],
+    'best-customer-service-outsourcing-companies': ['customer-service-outsourcing-cost', 'ai-employees-vs-virtual-assistants', 'gorgias-ai'],
     'profound-ai-alternative': ['profound-vs-peec-ai', 'profound-ai-pricing', 'ai-visibility-tools'],
     'profound-vs-peec-ai': ['profound-ai-alternative', 'ai-visibility-tools', 'profound-ai-pricing'],
     'ai-visibility-tools': ['profound-ai-alternative', 'ai-overviews-tracking', 'ai-citations'],
