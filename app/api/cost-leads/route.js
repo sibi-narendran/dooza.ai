@@ -19,6 +19,12 @@ const STATUS_POTENTIAL = 'stat_nkpN4inzaYIfOaao3HfnSSCbl5hfQL7CjwR9KhzKFZ2';
 const FUNNEL_TAG = 'fb-cut-costs';
 const QUALIFIED_TAG = 'fb-cut-costs-qualified';
 const PAGE_URL = 'https://www.dooza.ai/cut-costs';
+const SMS_FROM = '+17373901099';
+const WELCOME_MARKER = 'what eats most of your team';
+const WELCOME_SMS =
+    "Hi, it's Sibi, founder of Dooza. Thanks for checking how AI can cut your costs! " +
+    `Quick question so I can put your plan together: ${WELCOME_MARKER}'s time each week? ` +
+    'Reply STOP to opt out.';
 
 const ROLE_OPTIONS = {
     owner: 'Owner / founder',
@@ -148,6 +154,34 @@ function readAttribution(raw = {}) {
     return out;
 }
 
+// Instant reply to every new number, sent from the Close number so replies
+// land in Close. Skipped if this lead already got it (repeat submits).
+// Kill switch: CUT_COSTS_WELCOME_SMS=0.
+async function sendWelcomeSms(apiKey, leadId, phone) {
+    if (process.env.CUT_COSTS_WELCOME_SMS === '0') return false;
+    try {
+        const result = await closeFetch(apiKey, `/activity/sms/?lead_id=${leadId}&_limit=50`);
+        const sent = (result?.data || []).some(
+            (sms) => sms.direction === 'outbound' && String(sms.text || '').includes(WELCOME_MARKER),
+        );
+        if (sent) return false;
+    } catch {
+        // Can't check history; send anyway.
+    }
+    await closeFetch(apiKey, '/activity/sms/', {
+        method: 'POST',
+        body: JSON.stringify({
+            lead_id: leadId,
+            local_phone: SMS_FROM,
+            remote_phone: phone,
+            text: WELCOME_SMS,
+            status: 'outbox',
+            send_in: 30,
+        }),
+    });
+    return true;
+}
+
 async function handlePhone(apiKey, body, request) {
     const phone = normalizePhone(body.phone);
     if (!phone) {
@@ -202,6 +236,12 @@ async function handlePhone(apiKey, body, request) {
         });
     } catch (error) {
         console.error('cost-leads: note failed', error.body || error.message);
+    }
+
+    try {
+        await sendWelcomeSms(apiKey, leadId, phone);
+    } catch (error) {
+        console.error('cost-leads: welcome SMS failed', error.body || error.message);
     }
 
     return NextResponse.json({ leadId, token: sign(leadId) });

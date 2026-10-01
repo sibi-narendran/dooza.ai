@@ -122,10 +122,8 @@ export default function CutCostsFunnel() {
         inputRef.current?.blur();
         const e164 = toE164(phone);
 
-        // Advanced matching for the pixel, then a custom (non-optimizing) event.
-        const pixelId = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '777622852092389';
-        fbq('init', pixelId, { ph: e164.replace(/\D/g, '') });
-        fbq('trackCustom', 'CutCostsPhone');
+        // Nothing goes to Meta here. Every number is a lead for Close, but
+        // Meta only hears about qualified ones (see chooseBudget).
         gtagEvent('cut_costs_phone', { event_category: 'cut_costs' });
 
         // Save in the background. The visitor moves on instantly; the
@@ -162,11 +160,13 @@ export default function CutCostsFunnel() {
         const ok = isQualified(role, budget);
         const eventId = typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : `cc-${Date.now()}`;
 
+        // Meta gets a Lead only for qualified visitors, so it optimizes toward
+        // them. Unqualified numbers stay in Close and never reach Meta.
         if (ok) {
+            const pixelId = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '777622852092389';
+            fbq('init', pixelId, { ph: toE164(phone).replace(/\D/g, '') });
             fbq('track', 'Lead', { content_name: 'cut_costs_qualified', lead_type: role, budget }, { eventID: eventId });
             gtagEvent('generate_lead', { event_category: 'cut_costs', role, budget });
-        } else {
-            fbq('trackCustom', 'CutCostsUnqualified', { role, budget });
         }
 
         let fbc = readCookie('_fbc');
