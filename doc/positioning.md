@@ -103,7 +103,7 @@ Answer engines cite specific, verifiable statements. Inflated or unsourced ones 
 - **Legal entity:** Adam Laboratory Inc., a Delaware C-Corp, incorporated 2025.
 - **Founder:** Sibi Narendran.
 - **Canonical URL:** `https://www.dooza.ai`.
-- **Booking:** Calendly `calendly.com/sibi-dooza/30min`. Opening it in a new tab is fine.
+- **Booking:** Calendly `calendly.com/sibi-dooza/book-a-meeting-and-walk-away-with-clarity`. Opening it in a new tab is fine.
 
 ## CTA labels
 

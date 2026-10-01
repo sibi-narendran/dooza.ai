@@ -186,7 +186,7 @@ const howToSchema = {
             "position": 2,
             "name": "Book Onboarding Call",
             "text": "Book a free 30-minute pilot call where a Dooza engineer scopes your pilot and sets up your AI employees with you",
-            "url": "https://calendly.com/sibi-dooza/30min"
+            "url": "https://calendly.com/sibi-dooza/book-a-meeting-and-walk-away-with-clarity"
         },
         {
             "@type": "HowToStep",
