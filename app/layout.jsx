@@ -115,16 +115,20 @@ export default function RootLayout({ children }) {
           <link key={index} rel={hint.rel} href={hint.href} />
         ))}
         <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('js-loaded')` }} />
-        {/* Apollo Website Visitor Tracking — inline so it appears in server HTML */}
+        {/* Apollo Website Visitor Tracking — inline so it appears in server HTML.
+            Skipped on the /cut-costs ad page, which has to load as fast as possible. */}
         <script dangerouslySetInnerHTML={{ __html: `
+          if(location.pathname.indexOf('/cut-costs')!==0){
           function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
           o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
           o.onload=function(){window.trackingFunctions.onLoad({appId:"6a280b8f5b4466000cc27d1f"})},
-          document.head.appendChild(o)}initApollo();
+          document.head.appendChild(o)}initApollo();}
         ` }} />
-        {/* Calendly widget — loads async, used by BookingModal and /book page */}
+        {/* Calendly widget — loads async, used by BookingModal and /book page.
+            /cut-costs loads it on demand instead. */}
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
+            if (location.pathname.indexOf('/cut-costs')===0) return;
             if (document.getElementById('calendly-widget-js')) return;
             var s = document.createElement('script');
             s.id = 'calendly-widget-js';
