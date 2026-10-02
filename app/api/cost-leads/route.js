@@ -16,8 +16,6 @@ export const dynamic = 'force-dynamic';
 
 const CLOSE_BASE = 'https://api.close.com/api/v1';
 const STATUS_POTENTIAL = 'stat_nkpN4inzaYIfOaao3HfnSSCbl5hfQL7CjwR9KhzKFZ2';
-const FUNNEL_TAG = 'fb-cut-costs';
-const QUALIFIED_TAG = 'fb-cut-costs-qualified';
 const PAGE_URL = 'https://www.dooza.ai/cut-costs';
 const SMS_FROM = '+17373901099';
 const WELCOME_MARKER = 'what eats most of your team';
@@ -131,20 +129,6 @@ async function findLeadByPhone(apiKey, phone) {
     }
 }
 
-async function addTag(apiKey, lead, tag) {
-    const custom = lead?.custom && typeof lead.custom === 'object' ? lead.custom : {};
-    const tags = Array.isArray(custom.Tags) ? custom.Tags : [];
-    if (tags.includes(tag)) return;
-    try {
-        await closeFetch(apiKey, `/lead/${lead.id}/`, {
-            method: 'PUT',
-            body: JSON.stringify({ custom: { Tags: [...tags, tag] } }),
-        });
-    } catch (error) {
-        console.error('cost-leads: tag update failed', error.body || error.message);
-    }
-}
-
 function readAttribution(raw = {}) {
     const out = {};
     ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'ad_id', 'adset_id'].forEach((key) => {
@@ -194,12 +178,10 @@ async function handlePhone(apiKey, body, request) {
 
     if (existing) {
         leadId = existing.id;
-        await addTag(apiKey, existing, FUNNEL_TAG);
     } else {
         const custom = {
             'Lead Source': attribution.utm_source ? `${attribution.utm_source}-cut-costs` : 'facebook-cut-costs',
             'Landing Page': '/cut-costs',
-            Tags: [FUNNEL_TAG],
         };
         if (attribution.utm_campaign) custom['Ad Campaign'] = attribution.utm_campaign;
         if (attribution.utm_content) custom['Ad Group'] = attribution.utm_content;
@@ -211,24 +193,14 @@ async function handlePhone(apiKey, body, request) {
             contacts: [{ name: '', phones: [{ phone, type: 'mobile' }] }],
             custom,
         };
-        // Tags is a choices field in Close: an unknown tag rejects the whole
-        // create. Fall back to dropping Tags first so attribution survives,
-        // then to no custom fields at all.
         let created;
         try {
             created = await closeFetch(apiKey, '/lead/', { method: 'POST', body: JSON.stringify(lead) });
         } catch (error) {
             if (error.status !== 400) throw error;
-            console.error('cost-leads: create failed, retrying without Tags', error.body);
-            delete lead.custom.Tags;
-            try {
-                created = await closeFetch(apiKey, '/lead/', { method: 'POST', body: JSON.stringify(lead) });
-            } catch (retryError) {
-                if (retryError.status !== 400) throw retryError;
-                console.error('cost-leads: create failed, retrying without custom fields', retryError.body);
-                delete lead.custom;
-                created = await closeFetch(apiKey, '/lead/', { method: 'POST', body: JSON.stringify(lead) });
-            }
+            console.error('cost-leads: create with custom fields failed, retrying without', error.body);
+            delete lead.custom;
+            created = await closeFetch(apiKey, '/lead/', { method: 'POST', body: JSON.stringify(lead) });
         }
         leadId = created.id;
     }
@@ -248,13 +220,17 @@ async function handlePhone(apiKey, body, request) {
         console.error('cost-leads: note failed', error.body || error.message);
     }
 
+    // sms: 'sent', 'skipped' (already texted or switched off), or the Close
+    // HTTP status on failure, so a broken welcome text is visible.
+    let sms;
     try {
-        await sendWelcomeSms(apiKey, leadId, phone);
+        sms = (await sendWelcomeSms(apiKey, leadId, phone)) ? 'sent' : 'skipped';
     } catch (error) {
+        sms = `error ${error.status || 'network'}`;
         console.error('cost-leads: welcome SMS failed', error.body || error.message);
     }
 
-    return NextResponse.json({ leadId, token: sign(leadId) });
+    return NextResponse.json({ leadId, token: sign(leadId), sms });
 }
 
 async function handleQualify(apiKey, body, request) {
@@ -280,8 +256,6 @@ async function handleQualify(apiKey, body, request) {
                 body: JSON.stringify({ lead_id: leadId, note }),
             });
             if (qualified) {
-                const lead = await closeFetch(apiKey, `/lead/${leadId}/?_fields=id,custom`);
-                await addTag(apiKey, lead, QUALIFIED_TAG);
                 await closeFetch(apiKey, '/task/', {
                     method: 'POST',
                     body: JSON.stringify({
