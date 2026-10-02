@@ -265,6 +265,9 @@ async function handleQualify(apiKey, body, request) {
     const qualified = isQualified({ role, budget });
     const eventId = clean(body.eventId, 80) || crypto.randomUUID();
 
+    // crm: 'ok', 'skipped' (no signed lead id), or the Close HTTP status on
+    // failure. Status only, no data, so outages show up in the response.
+    let crm = 'skipped';
     if (leadId && validToken(leadId, body.token)) {
         const note = [
             `Qualifying answers on /cut-costs: ${qualified ? 'QUALIFIED' : 'not qualified'}`,
@@ -289,7 +292,9 @@ async function handleQualify(apiKey, body, request) {
                     }),
                 });
             }
+            crm = 'ok';
         } catch (error) {
+            crm = `error ${error.status || 'network'}`;
             console.error('cost-leads: qualify update failed', error.body || error.message);
         }
     }
@@ -316,7 +321,7 @@ async function handleQualify(apiKey, body, request) {
         }
     }
 
-    return NextResponse.json({ qualified, eventId, capi });
+    return NextResponse.json({ qualified, eventId, capi, crm });
 }
 
 export async function POST(request) {
