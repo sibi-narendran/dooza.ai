@@ -211,14 +211,24 @@ async function handlePhone(apiKey, body, request) {
             contacts: [{ name: '', phones: [{ phone, type: 'mobile' }] }],
             custom,
         };
+        // Tags is a choices field in Close: an unknown tag rejects the whole
+        // create. Fall back to dropping Tags first so attribution survives,
+        // then to no custom fields at all.
         let created;
         try {
             created = await closeFetch(apiKey, '/lead/', { method: 'POST', body: JSON.stringify(lead) });
         } catch (error) {
             if (error.status !== 400) throw error;
-            console.error('cost-leads: create with custom fields failed, retrying without', error.body);
-            delete lead.custom;
-            created = await closeFetch(apiKey, '/lead/', { method: 'POST', body: JSON.stringify(lead) });
+            console.error('cost-leads: create failed, retrying without Tags', error.body);
+            delete lead.custom.Tags;
+            try {
+                created = await closeFetch(apiKey, '/lead/', { method: 'POST', body: JSON.stringify(lead) });
+            } catch (retryError) {
+                if (retryError.status !== 400) throw retryError;
+                console.error('cost-leads: create failed, retrying without custom fields', retryError.body);
+                delete lead.custom;
+                created = await closeFetch(apiKey, '/lead/', { method: 'POST', body: JSON.stringify(lead) });
+            }
         }
         leadId = created.id;
     }
