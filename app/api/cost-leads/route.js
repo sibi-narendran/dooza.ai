@@ -16,6 +16,8 @@ export const dynamic = 'force-dynamic';
 
 const CLOSE_BASE = 'https://api.close.com/api/v1';
 const STATUS_POTENTIAL = 'stat_nkpN4inzaYIfOaao3HfnSSCbl5hfQL7CjwR9KhzKFZ2';
+const STATUS_NEW = 'stat_25PYqOb4eJWxpmz8hRnuMnNxG8H2FJu9xksZWKeDOb5';
+const STATUS_QUALIFIED = 'stat_T56TOw0TsAkZLOeOuGTNw37ygQdkglmQzMMFE1jTkoI';
 const PAGE_URL = 'https://www.dooza.ai/cut-costs';
 const SMS_FROM = '+17373901099';
 const WELCOME_MARKER = 'what eats most of your team';
@@ -256,6 +258,16 @@ async function handleQualify(apiKey, body, request) {
                 body: JSON.stringify({ lead_id: leadId, note }),
             });
             if (qualified) {
+                // Qualified leads get the Close "Qualified" status, which is how
+                // they are found. Only upgrades early statuses, so a lead someone
+                // already moved (Customer, Do Not Contact...) is left alone.
+                const current = await closeFetch(apiKey, `/lead/${leadId}/?_fields=status_id`);
+                if ([STATUS_POTENTIAL, STATUS_NEW].includes(current?.status_id)) {
+                    await closeFetch(apiKey, `/lead/${leadId}/`, {
+                        method: 'PUT',
+                        body: JSON.stringify({ status_id: STATUS_QUALIFIED }),
+                    });
+                }
                 await closeFetch(apiKey, '/task/', {
                     method: 'POST',
                     body: JSON.stringify({
