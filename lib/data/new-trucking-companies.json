@@ -1,0 +1,489 @@
+{
+ "generatedAt": "2026-10-06",
+ "source": {
+  "name": "FMCSA Company Census File",
+  "dataset": "az4n-8mr2",
+  "url": "https://data.transportation.gov/Trucking-and-Motorcoaches/Company-Census-File/az4n-8mr2",
+  "latestRecord": "2026-10-05"
+ },
+ "definition": "Interstate carriers (carrier operation A) whose classification includes Authorized For Hire, counted by the date the USDOT record was added.",
+ "monthly": [
+  {
+   "month": "2023-01",
+   "count": 9059
+  },
+  {
+   "month": "2023-02",
+   "count": 8274
+  },
+  {
+   "month": "2023-03",
+   "count": 9348
+  },
+  {
+   "month": "2023-04",
+   "count": 7227
+  },
+  {
+   "month": "2023-05",
+   "count": 7526
+  },
+  {
+   "month": "2023-06",
+   "count": 6967
+  },
+  {
+   "month": "2023-07",
+   "count": 6542
+  },
+  {
+   "month": "2023-08",
+   "count": 7623
+  },
+  {
+   "month": "2023-09",
+   "count": 6562
+  },
+  {
+   "month": "2023-10",
+   "count": 6460
+  },
+  {
+   "month": "2023-11",
+   "count": 5410
+  },
+  {
+   "month": "2023-12",
+   "count": 5084
+  },
+  {
+   "month": "2024-01",
+   "count": 6728
+  },
+  {
+   "month": "2024-02",
+   "count": 7237
+  },
+  {
+   "month": "2024-03",
+   "count": 7492
+  },
+  {
+   "month": "2024-04",
+   "count": 7232
+  },
+  {
+   "month": "2024-05",
+   "count": 7040
+  },
+  {
+   "month": "2024-06",
+   "count": 6291
+  },
+  {
+   "month": "2024-07",
+   "count": 6626
+  },
+  {
+   "month": "2024-08",
+   "count": 6847
+  },
+  {
+   "month": "2024-09",
+   "count": 6381
+  },
+  {
+   "month": "2024-10",
+   "count": 6496
+  },
+  {
+   "month": "2024-11",
+   "count": 5484
+  },
+  {
+   "month": "2024-12",
+   "count": 5465
+  },
+  {
+   "month": "2025-01",
+   "count": 7121
+  },
+  {
+   "month": "2025-02",
+   "count": 7105
+  },
+  {
+   "month": "2025-03",
+   "count": 7942
+  },
+  {
+   "month": "2025-04",
+   "count": 6965
+  },
+  {
+   "month": "2025-05",
+   "count": 6730
+  },
+  {
+   "month": "2025-06",
+   "count": 6580
+  },
+  {
+   "month": "2025-07",
+   "count": 7038
+  },
+  {
+   "month": "2025-08",
+   "count": 6866
+  },
+  {
+   "month": "2025-09",
+   "count": 6599
+  },
+  {
+   "month": "2025-10",
+   "count": 6714
+  },
+  {
+   "month": "2025-11",
+   "count": 5441
+  },
+  {
+   "month": "2025-12",
+   "count": 5615
+  },
+  {
+   "month": "2026-01",
+   "count": 7320
+  },
+  {
+   "month": "2026-02",
+   "count": 7240
+  },
+  {
+   "month": "2026-03",
+   "count": 8579
+  },
+  {
+   "month": "2026-04",
+   "count": 8224
+  },
+  {
+   "month": "2026-05",
+   "count": 7227
+  },
+  {
+   "month": "2026-06",
+   "count": 7455
+  },
+  {
+   "month": "2026-07",
+   "count": 8098
+  },
+  {
+   "month": "2026-08",
+   "count": 7542
+  },
+  {
+   "month": "2026-09",
+   "count": 7039
+  }
+ ],
+ "quarter": {
+  "label": "Q3 2026",
+  "prevLabel": "Q3 2025",
+  "start": "2026-07-01",
+  "end": "2026-10-01",
+  "states": [
+   {
+    "state": "TX",
+    "count": 2667,
+    "prevYear": 2556
+   },
+   {
+    "state": "CA",
+    "count": 2315,
+    "prevYear": 1921
+   },
+   {
+    "state": "FL",
+    "count": 1853,
+    "prevYear": 1634
+   },
+   {
+    "state": "IL",
+    "count": 1192,
+    "prevYear": 984
+   },
+   {
+    "state": "PA",
+    "count": 1117,
+    "prevYear": 934
+   },
+   {
+    "state": "OH",
+    "count": 1042,
+    "prevYear": 854
+   },
+   {
+    "state": "GA",
+    "count": 1005,
+    "prevYear": 1051
+   },
+   {
+    "state": "NJ",
+    "count": 868,
+    "prevYear": 786
+   },
+   {
+    "state": "NC",
+    "count": 810,
+    "prevYear": 823
+   },
+   {
+    "state": "IN",
+    "count": 545,
+    "prevYear": 587
+   },
+   {
+    "state": "NY",
+    "count": 508,
+    "prevYear": 444
+   },
+   {
+    "state": "VA",
+    "count": 492,
+    "prevYear": 456
+   },
+   {
+    "state": "MI",
+    "count": 474,
+    "prevYear": 390
+   },
+   {
+    "state": "AZ",
+    "count": 456,
+    "prevYear": 363
+   },
+   {
+    "state": "MN",
+    "count": 441,
+    "prevYear": 278
+   },
+   {
+    "state": "TN",
+    "count": 430,
+    "prevYear": 422
+   },
+   {
+    "state": "SC",
+    "count": 405,
+    "prevYear": 375
+   },
+   {
+    "state": "MD",
+    "count": 402,
+    "prevYear": 394
+   },
+   {
+    "state": "WA",
+    "count": 370,
+    "prevYear": 325
+   },
+   {
+    "state": "MO",
+    "count": 341,
+    "prevYear": 314
+   },
+   {
+    "state": "CO",
+    "count": 326,
+    "prevYear": 268
+   },
+   {
+    "state": "AL",
+    "count": 309,
+    "prevYear": 305
+   },
+   {
+    "state": "MA",
+    "count": 296,
+    "prevYear": 249
+   },
+   {
+    "state": "KY",
+    "count": 284,
+    "prevYear": 251
+   },
+   {
+    "state": "WI",
+    "count": 244,
+    "prevYear": 233
+   },
+   {
+    "state": "OK",
+    "count": 242,
+    "prevYear": 246
+   },
+   {
+    "state": "MS",
+    "count": 242,
+    "prevYear": 263
+   },
+   {
+    "state": "LA",
+    "count": 240,
+    "prevYear": 203
+   },
+   {
+    "state": "CT",
+    "count": 224,
+    "prevYear": 205
+   },
+   {
+    "state": "IA",
+    "count": 208,
+    "prevYear": 165
+   },
+   {
+    "state": "NV",
+    "count": 207,
+    "prevYear": 182
+   },
+   {
+    "state": "OR",
+    "count": 196,
+    "prevYear": 164
+   },
+   {
+    "state": "UT",
+    "count": 171,
+    "prevYear": 180
+   },
+   {
+    "state": "NE",
+    "count": 141,
+    "prevYear": 120
+   },
+   {
+    "state": "KS",
+    "count": 140,
+    "prevYear": 132
+   },
+   {
+    "state": "AR",
+    "count": 139,
+    "prevYear": 204
+   },
+   {
+    "state": "ID",
+    "count": 129,
+    "prevYear": 112
+   },
+   {
+    "state": "NM",
+    "count": 115,
+    "prevYear": 105
+   },
+   {
+    "state": "DE",
+    "count": 93,
+    "prevYear": 105
+   },
+   {
+    "state": "WY",
+    "count": 86,
+    "prevYear": 67
+   },
+   {
+    "state": "RI",
+    "count": 70,
+    "prevYear": 57
+   },
+   {
+    "state": "NH",
+    "count": 66,
+    "prevYear": 58
+   },
+   {
+    "state": "ND",
+    "count": 62,
+    "prevYear": 47
+   },
+   {
+    "state": "WV",
+    "count": 59,
+    "prevYear": 58
+   },
+   {
+    "state": "SD",
+    "count": 59,
+    "prevYear": 43
+   },
+   {
+    "state": "MT",
+    "count": 47,
+    "prevYear": 47
+   },
+   {
+    "state": "ME",
+    "count": 31,
+    "prevYear": 24
+   },
+   {
+    "state": "VT",
+    "count": 21,
+    "prevYear": 21
+   },
+   {
+    "state": "DC",
+    "count": 12,
+    "prevYear": 21
+   },
+   {
+    "state": "AK",
+    "count": 9,
+    "prevYear": 3
+   },
+   {
+    "state": "HI",
+    "count": 3,
+    "prevYear": 11
+   }
+  ],
+  "total": 22204,
+  "prevTotal": 20040
+ },
+ "fleetSize": [
+  {
+   "bucket": "0",
+   "count": 137
+  },
+  {
+   "bucket": "1",
+   "count": 14520
+  },
+  {
+   "bucket": "2",
+   "count": 5599
+  },
+  {
+   "bucket": "3-5",
+   "count": 1659
+  },
+  {
+   "bucket": "6-10",
+   "count": 515
+  },
+  {
+   "bucket": "11+",
+   "count": 249
+  }
+ ],
+ "cohort": {
+  "label": "Q1 2025",
+  "active": 17002,
+  "inactive": 5143,
+  "pending": 23
+ }
+}

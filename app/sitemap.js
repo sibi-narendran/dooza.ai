@@ -146,6 +146,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/new-trucking-companies`,
+            lastModified: pageDate('2026-10-06'),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/generative-engine-optimization`,
             lastModified: pageDate('2026-09-25'),
             changeFrequency: 'weekly',
