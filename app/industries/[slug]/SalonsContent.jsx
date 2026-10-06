@@ -183,6 +183,15 @@ export default function SalonsContent({ page }) {
                 </div>
             </section>
 
+            {/* Answer-first block for AI engines and searchers: the sub-question, answered in one paragraph. */}
+            <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
+                <div className="mx-auto max-w-3xl">
+                    <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI receptionist for salons do?</h2>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI receptionist for salons answers every call 24/7, books appointments by stylist availability and specialty, confirms and reschedules by text, and sends SMS reminders to cut no-shows. Dooza sets it up on your existing number and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
+                </div>
+            </section>
+
             {/* ===== PROBLEM ===== */}
             <section className="py-16 md:py-24 bg-white">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

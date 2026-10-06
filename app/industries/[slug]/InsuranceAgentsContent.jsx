@@ -172,6 +172,15 @@ export default function InsuranceAgentsContent({ page }) {
                 </div>
             </section>
 
+            {/* Answer-first block for AI engines and searchers: the sub-question, answered in one paragraph. */}
+            <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
+                <div className="mx-auto max-w-3xl">
+                    <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI answering service for insurance agents do?</h2>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI answering service for insurance agents answers every call 24/7, captures quote requests with line of business, current carrier and renewal date, handles routine policy questions from your agency’s information, and escalates urgent claims to your phone. Dooza sets it up for you and texts you a summary after every call. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
+                </div>
+            </section>
+
             {/* =============================== */}
             {/* 2. PROBLEM SECTION              */}
             {/* =============================== */}

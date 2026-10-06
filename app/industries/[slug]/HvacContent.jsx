@@ -210,6 +210,15 @@ export default function HvacContent({ page }) {
                     </div>
                 </section>
 
+            {/* Answer-first block for AI engines and searchers: the sub-question, answered in one paragraph. */}
+            <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
+                <div className="mx-auto max-w-3xl">
+                    <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI answering service for plumbers, HVAC and other trades do?</h2>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI answering service for the trades answers calls 24/7, answers common questions, captures the job and service area, qualifies the caller, books the next step and routes urgent work to your team with a structured call summary. Dooza sets it up and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
+                </div>
+            </section>
+
                 <section className="relative z-10 -mt-10 px-4 sm:px-6 lg:-mt-14 lg:px-8">
                     <div className="mx-auto grid max-w-7xl overflow-hidden border border-primary-200 bg-white shadow-[0_24px_70px_rgba(13,148,136,.16)] lg:grid-cols-[1.15fr_.85fr]">
                         <div className="relative min-h-[22rem] overflow-hidden bg-primary-50 sm:min-h-[29rem]">
