@@ -333,7 +333,7 @@ export default function AiCopywritingToolsContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">AI Copywriting ≠ Fully Automated Content</h4>
                                         <p className="text-slate-700">
-                                            The best results come from human + AI collaboration. AI handles the heavy lifting—research, first drafts, variations—while humans add strategy, brand voice, fact-checking, and creative direction. According to <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-amber-600 underline">Content Marketing Institute</a>, 83% of content marketers use AI as a starting point, not an endpoint.
+                                            The best results come from human + AI collaboration. AI handles the heavy lifting—research, first drafts, variations—while humans add strategy, brand voice, fact-checking, and creative direction. According to <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-amber-600 underline">Content Marketing Institute</a>, 83% of content marketers use AI as a starting point, not an endpoint. Before you publish, paste the draft into our free <Link href="/ai-slop-checker" className="text-amber-600 underline">AI slop checker</Link> to flag the phrases that make it read as machine-written.
                                         </p>
                                     </div>
                                 </div>

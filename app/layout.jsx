@@ -106,6 +106,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
+        {/* RSS discovery on every page (page-level metadata.alternates replaces the root one, dropping its types) */}
+        <link rel="alternate" type="application/rss+xml" title="Dooza Blog" href="https://www.dooza.ai/rss.xml" />
         <meta
           name="ahrefs-site-verification"
           content="d24e36e2dc624015052db7f13470711f13cf0638849a33c13e6498d800e1c07e"
