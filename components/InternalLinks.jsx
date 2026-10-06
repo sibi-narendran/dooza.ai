@@ -6,6 +6,16 @@ import { blogPosts } from '@/lib/blogData';
 
 // Define related post mappings for better internal linking
 const relatedPostMappings = {
+    'claude-opus-5-5': ['claude-sonnet-5-5', 'gpt-6-1-sol', 'anthropic-2-trillion-valuation-vs-samsung'],
+    'claude-sonnet-5-5': ['claude-opus-5-5', 'gpt-6-1-sol', 'claude-code-creator-prompting-tips-video'],
+    'gpt-6-1-sol': ['claude-sonnet-5-5', 'claude-opus-5-5', 'ai-agents-vs-agentic-ai'],
+    'claude-made-video-western-civilization': ['claude-opus-5-5', 'claude-code-universal-modder-game-mods', 'claude-code-creator-prompting-tips-video'],
+    'claude-code-universal-modder-game-mods': ['claude-code-creator-prompting-tips-video', 'claude-made-video-western-civilization', 'automate-business-processes'],
+    'claude-code-creator-prompting-tips-video': ['claude-code-universal-modder-game-mods', 'claude-sonnet-5-5', 'claude-cowork-vs-dooza'],
+    'google-tpus-in-space-project-suncatcher': ['gpt-6-1-sol', 'anthropic-2-trillion-valuation-vs-samsung', 'dyna-2-1-robot-laundry-physical-agent'],
+    'dyna-2-1-robot-laundry-physical-agent': ['ai-agents-vs-agentic-ai', 'google-tpus-in-space-project-suncatcher', 'automate-business-processes'],
+    'x-cashtag-trading': ['anthropic-2-trillion-valuation-vs-samsung', 'small-business-marketing-tools', 'marketing-automation-tools'],
+    'anthropic-2-trillion-valuation-vs-samsung': ['claude-opus-5-5', 'gpt-6-1-sol', 'google-tpus-in-space-project-suncatcher'],
     'n8n-alternatives': ['automate-business-processes', 'openclaw-alternatives', 'marketing-automation-tools'],
     'ringcentral-ai-receptionist': ['after-hours-answering-service', 'best-ai-receptionist', 'virtual-receptionist-for-small-business'],
     'after-hours-answering-service': ['ringcentral-ai-receptionist', 'best-ai-receptionist', 'ai-voice-agent-missed-calls'],
