@@ -339,6 +339,7 @@ export default function BestAiReceptionistContent() {
                         {/* Section 4: AI Receptionist vs Alternatives */}
                         <section id="ai-vs-alternatives" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">AI Receptionist vs The Alternatives</h2>
+                            <p className="text-slate-600 mb-6">Comparing AI receptionist prices? We checked 21 services’ pricing pages: see <a href="/blog/ai-receptionist-pricing" className="text-teal-700 underline">AI receptionist pricing (2026)</a> for what 100 calls a month costs on each.</p>
 
                             <div className="overflow-x-auto mb-8">
                                 <table className="w-full text-sm border-collapse">
