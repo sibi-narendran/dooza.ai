@@ -9,6 +9,102 @@
  "definition": "Interstate carriers (carrier operation A) whose classification includes Authorized For Hire, counted by the date the USDOT record was added.",
  "monthly": [
   {
+   "month": "2021-01",
+   "count": 10378
+  },
+  {
+   "month": "2021-02",
+   "count": 9675
+  },
+  {
+   "month": "2021-03",
+   "count": 13534
+  },
+  {
+   "month": "2021-04",
+   "count": 12654
+  },
+  {
+   "month": "2021-05",
+   "count": 12599
+  },
+  {
+   "month": "2021-06",
+   "count": 14141
+  },
+  {
+   "month": "2021-07",
+   "count": 13599
+  },
+  {
+   "month": "2021-08",
+   "count": 13974
+  },
+  {
+   "month": "2021-09",
+   "count": 13250
+  },
+  {
+   "month": "2021-10",
+   "count": 12832
+  },
+  {
+   "month": "2021-11",
+   "count": 11423
+  },
+  {
+   "month": "2021-12",
+   "count": 10271
+  },
+  {
+   "month": "2022-01",
+   "count": 13133
+  },
+  {
+   "month": "2022-02",
+   "count": 12648
+  },
+  {
+   "month": "2022-03",
+   "count": 13453
+  },
+  {
+   "month": "2022-04",
+   "count": 11045
+  },
+  {
+   "month": "2022-05",
+   "count": 10868
+  },
+  {
+   "month": "2022-06",
+   "count": 9837
+  },
+  {
+   "month": "2022-07",
+   "count": 9201
+  },
+  {
+   "month": "2022-08",
+   "count": 10931
+  },
+  {
+   "month": "2022-09",
+   "count": 9709
+  },
+  {
+   "month": "2022-10",
+   "count": 9079
+  },
+  {
+   "month": "2022-11",
+   "count": 7614
+  },
+  {
+   "month": "2022-12",
+   "count": 6700
+  },
+  {
    "month": "2023-01",
    "count": 9059
   },
@@ -480,10 +576,144 @@
    "count": 249
   }
  ],
- "cohort": {
-  "label": "Q1 2025",
-  "active": 17002,
-  "inactive": 5143,
-  "pending": 23
- }
+ "cohorts": [
+  {
+   "cohort": "2021 Q1",
+   "active": 10081,
+   "inactive": 23492,
+   "pending": 14
+  },
+  {
+   "cohort": "2021 Q2",
+   "active": 10871,
+   "inactive": 28510,
+   "pending": 13
+  },
+  {
+   "cohort": "2021 Q3",
+   "active": 12165,
+   "inactive": 28644,
+   "pending": 14
+  },
+  {
+   "cohort": "2021 Q4",
+   "active": 10397,
+   "inactive": 24121,
+   "pending": 8
+  },
+  {
+   "cohort": "2022 Q1",
+   "active": 12181,
+   "inactive": 27032,
+   "pending": 21
+  },
+  {
+   "cohort": "2022 Q2",
+   "active": 10047,
+   "inactive": 21684,
+   "pending": 19
+  },
+  {
+   "cohort": "2022 Q3",
+   "active": 10252,
+   "inactive": 19580,
+   "pending": 9
+  },
+  {
+   "cohort": "2022 Q4",
+   "active": 8247,
+   "inactive": 15137,
+   "pending": 9
+  },
+  {
+   "cohort": "2023 Q1",
+   "active": 9978,
+   "inactive": 16688,
+   "pending": 15
+  },
+  {
+   "cohort": "2023 Q2",
+   "active": 8983,
+   "inactive": 12725,
+   "pending": 12
+  },
+  {
+   "cohort": "2023 Q3",
+   "active": 9682,
+   "inactive": 11031,
+   "pending": 14
+  },
+  {
+   "cohort": "2023 Q4",
+   "active": 9040,
+   "inactive": 7898,
+   "pending": 16
+  },
+  {
+   "cohort": "2024 Q1",
+   "active": 11703,
+   "inactive": 9732,
+   "pending": 22
+  },
+  {
+   "cohort": "2024 Q2",
+   "active": 12357,
+   "inactive": 8185,
+   "pending": 21
+  },
+  {
+   "cohort": "2024 Q3",
+   "active": 13038,
+   "inactive": 6799,
+   "pending": 17
+  },
+  {
+   "cohort": "2024 Q4",
+   "active": 12509,
+   "inactive": 4912,
+   "pending": 24
+  },
+  {
+   "cohort": "2025 Q1",
+   "active": 17002,
+   "inactive": 5143,
+   "pending": 23
+  },
+  {
+   "cohort": "2025 Q2",
+   "active": 16564,
+   "inactive": 3692,
+   "pending": 19
+  },
+  {
+   "cohort": "2025 Q3",
+   "active": 17671,
+   "inactive": 2805,
+   "pending": 27
+  },
+  {
+   "cohort": "2025 Q4",
+   "active": 16025,
+   "inactive": 1721,
+   "pending": 24
+  },
+  {
+   "cohort": "2026 Q1",
+   "active": 21206,
+   "inactive": 1894,
+   "pending": 39
+  },
+  {
+   "cohort": "2026 Q2",
+   "active": 22047,
+   "inactive": 785,
+   "pending": 74
+  },
+  {
+   "cohort": "2026 Q3",
+   "active": 21935,
+   "inactive": 570,
+   "pending": 174
+  }
+ ]
 }

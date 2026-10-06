@@ -25,12 +25,19 @@ const q = data.quarter;
 const fleetTotal = data.fleetSize.reduce((s, b) => s + b.count, 0);
 const oneOrTwo = data.fleetSize.filter((b) => b.bucket === '1' || b.bucket === '2').reduce((s, b) => s + b.count, 0);
 const singleTruck = data.fleetSize.find((b) => b.bucket === '1').count;
-const cohortTotal = data.cohort.active + data.cohort.inactive + data.cohort.pending;
-const inactiveShare = ((data.cohort.inactive / cohortTotal) * 100).toFixed(0);
+const cohortTotal = (c) => c.active + c.inactive + c.pending;
+const inactivePct = (c) => (c.inactive / cohortTotal(c)) * 100;
+// Cohorts at least a year old (the last four quarters are too young to read).
+const matureCohorts = data.cohorts.slice(0, -4);
+const boom = data.cohorts.filter((c) => c.cohort.startsWith('2021'));
+const boomTotal = boom.reduce((s, c) => s + cohortTotal(c), 0);
+const boomInactive = boom.reduce((s, c) => s + c.inactive, 0);
+const twoYear = data.cohorts[data.cohorts.length - 9]; // the quarter two years before the latest full quarter
+const oneYear = data.cohorts[data.cohorts.length - 5];
 const updated = new Date(`${data.generatedAt}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
-const pageTitle = `New Trucking Companies Per Month (${ytdYear} Data, by State) | Dooza`;
-const pageDescription = `${fmt(lastMonth.count)} new interstate for-hire trucking companies registered with FMCSA in ${monthName(lastMonth.month)}. Monthly counts since 2023, ${q.label} by state, fleet sizes and one-year survival, from FMCSA open data. Updated monthly.`;
+const pageTitle = `New Trucking Companies Per Month, and How Many Stay Active (${ytdYear} FMCSA Data) | Dooza`;
+const pageDescription = `${fmt(lastMonth.count)} new interstate for-hire trucking companies registered with FMCSA in ${monthName(lastMonth.month)}. ${(boomInactive / boomTotal * 100).toFixed(0)}% of the 2021 class is now inactive. Monthly counts since 2021, survival by quarter, states and fleet sizes, from FMCSA open data.`;
 
 export const metadata = {
     title: { absolute: pageTitle },
@@ -55,8 +62,8 @@ const faqData = [
         answer: `Small. In ${q.label}, ${((singleTruck / fleetTotal) * 100).toFixed(0)}% of new interstate for-hire carriers reported one power unit, and ${((oneOrTwo / fleetTotal) * 100).toFixed(0)}% reported one or two.`,
     },
     {
-        question: 'How many new trucking companies are still active after a year?',
-        answer: `Of the carriers added in ${data.cohort.label}, ${inactiveShare}% have an inactive USDOT status in the census today (${fmt(data.cohort.inactive)} of ${fmt(cohortTotal)}). Inactive status can mean the carrier closed, was revoked or stopped updating its registration, so treat it as an upper-bound signal, not a failure rate.`,
+        question: 'How many new trucking companies go out of business?',
+        answer: `FMCSA does not record closures directly, but the census shows which carriers are now inactive. Of the interstate for-hire carriers added in ${oneYear.cohort}, ${inactivePct(oneYear).toFixed(0)}% are inactive today; of those added in ${twoYear.cohort}, ${inactivePct(twoYear).toFixed(0)}%; and of the ${fmt(boomTotal)} added in 2021, ${(boomInactive / boomTotal * 100).toFixed(0)}%. Inactive can mean the carrier closed, lost its authority or stopped updating its registration, so read these as upper bounds on exits.`,
     },
     {
         question: 'Where does this data come from?',
@@ -140,7 +147,7 @@ export default function NewTruckingCompaniesPage() {
                     <p className="text-sm font-medium text-indigo-600">Trucking data · Updated {updated}</p>
                     <h1 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight">New trucking companies per month</h1>
                     <p className="mt-4 text-lg text-slate-600">
-                        How many new interstate, for-hire trucking companies register with FMCSA each month, where they are, and how big they are.
+                        How many new interstate, for-hire trucking companies register with FMCSA each month, how many of them are still active years later, where they are, and how big they are.
                         Counted from FMCSA&apos;s own open data, refreshed monthly.
                     </p>
 
@@ -156,9 +163,9 @@ export default function NewTruckingCompaniesPage() {
                             <div className="mt-1 text-sm text-slate-500">{pct(ytdNow, ytdPrev)} vs same months of {Number(ytdYear) - 1}</div>
                         </div>
                         <div className="rounded-xl border border-slate-200 p-5">
-                            <div className="text-sm text-slate-500">One-truck operations, {q.label}</div>
-                            <div className="mt-1 text-3xl font-bold">{((singleTruck / fleetTotal) * 100).toFixed(0)}%</div>
-                            <div className="mt-1 text-sm text-slate-500">of new for-hire carriers</div>
+                            <div className="text-sm text-slate-500">Class of 2021, inactive today</div>
+                            <div className="mt-1 text-3xl font-bold">{(boomInactive / boomTotal * 100).toFixed(0)}%</div>
+                            <div className="mt-1 text-sm text-slate-500">{fmt(boomInactive)} of {fmt(boomTotal)} carriers</div>
                         </div>
                     </div>
 
@@ -207,11 +214,39 @@ export default function NewTruckingCompaniesPage() {
                         ))}
                     </div>
 
-                    <h2 className="mt-14 text-2xl font-bold">How many are still active a year later</h2>
+                    <h2 className="mt-14 text-2xl font-bold">How many new carriers stay active</h2>
                     <p className="mt-2 text-slate-600">
-                        Of the {fmt(cohortTotal)} interstate for-hire carriers added in {data.cohort.label}, {fmt(data.cohort.inactive)} ({inactiveShare}%) show an inactive USDOT status today.
-                        Inactive can mean closed, revoked or simply not updated, so read it as an upper bound on early exits.
+                        Each quarter&apos;s new interstate for-hire carriers, by their USDOT status in the census today. The older the class, the more of it has gone inactive:
+                        {' '}{inactivePct(oneYear).toFixed(0)}% of the {oneYear.cohort} class, {inactivePct(twoYear).toFixed(0)}% of {twoYear.cohort}, and {(boomInactive / boomTotal * 100).toFixed(0)}% of the {fmt(boomTotal)} carriers that joined during the 2021 boom.
+                        Inactive can mean closed, revoked or simply not updated, so read it as an upper bound on exits. The last four quarters are left out as too young to read.
                     </p>
+                    <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200">
+                        <table className="w-full text-sm">
+                            <thead className="bg-slate-50 text-left text-slate-600">
+                                <tr>
+                                    <th className="px-4 py-2 font-medium">Joined</th>
+                                    <th className="px-4 py-2 font-medium text-right">New carriers</th>
+                                    <th className="px-4 py-2 font-medium text-right">Inactive today</th>
+                                    <th className="px-4 py-2 font-medium w-1/3">Share inactive</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {matureCohorts.map((c) => (
+                                    <tr key={c.cohort} className="border-t border-slate-100">
+                                        <td className="px-4 py-2">{c.cohort}</td>
+                                        <td className="px-4 py-2 text-right tabular-nums">{fmt(cohortTotal(c))}</td>
+                                        <td className="px-4 py-2 text-right tabular-nums">{fmt(c.inactive)}</td>
+                                        <td className="px-4 py-2">
+                                            <div className="flex items-center gap-2">
+                                                <div className="h-3 rounded bg-indigo-500" style={{ width: `${inactivePct(c) * 0.8}%` }} />
+                                                <span className="tabular-nums text-slate-700">{inactivePct(c).toFixed(1)}%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
 
                     <h2 className="mt-14 text-2xl font-bold">Method</h2>
                     <ul className="mt-3 list-disc pl-6 space-y-1 text-slate-600">

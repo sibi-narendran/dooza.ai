@@ -50,7 +50,7 @@ def main():
     today = datetime.now(timezone.utc).date()
     latest = soql(select='max(add_date) as latest')[0]['latest']
 
-    monthly = soql(select='substring(add_date,1,6) as ym, count(*) as n', where=f"{WHERE} and add_date >= '20230101'",
+    monthly = soql(select='substring(add_date,1,6) as ym, count(*) as n', where=f"{WHERE} and add_date >= '20210101'",
                    group='ym', order='ym', limit=200)
     this_month = today.strftime('%Y%m')
     months = [{'month': f"{r['ym'][:4]}-{r['ym'][4:]}", 'count': int(r['n'])} for r in monthly if r['ym'] < this_month]
@@ -71,14 +71,18 @@ def main():
         key = '0' if u == 0 else '1' if u == 1 else '2' if u == 2 else '3-5' if u <= 5 else '6-10' if u <= 10 else '11+'
         buckets[key] += int(r['n'])
 
-    # Survival: status today of the cohort added in the quarter 18 months before the latest full quarter,
-    # so every carrier in it has had at least a year.
-    c_start = date(q_start.year - 1 - (q_start.month <= 6), (q_start.month + 5) % 12 + 1, 1)
-    c_start = date(c_start.year, ((c_start.month - 1) // 3) * 3 + 1, 1)
-    c_end = date(c_start.year + (c_start.month == 10), (c_start.month + 2) % 12 + 1, 1)
-    status = soql(select='status_code, count(*) as n', where=f"{WHERE} and add_date >= '{ymd(c_start)}' and add_date < '{ymd(c_end)}'",
-                  group='status_code')
-    st = {r.get('status_code', '?'): int(r['n']) for r in status}
+    # Survival: each quarterly cohort since 2021, by its USDOT status today (A active, I inactive, P pending).
+    rows = soql(select='substring(add_date,1,6) as ym, status_code, count(*) as n',
+                where=f"{WHERE} and add_date >= '20210101' and add_date < '{ymd(q_end)}'", group='ym, status_code', limit=5000)
+    cohorts = {}
+    for r in rows:
+        ym = r['ym']
+        label = f"{ym[:4]} Q{(int(ym[4:]) - 1) // 3 + 1}"
+        c = cohorts.setdefault(label, {'cohort': label, 'active': 0, 'inactive': 0, 'pending': 0})
+        key = {'A': 'active', 'I': 'inactive', 'P': 'pending'}.get(r.get('status_code'))
+        if key:
+            c[key] += int(r['n'])
+    cohorts = [cohorts[k] for k in sorted(cohorts)]
 
     data = {
         'generatedAt': today.isoformat(),
@@ -91,8 +95,7 @@ def main():
                     'start': q_start.isoformat(), 'end': q_end.isoformat(), 'states': states,
                     'total': sum(cur.values()), 'prevTotal': sum(prev.values())},
         'fleetSize': [{'bucket': k, 'count': v} for k, v in buckets.items()],
-        'cohort': {'label': f'Q{(c_start.month - 1) // 3 + 1} {c_start.year}', 'active': st.get('A', 0),
-                   'inactive': st.get('I', 0), 'pending': st.get('P', 0)},
+        'cohorts': cohorts,
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, 'w') as f:
