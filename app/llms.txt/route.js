@@ -171,6 +171,14 @@ const servicePages = [
     },
 ];
 
+const researchPages = [
+    {
+        title: 'New trucking companies per month (FMCSA data)',
+        url: `${SITE_URL}/new-trucking-companies`,
+        description: 'Monthly count of new interstate for-hire carriers since 2021, by state and fleet size, and the share of each quarterly class that is inactive today. From the FMCSA Company Census, refreshed monthly, free to cite.',
+    },
+];
+
 const brandAssets = [
     {
         title: 'Dooza icon logo (PNG)',
@@ -297,6 +305,8 @@ export async function GET() {
         section('Products', productPages),
         '',
         section('Services (done for you)', servicePages),
+        '',
+        section('Research and data', researchPages),
         '',
         section('Core Pages', staticPages),
         '',

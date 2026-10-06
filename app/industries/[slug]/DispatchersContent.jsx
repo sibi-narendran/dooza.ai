@@ -233,6 +233,14 @@ export default function DispatchersContent({ page }) {
                             </div>
                         ))}
                     </div>
+
+                    <p className="mt-10 text-center text-sm text-slate-600">
+                        Looking for carriers? See how many{' '}
+                        <Link href="/new-trucking-companies" className="font-semibold text-primary-600 hover:text-primary-700 underline">
+                            new trucking companies register each month
+                        </Link>
+                        , by state, from FMCSA data.
+                    </p>
                 </div>
             </section>
 
