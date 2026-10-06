@@ -10,6 +10,8 @@ import FAQAccordion from '@/components/FAQAccordion';
 
 const pageUrl = `${SITE_URL}/new-trucking-companies`;
 const fmt = (n) => n.toLocaleString('en-US');
+// Same census month under wider definitions (why other published counts are higher). Filled by scripts/fmcsa-new-carriers.py.
+const bd = (data.breakdown || [])[data.breakdown ? data.breakdown.length - 1 : 0] || null;
 const pct = (a, b) => (b ? `${a >= b ? '+' : ''}${(((a - b) / b) * 100).toFixed(1)}%` : 'n/a');
 const monthName = (ym) => new Date(`${ym}-01T00:00:00Z`).toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
 
@@ -51,7 +53,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'How many new trucking companies start each month?',
-        answer: `In ${monthName(lastMonth.month)}, ${fmt(lastMonth.count)} new interstate, authorized-for-hire carriers were added to the FMCSA Company Census. From January to ${monthName(lastMonth.month)}, the total was ${fmt(ytdNow)}, ${pct(ytdNow, ytdPrev)} against the same months of ${Number(ytdYear) - 1} (${fmt(ytdPrev)}).`,
+        answer: `In ${monthName(lastMonth.month)}, ${fmt(lastMonth.count)} new interstate, authorized-for-hire carriers were added to the FMCSA Company Census. From January to ${monthName(lastMonth.month)}, the total was ${fmt(ytdNow)}, ${pct(ytdNow, ytdPrev)} against the same months of ${Number(ytdYear) - 1} (${fmt(ytdPrev)}). ${bd ? `Counting every new USDOT record instead (including intrastate and private carriers), the ${monthName(bd.month)} figure was ${fmt(bd.allRecords)}.` : ''}`,
     },
     {
         question: 'Which states have the most new trucking companies?',
@@ -247,6 +249,40 @@ export default function NewTruckingCompaniesPage() {
                             </tbody>
                         </table>
                     </div>
+
+                    {bd && (
+                        <>
+                            <h2 className="mt-14 text-2xl font-bold">Why other counts of new trucking companies are higher</h2>
+                            <p className="mt-3 text-slate-700">
+                                Other published counts usually include every new USDOT record: intrastate carriers, private fleets and other registrants. Ours counts only new interstate, for-hire carriers.
+                                In {monthName(bd.month)}, the same census gives {fmt(bd.allRecords)} new USDOT records in total but {fmt(bd.interstateForHire)} new interstate for-hire carriers.
+                            </p>
+                            <div className="mt-4 overflow-x-auto">
+                                <table className="w-full text-sm">
+                                    <thead>
+                                        <tr className="border-b text-left text-slate-500">
+                                            <th className="py-2 pr-4">Definition (same FMCSA Company Census)</th>
+                                            {data.breakdown.map((b) => <th key={b.month} className="py-2 pr-4 text-right">{monthName(b.month)}</th>)}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {[
+                                            ['All new USDOT records', 'allRecords'],
+                                            ['All new USDOT records, 50 states and DC', 'allRecordsUs'],
+                                            ['Interstate carriers, any type (incl. private fleets)', 'interstateAll'],
+                                            ['Interstate, authorized for hire (this page)', 'interstateForHire'],
+                                            ['Intrastate only', 'intrastateOnly'],
+                                        ].map(([label, key]) => (
+                                            <tr key={key} className={`border-b border-slate-100 ${key === 'interstateForHire' ? 'font-semibold' : ''}`}>
+                                                <td className="py-2 pr-4 text-slate-700">{label}</td>
+                                                {data.breakdown.map((b) => <td key={b.month} className="py-2 pr-4 text-right tabular-nums">{fmt(b[key])}</td>)}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </>
+                    )}
 
                     <h2 className="mt-14 text-2xl font-bold">Method</h2>
                     <ul className="mt-3 list-disc pl-6 space-y-1 text-slate-600">

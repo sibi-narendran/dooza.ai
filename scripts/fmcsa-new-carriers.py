@@ -46,6 +46,17 @@ def by_state(start, end):
     return {r['phy_state']: int(r['n']) for r in rows if r.get('phy_state') in STATES}
 
 
+def breakdown(year, month):
+    """Why other "new trucking companies" counts differ: the same census month under wider definitions."""
+    start = date(year, month, 1); end = date(year + (month == 12), month % 12 + 1, 1)
+    rng = f"add_date >= '{ymd(start)}' and add_date < '{ymd(end)}'"
+    n = lambda extra='': int(soql(select='count(*) as n', where=rng + extra)[0]['n'])
+    us = ','.join(f"'{s}'" for s in sorted(STATES))
+    return {'month': f'{year}-{month:02d}', 'allRecords': n(), 'allRecordsUs': n(f' and phy_state in ({us})'),
+            'interstateAll': n(" and carrier_operation='A'"), 'interstateForHire': n(f' and {WHERE}'),
+            'intrastateOnly': n(" and carrier_operation in ('B','C')")}
+
+
 def main():
     today = datetime.now(timezone.utc).date()
     latest = soql(select='max(add_date) as latest')[0]['latest']
@@ -96,6 +107,7 @@ def main():
                     'total': sum(cur.values()), 'prevTotal': sum(prev.values())},
         'fleetSize': [{'bucket': k, 'count': v} for k, v in buckets.items()],
         'cohorts': cohorts,
+        'breakdown': [breakdown(int(m['month'][:4]), int(m['month'][5:])) for m in months[-2:]],
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, 'w') as f:

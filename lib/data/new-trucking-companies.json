@@ -715,5 +715,23 @@
    "inactive": 570,
    "pending": 174
   }
+ ],
+ "breakdown": [
+  {
+   "month": "2026-08",
+   "allRecords": 15279,
+   "allRecordsUs": 15073,
+   "interstateAll": 8995,
+   "interstateForHire": 7542,
+   "intrastateOnly": 6284
+  },
+  {
+   "month": "2026-09",
+   "allRecords": 14367,
+   "allRecordsUs": 14124,
+   "interstateAll": 8452,
+   "interstateForHire": 7039,
+   "intrastateOnly": 5915
+  }
  ]
 }
