@@ -86,7 +86,7 @@ Name the product, role, and category consistently.
 Preferred phrasing:
 
 ```text
-Dooza is an AI employee platform for small businesses.
+Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.
 Ranky is Dooza's AI visibility and growth employee.
 Voice Pro is Dooza's AI voice agent for missed calls and lead capture.
 Lead Gen Pro is Dooza's AI lead generation employee.
@@ -155,7 +155,7 @@ Add these where relevant:
 - Third-party source links for statistics.
 - Internal links to related pages.
 - FAQ answers that match visible content.
-- Schema markup for Article, FAQPage, BreadcrumbList, Organization, Product, or Service where appropriate.
+- Schema markup for Article/BlogPosting (named author, dates), BreadcrumbList, Organization, Product or Service where appropriate. FAQPage is optional: Google dropped FAQ rich results on 2026-05-07, and controlled tests show no citation lift from schema.
 
 ## Technical Requirements
 

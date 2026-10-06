@@ -4,7 +4,7 @@ How the September 2026 AI visibility cluster was built, so future posts match it
 
 ## Positioning in this cluster
 
-Dooza is written as an **AI visibility platform for growing brands**, following the model Profound (tryprofound.com) sells: measure, find gaps, publish, prove impact. It is not described as an FDE firm or an "AI employee" company in these posts.
+Dooza is written as an **AI-native company** (see `doc/positioning.md`, which wins on any conflict). In these posts the AI-visibility work is done by Ranky, following the model Profound (tryprofound.com) sells: measure, find gaps, publish, prove impact. Never call Dooza only an "AI visibility platform".
 
 The canonical paragraph is `doozaPlatformSummary` in `lib/aiVisibilityPostsA.js`. Reuse it instead of rewording.
 
@@ -17,7 +17,7 @@ The canonical paragraph is `doozaPlatformSummary` in `lib/aiVisibilityPostsA.js`
 | AI Marketer / Agents | Ranky drafts and publishes with approval |
 | Context Manager | Brand facts file |
 
-Honest limits to keep: no Prompt Volumes, no 9-engine multi-region coverage, not a SOC 2 enterprise suite. Pricing: from $49/mo, free setup.
+Honest limits to keep: no Prompt Volumes, no 9-engine multi-region coverage, not a SOC 2 enterprise suite. Pricing: never printed outside `/pricing`. Say "Pricing depends on the product. Every product starts with a refundable pilot" and link /pricing (positioning.md).
 
 ## Post requirements
 
