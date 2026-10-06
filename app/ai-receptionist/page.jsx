@@ -251,6 +251,13 @@ export default function AiReceptionistPage({ searchParams }) {
                                 </div>
                             ))}
                         </dl>
+                        {!adsMode && (
+                            <p className="mt-6 text-slate-600">
+                                Comparing options? Our free{' '}
+                                <Link href="/ai-receptionist-cost-calculator" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">AI receptionist cost calculator</Link>{' '}
+                                shows what your call volume would cost on 13 AI receptionists and 2 human answering services, from prices checked on each vendor’s site.
+                            </p>
+                        )}
                     </div>
                 </section>
 

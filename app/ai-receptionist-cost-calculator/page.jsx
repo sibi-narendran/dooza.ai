@@ -20,7 +20,7 @@ export const metadata = {
         description: DESCRIPTION,
         url: `${SITE_URL}${PATH}`,
         type: 'website',
-        images: [{ url: `${SITE_URL}/blog/ai-receptionist-pricing.png`, width: 1600, height: 900, alt: 'What 100 calls a month cost on AI receptionists vs human answering services' }],
+        images: [{ url: `${SITE_URL}/blog/ai-receptionist-pricing.png`, width: 1600, height: 930, alt: 'What 100 calls a month cost on AI receptionists vs human answering services' }],
     },
     twitter: { card: 'summary_large_image', title: 'AI Receptionist Cost Calculator | Dooza', description: DESCRIPTION, images: [`${SITE_URL}/blog/ai-receptionist-pricing.png`] },
 };
