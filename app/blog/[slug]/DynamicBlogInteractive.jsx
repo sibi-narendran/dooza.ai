@@ -58,6 +58,22 @@ export function TocSidebar({ tocData, children }) {
 export function ContentClickHandler({ html }) {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
+    // X posts ship as server-rendered <blockquote class="twitter-tweet"> (readable
+    // without JS); load X's widget script only on posts that contain one.
+    useEffect(() => {
+        if (!html || !html.includes('twitter-tweet')) return;
+        if (window.twttr?.widgets) {
+            window.twttr.widgets.load();
+            return;
+        }
+        if (document.querySelector('script[src="https://platform.twitter.com/widgets.js"]')) return;
+        const script = document.createElement('script');
+        script.src = 'https://platform.twitter.com/widgets.js';
+        script.async = true;
+        script.charset = 'utf-8';
+        document.body.appendChild(script);
+    }, [html]);
+
     const handleContentClick = (e) => {
         const anchor = e.target.closest('a');
         if (anchor && anchor.href && anchor.href.includes('cal.com')) {
