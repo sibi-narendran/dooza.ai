@@ -38,7 +38,7 @@ import {
 const faqData = [
     {
         question: "Do small businesses really need SEO tools?",
-        answer: "Yes, but not necessarily the expensive ones. 75% of users never scroll past page one of Google, and 46% of all searches have local intent. If customers can't find you online, they'll find your competitors. The question is whether you need a $139/month tool that tells you what to do, or an AI employee that does the work."
+        answer: "Yes, but not necessarily the expensive ones. If customers can't find you in Google or in AI answers, they find your competitors. The real question is whether you need a $139/month tool that tells you what to do (Semrush's cheapest paid plan, checked Oct 7, 2026), or help that does the work."
     },
     {
         question: "What's the best free SEO tool for small businesses?",
@@ -46,7 +46,7 @@ const faqData = [
     },
     {
         question: "Is Ahrefs or Semrush better for small businesses?",
-        answer: "Both are overkill for most small businesses. Ahrefs starts at $29/month (limited) or $129/month (Lite), while Semrush starts at $139.95/month. Most SMBs don't need enterprise-level backlink analysis. SE Ranking ($65/month) or Moz ($49/month) offer more appropriate features at better prices. Or let Ranky handle your SEO automatically for $49/month."
+        answer: "For many small businesses both are more than they need. Per their pricing pages (checked Oct 7, 2026): Ahrefs has a free tier, a $29/month Starter plan and full plans from $129/month (Lite); Semrush has a free plan and paid plans from $139/month. Moz starts at $49/month and SE Ranking at $129/month. If you'd rather have the work done than a tool, Dooza's Ranky does SEO for you (see dooza.ai/pricing; every Dooza product starts with a refundable pilot)."
     },
     {
         question: "How long does SEO take to show results?",
@@ -65,7 +65,7 @@ const faqData = [
 const seoTools = [
     {
         name: "Semrush",
-        price: "$139.95-499.95/mo",
+        price: "Free plan; $139-549/mo",
         bestFor: "Enterprise, agencies",
         pros: ["55+ tools", "Comprehensive PPC + SEO", "Large keyword database"],
         cons: ["Expensive for SMBs", "Overwhelming features", "Learning curve"],
@@ -73,15 +73,15 @@ const seoTools = [
     },
     {
         name: "Ahrefs",
-        price: "$29-449/mo",
+        price: "Free; $29 Starter; $129-449/mo",
         bestFor: "SEO-focused teams",
         pros: ["Best backlink data", "Content explorer", "Accurate rankings"],
-        cons: ["Credit-based pricing", "Lite plan limited", "No free trial"],
+        cons: ["Credit-based pricing", "Lite plan limited", "Extra users cost more"],
         verdict: "Good value if you need backlink analysis"
     },
     {
         name: "Moz Pro",
-        price: "$49-179/mo",
+        price: "$49-299/mo",
         bestFor: "Beginners, single domain",
         pros: ["User-friendly", "Domain Authority metric", "Good learning resources"],
         cons: ["Smaller database", "Slower updates", "Basic features"],
@@ -89,7 +89,7 @@ const seoTools = [
     },
     {
         name: "SE Ranking",
-        price: "$65-239/mo",
+        price: "$129-279/mo",
         bestFor: "Small-mid businesses",
         pros: ["AI-powered features", "Good value", "All-in-one SEO"],
         cons: ["Less known brand", "Smaller database", "Fewer integrations"],
@@ -167,7 +167,7 @@ export default function SeoToolsSmallBusinessContent() {
                             <span className="text-primary-600">SEO Tools for Small Business</span>: Complete 2026 Guide
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            75% of users never scroll past page one of Google. Learn which SEO tools actually make sense for small businesses—and why AI might be a better investment than expensive subscriptions.
+                            Fewer than 1% of Google searchers click a page-two result (Backlinko). Learn which SEO tools actually make sense for small businesses—and why AI might be a better investment than expensive subscriptions.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -255,10 +255,7 @@ export default function SeoToolsSmallBusinessContent() {
                                     Here's the SEO tool paradox: the tools that show you what to do are expensive, but they don't actually do the work for you.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    You pay $139/month for <a href="https://www.semrush.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Semrush</a>. It tells you to write more blog posts, optimize your Google Business Profile, and build backlinks. Great advice—but who has time to actually do all that?
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    According to <a href="https://seranking.com/blog/ahrefs-vs-semrush/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">SE Ranking's analysis</a>, many small business owners feel they're "paying for features they don't need" and that "the complexity and cost doesn't match their actual usage."
+                                    You pay $139/month (its cheapest paid plan, checked Oct 7, 2026) for <a href="https://www.semrush.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Semrush</a>. It tells you to write more blog posts, optimize your Google Business Profile, and build backlinks. Great advice—but who has time to actually do all that?
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     This guide compares the major SEO tools honestly—what they cost, what they're good for, and when you should skip them entirely for an AI that actually does the SEO work for you.
@@ -291,23 +288,14 @@ export default function SeoToolsSmallBusinessContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Why SEO Still Matters for Small Businesses</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Before we dive into tools, let's establish why SEO is worth investing in. Data from <a href="https://backlinko.com/ahrefs-vs-semrush" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Backlinko</a>, <a href="https://moz.com/local-search-ranking-factors" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Moz</a>, BrightEdge, and HubSpot:
+                                    Before we dive into tools, here is why ranking on page one matters. Backlinko's analysis of Google click-through rates found:
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-2 gap-6 mb-8">
-                                {[
-                                    { stat: "75%", label: "of users never scroll past page one", source: "Backlinko", link: "https://backlinko.com/google-ctr-stats" },
-                                    { stat: "46%", label: "of all Google searches have local intent", source: "Moz", link: "https://moz.com/local-search-ranking-factors" },
-                                    { stat: "53%", label: "of website traffic comes from organic search", source: "BrightEdge", link: "https://www.brightedge.com/resources/research-reports" },
-                                    { stat: "5.7x", label: "more keywords ranked with consistent blogging", source: "HubSpot", link: "https://www.hubspot.com/marketing-statistics" }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-green-50 border border-green-100 p-6 rounded-xl text-center">
-                                        <div className="text-4xl font-bold text-green-600 mb-2">{item.stat}</div>
-                                        <p className="text-slate-700 font-medium mb-1">{item.label}</p>
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xs text-green-600 hover:underline">{item.source}</a>
-                                    </div>
-                                ))}
+                            <div className="bg-green-50 border border-green-100 p-6 rounded-xl text-center mb-8">
+                                <div className="text-4xl font-bold text-green-600 mb-2">0.63%</div>
+                                <p className="text-slate-700 font-medium mb-1">of Google searchers clicked on something from the second page</p>
+                                <a href="https://backlinko.com/google-ctr-stats" target="_blank" rel="noopener noreferrer" className="text-xs text-green-600 hover:underline">Backlinko, Google CTR stats</a>
                             </div>
 
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
@@ -517,12 +505,12 @@ export default function SeoToolsSmallBusinessContent() {
                                 <h4 className="font-bold text-green-800 mb-3">The Cost Comparison</h4>
                                 <div className="grid md:grid-cols-3 gap-4 text-center">
                                     <div>
-                                        <div className="text-2xl font-bold text-slate-900">$139.95/mo</div>
-                                        <p className="text-sm text-slate-600">Semrush Pro (tells you what to do)</p>
+                                        <div className="text-2xl font-bold text-slate-900">$139/mo</div>
+                                        <p className="text-sm text-slate-600">Semrush, cheapest paid plan (tells you what to do)</p>
                                     </div>
                                     <div>
-                                        <div className="text-2xl font-bold text-slate-900">$65/mo</div>
-                                        <p className="text-sm text-slate-600">SE Ranking (budget option)</p>
+                                        <div className="text-2xl font-bold text-slate-900">$49/mo</div>
+                                        <p className="text-sm text-slate-600">Moz entry plan (budget option)</p>
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
                                         <div className="text-2xl font-bold text-green-700">14-day</div>
@@ -601,19 +589,19 @@ export default function SeoToolsSmallBusinessContent() {
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Sources & References</h3>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">SEO Tool Comparisons</h4>
+                                    <h4 className="font-semibold text-slate-800 mb-3">Vendor pricing (checked Oct 7, 2026)</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://backlinko.com/ahrefs-vs-semrush" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Backlinko - Ahrefs vs Semrush</a></li>
-                                        <li>• <a href="https://seranking.com/blog/ahrefs-vs-semrush/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">SE Ranking - Tool Comparison</a></li>
-                                        <li>• <a href="https://learn.g2.com/semrush-alternatives" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">G2 - Semrush Alternatives</a></li>
-                                        <li>• <a href="https://trafficthinktank.com/semrush-alternatives/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Traffic Think Tank - Alternatives</a></li>
+                                        <li>• <a href="https://www.semrush.com/prices/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Semrush pricing</a></li>
+                                        <li>• <a href="https://ahrefs.com/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ahrefs pricing</a></li>
+                                        <li>• <a href="https://moz.com/products/pro/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Moz Pro pricing</a></li>
+                                        <li>• <a href="https://seranking.com/subscription.html" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">SE Ranking pricing</a></li>
+                                        <li>• <a href="https://app.neilpatel.com/en/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ubersuggest pricing</a></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">SEO Statistics</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li>• <a href="https://backlinko.com/google-ctr-stats" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Backlinko - Google CTR Statistics</a></li>
-                                        <li>• <a href="https://moz.com/local-search-ranking-factors" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Moz - Local Search Ranking Factors</a></li>
                                         <li>• <a href="https://ahrefs.com/blog/how-long-does-it-take-to-rank/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ahrefs - How Long to Rank</a></li>
                                     </ul>
                                 </div>
