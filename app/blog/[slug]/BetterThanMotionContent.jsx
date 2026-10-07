@@ -74,7 +74,7 @@ export default function BetterThanMotionContent() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['introduction', 'what-is-motion', 'motion-limitations', 'why-dooza', 'ai-employees', 'comparison', 'pricing', 'testimonials', 'migration', 'conclusion', 'faq'];
+            const sections = ['introduction', 'what-is-motion', 'motion-limitations', 'why-dooza', 'ai-employees', 'comparison', 'pricing', 'migration', 'conclusion', 'faq'];
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -163,7 +163,6 @@ export default function BetterThanMotionContent() {
                                     { id: 'ai-employees', label: 'AI Employees Comparison' },
                                     { id: 'comparison', label: 'Feature Comparison' },
                                     { id: 'pricing', label: 'Pricing Breakdown' },
-                                    { id: 'testimonials', label: 'What Users Say' },
                                     { id: 'migration', label: 'Easy Switching' },
                                     { id: 'conclusion', label: 'Conclusion' },
                                     { id: 'faq', label: 'FAQ' },
@@ -469,31 +468,6 @@ export default function BetterThanMotionContent() {
                             </div>
                         </section>
 
-                        <section id="testimonials" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What Motion Users Say (And Why They Switch)</h2>
-                            <div className="space-y-6">
-                                <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                                    <p className="text-slate-700 italic mb-4">"It's just so expensive. They don't really ship the features I want. The AI agents are useless."</p>
-                                    <p className="text-sm text-slate-500">— Motion user on Trustpilot</p>
-                                </div>
-                                <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                                    <p className="text-slate-700 italic mb-4">"I wish the instructions for learning were made for dummies. I am having a hard time learning how to use it."</p>
-                                    <p className="text-sm text-slate-500">— Motion user on Trustpilot</p>
-                                </div>
-                                <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                                    <p className="text-slate-700 italic mb-4">"It was advertised that we could add on the virtual employees but when I inquired, I was told that this was not an option."</p>
-                                    <p className="text-sm text-slate-500">— Motion user on Trustpilot</p>
-                                </div>
-                                <div className="bg-primary-50 p-6 rounded-xl border-2 border-primary-200">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <TrendingUp className="w-5 h-5 text-primary-600" />
-                                        <span className="font-bold text-primary-700">After Switching to Dooza:</span>
-                                    </div>
-                                    <p className="text-slate-700 italic mb-4">"My AI receptionist answers every call while I'm on site. Haven't missed a lead in months."</p>
-                                    <p className="text-sm text-slate-500">— Interio Square, Dooza Customer</p>
-                                </div>
-                            </div>
-                        </section>
 
                         <section id="migration" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Switching from Motion is Easy</h2>

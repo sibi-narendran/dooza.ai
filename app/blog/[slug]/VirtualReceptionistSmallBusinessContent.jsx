@@ -444,12 +444,6 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 ))}
                             </div>
 
-                            <div className="bg-primary-50 border border-primary-100 p-6 rounded-xl">
-                                <p className="text-slate-700 italic text-center">
-                                    "Since switching to Rachel, we haven't missed a single lead. She books consultations while we're on-site with clients — even at 10 PM on a Saturday."
-                                </p>
-                                <p className="text-sm text-primary-600 font-medium text-center mt-2">— Interio Square, Interior Design Firm</p>
-                            </div>
                         </section>
 
                         {/* Section 7: Who Needs a Virtual Receptionist? */}
