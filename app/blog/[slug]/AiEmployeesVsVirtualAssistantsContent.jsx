@@ -481,7 +481,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     <div>
                                         <h4 className="font-semibold text-blue-700 mb-3 flex items-center gap-2">
                                             <Bot className="w-5 h-5" />
-                                            AI Handles (80% of volume)
+                                            AI Handles (the high-volume work)
                                         </h4>
                                         <ul className="space-y-2 text-slate-600">
                                             <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-blue-500 shrink-0 mt-1" /> Email triage and initial responses</li>
@@ -659,7 +659,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-2xl text-center">
                                 <h3 className="text-2xl font-bold mb-4">What if you could have the reliability of AI with the quality of human touch?</h3>
                                 <p className="text-slate-300 mb-6 max-w-xl mx-auto">
-                                    Dooza handles the 80% of repetitive work that drains your time, freeing you (or your VA) to focus on what actually matters—relationships, strategy, and growth.
+                                    Dooza handles the repetitive work that drains your time, freeing you (or your VA) to focus on what actually matters—relationships, strategy, and growth.
                                 </p>
                                 <a
                                     href={getProductSignupUrl('workforce')}
