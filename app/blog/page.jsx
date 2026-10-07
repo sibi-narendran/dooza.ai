@@ -9,7 +9,7 @@ import { SITE_URL } from '../../lib/site';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-export const revalidate = 60;
+export const revalidate = 3600; // was 60s: regenerating the 1.5 MB blog index every minute burned Vercel Fast Origin Transfer (2026-10-07)
 
 export const metadata = {
     title: 'Dooza Blog — Proven AI Automation Strategies [2026]',

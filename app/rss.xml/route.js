@@ -4,7 +4,7 @@ import { supabaseServer } from '../../lib/supabaseServer';
 import { dbToPost } from '../../lib/blogTransform';
 import mergedBlogPosts from '../../lib/mergedBlogPosts.json';
 
-export const revalidate = 60;
+export const revalidate = 3600; // was 60s: regenerating the 280 KB feed every minute counted toward Vercel Fast Origin Transfer (2026-10-07)
 
 export async function GET() {
     const baseUrl = SITE_URL;
