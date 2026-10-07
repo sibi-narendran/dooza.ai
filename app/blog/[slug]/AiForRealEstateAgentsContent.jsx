@@ -47,7 +47,7 @@ import {
 const faqData = [
     {
         question: "Do I really need AI as a real estate agent?",
-        answer: "According to NAR's 2025 Technology Survey, 68% of agents now use AI tools, and 47% of buyers say an agent's technology skills are 'very important' when choosing who to work with. AI isn't optional anymore—it's becoming the standard. Agents who adopt early are capturing more leads while competitors struggle with response times."
+        answer: "According to NAR's 2026 Technology Report, 23% of REALTORS® use AI tools daily in their business, and 55% of respondents said AI has had a positive effect on their real estate business. AI is quickly becoming a normal part of how agents work, especially for tasks like listing descriptions, social posts and follow-up emails."
     },
     {
         question: "I'm not tech-savvy. Can I still use AI tools?",
@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "How does AI help with lead response time?",
-        answer: "MIT research shows responding within 5 minutes makes you 10x more likely to connect with a lead. But most agents take hours to respond. Dooza's AI employees respond instantly—24/7—qualifying leads, answering questions, and booking appointments while you're showing properties or sleeping."
+        answer: "Speed matters: the faster you reply to a new inquiry, the better your odds of connecting, and many agents take hours to respond. Dooza's AI employees respond instantly—24/7—qualifying leads, answering questions, and booking appointments while you're showing properties or sleeping."
     },
     {
         question: "Can AI really write content that sounds like me?",
@@ -67,7 +67,7 @@ const faqData = [
     },
     {
         question: "How much does a traditional real estate VA cost compared to Dooza?",
-        answer: "According to industry data, human virtual assistants for real estate cost $1,000-$2,600/month for full-time help, or $20-40/hour in the US. Dooza gives you AI employees working 24/7 for a fraction of that cost, with no hourly limits. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "A human virtual assistant for real estate starts around $1,299/month at Wishup (checked Oct 2026), and an in-house assistant costs more. Dooza gives you AI employees working 24/7, with no hourly limits. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How quickly will I see results?",
@@ -79,7 +79,7 @@ const painPoints = [
     {
         icon: Timer,
         title: "Leads Go Cold While You're Showing Homes",
-        description: "You're in the middle of a showing when a hot lead comes in. By the time you respond 2 hours later, they've already contacted 3 other agents. MIT research shows you're 10x less likely to connect after just 5 minutes."
+        description: "You're in the middle of a showing when a hot lead comes in. By the time you respond a couple of hours later, they may already have contacted other agents. Speed of response is one of the few things in lead handling you fully control."
     },
     {
         icon: Clock,
@@ -104,7 +104,7 @@ const painPoints = [
     {
         icon: DollarSign,
         title: "Marketing Costs Are Eating Your Commission",
-        description: "Zillow leads cost $139-$450 each. Social media managers want $1,500/month. A VA costs $1,000-$2,600/month. After splits, marketing, and expenses, your actual take-home keeps shrinking."
+        description: "Paid portal leads, social media managers and virtual assistants all add up. After splits, marketing, and expenses, your actual take-home keeps shrinking."
     }
 ];
 
@@ -259,10 +259,10 @@ export default function AiForRealEstateAgentsContent() {
                                     Let's be honest: real estate was supposed to be about helping people find their dream homes. Instead, you're drowning in admin work, chasing leads, and posting on Instagram at midnight.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    According to <a href="https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">NAR's 2025 Technology Survey</a>, 68% of agents now use AI tools—and that number is growing fast. The agents embracing AI aren't just saving time; they're closing more deals while their competitors struggle to keep up.
+                                    According to <a href="https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">NAR's 2026 Technology Report</a>, 23% of REALTORS® report using AI tools daily in their business, and 55% of respondents say AI has had a positive effect on their business. The agents embracing AI aren't just saving time; they're getting time back for clients while competitors struggle to keep up.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>Here's the uncomfortable truth:</strong> While you were showing a property, 3 leads went cold because no one responded. While you were at an open house, your competitor posted on social media twice. While you slept, buyers in different time zones searched for agents—and found someone else.
+                                    <strong>Here's the uncomfortable truth:</strong> While you were showing a property, new leads may have gone unanswered. While you were at an open house, your competitor posted on social media twice. While you slept, buyers in different time zones searched for agents—and found someone else.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     This guide shows you how AI employees can change that equation—working 24/7 so you can focus on what actually makes you money: building relationships and closing deals.
@@ -297,7 +297,7 @@ export default function AiForRealEstateAgentsContent() {
                         <section id="pain-points" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-4">The Reality of Being a Real Estate Agent in 2026</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                According to <a href="https://resources.insiderealestate.com/trending-now/10-real-pain-points-agents-are-facing-today-and-how-to-push-through" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">BoldTrail's research</a> and conversations with thousands of agents, here's what you're actually dealing with:
+                                Here's what many agents are actually dealing with:
                             </p>
                             <div className="grid gap-6">
                                 {painPoints.map((point, idx) => (
@@ -314,30 +314,22 @@ export default function AiForRealEstateAgentsContent() {
                                     </div>
                                 ))}
                             </div>
-                            <div className="mt-8 bg-amber-50 border border-amber-200 p-6 rounded-xl">
-                                <p className="text-amber-800 font-medium text-center">
-                                    "Most new agents take 6–12 months to ramp up—and 40% quit in year one."
-                                    <span className="block text-sm text-amber-600 mt-2">— <a href="https://resources.insiderealestate.com/trending-now/10-real-pain-points-agents-are-facing-today-and-how-to-push-through" target="_blank" rel="noopener noreferrer" className="underline">BoldTrail Industry Research</a></span>
-                                </p>
-                            </div>
                         </section>
 
                         <section id="why-ai-matters" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Why AI Matters for Real Estate Agents (The Numbers)</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    This isn't hype—it's what's actually happening in the industry. Data from <a href="https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">NAR</a>, <a href="https://www.inman.com/2025/12/31/more-ai-a-big-recovery-real-estate-heavyweights-predict-2026/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Inman</a>, and industry research shows a clear picture:
+                                    This isn't hype—it's what's actually happening in the industry. The <a href="https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">NAR Technology Survey</a> shows where agents already use AI:
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { stat: "68%", label: "of agents now use AI tools", source: "NAR 2025 Technology Survey", link: "https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" },
-                                    { stat: "47%", label: "of buyers say tech skills are 'very important'", source: "NAR Home Buyers Report", link: "https://www.nar.realtor/research-and-statistics/research-reports/home-buyer-and-seller-generational-trends" },
-                                    { stat: "79%", label: "of agents say AI discoverability is critical", source: "Inman 2026 Survey", link: "https://www.inman.com/2025/12/31/more-ai-a-big-recovery-real-estate-heavyweights-predict-2026/" },
-                                    { stat: "87%", label: "of brokerages report agents using AI", source: "Industry Research", link: "https://avenuehq.com/blog/ai-for-real-estate-2026" },
-                                    { stat: "10x", label: "more likely to connect with 5-min response", source: "MIT Research", link: "https://marketwiz.ai/real-estate-lead-response-time-why-5-minutes-10x-more-conversions/" },
-                                    { stat: "40%", label: "increase in lead conversion with AI chatbots", source: "Crescendo AI Study", link: "https://www.crescendo.ai/blog/best-real-estate-chatbots-with-ai" }
+                                    { stat: "23%", label: "of REALTORS® use AI tools daily", source: "NAR 2026 Technology Report", link: "https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" },
+                                    { stat: "55%", label: "say AI has had a positive effect on their business", source: "NAR 2026 Technology Report", link: "https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" },
+                                    { stat: "56%", label: "use AI to create social media posts", source: "NAR 2026 Technology Report", link: "https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" },
+                                    { stat: "52%", label: "use AI to draft emails and follow-ups", source: "NAR 2026 Technology Report", link: "https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-primary-50 border border-primary-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-primary-600 mb-2">{item.stat}</div>
@@ -350,10 +342,10 @@ export default function AiForRealEstateAgentsContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
                                     <TrendingUp className="w-5 h-5" />
-                                    The 2026 Reality Check
+                                    Where This Is Heading
                                 </h4>
                                 <p className="text-blue-700 mb-4">
-                                    According to <a href="https://www.inman.com/2025/12/31/more-ai-a-big-recovery-real-estate-heavyweights-predict-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Inman's 2026 predictions</a>: "AI will be the common thread driving the biggest changes in residential real estate. Profitable brokerages will acquire AI-lagging competitors, and top teams will dominate by working smarter."
+                                    Agents who build AI into their daily routine free up time for the work only a person can do: showing homes, negotiating and building relationships.
                                 </p>
                                 <p className="text-blue-700">
                                     The question isn't whether you should use AI—it's whether you can afford to wait while competitors adopt it first.
@@ -365,61 +357,23 @@ export default function AiForRealEstateAgentsContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Lead Response Crisis: Why Speed Wins Deals</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Here's the brutal math that's costing you money. According to research from <a href="https://marketwiz.ai/real-estate-lead-response-time-why-5-minutes-10x-more-conversions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">MIT, Harvard, and industry studies</a>:
+                                    Here's the math that quietly costs agents money: every minute a new lead waits is a minute another agent can use.
                                 </p>
-                            </div>
-
-                            <div className="bg-red-50 border-2 border-red-200 p-8 rounded-xl mb-8">
-                                <h3 className="text-2xl font-bold text-red-800 mb-6 text-center">The 5-Minute Window</h3>
-                                <div className="grid md:grid-cols-3 gap-6">
-                                    <div className="text-center">
-                                        <div className="text-5xl font-bold text-red-600 mb-2">78%</div>
-                                        <p className="text-slate-700">of buyers work with the <strong>first agent who responds</strong></p>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="text-5xl font-bold text-red-600 mb-2">10x</div>
-                                        <p className="text-slate-700">more likely to connect if you respond in <strong>5 minutes vs 30</strong></p>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="text-5xl font-bold text-red-600 mb-2">100x</div>
-                                        <p className="text-slate-700">higher conversion when contacting leads <strong>within 5 minutes</strong></p>
-                                    </div>
-                                </div>
                             </div>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    But here's the problem: According to <a href="https://agentzap.ai/blog/real-estate-lead-statistics" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">AgentZap's research</a>, most agents take <strong>hours</strong> to respond—not minutes. You're at a showing. You're driving. You're sleeping. Life happens.
+                                    But here's the problem: AgentZap's <a href="https://agentzap.ai/blog/real-estate-lead-statistics" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">lead statistics roundup</a> cites an Inman survey that puts the average agent response to a new inquiry at over 15 hours (917 minutes), <strong>hours</strong>, not minutes. You're at a showing. You're driving. You're sleeping. Life happens.
                                 </p>
                                 <p>
-                                    Meanwhile, that lead just found 3 other agents on <a href="https://www.zillow.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Zillow</a> who responded faster.
+                                    Meanwhile, that lead may already be talking to another agent who replied faster.
                                 </p>
-                            </div>
-
-                            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl mb-8">
-                                <h3 className="font-bold text-slate-900 mb-6 text-xl">The Economics of Slow Response:</h3>
-                                <div className="space-y-4">
-                                    {[
-                                        { time: "0-5 minutes", conversion: "High conversion (100x baseline)", color: "bg-green-500" },
-                                        { time: "5-30 minutes", conversion: "Conversion drops 10x", color: "bg-yellow-500" },
-                                        { time: "30-60 minutes", conversion: "Conversion drops 21x", color: "bg-orange-500" },
-                                        { time: "1+ hours", conversion: "Lead likely gone to competitor", color: "bg-red-500" }
-                                    ].map((item, idx) => (
-                                        <div key={idx} className="flex items-center gap-4">
-                                            <div className={`w-4 h-4 rounded-full ${item.color} shrink-0`}></div>
-                                            <div className="flex-1">
-                                                <span className="font-bold text-slate-900">{item.time}:</span>
-                                                <span className="text-slate-600 ml-2">{item.conversion}</span>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
                             </div>
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-green-800 mb-3">The AI Advantage:</h4>
                                 <p className="text-green-700">
-                                    AI employees respond <strong>instantly</strong>—24/7/365. While you're showing a property in Seattle, your AI is qualifying a lead in Miami. While you're sleeping, your AI is booking appointments for tomorrow. According to <a href="https://www.crescendo.ai/blog/best-real-estate-chatbots-with-ai" target="_blank" rel="noopener noreferrer" className="text-green-600 underline">Crescendo AI</a>, real estate teams using AI chatbots see up to 40% increase in lead conversion.
+                                    AI employees respond <strong>instantly</strong>—24/7/365. While you're showing a property in Seattle, your AI is qualifying a lead in Miami. While you're sleeping, your AI is booking appointments for tomorrow. Every lead gets an instant first reply.
                                 </p>
                             </div>
                         </section>
@@ -428,10 +382,10 @@ export default function AiForRealEstateAgentsContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Content & Social Media Struggle</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    According to <a href="https://www.housingwire.com/articles/real-estate-social-media-marketing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">HousingWire</a> and <a href="https://resimpli.com/blog/real-estate-social-media-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">industry statistics</a>, social media isn't optional anymore:
+                                    According to <a href="https://resimpli.com/blog/real-estate-social-media-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">REsimpli's social media statistics roundup</a>, social media isn't optional anymore:
                                 </p>
                                 <blockquote className="border-l-4 border-primary-500 pl-6 my-6 text-xl italic text-slate-700">
-                                    "71% of buyers are more likely to work with agents who have a strong social media presence."
+                                    "71% of buyers choose agents with a strong social media presence."
                                 </blockquote>
                             </div>
 
@@ -596,7 +550,7 @@ export default function AiForRealEstateAgentsContent() {
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">
-                                                    <strong>Real estate impact:</strong> According to industry research, 71% of buyers prefer agents with strong social presence. Somi ensures you're always visible and top-of-mind in your market.
+                                                    <strong>Real estate impact:</strong> Buyers look agents up online before they call. Somi ensures you're always visible and top-of-mind in your market.
                                                 </p>
                                             </div>
                                         </div>
@@ -634,7 +588,7 @@ export default function AiForRealEstateAgentsContent() {
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">
-                                                    <strong>Real estate impact:</strong> Stop paying $139-$450 per <a href="https://www.zillow.com/premier-agent/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Zillow lead</a>. Stan helps you build your own lead pipeline through organic methods that compound over time.
+                                                    <strong>Real estate impact:</strong> Reduce your reliance on paid portal leads. Stan helps you build your own lead pipeline through organic methods that compound over time.
                                                 </p>
                                             </div>
                                         </div>
@@ -665,7 +619,7 @@ export default function AiForRealEstateAgentsContent() {
                         <section id="pricing" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Cost Comparison: What You're Really Paying</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                Let's look at what real estate agents typically spend on support, according to <a href="https://shoreagents.com/virtual-real-estate-assistant-pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">ShoreAgents</a>, <a href="https://www.wishup.co/blog/virtual-real-estate-assistant-pricing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Wishup</a>, and industry research:
+                                Let's look at what real estate agents typically spend on support, with one price we could confirm (<a href="https://www.wishup.co/blog/virtual-real-estate-assistant-pricing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Wishup</a>, checked Oct 2026):
                             </p>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -674,22 +628,22 @@ export default function AiForRealEstateAgentsContent() {
                                     <div className="space-y-4">
                                         <div className="border-b border-slate-200 pb-4">
                                             <div className="font-bold text-slate-900">Human VA (Full-time)</div>
-                                            <div className="text-2xl font-bold text-slate-700">$1,500-$2,600<span className="text-sm font-normal">/month</span></div>
+                                            <div className="text-2xl font-bold text-slate-700">From $1,299<span className="text-sm font-normal">/month (Wishup, checked Oct 2026)</span></div>
                                             <p className="text-sm text-slate-500">Still needs time off, training, management</p>
                                         </div>
                                         <div className="border-b border-slate-200 pb-4">
                                             <div className="font-bold text-slate-900">Social Media Manager</div>
-                                            <div className="text-2xl font-bold text-slate-700">$1,000-$3,000<span className="text-sm font-normal">/month</span></div>
+                                            <div className="text-2xl font-bold text-slate-700">Monthly retainer<span className="text-sm font-normal"> (varies by scope)</span></div>
                                             <p className="text-sm text-slate-500">Only handles social, nothing else</p>
                                         </div>
                                         <div className="border-b border-slate-200 pb-4">
                                             <div className="font-bold text-slate-900">Zillow Premier Agent</div>
-                                            <div className="text-2xl font-bold text-slate-700">$139-$450<span className="text-sm font-normal">/per lead</span></div>
+                                            <div className="text-2xl font-bold text-slate-700">Pay per lead<span className="text-sm font-normal"> (varies by market)</span></div>
                                             <p className="text-sm text-slate-500">Shared leads, competitive market</p>
                                         </div>
                                         <div>
                                             <div className="font-bold text-slate-900">AI Tools (Individual)</div>
-                                            <div className="text-2xl font-bold text-slate-700">$50-$300<span className="text-sm font-normal">/each/month</span></div>
+                                            <div className="text-2xl font-bold text-slate-700">One subscription each<span className="text-sm font-normal"> (varies by tool)</span></div>
                                             <p className="text-sm text-slate-500">Need multiple tools, doesn't integrate</p>
                                         </div>
                                     </div>
@@ -716,14 +670,14 @@ export default function AiForRealEstateAgentsContent() {
                             </div>
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
-                                <p className="text-2xl font-bold text-green-700">A fraction of what a part-time VA costs</p>
+                                <p className="text-2xl font-bold text-green-700">One team instead of five subscriptions</p>
                                 <p className="text-green-600 mt-2">With AI employees working 24/7—no sick days, no training time, no management needed</p>
                             </div>
 
                             <div className="mt-8 bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-800 mb-3">The ROI Math:</h4>
                                 <p className="text-blue-700">
-                                    According to <a href="https://www.nar.realtor/agent-income" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">NAR</a>, the median agent commission on a $367,711 home is about $10,000. If Dooza helps you close just <strong>one extra deal per year</strong> through faster lead response, better follow-up, or improved online presence, that one commission alone covers many years of AI support. Start with a refundable pilot and judge the results yourself.
+                                    <a href="https://www.nar.realtor/agent-income" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">NAR's agent income page</a> shows a median gross income of $58,100 for REALTORS® (2024). If Dooza helps you close just <strong>one extra deal per year</strong> through faster lead response, better follow-up, or improved online presence, that one commission may well outweigh what you spend on a pilot. Start with a refundable pilot and judge the results yourself.
                                 </p>
                             </div>
                         </section>
@@ -770,7 +724,7 @@ export default function AiForRealEstateAgentsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Work Smarter, Not Harder?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    68% of agents are already using AI. The longer you wait, the more leads you're losing to competitors who respond faster, post more, and show up where buyers are searching.
+                                    AI is already part of many agents' daily work. The longer you wait, the more you risk losing leads to competitors who respond faster, post more, and show up where buyers are searching.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
@@ -802,51 +756,21 @@ export default function AiForRealEstateAgentsContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Industry Research & Statistics</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">NAR 2025 Technology Survey</a></li>
+                                        <li>• <a href="https://www.nar.realtor/research-and-statistics/research-reports/realtor-technology-survey" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">NAR 2026 Technology Report</a></li>
                                         <li>• <a href="https://www.nar.realtor/agent-income" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">NAR Agent Income Statistics</a></li>
-                                        <li>• <a href="https://www.inman.com/2025/12/31/more-ai-a-big-recovery-real-estate-heavyweights-predict-2026/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Inman - Real Estate AI Predictions 2026</a></li>
-                                        <li>• <a href="https://avenuehq.com/blog/ai-for-real-estate-2026" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Avenue - AI for Real Estate Guide</a></li>
-                                        <li>• <a href="https://homebuyinginstitute.com/mortgage/future-of-ai-in-real-estate/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Home Buying Institute - Future of AI</a></li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Lead Response & Conversion</h4>
+                                    <h4 className="font-semibold text-slate-800 mb-3">Lead Response</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://marketwiz.ai/real-estate-lead-response-time-why-5-minutes-10x-more-conversions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">MarketWiz - Lead Response Time Research</a></li>
-                                        <li>• <a href="https://agentzap.ai/blog/real-estate-lead-statistics" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">AgentZap - Lead Statistics 2026</a></li>
-                                        <li>• <a href="https://theclose.com/real-estate-lead-generation-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">The Close - Lead Generation Statistics</a></li>
-                                        <li>• <a href="https://www.ylopo.com/blog/real-estate-lead-conversion-rate" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ylopo - Lead Conversion Rates</a></li>
+                                        <li>• <a href="https://agentzap.ai/blog/real-estate-lead-statistics" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">AgentZap - Lead Statistics</a></li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Productivity & Time Management</h4>
+                                    <h4 className="font-semibold text-slate-800 mb-3">Social Media & Pricing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://resources.insiderealestate.com/trending-now/10-real-pain-points-agents-are-facing-today-and-how-to-push-through" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">BoldTrail - Agent Pain Points</a></li>
-                                        <li>• <a href="https://theclose.com/time-management-for-realtors/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">The Close - Time Management for Realtors</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Social Media & Marketing</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.housingwire.com/articles/real-estate-social-media-marketing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">HousingWire - Social Media Marketing</a></li>
                                         <li>• <a href="https://resimpli.com/blog/real-estate-social-media-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">REsimpli - Social Media Statistics</a></li>
-                                        <li>• <a href="https://blog.hootsuite.com/real-estate-social-media/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Hootsuite - Real Estate Social Media Tips</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">AI & Chatbot Research</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.crescendo.ai/blog/best-real-estate-chatbots-with-ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Crescendo - Real Estate AI Chatbots</a></li>
-                                        <li>• <a href="https://rtslabs.com/ai-chatbot-for-real-estate/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">RTS Labs - AI Chatbot Benefits</a></li>
-                                        <li>• <a href="https://masterofcode.com/blog/real-estate-chatbot" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Master of Code - Chatbot Case Studies</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">VA & Pricing Research</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://shoreagents.com/virtual-real-estate-assistant-pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">ShoreAgents - VA Pricing</a></li>
-                                        <li>• <a href="https://www.wishup.co/blog/virtual-real-estate-assistant-pricing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Wishup - VA Pricing Guide</a></li>
-                                        <li>• <a href="https://theclose.com/best-real-estate-virtual-assistant-companies/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">The Close - Best VA Companies</a></li>
+                                        <li>• <a href="https://www.wishup.co/blog/virtual-real-estate-assistant-pricing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Wishup - VA Pricing (checked Oct 2026)</a></li>
                                     </ul>
                                 </div>
                             </div>
