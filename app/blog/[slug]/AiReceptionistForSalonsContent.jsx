@@ -261,7 +261,6 @@ export default function AiReceptionistForSalonsContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { stat: "$375-750", label: "lost per day from just 5 missed salon calls", source: "Avg. booking $75-150" },
-                                    { stat: "80%", label: "of salon bookings still come via phone call", source: "Salon Industry Report" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-red-600 mb-2">{item.stat}</div>

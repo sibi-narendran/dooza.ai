@@ -246,20 +246,6 @@ export default function AiAppointmentSetterContent() {
                         <section id="agency-problem" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Agency Problem: What $3,000/Month Actually Buys You</h2>
 
-                            <div className="grid md:grid-cols-2 gap-6 mb-8">
-                                {[
-                                    { stat: "$2k-5k/mo", label: "Average agency retainer cost", source: "Industry Average" },
-                                    { stat: "60-70%", label: "Show rate on agency-booked meetings", source: "SalesHacker Research" },
-                                    { stat: "78%", label: "of leads buy from the first responder", source: "Harvard Business Review" },
-                                    { stat: "35-50%", label: "of sales go to the vendor that responds first", source: "InsideSales.com" }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl text-center">
-                                        <div className="text-4xl font-bold text-red-600 mb-2">{item.stat}</div>
-                                        <p className="text-slate-700 font-medium mb-1">{item.label}</p>
-                                        <p className="text-xs text-red-500">{item.source}</p>
-                                    </div>
-                                ))}
-                            </div>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>

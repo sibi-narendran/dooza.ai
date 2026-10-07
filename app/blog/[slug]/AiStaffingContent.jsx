@@ -246,7 +246,6 @@ export default function AiStaffingContent() {
                                 {[
                                     { stat: "$4,700", label: "average cost per hire", source: "SHRM" },
                                     { stat: "42 days", label: "average time to fill a position", source: "SHRM" },
-                                    { stat: "3-6 months", label: "time for new hire to reach full productivity", source: "Industry Average" },
                                     { stat: "33%", label: "annual turnover rate for small businesses", source: "BLS" },
                                     { stat: "$35-65K", label: "average salary for an administrative role", source: "Glassdoor" },
                                     { stat: "76%", label: "of SMBs say hiring is their biggest challenge", source: "NFIB" }
