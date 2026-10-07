@@ -80,7 +80,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
 
     const handleAction = (e) => {
         const url = e?.currentTarget?.href;
-        if (url && url.includes('cal.com')) {
+        if (url && /calendly\.com|cal\.com|\/book(\/|\?|$)/.test(url)) {
             if (e) e.preventDefault();
             setIsBookingModalOpen(true);
         }

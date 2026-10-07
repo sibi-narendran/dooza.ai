@@ -26,7 +26,7 @@ export default function DoozaVsLindyAiContent() {
 
     const handleAction = (e) => {
         const url = e?.currentTarget?.href;
-        if (url && url.includes('cal.com')) {
+        if (url && /calendly\.com|cal\.com|\/book(\/|\?|$)/.test(url)) {
             if (e) e.preventDefault();
             setIsBookingModalOpen(true);
         }
@@ -497,7 +497,7 @@ export default function DoozaVsLindyAiContent() {
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /> Need a <strong>24/7 AI receptionist</strong> for phone calls and appointments</li>
                                     </ul>
                                     <div className="mt-6">
-                                        <Link href="/" onClick={handleAction} className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors text-sm">
+                                        <Link href="/book" onClick={handleAction} className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors text-sm">
                                             Start your pilot <Zap className="w-4 h-4" />
                                         </Link>
                                     </div>
@@ -517,7 +517,7 @@ export default function DoozaVsLindyAiContent() {
                             <div className="prose md:prose-lg text-slate-600 mt-8">
                                 <p>For founders and small business owners who want AI <strong>built and run for them</strong> &mdash; email managed, social media posted, leads followed up, and phones answered &mdash; Dooza is the better fit. A Dooza engineer does the setup with you, and a refundable pilot lets you prove it on real work.</p>
                                 <p>Lindy is a good product with real strengths: published self-serve pricing, a fast start, strong meeting and calendar features, and compliance certifications Dooza doesn&apos;t have. If you are comfortable setting up and maintaining your own agents, or you need those certifications, choose Lindy.</p>
-                                <p className="mt-6"><strong>Ready to see the difference?</strong> <Link href="/" onClick={handleAction} className="text-primary-600 hover:underline font-medium">Start your pilot</Link> and have your AI employees working the same day. Start with a refundable pilot &mdash; 100% refund within 14 days. No credits to track. Just results.</p>
+                                <p className="mt-6"><strong>Ready to see the difference?</strong> <Link href="/book" onClick={handleAction} className="text-primary-600 hover:underline font-medium">Start your pilot</Link> and have your AI employees working the same day. Start with a refundable pilot &mdash; 100% refund within 14 days. No credits to track. Just results.</p>
                             </div>
                         </section>
 

@@ -87,7 +87,7 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
 
     const handleAction = (e) => {
         const url = e?.currentTarget?.href;
-        if (url && url.includes('cal.com')) {
+        if (url && /calendly\.com|cal\.com|\/book(\/|\?|$)/.test(url)) {
             e.preventDefault();
             setIsBookingModalOpen(true);
         }
