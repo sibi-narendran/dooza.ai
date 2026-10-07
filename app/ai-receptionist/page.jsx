@@ -69,7 +69,7 @@ const WHAT_IT_DOES = [
 ];
 
 const PILOT_STEPS = [
-    'Book a 15-minute meeting. We collect your questions, hours, and calendar.',
+    'Book a free 30-minute meeting. We collect your questions, hours, and calendar.',
     'We set it up for you within 48 hours. Nothing for you to build.',
     'It runs on your real calls. You listen to the recordings.',
     'Not useful? Ask within 14 days and you get a 100% refund.',
@@ -274,7 +274,7 @@ export default function AiReceptionistPage({ searchParams }) {
                                 Book a free pilot call
                             </Link>
                         </div>
-                        <p className="mt-4 text-sm text-slate-300">15 minutes. No card needed. Works with any phone.</p>
+                        <p className="mt-4 text-sm text-slate-300">30 minutes. No card needed. Works with any phone.</p>
                         <div className="mt-6">
                             <TextPilotLink source="pilot_section" tone="dark" />
                         </div>
