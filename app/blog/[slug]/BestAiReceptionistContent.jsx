@@ -40,7 +40,7 @@ const faqData = [
     },
     {
         question: "How much does an AI receptionist cost compared to a human?",
-        answer: "A human receptionist costs $3,500-4,200/month. Virtual receptionist services like Ruby or Smith.ai cost $300-935/month. Dooza's Rachel (AI Receptionist) handles unlimited calls 24/7 for a fraction of either. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
+        answer: "A human receptionist costs $3,500-4,200/month. Virtual receptionist services start at $250/month for 50 minutes (Ruby) or $300/month for 30 calls (Smith.ai), checked Oct 7, 2026. Dooza's Rachel (AI Receptionist) handles unlimited calls 24/7 for a fraction of either. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "Can an AI receptionist handle complex conversations?",
@@ -488,9 +488,9 @@ export default function BestAiReceptionistContent() {
                                     <p className="text-xs text-slate-500 mt-1">Salary + benefits + training</p>
                                 </div>
                                 <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl text-center">
-                                    <div className="text-3xl font-bold text-amber-600 mb-2">$935/mo</div>
+                                    <div className="text-3xl font-bold text-amber-600 mb-2">$720/mo</div>
                                     <p className="text-sm text-slate-700 font-medium">Ruby Receptionist</p>
-                                    <p className="text-xs text-slate-500 mt-1">200 calls/month limit</p>
+                                    <p className="text-xs text-slate-500 mt-1">200 minutes/month plan (checked Oct 7, 2026)</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
@@ -580,8 +580,8 @@ export default function BestAiReceptionistContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Virtual Receptionist Pricing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.ruby.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ruby Receptionist — Virtual receptionist pricing</a></li>
-                                        <li>• <a href="https://smith.ai/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Smith.ai — Virtual receptionist comparison</a></li>
+                                        <li>• <a href="https://www.ruby.com/plans-and-pricing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ruby Receptionist — Virtual receptionist pricing</a></li>
+                                        <li>• <a href="https://smith.ai/pricing/receptionists" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Smith.ai — Virtual receptionist comparison</a></li>
                                     </ul>
                                 </div>
                             </div>

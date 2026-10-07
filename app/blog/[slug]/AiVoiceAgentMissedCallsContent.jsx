@@ -354,7 +354,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">Why Virtual Receptionist Services Still Miss Revenue</h4>
                                         <p className="text-slate-700">
-                                            Virtual receptionist services like Ruby and Smith.ai are better than voicemail — but they charge <strong>$1.55-$2.20 per minute</strong>, cap your monthly call volume, and most don't operate after midnight. They take messages. They don't qualify leads, push to CRM, or trigger follow-ups. You still end up with a list of callbacks to make manually the next morning — by which time 78% of those leads have moved on.
+                                            Human virtual receptionist services like Ruby and Smith.ai answer 24/7 and are far better than voicemail, but every call is metered: Ruby's plans work out to <strong>$3.45–$5.00 per minute</strong> ($250/month for 50 minutes) and Smith.ai's to <strong>$7–$10 per call</strong> ($300/month for 30 calls), per their pricing pages (checked Oct 7, 2026). Booking, CRM entry and follow-up texts are often paid add-ons, so costs climb with volume.
                                         </p>
                                     </div>
                                 </div>
@@ -859,8 +859,8 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     <h4 className="font-semibold text-slate-800 mb-3">Cost & Industry Data</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li>• <a href="https://www.bls.gov/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Bureau of Labor Statistics — Receptionist & admin salary data</a></li>
-                                        <li>• <a href="https://www.ruby.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ruby — Virtual receptionist pricing ($1.55-2.20/min)</a></li>
-                                        <li>• <a href="https://smith.ai/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Smith.ai — Virtual receptionist pricing & capabilities</a></li>
+                                        <li>• <a href="https://www.ruby.com/plans-and-pricing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ruby — Plans and pricing (checked Oct 7, 2026)</a></li>
+                                        <li>• <a href="https://smith.ai/pricing/receptionists" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Smith.ai — Virtual receptionist pricing & capabilities</a></li>
                                         <li>• <a href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Salesforce — CRM data entry error rates and adoption</a></li>
                                     </ul>
                                 </div>

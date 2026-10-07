@@ -100,7 +100,7 @@ const toolCategories = [
         icon: Phone,
         title: "Phone & Receptionist",
         description: "Answering calls and booking appointments",
-        tools: ["Ruby ($230-1,640/mo)", "Smith.ai ($255-1,500/mo)", "Grasshopper ($31-80/mo)"],
+        tools: ["Ruby ($250-1,725/mo)", "Smith.ai ($300-2,100/mo)", "Grasshopper ($31-80/mo)"],
         dooza: "Rachel answers calls 24/7"
     },
     {

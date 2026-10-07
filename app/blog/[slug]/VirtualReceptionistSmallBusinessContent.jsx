@@ -37,7 +37,7 @@ import {
 
 const faqData = [
     { question: "What is a virtual receptionist for small business?", answer: "A virtual receptionist answers your business calls remotely — greeting callers, taking messages, booking appointments, and routing urgent calls. Traditional services use human agents; AI virtual receptionists like Rachel do it with AI, 24/7." },
-    { question: "How much does a virtual receptionist cost?", answer: "Traditional virtual receptionist services cost $230–$1,640/month (Ruby) or $255–$1,500/month (Smith.ai) depending on call volume. Dooza's AI receptionist Rachel answers calls 24/7; Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days." },
+    { question: "How much does a virtual receptionist cost?", answer: "Traditional virtual receptionist services cost $250–$1,725/month for 50–500 minutes (Ruby) or $300–$2,100/month for 30–300 calls (Smith.ai), per their pricing pages (checked Oct 7, 2026). Dooza's AI receptionist Rachel answers calls 24/7; Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "Can an AI virtual receptionist handle real conversations?", answer: "Yes. Rachel uses natural language processing for multi-turn conversations — she asks qualifying questions, answers FAQs about your business, books appointments, and knows when to route calls to you directly." },
     { question: "Is an AI receptionist reliable for a small business?", answer: "More reliable than human services. Rachel answers every call in under 1 second, never calls in sick, and works nights, weekends, and holidays. She handles the calls that human virtual receptionists miss after-hours." },
     { question: "How do I switch from my current answering service to AI?", answer: "Book a free 30-minute call to scope your pilot, and a Dooza engineer configures Rachel with your business info, FAQs, and calendar. Most businesses switch in a single day." }
@@ -209,7 +209,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     You started your business to do what you love — not to answer phones. But every missed call is a missed customer.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    If you're a small business owner, you already know the problem: the phone rings while you're with a client, on a job site, or just trying to eat lunch. You can't answer every call. So you hire a virtual receptionist service — Ruby, Smith.ai, PATLive — and suddenly you're paying $300–$900/month for someone to answer your phone during business hours.
+                                    If you're a small business owner, you already know the problem: the phone rings while you're with a client, on a job site, or just trying to eat lunch. You can't answer every call. So you hire a virtual receptionist service — Ruby, Smith.ai, PATLive — and suddenly you're paying $250–$810/month for a small plan, with every extra minute or call billed on top.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     But here's the part they don't tell you: those services still send callers to voicemail after 8 PM. They still charge per-minute overages. And on your busiest months, that "affordable" plan quietly doubles.
@@ -385,14 +385,10 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", ruby: "$230–$1,640", smith: "$255–$1,500", patlive: "$235–$1,110", rachel: "Refundable pilot (see /pricing)" },
-                                            { feature: "Per-Minute Overage", ruby: "$1.75–$2.20/min", smith: "$7–$9/call", patlive: "$1.63–$2.19/min", rachel: "None" },
-                                            { feature: "Hours of Operation", ruby: "Mon–Fri 5am–9pm PT", smith: "Mon–Fri 6am–6pm PT", patlive: "24/7 (premium plan)", rachel: "24/7/365" },
-                                            { feature: "Appointment Booking", ruby: "Yes (extra cost)", smith: "Yes (extra cost)", patlive: "Basic", rachel: "Included" },
-                                            { feature: "Lead Qualification", ruby: "Basic scripting", smith: "Intake forms", patlive: "Basic scripting", rachel: "Custom AI questions" },
-                                            { feature: "Call Summaries", ruby: "Basic notes", smith: "Email summaries", patlive: "Basic notes", rachel: "Detailed AI summaries" },
-                                            { feature: "Setup Time", ruby: "1–2 weeks", smith: "3–5 days", patlive: "1–2 weeks", rachel: "Same day" },
-                                            { feature: "Languages", ruby: "English, Spanish", smith: "English, Spanish", patlive: "English, Spanish", rachel: "English, Spanish, and more" }
+                                            { feature: "Monthly Cost", ruby: "$250–$1,725 (50–500 min)", smith: "$300–$2,100 (30–300 calls)", patlive: "$99–$1,499 (50–1,000 min), or $49 pay-as-you-go", rachel: "Refundable pilot (see /pricing)" },
+                                            { feature: "Overage", ruby: "Not listed", smith: "$8.50–$11.50/call", patlive: "$1.54–$2.99/min", rachel: "None" },
+                                            { feature: "Hours of Operation", ruby: "24/7", smith: "24/7", patlive: "24/7", rachel: "24/7/365" },
+                                            { feature: "Who answers", ruby: "Live receptionists", smith: "Live receptionists", patlive: "Live receptionists (US)", rachel: "AI receptionist" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -404,6 +400,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                         ))}
                                     </tbody>
                                 </table>
+                                <p className="text-xs text-slate-500 mt-2">Competitor prices from their own pricing pages (<a href="https://www.ruby.com/plans-and-pricing/" target="_blank" rel="noopener noreferrer" className="underline">Ruby</a>, <a href="https://smith.ai/pricing/receptionists" target="_blank" rel="noopener noreferrer" className="underline">Smith.ai</a>, <a href="https://www.patlive.com/pricing/" target="_blank" rel="noopener noreferrer" className="underline">PATLive</a>), checked Oct 7, 2026.</p>
                             </div>
                         </section>
 
@@ -518,14 +515,14 @@ export default function VirtualReceptionistSmallBusinessContent() {
 
                             <div className="grid md:grid-cols-3 gap-6 mb-8">
                                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl text-center">
-                                    <div className="text-3xl font-bold text-red-600 mb-2">$3,708/yr</div>
+                                    <div className="text-3xl font-bold text-red-600 mb-2">$3,000/yr</div>
                                     <p className="text-sm text-slate-700 font-medium">Ruby Receptionist</p>
-                                    <p className="text-xs text-slate-500 mt-1">$309/mo for 50 calls</p>
+                                    <p className="text-xs text-slate-500 mt-1">$250/mo for 50 minutes (checked Oct 7, 2026)</p>
                                 </div>
                                 <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl text-center">
-                                    <div className="text-3xl font-bold text-amber-600 mb-2">$3,060/yr</div>
+                                    <div className="text-3xl font-bold text-amber-600 mb-2">$3,600/yr</div>
                                     <p className="text-sm text-slate-700 font-medium">Smith.ai</p>
-                                    <p className="text-xs text-slate-500 mt-1">$255/mo for 30 calls</p>
+                                    <p className="text-xs text-slate-500 mt-1">$300/mo for 30 calls (checked Oct 7, 2026)</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
@@ -538,8 +535,8 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 <h3 className="font-bold text-slate-900 mb-4 text-lg text-center">What You Pay Today for Call Coverage</h3>
                                 <div className="space-y-3">
                                     {[
-                                        { label: "Ruby Receptionist (50 calls/mo)", value: "$3,708/year", highlight: false },
-                                        { label: "Smith.ai (30 calls/mo)", value: "$3,060/year", highlight: false },
+                                        { label: "Ruby Receptionist (50 minutes/mo)", value: "$3,000/year", highlight: false },
+                                        { label: "Smith.ai (30 calls/mo)", value: "$3,600/year", highlight: false },
                                         { label: "In-House Receptionist", value: "$42,000+/year", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>
@@ -625,9 +622,9 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Virtual Receptionist Pricing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.ruby.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ruby Receptionist — Pricing page</a></li>
-                                        <li>• <a href="https://smith.ai/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Smith.ai — Virtual receptionist plans</a></li>
-                                        <li>• <a href="https://www.patlive.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">PATLive — Answering service pricing</a></li>
+                                        <li>• <a href="https://www.ruby.com/plans-and-pricing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ruby Receptionist — Pricing page</a></li>
+                                        <li>• <a href="https://smith.ai/pricing/receptionists" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Smith.ai — Virtual receptionist plans</a></li>
+                                        <li>• <a href="https://www.patlive.com/pricing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">PATLive — Answering service pricing</a></li>
                                     </ul>
                                 </div>
                             </div>
