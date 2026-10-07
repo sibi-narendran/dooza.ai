@@ -791,7 +791,7 @@ export default function SeoForDoctorsDentistsContent() {
                                         <li>• <a href="https://backlinko.com/google-ctr-stats" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Backlinko - Google CTR Statistics</a></li>
                                         <li>• <a href="https://www.searchenginejournal.com/seo-guide/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Search Engine Journal - Complete SEO Guide</a></li>
                                         <li>• <a href="https://ahrefs.com/blog/healthcare-seo/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ahrefs - Healthcare SEO Guide</a></li>
-                                        <li>• <a href="https://www.semrush.com/blog/medical-seo/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Semrush - Medical SEO Best Practices</a></li>
+                                        <li>• <a href="https://www.semrush.com/blog/healthcare-seo/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Semrush - Healthcare SEO Guide</a></li>
                                     </ul>
                                 </div>
                             </div>

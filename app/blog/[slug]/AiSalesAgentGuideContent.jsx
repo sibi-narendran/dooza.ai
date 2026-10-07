@@ -261,9 +261,7 @@ export default function AiSalesAgentGuideContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { stat: "78%", label: "of deals go to the first company that responds", source: "Lead Connect" },
-                                    { stat: "5 min", label: "is the window to reach a lead — after that, conversion drops 10x", source: "MIT / InsideSales" },
-                                    { stat: "44%", label: "of salespeople give up after just one follow-up", source: "Brevet Group" },
-                                    { stat: "80%", label: "of sales require 5+ follow-ups, but most reps never get there", source: "RAIN Group" }
+                                    { stat: "5 min", label: "is the window to reach a lead — after that, conversion drops 10x", source: "MIT / InsideSales" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-red-600 mb-2">{item.stat}</div>
@@ -360,7 +358,7 @@ export default function AiSalesAgentGuideContent() {
                                     { icon: Zap, title: "Instant Lead Response", desc: "Responds to every inbound inquiry in under 60 seconds — email, form, or chat. No lead waits. Ever." },
                                     { icon: UserCheck, title: "Lead Qualification", desc: "Asks your custom screening questions: budget, timeline, decision-maker status, specific needs. Scores and ranks every prospect." },
                                     { icon: Calendar, title: "Appointment Booking", desc: "Checks your team's real-time availability and books meetings directly. No back-and-forth scheduling emails." },
-                                    { icon: Repeat, title: "Automated Follow-Up", desc: "Sends the 2nd, 3rd, 4th, and 5th follow-up on schedule. 80% of deals need 5+ touches — AI never forgets." },
+                                    { icon: Repeat, title: "Automated Follow-Up", desc: "Sends the 2nd, 3rd, 4th, and 5th follow-up on schedule. Most deals take several touches — AI never forgets." },
                                     { icon: PhoneCall, title: "Outbound Outreach", desc: "Reaches out to cold lists with personalized messaging. Warms them up and routes interested prospects to your team." },
                                     { icon: BarChart3, title: "Pipeline Intelligence", desc: "Tracks every interaction, scores lead quality, and gives your team a clear picture of what's hot and what's cold." }
                                 ].map((item, idx) => (
@@ -713,8 +711,6 @@ export default function AiSalesAgentGuideContent() {
                                     <h4 className="font-semibold text-slate-800 mb-3">Sales Response & Follow-Up Research</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li>• <a href="https://www.salesforce.com/news/stories/sales-research-2023/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Salesforce research (2023): reps spend 28% of their week selling</a></li>
-                                        <li>• <a href="https://brevetgroup.com/21-mind-blowing-sales-stats/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Brevet Group — 44% give up after one follow-up</a></li>
-                                        <li>• <a href="https://www.rainsalestraining.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">RAIN Group — 80% of sales need 5+ follow-ups</a></li>
                                     </ul>
                                 </div>
                                 <div>

@@ -84,7 +84,7 @@ const painPoints = [
     {
         icon: Clock,
         title: "You're Working 60+ Hours But Still Behind",
-        description: "Between showings, open houses, paperwork, and client calls, there's no time left for marketing. Studies show agents waste 10+ hours weekly on admin tasks—that's an entire workday that could go toward closing deals."
+        description: "Between showings, open houses, paperwork, and client calls, there's no time left for marketing. Agents lose hours every week to admin tasks—time that could go toward closing deals."
     },
     {
         icon: Instagram,
@@ -492,7 +492,7 @@ export default function AiForRealEstateAgentsContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The Time Problem</h4>
                                         <p className="text-slate-700">
-                                            According to <a href="https://www.vertuagent.com/blog/why-most-real-estate-agents-waste-10-hours-a-week-on-admin-tasks" target="_blank" rel="noopener noreferrer" className="text-amber-600 underline">Vertu Agent research</a>, most agents waste 10+ hours per week on non-revenue-generating tasks. That's 40+ hours a month that could go toward showings, client calls, and closing deals. Creating content on top of that? It's not sustainable.
+                                            Most agents lose a lot of time each week to admin and other non-revenue-generating tasks—time that could go toward showings, client calls, and closing deals. Creating content on top of that? It's not sustainable.
                                         </p>
                                     </div>
                                 </div>
@@ -821,7 +821,6 @@ export default function AiForRealEstateAgentsContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Productivity & Time Management</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.vertuagent.com/blog/why-most-real-estate-agents-waste-10-hours-a-week-on-admin-tasks" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Vertu Agent - Admin Time Waste Study</a></li>
                                         <li>• <a href="https://resources.insiderealestate.com/trending-now/10-real-pain-points-agents-are-facing-today-and-how-to-push-through" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">BoldTrail - Agent Pain Points</a></li>
                                         <li>• <a href="https://theclose.com/time-management-for-realtors/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">The Close - Time Management for Realtors</a></li>
                                     </ul>

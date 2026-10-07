@@ -840,7 +840,6 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     <h4 className="font-semibold text-slate-800 mb-3">Outreach & Sales Research</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li><a href="https://www.rainsalestraining.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">RAIN Group — Multi-touch follow-up and buyer engagement data</a></li>
-                                        <li><a href="https://brevetgroup.com/21-mind-blowing-sales-stats/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Brevet Group — 80% of sales require 5+ follow-ups</a></li>
                                     </ul>
                                 </div>
                             </div>

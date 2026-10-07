@@ -232,7 +232,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     <li>A hybrid workforce saves employees an average of <strong className="text-white">2.5 hours per day</strong></li>
                                 </ul>
                                 <p className="text-sm text-slate-400 mt-3">
-                                    Sources: <a href="https://clearsky2100.com/ai-employees-vs-virtual-assistants-which-is-best-for-smes-in-2026/" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:underline">ClearSky</a>, <a href="https://contacteva.com/resources/virtual-assistant-outlook-for-2026-the-ai-powered-evolution/" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:underline">ContactEva</a>
+                                    Source: <a href="https://clearsky2100.com/ai-employees-vs-virtual-assistants-which-is-best-for-smes-in-2026/" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:underline">ClearSky</a>
                                 </p>
                             </div>
 

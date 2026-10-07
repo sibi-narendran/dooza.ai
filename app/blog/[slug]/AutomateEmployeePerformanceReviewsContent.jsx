@@ -347,7 +347,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     </h3>
                                     <div className="space-y-3 text-sm text-slate-700">
                                         <p>
-                                            Research from Stanford University found that women are <strong>1.4x more likely</strong> to receive critical subjective feedback in reviews. The same assertive behavior gets described differently:
+                                            Research on review language has found that women are <strong>more likely</strong> to receive critical subjective feedback in reviews. The same assertive behavior gets described differently:
                                         </p>
                                         <div className="grid gap-3 mt-3 sm:grid-cols-2">
                                             <div className="bg-white p-3 rounded-lg">
@@ -397,7 +397,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                 </h3>
                                 <div className="text-sm text-slate-700 space-y-3">
                                     <p>
-                                        Managers consistently rate employees they see more often (and like more personally) higher than those they interact with less. In the age of remote and hybrid work, this has become a serious equity issue. A 2023 study from the Society for Human Resource Management found that <strong>remote workers are 38% less likely to receive a positive performance review</strong> compared to in-office peers — even when output metrics are identical.
+                                        Managers consistently rate employees they see more often (and like more personally) higher than those they interact with less. In the age of remote and hybrid work, this has become a serious equity issue. This proximity bias means <strong>remote workers can be rated lower</strong> than in-office peers — even when their output is the same.
                                     </p>
                                     <p>
                                         Similarly, the "similar-to-me" effect means managers unconsciously favor employees who share their background, communication style, or personality traits. This is not favoritism in the malicious sense — it is pattern-matching that feels like good judgment but produces unfair outcomes.
@@ -1022,13 +1022,11 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li><a href="https://www.gallup.com/workplace/249332/harm-good-truth-performance-reviews.aspx" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Gallup — Only 14% of employees say reviews motivate them</a></li>
                                         <li><a href="https://hbr.org/2019/03/the-feedback-fallacy" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Harvard Business Review — The Feedback Fallacy</a></li>
-                                        <li><a href="https://www.shrm.org/topics-tools/news/employee-relations/is-it-time-to-put-performance-reviews-on-pip" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">SHRM — Remote worker review disparities</a></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Bias in Performance Evaluations</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li><a href="https://womensleadership.stanford.edu/resources/voices/language-matters-how-words-used-performance-reviews-can-undermine-gender-equity" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Stanford University — Gender bias in performance feedback language</a></li>
                                         <li><a href="https://psycnet.apa.org/record/2008-04617-008" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Journal of Applied Psychology — Racial disparities in performance ratings</a></li>
                                         <li><a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/three-common-biases-that-make-performance-reviews-unfair" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">McKinsey — Three common biases in performance reviews</a></li>
                                     </ul>

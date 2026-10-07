@@ -690,9 +690,9 @@ export default function WhatIsOpenClawContent() {
                                     {
                                         icon: Terminal,
                                         title: "Full System Access = Full Risk",
-                                        desc: "OpenClaw has unrestricted access to your file system, terminal, and browser. While this enables powerful automation, it also means any vulnerability or prompt injection could lead to data deletion, unauthorized purchases, or worse.",
-                                        source: "OpenClaw FAQ",
-                                        sourceUrl: "https://github.com/nicepkg/openclaw"
+                                        desc: "OpenClaw's tools run directly on your computer (the host) unless you configure sandboxing, and its own docs say to treat inbound messages as untrusted input. While this enables powerful automation, it also means any vulnerability or prompt injection could lead to data deletion, unauthorized purchases, or worse.",
+                                        source: "OpenClaw README (Security)",
+                                        sourceUrl: "https://github.com/openclaw/openclaw"
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl">

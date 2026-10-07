@@ -230,11 +230,10 @@ export default function AutomateBusinessProcessesContent() {
                         <section id="time-wasters" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The 3 Biggest Time-Wasters Killing Your Business</h2>
 
-                            <div className="grid md:grid-cols-3 gap-6 mb-8">
+                            <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { stat: "28%", label: "of the workday spent on email", source: "McKinsey" },
-                                    { stat: "6+ hrs/wk", label: "spent managing social media", source: "Sprout Social" },
-                                    { stat: "62%", label: "of SMB calls go unanswered", source: "Forbes" }
+                                    { stat: "6+ hrs/wk", label: "spent managing social media", source: "Sprout Social" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-primary-50 border border-primary-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-primary-600 mb-2">{item.stat}</div>
@@ -356,7 +355,7 @@ export default function AutomateBusinessProcessesContent() {
                                         Before
                                     </h3>
                                     <p className="text-slate-600">
-                                        Voicemail: 85% of callers won't leave a message. 62% of calls go unanswered. Every missed call is a missed sale.
+                                        Voicemail: 85% of callers won't leave a message. Many calls simply go unanswered. Every missed call is a missed sale.
                                     </p>
                                 </div>
                                 <div className="bg-green-50 border-2 border-green-200 p-6 rounded-xl">
@@ -673,7 +672,6 @@ export default function AutomateBusinessProcessesContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Lead Generation & Marketing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.forbes.com/councils/forbesbusinesscouncil/2023/12/11/why-small-businesses-miss-calls-and-how-to-fix-it/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Forbes — SMB missed calls and lost revenue</a></li>
                                         <li>• <a href="https://blog.hubspot.com/marketing/content-marketing-strategy" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">HubSpot — Content marketing and lead generation</a></li>
                                     </ul>
                                 </div>

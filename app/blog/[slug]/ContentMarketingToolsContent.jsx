@@ -308,14 +308,13 @@ export default function ContentMarketingToolsContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Real Content Marketing Challenges</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Data from <a href="https://penfriend.ai/blog/content-marketing-stats" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Penfriend</a>, <a href="https://www.semrush.com/blog/content-marketing-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Semrush</a>, and <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">CMI</a>:
+                                    Data from <a href="https://www.semrush.com/blog/content-marketing-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Semrush</a> and <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">CMI</a>:
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { stat: "54%", label: "cite lack of resources as biggest challenge", source: "CMI Research", link: "https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" },
-                                    { stat: "45%", label: "struggle to attract quality leads", source: "Penfriend", link: "https://penfriend.ai/blog/content-marketing-stats" },
                                     { stat: "38%", label: "need to create content faster", source: "Semrush", link: "https://www.semrush.com/blog/content-marketing-statistics/" },
                                     { stat: "35%", label: "struggle with generating ideas", source: "Industry Research", link: "https://www.demandsage.com/content-marketing-statistics/" },
                                     { stat: "64%", label: "adapting to SEO changes is challenging", source: "Content Research", link: "https://www.searchenginejournal.com/content-marketing-statistics-you-should-know/507173/" },
@@ -595,7 +594,6 @@ export default function ContentMarketingToolsContent() {
                                         <li>• <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">CMI - B2B Content Marketing Trends</a></li>
                                         <li>• <a href="https://www.demandsage.com/content-marketing-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">DemandSage - Content Marketing Statistics</a></li>
                                         <li>• <a href="https://www.semrush.com/blog/content-marketing-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Semrush - 96 Content Statistics</a></li>
-                                        <li>• <a href="https://penfriend.ai/blog/content-marketing-stats" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Penfriend - Marketing Stats</a></li>
                                     </ul>
                                 </div>
                                 <div>
