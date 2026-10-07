@@ -244,18 +244,6 @@ export default function BestAiReceptionistContent() {
                         <section id="voicemail-problem" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Voicemail Problem: Why Callers Hang Up</h2>
 
-                            <div className="grid md:grid-cols-2 gap-6 mb-8">
-                                {[
-                                    { stat: "$1,200+", label: "per month in lost leads", source: "Industry Average" },
-                                    { stat: "67%", label: "of callers hang up when they can't reach a person", source: "Consumer Reports" }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl text-center">
-                                        <div className="text-4xl font-bold text-red-600 mb-2">{item.stat}</div>
-                                        <p className="text-slate-700 font-medium mb-1">{item.label}</p>
-                                        <p className="text-xs text-red-500">{item.source}</p>
-                                    </div>
-                                ))}
-                            </div>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl">

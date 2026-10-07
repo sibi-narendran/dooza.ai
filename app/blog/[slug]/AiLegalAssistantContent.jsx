@@ -238,7 +238,6 @@ export default function AiLegalAssistantContent() {
                                 {[
                                     { stat: "24 hrs", label: "average response time for law firm inquiries", source: "Martindale-Avvo Study" },
                                     { stat: "42%", label: "of law firms don't respond to voicemails within 24 hours", source: "ABA Journal" },
-                                    { stat: "67%", label: "of callers won't leave a voicemail — they call the next firm", source: "Consumer Research" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-red-600 mb-2">{item.stat}</div>
@@ -567,7 +566,7 @@ export default function AiLegalAssistantContent() {
 
                             <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                 <p className="text-slate-700 font-medium text-center">
-                                    All four of these scenarios happened after business hours. Without an AI legal assistant, every one of these callers would have reached voicemail — and 67% of them would have called the next firm on their list instead of leaving a message.
+                                    All four of these scenarios happened after business hours. Without an AI legal assistant, every one of these callers would have reached voicemail — and many of them would have called the next firm on their list instead of leaving a message.
                                 </p>
                             </div>
                         </section>

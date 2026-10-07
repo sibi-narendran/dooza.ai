@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "What happens during after-hours calls?",
-        answer: "The AI voice agent answers 24/7 with the same quality as business hours. It qualifies the caller, captures their needs, books appointments on your calendar, and sends you a text summary. 40% of inbound calls happen outside business hours — you're capturing all of them."
+        answer: "The AI voice agent answers 24/7 with the same quality as business hours. It qualifies the caller, captures their needs, books appointments on your calendar, and sends you a text summary. Many calls come in outside business hours, and you capture all of them."
     },
     {
         question: "Will callers know they're speaking to an AI?",
@@ -574,8 +574,8 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     ))}
                                 </div>
                                 <div className="mt-6 pt-4 border-t border-slate-700 text-center">
-                                    <p className="text-lg font-bold text-red-400">Total: 40% of inbound calls happen outside business hours</p>
-                                    <p className="text-sm text-slate-400 mt-1">If you're only answering calls M-F 9-5, you're missing nearly half your revenue opportunities</p>
+                                    <p className="text-lg font-bold text-red-400">Many inbound calls happen outside business hours</p>
+                                    <p className="text-sm text-slate-400 mt-1">If you're only answering calls M-F 9-5, you're missing every opportunity that calls after hours</p>
                                 </div>
                             </div>
 
