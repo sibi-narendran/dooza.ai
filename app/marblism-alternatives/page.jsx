@@ -76,7 +76,7 @@ const faqData = [
     },
     {
         question: 'Does Marblism have a free trial?',
-        answer: 'Marblism\'s pricing page does not mention a free trial (checked October 7, 2026); check marblism.com/pricing for current terms. Alternatives offer different ways to evaluate: Dooza starts with a refundable pilot (100% refund within 14 days), Motion offers a free trial, and Lindy AI gives $50 in free credits that last 7 days (checked October 7, 2026).',
+        answer: 'Marblism\'s pricing page does not mention a free trial but offers a 7-day money-back guarantee (checked October 7, 2026); check marblism.com/pricing for current terms. Alternatives offer different ways to evaluate: Dooza starts with a refundable pilot (100% refund within 14 days), Motion offers a free trial, and Lindy AI gives $50 in free credits that last 7 days (checked October 7, 2026).',
     },
     {
         question: 'Which AI employee platform has the best onboarding?',

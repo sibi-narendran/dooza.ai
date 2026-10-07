@@ -23,7 +23,7 @@ const comparisonRows = [
     { feature: 'Setup', dooza: 'Done for you: a Dooza engineer scopes your pilot on a free 30-min call, then builds and tunes it with you', competitor: 'Self-serve (you set it up and manage it)', doozaWins: true },
     { feature: 'Custom Agents', dooza: 'Built and maintained by Dooza engineers (Dooza Agents)', competitor: 'Fixed roster of 7 AI employees', doozaWins: true },
     { feature: 'Integrations', dooza: '1,000+ app integrations', competitor: 'See marblism.com for supported tools', doozaWins: true },
-    { feature: 'Try Before Committing', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: 'No free trial mentioned on its pricing page', doozaWins: true },
+    { feature: 'Try Before Committing', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: '7-day money-back guarantee (no free trial mentioned on its pricing page)', doozaWins: true },
     { feature: 'Best For', dooza: 'Owners who want it done for them', competitor: 'Lowest-cost self-serve option', doozaWins: false },
 ];
 
@@ -190,7 +190,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                 <p className="section-label mb-3">Pricing Breakdown</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white">Marblism Pricing (Checked October 7, 2026)</h2>
                                 <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
-                                    Marblism plans start at $24/month billed yearly, or $44/month billed monthly. Every plan includes all 7 AI employees, 50 hours of work, unlimited team members, and unlimited businesses. Its pricing page does not mention a free trial. Source: <a href="https://www.marblism.com/pricing" target="_blank" rel="noopener noreferrer" className="underline text-primary-300">marblism.com/pricing</a>.
+                                    Marblism plans start at $24/month billed yearly, or $44/month billed monthly. Every plan includes all 7 AI employees, 50 hours of work, unlimited team members, and unlimited businesses. Its pricing page does not mention a free trial but offers a 7-day money-back guarantee. Source: <a href="https://www.marblism.com/pricing" target="_blank" rel="noopener noreferrer" className="underline text-primary-300">marblism.com/pricing</a>.
                                 </p>
                                 <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
                                     For a self-serve user, Marblism is the cheaper option. Dooza fits when you want it done for you: a Dooza engineer scopes your pilot on a free 30-minute call, builds and tunes your AI employees or custom agents with you, and every product starts with a refundable pilot (100% refund within 14 days). Dooza pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.

@@ -19,7 +19,7 @@ const marblismPainPoints = [
     { icon: Users, title: 'Self-Serve Setup', desc: 'Marblism is self-serve: you set up and manage the AI employees yourself. If you would rather have someone build and tune them with you, a done-for-you option fits better.' },
     { icon: Bot, title: 'Need Custom Agents', desc: 'Every Marblism plan includes the same 7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda). If your workflow needs an agent outside that roster, look at platforms that build custom agents.' },
     { icon: Puzzle, title: 'Specific Integrations', desc: 'If you depend on a particular tool, check Marblism\'s site for the tools it connects to before you commit, and compare it with the alternatives below.' },
-    { icon: Shield, title: 'How You Evaluate It', desc: 'Marblism\'s pricing page (checked October 7, 2026) does not mention a free trial. Some alternatives offer free trials, free tiers, or refundable pilots.' },
+    { icon: Shield, title: 'How You Evaluate It', desc: 'Marblism\'s pricing page (checked October 7, 2026) does not mention a free trial but offers a 7-day money-back guarantee. Some alternatives offer free trials, free tiers, or refundable pilots.' },
     { icon: DollarSign, title: 'Hours Included', desc: 'Every Marblism plan includes 50 hours of work. If you expect heavier use, compare how each alternative meters work.' },
     { icon: Clock, title: 'Time to Set It Up', desc: 'A low price is good value only if you have time to set up and tune the AI employees. If you do not, weigh that time against a done-for-you option.' },
 ];
@@ -481,6 +481,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                                 { item: 'Team members', value: 'Unlimited' },
                                                 { item: 'Businesses', value: 'Unlimited' },
                                                 { item: 'Free trial', value: 'Not mentioned on the pricing page' },
+                                                { item: 'Guarantee', value: '7-day money-back guarantee' },
                                             ].map((row, i) => (
                                                 <tr key={i} className="border-b border-white/5 last:border-0">
                                                     <td className="p-4 md:p-5 text-white font-medium">{row.item}</td>
