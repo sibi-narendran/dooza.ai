@@ -59,6 +59,10 @@ const faqData = [
         answer: 'Sintra X has a $97/mo list price but sells at $48.50/mo month to month, $23.60/mo on a 3-month plan ($70.80 up front), or $15.60/mo on a 12-month plan ($187.20 up front). Every plan includes 250 credits a month, with paid top-ups for advanced actions. Sintra no longer sells single-helper plans. Dooza has no credit system; pricing depends on the product and every Dooza product starts with a refundable pilot (see dooza.ai/pricing). Sintra prices checked October 7, 2026.',
     },
     {
+        question: 'Is Sintra AI free?',
+        answer: "No. Sintra's pricing page lists only paid plans (from $15.60/mo on a 12-month plan to $48.50/mo month to month) and no free plan or free trial. Every plan comes with a 14-day money-back guarantee: ask within 14 days for a full refund. Dooza works the same way on refunds: no free trial, and every product starts with a refundable pilot (100% refund within 14 days). If you want a free plan, Cubeo AI has one (see the comparison above). Sintra prices checked October 7, 2026 on sintra.ai/pricing.",
+    },
+    {
         question: 'Can Sintra AI helpers talk to each other?',
         answer: 'Yes. Sintra\'s help centre says its AI employees "call on each other automatically" and divide the work between themselves, and every helper can use the same Brain AI knowledge base (checked October 7, 2026).',
     },
