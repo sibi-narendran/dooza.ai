@@ -40,11 +40,15 @@ const faqData = [
     },
     {
         question: "How much does an AI receptionist cost compared to a human?",
-        answer: "A human receptionist costs $3,500-4,200/month. Virtual receptionist services start at $250/month for 50 minutes (Ruby) or $300/month for 30 calls (Smith.ai), checked Oct 7, 2026. Dooza's Rachel (AI Receptionist) handles unlimited calls 24/7 for a fraction of either. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
+        answer: "A human receptionist costs a salary plus benefits. Virtual receptionist services start at $250/month for 50 minutes (Ruby) or $300/month for 30 calls (Smith.ai), checked Oct 7, 2026. Dooza's Rachel (AI Receptionist) answers calls 24/7. See dooza.ai/pricing; every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Can an AI receptionist handle complex conversations?",
         answer: "Modern AI receptionists like Rachel use natural language processing to handle multi-turn conversations, answer FAQs, qualify leads with custom questions, and know when to route to a human for complex issues."
+    },
+    {
+        question: "What's the best AI virtual receptionist for lead qualification?",
+        answer: "The best one asks your own screening questions on every call, books qualified callers straight onto your calendar, sends urgent or high-value calls to a person under rules you set, and gives your team a written summary of each call. Test any vendor on those four points with a live trial call before you sign. Dooza's AI Receptionist (Rachel) does all four, and starts with a refundable pilot (100% refund within 14 days). If you only need messages taken, a cheaper answering service may be enough."
     },
     {
         question: "Will callers know they're talking to an AI?",
@@ -340,7 +344,7 @@ export default function BestAiReceptionistContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", voicemail: "$0", virtual: "$300-935", inhouse: "$3,500-4,200", rachel: "Refundable pilot (see /pricing)" },
+                                            { feature: "Monthly Cost", voicemail: "$0", virtual: "$300-935", inhouse: "Salary + benefits", rachel: "Refundable pilot (see /pricing)" },
                                             { feature: "Availability", voicemail: "Always (but useless)", virtual: "Business hours + limited after-hours", inhouse: "Business hours", rachel: "24/7/365" },
                                             { feature: "Call Capacity", voicemail: "Unlimited", virtual: "50-200 calls/mo", inhouse: "~40 calls/day", rachel: "Unlimited" },
                                             { feature: "Lead Qualification", voicemail: "None", virtual: "Basic scripting", inhouse: "Trained judgment", rachel: "Custom AI qualification" },
