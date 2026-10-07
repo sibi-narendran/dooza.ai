@@ -33,9 +33,9 @@ const categories = [
         id: 'ai-email-management',
         desc: 'Automate drafting, sending, sorting, and replying to emails. AI reads context, applies brand voice, and handles routine threads without supervision.',
         topTools: [
-            { name: 'Mailchimp', price: '$20–350/mo' },
-            { name: 'Klaviyo', price: '$20–200/mo' },
-            { name: 'Superhuman', price: '$30/mo' },
+            { name: 'Mailchimp', price: 'See vendor pricing' },
+            { name: 'Klaviyo', price: 'See vendor pricing' },
+            { name: 'Superhuman', price: 'See vendor pricing' },
         ],
         doozaAgent: 'Maily',
         doozaNote: 'Handles email campaigns, replies, and inbox management as part of Dooza Workforce.',
@@ -46,9 +46,9 @@ const categories = [
         id: 'ai-social-media',
         desc: 'Schedule posts, generate captions, analyze engagement, and post across platforms. AI maintains your brand voice while posting on autopilot.',
         topTools: [
-            { name: 'Hootsuite', price: '$99–249/mo' },
-            { name: 'Buffer', price: '$6–120/mo' },
-            { name: 'Sprout Social', price: '$249–499/mo' },
+            { name: 'Hootsuite', price: 'From $99/mo' },
+            { name: 'Buffer', price: '$5–10/channel/mo' },
+            { name: 'Sprout Social', price: '$79–399/seat/mo' },
         ],
         doozaAgent: 'Somi',
         doozaNote: 'Writes, schedules, and posts across Instagram, Facebook, X, and LinkedIn automatically.',
@@ -59,9 +59,9 @@ const categories = [
         id: 'ai-seo-content',
         desc: 'Research keywords, write optimized content, track rankings, and build topical authority. AI creates content that ranks without manual research.',
         topTools: [
-            { name: 'Semrush', price: '$139–499/mo' },
-            { name: 'Surfer SEO', price: '$89–219/mo' },
-            { name: 'Jasper AI', price: '$49–125/mo' },
+            { name: 'Semrush', price: '$139–549/mo' },
+            { name: 'Surfer SEO', price: '$49–299/mo (billed yearly)' },
+            { name: 'Jasper AI', price: '$59–69/seat/mo' },
         ],
         doozaAgent: 'Ranky',
         doozaNote: 'Researches keywords, writes SEO- and GEO-optimized blog posts, and gets you cited by ChatGPT, Perplexity, and Google AI Overviews.',
@@ -73,9 +73,9 @@ const categories = [
         id: 'ai-customer-support',
         desc: 'Answer customer queries 24/7 via chat, email, and phone. AI resolves common tickets instantly and escalates complex issues to humans.',
         topTools: [
-            { name: 'Intercom', price: '$74–289/mo' },
-            { name: 'Zendesk', price: '$55–115/agent/mo' },
-            { name: 'Freshdesk', price: '$15–79/agent/mo' },
+            { name: 'Intercom', price: '$29–132/seat/mo + usage' },
+            { name: 'Zendesk', price: '$55–115/agent/mo (annual)' },
+            { name: 'Freshdesk', price: '$19–89/agent/mo (annual)' },
         ],
         doozaAgent: 'Maily',
         doozaNote: 'Handles support emails around the clock and escalates complex issues to your team.',
@@ -86,9 +86,9 @@ const categories = [
         id: 'ai-lead-generation',
         desc: 'Find prospects, enrich contact data, send outreach sequences, and qualify leads. AI targets the right people with personalized messages at scale.',
         topTools: [
-            { name: 'Apollo.io', price: '$49–119/mo' },
-            { name: 'Instantly', price: '$37–97/mo' },
-            { name: 'HubSpot Sales', price: '$50–150/mo' },
+            { name: 'Apollo.io', price: 'See vendor pricing' },
+            { name: 'Instantly', price: '$47–97/mo' },
+            { name: 'HubSpot Sales', price: 'See vendor pricing' },
         ],
         doozaAgent: 'Stan',
         doozaNote: 'Finds leads, sends outreach emails you approve, and qualifies prospects.',
@@ -100,7 +100,7 @@ const categories = [
         desc: 'Review contracts, flag risks, ensure regulatory compliance, and draft legal documents. AI scans thousands of pages in minutes.',
         topTools: [
             { name: 'Harvey AI', price: 'Enterprise pricing' },
-            { name: 'Ironclad', price: 'From $50/user/mo' },
+            { name: 'Ironclad', price: 'Contact vendor' },
             { name: 'ContractPodAi', price: 'Enterprise pricing' },
         ],
         doozaAgent: 'Linda',
@@ -112,9 +112,9 @@ const categories = [
         id: 'ai-accounting',
         desc: 'Automate bookkeeping, invoicing, expense tracking, and financial reporting. AI categorizes transactions and catches errors humans miss.',
         topTools: [
-            { name: 'QuickBooks AI', price: '$30–200/mo' },
-            { name: 'Xero', price: '$15–78/mo' },
-            { name: 'Bench', price: '$299–499/mo' },
+            { name: 'QuickBooks AI', price: '$38–340/mo' },
+            { name: 'Xero', price: '$27–97/mo' },
+            { name: 'Bench', price: '$199–649/mo' },
         ],
         doozaAgent: null,
         doozaNote: null,
@@ -125,8 +125,8 @@ const categories = [
         id: 'ai-hr-recruiting',
         desc: 'Screen resumes, schedule interviews, onboard new hires, and manage payroll. AI shortlists top candidates from hundreds of applications.',
         topTools: [
-            { name: 'Workable', price: '$149–299/mo' },
-            { name: 'Lever', price: 'From $60/user/mo' },
+            { name: 'Workable', price: '$299–719/mo' },
+            { name: 'Lever', price: 'Contact vendor' },
             { name: 'Paradox (Olivia)', price: 'Enterprise pricing' },
         ],
         doozaAgent: null,
@@ -138,9 +138,9 @@ const categories = [
         id: 'ai-project-management',
         desc: 'Plan projects, assign tasks, predict bottlenecks, and automate status updates. AI keeps your team aligned without constant check-ins.',
         topTools: [
-            { name: 'ClickUp AI', price: '$7–12/user/mo' },
-            { name: 'Monday.com', price: '$9–19/seat/mo' },
-            { name: 'Asana Intelligence', price: '$10.99–24.99/user/mo' },
+            { name: 'ClickUp AI', price: '$7–12/user/mo (annual)' },
+            { name: 'Monday.com', price: '$9–19/seat/mo (annual)' },
+            { name: 'Asana Intelligence', price: '$10.99–24.99/user/mo (annual)' },
         ],
         doozaAgent: null,
         doozaNote: null,
@@ -151,8 +151,8 @@ const categories = [
         id: 'ai-marketing-automation',
         desc: 'Run omnichannel campaigns, A/B test messaging, personalize content, and optimize ad spend. AI makes real-time adjustments based on performance data.',
         topTools: [
-            { name: 'HubSpot Marketing', price: '$50–3,600/mo' },
-            { name: 'ActiveCampaign', price: '$29–149/mo' },
+            { name: 'HubSpot Marketing', price: '$7/seat – $3,600/mo' },
+            { name: 'ActiveCampaign', price: 'See vendor pricing' },
             { name: 'Marketo', price: 'Enterprise pricing' },
         ],
         doozaAgent: null,
@@ -164,9 +164,9 @@ const categories = [
         id: 'ai-design',
         desc: 'Generate social graphics, product mockups, brand assets, and video thumbnails. AI creates on-brand visuals in seconds, not hours.',
         topTools: [
-            { name: 'Canva AI', price: '$13–30/mo' },
-            { name: 'Adobe Firefly', price: '$10–55/mo' },
-            { name: 'Midjourney', price: '$10–60/mo' },
+            { name: 'Canva AI', price: 'See vendor pricing' },
+            { name: 'Adobe Firefly', price: 'See vendor pricing' },
+            { name: 'Midjourney', price: 'See vendor pricing' },
         ],
         doozaAgent: null,
         doozaNote: null,
@@ -177,9 +177,9 @@ const categories = [
         id: 'ai-coding',
         desc: 'Generate code, debug issues, write tests, and build prototypes. AI accelerates development cycles and reduces technical debt.',
         topTools: [
-            { name: 'GitHub Copilot', price: '$10–39/user/mo' },
+            { name: 'GitHub Copilot', price: '$10–39/mo' },
             { name: 'Cursor', price: '$20–40/mo' },
-            { name: 'Replit AI', price: '$25–100/mo' },
+            { name: 'Replit AI', price: '$18–100/mo (annual)' },
         ],
         doozaAgent: null,
         doozaNote: null,
@@ -187,11 +187,11 @@ const categories = [
 ];
 
 const fragmentationComparison = [
-    { function: 'Email marketing', tool: 'Mailchimp', cost: '$45/mo' },
-    { function: 'Social media', tool: 'Hootsuite', cost: '$99/mo' },
-    { function: 'SEO & content', tool: 'Semrush', cost: '$139/mo' },
-    { function: 'Customer support', tool: 'Intercom', cost: '$74/mo' },
-    { function: 'Lead generation', tool: 'Apollo.io', cost: '$49/mo' },
+    { function: 'Email marketing', tool: 'Mailchimp', cost: 'Own plan' },
+    { function: 'Social media', tool: 'Hootsuite', cost: 'From $99/mo' },
+    { function: 'SEO & content', tool: 'Semrush', cost: 'From $139/mo' },
+    { function: 'Customer support', tool: 'Intercom', cost: 'From $29/seat/mo + usage' },
+    { function: 'Lead generation', tool: 'Apollo.io', cost: 'Own plan' },
 ];
 
 const budgetTiers = [
@@ -201,7 +201,7 @@ const budgetTiers = [
         color: 'primary',
         recommendation: 'Start with an all-in-one AI employee platform that covers email, social, SEO, support, and leads in one subscription.',
         bestPick: 'Dooza Workforce: ready-made AI employees for email, social, SEO, leads, legal, and calls, with 1,000+ integrations. Starts with a refundable pilot: 100% refund within 14 days.',
-        tools: ['Dooza Workforce (all AI employees)', 'Buffer ($6/mo — social only)', 'Canva Free (design only)'],
+        tools: ['Dooza Workforce (all AI employees)', 'Buffer (from $5/channel/mo — social only)', 'Canva Free (design only)'],
     },
     {
         tier: 'Mid budget',
@@ -209,7 +209,7 @@ const budgetTiers = [
         color: 'teal',
         recommendation: 'Combine an all-in-one platform with 1-2 specialized tools for your biggest gaps. This covers most needs without the tool sprawl.',
         bestPick: 'Dooza Workforce + 1 specialized tool for your biggest gap.',
-        tools: ['Dooza Workforce (AI employees)', 'Semrush ($139/mo — if SEO is critical)', 'ClickUp ($7/user/mo — project management)'],
+        tools: ['Dooza Workforce (AI employees)', 'Semrush (from $139/mo — if SEO is critical)', 'ClickUp (from $7/user/mo billed annually — project management)'],
     },
     {
         tier: 'Larger budget',
@@ -217,7 +217,7 @@ const budgetTiers = [
         color: 'slate',
         recommendation: 'Run an AI employee platform at the core with enterprise-grade specialized tools for your most impactful functions.',
         bestPick: 'Dooza Agents: custom AI agents built and maintained by Dooza engineers, done for you.',
-        tools: ['Dooza Agents (custom agents built by engineers)', 'HubSpot ($50/mo — CRM + marketing)', 'Intercom ($74/mo — advanced support)'],
+        tools: ['Dooza Agents (custom agents built by engineers)', 'HubSpot (CRM + marketing)', 'Intercom (advanced support, priced per seat plus usage)'],
     },
 ];
 
@@ -247,7 +247,7 @@ const implementationSteps = [
         step: 4,
         title: 'Measure and Expand',
         time: 'Week 4+',
-        desc: 'Track time saved, cost reduction, and output quality. Once validated, expand AI to the next business function. Most businesses see measurable results within 2-4 weeks.',
+        desc: 'Track time saved, cost reduction, and output quality. Once validated, expand AI to the next business function. Track results from the first weeks.',
         actionItems: ['Compare hours spent before vs. after AI', 'Calculate cost savings (tools replaced, time reclaimed)', 'Expand to the next highest-impact area'],
     },
 ];
@@ -275,11 +275,6 @@ export default function AISolutionsContent({ faqData }) {
         trackFBViewContent('ai_solutions_for_business', 'guide_page');
     }, []);
 
-    const totalFragmented = fragmentationComparison.reduce(
-        (sum, item) => sum + parseInt(item.cost.replace(/[^0-9]/g, '')),
-        0
-    );
-
     return (
         <BookingModalProvider>
             <Navbar />
@@ -298,7 +293,7 @@ export default function AISolutionsContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Complete Guide — Updated March 2026
+                                    Complete Guide — Updated October 2026
                                 </div>
                             </div>
 
@@ -307,11 +302,11 @@ export default function AISolutionsContent({ faqData }) {
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                12 categories. Real pricing. Actual ROI data. No fluff.
+                                12 categories. Vendor-checked pricing. Sourced data. No fluff.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Most organizations now use AI. But buying 5-7 separate tools costs $200-450/month and creates tool fatigue. This guide shows you exactly which AI solutions exist, what they cost, and how to implement them without wasting money.
+                                Most organizations now use AI. But buying 5-7 separate tools means 5-7 bills and creates tool fatigue. This guide shows you exactly which AI solutions exist, what they cost, and how to implement them without wasting money.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -387,7 +382,7 @@ export default function AISolutionsContent({ faqData }) {
                                 <p className="section-label mb-3">The Categories</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">12 Categories of AI Solutions for Business</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
-                                    Every AI tool falls into one of these 12 categories. We include top tools and real pricing for each.
+                                    Every AI tool falls into one of these 12 categories. We include top tools and their published pricing for each (checked Oct 2026; billing basis shown where the vendor states it).
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -474,10 +469,10 @@ export default function AISolutionsContent({ faqData }) {
                                         ))}
                                     </div>
                                     <div className="border-t border-white/10 pt-4 flex items-center justify-between">
-                                        <span className="text-slate-400 font-bold">Monthly total</span>
-                                        <span className="text-2xl font-bold text-red-400">${totalFragmented}/mo</span>
+                                        <span className="text-slate-400 font-bold">Total</span>
+                                        <span className="text-lg font-bold text-red-400">5 subscriptions, 5 bills</span>
                                     </div>
-                                    <p className="text-xs text-slate-500 mt-2">Plus 5 separate logins, 5 billing cycles, and no shared context between tools.</p>
+                                    <p className="text-xs text-slate-500 mt-2">Prices checked Oct 2026 on each vendor’s pricing page, monthly billing; they vary by seats and usage. Plus 5 separate logins, 5 billing cycles, and no shared context between tools.</p>
                                 </div>
 
                                 {/* Dooza all-in-one */}
@@ -516,7 +511,7 @@ export default function AISolutionsContent({ faqData }) {
                                 <p className="section-label mb-3">Budget Guide</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">AI Stack by Budget</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
-                                    Not every business needs a $500/month AI stack. Here is what to buy at every price point.
+                                    Not every business needs a big AI stack. Here is what to buy at every budget level.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -563,7 +558,7 @@ export default function AISolutionsContent({ faqData }) {
                                 <p className="section-label mb-3">Implementation</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">How to Implement AI in Your Business</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
-                                    A 4-step framework used by businesses that actually see ROI from AI. Most see results within 2-4 weeks.
+                                    A 4-step framework for rolling out AI one function at a time.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -725,7 +720,7 @@ export default function AISolutionsContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Bring AI into Your Business?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Stop paying $200-450/month for 5 separate tools. Dooza is an AI-native company that builds AI products and services for small businesses. Start with a refundable pilot — 100% refund within 14 days.
+                                Stop juggling 5 separate tools. Dooza is an AI-native company that builds AI products and services for small businesses. Start with a refundable pilot — 100% refund within 14 days.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="ai_solutions_cta">Start your pilot</SignupButton>
