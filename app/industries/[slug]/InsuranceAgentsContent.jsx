@@ -45,8 +45,8 @@ export default function InsuranceAgentsContent({ page }) {
     const problemCards = [
         {
             icon: PhoneCall,
-            title: 'Quote shoppers buy from whoever answers first',
-            description: 'Someone shopping for auto or home insurance calls 3-4 agencies. The first one to pick up usually binds the policy. If you\'re on another line, you never knew you lost the deal.'
+            title: 'Quote shoppers call around',
+            description: 'Someone shopping for auto or home insurance often calls more than one agency. If yours doesn\'t pick up, the next one may get the quote. If you\'re on another line, you never knew you lost the deal.'
         },
         {
             icon: Timer,

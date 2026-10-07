@@ -73,7 +73,7 @@ export default function SalonsContent({ page }) {
         {
             icon: CalendarCheck,
             title: 'Fewer No-Shows',
-            description: 'Automated SMS reminders reduce no-shows by up to 40%. Your chairs stay full.'
+            description: 'Automated SMS reminders before each appointment, so fewer clients forget.'
         },
         {
             icon: DollarSign,
