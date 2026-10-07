@@ -66,7 +66,7 @@ const faqData = [
     },
     {
         question: 'Will AI replace my employees?',
-        answer: 'Only 12% of small businesses plan staff reductions due to AI (Business.com 2026). Most businesses use AI to augment existing teams — handling repetitive tasks so humans can focus on strategy, creativity, and relationships. AI employees handle the execution; your team handles the thinking.',
+        answer: 'Few small businesses plan to cut staff because of AI, according to Business.com’s 2026 Small Business AI Outlook Report (business.com/articles/ai-usage-smb-workplace-study). Most businesses use AI to augment existing teams — handling repetitive tasks so humans can focus on strategy, creativity, and relationships. AI employees handle the execution; your team handles the thinking.',
     },
     {
         question: 'What business functions can AI automate?',
