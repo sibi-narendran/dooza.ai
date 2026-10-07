@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: "Will callers know they're speaking to an AI?",
-        answer: "Modern AI voice agents use natural, conversational language that sounds professional and human-like. Most callers can't tell the difference. The agent introduces itself by name and maintains context throughout the call."
+        answer: "Modern AI voice agents use natural, conversational language that sounds professional and human-like. We recommend telling callers they're speaking with an AI assistant, for example in the greeting. The agent introduces itself by name and maintains context throughout the call."
     },
     {
         question: "How fast is the setup?",

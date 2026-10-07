@@ -48,7 +48,7 @@ const faqData = [
     },
     {
         question: "Will callers know they're talking to an AI?",
-        answer: "Rachel uses natural, conversational language that sounds professional and human-like. Most callers won't notice the difference. She introduces herself by name and maintains context throughout the conversation."
+        answer: "Rachel uses natural, conversational language that sounds professional and human-like. We recommend telling callers they're speaking with an AI assistant, for example in the greeting. She introduces herself by name and maintains context throughout the conversation."
     },
     {
         question: "How many calls does the average small business miss?",

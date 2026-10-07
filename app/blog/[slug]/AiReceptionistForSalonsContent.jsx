@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "Will clients know they're talking to an AI?",
-        answer: "Rachel uses natural, conversational language that sounds professional and warm. Most callers won't notice the difference. She introduces herself by name and maintains context throughout the conversation."
+        answer: "Rachel uses natural, conversational language that sounds professional and warm. We recommend telling callers they're speaking with an AI assistant, for example in the greeting. She introduces herself by name and maintains context throughout the conversation."
     }
 ];
 

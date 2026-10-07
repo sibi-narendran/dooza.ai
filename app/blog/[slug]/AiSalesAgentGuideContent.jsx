@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "Will prospects know they're talking to an AI?",
-        answer: "Modern AI sales agents use natural language that's conversational and professional. Most prospects can't tell the difference during initial qualification. The AI identifies itself transparently when asked, and hands off to a human for complex negotiations."
+        answer: "Modern AI sales agents use natural language that's conversational and professional. The AI identifies itself transparently when asked, and hands off to a human for complex negotiations."
     },
     {
         question: "What industries benefit most from AI sales agents?",
