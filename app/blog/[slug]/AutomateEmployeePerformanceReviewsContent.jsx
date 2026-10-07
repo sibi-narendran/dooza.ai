@@ -50,11 +50,11 @@ const faqData = [
     },
     {
         question: "Will employees trust AI-generated reviews?",
-        answer: "Trust depends on transparency. Organizations that openly communicate how AI is used in the review process — explaining that it aggregates objective data rather than making subjective judgments — see higher employee acceptance. Studies show employees actually prefer data-backed feedback over reviews based solely on a manager's memory. The critical factor is that employees understand AI assists the process but doesn't control it, and that they can see the data sources behind their review."
+        answer: "Trust depends on transparency. Organizations that openly communicate how AI is used in the review process — explaining that it aggregates objective data rather than making subjective judgments — tend to earn more acceptance. The critical factor is that employees understand AI assists the process but doesn't control it, and that they can see the data sources behind their review."
     },
     {
         question: "How much time does AI save on performance reviews?",
-        answer: "Most organizations report saving 10-15 hours per manager per review cycle. The breakdown: 3-5 hours saved on data collection (AI aggregates automatically), 4-6 hours saved on draft writing (AI generates first drafts), and 2-3 hours saved on calibration (AI identifies inconsistencies across teams). For a company with 20 managers doing quarterly reviews, that's 800-1,200 hours saved per year — the equivalent of hiring a full-time HR coordinator."
+        answer: "It depends on team size and how you run reviews, so measure it in a pilot. The savings come from three places: data collection (AI aggregates it automatically), draft writing (AI generates first drafts for the manager to edit), and calibration (AI flags inconsistencies across teams). To estimate your own number, note the hours your managers spend on each step today, decide which steps AI would handle, and multiply the difference by your managers' hourly cost and your number of review cycles per year."
     },
     {
         question: "Does AI eliminate bias in performance reviews?",
@@ -66,11 +66,11 @@ const faqData = [
     },
     {
         question: "Is AI performance review software expensive?",
-        answer: "Costs vary widely. Enterprise platforms like Lattice or Culture Amp range from $6-11 per employee per month. AI-specific add-ons can add $3-8 per employee per month. However, when you calculate the time savings (10+ hours per manager per cycle), the ROI is substantial. A manager earning $60/hour who saves 12 hours per cycle saves $720 in labor costs alone — easily covering the software cost for dozens of employees."
+        answer: "Costs vary widely by vendor, plan and company size, and many review platforms price per employee per month, so check each vendor's current pricing page. To judge the return, compare the subscription against the manager hours it frees: hours saved per cycle times your managers' hourly cost times cycles per year."
     },
     {
         question: "How do I get started with AI performance reviews?",
-        answer: "Start small: pick one team, digitize your review criteria into clear measurable goals, and begin tracking performance data consistently for one quarter. Then introduce AI drafting for that team's next review cycle. Gather feedback from both managers and employees, iterate on the process, and expand company-wide. Most organizations see meaningful results within two review cycles. The key is starting with good data — AI can only be as fair as the data it works with."
+        answer: "Start small: pick one team, digitize your review criteria into clear measurable goals, and begin tracking performance data consistently for one quarter. Then introduce AI drafting for that team's next review cycle. Gather feedback from both managers and employees, iterate on the process, and expand company-wide. Run at least one full cycle before judging results. The key is starting with good data — AI can only be as fair as the data it works with."
     }
 ];
 
@@ -136,7 +136,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                             How to Automate Employee Performance Reviews with AI <span className="text-primary-600">(Fairly & Quickly)</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Most managers spend 17+ hours per review cycle on a process that employees dread and nobody trusts. AI can cut that to 3 hours while making reviews more objective, more comprehensive, and less biased. Here's how to do it right.
+                            Performance reviews eat manager time and leave employees unmotivated. AI can take over the data gathering and first drafts, so reviews are more objective, more comprehensive and less biased. Here's how to do it right.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -175,7 +175,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                             <h3 className="font-semibold text-slate-900 mb-4">Table of Contents</h3>
                             <nav className="space-y-1">
                                 {[
-                                    { id: 'introduction', label: 'The 17-Hour Problem' },
+                                    { id: 'introduction', label: 'The Problem' },
                                     { id: 'pain-of-manual-reviews', label: 'Why Manual Reviews Fail' },
                                     { id: 'bias-problem', label: 'The Bias Problem' },
                                     { id: 'how-ai-collects-data', label: 'AI Data Collection' },
@@ -222,14 +222,14 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                     {/* Main Content */}
                     <div className="w-full max-w-3xl mx-auto space-y-12">
 
-                        {/* Section 1: Introduction — The 17-Hour Problem */}
+                        {/* Section 1: Introduction */}
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
                                     Performance reviews are one of the most universally dreaded rituals in the modern workplace. Managers hate writing them. Employees hate receiving them. HR hates chasing everyone to complete them on time. And yet, we keep doing them the same way we did twenty years ago.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Here is the scale of the problem: the average manager spends <strong>17 hours per review cycle</strong> — gathering notes, trying to remember what happened six months ago, writing feedback that feels both honest and constructive, calibrating across teams, and then delivering it in a conversation that nobody enjoys. Multiply that across a company with 50 managers, and you are looking at <strong>850 hours of managerial time</strong> consumed every cycle. That is more than five months of a full-time employee's year.
+                                    Here is the scale of the problem: reviews take real manager time — gathering notes, trying to remember what happened six months ago, writing feedback that feels both honest and constructive, calibrating across teams, and then delivering it in a conversation that nobody enjoys. Multiply that across every manager in your company and every review cycle, and it adds up to a lot of hours.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     But time is not even the biggest problem. The real issue is quality. Manual reviews are riddled with cognitive biases, inconsistencies, and gaps. They rely on a manager's selective memory rather than comprehensive data. And by the time the feedback is delivered — often months after the behavior occurred — it is too late to be actionable.
@@ -242,11 +242,10 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-3 gap-4 mt-8">
+                            <div className="grid md:grid-cols-2 gap-4 mt-8">
                                 {[
-                                    { stat: "17+", label: "hours per manager per review cycle", icon: Clock },
-                                    { stat: "95%", label: "of managers say they are dissatisfied with the review process", icon: ThumbsDown },
-                                    { stat: "Only 14%", label: "of employees say reviews motivate them to improve", icon: TrendingUp }
+                                    { stat: "Only 14%", label: "of employees strongly agree their performance reviews inspire them to improve (Gallup)", icon: TrendingUp },
+                                    { stat: "About 1 in 3", label: "reviews can make performance worse, per research cited by Gallup", icon: ThumbsDown }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-purple-50 border border-purple-100 p-5 rounded-xl text-center">
                                         <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mx-auto mb-3">
@@ -265,7 +264,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    The traditional performance review process was designed for a different era — one where managers supervised small teams doing repetitive work and could directly observe every task. Today, teams are distributed, projects are cross-functional, and a manager might oversee 8-15 people working on completely different initiatives. The old model does not work anymore, and the cracks show in five specific ways.
+                                    The traditional performance review process was designed for a different era — one where managers supervised small teams doing repetitive work and could directly observe every task. Today, teams are distributed, projects are cross-functional, and a manager might oversee many people working on completely different initiatives. The old model does not work anymore, and the cracks show in five specific ways.
                                 </p>
                             </div>
 
@@ -274,7 +273,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     {
                                         icon: Clock,
                                         title: "Recency Bias",
-                                        desc: "Managers disproportionately remember the last 2-3 weeks before the review. An employee who delivered exceptional work in Q1 and Q2 but had a rough final month gets rated as if the entire period was mediocre. Conversely, someone who coasted for five months but rallied at the end looks like a top performer. This is not a character flaw in managers — it is how human memory works. We are wired to weight recent experiences more heavily.",
+                                        desc: "Managers disproportionately remember the most recent weeks before the review. An employee who delivered exceptional work in Q1 and Q2 but had a rough final month gets rated as if the entire period was mediocre. Conversely, someone who coasted for five months but rallied at the end looks like a top performer. This is not a character flaw in managers — it is how human memory works. We are wired to weight recent experiences more heavily.",
                                         color: "bg-red-50 border-red-200",
                                         iconColor: "bg-red-100 text-red-600"
                                     },
@@ -295,14 +294,14 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     {
                                         icon: Timer,
                                         title: "Massive Time Drain",
-                                        desc: "Writing a single thorough review takes 1-2 hours. A manager with 10 direct reports needs 10-20 hours just for writing — not counting data gathering, peer feedback collection, calibration meetings, and delivery conversations. Many managers end up rushing through reviews or copying generic language just to meet the deadline. The result is feedback that feels hollow and unhelpful.",
+                                        desc: "Writing a single thorough review takes real time, and a manager with many direct reports multiplies that — not counting data gathering, peer feedback collection, calibration meetings, and delivery conversations. Many managers end up rushing through reviews or copying generic language just to meet the deadline. The result is feedback that feels hollow and unhelpful.",
                                         color: "bg-blue-50 border-blue-200",
                                         iconColor: "bg-blue-100 text-blue-600"
                                     },
                                     {
                                         icon: MessageSquare,
                                         title: "Delayed, Stale Feedback",
-                                        desc: "Annual reviews deliver feedback 6-12 months after the behavior occurred. Even quarterly reviews have a 3-month lag. By the time an employee hears 'you should have handled that client situation differently,' the context has faded, the emotions have cooled, and the learning opportunity has passed. Effective feedback needs to be timely. The traditional review cycle makes that structurally impossible.",
+                                        desc: "Annual reviews deliver feedback months after the behavior occurred. Even quarterly reviews lag by weeks to months. By the time an employee hears 'you should have handled that client situation differently,' the context has faded, the emotions have cooled, and the learning opportunity has passed. Effective feedback needs to be timely. The traditional review cycle makes that structurally impossible.",
                                         color: "bg-purple-50 border-purple-200",
                                         iconColor: "bg-purple-100 text-purple-600"
                                     }
@@ -347,7 +346,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     </h3>
                                     <div className="space-y-3 text-sm text-slate-700">
                                         <p>
-                                            Research on review language has found that women are <strong>more likely</strong> to receive critical subjective feedback in reviews. The same assertive behavior gets described differently:
+                                            Review language can differ by gender: the <strong>same assertive behavior</strong> can get described differently depending on who shows it. For example:
                                         </p>
                                         <div className="grid gap-3 mt-3 sm:grid-cols-2">
                                             <div className="bg-white p-3 rounded-lg">
@@ -366,7 +365,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                             </div>
                                         </div>
                                         <p className="mt-2">
-                                            Women also receive more vague feedback ("You need to be more strategic") compared to specific actionable feedback given to men ("You should lead the Q3 product launch").
+                                            Feedback can also be vaguer for some employees than others ("You need to be more strategic") compared to specific, actionable feedback given to others ("You should lead the Q3 product launch").
                                         </p>
                                     </div>
                                 </div>
@@ -374,14 +373,11 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                 <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-amber-800 mb-4 flex items-center gap-2">
                                         <AlertTriangle className="w-5 h-5 text-amber-600" />
-                                        Racial Disparities in Ratings
+                                        Bias Risk Along Racial Lines
                                     </h3>
                                     <div className="space-y-3 text-sm text-slate-700">
                                         <p>
-                                            A study published in the Journal of Applied Psychology found that Black employees receive <strong>lower performance ratings</strong> than white employees performing at the same level — even after controlling for objective performance metrics.
-                                        </p>
-                                        <p>
-                                            The gap widens when reviews rely more heavily on subjective assessments and narrows when organizations use <strong>structured, criteria-based evaluations</strong> with clear behavioral anchors.
+                                            Subjective, unstructured ratings give unconscious bias more room to operate, including along racial lines. <strong>Structured, criteria-based evaluations</strong> with clear behavioral anchors leave less room for it.
                                         </p>
                                         <p>
                                             This is not about individual racism. It is about a system that gives unconscious bias too much room to operate. When reviews depend on a manager's subjective impression rather than documented data, the patterns are predictable and persistent.
@@ -397,7 +393,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                 </h3>
                                 <div className="text-sm text-slate-700 space-y-3">
                                     <p>
-                                        Managers consistently rate employees they see more often (and like more personally) higher than those they interact with less. In the age of remote and hybrid work, this has become a serious equity issue. This proximity bias means <strong>remote workers can be rated lower</strong> than in-office peers — even when their output is the same.
+                                        Managers can rate employees they see more often (and like more personally) higher than those they interact with less. In the age of remote and hybrid work, this has become a serious equity issue. This proximity bias means <strong>remote workers can be rated lower</strong> than in-office peers — even when their output is the same.
                                     </p>
                                     <p>
                                         Similarly, the "similar-to-me" effect means managers unconsciously favor employees who share their background, communication style, or personality traits. This is not favoritism in the malicious sense — it is pattern-matching that feels like good judgment but produces unfair outcomes.
@@ -554,14 +550,14 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                         step: "2",
                                         title: "AI Generates First Draft",
                                         desc: "Based on the synthesized data, the AI writes a comprehensive review draft covering each evaluation category. It cites specific examples and data points for every statement, so nothing feels generic or unsubstantiated.",
-                                        time: "5-10 minutes",
+                                        time: "Fast",
                                         color: "bg-purple-50 border-purple-200"
                                     },
                                     {
                                         step: "3",
                                         title: "Manager Reviews & Personalizes",
                                         desc: "The manager reads the AI draft, adds context the AI could not capture (interpersonal dynamics, leadership qualities, strategic thinking), adjusts tone, and ensures the feedback sounds like them — not a robot.",
-                                        time: "15-20 minutes",
+                                        time: "Manager time",
                                         color: "bg-green-50 border-green-200"
                                     },
                                     {
@@ -613,7 +609,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                         <span className="font-bold text-green-800">AFTER: AI-Assisted Review</span>
                                     </div>
                                     <div className="bg-white p-4 rounded-lg text-sm text-slate-700 italic leading-relaxed border border-green-100">
-                                        "Sarah delivered 47 of 52 assigned tasks on or ahead of deadline this quarter (90.4% on-time rate, up from 82% last quarter). She led the client onboarding redesign that reduced setup time by 34%, receiving praise from 4 peers in 360 feedback. Her cross-team collaboration score increased 15%. For growth: three stakeholders noted that written project updates could include more context for non-technical audiences — a specific skill to develop next quarter."
+                                        "(Fictional example for illustration.) Sarah delivered 47 of 52 assigned tasks on or ahead of deadline this quarter (90.4% on-time rate, up from 82% last quarter). She led the client onboarding redesign that reduced setup time by 34%, receiving praise from 4 peers in 360 feedback. Her cross-team collaboration score increased 15%. For growth: three stakeholders noted that written project updates could include more context for non-technical audiences — a specific skill to develop next quarter."
                                     </div>
                                     <div className="mt-3 space-y-1">
                                         <p className="text-xs text-green-600 flex items-center gap-1"><CheckCircle2 size={12} /> Specific metrics and examples</p>
@@ -714,11 +710,11 @@ export default function AutomateEmployeePerformanceReviewsContent() {
 
                         {/* Section 7: The ROI — 10+ Hours Saved Per Quarter */}
                         <section id="time-savings" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The ROI: 10+ Hours Saved Per Manager Per Quarter</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The ROI: Where the Manager Time Goes</h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Let us talk numbers. The fairness argument for AI-assisted reviews is compelling, but for many organizations, the business case starts with time and money. Here is what the data shows.
+                                    The fairness argument for AI-assisted reviews is compelling, but for many organizations the business case starts with time and money. We do not have a verified benchmark for hours saved, so below is where the time goes and how to calculate your own savings.
                                 </p>
                             </div>
 
@@ -727,27 +723,27 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                 {[
                                     {
                                         title: "Data Collection",
-                                        manual: "3-5 hours",
+                                        manual: "Manual pulls and chasing",
                                         ai: "Automated",
-                                        saved: "3-5 hours",
+                                        saved: "Collection effort",
                                         desc: "Manually pulling metrics from tools, chasing peer feedback, reviewing old notes. AI does this continuously.",
                                         color: "bg-blue-50 border-blue-200",
                                         savedColor: "text-blue-700"
                                     },
                                     {
                                         title: "Writing Drafts",
-                                        manual: "4-6 hours",
-                                        ai: "15-20 min editing",
-                                        saved: "4-6 hours",
+                                        manual: "Writing from scratch",
+                                        ai: "Editing a draft",
+                                        saved: "Drafting effort",
                                         desc: "Staring at a blank page, writing feedback for each direct report. AI generates data-backed first drafts.",
                                         color: "bg-green-50 border-green-200",
                                         savedColor: "text-green-700"
                                     },
                                     {
                                         title: "Review Calibration",
-                                        manual: "2-3 hours",
-                                        ai: "30 min review",
-                                        saved: "2-3 hours",
+                                        manual: "Compare by hand",
+                                        ai: "Review flagged items",
+                                        saved: "Calibration effort",
                                         desc: "Comparing ratings across teams, adjusting for manager strictness. AI flags inconsistencies automatically.",
                                         color: "bg-purple-50 border-purple-200",
                                         savedColor: "text-purple-700"
@@ -783,12 +779,12 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     </h3>
                                     <div className="space-y-2">
                                         {[
-                                            { label: "Data collection", value: "3-5 hours" },
-                                            { label: "Writing drafts (10 reports)", value: "4-6 hours" },
-                                            { label: "Calibration meetings", value: "2-3 hours" },
-                                            { label: "Revision & editing", value: "1-2 hours" },
-                                            { label: "Total time", value: "10-16 hours", highlight: true },
-                                            { label: "Cost at $60/hr manager rate", value: "$600-960", highlight: true }
+                                            { label: "Data collection", value: "Manual" },
+                                            { label: "Writing drafts", value: "From a blank page" },
+                                            { label: "Calibration meetings", value: "By hand" },
+                                            { label: "Revision & editing", value: "Manual" },
+                                            { label: "Total time", value: "Your hours", highlight: true },
+                                            { label: "Cost", value: "Hours x hourly rate", highlight: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className={`flex justify-between items-center py-1.5 text-sm ${item.highlight ? 'border-t border-red-200 pt-2 mt-1' : ''}`}>
                                                 <span className="text-slate-700">{item.label}</span>
@@ -806,11 +802,11 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     <div className="space-y-2">
                                         {[
                                             { label: "Data collection", value: "Automated" },
-                                            { label: "Review & edit AI drafts", value: "2-3 hours" },
-                                            { label: "Calibration (AI-flagged)", value: "30 min" },
-                                            { label: "Final personalization", value: "30 min" },
-                                            { label: "Total time", value: "3-4 hours", highlight: true },
-                                            { label: "Cost at $60/hr manager rate", value: "$180-240", highlight: true }
+                                            { label: "Review & edit AI drafts", value: "Edit, not write" },
+                                            { label: "Calibration (AI-flagged)", value: "Flagged items only" },
+                                            { label: "Final personalization", value: "Manager's own voice" },
+                                            { label: "Total time", value: "Fewer hours", highlight: true },
+                                            { label: "Cost", value: "Fewer hours x hourly rate", highlight: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className={`flex justify-between items-center py-1.5 text-sm ${item.highlight ? 'border-t border-green-200 pt-2 mt-1' : ''}`}>
                                                 <span className="text-slate-700">{item.label}</span>
@@ -823,11 +819,11 @@ export default function AutomateEmployeePerformanceReviewsContent() {
 
                             {/* Company-wide Impact */}
                             <div className="bg-slate-900 text-white p-8 rounded-xl mb-8">
-                                <h4 className="font-bold text-lg mb-4">Company-Wide Impact (50 Managers, Quarterly Reviews)</h4>
+                                <h4 className="font-bold text-lg mb-4">Company-Wide Impact: Calculate Your Own</h4>
                                 <div className="grid md:grid-cols-3 gap-6">
                                     {[
-                                        { label: "Hours Saved Per Year", value: "1,400-2,400", sub: "hours" },
-                                        { label: "Cost Savings Per Year", value: "$84,000-144,000", sub: "in manager time" },
+                                        { label: "Hours Saved Per Year", value: "Hours", sub: "saved per manager x managers x cycles per year" },
+                                        { label: "Cost Savings Per Year", value: "Dollars", sub: "hours saved x manager hourly cost" },
                                         { label: "Better Outcome", value: "Higher quality", sub: "reviews with less effort" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="text-center">
@@ -846,13 +842,13 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                 </h4>
                                 <div className="text-sm text-slate-700 space-y-2">
                                     <p>
-                                        The time savings are just the beginning. Organizations using AI-assisted reviews also report:
+                                        The time savings are just the beginning. AI-assisted reviews can also help with:
                                     </p>
                                     <ul className="space-y-1 ml-4">
-                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" /><span><strong>23% increase in employee satisfaction</strong> with the review process (feedback feels fairer and more specific)</span></li>
-                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" /><span><strong>31% reduction in review-related grievances</strong> (data-backed feedback is harder to dispute)</span></li>
+                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" /><span><strong>Employee satisfaction</strong> with the review process (feedback can feel fairer and more specific)</span></li>
+                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" /><span><strong>Fewer review disputes</strong> (data-backed feedback is harder to dispute)</span></li>
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" /><span><strong>Higher manager confidence</strong> in their own reviews (the data gives them something to stand behind)</span></li>
-                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" /><span><strong>Better retention</strong> — employees who feel fairly evaluated are less likely to leave</span></li>
+                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" /><span><strong>Retention</strong> — employees who feel fairly evaluated may be less likely to leave</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -956,22 +952,22 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     {
                                         icon: Database,
                                         title: "Automated Data Collection",
-                                        desc: "Dooza's AI employees continuously track work output, project completions, and collaboration patterns across your team's tools — giving you a comprehensive performance picture without manual data gathering."
+                                        desc: "Dooza Agents are custom AI agents built and maintained by Dooza engineers. They can be set up to pull work data from the tools your team already uses, so managers spend less time gathering it by hand."
                                     },
                                     {
                                         icon: BarChart3,
                                         title: "Performance Analytics",
-                                        desc: "Get real-time visibility into team productivity, project velocity, and individual contributions. No more scrambling to reconstruct what happened last quarter."
+                                        desc: "Agents can be built to compile summaries of team output from your own tools, so you are not reconstructing last quarter from memory. Scope is agreed with a Dooza engineer during your pilot."
                                     },
                                     {
                                         icon: Bot,
                                         title: "AI-Powered Insights",
-                                        desc: "Dooza's AI identifies patterns in work output and collaboration that humans often miss — highlighting top contributors, flagging burnout risks, and surfacing development opportunities."
+                                        desc: "Custom agents can draft review summaries from the data you connect, for managers to edit and approve. Humans make the final call on every review."
                                     },
                                     {
                                         icon: Workflow,
                                         title: "Seamless Integration",
-                                        desc: "Works alongside your existing HR tools and processes. Dooza does not replace your review system — it feeds better data into it."
+                                        desc: "Designed to work alongside your existing HR tools and processes rather than replace your review system."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -987,7 +983,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Make Performance Reviews Fair, Fast, and Data-Driven?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Dooza's AI workforce handles the operational heavy lifting so your managers can focus on what matters: coaching their teams. Start with a refundable pilot — 100% refund within 14 days — and see the difference AI-powered data collection makes.
+                                    Dooza builds AI products and services for small businesses so your managers can focus on coaching their teams. Start with a refundable pilot — 100% refund within 14 days — and see what AI-powered data collection does for your review cycle.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
@@ -1016,19 +1012,11 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                         {/* Sources Section */}
                         <section className="scroll-mt-28 border-t border-slate-200 pt-8">
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Sources & References</h3>
-                            <div className="grid md:grid-cols-2 gap-6">
+                            <div className="grid md:grid-cols-1 gap-6">
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Performance Review Research</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li><a href="https://www.gallup.com/workplace/249332/harm-good-truth-performance-reviews.aspx" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Gallup — Only 14% of employees say reviews motivate them</a></li>
-                                        <li><a href="https://hbr.org/2019/03/the-feedback-fallacy" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Harvard Business Review — The Feedback Fallacy</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Bias in Performance Evaluations</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li><a href="https://psycnet.apa.org/record/2008-04617-008" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Journal of Applied Psychology — Racial disparities in performance ratings</a></li>
-                                        <li><a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/three-common-biases-that-make-performance-reviews-unfair" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">McKinsey — Three common biases in performance reviews</a></li>
+                                        <li><a href="https://www.gallup.com/workplace/249332/harm-good-truth-performance-reviews.aspx" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Gallup — Only 14% of employees strongly agree reviews inspire them to improve</a></li>
                                     </ul>
                                 </div>
                             </div>

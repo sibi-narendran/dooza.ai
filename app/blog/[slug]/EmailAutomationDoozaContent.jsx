@@ -67,24 +67,24 @@ const tools = [
     },
     {
         name: 'Mailchimp',
-        price: '$13/mo+',
+        price: 'Paid plans; see vendor pricing',
         setup: 'DIY campaigns and lists',
         bestFor: 'Basic newsletters and simple campaigns',
         weakness: 'Limited if you need inbox replies, lead follow-up, or sales context'
     },
     {
         name: 'ActiveCampaign',
-        price: '$29/mo+',
+        price: 'Paid plans; see vendor pricing',
         setup: 'Workflow builder',
         bestFor: 'Email sequences and CRM-style automation',
         weakness: 'Powerful but requires workflow design, copywriting, and maintenance'
     },
     {
         name: 'HubSpot',
-        price: '$20/mo to thousands',
+        price: 'Free tier; Marketing Hub Professional from $800/mo (checked Oct 2026)',
         setup: 'CRM and marketing suite setup',
         bestFor: 'Teams already using HubSpot CRM',
-        weakness: 'Costs and complexity climb quickly as you scale'
+        weakness: 'Costs and setup effort rise as you move up the tiers'
     },
     {
         name: 'Klaviyo',
@@ -95,7 +95,7 @@ const tools = [
     },
     {
         name: 'Zapier',
-        price: '$29.99/mo+',
+        price: 'Pro $29.99/mo billed monthly (checked Oct 2026)',
         setup: 'Build zaps between apps',
         bestFor: 'Connecting email actions across tools',
         weakness: 'Moves data between apps but does not think, write, or manage the inbox'
@@ -298,7 +298,7 @@ export default function EmailAutomationDoozaContent() {
                                     Most comparison blogs rank email tools by feature count: templates, segmentation, A/B tests, landing pages, analytics, and integrations. Those matter. But they miss the small business reality.
                                 </p>
                                 <p>
-                                    A founder does not lose money because an email tool lacks one more template. They lose money because a hot lead waits 14 hours for a reply, a quote request sits unread, a customer question gets buried, or a follow-up never happens.
+                                    A founder does not lose money because an email tool lacks one more template. They lose money because a hot lead waits too long for a reply, a quote request sits unread, a customer question gets buried, or a follow-up never happens.
                                 </p>
                             </div>
 

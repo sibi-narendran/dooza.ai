@@ -34,11 +34,11 @@ const faqData = [
     },
     {
         question: "Is Dooza better than Outrank.so?",
-        answer: "Not for everyone. Outrank is the better pick if you want a self-serve tool you run yourself, with a published monthly price and its backlink exchange. Dooza is the better pick if you want Dooza engineers to set up and run the SEO work with you, and want Ranky alongside other AI employees for email, social media, sales, and calls."
+        answer: "Not for everyone. Outrank is the better pick if you want a self-serve tool you run yourself, with a published monthly price and its backlink credits. Dooza is the better pick if you want Dooza engineers to set up and run the SEO work with you, and want Ranky alongside other AI employees for email, social media, sales, and calls."
     },
     {
         question: "How much does Outrank.so cost?",
-        answer: "Outrank.so lists its all-in-one plan at $99/month (shown against a struck-through $199/month), or $999/year, with 30 articles per month. You can add 60 articles/month for +$85/month or 90 articles/month for +$160/month. The plan includes CMS publishing, AI images, backlink exchange, YouTube videos, and 150+ languages (checked October 7, 2026, on outrank.so/pricing)."
+        answer: "Outrank.so lists its all-in-one plan at $99/month (shown against a struck-through $199/month), or $999/year, with 30 articles per month. You can add 60 articles/month for +$85/month or 90 articles/month for +$160/month. The plan includes CMS publishing, AI images, automated backlink building, YouTube videos, and 150+ languages (checked October 7, 2026, on outrank.so/pricing; prices change)."
     },
     {
         question: "Why should I choose Dooza instead of Outrank.so?",
@@ -50,7 +50,7 @@ const faqData = [
     },
     {
         question: "Who should still consider Outrank.so?",
-        answer: "Outrank.so is a good fit if you want a self-serve autopilot blog tool with a published price, you are comfortable reviewing drafts inside your CMS, and you want options like its backlink exchange, REST API, or MCP server. If you want Dooza engineers to do the work with you, and a broader AI workforce, Dooza is the better alternative."
+        answer: "Outrank.so is a good fit if you want a self-serve autopilot blog tool with a published price, you are comfortable reviewing drafts inside your CMS, and you want options like its backlink credits, REST API, or MCP server. If you want Dooza engineers to do the work with you, and a broader AI workforce, Dooza is the better alternative."
     }
 ];
 
@@ -74,7 +74,7 @@ const comparisonRows = [
     ['Content control', 'Custom voice; edit drafts with AI or manually', 'Trained on your brand voice; you approve what goes live', 'Tie'],
     ['YouTube support', 'Relevant YouTube videos in articles', 'Relevant YouTube embeds in articles', 'Tie'],
     ['Integrations', 'WordPress, Webflow, Shopify, Wix, Framer, Notion, Ghost, webhook, REST API, MCP', '1,000+ app integrations', 'Tie'],
-    ['Backlinks', 'Backlink exchange: you host relevant links to earn credits for your own', 'No exchange; outreach and internal linking done with you', 'Depends'],
+    ['Backlinks', 'Automated backlink building; you earn credits by hosting a relevant link in your own articles', 'No exchange; outreach and internal linking done with you', 'Depends'],
     ['Beyond SEO', 'Also sells a Free Tools Builder, directory submission, and AI visibility', 'Email, social, sales, and phone AI employees', 'Depends'],
     ['Price', '$99/month or $999/year (checked October 7, 2026)', 'Refundable pilot (100% refund within 14 days); pricing depends on the product', 'Outrank']
 ];
@@ -197,7 +197,7 @@ export default function OutrankSoAlternativeContent() {
                                     If you are searching for an <strong>Outrank.so alternative</strong>, you probably want the same outcome Outrank promises: more blog posts, more search visibility, and more chances to get recommended by Google, ChatGPT, Perplexity, and other AI search engines.
                                 </p>
                                 <p>
-                                    The question is not whether Outrank.so is useful. It is. Outrank positions itself as an autopilot SEO platform that plans keywords, writes articles in your voice, publishes to your CMS, adds internal links, images, and relevant YouTube videos, and runs a backlink exchange. It also says it helps you get recommended by ChatGPT. For a founder with an empty blog, that is a strong offer.
+                                    The question is not whether Outrank.so is useful. It is. Outrank positions itself as an autopilot SEO platform that plans keywords, writes articles in your voice, publishes to your CMS, adds internal links, images, and relevant YouTube videos, and builds backlinks. Its homepage also promises to help you get recommended by ChatGPT. For a founder with an empty blog, that is a strong offer.
                                 </p>
                                 <p>
                                     The real difference is who does the work. With Outrank, you run the tool. With <strong>Dooza Ranky</strong>, Dooza&apos;s AI SEO &amp; visibility employee, Ranky and Dooza engineers do the work for you, and nothing goes live without your approval. Dooza is an AI-native company, and Ranky sits inside its broader AI workforce.
@@ -218,7 +218,7 @@ export default function OutrankSoAlternativeContent() {
                                     Outrank.so is built around a simple promise: grow organic traffic on autopilot. According to Outrank&apos;s website, the platform handles keyword research, content generation, content optimization, backlink building, AI images, localization, and publishing to WordPress, Webflow, Shopify, Wix, Framer, Notion, Ghost, and a custom webhook. It also offers a REST API and an MCP server.
                                 </p>
                                 <p>
-                                    Its all-in-one plan is listed at <strong>$99/month</strong> or $999/year (checked October 7, 2026) and includes <strong>30 articles per month</strong>, with add-ons for 60 or 90 articles a month. It also includes unlimited organization users, automated keyword research, CMS publishing, AI images, backlink exchange, relevant YouTube videos in articles, 150+ languages, unlimited AI rewrites, and custom feature requests.
+                                    Its all-in-one plan is listed at <strong>$99/month</strong> or $999/year (checked October 7, 2026 on <a href="https://www.outrank.so/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">outrank.so/pricing</a>) and includes <strong>30 articles per month</strong>, with add-ons for 60 or 90 articles a month. It also includes unlimited organization users, automated keyword research, CMS publishing, AI images, automated backlink building, relevant YouTube videos in articles, 150+ languages, unlimited AI rewrites, and custom feature requests.
                                 </p>
                                 <p>
                                     That is a real offer. If you want to publish SEO articles on a schedule you set, with minimal involvement, and you are happy to run the tool yourself, Outrank.so belongs on the shortlist.
@@ -255,8 +255,8 @@ export default function OutrankSoAlternativeContent() {
                             <div className="mt-8 space-y-5">
                                 {[
                                     ['You would rather not run another tool', 'Outrank automates the writing and publishing, but you still own the setup, the review, and the strategy. Dooza engineers set up and run Ranky with you, and you approve what goes live.'],
-                                    ['You want to choose how links are built', 'Outrank says its exchange places relevant links inside real articles on real blogs and verifies each one. Some teams still prefer not to host links for other members, and want outreach and internal linking handled case by case instead.'],
-                                    ['You want SEO and AI search handled together', 'Buyers ask ChatGPT, Perplexity, Claude, and Gemini as well as Google. Both tools target AI search; with Dooza, the GEO work (schema, citable claims, Reddit and Quora presence) is done for you.'],
+                                    ['You want to choose how links are built', 'Outrank says it places relevant links inside real articles on real blogs and verifies each one, and its plan earns link credits when you host a relevant link in your own articles. Some teams still prefer not to host links for other members, and want outreach and internal linking handled case by case instead.'],
+                                    ['You want SEO and AI search handled together', 'Buyers ask ChatGPT, Perplexity, Claude, and Gemini as well as Google. Both tools target AI search; with Dooza, the GEO work is done for you by Dooza engineers.'],
                                     ['You want content tied to the rest of the business', 'A blog post is more valuable when it feeds social posts, sales follow-ups, email replies, and lead nurturing. Dooza adds AI employees for those jobs.']
                                 ].map(([title, copy]) => (
                                     <div key={title} className="bg-slate-50 border border-slate-100 rounded-xl p-6 flex gap-4">
@@ -360,7 +360,7 @@ export default function OutrankSoAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing: Outrank.so vs Dooza</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Outrank.so lists its all-in-one plan at <strong>$99/month</strong> or $999/year, with add-ons for more articles (+$85/month for 60, +$160/month for 90), checked October 7, 2026. It says there are no hidden fees and no per-seat charges. If you only need SEO articles and will run the tool yourself, that is a clear, published price.
+                                    Outrank.so lists its all-in-one plan at <strong>$99/month</strong> or $999/year, with add-ons for more articles (+$85/month for 60, +$160/month for 90), checked October 7, 2026 on <a href="https://www.outrank.so/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Outrank&apos;s pricing page</a>. It includes unlimited users in your organization, and lists a separate &quot;Human Curated&quot; option if you want people involved. If you only need SEO articles and will run the tool yourself, that is a clear, published price.
                                 </p>
                                 <p>
                                     The case for Dooza is different: you are paying for the work to be done with you, not for a tool. Ranky is part of a broader AI workforce that can also help with email, social media, sales follow-up, and phone calls. Dooza pricing depends on the product (see <a href="/pricing" className="text-primary-600 hover:underline">pricing</a>), and every Dooza product starts with a refundable pilot — 100% refund within 14 days.

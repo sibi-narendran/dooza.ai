@@ -35,7 +35,7 @@ import {
 const faqData = [
     {
         question: "How much revenue am I losing from missed calls?",
-        answer: "Many small businesses miss a large share of inbound calls, and most callers won't leave a voicemail, so each missed call is often a lost customer. To estimate your own loss, multiply the calls you miss each month by your average customer value."
+        answer: "Many small businesses miss a large share of inbound calls, and many callers won't leave a voicemail, so each missed call is often a lost customer. To estimate your own loss, multiply the calls you miss each month by your average customer value."
     },
     {
         question: "How is an AI voice agent different from an AI receptionist?",
@@ -213,16 +213,16 @@ export default function AiVoiceAgentMissedCallsContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    Your phone just rang. You were with a client, on the other line, or had your hands full. It went to voicemail. The caller hung up without leaving a message. They called the next business on Google instead. You just lost $200. Maybe $1,500. Maybe $3,500.
+                                    Your phone just rang. You were with a client, on the other line, or had your hands full. It went to voicemail. The caller hung up without leaving a message. They called the next business on Google instead. You may just have lost a customer.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     And it's happening every single day.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>Many calls to small businesses go unanswered.</strong> That alone is damaging. But here's what makes it a revenue emergency: <strong>most callers who reach voicemail won't leave a message</strong>. They simply move on to a competitor who picks up.
+                                    <strong>Many calls to small businesses go unanswered.</strong> That alone is damaging. But here's what makes it a revenue emergency: <strong>many callers who reach voicemail won't leave a message</strong>. They simply move on to a competitor who picks up.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    This isn't a phone problem. It's a <strong>revenue leak</strong>. If your business misses just 2 calls a day and the average lead value is $200, that's up to <strong>$12,000 a month</strong> in leads that may never call back.
+                                    This isn't a phone problem. It's a <strong>revenue leak</strong>. As a purely illustrative example: if your business misses 2 calls a day and an average lead is worth $200 to you, that's up to <strong>$12,000 a month</strong> in leads that may never call back. Swap in your own numbers.
                                 </p>
                             </div>
 
@@ -232,21 +232,21 @@ export default function AiVoiceAgentMissedCallsContent() {
                                 <div className="grid md:grid-cols-3 gap-6 text-center">
                                     <div>
                                         <div className="text-sm text-slate-400 mb-1">Response within 5 minutes</div>
-                                        <div className="text-3xl font-bold text-green-400">21x</div>
-                                        <div className="text-sm text-slate-400">more likely to qualify</div>
+                                        <div className="text-3xl font-bold text-green-400">10x</div>
+                                        <div className="text-sm text-slate-400">baseline odds of connecting</div>
                                     </div>
                                     <div>
-                                        <div className="text-sm text-slate-400 mb-1">Response after 30 minutes</div>
-                                        <div className="text-3xl font-bold text-amber-400">100x</div>
-                                        <div className="text-sm text-slate-400">less likely vs 5-min response</div>
+                                        <div className="text-sm text-slate-400 mb-1">Response in 16-30 minutes</div>
+                                        <div className="text-3xl font-bold text-amber-400">2x</div>
+                                        <div className="text-sm text-slate-400">baseline odds of connecting</div>
                                     </div>
                                     <div>
-                                        <div className="text-sm text-slate-400 mb-1">Response next day</div>
-                                        <div className="text-3xl font-bold text-red-400">0%</div>
-                                        <div className="text-sm text-slate-400">lead is gone</div>
+                                        <div className="text-sm text-slate-400 mb-1">Response after an hour or more</div>
+                                        <div className="text-3xl font-bold text-red-400">1x</div>
+                                        <div className="text-sm text-slate-400">baseline only</div>
                                     </div>
                                 </div>
-                                <p className="text-sm text-slate-400 text-center mt-4">Source: Lead Connect / MIT InsideSales</p>
+                                <p className="text-sm text-slate-400 text-center mt-4">Source: <a href="https://marketwiz.ai/real-estate-lead-response-time-why-5-minutes-10x-more-conversions/" target="_blank" rel="noopener noreferrer" className="underline">MarketWiz</a> (a real-estate lead-response article that attributes the 5-minute figure to MIT and Harvard studies; we have not checked the original study)</p>
                             </div>
 
                             <div className="prose md:prose-lg text-slate-600">
@@ -254,7 +254,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     Speed-to-response is one of the biggest factors in lead conversion. It doesn't matter how good your service is, how competitive your pricing is, or how many 5-star reviews you have. If you don't answer the phone, <strong>the lead often goes to whichever competitor picks up first</strong>.
                                 </p>
                                 <p>
-                                    An AI voice agent answers in under one second. Every time. That alone shifts the math in your favor.
+                                    An AI voice agent picks up straight away, every time. That alone shifts the math in your favor.
                                 </p>
                             </div>
                         </section>
@@ -282,15 +282,14 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", voicemail: "Free", human: "$3,500-4,200", virtual: "$300-935", ai: "Refundable pilot (see /pricing)" },
+                                            { feature: "Monthly Cost", voicemail: "Free", human: "Salary plus benefits", virtual: "From $250 (Ruby) or $300 (Smith.ai); checked Oct 2026", ai: "Refundable pilot (see /pricing)" },
                                             { feature: "Availability", voicemail: "24/7 (no one answers)", human: "40-45 hrs/week", virtual: "Business hours mostly", ai: "24/7/365" },
                                             { feature: "Lead Qualification", voicemail: "None", human: "If trained", virtual: "Basic scripting", ai: "Custom AI qualification" },
                                             { feature: "CRM Integration", voicemail: "None", human: "Manual entry", virtual: "Limited / extra cost", ai: "Automatic, real-time" },
                                             { feature: "Follow-Up Trigger", voicemail: "None", human: "Manual", virtual: "None", ai: "Automated sequences" },
                                             { feature: "Data Capture", voicemail: "Maybe a message", human: "Depends on person", virtual: "Name & number", ai: "Full qualification data" },
-                                            { feature: "Setup Time", voicemail: "5 minutes", human: "2-4 weeks hire", virtual: "1-2 weeks", ai: "Same day" },
-                                            { feature: "Scales With Volume", voicemail: "No", human: "Hire more", virtual: "Pay per minute", ai: "Handles call spikes without extra hires" },
-                                            { feature: "Cost Per Captured Lead", voicemail: "N/A (no capture)", human: "$15-25+", virtual: "$8-15", ai: "Varies by product — refundable pilot*" }
+                                            { feature: "Setup Time", voicemail: "Minutes", human: "Weeks to hire and train", virtual: "Sign-up and onboarding", ai: "Same day" },
+                                            { feature: "Scales With Volume", voicemail: "No", human: "Hire more", virtual: "Pay per minute", ai: "Handles call spikes without extra hires" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -333,7 +332,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     </h3>
                                     <ul className="space-y-3">
                                         {[
-                                            "Answers every call in under 1 second — no rings, no wait",
+                                            "Answers every call straight away — no wait, no voicemail",
                                             "Asks custom qualification questions per your criteria",
                                             "Captures name, contact, needs, budget, timeline",
                                             "Pushes data to CRM as a new pipeline record",
@@ -367,7 +366,7 @@ export default function AiVoiceAgentMissedCallsContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    An AI voice agent isn't just picking up the phone. It's running a five-step revenue capture process on every single call — the same process your best salesperson would run, but in 90 seconds instead of 10 minutes, and without ever taking a break.
+                                    An AI voice agent isn't just picking up the phone. It's running a five-step revenue capture process on every single call — the same process your best salesperson would run, but on every call, and without ever taking a break.
                                 </p>
                             </div>
 
@@ -377,8 +376,8 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         step: "1",
                                         title: "Answer Instantly",
                                         icon: Phone,
-                                        desc: "The AI voice agent answers in under 1 second. No rings, no hold music, no 'please leave a message.' The caller immediately hears a professional greeting customized to your business. First impression: this company is responsive.",
-                                        detail: "Studies show that answer speed directly correlates with caller trust. A 1-second pickup creates the impression of a well-staffed, professional operation."
+                                        desc: "The AI voice agent answers straight away. No rings, no hold music, no 'please leave a message.' The caller immediately hears a professional greeting customized to your business. First impression: this company is responsive.",
+                                        detail: "A fast pickup creates the impression of a well-staffed, professional operation."
                                     },
                                     {
                                         step: "2",
@@ -539,7 +538,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-800 mb-3">Zero Data Entry = Zero Data Loss</h4>
                                 <p className="text-blue-700">
-                                    Studies show that <strong>manual CRM entry has a 20-30% error rate</strong> and that reps skip logging 40% of their interactions entirely. An AI voice agent captures every data point with 100% consistency. Your pipeline finally reflects reality — and your forecasting improves overnight.
+                                    Manual CRM entry is easy to skip or get wrong, especially after a busy day. An AI voice agent logs the same fields on every call it handles. Your pipeline finally reflects reality — and your forecasting improves overnight.
                                 </p>
                             </div>
                         </section>
@@ -550,25 +549,22 @@ export default function AiVoiceAgentMissedCallsContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Most businesses operate 8-10 hours a day. But your customers don't stop needing help at 5 PM. In fact, a huge percentage of the highest-intent calls happen when you're closed. That's not a problem — it's an <strong>opportunity your competitors are ignoring</strong>.
+                                    Most businesses operate 8-10 hours a day. But your customers don't stop needing help at 5 PM. Plenty of calls come in when you're closed. That's not a problem — it's an <strong>opportunity your competitors are ignoring</strong>.
                                 </p>
                             </div>
 
                             <div className="bg-slate-900 text-white p-8 rounded-xl mb-8">
-                                <h3 className="text-xl font-bold mb-6 text-center">When Your Calls Actually Come In</h3>
+                                <h3 className="text-xl font-bold mb-6 text-center">When Calls Can Come In Outside Office Hours</h3>
                                 <div className="grid md:grid-cols-4 gap-4">
                                     {[
-                                        { time: "After Hours (5PM-9PM)", pct: "22%", desc: "People call after their own work day ends. This is the highest-intent window — they've been thinking about it all day.", color: "text-red-400", barWidth: "w-[88%]", barColor: "bg-red-500" },
-                                        { time: "Lunch Hour (11AM-1PM)", pct: "18%", desc: "Spike during lunch breaks when people finally have a free minute to make that call they've been putting off.", color: "text-amber-400", barWidth: "w-[72%]", barColor: "bg-amber-500" },
-                                        { time: "Weekends", pct: "12%", desc: "Saturday and Sunday calls are from buyers with urgency — they're researching, comparing, and ready to act.", color: "text-blue-400", barWidth: "w-[48%]", barColor: "bg-blue-500" },
-                                        { time: "Early Morning (6-8AM)", pct: "8%", desc: "Before-work callers planning their day. Homeowners calling about emergency repairs that happened overnight.", color: "text-purple-400", barWidth: "w-[32%]", barColor: "bg-purple-500" }
+                                        { time: "After Hours (5PM-9PM)", pct: "Evenings", desc: "People call after their own work day ends. They've been thinking about it all day.", color: "text-red-400" },
+                                        { time: "Lunch Hour (11AM-1PM)", pct: "Lunch", desc: "Spike during lunch breaks when people finally have a free minute to make that call they've been putting off.", color: "text-amber-400" },
+                                        { time: "Weekends", pct: "Weekends", desc: "Saturday and Sunday calls often come from buyers who finally have time to research and act.", color: "text-blue-400" },
+                                        { time: "Early Morning (6-8AM)", pct: "Mornings", desc: "Before-work callers planning their day. Customers calling about problems that happened overnight.", color: "text-purple-400" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="text-center">
                                             <div className={`text-3xl font-bold ${item.color} mb-1`}>{item.pct}</div>
                                             <div className="text-sm font-medium text-white mb-2">{item.time}</div>
-                                            <div className="w-full bg-slate-700 rounded-full h-2 mb-3">
-                                                <div className={`${item.barColor} h-2 rounded-full ${item.barWidth}`}></div>
-                                            </div>
                                             <p className="text-xs text-slate-400">{item.desc}</p>
                                         </div>
                                     ))}
@@ -622,7 +618,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The After-Hours Revenue Advantage</h4>
                                         <p className="text-slate-700">
-                                            Here's the counterintuitive truth: after-hours callers convert at <strong>higher rates</strong> than business-hours callers. Why? Because they've already done their research. They're calling to take action, not to browse. A Saturday evening call to a plumber means a burst pipe. A 9 PM call to a lawyer means they just got served. These are <strong>high-urgency, high-value leads</strong> — and most businesses let them go straight to voicemail.
+                                            After-hours callers are often calling to take action, not to browse. A Saturday evening call to a plumber means a burst pipe. A 9 PM call to a lawyer means they just got served. These are <strong>high-urgency, high-value leads</strong> — and most businesses let them go straight to voicemail.
                                         </p>
                                     </div>
                                 </div>
@@ -635,7 +631,7 @@ export default function AiVoiceAgentMissedCallsContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Let's stop talking about hypotheticals and run the actual numbers for your business. The formula is simple — and the results are hard to ignore.
+                                    Here is the formula, with example numbers. Replace each assumption with your own; none of the figures below are measured results.
                                 </p>
                             </div>
 
@@ -644,7 +640,7 @@ export default function AiVoiceAgentMissedCallsContent() {
 
                                 <div className="space-y-4 max-w-2xl mx-auto">
                                     <div className="flex items-center justify-between bg-white p-4 rounded-lg border border-slate-200">
-                                        <span className="text-slate-700 font-medium">Missed calls per day (example)</span>
+                                        <span className="text-slate-700 font-medium">Missed calls per day (assumed)</span>
                                         <span className="text-xl font-bold text-red-600">10</span>
                                     </div>
                                     <div className="flex items-center justify-center">
@@ -655,7 +651,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         <span className="text-xl font-bold text-red-600">300</span>
                                     </div>
                                     <div className="flex items-center justify-center">
-                                        <span className="text-slate-400 text-sm">x 10% would convert x $500 avg deal</span>
+                                        <span className="text-slate-400 text-sm">x 10% would convert (assumed) x $500 avg deal (assumed)</span>
                                     </div>
                                     <div className="flex items-center justify-between bg-red-100 p-4 rounded-lg border-2 border-red-300">
                                         <span className="text-red-800 font-bold">Monthly revenue lost to voicemail</span>
@@ -673,21 +669,21 @@ export default function AiVoiceAgentMissedCallsContent() {
                             <div className="grid md:grid-cols-3 gap-6 mb-8">
                                 {[
                                     {
-                                        scenario: "Conservative",
+                                        scenario: "Example: low",
                                         captured: "5 extra leads/month",
                                         avgDeal: "$500",
                                         revenue: "$2,500/mo",
                                         color: "green"
                                     },
                                     {
-                                        scenario: "Moderate",
+                                        scenario: "Example: mid",
                                         captured: "15 extra leads/month",
                                         avgDeal: "$500",
                                         revenue: "$7,500/mo",
                                         color: "blue"
                                     },
                                     {
-                                        scenario: "Realistic (Service Biz)",
+                                        scenario: "Example: high",
                                         captured: "30 extra leads/month",
                                         avgDeal: "$500",
                                         revenue: "$15,000/mo",
@@ -712,35 +708,35 @@ export default function AiVoiceAgentMissedCallsContent() {
                             </div>
 
                             <div className="bg-slate-900 text-white p-8 rounded-xl mb-8">
-                                <h3 className="text-xl font-bold mb-6 text-center">Industry-Specific ROI Examples</h3>
+                                <h3 className="text-xl font-bold mb-6 text-center">Industry Math: Plug In Your Own Numbers</h3>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     {[
                                         {
                                             industry: "HVAC Company",
-                                            detail: "Captures 10 after-hours emergency calls/month that previously went to voicemail",
-                                            calculation: "10 calls x $400 avg job = $4,000/month recovered",
-                                            roi: "$4,000/month recovered",
+                                            detail: "After-hours emergency calls that would otherwise go to voicemail",
+                                            calculation: "Calls captured per month x your average job value",
+                                            roi: "Your numbers",
                                             roiColor: "text-green-400"
                                         },
                                         {
                                             industry: "Law Firm",
-                                            detail: "Captures 3 potential client calls/month that competitors would have gotten",
-                                            calculation: "3 calls x $1,500 avg case = $4,500/month recovered",
-                                            roi: "$4,500/month recovered",
+                                            detail: "Potential-client calls a competitor would otherwise get",
+                                            calculation: "Calls captured per month x your average case value",
+                                            roi: "Your numbers",
                                             roiColor: "text-green-400"
                                         },
                                         {
                                             industry: "Dental Practice",
-                                            detail: "Captures 8 new patient inquiries/month during lunch and after hours",
-                                            calculation: "8 calls x $600 first-year value = $4,800/month recovered",
-                                            roi: "$4,800/month recovered",
+                                            detail: "New-patient inquiries during lunch and after hours",
+                                            calculation: "Calls captured per month x your first-year patient value",
+                                            roi: "Your numbers",
                                             roiColor: "text-green-400"
                                         },
                                         {
                                             industry: "Real Estate Agent",
-                                            detail: "Captures 2 buyer leads/month from weekend and evening calls",
-                                            calculation: "2 calls x $3,500 expected commission = $7,000/month recovered",
-                                            roi: "$7,000/month recovered",
+                                            detail: "Buyer leads from weekend and evening calls",
+                                            calculation: "Calls captured per month x your expected commission",
+                                            roi: "Your numbers",
                                             roiColor: "text-green-400"
                                         }
                                     ].map((item, idx) => (
@@ -818,7 +814,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Every Minute Without an AI Voice Agent Is Revenue Lost</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Your phone is ringing right now. Someone is calling your competitors because your line went to voicemail. An AI voice agent would have answered in under a second, qualified the caller, captured their data, and booked the appointment. Start today.
+                                    If your line goes to voicemail, a caller may be trying your competitors instead. An AI voice agent would have answered, qualified the caller, captured their data, and booked the appointment. Start today.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
@@ -852,16 +848,14 @@ export default function AiVoiceAgentMissedCallsContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Missed Call & Response Data</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://marketwiz.ai/real-estate-lead-response-time-why-5-minutes-10x-more-conversions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">MIT / InsideSales — 5-minute response window, 21x qualification</a></li>
+                                        <li>• <a href="https://marketwiz.ai/real-estate-lead-response-time-why-5-minutes-10x-more-conversions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">MarketWiz — lead response time (5 min = 10x baseline)</a></li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Cost & Industry Data</h4>
+                                    <h4 className="font-semibold text-slate-800 mb-3">Pricing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.bls.gov/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Bureau of Labor Statistics — Receptionist & admin salary data</a></li>
                                         <li>• <a href="https://www.ruby.com/plans-and-pricing/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ruby — Plans and pricing (checked Oct 7, 2026)</a></li>
-                                        <li>• <a href="https://smith.ai/pricing/receptionists" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Smith.ai — Virtual receptionist pricing & capabilities</a></li>
-                                        <li>• <a href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Salesforce — CRM data entry error rates and adoption</a></li>
+                                        <li>• <a href="https://smith.ai/pricing/receptionists" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Smith.ai — Virtual receptionist pricing (checked Oct 2026)</a></li>
                                     </ul>
                                 </div>
                             </div>
