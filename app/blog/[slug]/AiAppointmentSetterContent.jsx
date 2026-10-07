@@ -398,7 +398,7 @@ export default function AiAppointmentSetterContent() {
                                             { metric: "Availability", ai: "24/7/365", agency: "Business hours (M-F)", sdr: "Business hours (M-F)", diy: "Whenever you check" },
                                             { metric: "Scalability", ai: "Unlimited leads", agency: "Limited by headcount", sdr: "1 person's capacity", diy: "Your bandwidth" },
                                             { metric: "Setup Time", ai: "Same day", agency: "2-4 weeks", sdr: "4-8 weeks hiring + training", diy: "Ongoing" },
-                                            { metric: "Consistency", ai: "100% consistent", agency: "Varies by rep", sdr: "Varies by day", diy: "Inconsistent" }
+                                            { metric: "Consistency", ai: "Follows the same steps every time", agency: "Varies by rep", sdr: "Varies by day", diy: "Inconsistent" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.metric}</td>
@@ -414,7 +414,7 @@ export default function AiAppointmentSetterContent() {
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    The numbers speak for themselves. An AI appointment setter costs 99% less than an agency, responds 840x faster, and maintains near-perfect consistency. The only area where agencies and SDRs compete is in complex, relationship-heavy sales cycles — which we'll address next.
+                                    The pattern is clear: an AI appointment setter replies in seconds at any hour, follows the same steps every time, and charges no per-meeting fee. The only area where agencies and SDRs compete is in complex, relationship-heavy sales cycles — which we'll address next.
                                 </p>
                             </div>
                         </section>
@@ -501,12 +501,12 @@ export default function AiAppointmentSetterContent() {
                                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl text-center">
                                     <div className="text-3xl font-bold text-red-600 mb-2">$250/meeting</div>
                                     <p className="text-sm text-slate-700 font-medium">Agency</p>
-                                    <p className="text-xs text-slate-500 mt-1">$3,000/mo for ~12 meetings</p>
+                                    <p className="text-xs text-slate-500 mt-1">Example: $3,000/mo for ~12 meetings</p>
                                 </div>
                                 <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl text-center">
-                                    <div className="text-3xl font-bold text-amber-600 mb-2">$150/meeting</div>
+                                    <div className="text-3xl font-bold text-amber-600 mb-2">$250/meeting</div>
                                     <p className="text-sm text-slate-700 font-medium">In-House SDR</p>
-                                    <p className="text-xs text-slate-500 mt-1">$5,000+/mo total cost</p>
+                                    <p className="text-xs text-slate-500 mt-1">Example: $5,000/mo for ~20 meetings</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-3xl font-bold text-green-700 mb-2">No per-meeting fee</div>
