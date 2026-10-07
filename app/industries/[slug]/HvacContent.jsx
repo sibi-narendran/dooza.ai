@@ -138,7 +138,7 @@ const aiAdoptionTestimonials = [
         author: 'Emma Corvan',
         role: 'CSR · Homer Home Service',
         company: 'Homer Home Service',
-        website: 'https://www.homerhomeservice.com/',
+        website: 'https://www.avoca.ai/customers/homer-STL',  // homerhomeservice.com was dead (404) on 2026-10-07
         image: '/industries/home-services-testimonials/homer-home-service.png',
         imageAlt: 'Homer Home Service technician working on an outdoor HVAC unit',
         href: 'https://www.avoca.ai/customers/homer-STL',
