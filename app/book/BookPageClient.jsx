@@ -49,7 +49,7 @@ export default function BookPageClient() {
                     container.style.cssText = 'padding: 0; background: white;';
 
                     window.Calendly.initInlineWidget({
-                        url: (() => { const u = getBookingUrlWithUtm('website', 'book_page', 'book'); const t = getNavTrail(); return t ? `${u}&utm_term=${encodeURIComponent(t)}` : u; })(),
+                        url: (() => { const q = new URLSearchParams(window.location.search); const u = getBookingUrlWithUtm(q.get('utm_source') || 'website', q.get('utm_medium') || 'book_page', q.get('utm_content') || 'book').replace('utm_campaign=booking', `utm_campaign=${encodeURIComponent(q.get('utm_campaign') || 'booking')}`); const t = q.get('utm_term') || getNavTrail(); return t ? `${u}&utm_term=${encodeURIComponent(t)}` : u; })(),
                         parentElement: container,
                     });
 
