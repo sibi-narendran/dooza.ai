@@ -70,7 +70,7 @@ function TweetEmbed({ tweetId }) {
 const faqData = [
     {
         question: "Is this tweet real?",
-        answer: "Yes. The tweet was posted by Ami Palan (@markmeyourze) on February 17, 2026, and has received over 68,000 views. The follow-up tweet confirms the business uses Dooza.ai."
+        answer: "Yes. The tweet was posted by Ami Palan (@markmeyourze) on February 17, 2026, and had over 82,000 views as of October 7, 2026. The follow-up tweet confirms the business uses Dooza.ai."
     },
     {
         question: "What are AI employees?",
@@ -153,7 +153,7 @@ export default function HerEntireTeamWasAiContent() {
                             Her Entire Team Was AI. <span className="text-primary-600">Nobody Could Tell.</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            A Bangalore tech professional went to dinner with a friend who&apos;d just expanded her business. Her team was responding on Slack at 10 PM — every single one of them turned out to be an AI agent. The tweet went viral.
+                            Ami Palan went to dinner with a friend who&apos;d just expanded her business. Her team was responding on Slack at 10 PM — every single one of them turned out to be an AI agent. The tweet went viral.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -220,13 +220,13 @@ export default function HerEntireTeamWasAiContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    It was a regular weeknight dinner in Bangalore. Two friends catching up. One had recently expanded her business — more clients, more moving parts, more to manage.
+                                    It was a regular dinner. Two friends catching up. One had recently expanded her business — more clients, more moving parts, more to manage.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     Mid-dinner, she pulls out her phone. Slack notifications. Her team is active — messages going back and forth, tasks being picked up, replies firing instantly. It&apos;s nearly 10 PM on a weeknight.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Her friend, Ami Palan, a tech professional based in Bangalore, watches this and thinks: <em>Wow, her team is dedicated.</em> She even compliments her management skills.
+                                    Her friend, Ami Palan, watches this and thinks: <em>Wow, her team is dedicated.</em> She even compliments her management skills.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     Then, casually — almost as an afterthought — the friend reveals the truth.
@@ -266,7 +266,7 @@ export default function HerEntireTeamWasAiContent() {
                                     The detail that struck people wasn&apos;t the technology itself — it was how <em>normal</em> it looked.
                                 </p>
                                 <p>
-                                    The Slack messages looked like any team conversation. The AI agents were responding contextually, handling tasks, coordinating work. There was nothing robotic about the exchange. Ami, a tech-savvy observer from Bangalore&apos;s own tech ecosystem, couldn&apos;t tell the difference.
+                                    The Slack messages looked like any team conversation. The AI agents were responding contextually, handling tasks, coordinating work. There was nothing robotic about the exchange. Ami didn&apos;t realise they were AI until her friend told her.
                                 </p>
                                 <p>
                                     And the business owner didn&apos;t frame it as a tech achievement. She mentioned it the way someone mentions switching to a new accounting software — it&apos;s just how things run now. The casualness of the reveal is what makes the story so striking.
@@ -301,7 +301,7 @@ export default function HerEntireTeamWasAiContent() {
                                     Not a future alternative. A current one. Already deployed. Already working. In India.
                                 </p>
                                 <p>
-                                    The conversation around AI in business has largely been driven by Silicon Valley — billion-dollar models, enterprise deployments, abstract roadmaps. This tweet grounded it. A real business. A real dinner. A real team of AI agents. In Bangalore.
+                                    The conversation around AI in business has largely been driven by Silicon Valley — billion-dollar models, enterprise deployments, abstract roadmaps. This tweet grounded it. A real business. A real dinner. A real team of AI agents.
                                 </p>
                             </div>
                         </section>
@@ -323,7 +323,7 @@ export default function HerEntireTeamWasAiContent() {
                                     Indian entrepreneurs in cities like Bangalore, Mumbai, Delhi, Hyderabad, and Pune are early movers. They&apos;re not waiting for AI to become mainstream — they&apos;re deploying it now, while competitors are still debating whether to try ChatGPT.
                                 </p>
                                 <p>
-                                    The tweet from Ami Palan is a snapshot of this shift. It&apos;s not about the technology being impressive — it&apos;s about the technology being <em>invisible</em>. The AI agents blended in so naturally that a tech professional from Bangalore&apos;s own IT ecosystem couldn&apos;t distinguish them from human employees.
+                                    The tweet from Ami Palan is a snapshot of this shift. It&apos;s not about the technology being impressive — it&apos;s about the technology being <em>invisible</em>. The AI agents blended in so naturally that Ami took them for a dedicated human team.
                                 </p>
                                 <p>
                                     That&apos;s the inflection point. Not when AI becomes powerful — but when it becomes unremarkable.
@@ -339,7 +339,7 @@ export default function HerEntireTeamWasAiContent() {
                                     Y Combinator president Garry Tan recently coined the term &ldquo;20X companies&rdquo; — startups where teams of 4-5 people produce the output of companies 20 times their size, using AI agents across every function. Companies like GigaML, Legion Health, and Phase Shift are proving the model works.
                                 </p>
                                 <p>
-                                    But those are elite YC-backed startups with engineering teams. What the Bangalore dinner story suggests is something more significant: <strong>the 20X model is already trickling down to regular businesses</strong>. No venture capital. No engineering team. Just a founder, a platform, and a team of AI agents that reply on Slack at 10 PM.
+                                    But those are elite YC-backed startups with engineering teams. What the dinner story suggests is something more significant: <strong>the 20X model is already trickling down to regular businesses</strong>. No venture capital. No engineering team. Just a founder, a platform, and a team of AI agents that reply on Slack at 10 PM.
                                 </p>
                                 <p>
                                     The question is no longer whether AI employees work. It&apos;s how long until the businesses that don&apos;t use them can&apos;t compete with the ones that do.
