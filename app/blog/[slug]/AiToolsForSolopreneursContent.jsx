@@ -53,7 +53,7 @@ const faqData = [
     },
     {
         question: "What is tool stack fatigue?",
-        answer: "Tool stack fatigue occurs when solopreneurs juggle too many separate software subscriptions. Symptoms include: spending more time managing tools than doing actual work, paying for overlapping features, forgetting passwords, dealing with integration issues, and subscription creep. Studies show the average solopreneur uses 7+ different tools. Consolidating to all-in-one platforms reduces cognitive load and costs."
+        answer: "Tool stack fatigue occurs when solopreneurs juggle too many separate software subscriptions. Symptoms include: spending more time managing tools than doing actual work, paying for overlapping features, forgetting passwords, dealing with integration issues, and subscription creep. Consolidating overlapping tools reduces cognitive load and often cost."
     },
     {
         question: "Is Dooza good for solopreneurs?",
@@ -61,7 +61,7 @@ const faqData = [
     },
     {
         question: "How much time can AI tools save solopreneurs?",
-        answer: "AI tools can save solopreneurs 10-20+ hours per week depending on usage. Specific savings include: 2-4 hours/day on email (average professional spends 4.1 hours), 1-2 hours/day on content creation, 1 hour/day on social media, and 30+ minutes on meeting notes. Studies suggest AI can save 50+ workdays per year for heavy users—that's nearly 3 months of full-time work."
+        answer: "It depends on how much of your week goes to repeatable work. The biggest savings usually come from first drafts (emails, posts, blog outlines), meeting notes and follow-ups, and scheduling social posts in batches. A simple way to measure it: log how long each recurring task takes for one week, hand it to an AI tool for the next week, and compare. Keep the tools that clearly save time and cancel the rest."
     }
 ];
 
@@ -99,7 +99,7 @@ const aiTools = [
         price: "$25-50/mo",
         icon: Mail,
         color: "blue",
-        description: "Triage inbox, draft responses, schedule sends, and actually hit inbox zero for once. The average professional spends 4.1 hours/day on email.",
+        description: "Triage inbox, draft responses, schedule sends, and actually hit inbox zero for once.",
         features: ["Auto-drafts", "Smart sorting", "Follow-ups", "Scheduling"]
     },
     {
@@ -319,27 +319,12 @@ export default function AiToolsForSolopreneursContent() {
                                 </p>
                             </div>
 
-                            <div className="bg-gradient-to-r from-primary-50 to-teal-50 border border-primary-100 rounded-2xl p-6 my-8">
-                                <div className="flex items-start gap-4">
-                                    <Sparkles className="w-6 h-6 text-primary-600 shrink-0 mt-1" />
-                                    <div>
-                                        <h3 className="font-bold text-slate-900 mb-2">The 2026 Solopreneur Reality</h3>
-                                        <p className="text-slate-700">
-                                            According to <a href="https://blog.google/products/google-cloud/ai-business-trends-report-2026/" className="text-primary-600 hover:underline" target="_blank" rel="noopener noreferrer">Google Cloud's 2026 AI Business Trends Report</a>,
-                                            91% of small businesses believe AI will be vital for achieving their growth goals,
-                                            and 71% plan to increase AI investments this year. The solopreneurs who embrace AI
-                                            aren't just surviving—they're scaling.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-lg leading-relaxed">
                                     But here's the problem: the AI landscape is overwhelming. ChatGPT for writing.
                                     Canva for design. Zapier for automation. QuickBooks for accounting. Otter for
-                                    meetings. Buffer for social media. Before you know it, you're spending $300/month
-                                    on tools and half your day switching between them.
+                                    meetings. Buffer for social media. Before you know it, you're paying for a stack of
+                                    subscriptions and switching between them all day.
                                 </p>
                             </div>
 
@@ -375,7 +360,7 @@ export default function AiToolsForSolopreneursContent() {
                                         "Paying for features you don't use",
                                         "Forgetting which tool does what",
                                         "Integration nightmares",
-                                        "Subscription creep ($50 → $300/month)",
+                                        "Subscription creep (one tool at a time)",
                                         "Context switching every 10 minutes",
                                         "Data scattered across platforms",
                                         "Can't remember all your passwords",
@@ -391,8 +376,7 @@ export default function AiToolsForSolopreneursContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    According to <a href="https://www.flowlu.com/blog/productivity/best-business-tools-for-solopreneurs/" className="text-primary-600 hover:underline" target="_blank" rel="noopener noreferrer">Flowlu's research on solopreneur productivity</a>,
-                                    the average one-person business uses 7+ different software tools. That's 7 logins,
+                                    Build a stack from the seven categories above and you have seven separate tools. That's 7 logins,
                                     7 billing cycles, 7 learning curves, and 7 potential points of failure.
                                 </p>
                             </div>
@@ -486,7 +470,7 @@ export default function AiToolsForSolopreneursContent() {
                                     </div>
                                 </div>
                                 <p className="text-red-700 text-sm">
-                                    * And this doesn't include the 10+ hours/week YOU spend managing these disconnected tools
+                                    * And this doesn't count the time you spend switching between and managing separate tools
                                 </p>
                             </div>
                         </section>
@@ -509,7 +493,7 @@ export default function AiToolsForSolopreneursContent() {
                                     },
                                     {
                                         title: "Context Switching Kills Productivity",
-                                        desc: "Studies show it takes 23 minutes to refocus after switching tasks. With 7 different tools, you're switching contexts constantly. That 'time-saving' AI stack might be costing you hours of deep work daily."
+                                        desc: "Every jump between apps breaks your focus, and getting back into deep work takes time. With seven separate tools, you're switching contexts all day. Track how often you change apps in a normal day before adding another one."
                                     },
                                     {
                                         title: "Feature Overlap = Wasted Money",
@@ -526,21 +510,6 @@ export default function AiToolsForSolopreneursContent() {
                                     </div>
                                 ))}
                             </div>
-
-                            <div className="prose md:prose-lg text-slate-600 mb-8">
-                                <p>
-                                    According to <a href="https://siift.ai/blog/ai-tools-for-solopreneurs-comparison" className="text-primary-600 hover:underline" target="_blank" rel="noopener noreferrer">Siift's AI tools comparison</a>,
-                                    the average solopreneur spends 5-10 hours per week just managing and coordinating
-                                    their tool stack. That's equivalent to losing an entire workday every week.
-                                </p>
-                            </div>
-
-                            <blockquote className="border-l-4 border-amber-500 pl-6 my-8 italic text-slate-700">
-                                "I had 9 AI subscriptions. $380/month. I finally sat down and calculated: I was
-                                spending more time learning and managing these tools than they were saving me.
-                                The irony of 'productivity' software."
-                                <footer className="text-sm text-slate-500 mt-2 not-italic">— Comment on Hacker News</footer>
-                            </blockquote>
                         </section>
 
                         <section id="all-in-one-solution" className="scroll-mt-28">
@@ -821,16 +790,13 @@ export default function AiToolsForSolopreneursContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Solopreneur & AI Research</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://blog.google/products/google-cloud/ai-business-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Google Cloud - AI Business Trends 2026</a></li>
                                         <li>• <a href="https://www.entrepreneur.com/science-technology/7-ai-tools-solopreneurs-need-for-2026-to-hit-7-figures/499925" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Entrepreneur - AI Tools for Solopreneurs</a></li>
-                                        <li>• <a href="https://www.flowlu.com/blog/productivity/best-business-tools-for-solopreneurs/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Flowlu - Best Tools for Solopreneurs</a></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Tool Comparisons</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li>• <a href="https://www.nextiva.com/blog/best-ai-tools-for-small-business.html" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Nextiva - Best AI Tools for Small Business</a></li>
-                                        <li>• <a href="https://siift.ai/blog/ai-tools-for-solopreneurs-comparison" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Siift - AI Tools Comparison</a></li>
                                     </ul>
                                 </div>
                             </div>

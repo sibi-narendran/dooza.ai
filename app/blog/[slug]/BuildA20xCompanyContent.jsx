@@ -40,7 +40,7 @@ import {
 const faqData = [
     {
         question: "What is a 20X company?",
-        answer: "A 20X company is a term coined by Y Combinator president Garry Tan to describe startups that use AI to automate every internal function — not just one. Instead of hiring large teams, 20X companies use AI agents to handle sales, marketing, support, legal, and operations, allowing tiny teams of 4-12 people to produce the output of companies 20 times their size."
+        answer: "A 20X company is a startup that automates all of its internal functions with AI, not just one or two. The phrase was coined by the founders of GigaML (their team of four to five engineers won DoorDash against incumbents about 20 times their size) and popularised by Y Combinator president Garry Tan in the February 2026 video “The New Way To Build A Startup”. 20X companies automate code, support, marketing, sales, hiring and QA so they can delay hiring and stay lean."
     },
     {
         question: "How can a small business compete with larger companies using AI?",
@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: "How is this different from hiring a virtual assistant?",
-        answer: "A human virtual assistant costs $1,000-2,600/month and works limited hours. Dooza's AI employees work 24/7, handle six different job functions simultaneously, never take PTO, and start with a refundable pilot (100% refund within 14 days). They handle the repetitive 80% of work so humans can focus on the 20% requiring judgment and creativity."
+        answer: "A human virtual assistant works set hours and usually covers one role at a time. Dooza's AI employees run around the clock across several job functions (email, social media, SEO, sales and more), and every Dooza product starts with a refundable pilot (100% refund within 14 days). They take the repetitive work so people can focus on the parts that need judgment and creativity."
     }
 ];
 
@@ -122,7 +122,7 @@ export default function BuildA20xCompanyContent() {
                             How to Build a <span className="text-primary-600">20X Company</span>: The Playbook Any Business Can Follow
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Y Combinator companies are using AI to do the work of 20 people with teams of 4. Here's how any business can follow the same playbook — no engineers required.
+                            Tiny Y Combinator teams are beating incumbents 20 times their size by automating every internal function with AI. Here's how any business can follow the same playbook — no engineers required.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -225,16 +225,16 @@ export default function BuildA20xCompanyContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    Garry Tan, president of Y Combinator, recently made a bold claim: the best startups in YC's current batch aren't just using AI — they're <strong>replacing entire departments with it</strong>.
+                                    Garry Tan, president of Y Combinator, recently made a bold claim: the best teams aren't automating one or two internal functions — they're <strong>automating all of them</strong>.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    He calls them <strong>"20X companies"</strong> — startups where a team of 4-5 people produces the output of a company 20 times their size. Not by working harder. By deploying AI agents across every function of the business.
+                                    He calls them <strong>"20X companies"</strong>, a phrase coined by GigaML's founders after their team of four to five engineers beat players roughly 20 times their size. Not by working harder. By automating every internal function of the business.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    The examples are striking. <strong>GigaML</strong> built an AI sales agent that closed DoorDash — with 4-5 engineers. <strong>Legion Health</strong> grew 4x without hiring a single new person. <strong>Phase Shift</strong> runs with 12 people doing what would normally require hundreds.
+                                    The examples are striking. <strong>GigaML</strong> closed DoorDash with about four to five engineers, helped by an internal agent called Atlas. <strong>Legion Health</strong> grew 4x in a year without a single net new hire. <strong>Phase Shift</strong> competes with 12 people against companies that have hundreds of employees.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    But here's the catch: these are elite YC startups with world-class engineering teams. What about the other 33 million small businesses in America?
+                                    But here's the catch: these are elite YC startups with world-class engineering teams. What about the millions of small businesses that don't have them?
                                 </p>
 
                                 <div className="bg-primary-50 border border-primary-100 p-6 rounded-xl my-8">
@@ -318,9 +318,9 @@ export default function BuildA20xCompanyContent() {
                             {/* Stat Grid */}
                             <div className="grid gap-4 sm:grid-cols-3">
                                 {[
-                                    { stat: "4-5", label: "engineers at GigaML closing enterprise deals" },
-                                    { stat: "4x", label: "growth at Legion Health — zero new hires" },
-                                    { stat: "12", label: "people at Phase Shift doing the work of hundreds" }
+                                    { stat: "4-5", label: "engineers at GigaML when it won DoorDash" },
+                                    { stat: "4x", label: "growth at Legion Health in a year, no net new hires" },
+                                    { stat: "12", label: "people at Phase Shift, against rivals with hundreds" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-primary-50 border border-primary-100 p-5 rounded-xl text-center">
                                         <div className="text-2xl md:text-3xl font-bold text-primary-700 mb-2">{item.stat}</div>
@@ -347,13 +347,13 @@ export default function BuildA20xCompanyContent() {
                                             <Target size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-amber-900 text-xl mb-2">GigaML — AI Sales Agent</h3>
+                                            <h3 className="font-bold text-amber-900 text-xl mb-2">GigaML — An Internal AI Agent Called Atlas</h3>
                                             <p className="text-amber-800 mb-4">
-                                                A team of <strong>4-5 engineers</strong> built "Atlas," an AI sales agent that autonomously handles outbound sales. The result? They <strong>closed DoorDash as a customer</strong> — the kind of enterprise deal that normally requires a 20+ person sales team.
+                                                GigaML builds voice-based customer service agents for enterprises. With roughly <strong>4-5 engineers</strong> it <strong>closed DoorDash as a customer</strong>, going up against players with far bigger teams. Its internal agent "Atlas" can use browsers, edit policies and write code, which takes boilerplate off each engineer and works alongside the company's single human FTE to serve accounts.
                                             </p>
                                             <div className="flex flex-wrap gap-2">
                                                 <span className="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">4-5 engineers</span>
-                                                <span className="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">AI sales agent "Atlas"</span>
+                                                <span className="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">Internal agent "Atlas"</span>
                                                 <span className="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">Closed DoorDash</span>
                                             </div>
                                         </div>
@@ -369,12 +369,12 @@ export default function BuildA20xCompanyContent() {
                                         <div>
                                             <h3 className="font-bold text-blue-900 text-xl mb-2">Legion Health — AI Psychiatry</h3>
                                             <p className="text-blue-800 mb-4">
-                                                A mental health company that grew <strong>4x</strong> without hiring a single new person. Their secret: <strong>one person per department</strong>, each augmented by AI agents that handle the operational load. The human provides judgment; the AI handles volume.
+                                                An AI-native psychiatry network that grew <strong>4x</strong> in a year without a single net new hire. Their approach: a custom internal interface that gives the care operations team patient history, scheduling, insurance codes and messages in one place. They now run with <strong>one clinical lead, one patient support person and one billing person</strong> for thousands of patients a month.
                                             </p>
                                             <div className="flex flex-wrap gap-2">
                                                 <span className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">4x growth</span>
-                                                <span className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">Zero new hires</span>
-                                                <span className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">1 person per department</span>
+                                                <span className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">No net new hires</span>
+                                                <span className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">One source of truth</span>
                                             </div>
                                         </div>
                                     </div>
@@ -389,7 +389,7 @@ export default function BuildA20xCompanyContent() {
                                         <div>
                                             <h3 className="font-bold text-purple-900 text-xl mb-2">Phase Shift — Custom AI Agents Per Employee</h3>
                                             <p className="text-purple-800 mb-4">
-                                                Running with just <strong>12 people</strong>, Phase Shift builds custom AI agents for each employee's specific role. Every team member has AI handling their repetitive tasks, letting them focus on high-value work. The result: they <strong>avoided hiring entire teams</strong> that their competitors needed.
+                                                Running with just <strong>12 people</strong>, Phase Shift builds custom AI agents for each employee's specific role. Every team member has AI handling their repetitive tasks, letting them focus on high-value work. The result: they <strong>delayed hiring for entire functions</strong>; for example, they have not hired a designer and build front-end designs with an AI tool instead.
                                             </p>
                                             <div className="flex flex-wrap gap-2">
                                                 <span className="bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full">12 people total</span>
@@ -410,7 +410,7 @@ export default function BuildA20xCompanyContent() {
                                     The 20X playbook sounds incredible. But there's a massive gap between hearing about it and actually doing it.
                                 </p>
                                 <p>
-                                    GigaML's team has PhDs in machine learning. Legion Health has YC funding and mentorship. Phase Shift has engineers who can build custom AI agents from scratch.
+                                    GigaML has engineers who build AI agents for a living. Legion Health has YC funding and mentorship. Phase Shift has engineers who can build custom AI agents from scratch.
                                 </p>
                                 <p>
                                     Most businesses? They have a founder who's already wearing 6 hats and a tech stack that starts and ends with Gmail and Canva.

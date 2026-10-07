@@ -8,7 +8,7 @@
  *
  * Usage:
  *   node scripts/gsc.mjs sites                                   # list accessible properties
- *   node scripts/gsc.mjs query [days] [dimension]                # search analytics (default: 28 days by page)
+ *   node scripts/gsc.mjs query [days] [dimension]                # search analytics (default: 28 days by page, 25 rows; 3rd arg = row limit)
  *   node scripts/gsc.mjs query 7 query                           # last 7 days, by search query
  *   node scripts/gsc.mjs page-queries <url-path> [days]          # queries for one page, e.g. /workforce
  *   node scripts/gsc.mjs sitemaps                                # sitemap status
@@ -98,7 +98,7 @@ try {
         const data = await api('/webmasters/v3/sites');
         for (const s of data.siteEntry || []) console.log(`${s.siteUrl}  (${s.permissionLevel})`);
     } else if (cmd === 'query') {
-        await searchAnalytics({ days: Number(args[0]) || 28, dimension: args[1] || 'page' });
+        await searchAnalytics({ days: Number(args[0]) || 28, dimension: args[1] || 'page', limit: Number(args[2]) || 25 });
     } else if (cmd === 'page-queries') {
         const page = args[0];
         if (!page) throw new Error('Usage: gsc.mjs page-queries </path> [days]');
