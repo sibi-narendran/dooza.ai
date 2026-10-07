@@ -16,7 +16,7 @@ const faqData = [
     { question: "What is AI for WooCommerce?", answer: "AI for WooCommerce refers to plugins, integrations, and AI employees that automate the daily work of running a WordPress ecommerce store — product descriptions, customer support chat, marketing emails, SEO content, inventory alerts, and personalization. Once connected to your WooCommerce store, the AI reads orders, products, and customers, and writes back updates 24/7." },
     { question: "What is the best AI plugin for WooCommerce?", answer: "It depends on the job. For support and order tracking, pick an AI chatbot trained on your catalog and policies. For content and SEO, pick a writer that publishes directly into WordPress. For sales recovery, pick one that handles abandoned carts via email and chat. Dooza's AI employees cover all three inside one workflow." },
     { question: "How does WooCommerce AI integration work?", answer: "Most WooCommerce AI tools install as a WordPress plugin or connect via the WooCommerce REST API. Once authenticated, the AI can read products, orders, and customers and push updates back — descriptions, tags, replies, emails, blog posts — without manual work." },
-    { question: "Can AI write WooCommerce product descriptions?", answer: "Yes. AI copywriters generate SEO-optimized descriptions in bulk from a few inputs (title, features, target keyword) and publish them straight into WooCommerce. A store with 500 SKUs can finish a full rewrite in an afternoon — one of the highest-ROI AI use cases in WordPress ecommerce." },
+    { question: "Can AI write WooCommerce product descriptions?", answer: "Yes. AI copywriters generate SEO-optimized descriptions in bulk from a few inputs (title, features, target keyword) and publish them straight into WooCommerce. It is one of the quickest wins for a large catalog; review a sample before you publish in bulk." },
     { question: "Is AI for WooCommerce worth it for small stores?", answer: "Especially for small stores. A solo founder can't write descriptions, answer tickets, run email campaigns, and publish SEO blogs at once. WooCommerce automation removes that bottleneck for a fraction of what a virtual assistant costs, and it is always on. With Dooza, pricing depends on the product, and every product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "What tasks can AI automate in a WooCommerce store?", answer: "Product descriptions, SEO blog content, customer support chat, abandoned cart recovery, email marketing, review responses, low-stock inventory alerts, ad copy, and order status updates. Online store automation lets the founder focus on product and brand instead of admin." },
 ];
@@ -169,7 +169,7 @@ export default function AiForWoocommerceStoreContent() {
                                 <p>Not every AI feature is worth installing. These six are.</p>
                                 <ul className="list-disc pl-6 space-y-3">
                                     <li><strong>AI product descriptions.</strong> Generate SEO-friendly copy for your entire WooCommerce catalog in bulk. The fastest win for any new store.</li>
-                                    <li><strong>AI chatbot for WooCommerce support.</strong> A bot trained on your products, shipping policy, and FAQs answers 70–90% of tickets without escalation. Order tracking, returns, sizing — all handled.</li>
+                                    <li><strong>AI chatbot for WooCommerce support.</strong> A bot trained on your products, shipping policy, and FAQs handles the repeat questions (order tracking, returns, sizing) and hands the rest to you.</li>
                                     <li><strong>SEO blog content.</strong> A WooCommerce AI writer can publish ranking articles into WordPress weekly, driving organic traffic that compounds. The cheapest acquisition channel ecommerce has — and AI makes it scalable.</li>
                                     <li><strong>Email & abandoned cart.</strong> AI writes subject lines, segments lists, and recovers carts on autopilot. One of the highest-leverage forms of WooCommerce automation.</li>
                                     <li><strong>Inventory forecasting & alerts.</strong> AI flags low-stock SKUs, predicts restocks, and pings you before you sell out — no spreadsheet babysitting required.</li>
@@ -197,7 +197,7 @@ export default function AiForWoocommerceStoreContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Best AI WooCommerce Plugins in 2026</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    The WordPress plugin directory is now flooded with single-purpose AI plugins — one for descriptions, one for support, one for SEO, one for email. The problem with stitching together five of them is that nothing talks to each other and your monthly bill creeps past $300.
+                                    The WordPress plugin directory is now flooded with single-purpose AI plugins — one for descriptions, one for support, one for SEO, one for email. The problem with stitching together five of them is that nothing talks to each other and the subscriptions add up.
                                 </p>
                                 <p>
                                     The cleaner pattern in 2026 is a single AI employee platform that covers multiple jobs at once. <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> ships AI employees for SEO writing, customer support, lead generation, and email — all configurable for a WooCommerce workflow, and every product starts with a refundable pilot (100% refund within 14 days; <Link href="/pricing" className="text-primary-600 hover:underline">see pricing</Link>). For most stores, that&apos;s a better starting point than five separate plugins.
@@ -224,25 +224,25 @@ export default function AiForWoocommerceStoreContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The ROI: What AI for WooCommerce Actually Costs (and Saves)</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    A virtual assistant who writes product descriptions, replies to support, and runs email costs $1,500–$3,000/month. A WooCommerce AI stack covering the same jobs costs $29–$99/month. The math is not subtle.
+                                    A virtual assistant who writes product descriptions, replies to support and runs email is paid for every hour they work. Most WooCommerce AI plugins charge a flat monthly fee (check each plugin's page for current prices). Compare the two against the hours these jobs take you each week.
                                 </p>
                             </div>
                             <div className="bg-slate-900 text-white p-8 rounded-2xl mt-6">
                                 <div className="grid gap-6 text-center sm:grid-cols-2">
                                     <div>
                                         <div className="text-slate-400 text-sm mb-1">Human VA</div>
-                                        <div className="text-3xl font-bold">$1,500+<span className="text-base text-slate-400">/mo</span></div>
+                                        <div className="text-3xl font-bold">Hourly<span className="text-base text-slate-400"> or monthly retainer</span></div>
                                     </div>
                                     <div>
                                         <div className="text-slate-400 text-sm mb-1">AI for WooCommerce</div>
                                         <div className="text-3xl font-bold text-primary-400">14-day<span className="text-base text-slate-400"> refundable pilot</span></div>
                                     </div>
                                 </div>
-                                <p className="text-slate-300 text-center mt-6 italic">Same output. A fraction of the cost. Always on.</p>
+                                <p className="text-slate-300 text-center mt-6 italic">Always on. Review the work before you scale it.</p>
                             </div>
                             <div className="prose md:prose-lg text-slate-600 mt-6">
                                 <p>
-                                    The savings are only half the story. The other half is throughput: AI ships 10× more descriptions, replies, and emails than a human in the same window — which means more SKUs live, more tickets closed, more carts recovered, more revenue in the door.
+                                    Cost is only half the story. The other half is speed: AI drafts descriptions, replies and emails in minutes, so more SKUs go live and fewer tickets wait overnight. Keep a human review step for anything customers see.
                                 </p>
                             </div>
                         </section>
