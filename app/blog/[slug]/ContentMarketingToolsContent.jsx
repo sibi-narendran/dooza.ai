@@ -43,19 +43,19 @@ const faqData = [
     },
     {
         question: "How much should small businesses spend on content marketing tools?",
-        answer: "According to research, 48% of small businesses spend $1,000 or less monthly on content marketing. Many overspend on multiple disconnected tools. A smarter approach: use free basics (Google Analytics, Canva free) plus one comprehensive AI tool that handles creation and distribution."
+        answer: "Semrush reports that 48% of small business owners who don’t use AI tools spend $1,000 or less a month on content marketing (semrush.com/blog/content-marketing-statistics). Many overspend on multiple disconnected tools. A smarter approach: use free basics (Google Analytics, Canva free) plus one comprehensive AI tool that handles creation and distribution."
     },
     {
         question: "What's the ROI of content marketing?",
-        answer: "Content marketing generates 3x more leads than outbound marketing at 62% lower cost, according to DemandMetric. The challenge isn't ROI—it's consistency. Most businesses start strong then trail off. AI tools solve this by ensuring consistent output."
+        answer: "DemandSage reports that content marketing generates over three times as many leads as outbound marketing and costs 62% less (demandsage.com/content-marketing-statistics). The challenge isn't ROI—it's consistency. Most businesses start strong then trail off. AI tools solve this by ensuring consistent output."
     },
     {
         question: "Can AI really create good content?",
-        answer: "Yes, with the right approach. AI-generated content reduces production costs by 65% and AI-assisted blogs increase organic traffic by 120% within 6 months. The key is using AI as a foundation and adding your expertise, brand voice, and unique insights. 83% of content marketers now use AI this way."
+        answer: "Yes, with the right approach. AI can cut drafting time sharply. The key is using AI as a foundation and adding your expertise, brand voice, and unique insights."
     },
     {
         question: "How do I create content consistently when I'm too busy?",
-        answer: "This is the #1 content marketing challenge. Options: (1) Hire a content team ($3,000-10,000+/month), (2) Use an agency ($2,000-5,000+/month), (3) Batch create content (time-intensive), or (4) Use AI that creates and publishes automatically. For most small businesses, AI is the only affordable path to consistency."
+        answer: "This is the #1 content marketing challenge. Options: (1) Hire a content team, (2) Use an agency, (3) Batch create content (time-intensive), or (4) Use AI that creates and publishes automatically. For many small businesses, AI is the most affordable path to consistency."
     },
     {
         question: "What type of content should I create first?",
@@ -68,46 +68,46 @@ const contentTools = [
         category: "Writing & Creation",
         icon: PenTool,
         tools: [
-            { name: "Jasper AI", price: "$49-125/mo", desc: "AI writing assistant" },
-            { name: "Copy.ai", price: "$49-249/mo", desc: "AI copywriting" },
-            { name: "ChatGPT Plus", price: "$20/mo", desc: "General AI writing" },
-            { name: "Grammarly", price: "$12-30/mo", desc: "Grammar & style" }
+            { name: "Jasper AI", price: "$59-69/mo", desc: "AI writing assistant (Pro, per seat)" },
+            { name: "Copy.ai", price: "See vendor pricing", desc: "AI copywriting" },
+            { name: "ChatGPT Plus", price: "See vendor pricing", desc: "General AI writing" },
+            { name: "Grammarly", price: "See vendor pricing", desc: "Grammar & style" }
         ]
     },
     {
         category: "Design & Visual",
         icon: Image,
         tools: [
-            { name: "Canva", price: "Free-$15/mo", desc: "Graphic design" },
-            { name: "Adobe Creative", price: "$55-85/mo", desc: "Professional design" },
-            { name: "Figma", price: "Free-$15/mo", desc: "UI/UX design" }
+            { name: "Canva", price: "See vendor pricing", desc: "Graphic design" },
+            { name: "Adobe Creative", price: "See vendor pricing", desc: "Professional design" },
+            { name: "Figma", price: "See vendor pricing", desc: "UI/UX design" }
         ]
     },
     {
         category: "Video",
         icon: Video,
         tools: [
-            { name: "Descript", price: "$15-30/mo", desc: "Video editing" },
-            { name: "Loom", price: "Free-$15/mo", desc: "Screen recording" },
-            { name: "Synthesia", price: "$22-67/mo", desc: "AI video" }
+            { name: "Descript", price: "See vendor pricing", desc: "Video editing" },
+            { name: "Loom", price: "See vendor pricing", desc: "Screen recording" },
+            { name: "Synthesia", price: "See vendor pricing", desc: "AI video" }
         ]
     },
     {
         category: "Distribution",
         icon: MessageSquare,
         tools: [
-            { name: "Buffer", price: "$6-120/mo", desc: "Social scheduling" },
-            { name: "Hootsuite", price: "$99-739/mo", desc: "Social management" },
-            { name: "Later", price: "Free-$40/mo", desc: "Visual planning" }
+            { name: "Buffer", price: "$5-10/channel/mo", desc: "Social scheduling" },
+            { name: "Hootsuite", price: "$99-399/mo", desc: "Social management (per user; checked Oct 2026)" },
+            { name: "Later", price: "See vendor pricing", desc: "Visual planning" }
         ]
     },
     {
         category: "SEO & Research",
         icon: Target,
         tools: [
-            { name: "Semrush", price: "$140-500/mo", desc: "All-in-one SEO" },
+            { name: "Semrush", price: "$139-549/mo", desc: "All-in-one SEO" },
             { name: "Ahrefs", price: "$29-449/mo", desc: "Backlinks & SEO" },
-            { name: "Surfer SEO", price: "$89-219/mo", desc: "Content optimization" }
+            { name: "Surfer SEO", price: "$49-299/mo", desc: "Content optimization (billed yearly)" }
         ]
     },
     {
@@ -115,8 +115,8 @@ const contentTools = [
         icon: BarChart3,
         tools: [
             { name: "Google Analytics", price: "Free", desc: "Website analytics" },
-            { name: "Hotjar", price: "Free-$99/mo", desc: "User behavior" },
-            { name: "Databox", price: "$72-231/mo", desc: "Dashboard reporting" }
+            { name: "Hotjar", price: "See vendor pricing", desc: "User behavior" },
+            { name: "Databox", price: "$71-319/mo", desc: "Dashboard reporting (billed annually)" }
         ]
     }
 ];
@@ -183,7 +183,7 @@ export default function ContentMarketingToolsContent() {
                             <span className="text-primary-600">Content Marketing Tools</span>: What You Actually Need in 2026
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            54% of businesses say lack of resources is their biggest content challenge. Learn which tools actually help—and why AI might replace your entire tool stack for a fraction of the cost.
+                            Most small teams don’t lack content tools; they lack time to use them. Learn which tools actually help—and why AI might replace your entire tool stack for a fraction of the cost.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -272,7 +272,7 @@ export default function ContentMarketingToolsContent() {
                                     You know content marketing works. You've read the stats. You've seen it bring in leads for others. But here's the uncomfortable truth: knowing isn't the same as doing.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    According to <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Content Marketing Institute</a>, the top two reasons businesses don't develop content strategies are: <strong>small team (67%)</strong> and <strong>lack of time (44%)</strong>. Sound familiar?
+                                    According to <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Content Marketing Institute</a>, resource constraints (time, people and budget) are among the top content challenges marketers report. Sound familiar?
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     The content tool market has exploded—there are now tools for writing, design, video, distribution, analytics, and optimization. But more tools often means more complexity, more subscriptions, and more time managing tools instead of creating content.
@@ -296,7 +296,7 @@ export default function ContentMarketingToolsContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">The Consistency Problem</h4>
                                             <p className="text-slate-700">
-                                                According to <a href="https://www.demandsage.com/content-marketing-statistics/" target="_blank" rel="noopener noreferrer" className="text-orange-600 underline">DemandSage research</a>, <strong>45% of B2B marketers lack scalable content creation models</strong>. They know what to do but can't do it consistently. Tools alone don't solve this—you need execution capacity.
+                                                Many teams know what to do but can't do it consistently. Tools alone don't solve this—you need execution capacity.
                                             </p>
                                         </div>
                                     </div>
@@ -308,24 +308,8 @@ export default function ContentMarketingToolsContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Real Content Marketing Challenges</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Data from <a href="https://www.semrush.com/blog/content-marketing-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Semrush</a> and <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">CMI</a>:
+                                    Content research from <a href="https://www.semrush.com/blog/content-marketing-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Semrush</a> and <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">CMI</a> points to resource constraints (time, people and budget) as a top challenge.
                                 </p>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-6 mb-8">
-                                {[
-                                    { stat: "54%", label: "cite lack of resources as biggest challenge", source: "CMI Research", link: "https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" },
-                                    { stat: "38%", label: "need to create content faster", source: "Semrush", link: "https://www.semrush.com/blog/content-marketing-statistics/" },
-                                    { stat: "35%", label: "struggle with generating ideas", source: "Industry Research", link: "https://www.demandsage.com/content-marketing-statistics/" },
-                                    { stat: "64%", label: "adapting to SEO changes is challenging", source: "Content Research", link: "https://www.searchenginejournal.com/content-marketing-statistics-you-should-know/507173/" },
-                                    { stat: "18%", label: "feel they have the right technology", source: "CMI Research", link: "https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl text-center">
-                                        <div className="text-4xl font-bold text-red-600 mb-2">{item.stat}</div>
-                                        <p className="text-slate-700 font-medium mb-1">{item.label}</p>
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xs text-red-600 hover:underline">{item.source}</a>
-                                    </div>
-                                ))}
                             </div>
 
                             <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl">
@@ -334,7 +318,7 @@ export default function ContentMarketingToolsContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The Tool Paradox</h4>
                                         <p className="text-slate-700">
-                                            Only 18% of content marketers feel they have the right technology, but <strong>45% say they have tools they aren't using to their potential</strong>. The problem isn't finding tools—it's having the time to use them effectively.
+                                            Many teams own tools they aren't using to their potential. The problem isn't finding tools—it's having the time to use them effectively.
                                         </p>
                                     </div>
                                 </div>
@@ -344,7 +328,7 @@ export default function ContentMarketingToolsContent() {
                         <section id="tool-landscape" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Content Marketing Tool Landscape</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                Here's what a "complete" content marketing tech stack looks like:
+                                Here's what a "complete" content marketing tech stack looks like (prices from each vendor’s own pricing page, checked October 2026; where we haven’t verified a price, we say “See vendor pricing”):
                             </p>
 
                             <div className="space-y-6 mb-8">
@@ -381,11 +365,10 @@ export default function ContentMarketingToolsContent() {
                                 <h3 className="font-bold text-red-800 mb-6 text-xl">What a "Basic" Content Stack Actually Costs</h3>
                                 <div className="space-y-3 mb-6">
                                     {[
-                                        { tool: "AI Writing Tool (Jasper)", cost: "$49/mo" },
-                                        { tool: "Design Tool (Canva Pro)", cost: "$15/mo" },
-                                        { tool: "SEO Tool (Ahrefs Lite)", cost: "$129/mo" },
-                                        { tool: "Social Scheduling (Buffer)", cost: "$60/mo" },
-                                        { tool: "Analytics (Premium)", cost: "$50/mo" }
+                                        { tool: "AI Writing Tool (Jasper Pro, annual billing; jasper.ai/pricing, checked Oct 2026)", cost: "$59/mo" },
+                                        { tool: "Design Tool (Canva: see canva.com/pricing; not counted below)", cost: "varies" },
+                                        { tool: "SEO Tool (Ahrefs Lite; ahrefs.com/pricing, checked Oct 2026)", cost: "$129/mo" },
+                                        { tool: "Social Scheduling (Buffer Essentials, 3 channels at $5; buffer.com/pricing, checked Oct 2026)", cost: "$15/mo" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex justify-between items-center border-b border-red-200 pb-2">
                                             <span className="text-slate-700">{item.tool}</span>
@@ -393,12 +376,12 @@ export default function ContentMarketingToolsContent() {
                                         </div>
                                     ))}
                                     <div className="flex justify-between items-center pt-2">
-                                        <span className="font-bold text-slate-900">Monthly Total</span>
-                                        <span className="font-bold text-red-700 text-xl">$303/mo</span>
+                                        <span className="font-bold text-slate-900">Monthly Total (verified items only, checked Oct 2026)</span>
+                                        <span className="font-bold text-red-700 text-xl">$203/mo</span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="font-bold text-slate-900">Annual Total</span>
-                                        <span className="font-bold text-red-700 text-xl">$3,636/year</span>
+                                        <span className="font-bold text-red-700 text-xl">$2,436/year</span>
                                     </div>
                                 </div>
                                 <p className="text-red-700 text-sm">
@@ -409,7 +392,7 @@ export default function ContentMarketingToolsContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl mb-8">
                                 <h4 className="font-bold text-blue-800 mb-3">The Hidden Cost: Your Time</h4>
                                 <p className="text-blue-700">
-                                    According to <a href="https://www.hubspot.com/marketing-statistics" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">HubSpot research</a>, marketers using AI save <strong>2.5 hours per day</strong>. Without AI doing the heavy lifting, you're trading your most valuable resource (time) to manage tools that only do part of the job.
+                                    Every hour spent learning, configuring and switching between tools is an hour not spent on your business. Without AI doing the heavy lifting, you're trading your most valuable resource (time) to manage tools that only do part of the job.
                                 </p>
                             </div>
                         </section>
@@ -425,10 +408,8 @@ export default function ContentMarketingToolsContent() {
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { stat: "83%", label: "of content marketers use AI", source: "CMI 2025", link: "https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" },
-                                    { stat: "65%", label: "reduction in production costs", source: "DemandSage", link: "https://www.demandsage.com/content-marketing-statistics/" },
-                                    { stat: "84%", label: "faster content delivery", source: "Industry Research", link: "https://www.demandsage.com/content-marketing-statistics/" },
-                                    { stat: "68%", label: "increase in content ROI with AI", source: "Marketing Research", link: "https://genesysgrowth.com/blog/content-marketing-roi-stats-for-marketing-leaders" }
+                                    { stat: "84%", label: "faster content delivery", source: "Genesys Growth", link: "https://genesysgrowth.com/blog/content-marketing-roi-stats-for-marketing-leaders" },
+                                    { stat: "3x", label: "more leads than outbound marketing, at 62% lower cost", source: "DemandSage", link: "https://www.demandsage.com/content-marketing-statistics/" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-green-50 border border-green-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-green-600 mb-2">{item.stat}</div>
@@ -505,7 +486,7 @@ export default function ContentMarketingToolsContent() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="bg-white p-6 rounded-lg">
                                         <div className="text-sm font-bold text-slate-500 mb-2">TRADITIONAL TOOL STACK</div>
-                                        <div className="text-3xl font-bold text-slate-900 mb-1">$303+/mo</div>
+                                        <div className="text-3xl font-bold text-slate-900 mb-1">$203+/mo</div>
                                         <p className="text-sm text-slate-600">5+ tools, you do the work</p>
                                     </div>
                                     <div className="bg-green-100 p-6 rounded-lg">
