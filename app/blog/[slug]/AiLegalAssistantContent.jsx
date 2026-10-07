@@ -108,7 +108,7 @@ export default function AiLegalAssistantContent() {
                             Why Law Firms Are Replacing Paralegals with <span className="text-primary-600">AI Legal Assistants</span> for Intake & Scheduling
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            79% of clients hire the first attorney who responds. An AI legal assistant handles intake calls, screens cases, gathers facts, and books consultations — 24/7, starting with a refundable pilot. The paralegal that never sleeps.
+                            Clients often hire the first attorney who responds. An AI legal assistant handles intake calls, screens cases, gathers facts, and books consultations — 24/7, starting with a refundable pilot. The paralegal that never sleeps.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -203,7 +203,7 @@ export default function AiLegalAssistantContent() {
                                     Guess which firm she hires?
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    According to Clio's Legal Trends Report, <strong>79% of clients hire the first attorney who responds to their inquiry</strong>. Not the best attorney. Not the cheapest. The <em>first one who picks up the phone</em>.
+                                    <strong>Clients often hire the first attorney who responds to their inquiry.</strong> Not the best attorney. Not the cheapest. The <em>first one who picks up the phone</em>.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     For law firms, intake isn't just an administrative function — it's the single biggest determinant of revenue. Every missed call is a missed case. Every voicemail is a client calling your competitor.
@@ -236,7 +236,6 @@ export default function AiLegalAssistantContent() {
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { stat: "79%", label: "of clients hire the first attorney who responds", source: "Clio Legal Trends Report" },
                                     { stat: "24 hrs", label: "average response time for law firm inquiries", source: "Martindale-Avvo Study" },
                                     { stat: "42%", label: "of law firms don't respond to voicemails within 24 hours", source: "ABA Journal" },
                                     { stat: "67%", label: "of callers won't leave a voicemail — they call the next firm", source: "Consumer Research" }
@@ -291,7 +290,7 @@ export default function AiLegalAssistantContent() {
 
                             <div className="grid md:grid-cols-2 gap-4 mb-8">
                                 {[
-                                    { icon: Zap, title: "Instant Response 24/7", desc: "Every call answered on the first ring — nights, weekends, holidays. The 79% first-responder advantage means speed is everything. A 5-minute delay can cost you a case." },
+                                    { icon: Zap, title: "Instant Response 24/7", desc: "Every call answered on the first ring — nights, weekends, holidays. The first-responder advantage means speed is everything. A 5-minute delay can cost you a case." },
                                     { icon: Target, title: "Case Screening", desc: "Asking the right questions for each practice area: What happened? When? Where? Who was involved? Was there a police report? Are there injuries? Separating viable cases from non-starters before the attorney's time is spent." },
                                     { icon: ClipboardList, title: "Fact Gathering", desc: "Collecting the essential facts while they're fresh — incident details, witness information, insurance data, medical treatment status. The sooner this happens after an incident, the more accurate and complete the information." },
                                     { icon: Heart, title: "Empathetic Communication", desc: "People calling a law firm are often stressed, scared, or angry. The intake process needs to be professional and empathetic — not robotic. A DUI caller at 2 AM needs reassurance, not a cold script." },
@@ -839,7 +838,7 @@ export default function AiLegalAssistantContent() {
                             <div className="bg-indigo-50 border border-indigo-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Stop Losing Cases to Voicemail?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    79% of clients hire the first attorney who responds. Every missed call is a missed case — and potentially $10,000-$50,000 in fees. Rachel answers every call, screens every case, and books every consultation. Start with a refundable pilot — 100% refund within 14 days.
+                                    Clients often hire the first attorney who responds. Every missed call is a missed case — and potentially $10,000-$50,000 in fees. Rachel answers every call, screens every case, and books every consultation. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
@@ -885,16 +884,8 @@ export default function AiLegalAssistantContent() {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Small Business Phone Statistics</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>- <a href="https://www.forbes.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Forbes — 62% of SMB calls go unanswered</a></li>
-                                        <li>- <a href="https://www.att.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">AT&T Research — Voicemail behavior statistics</a></li>
-                                    </ul>
-                                </div>
-                                <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Law Firm Marketing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>- <a href="https://www.clio.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Clio — 79% of clients hire the first responder</a></li>
                                         <li>- <a href="https://lawyerist.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Lawyerist — Law firm intake best practices</a></li>
                                     </ul>
                                 </div>

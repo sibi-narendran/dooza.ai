@@ -107,7 +107,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                             Automating the <span className="text-primary-600">Front Desk</span>: How AI Handles Dental Emergencies & Scheduling
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            35% of dental calls come after hours. 62% of small business calls go unanswered. An AI receptionist for your dental office picks up every call, triages emergencies, verifies insurance, and books the right appointment -- 24/7. Start with a refundable pilot: 100% refund within 14 days.
+                            Many dental calls come after hours, and many calls to small businesses go unanswered. An AI receptionist for your dental office picks up every call, triages emergencies, verifies insurance, and books the right appointment -- 24/7. Start with a refundable pilot: 100% refund within 14 days.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -200,7 +200,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     You just lost a patient -- and potentially <strong>$3,000+ in lifetime value</strong> -- because nobody answered the phone.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    This isn't a hypothetical scenario. It happens to dental practices every single weekend. According to industry data, 35% of dental calls come after hours, and 62% of calls to small businesses go unanswered entirely. That means more than one in three of your patients are calling when nobody is at the front desk -- and most of those calls are disappearing into voicemail purgatory.
+                                    This isn't a hypothetical scenario. It happens to dental practices every single weekend. Many dental calls come after hours, and many calls to small businesses go unanswered entirely. That means a real share of your patients are calling when nobody is at the front desk -- and many of those calls are disappearing into voicemail purgatory.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     <Link href="/blog/seo-for-doctors-dentists" className="text-primary-600 hover:underline font-medium">As we covered in our dental SEO guide</Link>, getting patients to find your practice online is only half the battle. The other half? Actually answering the phone when they call.
@@ -248,9 +248,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { stat: "25-30%", label: "Annual turnover rate for dental front desk staff", source: "Dental Economics" },
-                                    { stat: "$3,000-5,000", label: "Cost to hire and train a single replacement", source: "ADA Practice Management" },
-                                    { stat: "35%", label: "of dental calls come after hours", source: "Dental Intelligence" },
-                                    { stat: "62%", label: "of calls to small businesses go unanswered", source: "Forbes" }
+                                    { stat: "$3,000-5,000", label: "Cost to hire and train a single replacement", source: "ADA Practice Management" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-red-600 mb-2">{item.stat}</div>
@@ -387,7 +385,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     {
                                         icon: Phone,
                                         title: "After-Hours Coverage",
-                                        desc: "Handles the 35% of calls that come outside business hours. No more lost Saturday night emergency patients. No more Monday morning voicemail backlog.",
+                                        desc: "Handles the calls that come outside business hours. No more lost Saturday night emergency patients. No more Monday morning voicemail backlog.",
                                         color: "teal"
                                     }
                                 ].map((item, idx) => {
@@ -748,7 +746,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     { icon: Calendar, title: "Smart Scheduling", desc: "Books hygienist vs. dentist appointments automatically." },
                                     { icon: MessageSquare, title: "SMS Reminders", desc: "Helps cut no-shows with automated appointment reminders." },
                                     { icon: UserPlus, title: "New Patient Intake", desc: "Collects info and sends forms before the first visit." },
-                                    { icon: Phone, title: "After-Hours Coverage", desc: "Handles the 35% of calls that come outside business hours." },
+                                    { icon: Phone, title: "After-Hours Coverage", desc: "Handles the calls that come outside business hours." },
                                     { icon: FileText, title: "Call Summaries", desc: "Detailed summary of every call sent to your team via email." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -841,14 +839,6 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li>- <a href="https://www.dentaleconomics.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Dental Economics -- Staff turnover rates in dental practices</a></li>
                                         <li>- <a href="https://www.ada.org/resources/practice/practice-management" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">American Dental Association -- Practice management resources</a></li>
-                                        <li>- <a href="https://www.dentalintel.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Dental Intelligence -- After-hours call statistics</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Small Business Phone Statistics</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>- <a href="https://www.forbes.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Forbes -- 62% of SMB calls go unanswered</a></li>
-                                        <li>- <a href="https://www.att.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">AT&T Research -- Voicemail behavior statistics</a></li>
                                     </ul>
                                 </div>
                                 <div>

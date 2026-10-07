@@ -35,7 +35,7 @@ import {
 const faqData = [
     {
         question: "How much revenue am I losing from missed calls?",
-        answer: "The average small business misses 62% of inbound calls. With 85% of callers refusing to leave voicemail, you're losing over half your potential customers. For a business receiving 20 calls/day at $200 average value, that's $12,000+/month in lost revenue."
+        answer: "Many small businesses miss a large share of inbound calls, and most callers won't leave a voicemail, so each missed call is often a lost customer. To estimate your own loss, multiply the calls you miss each month by your average customer value."
     },
     {
         question: "How is an AI voice agent different from an AI receptionist?",
@@ -164,7 +164,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                             <h3 className="font-semibold text-slate-900 mb-4">Table of Contents</h3>
                             <nav className="space-y-1">
                                 {[
-                                    { id: 'introduction', label: 'The $12,000 Problem' },
+                                    { id: 'introduction', label: 'The Missed Call Problem' },
                                     { id: 'cost-of-missed-calls', label: 'Cost Per Missed Call' },
                                     { id: 'voice-agent-vs-alternatives', label: 'Voice Agent vs Alternatives' },
                                     { id: 'how-voice-agents-capture-leads', label: 'Lead Capture Process' },
@@ -209,7 +209,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                     {/* Main Content */}
                     <div className="w-full max-w-3xl mx-auto space-y-12">
 
-                        {/* Section 1: Introduction — The $12,000 Problem */}
+                        {/* Section 1: Introduction — The Missed Call Problem */}
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
@@ -219,123 +219,13 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     And it's happening every single day.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    According to Forbes, <strong>62% of calls to small businesses go unanswered</strong>. That alone is damaging. But here's the number that makes it a revenue emergency: <strong>85% of callers who reach voicemail will never leave a message</strong>. They simply move on to a competitor who picks up.
+                                    <strong>Many calls to small businesses go unanswered.</strong> That alone is damaging. But here's what makes it a revenue emergency: <strong>most callers who reach voicemail won't leave a message</strong>. They simply move on to a competitor who picks up.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    This isn't a phone problem. It's a <strong>revenue leak</strong>. If your business receives just 20 calls a day and the average lead value is $200, you're leaving <strong>$12,400 on the table every month</strong> — and that's a conservative estimate.
+                                    This isn't a phone problem. It's a <strong>revenue leak</strong>. If your business misses just 2 calls a day and the average lead value is $200, that's up to <strong>$12,000 a month</strong> in leads that may never call back.
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-3 gap-4 my-8">
-                                {[
-                                    { stat: "62%", label: "of calls to small businesses go unanswered", source: "Forbes" },
-                                    { stat: "85%", label: "of callers won't leave a voicemail", source: "Forbes / Nectafy" },
-                                    { stat: "$12,400+", label: "monthly revenue lost for an average service business", source: "Industry data" }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-red-50 border border-red-100 p-5 rounded-xl text-center">
-                                        <div className="text-3xl font-bold text-red-600 mb-1">{item.stat}</div>
-                                        <p className="text-sm text-slate-700 font-medium mb-1">{item.label}</p>
-                                        <p className="text-xs text-red-500">{item.source}</p>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className="prose md:prose-lg text-slate-600">
-                                <p className="text-lg leading-relaxed">
-                                    You've probably thought about this before. Maybe you've tried hiring someone to answer the phones, or looked into virtual receptionist services, or just accepted that voicemail is "good enough." It's not. An AI voice agent is different. It doesn't just answer — it <strong>qualifies, captures, and converts</strong> every caller into a lead record in your CRM, 24 hours a day, 7 days a week.
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    <Link href="/blog/best-ai-receptionist" className="text-primary-600 hover:underline font-medium">We've covered AI receptionists</Link> for answering and routing calls. <Link href="/blog/virtual-receptionist-for-small-business" className="text-primary-600 hover:underline font-medium">We've compared virtual receptionist services</Link> and their costs. This guide is about something more specific: using an AI voice agent as a <strong>revenue-capture tool</strong> — one that can recover far more revenue than it costs.
-                                </p>
-                            </div>
-
-                            <div className="bg-red-50 border border-red-200 p-6 rounded-xl my-8">
-                                <div className="flex items-start gap-3">
-                                    <DollarSign className="w-6 h-6 text-red-600 shrink-0 mt-1" />
-                                    <div>
-                                        <h4 className="font-bold text-slate-900 mb-2">Quick Math: Your Missed Call Revenue Leak</h4>
-                                        <p className="text-slate-700">
-                                            <strong>20 calls/day</strong> x 62% missed = <strong>12.4 missed calls/day</strong>. Of those, 85% won't leave voicemail = <strong>10.5 lost leads/day</strong>. At $200 average value = <strong>$2,100/day</strong> or <strong>$63,000/month</strong> in potential revenue walking to competitors. Even if only 10% would have converted, that's <strong>$6,300/month gone</strong>.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* Section 2: True Cost Per Missed Call by Industry */}
-                        <section id="cost-of-missed-calls" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">True Cost Per Missed Call by Industry</h2>
-
-                            <div className="prose md:prose-lg text-slate-600 mb-8">
-                                <p>
-                                    Not all missed calls are created equal. A missed call to a plumber costs a few hundred dollars. A missed call to a personal injury attorney can cost tens of thousands. Understanding your per-call value is the first step in calculating what inaction costs you.
-                                </p>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-6 mb-8">
-                                {[
-                                    {
-                                        industry: "Legal Services",
-                                        icon: Shield,
-                                        costPerCall: "$1,500",
-                                        detail: "Average personal injury case value is $52,000. Even a general practice consult converts at $1,500+. One missed call per week = $78,000/year in lost revenue.",
-                                        color: "red",
-                                        monthlyLoss: "$6,000/mo",
-                                        missedPerWeek: "4"
-                                    },
-                                    {
-                                        industry: "HVAC / Plumbing",
-                                        icon: Building2,
-                                        costPerCall: "$400",
-                                        detail: "Average service call is $350-$500. Emergency repairs run $800+. After-hours emergency calls are the highest-value leads — and the most often missed.",
-                                        color: "orange",
-                                        monthlyLoss: "$4,800/mo",
-                                        missedPerWeek: "12"
-                                    },
-                                    {
-                                        industry: "Dental Practices",
-                                        icon: Users,
-                                        costPerCall: "$600",
-                                        detail: "New patient lifetime value averages $3,000-$5,000. A single missed new-patient call costs $600+ in first-year treatment alone. Most dental practices miss 30%+ of calls.",
-                                        color: "blue",
-                                        monthlyLoss: "$4,800/mo",
-                                        missedPerWeek: "8"
-                                    },
-                                    {
-                                        industry: "Real Estate",
-                                        icon: TrendingUp,
-                                        costPerCall: "$3,500",
-                                        detail: "Average buyer's agent commission on a $400K home = $12,000. At a 30% conversion rate from qualified call to closing, each missed call costs ~$3,500 in expected commission.",
-                                        color: "green",
-                                        monthlyLoss: "$14,000/mo",
-                                        missedPerWeek: "4"
-                                    }
-                                ].map((item, idx) => {
-                                    const colorMap = {
-                                        red: { bg: 'bg-red-50', border: 'border-red-200', badge: 'bg-red-100 text-red-700', icon: 'bg-red-100 text-red-600', stat: 'text-red-600' },
-                                        orange: { bg: 'bg-orange-50', border: 'border-orange-200', badge: 'bg-orange-100 text-orange-700', icon: 'bg-orange-100 text-orange-600', stat: 'text-orange-600' },
-                                        blue: { bg: 'bg-blue-50', border: 'border-blue-200', badge: 'bg-blue-100 text-blue-700', icon: 'bg-blue-100 text-blue-600', stat: 'text-blue-600' },
-                                        green: { bg: 'bg-green-50', border: 'border-green-200', badge: 'bg-green-100 text-green-700', icon: 'bg-green-100 text-green-600', stat: 'text-green-600' }
-                                    };
-                                    const c = colorMap[item.color];
-                                    return (
-                                        <div key={idx} className={`${c.bg} border ${c.border} p-6 rounded-xl`}>
-                                            <div className="flex items-center gap-3 mb-4">
-                                                <div className={`w-10 h-10 ${c.icon} rounded-lg flex items-center justify-center shrink-0`}>
-                                                    <item.icon size={20} />
-                                                </div>
-                                                <h3 className="font-bold text-slate-900">{item.industry}</h3>
-                                            </div>
-                                            <div className={`text-3xl font-bold ${c.stat} mb-2`}>{item.costPerCall} <span className="text-base font-medium text-slate-500">per missed call</span></div>
-                                            <p className="text-sm text-slate-600 mb-4">{item.detail}</p>
-                                            <div className="flex justify-between items-center pt-3 border-t border-slate-200">
-                                                <span className="text-xs text-slate-500">{item.missedPerWeek} missed calls/week</span>
-                                                <span className={`text-sm font-bold ${c.stat}`}>{item.monthlyLoss} lost</span>
-                                            </div>
-                                        </div>
-                                    );
-                                })}
-                            </div>
 
                             <div className="bg-slate-900 text-white p-8 rounded-xl mb-8">
                                 <h3 className="text-xl font-bold mb-4">The Compounding Cost of "I'll Call Them Back"</h3>
@@ -423,7 +313,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     </h3>
                                     <ul className="space-y-3">
                                         {[
-                                            "85% of callers hang up without leaving a message",
+                                            "Most callers hang up without leaving a message",
                                             "Zero lead qualification — no data captured",
                                             "No CRM entry — the call never existed in your pipeline",
                                             "No follow-up triggered — the lead vanishes",
@@ -694,7 +584,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     <h3 className="font-bold text-slate-900 mb-3">What Competitors Do After Hours</h3>
                                     <ul className="space-y-2">
                                         {[
-                                            "Send calls to voicemail (85% of callers hang up)",
+                                            "Send calls to voicemail (most callers hang up)",
                                             "Use answering services that close at midnight",
                                             "Forward to personal phones (unreliable, unprofessional)",
                                             "Use ring groups that no one answers on weekends",
@@ -754,36 +644,22 @@ export default function AiVoiceAgentMissedCallsContent() {
 
                                 <div className="space-y-4 max-w-2xl mx-auto">
                                     <div className="flex items-center justify-between bg-white p-4 rounded-lg border border-slate-200">
-                                        <span className="text-slate-700 font-medium">Calls per day</span>
-                                        <span className="text-xl font-bold text-slate-900">20</span>
+                                        <span className="text-slate-700 font-medium">Missed calls per day (example)</span>
+                                        <span className="text-xl font-bold text-red-600">10</span>
                                     </div>
                                     <div className="flex items-center justify-center">
-                                        <span className="text-slate-400 text-sm">x 62% missed</span>
+                                        <span className="text-slate-400 text-sm">x 30 days (most won't leave a voicemail)</span>
                                     </div>
                                     <div className="flex items-center justify-between bg-white p-4 rounded-lg border border-slate-200">
-                                        <span className="text-slate-700 font-medium">Missed calls per day</span>
-                                        <span className="text-xl font-bold text-red-600">12.4</span>
-                                    </div>
-                                    <div className="flex items-center justify-center">
-                                        <span className="text-slate-400 text-sm">x 85% won't leave voicemail</span>
-                                    </div>
-                                    <div className="flex items-center justify-between bg-white p-4 rounded-lg border border-slate-200">
-                                        <span className="text-slate-700 font-medium">Lost leads per day</span>
-                                        <span className="text-xl font-bold text-red-600">10.5</span>
-                                    </div>
-                                    <div className="flex items-center justify-center">
-                                        <span className="text-slate-400 text-sm">x 30 business days</span>
-                                    </div>
-                                    <div className="flex items-center justify-between bg-white p-4 rounded-lg border border-slate-200">
-                                        <span className="text-slate-700 font-medium">Lost leads per month</span>
-                                        <span className="text-xl font-bold text-red-600">315</span>
+                                        <span className="text-slate-700 font-medium">Missed calls per month</span>
+                                        <span className="text-xl font-bold text-red-600">300</span>
                                     </div>
                                     <div className="flex items-center justify-center">
                                         <span className="text-slate-400 text-sm">x 10% would convert x $500 avg deal</span>
                                     </div>
                                     <div className="flex items-center justify-between bg-red-100 p-4 rounded-lg border-2 border-red-300">
                                         <span className="text-red-800 font-bold">Monthly revenue lost to voicemail</span>
-                                        <span className="text-2xl font-bold text-red-700">$15,750</span>
+                                        <span className="text-2xl font-bold text-red-700">$15,000</span>
                                     </div>
                                 </div>
                             </div>
@@ -976,8 +852,6 @@ export default function AiVoiceAgentMissedCallsContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Missed Call & Response Data</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.forbes.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Forbes — 62% of small business calls go unanswered</a></li>
-                                        <li>• <a href="https://www.nectafy.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Nectafy — 85% of callers won't leave voicemail</a></li>
                                         <li>• <a href="https://marketwiz.ai/real-estate-lead-response-time-why-5-minutes-10x-more-conversions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">MIT / InsideSales — 5-minute response window, 21x qualification</a></li>
                                     </ul>
                                 </div>

@@ -260,8 +260,6 @@ export default function AiReceptionistForSalonsContent() {
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { stat: "62%", label: "of calls to small businesses go unanswered", source: "Forbes" },
-                                    { stat: "85%", label: "of callers won't leave a voicemail", source: "AT&T Research" },
                                     { stat: "$375-750", label: "lost per day from just 5 missed salon calls", source: "Avg. booking $75-150" },
                                     { stat: "80%", label: "of salon bookings still come via phone call", source: "Salon Industry Report" }
                                 ].map((item, idx) => (
@@ -275,7 +273,7 @@ export default function AiReceptionistForSalonsContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Let's do the math. Say your salon gets 15 calls per day. At a 62% miss rate, that's roughly 9 missed calls. With 85% of those callers refusing to leave a voicemail, you lose about 8 potential bookings — <em>every single day</em>.
+                                    Let's do the math. Say your salon misses 8 calls a day while stylists are with clients. Most callers won't leave a voicemail, so you could lose up to 8 potential bookings — <em>every single day</em>.
                                 </p>
                                 <p>
                                     If just half of those calls were new clients looking to book a service averaging $100, that's <strong>$400/day in lost revenue</strong>. Over a month? <strong>$12,000</strong>. Over a year? <strong>$144,000</strong>. That's the salary of two full-time stylists — gone to voicemail.
@@ -873,8 +871,6 @@ export default function AiReceptionistForSalonsContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Call & Booking Statistics</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.forbes.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Forbes — 62% of SMB calls go unanswered</a></li>
-                                        <li>• <a href="https://www.att.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">AT&T Research — 85% of callers won't leave voicemail</a></li>
                                         <li>• <a href="https://www.salontoday.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Salon Today — Phone booking trends in the salon industry</a></li>
                                     </ul>
                                 </div>

@@ -219,9 +219,9 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     <div className="flex items-start gap-3">
                                         <AlertTriangle className="w-6 h-6 text-red-600 shrink-0 mt-1" />
                                         <div>
-                                            <h4 className="font-bold text-slate-900 mb-2">The Numbers Don't Lie</h4>
+                                            <h4 className="font-bold text-slate-900 mb-2">The Voicemail Problem</h4>
                                             <p className="text-slate-700">
-                                                <strong>62%</strong> of calls to small businesses go unanswered (Forbes), and <strong>85%</strong> of those callers won't leave a voicemail. They call your competitor instead.
+                                                <strong>Many calls to small businesses go unanswered</strong>, and <strong>most of those callers won't leave a voicemail</strong>. They call your competitor instead.
                                             </p>
                                         </div>
                                     </div>
@@ -631,8 +631,6 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Call & Voicemail Statistics</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.forbes.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Forbes — SMB missed calls statistics</a></li>
-                                        <li>• <a href="https://www.att.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">AT&T Research — Voicemail statistics</a></li>
                                         <li>• <a href="https://www.consumerreports.org/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Consumer Reports — Caller behavior research</a></li>
                                     </ul>
                                 </div>

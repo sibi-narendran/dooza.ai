@@ -52,7 +52,7 @@ const faqData = [
     },
     {
         question: "How many calls does the average small business miss?",
-        answer: "According to Forbes, 62% of calls to small businesses go unanswered. With 85% of callers refusing to leave voicemail, that means most businesses lose over half their inbound leads before ever speaking to them."
+        answer: "Many calls to small businesses go unanswered, and most callers who reach voicemail hang up without leaving a message. That means many businesses lose inbound leads before ever speaking to them."
     }
 ];
 
@@ -118,7 +118,7 @@ export default function BestAiReceptionistContent() {
                             The Best <span className="text-primary-600">AI Receptionist</span>: Why You Should Fire Your Voicemail
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            85% of callers won't leave a voicemail — they just call your competitor. Discover why an AI receptionist captures more leads, books more appointments, and costs a fraction of a human receptionist.
+                            Most callers won't leave a voicemail — they just call your competitor. Discover why an AI receptionist captures more leads, books more appointments, and costs a fraction of a human receptionist.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -209,7 +209,7 @@ export default function BestAiReceptionistContent() {
                                     Your voicemail is a lead-killing machine.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    85% of callers who reach voicemail will never leave a message. They hang up and call your competitor. Every unanswered ring is revenue walking out the door — and you don't even know it's happening.
+                                    Most callers who reach voicemail won't leave a message. They hang up and call your competitor. Every unanswered ring is revenue walking out the door — and you don't even know it's happening.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     Picture this: it's 6 PM on a Tuesday. A homeowner discovers a burst pipe flooding their basement. They grab their phone and call three plumbers. Two go straight to voicemail. The third picks up instantly, asks the right questions — "Where's the leak? How bad is the flooding? What's your address?" — and books the emergency appointment on the spot. That third business just won <strong>$2,500 in revenue</strong> while the other two were still recording "Sorry we missed your call."
@@ -232,7 +232,7 @@ export default function BestAiReceptionistContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">The Cost of Voicemail</h4>
                                             <p className="text-slate-700">
-                                                If you receive just 10 calls/week and miss 62% of them, that's 6 missed opportunities. At $200/lead, you're losing <strong>$1,200/week</strong> — or <strong>$4,800/month</strong> — to voicemail.
+                                                If you miss just 6 calls a week, that's 6 missed opportunities. At $200/lead, you could be losing up to <strong>$1,200/week</strong> — or <strong>$4,800/month</strong> — to voicemail.
                                             </p>
                                         </div>
                                     </div>
@@ -246,8 +246,6 @@ export default function BestAiReceptionistContent() {
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { stat: "85%", label: "of callers won't leave a voicemail", source: "AT&T Research" },
-                                    { stat: "62%", label: "of SMB calls go unanswered", source: "Forbes" },
                                     { stat: "$1,200+", label: "per month in lost leads", source: "Industry Average" },
                                     { stat: "67%", label: "of callers hang up when they can't reach a person", source: "Consumer Reports" }
                                 ].map((item, idx) => (
@@ -482,11 +480,10 @@ export default function BestAiReceptionistContent() {
                                 <h3 className="font-bold text-slate-900 mb-4 text-lg">The Math Behind Missed Calls</h3>
                                 <div className="space-y-3">
                                     {[
-                                        { label: "Average calls/week", value: "20" },
-                                        { label: "Missed calls (62%)", value: "12.4 calls" },
-                                        { label: "Callers who won't leave VM (85%)", value: "10.5 lost leads" },
-                                        { label: "Average lead value", value: "$300" },
-                                        { label: "Monthly lost revenue", value: "$12,600", highlight: true }
+                                        { label: "Missed calls/week (example)", value: "10" },
+                                        { label: "Most won't leave a voicemail", value: "up to 10 lost leads" },
+                                        { label: "Lead value (example)", value: "$300" },
+                                        { label: "Monthly lost revenue (4 weeks)", value: "up to $12,000", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>
                                             <span className="text-slate-700">{item.label}</span>
@@ -592,13 +589,6 @@ export default function BestAiReceptionistContent() {
                         <section className="scroll-mt-28 border-t border-slate-200 pt-8">
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Sources & References</h3>
                             <div className="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Call & Voicemail Statistics</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.forbes.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Forbes — SMB missed calls statistics</a></li>
-                                        <li>• <a href="https://www.att.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">AT&T Research — Voicemail statistics</a></li>
-                                    </ul>
-                                </div>
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Virtual Receptionist Pricing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">

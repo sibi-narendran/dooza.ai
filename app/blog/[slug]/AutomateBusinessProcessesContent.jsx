@@ -355,7 +355,7 @@ export default function AutomateBusinessProcessesContent() {
                                         Before
                                     </h3>
                                     <p className="text-slate-600">
-                                        Voicemail: 85% of callers won't leave a message. Many calls simply go unanswered. Every missed call is a missed sale.
+                                        Voicemail: most callers won't leave a message. Many calls simply go unanswered. Every missed call is a missed sale.
                                     </p>
                                 </div>
                                 <div className="bg-green-50 border-2 border-green-200 p-6 rounded-xl">
@@ -385,7 +385,7 @@ export default function AutomateBusinessProcessesContent() {
                                 <div className="flex items-start gap-3">
                                     <Phone className="w-6 h-6 text-amber-600 shrink-0 mt-1" />
                                     <p className="text-slate-700">
-                                        <strong>85% of callers who reach voicemail will never call back — they'll call your competitor instead.</strong>
+                                        <strong>Many callers who reach voicemail never call back — they call your competitor instead.</strong>
                                     </p>
                                 </div>
                             </div>

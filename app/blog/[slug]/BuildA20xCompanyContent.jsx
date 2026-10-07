@@ -527,7 +527,7 @@ export default function BuildA20xCompanyContent() {
                                     </div>
                                     <p className="text-slate-600 text-sm mb-3">Answers every call, qualifies leads, and books appointments — 24/7.</p>
                                     <div className="bg-green-50 p-3 rounded-lg">
-                                        <p className="text-xs text-green-700 font-medium">85% of callers won't leave voicemail. Rachel captures them all.</p>
+                                        <p className="text-xs text-green-700 font-medium">Most callers won't leave a voicemail. Rachel answers every call.</p>
                                     </div>
                                 </div>
 
