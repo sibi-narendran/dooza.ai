@@ -283,7 +283,18 @@ export async function GET() {
         title: page.title,
         url: `${SITE_URL}/industries/${page.slug}`,
         description: page.metaDescription,
-    }));
+    })).concat([
+        {
+            title: 'AI Workflow Automation for Law Firms',
+            url: `${SITE_URL}/industries/law-firms`,
+            description: 'Dooza helps law firms automate intake, conflict-check prep, onboarding, document collection, client updates, billing reminders, and approvals.',
+        },
+        {
+            title: 'AI Customer Support Automation for Stores',
+            url: `${SITE_URL}/industries/customer-support`,
+            description: 'Dooza sets up and manages AI that answers phone calls, sends quotes, and handles customer support across email and chat for ecommerce stores and SMBs.',
+        },
+    ]);
 
     const blogLinks = [
         ...blogPosts
