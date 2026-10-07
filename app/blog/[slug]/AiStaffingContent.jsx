@@ -40,19 +40,19 @@ const faqData = [
     },
     {
         question: "How much does AI staffing cost compared to hiring?",
-        answer: "Traditional hiring costs $4,700 per hire plus $3,500-6,000/month per employee in salary alone. Hiring the equivalent six-person human team runs about $24,700/month. Dooza Workforce, the AI workforce app from Dooza, covers those roles with AI employees for a fraction of that. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Traditional hiring means recruiting costs, salary, benefits, payroll taxes, equipment and training for every role, and the bill grows with each person you add. Dooza Workforce, the AI workforce app from Dooza, covers email, social, phones, lead generation, SEO and legal documents with AI employees instead. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Can AI employees really replace human workers?",
-        answer: "AI employees handle the repetitive 80% of work — email, posting, answering calls, generating leads. Humans should focus on the 20% requiring judgment, creativity, and relationship building. The best model is a hybrid workforce."
+        answer: "AI employees handle repetitive work — email, posting, answering calls, generating leads. Humans should focus on the work that needs judgment, creativity, and relationship building. The best model is a hybrid workforce."
     },
     {
         question: "How fast can I onboard AI employees?",
-        answer: "Traditional hiring averages 42 days. With Dooza, an engineer scopes your pilot on a free 30-minute call, then configures your AI employees to match your business, brand voice, and workflows. Workforce employees can start working the same day."
+        answer: "Traditional hiring means posting the job, interviewing and onboarding before anyone starts. With Dooza, an engineer scopes your pilot on a free 30-minute call, then configures your AI employees to match your business, brand voice, and workflows. Workforce employees can start working the same day."
     },
     {
         question: "Is AI staffing only for large companies?",
-        answer: "AI staffing is actually most impactful for small businesses and solopreneurs who can't afford to hire full teams. A solo consultant can get an entire support staff of AI employees for less than the cost of a single lunch meeting."
+        answer: "AI staffing is actually most impactful for small businesses and solopreneurs who can't afford to hire full teams. A solo consultant can get a whole support staff of AI employees without taking on payroll."
     }
 ];
 
@@ -118,7 +118,7 @@ export default function AiStaffingContent() {
                             <span className="text-primary-600">AI Staffing</span>: Building a Workforce That Runs 24/7
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            The average hire costs $4,700 and takes 42 days. What if you could fill 6 roles the same day, starting with a refundable pilot? AI staffing is replacing traditional hiring for small businesses.
+                            Hiring is slow and expensive. What if you could fill 6 roles the same day, starting with a refundable pilot? AI staffing is replacing traditional hiring for small businesses.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -207,7 +207,7 @@ export default function AiStaffingContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    According to SHRM, the average cost-per-hire is <strong>$4,700</strong> and it takes <strong>42 days</strong> to fill a position. What if you could fill 6 roles the same day, with a refundable pilot?
+                                    Hiring a person means job ads, interviews, onboarding and weeks of waiting before they are productive. What if you could fill 6 roles the same day, with a refundable pilot?
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     AI staffing isn't about replacing humans. It's about filling the operational gaps that small businesses can't afford to fill with traditional hiring.
@@ -230,7 +230,7 @@ export default function AiStaffingContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">The Staffing Reality</h4>
                                             <p className="text-slate-700">
-                                                Small businesses need help with email, social media, phones, lead gen, SEO, and legal — but hiring 6 employees would cost <strong>$24,700+/month</strong>. AI staffing fills these roles for <strong>a fraction of that</strong>, and Dooza starts every product with a <strong>refundable pilot</strong> (100% refund within 14 days).
+                                                Small businesses need help with email, social media, phones, lead gen, SEO, and legal — but hiring 6 employees means six salaries plus benefits, payroll taxes and training. AI staffing fills these roles for <strong>a fraction of that</strong>, and Dooza starts every product with a <strong>refundable pilot</strong> (100% refund within 14 days).
                                             </p>
                                         </div>
                                     </div>
@@ -242,29 +242,13 @@ export default function AiStaffingContent() {
                         <section id="hiring-crisis" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Small Business Hiring Crisis</h2>
 
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                                {[
-                                    { stat: "$4,700", label: "average cost per hire", source: "SHRM" },
-                                    { stat: "42 days", label: "average time to fill a position", source: "SHRM" },
-                                    { stat: "33%", label: "annual turnover rate for small businesses", source: "BLS" },
-                                    { stat: "$35-65K", label: "average salary for an administrative role", source: "Glassdoor" },
-                                    { stat: "76%", label: "of SMBs say hiring is their biggest challenge", source: "NFIB" }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-amber-50 border border-amber-100 p-5 rounded-xl text-center">
-                                        <div className="text-2xl md:text-3xl font-bold text-amber-700 mb-2">{item.stat}</div>
-                                        <p className="text-sm text-slate-700 font-medium mb-1">{item.label}</p>
-                                        <p className="text-xs text-amber-600">{item.source}</p>
-                                    </div>
-                                ))}
-                            </div>
-
                             <div className="bg-red-50 border border-red-200 p-6 rounded-xl">
                                 <div className="flex items-start gap-3">
                                     <AlertTriangle className="w-6 h-6 text-red-600 shrink-0 mt-1" />
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The Hidden Cost</h4>
                                         <p className="text-slate-700">
-                                            Beyond salary, each employee costs <strong>25-40% more</strong> in benefits, payroll taxes, equipment, training, and management overhead. A $45K/yr hire actually costs <strong>$56-63K/yr</strong>.
+                                            Beyond salary, each employee also costs benefits, payroll taxes, equipment, training, and management overhead, so the real cost of a hire is well above the salary on the offer letter.
                                         </p>
                                     </div>
                                 </div>
@@ -340,30 +324,27 @@ export default function AiStaffingContent() {
                                     <thead>
                                         <tr className="bg-slate-100">
                                             <th className="text-left p-4 font-bold text-slate-900">Role</th>
-                                            <th className="text-left p-4 font-bold text-slate-900">Human Cost/mo</th>
                                             <th className="text-left p-4 font-bold text-primary-700 bg-primary-50">Dooza AI Employee</th>
                                             <th className="text-left p-4 font-bold text-primary-700 bg-primary-50">Dooza Cost</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {[
-                                            { role: "Email Manager", humanCost: "$3,500", agent: "Maily", doozaCost: "Included" },
-                                            { role: "Social Media Manager", humanCost: "$4,200", agent: "Somi", doozaCost: "Included" },
-                                            { role: "Receptionist", humanCost: "$3,500", agent: "Rachel", doozaCost: "Included" },
-                                            { role: "Lead Generation Specialist", humanCost: "$4,500", agent: "Stan", doozaCost: "Included" },
-                                            { role: "SEO Specialist", humanCost: "$5,000", agent: "Ranky", doozaCost: "Included" },
-                                            { role: "Legal/Compliance Assistant", humanCost: "$4,000", agent: "Linda", doozaCost: "Included" }
+                                            { role: "Email Manager", agent: "Maily", doozaCost: "Included" },
+                                            { role: "Social Media Manager", agent: "Somi", doozaCost: "Included" },
+                                            { role: "Receptionist", agent: "Rachel", doozaCost: "Included" },
+                                            { role: "Lead Generation Specialist", agent: "Stan", doozaCost: "Included" },
+                                            { role: "SEO Specialist", agent: "Ranky", doozaCost: "Included" },
+                                            { role: "Legal/Compliance Assistant", agent: "Linda", doozaCost: "Included" }
                                         ].map((item, idx) => (
                                             <tr key={idx} className="border-t border-slate-200">
                                                 <td className="p-4 text-slate-700">{item.role}</td>
-                                                <td className="p-4 text-slate-700">{item.humanCost}</td>
                                                 <td className="p-4 text-primary-700 font-medium bg-primary-50">{item.agent}</td>
                                                 <td className="p-4 text-primary-700 bg-primary-50">{item.doozaCost}</td>
                                             </tr>
                                         ))}
                                         <tr className="border-t-2 border-slate-300 bg-slate-50 font-bold">
-                                            <td className="p-4 text-slate-900">Total</td>
-                                            <td className="p-4 text-slate-900">$24,700/mo</td>
+                                            <td className="p-4 text-slate-900">All six roles</td>
                                             <td className="p-4 text-primary-700 bg-primary-100">AI Employees</td>
                                             <td className="p-4 text-primary-700 bg-primary-100"><Link href="/pricing" className="underline">Refundable pilot (see pricing)</Link></td>
                                         </tr>
@@ -373,7 +354,7 @@ export default function AiStaffingContent() {
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
                                 <p className="text-xl font-bold text-green-800">
-                                    A fraction of the cost of <span className="text-3xl">$24,700/mo</span> in salaries. Same roles. Same functions. Available 24/7.
+                                    <span className="text-3xl">Six roles, one workforce.</span> Same functions as a human team, without the payroll.
                                 </p>
                             </div>
                         </section>
@@ -410,8 +391,8 @@ export default function AiStaffingContent() {
                                 </h4>
                                 <div className="grid md:grid-cols-2 gap-6 text-center">
                                     <div className="bg-red-50 p-4 rounded-lg">
-                                        <div className="text-2xl font-bold text-red-700">$65,000-90,000/yr</div>
-                                        <p className="text-sm text-red-600 mt-1">Traditional: 1 employee total cost</p>
+                                        <div className="text-2xl font-bold text-red-700">Salary + overhead</div>
+                                        <p className="text-sm text-red-600 mt-1">Traditional: every employee, every month</p>
                                     </div>
                                     <div className="bg-green-100 p-4 rounded-lg">
                                         <div className="text-2xl font-bold text-green-700">14-day</div>
@@ -611,7 +592,7 @@ export default function AiStaffingContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-800 mb-3">The 80/20 Rule</h4>
                                 <p className="text-blue-700">
-                                    AI handles the repetitive <strong>80% of work</strong>. Humans focus on the <strong>20%</strong> that requires judgment, creativity, and emotional intelligence. This isn't about replacing people — it's about freeing them to do their best work.
+                                    AI handles the <strong>repetitive work</strong>. Humans focus on what requires judgment, creativity, and emotional intelligence. This isn't about replacing people — it's about freeing them to do their best work.
                                 </p>
                             </div>
                         </section>
@@ -680,7 +661,7 @@ export default function AiStaffingContent() {
                                         Solo Consultant
                                     </h3>
                                     <p className="text-blue-700">
-                                        You're a one-person shop. Maily handles your email. Somi posts to LinkedIn. Rachel answers calls. You just gained <strong>20 hours/week</strong> to serve clients.
+                                        You're a one-person shop. Maily handles your email. Somi posts to LinkedIn. Rachel answers calls. You get time back to serve clients.
                                     </p>
                                 </div>
 
@@ -690,7 +671,7 @@ export default function AiStaffingContent() {
                                         Small Agency (5-10 people)
                                     </h3>
                                     <p className="text-purple-700">
-                                        Your team is stretched thin. Ranky handles SEO for all client accounts. Stan generates leads. Linda reviews contracts. Your team focuses on <strong>creative and strategy</strong>.
+                                        Your team is stretched thin. Ranky handles SEO for all client accounts. Stan generates leads. Linda drafts legal documents. Your team focuses on <strong>creative and strategy</strong>.
                                     </p>
                                 </div>
 
@@ -700,7 +681,7 @@ export default function AiStaffingContent() {
                                         Local Service Business
                                     </h3>
                                     <p className="text-green-700">
-                                        You run a plumbing company. Rachel captures emergency calls at 3 AM. Somi posts before/after photos. Maily follows up on quotes. You went from missing <strong>60% of calls</strong> to capturing <strong>100%</strong>.
+                                        You run a plumbing company. Rachel captures emergency calls at 3 AM. Somi posts before/after photos. Maily follows up on quotes. Calls that used to go to voicemail get answered, and nothing falls through the cracks.
                                     </p>
                                 </div>
                             </div>
@@ -716,7 +697,7 @@ export default function AiStaffingContent() {
                         <section className="scroll-mt-28">
                             <div className="bg-gradient-to-br from-primary-50 to-blue-50 border-2 border-primary-200 p-8 rounded-2xl text-center">
                                 <p className="text-2xl font-bold text-slate-900 mb-4">
-                                    AI employees. 24/7. No interviews. No PTO. No turnover. Start with a refundable pilot — 100% refund within 14 days.
+                                    AI employees. No interviews. No PTO. No turnover. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
@@ -739,27 +720,6 @@ export default function AiStaffingContent() {
                                         <p className="text-slate-600 leading-relaxed">{item.answer}</p>
                                     </div>
                                 ))}
-                            </div>
-                        </section>
-
-                        {/* Sources Section */}
-                        <section className="scroll-mt-28 border-t border-slate-200 pt-8">
-                            <h3 className="text-xl font-bold text-slate-900 mb-4">Sources & References</h3>
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Hiring & Staffing Data</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.shrm.org/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">SHRM — Cost per hire and time to fill</a></li>
-                                        <li>• <a href="https://www.bls.gov/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">BLS — Turnover statistics</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Market Research</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.nfib.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">NFIB — Small business hiring challenges</a></li>
-                                        <li>• <a href="https://www.glassdoor.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Glassdoor — Salary benchmarks</a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </section>
 
