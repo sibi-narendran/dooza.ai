@@ -44,7 +44,7 @@ const faqData = [
     },
     {
         question: "Is marketing automation worth it for small businesses?",
-        answer: "Yes—small businesses using marketing automation see 25% higher ROI and 451% more qualified leads according to industry research. The key is choosing the right tool. Enterprise platforms like HubSpot or Marketo are overkill (and overpriced) for most SMBs. AI-powered automation like Dooza provides similar benefits without the enterprise setup, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "Usually, if it takes repetitive work off your plate: in DemandSage's roundup, 36% of marketers say handling repetitive tasks is automation's most important benefit, and in Backlinko's, 25% of marketers call their automation \"very successful\". The key is choosing the right tool. Enterprise platforms like HubSpot or Marketo are overkill (and overpriced) for most SMBs. AI-powered automation like Dooza provides similar benefits without the enterprise setup, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "What's the difference between marketing automation and AI automation?",
@@ -164,7 +164,7 @@ export default function MarketingAutomationToolsContent() {
                             <span className="text-primary-600">Marketing Automation Tools</span>: The 2026 Guide for Small Business
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            76% of businesses use marketing automation—but most SMBs are stuck with tools built for enterprises. Learn which automation actually makes sense for small businesses and how AI is changing the game.
+                            Most companies that automate see a return within a year—but most SMBs are stuck with tools built for enterprises. Learn which automation actually makes sense for small businesses and how AI is changing the game.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -252,7 +252,7 @@ export default function MarketingAutomationToolsContent() {
                                     Here's the dirty secret about marketing automation: most tools are designed for companies with dedicated marketing teams and six-figure budgets.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    According to <a href="https://inbeat.agency/blog/marketing-automation-statistics" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">inBeat Agency research</a>, 76% of businesses now use marketing automation. But there's a massive gap between enterprise tools like <a href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">HubSpot</a> ($3,600+/month) and what small businesses actually need.
+                                    According to <a href="https://inbeat.agency/blog/marketing-automation-statistics" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">inBeat Agency's roundup</a>, an Adobe for Business report found 76% of companies see positive ROI from automation within one year. But there's a massive gap between enterprise tools like <a href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">HubSpot</a>'s top tiers and what small businesses actually need.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     <strong>The result?</strong> Small businesses either overpay for features they'll never use, or they cobble together multiple tools that don't talk to each other. Meanwhile, the promise of "automation" becomes hours spent setting up workflows that still require constant babysitting.
@@ -274,9 +274,9 @@ export default function MarketingAutomationToolsContent() {
                                     <div className="flex items-start gap-3">
                                         <Zap className="w-6 h-6 text-purple-600 shrink-0 mt-1" />
                                         <div>
-                                            <h4 className="font-bold text-slate-900 mb-2">The 340% ROI Opportunity</h4>
+                                            <h4 className="font-bold text-slate-900 mb-2">Where Automation Pays Back</h4>
                                             <p className="text-slate-700">
-                                                According to <a href="https://medium.com/@ap3617180/the-340-roi-shift-why-smbs-must-automate-operational-tasks-to-achieve-scalable-growth-in-the-ai-7a3c5a97daf9" target="_blank" rel="noopener noreferrer" className="text-purple-600 underline">research published on Medium</a>, businesses investing in workflow automation see an average <strong>340% ROI within 18 months</strong>. The question isn't whether to automate—it's choosing the right approach.
+                                                Start with the tasks you repeat every week: lead replies, follow-ups, posting. If a workflow doesn't save you time within a month, cut it. The question isn't whether to automate—it's choosing the right approach.
                                             </p>
                                         </div>
                                     </div>
@@ -326,10 +326,10 @@ export default function MarketingAutomationToolsContent() {
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { stat: "451%", label: "increase in qualified leads", source: "DemandSage", link: "https://www.demandsage.com/marketing-automation-statistics/" },
-                                    { stat: "$46K", label: "annual savings for SMBs", source: "Vena Solutions", link: "https://www.venasolutions.com/blog/automation-statistics" },
-                                    { stat: "25%", label: "higher marketing ROI", source: "Backlinko", link: "https://backlinko.com/marketing-automation-stats" },
-                                    { stat: "82%", label: "of sales teams freed for relationship building", source: "Vena Solutions", link: "https://www.venasolutions.com/blog/automation-statistics" }
+                                    { stat: "36%", label: "of marketers say handling repetitive tasks is the biggest benefit", source: "DemandSage", link: "https://www.demandsage.com/marketing-automation-statistics/" },
+                                    { stat: "58%", label: "of businesses automated email processes in 2024", source: "Statista, via Vena Solutions", link: "https://www.venasolutions.com/blog/automation-statistics" },
+                                    { stat: "25%", label: "of marketers call their automation \"very successful\"", source: "Backlinko", link: "https://backlinko.com/marketing-automation-stats" },
+                                    { stat: "82%", label: "of sales teams freed for relationship building", source: "Salesforce, via Vena Solutions", link: "https://www.venasolutions.com/blog/automation-statistics" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-purple-50 border border-purple-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-purple-600 mb-2">{item.stat}</div>

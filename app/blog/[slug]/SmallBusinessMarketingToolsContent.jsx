@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "How much should a small business spend on marketing tools?",
-        answer: "According to research, 52% of small businesses have monthly marketing budgets under $1,000. The sweet spot is typically 5-10% of revenue for established businesses, less for startups. The key is maximizing ROI—spending less on tools that deliver more. AI-powered tools often provide better ROI because they automate work that would otherwise require hiring."
+        answer: "In LocaliQ's 2026 small business survey, 52% of SMBs had monthly marketing budgets under $1,000. Whatever your budget, the key is maximizing ROI—spending less on tools that deliver more. AI-powered tools often provide better ROI because they automate work that would otherwise require hiring."
     },
     {
         question: "What's the best free marketing tool for small businesses?",
@@ -63,7 +63,7 @@ const faqData = [
     },
     {
         question: "What's the ROI of marketing tools for small businesses?",
-        answer: "Email marketing delivers approximately $40 ROI for every dollar spent. Small businesses using marketing automation see 25% higher ROI and 451% more qualified leads. The key is consistent execution—which is where many small businesses fail. AI tools ensure consistency without requiring constant manual effort."
+        answer: "Email is usually the highest-return channel for small businesses: marketing statistics roundups commonly put it around $40 back for every $1 spent (Thrive Themes, citing Omnisend). The key is consistent execution—which is where many small businesses fail. AI tools ensure consistency without requiring constant manual effort."
     }
 ];
 
@@ -265,7 +265,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                     According to <a href="https://localiq.com/blog/small-business-marketing-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">LocaliQ's 2026 Small Business Marketing Report</a>, 53% of small businesses spend 1-10 hours per week on marketing, and 50% have no employees dedicated to marketing at all.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>The result?</strong> Most small businesses bounce between too many tools, spend money on subscriptions they barely use, and still struggle to execute consistently. Marketing confidence is at an all-time low—just 18% of SMBs feel "very confident" in their marketing.
+                                    <strong>The result?</strong> Most small businesses bounce between too many tools, spend money on subscriptions they barely use, and still struggle to execute consistently.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     This guide cuts through the noise. We'll show you which tools actually matter, what they cost, and how AI is helping small businesses do more with less.
@@ -286,7 +286,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">Key Insight</h4>
                                             <p className="text-slate-700">
-                                                <strong>14% of businesses fail due to poor marketing</strong>—yet most small businesses spend more time researching tools than actually marketing. The goal isn't to have the most tools; it's to have tools that actually get used and drive results.
+                                                <strong>14% of businesses close due to poor marketing</strong> (EntrepreneursHQ, citing Fundera), yet most small businesses spend more time researching tools than actually marketing. The goal isn't to have the most tools; it's to have tools that actually get used and drive results.
                                             </p>
                                         </div>
                                     </div>
@@ -306,10 +306,10 @@ export default function SmallBusinessMarketingToolsContent() {
                                 {[
                                     { stat: "52%", label: "of SMBs have marketing budgets under $1,000/month", source: "LocaliQ", link: "https://localiq.com/blog/small-business-marketing-trends-report-2026/" },
                                     { stat: "50%", label: "have no employees dedicated to marketing", source: "LocaliQ Research", link: "https://localiq.com/blog/small-business-marketing-trends-report-2026/" },
-                                    { stat: "18%", label: "feel 'very confident' in their marketing", source: "MarketingProfs", link: "https://www.marketingprofs.com/charts/2025/52601/small-business-marketing-trends-challenges-goals-ai-use" },
-                                    { stat: "67%", label: "use AI tools for content marketing", source: "LocaliQ 2026", link: "https://localiq.com/blog/small-business-marketing-trends-report-2026/" },
-                                    { stat: "43%", label: "struggle with creating engaging content", source: "Industry Research", link: "https://thrivethemes.com/250-small-business-marketing-statistics/" },
-                                    { stat: "39%", label: "cite resource constraints as top challenge", source: "MarketingProfs", link: "https://www.marketingprofs.com/charts/2025/52601/small-business-marketing-trends-challenges-goals-ai-use" }
+                                    { stat: "30%", label: "say lead generation is their top marketing challenge", source: "MarketingProfs (Taradel survey)", link: "https://www.marketingprofs.com/charts/2025/52601/small-business-marketing-trends-challenges-goals-ai-use" },
+                                    { stat: "67%", label: "of small businesses use AI for content marketing or SEO", source: "Semrush, via Thrive Themes", link: "https://thrivethemes.com/250-small-business-marketing-statistics/" },
+                                    { stat: "34%", label: "work with at least one marketing partner", source: "LocaliQ 2026", link: "https://localiq.com/blog/small-business-marketing-trends-report-2026/" },
+                                    { stat: "27%", label: "say budget constraints are their top marketing challenge", source: "MarketingProfs (Taradel survey)", link: "https://www.marketingprofs.com/charts/2025/52601/small-business-marketing-trends-challenges-goals-ai-use" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-slate-50 border border-slate-200 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-slate-900 mb-2">{item.stat}</div>
@@ -348,9 +348,9 @@ export default function SmallBusinessMarketingToolsContent() {
                                     </h3>
                                     <div className="grid md:grid-cols-2 gap-4">
                                         {[
-                                            { name: "Email Marketing", why: "$40 ROI per $1 spent—highest of any channel" },
+                                            { name: "Email Marketing", why: "Often cited at ~$40 back per $1 spent (Omnisend, via Thrive Themes)" },
                                             { name: "Google Business Profile", why: "Free, directly impacts local search visibility" },
-                                            { name: "Social Media Presence", why: "71% of consumers expect brands to be active" },
+                                            { name: "Social Media Presence", why: "Where customers check you out before they buy" },
                                             { name: "Website/SEO Basics", why: "Your 24/7 salesperson and credibility builder" }
                                         ].map((item, idx) => (
                                             <div key={idx} className="bg-white p-4 rounded-lg">
@@ -368,8 +368,8 @@ export default function SmallBusinessMarketingToolsContent() {
                                     </h3>
                                     <div className="grid md:grid-cols-2 gap-4">
                                         {[
-                                            { name: "CRM", why: "34% sales productivity boost (Salesforce)" },
-                                            { name: "Marketing Automation", why: "451% more qualified leads" },
+                                            { name: "CRM", why: "Keeps every lead and follow-up in one place" },
+                                            { name: "Marketing Automation", why: "Sends follow-ups on time without manual work" },
                                             { name: "Content Creation Tools", why: "2.5 hours saved daily with AI" },
                                             { name: "Analytics/Reporting", why: "Data-driven decisions beat guessing" }
                                         ].map((item, idx) => (
@@ -390,7 +390,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                         {[
                                             { name: "Advanced SEO Tools", why: "Once you have content to optimize" },
                                             { name: "Paid Ads Management", why: "After organic channels are working" },
-                                            { name: "Video Production", why: "1,200% more shares, but time-intensive" },
+                                            { name: "Video Production", why: "Strong for trust and reach, but time-intensive" },
                                             { name: "Influencer Platforms", why: "Niche strategy, not core need" }
                                         ].map((item, idx) => (
                                             <div key={idx} className="bg-white p-4 rounded-lg">
