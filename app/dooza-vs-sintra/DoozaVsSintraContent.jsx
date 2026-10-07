@@ -16,37 +16,39 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const comparisonRows = [
-    { feature: 'Price', dooza: 'Refundable pilot (see /pricing)', competitor: '$48.50/mo (discounted from $97); $15.60/mo on a 12-month commitment', doozaWins: false },
-    { feature: 'Task / Usage Limits', dooza: 'No credits', competitor: '250 credits per month', doozaWins: true },
-    { feature: 'Number of AI Agents', dooza: 'Maily, Somi, Ranky, Stan, Linda, Rachel', competitor: '12+ helpers', doozaWins: false },
-    { feature: 'Onboarding', dooza: 'Dooza engineer scopes your pilot on a free 30-min call', competitor: 'Self-serve only', doozaWins: true },
+    { feature: 'Price', dooza: 'Refundable pilot (see /pricing)', competitor: '$48.50/mo (discounted from $97); $15.60/mo on a 12-month commitment (checked October 7, 2026)', doozaWins: false },
+    { feature: 'Task / Usage Limits', dooza: 'No credits', competitor: '250 credits per month, plus paid top-ups', doozaWins: true },
+    { feature: 'Number of AI Agents', dooza: 'Maily, Somi, Ranky, Stan, Linda, Rachel', competitor: '12+ helpers that call on each other automatically', doozaWins: false },
+    { feature: 'Onboarding', dooza: 'Dooza engineer scopes your pilot on a free 30-min call', competitor: 'Call with a Sintra specialist, plus two weeks of hands-on help', doozaWins: false },
+    { feature: 'Who Builds It', dooza: 'Dooza engineers build and tune your AI employees or custom agents with you', competitor: 'You run it yourself in the app (Sintra: "Zero technical setup. Simply chat and ask.")', doozaWins: true },
+    { feature: 'Custom Agents', dooza: 'Custom agents built and maintained by Dooza engineers', competitor: 'Helper Builder: create your own custom helper', doozaWins: false },
     { feature: 'Integrations', dooza: '1,000+ app integrations', competitor: '15+ direct integrations', doozaWins: false },
-    { feature: 'Setup Time', dooza: 'One 30-min guided call', competitor: 'Hours to days (DIY)', doozaWins: true },
     { feature: 'Refund Window', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: '14-day money-back guarantee', doozaWins: false },
-    { feature: 'Brand Personalization', dooza: 'Auto-extracted from your site', competitor: 'Brain AI knowledge base', doozaWins: false },
-    { feature: 'Try Before Committing', dooza: 'Refundable pilot scoped with an engineer on a free call', competitor: 'Self-serve; 14-day money-back guarantee', doozaWins: true },
+    { feature: 'Brand Personalization', dooza: 'Auto-extracted from your site', competitor: 'Brain AI knowledge base shared by all helpers', doozaWins: false },
 ];
 
 const doozaAdvantages = [
-    { icon: Infinity, title: 'No Credit Caps', desc: 'Dooza has no 250-credit ceiling. Use your AI employees as much as you need without rationing.' },
-    { icon: Zap, title: 'A Real Engineer', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call and sets up your AI employees with you. Not a chatbot — a real person.' },
+    { icon: Infinity, title: 'Done for You', desc: 'Sintra is a self-serve app you run yourself. Dooza engineers build and tune your AI employees, and build and maintain custom agents, so you are not configuring it alone.' },
+    { icon: Zap, title: 'A Real Engineer', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you. Not a chatbot — a real person.' },
     { icon: Shield, title: 'No Credits, No Per-Seat Fees', desc: 'No "original price" vs "discounted" confusion and no credit meter. Pricing depends on the product — see /pricing.' },
     { icon: Puzzle, title: 'Refundable Pilot', desc: 'Every Dooza product starts with a refundable pilot. If it is not right for you, ask within 14 days for a 100% refund.' },
 ];
 
+// Quoted from Sintra's own pages, checked October 7, 2026.
 const userQuotes = [
-    { quote: 'The idea generation is decent, but the actual work output is not usable without significant editing.', source: 'CyberNews Review', sentiment: 'negative' },
-    { quote: 'You are given a LOGIN and left to figure it out. There is no onboarding support or human guidance.', source: 'Independent Reviewer', sentiment: 'negative' },
-    { quote: 'The 250 credit limit runs out fast if you are using multiple helpers. Then you are stuck waiting or paying for top-ups.', source: 'Salesforge Analysis', sentiment: 'negative' },
-    { quote: 'Helpers do NOT share context. If I need data from Dexter passed to Emmie, I have to copy and paste it myself.', source: 'User Review — Efficient App', sentiment: 'negative' },
-    { quote: 'Brain AI is a good concept — storing brand voice and business details makes the outputs more relevant.', source: 'CoolTechZone Review', sentiment: 'positive' },
+    { quote: 'AI employee collaboration: They call on each other automatically… AI employees will divide the work themselves.', source: 'help.sintra.ai — Sintra AI employees explained', sentiment: 'positive' },
+    { quote: 'Hop on a call with one of our specialists… your specialist stays your direct contact for two weeks of hands-on help.', source: 'sintra.ai/book-a-demo', sentiment: 'positive' },
+    { quote: 'Every plan starts with 250 monthly credits that reset each month.', source: 'sintra.ai/pricing', sentiment: 'negative' },
+    { quote: 'If a workspace runs out of credits, AI employees will stop working.', source: 'help.sintra.ai — Workspace credits', sentiment: 'negative' },
+    { quote: 'The Helper Builder lets you create your own custom Helper beyond the 12 pre-built ones.', source: 'help.sintra.ai — Helper Builder', sentiment: 'positive' },
+    { quote: 'A knowledge base that all our AI Helpers can access.', source: 'sintra.ai/features/brain-ai', sentiment: 'positive' },
 ];
 
 const switchReasons = [
-    { title: 'The credit cap creates anxiety', desc: 'When every AI action burns a credit, you start rationing usage instead of letting agents work freely. Dooza removes that mental overhead entirely.' },
-    { title: 'Setup took too long without help', desc: 'Sintra\'s self-serve approach means hours configuring agents. With Dooza, a Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you.' },
-    { title: 'Copy-pasting between helpers was exhausting', desc: 'Because Sintra helpers don\'t share context, multi-step workflows require manually moving data between agents.' },
-    { title: 'The refundable pilot removed the risk', desc: 'Every Dooza product starts with a refundable pilot — 100% refund within 14 days — and a Dooza engineer scopes it with you instead of leaving you to self-serve.' },
+    { title: 'You do not want to ration credits', desc: 'Sintra includes 250 credits a month on every plan; when they run out, helpers stop until you buy a top-up or the month resets. Dooza has no credit meter.' },
+    { title: 'You want it built for you', desc: 'Sintra gives you a specialist call and two weeks of hands-on help, then you run the helpers yourself. A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you.' },
+    { title: 'Sintra is the better pick on price', desc: 'If you are happy to run the AI yourself, Sintra is hard to beat: $15.60/mo on a 12-month plan ($187.20 up front), with 12+ helpers that work together (checked October 7, 2026).' },
+    { title: 'The refundable pilot removes the risk', desc: 'Every Dooza product starts with a refundable pilot — 100% refund within 14 days — and a Dooza engineer scopes it with you on a free 30-minute call.' },
 ];
 
 export default function DoozaVsSintraContent({ faqData }) {
@@ -75,7 +77,7 @@ export default function DoozaVsSintraContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Comparison — Updated September 2026
+                                    Comparison — Updated October 7, 2026
                                 </div>
                             </div>
 
@@ -84,11 +86,11 @@ export default function DoozaVsSintraContent({ faqData }) {
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                The #1 Sintra AI alternative with no credit caps.
+                                A done-for-you alternative to Sintra AI.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Looking for a Sintra AI alternative? Sintra AI offers 12+ helpers capped at 250 credits/month. Dooza has no credits, a Dooza engineer who scopes your pilot on a free 30-minute call, and a refundable pilot — 100% refund within 14 days. Here is the full breakdown.
+                                Looking for a Sintra AI alternative? Sintra AI is a low-cost self-serve app with 12+ helpers and 250 credits a month on every plan. Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you, with no credit meter and a refundable pilot — 100% refund within 14 days. Here is the full breakdown.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -131,10 +133,10 @@ export default function DoozaVsSintraContent({ faqData }) {
                                     <h2 className="text-2xl font-bold">Quick Verdict</h2>
                                 </div>
                                 <p className="text-lg text-slate-600 leading-relaxed mb-4">
-                                    Sintra AI offers more helpers (12+), but caps every plan at <strong>250 credits per month</strong>. Once those credits run out, you pay for top-ups or wait. Helpers also <strong>cannot share context</strong> — you copy-paste between them manually.
+                                    Sintra AI offers more helpers (12+) that call on each other automatically, a specialist call with two weeks of hands-on help, and a low price if you pay for a year up front. Every plan includes <strong>250 credits per month</strong>; once they run out, you buy top-ups or wait. After onboarding, <strong>you run the helpers yourself</strong>.
                                 </p>
                                 <p className="text-lg text-slate-600 leading-relaxed">
-                                    Dooza takes the opposite approach: AI employees with one clear job each, <strong>no credits</strong>, a <strong>free 30-minute call with a Dooza engineer</strong> to scope your pilot, and a <strong>refundable pilot</strong> — 100% refund within 14 days.
+                                    Dooza is <strong>done for you</strong>: a <strong>free 30-minute call with a Dooza engineer</strong> to scope your pilot, then the engineer builds and tunes AI employees or custom agents with you. <strong>No credits</strong>, and a <strong>refundable pilot</strong> — 100% refund within 14 days. If you only want the cheapest self-serve app, Sintra is the better pick.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -208,7 +210,7 @@ export default function DoozaVsSintraContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Competitor pricing and features as of March 2026. Sintra AI pricing reflects their displayed discounted rates.
+                                Sintra pricing and features checked October 7, 2026 on sintra.ai and help.sintra.ai. Sintra AI pricing reflects their displayed discounted rates.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -225,7 +227,7 @@ export default function DoozaVsSintraContent({ faqData }) {
                                 <p className="section-label mb-3">Pricing Breakdown</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white">What You Actually Pay</h2>
                                 <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
-                                    Sintra lists $97/mo crossed out with a "50% discount" to $48.50. Every plan is capped at 250 credits.
+                                    Sintra lists $97/mo crossed out with a "50% discount" to $48.50 (checked October 7, 2026). Every plan includes 250 credits a month, with paid top-ups.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -253,9 +255,9 @@ export default function DoozaVsSintraContent({ faqData }) {
                                     <ul className="space-y-2.5 text-sm">
                                         {[
                                             { text: '12+ AI helpers', neg: false },
-                                            { text: '250 credits/month (then pay more)', neg: true },
+                                            { text: '250 credits/month (top-ups extra)', neg: true },
                                             { text: '15+ integrations', neg: false },
-                                            { text: 'Self-serve setup only', neg: true },
+                                            { text: 'Specialist call + 2 weeks of hands-on help', neg: false },
                                             { text: 'No free tier', neg: true },
                                             { text: '14-day money-back guarantee', neg: false },
                                         ].map((item, i) => (
@@ -279,9 +281,9 @@ export default function DoozaVsSintraContent({ faqData }) {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center mb-12">
-                                <p className="section-label mb-3">Real Reviews</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl">What Users Say About Sintra AI</h2>
-                                <p className="text-lg text-slate-500 mt-4">Based on reviews from CyberNews, Efficient App, Salesforge, CoolTechZone, and independent user blogs.</p>
+                                <p className="section-label mb-3">In Sintra&apos;s Words</p>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl">What Sintra AI Says About Itself</h2>
+                                <p className="text-lg text-slate-500 mt-4">Quoted from sintra.ai and help.sintra.ai, checked October 7, 2026.</p>
                             </div>
                         </ScrollReveal>
 
@@ -309,8 +311,8 @@ export default function DoozaVsSintraContent({ faqData }) {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center mb-12">
-                                <p className="section-label mb-3">The Switch</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl">Why Users Are Moving to Dooza</h2>
+                                <p className="section-label mb-3">The Fit</p>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl">When Dooza Fits Better (and When Sintra Does)</h2>
                             </div>
                         </ScrollReveal>
 

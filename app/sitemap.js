@@ -63,13 +63,13 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/alternatives`,
-            lastModified: pageDate('2026-04-20'),
+            lastModified: pageDate('2026-10-07'),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
             url: `${SITE_URL}/dooza-vs-sintra`,
-            lastModified: pageDate('2026-04-14'),
+            lastModified: pageDate('2026-10-07'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
@@ -81,13 +81,13 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/dooza-vs-profound`,
-            lastModified: pageDate('2026-09-25'),
+            lastModified: pageDate('2026-10-07'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
         {
             url: `${SITE_URL}/profound-alternatives`,
-            lastModified: pageDate('2026-09-25'),
+            lastModified: pageDate('2026-10-07'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
@@ -141,7 +141,7 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/gorgias-alternatives`,
-            lastModified: pageDate('2026-09-30'),
+            lastModified: pageDate('2026-10-07'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
@@ -159,7 +159,7 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/sintra-alternatives`,
-            lastModified: pageDate('2026-04-20'),
+            lastModified: pageDate('2026-10-07'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },

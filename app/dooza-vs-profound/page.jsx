@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/dooza-vs-profound`;
 
 export const metadata = {
     title: 'Dooza vs Profound: Best Profound AI Alternative [2026]',
-    description: 'Dooza vs Profound (tryprofound.com): Profound shows where your brand is invisible in AI answers. Dooza fixes it. Compare features, pricing, and GEO execution.',
+    description: 'Dooza vs Profound (tryprofound.com): a platform with analytics and agents your team runs, vs GEO done for you by Ranky and Dooza engineers. Compare features, pricing, and fit.',
     keywords: [
         'profound ai', 'tryprofound', 'profound pricing', 'profound alternative',
         'profound ai alternative', 'dooza vs profound', 'profound vs dooza',
@@ -26,19 +26,19 @@ export const metadata = {
     },
     openGraph: {
         title: 'Profound AI Alternative — Dooza vs Profound Compared [2026]',
-        description: 'Profound shows you where you are invisible in AI answers. Dooza fixes it — Ranky does the GEO work, engineers set it up with you, and it starts with a refundable pilot.',
+        description: 'Profound is an AI visibility platform with analytics and agents. Dooza is done for you — Ranky and Dooza engineers do the GEO work with your approval, starting with a refundable pilot.',
         url: PAGE_URL,
         siteName: 'Dooza',
         type: 'article',
-        modifiedTime: '2026-09-25T00:00:00.000Z',
+        modifiedTime: '2026-10-07T00:00:00.000Z',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza vs Profound AI comparison' }],
     },
     twitter: {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: 'Dooza vs Profound AI [2026] — Monitoring vs Execution',
-        description: 'Profound measures your AI visibility. Dooza does the GEO work that moves it. Honest comparison of features, pricing, and fit.',
+        title: 'Dooza vs Profound AI [2026] — Platform vs Done for You',
+        description: 'Profound gives your team an AI visibility platform with agents. Dooza does the GEO work for you. Honest comparison of features, pricing, and fit.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -46,31 +46,31 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is Profound AI?',
-        answer: 'Profound (tryprofound.com) is an AI visibility and answer engine optimization (AEO) analytics platform. It tracks how answer engines like ChatGPT, Perplexity, Gemini, Claude, Microsoft Copilot, and Google AI Overviews mention and cite your brand, with features such as Answer Engine Insights, share of voice, citation tracking, Prompt Volumes, and Agent Analytics.',
+        answer: 'Profound (tryprofound.com) is an AI visibility and answer engine optimization (AEO) platform with analytics and agents. It tracks how answer engines like ChatGPT, Perplexity, Gemini, Claude, Microsoft Copilot, and Google AI Overviews mention and cite your brand, with features such as Answer Engine Insights, share of voice, citation tracking, Prompt Volumes, and Agent Analytics. Its AI Marketer and Profound Agents research, write, and publish content, with an approval step before anything publishes.',
     },
     {
         question: 'How much does Profound cost in 2026?',
-        answer: 'As of September 2026, Profound\'s pricing page lists a 7-day free Trial (50 prompts, 3 answer engines) and an Enterprise plan with custom pricing that requires a demo. Third-party reviews from early-to-mid 2026 reported earlier self-serve tiers of about $99/mo (Starter) and $399/mo (Growth), and enterprise deployments of roughly $2,000 to $5,000+ per month. Check tryprofound.com/pricing for current rates.',
+        answer: 'Profound\'s pricing page (checked October 7, 2026) lists a 7-day free Trial (50 prompts, 3 answer engines), a self-serve Agency Growth plan at $99/month with full client workspaces as an add-on for $399/month, and an Enterprise plan with custom pricing and custom AI Marketer credits that requires a demo. Check tryprofound.com/pricing for current rates.',
     },
     {
         question: 'Is Dooza a Profound alternative?',
-        answer: 'Yes, for teams that need GEO work done, not just measured. Profound is an enterprise monitoring and analytics platform. Dooza measures and executes: Ranky, Dooza\'s AI SEO & visibility employee, tracks your core prompts, researches topics, fixes on-page SEO and schema, publishes GEO-ready content, and monitors brand mentions, and Dooza engineers set it up with you. Every Dooza product starts with a refundable pilot — 100% refund within 14 days.',
+        answer: 'Yes, for small businesses that want GEO done for them. Profound is a platform with analytics and agents that your team runs. With Dooza, the work is done for you: Ranky, Dooza\'s AI SEO & visibility employee, and Dooza engineers track your core prompts, research topics, fix on-page SEO and schema, publish GEO-ready content with your approval, and monitor brand mentions. Every Dooza product starts with a refundable pilot — 100% refund within 14 days.',
     },
     {
         question: 'What is the difference between Dooza and Profound?',
-        answer: 'Profound shows you where you are invisible in AI answers. Dooza fixes it. Profound specializes in tracking share of voice, citations, and prompt volumes across up to 9 answer engines. Dooza focuses on doing the work that earns citations: content, schema, internal links, Reddit and Quora presence, and consistent business listings.',
+        answer: 'Profound is a platform your team runs: analytics across up to 9 answer engines (share of voice, citations, prompt volumes) plus Profound Agents that research, write, and publish content, with an approval step. Dooza is done for you: Ranky and Dooza engineers do the work that earns citations — content, schema, internal links, Reddit and Quora presence, and consistent business listings — and you approve what goes live.',
     },
     {
         question: 'Does Dooza track as many AI engines as Profound?',
-        answer: 'Not at the same scale. Profound Enterprise tracks up to 9 answer engines across many regions and offers prompt-volume data, which Dooza does not replicate. Ranky tracks your core prompt set across ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews, with share of voice and citation maps, then does the fixes: it writes content built to be cited and monitors who is mentioning you and where.',
+        answer: 'Not at the same scale. Profound Enterprise tracks up to 9 answer engines across many regions and offers prompt-volume data, which Dooza does not replicate. Ranky tracks your core prompt set across ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews, with share of voice and citation maps, then Ranky and Dooza engineers do the fixes for you: content built to be cited, plus monitoring of who is mentioning you and where.',
     },
     {
         question: 'Is Profound worth it for a small business?',
-        answer: 'Usually not as a first purchase. Profound\'s current plans are a 7-day trial and custom-priced Enterprise, built for large brands and agencies with analytics teams. A small business typically gets more from paying for execution first — content, schema, and citations — and adding monitoring later.',
+        answer: 'It depends on who will run it. Profound\'s plans are a 7-day trial, a $99/month Agency Growth plan for agencies, and custom-priced Enterprise (checked October 7, 2026). It suits teams with someone to run the platform and review its Agents\' work. A small business without that person often gets more from having the work done for it — content, schema, and citations.',
     },
     {
         question: 'Can I use Dooza and Profound together?',
-        answer: 'Yes. Profound can identify which prompts and answer engines you are missing from, and Ranky can do the work to close those gaps: publish content targeting those topics, add schema, build internal links, and show up on Reddit and Quora threads that answer engines cite.',
+        answer: 'Yes. Profound can identify which prompts and answer engines you are missing from, and Ranky and Dooza engineers can do the work to close those gaps for you: publish content targeting those topics, add schema, build internal links, and show up on Reddit and Quora threads that answer engines cite.',
     },
     {
         question: 'What does Ranky do for generative engine optimization (GEO)?',
@@ -90,7 +90,7 @@ const faqData = [
     },
     {
         question: 'How fast can I get started with Dooza?',
-        answer: 'Book a free 30-minute call and a Dooza engineer scopes your refundable pilot. Workforce employees like Ranky can start working the same day, and custom agents on Dooza Agents are live in days. Profound Enterprise requires a sales demo before pricing is shared.',
+        answer: 'Book a free 30-minute call and a Dooza engineer scopes your refundable pilot. Workforce employees like Ranky can start working the same day, and custom agents on Dooza Agents are live in days. Profound Enterprise requires a demo before pricing is shared.',
     },
 ];
 
@@ -101,7 +101,7 @@ const schemas = [
         name: 'Dooza vs Profound AI Comparison',
         description: metadata.description,
         url: PAGE_URL,
-        dateModified: '2026-09-25',
+        dateModified: '2026-10-07',
         publisher: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         about: [
             { '@type': 'SoftwareApplication', name: 'Profound', url: 'https://www.tryprofound.com', applicationCategory: 'BusinessApplication' },

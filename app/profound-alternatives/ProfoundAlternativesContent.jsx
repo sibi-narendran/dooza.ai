@@ -16,16 +16,16 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const quickAnswer = [
-    { pick: 'Dooza', why: 'Best overall for teams that need GEO done, not just measured — Ranky does the work, engineers set it up with you, and it starts with a refundable pilot.' },
-    { pick: 'Otterly.ai', why: 'Best budget AI visibility tracker — third-party reviews report plans from about $29/mo.' },
+    { pick: 'Dooza', why: 'Best for small businesses that want GEO done for them — Ranky and Dooza engineers do the work with your approval, and it starts with a refundable pilot.' },
+    { pick: 'Otterly.ai', why: 'Best budget AI visibility tracker — Lite is $29/month (checked October 7, 2026).' },
     { pick: 'Peec AI', why: 'Best mid-priced AI search analytics for marketing teams.' },
     { pick: 'Semrush / Ahrefs', why: 'Best if you already pay for one and want AI visibility next to your SEO data.' },
 ];
 
 const profoundPainPoints = [
-    { icon: CreditCard, title: 'Custom pricing, demo required', desc: 'Profound\'s pricing page lists a 7-day free Trial and a custom-priced Enterprise plan. To see a number, you book a demo.' },
+    { icon: CreditCard, title: 'Enterprise is custom-priced', desc: 'Profound\'s pricing page lists a 7-day free Trial, a self-serve Agency Growth plan at $99/month (client workspaces are a $399/month add-on), and a custom-priced Enterprise plan that needs a demo (checked October 7, 2026).' },
     { icon: Building2, title: 'Built for enterprise', desc: 'SSO/SAML, SOC 2, API, 9 answer engines, and Slack support are great for large brands — and more than most small teams will use.' },
-    { icon: BarChart3, title: 'Dashboards don\'t do the work', desc: 'Share of voice, citations, and Prompt Volumes tell you where you are invisible. Someone still has to write, optimize, and publish.' },
+    { icon: BarChart3, title: 'A platform your team runs', desc: 'Profound pairs analytics with Profound Agents that research, write, and publish, with an approval step before anything goes live. Your team still runs the platform. Small businesses without a marketing team often want it done for them.' },
     { icon: Target, title: 'The trial is narrow', desc: 'The Trial covers 50 prompts for 7 days across 3 answer engines, with limited AI Marketer credits and no API or support.' },
 ];
 
@@ -33,23 +33,23 @@ const alternatives = [
     {
         rank: 1,
         name: 'Dooza',
-        tagline: 'Best overall for teams that need GEO done, not just measured',
-        bestFor: 'Small and mid-sized businesses, founders, local businesses, lean marketing teams, and agencies that need outcomes, not dashboards',
+        tagline: 'Best for small businesses that want GEO done for them',
+        bestFor: 'Small businesses, founders, local businesses, and lean teams that want the work done for them rather than another platform to run',
         price: 'Refundable pilot (see /pricing)',
         trial: 'Refundable pilot — 100% refund within 14 days',
-        type: 'AI visibility tracking + execution',
+        type: 'Done-for-you AI visibility + execution',
         doesWork: true,
         highlight: true,
-        what: 'Dooza is an AI-native company that builds AI products and services for small businesses. For AI search, Ranky tracks how ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews answer your buyers\' prompts, maps which sources they cite, and then does the work: topic research with real search data, on-page SEO and schema, GEO-ready content built to be cited, and live monitoring of who is mentioning you.',
+        what: 'Dooza is an AI-native company that builds AI products and services for small businesses. For AI search, Ranky, Dooza\'s AI SEO & visibility employee, tracks how ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews answer your buyers\' prompts, maps which sources they cite, and then Ranky and Dooza engineers do the work for you, with your approval: topic research with real search data, on-page SEO and schema, GEO-ready content built to be cited, and live monitoring of who is mentioning you.',
         pros: [
-            'Does the work: researches, writes, optimizes, and publishes to Shopify, WordPress, Wix, or custom sites',
+            'Done for you: Ranky and Dooza engineers research, write, optimize, and publish to Shopify, WordPress, Wix, or custom sites, with your approval',
             'GEO method built in: citable claims, third-party citations, schema, Reddit and Quora presence, consistent NAP',
             'Social listening and brand-voice comments on LinkedIn, YouTube, and Reddit (approve or auto-send)',
             'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you — no contracts',
             'Refundable pilot — 100% refund within 14 days',
         ],
         cons: [
-            'Not an enterprise analytics suite: no 9-engine coverage, Prompt Volumes, or ongoing AI crawler analytics',
+            'Not a self-serve platform: no 9-engine coverage, Prompt Volumes, or ongoing AI crawler analytics like Profound',
             'Not SOC 2 certified (encrypted connections and your approval on anything sensitive)',
             'Tracks your core prompt set, not thousands of prompts across many languages and regions',
         ],
@@ -59,8 +59,8 @@ const alternatives = [
         name: 'Otterly.ai',
         tagline: 'Budget-friendly AI search monitoring',
         bestFor: 'Small teams and solo marketers who want to start tracking AI visibility cheaply',
-        price: 'From ~$29/mo (Lite), per third-party reviews — check otterly.ai',
-        trial: 'Check vendor site',
+        price: 'Lite $29/mo, $25/mo billed annually (checked October 7, 2026)',
+        trial: 'Free trial for new users',
         type: 'Monitoring',
         doesWork: false,
         highlight: false,
@@ -72,7 +72,7 @@ const alternatives = [
         ],
         cons: [
             'Monitoring tool — you still need someone to act on the data',
-            'Lighter than Profound for enterprise needs; confirm engine coverage on the vendor site',
+            'Lighter than Profound for enterprise needs; tracks 4 AI search engines (ChatGPT, Google AI Overviews, Perplexity, Microsoft Copilot)',
         ],
     },
     {
@@ -80,19 +80,19 @@ const alternatives = [
         name: 'Peec AI',
         tagline: 'Mid-priced AI search analytics',
         bestFor: 'Marketing teams that want AI search analytics without enterprise pricing',
-        price: '~$89–95/mo entry, per third-party reviews — check peec.ai',
-        trial: 'Check vendor site',
-        type: 'Monitoring',
+        price: 'Starter $95/mo, 15% off billed annually (checked October 7, 2026)',
+        trial: 'Free trial',
+        type: 'Analytics + recommended actions',
         doesWork: false,
         highlight: false,
-        what: 'Peec AI is an AI search analytics platform that tracks how brands show up in answer engines.',
+        what: 'Peec AI is an AI search analytics platform that tracks how brands show up in answer engines and suggests recommended actions and agent actions from your data.',
         pros: [
-            'Reported entry price well below reported Profound enterprise costs',
+            'Published self-serve pricing',
             'Focused on AI search visibility for marketing teams',
             'Suits in-house marketing teams that will act on the data',
         ],
         cons: [
-            'Monitoring tool — content, schema, and citations are still on you',
+            'Your team runs the platform and ships the changes',
             'Costs more than entry-level trackers like Otterly.ai',
         ],
     },
@@ -101,39 +101,39 @@ const alternatives = [
         name: 'Scrunch AI',
         tagline: 'AI visibility platform for brands',
         bestFor: 'Brands that want a dedicated AI visibility platform at a lower price point than Profound Enterprise',
-        price: '~$300/mo, per third-party reviews — check vendor site',
+        price: 'Core $250/mo (checked October 7, 2026)',
         trial: 'Check vendor site',
-        type: 'Monitoring',
+        type: 'Analytics + optimization',
         doesWork: false,
         highlight: false,
-        what: 'Scrunch AI helps brands monitor and understand how they appear in AI-generated answers.',
+        what: 'Scrunch AI helps brands monitor how they appear in AI-generated answers, and its plans add Page Optimizations, Content Generation, and an Agent Experience Platform (AXP).',
         pros: [
             'Dedicated AI visibility focus',
             'Positioned closer to Profound for brands that want depth',
         ],
         cons: [
             'Higher price than Otterly.ai or Peec AI',
-            'Measurement-focused — execution still needs a team or AI employee',
+            'Software your team operates — not a done-for-you service',
         ],
     },
     {
         rank: 5,
-        name: 'Semrush AI Toolkit',
+        name: 'Semrush AI Visibility Toolkit',
         tagline: 'AI visibility inside the Semrush suite',
         bestFor: 'Teams already paying for Semrush that want AI visibility next to their SEO data',
-        price: 'Add-on to Semrush — check semrush.com for current pricing',
+        price: '$99/mo, or bundled in Semrush One plans (checked October 7, 2026)',
         trial: 'Check vendor site',
-        type: 'Monitoring (part of SEO suite)',
+        type: 'AI visibility (part of SEO suite)',
         doesWork: false,
         highlight: false,
-        what: 'Semrush\'s AI Toolkit adds AI search visibility insights to the Semrush SEO platform.',
+        what: 'Semrush\'s AI Visibility Toolkit adds AI search visibility insights to the Semrush SEO platform. Semrush One bundles the SEO and AI Visibility toolkits.',
         pros: [
             'One login for SEO and AI visibility',
             'Sensible first step if Semrush is already your SEO tool',
         ],
         cons: [
-            'Adds cost on top of a Semrush subscription',
-            'Still reporting — someone has to implement the recommendations',
+            'Adds cost unless you buy a Semrush One bundle',
+            'Software your team operates — not a done-for-you service',
         ],
     },
     {
@@ -141,9 +141,9 @@ const alternatives = [
         name: 'Ahrefs Brand Radar',
         tagline: 'Brand mentions in AI answers from Ahrefs',
         bestFor: 'Ahrefs users who want to see how their brand shows up in AI answers alongside backlink data',
-        price: 'Part of Ahrefs — check ahrefs.com for current pricing',
+        price: 'Included with paid Ahrefs plans (Lite and above) (checked October 7, 2026)',
         trial: 'Check vendor site',
-        type: 'Monitoring (part of SEO suite)',
+        type: 'AI visibility (part of SEO suite)',
         doesWork: false,
         highlight: false,
         what: 'Ahrefs Brand Radar tracks brand mentions and visibility in AI answers, alongside Ahrefs\' SEO and backlink data.',
@@ -153,7 +153,7 @@ const alternatives = [
         ],
         cons: [
             'Requires an Ahrefs subscription',
-            'Measurement only — no content publishing or schema fixes',
+            'Software your team operates — not a done-for-you service',
         ],
     },
     {
@@ -172,7 +172,7 @@ const alternatives = [
             'Strategy and execution in one relationship',
         ],
         cons: [
-            'Retainers typically cost far more than software',
+            'Retainers typically cost more than self-serve software',
             'Quality varies — GEO is a young discipline, so vet case studies',
             'Often locked into multi-month contracts',
         ],
@@ -180,25 +180,25 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'GEO work actually done', pick: 'Dooza', reason: 'Ranky researches, writes, optimizes, and publishes; engineers set it up with you. Starts with a refundable pilot.' },
-    { need: 'Cheapest AI visibility tracking', pick: 'Otterly.ai', reason: 'Lowest reported entry price among dedicated trackers (~$29/mo, third-party reported).' },
-    { need: 'Mid-market AI search analytics', pick: 'Peec AI', reason: 'Mid-priced AI search analytics (~$89–95/mo, third-party reported).' },
-    { need: 'AI visibility inside your SEO suite', pick: 'Semrush or Ahrefs', reason: 'Semrush AI Toolkit or Ahrefs Brand Radar next to the SEO data you already use.' },
-    { need: 'Enterprise coverage and SOC 2', pick: 'Stay on Profound', reason: '9 answer engines, Prompt Volumes, Agent Analytics, SSO/SAML, and SOC 2 on Enterprise.' },
+    { need: 'GEO work done for you', pick: 'Dooza', reason: 'Ranky and Dooza engineers research, write, optimize, and publish with your approval. Starts with a refundable pilot.' },
+    { need: 'Cheapest AI visibility tracking', pick: 'Otterly.ai', reason: 'Low entry price among dedicated trackers (Lite $29/mo, checked October 7, 2026).' },
+    { need: 'Mid-market AI search analytics', pick: 'Peec AI', reason: 'Mid-priced AI search analytics (Starter $95/mo, checked October 7, 2026).' },
+    { need: 'AI visibility inside your SEO suite', pick: 'Semrush or Ahrefs', reason: 'Semrush AI Visibility Toolkit or Ahrefs Brand Radar next to the SEO data you already use.' },
+    { need: 'A platform with analytics and agents', pick: 'Stay on Profound', reason: 'Larger teams and agencies that want to run their own platform: Profound Agents, Prompt Volumes, Agent Analytics, and, on Enterprise, 9 answer engines, SSO/SAML, and SOC 2.' },
     { need: 'Fully outsourced GEO', pick: 'A GEO agency', reason: 'Managed service on a retainer — vet case studies carefully.' },
-    { need: 'Tracking + execution', pick: 'Tracker + Dooza', reason: 'Use any tracker to find gaps and Ranky to close them.' },
+    { need: 'Your tracker + hands to do the work', pick: 'Tracker + Dooza', reason: 'Keep the tracker you like and have Ranky and Dooza engineers close the gaps it finds.' },
 ];
 
 const howToChoose = [
     { step: 'Decide if you need data or outcomes', desc: 'If you have writers and SEO staff waiting on insights, buy a tracker. If nobody has time to act on insights, buy execution first.' },
     { step: 'Check which answer engines matter', desc: 'ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews behave differently. Confirm current engine coverage on each vendor\'s site.' },
-    { step: 'Compare real prices, not "from" prices', desc: 'Profound Enterprise is custom-priced. Ask every vendor for prompt limits, engines included, and what counts as overage.' },
+    { step: 'Compare real prices, not "from" prices', desc: 'Profound Enterprise is custom-priced, and credits for agents and content vary by plan. Ask every vendor for prompt limits, engines included, credits, and what counts as overage.' },
     { step: 'Ask who does the work', desc: 'Someone has to publish citable content, add schema, and show up on Reddit and Quora. Make that owner explicit before you buy.' },
     { step: 'Start small, measure, expand', desc: 'Pick a short list of priority topics, ship content for them, and check whether mentions and citations move before scaling up.' },
 ];
 
 const whyDooza = [
-    { icon: Wrench, title: 'Execution, not just insight', desc: 'Every other tool on this list tells you what to fix. Ranky fixes it: content, on-page SEO, schema, internal links, and off-site presence.' },
+    { icon: Wrench, title: 'Done for you, not another platform', desc: 'Profound and several tools on this list now have agents or content features your team operates. With Dooza, Ranky and Dooza engineers do the work for you — content, on-page SEO, schema, internal links, and off-site presence — and you approve what goes live.' },
     { icon: Users, title: 'Humans set it up', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds it with you. Ranky can start working the same day.' },
     { icon: Quote, title: 'Built for how AI cites', desc: 'Specific citable claims, third-party citations, schema, Reddit and Quora presence, and consistent NAP — the inputs answer engines use.' },
     { icon: CreditCard, title: 'A refundable pilot, not a sales cycle', desc: 'Every Dooza product starts with a refundable pilot — 100% refund within 14 days — with no contracts. Pricing is listed on /pricing; no demo required to see it.' },
@@ -230,7 +230,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Updated September 2026
+                                    Updated October 7, 2026
                                 </div>
                             </div>
 
@@ -239,11 +239,11 @@ export default function ProfoundAlternativesContent({ faqData }) {
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                Cheaper AI visibility and GEO tools — and one that does the work.
+                                AI visibility and GEO tools compared — and one that is done for you.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Profound (tryprofound.com) is an enterprise AI visibility platform with custom pricing. The best Profound alternative for most small and mid-sized teams is Dooza: Ranky does the generative engine optimization work, Dooza engineers set it up with you, and it starts with a refundable pilot — 100% refund within 14 days. For cheaper monitoring only, look at Otterly.ai or Peec AI.
+                                Profound (tryprofound.com) is an AI visibility platform with analytics and agents, sold as a self-serve agency plan and custom-priced Enterprise. If you are a small business that wants the work done for you, the best Profound alternative is Dooza: Ranky and Dooza engineers do the generative engine optimization work with your approval, and it starts with a refundable pilot — 100% refund within 14 days. For lower-cost monitoring only, look at Otterly.ai or Peec AI.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -269,7 +269,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                     ))}
                                 </ul>
                                 <p className="text-slate-600 mt-6 leading-relaxed">
-                                    The key split: Profound, Otterly.ai, Peec AI, Scrunch AI, Semrush, and Ahrefs <strong>measure</strong> AI visibility. Dooza and GEO agencies <strong>do the work</strong> that changes it.
+                                    The key split: Profound, Otterly.ai, Peec AI, Scrunch AI, Semrush, and Ahrefs are <strong>platforms your team runs</strong> — some now include agents and content features. Dooza and GEO agencies <strong>do the work for you</strong>.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -284,7 +284,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                 <p className="section-label mb-3">The Problem</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Why People Look for Profound Alternatives</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
-                                    Profound is a strong enterprise platform. These are the reasons smaller teams shop around.
+                                    Profound is a strong platform. These are the reasons smaller teams shop around.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -325,7 +325,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                                 <th className="p-4 md:p-5 border-b font-bold text-slate-600 w-[30%]">Best For</th>
                                                 <th className="p-4 md:p-5 border-b font-bold text-slate-600 w-[24%]">Starting Price</th>
                                                 <th className="p-4 md:p-5 border-b font-bold text-slate-600 w-[16%]">Type</th>
-                                                <th className="p-4 md:p-5 border-b font-bold text-slate-600 w-[14%] text-center">Does the GEO work?</th>
+                                                <th className="p-4 md:p-5 border-b font-bold text-slate-600 w-[14%] text-center">Done for you?</th>
                                             </tr>
                                         </thead>
                                         <tbody className="text-sm text-slate-600">
@@ -350,9 +350,9 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                             ))}
                                             <tr className="bg-slate-50/60">
                                                 <td className="p-4 md:p-5 font-bold text-slate-500">Profound (for reference)</td>
-                                                <td className="p-4 md:p-5 text-slate-500">Large brands and agencies with analytics teams</td>
-                                                <td className="p-4 md:p-5 text-slate-500">7-day free trial; Enterprise custom</td>
-                                                <td className="p-4 md:p-5 text-slate-500">Monitoring</td>
+                                                <td className="p-4 md:p-5 text-slate-500">Brands and agencies that want to run an AI visibility platform with analytics and agents</td>
+                                                <td className="p-4 md:p-5 text-slate-500">7-day free trial; Agency Growth $99/mo; Enterprise custom</td>
+                                                <td className="p-4 md:p-5 text-slate-500">Analytics + agents</td>
                                                 <td className="p-4 md:p-5 text-center"><XCircle size={18} className="text-red-400 mx-auto" aria-label="No" /></td>
                                             </tr>
                                         </tbody>
@@ -360,8 +360,9 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Competitor prices are third-party reported (early-to-mid 2026) and may have changed — check each vendor&apos;s site. Profound pricing from{' '}
-                                <a href="https://www.tryprofound.com/pricing" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">tryprofound.com/pricing</a>, checked September 25, 2026.
+                                Competitor prices are from each vendor&apos;s own pricing page, checked October 7, 2026, and may change — check each vendor&apos;s site. Profound pricing from{' '}
+                                <a href="https://www.tryprofound.com/pricing" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">tryprofound.com/pricing</a>; Profound Agents from{' '}
+                                <a href="https://www.tryprofound.com/features/agents" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">tryprofound.com/features/agents</a>.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -471,7 +472,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                 <p className="section-label mb-3">Why Dooza</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Why Dooza Is the Best Profound Alternative</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
-                                    Profound shows you where you&apos;re invisible in AI answers. Dooza fixes it.
+                                    Profound gives your team a platform to run. Dooza does the work for you.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -593,7 +594,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
 
                     <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <ScrollReveal>
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Get GEO Done, Not Just Measured</h2>
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Get GEO Done for You</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
                                 Book a free 30-minute call and a Dooza engineer will scope your pilot — no contracts. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
                             </p>

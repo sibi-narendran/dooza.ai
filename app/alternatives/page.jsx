@@ -20,7 +20,7 @@ export default function AlternativesPage() {
             slug: null,
             directLink: '/sintra-alternatives',
             tagline: '7 alternatives compared — pricing, features, pros & cons',
-            doozaAdvantage: 'No credits, personal onboarding, refundable pilot'
+            doozaAdvantage: 'Done for you: engineer-led setup, no credits, refundable pilot'
         },
         {
             name: 'Marblism Alternatives',
@@ -34,7 +34,7 @@ export default function AlternativesPage() {
             slug: null,
             directLink: '/profound-alternatives',
             tagline: 'AI visibility & GEO tools compared — pricing, engines, execution',
-            doozaAdvantage: 'GEO done for you by Ranky, not another dashboard'
+            doozaAdvantage: 'GEO done for you by Ranky'
         },
         {
             name: 'Gorgias Alternatives',
@@ -47,19 +47,19 @@ export default function AlternativesPage() {
             name: 'Dooza vs Profound',
             slug: null,
             directLink: '/dooza-vs-profound',
-            tagline: 'Enterprise AI visibility monitoring with custom pricing',
+            tagline: 'AI visibility platform with an AI Marketer; Enterprise on custom pricing',
             doozaAdvantage: 'Ranky publishes, earns citations, and fixes schema daily'
         },
         {
             name: 'Motion App',
             slug: 'better-than-motion',
-            tagline: '$348/year for limited AI features',
+            tagline: 'Pro AI from $19/seat/mo yearly or $29/seat/mo monthly (checked October 7, 2026)',
             doozaAdvantage: 'Full AI employees, starting with a refundable pilot'
         },
         {
             name: 'Surfer SEO vs Ahrefs',
             slug: 'surfer-seo-vs-ahrefs',
-            tagline: 'Expensive SEO tools that require manual work',
+            tagline: 'Two popular SEO tools compared',
             doozaAdvantage: 'AI SEO employee that does the work for you'
         }
     ];

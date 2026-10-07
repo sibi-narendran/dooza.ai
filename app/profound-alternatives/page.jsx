@@ -4,8 +4,8 @@ import ProfoundAlternativesContent from './ProfoundAlternativesContent';
 const PAGE_URL = `${SITE_URL}/profound-alternatives`;
 
 export const metadata = {
-    title: '7 Best Profound Alternatives (2026): Cheaper GEO Tools',
-    description: 'Looking for a Profound AI alternative? 7 cheaper AI visibility and GEO tools compared on pricing, fit, pros, and cons — the #1 pick does the GEO work, not just the tracking.',
+    title: '7 Best Profound Alternatives (2026): GEO Tools Compared',
+    description: 'Looking for a Profound AI alternative? 7 AI visibility and GEO options compared on pricing, fit, pros, and cons — the #1 pick is done for you by Ranky and Dooza engineers.',
     keywords: [
         'profound alternatives', 'profound alternative', 'profound ai alternatives',
         'tryprofound alternatives', 'profound ai competitors', 'cheaper than profound',
@@ -25,20 +25,20 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: '7 Best Profound Alternatives in 2026 (Cheaper AI Visibility & GEO Tools)',
+        title: '7 Best Profound Alternatives in 2026 (AI Visibility & GEO Tools)',
         description: 'Honest comparison of 7 Profound alternatives — Dooza, Otterly.ai, Peec AI, Scrunch AI, Semrush, Ahrefs Brand Radar, and GEO agencies.',
         url: PAGE_URL,
         siteName: 'Dooza',
         type: 'article',
-        modifiedTime: '2026-09-25T00:00:00.000Z',
+        modifiedTime: '2026-10-07T00:00:00.000Z',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Profound AI alternatives — Dooza' }],
     },
     twitter: {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: '7 Best Profound Alternatives [2026] — Cheaper AI Visibility & GEO',
-        description: 'Profound is custom-priced and built for enterprise. 7 alternatives compared — the #1 pick does the GEO work and starts with a refundable pilot.',
+        title: '7 Best Profound Alternatives [2026] — AI Visibility & GEO',
+        description: 'Profound is an AI visibility platform with analytics and agents. 7 alternatives compared — the #1 pick is done for you and starts with a refundable pilot.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -46,19 +46,19 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is the best Profound alternative?',
-        answer: 'For small and mid-sized businesses that need GEO done, not just measured, Dooza is the best Profound alternative: Ranky, Dooza\'s AI SEO & Visibility Employee, researches, writes, optimizes, and publishes GEO-ready content, Dooza engineers set it up with you, and it starts with a refundable pilot (100% refund within 14 days). If you only want cheaper monitoring, Otterly.ai and Peec AI are the most common picks.',
+        answer: 'For small businesses that want GEO done for them rather than another platform to run, Dooza is the best Profound alternative: Ranky, Dooza\'s AI SEO & Visibility Employee, and Dooza engineers research, write, optimize, and publish GEO-ready content with your approval, and it starts with a refundable pilot (100% refund within 14 days). If you only want lower-cost monitoring, Otterly.ai and Peec AI are common picks. Larger teams that want a platform with analytics and agents may be better served by Profound itself.',
     },
     {
         question: 'Why do people look for Profound alternatives?',
-        answer: 'The most common reasons are price and fit. Profound\'s pricing page lists only a 7-day trial and custom-priced Enterprise that requires a demo, and it is built for large brands with analytics teams. Many smaller teams also find that a monitoring dashboard does not change their AI visibility on its own — someone still has to do the work.',
+        answer: 'The most common reasons are fit and who does the work. Profound is a platform: it has analytics and Profound Agents that research, write, and publish content, but your team runs it, reviews each Agent run, and ships the work. Its Enterprise plan is custom-priced and requires a demo. Small businesses without a marketing team often want the work done for them instead.',
     },
     {
         question: 'How much does Profound cost?',
-        answer: 'As of September 2026, Profound lists a free 7-day Trial (50 prompts, 3 answer engines) and Enterprise with custom pricing. Third-party reviews from early-to-mid 2026 reported earlier tiers of about $99/mo and $399/mo, and enterprise deployments of roughly $2,000 to $5,000+ per month.',
+        answer: 'Profound\'s pricing page (checked October 7, 2026) lists a free 7-day Trial (50 prompts, 3 answer engines), a self-serve Agency Growth plan at $99/month with full client workspaces as an add-on for $399/month, and Enterprise with custom pricing and custom AI Marketer credits.',
     },
     {
         question: 'What is the cheapest Profound alternative?',
-        answer: 'Among dedicated AI visibility trackers, third-party reviews report Otterly.ai starting around $29/mo (Lite). Dooza is not a cheapest-tracker play: pricing depends on the product (see dooza.ai/pricing), it starts with a refundable pilot, and it includes the execution work — content, schema, and citations — that trackers leave to you. Check each vendor\'s site for current pricing.',
+        answer: 'Among dedicated AI visibility trackers, Otterly.ai lists its Lite plan at $29/month (checked October 7, 2026). Dooza is not a cheapest-tracker play: pricing depends on the product (see dooza.ai/pricing), it starts with a refundable pilot, and Ranky and Dooza engineers do the execution work — content, schema, and citations — for you. Check each vendor\'s site for current pricing.',
     },
     {
         question: 'Is there a free Profound alternative?',
@@ -66,15 +66,15 @@ const faqData = [
     },
     {
         question: 'What is the difference between an AI visibility tool and a GEO service?',
-        answer: 'An AI visibility tool (Profound, Otterly.ai, Peec AI, Scrunch AI) measures how answer engines mention and cite your brand. A GEO service or AI employee (Dooza, a GEO agency) does the work that changes those answers: publishing citable content, adding schema, and building presence on sources answer engines cite.',
+        answer: 'An AI visibility platform (Profound, Otterly.ai, Peec AI, Scrunch AI) is software your team operates: it measures how answer engines mention and cite your brand, and several (Profound, Peec AI, Scrunch AI) now add recommendations, agents, or content features. A done-for-you service (Dooza, a GEO agency) has someone else do the work that changes those answers: publishing citable content, adding schema, and building presence on sources answer engines cite.',
     },
     {
         question: 'Is Dooza a monitoring tool like Profound?',
-        answer: 'Partly. Ranky tracks your core prompt set across ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews, with share of voice and citation maps, then does the fixes. It does not replicate Profound\'s enterprise scale: no 9-engine, multi-region coverage and no prompt-volume data.',
+        answer: 'Partly. Ranky tracks your core prompt set across ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews, with share of voice and citation maps, and then Ranky and Dooza engineers do the fixes for you, with your approval. It does not replicate Profound\'s platform scale: no 9-engine, multi-region coverage and no prompt-volume data.',
     },
     {
         question: 'Should I use Semrush or Ahrefs instead of Profound?',
-        answer: 'If you already pay for Semrush or Ahrefs, their AI visibility features (Semrush AI Toolkit, Ahrefs Brand Radar) are a sensible first step because they sit next to your existing SEO data. They are still measurement tools, so you need a person or AI employee to act on what they show.',
+        answer: 'If you already pay for Semrush or Ahrefs, their AI visibility features (Semrush AI Visibility Toolkit, Ahrefs Brand Radar) are a sensible first step because they sit next to your existing SEO data. Your team still operates them and decides what to change on your site.',
     },
     {
         question: 'Should I hire a GEO agency instead of buying a tool?',
@@ -93,7 +93,7 @@ const schemas = [
         name: '7 Best Profound Alternatives in 2026',
         description: metadata.description,
         url: PAGE_URL,
-        dateModified: '2026-09-25',
+        dateModified: '2026-10-07',
         publisher: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {
@@ -125,7 +125,7 @@ const schemas = [
             { '@type': 'ListItem', position: 2, name: 'Otterly.ai', url: 'https://otterly.ai' },
             { '@type': 'ListItem', position: 3, name: 'Peec AI', url: 'https://peec.ai' },
             { '@type': 'ListItem', position: 4, name: 'Scrunch AI' },
-            { '@type': 'ListItem', position: 5, name: 'Semrush AI Toolkit', url: 'https://www.semrush.com' },
+            { '@type': 'ListItem', position: 5, name: 'Semrush AI Visibility Toolkit', url: 'https://www.semrush.com' },
             { '@type': 'ListItem', position: 6, name: 'Ahrefs Brand Radar', url: 'https://ahrefs.com' },
             { '@type': 'ListItem', position: 7, name: 'A GEO agency' },
         ],

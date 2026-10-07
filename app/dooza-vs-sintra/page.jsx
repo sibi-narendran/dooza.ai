@@ -14,7 +14,7 @@ export const metadata = {
     alternates: { canonical: `${SITE_URL}/dooza-vs-sintra` },
     openGraph: {
         title: 'Sintra AI Alternative — Dooza vs Sintra Compared [2026]',
-        description: 'A Sintra AI alternative with no credits and no 250-credit cap. A Dooza engineer scopes your refundable pilot on a free 30-minute call — 100% refund within 14 days.',
+        description: 'A done-for-you Sintra AI alternative with no credit meter. A Dooza engineer scopes your refundable pilot on a free 30-minute call — 100% refund within 14 days.',
         url: `${SITE_URL}/dooza-vs-sintra`,
         siteName: 'Dooza',
         type: 'website',
@@ -31,7 +31,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'Is Dooza really better than Sintra AI?',
-        answer: 'It depends on your needs. Dooza has no credits, a free 30-minute call with a Dooza engineer to scope your pilot, and every product starts with a refundable pilot (100% refund within 14 days). Sintra AI offers more helpers (12+) but limits you to 250 credits per month and has no human onboarding support. If you want no credit meters and guided setup, Dooza is the stronger choice.',
+        answer: 'It depends on how you want to work. Sintra AI is a low-cost self-serve app: 12+ helpers that call on each other automatically, 250 credits per month on every plan with paid top-ups, and a call with a Sintra specialist plus two weeks of hands-on help (checked October 7, 2026). If you are happy to run the AI yourself, Sintra costs less. Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you, with no credit meter. Every Dooza product starts with a refundable pilot (100% refund within 14 days).',
     },
     {
         question: 'Does Sintra AI have a credit limit?',
@@ -39,7 +39,7 @@ const faqData = [
     },
     {
         question: 'Can Sintra AI helpers talk to each other?',
-        answer: 'No. Sintra AI helpers do not share context. If you need information from one helper passed to another, you must manually copy and paste it. This slows down multi-step workflows significantly.',
+        answer: 'Yes. Sintra\'s help centre says its AI employees "call on each other automatically" and divide the work between themselves, and every helper can use the same Brain AI knowledge base. Sintra also has a Helper Builder for creating your own custom helpers (checked October 7, 2026).',
     },
     {
         question: 'What AI employees does Dooza offer?',
@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: 'How does Dooza pricing compare to Sintra AI?',
-        answer: 'Sintra AI starts at $48.50/month (monthly) or $15.60/month on an annual commitment — but all plans are capped at 250 credits. Dooza has no credits and no per-seat fees, and every Dooza product starts with a refundable pilot (100% refund within 14 days). Pricing depends on the product; current plans are listed at dooza.ai/pricing.',
+        answer: 'Sintra AI is $48.50/month on a 1-month plan or $15.60/month on a 12-month plan ($187.20 up front), and every plan includes 250 credits a month with paid top-ups (checked October 7, 2026). Sintra is the cheaper option if you are happy to run it yourself. Dooza has no credits and no per-seat fees, and every Dooza product starts with a refundable pilot (100% refund within 14 days). Pricing depends on the product; current plans are listed at dooza.ai/pricing.',
     },
     {
         question: 'What is an AI employee and how does it work?',
@@ -86,6 +86,7 @@ const schemas = [
         name: 'Dooza vs Sintra AI Comparison',
         description: metadata.description,
         url: `${SITE_URL}/dooza-vs-sintra`,
+        dateModified: '2026-10-07',
         publisher: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {

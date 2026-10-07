@@ -37,40 +37,40 @@ import {
 const faqData = [
     {
         question: "What is the best Lindy AI alternative?",
-        answer: "Dooza is the top Lindy AI alternative for businesses seeking predictable pricing. Unlike Lindy's credit-based system that can lead to surprise costs, Dooza has no credit system: pricing depends on the product, and every Dooza product starts with a refundable pilot (100% refund within 14 days). Other alternatives include Gumloop for cheaper automation and Zapier for backend workflows."
+        answer: "It depends on what you want instead. If you want AI built for you, Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you, and every Dooza product starts with a refundable pilot (100% refund within 14 days). If you want to keep building yourself, Gumloop (Pro from $37/month, 14-day free trial) suits agentic workflows, and Zapier (free plan; Professional from $19.99/month; 9,000+ apps) suits app-to-app automation with AI steps. Prices checked October 7, 2026."
     },
     {
-        question: "Why are users switching from Lindy AI?",
-        answer: "The main reasons users switch from Lindy AI include: unpredictable credit consumption (users report credits running out quickly), the credit system being 'brutal' according to reviews, premium actions required for most useful workflows, and costs that can escalate with complex automations."
+        question: "Why do teams look for a Lindy AI alternative?",
+        answer: "Usually because they would rather not build and maintain agents themselves, or would rather not manage a per-seat credit pool. Lindy's billing itself is predictable: its pricing page says 'No surprise bills. If the pool runs low, Lindy pauses and tells you.' Lindy is still the better pick if you want self-serve control, strong meeting and calendar features, or SOC 2 Type II and HIPAA compliance."
     },
     {
         question: "How much does Lindy AI cost compared to alternatives?",
-        answer: "Lindy AI uses a credit-based system starting at $50/month for 5,000 credits, but costs vary based on task complexity ($0.01-$0.10+ per task). Dooza uses no credits; pricing depends on the product, and every Dooza product starts with a refundable pilot (see dooza.ai/pricing). Gumloop offers similar capabilities at lower price points, and Zapier starts at $19/month for basic automation."
+        answer: "Lindy is billed per seat in credits: Plus from $29.99/month for 3,000 credits, Pro $99.99 for 15,000, Max $199.99 for 35,000, and custom Enterprise pricing. A credit is about one cent, and new users get $50 in credits for 7 days. Gumloop Pro starts at $37/month with a 14-day free trial, and Zapier has a free plan (100 tasks/month) with Professional from $19.99/month. All checked October 7, 2026, on each vendor's pricing page. Dooza uses no credits; pricing depends on the product, and every Dooza product starts with a refundable pilot (see dooza.ai/pricing)."
     },
     {
         question: "Is Lindy AI good for small businesses?",
-        answer: "Lindy AI is powerful for no-code automation, but its credit system can be challenging for small businesses with tight budgets. The unpredictable costs make budgeting difficult. Alternatives like Dooza offer more predictable pricing better suited for small business budgets."
+        answer: "Yes, if you are comfortable setting it up yourself. Lindy says setup takes 2 minutes, it has ready-made templates and 40+ skills, and its per-seat credit plans have no surprise bills: agents pause when credits run low. If you would rather have someone build and maintain your AI for you, a done-for-you option like Dooza fits better."
     },
     {
         question: "Can I migrate from Lindy AI to Dooza?",
-        answer: "Yes, you can easily switch from Lindy AI to Dooza. While there's no direct migration tool, Dooza's pre-built AI employees are ready to use immediately. You can run both platforms in parallel during transition, and Dooza's onboarding team will help you replicate your workflows."
+        answer: "Yes. There's no direct migration tool, but a Dooza engineer scopes your pilot on a free 30-minute call and helps you replicate your Lindy workflows. Workforce employees can start working the same day. You can run both platforms in parallel during the transition."
     },
     {
         question: "What does Dooza offer that Lindy AI doesn't?",
-        answer: "Dooza offers: pre-built AI employees for specific roles (email, social, SEO, sales), a refundable pilot with a 100% refund within 14 days, engineer-led setup, no credit system, and dedicated support. Lindy requires building agents from scratch and uses variable credit-based pricing."
+        answer: "Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees (email, social, SEO, sales, phones) or custom agents with you. There's no credit system, and every product starts with a refundable pilot: 100% refund within 14 days. Lindy is self-serve: you set up your own agents from templates and 40+ skills, billed per seat in credits. Lindy has compliance certifications (SOC 2 Type II, HIPAA) that Dooza doesn't."
     }
 ];
 
 const alternatives = [
     {
         name: "Dooza",
-        tagline: "Pre-built AI Employees with Fixed Pricing",
-        description: "Dooza offers ready-to-use AI employees for email, social media, SEO, sales, and customer support. No credit system to track. Every Dooza product starts with a refundable pilot.",
+        tagline: "Done-for-You AI Employees and Custom Agents",
+        description: "Dooza builds AI employees for email, social media, SEO, sales, and phones, plus custom agents. A Dooza engineer scopes your pilot on a free 30-minute call and builds it with you. No credit system to track. Every Dooza product starts with a refundable pilot.",
         price: "14-day",
         priceNote: "refundable pilot",
         pros: [
-            "Fixed pricing - no surprise credit costs",
-            "Pre-built AI employees ready to work day one",
+            "No credit system to track",
+            "Workforce employees can start the same day",
             "Free 30-minute call to scope your pilot, zero coding required",
             "Refundable pilot: 100% refund within 14 days",
             "Encrypted connections and your approval on anything sensitive",
@@ -78,75 +78,50 @@ const alternatives = [
         ],
         cons: [
             "Less DIY customization than Lindy",
+            "Not SOC 2 certified (Lindy is SOC 2 Type II)",
             "Focused on business automation (not personal use)"
         ],
-        bestFor: "Businesses wanting AI automation without credit anxiety or technical setup",
+        bestFor: "Businesses that want AI built and tuned for them, without managing credits",
         featured: true,
         url: "workforce"
     },
     {
         name: "Gumloop",
-        tagline: "Affordable Agentic Workflow Builder",
-        description: "A solid Lindy alternative for creating agentic workflows. Offers a generous free plan and cheaper paid tiers than Lindy.",
-        price: "$0-39/month",
-        priceNote: "Generous free tier",
-        rating: 4.5,
+        tagline: "Agentic Workflow Builder",
+        description: "A Lindy alternative for building agentic workflows yourself. Pro starts at $37/month with a 14-day free trial; there is no free plan (checked October 7, 2026).",
+        price: "$37+/month",
+        priceNote: "14-day free trial",
         pros: [
-            "More affordable than Lindy",
-            "Generous free plan to start",
             "Good for agentic workflows",
-            "Similar no-code approach"
+            "Templates and agents to start from",
+            "Similar no-code approach",
+            "14-day free trial"
         ],
         cons: [
-            "Smaller community than Lindy",
-            "Fewer integrations available",
-            "Less polished user experience"
+            "No free plan",
+            "Billed in credits, with usage billing beyond the included amount",
+            "Self-serve: you build and maintain it"
         ],
-        bestFor: "Budget-conscious users who want Lindy-like functionality",
+        bestFor: "Teams that want to build their own AI workflows and agents",
         featured: false
     },
     {
         name: "Zapier + AI",
         tagline: "Backend Automation Leader",
-        description: "The long-standing leader in no-code automation with 8,000+ app integrations. Excels at moving data between apps and orchestrating workflows.",
-        price: "$19-99/month",
-        priceNote: "Based on task volume",
-        rating: 4.6,
+        description: "The long-standing leader in no-code automation, with 9,000+ apps. It now also offers AI fields, Agents, Chatbots, and Copilot. Free plan with 100 tasks/month; Professional from $19.99/month (checked October 7, 2026).",
+        price: "$0-19.99+/month",
+        priceNote: "Free plan; paid tiers by task volume",
         pros: [
-            "8,000+ app integrations",
-            "Battle-tested reliability",
-            "AI-powered automation steps",
-            "Excellent documentation"
+            "9,000+ app integrations",
+            "Free plan (100 tasks/month)",
+            "AI fields, Agents, and Chatbots",
+            "Email and live chat support on paid plans"
         ],
         cons: [
-            "No conversational AI interface",
-            "More complex to set up",
-            "Pricing scales with usage",
-            "Not designed for AI employees"
+            "Pricing scales with task volume",
+            "Self-serve: you design and maintain the automations"
         ],
-        bestFor: "Users needing app-to-app automation without AI employee features",
-        featured: false
-    },
-    {
-        name: "Open-Source Automation",
-        tagline: "Technical Workflow Framework",
-        description: "A DIY automation framework for technical users. You build automations from scratch and can self-host for free.",
-        price: "$0-50/month",
-        priceNote: "Free self-hosted option",
-        rating: 4.4,
-        pros: [
-            "Free self-hosted option",
-            "Highly customizable",
-            "Open-source transparency",
-            "Active developer community"
-        ],
-        cons: [
-            "Requires technical expertise",
-            "Bring your own API keys",
-            "No pre-built AI agents",
-            "Steeper learning curve"
-        ],
-        bestFor: "Technical users who want full control and are comfortable self-hosting",
+        bestFor: "Teams that want broad app-to-app automation with AI steps, and will build it themselves",
         featured: false
     }
 ];
@@ -213,7 +188,7 @@ export default function LindyAiAlternativeContent() {
                             <span className="text-primary-600">Lindy AI</span> Alternative: Why Businesses Are Switching in 2026
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-                            Love the concept of AI employees but frustrated with credit limits? Discover alternatives with predictable pricing and pre-built solutions.
+                            Like the idea of AI employees but would rather not build them yourself? Compare Lindy AI alternatives on pricing, setup, and support, checked against each vendor's own pages.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -222,7 +197,7 @@ export default function LindyAiAlternativeContent() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
-                                <span>January 28, 2026</span>
+                                <span>Updated October 7, 2026</span>
                             </div>
                         </div>
 
@@ -249,7 +224,7 @@ export default function LindyAiAlternativeContent() {
                                 {[
                                     { id: 'introduction', label: 'Introduction' },
                                     { id: 'what-is-lindy', label: 'What is Lindy AI?' },
-                                    { id: 'why-switch', label: 'Why Users Switch' },
+                                    { id: 'why-switch', label: 'Why Teams Look Elsewhere' },
                                     { id: 'alternatives', label: 'Top Alternatives' },
                                     { id: 'comparison', label: 'Comparison Table' },
                                     { id: 'when-to-choose', label: 'When to Choose Each' },
@@ -294,16 +269,16 @@ export default function LindyAiAlternativeContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-lg leading-relaxed">
-                                    You've tried <strong>Lindy AI</strong> and loved the concept. Building AI employees from a simple prompt? Genius. Watching your "Lindy" handle emails, schedule meetings, and update your CRM automatically? Amazing.
+                                    You've looked at <strong>Lindy AI</strong> and liked the concept. An AI teammate that handles emails, schedules meetings, and takes meeting notes? Useful.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>But then the credits ran out faster than expected.</strong>
+                                    <strong>But Lindy is self-serve: you set it up, size the credits, and maintain it yourself.</strong>
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    If you've found yourself anxiously checking your credit balance, wondering why a simple workflow consumed 50 credits, or calculating whether you can afford to run that automation one more time—you're not alone.
+                                    That suits many teams. Others would rather have someone build it for them, or want a different pricing model.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    In this guide, we'll look at why users are seeking Lindy AI alternatives and compare the best options for businesses that want AI automation without the credit anxiety.
+                                    In this guide, we'll look at why some teams look for a Lindy AI alternative and compare the options, with every competitor price checked on the vendor's own pricing page on October 7, 2026.
                                 </p>
                             </div>
                         </section>
@@ -312,7 +287,7 @@ export default function LindyAiAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">What is Lindy AI?</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    <a href="https://www.lindy.ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Lindy AI</a> is a no-code platform for creating "AI employees" (called Lindies) that automate business processes. Unlike simple chatbots, Lindy agents can navigate browsers, use thousands of apps, and complete multi-step workflows autonomously.
+                                    <a href="https://www.lindy.ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Lindy AI</a> describes itself as "an AI teammate that gets work done for you and your team." It is self-serve: Lindy says setup takes 2 minutes, and you start from ready-made templates and 40+ skills, or create your own. Lindy connects to thousands of apps, and computer use (browsing for you) is available on the Pro and Max levels.
                                 </p>
                                 <p>
                                     According to <a href="https://www.unite.ai/lindy-ai-review/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Unite.AI's review</a>, Lindy represents "a new wave of autonomous AI agents that can act on your behalf rather than merely respond to prompts."
@@ -324,11 +299,11 @@ export default function LindyAiAlternativeContent() {
                                     Lindy AI Quick Facts
                                 </h3>
                                 <ul className="space-y-2 text-slate-600">
-                                    <li><strong>Type:</strong> No-code AI agent builder</li>
-                                    <li><strong>Best For:</strong> Sales, customer support, content workflows</li>
-                                    <li><strong>Pricing:</strong> Credit-based ($0.01-$0.10+ per task)</li>
-                                    <li><strong>Rating:</strong> 4.8/5 on <a href="https://www.g2.com/products/lindy-lindy/reviews" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">G2</a></li>
-                                    <li><strong>Certifications:</strong> SOC 2 Type II, GDPR, HIPAA compliant</li>
+                                    <li><strong>Type:</strong> Self-serve AI teammate</li>
+                                    <li><strong>Best For:</strong> Email, meetings, scheduling, and everyday work tasks</li>
+                                    <li><strong>Pricing:</strong> Per seat in credits; Plus from $29.99/month for 3,000 credits, about one cent per credit (checked October 7, 2026, on <a href="https://www.lindy.ai/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">lindy.ai/pricing</a>)</li>
+                                    <li><strong>Trial:</strong> $50 in credits, valid for 7 days</li>
+                                    <li><strong>Certifications:</strong> SOC 2 Type II, GDPR, HIPAA, and PIPEDA compliant</li>
                                 </ul>
                             </div>
                             <div className="w-full mb-8">
@@ -340,48 +315,42 @@ export default function LindyAiAlternativeContent() {
                         </section>
 
                         <section id="why-switch" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Users Are Seeking Lindy AI Alternatives</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Some Teams Look for a Lindy AI Alternative</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Lindy AI is genuinely impressive technology. But based on user reviews from <a href="https://www.g2.com/products/lindy-lindy/reviews" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">G2</a>, <a href="https://annikahelendi.substack.com/p/my-honest-lindy-ai-review-what-works" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Substack</a>, and Reddit, several pain points keep appearing:
+                                    Lindy AI is a strong product. Teams that look elsewhere usually want one of these things instead:
                                 </p>
                             </div>
                             <div className="space-y-6">
                                 {[
                                     {
                                         icon: CreditCard,
-                                        title: "The Credit System is 'Brutal'",
-                                        desc: "Users report that credits disappear quickly, especially for complex workflows. One reviewer noted: 'Almost every useful workflow needs premium actions, making the free plan essentially useless.'",
-                                        source: "Substack Review"
-                                    },
-                                    {
-                                        icon: DollarSign,
-                                        title: "Unpredictable Costs",
-                                        desc: "Tasks cost anywhere from $0.01 to $0.10+ depending on complexity. Reddit users note this can lead to 'surprise costs for complex loops' that are hard to budget for.",
-                                        source: "Reddit Discussion"
-                                    },
-                                    {
-                                        icon: Settings,
-                                        title: "Lack of Vertical Expertise",
-                                        desc: "Lindy aims to do everything from medical scribing to recruiting. But generalist tools often lack the deep vertical expertise needed for specialized tasks.",
-                                        source: "Gumloop Analysis"
+                                        title: "You'd Rather Not Manage a Credit Pool",
+                                        desc: "Lindy bills per seat in credits worth about one cent each. Everyday asks use 2-250 credits, deep work 250-1,000, and big builds 1,000-2,500. There are no overage bills: when the pool runs low, Lindy pauses and tells you. But someone still has to size the pool and top it up ($10 per 1,000 credits).",
+                                        source: "Lindy pricing page and docs"
                                     },
                                     {
                                         icon: Workflow,
-                                        title: "Build-It-Yourself Approach",
-                                        desc: "While Lindy makes building agents easy, you still need to build everything from scratch. For busy business owners, pre-built solutions may be more practical.",
-                                        source: "User Feedback"
+                                        title: "You'd Rather Not Build It Yourself",
+                                        desc: "Lindy makes building easy, with ready-made templates and 40+ skills. But the setup, testing, and upkeep are still yours. Busy owners may prefer to have it built and tuned for them.",
+                                        source: "lindy.ai/pricing"
+                                    },
+                                    {
+                                        icon: Settings,
+                                        title: "You Want a Specialist for One Job",
+                                        desc: "Lindy is a general AI teammate. If you want one employee built for one job, such as email, social media, SEO, sales, or phones, a specialist setup may fit better.",
+                                        source: "Our take"
                                     }
                                 ].map((item, idx) => (
-                                    <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl">
+                                    <div key={idx} className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                         <div className="flex items-start gap-4">
-                                            <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center text-red-600 shrink-0">
+                                            <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 shrink-0">
                                                 <item.icon size={20} />
                                             </div>
                                             <div>
                                                 <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
                                                 <p className="text-slate-600 mb-2">{item.desc}</p>
-                                                <span className="text-xs text-red-600">Source: {item.source}</span>
+                                                <span className="text-xs text-slate-500">Source: {item.source}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -391,11 +360,11 @@ export default function LindyAiAlternativeContent() {
                                 <div className="flex items-start gap-3">
                                     <AlertTriangle className="w-6 h-6 text-amber-600 shrink-0" />
                                     <div>
-                                        <h4 className="font-bold text-amber-800 mb-2">What Users Actually Say</h4>
+                                        <h4 className="font-bold text-amber-800 mb-2">What Lindy Says About Billing</h4>
                                         <blockquote className="text-amber-700 italic border-l-4 border-amber-300 pl-4">
-                                            "The credit system is brutal. The free plan gives you 400 credits monthly, but you can't use any premium actions. Based on my testing, almost every useful workflow needs premium actions."
+                                            "No surprise bills. If the pool runs low, Lindy pauses and tells you."
                                         </blockquote>
-                                        <p className="text-sm text-amber-600 mt-2">- <a href="https://annikahelendi.substack.com/p/my-honest-lindy-ai-review-what-works" target="_blank" rel="noopener noreferrer" className="underline">Honest Lindy Review, Substack</a></p>
+                                        <p className="text-sm text-amber-600 mt-2">- <a href="https://www.lindy.ai/pricing" target="_blank" rel="noopener noreferrer" className="underline">Lindy pricing page</a>, checked October 7, 2026</p>
                                     </div>
                                 </div>
                             </div>
@@ -405,7 +374,7 @@ export default function LindyAiAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Top Lindy AI Alternatives in 2026</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Based on research from <a href="https://www.gumloop.com/blog/lindy-ai-alternatives" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Gumloop</a>, <a href="https://www.g2.com/products/lindy-lindy/competitors/alternatives" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">G2</a>, and <a href="https://www.nocode.mba/articles/lindy-ai-review" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">NoCode MBA</a>, here are the best alternatives:
+                                    Based on research from <a href="https://www.gumloop.com/blog/lindy-ai-alternatives" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Gumloop</a>, <a href="https://www.g2.com/products/lindy-lindy/competitors/alternatives" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">G2</a>, and <a href="https://www.nocode.mba/articles/lindy-ai-review" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">NoCode MBA</a>, here are the best alternatives. Competitor prices were checked on each vendor's own pricing page on October 7, 2026:
                                 </p>
                             </div>
                             <div className="space-y-8">
@@ -505,42 +474,42 @@ export default function LindyAiAlternativeContent() {
                                     <tbody className="text-slate-600">
                                         <tr>
                                             <td className="p-4 border-b font-medium">Pricing Model</td>
-                                            <td className="p-4 border-b text-amber-600">Credit-based</td>
+                                            <td className="p-4 border-b text-amber-600">Per-seat credits</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">No credits</td>
-                                            <td className="p-4 border-b">Fixed monthly</td>
+                                            <td className="p-4 border-b">Credit-based</td>
                                             <td className="p-4 border-b">Task-based</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Starting Price</td>
-                                            <td className="p-4 border-b">$50/month</td>
+                                            <td className="p-4 border-b">$29.99/month per seat (3,000 credits)</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold"><Link href="/pricing" className="hover:underline">Refundable pilot (see /pricing)</Link></td>
-                                            <td className="p-4 border-b">$0 (free tier)</td>
-                                            <td className="p-4 border-b">$19/month</td>
+                                            <td className="p-4 border-b">$37/month (14-day free trial)</td>
+                                            <td className="p-4 border-b">$0 free plan; Professional $19.99/month</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Pre-built AI Employees</td>
-                                            <td className="p-4 border-b text-red-500">No - build yourself</td>
+                                            <td className="p-4 border-b text-amber-600">Templates and 40+ skills you configure</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - six AI employees</td>
-                                            <td className="p-4 border-b text-red-500">No</td>
-                                            <td className="p-4 border-b text-red-500">No</td>
+                                            <td className="p-4 border-b text-amber-600">Templates and agents you configure</td>
+                                            <td className="p-4 border-b text-amber-600">Agents you train yourself</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Setup Time</td>
-                                            <td className="p-4 border-b">Minutes (build agent)</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">5 min (pre-built)</td>
+                                            <td className="p-4 border-b">Minutes (Lindy says 2)</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Same day, after a free 30-min scoping call</td>
                                             <td className="p-4 border-b">Minutes</td>
-                                            <td className="p-4 border-b">30+ min</td>
+                                            <td className="p-4 border-b">Varies</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Predictable Costs</td>
-                                            <td className="p-4 border-b text-red-500">No - variable</td>
+                                            <td className="p-4 border-b text-green-600">Yes - fixed per seat; pauses when credits run out</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - no credits</td>
-                                            <td className="p-4 border-b text-green-600">Yes</td>
+                                            <td className="p-4 border-b text-amber-600">Included credits, then usage billing</td>
                                             <td className="p-4 border-b text-amber-600">Somewhat</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Onboarding Support</td>
-                                            <td className="p-4 border-b">Self-serve</td>
+                                            <td className="p-4 border-b">Self-serve, email support, group onboarding sessions</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Engineer-led pilot</td>
                                             <td className="p-4 border-b">Self-serve</td>
                                             <td className="p-4 border-b">Tiered support</td>
@@ -548,6 +517,7 @@ export default function LindyAiAlternativeContent() {
                                     </tbody>
                                 </table>
                             </div>
+                            <p className="text-sm text-slate-500 mt-3">Lindy, Gumloop, and Zapier prices and plans checked October 7, 2026, on each vendor's own pricing page.</p>
                         </section>
 
                         <section id="when-to-choose" className="scroll-mt-28">
@@ -556,35 +526,35 @@ export default function LindyAiAlternativeContent() {
                                 <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-slate-900 mb-4">Stay with Lindy AI if you...</h3>
                                     <ul className="space-y-2 text-slate-600">
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Love building custom agents from scratch</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Have flexible budgets for variable costs</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Need maximum customization</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Run simple, low-credit workflows</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Want to build and tweak your own agents</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Want published per-seat pricing (from $29.99/month)</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Need SOC 2 Type II, HIPAA, or GDPR compliance</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Rely on meeting notes and calendar scheduling</li>
                                     </ul>
                                 </div>
                                 <div className="bg-primary-50 border-2 border-primary-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-primary-800 mb-4">Choose Dooza if you...</h3>
                                     <ul className="space-y-2 text-slate-700">
-                                        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want AI employees ready to work immediately</li>
-                                        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want predictable costs with no credit system</li>
-                                        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Don't want to build agents from scratch</li>
+                                        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want AI employees working the same day</li>
+                                        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Don't want a credit pool to manage</li>
+                                        <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want a Dooza engineer to build and tune it with you</li>
                                         <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Value onboarding support and guidance</li>
                                     </ul>
                                 </div>
                                 <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-slate-900 mb-4">Choose Gumloop if you...</h3>
                                     <ul className="space-y-2 text-slate-600">
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Need a cheaper Lindy-like experience</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Want to test with a generous free tier</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Are comfortable with a smaller ecosystem</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Want a no-code builder for agentic workflows</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Want a 14-day free trial before paying</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Are comfortable building it yourself</li>
                                     </ul>
                                 </div>
                                 <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-slate-900 mb-4">Choose Zapier if you...</h3>
                                     <ul className="space-y-2 text-slate-600">
                                         <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Need app-to-app automation primarily</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Require 8,000+ integrations</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Don't need conversational AI features</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Need 9,000+ app integrations</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Want a free plan to start (100 tasks/month)</li>
                                     </ul>
                                 </div>
                             </div>
@@ -594,7 +564,7 @@ export default function LindyAiAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">How to Switch from Lindy AI to Dooza</h2>
                             <div className="space-y-4">
                                 {[
-                                    { step: "1", title: "Start Your Dooza Pilot", desc: "Create your account in under 2 minutes. Every Dooza product starts with a refundable pilot: 100% refund within 14 days." },
+                                    { step: "1", title: "Start Your Dooza Pilot", desc: "Book a free 30-minute call so a Dooza engineer can scope your pilot. Every Dooza product starts with a refundable pilot: 100% refund within 14 days." },
                                     { step: "2", title: "Choose Your AI Employees", desc: "Select from pre-built roles: email assistant, social media manager, SEO specialist, sales rep, and more." },
                                     { step: "3", title: "Connect Your Tools", desc: "Link your email, calendar, CRM, and social accounts with one-click integrations." },
                                     { step: "4", title: "Get Onboarding Help", desc: "A Dooza engineer will help you replicate your Lindy workflows during your pilot." },
@@ -618,10 +588,10 @@ export default function LindyAiAlternativeContent() {
                                     Lindy AI is genuinely innovative technology. Its ability to create AI agents from simple prompts is impressive, and for users who love building and tinkering, it's a powerful tool.
                                 </p>
                                 <p>
-                                    But if you're a business owner who wants AI automation without the credit anxiety, unpredictable costs, or need to build everything yourself—there are better options.
+                                    But if you're a business owner who would rather not build agents or manage a credit pool yourself, a done-for-you option may fit better. And if you need SOC 2 Type II or HIPAA, or you want to start self-serve tonight, Lindy remains the better pick.
                                 </p>
                                 <p>
-                                    <strong>Dooza</strong> gives you pre-built AI employees ready to work on day one, with no credits to track and a refundable pilot to start.
+                                    <strong>Dooza</strong> builds it with you: a Dooza engineer scopes your pilot on a free 30-minute call, then sets up and tunes your AI employees or custom agents, with no credits to track and a refundable pilot to start.
                                 </p>
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">

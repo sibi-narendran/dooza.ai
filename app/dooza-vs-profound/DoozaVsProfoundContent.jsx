@@ -16,14 +16,14 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const summaryBullets = [
-    'Profound is an AI visibility analytics platform: it tracks how ChatGPT, Perplexity, Gemini, Claude, and other answer engines mention and cite your brand.',
-    'Dooza is a tracking-and-execution alternative: it measures your AI visibility on the prompts that matter, and Ranky, Dooza\'s AI SEO & visibility employee, does the generative engine optimization (GEO) work that changes those answers.',
-    'Profound wins on engine coverage (9 answer engines on Enterprise), Prompt Volumes data, and enterprise security (SSO/SAML, SOC 2).',
-    'Dooza wins on doing the work — content, schema, citations, Reddit and Quora presence — with engineers who set it up with you and a refundable pilot (100% refund within 14 days).',
+    'Profound is an AI visibility platform with analytics and agents: it tracks how ChatGPT, Perplexity, Gemini, Claude, and other answer engines mention and cite your brand, and Profound Agents research, write, and publish content, with an approval step before anything goes live.',
+    'Dooza is a done-for-you alternative: it measures your AI visibility on the prompts that matter, and Ranky, Dooza\'s AI SEO & visibility employee, and Dooza engineers do the generative engine optimization (GEO) work for you, with your approval.',
+    'Profound wins on engine coverage (9 answer engines on Enterprise), Prompt Volumes data, AI crawler analytics, enterprise security (SSO/SAML, SOC 2), and as a platform for teams that want to run the work themselves.',
+    'Dooza wins for small businesses that want the work done for them — content, schema, citations, Reddit and Quora presence — by Ranky and Dooza engineers, starting with a refundable pilot (100% refund within 14 days).',
 ];
 
 const doozaAdvantages = [
-    { icon: Wrench, title: 'It does the work, not just the report', desc: 'A share-of-voice chart does not publish a page, add schema, or earn a citation. Ranky researches topics, writes GEO-ready content, fixes on-page SEO, and publishes it to your site.' },
+    { icon: Wrench, title: 'Done for you, not another platform to run', desc: 'Profound gives your team a platform with agents to run and review. With Dooza, Ranky and Dooza engineers research topics, write GEO-ready content, fix on-page SEO, and publish it to your site — you approve what goes live.' },
     { icon: Target, title: 'A refundable pilot, not a sales cycle', desc: 'Every Dooza product starts with a refundable pilot — 100% refund within 14 days — and pricing is listed on /pricing. Profound\'s Enterprise plan is custom-priced and requires a demo.' },
     { icon: Users, title: 'Engineers set it up with you', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call, builds your prompt set and baseline, and sets up Ranky with you.' },
     { icon: Quote, title: 'Built around how answer engines cite', desc: 'Ranky writes specific, citable claims with third-party sources, adds schema markup, keeps your name, address, and phone consistent, and shows up on Reddit and Quora threads.' },
@@ -31,21 +31,21 @@ const doozaAdvantages = [
 
 // winner: 'dooza' | 'profound' | 'tie'
 const comparisonRows = [
-    { feature: 'What it is', dooza: 'AI visibility platform: prompt tracking and citation maps, plus Ranky, an AI agent that does the SEO + GEO work', competitor: 'AI visibility / answer engine optimization (AEO) analytics platform', winner: 'tie' },
-    { feature: 'Core job', dooza: 'Tracking + execution: measure, then research, write, optimize, publish, engage', competitor: 'Monitoring — share of voice, citations, prompt tracking', winner: 'tie' },
+    { feature: 'What it is', dooza: 'Done-for-you AI visibility: prompt tracking and citation maps, plus Ranky and Dooza engineers who do the SEO + GEO work', competitor: 'AI visibility / answer engine optimization (AEO) platform with analytics and agents', winner: 'tie' },
+    { feature: 'Who does the work', dooza: 'Done for you: Ranky and Dooza engineers measure, research, write, optimize, and publish; you approve', competitor: 'Your team runs the platform: analytics plus Profound Agents that research, write, and publish, with an approval step', winner: 'tie' },
     { feature: 'Answer engines tracked', dooza: 'Prompt-level tracking for your core prompt set across ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews, with share of voice and citation maps', competitor: 'Up to 9 on Enterprise: ChatGPT, Perplexity, Google AI Mode, Gemini, Copilot, DeepSeek, Claude, AI Overviews, Exa', winner: 'profound' },
     { feature: 'Prompt volume data', dooza: 'Not offered — uses real search data for keyword and topic research', competitor: 'Prompt Volumes', winner: 'profound' },
     { feature: 'AI crawler analytics', dooza: 'Crawler access check at setup (robots.txt, CDN rules, llms.txt); no ongoing bot analytics', competitor: 'Agent Analytics (AI bot visits to your site)', winner: 'profound' },
-    { feature: 'Content creation & publishing', dooza: 'Daily or 3x/week posts with featured images; publishes to Shopify, WordPress, Wix, or custom sites', competitor: 'AI Marketer credits (limited on Trial, unlimited on Enterprise)', winner: 'dooza' },
-    { feature: 'On-page SEO & schema', dooza: 'Ranky handles titles, meta, schema, and internal links', competitor: 'Surfaces Opportunities — implementation typically sits with your team', winner: 'dooza' },
-    { feature: 'Off-site presence', dooza: 'Drafts brand-voice comments on Reddit, LinkedIn, YouTube; builds Reddit and Quora presence', competitor: 'Shows which sources answer engines cite', winner: 'dooza' },
-    { feature: 'Human setup', dooza: 'A Dooza engineer scopes your pilot and sets it up with you', competitor: 'Self-serve 7-day trial; Enterprise requires a demo', winner: 'dooza' },
-    { feature: 'Starting price', dooza: 'Refundable pilot (see /pricing)', competitor: 'Custom Enterprise pricing (demo required)', winner: 'dooza' },
+    { feature: 'Content creation & publishing', dooza: 'Daily or 3x/week posts with featured images; publishes to Shopify, WordPress, Wix, or custom sites', competitor: 'AI Marketer and Profound Agents research, write, and publish; credits limited on Trial, custom on Enterprise', winner: 'tie' },
+    { feature: 'On-page SEO & schema', dooza: 'Ranky handles titles, meta, schema, and internal links', competitor: 'Agents create new content and optimize what is already published; your team reviews and ships', winner: 'tie' },
+    { feature: 'Off-site presence', dooza: 'Drafts brand-voice comments on Reddit, LinkedIn, YouTube; builds Reddit and Quora presence', competitor: 'Shows which sources answer engines cite; AI Marketer suggests publisher outreach', winner: 'tie' },
+    { feature: 'Human setup', dooza: 'A Dooza engineer scopes your pilot and sets it up with you', competitor: 'Self-serve 7-day trial and Agency Growth plan; Enterprise requires a demo', winner: 'dooza' },
+    { feature: 'Starting price', dooza: 'Refundable pilot (see /pricing)', competitor: 'Agency Growth $99/mo (self-serve, for agencies); Enterprise custom, demo required (checked October 7, 2026)', winner: 'tie' },
     { feature: 'Try before you commit', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: '7-day free trial (50 prompts, 3 engines)', winner: 'tie' },
     { feature: 'Enterprise security', dooza: 'Not SOC 2 certified; encrypted connections and your approval on anything sensitive', competitor: 'SSO/SAML + SOC 2 on Enterprise', winner: 'profound' },
     { feature: 'API & data exports', dooza: '1,000+ app integrations; Close CRM, Notion, Drive context', competitor: 'API and exports on Enterprise', winner: 'profound' },
-    { feature: 'Integrations', dooza: 'Shopify, WordPress, Wix, custom sites, 1,000+ app integrations', competitor: 'Akamai, AWS, Cloudflare, Fastly, Google Analytics, GCP, Netlify, Vercel, WordPress', winner: 'tie' },
-    { feature: 'Best for', dooza: 'SMBs, founders, local businesses, lean marketing teams, agencies that need outcomes', competitor: 'Large brands and agencies with analytics teams', winner: 'tie' },
+    { feature: 'Integrations', dooza: 'Shopify, WordPress, Wix, custom sites, 1,000+ app integrations', competitor: 'Akamai, AWS, Cloudflare, Fastly, Google Analytics, GCP, Netlify, Vercel, WordPress, plus CMS and productivity tools', winner: 'tie' },
+    { feature: 'Best for', dooza: 'Small businesses, founders, local businesses, and lean teams that want the work done for them', competitor: 'Brands and agencies that want to run their own AI visibility platform, from a self-serve agency plan to Enterprise', winner: 'tie' },
 ];
 
 const monitoringVsExecution = [
@@ -54,7 +54,7 @@ const monitoringVsExecution = [
     { icon: Link2, feature: 'Citations', profound: 'Lists the sources answer engines cite for your category.', ranky: 'Builds presence where citations come from: Reddit and Quora threads, consistent NAP listings, schema markup.' },
     { icon: Search, feature: 'Prompt Volumes', profound: 'Estimates which prompts people ask answer engines.', ranky: 'Turns priority topics into a publishing plan — daily or 3x/week, on your cadence.' },
     { icon: Bot, feature: 'Agent Analytics', profound: 'Reports which AI crawlers visit your pages.', ranky: 'Makes the pages they crawl easier to extract: titles, meta, schema, and internal links.' },
-    { icon: PenTool, feature: 'AI Marketer', profound: 'Profound\'s content assistant, credit-limited on the Trial.', ranky: 'Trained on your brand voice in plain English, publishes to your CMS, and sends a nightly email recap.' },
+    { icon: PenTool, feature: 'AI Marketer', profound: 'Profound\'s marketing agent: turns recommendations you accept into projects for sub-Agents your team reviews and ships.', ranky: 'Ranky and Dooza engineers do it for you: trained on your brand voice in plain English, publishes to your CMS with your approval, and sends a nightly email recap.' },
 ];
 
 const profoundTrial = [
@@ -67,29 +67,29 @@ const profoundTrial = [
 
 const profoundEnterprise = [
     { text: 'Custom prompts across 9 answer engines', neg: false },
-    { text: 'Unlimited AI Marketer credits', neg: false },
+    { text: 'AI Marketer credits for your whole team (custom)', neg: false },
     { text: 'API, exports, SSO/SAML, SOC 2', neg: false },
     { text: 'Slack support', neg: false },
     { text: 'Custom pricing — demo required', neg: true },
 ];
 
 const pickProfound = [
-    'You are a large brand or agency with an analytics team that will act on dashboards',
+    'You are a brand or agency with a team that wants to run its own AI visibility platform',
     'You need coverage across 9 answer engines and prompt-volume data',
     'Procurement requires SSO/SAML, SOC 2, API access, and exports',
-    'You already have writers and SEO staff to implement what the data shows',
+    'You want Profound Agents to research, write, and publish, and have people to review and ship that work',
 ];
 
 const pickDooza = [
-    'You are a small or mid-sized business, founder, or lean marketing team',
+    'You are a small business, founder, or lean team without someone to run another platform',
     'Nobody on your team has time to write, optimize, and publish every week',
     'You want a refundable pilot instead of a sales-led quote',
-    'You want an engineer to set it up with you instead of learning another tool',
+    'You want the work done for you by Ranky and Dooza engineers instead of learning another tool',
 ];
 
 const pickBoth = [
     'Profound tells you which prompts and answer engines you are missing from',
-    'Ranky publishes the content, fixes the schema, and builds the citations to close those gaps',
+    'Ranky and Dooza engineers publish the content, fix the schema, and build the citations to close those gaps for you',
     'Profound then shows whether share of voice moved',
 ];
 
@@ -119,7 +119,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Comparison — Updated September 2026
+                                    Comparison — Updated October 7, 2026
                                 </div>
                             </div>
 
@@ -128,11 +128,11 @@ export default function DoozaVsProfoundContent({ faqData }) {
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                Profound shows you where you&apos;re invisible in AI answers. Dooza fixes it.
+                                Profound gives your team a platform to run. Dooza does the work for you.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Profound (tryprofound.com) is an AI visibility platform that measures how answer engines like ChatGPT and Perplexity mention your brand. Dooza is the Profound alternative for teams that need generative engine optimization done: Ranky does the GEO work, Dooza engineers set it up with you, and it starts with a refundable pilot — 100% refund within 14 days.
+                                Profound (tryprofound.com) is an AI visibility platform with analytics and agents that track how answer engines like ChatGPT and Perplexity mention your brand and research, write, and publish content. Dooza is the Profound alternative for small businesses that want generative engine optimization done for them: Ranky and Dooza engineers do the GEO work with your approval, and it starts with a refundable pilot — 100% refund within 14 days.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -155,10 +155,10 @@ export default function DoozaVsProfoundContent({ faqData }) {
                                     <h2 className="text-2xl font-bold">Quick Verdict</h2>
                                 </div>
                                 <p className="text-lg text-slate-600 leading-relaxed mb-4">
-                                    <strong>Profound is a measurement tool. Dooza is an execution team.</strong> Profound tells you your share of voice, which sources answer engines cite, and which prompts you lose. It does not write your pages, fix your schema, or show up in the Reddit threads ChatGPT quotes. Someone still has to do that work.
+                                    <strong>Profound is a platform your team runs. Dooza is done for you.</strong> Profound tells you your share of voice, which sources answer engines cite, and which prompts you lose, and its Agents can research, write, and publish content, with an approval step before anything goes live. With Dooza, Ranky and Dooza engineers do that work for you, and you approve it.
                                 </p>
                                 <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                                    Pick <strong>Profound</strong> if you are a large brand with an analytics team and need 9-engine coverage, prompt volumes, and SOC 2. Pick <strong>Dooza</strong> if you are a small or mid-sized business that needs AI visibility to actually improve — with a refundable pilot and engineers who set it up.
+                                    Pick <strong>Profound</strong> if you have a team to run a platform, or need 9-engine coverage, prompt volumes, and SOC 2. Pick <strong>Dooza</strong> if you are a small business that wants the work done for you — with a refundable pilot and engineers who set it up.
                                 </p>
                                 <ul className="space-y-3">
                                     {summaryBullets.map((item, i) => (
@@ -207,7 +207,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
                                 <p className="section-label mb-3">Head-to-Head</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl">Dooza vs Profound: Full Feature Comparison</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
-                                    Honest scoring. Profound wins five rows. That is the point — they solve different problems.
+                                    Honest scoring. Profound wins five rows, Dooza one. The real difference is who does the work.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -247,7 +247,8 @@ export default function DoozaVsProfoundContent({ faqData }) {
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
                                 Check mark = stronger on that row. Unmarked rows are a tie or a different approach. Profound features from{' '}
-                                <a href="https://www.tryprofound.com/pricing" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">tryprofound.com/pricing</a>, checked September 25, 2026.
+                                <a href="https://www.tryprofound.com/pricing" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">tryprofound.com/pricing</a> and{' '}
+                                <a href="https://www.tryprofound.com/features/agents" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">tryprofound.com/features/agents</a>, checked October 7, 2026.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -264,7 +265,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
                                 <p className="section-label mb-3">Pricing Breakdown</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white">Profound Pricing vs Dooza Pricing</h2>
                                 <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
-                                    Profound&apos;s pricing page lists a 7-day free trial and custom Enterprise pricing. Dooza lists its pricing on /pricing, and every product starts with a refundable pilot.
+                                    Profound&apos;s pricing page lists a 7-day free trial, a self-serve Agency Growth plan, and custom Enterprise pricing. Dooza lists its pricing on /pricing, and every product starts with a refundable pilot.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -330,14 +331,12 @@ export default function DoozaVsProfoundContent({ faqData }) {
 
                         <ScrollReveal>
                             <div className="mt-10 bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
-                                <h3 className="text-white font-bold text-lg mb-3">What Profound has cost, according to third-party reviews</h3>
+                                <h3 className="text-white font-bold text-lg mb-3">Profound&apos;s self-serve agency plan</h3>
                                 <p className="text-slate-300 text-sm leading-relaxed mb-3">
-                                    Reviews published in early-to-mid 2026 reported earlier self-serve tiers of about <strong className="text-white">$99/mo (Starter — ChatGPT only, 50 prompts)</strong> and <strong className="text-white">$399/mo (Growth — 3 engines, 100 prompts)</strong>, and enterprise deployments of roughly <strong className="text-white">$2,000–$5,000+ per month</strong>. These are not Profound&apos;s official current prices; its pricing page now shows only the Trial and custom Enterprise.
+                                    Profound&apos;s pricing page also has an agency tab: <strong className="text-white">Agency Growth at $99/month</strong>, for agencies pitching prospects and managing clients, with full client workspaces as an add-on for <strong className="text-white">$399/month</strong>. Enterprise is custom-priced, with custom AI Marketer credits (checked October 7, 2026).
                                 </p>
                                 <p className="text-slate-400 text-xs">
-                                    Sources:{' '}
-                                    <a href="https://www.rankability.com/blog/profound-ai-review/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-300">Rankability Profound review</a>,{' '}
-                                    <a href="https://arobis.ai/blog/profound-pricing" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-300">Arobis Profound pricing</a>,{' '}
+                                    Source:{' '}
                                     <a href="https://www.tryprofound.com/pricing" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-300">tryprofound.com/pricing</a>. Full breakdown in our{' '}
                                     <Link href="/blog/profound-ai-pricing" className="underline hover:text-primary-300">Profound AI pricing guide</Link>.
                                 </p>
@@ -346,15 +345,15 @@ export default function DoozaVsProfoundContent({ faqData }) {
                     </div>
                 </section>
 
-                {/* ── Monitoring vs Execution ── */}
+                {/* ── Platform vs Done for You ── */}
                 <section className="py-20 lg:py-28 bg-slate-50">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center mb-12">
-                                <p className="section-label mb-3">Monitoring vs Execution</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl">What Profound Tells You — and What Ranky Does About It</h2>
+                                <p className="section-label mb-3">Platform vs Done for You</p>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl">What Profound Gives Your Team — and What Dooza Does for You</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-3xl mx-auto">
-                                    Every Profound insight ends with a to-do list. Here is each Profound feature, the gap it reveals, and the work Ranky does to close it.
+                                    Here is each Profound feature and how Dooza handles the same job: Ranky and Dooza engineers do the work for you, and you approve it.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -371,11 +370,11 @@ export default function DoozaVsProfoundContent({ faqData }) {
                                         </div>
                                         <div className="space-y-4">
                                             <div>
-                                                <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Profound shows you</p>
+                                                <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">In Profound</p>
                                                 <p className="text-sm text-slate-600 leading-relaxed">{item.profound}</p>
                                             </div>
                                             <div className="border-t border-slate-100 pt-4">
-                                                <p className="text-xs text-primary-600 uppercase tracking-wider font-semibold mb-1">Ranky does</p>
+                                                <p className="text-xs text-primary-600 uppercase tracking-wider font-semibold mb-1">Dooza does for you</p>
                                                 <p className="text-sm text-slate-800 leading-relaxed font-medium">{item.ranky}</p>
                                             </div>
                                         </div>
@@ -443,7 +442,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
                                         <FileText className="w-5 h-5 text-teal-600" />
                                     </div>
                                     <h3 className="text-xl font-bold mb-4">Use both if…</h3>
-                                    <p className="text-sm text-slate-600 mb-3">You have the budget for enterprise monitoring and want the work done too:</p>
+                                    <p className="text-sm text-slate-600 mb-3">You want Profound&apos;s platform and also want the work done for you:</p>
                                     <ol className="space-y-3 list-decimal list-inside text-sm text-slate-600">
                                         {pickBoth.map((item, i) => (
                                             <li key={i}>{item}</li>
@@ -480,7 +479,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
 
                     <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <ScrollReveal>
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Stop Watching the Dashboard. Start Fixing It.</h2>
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Get Your AI Visibility Work Done for You</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
                                 Book a free 30-minute call and a Dooza engineer will scope your pilot — Ranky can start working the same day. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
                             </p>

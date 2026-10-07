@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
     CheckCircle2, XCircle, ArrowRight, Sparkles, Star,
-    CreditCard, Puzzle, Shield, Users, Bot, AlertTriangle
+    CreditCard, Shield, Users
 } from 'lucide-react';
 import SignupButton from '@/components/buttons/SignupButton';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
@@ -16,12 +16,9 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const sintraPainPoints = [
-    { icon: CreditCard, title: '250 Credit Cap', desc: 'Every Sintra plan caps you at 250 credits per month. Advanced actions burn credits fast, forcing you to buy top-ups or wait.' },
-    { icon: Puzzle, title: 'No Inter-Helper Communication', desc: 'Sintra helpers cannot share context. Multi-step workflows require manually copying data between helper chats.' },
-    { icon: Shield, title: 'Self-Serve Onboarding Only', desc: 'No human guidance during setup. You get a login and are left to figure out 90+ Power-Ups on your own.' },
-    { icon: AlertTriangle, title: 'Rigid Helper Structure', desc: 'Pre-built helpers with fixed capabilities. No way to create custom agents, modify prompts, or chain actions between helpers.' },
-    { icon: Users, title: 'Confusing Pricing Tiers', desc: 'Listed at $97/mo, sold at $48.50/mo month to month. The $15.60/mo rate means paying $187.20 for 12 months up front, and credit top-ups cost extra.' },
-    { icon: Bot, title: 'Output Quality Concerns', desc: 'Multiple independent reviews note that AI outputs require significant editing before they are usable for real business tasks.' },
+    { icon: CreditCard, title: '250 Credits a Month', desc: 'Every Sintra plan includes 250 credits per month, shared by all helpers and reset monthly. Advanced actions use credits; when they run out, you buy top-ups or wait for the reset.' },
+    { icon: Users, title: 'Best Price Needs a Year Up Front', desc: 'Listed at $97/mo, sold at $48.50/mo month to month. The $15.60/mo rate means paying $187.20 for 12 months up front (checked October 7, 2026).' },
+    { icon: Shield, title: 'You Run It Yourself', desc: 'Sintra is an app you operate. It offers a call with a specialist and two weeks of hands-on help; after that, using and tuning the helpers is up to you. Some teams would rather have the AI built and run for them.' },
 ];
 
 const alternatives = [
@@ -29,7 +26,7 @@ const alternatives = [
         rank: 1,
         name: 'Dooza',
         tagline: 'Best overall Sintra alternative for SMBs',
-        bestFor: 'Small businesses wanting hands-off AI employees with personal onboarding',
+        bestFor: 'Small businesses that want AI employees or custom agents built and tuned for them',
         price: 'Refundable pilot (see /pricing)',
         trial: 'Refundable pilot — 100% refund within 14 days',
         agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents), Rachel (phone calls)',
@@ -39,7 +36,7 @@ const alternatives = [
         highlight: true,
         pros: [
             'Refundable pilot — 100% refund within 14 days if it is not the right fit',
-            'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you',
+            'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you',
             'No credit system and no per-seat fees',
             '1,000+ app integrations',
         ],
@@ -47,12 +44,13 @@ const alternatives = [
             'Fewer named AI employees than Sintra\'s 12+ helpers',
             'Newer platform with a smaller user base',
             'No free tier — the pilot is paid, with a 100% refund within 14 days',
+            'Not the lowest-priced option: self-serve apps like Sintra cost less if you are happy to run the AI yourself',
         ],
     },
     {
         rank: 2,
         name: 'Marblism',
-        tagline: 'Cheapest named-agent platform',
+        tagline: 'Low-cost named-agent platform',
         bestFor: 'Budget-conscious solopreneurs who want an affordable AI team',
         price: 'From $24/mo (yearly) or $44/mo (monthly)',
         trial: 'No free trial mentioned on its pricing page (checked Oct 7, 2026)',
@@ -75,111 +73,107 @@ const alternatives = [
     {
         rank: 3,
         name: 'Motion',
-        tagline: 'Project management tool with AI employees bolted on',
+        tagline: 'Project management and calendar suite with AI built in',
         bestFor: 'Teams already using Motion for PM/calendar who want AI features',
-        price: 'From $19/seat/mo (yearly) or $29/seat/mo (monthly)',
-        trial: '7-day free trial',
-        agents: '5+ named agents (Alfred, Chip, Clide, Millie, Suki) + custom builder',
-        integrations: 'Moderate — Gmail-dependent, limited Outlook support',
+        price: 'Pro AI from $19/seat/mo (yearly) or $29/seat/mo (monthly) (checked October 7, 2026)',
+        trial: 'Free trial (length not stated on its pricing page)',
+        agents: 'AI Workflows for repeatable projects and SOPs, plus AI Project Manager and AI Calendar',
+        integrations: 'Google, Outlook and iCloud calendars, Outlook 365 email forwarding, and more',
         creditSystem: true,
-        namedAgents: true,
+        namedAgents: false,
         highlight: false,
         pros: [
-            '$60M funded (Series C) — well-resourced and actively developing',
-            'Custom agent builder for tailored workflows',
+            'Raised $60M across Series B, C and C2 ($75M total), per Motion\'s blog',
+            'AI Workflows for repeatable projects and SOPs',
             'Strong project management and calendar foundation',
-            '7-day free trial with no commitment',
+            'Free trial, cancel anytime',
         ],
         cons: [
-            'Credit-based AI usage (7,500-15,000 credits/seat) limits actual output',
-            'Per-seat pricing gets expensive fast for teams',
-            'AI employees are secondary to the core PM product — not purpose-built',
-            'Gmail dependency — Outlook users get degraded functionality',
+            'Credit-based AI usage (7,500 credits/seat/month on Pro AI, 15,000 on Business AI)',
+            'Per-seat pricing adds up for larger teams',
+            'Built around project management and calendar — the AI works inside that tool',
         ],
     },
     {
         rank: 4,
         name: 'NoimosAI',
-        tagline: 'Marketing-only AI agents (deep but narrow)',
+        tagline: 'Marketing-focused AI agent (deep but narrow)',
         bestFor: 'Marketing teams and agencies wanting specialized marketing automation',
-        price: 'From $99/user/mo (Pro) or $249/user/mo (Team)',
-        trial: 'No free plan listed — cancel anytime',
-        agents: '11 marketing agents — SEO, Social, Competitor, GEO, Social Listening, CVR, Ads, and more',
+        price: 'From $99/user/mo (Pro), $249/user/mo (Team) or $499/user/mo (Advanced) (checked October 7, 2026)',
+        trial: 'No free plan; free trial available',
+        agents: 'One AI agent with 11 marketing capabilities — Growth Metrics, Competitor Strategy, Social Listening, SEO, GEO, CVR Optimization, and more',
         integrations: 'Marketing-focused — social platforms, analytics tools',
         creditSystem: true,
-        namedAgents: true,
+        namedAgents: false,
         highlight: false,
         pros: [
-            'Deepest marketing agent roster — 11 specialized agents',
-            'Unique GEO agent for AI search engine optimization',
-            'Social Listening agent tracks brand mentions across the web',
+            'Deep marketing coverage — 11 capabilities listed on its pricing page',
+            'GEO capability for AI search visibility',
+            'Social Listening finds high-intent conversations online',
             'Clear credit allowances (30,000/mo on Pro) with $3 per 1,000 extra',
         ],
         cons: [
-            'Marketing-only — no email management, legal, receptionist, or general business agents',
-            'Expensive starting point at $99 per user per month',
-            'Smaller company with limited public reviews',
+            'Marketing-focused — no legal, receptionist, or general business agents',
+            'Higher starting point at $99 per user per month',
             'Credit system with daily limits (100 per day on Pro)',
         ],
     },
     {
         rank: 5,
         name: 'Lindy AI',
-        tagline: 'Custom agent builder with massive integrations',
-        bestFor: 'Technical users who want to build their own AI agents from scratch',
-        price: 'From $29.99/user/mo (Plus) or $99.99/user/mo (Pro)',
-        trial: '7-day free trial',
-        agents: 'No pre-built agents — build your own custom "Lindies" from 50+ templates',
-        integrations: '5,000+ via Pipedream',
+        tagline: 'Self-serve AI teammate with a large integration library',
+        bestFor: 'Teams who want a self-serve AI teammate in Slack and are happy to configure it themselves',
+        price: 'From $29.99/user/mo for 3,000 credits; 15,000 credits for $99.99, 35,000 for $199.99, plus Enterprise (checked October 7, 2026)',
+        trial: '$50 in free credits, valid for 7 days',
+        agents: '40+ skills, plus create your own; ready-made templates',
+        integrations: '1,500+ (pricing page); 1,000+ (integrations page)',
         creditSystem: true,
         namedAgents: false,
         highlight: false,
         pros: [
-            '5,000+ integrations — the largest library in this category',
-            'Voice agent capabilities (inbound and outbound calling)',
-            'Enterprise-grade security (HIPAA, SOC 2, GDPR)',
-            '7-day free trial when you sign up through Slack',
+            '1,000+ integrations (1,500+ on its pricing page)',
+            'Setup in about 2 minutes, per Lindy',
+            'SOC 2 and GDPR; Enterprise adds SSO, audit logs and HIPAA with a signed BAA',
+            '$50 in free credits to try it for 7 days',
         ],
         cons: [
-            'Requires technical knowledge to build agents — not plug-and-play',
-            'Credit-based system plus per-minute voice charges add up',
-            'No pre-built named agents — you build and configure everything yourself',
+            'Credit-based: when credits run out, Lindy pauses until they reset or you top up ($10 per 1,000 credits)',
+            'Per-user pricing adds up for larger teams',
+            'Self-serve: you configure the skills yourself (Lindy offers live onboarding sessions)',
         ],
     },
     {
         rank: 6,
         name: 'Relevance AI',
         tagline: 'Enterprise-grade AI workforce platform',
-        bestFor: 'Mid-market companies and GTM teams (Canva, KPMG use it)',
-        price: 'Free tier, Pro from $19/mo and Team from $234/mo (billed yearly)',
-        trial: 'Free plan with 200 actions/month',
+        bestFor: 'Mid-market and enterprise GTM teams (Canva and Autodesk case studies on its site)',
+        price: 'Enterprise plan only, through sales (checked October 7, 2026)',
+        trial: 'No self-serve plan listed — talk to sales',
         agents: 'Custom agent builder — design your own AI workforce',
-        integrations: 'Enterprise integrations with CRM and sales tools',
+        integrations: '2,000+ integrations, including CRM and sales tools',
         creditSystem: true,
         namedAgents: false,
         highlight: false,
         pros: [
-            'Used by Canva, KPMG, Autodesk — proven at enterprise scale',
-            'Free tier with 200 actions/month to test',
-            '$37M in VC funding — strong long-term viability',
-            'Multi-agent orchestration where agents actually collaborate',
+            'Case studies with Canva and Autodesk on its site',
+            '$24M Series B led by Bessemer, per its blog',
+            'Multi-agent orchestration ("Unlimited Workforces")',
+            '2,000+ integrations',
         ],
         cons: [
-            'Dual credit system (actions + LLM vendor credits) is confusing',
-            'Not designed for SMBs — pricing and complexity target enterprise',
-            'Requires days or weeks of setup — not plug-and-play',
-            'Limited organic reviews suggest low SMB adoption',
+            'Two usage meters to track (actions and LLM vendor credits)',
+            'Enterprise-focused — pricing only through sales',
         ],
     },
     {
         rank: 7,
         name: 'Cubeo AI',
-        tagline: 'No-code chatbot builder (not autonomous agents)',
+        tagline: 'No-code AI agent and chatbot builder',
         bestFor: 'Businesses wanting simple AI chatbots on their website',
         price: 'From \u20ac17/mo (\u20ac14.17/mo billed yearly) — pricing in euros',
         trial: 'Free plan with 100 credits',
-        agents: 'No-code builder — create chatbots and AI assistants (not autonomous employees)',
-        integrations: 'Basic — Salesforce, HubSpot, Slack, Zapier, Make',
+        agents: 'No-code builder — create AI assistants and chatbots, with agent triggers',
+        integrations: 'HubSpot, plus Zapier and Make webhooks',
         creditSystem: true,
         namedAgents: false,
         highlight: false,
@@ -190,31 +184,29 @@ const alternatives = [
             'GPT-4 and Claude models under the hood',
         ],
         cons: [
-            'Chatbot builder, not autonomous AI employees — agents wait for prompts',
-            'Cannot execute tasks like sending emails or posting to social media',
+            'You build and configure the agents yourself',
             'Credit-based system (1,200 credits on Starter) limits heavy usage',
-            'Very limited public reviews — hard to verify reliability at scale',
+            'Pricing in euros',
         ],
     },
 ];
 
-// Sintra X pricing checked on sintra.ai/pricing, September 24, 2026.
+// Sintra X pricing checked on sintra.ai/pricing, October 7, 2026. Sintra no longer sells single-helper plans.
 const sintraCostRows = [
     { plan: 'Sintra X, 1-month plan', shown: '$48.50/mo (list $97)', upfront: '$48.50', credits: '250 per month' },
     { plan: 'Sintra X, 3-month plan', shown: '$23.60/mo', upfront: '$70.80', credits: '250 per month' },
     { plan: 'Sintra X, 12-month plan', shown: '$15.60/mo', upfront: '$187.20', credits: '250 per month' },
-    { plan: 'One Sintra helper only', shown: '$39/mo per helper', upfront: '$39', credits: 'Single helper' },
     { plan: 'Dooza', shown: 'Refundable pilot (see /pricing)', upfront: 'Pilot, 100% refundable within 14 days', credits: 'No credits', dooza: true },
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Named AI employees, refundable pilot, engineer-led setup, no credit system, 1,000+ integrations' },
-    { need: 'Lowest price', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 7 named agents, unlimited team members, and no credit system' },
-    { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations via Pipedream; building agents takes some technical knowledge' },
-    { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG, multi-agent orchestration, $37M funded' },
-    { need: 'Marketing only', pick: 'NoimosAI', reason: '11 specialized marketing agents including unique GEO and Social Listening agents' },
-    { need: 'PM + AI in one tool', pick: 'Motion', reason: 'Calendar, task management, and AI employees in a single platform' },
-    { need: 'Personal onboarding', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you' },
+    { need: 'Done for you', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you; refundable pilot; 1,000+ integrations' },
+    { need: 'Lowest price, self-serve', pick: 'Sintra (12-month) or Cubeo AI', reason: 'Sintra is $15.60/mo if you pay $187.20 for a year; Cubeo starts at \u20ac14.17/mo yearly and has a free plan (checked October 7, 2026)' },
+    { need: 'Low-cost named agents', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 7 named agents, unlimited team members, and no credit system' },
+    { need: 'AI teammate in Slack', pick: 'Lindy AI', reason: '1,000+ integrations (1,500+ on its pricing page), 40+ skills, setup in about 2 minutes, per Lindy' },
+    { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Canva and Autodesk case studies, multi-agent workforces, 2,000+ integrations' },
+    { need: 'Marketing only', pick: 'NoimosAI', reason: '11 marketing capabilities including GEO and Social Listening' },
+    { need: 'PM + AI in one tool', pick: 'Motion', reason: 'Calendar, task management, and AI Workflows in a single platform' },
 ];
 
 export default function SintraAlternativesContent({ faqData }) {
@@ -243,7 +235,7 @@ export default function SintraAlternativesContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Updated September 2026
+                                    Updated October 7, 2026
                                 </div>
                             </div>
 
@@ -252,11 +244,11 @@ export default function SintraAlternativesContent({ faqData }) {
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                Credits running out? Helpers not talking to each other? You are not alone.
+                                Credits running out? Want someone to build and run the AI for you? Here are your options.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Sintra AI caps every plan at 250 credits and their helpers cannot share context. We tested 7 alternatives and compared pricing, features, pros, and cons — so you do not have to.
+                                Sintra AI is a low-cost self-serve app: every plan includes 250 credits a month, and you run the helpers yourself. We compared 7 alternatives on pricing, features, pros, and cons (checked October 7, 2026), so you do not have to.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -275,7 +267,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                 <p className="section-label mb-3">The Problem</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Why People Look for Sintra Alternatives</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
-                                    Sintra AI has 40,000+ users and a 4.5/5 Trustpilot rating. But recurring complaints push many to explore other options.
+                                    Sintra AI says it is trusted by 40,000+ entrepreneurs, and its helpers now work together and share one knowledge base. Cost and fit are the usual reasons people look elsewhere.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -349,7 +341,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Prices checked September 24, 2026 on each platform’s pricing page. Visit each platform for current rates. Green check = no credit system / has named agents. Red X = uses credits / no named agents.
+                                Prices checked October 7, 2026 on each platform’s pricing page. Visit each platform for current rates. Green check = no credit system / has named agents. Red X = uses credits / no named agents.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -512,7 +504,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-6 italic text-center">
-                                Sintra prices checked September 24, 2026 on sintra.ai/pricing. On a 12-month plan Sintra is one of the lowest-cost options here; the trade-off is the up-front payment and the credit cap. Dooza pricing is listed on /pricing.
+                                Sintra prices checked October 7, 2026 on sintra.ai/pricing. On a 12-month plan Sintra is one of the lowest-cost options here; the trade-off is the up-front payment and the 250 monthly credits (top-ups cost extra). Dooza pricing is listed on /pricing.
                             </p>
                         </ScrollReveal>
                     </div>
