@@ -8,6 +8,7 @@ import RealEstateContent from './RealEstateContent';
 import DispatchersContent from './DispatchersContent';
 import InsuranceAgentsContent from './InsuranceAgentsContent';
 import HvacContent from './HvacContent';
+import PropertyManagementContent from './PropertyManagementContent';
 
 // Map slugs to components
 const INDUSTRY_COMPONENTS = {
@@ -16,6 +17,7 @@ const INDUSTRY_COMPONENTS = {
     'dispatchers': DispatchersContent,
     'insurance-agents': InsuranceAgentsContent,
     'trades': HvacContent,
+    'property-management': PropertyManagementContent,
 };
 
 const LEGACY_INDUSTRY_SLUGS = {

@@ -37,6 +37,15 @@ export default function IndustriesPage() {
             benefits: ['Capture every lead', 'Emergency routing', 'Service and estimate booking']
         },
         {
+            name: 'Property Management',
+            category: 'Tenant calls',
+            description: 'AI answering service that sorts after-hours maintenance emergencies from routine requests by your rules',
+            industrySlug: 'property-management',
+            image: '/industries/home-services-ai-automation.png',
+            imageAlt: 'Property manager using AI to handle tenant maintenance calls after hours',
+            benefits: ['24/7 tenant calls', 'Emergency triage by your rules', 'Leasing call capture']
+        },
+        {
             name: 'Real Estate',
             category: 'Sales',
             description: 'AI sales agent that follows up on every lead 24/7 and books showings',
@@ -122,7 +131,7 @@ export default function IndustriesPage() {
                             Start with a proven workflow for your field. We connect it to your tools, train it on your process, and keep it running.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-3 text-sm font-medium text-slate-700">
-                            {['9 focused industries', 'Managed setup', 'Human approval controls'].map((item) => (
+                            {['10 focused industries', 'Managed setup', 'Human approval controls'].map((item) => (
                                 <span key={item} className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">
                                     <Check className="h-4 w-4 text-primary-600" />
                                     {item}
