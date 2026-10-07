@@ -561,7 +561,7 @@ export default function BuildA20xCompanyContent() {
                                     </div>
                                     <p className="text-slate-600 text-sm mb-3">Writes optimized content, manages Google Business Profile, monitors rankings.</p>
                                     <div className="bg-teal-50 p-3 rounded-lg">
-                                        <p className="text-xs text-teal-700 font-medium">120% increase in organic traffic — without hiring an SEO team.</p>
+                                        <p className="text-xs text-teal-700 font-medium">SEO and AI visibility work, done by an AI employee.</p>
                                     </div>
                                 </div>
 

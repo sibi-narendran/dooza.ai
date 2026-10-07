@@ -74,37 +74,31 @@ const useCases = [
         icon: Mail,
         title: "Email Marketing",
         description: "Subject lines, newsletters, drip campaigns, and follow-up sequences that convert.",
-        stat: "34% higher open rates with AI personalization"
     },
     {
         icon: MessageSquare,
         title: "Social Media Posts",
         description: "Engaging posts, captions, and content calendars for all platforms.",
-        stat: "2.5 hours saved daily on content creation"
     },
     {
         icon: FileText,
         title: "Blog Posts & Articles",
         description: "SEO-optimized long-form content that ranks and drives organic traffic.",
-        stat: "120% increase in organic traffic in 6 months"
     },
     {
         icon: Target,
         title: "Ad Copy",
         description: "Headlines, descriptions, and CTAs for Google, Facebook, and other platforms.",
-        stat: "38% higher CTR with AI-optimized ads"
     },
     {
         icon: Globe,
         title: "Website Copy",
         description: "Landing pages, product descriptions, and homepage content that converts.",
-        stat: "63% higher lead generation reported"
     },
     {
         icon: Users,
         title: "Sales Outreach",
         description: "Cold emails, LinkedIn messages, and personalized sales sequences.",
-        stat: "51% more qualified leads generated"
     }
 ];
 
@@ -392,7 +386,7 @@ export default function AiCopywritingToolsContent() {
                                             <div className="flex-1">
                                                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                                                     <h3 className="font-bold text-slate-900 text-lg">{useCase.title}</h3>
-                                                    <span className="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">{useCase.stat}</span>
+                                                    {useCase.stat && <span className="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">{useCase.stat}</span>}
                                                 </div>
                                                 <p className="text-slate-600">{useCase.description}</p>
                                             </div>
