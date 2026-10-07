@@ -558,7 +558,7 @@ export default function AiForRealEstateAgentsContent() {
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">
-                                                    <strong>Real estate impact:</strong> 78% of buyers work with the first agent who responds. Rachel ensures that's always you—even at 2 AM when a relocating buyer calls from another time zone.
+                                                    <strong>Real estate impact:</strong> Buyers often work with the first agent who responds. Rachel ensures that's always you—even at 2 AM when a relocating buyer calls from another time zone.
                                                 </p>
                                             </div>
                                         </div>

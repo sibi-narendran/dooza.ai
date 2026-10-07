@@ -492,7 +492,7 @@ export default function AiSalesAgentGuideContent() {
                                     {
                                         title: "Real Estate",
                                         icon: Home,
-                                        desc: "Qualify buyer/seller leads instantly, book showings, and follow up with prospects across time zones. 78% of buyers choose the first agent to respond.",
+                                        desc: "Qualify buyer/seller leads instantly, book showings, and follow up with prospects across time zones. Buyers often choose the first agent to respond.",
                                         link: { href: "/blog/ai-for-real-estate-agents", label: "See our real estate AI guide" }
                                     },
                                     {
@@ -712,7 +712,6 @@ export default function AiSalesAgentGuideContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Sales Response & Follow-Up Research</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.leadconnectapp.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Lead Connect — First responder wins 78% of deals</a></li>
                                         <li>• <a href="https://www.salesforce.com/resources/article/sales-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Salesforce — Sales reps spend 28% of time selling</a></li>
                                         <li>• <a href="https://brevetgroup.com/21-mind-blowing-sales-stats/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Brevet Group — 44% give up after one follow-up</a></li>
                                         <li>• <a href="https://www.rainsalestraining.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">RAIN Group — 80% of sales need 5+ follow-ups</a></li>

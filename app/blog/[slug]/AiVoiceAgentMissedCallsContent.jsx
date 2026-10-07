@@ -978,7 +978,6 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li>• <a href="https://www.forbes.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Forbes — 62% of small business calls go unanswered</a></li>
                                         <li>• <a href="https://www.nectafy.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Nectafy — 85% of callers won't leave voicemail</a></li>
-                                        <li>• <a href="https://www.leadconnectapp.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Lead Connect — 78% of deals go to the first responder</a></li>
                                         <li>• <a href="https://marketwiz.ai/real-estate-lead-response-time-why-5-minutes-10x-more-conversions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">MIT / InsideSales — 5-minute response window, 21x qualification</a></li>
                                     </ul>
                                 </div>
