@@ -494,7 +494,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     <div>
                                         <h4 className="font-semibold text-primary-700 mb-3 flex items-center gap-2">
                                             <User className="w-5 h-5" />
-                                            Human VA Handles (20% high-value)
+                                            Human VA Handles (the high-value work)
                                         </h4>
                                         <ul className="space-y-2 text-slate-600">
                                             <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary-500 shrink-0 mt-1" /> Complex client conversations</li>
