@@ -4,6 +4,7 @@ import './globals.css';
 import CalEmbedLoader from '../components/CalEmbedLoader';
 import ColdAdSignupLinkRewriter from '../components/ColdAdSignupLinkRewriter';
 import BookingModalProvider from '../components/BookingModalProvider';
+import NavTrail from '../components/NavTrail';
 
 // Resource hints for external services - improves Core Web Vitals
 const resourceHints = [
@@ -153,6 +154,7 @@ export default function RootLayout({ children }) {
         `}} />
       </head>
       <body className={`${inter.className} antialiased`}>
+        <NavTrail />
         <BookingModalProvider>
           {children}
         </BookingModalProvider>

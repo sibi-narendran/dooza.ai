@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { trackFBContact } from '@/lib/analytics';
 import { getBookingUrlWithUtm } from '@/lib/links';
+import { getNavTrail } from '@/components/NavTrail';
 
 export default function BookPageClient() {
     useEffect(() => {
@@ -48,7 +49,7 @@ export default function BookPageClient() {
                     container.style.cssText = 'padding: 0; background: white;';
 
                     window.Calendly.initInlineWidget({
-                        url: getBookingUrlWithUtm('website', 'book_page', 'book'),
+                        url: (() => { const u = getBookingUrlWithUtm('website', 'book_page', 'book'); const t = getNavTrail(); return t ? `${u}&utm_term=${encodeURIComponent(t)}` : u; })(),
                         parentElement: container,
                     });
 

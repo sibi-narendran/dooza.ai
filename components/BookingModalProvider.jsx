@@ -3,6 +3,7 @@
 import { createContext, useContext } from 'react';
 import { usePathname } from 'next/navigation';
 import { getBookingUrlFromPath } from '@/lib/links';
+import { getNavTrail } from '@/components/NavTrail';
 
 const BookingModalContext = createContext(null);
 
@@ -19,7 +20,9 @@ export default function BookingModalProvider({ children }) {
 
     const openBooking = () => {
         if (typeof window === 'undefined') return;
-        window.open(getBookingUrlFromPath(pathname), '_blank', 'noopener,noreferrer');
+        const trail = getNavTrail();
+        const url = getBookingUrlFromPath(pathname);
+        window.open(trail ? `${url}&utm_term=${encodeURIComponent(trail)}` : url, '_blank', 'noopener,noreferrer');
     };
 
     const value = { openModal: openBooking };
