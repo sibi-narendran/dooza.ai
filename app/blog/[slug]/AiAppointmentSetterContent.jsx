@@ -42,7 +42,7 @@ const faqData = [
         answer: "For initial outreach and qualification, yes. AI appointment setters handle the repetitive top-of-funnel work — responding to leads, asking screening questions, and booking meetings — so your human closers focus on qualified conversations. Most businesses see higher booking rates because AI responds instantly."
     },
     {
-        question: "How many more meetings does an AI appointment setter book compared to an agency?",
+        question: "Is an AI appointment setter cheaper per meeting than an agency?",
         answer: "AI appointment setters often book more meetings for the money because they respond instantly and never skip a follow-up, and there is no per-meeting fee. With Dooza there's no per-meeting fee, so your cost per meeting keeps falling as volume grows. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
@@ -117,7 +117,7 @@ export default function AiAppointmentSetterContent() {
                             <span className="text-primary-600">AI Appointment Setters</span> vs. Agencies: Which One Actually Books More Meetings?
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            You're paying $2k-5k/month for an agency that books 8-12 meetings. That's $250-375 per meeting. Meanwhile, leads that inquired at 8 PM didn't get a response until 10 AM the next day. There's a better way.
+                            If you pay an agency $3,000 a month and it books 8 to 12 meetings, each meeting costs you $250 to $375. Meanwhile, a lead that inquires at 8 PM may not hear back until the next morning. There's a better way.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -225,20 +225,11 @@ export default function AiAppointmentSetterContent() {
                                 <div className="my-8">
                                     <YouTubeEmbed
                                         videoId="6Ait5R-3-lI"
-                                        title="Alex Hormozi & Amjad Massad on AI Appointment Setting & Sales"
+                                        title="Alex Hormozi’s New Playbook: Entrepreneurship in the Age of AI (Replit)"
                                     />
-                                    <p className="text-sm text-slate-500 text-center mt-3">Watch: Alex Hormozi and Replit CEO Amjad Massad discuss AI sales agents, appointment setting, and the future of lead conversion</p>
+                                    <p className="text-sm text-slate-500 text-center mt-3">Watch: Alex Hormozi with Replit CEO Amjad Masad on AI agents, sales and offers (Replit, October 2025)</p>
                                 </div>
 
-                                <div className="bg-slate-50 border-l-4 border-primary-500 p-6 rounded-r-xl my-8">
-                                    <p className="text-slate-700 italic text-lg leading-relaxed mb-3">
-                                        "We were training an AI SDR and it would make a mistake. I'd correct it — and every single time after that, it would do it right. I've trained a lot of salespeople. This was scary in a cool way — how quickly it can learn. It just doesn't make a mistake after."
-                                    </p>
-                                    <p className="text-slate-600 text-sm">
-                                        Hormozi trained dozens of human sales teams before building AI-powered ones. His observation is critical: human SDRs need weeks of coaching and still have off days. An AI appointment setter corrects once and the fix is permanent. That consistency is what makes the cost-per-meeting math so lopsided.
-                                    </p>
-                                    <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, conversation with Replit CEO Amjad Massad</p>
-                                </div>
                             </div>
                         </section>
 
@@ -249,7 +240,7 @@ export default function AiAppointmentSetterContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Here's the math most agencies don't want you to do. If you're paying $3,000/month and your agency books 12 meetings, that's <strong>$250 per meeting</strong>. But it gets worse — only 60-70% of those prospects actually show up. So your real cost per <em>attended</em> meeting is closer to <strong>$357-417</strong>.
+                                    Here's the math most agencies don't want you to do. If you're paying $3,000/month and your agency books 12 meetings, that's <strong>$250 per meeting</strong>. And every no-show raises your real cost per <em>attended</em> meeting.
                                 </p>
                                 <p>
                                     Now factor in speed-to-lead. Agencies work business hours. Their reps are juggling multiple clients. When a lead comes in at 7 PM or on Saturday morning, that lead sits untouched until Monday. By then, your competitor's AI has already qualified the prospect and booked the meeting.
@@ -260,19 +251,19 @@ export default function AiAppointmentSetterContent() {
                                 <div className="flex items-start gap-3">
                                     <AlertTriangle className="w-6 h-6 text-amber-600 shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="font-bold text-slate-900 mb-2">Hidden Agency Costs Most Businesses Discover Too Late</h4>
+                                        <h4 className="font-bold text-slate-900 mb-2">Agency Costs to Ask About Before You Sign</h4>
                                         <ul className="space-y-2 text-slate-700">
                                             <li className="flex items-start gap-2">
                                                 <DollarSign className="w-4 h-4 text-amber-500 shrink-0 mt-1" />
-                                                <span><strong>Setup fees:</strong> $500-2,000 onboarding charge in month one</span>
+                                                <span><strong>Setup fees:</strong> some agencies charge an onboarding fee in month one</span>
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <DollarSign className="w-4 h-4 text-amber-500 shrink-0 mt-1" />
-                                                <span><strong>Minimum contracts:</strong> 3-6 month lock-in, even if results are poor</span>
+                                                <span><strong>Minimum contracts:</strong> multi-month minimum terms, even if results are poor</span>
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <DollarSign className="w-4 h-4 text-amber-500 shrink-0 mt-1" />
-                                                <span><strong>Per-meeting surcharges:</strong> $50-150 extra per meeting above your plan limit</span>
+                                                <span><strong>Per-meeting surcharges:</strong> extra fees per meeting above your plan limit</span>
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <DollarSign className="w-4 h-4 text-amber-500 shrink-0 mt-1" />
@@ -353,15 +344,6 @@ export default function AiAppointmentSetterContent() {
                                 </p>
                             </div>
 
-                            <div className="bg-slate-50 border-l-4 border-primary-500 p-6 rounded-r-xl mb-8">
-                                <p className="text-slate-700 italic text-lg leading-relaxed mb-3">
-                                    "We're going to go from information systems — which is what ChatGPT and Perplexity are today — to action systems. Agents. The SDR you're talking about, that's what you're training there. An action system."
-                                </p>
-                                <p className="text-slate-600 text-sm">
-                                    Replit CEO Amjad Massad draws the critical line. A chatbot is an information system — it answers your question and waits. An AI appointment setter is an <em>action system</em> — it qualifies the lead, checks your calendar, and books the meeting. That distinction is why appointment-setting agencies are being disrupted: they're selling human-powered action at $250/meeting when AI delivers the same action for under $2.
-                                </p>
-                                <p className="text-xs text-slate-500 mt-2">— Amjad Massad, CEO of Replit</p>
-                            </div>
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                                 {[
@@ -410,11 +392,10 @@ export default function AiAppointmentSetterContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { metric: "Monthly Cost", ai: "Varies by product — refundable pilot (see /pricing)", agency: "$2,000-5,000", sdr: "$4,000-6,500", diy: "$0 (your time)" },
-                                            { metric: "Cost Per Meeting", ai: "No per-meeting fee", agency: "$150-250", sdr: "$100-150", diy: "Hours of your time" },
-                                            { metric: "Response Time", ai: "Under 60 seconds", agency: "1-14 hours", sdr: "5-60 minutes", diy: "When you're free" },
+                                            { metric: "Monthly Cost", ai: "Varies by product — refundable pilot (see /pricing)", agency: "Retainer, per-meeting fee, or both", sdr: "Salary + benefits + tools", diy: "$0 (your time)" },
+                                            { metric: "Cost Per Meeting", ai: "No per-meeting fee", agency: "Your bill ÷ meetings booked", sdr: "Fully loaded cost ÷ meetings", diy: "Hours of your time" },
+                                            { metric: "Response Time", ai: "Under 60 seconds", agency: "Depends on staffed hours", sdr: "During working hours", diy: "When you're free" },
                                             { metric: "Availability", ai: "24/7/365", agency: "Business hours (M-F)", sdr: "Business hours (M-F)", diy: "Whenever you check" },
-                                            { metric: "Show Rate", ai: "80-90%", agency: "60-70%", sdr: "70-80%", diy: "50-60%" },
                                             { metric: "Scalability", ai: "Unlimited leads", agency: "Limited by headcount", sdr: "1 person's capacity", diy: "Your bandwidth" },
                                             { metric: "Setup Time", ai: "Same day", agency: "2-4 weeks", sdr: "4-8 weeks hiring + training", diy: "Ongoing" },
                                             { metric: "Consistency", ai: "100% consistent", agency: "Varies by rep", sdr: "Varies by day", diy: "Inconsistent" }
@@ -496,13 +477,12 @@ export default function AiAppointmentSetterContent() {
                             </div>
 
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl mb-8">
-                                <h3 className="font-bold text-slate-900 mb-4 text-lg">The Cost-Per-Meeting Math</h3>
+                                <h3 className="font-bold text-slate-900 mb-4 text-lg">The Cost-Per-Meeting Math (example numbers)</h3>
                                 <div className="space-y-3">
                                     {[
-                                        { label: "Agency: $3,000/mo / 12 meetings", value: "$250/meeting", highlight: false },
-                                        { label: "In-House SDR: $5,000/mo / 20 meetings", value: "$250/meeting", highlight: false },
-                                        { label: "SDR (adjusted for benefits + tools)", value: "~$150/meeting", highlight: false },
-                                        { label: "AI Appointment Setter (Dooza): no per-meeting fee", value: "A fraction", highlight: true }
+                                        { label: "Example agency: $3,000/mo ÷ 12 meetings", value: "$250/meeting", highlight: false },
+                                        { label: "Example in-house SDR: $5,000/mo ÷ 20 meetings", value: "$250/meeting", highlight: false },
+                                        { label: "AI Appointment Setter (Dooza): no per-meeting fee", value: "See /pricing", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>
                                             <span className="text-slate-700">{item.label}</span>
@@ -554,12 +534,12 @@ export default function AiAppointmentSetterContent() {
 
                             <div className="bg-slate-50 border-l-4 border-primary-500 p-6 rounded-r-xl mb-8">
                                 <p className="text-slate-700 italic text-lg leading-relaxed mb-3">
-                                    "Instead of having one agent that was a master at the whole conversation, it started to make more sense to have an AI that was only trained on first message, and another AI trained only on second message. The more specialized we can make them, the better."
+                                    "Instead of having an agent that was master at this conversation… it started to make more sense to have an AI that was only trained on first message and another AI that was trained only on second message… the more specialized we can make them."
                                 </p>
                                 <p className="text-slate-600 text-sm">
-                                    Hormozi's insight from training his own AI sales team reflects exactly how Dooza built Stan and Rachel. Stan specializes in outbound — cold outreach, follow-up sequences, booking meetings. Rachel specializes in inbound — answering calls, qualifying callers, capturing leads. Two specialists outperform one generalist every time.
+                                    Dooza splits the work the same way: Stan handles lead generation and sales outreach, and Rachel answers phone calls as an AI receptionist.
                                 </p>
-                                <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, conversation with Replit CEO Amjad Massad</p>
+                                <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, talking with Replit CEO Amjad Masad (Replit, October 2025; lightly trimmed)</p>
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -698,15 +678,6 @@ export default function AiAppointmentSetterContent() {
                                     <h4 className="font-semibold text-slate-800 mb-3">Lead Response & Sales Statistics</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li>• <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Harvard Business Review — The Short Life of Online Sales Leads</a></li>
-                                        <li>• <a href="https://www.insidesales.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">InsideSales.com — Speed-to-Lead research</a></li>
-                                        <li>• <a href="https://www.saleshacker.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">SalesHacker — Agency appointment setting benchmarks</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Appointment Setting Industry</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.gartner.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Gartner — Sales Development Representative cost analysis</a></li>
-                                        <li>• <a href="https://www.glassdoor.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Glassdoor — SDR salary benchmarks</a></li>
                                     </ul>
                                 </div>
                             </div>
