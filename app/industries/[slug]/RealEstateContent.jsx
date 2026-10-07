@@ -84,7 +84,7 @@ export default function RealEstateContent({ page }) {
             icon: TrendingUp,
             title: 'Close more deals',
             description:
-                'Agents using AI follow-up report 2-3x more closings from the same lead volume.',
+                'Every lead gets a fast reply and steady follow-up, so fewer of the leads you already paid for go cold.',
         },
     ];
 
