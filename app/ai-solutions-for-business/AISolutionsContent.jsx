@@ -20,10 +20,10 @@ import { trackFBViewContent } from '@/lib/analytics';
 /* ── Inline Data ── */
 
 const keyStats = [
-    { value: '88%', label: 'of organizations have adopted AI', source: 'McKinsey 2025' },
-    { value: '5.8×', label: 'average ROI within 14 months', source: 'McKinsey' },
-    { value: '25%', label: 'faster task completion with AI', source: 'Harvard Business School' },
-    { value: '15–20 hrs', label: 'saved per week by active AI users', source: 'National Bureau of Economic Research' },
+    { value: '88%', label: 'of organizations use AI in at least one business function', source: 'McKinsey, The State of AI in 2025', url: 'https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2025' },
+    { value: '25.1%', label: 'faster task completion for consultants using AI', source: 'Harvard Business School & BCG field experiment (2023)', url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321' },
+    { value: '12.2%', label: 'more tasks completed with AI', source: 'Harvard Business School & BCG field experiment (2023)', url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321' },
+    { value: '40%', label: 'higher-quality work on tasks AI handles well', source: 'Harvard Business School & BCG field experiment (2023)', url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321' },
 ];
 
 const categories = [
@@ -253,10 +253,10 @@ const implementationSteps = [
 ];
 
 const failureReasons = [
-    { stat: '87%', label: 'of AI projects never reach production', source: 'VentureBeat', reason: 'Trying to automate everything at once instead of starting with one high-impact function.' },
-    { stat: '57%', label: 'of SMBs report no value from AI', source: 'Business.com 2026', reason: 'Using generic chatbots instead of purpose-built AI employees designed for specific tasks.' },
-    { stat: '42%', label: 'cite implementation difficulty', source: 'McKinsey', reason: 'Self-serve-only platforms with no onboarding support. Guided setup eliminates this entirely.' },
-    { stat: '38%', label: 'stop using AI within 3 months', source: 'Gartner', reason: 'Tool fatigue from managing 5-7 separate AI subscriptions instead of one integrated platform.' },
+    { stat: 'Too much at once', label: 'Trying to automate every function on day one', reason: 'Start with one high-impact function, prove it, then expand.' },
+    { stat: 'Generic chatbots', label: 'Tools that are not built for a specific job', reason: 'Purpose-built AI employees do one job well (email, calls, leads) instead of answering everything vaguely.' },
+    { stat: 'No onboarding', label: 'Self-serve setup with nobody to help', reason: 'Guided setup by an engineer gets the first workflow live and tuned.' },
+    { stat: 'Tool fatigue', label: 'Too many separate AI subscriptions', reason: 'One integrated platform is easier to run than five or more disconnected tools.' },
 ];
 
 const industries = [
@@ -371,7 +371,7 @@ export default function AISolutionsContent({ faqData }) {
                                     <div className="card-shadow bg-white rounded-2xl border border-slate-100 p-8 text-center h-full">
                                         <p className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent mb-3">{stat.value}</p>
                                         <p className="text-slate-700 font-medium mb-2">{stat.label}</p>
-                                        <p className="text-xs text-slate-600">{stat.source}</p>
+                                        <p className="text-xs text-slate-600"><a href={stat.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">{stat.source}</a></p>
                                     </div>
                                 </StaggerItem>
                             ))}
@@ -639,14 +639,13 @@ export default function AISolutionsContent({ faqData }) {
                                                 <AlertTriangle className="w-6 h-6 text-red-500" />
                                             </div>
                                             <div>
-                                                <p className="text-3xl font-bold text-red-600">{item.stat}</p>
+                                                <p className="text-xl font-bold text-red-600">{item.stat}</p>
                                                 <p className="text-sm text-slate-500">{item.label}</p>
                                             </div>
                                         </div>
                                         <p className="text-sm text-slate-600 leading-relaxed mb-2">
                                             <strong className="text-slate-900">Why it happens:</strong> {item.reason}
                                         </p>
-                                        <p className="text-xs text-slate-600 italic">Source: {item.source}</p>
                                     </div>
                                 </StaggerItem>
                             ))}

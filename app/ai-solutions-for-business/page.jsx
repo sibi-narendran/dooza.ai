@@ -58,7 +58,7 @@ const faqData = [
     },
     {
         question: 'Is AI worth it for small businesses?',
-        answer: 'Businesses using AI report 5.8x average ROI within 14 months and 25% faster task completion (McKinsey, Harvard Business School). However, 57% of small businesses see no value — usually because of poor implementation, not the technology. The key is starting with one high-impact area and using guided onboarding.',
+        answer: 'It can, when it fits the task. In a Harvard Business School and BCG field experiment (2023), consultants using AI completed 12.2% more tasks, 25.1% faster, on tasks within AI’s capabilities, and did worse on tasks outside them. Results depend on implementation, so start with one high-impact area and use guided onboarding.',
     },
     {
         question: 'How do I start using AI in my business?',
