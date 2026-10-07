@@ -278,7 +278,7 @@ export default function AiSalesAgentGuideContent() {
                                     Here's the problem every sales team faces: <strong>the work that fills the pipeline is the work nobody wants to do</strong>. Qualifying cold leads, sending the fifth follow-up email, responding to a website inquiry at 11 PM on a Saturday — this is where deals are won and lost.
                                 </p>
                                 <p>
-                                    But it's also the work that burns people out. Your best closer shouldn't be screening unqualified leads. Your $80,000/year sales rep shouldn't spend 60% of their day on admin tasks. According to Salesforce, reps spend only <strong>28% of their time actually selling</strong> — the rest is data entry, emails, and scheduling.
+                                    But it's also the work that burns people out. Your best closer shouldn't be screening unqualified leads. Your $80,000/year sales rep shouldn't spend 60% of their day on admin tasks. According to Salesforce research (2023), reps spend just <strong>28% of their week actually selling</strong> — the rest is data entry, emails, and scheduling.
                                 </p>
                             </div>
 
@@ -712,7 +712,7 @@ export default function AiSalesAgentGuideContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Sales Response & Follow-Up Research</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.salesforce.com/resources/article/sales-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Salesforce — Sales reps spend 28% of time selling</a></li>
+                                        <li>• <a href="https://www.salesforce.com/news/stories/sales-research-2023/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Salesforce research (2023): reps spend 28% of their week selling</a></li>
                                         <li>• <a href="https://brevetgroup.com/21-mind-blowing-sales-stats/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Brevet Group — 44% give up after one follow-up</a></li>
                                         <li>• <a href="https://www.rainsalestraining.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">RAIN Group — 80% of sales need 5+ follow-ups</a></li>
                                     </ul>

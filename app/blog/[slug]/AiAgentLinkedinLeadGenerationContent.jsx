@@ -833,14 +833,12 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     <h4 className="font-semibold text-slate-800 mb-3">LinkedIn Data & Research</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li><a href="https://business.linkedin.com/marketing-solutions/blog" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">LinkedIn Marketing Solutions — 80% of B2B leads from social come from LinkedIn</a></li>
-                                        <li><a href="https://www.hubspot.com/state-of-sales" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">HubSpot State of Sales — 13% of reps confident in LinkedIn outreach</a></li>
                                         <li><a href="https://www.linkedin.com/help/linkedin/answer/a1342443" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">LinkedIn Help — Connection request limits and enforcement policies</a></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Outreach & Sales Research</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li><a href="https://www.salesforce.com/resources/article/sales-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Salesforce — Personalization increases response rates 3x</a></li>
                                         <li><a href="https://www.rainsalestraining.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">RAIN Group — Multi-touch follow-up and buyer engagement data</a></li>
                                         <li><a href="https://brevetgroup.com/21-mind-blowing-sales-stats/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Brevet Group — 80% of sales require 5+ follow-ups</a></li>
                                     </ul>

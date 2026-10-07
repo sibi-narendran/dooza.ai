@@ -669,7 +669,6 @@ export default function AiCopywritingToolsContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Regulations & Best Practices</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-check" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">FTC - AI Disclosure Guidelines</a></li>
                                         <li>• <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Google - Helpful Content Guidelines</a></li>
                                     </ul>
                                 </div>
