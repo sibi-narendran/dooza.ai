@@ -336,7 +336,7 @@ export default function HerEntireTeamWasAiContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">What Comes Next</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Y Combinator president Gary Tan recently coined the term &ldquo;20X companies&rdquo; — startups where teams of 4-5 people produce the output of companies 20 times their size, using AI agents across every function. Companies like GigaML, Legion Health, and Phase Shift are proving the model works.
+                                    Y Combinator president Garry Tan recently coined the term &ldquo;20X companies&rdquo; — startups where teams of 4-5 people produce the output of companies 20 times their size, using AI agents across every function. Companies like GigaML, Legion Health, and Phase Shift are proving the model works.
                                 </p>
                                 <p>
                                     But those are elite YC-backed startups with engineering teams. What the Bangalore dinner story suggests is something more significant: <strong>the 20X model is already trickling down to regular businesses</strong>. No venture capital. No engineering team. Just a founder, a platform, and a team of AI agents that reply on Slack at 10 PM.

@@ -40,7 +40,7 @@ import {
 const faqData = [
     {
         question: "What is a 20X company?",
-        answer: "A 20X company is a term coined by Y Combinator president Gary Tan to describe startups that use AI to automate every internal function — not just one. Instead of hiring large teams, 20X companies use AI agents to handle sales, marketing, support, legal, and operations, allowing tiny teams of 4-12 people to produce the output of companies 20 times their size."
+        answer: "A 20X company is a term coined by Y Combinator president Garry Tan to describe startups that use AI to automate every internal function — not just one. Instead of hiring large teams, 20X companies use AI agents to handle sales, marketing, support, legal, and operations, allowing tiny teams of 4-12 people to produce the output of companies 20 times their size."
     },
     {
         question: "How can a small business compete with larger companies using AI?",
@@ -139,7 +139,7 @@ export default function BuildA20xCompanyContent() {
                         <div className="mt-10 max-w-3xl mx-auto">
                             <YouTubeEmbed
                                 videoId="rWUWfj_PqmM"
-                                title="Gary Tan on 20X Companies — Y Combinator"
+                                title="Garry Tan on 20X Companies — Y Combinator"
                             />
                         </div>
 
@@ -225,7 +225,7 @@ export default function BuildA20xCompanyContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    Gary Tan, president of Y Combinator, recently made a bold claim: the best startups in YC's current batch aren't just using AI — they're <strong>replacing entire departments with it</strong>.
+                                    Garry Tan, president of Y Combinator, recently made a bold claim: the best startups in YC's current batch aren't just using AI — they're <strong>replacing entire departments with it</strong>.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     He calls them <strong>"20X companies"</strong> — startups where a team of 4-5 people produces the output of a company 20 times their size. Not by working harder. By deploying AI agents across every function of the business.
@@ -256,7 +256,7 @@ export default function BuildA20xCompanyContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">What Is a 20X Company?</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    In Gary Tan's words, a 20X company is one where <strong>"every single function in the company is being automated with AI."</strong> Not just customer support. Not just marketing. <em>Everything.</em>
+                                    In Garry Tan's words, the best teams <strong>"aren't automating one or two internal functions. They're automating all of them."</strong> Not just customer support. Not just marketing. <em>Everything.</em>
                                 </p>
                                 <p>
                                     The concept is simple: instead of hiring a person for every role, you deploy an AI agent. The result? A team of 5 can compete with — and beat — companies with 100+ employees.
@@ -307,12 +307,12 @@ export default function BuildA20xCompanyContent() {
                                 </div>
                             </div>
 
-                            {/* Gary Tan Quote */}
+                            {/* Garry Tan Quote */}
                             <div className="bg-slate-900 text-white p-8 rounded-2xl mb-8">
                                 <blockquote className="text-lg md:text-xl italic leading-relaxed mb-4">
-                                    "Every single function in the company is being automated with AI. Sales, marketing, support, legal, HR — all of it. These companies are doing the output of 20 companies their size."
+                                    "The best teams aren't automating one or two internal functions. They're automating all of them. Often they're tiny teams able to beat huge incumbents thanks to internal automation. Their leanness is their superpower."
                                 </blockquote>
-                                <p className="text-slate-400 font-medium">— Gary Tan, President of Y Combinator</p>
+                                <p className="text-slate-400 font-medium">— Garry Tan, President of Y Combinator, in “The New Way To Build A Startup” (YC, February 2026)</p>
                             </div>
 
                             {/* Stat Grid */}
@@ -335,7 +335,7 @@ export default function BuildA20xCompanyContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Real YC Case Studies</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    These aren't hypotheticals. These are real companies from Y Combinator's portfolio, referenced in Gary Tan's talk, that are proving the 20X model works.
+                                    These aren't hypotheticals. These are real companies from Y Combinator's portfolio, referenced in Garry Tan's talk, that are proving the 20X model works.
                                 </p>
                             </div>
 
@@ -743,7 +743,7 @@ export default function BuildA20xCompanyContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">20X Company Concept</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.youtube.com/watch?v=rWUWfj_PqmM" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Gary Tan — 20X Companies (YouTube)</a></li>
+                                        <li>• <a href="https://www.youtube.com/watch?v=rWUWfj_PqmM" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Garry Tan — 20X Companies (YouTube)</a></li>
                                         <li>• <a href="https://www.ycombinator.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Y Combinator — Company portfolio & research</a></li>
                                     </ul>
                                 </div>
