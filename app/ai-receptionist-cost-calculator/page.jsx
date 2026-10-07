@@ -43,7 +43,7 @@ const faqItems = [
     },
     {
         question: 'Is an AI receptionist cheaper than a human answering service?',
-        answer: `Usually by a wide margin. For the same 100 calls, the two human answering services here cost ${humanLow} to ${humanHigh} a month. Human services are still the better choice for complex or sensitive calls.`,
+        answer: `Usually by a wide margin. For the same 100 calls, the five human answering services here cost ${humanLow} to ${humanHigh} a month. Human services are still the better choice for complex or sensitive calls.`,
     },
     {
         question: 'How does the calculator work?',
