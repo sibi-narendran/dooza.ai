@@ -209,20 +209,11 @@ export default function AiReceptionistForDentalOfficeContent() {
                                 <div className="my-8">
                                     <YouTubeEmbed
                                         videoId="6Ait5R-3-lI"
-                                        title="Alex Hormozi & Amjad Massad on AI for Service Businesses"
+                                        title="Alex Hormozi’s New Playbook: Entrepreneurship in the Age of AI (Replit)"
                                     />
-                                    <p className="text-sm text-slate-500 text-center mt-3">Watch: Alex Hormozi and Replit CEO Amjad Massad on how AI is transforming service businesses — from missed calls to booked appointments</p>
+                                    <p className="text-sm text-slate-500 text-center mt-3">Watch: Alex Hormozi with Replit CEO Amjad Masad on offers, acquisition and AI agents (Replit, October 2025)</p>
                                 </div>
 
-                                <div className="bg-slate-50 border-l-4 border-primary-500 p-6 rounded-r-xl my-8">
-                                    <p className="text-slate-700 italic text-lg leading-relaxed mb-3">
-                                        "If you were a dentist, you do Invisalines, person comes in, you make three times your money, and then after that you get them onto the subscription — cleanings and whitening on an ongoing basis. Almost every business can structure it this way."
-                                    </p>
-                                    <p className="text-slate-600 text-sm">
-                                        Hormozi uses dental practices as his go-to example of lifetime value because the math is so clear. One new patient isn't one cleaning — it's a decade of cleanings, X-rays, fillings, crowns, whitening, and family referrals. That's $3,000-5,000 in lifetime revenue. But that entire revenue stream starts with a single phone call. If that call goes to voicemail on a Saturday night, you don't just lose the emergency appointment — you lose the entire relationship.
-                                    </p>
-                                    <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, conversation with Replit CEO Amjad Massad</p>
-                                </div>
 
                                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl my-8">
                                     <div className="flex items-start gap-3">
@@ -340,15 +331,6 @@ export default function AiReceptionistForDentalOfficeContent() {
                                 </p>
                             </div>
 
-                            <div className="bg-slate-50 border-l-4 border-primary-500 p-6 rounded-r-xl mb-8">
-                                <p className="text-slate-700 italic text-lg leading-relaxed mb-3">
-                                    "It would make a mistake and I would correct it — and every single time after that, it would do it right. I've trained a lot of salespeople. This was scary in a cool way. It just doesn't make a mistake after."
-                                </p>
-                                <p className="text-slate-600 text-sm">
-                                    For dental offices, this consistency is critical. When a panicking patient calls about a knocked-out tooth at 10 PM, you need the AI to follow the emergency protocol perfectly — every single time. Unlike a rotating pool of answering service operators who might forget to ask about bleeding or give wrong reimplantation instructions, an AI receptionist configured with your dental protocols executes them flawlessly on every call.
-                                </p>
-                                <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, conversation with Replit CEO Amjad Massad</p>
-                            </div>
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                                 {[
@@ -648,12 +630,12 @@ export default function AiReceptionistForDentalOfficeContent() {
 
                             <div className="bg-slate-50 border-l-4 border-primary-500 p-6 rounded-r-xl mb-8">
                                 <p className="text-slate-700 italic text-lg leading-relaxed mb-3">
-                                    "One customer comes in with enough gross profit embedded to pay for that customer plus the cost of acquiring the next customer. If you can accomplish that within a 30-day cycle, cash is no longer a constraint to growth."
+                                    "One customer comes embedded within it enough gross profit to pay for that customer at the cost of delivering to that customer… If you can accomplish that… within a 30 day cycle, then almost all businesses have interest-free cash available to them."
                                 </p>
                                 <p className="text-slate-600 text-sm">
-                                    Hormozi's "money model" math works perfectly for dental practices. Rachel costs a fraction of a front desk salary. One captured emergency patient who would have otherwise called your competitor is worth $3,000+ in lifetime revenue. That single answered call doesn't just pay for Rachel — it funds your entire marketing budget for the year. The ROI isn't 10x. It's 100x.
+                                    For a dental practice, that means the first visit should pay back what it cost to win the patient. A call that goes to voicemail loses the patient before that math even starts.
                                 </p>
-                                <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, conversation with Replit CEO Amjad Massad</p>
+                                <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, talking with Replit CEO Amjad Masad (Replit, October 2025)</p>
                             </div>
 
                             {/* Comparison Table */}

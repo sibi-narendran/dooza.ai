@@ -225,9 +225,9 @@ export default function AiReceptionistForSalonsContent() {
                                 <div className="my-8">
                                     <YouTubeEmbed
                                         videoId="6Ait5R-3-lI"
-                                        title="Alex Hormozi & Amjad Massad on AI for Small Business"
+                                        title="Alex Hormozi’s New Playbook: Entrepreneurship in the Age of AI (Replit)"
                                     />
-                                    <p className="text-sm text-slate-500 text-center mt-3">Watch: Alex Hormozi and Replit CEO Amjad Massad discuss how AI is transforming small business operations</p>
+                                    <p className="text-sm text-slate-500 text-center mt-3">Watch: Alex Hormozi with Replit CEO Amjad Masad on offers, acquisition and AI agents (Replit, October 2025)</p>
                                 </div>
 
                                 <div className="bg-slate-50 border-l-4 border-primary-500 p-6 rounded-r-xl my-8">
@@ -237,7 +237,7 @@ export default function AiReceptionistForSalonsContent() {
                                     <p className="text-slate-600 text-sm">
                                         Alex Hormozi said this about a business owner whose call-to-action was hidden below the fold — clients literally couldn't find how to book. The fix took seconds. For salons, the parallel is obvious: if your phone goes to voicemail while you're working, the booking button is effectively invisible. An AI receptionist makes it visible 24/7.
                                     </p>
-                                    <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, conversation with Replit CEO Amjad Massad</p>
+                                    <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, talking with Replit CEO Amjad Masad (Replit, October 2025)</p>
                                 </div>
 
                                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl my-8">
@@ -372,15 +372,6 @@ export default function AiReceptionistForSalonsContent() {
                                 </div>
                             </div>
 
-                            <div className="bg-slate-50 border-l-4 border-primary-500 p-6 rounded-r-xl mb-8">
-                                <p className="text-slate-700 italic text-lg leading-relaxed mb-3">
-                                    "People have very large amounts of motivation for very short periods of time. When they have these large moments of motivation, we would like to capitalize on that with the largest transaction possible rather than the smallest transaction possible."
-                                </p>
-                                <p className="text-slate-600 text-sm">
-                                    Hormozi's insight about customer motivation explains exactly why salons lose bookings. A client decides they want a haircut at 9 PM on a Tuesday — that's a spike of motivation. If they call and hit voicemail, the motivation fades. By morning, they've either booked elsewhere or forgotten entirely. The window is minutes, not hours.
-                                </p>
-                                <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, conversation with Replit CEO Amjad Massad</p>
-                            </div>
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
@@ -718,15 +709,6 @@ export default function AiReceptionistForSalonsContent() {
                                 </div>
                             </div>
 
-                            <div className="bg-slate-50 border-l-4 border-primary-500 p-6 rounded-r-xl mb-8">
-                                <p className="text-slate-700 italic text-lg leading-relaxed mb-3">
-                                    "If you were a dentist, you do Invisalines, person comes in, you make three times your money, and then after that you get them onto the subscription — cleanings and whitening on an ongoing basis. Almost every business can structure it this way."
-                                </p>
-                                <p className="text-slate-600 text-sm">
-                                    Hormozi's point about customer lifetime value applies directly to salons. That first color appointment isn't a one-time transaction — it's the entry point to touch-ups every 8 weeks, product purchases, and referrals. The first booking funds the next booking. But only if you answer the phone.
-                                </p>
-                                <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, conversation with Replit CEO Amjad Massad</p>
-                            </div>
 
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl mb-8">
                                 <h3 className="font-bold text-slate-900 mb-4 text-lg">ROI Math: What Captured Calls Are Worth</h3>
