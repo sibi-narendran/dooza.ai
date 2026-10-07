@@ -15,8 +15,8 @@ import { Clock, Calendar, MessageCircle } from 'lucide-react';
 const faqData = [
     { question: "What is an AI chatbot for Shopify?", answer: "A Shopify chatbot is an AI assistant that lives on your storefront and handles customer service, product recommendations, and order tracking automatically. It's trained on your product catalog, shipping policies, and FAQs so it can resolve most tickets without a human in the loop." },
     { question: "What is the best AI chatbot for Shopify in 2026?", answer: "The best AI chatbot Shopify merchants pick depends on the job. For 24/7 support and order tracking, look for one trained on your catalog. For sales, pick one that recommends products and recovers abandoned carts. Dooza's AI employees do both inside one workflow, and every Dooza product starts with a refundable pilot (100% refund within 14 days)." },
-    { question: "Can an AI chatbot replace my Shopify customer service team?", answer: "It can replace 70–90% of repetitive tickets — order status, returns, sizing, shipping. Humans still own complex cases, refunds outside policy, and VIP escalations. The winning setup is AI on the front line, humans on exceptions." },
-    { question: "How does an AI chatbot increase Shopify conversions?", answer: "By answering buying-intent questions in real time (sizing, stock, shipping ETA), recommending the right product, and recovering abandoned carts via chat. Stores running an AI assistant typically see a 10–30% lift in conversion on chat sessions vs no chat." },
+    { question: "Can an AI chatbot replace my Shopify customer service team?", answer: "It can handle most repetitive tickets — order status, returns, sizing, shipping. Humans still own complex cases, refunds outside policy, and VIP escalations. The winning setup is AI on the front line, humans on exceptions." },
+    { question: "How does an AI chatbot increase Shopify conversions?", answer: "By answering buying-intent questions in real time (sizing, stock, shipping ETA), recommending the right product, and recovering abandoned carts via chat. Answering buying questions instantly can lift conversion on chat sessions; measure it on your own store." },
     { question: "Is it hard to install an AI chatbot on Shopify?", answer: "No. Most modern Shopify chatbots install from the App Store in one click and authenticate against your store automatically. Training takes another 30 minutes — upload your FAQs, brand voice, and shipping policy, and you're live." },
     { question: "How much does an AI chatbot for Shopify cost?", answer: "Single-purpose Shopify chatbots run $20–$200/month depending on volume. A bundled AI employee platform like Dooza covers chat, email, SEO, and lead gen in one place. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
 ];
@@ -143,7 +143,7 @@ export default function BestAiChatbotShopifyContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    If you run a Shopify store in 2026, customer service is no longer something you should be doing yourself. The best <strong>AI chatbot for Shopify</strong> will answer 70–90% of your tickets, recommend the right product to every visitor, and recover abandoned carts — all while you sleep.
+                                    If you run a Shopify store in 2026, customer service is no longer something you should be doing yourself. The best <strong>AI chatbot for Shopify</strong> will answer most of your routine tickets, recommend the right product to every visitor, and recover abandoned carts — all while you sleep.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     This guide breaks down what a great Shopify chatbot actually does, the features that matter for ecommerce, the best AI assistant options on the market, and how to get one live on your store in under an hour. If you want <strong>AI support Shopify</strong> stores actually use, start here.
@@ -248,7 +248,7 @@ export default function BestAiChatbotShopifyContent() {
                             </div>
                             <div className="prose md:prose-lg text-slate-600 mt-6">
                                 <p>
-                                    The biggest ROI isn&apos;t the saved salary — it&apos;s the recovered revenue. A Shopify chatbot answering buying-intent questions in real time will lift conversion 10–30% on chat sessions. On a store doing $50k/month, that&apos;s meaningful extra revenue every month from a tool that costs far less than a support hire.
+                                    The biggest ROI isn&apos;t the saved salary — it&apos;s the recovered revenue. A Shopify chatbot answering buying-intent questions in real time can lift conversion on chat sessions. On a store doing $50k/month, that&apos;s meaningful extra revenue every month from a tool that costs far less than a support hire.
                                 </p>
                             </div>
                         </section>
