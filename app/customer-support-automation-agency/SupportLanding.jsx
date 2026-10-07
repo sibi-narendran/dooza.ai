@@ -277,7 +277,7 @@ function ProductWindow() {
                 <Reveal className="mb-12 text-center">
                     <Eyebrow>Dooza support</Eyebrow>
                     <h2 className="mx-auto mb-5 mt-6 max-w-3xl text-3xl leading-[1.3] tracking-[-1px] text-[#1a1a1a] md:text-[40px]">AI answers first. Our team handles the rest.</h2>
-                    <p className="mx-auto max-w-2xl text-base text-[#1a1a1a]">Routine questions get answered in minutes, day and night. Anything unusual goes to a Dooza specialist, and anything sensitive goes to you.</p>
+                    <p className="mx-auto max-w-2xl text-base text-[#1a1a1a]">Routine questions get answered fast, day and night. Anything unusual goes to a Dooza specialist, and anything sensitive goes to you. The inbox below is an illustrative example, not real customer data.</p>
                 </Reveal>
                 <Reveal>
                     <div className="relative mx-auto overflow-hidden rounded-t-xl border border-b-0 border-slate-300 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
@@ -380,10 +380,10 @@ function Team() {
                         <Image src="/support/hero-green.jpg" alt="" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
                         <div className="absolute inset-0 bg-black/45" />
                         <div className="relative">
-                            <h3 className="mb-2 text-2xl tracking-[-1px]">Weekly report</h3>
+                            <h3 className="mb-2 text-2xl tracking-[-1px]">Weekly report (example)</h3>
                             <p className="mb-6 text-sm text-white/85">A short note in your WhatsApp group every Monday: what we answered, what went to you, what we learned.</p>
                             <div className="rounded-lg border border-white/25 bg-black/35 p-4 backdrop-blur-md">
-                                <div className="text-xs text-white">Messages answered</div>
+                                <div className="text-xs text-white">Messages answered (example)</div>
                                 <div className="mb-4 text-4xl">212</div>
                                 <div className="flex h-28 items-end gap-2">
                                     {[40, 55, 48, 70, 62, 85, 100].map((h, i) => (
@@ -392,7 +392,7 @@ function Team() {
                                 </div>
                             </div>
                             <div className="mt-4 rounded-lg bg-black/40 p-3 font-mono text-[11px] leading-relaxed text-white/85">
-                                WEEK 3 · 212 answered · 9 went to you · avg first reply 3 min · new saved answer: &ldquo;Canada shipping&rdquo;
+                                EXAMPLE REPORT, WEEK 3 · 212 answered · 9 went to you · avg first reply 3 min · new saved answer: &ldquo;Canada shipping&rdquo;
                             </div>
                         </div>
                     </Reveal>
@@ -644,7 +644,7 @@ function Founder() {
 const compareCols = ['Answer it yourself', 'Hire a VA', 'AI built into your inbox', 'Dooza'];
 const compareRows = [
     ['Who writes the reply', 'You', 'A person you trained', 'Suggested drafts, you edit', 'AI drafts, a specialist checks'],
-    ['When customers hear back', 'When you get to it', 'Their working hours', 'When you open the inbox', 'Minutes, day and night'],
+    ['When customers hear back', 'When you get to it', 'Their working hours', 'When you open the inbox', 'Fast, day and night'],
     ['Your time each week', 'Hours', 'Training and checking', 'Still reading every message', 'Tap approve, then nothing'],
     ['Wrong answer risk', 'Low, but slow', 'Depends on the person', 'Sends what AI guessed', 'You approve until you trust it'],
     ['Cost', 'Your evenings', 'Hourly, plus hiring time', 'Included or per reply', '$300/mo after 2 free steps'],
