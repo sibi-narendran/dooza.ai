@@ -338,7 +338,7 @@ export default function AutomateBusinessProcessesContent() {
                                 <div className="flex items-start gap-3">
                                     <Share2 className="w-6 h-6 text-primary-600 shrink-0 mt-1" />
                                     <p className="text-slate-700">
-                                        <strong>Businesses that post consistently see 67% more leads than those that don't (HubSpot).</strong>
+                                        <strong>Consistent posting is what most small teams struggle to keep up, and it's the easiest part to automate.</strong>
                                     </p>
                                 </div>
                             </div>

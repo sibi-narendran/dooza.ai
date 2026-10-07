@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "What's the ROI of content marketing?",
-        answer: "Content marketing generates 3x more leads than outbound marketing at 62% lower cost, according to DemandMetric. Companies with blogs get 67% more leads than those without. The challenge isn't ROI—it's consistency. Most businesses start strong then trail off. AI tools solve this by ensuring consistent output."
+        answer: "Content marketing generates 3x more leads than outbound marketing at 62% lower cost, according to DemandMetric. The challenge isn't ROI—it's consistency. Most businesses start strong then trail off. AI tools solve this by ensuring consistent output."
     },
     {
         question: "Can AI really create good content?",
@@ -269,7 +269,7 @@ export default function ContentMarketingToolsContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    You know content marketing works. You've read the stats. You understand that companies with blogs get 67% more leads. But here's the uncomfortable truth: knowing isn't the same as doing.
+                                    You know content marketing works. You've read the stats. You've seen it bring in leads for others. But here's the uncomfortable truth: knowing isn't the same as doing.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     According to <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Content Marketing Institute</a>, the top two reasons businesses don't develop content strategies are: <strong>small team (67%)</strong> and <strong>lack of time (44%)</strong>. Sound familiar?

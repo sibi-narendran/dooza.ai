@@ -623,12 +623,6 @@ export default function VirtualReceptionistSmallBusinessContent() {
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Sources & References</h3>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Call & Voicemail Statistics</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://www.consumerreports.org/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Consumer Reports — Caller behavior research</a></li>
-                                    </ul>
-                                </div>
-                                <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Virtual Receptionist Pricing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
                                         <li>• <a href="https://www.ruby.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Ruby Receptionist — Pricing page</a></li>
