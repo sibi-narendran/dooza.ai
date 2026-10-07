@@ -251,7 +251,7 @@ export default function AiVoiceAgentMissedCallsContent() {
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    The data is unambiguous. Speed-to-response is the single largest factor in lead conversion. It doesn't matter how good your service is, how competitive your pricing is, or how many 5-star reviews you have. If you don't answer the phone, <strong>78% of leads go to whichever competitor picks up first</strong>.
+                                    Speed-to-response is one of the biggest factors in lead conversion. It doesn't matter how good your service is, how competitive your pricing is, or how many 5-star reviews you have. If you don't answer the phone, <strong>the lead often goes to whichever competitor picks up first</strong>.
                                 </p>
                                 <p>
                                     An AI voice agent answers in under one second. Every time. That alone shifts the math in your favor.

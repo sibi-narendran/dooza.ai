@@ -43,11 +43,11 @@ const faqData = [
     },
     {
         question: "How many more meetings does an AI appointment setter book compared to an agency?",
-        answer: "AI appointment setters typically book more meetings per dollar because they respond instantly and never skip a follow-up. Agencies average $150-250 per booked meeting. With Dooza there's no per-meeting fee, so your cost per meeting keeps falling as volume grows. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "AI appointment setters often book more meetings for the money because they respond instantly and never skip a follow-up, and there is no per-meeting fee. With Dooza there's no per-meeting fee, so your cost per meeting keeps falling as volume grows. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How much does an AI appointment setter cost per meeting?",
-        answer: "Agencies charge $2,000-5,000/month, working out to $150-250 per booked meeting at typical volumes. Dooza charges no per-meeting fee, so the cost per meeting is a fraction of an agency's. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Agencies usually charge a monthly retainer, a per-meeting fee, or both. Dooza charges no per-meeting fee, so your cost per meeting falls as volume grows. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Do I still need an appointment setting agency if I use AI?",
@@ -210,7 +210,7 @@ export default function AiAppointmentSetterContent() {
                                     Eight meetings booked last month. Your agency bill? $3,000. That works out to <strong>$375 per meeting</strong>. You glance at the activity log and notice something worse: a prospect filled out your contact form at 8:14 PM on a Tuesday. The agency's first response? 10:03 AM the next morning — <strong>nearly 14 hours later</strong>.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    By then, that prospect had already booked a demo with your competitor. According to Harvard Business Review, <strong>78% of leads buy from the company that responds first</strong>. Your agency isn't just expensive — it's slow enough to cost you deals you never even knew you lost.
+                                    By then, that prospect had already booked a demo with your competitor. Leads often <strong>buy from the company that responds first</strong>. Your agency isn't just expensive — it's slow enough to cost you deals you never even knew you lost.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     And the calls keep coming. Minimum contract commitments, setup fees that appeared on month two, per-meeting surcharges you didn't see in the initial proposal. You wanted more meetings. What you got was an expensive middleman standing between you and your leads.
