@@ -8,7 +8,7 @@ import { SITE_URL } from '@/lib/site';
 import { compareReceptionistCosts, PRICES_CHECKED, PRICES_CHECKED_LABEL } from '@/lib/receptionistPricing';
 
 const PATH = '/ai-receptionist-cost-calculator';
-const TITLE = 'AI Receptionist Cost Calculator: Compare 15 Services by Your Call Volume';
+const TITLE = 'AI Receptionist Cost Calculator: Compare 18 Services by Your Call Volume';
 const DESCRIPTION = `Free calculator: enter your calls per month and minutes per call to see what 13 AI receptionists and 2 human answering services would cost, from list prices checked ${PRICES_CHECKED_LABEL}.`;
 
 export const metadata = {
