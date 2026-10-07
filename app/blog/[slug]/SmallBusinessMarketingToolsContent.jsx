@@ -174,7 +174,7 @@ export default function SmallBusinessMarketingToolsContent() {
                             <span className="text-primary-600">Small Business Marketing Tools</span>: The Complete Guide for 2026
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            52% of small businesses spend under $1,000/month on marketing—but most waste half of it on disconnected tools. Learn which tools actually matter and how AI is changing the game for SMBs.
+                            52% of small businesses spend under $1,000 a month on marketing (LocaliQ 2026), so every tool has to earn its place. Learn which tools actually matter and how AI is changing the game for SMBs.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
