@@ -178,7 +178,7 @@ export default function RealEstateContent({ page }) {
 
                     {/* Hook line */}
                     <p className="text-center text-slate-600 text-lg md:text-xl max-w-2xl mx-auto mb-4">
-                        78% of deals go to the agent who responds first. Are you first?
+                        Deals often go to the agent who responds first. Are you first?
                     </p>
 
                     {/* Title */}

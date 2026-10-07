@@ -53,7 +53,7 @@ export default function ContractorsContent({ page }) {
         {
             icon: Timer,
             title: 'Competitor answers first — wins the job',
-            description: 'Homeowners call 2-3 contractors. The first one to pick up gets the job 78% of the time. If you\'re on-site, you lose before you even knew you were competing.'
+            description: 'Homeowners call 2-3 contractors. The first one to pick up usually gets the job. If you\'re on-site, you lose before you even knew you were competing.'
         },
         {
             icon: Moon,

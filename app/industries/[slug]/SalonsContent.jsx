@@ -47,7 +47,7 @@ export default function SalonsContent({ page }) {
         {
             icon: Moon,
             title: 'After-hours calls = gone forever',
-            description: '40% of salon calls come outside business hours. No voicemail box in the world converts like a live answer.'
+            description: 'Many salon calls come outside business hours. No voicemail box in the world converts like a live answer.'
         }
     ];
 

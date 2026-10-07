@@ -211,7 +211,7 @@ const floatingPills = [
     { text: 'SEO', className: 'top-[30%] right-[5%] float-pill-delay-2' },
     { text: 'Keywords', className: 'bottom-[25%] right-[15%] float-pill-delay-3' },
     { text: 'Page One', className: 'top-[20%] left-[5%] float-pill-delay-4' },
-    { text: '↑ 340%', className: 'bottom-[35%] left-[8%] float-pill-delay-5' },
+    { text: '↑ Rankings', className: 'bottom-[35%] left-[8%] float-pill-delay-5' },
 ];
 
 /* ── Sticky-stacking capabilities section ── */

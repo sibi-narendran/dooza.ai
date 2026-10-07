@@ -311,7 +311,7 @@ export default function AISolutionsContent({ faqData }) {
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                88% of organizations now use AI. But buying 5-7 separate tools costs $200-450/month and creates tool fatigue. This guide shows you exactly which AI solutions exist, what they cost, and how to implement them without wasting money.
+                                Most organizations now use AI. But buying 5-7 separate tools costs $200-450/month and creates tool fatigue. This guide shows you exactly which AI solutions exist, what they cost, and how to implement them without wasting money.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
