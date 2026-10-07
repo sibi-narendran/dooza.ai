@@ -326,12 +326,10 @@ export default function MarketingAutomationToolsContent() {
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { stat: "340%", label: "average ROI within 18 months", source: "Industry Research", link: "https://medium.com/@ap3617180/the-340-roi-shift-why-smbs-must-automate-operational-tasks-to-achieve-scalable-growth-in-the-ai-7a3c5a97daf9" },
                                     { stat: "451%", label: "increase in qualified leads", source: "DemandSage", link: "https://www.demandsage.com/marketing-automation-statistics/" },
                                     { stat: "$46K", label: "annual savings for SMBs", source: "Vena Solutions", link: "https://www.venasolutions.com/blog/automation-statistics" },
                                     { stat: "25%", label: "higher marketing ROI", source: "Backlinko", link: "https://backlinko.com/marketing-automation-stats" },
-                                    { stat: "70%", label: "reduction in manual tasks", source: "Forbes", link: "https://www.forbes.com/" },
-                                    { stat: "82%", label: "of sales teams freed for relationship building", source: "Industry Data", link: "https://www.venasolutions.com/blog/automation-statistics" }
+                                    { stat: "82%", label: "of sales teams freed for relationship building", source: "Vena Solutions", link: "https://www.venasolutions.com/blog/automation-statistics" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-purple-50 border border-purple-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-purple-600 mb-2">{item.stat}</div>

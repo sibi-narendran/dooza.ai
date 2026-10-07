@@ -291,7 +291,7 @@ export default function SeoToolsSmallBusinessContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Why SEO Still Matters for Small Businesses</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Before we dive into tools, let's establish why SEO is worth investing in. Data from <a href="https://backlinko.com/ahrefs-vs-semrush" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Backlinko</a>, <a href="https://moz.com/local-search-ranking-factors" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Moz</a>, and <a href="https://www.thinkwithgoogle.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Google</a>:
+                                    Before we dive into tools, let's establish why SEO is worth investing in. Data from <a href="https://backlinko.com/ahrefs-vs-semrush" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Backlinko</a>, <a href="https://moz.com/local-search-ranking-factors" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Moz</a>, BrightEdge, and HubSpot:
                                 </p>
                             </div>
 
@@ -299,9 +299,7 @@ export default function SeoToolsSmallBusinessContent() {
                                 {[
                                     { stat: "75%", label: "of users never scroll past page one", source: "Backlinko", link: "https://backlinko.com/google-ctr-stats" },
                                     { stat: "46%", label: "of all Google searches have local intent", source: "Moz", link: "https://moz.com/local-search-ranking-factors" },
-                                    { stat: "28%", label: "of local searches result in a purchase", source: "Think With Google", link: "https://www.thinkwithgoogle.com/" },
                                     { stat: "53%", label: "of website traffic comes from organic search", source: "BrightEdge", link: "https://www.brightedge.com/resources/research-reports" },
-                                    { stat: "70%", label: "of marketers say SEO is more effective than PPC", source: "Databox", link: "https://databox.com/" },
                                     { stat: "5.7x", label: "more keywords ranked with consistent blogging", source: "HubSpot", link: "https://www.hubspot.com/marketing-statistics" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-green-50 border border-green-100 p-6 rounded-xl text-center">
