@@ -16,20 +16,20 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const marblismPainPoints = [
-    { icon: DollarSign, title: 'Per-Seat Pricing Adds Up', desc: 'Marblism charges $44/mo for one user plus $29 for every additional seat. A 5-person team pays $160/mo — more than 3× the base price.' },
-    { icon: Puzzle, title: 'Limited Integrations', desc: 'Only Gmail, Instagram, Facebook, WordPress, and Wix. No Slack, Shopify, Notion, HubSpot, or TikTok. Competing platforms offer 1,000-5,000+ integrations.' },
-    { icon: Shield, title: 'No Free Trial', desc: 'No free plan and no free trial. You pay $44 upfront and rely on a 7-day money-back guarantee. Most competitors offer free trials or their own refund windows.' },
-    { icon: Users, title: 'Self-Serve Onboarding Only', desc: 'No human guidance during setup. You get a login and are left to configure 6 AI employees on your own. No setup call, no walkthrough.' },
-    { icon: Bot, title: 'Agents Ignore Instructions', desc: 'Multiple independent reviews report agents "having a mind of their own" — rewriting requests, forgetting context, and altering task instructions.' },
-    { icon: Clock, title: 'Daily Check-In Model', desc: 'Agents check in once per day at a set time for approval. You cannot adjust priorities mid-day or assign urgent tasks between check-ins.' },
+    { icon: Users, title: 'Self-Serve Setup', desc: 'Marblism is self-serve: you set up and manage the AI employees yourself. If you would rather have someone build and tune them with you, a done-for-you option fits better.' },
+    { icon: Bot, title: 'Need Custom Agents', desc: 'Every Marblism plan includes the same 7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda). If your workflow needs an agent outside that roster, look at platforms that build custom agents.' },
+    { icon: Puzzle, title: 'Specific Integrations', desc: 'If you depend on a particular tool, check Marblism\'s site for the tools it connects to before you commit, and compare it with the alternatives below.' },
+    { icon: Shield, title: 'How You Evaluate It', desc: 'Marblism\'s pricing page (checked October 7, 2026) does not mention a free trial. Some alternatives offer free trials, free tiers, or refundable pilots.' },
+    { icon: DollarSign, title: 'Hours Included', desc: 'Every Marblism plan includes 50 hours of work. If you expect heavier use, compare how each alternative meters work.' },
+    { icon: Clock, title: 'Time to Set It Up', desc: 'A low price is good value only if you have time to set up and tune the AI employees. If you do not, weigh that time against a done-for-you option.' },
 ];
 
 const alternatives = [
     {
         rank: 1,
         name: 'Dooza',
-        tagline: 'Best overall — flat pricing, personal onboarding, 1,000+ integrations',
-        bestFor: 'SMBs and teams wanting AI employees without per-seat fees or DIY setup',
+        tagline: 'Best done-for-you option — engineer-led setup, custom agents, 1,000+ integrations',
+        bestFor: 'SMBs and teams that want AI employees built and tuned for them instead of DIY setup',
         price: 'Refundable pilot (see /pricing)',
         trial: 'Refundable pilot — 100% refund within 14 days',
         agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents), Rachel (phone calls)',
@@ -38,14 +38,15 @@ const alternatives = [
         namedAgents: true,
         highlight: true,
         pros: [
-            'No per-seat fees and no credits',
+            'Done for you: a Dooza engineer builds and tunes your AI employees with you',
             'Refundable pilot — 100% refund within 14 days if it is not the right fit',
             'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you',
-            '1,000+ app integrations (vs Marblism\'s ~5 platforms)',
-            'Purpose-built for AI employees from day one (not a pivot)',
+            '1,000+ app integrations',
+            'Custom agents built and maintained by Dooza engineers (Dooza Agents)',
         ],
         cons: [
             'Fewer named AI employees than Sintra\'s 12+ helpers',
+            'Costs more than Marblism for a self-serve user',
             'Newer platform with a smaller user base',
             'No free tier — the pilot is paid, with a 100% refund within 14 days',
         ],
@@ -64,9 +65,8 @@ const alternatives = [
         highlight: false,
         pros: [
             'Largest roster — 12+ named AI helpers covering diverse tasks',
-            '40,000+ users and 4.5/5 Trustpilot rating',
             'Brain AI knowledge base personalizes all helpers to your brand',
-            '14-day money-back guarantee (longer than Marblism\'s 7 days)',
+            '14-day money-back guarantee',
         ],
         cons: [
             '250 credit cap on every plan — advanced actions burn credits fast',
@@ -95,7 +95,7 @@ const alternatives = [
         ],
         cons: [
             'Credit-based AI usage (7,500-15,000 credits/seat) limits output',
-            'Per-seat pricing — same scaling problem as Marblism',
+            'Per-seat pricing — cost scales with team size',
             'AI employees are secondary to the core PM product',
             'Gmail dependency — Outlook users get degraded functionality',
         ],
@@ -144,7 +144,6 @@ const alternatives = [
             '7-day free trial with full access',
         ],
         cons: [
-            '2.0/5 on Trustpilot — major complaints about billing and unauthorized charges',
             'Requires technical knowledge — not plug-and-play like Marblism',
             'Credit-based system plus per-minute voice charges add up',
             'No pre-built named agents — you build everything yourself',
@@ -203,13 +202,13 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative', pick: 'Dooza', reason: 'No per-seat fees, refundable pilot, engineer-led setup, 1,000+ integrations' },
+    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Done for you: engineer-led setup, custom agents, refundable pilot, 1,000+ integrations' },
     { need: 'Most AI agents', pick: 'Sintra AI', reason: '12+ named helpers — the widest roster. But capped at 250 credits/month' },
-    { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations — but 2.0/5 Trustpilot and requires technical setup' },
+    { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations via Pipedream; building agents takes some technical knowledge' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG. Multi-agent orchestration. But not SMB-friendly' },
     { need: 'Marketing only', pick: 'NoimosAI', reason: '11 specialized marketing agents including unique GEO and Social Listening' },
     { need: 'PM + AI in one tool', pick: 'Motion', reason: 'Calendar, tasks, and AI employees in one platform. But still per-seat pricing' },
-    { need: 'Cheapest single user', pick: 'Marblism ($24/mo yearly)', reason: 'Still the cheapest for one person on a yearly plan — but per-seat fees kick in fast' },
+    { need: 'Lowest-cost self-serve AI employees', pick: 'Marblism ($24/mo yearly)', reason: 'All 7 AI employees, 50 hours of work, unlimited team members — if you are happy to set it up yourself' },
     { need: 'Personal onboarding', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you' },
 ];
 
@@ -239,7 +238,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Updated March 2026
+                                    Updated October 7, 2026
                                 </div>
                             </div>
 
@@ -248,11 +247,11 @@ export default function MarblismAlternativesContent({ faqData }) {
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                Per-seat fees adding up? Integrations too limited? You are not alone.
+                                Want it done for you, or need agents Marblism does not offer? Here are your options.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Marblism charges $29/seat on top of the base price, only connects to ~5 platforms, and offers no free trial. We tested 7 alternatives and compared pricing, integrations, pros, and cons — so you do not have to.
+                                Marblism is a low-cost, self-serve AI employee platform: $24/mo billed yearly or $44/mo monthly for all 7 AI employees (pricing checked October 7, 2026). We compared 7 alternatives on pricing, integrations, setup, pros, and cons — so you do not have to.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -271,7 +270,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                 <p className="section-label mb-3">The Problem</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Why People Look for Marblism Alternatives</h2>
                                 <p className="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
-                                    Marblism has 11,800+ users and a 4.7/5 Trustpilot rating. But recurring complaints push many to explore other options.
+                                    Marblism is a popular, low-cost option, but it is not the right fit for everyone. These are the common reasons people compare alternatives.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -345,7 +344,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Pricing as of March 2026. Visit each platform for current rates. Green check = no credit system / has named agents. Red X = uses credits / no named agents.
+                                Marblism pricing checked October 7, 2026; other platforms as of March 2026. Visit each platform for current rates. Green check = no credit system / has named agents. Red X = uses credits / no named agents.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -452,7 +451,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                     </div>
                 </section>
 
-                {/* ── Per-Seat Pricing Breakdown (Dark) ── */}
+                {/* ── Marblism Pricing (Dark) ── */}
                 <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900 overflow-hidden relative">
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
                     <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl" />
@@ -460,10 +459,10 @@ export default function MarblismAlternativesContent({ faqData }) {
                     <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center mb-16">
-                                <p className="section-label mb-3">The Math</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">What Per-Seat Pricing Actually Costs</h2>
+                                <p className="section-label mb-3">Pricing</p>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Marblism Pricing (Checked October 7, 2026)</h2>
                                 <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
-                                    Marblism&apos;s $44/mo looks affordable — until you add your team.
+                                    From Marblism&apos;s own <a href="https://www.marblism.com/pricing" target="_blank" rel="noopener noreferrer" className="underline text-primary-300">pricing page</a>.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -474,31 +473,31 @@ export default function MarblismAlternativesContent({ faqData }) {
                                     <table className="w-full border-collapse text-left">
                                         <thead>
                                             <tr className="bg-white/5">
-                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-white">Team Size</th>
-                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-slate-400">Marblism (monthly)</th>
-                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-primary-300">Dooza</th>
+                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-white">What you get</th>
+                                                <th className="p-4 md:p-5 border-b border-white/10 font-bold text-slate-400">Marblism</th>
                                             </tr>
                                         </thead>
                                         <tbody className="text-sm">
                                             {[
-                                                { team: '1 person', marblism: '$44/mo', dooza: 'No per-seat fees' },
-                                                { team: '2 people', marblism: '$73/mo', dooza: 'No per-seat fees' },
-                                                { team: '3 people', marblism: '$102/mo', dooza: 'No per-seat fees' },
-                                                { team: '5 people', marblism: '$160/mo', dooza: 'No per-seat fees' },
-                                                { team: '10 people', marblism: '$305/mo', dooza: 'No per-seat fees' },
+                                                { item: 'Price (billed yearly)', value: '$24/mo' },
+                                                { item: 'Price (billed monthly)', value: '$44/mo' },
+                                                { item: 'AI employees', value: 'All 7 (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda)' },
+                                                { item: 'Work included', value: '50 hours' },
+                                                { item: 'Team members', value: 'Unlimited' },
+                                                { item: 'Businesses', value: 'Unlimited' },
+                                                { item: 'Free trial', value: 'Not mentioned on the pricing page' },
                                             ].map((row, i) => (
                                                 <tr key={i} className="border-b border-white/5 last:border-0">
-                                                    <td className="p-4 md:p-5 text-white font-medium">{row.team}</td>
-                                                    <td className="p-4 md:p-5 text-slate-400">{row.marblism}</td>
-                                                    <td className="p-4 md:p-5 text-primary-300 font-medium">{row.dooza}</td>
+                                                    <td className="p-4 md:p-5 text-white font-medium">{row.item}</td>
+                                                    <td className="p-4 md:p-5 text-slate-300">{row.value}</td>
                                                 </tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Marblism monthly pricing: $44 base + $29/seat. Dooza has no per-seat fees; pricing depends on the product and every product starts with a refundable pilot (see /pricing).
+                            <p className="text-base text-slate-400 mt-8 max-w-3xl mx-auto text-center leading-relaxed">
+                                For a self-serve user who wants many AI employees at a low price, Marblism is good value. Dooza fits when you would rather not set it up yourself: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents (Dooza Agents) with you, with your approval on anything sensitive. Every Dooza product starts with a refundable pilot — 100% refund within 14 days. Pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -567,7 +566,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Marblism Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start with a refundable pilot — 100% refund within 14 days. No per-seat fees. Book a free 30-minute call with a Dooza engineer to scope it.
+                                Start with a refundable pilot — 100% refund within 14 days. Book a free 30-minute call with a Dooza engineer to scope it.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="marblism_alt_cta">Start your pilot</SignupButton>

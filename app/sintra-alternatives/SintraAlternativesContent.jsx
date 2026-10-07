@@ -55,24 +55,21 @@ const alternatives = [
         tagline: 'Cheapest named-agent platform',
         bestFor: 'Budget-conscious solopreneurs who want an affordable AI team',
         price: 'From $24/mo (yearly) or $44/mo (monthly)',
-        trial: '7-day money-back guarantee (no free trial)',
+        trial: 'No free trial mentioned on its pricing page (checked Oct 7, 2026)',
         agents: '7 named AI employees — Eva (assistant), Sonny (social), Penny (SEO), Stan (leads), Rachel (receptionist), Walter (websites), Linda (legal)',
-        integrations: 'Limited — Gmail, Instagram, Facebook, WordPress, Wix',
+        integrations: 'See marblism.com for supported tools',
         creditSystem: false,
         namedAgents: true,
         highlight: false,
         pros: [
             'Low starting price at $24/mo yearly',
-            '4.7/5 on Trustpilot from 765+ reviews',
             '7 named agents including a phone receptionist (Rachel)',
             'Unlimited team members on every plan',
             'No credit system — all features included in every plan',
         ],
         cons: [
-            'Limited integrations compared to competitors',
-            'No free trial — relies on 7-day refund guarantee',
-            'Some users report agents occasionally ignore prompts',
-            'Work is capped at 50 hours per month on every plan',
+            'No free trial mentioned on its pricing page',
+            '50 hours of work included in every plan',
         ],
     },
     {
@@ -144,7 +141,6 @@ const alternatives = [
             '7-day free trial when you sign up through Slack',
         ],
         cons: [
-            '2.0/5 on Trustpilot — major complaints about billing and unauthorized charges',
             'Requires technical knowledge to build agents — not plug-and-play',
             'Credit-based system plus per-minute voice charges add up',
             'No pre-built named agents — you build and configure everything yourself',
@@ -214,11 +210,10 @@ const sintraCostRows = [
 const decisionGuide = [
     { need: 'Best overall alternative', pick: 'Dooza', reason: 'Named AI employees, refundable pilot, engineer-led setup, no credit system, 1,000+ integrations' },
     { need: 'Lowest price', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 7 named agents, unlimited team members, and no credit system' },
-    { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations — but beware of the 2.0/5 Trustpilot rating and credit system' },
+    { need: 'Most integrations', pick: 'Lindy AI', reason: '5,000+ integrations via Pipedream; building agents takes some technical knowledge' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Used by Canva and KPMG, multi-agent orchestration, $37M funded' },
     { need: 'Marketing only', pick: 'NoimosAI', reason: '11 specialized marketing agents including unique GEO and Social Listening agents' },
     { need: 'PM + AI in one tool', pick: 'Motion', reason: 'Calendar, task management, and AI employees in a single platform' },
-    { need: 'Best user reviews', pick: 'Marblism', reason: '4.7/5 on Trustpilot from 765+ reviews — highest rated in this list' },
     { need: 'Personal onboarding', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you' },
 ];
 

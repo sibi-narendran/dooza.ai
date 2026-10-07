@@ -44,7 +44,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is the best alternative to Sintra AI?',
-        answer: 'It depends on your needs. Dooza is the best all-around alternative for SMBs — it offers named AI employees with no credit system, a Dooza engineer who scopes your pilot on a free 30-minute call, and a refundable pilot (100% refund within 14 days). Marblism is the cheapest at $24/mo. Lindy AI has the most integrations (5,000+) but has a 2.0/5 Trustpilot rating.',
+        answer: 'It depends on your needs. Dooza is the best all-around alternative for SMBs — it offers named AI employees with no credit system, a Dooza engineer who scopes your pilot on a free 30-minute call, and a refundable pilot (100% refund within 14 days). Marblism is the cheapest at $24/mo. Lindy AI has the most integrations (5,000+), but building agents takes some technical knowledge.',
     },
     {
         question: 'Why are people leaving Sintra AI?',

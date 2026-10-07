@@ -75,7 +75,7 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/dooza-vs-marblism`,
-            lastModified: pageDate('2026-04-13'),
+            lastModified: pageDate('2026-10-07'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
@@ -183,7 +183,7 @@ export default async function sitemap() {
         },
         {
             url: `${SITE_URL}/marblism-alternatives`,
-            lastModified: pageDate('2026-04-20'),
+            lastModified: pageDate('2026-10-07'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },

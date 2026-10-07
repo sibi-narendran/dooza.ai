@@ -27,7 +27,7 @@ export default function AlternativesPage() {
             slug: null,
             directLink: '/marblism-alternatives',
             tagline: '7 alternatives compared — pricing, integrations, setup',
-            doozaAdvantage: 'No-code setup, engineer-led onboarding, no per-seat fees'
+            doozaAdvantage: 'Done for you: engineer-led setup, custom agents, refundable pilot'
         },
         {
             name: 'Profound Alternatives',

@@ -2,8 +2,8 @@ import { SITE_URL } from '../../lib/site';
 import DoozaVsMarblismContent from './DoozaVsMarblismContent';
 
 export const metadata = {
-    title: 'Dooza vs Marblism — No Per-Seat Fees vs Per-Seat Pricing [2026]',
-    description: 'Compare Dooza vs Marblism on pricing, seats, setup, integrations, and AI employee workflows before choosing an automation platform.',
+    title: 'Dooza vs Marblism (2026): Done-for-You vs Self-Serve AI Employees',
+    description: 'Dooza vs Marblism compared: Marblism pricing (checked October 7, 2026), setup, AI employees, and when a done-for-you option fits better than self-serve.',
     keywords: [
         'Dooza vs Marblism', 'Marblism alternative', 'Marblism comparison',
         'AI employees comparison', 'Marblism review', 'Marblism pricing',
@@ -14,7 +14,7 @@ export const metadata = {
     alternates: { canonical: `${SITE_URL}/dooza-vs-marblism` },
     openGraph: {
         title: 'Dooza vs Marblism — We Build It For You',
-        description: 'Head-to-head comparison: a Dooza engineer scopes your refundable pilot on a free 30-minute call, with no per-seat fees and a 100% refund within 14 days. Marblism charges $44/mo + per-seat fees. See the full breakdown.',
+        description: 'Head-to-head comparison: a Dooza engineer scopes your refundable pilot on a free 30-minute call (100% refund within 14 days). Marblism is self-serve, from $24/mo billed yearly or $44/mo monthly with all 7 AI employees. See the full breakdown.',
         url: `${SITE_URL}/dooza-vs-marblism`,
         siteName: 'Dooza',
         type: 'website',
@@ -23,7 +23,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Dooza vs Marblism — 2026 Comparison',
-        description: 'Engineer-led setup vs DIY. No per-seat fees vs per-seat pricing. A refundable pilot vs self-serve. See the full comparison.',
+        description: 'Done-for-you vs self-serve AI employees. Engineer-led setup and a refundable pilot vs the lowest-cost DIY option. See the full comparison.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -31,19 +31,19 @@ export const metadata = {
 const faqData = [
     {
         question: 'Is Dooza better than Marblism for AI employees?',
-        answer: 'For businesses that want a hands-off experience, yes. A Dooza engineer scopes your pilot on a free 30-minute call and configures everything with you. Marblism is entirely self-serve — you set up and manage agents yourself. Dooza offers 1,000+ app integrations, while Marblism\'s integration ecosystem is limited and undocumented.',
+        answer: 'For businesses that want a hands-off experience, yes. A Dooza engineer scopes your pilot on a free 30-minute call and configures everything with you. Marblism is self-serve: you set up and manage the AI employees yourself. If you want the lowest-cost self-serve option, Marblism is the better pick; if you want it built and tuned for you, Dooza fits better.',
     },
     {
         question: 'How are Dooza and Marblism different?',
-        answer: 'Dooza is an AI-native company that builds AI products and services for small businesses. Its AI employees each have one job (Maily, Somi, Ranky, Stan, Linda, and Rachel). Marblism pivoted from being an app code generator to AI employees in 2025-2026 and offers 6 agents. The biggest differences are in pricing (flat vs per-seat), onboarding (engineer-led setup vs self-serve), and integrations (1,000+ vs undocumented).',
+        answer: 'Dooza is an AI-native company that builds AI products and services for small businesses. Its AI employees each have one job (Maily, Somi, Ranky, Stan, Linda, and Rachel). Marblism offers 7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, and Linda) in every plan. The biggest difference is setup: Dooza is done for you (a Dooza engineer scopes, builds, and tunes your AI employees or custom agents with you), while Marblism is self-serve and costs less for a self-serve user.',
     },
     {
-        question: 'Does Marblism charge per seat?',
-        answer: 'Yes. Marblism charges $44/month for the first user on the monthly plan, then $29/month for each additional seat. On the annual plan it is $24/month + $14/seat. Dooza has no per-seat fees and no credits, so adding a teammate does not change your bill; every Dooza product starts with a refundable pilot (100% refund within 14 days). Pricing depends on the product — see dooza.ai/pricing.',
+        question: 'How much does Marblism cost?',
+        answer: 'According to Marblism\'s pricing page (checked October 7, 2026), plans start at $24/month billed yearly or $44/month billed monthly. Every plan includes all 7 AI employees, 50 hours of work, unlimited team members, and unlimited businesses. The pricing page does not mention a free trial. Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot (100% refund within 14 days) — see dooza.ai/pricing.',
     },
     {
         question: 'Which has better integrations — Dooza or Marblism?',
-        answer: 'Dooza offers 1,000+ app integrations, including Gmail, LinkedIn, Slack, WordPress, Shopify, and YouTube. Marblism\'s integration options are limited and not well-documented — users report difficulty connecting to tools like Notion and other common platforms.',
+        answer: 'Dooza offers 1,000+ app integrations, including Gmail, LinkedIn, Slack, WordPress, Shopify, and YouTube. For the tools Marblism connects to, check Marblism\'s own site.',
     },
     {
         question: 'How do I switch from Marblism to Dooza?',

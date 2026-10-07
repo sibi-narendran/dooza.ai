@@ -16,38 +16,22 @@ import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
 
 const comparisonRows = [
-    { feature: 'Price', dooza: 'Refundable pilot (see /pricing)', competitor: '$44/mo + $29/seat monthly; $24/mo + $14/seat annually', doozaWins: false },
-    { feature: 'Per-Seat Fees', dooza: 'None', competitor: '$29/seat (monthly)', doozaWins: true },
-    { feature: 'Number of AI Agents', dooza: 'Maily, Somi, Ranky, Stan, Linda, Rachel', competitor: '6 agents', doozaWins: true },
-    { feature: 'Onboarding', dooza: 'Dooza engineer scopes your pilot on a free 30-min call', competitor: 'Self-serve only', doozaWins: true },
-    { feature: 'Integrations', dooza: '1,000+ app integrations', competitor: 'Limited / undocumented', doozaWins: true },
-    { feature: 'Inter-Agent Comms', dooza: 'Coming soon', competitor: 'Yes (2026 update)', doozaWins: false },
-    { feature: 'Try Before Committing', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: 'No free tier', doozaWins: true },
-    { feature: 'Setup Time', dooza: 'One 30-min guided call', competitor: 'Hours (DIY)', doozaWins: true },
-    { feature: 'Brand Personalization', dooza: 'Auto-extracted from your site', competitor: 'Manual config', doozaWins: true },
-    { feature: 'Platform Origin', dooza: 'Built for AI employees from day one', competitor: 'Pivoted from app code generator', doozaWins: true },
-];
-
-const teamPricing = [
-    ['1 person', 'No per-seat fees', '$44/mo'],
-    ['2 people', 'No per-seat fees', '$73/mo'],
-    ['3 people', 'No per-seat fees', '$102/mo'],
-    ['5 people', 'No per-seat fees', '$160/mo'],
+    { feature: 'Price', dooza: 'Refundable pilot (see /pricing)', competitor: '$24/mo billed yearly or $44/mo billed monthly', doozaWins: false },
+    { feature: 'Team Members', dooza: 'Scoped on your pilot call', competitor: 'Unlimited team members and businesses', doozaWins: false },
+    { feature: 'AI Employees', dooza: 'Maily, Somi, Ranky, Stan, Linda, Rachel + custom agents via Dooza Agents', competitor: '7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda)', doozaWins: false },
+    { feature: 'Included Work', dooza: 'Scoped on your pilot call', competitor: '50 hours of work per plan', doozaWins: false },
+    { feature: 'Setup', dooza: 'Done for you: a Dooza engineer scopes your pilot on a free 30-min call, then builds and tunes it with you', competitor: 'Self-serve (you set it up and manage it)', doozaWins: true },
+    { feature: 'Custom Agents', dooza: 'Built and maintained by Dooza engineers (Dooza Agents)', competitor: 'Fixed roster of 7 AI employees', doozaWins: true },
+    { feature: 'Integrations', dooza: '1,000+ app integrations', competitor: 'See marblism.com for supported tools', doozaWins: true },
+    { feature: 'Try Before Committing', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: 'No free trial mentioned on its pricing page', doozaWins: true },
+    { feature: 'Best For', dooza: 'Owners who want it done for them', competitor: 'Lowest-cost self-serve option', doozaWins: false },
 ];
 
 const doozaAdvantages = [
-    { icon: Users, title: 'No Per-Seat Fees', desc: 'Adding a teammate does not add a seat fee. No surprise charges when your VA or co-founder needs in.' },
+    { icon: Users, title: 'Done For You', desc: 'You do not set it up alone. A Dooza engineer builds and tunes your AI employees with you, with your approval on anything sensitive.' },
     { icon: Zap, title: 'A Real Engineer', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees with you. Not a chatbot — a real person.' },
     { icon: Puzzle, title: '1,000+ App Integrations', desc: 'Gmail, Slack, LinkedIn, Shopify, Notion, YouTube and more, connected for you during setup.' },
     { icon: Shield, title: 'Refundable Pilot', desc: 'Every Dooza product starts with a refundable pilot. If it is not right for you, ask within 14 days for a 100% refund.' },
-];
-
-const userQuotes = [
-    { quote: 'The blogs are decent but emails need a lot of workflow to maybe work a little bit fine.', source: 'Zen Aegis — Honest Review', sentiment: 'negative' },
-    { quote: 'Requests for deep integrations like Notion remain unfulfilled. The integration ecosystem is limited.', source: 'The Tranquil Mind Review', sentiment: 'negative' },
-    { quote: 'Each AI employee checks in once daily for approval. It cannot run completely hands-off.', source: 'Spruce & Signal Review', sentiment: 'neutral' },
-    { quote: 'Inter-agent communication is a game changer — agents can now see what other agents are doing.', source: 'The Tranquil Mind — 2026 Update', sentiment: 'positive' },
-    { quote: 'The legacy app builder branding creates confusion. I had to dig to find the AI employees product.', source: 'Independent Reviewer', sentiment: 'negative' },
 ];
 
 export default function DoozaVsMarblismContent({ faqData }) {
@@ -76,7 +60,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                             <div className="hero-entrance hero-delay-1">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
                                     <Sparkles className="w-4 h-4" />
-                                    Comparison — Updated September 2026
+                                    Comparison — Updated October 7, 2026
                                 </div>
                             </div>
 
@@ -89,7 +73,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Dooza offers AI employees with no per-seat fees, a free 30-minute call with a Dooza engineer to scope your pilot, and a 100% refund within 14 days. Marblism offers 6 agents with per-seat fees and self-serve setup. Here is the full breakdown.
+                                Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees with you, with a 100% refund within 14 days. Marblism is self-serve: 7 AI employees from $24/mo billed yearly. Here is the full breakdown.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -112,10 +96,10 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                     <h2 className="text-2xl font-bold">Quick Verdict</h2>
                                 </div>
                                 <p className="text-lg text-slate-600 leading-relaxed mb-4">
-                                    Marblism charges <strong>$44/month + $29 per additional seat</strong>, offers no human onboarding, and has an undocumented integration ecosystem.
+                                    Marblism costs <strong>$24/month billed yearly or $44/month billed monthly</strong>, with all 7 AI employees, 50 hours of work, and unlimited team members. It is self-serve: you set up and manage the AI employees yourself. If you want the lowest-cost self-serve option, Marblism is the better pick.
                                 </p>
                                 <p className="text-lg text-slate-600 leading-relaxed">
-                                    Dooza has <strong>no per-seat fees</strong> and no credits, a Dooza engineer scopes your <strong>refundable pilot</strong> (100% refund within 14 days) on a free 30-minute call, and it connects to <strong>1,000+ apps</strong>. For businesses that want guided setup and no seat math, the difference is significant.
+                                    Dooza is <strong>done for you</strong>: a Dooza engineer scopes your <strong>refundable pilot</strong> (100% refund within 14 days) on a free 30-minute call, builds and tunes your AI employees or custom agents with you, and connects them to <strong>1,000+ apps</strong>. If you do not have time to set up and tune AI employees yourself, Dooza fits better.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -189,13 +173,13 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-4 italic text-center">
-                                Competitor pricing and features as of March 2026.
+                                Marblism pricing checked October 7, 2026 on <a href="https://www.marblism.com/pricing" target="_blank" rel="noopener noreferrer" className="underline">marblism.com/pricing</a>.
                             </p>
                         </ScrollReveal>
                     </div>
                 </section>
 
-                {/* ── Pricing: The Per-Seat Problem ── */}
+                {/* ── Pricing ── */}
                 <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900 overflow-hidden">
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
                     <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl" />
@@ -204,33 +188,13 @@ export default function DoozaVsMarblismContent({ faqData }) {
                         <ScrollReveal>
                             <div className="text-center mb-16">
                                 <p className="section-label mb-3">Pricing Breakdown</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white">The Per-Seat Problem</h2>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white">Marblism Pricing (Checked October 7, 2026)</h2>
                                 <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
-                                    Marblism charges $44/mo for one user, then $29/mo for each additional seat. Watch how fast that adds up.
+                                    Marblism plans start at $24/month billed yearly, or $44/month billed monthly. Every plan includes all 7 AI employees, 50 hours of work, unlimited team members, and unlimited businesses. Its pricing page does not mention a free trial. Source: <a href="https://www.marblism.com/pricing" target="_blank" rel="noopener noreferrer" className="underline text-primary-300">marblism.com/pricing</a>.
                                 </p>
-                            </div>
-                        </ScrollReveal>
-
-                        <ScrollReveal>
-                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
-                                <table className="w-full text-sm">
-                                    <thead>
-                                        <tr className="border-b border-white/10">
-                                            <th className="text-left py-4 px-6 font-bold text-white">Team Size</th>
-                                            <th className="text-left py-4 px-6 font-bold text-primary-300">Dooza</th>
-                                            <th className="text-left py-4 px-6 font-bold text-slate-400">Marblism</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {teamPricing.map(([team, dooza, marblism], i) => (
-                                            <tr key={i} className="border-b border-white/5 last:border-0">
-                                                <td className="py-4 px-6 font-medium text-white">{team}</td>
-                                                <td className="py-4 px-6 text-primary-300 font-semibold">{dooza}</td>
-                                                <td className="py-4 px-6 text-slate-400">{marblism}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
+                                <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
+                                    For a self-serve user, Marblism is the cheaper option. Dooza fits when you want it done for you: a Dooza engineer scopes your pilot on a free 30-minute call, builds and tunes your AI employees or custom agents with you, and every product starts with a refundable pilot (100% refund within 14 days). Dooza pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
+                                </p>
                             </div>
                         </ScrollReveal>
 
@@ -239,9 +203,9 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                 <div className="bg-primary-500/10 backdrop-blur-sm border border-primary-400/20 rounded-2xl p-8">
                                     <p className="text-primary-300 font-bold text-sm uppercase tracking-wider mb-2">Dooza</p>
                                     <div className="text-3xl font-bold text-white mb-1">Refundable pilot</div>
-                                    <p className="text-sm text-slate-400 mb-5">No per-seat fees. 100% refund within 14 days. Pricing depends on the product — <Link href="/pricing" className="underline text-primary-300">see /pricing</Link>.</p>
+                                    <p className="text-sm text-slate-400 mb-5">Done for you. 100% refund within 14 days. Pricing depends on the product — <Link href="/pricing" className="underline text-primary-300">see /pricing</Link>.</p>
                                     <ul className="space-y-2.5 text-sm">
-                                        {['AI employees with one job each', 'No credits', 'No per-seat fees', '1,000+ app integrations', 'Free 30-minute call to scope your pilot', '100% refund within 14 days'].map((item, i) => (
+                                        {['AI employees with one job each', 'Custom agents via Dooza Agents', 'Built and tuned with you by a Dooza engineer', '1,000+ app integrations', 'Free 30-minute call to scope your pilot', '100% refund within 14 days'].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {item}
@@ -252,16 +216,15 @@ export default function DoozaVsMarblismContent({ faqData }) {
 
                                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                                     <p className="text-slate-400 font-bold text-sm uppercase tracking-wider mb-2">Marblism</p>
-                                    <div className="text-4xl font-bold text-white mb-1">$44<span className="text-base font-normal text-slate-400">/month</span></div>
-                                    <p className="text-sm text-slate-500 mb-5">Per user. +$29/seat for team members.</p>
+                                    <div className="text-4xl font-bold text-white mb-1">$24<span className="text-base font-normal text-slate-400">/month</span></div>
+                                    <p className="text-sm text-slate-500 mb-5">Billed yearly ($44/month billed monthly). Checked October 7, 2026.</p>
                                     <ul className="space-y-2.5 text-sm">
                                         {[
-                                            { text: 'AI employees', neg: false },
-                                            { text: 'Unlimited chat interactions', neg: false },
-                                            { text: 'Limited integrations', neg: true },
-                                            { text: 'Self-serve setup', neg: true },
-                                            { text: '+$29/month per extra seat', neg: true },
-                                            { text: '24-48hr support', neg: true },
+                                            { text: 'All 7 AI employees', neg: false },
+                                            { text: '50 hours of work', neg: false },
+                                            { text: 'Unlimited team members', neg: false },
+                                            { text: 'Unlimited businesses', neg: false },
+                                            { text: 'Self-serve setup (you set it up yourself)', neg: true },
                                         ].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-400">
                                                 {item.neg
@@ -275,39 +238,6 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                 </div>
                             </div>
                         </ScrollReveal>
-                    </div>
-                </section>
-
-                {/* ── What Users Say About Marblism ── */}
-                <section className="py-20 lg:py-28 bg-slate-50">
-                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <ScrollReveal>
-                            <div className="text-center mb-12">
-                                <p className="section-label mb-3">Real Reviews</p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl">What Users Say About Marblism</h2>
-                                <p className="text-lg text-slate-500 mt-4">Based on reviews from The Tranquil Mind, Zen Aegis, Spruce & Signal, and independent user blogs.</p>
-                            </div>
-                        </ScrollReveal>
-
-                        <StaggerContainer className="grid md:grid-cols-2 gap-4">
-                            {userQuotes.map((item, i) => (
-                                <StaggerItem key={i}>
-                                    <div className={`border rounded-2xl p-6 h-full ${
-                                        item.sentiment === 'positive' ? 'bg-primary-50/50 border-primary-100' :
-                                        item.sentiment === 'neutral' ? 'bg-amber-50/50 border-amber-100' :
-                                        'bg-white border-slate-200'
-                                    }`}>
-                                        <MessageSquare size={18} className={`mb-3 ${
-                                            item.sentiment === 'positive' ? 'text-primary-500' :
-                                            item.sentiment === 'neutral' ? 'text-amber-500' :
-                                            'text-slate-400'
-                                        }`} />
-                                        <p className="text-slate-700 italic leading-relaxed mb-3">"{item.quote}"</p>
-                                        <p className="text-sm text-slate-500">— {item.source}</p>
-                                    </div>
-                                </StaggerItem>
-                            ))}
-                        </StaggerContainer>
                     </div>
                 </section>
 

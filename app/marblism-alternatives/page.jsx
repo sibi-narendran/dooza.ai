@@ -2,12 +2,12 @@ import { SITE_URL } from '../../lib/site';
 import MarblismAlternativesContent from './MarblismAlternativesContent';
 
 export const metadata = {
-    title: '7 Best Marblism Alternatives [2026] — No Per-Seat Fees',
-    description: 'We compared 7 Marblism alternatives on real pricing, integrations, and setup. Our #1 pick has no per-seat fees and starts with a refundable pilot.',
+    title: '7 Best Marblism Alternatives (2026): Pricing Checked October 2026',
+    description: 'Marblism costs $24/mo billed yearly or $44/mo monthly (checked October 7, 2026). We compared 7 Marblism alternatives on pricing, integrations, and setup, including a done-for-you option.',
     keywords: [
         'Marblism alternatives', 'Marblism alternative', 'Marblism AI alternative',
         'Marblism AI alternatives', 'best Marblism alternative 2026',
-        'platforms like Marblism', 'Marblism competitors', 'Marblism alternative no per seat',
+        'platforms like Marblism', 'Marblism competitors', 'Marblism pricing', 'Marblism free trial', 'is Marblism worth it',
         'AI employee platform', 'AI employees for business', 'Marblism vs Dooza',
         'Marblism vs Sintra', 'best AI agents for small business', 'Marblism replacement',
     ],
@@ -23,20 +23,20 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: '7 Best Marblism Alternatives [2026] — No Per-Seat Fees',
-        description: 'Per-seat pricing adding up? We compared 7 Marblism alternatives with real pricing — the #1 pick includes engineer-led setup and a refundable pilot.',
+        title: '7 Best Marblism Alternatives (2026): Pricing Checked October 2026',
+        description: 'Marblism pricing checked October 7, 2026, plus 7 alternatives compared — including a done-for-you option with engineer-led setup and a refundable pilot.',
         url: `${SITE_URL}/marblism-alternatives`,
         siteName: 'Dooza',
         type: 'article',
-        modifiedTime: '2026-03-30T00:00:00.000Z',
+        modifiedTime: '2026-10-07T00:00:00.000Z',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Marblism Alternatives — Dooza' }],
     },
     twitter: {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: '7 Best Marblism Alternatives [2026] — No Per-Seat Fees',
-        description: 'Per-seat fees, limited integrations, no free trial — 7 alternatives compared. The #1 pick starts with a refundable pilot.',
+        title: '7 Best Marblism Alternatives (2026): Pricing Checked October 2026',
+        description: 'Marblism pricing (checked October 7, 2026) and 7 alternatives compared, from self-serve to done-for-you.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -44,39 +44,39 @@ export const metadata = {
 const faqData = [
     {
         question: 'What are the best Marblism alternatives in 2026?',
-        answer: 'The top Marblism alternatives in 2026 are Dooza (best overall — no per-seat fees, personal onboarding, 1,000+ integrations), Sintra AI (largest agent roster with 12+ helpers), Motion (PM + AI employees), NoimosAI (deepest marketing agents), Lindy AI (5,000+ integrations), Relevance AI (enterprise scale), and Cubeo AI (cheapest entry point). The best choice depends on whether you prioritize pricing, integrations, or agent variety.',
+        answer: 'The top Marblism alternatives in 2026 are Dooza (best done-for-you option — engineer-led setup, custom agents, 1,000+ integrations), Sintra AI (largest agent roster with 12+ helpers), Motion (PM + AI employees), NoimosAI (deepest marketing agents), Lindy AI (5,000+ integrations), Relevance AI (enterprise scale), and Cubeo AI (cheapest entry point). The best choice depends on whether you prioritize price, setup help, integrations, or agent variety.',
     },
     {
         question: 'Is Dooza better than Marblism?',
-        answer: 'Dooza and Marblism both offer named AI employees, but they differ in key areas. Dooza has no per-seat fees, offers 1,000+ app integrations, a free 30-minute call with a Dooza engineer to scope your pilot, and a refundable pilot (100% refund within 14 days). Marblism starts at $24/mo yearly but charges $14-29 per additional seat, has limited integrations (Gmail, Instagram, Facebook, WordPress, Wix), no free trial, and self-serve onboarding only.',
+        answer: 'It depends on how you want to work. Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you, with 1,000+ app integrations and a refundable pilot (100% refund within 14 days). Marblism is self-serve and costs less: $24/mo billed yearly or $44/mo monthly for all 7 AI employees, 50 hours of work, and unlimited team members (checked October 7, 2026). If you want the lowest-cost self-serve option, Marblism is the better pick.',
     },
     {
-        question: 'Why are people switching from Marblism?',
-        answer: 'Common reasons include: per-seat pricing that gets expensive for teams ($44/mo + $29/seat), limited integrations (no Slack, Shopify, Notion, or TikTok), no free trial (only a 7-day money-back guarantee), self-serve onboarding with no human guidance, agents that sometimes ignore instructions or rewrite requests, and a daily check-in model that prevents real-time task adjustments.',
+        question: 'Why do people look for Marblism alternatives?',
+        answer: 'Common reasons include wanting someone to set up and tune the AI employees for them (Marblism is self-serve), needing a custom agent outside Marblism\'s roster of 7 AI employees, depending on a specific integration, or wanting a free trial or refund window to evaluate the product.',
     },
     {
-        question: 'Does Marblism charge per seat?',
-        answer: 'Yes. Marblism charges $44/mo for one user on the monthly plan, plus $29/mo for each additional team member. On the yearly plan, the base drops to $24/mo with extra seats at $14/mo each. A 5-person team on the monthly plan pays $160/mo. Alternatives like Dooza have no per-seat fees, so adding a teammate does not change the bill.',
+        question: 'How much does Marblism cost?',
+        answer: 'According to Marblism\'s pricing page (checked October 7, 2026), plans start at $24/month billed yearly, or $44/month billed monthly. Every plan includes all 7 AI employees, 50 hours of work, unlimited team members, and unlimited businesses. See marblism.com/pricing for current prices.',
+    },
+    {
+        question: 'Is Marblism worth it?',
+        answer: 'For a self-serve user who wants many AI employees at a low price, Marblism is good value: all 7 AI employees, 50 hours of work, and unlimited team members from $24/month billed yearly. If you do not have time to set up and tune them yourself, consider a done-for-you option like Dooza, where a Dooza engineer builds and tunes your AI employees with you and every product starts with a refundable pilot (100% refund within 14 days).',
     },
     {
         question: 'Which Marblism alternative has the most integrations?',
-        answer: 'Lindy AI leads with 5,000+ integrations via Pipedream, but it requires technical knowledge to build agents and has a 2.0/5 Trustpilot rating. Dooza offers 1,000+ app integrations with a plug-and-play setup. Marblism itself only supports Gmail, Instagram, Facebook, WordPress, and Wix.',
+        answer: 'Lindy AI leads with 5,000+ integrations via Pipedream, but it requires technical knowledge to build agents. Dooza offers 1,000+ app integrations, connected for you during setup. For the tools Marblism connects to, check Marblism\'s own site.',
     },
     {
         question: 'Is there a free alternative to Marblism?',
         answer: 'Relevance AI offers a free tier with 200 actions/month, but it is designed for enterprise users and requires technical setup. Cubeo AI has a free plan with 100 credits. Dooza is not free: every Dooza product starts with a paid, refundable pilot — 100% refund if you ask within 14 days.',
     },
     {
-        question: 'Can Marblism agents work fully autonomously?',
-        answer: 'Not entirely. Marblism agents check in once daily at a designated time for approval and feedback. You cannot instruct them to handle urgent tasks or adjust priorities throughout the day. Platforms like Dooza and Sintra AI offer 24/7 autonomous operation where agents execute tasks continuously without waiting for daily check-ins.',
-    },
-    {
         question: 'What is the cheapest Marblism alternative?',
-        answer: 'Cubeo AI starts at approximately €17/mo, making it the cheapest option — but it offers chatbots, not autonomous AI employees. For named AI employees, Marblism\'s yearly plan ($24/mo) is the cheapest single-user option. For teams, per-seat fees are the bigger cost driver: Dooza has no per-seat fees and no credits, and its pricing is listed at dooza.ai/pricing.',
+        answer: 'Cubeo AI starts at approximately €17/mo, making it the cheapest option — but it offers chatbots, not autonomous AI employees. For named AI employees, Marblism\'s yearly plan ($24/mo, all 7 AI employees and unlimited team members, checked October 7, 2026) is one of the lowest-cost options. Dooza is not the lowest-priced option; it is done for you, and its pricing is listed at dooza.ai/pricing.',
     },
     {
         question: 'Does Marblism have a free trial?',
-        answer: 'No. Marblism does not offer a free trial or a free plan. They provide a 7-day money-back guarantee, meaning you pay upfront ($44/mo monthly) and can request a refund within 7 days. Alternatives like Dooza (a refundable pilot — 100% refund within 14 days), Motion (7-day free trial), and Lindy AI (7-day free trial) offer different ways to evaluate the platform.',
+        answer: 'Marblism\'s pricing page does not mention a free trial (checked October 7, 2026); check marblism.com/pricing for current terms. Alternatives offer different ways to evaluate: Dooza starts with a refundable pilot (100% refund within 14 days), and Motion and Lindy AI offer 7-day free trials.',
     },
     {
         question: 'Which AI employee platform has the best onboarding?',
@@ -91,7 +91,7 @@ const schemas = [
         name: metadata.title,
         description: metadata.description,
         url: `${SITE_URL}/marblism-alternatives`,
-        dateModified: '2026-03-30',
+        dateModified: '2026-10-07',
         publisher: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {
