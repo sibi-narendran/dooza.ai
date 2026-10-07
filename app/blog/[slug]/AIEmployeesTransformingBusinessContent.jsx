@@ -238,7 +238,7 @@ export default function AIEmployeesTransformingBusinessContent() {
                                 <h3 className="text-2xl font-bold text-slate-900">Email Management</h3>
                             </div>
                             <div className="prose md:prose-lg text-slate-600">
-                                <p className="mb-4">The average professional spends <strong>28% of their workday</strong> managing email.</p>
+                                <p className="mb-4">The average interaction worker spends about <strong>28% of the workweek</strong> managing email, according to the <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy" target="_blank" rel="noopener noreferrer">McKinsey Global Institute (2012)</a>.</p>
                                 <ul className="space-y-2 mb-6">
                                     {["Automatically sort and prioritize incoming emails", "Draft contextual responses based on your communication style", "Schedule follow-ups and manage your calendar", "Flag urgent messages that need your personal attention"].map((item, idx) => (
                                         <li key={idx} className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-1" /><span>{item}</span></li>
