@@ -114,6 +114,56 @@ const staticPages = [
         description: 'AI solutions for small business workflows.',
     },
     {
+        title: 'Free AI Slop Checker',
+        url: `${SITE_URL}/ai-slop-checker`,
+        description: 'Free tool: paste text and flag 20+ patterns that make writing sound AI-generated. Private, runs in your browser.',
+    },
+    {
+        title: 'Dooza Grow',
+        url: `${SITE_URL}/grow`,
+        description: 'Done-for-you growth engine for small businesses: AI agents for SEO and GEO, paid ads, website and lead conversion, set up by Dooza engineers.',
+    },
+    {
+        title: 'AI Customer Support (done for you)',
+        url: `${SITE_URL}/customer-support-ai`,
+        description: 'AI customer support workflows for email, chat and tickets, built and run by Dooza Agents and AI employees.',
+    },
+    {
+        title: 'Automated Customer Service',
+        url: `${SITE_URL}/automated-customer-support`,
+        description: 'Done-for-you automated customer service: Dooza sets up AI support workflows and connects your tools.',
+    },
+    {
+        title: 'Customer Service Automation Calculator',
+        url: `${SITE_URL}/best-customer-service-automation-software`,
+        description: 'Estimate support workload and savings from customer service automation.',
+    },
+    {
+        title: 'Customer Service Automation Planner',
+        url: `${SITE_URL}/customer-service-automation-solutions`,
+        description: 'Plan triage, AI-drafted replies, approvals, CRM updates and reporting for support.',
+    },
+    {
+        title: 'AI Automation Examples',
+        url: `${SITE_URL}/ai-automation-examples`,
+        description: 'Practical AI automation examples for support, content, SEO, lead generation, email, reporting and operations.',
+    },
+    {
+        title: 'AI Content Automation',
+        url: `${SITE_URL}/ai-content-automation`,
+        description: 'Plan AI content workflows for blogs, social posts, email campaigns, repurposing, approvals and publishing.',
+    },
+    {
+        title: 'AI Blog Automation',
+        url: `${SITE_URL}/ai-blog-automation`,
+        description: 'AI blog workflow for keyword research, briefs, drafts, internal links, review, publishing and reporting.',
+    },
+    {
+        title: 'How to Start an AI Automation Agency',
+        url: `${SITE_URL}/start-ai-automation-agency`,
+        description: 'Package repeatable workflows, choose offers and deliver with Dooza Agents.',
+    },
+    {
         title: 'Industries',
         url: `${SITE_URL}/industries`,
         description: 'Industry-specific AI employee use cases.',
