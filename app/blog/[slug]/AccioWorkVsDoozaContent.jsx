@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: "Is Accio Work free?",
-        answer: "Accio Work offers a freemium model with a 14-day free trial. However, pricing details beyond that aren't publicly transparent. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Yes. Accio Work has a free plan (forever, web search only). Paid plans are Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year), per accio.com (checked October 7, 2026). Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Does Accio Work handle social media and email?",
@@ -325,7 +325,6 @@ export default function AccioWorkVsDoozaContent() {
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Where Accio Work Falls Short</h3>
                             <div className="space-y-3 mb-8">
                                 {[
-                                    "Still in beta (v0.6.2) — not production-ready for business-critical operations",
                                     "Heavily e-commerce focused — not useful for service businesses, agencies, or consultants",
                                     "Locked to Alibaba's ecosystem — limited supplier options beyond Alibaba's network",
                                     "No email automation — cannot manage your inbox or send follow-ups",
@@ -430,7 +429,6 @@ export default function AccioWorkVsDoozaContent() {
                                             "Tied to Alibaba's supplier ecosystem",
                                             "Runs locally on your desktop (Electron app)",
                                             "Stops when your computer sleeps",
-                                            "Still in beta — not production-ready",
                                             "Best for: dropshippers & cross-border sellers",
                                             "Model: reactive — you prompt, agents execute"
                                         ].map((item, idx) => (
@@ -504,8 +502,8 @@ export default function AccioWorkVsDoozaContent() {
                                             { feature: "Product Listing", accio: "Automated via Alibaba", dooza: "Via integrations (Shopify, etc.)" },
                                             { feature: "Integrations", accio: "Telegram, Discord, DingTalk, Lark", dooza: "1,000+ app integrations" },
                                             { feature: "Status", accio: "Beta (v0.6.2)", dooza: "Production-ready" },
-                                            { feature: "Setup & Onboarding", accio: "Desktop install — no onboarding offered", dooza: "Free 30-min call to scope your pilot" },
-                                            { feature: "Starting Price", accio: "Freemium (unclear pricing)", dooza: "Varies by product — refundable pilot (see /pricing)" },
+                                            { feature: "Setup & Onboarding", accio: "Desktop app, self-serve", dooza: "Free 30-min call to scope your pilot" },
+                                            { feature: "Starting Price", accio: "Free plan; Pro from $19.9/mo", dooza: "Varies by product — refundable pilot (see /pricing)" },
                                             { feature: "Best For", accio: "E-commerce & dropshipping", dooza: "Any business needing AI operations" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -523,80 +521,46 @@ export default function AccioWorkVsDoozaContent() {
                         <section id="pricing-breakdown" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                                 <DollarSign className="w-8 h-8 text-green-600" />
-                                Pricing: The Real Cost Comparison
+                                How Much Does Accio Work Cost?
                             </h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Accio Work's pricing is one of its biggest question marks. While the original Accio sourcing tool is currently free, Accio Work uses a tiered subscription model with pricing that isn't publicly disclosed. The 14-day free trial gives you a taste, but what comes after is unclear.
+                                    <strong>Accio Work has a free plan (forever, web search only) and three paid plans: Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year).</strong> That is how Accio itself answers &quot;How much does Accio Work cost?&quot; on <a href="https://www.accio.com/wow/index.html" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">accio.com</a> (page updated August 2026, checked October 7, 2026). Check Accio&apos;s site for what each plan includes before you buy.
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-3 gap-6 mb-8">
-                                {/* Accio Free */}
-                                <div className="bg-orange-50 border border-orange-200 p-6 rounded-xl">
-                                    <h3 className="font-bold text-orange-800 mb-1">Accio Work Free</h3>
-                                    <p className="text-3xl font-bold text-orange-600 mb-3">$0<span className="text-lg text-orange-400">/trial</span></p>
-                                    <div className="space-y-2 text-sm">
+                            <div className="overflow-x-auto mb-8">
+                                <table className="w-full text-sm border-collapse">
+                                    <thead>
+                                        <tr className="border-b-2 border-slate-200 text-left">
+                                            <th className="py-3 pr-4 font-bold text-slate-900">Accio Work plan</th>
+                                            <th className="py-3 pr-4 font-bold text-slate-900">Monthly</th>
+                                            <th className="py-3 pr-4 font-bold text-slate-900">Yearly</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
                                         {[
-                                            { text: "14-day free trial", good: true },
-                                            { text: "Basic agent access", good: true },
-                                            { text: "Pricing unclear after trial", good: false },
-                                            { text: "E-commerce features only", good: false }
-                                        ].map((item, idx) => (
-                                            <div key={idx} className="flex items-center gap-2">
-                                                {item.good ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <XCircle className="w-4 h-4 text-red-400" />}
-                                                <span className="text-slate-700">{item.text}</span>
-                                            </div>
+                                            { plan: 'Free (forever, web search only)', monthly: '$0', yearly: '$0' },
+                                            { plan: 'Pro', monthly: 'from $19.9', yearly: '$199' },
+                                            { plan: 'Elite', monthly: 'from $99', yearly: '$999' },
+                                            { plan: 'Ultra', monthly: 'from $199', yearly: '$1,999' },
+                                        ].map((row) => (
+                                            <tr key={row.plan} className="border-b border-slate-100">
+                                                <td className="py-3 pr-4 text-slate-800">{row.plan}</td>
+                                                <td className="py-3 pr-4 text-slate-700">{row.monthly}</td>
+                                                <td className="py-3 pr-4 text-slate-700">{row.yearly}</td>
+                                            </tr>
                                         ))}
-                                    </div>
-                                </div>
-
-                                {/* Accio Paid */}
-                                <div className="bg-orange-50 border border-orange-200 p-6 rounded-xl">
-                                    <h3 className="font-bold text-orange-800 mb-1">Accio Work Paid</h3>
-                                    <p className="text-3xl font-bold text-orange-600 mb-3">$??<span className="text-lg text-orange-400">/mo</span></p>
-                                    <div className="space-y-2 text-sm">
-                                        {[
-                                            { text: "Full agent platform access", good: true },
-                                            { text: "Multi-model support", good: true },
-                                            { text: "Pricing not publicly disclosed", good: false },
-                                            { text: "Still in beta", good: false }
-                                        ].map((item, idx) => (
-                                            <div key={idx} className="flex items-center gap-2">
-                                                {item.good ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <XCircle className="w-4 h-4 text-red-400" />}
-                                                <span className="text-slate-700">{item.text}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Dooza */}
-                                <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-xs font-bold text-green-700 bg-green-200 px-2 py-0.5 rounded-full w-fit mb-2">BEST VALUE</div>
-                                    <h3 className="font-bold text-green-800 mb-1">Dooza Pilot</h3>
-                                    <p className="text-3xl font-bold text-green-600 mb-3">14-day<span className="text-lg text-green-400"> refundable pilot</span></p>
-                                    <div className="space-y-2 text-sm">
-                                        {[
-                                            { text: "Six AI employees in Dooza Workforce", good: true },
-                                            { text: "1,000+ app integrations", good: true },
-                                            { text: "Cloud-based — works 24/7", good: true },
-                                            { text: "Free 30-min pilot scoping call", good: true },
-                                            { text: "100% refund within 14 days", good: true }
-                                        ].map((item, idx) => (
-                                            <div key={idx} className="flex items-center gap-2">
-                                                <CheckCircle2 className="w-4 h-4 text-green-500" />
-                                                <span className="text-slate-700">{item.text}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
+                                    </tbody>
+                                </table>
+                                <p className="mt-2 text-xs text-slate-500">Source: <a href="https://www.accio.com/wow/index.html" target="_blank" rel="noopener noreferrer" className="underline">accio.com</a>, checked October 7, 2026.</p>
                             </div>
 
-                            <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
-                                <h4 className="font-bold text-slate-900 mb-2">The Transparency Factor</h4>
+                            <div className="bg-green-50 border border-green-200 p-6 rounded-xl">
+                                <h4 className="font-bold text-slate-900 mb-2">How Dooza is priced</h4>
                                 <p className="text-slate-700 text-sm">
-                                    Dooza publishes its pricing on <Link href="/pricing" className="text-primary-600 hover:underline font-medium">its pricing page</Link>. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days. Accio Work's pricing beyond the free trial isn't publicly available, making it hard to budget for. When you're running a business, <strong>predictable costs matter</strong>.
+                                    Dooza is a different kind of product: a Dooza engineer scopes and sets up your AI employees with you, for work beyond product sourcing. Pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza pricing</Link>), and every Dooza product starts with a refundable pilot: 100% refund within 14 days. If you only need sourcing research, Accio&apos;s free plan is the cheaper place to start.
                                 </p>
                             </div>
                         </section>
