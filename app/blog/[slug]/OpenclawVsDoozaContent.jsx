@@ -47,31 +47,31 @@ import {
 const faqData = [
     {
         question: "What is OpenClaw?",
-        answer: "OpenClaw (formerly ClawdBot/MoltBot) is a free, open-source AI assistant framework that runs locally on your computer. It connects to AI models like Claude or GPT and can automate tasks through messaging apps. It's powerful but requires significant technical expertise to set up and maintain."
+        answer: "OpenClaw (formerly Clawdbot, then Moltbot) is a free, MIT-licensed, open-source AI assistant that runs on your own Mac, Windows or Linux machine. You bring your own models, talk to it on messaging apps like WhatsApp, Telegram, Discord and Slack, and it can browse the web, fill forms, manage files and run commands. It includes a built-in scheduler, a web Control UI, bundled skills and Markdown-file memory."
     },
     {
         question: "Is OpenClaw free?",
-        answer: "The framework is free and open-source. However, running it requires API costs ($100-300+/day for heavy use), a dedicated server, and significant developer time for setup and maintenance. The 'free' software often costs more than a managed platform."
+        answer: "Yes. OpenClaw is MIT licensed and has no paid version or hosted tier. What you pay for is model usage (which depends on the models you choose and how much the agent does), the machine it runs on, and your own time to set it up and maintain it."
     },
     {
-        question: "Why is Dooza better than building on OpenClaw?",
-        answer: "Dooza solves the 7 infrastructure problems that OpenClaw doesn't: multi-tenancy, workstation UIs, real-time chat, cron scheduling, prebuilt skills, memory management, and security. You get all of this as a managed service instead of spending weeks building it yourself, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        question: "What is the difference between OpenClaw and Dooza?",
+        answer: "OpenClaw is an agent you host and run yourself. Dooza is a managed alternative to self-hosting OpenClaw: Dooza engineers set up and run AI employees for your business, so there is nothing to install, secure or update. Every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Can I use OpenClaw for business?",
-        answer: "You can, but OpenClaw is an agent runtime, not a business platform. You'll need to build multi-tenancy, security layers, user management, billing, and a UI from scratch. Most businesses are better served by a managed platform like Dooza."
+        answer: "Yes. A team can share one OpenClaw gateway, and it can run multiple isolated agents. OpenClaw's own security docs say it is not a hostile multi-tenant security boundary, so if you want to serve separate clients from one setup you need extra isolation work. Self-hosting also means you handle updates, security reviews and support yourself."
     },
     {
-        question: "How much developer time does OpenClaw require?",
-        answer: "Based on real-world builds: 2-4 weeks for basic setup, 2-3 months for production infrastructure (multi-tenancy, security, cron), and ongoing maintenance. At $150/hour developer rates, that's $50,000-100,000+ before your first customer."
+        question: "How hard is OpenClaw to set up?",
+        answer: "The default install is a one-line installer followed by an onboarding wizard (openclaw onboard); Docker is optional. Most of the effort comes afterwards: choosing models, connecting channels, writing automations, reviewing security settings and keeping it updated."
     },
     {
         question: "Is Dooza an alternative to self-hosting OpenClaw?",
-        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app is a managed alternative to self-hosting OpenClaw. It comes with the infrastructure businesses need — multi-tenancy, security, scheduling, and a dashboard UI — so you get agents that take real actions without running the stack yourself."
+        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app is a managed alternative to self-hosting OpenClaw. Dooza runs and maintains the AI employees for you, with encrypted connections and your approval on anything sensitive."
     },
     {
         question: "What if I want to customize my AI employees?",
-        answer: "Yes. A Dooza engineer scopes your pilot on a free 30-minute call and configures AI employees to match your business, brand voice, and workflows. If you need something the ready-made employees don't cover, Dooza Agents is the AI agentic platform where Dooza engineers build and maintain custom agents for you."
+        answer: "A Dooza engineer scopes your pilot on a free 30-minute call and configures AI employees to match your business, brand voice, and workflows. If you need something the ready-made employees don't cover, Dooza Agents is the AI agentic platform where Dooza engineers build and maintain custom agents for you."
     }
 ];
 
@@ -134,10 +134,10 @@ export default function OpenclawVsDoozaContent() {
                             <span>Comparison</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            OpenClaw vs Dooza: Why <span className="text-primary-600">Building From Scratch</span> Costs More Than You Think
+                            OpenClaw vs Dooza: <span className="text-primary-600">Self-Hosting</span> or a Managed Alternative?
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            OpenClaw is a powerful open-source framework. But between API costs, infrastructure, and months of development, "free" software can cost you $50,000+ before your first customer. Here's the honest comparison.
+                            OpenClaw is a capable, free, open-source agent you run yourself. Dooza is a managed alternative where Dooza engineers run AI employees for you. Here's the honest comparison, checked against OpenClaw's own docs.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -146,7 +146,7 @@ export default function OpenclawVsDoozaContent() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
-                                <span>February 23, 2026</span>
+                                <span>Updated October 7, 2026</span>
                             </div>
                         </div>
 
@@ -157,7 +157,7 @@ export default function OpenclawVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Skip the Build. Start your pilot
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -165,7 +165,7 @@ export default function OpenclawVsDoozaContent() {
                         <div className="mt-10 max-w-3xl mx-auto">
                             <YouTubeEmbed
                                 videoId="ssYt09bCgUY"
-                                title="OpenClaw vs Dooza — Why Building From Scratch Costs More Than You Think"
+                                title="OpenClaw vs Dooza — self-hosting or a managed alternative"
                             />
                         </div>
                     </div>
@@ -184,11 +184,11 @@ export default function OpenclawVsDoozaContent() {
                                 {[
                                     { id: 'introduction', label: 'Introduction' },
                                     { id: 'what-is-openclaw', label: 'What Is OpenClaw?' },
-                                    { id: 'diy-trap', label: 'The DIY Trap' },
-                                    { id: 'hidden-costs', label: 'Hidden Costs' },
+                                    { id: 'diy-trap', label: 'What Self-Hosting Involves' },
+                                    { id: 'hidden-costs', label: 'What OpenClaw Includes' },
                                     { id: 'what-dooza-gives-you', label: 'What Dooza Gives You' },
                                     { id: 'side-by-side', label: 'Side-by-Side Comparison' },
-                                    { id: 'real-cost-math', label: 'The Real Cost Math' },
+                                    { id: 'real-cost-math', label: 'What You Pay For' },
                                     { id: 'who-should-use-what', label: 'Who Should Use What' },
                                     { id: 'getting-started', label: 'Getting Started' },
                                     { id: 'faq', label: 'FAQ' },
@@ -208,7 +208,7 @@ export default function OpenclawVsDoozaContent() {
                             </nav>
 
                             <div className="mt-8 pt-6 border-t border-slate-200">
-                                <p className="text-sm text-slate-600 mb-4">Skip months of building</p>
+                                <p className="text-sm text-slate-600 mb-4">Rather not self-host?</p>
                                 <a
                                     href={getProductSignupUrl('workforce')}
                                     target="_blank"
@@ -233,19 +233,16 @@ export default function OpenclawVsDoozaContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    We love OpenClaw. We built Dooza on it. But we also spent months solving problems that OpenClaw was never designed to solve.
+                                    OpenClaw is a strong open-source agent. Dooza is a managed alternative to self-hosting OpenClaw. The real choice is not which one is more capable. It is who runs, secures and maintains the agent: you, or Dooza.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    If you're a developer or technical founder evaluating whether to build your AI agent business on OpenClaw from scratch, this article will save you months of pain. We've been there. We've solved every problem listed here. The hard way.
+                                    An earlier version of this article said OpenClaw lacks scheduling, a dashboard, chat, skills and persistent memory. OpenClaw&apos;s own documentation shows it has all of these, so we rewrote the comparison. Every OpenClaw fact below comes from openclaw.ai and docs.openclaw.ai, checked October 7, 2026.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>The short version:</strong> OpenClaw is an incredible agent runtime. But an agent runtime is not a business. The gap between "agent that works on my laptop" and "platform that serves paying customers" is wider than most people expect.
+                                    <strong>The short version:</strong> if you are comfortable running software on your own machine or server, OpenClaw gives you a capable, free, MIT-licensed agent. If you would rather have AI employees set up and run for you by Dooza engineers, with a refundable pilot, Dooza is the managed path.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    If you want to understand OpenClaw first, read our <Link href="/blog/what-is-openclaw" className="text-primary-600 hover:underline font-medium">complete OpenClaw guide</Link>. If you want to understand the <em>business</em> layer, read our <Link href="/blog/ai-employees-openclaw-business" className="text-primary-600 hover:underline font-medium">guide to building AI employees on OpenClaw</Link>.
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    This article is the honest comparison. No fluff.
+                                    If you want to understand OpenClaw first, read our <Link href="/blog/what-is-openclaw" className="text-primary-600 hover:underline font-medium">complete OpenClaw guide</Link>. For the business side of AI employees, see our <Link href="/blog/ai-employees-openclaw-business" className="text-primary-600 hover:underline font-medium">guide to AI employees and OpenClaw</Link>.
                                 </p>
                             </div>
                         </section>
@@ -256,19 +253,19 @@ export default function OpenclawVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    <Link href="/blog/what-is-openclaw" className="text-primary-600 hover:underline font-medium">OpenClaw</Link> (formerly ClawdBot, then MoltBot) is an open-source AI assistant that runs locally on your machine. It connects to LLMs like Claude or GPT, integrates with messaging apps, and can execute tasks autonomously.
+                                    <Link href="/blog/what-is-openclaw" className="text-primary-600 hover:underline font-medium">OpenClaw</Link> (formerly Clawdbot, then Moltbot) is an open-source AI assistant that runs on your own Mac, Windows or Linux machine. You bring hosted, subscription-backed, gateway or local models, talk to it on messaging apps such as WhatsApp, Telegram, Discord and Slack, and it can browse the web, fill forms, read and write files and run shell commands.
                                 </p>
                                 <p>
-                                    It's powerful. It's free. And it's attracted a massive developer community.
+                                    It is MIT licensed, with no paid version and no hosted tier, and it has a very large developer community (over 390,000 GitHub stars as of October 7, 2026).
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                                 {[
-                                    { icon: Code, title: "Open Source", desc: "Free framework, MIT licensed" },
-                                    { icon: Terminal, title: "Local Runtime", desc: "Runs on your machine or server" },
-                                    { icon: Brain, title: "Multi-Model", desc: "Works with Claude, GPT, and more" },
-                                    { icon: Zap, title: "Extensible", desc: "Custom skills and tools" }
+                                    { icon: Code, title: "Open Source", desc: "Free, MIT licensed, no paid version" },
+                                    { icon: Terminal, title: "Runs on Your Machine", desc: "State lives on your machine, not a vendor cloud" },
+                                    { icon: Brain, title: "Any Model", desc: "Hosted, subscription, gateway or local models" },
+                                    { icon: Zap, title: "Extensible", desc: "Bundled skills plus community skills on ClawHub" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-slate-50 border border-slate-200 p-4 rounded-xl text-center">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mx-auto mb-2">
@@ -281,70 +278,64 @@ export default function OpenclawVsDoozaContent() {
                             </div>
 
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
-                                <h4 className="font-bold text-blue-900 mb-2">So What's the Problem?</h4>
+                                <h4 className="font-bold text-blue-900 mb-2">So What&apos;s the Trade-off?</h4>
                                 <p className="text-blue-800">
-                                    OpenClaw gives you an agent runtime. But a runtime isn't a business platform. You still need user management, security, scheduling, a usable interface, and someone to keep it all running. <strong>That's the gap this article is about.</strong>
+                                    OpenClaw is a complete agent you host yourself. Self-hosting means you install it, choose and pay for the models, connect your accounts, decide what to automate, review its security settings and keep it updated. <strong>Dooza runs that work for you.</strong> That is the whole difference this article is about.
                                 </p>
                             </div>
                         </section>
 
-                        {/* Section 3: The DIY Trap */}
+                        {/* Section 3: What Self-Hosting Involves */}
                         <section id="diy-trap" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The DIY Trap: What "Free" Actually Costs</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What Self-Hosting OpenClaw Actually Involves</h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Every developer has the same thought when they first see OpenClaw:
-                                </p>
-                                <p className="text-xl font-semibold text-slate-800 italic">
-                                    "This is incredible. I can build anything with this. Why would I pay for a platform?"
-                                </p>
-                                <p>
-                                    We thought the same thing. Then we actually tried to ship a product. Here's the timeline of what really happens:
+                                    Getting started is easier than many guides suggest. The default install is a one-line installer, followed by an onboarding wizard (<code>openclaw onboard</code>). Docker is one option, not a requirement. The ongoing work is what you sign up for:
                                 </p>
                             </div>
 
                             <div className="space-y-4 mb-8">
                                 {[
                                     {
-                                        week: "Week 1-2",
-                                        title: "The Honeymoon",
-                                        desc: "You get a demo working on your laptop. The agent can chat, use tools, and complete tasks. You feel unstoppable. You tweet about it.",
+                                        step: "Install",
+                                        title: "Install and onboard",
+                                        desc: "Run the installer and the onboarding wizard on a machine you control. If you want it running around the clock, that machine has to stay on and online.",
                                         mood: "bg-green-50 border-green-200",
                                         icon: Sparkles,
                                         iconColor: "text-green-600"
                                     },
                                     {
-                                        week: "Week 3-4",
-                                        title: "The First Wall",
-                                        desc: "You try to add a second user. Realize there's no multi-tenancy. Customer A can see Customer B's data. You spend 2 weeks building data isolation from scratch.",
+                                        step: "Models",
+                                        title: "Choose and pay for models",
+                                        desc: "You bring the models. Cost depends on which models you pick and how much the agent does, so you watch usage and set limits yourself.",
                                         mood: "bg-amber-50 border-amber-200",
-                                        icon: AlertTriangle,
+                                        icon: Brain,
                                         iconColor: "text-amber-600"
                                     },
                                     {
-                                        week: "Month 2",
-                                        title: "The Infrastructure Rabbit Hole",
-                                        desc: "Authentication. Real-time chat. WebSocket management. A UI that doesn't look like a terminal. Each problem takes a week to solve properly.",
+                                        step: "Configure",
+                                        title: "Connect channels, skills and automations",
+                                        desc: "Pick the channels you use, enable bundled or community skills, and write the automations (OpenClaw's built-in scheduler) that make the agent work without being asked.",
                                         mood: "bg-orange-50 border-orange-200",
                                         icon: Wrench,
                                         iconColor: "text-orange-600"
                                     },
                                     {
-                                        week: "Month 3",
-                                        title: "The Cron Problem",
-                                        desc: "Your agent only works when someone talks to it. That's ChatGPT, not an employee. You need cron scheduling so the agent works autonomously. Another 2 weeks.",
-                                        mood: "bg-red-50 border-red-200",
-                                        icon: Timer,
-                                        iconColor: "text-red-600"
-                                    },
-                                    {
-                                        week: "Month 4+",
-                                        title: "The Security Audit",
-                                        desc: "First business customer asks about security. You realize your agent can execute arbitrary commands. Prompt injection could leak data across tenants. You need three security layers. Minimum.",
+                                        step: "Secure",
+                                        title: "Review security",
+                                        desc: "OpenClaw ships with conservative defaults: the Gateway binds to loopback, group access is allowlisted, and you choose full access or a sandbox. It also includes an openclaw security audit command. Exposing it to the internet or giving it more access is your call and your responsibility.",
                                         mood: "bg-red-50 border-red-200",
                                         icon: Shield,
                                         iconColor: "text-red-600"
+                                    },
+                                    {
+                                        step: "Maintain",
+                                        title: "Update and support it",
+                                        desc: "There is no paid version or vendor support. Help comes from the docs, GitHub and the Discord community, and you apply updates and fix problems yourself.",
+                                        mood: "bg-slate-50 border-slate-200",
+                                        icon: Timer,
+                                        iconColor: "text-slate-600"
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className={`${item.mood} border p-5 rounded-xl`}>
@@ -352,7 +343,7 @@ export default function OpenclawVsDoozaContent() {
                                             <item.icon className={`w-5 h-5 ${item.iconColor} shrink-0 mt-1`} />
                                             <div>
                                                 <div className="flex items-center gap-2 mb-1">
-                                                    <span className="text-xs font-mono text-slate-500">{item.week}</span>
+                                                    <span className="text-xs font-mono text-slate-500">{item.step}</span>
                                                     <h4 className="font-bold text-slate-900">{item.title}</h4>
                                                 </div>
                                                 <p className="text-sm text-slate-700">{item.desc}</p>
@@ -363,20 +354,20 @@ export default function OpenclawVsDoozaContent() {
                             </div>
 
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
-                                <p className="text-lg font-bold mb-2">The punchline:</p>
+                                <p className="text-lg font-bold mb-2">The honest summary:</p>
                                 <p className="text-slate-300">
-                                    You started with a free framework. Four months later, you've spent <strong className="text-white">$50,000+ in developer time</strong> and you still don't have a product you'd show to a paying customer. The agent is 10% of the work. The platform is the other 90%.
+                                    For a developer running an agent for themselves, this is very manageable. It gets heavier if you want to run agents for a business team or for clients, because that time comes out of running the business.
                                 </p>
                             </div>
                         </section>
 
-                        {/* Section 4: Hidden Costs */}
+                        {/* Section 4: What OpenClaw Includes */}
                         <section id="hidden-costs" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The 7 Hidden Costs of Building on OpenClaw</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What OpenClaw Includes, and What Stays Your Job</h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    We documented every infrastructure problem we solved while <Link href="/blog/ai-employees-openclaw-business" className="text-primary-600 hover:underline font-medium">building our AI employee business on OpenClaw</Link>. Here's the summary:
+                                    Here is what OpenClaw&apos;s documentation says it includes, next to the part that remains yours when you self-host:
                                 </p>
                             </div>
 
@@ -384,52 +375,45 @@ export default function OpenclawVsDoozaContent() {
                                 {[
                                     {
                                         num: "1",
-                                        title: "Multi-Tenancy",
-                                        problem: "OpenClaw runs one agent per directory. Serving multiple customers requires database-level isolation, filesystem sandboxing, and runtime identity tracking.",
-                                        time: "2-3 weeks",
-                                        cost: "$7,500-11,250"
+                                        title: "Scheduling",
+                                        has: "Automations are OpenClaw's built-in scheduler; they wake the agent at the right time.",
+                                        yours: "Writing, testing and monitoring each automation."
                                     },
                                     {
                                         num: "2",
-                                        title: "Workstation UIs",
-                                        problem: "Headless agents feel like ChatGPT. Business buyers need dashboards — content calendars, analytics, ticket queues. Each agent type needs a different workspace.",
-                                        time: "3-4 weeks",
-                                        cost: "$11,250-15,000"
+                                        title: "Dashboard",
+                                        has: "The Control UI is a web app served by the Gateway.",
+                                        yours: "Hosting it and keeping access to it safe."
                                     },
                                     {
                                         num: "3",
-                                        title: "Real-Time Chat",
-                                        problem: "Business users expect Slack-like messaging. That means Server-Sent Events, WebSocket bridging, auto-reconnect, multi-tab sync, and sub-200ms first token.",
-                                        time: "1-2 weeks",
-                                        cost: "$3,750-7,500"
+                                        title: "Chat",
+                                        has: "Talk to it on WhatsApp, Telegram, Discord, Slack and more (29 channels), or through the Control UI.",
+                                        yours: "Connecting and maintaining each channel account."
                                     },
                                     {
                                         num: "4",
-                                        title: "Cron Scheduling",
-                                        problem: "Without cron, your agent only works when talked to. With cron, it wakes up autonomously, generates content, monitors metrics, and sends reports. This is what makes it an employee.",
-                                        time: "1-2 weeks",
-                                        cost: "$3,750-7,500"
+                                        title: "Skills",
+                                        has: "Bundled skills plus local overrides; community skills and plugins on ClawHub.",
+                                        yours: "Choosing, vetting and configuring skills for your jobs."
                                     },
                                     {
                                         num: "5",
-                                        title: "Prebuilt Skills",
-                                        problem: "Every new capability (save post, send email, generate image) needs a custom tool definition, error handling, and testing. And non-technical users need a way to add them without code.",
-                                        time: "2-3 weeks",
-                                        cost: "$7,500-11,250"
+                                        title: "Memory",
+                                        has: "Remembers things in plain Markdown files in the agent's workspace, with no hidden state.",
+                                        yours: "Backing up the machine those files live on."
                                     },
                                     {
                                         num: "6",
-                                        title: "Memory Management",
-                                        problem: "Push an update, lose the agent's memory. Customers notice immediately. You need a safe update pipeline that preserves everything the agent has learned.",
-                                        time: "1 week",
-                                        cost: "$3,750"
+                                        title: "Multiple agents",
+                                        has: "Runs multiple isolated agents in one Gateway process, each with its own workspace; a team can share one gateway.",
+                                        yours: "OpenClaw's docs say it is not a hostile multi-tenant security boundary, so serving separate clients safely takes extra isolation work."
                                     },
                                     {
                                         num: "7",
-                                        title: "Security Layers",
-                                        problem: "One prompt injection could leak data across tenants. You need agent-level whitelists, global blacklists, and filesystem sandboxing. All active by default.",
-                                        time: "2-3 weeks",
-                                        cost: "$7,500-11,250"
+                                        title: "Security",
+                                        has: "Conservative defaults (loopback binding, allowlisted group access, optional sandbox) and an openclaw security audit command.",
+                                        yours: "Reviewing settings whenever you widen access, and keeping up with updates."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden">
@@ -437,54 +421,39 @@ export default function OpenclawVsDoozaContent() {
                                             <div className="w-8 h-8 bg-primary-600 text-white rounded-lg flex items-center justify-center font-bold text-sm">{item.num}</div>
                                             <h4 className="font-bold text-slate-900">{item.title}</h4>
                                         </div>
-                                        <div className="p-5">
-                                            <p className="text-slate-600 text-sm mb-3">{item.problem}</p>
-                                            <div className="flex gap-4">
-                                                <div className="bg-red-50 px-3 py-1.5 rounded-lg">
-                                                    <span className="text-xs text-red-600 font-medium">Dev Time: {item.time}</span>
-                                                </div>
-                                                <div className="bg-red-50 px-3 py-1.5 rounded-lg">
-                                                    <span className="text-xs text-red-600 font-medium">Cost: {item.cost}</span>
-                                                </div>
-                                            </div>
+                                        <div className="p-5 space-y-2">
+                                            <p className="text-slate-600 text-sm"><strong className="text-slate-800">OpenClaw includes:</strong> {item.has}</p>
+                                            <p className="text-slate-600 text-sm"><strong className="text-slate-800">Still your job when self-hosting:</strong> {item.yours}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
 
-                            <div className="bg-red-50 border-2 border-red-200 p-6 rounded-xl">
-                                <h4 className="font-bold text-red-800 mb-2 text-lg">Total DIY Cost</h4>
-                                <div className="flex flex-col sm:flex-row gap-4">
-                                    <div>
-                                        <p className="text-sm text-red-700 mb-1">Development Time</p>
-                                        <p className="text-2xl font-bold text-red-600">12-18 weeks</p>
-                                    </div>
-                                    <div className="sm:border-l sm:border-red-200 sm:pl-4">
-                                        <p className="text-sm text-red-700 mb-1">At $150/hr developer rate</p>
-                                        <p className="text-2xl font-bold text-red-600">$45,000 - $67,500</p>
-                                    </div>
-                                </div>
-                                <p className="text-sm text-red-700 mt-3">Plus ongoing maintenance, bug fixes, and security updates. Every month. Forever.</p>
+                            <div className="bg-amber-50 border-2 border-amber-200 p-6 rounded-xl">
+                                <h4 className="font-bold text-amber-800 mb-2 text-lg">What about cost?</h4>
+                                <p className="text-sm text-amber-800">
+                                    OpenClaw itself is free. What you pay is model usage (which depends entirely on your models and workload), the machine it runs on, and your own time to set it up and maintain it. We don&apos;t publish a dollar estimate here because those numbers vary too much from one setup to the next.
+                                </p>
                             </div>
                         </section>
 
                         {/* Section 5: What Dooza Gives You */}
                         <section id="what-dooza-gives-you" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What Dooza Gives You Out of the Box</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What Dooza Gives You Instead</h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is a managed alternative to self-hosting OpenClaw. We've already solved every problem listed above — and wrapped it in a platform that's ready for your business on day one.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days. Instead of hosting an agent yourself, you get AI employees that Dooza engineers set up and run for you.
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
                                 {[
-                                    { icon: Users, title: "6 Pre-Built AI Employees", desc: "Maily (Email), Somi (Social Media), Ranky (SEO), Rachel (Receptionist), Stan (Sales), Linda (Legal). All configured and working from day one." },
-                                    { icon: Timer, title: "Autonomous Cron Jobs", desc: "AI employees wake up on schedule, do their work, and report back. Social posts at 9am. Review monitoring at noon. Weekly reports on Monday." },
-                                    { icon: ShieldCheck, title: "Security by Default", desc: "Encrypted connections and your approval on anything sensitive. Active by default. Zero configuration." },
-                                    { icon: Database, title: "Multi-Tenancy Built In", desc: "Row-level database security, filesystem sandboxing, runtime identity tracking. Each customer's data is completely isolated." },
-                                    { icon: Sparkles, title: "Dashboard & Workstations", desc: "Each AI employee gets a purpose-built workspace. Content calendars, analytics, conversation history. Not a blank chat window." },
+                                    { icon: Users, title: "6 Ready-Made AI Employees", desc: "Maily (Email), Somi (Social Media), Ranky (SEO), Rachel (Receptionist), Stan (Sales), Linda (Legal)." },
+                                    { icon: Timer, title: "Scheduled Work", desc: "AI employees work on a schedule, do their job, and report back. Social posts in the morning, weekly reports on Monday." },
+                                    { icon: ShieldCheck, title: "Security", desc: "Encrypted connections and your approval on anything sensitive." },
+                                    { icon: Server, title: "Nothing to Host", desc: "No machine to keep on, no installs, no updates to apply. Dooza runs and maintains it." },
+                                    { icon: Sparkles, title: "Dashboard & Workstations", desc: "Each AI employee has its own workspace: content calendars, analytics, conversation history." },
                                     { icon: HeartHandshake, title: "Refundable Pilot", desc: "A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees. Your brand voice, your workflows, your tools. 100% refund within 14 days." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -503,7 +472,7 @@ export default function OpenclawVsDoozaContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">Setup: Same Day</h4>
                                         <p className="text-slate-700">
-                                            Book a free call to scope your pilot. Our team configures everything. Your AI employees start working the same day. Compare that to 3-4 months of building infrastructure from scratch.
+                                            Book a free 30-minute call to scope your pilot. A Dooza engineer configures everything, and Workforce AI employees can start working the same day.
                                         </p>
                                     </div>
                                 </div>
@@ -512,33 +481,33 @@ export default function OpenclawVsDoozaContent() {
 
                         {/* Section 6: Side-by-Side Comparison */}
                         <section id="side-by-side" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">OpenClaw DIY vs Dooza: Side-by-Side</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Self-Hosted OpenClaw vs Dooza: Side-by-Side</h2>
 
                             <div className="overflow-x-auto mb-8">
                                 <table className="w-full text-sm border-collapse">
                                     <thead>
                                         <tr className="border-b-2 border-slate-200">
                                             <th className="text-left py-3 px-4 font-bold text-slate-900">Feature</th>
-                                            <th className="text-left py-3 px-4 font-bold text-slate-900">OpenClaw DIY</th>
+                                            <th className="text-left py-3 px-4 font-bold text-slate-900">OpenClaw (self-hosted)</th>
                                             <th className="text-left py-3 px-4 font-bold text-primary-700 bg-primary-50">Dooza</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Setup Time", openclaw: "3-4 months", dooza: "Same day" },
-                                            { feature: "Upfront Cost", openclaw: "$45,000-67,500 (dev time)", dooza: "Refundable pilot — 100% refund within 14 days" },
-                                            { feature: "Monthly Cost", openclaw: "$100-300+/day in API + hosting", dooza: "Depends on the product (see /pricing)" },
-                                            { feature: "Multi-Tenancy", openclaw: "Build from scratch", dooza: "Built in" },
-                                            { feature: "Security Layers", openclaw: "Build from scratch", dooza: "Encrypted, with your approval on sensitive actions" },
-                                            { feature: "Cron Scheduling", openclaw: "Build from scratch", dooza: "Built in" },
-                                            { feature: "Dashboard UI", openclaw: "Build from scratch", dooza: "Per-agent workstations" },
-                                            { feature: "Real-Time Chat", openclaw: "Build from scratch", dooza: "Slack-like, built in" },
-                                            { feature: "AI Employees", openclaw: "Build each one", dooza: "6 pre-built, ready to go" },
-                                            { feature: "Memory Management", openclaw: "Manual, fragile", dooza: "Auto-preserved on updates" },
-                                            { feature: "Onboarding Help", openclaw: "GitHub docs + Discord", dooza: "Dooza engineer scopes your pilot" },
-                                            { feature: "Technical Skill Required", openclaw: "Senior developer", dooza: "None" },
-                                            { feature: "Ongoing Maintenance", openclaw: "You maintain everything", dooza: "We handle it" },
-                                            { feature: "Time to First Customer", openclaw: "3-6 months", dooza: "Same day" }
+                                            { feature: "Software cost", openclaw: "Free (MIT licensed)", dooza: "Depends on the product (see /pricing)" },
+                                            { feature: "Model costs", openclaw: "You pay your model provider directly", dooza: "Included in the product" },
+                                            { feature: "How to start", openclaw: "One-line installer + onboarding wizard", dooza: "Free 30-minute call, then a refundable pilot (100% refund within 14 days)" },
+                                            { feature: "Who runs it", openclaw: "You, on your machine or server", dooza: "Dooza" },
+                                            { feature: "Scheduling", openclaw: "Built-in scheduler (Automations)", dooza: "Built in, set up for you" },
+                                            { feature: "Dashboard", openclaw: "Control UI", dooza: "Per-employee workstations" },
+                                            { feature: "Chat channels", openclaw: "29 channels incl. WhatsApp, Telegram, Slack", dooza: "Dooza app and your connected tools" },
+                                            { feature: "Skills", openclaw: "Bundled + community skills", dooza: "6 ready-made AI employees" },
+                                            { feature: "Memory", openclaw: "Markdown files in the agent workspace", dooza: "Managed by Dooza" },
+                                            { feature: "Security", openclaw: "Conservative defaults; you review and maintain them", dooza: "Encrypted connections and your approval on anything sensitive" },
+                                            { feature: "Serving separate clients", openclaw: "Not a hostile multi-tenant boundary; extra isolation needed", dooza: "Each business has its own account" },
+                                            { feature: "Support", openclaw: "Docs, GitHub, Discord community", dooza: "Dooza engineers" },
+                                            { feature: "Maintenance", openclaw: "You apply updates and fixes", dooza: "Done for you" },
+                                            { feature: "Control and customisation", openclaw: "Full control over every layer", dooza: "Configured to your workflows; custom agents via Dooza Agents" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -549,61 +518,54 @@ export default function OpenclawVsDoozaContent() {
                                     </tbody>
                                 </table>
                             </div>
+                            <p className="text-xs text-slate-500">OpenClaw details from openclaw.ai and docs.openclaw.ai, checked October 7, 2026.</p>
                         </section>
 
-                        {/* Section 7: The Real Cost Math */}
+                        {/* Section 7: What You Pay For */}
                         <section id="real-cost-math" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Real Cost Math</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What You Pay For in Each Path</h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Let's be brutally honest about what each path actually costs over the first year.
+                                    We used to publish a dollar model for self-hosting. It was our own estimate, not a sourced figure, so we removed it. Here is what each path actually charges you for:
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
-                                {/* OpenClaw DIY */}
-                                <div className="bg-red-50 border border-red-200 p-6 rounded-xl">
-                                    <h3 className="font-bold text-red-800 mb-4 flex items-center gap-2">
+                                {/* OpenClaw */}
+                                <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
+                                    <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2">
                                         <Terminal className="w-5 h-5" />
-                                        OpenClaw DIY (Year 1)
+                                        Self-hosted OpenClaw
                                     </h3>
                                     <div className="space-y-2">
                                         {[
-                                            { label: "Infrastructure development", value: "$45,000-67,500" },
-                                            { label: "API costs (avg $150/day)", value: "$54,750/year" },
-                                            { label: "Server hosting", value: "$840/year" },
-                                            { label: "Ongoing maintenance (10hrs/wk)", value: "$78,000/year" },
-                                            { label: "Security audits", value: "$5,000-15,000" }
+                                            { label: "Software", value: "Free" },
+                                            { label: "Models", value: "Your provider's rates" },
+                                            { label: "Machine / hosting", value: "Yours" },
+                                            { label: "Setup and maintenance", value: "Your time" },
+                                            { label: "Support", value: "Community" }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex justify-between items-center py-1.5 text-sm">
                                                 <span className="text-slate-700">{item.label}</span>
-                                                <span className="font-medium text-red-700">{item.value}</span>
+                                                <span className="font-medium text-slate-800">{item.value}</span>
                                             </div>
                                         ))}
-                                        <div className="border-t border-red-200 pt-2 mt-2">
-                                            <div className="flex justify-between items-center">
-                                                <span className="font-bold text-red-800">Total Year 1</span>
-                                                <span className="text-xl font-bold text-red-600">$183,590-216,090</span>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
                                 {/* Dooza */}
-                                <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
+                                <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl">
                                     <h3 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                                         <Sparkles className="w-5 h-5" />
-                                        Dooza (Year 1)
+                                        Dooza
                                     </h3>
                                     <div className="space-y-2">
                                         {[
-                                            { label: "Infrastructure development", value: "$0" },
-                                            { label: "Subscription", value: "Depends on product" },
-                                            { label: "API costs", value: "Included" },
-                                            { label: "Server hosting", value: "Included" },
-                                            { label: "Maintenance & updates", value: "Included" },
-                                            { label: "Security", value: "Included" },
+                                            { label: "Product", value: "Depends on product" },
+                                            { label: "Models", value: "Included" },
+                                            { label: "Hosting", value: "Included" },
+                                            { label: "Setup and maintenance", value: "Done by Dooza engineers" },
                                             { label: "Pilot scoping call", value: "Free" }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex justify-between items-center py-1.5 text-sm">
@@ -623,8 +585,8 @@ export default function OpenclawVsDoozaContent() {
 
                             <div className="bg-slate-900 text-white p-8 rounded-xl text-center">
                                 <p className="text-slate-400 text-sm mb-2">The difference</p>
-                                <p className="text-4xl font-bold mb-2">$183K+ to build it yourself</p>
-                                <p className="text-slate-400">And that's assuming everything goes right on the first try. Dooza pricing depends on the product, and every product starts with a refundable pilot — 100% refund within 14 days.</p>
+                                <p className="text-3xl font-bold mb-2">Your time vs. a managed service</p>
+                                <p className="text-slate-400">OpenClaw costs nothing to license and asks for your time. Dooza pricing depends on the product, and every product starts with a refundable pilot — 100% refund within 14 days.</p>
                             </div>
                         </section>
 
@@ -634,7 +596,7 @@ export default function OpenclawVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    We're not going to pretend Dooza is right for everyone. Here's the honest breakdown:
+                                    OpenClaw is the better pick for a lot of people. Here is the honest breakdown:
                                 </p>
                             </div>
 
@@ -642,15 +604,15 @@ export default function OpenclawVsDoozaContent() {
                                 <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-blue-900 mb-4 flex items-center gap-2">
                                         <Terminal className="w-5 h-5 text-blue-600" />
-                                        Choose OpenClaw DIY If...
+                                        Choose OpenClaw If...
                                     </h3>
                                     <ul className="space-y-3">
                                         {[
-                                            "You're a developer building a deeply custom agent product",
-                                            "You need full control over every layer of the stack",
-                                            "You're building for a niche with unique infrastructure needs",
-                                            "You have 3-6 months and $50K+ budget for infrastructure",
-                                            "You enjoy solving hard systems problems"
+                                            "You're comfortable installing and running software yourself",
+                                            "You want a personal assistant that runs on your own machine, with your data kept there",
+                                            "You want to pick your own models, including local ones",
+                                            "You want full control over every layer, and the source code",
+                                            "You'd rather spend time than money"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-sm text-slate-700">
                                                 <Code className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
@@ -667,11 +629,11 @@ export default function OpenclawVsDoozaContent() {
                                     </h3>
                                     <ul className="space-y-3">
                                         {[
-                                            "You want AI employees working for your business today",
+                                            "You want AI employees working for your business without hosting anything",
                                             "You're a business owner, not a developer",
                                             "You need email, social media, SEO, calls, sales, and legal handled",
-                                            "You want to start with a refundable pilot (100% refund within 14 days)",
-                                            "You'd rather spend time on your business than building infrastructure"
+                                            "You want it set up and maintained by Dooza engineers",
+                                            "You want to start with a refundable pilot (100% refund within 14 days)"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-sm text-slate-700">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
@@ -685,13 +647,13 @@ export default function OpenclawVsDoozaContent() {
                             <div className="bg-primary-50 border border-primary-100 p-6 rounded-xl mb-8">
                                 <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
                                     <Layers className="w-5 h-5 text-primary-600" />
-                                    For Builders: The Best of Both Worlds
+                                    Need a Custom Agent?
                                 </h4>
                                 <p className="text-slate-700">
-                                    If you want <strong>custom AI agents</strong> but don't want to build the <strong>platform</strong>, Dooza Agents is the answer. It's Dooza's AI agentic platform: Dooza engineers build and maintain custom agents around your workflows, and we handle hosting, security, and deployment. <strong>You define the job. We run the agent.</strong>
+                                    If you want <strong>custom AI agents</strong> but don&apos;t want to host and maintain them, Dooza Agents is Dooza&apos;s AI agentic platform: Dooza engineers build and maintain custom agents around your workflows, and handle hosting, security, and deployment. <strong>You define the job. We run the agent.</strong>
                                 </p>
                                 <p className="text-slate-600 text-sm mt-3">
-                                    <Link href="/blog/ai-employees-openclaw-business" className="text-primary-600 hover:underline font-medium">Read our full guide to building AI employees on OpenClaw &rarr;</Link>
+                                    <Link href="/blog/ai-employees-openclaw-business" className="text-primary-600 hover:underline font-medium">Read our guide to AI employees and OpenClaw &rarr;</Link>
                                 </p>
                             </div>
 
@@ -701,7 +663,7 @@ export default function OpenclawVsDoozaContent() {
                                     <div>
                                         <h4 className="font-bold text-amber-800 mb-2">The Question That Matters</h4>
                                         <p className="text-amber-700">
-                                            Ask yourself: <strong>"Is building AI infrastructure my competitive advantage?"</strong> If no, you're better off using a platform and focusing on what actually differentiates your business. Most businesses compete on their product, their service, their relationships — not on their server architecture.
+                                            Ask yourself: <strong>&quot;Do I want to run an AI agent, or have the work done?&quot;</strong> If you enjoy running it, OpenClaw is a great choice. If you would rather spend that time on your customers, a managed service fits better.
                                         </p>
                                     </div>
                                 </div>
@@ -710,7 +672,7 @@ export default function OpenclawVsDoozaContent() {
 
                         {/* Section 9: Getting Started */}
                         <section id="getting-started" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Get AI Employees Working in 30 Minutes</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Book a 30-Minute Call; AI Employees Start the Same Day</h2>
 
                             <div className="space-y-4 mb-8">
                                 {[
@@ -727,7 +689,7 @@ export default function OpenclawVsDoozaContent() {
                                     {
                                         step: "3",
                                         title: "Your AI Team Starts Working",
-                                        desc: "AI employees begin handling email, posting content, answering calls, generating leads, optimizing SEO, and managing compliance. Autonomously. 24/7."
+                                        desc: "AI employees begin handling email, posting content, answering calls, generating leads, optimizing SEO, and drafting legal documents, with your approval on anything sensitive."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -747,9 +709,9 @@ export default function OpenclawVsDoozaContent() {
                             </div>
 
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
-                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Stop Building Infrastructure. Start Building Your Business.</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Rather Not Run It Yourself?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Every week you spend building platform infrastructure is a week your competitors are serving customers. Dooza is a managed alternative to self-hosting OpenClaw — agents that take real actions, without the months of development.
+                                    Dooza is a managed alternative to self-hosting OpenClaw: AI employees that take real actions, set up and maintained by Dooza engineers. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

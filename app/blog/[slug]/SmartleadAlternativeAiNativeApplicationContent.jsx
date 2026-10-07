@@ -28,34 +28,33 @@ import {
     Target,
     Users,
     Workflow,
-    XCircle,
     Zap
 } from 'lucide-react';
 
 const faqData = [
     {
         question: 'What is the best Smartlead alternative?',
-        answer: 'Dooza is the best Smartlead alternative for small businesses, founders, agencies, and operators that want more than cold email sending. Smartlead is strong for high-volume outbound email, but Dooza wins as an AI-native application because it combines email, SEO, social media, sales follow-up, and phone automation in one AI workforce.'
+        answer: 'If outbound is the whole job, Smartlead itself is hard to beat, and the closest alternatives are other outbound platforms. Dooza is the alternative for small businesses that want more than outbound: Dooza is an AI-native company, and its engineers set up AI employees for email, SEO, social media, sales follow-up, and inbound calls, with your approval on anything sensitive. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.'
     },
     {
         question: 'Is Dooza better than Smartlead?',
-        answer: 'Dooza is better if you want an AI-native business automation platform, not only a cold email sequencer. Smartlead is useful for mailbox rotation, warmup, deliverability, and campaign sending. Dooza is stronger for teams that need AI employees to manage email work, publish content, respond to leads, create social posts, and answer calls.'
+        answer: 'Only if your needs go beyond outbound. Smartlead is better for outbound email and calling at scale: mailbox rotation, warmup, deliverability, done-for-you mailboxes, SmartDialer calls, and AI SmartAgents. Dooza is better for teams that want AI employees set up for them to manage inbox work, publish SEO content, post on social, follow up with leads, and answer inbound calls.'
     },
     {
         question: 'How much does Smartlead cost in 2026?',
-        answer: 'Smartlead publicly lists plans from $39/month to $379/month, with add-ons for areas such as SmartDelivery, SmartServers, email verification, and client workspaces. Pricing can be a good fit for outbound-heavy teams, but total cost depends on the infrastructure and add-ons you need.'
+        answer: 'Smartlead lists Base at $39/month, Pro at $94/month, Unlimited Smart at $174/month, and Unlimited Prime at $379/month, with annual billing saving 17% (checked October 7, 2026, on smartlead.ai/pricing). Add-ons include SmartSenders, SmartDelivery, SmartDialer, Email Verification, and SmartServers, and white-label client workspaces are $29/month each. All plans include unlimited email accounts.'
     },
     {
-        question: 'Why is Dooza called an AI-native application?',
-        answer: 'Dooza is AI-native because the product is built around specialist AI employees rather than static campaign software. Maily, Somi, Ranky, Stan, and Rachel each own a business function and work together across email, social, SEO, sales, and phone workflows.'
+        question: 'What does it mean that Dooza is an AI-native company?',
+        answer: 'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. In the Workforce app, Maily, Somi, Ranky, Stan, and Rachel each own a business function across email, social, SEO, sales, and phone, and Dooza engineers set them up with you. Smartlead also now calls itself an AI-native operating system for sales teams; the difference is scope (outbound sales vs several business functions) and that Dooza does the setup with you.'
     },
     {
         question: 'Can Dooza replace Smartlead for cold outreach?',
-        answer: 'For many small businesses, yes. Dooza can support lead follow-up, sales replies, outbound messaging, email drafts, and cross-channel nurturing. Teams running very large cold email infrastructure may still use Smartlead as a sending engine, but Dooza gives broader automation around the whole sales process.'
+        answer: 'For some small businesses, yes. Dooza can support lead follow-up, sales replies, outbound messaging, email drafts, and cross-channel nurturing. Teams sending high-volume cold email or making outbound calls at scale are usually better served by Smartlead, and can use Dooza for the work around it.'
     },
     {
         question: 'Who should still choose Smartlead?',
-        answer: 'Choose Smartlead if your main requirement is high-volume cold email sending with mailbox rotation, warmup, master inbox, and agency-style outbound infrastructure. Choose Dooza if you want AI employees that handle the work before and after outbound: content, replies, lead handling, social posting, SEO, and calls.'
+        answer: 'Choose Smartlead if your main requirement is high-volume outbound: cold email with mailbox rotation, warmup, a master inbox, white-label agency workspaces, and calling with SmartDialer. Choose Dooza if you want AI employees set up for you that handle the work before and after outbound: content, replies, lead handling, social posting, SEO, and inbound calls.'
     }
 ];
 
@@ -63,10 +62,10 @@ const tocItems = [
     { id: 'introduction', label: 'Quick Verdict' },
     { id: 'what-is-smartlead', label: 'What Smartlead Does' },
     { id: 'why-alternative', label: 'Why Look Elsewhere' },
-    { id: 'dooza-ai-native', label: 'Dooza AI Native' },
+    { id: 'dooza-ai-native', label: 'The Dooza Alternative' },
     { id: 'comparison', label: 'Comparison Table' },
     { id: 'pricing', label: 'Pricing and TCO' },
-    { id: 'where-dooza-wins', label: 'Where Dooza Wins' },
+    { id: 'where-dooza-wins', label: 'Where Dooza Fits' },
     { id: 'use-cases', label: 'Use Cases' },
     { id: 'video', label: 'Video' },
     { id: 'verdict', label: 'Final Verdict' },
@@ -74,14 +73,14 @@ const tocItems = [
 ];
 
 const comparisonRows = [
-    ['Core category', 'Cold email outreach and deliverability platform', 'AI-native business automation platform', 'Dooza'],
-    ['Best fit', 'Outbound agencies and teams sending large email volume', 'Founders, SMBs, agencies, and operators that need AI employees', 'Dooza'],
-    ['Email automation', 'Sequences, warmup, mailbox rotation, master inbox', 'AI email employee for triage, replies, follow-ups, and sales support', 'Depends'],
-    ['AI depth', 'AI-led outbound features around email campaigns', 'Specialist AI employees across business functions', 'Dooza'],
-    ['Channels covered', 'Primarily email outreach', 'Email, SEO, social media, sales, and phone workflows', 'Dooza'],
-    ['Setup model', 'Build outbound infrastructure and campaigns', 'Concierge setup for role-based AI employees', 'Dooza'],
-    ['Pricing model', 'Plan plus possible add-ons for deliverability, servers, verification, and workspaces', 'Flat AI workforce value with no cold-email infrastructure sprawl', 'Dooza'],
-    ['Revenue workflow', 'Helps send and manage outbound campaigns', 'Helps create demand, respond to leads, nurture, book, and follow up', 'Dooza']
+    ['Core category', 'Outbound sales platform: cold email, deliverability, and calling', 'Done-for-you AI employees across business functions', 'Depends'],
+    ['Best fit', 'Outbound agencies and teams sending large email volume', 'Founders, SMBs, and operators that want work done across functions', 'Depends'],
+    ['Email automation', 'Sequences, warmup, mailbox rotation, master inbox, AI reply manager', 'AI email employee for triage, replies, follow-ups, and sales support', 'Depends'],
+    ['AI depth', 'SmartAgents (an AI-powered GTM workforce) and AI reply manager', 'Specialist AI employees across email, SEO, social, sales, and calls', 'Tie'],
+    ['Phone', 'Outbound calls and email from one dashboard; SmartDialer for AI multichannel calls', 'Rachel answers inbound calls, handles FAQs, and books appointments', 'Depends'],
+    ['Beyond outbound', 'Focused on outbound sales', 'SEO (Ranky), social (Somi), inbox (Maily), sales (Stan), calls (Rachel)', 'Dooza'],
+    ['Setup model', 'Self-serve, or Done For You Mailboxes (domains, DNS, SPF, DKIM, DMARC handled)', 'A Dooza engineer scopes your refundable pilot and sets up the AI employees with you', 'Tie'],
+    ['Pricing model', '$39 to $379/month plus optional add-ons (checked October 7, 2026)', 'Pricing depends on the product; every product starts with a refundable pilot (100% refund within 14 days)', 'Smartlead']
 ];
 
 const doozaWins = [
@@ -93,22 +92,22 @@ const doozaWins = [
     {
         icon: Workflow,
         title: '2. Dooza connects the whole customer journey',
-        desc: 'A lead does not stop at one cold email. They may read a blog, reply to an email, ask a question, book a call, miss a call, or need a follow-up. Dooza is stronger because it automates work across those moments.'
+        desc: 'A lead does not stop at one cold email. They may read a blog, reply to an email, ask a question, book a call, miss a call, or need a follow-up. Dooza covers work across those moments, including the inbound ones.'
     },
     {
         icon: DollarSign,
-        title: '3. Dooza avoids tool-stack sprawl',
-        desc: 'Cold outreach often requires separate tools for leads, verification, domains, inboxes, deliverability, copy, CRM, scheduling, and replies. Dooza consolidates practical business automation into one AI-native application.'
+        title: '3. One team across functions',
+        desc: 'Smartlead bundles or sells much of the outbound stack itself. Dooza covers the functions around it (SEO, social, inbox, inbound calls) with one team and 1,000+ app integrations, instead of a separate tool for each.'
     },
     {
         icon: Zap,
-        title: '4. Dooza is easier for non-technical operators',
-        desc: 'Smartlead is excellent when you know outbound infrastructure. Dooza is better when you want usable AI employees configured around your business without becoming an email operations specialist.'
+        title: '4. Done for you, with your approval',
+        desc: 'Smartlead now offers done-for-you mailboxes for the sending side. With Dooza, a Dooza engineer scopes your pilot on a free 30-minute call and sets up AI employees around your business, and you approve anything sensitive.'
     },
     {
         icon: ShieldCheck,
         title: '5. Dooza gives you broader leverage',
-        desc: 'Outbound is one growth channel. Dooza also helps with SEO content, social distribution, inbox responses, lead handling, appointment booking, and phone coverage. That is why Dooza wins for most small businesses.'
+        desc: 'Outbound is one growth channel. Dooza also helps with SEO content, social distribution, inbox responses, lead handling, appointment booking, and phone coverage. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.'
     }
 ];
 
@@ -163,22 +162,22 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                     <div className="text-center max-w-4xl mx-auto">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
                             <Sparkles size={16} />
-                            <span>AI Native Application Comparison</span>
+                            <span>Outbound Tool Comparison</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            Best <span className="text-primary-600">Smartlead Alternative</span>: Why Dooza Is the Clear Winner
+                            Best <span className="text-primary-600">Smartlead Alternative</span>: When Dooza Is the Better Fit
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Smartlead is strong for cold email infrastructure. Dooza is the better AI-native application for businesses that need email, SEO, social media, sales, and phone automation working together.
+                            Smartlead is strong for outbound email and calling. Here is when it is the better pick, and when Dooza, with AI employees set up for you across email, SEO, social media, sales, and calls, fits better.
                         </p>
                         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>14 min read</span></div>
-                            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>May 8, 2026</span></div>
+                            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>Updated October 7, 2026</span></div>
                         </div>
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
                                 src="/blog/marketing-automation-tools.png"
-                                alt="Smartlead alternative comparison showing Dooza as the clear AI native application winner"
+                                alt="Smartlead alternative comparison of Smartlead and Dooza"
                                 priority={true}
                             />
                         </div>
@@ -226,13 +225,13 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    If you are searching for a <strong>Smartlead alternative</strong>, you are probably not just comparing email tools. You are asking a bigger question: should your business invest in another cold email platform, or move to an <strong>AI-native application</strong> that can run more of the growth workflow?
+                                    If you are searching for a <strong>Smartlead alternative</strong>, start with the job. If you need a better outbound tool, Smartlead is already one of the strongest. If you need help with the rest of the growth workflow, the answer is different.
                                 </p>
                                 <p>
-                                    Smartlead has earned attention because it solves a real outbound problem: sending cold email at scale across many inboxes while protecting deliverability. It includes campaign sequences, mailbox rotation, warmup, a master inbox, analytics, and agency-friendly options.
+                                    Smartlead has earned attention because it solves outbound well: sending cold email at scale across many inboxes while protecting deliverability. It includes campaign sequences, mailbox rotation, warmup, a master inbox, analytics, agency-friendly options, calling with SmartDialer, and done-for-you mailbox setup.
                                 </p>
                                 <p>
-                                    But cold email is only one slice of growth. Someone still has to research, write, reply, follow up, publish content, post on social media, handle calls, and move leads toward a booked conversation. That is where <strong>Dooza</strong> becomes the clear winner.
+                                    But outbound is only one slice of growth. Someone still has to publish content, post on social media, answer inbound calls, reply to customers, and move leads toward a booked conversation. That is where <strong>Dooza</strong> fits. Dooza is an AI-native company; its Workforce app gives you AI employees, and Dooza engineers set them up with you.
                                 </p>
                             </div>
 
@@ -240,9 +239,9 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                                 <div className="flex gap-4 items-start">
                                     <Target className="w-7 h-7 text-primary-600 shrink-0 mt-1" />
                                     <div>
-                                        <h2 className="text-xl font-bold text-slate-900 mb-2">Quick verdict: Dooza wins</h2>
+                                        <h2 className="text-xl font-bold text-slate-900 mb-2">Quick verdict</h2>
                                         <p className="text-slate-700">
-                                            Smartlead is a strong cold email sending platform. Dooza is the better Smartlead alternative because it is an AI-native application with specialist AI employees for email, SEO, social media, sales, and phone calls. If you want business outcomes instead of only outbound infrastructure, choose Dooza.
+                                            Smartlead is the better pick if outbound email and calling are the job. Dooza is the better pick if you want AI employees set up for you across email, SEO, social media, sales follow-up, and inbound calls, starting with a refundable pilot: 100% refund within 14 days.
                                         </p>
                                     </div>
                                 </div>
@@ -253,10 +252,10 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">What Smartlead Does Well</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    <strong>Smartlead.ai</strong> is best understood as a cold email outreach and deliverability platform. It helps outbound teams create email sequences, rotate sending accounts, warm up mailboxes, manage replies in a unified inbox, and scale campaigns without paying per connected mailbox.
+                                    <strong>Smartlead.ai</strong> started as a cold email outreach and deliverability platform and now calls itself an AI-native operating system for sales teams. It helps outbound teams create email sequences, rotate sending accounts, warm up mailboxes, manage replies in a unified inbox, make calls from the same dashboard, and scale campaigns without paying per connected mailbox.
                                 </p>
                                 <p>
-                                    As of May 8, 2026, Smartlead publicly lists four main plans: Base, Pro, Unlimited Smart, and Unlimited Prime. Its pricing page shows monthly plans ranging from <strong>$39/month to $379/month</strong>, with annual billing discounts and add-ons for areas such as SmartDelivery, email verification, SmartServers, SmartSenders, and white-label client workspaces.
+                                    Smartlead lists four plans: Base ($39/month), Pro ($94/month), Unlimited Smart ($174/month), and Unlimited Prime ($379/month), so <strong>$39/month to $379/month</strong>, with annual billing saving 17% (checked October 7, 2026). Add-ons include SmartSenders, SmartDelivery, SmartDialer, Email Verification, and SmartServers, and white-label client workspaces are $29/month each.
                                 </p>
                                 <p>
                                     That makes Smartlead a serious tool for outbound agencies, SDR teams, recruiters, and companies that already know cold email operations. If you need to manage many mailboxes and send high-volume campaigns, Smartlead belongs in the conversation.
@@ -283,22 +282,22 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Businesses Look for a Smartlead Alternative</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Most Smartlead comparison blogs focus on other cold email tools: Instantly, Lemlist, Apollo, Reply.io, Salesloft, Outreach, or Woodpecker. That makes sense if your only buying question is "which sender should I use?"
+                                    Many Smartlead comparisons focus on other cold email tools: Instantly, Lemlist, Apollo, Reply.io, Salesloft, Outreach, or Woodpecker. That makes sense if your buying question is "which outbound tool should I use?"
                                 </p>
                                 <p>
-                                    But many founders are asking a different question. They do not want to become deliverability experts. They want leads answered, content published, follow-ups sent, customers supported, and calls handled without hiring a full team.
+                                    Some founders are asking a different question. They want leads answered, content published, follow-ups sent, customers supported, and inbound calls handled without hiring a full team.
                                 </p>
                             </div>
 
                             <div className="space-y-5 mt-8">
                                 {[
-                                    ['Cold email is not a full growth system', 'It can start conversations, but it does not create SEO demand, answer phone calls, post on social media, or manage every lead response after the first reply.'],
-                                    ['Add-ons and infrastructure can complicate costs', 'Domains, mailboxes, verification, deliverability tests, dedicated infrastructure, and agency workspaces can turn a simple plan into a broader email operations budget.'],
-                                    ['Outbound requires constant maintenance', 'Campaign copy, sending limits, inbox health, bounces, replies, lead lists, and follow-ups all need attention if you want quality outcomes.'],
+                                    ['Outbound is not a full growth system', 'It can start conversations, but it does not create SEO demand, post on social media, or answer inbound calls from customers.'],
+                                    ['Add-ons depend on how you operate', 'Smartlead publishes its plan and add-on prices. Your total depends on which add-ons (deliverability, servers, verification, dialer, workspaces) you need.'],
+                                    ['Outbound still needs attention', 'Campaign copy, lead lists, replies, and follow-ups need someone watching them, even with done-for-you mailboxes and AI agents.'],
                                     ['Small businesses need operators, not just senders', 'The biggest bottleneck is usually not sending one more campaign. It is following through when a lead replies, asks a question, or wants to book.']
                                 ].map(([title, desc]) => (
-                                    <div key={title} className="bg-red-50 border border-red-100 rounded-xl p-6 flex gap-4">
-                                        <XCircle className="w-6 h-6 text-red-500 shrink-0 mt-1" />
+                                    <div key={title} className="bg-slate-50 border border-slate-100 rounded-xl p-6 flex gap-4">
+                                        <CheckCircle2 className="w-6 h-6 text-primary-600 shrink-0 mt-1" />
                                         <div>
                                             <h3 className="font-bold text-slate-900 mb-2">{title}</h3>
                                             <p className="text-slate-600">{desc}</p>
@@ -309,13 +308,13 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                         </section>
 
                         <section id="dooza-ai-native" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Dooza: The AI-Native Application Built for Business Work</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Dooza: The Done-for-You Alternative to Smartlead</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> is not another cold email sequencer. It is an AI-native application built around specialist AI employees. Instead of giving you one campaign engine, Dooza gives you a workforce that can handle practical work across the business.
+                                    <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days. Instead of one campaign engine, Dooza engineers set up a workforce of AI employees that handle practical work across the business.
                                 </p>
                                 <p>
-                                    That difference matters. Smartlead can help you send outbound email. Dooza can help you create the content that brings leads in, follow up with those leads, post on social channels, answer phone calls, and keep customer communication moving.
+                                    That difference matters. Smartlead runs outbound email and calling. Dooza helps you create the content that brings leads in, follow up with those leads, post on social channels, answer inbound calls, and keep customer communication moving, with your approval on anything sensitive.
                                 </p>
                             </div>
 
@@ -347,7 +346,7 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                                             <th className="text-left p-4 font-semibold">Category</th>
                                             <th className="text-left p-4 font-semibold">Smartlead</th>
                                             <th className="text-left p-4 font-semibold">Dooza</th>
-                                            <th className="text-left p-4 font-semibold">Winner</th>
+                                            <th className="text-left p-4 font-semibold">Edge</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-slate-100">
@@ -357,7 +356,7 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                                                 <td className="p-4 text-slate-600">{smartlead}</td>
                                                 <td className="p-4 text-slate-600">{dooza}</td>
                                                 <td className="p-4">
-                                                    <span className={`inline-flex px-3 py-1 rounded-full text-xs font-bold ${winner === 'Dooza' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
+                                                    <span className={`inline-flex px-3 py-1 rounded-full text-xs font-bold ${winner === 'Dooza' || winner === 'Smartlead' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
                                                         {winner}
                                                     </span>
                                                 </td>
@@ -372,29 +371,29 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing and Total Cost: Smartlead vs Dooza</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Smartlead's published pricing starts at <strong>$39/month</strong> for Base and scales to <strong>$379/month</strong> for Unlimited Prime. The list price can be attractive for email-heavy teams because Smartlead includes unlimited connected email accounts across plans.
+                                    Smartlead's published pricing starts at <strong>$39/month</strong> for Base and scales to <strong>$379/month</strong> for Unlimited Prime (checked October 7, 2026). The list price is attractive for email-heavy teams because every plan includes unlimited email accounts.
                                 </p>
                                 <p>
-                                    The practical cost question is broader. Cold email infrastructure often includes domains, inboxes, email verification, deliverability testing, dedicated IPs or servers, copywriting, lead data, CRM cleanup, and someone to monitor replies. Smartlead offers several add-ons for parts of that system, but the total cost depends on how you operate.
+                                    Your total depends on which add-ons you use (SmartSenders, SmartDelivery, SmartDialer, Email Verification, SmartServers, white-label workspaces) and on who runs the campaigns and watches replies.
                                 </p>
                                 <p>
-                                    Dooza's value is different. You are not buying one sender. You are buying an AI-native workforce that can help with email, SEO, social media, sales follow-up, and phone calls. For small businesses, that is usually the better value because the same platform solves multiple bottlenecks. Dooza pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline">pricing</Link>), and every product starts with a refundable pilot.
+                                    Dooza's value is different. You are not buying an outbound tool. You are buying AI employees, set up by Dooza engineers, that help with email, SEO, social media, sales follow-up, and inbound calls. Dooza pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline">pricing</Link>), and every product starts with a refundable pilot.
                                 </p>
                             </div>
 
                             <div className="mt-8 bg-emerald-50 border border-emerald-100 rounded-2xl p-6 flex gap-4">
                                 <DollarSign className="w-8 h-8 text-emerald-600 shrink-0 mt-1" />
                                 <div>
-                                    <h3 className="font-bold text-slate-900 text-xl mb-2">The real ROI test</h3>
+                                    <h3 className="font-bold text-slate-900 text-xl mb-2">The value test</h3>
                                     <p className="text-slate-700">
-                                        If you already have outbound infrastructure and only need better sending, Smartlead can make sense. If you need a business system that creates, responds, follows up, books, and supports customers, Dooza delivers more value.
+                                        If outbound is your growth system, Smartlead is likely the better value. If you need help that creates content, responds, follows up, books, and supports customers, test Dooza with a refundable pilot and compare.
                                     </p>
                                 </div>
                             </div>
                         </section>
 
                         <section id="where-dooza-wins" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Where Dooza Wins as a Smartlead Alternative</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Where Dooza Fits Better Than Smartlead</h2>
                             <div className="space-y-6">
                                 {doozaWins.map((item) => (
                                     <div key={item.title} className="bg-white border border-slate-200 p-6 rounded-xl">
@@ -417,12 +416,12 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                             <div className="grid md:grid-cols-2 gap-5">
                                 {[
                                     'You want an AI email employee, not just outbound sequences',
-                                    'You need SEO, social, sales, email, and calls in one place',
-                                    'You are a founder without time to manage cold email operations',
+                                    'You need SEO, social, sales, email, and inbound calls in one place',
+                                    'You want Dooza engineers to set up and run the work with you',
                                     'You want leads followed up after they reply',
                                     'You need content marketing and outbound to work together',
                                     'You want phone calls and appointments covered 24/7',
-                                    'You prefer concierge onboarding over DIY setup',
+                                    'You want your approval on anything sensitive',
                                     'You care about business automation more than email volume'
                                 ].map((item) => (
                                     <div key={item} className="flex items-start gap-3 bg-slate-50 border border-slate-200 p-4 rounded-xl">
@@ -437,31 +436,31 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Relevant YouTube Video: See Dooza's AI Employees in Action</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    A Smartlead alternative should not only explain features. It should show what an AI-native application looks like in practice. This Dooza overview shows how AI employees work across email, social, SEO, sales, and calls.
+                                    This Dooza overview shows how Dooza&apos;s AI employees work across email, social, SEO, sales, and calls.
                                 </p>
                             </div>
                             <YouTubeEmbed videoId="NgBAXFK6nk4" title="AI Era with DOOZA.AI" />
                         </section>
 
                         <section id="verdict" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Final Verdict: Dooza Is the Clear Winner</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Final Verdict: Which Should You Choose?</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Smartlead is a good product when the job is clear: run cold email campaigns at scale, manage many inboxes, and protect deliverability. For outbound agencies and email-heavy sales teams, it can be a practical choice.
+                                    Smartlead is a strong product when the job is clear: run cold email campaigns at scale, manage many inboxes, protect deliverability, and add calling. For outbound agencies and email-heavy sales teams, it is likely the better choice.
                                 </p>
                                 <p>
-                                    But the best <strong>Smartlead alternative</strong> for most businesses is not another email sender. It is an AI-native application that can handle the work around growth: creating content, responding to leads, following up, posting on social media, managing email, and answering calls.
+                                    If you need more than outbound, the best <strong>Smartlead alternative</strong> is not another email sender. It is help with the work around growth: creating content, responding to leads, following up, posting on social media, managing email, and answering inbound calls.
                                 </p>
                                 <p>
-                                    That is why <strong>Dooza is the clear winner</strong>. It gives you AI employees that work across your business, not a single-purpose outbound engine.
+                                    That is where <strong>Dooza</strong> fits: Dooza engineers set up AI employees that work across your business, with your approval on anything sensitive, starting with a refundable pilot (100% refund within 14 days).
                                 </p>
                             </div>
 
                             <div className="mt-8 bg-slate-900 rounded-2xl p-8 text-center">
                                 <Phone className="w-10 h-10 text-emerald-300 mx-auto mb-4" />
-                                <h3 className="text-2xl font-bold text-white mb-3">Move from cold email software to an AI workforce</h3>
+                                <h3 className="text-2xl font-bold text-white mb-3">Want the work around outbound done for you?</h3>
                                 <p className="text-white/75 mb-6 max-w-2xl mx-auto">
-                                    Use Dooza to automate email, SEO, social media, sales follow-up, and calls from one AI-native application. Start with a refundable pilot — 100% refund within 14 days.
+                                    Dooza engineers set up AI employees for email, SEO, social media, sales follow-up, and calls. Start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                                     <a

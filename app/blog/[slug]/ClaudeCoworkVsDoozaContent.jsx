@@ -52,31 +52,31 @@ import {
 const faqData = [
     {
         question: "What is Claude Cowork?",
-        answer: "Claude Cowork is Anthropic's desktop AI agent that runs on your computer, connects to local files and apps, and completes multi-step tasks like organizing spreadsheets, drafting emails, and browsing the web. It's available on Claude Pro ($20/month) and Max ($100-200/month) plans."
+        answer: "Claude Cowork is Anthropic's agent for knowledge work: it brings Claude Code's agentic abilities to tasks beyond coding, such as organizing files, drafting documents and browsing the web. Since September 16, 2026, Cowork and chat have been merging into one Claude, and since October 6, 2026, new Cowork tasks on Pro and Max plans run in the cloud. It is available on paid Claude plans (Pro, Max, Team and Enterprise). Checked October 7, 2026."
     },
     {
         question: "How is Dooza different from Claude Cowork?",
-        answer: "Dooza is an AI-native company that builds AI products and services for small businesses. Its Dooza Workforce app provides purpose-built AI employees that run autonomously 24/7 — handling email, social media, SEO, sales, and phone calls without your involvement. Claude Cowork is a general-purpose desktop assistant that requires your computer to be on and you to assign each task. Dooza is set-and-forget; Cowork is hands-on."
+        answer: "Claude Cowork is a general-purpose agent you direct yourself: you describe tasks, connect your apps and set up any schedules. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Workforce app gives you role-specific AI employees for email, social media, SEO, sales, legal documents and phone calls, set up for you by Dooza engineers. Every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Can Claude Cowork run tasks while I sleep?",
-        answer: "Not reliably. If your computer goes to sleep or the Claude desktop app closes, all running tasks stop — including scheduled ones. Dooza's AI employees run on cloud infrastructure 24/7, regardless of whether your device is on."
+        answer: "Yes. Anthropic says scheduled tasks run in the cloud, so they don't need your computer to be awake or the desktop app open, and you can schedule a task for any cadence (checked October 7, 2026). The difference with Dooza is who sets the work up: with Cowork you write and manage each task; with Dooza, engineers configure AI employees for your business."
     },
     {
         question: "How does pricing compare — Claude Cowork or Dooza?",
-        answer: "Claude Cowork's Pro plan ($20/month) has strict usage limits that run out fast during complex tasks. For meaningful Cowork usage, you need the Max plan at $100-200/month. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Per claude.com/pricing (checked October 7, 2026), Claude Pro is $17/month billed annually or $20 billed monthly, and Max starts at $100/month ($100 or $200 tiers, with 5x or 20x Pro's usage). Usage limits apply on every plan, and Anthropic notes Cowork uses limits faster than chat. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
-        question: "Does Claude Cowork handle phone calls or customer support?",
-        answer: "No. Claude Cowork is a desktop agent — it works with files, browsers, and apps on your computer. Dooza includes Rachel, an AI receptionist that answers phone calls, books appointments, and handles customer inquiries 24/7."
+        question: "Does Dooza handle phone calls?",
+        answer: "Yes. Dooza includes Rachel, an AI receptionist that answers phone calls, books appointments, and handles customer inquiries. If phone answering is the main job you need done, compare that directly rather than a general-purpose agent."
     },
     {
         question: "Can I use both Claude Cowork and Dooza?",
-        answer: "Absolutely. Many businesses use Claude Cowork for ad-hoc desktop tasks (organizing files, research, document drafting) and Dooza for always-on business operations (email automation, social media posting, SEO, sales outreach, phone answering). They complement each other well."
+        answer: "Yes. Claude Cowork works well for your own research, documents and recurring knowledge-work tasks. Dooza covers business roles you want handled for you, such as email, social media posting, SEO, sales outreach and phone answering. They complement each other."
     },
     {
         question: "Does Dooza require technical skills?",
-        answer: "Zero technical skills required. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business, and Workforce employees can start working the same day. Claude Cowork also doesn't require coding, but you do need to manage tasks manually and troubleshoot when things break."
+        answer: "No. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business, and Workforce employees can start working the same day. Claude Cowork also doesn't require coding; you set up and manage your own tasks and connectors."
     }
 ];
 
@@ -140,10 +140,10 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <span>Comparison</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            Claude Cowork vs Dooza: <span className="text-primary-600">Desktop Assistant</span> vs AI Employees
+                            Claude Cowork vs Dooza: <span className="text-primary-600">General-Purpose Agent</span> vs Done-for-You AI Employees
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Claude Cowork is a powerful desktop agent. Dooza gives you an entire AI workforce. One requires your laptop open. The other works while you sleep. Here's the honest breakdown.
+                            Claude Cowork is a powerful general-purpose agent that now runs in the cloud. Dooza gives you role-specific AI employees set up for you by Dooza engineers. Here's the honest breakdown, updated for Anthropic's October 2026 changes.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -152,7 +152,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
-                                <span>April 14, 2026</span>
+                                <span>Updated October 7, 2026</span>
                             </div>
                         </div>
 
@@ -221,7 +221,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             </nav>
 
                             <div className="mt-8 pt-6 border-t border-slate-200">
-                                <p className="text-sm text-slate-600 mb-4">Get AI employees that work 24/7</p>
+                                <p className="text-sm text-slate-600 mb-4">Want AI employees set up for you?</p>
                                 <a
                                     href={getProductSignupUrl('workforce')}
                                     target="_blank"
@@ -245,16 +245,16 @@ export default function ClaudeCoworkVsDoozaContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    Anthropic's Claude Cowork is making waves. It turns Claude into a desktop agent that can open apps, browse the web, organize files, and complete multi-step tasks on your computer. It's impressive technology.
+                                    Anthropic's Claude Cowork turns Claude into an agent that can open browsers, organize files, and complete multi-step knowledge-work tasks. Since October 6, 2026, new Cowork tasks on Pro and Max plans run in the cloud, and since September 16, 2026 Cowork and chat have been merging into one Claude. It's impressive technology.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    But here's the question nobody's asking: <strong>is a desktop assistant the same thing as an AI employee?</strong>
+                                    An earlier version of this article said Cowork stops when your computer sleeps and has no memory. Neither is true any more, so we rewrote it. The real question is different: <strong>do you want a general-purpose agent you direct, or AI employees someone sets up and runs for you?</strong>
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    The answer is no. And understanding the difference could save your business thousands of dollars and hundreds of hours.
+                                    Both are valid. Which one fits depends on how much of the setup and management you want to do yourself.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Claude Cowork is a brilliant tool for individual productivity. <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline font-medium">Dooza's AI employees</Link> are built for business operations. They're solving different problems — and if you pick the wrong one, you'll feel the pain within a week.
+                                    Claude Cowork is a flexible agent for people who like to direct the work themselves. <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline font-medium">Dooza's AI employees</Link> are role-specific and configured for your business by Dooza engineers. They solve overlapping but different problems.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     This is the honest comparison. No fluff.
@@ -271,19 +271,19 @@ export default function ClaudeCoworkVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Claude Cowork launched in January 2026 as Anthropic's agentic AI for knowledge work. It's essentially <strong>Claude Code for non-technical users</strong> — running on your desktop, working with your local files, and completing tasks through your browser and apps.
+                                    Claude Cowork launched as a research preview in January 2026 and became generally available in April 2026. It's essentially <strong>Claude Code for non-technical users</strong>: it brings Claude Code's agentic abilities to knowledge work beyond coding. It runs in the desktop app and, in beta, on web and mobile, and since October 6, 2026, new Cowork tasks on Pro and Max plans run in the cloud.
                                 </p>
                                 <p>
-                                    Think of it as a very smart intern sitting at your computer. You tell it what to do, and it opens apps, clicks buttons, fills spreadsheets, and browses the web to get it done.
+                                    Think of it as a very capable generalist. You describe what you want, and it browses the web, works with your files and connected apps, and can repeat the task on a schedule.
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                                 {[
-                                    { icon: Monitor, title: "Desktop Agent", desc: "Runs on your Mac or Windows computer" },
-                                    { icon: FileText, title: "File Access", desc: "Works with your local files and documents" },
+                                    { icon: Monitor, title: "Web, Desktop & Mobile", desc: "New tasks on Pro and Max run in the cloud" },
+                                    { icon: FileText, title: "Files & Projects", desc: "Projects keep their own files, instructions and memory" },
                                     { icon: Globe, title: "Web Browsing", desc: "Opens browsers and navigates websites" },
-                                    { icon: Timer, title: "Scheduled Tasks", desc: "Can run tasks on a schedule (if PC is on)" }
+                                    { icon: Timer, title: "Scheduled Tasks", desc: "Run in the cloud on any cadence, without your computer awake" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-purple-50 border border-purple-200 p-4 rounded-xl text-center">
                                         <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mx-auto mb-2">
@@ -301,7 +301,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     "Organizing messy spreadsheets and documents",
                                     "Researching topics across multiple websites",
                                     "Drafting reports, emails, and presentations",
-                                    "Automating repetitive desktop workflows",
+                                    "Running recurring tasks on a schedule, unattended",
                                     "Connecting to Google Drive, Gmail, and other apps via MCP connectors"
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-3">
@@ -311,17 +311,13 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 ))}
                             </div>
 
-                            <h3 className="text-xl font-bold text-slate-900 mb-4">Where Claude Cowork Falls Short</h3>
+                            <h3 className="text-xl font-bold text-slate-900 mb-4">What to Keep in Mind</h3>
                             <div className="space-y-3 mb-8">
                                 {[
-                                    "Stops working if your computer sleeps or the app closes",
-                                    "No memory between sessions — starts fresh every conversation",
-                                    "External connectors (Gmail, Drive) are unreliable according to user reviews",
-                                    "Heavy tasks burn through usage limits fast ($20 plan runs out quickly)",
-                                    "Cannot make or answer phone calls",
-                                    "Cannot post to social media autonomously on a schedule",
-                                    "Not designed for multi-tenant business operations",
-                                    "Prompt injection risks — malicious files could cause unintended actions"
+                                    "You set up, describe and manage each task yourself",
+                                    "Usage limits apply on every plan, and Anthropic says Cowork uses limits faster than chat",
+                                    "It's a generalist: there are no ready-made business roles to switch on",
+                                    "Anthropic warns about prompt injection — malicious content could cause unintended actions"
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-3">
                                         <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
@@ -334,9 +330,9 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 <div className="flex items-start gap-3">
                                     <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                                     <div>
-                                        <h4 className="font-bold text-amber-900 mb-1">The Laptop Problem</h4>
+                                        <h4 className="font-bold text-amber-900 mb-1">What Changed in October 2026</h4>
                                         <p className="text-amber-800 text-sm">
-                                            Claude Cowork is tethered to your device. Close your laptop, and your "AI assistant" goes to sleep too. That's fine for personal productivity. It's a dealbreaker for business operations that need to run 24/7.
+                                            Anthropic says scheduled tasks now run in the cloud, so they don&apos;t need your computer to be awake or the desktop app open. Cowork is no longer tied to your laptop. The remaining difference with Dooza is who designs and runs the work.
                                         </p>
                                     </div>
                                 </div>
@@ -352,10 +348,10 @@ export default function ClaudeCoworkVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is an AI-native company that builds AI products and services for small businesses. Its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app gives you <strong>purpose-built AI employees</strong> that handle specific business functions autonomously, and <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza Agents</Link> is its AI agentic platform for custom agents. Not a general-purpose chatbot. Not a desktop assistant. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses. Its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app gives you <strong>purpose-built AI employees</strong> that handle specific business functions autonomously, and <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza Agents</Link> is its AI agentic platform for custom agents. Not a general-purpose agent you have to direct. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows.
                                 </p>
                                 <p>
-                                    Each AI employee runs in the cloud 24/7. They don't need your computer. They don't need you to assign tasks. They wake up, do their job, and report back — just like a real employee.
+                                    Each AI employee runs in the cloud on routines a Dooza engineer sets up with you during the pilot. They do their job and report back, with your approval on anything sensitive.
                                 </p>
                             </div>
 
@@ -384,7 +380,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The Key Difference</h4>
                                         <p className="text-slate-700">
-                                            Dooza's AI employees don't wait for instructions. They have defined roles, scheduled routines, and autonomous decision-making. Somi posts your social media at 9am whether you're awake or not. Rachel answers calls at 2am. Ranky publishes SEO content every week. <strong>They work like employees, not assistants.</strong>
+                                            Dooza's AI employees come with defined roles and routines that Dooza engineers configure for your business. Somi posts your social media on schedule. Rachel answers calls. Ranky publishes SEO content every week. <strong>You don't design the workflows; Dooza does.</strong>
                                         </p>
                                     </div>
                                 </div>
@@ -395,12 +391,12 @@ export default function ClaudeCoworkVsDoozaContent() {
                         <section id="core-difference" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                                 <Layers className="w-8 h-8 text-blue-600" />
-                                The Core Difference: Assistant vs Employee
+                                The Core Difference: Generalist vs Done-for-You Roles
                             </h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    This is the most important distinction most comparison articles miss. Claude Cowork and Dooza aren't competing — they're solving fundamentally different problems.
+                                    Both can run work in the cloud on a schedule. The difference is who designs that work and how specialized it is.
                                 </p>
                             </div>
 
@@ -409,17 +405,17 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 <div className="bg-purple-50 border-2 border-purple-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-purple-800 mb-4 flex items-center gap-2 text-lg">
                                         <Laptop className="w-5 h-5" />
-                                        Claude Cowork = Assistant
+                                        Claude Cowork = Generalist You Direct
                                     </h3>
                                     <div className="space-y-3">
                                         {[
-                                            "You assign every task manually",
-                                            "It uses YOUR computer to work",
-                                            "Stops when your laptop closes",
-                                            "No memory between conversations",
-                                            "General-purpose — does everything okay",
-                                            "Best for: individual knowledge workers",
-                                            "Model: reactive — waits for instructions"
+                                            "You describe each task and set any schedule",
+                                            "Runs in the cloud on Pro and Max (new tasks since Oct 6, 2026)",
+                                            "Scheduled tasks run without your computer awake",
+                                            "Memory and projects carry context across sessions",
+                                            "General-purpose — one agent for many kinds of work",
+                                            "Best for: people who like to direct the work themselves",
+                                            "You build and maintain your own workflows"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <div className="w-1.5 h-1.5 bg-purple-400 rounded-full shrink-0 mt-2"></div>
@@ -433,17 +429,17 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
                                     <h3 className="font-bold text-green-800 mb-4 flex items-center gap-2 text-lg">
                                         <Bot className="w-5 h-5" />
-                                        Dooza = Employee
+                                        Dooza = Done-for-You AI Employees
                                     </h3>
                                     <div className="space-y-3">
                                         {[
                                             "AI employees have defined roles & routines",
-                                            "Runs on cloud infrastructure 24/7",
-                                            "Works while you sleep, travel, or vacation",
-                                            "Persistent memory — learns your business",
-                                            "Purpose-built — each employee excels at one job",
-                                            "Best for: businesses needing autonomous operations",
-                                            "Model: proactive — executes on schedule"
+                                            "Runs in the cloud",
+                                            "Dooza engineers configure the work for your business",
+                                            "Includes Rachel, an AI receptionist for phone calls",
+                                            "Role-specific — each employee does one job",
+                                            "Best for: business owners who want work handled for them",
+                                            "Starts with a refundable pilot (100% refund within 14 days)"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
@@ -457,7 +453,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-900 mb-2">Think of It This Way</h4>
                                 <p className="text-blue-800">
-                                    Claude Cowork is like having a brilliant temp who sits at your desk and does whatever you ask — but only while you're watching. Dooza is like hiring six full-time specialists who show up every day, know their job, and don't need supervision. <strong>One saves you time. The other saves you headcount.</strong>
+                                    Claude Cowork is like a brilliant generalist you brief and manage yourself. Dooza is like a team of specialists that someone else trains and manages for you. <strong>One gives you flexibility. The other gives you the work done.</strong>
                                 </p>
                             </div>
                         </section>
@@ -477,21 +473,21 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Type", cowork: "Desktop AI assistant", dooza: "AI employee platform" },
-                                            { feature: "Runs On", cowork: "Your computer (Mac/Windows)", dooza: "Cloud — works 24/7" },
-                                            { feature: "Works When PC Off?", cowork: "No — stops completely", dooza: "Yes — always running" },
-                                            { feature: "Memory Between Sessions", cowork: "No — starts fresh each time", dooza: "Yes — persistent memory" },
-                                            { feature: "Phone Calls", cowork: "Not supported", dooza: "AI receptionist (Rachel)" },
-                                            { feature: "Social Media Posting", cowork: "Manual — you guide each post", dooza: "Automated — scheduled posting" },
-                                            { feature: "Email Management", cowork: "Can draft (connector unreliable)", dooza: "Full automation (Maily)" },
+                                            { feature: "Type", cowork: "General-purpose AI agent (part of Claude)", dooza: "Done-for-you AI employees (Dooza Workforce)" },
+                                            { feature: "Runs On", cowork: "Desktop app, web and mobile (beta); new Pro/Max tasks run in the cloud", dooza: "Cloud" },
+                                            { feature: "Works When PC Off?", cowork: "Yes — scheduled tasks run in the cloud", dooza: "Yes" },
+                                            { feature: "Who Sets Up the Work", cowork: "You", dooza: "Dooza engineers, with you" },
+                                            { feature: "Phone Calls", cowork: "General-purpose agent", dooza: "AI receptionist (Rachel)" },
+                                            { feature: "Social Media Posting", cowork: "Possible as a task you set up", dooza: "Scheduled posting by Somi" },
+                                            { feature: "Email Management", cowork: "Via Gmail and other connectors", dooza: "Handled by Maily" },
                                             { feature: "SEO Content", cowork: "Can research & draft", dooza: "Full pipeline (Ranky)" },
-                                            { feature: "Sales Outreach", cowork: "Manual assistance", dooza: "Automated pipeline (Stan)" },
-                                            { feature: "Cron/Scheduling", cowork: "Limited (requires PC on)", dooza: "Built-in, cloud-based" },
-                                            { feature: "Setup Time", cowork: "Download app, connect accounts", dooza: "Same day (pilot scoped on a free 30-min call)" },
-                                            { feature: "Technical Skill", cowork: "Low (but you manage tasks)", dooza: "None (we configure everything)" },
-                                            { feature: "Starting Price", cowork: "$20/mo (limited usage)", dooza: "Varies by product — refundable pilot (see /pricing)" },
-                                            { feature: "Full Usage Price", cowork: "$100-200/mo (Max plan)", dooza: "100% refund within 14 days if the pilot doesn't fit" },
-                                            { feature: "Best For", cowork: "Individual knowledge workers", dooza: "Businesses needing AI operations" }
+                                            { feature: "Sales Outreach", cowork: "Tasks you design", dooza: "Handled by Stan" },
+                                            { feature: "Scheduling", cowork: "Scheduled tasks in the cloud, any cadence", dooza: "Built in, configured for you" },
+                                            { feature: "Setup Time", cowork: "Sign in and connect accounts; no download needed for web (beta)", dooza: "Same day (pilot scoped on a free 30-min call)" },
+                                            { feature: "Technical Skill", cowork: "Low (you manage tasks)", dooza: "None (Dooza engineers configure it)" },
+                                            { feature: "Starting Price", cowork: "Pro $17/mo annual or $20 monthly (checked Oct 7, 2026)", dooza: "Varies by product — refundable pilot (see /pricing)" },
+                                            { feature: "Higher Usage", cowork: "Max $100 or $200/mo (checked Oct 7, 2026)", dooza: "100% refund within 14 days if the pilot doesn't fit" },
+                                            { feature: "Best For", cowork: "People who want to direct their own agent", dooza: "Owners who want business roles handled for them" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -508,12 +504,12 @@ export default function ClaudeCoworkVsDoozaContent() {
                         <section id="pricing-breakdown" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                                 <DollarSign className="w-8 h-8 text-green-600" />
-                                Pricing: The Real Cost Comparison
+                                Pricing Compared
                             </h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Claude Cowork's pricing is deceptively complex. The $20/month Pro plan <em>sounds</em> affordable, but Cowork tasks consume tokens 3-5x faster than regular Claude chat. Most users report hitting limits within hours of heavy use.
+                                    Cowork is included in paid Claude plans (Pro, Max, Team and Enterprise). Usage limits run on a rolling five-hour session window, paid plans add weekly limits, and Anthropic notes that Cowork consumes limits faster than chat. Prices below are from claude.com/pricing, checked October 7, 2026.
                                 </p>
                             </div>
 
@@ -521,13 +517,13 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 {/* Claude Pro */}
                                 <div className="bg-purple-50 border border-purple-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-purple-800 mb-1">Claude Pro</h3>
-                                    <p className="text-3xl font-bold text-purple-600 mb-3">$20<span className="text-lg text-purple-400">/mo</span></p>
+                                    <p className="text-3xl font-bold text-purple-600 mb-3">$17-20<span className="text-lg text-purple-400">/mo</span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
                                             { text: "Cowork access included", good: true },
-                                            { text: "Strict usage limits", good: false },
-                                            { text: "Runs out fast on complex tasks", good: false },
-                                            { text: "Resets every 5 hours", good: false }
+                                            { text: "$17/mo annual, $20 billed monthly", good: true },
+                                            { text: "Usage limits apply", good: false },
+                                            { text: "5-hour session window plus weekly limits", good: false }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 {item.good ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <XCircle className="w-4 h-4 text-red-400" />}
@@ -545,8 +541,8 @@ export default function ClaudeCoworkVsDoozaContent() {
                                         {[
                                             { text: "5x or 20x more usage", good: true },
                                             { text: "Full Cowork functionality", good: true },
-                                            { text: "Still usage-capped", good: false },
-                                            { text: "Tied to your desktop being on", good: false }
+                                            { text: "Scheduled tasks run in the cloud", good: true },
+                                            { text: "Still usage-capped", good: false }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 {item.good ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <XCircle className="w-4 h-4 text-red-400" />}
@@ -564,7 +560,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                         {[
                                             { text: "Six ready-made AI employees", good: true },
                                             { text: "100% refund within 14 days", good: true },
-                                            { text: "Runs 24/7 in the cloud", good: true },
+                                            { text: "Set up by Dooza engineers", good: true },
                                             { text: "Pricing by product — see /pricing", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
@@ -579,7 +575,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    Claude Cowork's Max plan ($100-200/month) still ties your AI to your laptop. Dooza gives you <strong className="text-white">six AI employees working around the clock in the cloud</strong>, with zero dependency on your laptop being open. Pricing depends on the product (see <Link href="/pricing" className="text-white underline">pricing</Link>), and every product starts with a refundable pilot &mdash; 100% refund within 14 days.
+                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza gives you <strong className="text-white">six role-specific AI employees configured for your business by Dooza engineers</strong>. Pricing depends on the product (see <Link href="/pricing" className="text-white underline">pricing</Link>), and every product starts with a refundable pilot &mdash; 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>
@@ -597,11 +593,11 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     <h3 className="font-bold text-purple-700 mb-4 text-lg">Use Claude Cowork if you...</h3>
                                     <div className="space-y-3">
                                         {[
-                                            "Are an individual knowledge worker (analyst, researcher, writer)",
-                                            "Need help with ad-hoc desktop tasks (file cleanup, data analysis)",
-                                            "Want an AI that works with your local files and apps",
-                                            "Already pay for Claude Pro or Max",
-                                            "Don't need 24/7 autonomous operations",
+                                            "Are a knowledge worker (analyst, researcher, writer)",
+                                            "Want one flexible agent for many kinds of tasks",
+                                            "Want to schedule your own recurring tasks in the cloud",
+                                            "Already pay for a Claude plan",
+                                            "Enjoy designing and adjusting your own workflows",
                                             "Are comfortable managing tasks yourself"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
@@ -618,11 +614,11 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     <div className="space-y-3">
                                         {[
                                             "Run a business that needs AI handling emails, social, SEO, and sales",
-                                            "Want AI employees that work 24/7 without supervision",
+                                            "Want those roles set up and run for you by Dooza engineers",
                                             "Need an AI receptionist that answers phone calls",
-                                            "Want set-and-forget automation, not task-by-task assistance",
-                                            "Need consistent output without usage caps or token limits",
-                                            "Don't want to keep your laptop open for AI to work"
+                                            "Would rather not design workflows yourself",
+                                            "Want your approval on anything sensitive",
+                                            "Want to start with a refundable pilot (100% refund within 14 days)"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />
@@ -636,7 +632,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-900 mb-2">Real Talk</h4>
                                 <p className="text-blue-800">
-                                    If you're a freelancer or solo knowledge worker who needs help with spreadsheets and research, Claude Cowork is excellent. If you're a business owner who needs AI handling your operations while you focus on growth, <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Dooza is the answer</Link>.
+                                    If you're comfortable directing an agent yourself, Claude Cowork is excellent and can now run scheduled work in the cloud. If you're a business owner who wants specific roles handled for you while you focus on growth, <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Dooza is built for that</Link>.
                                 </p>
                             </div>
                         </section>
@@ -658,8 +654,8 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 {[
                                     {
                                         scenario: "Morning Routine",
-                                        cowork: "Claude Cowork organizes your inbox, summarizes key documents, and prepares your daily brief",
-                                        dooza: "Dooza's Maily has already replied to customer emails at 6am. Somi posted your social content at 8am. Rachel has been answering calls since midnight."
+                                        cowork: "A scheduled Claude Cowork task summarizes key documents and prepares your daily brief",
+                                        dooza: "Dooza's Maily has handled customer emails. Somi posted your social content on schedule. Rachel has been answering calls."
                                     },
                                     {
                                         scenario: "Content Production",
@@ -669,12 +665,12 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     {
                                         scenario: "Sales & Lead Gen",
                                         cowork: "Use Cowork to build prospect lists and analyze CRM data in your spreadsheets",
-                                        dooza: "Dooza's Stan sends automated outreach, qualifies leads, and books meetings on your calendar 24/7."
+                                        dooza: "Dooza's Stan sends outreach, qualifies leads, and books meetings on your calendar."
                                     },
                                     {
-                                        scenario: "End of Day",
-                                        cowork: "You close your laptop. Claude Cowork stops.",
-                                        dooza: "Dooza keeps working — answering calls, monitoring reviews, sending follow-ups, posting content."
+                                        scenario: "Phone Calls",
+                                        cowork: "Use Claude to prepare call notes and follow-up drafts",
+                                        dooza: "Dooza's Rachel answers calls, books appointments, and handles customer inquiries."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden">
@@ -705,10 +701,10 @@ export default function ClaudeCoworkVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Claude Cowork is an impressive piece of technology. Anthropic is pushing the boundaries of what desktop AI agents can do, and for individual productivity, it's genuinely useful.
+                                    Claude Cowork is an impressive piece of technology, and with cloud execution, scheduled tasks and memory it can now run recurring work on its own. For anyone happy to direct their own agent, it's genuinely useful.
                                 </p>
                                 <p>
-                                    But for <strong>business operations</strong> — the kind of work that needs to happen 24/7 whether you're at your desk or not — Dooza is in a different league.
+                                    If you want <strong>specific business roles handled for you</strong>, without designing the workflows yourself, Dooza is the better fit.
                                 </p>
                             </div>
 
@@ -716,12 +712,12 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 <h3 className="font-bold text-slate-900 text-xl mb-4">Why Businesses Choose Dooza</h3>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
-                                        { icon: Repeat, text: "Always-on operations — no laptop dependency" },
+                                        { icon: Repeat, text: "Work designed and run for you" },
                                         { icon: Users, text: "6 specialized AI employees, not one generalist" },
-                                        { icon: Phone, text: "AI phone answering — Cowork can't do this" },
+                                        { icon: Phone, text: "AI phone answering with Rachel" },
                                         { icon: DollarSign, text: "Refundable pilot — 100% refund within 14 days" },
                                         { icon: HeartHandshake, text: "A Dooza engineer scopes your pilot on a free 30-min call" },
-                                        { icon: Brain, text: "Persistent memory — your AI learns your business" }
+                                        { icon: Brain, text: "Your approval on anything sensitive" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-start gap-3">
                                             <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 shrink-0">

@@ -33,15 +33,15 @@ import {
 const faqData = [
     {
         question: "What is the best Instantly.ai alternative for small businesses?",
-        answer: "Dooza is the best Instantly.ai alternative for small businesses that want an AI-native app, not only a cold email sending tool. Instantly is strong for outbound email campaigns, warmup, lead lists, and deliverability workflows. Dooza wins when you need AI employees for sales follow-up, email management, SEO, social media, and phone calls in one operating system."
+        answer: "If cold email is the whole job, Instantly itself is hard to beat, and the closest alternatives are other cold email platforms. Dooza is the alternative for small businesses that want more than outbound: Dooza is an AI-native company, and its engineers set up AI employees for sales follow-up, inbox work, SEO, social media, and inbound phone calls, with your approval on anything sensitive. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Is Dooza better than Instantly.ai?",
-        answer: "Yes, if your goal is broader business automation. Instantly.ai is better for high-volume cold email infrastructure. Dooza is better for founders and operators who want an AI-native team that can handle multiple business functions beyond cold email, including Maily for inbox work, Stan for sales, Ranky for SEO, Somi for social content, and Rachel for calls."
+        answer: "Only if your goal is broader than outbound. Instantly.ai is better for high-volume cold email, lead data, deliverability, and outbound calling and SMS from its CRM. Dooza is better for founders and operators who want AI employees across functions beyond cold email, including Maily for inbox work, Stan for sales, Ranky for SEO, Somi for social content, and Rachel for answering calls."
     },
     {
         question: "Why do people look for Instantly.ai alternatives?",
-        answer: "Common reasons include wanting simpler pricing, fewer separate add-ons, more channels than email, stronger done-for-you setup, less technical outbound configuration, and AI that works across the full customer journey instead of only campaign sending."
+        answer: "Reasons vary. Some teams want a different sending model or price point, some want AI that also covers inbound work (replies, inbound calls, SEO, social), and some want one team to run the work across functions. Note that Instantly now sells bundles and done-for-you setup itself, so pricing and setup alone are not strong reasons to switch."
     },
     {
         question: "Does Dooza replace Instantly.ai for cold email?",
@@ -49,11 +49,11 @@ const faqData = [
     },
     {
         question: "Can Dooza make phone calls like Instantly.ai?",
-        answer: "Dooza includes Rachel, an AI receptionist that can answer calls, handle FAQs, and book appointments. Instantly has sales and CRM products, but its core reputation is cold email outreach. Dooza is built around AI employees working across channels, including phone."
+        answer: "They do different phone jobs. Instantly's CRM lets you call and SMS people from your browser, which suits outbound dialing. Dooza includes Rachel, an AI receptionist that answers inbound calls, handles FAQs, and books appointments. If you need outbound calling, Instantly covers it; if you need calls answered, that is Rachel's job."
     },
     {
         question: "Which tool is easier for non-technical founders?",
-        answer: "Dooza is easier for most non-technical founders because it uses pre-built AI employees and a Dooza engineer scopes your refundable pilot on a free 30-minute call. Instantly requires more outbound setup knowledge, including domains, inboxes, warmup, campaign limits, lead credits, deliverability checks, and reply workflows."
+        answer: "Both now offer help. Instantly sells done-for-you email setup (Instantly AirMail) and a VIP option with domain and account setup, campaign setup and launch, and a dedicated GTM engineer. With Dooza, a Dooza engineer scopes your refundable pilot on a free 30-minute call and sets up the AI employees with you, across email, sales, SEO, social, and calls rather than outbound only."
     }
 ];
 
@@ -61,23 +61,23 @@ const tocItems = [
     { id: 'verdict', label: 'Quick Verdict' },
     { id: 'what-is-instantly', label: 'What Instantly Does' },
     { id: 'why-switch', label: 'Why Switch' },
-    { id: 'dooza-ai-native', label: 'Dooza AI-Native App' },
+    { id: 'dooza-ai-native', label: 'The Dooza Alternative' },
     { id: 'comparison', label: 'Comparison Table' },
     { id: 'pricing', label: 'Pricing & Value' },
     { id: 'video', label: 'Video' },
-    { id: 'winner', label: 'Clear Winner' },
+    { id: 'winner', label: 'Verdict' },
     { id: 'faq', label: 'FAQ' }
 ];
 
 const comparisonRows = [
-    ['Primary use case', 'Cold email outreach, warmup, lead database, campaign sending', 'AI-native business operations across sales, inbox, SEO, social, and calls', 'Dooza'],
-    ['Best user', 'Outbound teams and agencies focused on email volume', 'Founders, SMBs, agencies, local businesses, and lean teams', 'Dooza'],
-    ['Setup model', 'Configure domains, inboxes, leads, campaigns, warmup, and deliverability', 'Start with specialist AI employees and an engineer-scoped refundable pilot', 'Dooza'],
-    ['AI depth', 'AI writing, credits, reply agent, sales agent, and research features', 'Role-based AI employees that own recurring business functions', 'Dooza'],
-    ['Channels', 'Mostly email-led, with CRM and related sales tools available separately', 'Email, social, SEO, sales follow-up, and phone workflows', 'Dooza'],
-    ['Cold email scale', 'Strong for large outbound sending volume', 'Better for practical follow-up and business automation', 'Instantly'],
-    ['Pricing clarity', 'Multiple product tabs and add-ons for outreach, credits, CRM, visitors, inbox placement, and accounts', 'Pricing by product, every product starts with a refundable pilot (100% refund within 14 days)', 'Dooza'],
-    ['Best final choice', 'Use when cold email infrastructure is the whole job', 'Use when revenue operations need an AI-native team', 'Dooza']
+    ['Primary use case', 'Cold email outreach, warmup, lead database, CRM, campaign sending', 'Done-for-you AI employees across sales, inbox, SEO, social, and calls', 'Depends'],
+    ['Best user', 'Outbound teams and agencies focused on email volume', 'Founders, SMBs, and lean teams that want work done across functions', 'Depends'],
+    ['Setup model', 'Self-serve, or done-for-you setup (AirMail, VIP with a dedicated GTM engineer)', 'A Dooza engineer scopes your refundable pilot and sets up the AI employees with you', 'Tie'],
+    ['AI depth', 'AI Sales Agent, AI Reply Agent, Web Researcher Agent, AI Email Writer Agent', 'Role-based AI employees that own recurring business functions, with your approval', 'Tie'],
+    ['Phone', 'Outbound calls and SMS from the browser in Instantly CRM', 'Rachel answers inbound calls, handles FAQs, and books appointments', 'Depends'],
+    ['Beyond outreach', 'Outreach, CRM, website visitors, inbox placement', 'SEO (Ranky), social (Somi), inbox (Maily), sales (Stan), calls (Rachel)', 'Dooza'],
+    ['Cold email scale', 'Light Speed plan: 500,000 emails a month; 450M+ B2B lead database', 'Practical follow-up rather than high-volume sending', 'Instantly'],
+    ['Pricing', 'Published: Outreach from $47/month, bundles from $94/month (checked October 7, 2026)', 'Pricing by product; every product starts with a refundable pilot (100% refund within 14 days)', 'Instantly']
 ];
 
 export default function InstantlyAlternativeContent() {
@@ -134,20 +134,20 @@ export default function InstantlyAlternativeContent() {
                             <span>AI App Comparison</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            Best <span className="text-primary-600">Instantly.ai Alternative</span>: Why Dooza&apos;s AI-Native App Wins
+                            Best <span className="text-primary-600">Instantly.ai Alternative</span>: When Dooza Is the Better Fit
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Instantly is a strong cold email platform. But if you want an AI-native app that runs sales, inbox, SEO, social media, and calls together, Dooza is the clear winner.
+                            Instantly is a strong cold email and outbound platform. Here is when it is the better pick, and when Dooza, with AI employees set up for you across sales, inbox, SEO, social media, and calls, fits better.
                         </p>
                         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>13 min read</span></div>
-                            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>May 8, 2026</span></div>
+                            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>Updated October 7, 2026</span></div>
                         </div>
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
                                 src="/blog/ai-sales-agent-guide.png"
-                                alt="Instantly.ai alternative comparison showing Dooza as the AI-native business app winner"
+                                alt="Instantly.ai alternative comparison of Instantly and Dooza"
                                 priority={true}
                             />
                         </div>
@@ -194,20 +194,20 @@ export default function InstantlyAlternativeContent() {
                         <section id="verdict" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    If you are searching for an <strong>Instantly.ai alternative</strong>, the real question is not "which tool sends cold emails?" It is "which AI app helps my business turn outreach into revenue?"
+                                    If you are searching for an <strong>Instantly.ai alternative</strong>, start with the job. If you need a better cold email tool, Instantly is already one of the strongest. If you need help with the work around outreach, the answer is different.
                                 </p>
                                 <p>
-                                    Instantly.ai is popular because it solves a specific outbound problem: cold email infrastructure. It helps teams connect email accounts, warm inboxes, upload contacts, send campaigns, manage replies, use lead credits, and test deliverability. For high-volume outbound teams, that is valuable.
+                                    Instantly.ai is popular because it solves outbound well. It helps teams connect email accounts, warm inboxes, find leads in a 450M+ B2B database, send campaigns, manage replies, call and SMS from its CRM, and test deliverability. It also sells done-for-you email setup. For outbound teams, that is valuable.
                                 </p>
                                 <p>
-                                    But most small businesses do not only need more outbound emails. They need the whole operating loop: find prospects, follow up, answer replies, publish content, post on social, book calls, and keep customers moving. That is why <strong>Dooza</strong> is the better choice. Dooza is an AI-native app with specialist AI employees, not just another campaign sequencer.
+                                    Many small businesses need more than outbound: answer replies, publish content, post on social, answer the phone, and keep customers moving. That is where <strong>Dooza</strong> fits. Dooza is an AI-native company; its Workforce app gives you specialist AI employees, and Dooza engineers set them up with you.
                                 </p>
                             </div>
 
                             <div className="mt-8 bg-primary-50 border border-primary-100 rounded-2xl p-6">
                                 <p className="text-primary-900 font-bold text-lg mb-2">Quick verdict</p>
                                 <p className="text-primary-800">
-                                    Instantly.ai wins if your only job is cold email volume. Dooza wins if you want AI employees that handle sales follow-up, email, SEO, social media, and phone calls. For founders, agencies, SMBs, and lean teams, Dooza is the clear winner.
+                                    Instantly.ai is the better pick if outbound email (and outbound calling) is the job. Dooza is the better pick if you want AI employees set up for you across sales follow-up, inbox work, SEO, social media, and inbound calls, starting with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>
@@ -216,13 +216,13 @@ export default function InstantlyAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">What Instantly.ai Does Well</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Instantly.ai is a cold email and sales engagement platform. Its public pricing and help center describe several product areas: Email Outreach, Instantly Credits, CRM, Website Visitors, Inbox Placement, done-for-you domains, and pre-warmed email accounts.
+                                    Instantly.ai is a cold email and sales engagement platform. Its pricing page has several product areas: Outreach, Credits, CRM, Website Visitors, Inbox Placement, and Email Accounts, including done-for-you domains and pre-warmed accounts. It also sells bundles that combine them.
                                 </p>
                                 <p>
-                                    That tells you what Instantly is built for: outbound campaign infrastructure. It can connect and warm email accounts, upload leads, send campaign emails, help with lead discovery, verify or enrich leads, and support reply or sales agent features through credits.
+                                    That tells you what Instantly is built for: outbound. It can connect and warm email accounts, find and enrich leads, send campaigns, run AI reply and sales agents, and manage emails, calls, SMS, tasks, and LinkedIn connections in its CRM.
                                 </p>
                                 <p>
-                                    A fair comparison should acknowledge this: Instantly is not a bad tool. If you run a cold email agency or send at serious scale, it may fit. The problem is that a cold email stack is not the same thing as an AI-native business app.
+                                    A fair comparison should say it plainly: if you run a cold email agency or send at serious scale, Instantly is likely the better fit. Dooza is built for a different job: covering several business functions, including inbound ones, with AI employees that Dooza engineers set up and maintain.
                                 </p>
                             </div>
 
@@ -246,19 +246,19 @@ export default function InstantlyAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Businesses Look for an Instantly.ai Alternative</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Many Instantly alternatives compare sender limits, warmup, inbox rotation, lead credits, and deliverability. That is useful, but it misses the bigger shift. Teams are not just replacing one cold email tool with another. They are moving from tools to AI-native workflows.
+                                    Many Instantly alternatives compare sender limits, warmup, inbox rotation, lead credits, and deliverability. That is useful if you are swapping one outbound tool for another. Some teams are asking a different question: who handles the work around the campaigns?
                                 </p>
                                 <p>
-                                    An AI-native app should understand the business outcome, not only the campaign. When a lead replies, someone needs to answer. When a prospect asks for pricing, someone needs to follow up. When a buyer checks your website, someone needs to educate them. When the phone rings, someone needs to pick up. Cold email alone does not cover that.
+                                    When a lead replies, someone needs to answer. When a prospect asks for pricing, someone needs to follow up. When a buyer checks your website, someone needs to educate them. When the phone rings, someone needs to pick up. Instantly covers parts of this (an AI Reply Agent, CRM calling); Dooza covers the rest with AI employees.
                                 </p>
                             </div>
 
                             <div className="mt-8 space-y-5">
                                 {[
-                                    ['Pricing can feel fragmented', 'Instantly separates many jobs into product areas such as outreach, credits, CRM, website visitors, inbox placement, and email account services. That can make the real operating cost harder to reason about.'],
+                                    ['You need more than outbound', 'Instantly is built around outreach, CRM, and deliverability. If your bottleneck is inbound replies, SEO, social posting, or answering calls, you need something alongside it or instead of it.'],
                                     ['Email-only growth is fragile', 'Cold email can create pipeline, but it depends on deliverability, list quality, copy quality, sender reputation, and timely follow-up. If one part breaks, results drop.'],
-                                    ['AI should own work, not just write copy', 'A modern AI app should do more than generate email text. It should manage repeatable business roles across channels.'],
-                                    ['Small teams need outcomes', 'Most founders do not want to become deliverability engineers. They want qualified conversations, faster replies, more content, and fewer missed calls.']
+                                    ['You want roles covered, not just campaigns', 'Instantly offers AI agents for writing, research, replies, and sales. Dooza gives you AI employees for whole roles (email, sales, SEO, social, calls), set up by Dooza engineers, with your approval on anything sensitive.'],
+                                    ['Small teams need outcomes', 'Most founders want qualified conversations, faster replies, more content, and fewer missed calls. Instantly can set up your sending for you; Dooza sets up the wider workforce for you.']
                                 ].map(([title, copy]) => (
                                     <div key={title} className="bg-red-50 border border-red-100 rounded-xl p-6 flex gap-4">
                                         <XCircle className="w-6 h-6 text-red-500 shrink-0 mt-1" />
@@ -272,13 +272,13 @@ export default function InstantlyAlternativeContent() {
                         </section>
 
                         <section id="dooza-ai-native" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Dooza: The AI-Native App That Beats Instantly.ai</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Dooza: The Done-for-You Alternative to Instantly.ai</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> is built around AI employees. Instead of asking you to assemble a stack of tools, Dooza gives you specialist workers that own business functions.
+                                    <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days. Instead of asking you to assemble a stack of tools, Dooza engineers set up specialist AI employees that own business functions.
                                 </p>
                                 <p>
-                                    That is the key difference. Instantly helps you run outbound campaigns. Dooza helps you run the work around those campaigns. Your sales AI employee can follow up. Your email AI employee can manage replies. Your SEO AI employee can publish content that makes prospects trust you. Your social AI employee can distribute ideas. Your receptionist can answer the phone when leads call.
+                                    That is the key difference. Instantly helps you run outbound. Dooza runs the work around it, with your approval on anything sensitive. Your sales AI employee can follow up. Your email AI employee can manage replies. Your SEO AI employee can publish content that makes prospects trust you. Your social AI employee can distribute ideas. Your receptionist can answer the phone when leads call.
                                 </p>
                             </div>
 
@@ -310,7 +310,7 @@ export default function InstantlyAlternativeContent() {
                                             <th className="text-left p-4 font-semibold">Category</th>
                                             <th className="text-left p-4 font-semibold">Instantly.ai</th>
                                             <th className="text-left p-4 font-semibold">Dooza</th>
-                                            <th className="text-left p-4 font-semibold">Winner</th>
+                                            <th className="text-left p-4 font-semibold">Edge</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-slate-100">
@@ -320,7 +320,7 @@ export default function InstantlyAlternativeContent() {
                                                 <td className="p-4 text-slate-600">{instantly}</td>
                                                 <td className="p-4 text-slate-600">{dooza}</td>
                                                 <td className="p-4">
-                                                    <span className={`inline-flex px-3 py-1 rounded-full text-xs font-bold ${winner === 'Dooza' ? 'bg-emerald-100 text-emerald-700' : 'bg-blue-100 text-blue-700'}`}>
+                                                    <span className={`inline-flex px-3 py-1 rounded-full text-xs font-bold ${winner === 'Dooza' || winner === 'Instantly' ? 'bg-emerald-100 text-emerald-700' : 'bg-blue-100 text-blue-700'}`}>
                                                         {winner}
                                                     </span>
                                                 </td>
@@ -332,16 +332,16 @@ export default function InstantlyAlternativeContent() {
                         </section>
 
                         <section id="pricing" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing and Value: Dooza Gives You More Than Outreach</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing and Value</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Instantly&apos;s public help center lists multiple pricing areas. Email Outreach starts with Growth at $47/month, Hyper Growth at $97/month, and Light Speed at $358/month. Instantly Credits, CRM, Website Visitors, Inbox Placement, and email account services are separate product areas with their own pricing or usage rules.
+                                    Instantly&apos;s pricing page lists Outreach plans at Growth $47/month, Hypergrowth $97/month, and Light Speed $358/month billed monthly (about $37.60, $77.60, and $286.30 a month billed yearly). Credits, CRM, Website Visitors, Inbox Placement, and Email Accounts are separate tabs, and bundles combine them: Starter $94/month, Scale $194/month, and Agency $555/month (all checked October 7, 2026, on instantly.ai/pricing).
                                 </p>
                                 <p>
-                                    That structure can make sense for outbound teams that know exactly what they need. But for a founder or small business, the better value is usually one AI-native app that handles the work across departments.
+                                    That is clear, published pricing, and for outbound teams that know what they need, it is easy to compare. Dooza is priced differently because you are buying work across functions, set up for you, rather than an outbound tool.
                                 </p>
                                 <p>
-                                    Dooza&apos;s value is not "we send more cold emails." The value is that your business gets an AI workforce: Maily for email, Stan for sales, Ranky for SEO, Somi for social media, and Rachel for phone calls. That is a bigger operational win than another sending dashboard.
+                                    Dooza&apos;s value is not &quot;we send more cold emails.&quot; It is an AI workforce set up for you: Maily for email, Stan for sales, Ranky for SEO, Somi for social media, and Rachel for phone calls.
                                 </p>
                                 <p>
                                     Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days. See <Link href="/pricing" className="text-primary-600 hover:underline">Dooza pricing</Link> for current plans.
@@ -353,7 +353,7 @@ export default function InstantlyAlternativeContent() {
                                 <div>
                                     <h3 className="font-bold text-slate-900 text-xl mb-2">The value test</h3>
                                     <p className="text-slate-700">
-                                        If cold email is your entire growth system, Instantly can be a fit. If cold email is only one part of sales, marketing, support, and booking, Dooza delivers more value because it automates the whole loop.
+                                        If outbound is your growth system, Instantly is likely the better value. If outbound is only one part of sales, marketing, support, and booking, test Dooza with a refundable pilot and compare.
                                     </p>
                                 </div>
                             </div>
@@ -363,29 +363,29 @@ export default function InstantlyAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Relevant YouTube Video: See Dooza&apos;s AI Employees in Action</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    This comparison is easier to understand when you see the category difference. Instantly is a cold email platform. Dooza is an AI-native company that builds AI products and services for small businesses, including the Dooza Workforce app of AI employees. Watch how Dooza&apos;s AI-native workforce is designed to handle real business work beyond outbound campaigns.
+                                    This comparison is easier to understand when you see the category difference. Instantly is an outbound platform. Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days. Watch how Dooza&apos;s AI employees handle business work beyond outbound campaigns.
                                 </p>
                             </div>
                             <YouTubeEmbed videoId="NgBAXFK6nk4" title="AI Era with DOOZA.AI" />
                         </section>
 
                         <section id="winner" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Final Verdict: Dooza Is the Clear Winner</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Final Verdict: Which Should You Choose?</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Instantly.ai is a strong choice for a specific buyer: teams that already understand cold email operations and want dedicated infrastructure for sending, warmup, lead lists, deliverability, and campaign management.
+                                    Instantly.ai is a strong choice for outbound: sending, warmup, lead lists, deliverability, campaign management, and outbound calling from its CRM, with done-for-you setup if you want it.
                                 </p>
                                 <p>
-                                    But the best <strong>Instantly.ai alternative</strong> for most modern businesses is not another cold email platform. It is an AI-native app that can own the work before and after the email. That is where Dooza wins.
+                                    If you need more than outbound, the best <strong>Instantly.ai alternative</strong> is not another cold email platform. It is help with the work before and after the email. That is where Dooza fits.
                                 </p>
                                 <p>
-                                    Dooza is the clear winner because it gives you a team of AI employees, not just a campaign tool. When Stan follows up with leads, Maily manages the inbox, Ranky publishes SEO content, Somi posts on social, and Rachel answers calls, your business gets a real operating advantage.
+                                    With Dooza, Dooza engineers set up a team of AI employees: Stan follows up with leads, Maily manages the inbox, Ranky publishes SEO content, Somi posts on social, and Rachel answers calls, with your approval on anything sensitive.
                                 </p>
                             </div>
 
                             <div className="mt-8 bg-slate-900 rounded-2xl p-8 text-center">
                                 <Zap className="w-10 h-10 text-emerald-300 mx-auto mb-4" />
-                                <h3 className="text-2xl font-bold text-white mb-3">Choose the AI-native app, not another cold email silo</h3>
+                                <h3 className="text-2xl font-bold text-white mb-3">Want the work around outreach done for you?</h3>
                                 <p className="text-white/75 mb-6 max-w-2xl mx-auto">
                                     Use Dooza to run the work that turns leads into conversations: sales follow-up, inbox management, SEO content, social distribution, and phone coverage. Start with a refundable pilot: 100% refund within 14 days.
                                 </p>

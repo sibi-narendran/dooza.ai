@@ -38,118 +38,110 @@ import {
 
 const faqData = [
     {
-        question: "What is the best MoltBot alternative for businesses?",
-        answer: "Dooza is the top MoltBot alternative for businesses. Dooza is an AI-native company that builds AI products and services for small businesses. Its Dooza Workforce app offers ready-made AI employees for email, social media, SEO, and sales with encrypted connections, your approval on anything sensitive, and zero coding required - unlike MoltBot which requires extensive technical expertise. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        question: "What is Moltbot called now?",
+        answer: "Moltbot is now OpenClaw. The project was first called Clawdbot, then Moltbot, and is now published as OpenClaw at openclaw.ai. It is a free, MIT-licensed AI assistant that you install and run on your own machine."
     },
     {
-        question: "Why should I consider alternatives to MoltBot?",
-        answer: "MoltBot has significant drawbacks: security vulnerabilities (1,000+ exposed instances found), unpredictable API costs ($100-300+/day), complex setup requiring technical expertise, and no dedicated support. Managed alternatives offer better security, predictable costs, and professional support."
+        question: "What is a good Moltbot (OpenClaw) alternative for businesses?",
+        answer: "It depends on what you want to avoid. If you don't want to host and maintain an agent yourself, Dooza is a managed alternative to self-hosting OpenClaw: Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app gives you ready-made AI employees for email, social media, SEO, sales, legal documents and phone calls, set up by Dooza engineers. ChatGPT or Claude suit people who want a general-purpose assistant they direct; Zapier suits people who want to build app-to-app automations; Reclaim or Motion suit calendar and project planning. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
-        question: "Can I use MoltBot features without the security risks?",
-        answer: "Yes, platforms like Dooza offer similar AI automation capabilities (email management, social media, task automation) without the security risks. These managed solutions handle infrastructure, security, and updates for you."
+        question: "Why consider alternatives to self-hosting OpenClaw?",
+        answer: "OpenClaw is capable, but self-hosting means the work is yours: you install it, choose and pay for the models, connect your accounts, review its security settings when you widen access, and apply updates. There is no paid version or vendor support; help comes from the docs, GitHub and the Discord community. If you would rather not do that work, a managed product makes more sense."
     },
     {
-        question: "Is ChatGPT a good MoltBot alternative?",
-        answer: "ChatGPT is useful for conversational AI but cannot take real actions like MoltBot. It won't send emails, manage files, or automate workflows on your behalf. For action-taking AI, consider Dooza or similar platforms that offer AI employees."
+        question: "Can ChatGPT or Claude replace Moltbot?",
+        answer: "For many tasks, yes. ChatGPT Plus includes projects, scheduled tasks, custom GPTs and memory, and ChatGPT can take action across your apps and files. Claude's paid plans let you hand off and schedule tasks, use connectors, and work in Chrome and Microsoft 365, with memory across conversations. Both are general-purpose assistants you direct yourself (checked October 7, 2026)."
     },
     {
-        question: "How much do MoltBot alternatives cost?",
-        answer: "Costs vary significantly. Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot (100% refund within 14 days); see dooza.ai/pricing. ChatGPT Plus is $20/month but lacks automation features. MoltBot itself is 'free' but API costs run $100-300+/day for active use."
+        question: "How much do Moltbot alternatives cost?",
+        answer: "As of October 7, 2026, per each vendor's own pricing pages: ChatGPT Plus is $20/month and ChatGPT Pro tiers are $100, $200 or $500/month; Claude Pro is $17/month billed annually or $20 monthly, and Max starts at $100/month; Zapier has a free plan, Professional from $19.99/month and Team from $69/month; Reclaim has a free Lite plan and paid plans from $10/user/month billed annually; Motion's Pro AI plan is $19/seat/month billed annually or $29 monthly. OpenClaw itself is free; you pay for models and hosting. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
-        question: "Can developers bring their MoltBot agents to other platforms?",
-        answer: "Yes, developers who've built custom agents in MoltBot or ClawdBot can often port their workflows to managed platforms like Dooza, which offers API access and customization options while handling the infrastructure and security."
+        question: "Can Dooza build a custom agent like the one I built in OpenClaw?",
+        answer: "Yes. Dooza Agents is Dooza's AI agentic platform: Dooza engineers build and maintain custom agents around your workflows and handle hosting and security, with encrypted connections and your approval on anything sensitive. If you need local-only processing or full control of the code, self-hosted OpenClaw may still suit you better."
     }
 ];
 
 const alternatives = [
     {
         name: "Dooza",
-        tagline: "Pre-built AI Employees for Business",
-        description: "Dooza offers ready-to-use AI employees that handle email, social media, SEO, sales, and customer support. No coding required, encrypted connections with your approval on anything sensitive, and no surprise API bills.",
+        tagline: "Managed AI Employees for Business",
+        description: "Dooza is a managed alternative to self-hosting OpenClaw. Its Dooza Workforce app gives you ready-made AI employees for email, social media, SEO, sales, legal documents and phone calls, set up and maintained by Dooza engineers, with encrypted connections and your approval on anything sensitive.",
         price: "Refundable pilot",
         priceNote: "100% refund within 14 days",
         pros: [
             "Free 30-minute call to scope your pilot, no coding required",
-            "Pre-built AI employees for all business functions",
-            "Secure OAuth connections and approval steps",
-            "No surprise API costs",
+            "Six ready-made AI employees: Maily, Somi, Ranky, Stan, Linda and Rachel",
+            "Encrypted connections and your approval on anything sensitive",
+            "Model costs included; pricing depends on the product",
             "A Dooza engineer sets up and maintains your AI employees",
-            "Native integrations with popular tools"
+            "1,000+ app integrations"
         ],
         cons: [
             "Less customizable than self-hosted options",
-            "Requires internet connection"
+            "Runs in Dooza's cloud, not on your own machine"
         ],
-        bestFor: "Small to medium businesses wanting AI automation without technical complexity",
+        bestFor: "Small businesses that want AI employees working without hosting or maintaining anything",
         featured: true,
         url: "workforce"
     },
     {
         name: "ChatGPT / Claude",
-        tagline: "Conversational AI Assistants",
-        description: "Leading AI chat interfaces for brainstorming, writing, and research. Great for conversation but cannot take real-world actions on your behalf.",
-        price: "$20-200/month",
-        priceNote: "Depending on tier",
-        rating: 4.5,
+        tagline: "General-Purpose AI Assistants",
+        description: "Leading AI assistants for writing, research and everyday work. Both now take actions in connected apps, run scheduled tasks and remember context across conversations; you direct the work yourself.",
+        price: "From $20/month",
+        priceNote: "ChatGPT Plus $20; Claude Pro $17 annual / $20 monthly (checked Oct 7, 2026)",
         pros: [
-            "Excellent conversational abilities",
-            "Simple web interface",
-            "Good for writing and research",
-            "Managed security"
+            "Excellent writing and research abilities",
+            "Scheduled tasks and memory on paid plans",
+            "Connectors and app actions (ChatGPT Work; Claude in Chrome and Microsoft 365)",
+            "Managed by the vendor; nothing to host"
         ],
         cons: [
-            "Cannot take real actions (send emails, manage files)",
-            "No automation or scheduling",
-            "No persistent memory across sessions",
-            "Limited integrations"
+            "General-purpose: you design and manage each task yourself",
+            "No ready-made business roles to switch on",
+            "Higher tiers cost more (ChatGPT Pro $100-500/mo; Claude Max from $100/mo)"
         ],
-        bestFor: "Users who need AI assistance for writing, research, and brainstorming only",
+        bestFor: "People who want one capable assistant they direct themselves",
         featured: false
     },
     {
         name: "Zapier + AI",
         tagline: "Workflow Automation Platform",
-        description: "Connect apps and automate workflows with AI-powered steps. Requires building your own automations but offers extensive integration options.",
-        price: "$19-99/month",
-        priceNote: "Based on usage",
-        rating: 4.3,
+        description: "Connect apps and automate workflows with AI steps, Zapier Agents, chatbots and Copilot. You design the automations, with Copilot to help.",
+        price: "Free; paid from $19.99/month",
+        priceNote: "Professional from $19.99, Team from $69 (checked Oct 7, 2026)",
         pros: [
-            "6,000+ app integrations",
-            "Visual workflow builder",
-            "AI-powered automation steps",
-            "Established, reliable platform"
+            "9,000+ app connections",
+            "Visual workflow builder with Copilot",
+            "Zapier Agents, chatbots and MCP",
+            "Established platform with a free plan"
         ],
         cons: [
-            "Need to build automations yourself",
-            "Pricing scales with usage",
-            "No conversational interface",
-            "Learning curve for complex workflows"
+            "You design the automations yourself",
+            "Pricing scales with usage (each action counts as a task)"
         ],
-        bestFor: "Tech-savvy users who want to build custom integrations between specific apps",
+        bestFor: "Users who want to build their own automations between specific apps",
         featured: false
     },
     {
         name: "Reclaim / Motion",
-        tagline: "AI Calendar & Task Management",
-        description: "Specialized AI tools for calendar management and task scheduling. Limited scope but excellent at what they do.",
-        price: "$8-19/month",
-        priceNote: "Per user",
-        rating: 4.2,
+        tagline: "AI Calendar, Task & Project Planning",
+        description: "AI tools that plan your calendar and tasks. Motion adds an AI project manager, AI docs and AI chat; Reclaim adds AI agents, an AI assistant and meeting follow-up drafts.",
+        price: "Free; paid from $10/month",
+        priceNote: "Reclaim: free Lite, Starter $10/user annual; Motion Pro AI $19/seat annual, $29 monthly (checked Oct 7, 2026)",
         pros: [
             "Excellent calendar optimization",
             "Smart task scheduling",
             "Meeting time protection",
-            "Simple setup"
+            "AI chat and assistant features"
         ],
         cons: [
-            "Limited to calendar/scheduling only",
-            "No email or content automation",
-            "No general AI assistant features",
-            "Single-purpose tool"
+            "Built around calendar, task and project planning",
+            "Not designed to run social media, SEO or phone answering"
         ],
-        bestFor: "Users whose primary need is calendar and schedule management",
+        bestFor: "Users whose main need is calendar, task and project planning",
         featured: false
     }
 ];
@@ -204,7 +196,7 @@ export default function MoltbotAlternativesContent() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <Breadcrumbs items={[
                         { label: 'Blog', href: '/blog' },
-                        { label: 'MoltBot Alternatives' }
+                        { label: 'Moltbot (OpenClaw) Alternatives' }
                     ]} />
 
                     <div className="text-center max-w-4xl mx-auto">
@@ -213,10 +205,10 @@ export default function MoltbotAlternativesContent() {
                             <span>Comparison Guide</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            <span className="text-primary-600">MoltBot</span> Alternatives: 5 Safer AI Assistants for Business
+                            <span className="text-primary-600">Moltbot</span> (Now OpenClaw) Alternatives: 4 Options for Business
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-                            Compare the best MoltBot and ClawdBot alternatives. Find secure, affordable AI assistants that don't require coding expertise.
+                            Moltbot, formerly Clawdbot, is now OpenClaw. If you don't want to self-host it, here are 4 alternatives, compared honestly. Vendor facts checked October 7, 2026.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -225,14 +217,14 @@ export default function MoltbotAlternativesContent() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
-                                <span>January 27, 2026</span>
+                                <span>Updated October 7, 2026</span>
                             </div>
                         </div>
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
                                 src="/blog/moltbot-alternatives.png"
-                                alt="MoltBot alternatives comparison"
+                                alt="Moltbot (OpenClaw) alternatives comparison"
                                 priority={true}
                             />
                         </div>
@@ -255,7 +247,7 @@ export default function MoltbotAlternativesContent() {
                                     { id: 'what-to-look-for', label: 'What to Look For' },
                                     { id: 'alternatives', label: 'Top Alternatives' },
                                     { id: 'comparison', label: 'Comparison Table' },
-                                    { id: 'why-dooza', label: 'Why Dooza Wins' },
+                                    { id: 'why-dooza', label: 'Why Choose Dooza' },
                                     { id: 'for-developers', label: 'For Developers' },
                                     { id: 'decision-guide', label: 'Decision Guide' },
                                     { id: 'conclusion', label: 'Conclusion' },
@@ -299,45 +291,45 @@ export default function MoltbotAlternativesContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-lg leading-relaxed">
-                                    <Link href="/blog/what-is-moltbot" className="text-primary-600 hover:underline">MoltBot</Link> (formerly <Link href="/blog/what-is-clawdbot" className="text-primary-600 hover:underline">ClawdBot</Link>) has captured the imagination of the tech community with its vision of a personal AI assistant that can actually take action. But for many users, the security risks, unpredictable costs, and technical complexity make it impractical.
+                                    <Link href="/blog/what-is-moltbot" className="text-primary-600 hover:underline">Moltbot</Link> (first called <Link href="/blog/what-is-clawdbot" className="text-primary-600 hover:underline">Clawdbot</Link>) is now <Link href="/blog/what-is-openclaw" className="text-primary-600 hover:underline">OpenClaw</Link>: a free, MIT-licensed personal AI assistant that runs on your own machine and can actually take action. It is capable, but self-hosting means you run, secure and maintain it yourself.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    If you're looking for AI automation without the headaches, this guide covers the best MoltBot alternatives - with a focus on solutions that are secure, affordable, and don't require a computer science degree to use.
+                                    If you'd rather not do that work, this guide covers 4 alternatives, from general-purpose assistants to a managed service, with each vendor's current facts.
                                 </p>
                             </div>
                         </section>
 
                         <section id="why-alternatives" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Consider MoltBot Alternatives?</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Consider an Alternative to Self-Hosting?</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    MoltBot is impressive technology, but it comes with significant drawbacks that make it unsuitable for most business users:
+                                    OpenClaw is impressive technology. Self-hosting it means taking on four jobs:
                                 </p>
                             </div>
                             <div className="space-y-4">
                                 {[
                                     {
                                         icon: Shield,
-                                        title: "Security Vulnerabilities",
-                                        desc: "Over 1,000 exposed control panels found by security researchers. API keys, credentials, and conversation histories publicly accessible.",
+                                        title: "Security Is Your Job",
+                                        desc: "OpenClaw ships with conservative defaults (the Gateway binds to loopback on a regular install) and an openclaw security audit command. Widening access or exposing it to the internet is your responsibility.",
                                         color: "red"
                                     },
                                     {
                                         icon: DollarSign,
-                                        title: "Unpredictable Costs",
-                                        desc: "Users report $100-300+ per day in API costs. The AI defaults to expensive models, burning through budgets rapidly.",
+                                        title: "Model Costs Are Yours",
+                                        desc: "You bring hosted, subscription-backed, gateway or local models. What you spend depends on the models you pick and how much the agent does.",
                                         color: "red"
                                     },
                                     {
                                         icon: Settings,
-                                        title: "Technical Complexity",
-                                        desc: "Hours or days to configure properly. Requires Docker, security hardening, and ongoing maintenance expertise.",
+                                        title: "Setup and Maintenance",
+                                        desc: "The default install is a one-line installer plus an onboarding wizard; Docker is optional. After that, you configure channels, skills and automations and apply updates.",
                                         color: "red"
                                     },
                                     {
                                         icon: Headphones,
-                                        title: "No Professional Support",
-                                        desc: "Open-source project with community support only. When things break (which users report regularly), you're on your own.",
+                                        title: "Community Support",
+                                        desc: "There is no paid version or enterprise edition. Help comes from the docs, GitHub and the Discord community.",
                                         color: "red"
                                     }
                                 ].map((item, idx) => (
@@ -357,7 +349,7 @@ export default function MoltbotAlternativesContent() {
                             <div className="mt-8">
                                 <YouTubeEmbed
                                     videoId="NhJxxv3f7lI"
-                                    title="MoltBot Overview and Limitations"
+                                    title="Moltbot (OpenClaw) overview"
                                 />
                             </div>
                         </section>
@@ -385,7 +377,7 @@ export default function MoltbotAlternativesContent() {
                         </section>
 
                         <section id="alternatives" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Top MoltBot Alternatives</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">4 Moltbot (OpenClaw) Alternatives</h2>
                             <div className="space-y-8">
                                 {alternatives.map((alt, idx) => (
                                     <div key={idx} className={`border-2 rounded-2xl overflow-hidden ${alt.featured ? 'border-primary-300 bg-primary-50/30' : 'border-slate-200 bg-white'}`}>
@@ -468,13 +460,13 @@ export default function MoltbotAlternativesContent() {
                         </section>
 
                         <section id="comparison" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">MoltBot vs Alternatives: Full Comparison</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">OpenClaw vs Alternatives: Full Comparison</h2>
                             <div className="overflow-x-auto border border-slate-200 rounded-xl shadow-sm">
                                 <table className="w-full border-collapse text-left bg-white text-sm">
                                     <thead className="bg-slate-50 text-slate-900">
                                         <tr>
                                             <th className="p-4 border-b font-bold">Feature</th>
-                                            <th className="p-4 border-b font-bold">MoltBot</th>
+                                            <th className="p-4 border-b font-bold">OpenClaw (self-hosted)</th>
                                             <th className="p-4 border-b font-bold text-primary-700 bg-primary-50">Dooza</th>
                                             <th className="p-4 border-b font-bold">ChatGPT</th>
                                             <th className="p-4 border-b font-bold">Zapier+AI</th>
@@ -483,52 +475,52 @@ export default function MoltbotAlternativesContent() {
                                     <tbody className="text-slate-600">
                                         <tr>
                                             <td className="p-4 border-b font-medium">Monthly Cost</td>
-                                            <td className="p-4 border-b text-red-500">$3,000-9,000+</td>
+                                            <td className="p-4 border-b">Free software + your model costs</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold"><a href="/pricing" className="underline">Refundable pilot</a></td>
-                                            <td className="p-4 border-b">$20-200</td>
-                                            <td className="p-4 border-b">$19-99+</td>
+                                            <td className="p-4 border-b">Plus $20; Pro $100-500</td>
+                                            <td className="p-4 border-b">Free; from $19.99</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Setup Time</td>
-                                            <td className="p-4 border-b text-red-500">Hours-Days</td>
+                                            <td className="p-4 border-b">Installer + onboarding wizard</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Same day</td>
                                             <td className="p-4 border-b text-green-600">Instant</td>
-                                            <td className="p-4 border-b">30+ min</td>
+                                            <td className="p-4 border-b">Depends on the automation</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Coding Required</td>
-                                            <td className="p-4 border-b text-red-500">Yes</td>
+                                            <td className="p-4 border-b">Command line for install</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">No</td>
                                             <td className="p-4 border-b text-green-600">No</td>
-                                            <td className="p-4 border-b">Some</td>
+                                            <td className="p-4 border-b text-green-600">No (visual builder)</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Takes Real Actions</td>
                                             <td className="p-4 border-b text-green-600">Yes</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes</td>
-                                            <td className="p-4 border-b text-red-500">No</td>
+                                            <td className="p-4 border-b text-green-600">Yes (app actions, scheduled tasks)</td>
                                             <td className="p-4 border-b text-green-600">Yes</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Security</td>
-                                            <td className="p-4 border-b text-red-500">Self-managed</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Managed, encrypted</td>
+                                            <td className="p-4 border-b">Self-managed (conservative defaults)</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Encrypted, your approval on sensitive actions</td>
                                             <td className="p-4 border-b text-green-600">Managed</td>
                                             <td className="p-4 border-b text-green-600">Managed</td>
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Support</td>
-                                            <td className="p-4 border-b text-red-500">Community</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Priority Team</td>
-                                            <td className="p-4 border-b">Email</td>
+                                            <td className="p-4 border-b">Community (docs, GitHub, Discord)</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Dooza engineers</td>
+                                            <td className="p-4 border-b">Varies by plan</td>
                                             <td className="p-4 border-b">Tiered</td>
                                         </tr>
                                         <tr>
-                                            <td className="p-4 border-b font-medium">Pre-built AI Employees</td>
-                                            <td className="p-4 border-b text-red-500">No</td>
-                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - ready-made roles</td>
-                                            <td className="p-4 border-b text-red-500">No</td>
-                                            <td className="p-4 border-b text-red-500">No</td>
+                                            <td className="p-4 border-b font-medium">Ready-Made Capabilities</td>
+                                            <td className="p-4 border-b">Bundled + community skills</td>
+                                            <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">6 ready-made AI employees</td>
+                                            <td className="p-4 border-b">Custom GPTs, projects</td>
+                                            <td className="p-4 border-b">Agents and templates you configure</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -536,33 +528,33 @@ export default function MoltbotAlternativesContent() {
                         </section>
 
                         <section id="why-dooza" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Businesses Choose Dooza Over MoltBot</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose Dooza Instead of Self-Hosting</h2>
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     {
                                         icon: Shield,
                                         title: "Managed Security",
-                                        desc: "Encrypted connections and your approval on anything sensitive. No exposed control panels or leaked credentials."
+                                        desc: "Encrypted connections and your approval on anything sensitive. Nothing for you to host or expose."
                                     },
                                     {
                                         icon: DollarSign,
                                         title: "Refundable Pilot",
-                                        desc: "Start with a refundable pilot — 100% refund within 14 days. No self-managed API keys, no $300/day bills."
+                                        desc: "Start with a refundable pilot — 100% refund within 14 days. No model API keys to manage yourself."
                                     },
                                     {
                                         icon: Bot,
-                                        title: "Pre-built AI Employees",
-                                        desc: "Email assistant, social media manager, SEO writer, sales rep, support agent - all ready to work on day one."
+                                        title: "Ready-Made AI Employees",
+                                        desc: "Maily (email), Somi (social media), Ranky (SEO), Stan (sales), Linda (legal) and Rachel (phone receptionist)."
                                     },
                                     {
                                         icon: Zap,
                                         title: "Guided Setup",
-                                        desc: "Connect your accounts, activate your AI employees, and start automating. No Docker, no security hardening, no coding."
+                                        desc: "A Dooza engineer connects your accounts and sets up your AI employees. Nothing to install, no coding."
                                     },
                                     {
                                         icon: Headphones,
-                                        title: "Dedicated Support",
-                                        desc: "Real humans who respond in hours, not days. A Dooza engineer scopes your pilot on a free 30-minute call."
+                                        title: "Done for You",
+                                        desc: "A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business."
                                     },
                                     {
                                         icon: Wrench,
@@ -587,7 +579,7 @@ export default function MoltbotAlternativesContent() {
                                     <div>
                                         <h3 className="text-xl font-bold mb-2">The Dooza Difference</h3>
                                         <p className="text-slate-300">
-                                            With MoltBot, you're given software and left to figure it out. With Dooza, you get a team. We set up your AI employees, customize them for your business, and provide ongoing support to ensure success.
+                                            With OpenClaw, you run the software yourself. With Dooza, Dooza engineers set up your AI employees, customize them for your business, and maintain them for you.
                                         </p>
                                     </div>
                                 </div>
@@ -603,10 +595,10 @@ export default function MoltbotAlternativesContent() {
                         </section>
 
                         <section id="for-developers" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">For Developers: Bring Your Agents to Dooza</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">For Developers: Custom Agents Without Self-Hosting</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    If you've built custom agents in MoltBot or ClawdBot and want the benefits of managed infrastructure, Dooza offers a path forward.
+                                    If you've built custom agents in OpenClaw and would rather not host and maintain them, Dooza Agents is Dooza's AI agentic platform: Dooza engineers build and maintain custom agents for you.
                                 </p>
                             </div>
                             <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl mb-6">
@@ -617,19 +609,19 @@ export default function MoltbotAlternativesContent() {
                                 <ul className="space-y-3">
                                     <li className="flex gap-3">
                                         <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                                        <span><strong>API Access:</strong> Full API for custom integrations and workflows</span>
+                                        <span><strong>Custom Agents:</strong> Dooza engineers build and maintain custom agents around your workflows</span>
                                     </li>
                                     <li className="flex gap-3">
                                         <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                                        <span><strong>Custom Agents:</strong> Build and deploy your own AI agents on our infrastructure</span>
+                                        <span><strong>Integrations:</strong> 1,000+ app integrations</span>
                                     </li>
                                     <li className="flex gap-3">
                                         <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                                        <span><strong>Security Handled:</strong> We manage auth, encryption, and compliance</span>
+                                        <span><strong>Security:</strong> Encrypted connections and your approval on anything sensitive</span>
                                     </li>
                                     <li className="flex gap-3">
                                         <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                                        <span><strong>Scale Without Worry:</strong> Infrastructure that grows with your needs</span>
+                                        <span><strong>Hosting Handled:</strong> Dooza runs and maintains the infrastructure</span>
                                     </li>
                                 </ul>
                             </div>
@@ -637,7 +629,7 @@ export default function MoltbotAlternativesContent() {
                                 <div className="flex items-start gap-3">
                                     <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                                     <p className="text-amber-800 text-sm">
-                                        <strong>Note:</strong> While Dooza offers powerful customization options, developers with very specific requirements (local-only processing, custom LLM backends) may still prefer self-hosted solutions. Evaluate your specific needs before choosing.
+                                        <strong>Note:</strong> Developers with very specific requirements (local-only processing, custom or local models, full control of the code) may still prefer self-hosted OpenClaw. Evaluate your specific needs before choosing.
                                     </p>
                                 </div>
                             </div>
@@ -656,49 +648,49 @@ export default function MoltbotAlternativesContent() {
                                     <h3 className="font-bold text-primary-800 mb-3">Choose Dooza if you...</h3>
                                     <ul className="space-y-2 text-slate-700">
                                         <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want AI automation without technical complexity</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Need predictable, affordable monthly pricing</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want to start with a refundable pilot (100% refund within 14 days)</li>
                                         <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Value security and don't want to manage it yourself</li>
                                         <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Need AI employees for multiple business functions</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want real support when you need help</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-primary-600 shrink-0 mt-1" /> Want Dooza engineers to set it up and maintain it</li>
                                     </ul>
                                 </div>
 
                                 <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
-                                    <h3 className="font-bold text-slate-800 mb-3">Consider MoltBot if you...</h3>
+                                    <h3 className="font-bold text-slate-800 mb-3">Consider self-hosted OpenClaw if you...</h3>
                                     <ul className="space-y-2 text-slate-700">
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Are an experienced developer who enjoys tinkering</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Have unlimited API budgets ($100-300+/day)</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Can properly secure and isolate your deployment</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Want maximum customization at any cost</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Are comfortable installing and running software yourself</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Want to choose your own models, including local ones</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Can review and maintain your own security settings</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Want full control and the source code</li>
                                     </ul>
                                 </div>
 
                                 <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-slate-800 mb-3">Choose ChatGPT/Claude if you...</h3>
                                     <ul className="space-y-2 text-slate-700">
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Only need conversational AI (no real actions)</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Want one general-purpose assistant you direct yourself</li>
                                         <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Primarily need help with writing and research</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Don't need automation or scheduled tasks</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" /> Are happy to set up your own scheduled tasks and connectors</li>
                                     </ul>
                                 </div>
                             </div>
                         </section>
 
                         <section id="conclusion" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Conclusion: The Smarter Choice for Business AI</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Conclusion: Run It Yourself, or Have It Run for You</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    MoltBot opened our eyes to what AI assistants could become - but it also showed us the pitfalls of self-hosted, technically complex solutions. For most businesses, the risks simply aren't worth the reward.
+                                    OpenClaw (formerly Moltbot) shows what a personal AI assistant that takes action can do. If you're comfortable running it yourself, it's a strong, free choice.
                                 </p>
                                 <p>
-                                    Modern alternatives like Dooza deliver the promise of AI automation - agents that actually take action on your behalf - without the security nightmares, unpredictable costs, or technical hurdles.
+                                    If you'd rather not host, secure and maintain an agent, the alternatives above cover different needs: ChatGPT or Claude for a general-purpose assistant, Zapier for app automations, Reclaim or Motion for planning, and Dooza for AI employees run for you.
                                 </p>
                                 <p>
                                     The question isn't whether AI assistants are the future. It's whether you want to spend your time managing infrastructure or growing your business.
                                 </p>
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
-                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Experience the Difference?</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Want AI Employees Run for You?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
                                     Put Dooza's AI employees to work. Start with a refundable pilot — 100% refund within 14 days.
                                 </p>
@@ -725,7 +717,7 @@ export default function MoltbotAlternativesContent() {
                             </div>
                         </section>
 
-                        <RelatedPosts currentSlug="moltbot-alternatives" category="Comparison" tags={['MoltBot Alternatives', 'AI Employees', 'Comparison']} />
+                        <RelatedPosts currentSlug="moltbot-alternatives" category="Comparison" tags={['MoltBot Alternatives', 'OpenClaw', 'AI Employees', 'Comparison']} />
                     </div>
 
                     <div className="hidden xl:block w-64 shrink-0" aria-hidden="true"></div>

@@ -25,34 +25,33 @@ import {
     TrendingUp,
     Video,
     Workflow,
-    XCircle,
     Zap
 } from 'lucide-react';
 
 const faqData = [
     {
         question: "What is the best Revid AI alternative?",
-        answer: "Dooza is the best Revid AI alternative for businesses that want automated AI video creation, automatic posting, and a broader AI employee system. Revid is useful for converting prompts, social posts, blogs, and source content into videos. Dooza wins when the video workflow must connect to social posting, SEO, email, sales follow-up, and business automation."
+        answer: "It depends on what you need. If you want a self-serve tool that turns prompts, links, and social posts into short-form videos and auto-publishes them to YouTube, TikTok, and Instagram, Revid itself is hard to beat, and Fliki, OpusClip, and Predis.ai are close alternatives. Dooza is the alternative for businesses that want the work done for them: Dooza engineers set up AI employees for social video, SEO, email, sales, and calls, and nothing goes out without your approval."
     },
     {
         question: "Is Dooza better than Revid AI?",
-        answer: "Yes, for founders, agencies, creators, ecommerce brands, and small businesses that need more than a standalone AI video generator. Revid is strong for social video generation and source-to-video automation. Dooza is stronger as an operating layer because it can help create, post, repurpose, and connect content to the rest of the business."
+        answer: "Not for pure video. Revid is the better pick if video is your main job: it generates, edits, captions, and voices videos, schedules and auto-publishes them, and its Auto-Mode can publish a fresh video every day. Dooza is the better pick if you want video to be one part of a done-for-you setup that also covers SEO, email, sales follow-up, and calls, starting with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Why do people look for Revid AI alternatives?",
-        answer: "Common reasons include wanting automatic posting, deeper channel automation, fewer disconnected tools, stronger SEO and GEO support, broader business workflows, better cross-channel repurposing, and a platform that helps after the video is created."
+        answer: "Usually because of fit, not missing features. Some teams want a different video style or editor, some want long-form repurposing (OpusClip), narrated explainers (Fliki), or a social calendar (Predis.ai), and some want someone else to run the work across video, SEO, email, and sales instead of operating another tool themselves."
     },
     {
         question: "Can Dooza automatically post AI videos?",
-        answer: "Dooza is built around AI employees and automated workflows. Somi can support social content planning and posting, while Ranky, Stan, Maily, and Rachel can connect that content to SEO, sales, email, and calls."
+        answer: "Yes. Dooza's UGC Reel Creator makes short-form video and Somi, Dooza's social media employee, handles social planning and posting, with your approval. Ranky, Stan, Maily, and Rachel connect that content to SEO, sales, email, and calls. Revid, Fliki, OpusClip, and Predis.ai can also publish or schedule posts, so posting alone is not the difference; having it done for you is."
     },
     {
         question: "Which Revid competitors should I compare?",
-        answer: "The main Revid AI competitors include AutoFaceless, AutoReach, InVideo AI, Fliki, Pictory, OpusClip, HeyGen, Synthesia, Predis.ai, CapCut, and faceless video automation tools. Most compete on generation quality, avatars, stock media, repurposing, or scheduling. Dooza competes on the full automated content-to-posting-to-business workflow."
+        answer: "Common Revid AI competitors include AutoFaceless, invideo, Fliki, Pictory, OpusClip, HeyGen, Synthesia, Predis.ai, and CapCut. Most compete on generation quality, avatars, stock media, repurposing, or scheduling. Dooza is a different kind of alternative: a done-for-you setup where Dooza engineers run AI employees across video, social, SEO, email, sales, and calls."
     },
     {
         question: "Who should still use Revid AI?",
-        answer: "Revid AI can still be a good fit if your main need is turning prompts, articles, URLs, YouTube uploads, or social posts into short-form videos. If you need those videos to become part of a complete automated marketing and business system, Dooza is the better choice."
+        answer: "Revid AI is a strong fit if your main need is turning prompts, articles, URLs, YouTube uploads, or social posts into short-form videos and publishing them automatically, and you are happy to run the tool yourself. If you want that work done for you alongside SEO, email, sales, and calls, Dooza is the better choice."
     }
 ];
 
@@ -62,33 +61,31 @@ const tocItems = [
     { id: 'keywords', label: 'Keyword Strategy' },
     { id: 'competitors', label: 'Competitors' },
     { id: 'comparison', label: 'Comparison Table' },
-    { id: 'dooza', label: 'Why Dooza Wins' },
+    { id: 'dooza', label: 'Where Dooza Fits' },
     { id: 'workflow', label: 'Better Workflow' },
     { id: 'video', label: 'Video' },
-    { id: 'winner', label: 'Final Winner' },
+    { id: 'winner', label: 'Verdict' },
     { id: 'faq', label: 'FAQ' }
 ];
 
 const competitors = [
-    ['Revid AI', 'Revid AI alternative, Revid.ai alternatives, AI video generator, TikTok video generator, article to video', 'Strong source-to-video automation, but businesses still need a wider system for posting, repurposing, SEO, sales, and follow-up.'],
-    ['AutoFaceless', 'faceless video automation, automated faceless YouTube channel, daily shorts posting, AI shorts generator', 'Good for faceless channel automation, but narrower than Dooza for business operations beyond video.'],
-    ['AutoReach', 'Revid alternative, automated content pipeline, TikTok Instagram YouTube posting, AI video scheduling', 'Targets end-to-end social pipelines, but Dooza wins when content must connect to AI employees across email, sales, SEO, and calls.'],
-    ['InVideo AI', 'AI video generator, prompt to video, text to video, social video maker', 'Flexible for prompt-based generation, but less compelling as a complete automated business workflow.'],
-    ['Fliki', 'text to video, AI voiceover, blog to video, voice cloning, video narration', 'Strong for narrated videos and voice options, but usually needs separate posting and business automation.'],
-    ['Pictory', 'article to video, script to video, blog to video, video highlights', 'Useful for repurposing written content, but not a complete AI employee system.'],
-    ['OpusClip', 'long video to shorts, AI clips, virality score, social scheduler', 'Excellent for repurposing existing long-form video, less useful when you need original content and cross-channel operations.'],
-    ['Predis.ai', 'AI reels generator, social media content generator, auto posting, content calendar', 'Closer on social scheduling, but Dooza is broader for teams that also need SEO, email, sales, and phone workflows.']
+    ['Revid AI', 'Revid AI alternative, Revid.ai alternatives, AI video generator, TikTok video generator, article to video', 'Strong source-to-video automation that also schedules and auto-publishes to YouTube, TikTok, and Instagram, with API, MCP, and CLI access. The benchmark the others are measured against.'],
+    ['AutoFaceless', 'faceless video automation, automated faceless YouTube channel, automatic posting, AI shorts generator', 'Good for fully automated faceless channels, including automatic posting. Focused on video rather than other business work.'],
+    ['invideo', 'AI video generator, agentic video editor, prompt to video, social video maker', 'Now positioned as an agentic video editor for creatives. A fit if you want more editing control than a source-to-video tool gives you.'],
+    ['Fliki', 'text to video, AI voiceover, blog to video, voice cloning, video narration', 'Strong for narrated videos and voice options, including voice cloning, with one-click publishing to TikTok, Instagram, and YouTube.'],
+    ['Pictory', 'article to video, script to video, blog to video, URL to video', 'Useful for repurposing scripts, URLs, prompts, images, or audio into video.'],
+    ['OpusClip', 'long video to shorts, AI clips, virality score, social scheduler', 'Excellent for repurposing existing long-form video into clips, with a virality score and a social scheduler.'],
+    ['Predis.ai', 'AI reels generator, social media content generator, auto posting, content calendar', 'Combines AI reels and posts with a content calendar that schedules and autoposts.']
 ];
 
 const comparisonRows = [
-    ['Primary job', 'Turn prompts, posts, blogs, URLs, and source content into videos', 'Create AI video content, post it, repurpose it, and connect it to business workflows', 'Dooza'],
-    ['Best user', 'Creators focused on video output and short-form formats', 'Founders, agencies, SMBs, creators, ecommerce brands, and lean operators', 'Dooza'],
-    ['Automatic posting', 'Promotes automation around source-to-video and distribution workflows', 'Built around AI employees and repeatable social workflows', 'Dooza'],
-    ['Business automation', 'Mostly video creation and publishing features', 'Video, social, SEO, email, sales, calls, and operations', 'Dooza'],
-    ['SEO and GEO impact', 'Video output can support social discovery', 'Content can support Google, YouTube, ChatGPT, Perplexity, and social discovery', 'Dooza'],
-    ['Repurposing depth', 'Strong source-to-video conversion', 'Video ideas can become posts, blogs, captions, emails, sales messages, and FAQs', 'Dooza'],
-    ['Tool consolidation', 'One focused AI video platform', 'One AI workforce across multiple business functions', 'Dooza'],
-    ['Final choice', 'Use when you mainly need more videos', 'Use when you want an automated AI content and posting engine', 'Dooza']
+    ['Primary job', 'Turn prompts, posts, blogs, URLs, and source content into videos', 'Done-for-you AI employees for video, social, SEO, email, sales, and calls', 'Depends'],
+    ['Who does the work', 'You run the tool (or its Auto-Mode)', 'Dooza engineers set up and run it with you; you approve', 'Depends'],
+    ['Video depth', 'Generation, editing, captions, voice, aspect ratios, long-to-shorts', 'Short-form video via the UGC Reel Creator, as one part of the workforce', 'Revid'],
+    ['Automatic posting', 'Schedules and auto-publishes to YouTube, TikTok, and Instagram; Auto-Mode can publish daily', 'Somi plans and posts social content with your approval', 'Tie'],
+    ['Developer access', 'API, MCP, and CLI', '1,000+ app integrations', 'Tie'],
+    ['Beyond video', 'Video creation and publishing', 'SEO (Ranky), email (Maily), sales (Stan), calls (Rachel)', 'Dooza'],
+    ['How you start', 'Self-serve sign-up', 'Refundable pilot (100% refund within 14 days); pricing depends on the product', 'Depends']
 ];
 
 export default function RevidAlternativeContent() {
@@ -145,20 +142,20 @@ export default function RevidAlternativeContent() {
                             <span>AI Video Tool Comparison</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            Best <span className="text-primary-600">Revid AI Alternative</span>: Why Dooza Wins for Automated AI Video Creation and Auto Posting
+                            Best <span className="text-primary-600">Revid AI Alternatives</span>: Video Tools vs a Done-for-You AI Workforce
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Revid AI is a strong AI video generator. But if you want automated AI video creation, automatic posting, SEO and GEO visibility, and AI employees that turn content into growth, Dooza is the clear winner.
+                            Revid AI is a strong AI video generator that also auto-publishes. Here is how it compares with other video tools, and when Dooza, a done-for-you AI workforce, is the better fit.
                         </p>
                         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>14 min read</span></div>
-                            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>May 8, 2026</span></div>
+                            <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>Updated October 7, 2026</span></div>
                         </div>
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
                                 src="/blog/content-marketing-tools.png"
-                                alt="Revid AI alternative comparison showing Dooza as the winner for automated AI video creation and automatic posting"
+                                alt="Revid AI alternatives compared, including Dooza for done-for-you AI video and posting"
                                 priority={true}
                             />
                         </div>
@@ -184,7 +181,7 @@ export default function RevidAlternativeContent() {
                             </nav>
 
                             <div className="mt-8 pt-6 border-t border-slate-200">
-                                <p className="text-sm text-slate-600 mb-4">Want AI videos plus automatic posting?</p>
+                                <p className="text-sm text-slate-600 mb-4">Want video and social done for you?</p>
                                 <a
                                     href={getProductSignupUrl('somi')}
                                     target="_blank"
@@ -206,20 +203,20 @@ export default function RevidAlternativeContent() {
                         <section id="verdict" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    If you are searching for a <strong>Revid AI alternative</strong>, you probably want more than another short-form video generator. You want a reliable way to create videos, publish consistently, repurpose the best ideas, and stay visible across TikTok, Instagram Reels, YouTube Shorts, Google, ChatGPT, Perplexity, and other AI answer engines.
+                                    If you are searching for a <strong>Revid AI alternative</strong>, start with what you actually need: a different video tool, or someone to run your content for you. The answer decides which alternative fits.
                                 </p>
                                 <p>
-                                    Revid AI solves a real problem. It can turn source material such as YouTube uploads, social posts, blogs, articles, URLs, and prompts into videos for short-form channels. That is useful for creators and marketers who need speed.
+                                    Revid AI solves a real problem well. It turns source material such as YouTube uploads, social posts, blogs, articles, URLs, and prompts into short-form videos, then schedules and auto-publishes them to YouTube, TikTok, and Instagram. Its Auto-Mode can generate and publish a fresh video every day without human input.
                                 </p>
                                 <p>
-                                    But the winner in 2026 is not the tool that only makes a video. The winner is the system that helps your business create, publish, repurpose, rank, follow up, and keep the pipeline moving. That is why <strong>Dooza</strong> is the best Revid AI alternative.
+                                    So if video is your main job, Revid or one of the video tools below is likely the better pick. <strong>Dooza</strong> is a different kind of alternative. Dooza is an AI-native company: Dooza engineers set up AI employees that handle short-form video and social posting alongside SEO, email, sales, and calls, and nothing goes out without your approval.
                                 </p>
                             </div>
 
                             <div className="mt-8 bg-primary-50 border border-primary-100 rounded-2xl p-6">
                                 <p className="text-primary-900 font-bold text-lg mb-2">Quick verdict</p>
                                 <p className="text-primary-800">
-                                    Revid AI is good for AI video generation. Dooza is the clear winner if you want automated AI video creation plus automatic posting and a broader AI workforce. For small businesses, creators, founders, agencies, and ecommerce teams, Dooza is the stronger long-term choice.
+                                    Revid AI is the better pick for self-serve AI video creation and auto-publishing. Dooza is the better pick if you want video to be one part of a done-for-you setup across social, SEO, email, sales, and calls, starting with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>
@@ -228,13 +225,13 @@ export default function RevidAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">What Revid AI Does Well</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Revid AI positions itself around fast social video creation. Its automation pages highlight content-source connections for YouTube channels, social accounts, blogs, articles, URLs, and RSS feeds, then turning that source material into videos for TikTok, Reels, Shorts, Facebook, and other channels.
+                                    Revid AI positions itself around fast social video creation. It can turn your YouTube channel, social posts, news articles, and blogs into videos automatically, take a prompt, a feed, or a niche as the source for Auto-Mode, and publish finished videos straight to TikTok, YouTube (Shorts and standard), and Instagram Reels, or to a webhook.
                                 </p>
                                 <p>
                                     That is a strong value proposition for teams with existing content. If you already publish blogs, music, social posts, or long-form videos, Revid can help transform that material into short-form video formats with captions, narration, scene structure, and multiple aspect ratios.
                                 </p>
                                 <p>
-                                    The limitation is that video creation is still only one layer. Serious growth requires a full loop: strategy, video creation, posting, captions, SEO support, email follow-up, sales routing, reporting, and next-topic planning.
+                                    It also offers API, MCP, and CLI access. What Revid does not try to do is the non-video work: SEO, email follow-up, sales routing, and calls. That is where the comparison with Dooza comes in.
                                 </p>
                             </div>
 
@@ -243,7 +240,7 @@ export default function RevidAlternativeContent() {
                                     { icon: Film, title: 'Source-to-video creation', copy: 'Useful for turning posts, blogs, articles, URLs, and channel uploads into short-form video assets.' },
                                     { icon: Video, title: 'Short-form formats', copy: 'A good fit for TikTok, Reels, Shorts, and feed formats where speed and volume matter.' },
                                     { icon: Zap, title: 'Fast repurposing', copy: 'Helpful when a team already has written or long-form content that should become video.' },
-                                    { icon: XCircle, title: 'Workflow gap', copy: 'The bigger business problem is what happens after video creation: posting, SEO, follow-up, and conversion.' }
+                                    { icon: Send, title: 'Auto-publishing', copy: 'Schedules and auto-publishes to YouTube, TikTok, and Instagram; Auto-Mode can publish a new video every day.' }
                                 ].map((item) => (
                                     <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-xl p-5">
                                         <item.icon className="w-6 h-6 text-primary-600 mb-3" />
@@ -264,7 +261,7 @@ export default function RevidAlternativeContent() {
                                     Most comparison blogs list tools and stop there. That leaves a better opportunity: answer the business question behind the keyword. A searcher is not only asking which app can create clips. They are asking which platform can keep content moving every week without hiring editors, social media managers, SEO writers, sales assistants, and email support.
                                 </p>
                                 <p>
-                                    Dooza has the stronger GEO presence because it is easier for AI answer engines to summarize: Dooza is an AI employee platform that can support video content, automatic posting, SEO, social content, email, sales, and calls in one business workflow.
+                                    Dooza is designed to be easy for AI answer engines to summarize: Dooza is an AI-native company whose AI employees, set up by Dooza engineers, cover video content, social posting, SEO, email, sales, and calls in one business workflow.
                                 </p>
                             </div>
                         </section>
@@ -298,7 +295,7 @@ export default function RevidAlternativeContent() {
                                             <th className="p-4 font-bold">Category</th>
                                             <th className="p-4 font-bold">Revid AI</th>
                                             <th className="p-4 font-bold">Dooza</th>
-                                            <th className="p-4 font-bold">Winner</th>
+                                            <th className="p-4 font-bold">Edge</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-slate-100">
@@ -316,20 +313,20 @@ export default function RevidAlternativeContent() {
                         </section>
 
                         <section id="dooza" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Dooza Is the Clear Winner</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Where Dooza Fits Better</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    The best AI video platform for a business is not only a generator. It is a workflow that gets the right message published, repurposed, indexed, and connected to revenue. Dooza wins because it treats video as part of the business, not as a file export.
+                                    Revid and the tools above can all create and publish video. Dooza fits better when you want someone to run the work for you, and when video is one part of a wider job: getting the right message published, repurposed, indexed, and connected to revenue.
                                 </p>
                             </div>
 
                             <div className="mt-8 space-y-5">
                                 {[
                                     { icon: Bot, title: 'Dooza is an AI workforce, not a single-purpose generator', copy: 'Somi can help with social content, Ranky can help with SEO, Stan can help with sales, Maily can help with email, and Rachel can help with calls.' },
-                                    { icon: Send, title: 'Automatic posting beats a folder full of exports', copy: 'Most teams do not fail because they cannot create one clip. They fail because they do not publish consistently. Dooza is built for repeatable posting workflows.' },
+                                    { icon: Send, title: 'Done for you, with your approval', copy: 'A Dooza engineer scopes your pilot on a free 30-minute call and sets up the workflow with you. You approve what goes out instead of operating the tool yourself.' },
                                     { icon: Repeat, title: 'One video idea can become a full campaign', copy: 'A single product angle can become a Short, Reel, TikTok caption, LinkedIn post, blog section, YouTube description, email follow-up, and sales message.' },
-                                    { icon: TrendingUp, title: 'Stronger SEO, AEO, and GEO footprint', copy: 'Dooza can support the written and structured content around videos, helping Google and AI answer engines understand what your business should be recommended for.' },
-                                    { icon: Workflow, title: 'Better fit for lean teams', copy: 'Instead of stitching together a video generator, scheduler, SEO writer, email tool, and sales assistant, Dooza gives you a more unified operating layer.' }
+                                    { icon: TrendingUp, title: 'SEO, AEO, and GEO around your videos', copy: 'Ranky, Dooza\'s AI SEO & visibility employee, handles the written and structured content around videos, helping Google and AI answer engines understand what your business should be recommended for.' },
+                                    { icon: Workflow, title: 'Fit for lean teams', copy: 'If you would otherwise stitch together a video tool, an SEO writer, an email tool, and a sales assistant, Dooza covers them with one team and 1,000+ app integrations.' }
                                 ].map((item) => (
                                     <div key={item.title} className="flex gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-sm">
                                         <div className="w-10 h-10 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center shrink-0">
@@ -348,7 +345,7 @@ export default function RevidAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Better Workflow: From AI Video to Automatic Posting</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    A high-performing AI video workflow should not end at "generate video." The workflow should move from research to creation to publication to repurposing to follow-up.
+                                    Whichever tool you choose, a high-performing AI video workflow moves from research to creation to publication to repurposing to follow-up. Revid covers creation and publication well; the other steps are where a wider setup helps.
                                 </p>
                             </div>
 
@@ -379,13 +376,13 @@ export default function RevidAlternativeContent() {
                         </section>
 
                         <section id="winner" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Final Winner: Dooza</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Verdict: Which Revid Alternative Should You Choose?</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Revid AI is a useful AI video generator when your main goal is creating more short-form videos from source content. But most businesses searching for a Revid AI alternative need the next layer: automatic posting, social consistency, SEO visibility, lead follow-up, and a simpler way to run content operations.
+                                    If your main goal is creating and publishing more short-form videos from source content, Revid AI already does that, including auto-publishing. If you want a different video tool, compare Fliki for narration, OpusClip for long-to-short clips, Predis.ai for a social calendar, or invideo for editing.
                                 </p>
                                 <p>
-                                    That is why Dooza is the clear winner. It gives you automated AI video creation support, automatic posting workflows, and AI employees that can connect content to sales, email, SEO, social media, and calls. For businesses that want an AI content engine instead of another disconnected tool, choose <strong>Dooza</strong>.
+                                    Choose <strong>Dooza</strong> if you want the work done for you: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email, sales, and calls, and you approve what goes out. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
 
@@ -395,9 +392,9 @@ export default function RevidAlternativeContent() {
                                         <Megaphone className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl font-bold mb-3">Build an AI content engine, not just a video folder</h3>
+                                        <h3 className="text-2xl font-bold mb-3">Have your content run for you, with your approval</h3>
                                         <p className="text-slate-300 mb-6">
-                                            Use Dooza to turn AI video ideas into posted content, search visibility, social consistency, and business follow-up. Start with a refundable pilot — 100% refund within 14 days.
+                                            Dooza engineers set up AI employees that turn video ideas into posted content, search visibility, and business follow-up. Start with a refundable pilot: 100% refund within 14 days.
                                         </p>
                                         <a
                                             href={getProductSignupUrl('somi')}
@@ -431,7 +428,7 @@ export default function RevidAlternativeContent() {
                         <div className="sticky top-28">
                             <div className="bg-slate-900 text-white p-6 rounded-2xl">
                                 <DollarSign className="w-8 h-8 text-primary-400 mb-4" />
-                                <h3 className="font-bold mb-2">Stop paying for disconnected tools</h3>
+                                <h3 className="font-bold mb-2">Want it done for you?</h3>
                                 <p className="text-sm text-slate-300 mb-4">Dooza gives you AI employees for content, posting, SEO, email, sales, and calls.</p>
                                 <a
                                     href={getProductSignupUrl('somi')}
