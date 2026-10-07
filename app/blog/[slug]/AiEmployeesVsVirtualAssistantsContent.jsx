@@ -47,10 +47,7 @@ const faqData = [
     },
     {
         question: "How much cheaper is AI than a virtual assistant?",
-        answer: "AI can be up to 80% more cost-efficient than human assistants for repetitive tasks. A US-based VA costs $25-65/hour ($4,000-10,000+/month full-time), while offshore VAs cost $7-20/hour. AI platforms cost a fraction of that, making them dramatically cheaper for high-volume work. Dooza's pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
-    },
-    {
-        question: "Will AI replace virtual assistants?",
+        answer: "It depends on how much repetitive work you hand over. A human VA is paid for every hour they work; an AI platform charges a flat fee and works around the clock. For high-volume, repetitive tasks (scheduling, inbox triage, data entry) that usually makes AI cheaper per task. Dooza's pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days.",
         answer: "AI won't fully replace human VAs—it will transform their role. AI handles routine tasks (data entry, scheduling, email triage), freeing human VAs to focus on high-value work requiring judgment, creativity, and emotional intelligence. The most effective businesses use both in a hybrid model."
     },
     {
@@ -571,7 +568,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     <div>
                                         <h4 className="font-bold text-green-800 mb-2">Potential Savings with AI</h4>
                                         <p className="text-green-700">
-                                            According to <a href="https://www.zirtual.com/blog/ai-virtual-assistants/" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">Zirtual</a>, AI can be up to <strong>80% more cost-efficient</strong> compared to human assistants for repetitive tasks. A business spending $5,000/month on a VA for scheduling, email, and data entry could potentially hand that same work to AI for a small fraction of the cost.
+                                            A VA is paid by the hour, so repetitive work (scheduling, email, data entry) is where the gap shows most. Tally the hours your VA spends on those tasks each month, then compare that bill with a flat-fee AI platform.
                                         </p>
                                     </div>
                                 </div>
