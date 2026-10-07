@@ -72,7 +72,7 @@ const painPoints = [
     {
         icon: Clock,
         title: 'Tickets pile up overnight',
-        text: '78% of customers buy from whoever responds first. Slow replies cost you sales every day.',
+        text: 'Customers often buy from whoever answers first. Slow replies cost you sales every day.',
     },
     {
         icon: Users,
@@ -82,7 +82,7 @@ const painPoints = [
     {
         icon: TrendingDown,
         title: 'Repetitive work drains your team',
-        text: '60% of support tickets are the same questions — order status, returns, shipping, FAQs.',
+        text: 'Many support tickets are the same questions: order status, returns, shipping, FAQs.',
     },
 ];
 
