@@ -35,9 +35,9 @@ export default function RealEstateContent({ page }) {
     const problems = [
         {
             icon: Clock,
-            title: 'Leads go cold in 5 minutes',
+            title: 'Leads go cold fast',
             description:
-                'The average online inquiry expects a reply in under 5 minutes. After that, your odds of connecting drop by 80%.',
+                'Online inquiries expect a fast reply. The longer a new lead waits, the more likely they reach another agent first.',
         },
         {
             icon: Users,
