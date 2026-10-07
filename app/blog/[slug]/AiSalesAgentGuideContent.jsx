@@ -465,7 +465,7 @@ export default function AiSalesAgentGuideContent() {
                                             { feature: "Follow-Up Consistency", sdr: "Drops off after 1-2", outsourced: "Inconsistent", chatbot: "None", ai: "5+ touches, never misses" },
                                             { feature: "Lead Qualification", sdr: "Varies by person", outsourced: "Basic scripting", chatbot: "Pre-set forms only", ai: "Custom AI qualification" },
                                             { feature: "Appointment Booking", sdr: "Manual", outsourced: "Manual", chatbot: "Basic form redirect", ai: "Automatic calendar sync" },
-                                            { feature: "Ramp-Up Time", sdr: "3-6 months", outsourced: "2-4 weeks", chatbot: "1-2 weeks config", ai: "Same day" },
+                                            { feature: "Ramp-Up Time", sdr: "Months", outsourced: "2-4 weeks", chatbot: "1-2 weeks config", ai: "Same day" },
                                             { feature: "Scales With Volume", sdr: "Hire more people", outsourced: "Pay more", chatbot: "Yes", ai: "Yes, no extra cost" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -591,13 +591,13 @@ export default function AiSalesAgentGuideContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Real Cost: AI Sales Agent vs Hiring</h2>
 
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl mb-8">
-                                <h3 className="font-bold text-slate-900 mb-4 text-lg">The Math on Your Current Sales Overhead</h3>
+                                <h3 className="font-bold text-slate-900 mb-4 text-lg">Example Math: One Junior SDR (Illustrative Figures)</h3>
                                 <div className="space-y-3">
                                     {[
                                         { label: "Junior SDR salary", value: "$55,000/year" },
                                         { label: "Benefits & overhead (30%)", value: "$16,500/year" },
                                         { label: "Sales tools (CRM, dialer, email)", value: "$3,600/year" },
-                                        { label: "Training & ramp-up (3-6 months)", value: "$13,750 in lost productivity" },
+                                        { label: "Training & ramp-up (example: 3 months of salary before full productivity)", value: "$13,750 in lost productivity" },
                                         { label: "Total first-year cost for ONE SDR", value: "$88,850", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>

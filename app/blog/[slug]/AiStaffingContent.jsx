@@ -384,12 +384,12 @@ export default function AiStaffingContent() {
 
                             <div className="space-y-4 mb-8">
                                 {[
-                                    { title: "Recruiting", desc: "$4,700 per hire + agency fees (15-25% of salary)", icon: Target },
-                                    { title: "Training", desc: "3-6 months to full productivity. $1,200+ in training costs.", icon: Clock },
-                                    { title: "Benefits", desc: "Health insurance, PTO, 401k = 25-40% on top of salary.", icon: DollarSign },
-                                    { title: "PTO & Sick Days", desc: "15-20 days PTO + sick days. AI employees: 0 days off.", icon: Calendar },
-                                    { title: "Management Overhead", desc: "Managers spend 35% of their time on people management.", icon: Users },
-                                    { title: "Turnover", desc: "33% annual turnover. Each departure costs 50-200% of salary to replace.", icon: AlertTriangle }
+                                    { title: "Recruiting", desc: "Job ads, agency fees and interview time for every hire.", icon: Target },
+                                    { title: "Training", desc: "Weeks or months before a new hire is fully productive.", icon: Clock },
+                                    { title: "Benefits", desc: "Health insurance, paid time off and retirement on top of salary.", icon: DollarSign },
+                                    { title: "PTO & Sick Days", desc: "Paid time off and sick days. AI employees don't take days off.", icon: Calendar },
+                                    { title: "Management Overhead", desc: "Hiring, onboarding and managing people takes managers' time.", icon: Users },
+                                    { title: "Turnover", desc: "Every departure restarts recruiting and training.", icon: AlertTriangle }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl">
                                         <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center text-red-600 shrink-0">

@@ -43,7 +43,7 @@ const faqData = [
     },
     {
         question: "What response rates can I expect from AI-powered LinkedIn outreach?",
-        answer: "AI-personalized outreach typically sees 15-25% response rates compared to 5-10% for templated automation. The key is that AI reads each prospect's profile, recent posts, and company news to craft genuinely relevant messages — not just swapping a first name into a template."
+        answer: "It depends on your audience, offer and list quality, so measure your own baseline first. Personalized messages tend to beat templates because the AI reads each prospect's profile, recent posts and company news to write something relevant, not just a first name swapped into a template."
     },
     {
         question: "How many connection requests can I safely send per day?",
@@ -449,7 +449,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                 <div className="bg-green-50 border border-green-200 p-6 rounded-xl">
                                     <div className="flex items-center gap-2 mb-3">
                                         <CheckCircle2 className="w-5 h-5 text-green-500" />
-                                        <span className="font-bold text-green-800">AI-Personalized Message (15-25% response rate)</span>
+                                        <span className="font-bold text-green-800">AI-Personalized Message</span>
                                     </div>
                                     <div className="bg-white p-4 rounded-lg border border-green-100 text-sm text-slate-700 italic">
                                         "Hi Sarah — saw your post about the subcontractor scheduling nightmare on that Austin mixed-use project. We actually solved a similar problem for Meridian Builders (4 concurrent sites, 30+ subs) by replacing their spreadsheet tracking with automated crew scheduling. Saved their PMs about 12 hrs/week. Happy to share what worked if you're interested."
@@ -594,32 +594,16 @@ export default function AiAgentLinkedinLeadGenerationContent() {
 
                         {/* Section 6: Results & Metrics */}
                         <section id="results-metrics" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Results You Can Expect: The Numbers</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Numbers: A Pipeline Model to Run With Your Own Rates</h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Let's talk real numbers. The following benchmarks are based on aggregated data from B2B companies using AI-powered LinkedIn outreach across industries including SaaS, professional services, consulting, and financial services.
+                                    Here is a simple model you can run with your own numbers. The rates below are illustrative assumptions, not measured results: replace them with your real acceptance, reply and close rates.
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                                {[
-                                    { stat: "15-25%", label: "Response Rate", subtitle: "AI-personalized outreach", comparison: "vs 5-10% templates", cardClass: "bg-green-50 border-green-200", textClass: "text-green-600" },
-                                    { stat: "40-55%", label: "Connection Acceptance", subtitle: "With personalized notes", comparison: "vs 20-30% generic", cardClass: "bg-blue-50 border-blue-200", textClass: "text-blue-600" },
-                                    { stat: "3-5x", label: "Pipeline Value", subtitle: "Per message sent", comparison: "vs old-school automation", cardClass: "bg-primary-50 border-primary-200", textClass: "text-primary-600" },
-                                    { stat: "8-12%", label: "Meeting Booking Rate", subtitle: "From accepted connections", comparison: "vs 2-4% cold email alone", cardClass: "bg-purple-50 border-purple-200", textClass: "text-purple-600" }
-                                ].map((item, idx) => (
-                                    <div key={idx} className={`${item.cardClass} border p-5 rounded-xl text-center`}>
-                                        <div className={`text-3xl font-bold ${item.textClass} mb-1`}>{item.stat}</div>
-                                        <p className="text-sm font-semibold text-slate-800">{item.label}</p>
-                                        <p className="text-xs text-slate-600 mt-1">{item.subtitle}</p>
-                                        <p className="text-xs text-slate-400 mt-1">{item.comparison}</p>
-                                    </div>
-                                ))}
-                            </div>
-
                             <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl mb-8">
-                                <h3 className="font-bold text-slate-900 mb-4">Pipeline Math: What 20 Personalized Requests/Day Gets You</h3>
+                                <h3 className="font-bold text-slate-900 mb-4">Pipeline Math (Illustrative): What 20 Personalized Requests/Day Could Get You</h3>
                                 <div className="space-y-3">
                                     {[
                                         { label: "Connection requests per day", value: "20", note: "Within LinkedIn's safe zone" },
@@ -642,10 +626,10 @@ export default function AiAgentLinkedinLeadGenerationContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Five new customers per month from LinkedIn alone, with an AI agent doing the prospecting and follow-up. If your average deal size is $5,000, that's <strong>$25,000 in new revenue per month</strong> — for a fraction of what a human SDR or agency costs.
+                                    With these assumptions, that is five new customers a month from LinkedIn. If your average deal size is $5,000, that would be <strong>$25,000 in new revenue per month</strong>. Your real rates will differ, so run the model with your own numbers.
                                 </p>
                                 <p>
-                                    Compare that to hiring an SDR at $5,000-7,000/month who might book 15-20 meetings — with 3-6 months of ramp-up time before they hit those numbers. The AI starts producing results in week one.
+                                    Compare that with hiring an SDR: a full salary plus benefits, and a ramp-up period before they book meetings at full pace. An AI agent can start prospecting as soon as it is set up.
                                 </p>
                             </div>
 
