@@ -72,42 +72,42 @@ const toolCategories = [
         icon: Mail,
         title: "Email Marketing",
         description: "Newsletters, drip campaigns, and automated follow-ups",
-        tools: ["Mailchimp ($13-350/mo)", "Constant Contact ($12-80/mo)", "ActiveCampaign ($29-149/mo)"],
+        tools: ["Mailchimp", "Constant Contact", "ActiveCampaign"],
         dooza: "Maily handles email automatically"
     },
     {
         icon: Megaphone,
         title: "Social Media Management",
         description: "Scheduling, posting, and engagement across platforms",
-        tools: ["Hootsuite ($99-739/mo)", "Buffer ($6-120/mo)", "Sprout Social ($249-499/mo)"],
+        tools: ["Hootsuite ($99-399/mo)", "Buffer ($5-10/channel/mo)", "Sprout Social ($79-399/seat/mo)"],
         dooza: "Somi posts daily content"
     },
     {
         icon: Search,
         title: "SEO & Content",
         description: "Blog posts, keyword research, and search optimization",
-        tools: ["Semrush ($139-499/mo)", "Ahrefs ($29-449/mo)", "Surfer SEO ($89-219/mo)"],
+        tools: ["Semrush ($139-549/mo)", "Ahrefs ($29-449/mo)", "Surfer SEO ($49-299/mo, billed yearly)"],
         dooza: "Ranky writes and optimizes content"
     },
     {
         icon: Target,
         title: "Lead Generation",
         description: "Finding and qualifying potential customers",
-        tools: ["ZoomInfo ($15K+/year)", "Apollo ($49-99/mo)", "Hunter ($49-399/mo)"],
+        tools: ["ZoomInfo", "Apollo", "Hunter ($49-299/mo)"],
         dooza: "Stan generates and qualifies leads"
     },
     {
         icon: Phone,
         title: "Phone & Receptionist",
         description: "Answering calls and booking appointments",
-        tools: ["Ruby ($250-1,725/mo)", "Smith.ai ($300-2,100/mo)", "Grasshopper ($31-80/mo)"],
+        tools: ["Ruby ($250-1,725/mo)", "Smith.ai ($300-2,100/mo)", "Grasshopper"],
         dooza: "Rachel answers calls 24/7"
     },
     {
         icon: BarChart3,
         title: "Analytics & Reporting",
         description: "Tracking performance and ROI",
-        tools: ["Google Analytics (Free)", "Mixpanel ($28-1,000/mo)", "Databox ($72-231/mo)"],
+        tools: ["Google Analytics (Free)", "Mixpanel (free tier)", "Databox ($71-319/mo, billed yearly)"],
         dooza: "Built-in analytics"
     }
 ];
@@ -406,7 +406,7 @@ export default function SmallBusinessMarketingToolsContent() {
                         <section id="tool-categories" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Marketing Tool Categories & Costs</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                Here's what each category of marketing tool typically costs, and how Dooza's AI employees compare:
+                                Here's what each category of marketing tool typically costs, and how Dooza's AI employees compare. Prices are list prices from each vendor's pricing page, checked Oct 2026; tools shown without a price had no verifiable USD price on their page:
                             </p>
 
                             <div className="space-y-6 mb-8">
@@ -451,12 +451,12 @@ export default function SmallBusinessMarketingToolsContent() {
                                 <h3 className="font-bold text-red-800 mb-6 text-xl">Typical Small Business Marketing Stack</h3>
                                 <div className="space-y-3 mb-6">
                                     {[
-                                        { tool: "Email Marketing (Mailchimp)", cost: "$45/mo" },
-                                        { tool: "Social Media (Buffer Pro)", cost: "$60/mo" },
+                                        { tool: "Email Marketing (Mailchimp)", cost: "not verified" },
+                                        { tool: "Social Media (Buffer Essentials, 1 channel)", cost: "$5/mo" },
                                         { tool: "SEO Tool (Ahrefs Lite)", cost: "$129/mo" },
-                                        { tool: "CRM (HubSpot Starter)", cost: "$20/mo" },
-                                        { tool: "Phone Service", cost: "$50/mo" },
-                                        { tool: "Content Creation (Jasper)", cost: "$49/mo" }
+                                        { tool: "CRM (HubSpot Starter, per seat)", cost: "$20/mo" },
+                                        { tool: "Phone Service", cost: "not verified" },
+                                        { tool: "Content Creation (Jasper Pro, 1 seat)", cost: "$69/mo" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex justify-between items-center border-b border-red-200 pb-2">
                                             <span className="text-slate-700">{item.tool}</span>
@@ -464,16 +464,16 @@ export default function SmallBusinessMarketingToolsContent() {
                                         </div>
                                     ))}
                                     <div className="flex justify-between items-center pt-2">
-                                        <span className="font-bold text-slate-900">Monthly Total</span>
-                                        <span className="font-bold text-red-700 text-xl">$353/mo</span>
+                                        <span className="font-bold text-slate-900">Monthly Total (verified items only)</span>
+                                        <span className="font-bold text-red-700 text-xl">$223/mo</span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="font-bold text-slate-900">Annual Total</span>
-                                        <span className="font-bold text-red-700 text-xl">$4,236/year</span>
+                                        <span className="font-bold text-red-700 text-xl">$2,676/year</span>
                                     </div>
                                 </div>
                                 <p className="text-red-700 text-sm">
-                                    * And this doesn't include the 10+ hours/week YOU spend managing these disconnected tools
+                                    * Vendor list prices, monthly billing, checked Oct 2026; Mailchimp and phone service are left out of the total because we couldn't verify a USD price. And this doesn't include the 10+ hours/week YOU spend managing these disconnected tools
                                 </p>
                             </div>
 

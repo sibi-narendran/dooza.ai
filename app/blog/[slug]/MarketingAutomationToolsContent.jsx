@@ -67,35 +67,35 @@ const faqData = [
 const automationTools = [
     {
         name: "HubSpot",
-        price: "$20-3,600+/mo",
+        price: "From $7-20/seat/mo; $800+ (Pro), $3,600+ (Enterprise)",
         type: "All-in-one platform",
         bestFor: "Mid-market to enterprise",
         limitations: "Expensive as you scale, complex setup, steep learning curve"
     },
     {
         name: "ActiveCampaign",
-        price: "$29-149/mo",
+        price: "See vendor pricing",
         type: "Email + automation",
         bestFor: "Email-focused SMBs",
         limitations: "Limited beyond email, requires manual setup, no AI content creation"
     },
     {
         name: "Mailchimp",
-        price: "$13-350/mo",
+        price: "See vendor pricing",
         type: "Email marketing",
         bestFor: "Basic email automation",
         limitations: "Limited automation features, pricing increases with contacts"
     },
     {
         name: "Zapier",
-        price: "$29.99-599/mo",
+        price: "From $29.99/mo (monthly billing)",
         type: "Integration platform",
         bestFor: "Connecting apps",
         limitations: "Just connects tools, doesn't do the work itself"
     },
     {
         name: "Marketo",
-        price: "$1,000-4,000+/mo",
+        price: "Custom quote",
         type: "Enterprise automation",
         bestFor: "Large enterprises",
         limitations: "Way too expensive and complex for SMBs"
@@ -353,7 +353,7 @@ export default function MarketingAutomationToolsContent() {
                         <section id="tool-comparison" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Marketing Automation Tools Compared</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                Here's an honest breakdown of the major automation platforms, based on <a href="https://www.marketingautomationinsider.com/marketing-automation-vendor-market-share/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Marketing Automation Insider</a> and <a href="https://www.emailvendorselection.com/marketing-automation-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Email Vendor Selection</a>:
+                                Here's an honest breakdown of the major automation platforms, prices from each vendor's page (checked Oct 2026; no price shown where we couldn't verify one), and market data from <a href="https://www.marketingautomationinsider.com/marketing-automation-vendor-market-share/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Marketing Automation Insider</a> and <a href="https://www.emailvendorselection.com/marketing-automation-statistics/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Email Vendor Selection</a>:
                             </p>
 
                             <div className="space-y-4 mb-8">
@@ -484,11 +484,11 @@ export default function MarketingAutomationToolsContent() {
                                 <div className="grid md:grid-cols-3 gap-4 text-center">
                                     <div>
                                         <div className="text-2xl font-bold text-slate-900">$800+/mo</div>
-                                        <p className="text-sm text-slate-600">HubSpot Marketing Hub</p>
+                                        <p className="text-sm text-slate-600">HubSpot Marketing Hub Professional (checked Oct 2026)</p>
                                     </div>
                                     <div>
-                                        <div className="text-2xl font-bold text-slate-900">$149/mo</div>
-                                        <p className="text-sm text-slate-600">ActiveCampaign Plus</p>
+                                        <div className="text-2xl font-bold text-slate-900">$3,600+/mo</div>
+                                        <p className="text-sm text-slate-600">HubSpot Marketing Hub Enterprise</p>
                                     </div>
                                     <div className="bg-green-100 p-3 rounded-lg">
                                         <div className="text-2xl font-bold text-green-700">14-day</div>

@@ -41,11 +41,11 @@ import {
 const faqData = [
     {
         question: "What AI tools do solopreneurs need in 2026?",
-        answer: "Solopreneurs in 2026 need AI tools for content creation (ChatGPT, Jasper), visual design (Canva AI, Midjourney), email management (Superhuman), social media scheduling (Buffer, Hootsuite), meeting transcription (Otter.ai), automation (Zapier, Make), and accounting (QuickBooks). However, managing 7+ subscriptions can cost $200-500/month. Platforms like Dooza consolidate these functions into pre-built AI employees in one app. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
+        answer: "Solopreneurs in 2026 need AI tools for content creation (ChatGPT, Jasper), visual design (Canva AI, Midjourney), email management (Superhuman), social media scheduling (Buffer, Hootsuite), meeting transcription (Otter.ai), automation (Zapier, Make), and accounting (QuickBooks). However, managing 7+ subscriptions can cost several hundred dollars a month once subscriptions stack up. Platforms like Dooza consolidate these functions into pre-built AI employees in one app. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "How much do AI tools cost for a solopreneur?",
-        answer: "Individual AI tools typically cost $10-50/month each. A full stack including content creation, design, email, social media, automation, and accounting tools can run $200-500/month. All-in-one platforms like Dooza bundle multiple AI employees into one app, which can replace several overlapping subscriptions and reduce tool fatigue. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
+        answer: "Individual AI tools vary widely, from free tiers to tens of dollars a month each (see each vendor’s pricing page). A full stack covering content creation, design, email, social media, automation, and accounting adds up quickly. All-in-one platforms like Dooza bundle multiple AI employees into one app, which can replace several overlapping subscriptions and reduce tool fatigue. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "Can AI replace a virtual assistant for solopreneurs?",
@@ -69,7 +69,7 @@ const aiTools = [
     {
         name: "Content Creation AI",
         examples: "ChatGPT, Jasper, Claude, Copy.ai",
-        price: "$20-100/mo",
+        price: "Jasper Pro $59-69/seat/mo",
         icon: FileText,
         color: "purple",
         description: "Write blog posts, emails, social captions, ad copy, and more. The backbone of modern content marketing.",
@@ -87,7 +87,7 @@ const aiTools = [
     {
         name: "Visual Design AI",
         examples: "Canva AI, Midjourney, DALL-E, Adobe Firefly",
-        price: "$10-50/mo",
+        price: null,
         icon: Palette,
         color: "pink",
         description: "Create social graphics, product images, presentations, and brand assets without hiring a designer.",
@@ -96,7 +96,7 @@ const aiTools = [
     {
         name: "Email Management AI",
         examples: "Superhuman, Lindy, SaneBox, Mailbutler",
-        price: "$25-50/mo",
+        price: null,
         icon: Mail,
         color: "blue",
         description: "Triage inbox, draft responses, schedule sends, and actually hit inbox zero for once.",
@@ -105,7 +105,7 @@ const aiTools = [
     {
         name: "Social Media AI",
         examples: "Buffer, Hootsuite, Later, Sprout Social",
-        price: "$15-60/mo",
+        price: "Buffer from $5/channel/mo",
         icon: Share2,
         color: "green",
         description: "Schedule posts, generate captions, analyze performance, and maintain consistent presence across platforms without living on your phone.",
@@ -114,7 +114,7 @@ const aiTools = [
     {
         name: "Meeting Notes AI",
         examples: "Otter.ai, Fireflies, Grain, Fathom",
-        price: "$10-30/mo",
+        price: "Otter Pro $16.99/mo",
         icon: Video,
         color: "amber",
         description: "Auto-transcribe meetings, generate summaries, extract action items, and never miss a follow-up again.",
@@ -123,7 +123,7 @@ const aiTools = [
     {
         name: "Automation Platform",
         examples: "Zapier, Make, workflow automation tools",
-        price: "$20-75/mo",
+        price: "Zapier Pro $19.99-29.99/mo",
         icon: Zap,
         color: "orange",
         description: "Connect your apps, automate workflows, and eliminate repetitive tasks. The glue that holds your tech stack together.",
@@ -132,7 +132,7 @@ const aiTools = [
     {
         name: "AI Accounting",
         examples: "QuickBooks AI, FreshBooks, Wave, Xero",
-        price: "$15-50/mo",
+        price: "QuickBooks from $38/mo",
         icon: Calculator,
         color: "indigo",
         description: "Auto-categorize expenses, generate invoices, track time, and prepare for taxes without spreadsheet nightmares.",
@@ -419,7 +419,7 @@ export default function AiToolsForSolopreneursContent() {
                                                         <p className="text-sm text-slate-500">{tool.examples}</p>
                                                     </div>
                                                 </div>
-                                                <span className="text-sm font-semibold text-slate-900 bg-slate-100 px-3 py-1 rounded-full">{tool.price}</span>
+                                                {tool.price && <span className="text-sm font-semibold text-slate-900 bg-slate-100 px-3 py-1 rounded-full shrink-0">{tool.price}</span>}
                                             </div>
                                             <p className="text-slate-600 text-sm mb-3">{tool.description}</p>
                                             <div className="flex flex-wrap gap-2">
@@ -435,6 +435,10 @@ export default function AiToolsForSolopreneursContent() {
                                 })}
                             </div>
 
+                            <p className="text-xs text-slate-500 mb-4">
+                                Prices shown are from each vendor’s own pricing page (checked Oct 2026), US plans, monthly billing unless noted (Jasper per seat, Buffer per channel on Essentials, Zapier $29.99 monthly or $19.99 billed annually). Tools without a price here have no price we could verify, so check the vendor.
+                            </p>
+
                             {/* Cost Tally */}
                             <div className="bg-red-50 border border-red-200 rounded-2xl p-8 mt-8">
                                 <h4 className="font-bold text-xl text-red-800 mb-6 flex items-center gap-2">
@@ -443,13 +447,10 @@ export default function AiToolsForSolopreneursContent() {
                                 </h4>
                                 <div className="space-y-3 mb-6">
                                     {[
-                                        { tool: "Content Creation (ChatGPT Plus)", cost: "$20/mo" },
-                                        { tool: "Design (Canva Pro)", cost: "$15/mo" },
-                                        { tool: "Email (Superhuman)", cost: "$30/mo" },
-                                        { tool: "Social Media (Buffer)", cost: "$15/mo" },
-                                        { tool: "Meetings (Otter.ai)", cost: "$17/mo" },
-                                        { tool: "Automation (Zapier)", cost: "$30/mo" },
-                                        { tool: "Accounting (QuickBooks)", cost: "$30/mo" }
+                                        { tool: "Social Media (Buffer Essentials, 1 channel)", cost: "$5/mo" },
+                                        { tool: "Meetings (Otter.ai Pro, monthly)", cost: "$16.99/mo" },
+                                        { tool: "Automation (Zapier Pro, monthly)", cost: "$29.99/mo" },
+                                        { tool: "Accounting (QuickBooks Simple Start)", cost: "$38/mo" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex justify-between items-center border-b border-red-200 pb-2">
                                             <span className="text-slate-700">{item.tool}</span>
@@ -457,16 +458,16 @@ export default function AiToolsForSolopreneursContent() {
                                         </div>
                                     ))}
                                     <div className="flex justify-between items-center pt-2">
-                                        <span className="font-bold text-slate-900">Minimum Monthly Total</span>
-                                        <span className="font-bold text-red-700 text-xl">$157/mo</span>
+                                        <span className="font-bold text-slate-900">Total for these 4 (verified items only, checked Oct 2026)</span>
+                                        <span className="font-bold text-red-700 text-xl">$89.98/mo</span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-slate-700">Realistically with upgrades</span>
-                                        <span className="font-bold text-red-700">$250-400/mo</span>
+                                        <span className="text-slate-700">Content, design and email tools</span>
+                                        <span className="font-bold text-red-700">not included</span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="font-bold text-slate-900">Annual Cost</span>
-                                        <span className="font-bold text-red-700 text-xl">$1,884 - $4,800/year</span>
+                                        <span className="font-bold text-slate-900">Annual Cost (verified items only)</span>
+                                        <span className="font-bold text-red-700 text-xl">$1,079.76/year</span>
                                     </div>
                                 </div>
                                 <p className="text-red-700 text-sm">
@@ -629,12 +630,12 @@ export default function AiToolsForSolopreneursContent() {
                                     <tbody className="text-slate-600">
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Monthly Cost</td>
-                                            <td className="p-4">$157-400</td>
+                                            <td className="p-4">$89.98+ for 4 verified tools (checked Oct 2026)</td>
                                             <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">Varies by product — <Link href="/pricing" className="underline">see pricing</Link></td>
                                         </tr>
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Annual Cost</td>
-                                            <td className="p-4">$1,884-4,800</td>
+                                            <td className="p-4">$1,079.76+ (verified items only, checked Oct 2026)</td>
                                             <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">Refundable pilot (100% refund within 14 days)</td>
                                         </tr>
                                         <tr className="border-b">
