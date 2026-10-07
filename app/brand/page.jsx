@@ -69,9 +69,43 @@ function SectionTitle({ children, sub }) {
     );
 }
 
+const brandSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    url: pageUrl,
+    name: 'Dooza Brand Resources',
+    mainEntity: {
+        '@type': 'Organization',
+        name: 'Dooza',
+        legalName: 'Adam Laboratory Inc.',
+        url: SITE_URL,
+        logo: `${SITE_URL}/brand/dooza-icon.png`,
+        description: 'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.',
+        foundingDate: '2025',
+        founder: { '@type': 'Person', name: 'Sibi Narendran' },
+        email: 'support@dooza.ai',
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: '131 Continental Dr, Suite 305',
+            addressLocality: 'Newark',
+            addressRegion: 'DE',
+            postalCode: '19713',
+            addressCountry: 'US',
+        },
+        sameAs: [
+            'https://twitter.com/sibinarendran',
+            'https://www.linkedin.com/company/110144933/',
+            'https://www.crunchbase.com/organization/dooza',
+            'https://www.youtube.com/channel/UCWpF_BoN_rxwAQT32Cfra3g',
+            'https://www.g2.com/products/dooza',
+        ],
+    },
+};
+
 export default function BrandPage() {
     return (
         <BookingModalProvider>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandSchema) }} />
             <Navbar ctaSource="brand_nav" />
             <main id="main-content" className="bg-warm text-slate-900 font-sans">
 

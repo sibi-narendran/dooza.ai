@@ -36,27 +36,27 @@ import {
 const faqData = [
     {
         question: "Is Dooza really better than Motion for AI employees?",
-        answer: "Yes. Motion focuses primarily on calendar scheduling with AI employees as an add-on. Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app is purpose-built for AI employees that handle real business tasks—email, social media, calls, sales, and more—24/7 without you needing to manage a calendar."
+        answer: "It depends on the job. Motion is an AI calendar and project manager (auto-planned days, AI project management, docs and workflows). Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app is purpose-built for AI employees that handle real business tasks—email, social media, calls, sales, and more—24/7 without you needing to manage a calendar."
     },
     {
-        question: "Can I customize AI employees in Dooza like I can in Motion?",
-        answer: "Absolutely—and it's much easier. Dooza lets you create custom AI employees tailored to your exact workflow. Plus, a Dooza engineer scopes your pilot on a free 30-minute call and builds them FOR you."
+        question: "Can I customize AI employees in Dooza?",
+        answer: "Yes. Dooza lets you create custom AI employees tailored to your exact workflow. Plus, a Dooza engineer scopes your pilot on a free 30-minute call and builds them FOR you."
     },
     {
         question: "How does Dooza pricing compare to Motion?",
-        answer: "Motion starts at $29/month but AI Employees require the $49/month plan with limited credits. Dooza does not meter work in credits. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Motion's pricing page (checked Oct 7, 2026) lists Pro AI at $19 per seat per month billed annually or $29 month-to-month, with 7,500 AI credits per seat per month, and Business AI at $29 per seat per month billed annually, with 15,000 credits. Dooza does not meter work in credits. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Does Dooza work if I already use Google Calendar?",
-        answer: "Yes! Dooza integrates seamlessly with Google Calendar, Outlook, and other tools. Unlike Motion which tries to replace your calendar, Dooza works alongside your existing workflow."
+        answer: "Yes. Dooza works alongside the tools you already use. Motion also syncs with Google and Outlook calendars, so both fit a Google Calendar setup."
     },
     {
         question: "What if I need help setting up my AI employees?",
-        answer: "This is where Dooza shines. A Dooza engineer scopes your pilot on a free 30-minute call and builds your custom AI employees for you. Motion leaves you to figure it out yourself with documentation."
+        answer: "This is where Dooza shines. A Dooza engineer scopes your pilot on a free 30-minute call and builds your custom AI employees for you."
     },
     {
         question: "Can Dooza AI employees make phone calls?",
-        answer: "Yes! Dooza's Rachel (AI Receptionist) can handle inbound and outbound calls 24/7. Motion's AI employees cannot make or receive phone calls—a major limitation for sales-focused businesses."
+        answer: "Yes! Dooza's Rachel (AI Receptionist) can handle inbound and outbound calls 24/7. Motion's pricing page does not list phone answering; it is built around calendars, tasks and projects."
     }
 ];
 
@@ -122,7 +122,7 @@ export default function BetterThanMotionContent() {
                             <span className="text-primary-600">Motion App</span> Alternative: Why Smart Businesses Choose Dooza
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-                            Tired of paying $348/year for a calendar app with limited AI? Discover why businesses are switching to Dooza for real AI employees that work 24/7.
+                            Motion is a strong AI calendar and project manager. If the work you need done is answering calls, email, social posts or leads, here is how Dooza compares, and when Motion is the better pick.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -158,9 +158,9 @@ export default function BetterThanMotionContent() {
                                 {[
                                     { id: 'introduction', label: 'Introduction' },
                                     { id: 'what-is-motion', label: 'What is Motion?' },
-                                    { id: 'motion-limitations', label: 'Motion Limitations' },
-                                    { id: 'why-dooza', label: 'Why Dooza Wins' },
-                                    { id: 'ai-employees', label: 'AI Employees Comparison' },
+                                    { id: 'motion-limitations', label: 'Which One Fits' },
+                                    { id: 'why-dooza', label: 'Why Dooza' },
+                                    { id: 'ai-employees', label: 'What each one does' },
                                     { id: 'comparison', label: 'Feature Comparison' },
                                     { id: 'pricing', label: 'Pricing Breakdown' },
                                     { id: 'migration', label: 'Easy Switching' },
@@ -207,17 +207,14 @@ export default function BetterThanMotionContent() {
                                     If you've been searching for AI productivity tools, you've probably stumbled upon <a href="https://www.usemotion.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Motion</a> (usemotion.com). It promises to be an "AI-powered SuperApp for Work" that manages your calendar, tasks, and now—AI employees.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>But here's what the marketing doesn't tell you:</strong> Motion is fundamentally a calendar app with AI scheduling. Their "AI employees" are a recent add-on feature that requires <strong>additional fees</strong> and comes with <strong>strict credit limits</strong>.
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    According to <a href="https://www.trustpilot.com/review/www.usemotion.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Trustpilot reviews</a>, many users complain: <em>"It's just so expensive. They don't really ship the features I want. The AI agents are useless."</em>
+                                    <strong>The honest difference:</strong> Motion plans your time. Dooza does work for you: AI employees that answer calls, reply to email, post on social and find leads. Many teams could use both.
                                 </p>
                                 <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl my-8">
                                     <div className="flex items-start gap-3">
                                         <AlertTriangle className="w-6 h-6 text-amber-600 shrink-0 mt-1" />
                                         <div>
-                                            <h4 className="font-bold text-slate-900 mb-2">The Real Cost of Motion</h4>
-                                            <p className="text-slate-700">Motion's base plan is $29/month, but to access AI Employees, you need the $49/month plan. And you only get 10,000 credits—once they're gone, you're stuck waiting until next month or paying more.</p>
+                                            <h4 className="font-bold text-slate-900 mb-2">What Motion costs</h4>
+                                            <p className="text-slate-700">Per <a href="https://www.usemotion.com/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Motion's pricing page</a> (checked Oct 7, 2026): Pro AI is $19 per seat per month billed annually ($29 month-to-month) with 7,500 AI credits per seat per month; Business AI is $29 per seat per month billed annually with 15,000 credits. There is a free trial.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -231,62 +228,34 @@ export default function BetterThanMotionContent() {
                                     Motion (usemotion.com) is an AI-powered calendar and task management tool. It uses artificial intelligence to automatically schedule your tasks based on deadlines, priorities, and available time slots. The app gained popularity for its "set it and forget it" scheduling approach.
                                 </p>
                                 <p className="mb-6">
-                                    Recently, Motion added "AI Employees"—pre-built AI personas like Alfred (Executive Assistant), Chip (Sales Rep), and Millie (Project Manager). However, as <a href="https://thebusinessdive.com/motion-app-review" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">multiple reviewers note</a>, these AI employees are limited in what they can actually do.
+                                    Its pricing page lists an AI Calendar that auto-plans your day, an AI Project Manager with Gantt charts, AI Docs, Wiki and Notes, AI Chat and AI Workflows for repeatable projects. Motion marketed named "AI Employees" in 2025; those no longer appear on its site (checked Oct 7, 2026).
                                 </p>
                                 <div className="w-full mb-8">
                                     <YouTubeEmbed
                                         videoId="M6nB5k2eIvs"
-                                        title="Motion App Review - Is It Worth $348/Year?"
+                                        title="Motion App Review"
                                     />
                                 </div>
                                 <p className="mb-6">
-                                    <strong>The core problem:</strong> Motion wants to be your entire workflow—calendar, tasks, projects, AND AI employees. But when you try to do everything, you often do nothing exceptionally well.
+                                    <strong>Where Motion is the better pick:</strong> if your bottleneck is planning (too many tasks, projects and meetings for the hours you have), Motion is built for exactly that and Dooza is not a calendar.
                                 </p>
                             </div>
                         </section>
 
                         <section id="motion-limitations" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Real Limitations of Motion (That Reviews Don't Mention)</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Which one fits your problem?</h2>
                             <div className="space-y-6">
                                 {[
-                                    {
-                                        title: "AI Employees Cost Extra",
-                                        desc: "The base plan ($29/mo) doesn't include AI employees. You need to upgrade to the $49/mo plan—and even then, you only get 10,000 credits per month. Heavy users run out within weeks.",
-                                        source: "Trustpilot & G2 Reviews"
-                                    },
-                                    {
-                                        title: "No Phone Call Capabilities",
-                                        desc: "Motion's AI employees cannot make or receive phone calls. For businesses that rely on sales calls or customer support, this is a dealbreaker.",
-                                        source: "Motion Feature List"
-                                    },
-                                    {
-                                        title: "Steep Learning Curve",
-                                        desc: "Reddit users and reviewers consistently mention that Motion is 'too complicated' and 'takes too long to set up properly.' One user on Trustpilot said: 'I wish the instructions were made for dummies.'",
-                                        source: "Reddit & Trustpilot"
-                                    },
-                                    {
-                                        title: "Mobile App is Disappointing",
-                                        desc: "The mobile experience is severely limited compared to desktop. As one reviewer noted: 'There is no iPad app and the mobile app lacks most features.'",
-                                        source: "bymilliepham.com review"
-                                    },
-                                    {
-                                        title: "You're Locked Into Their Ecosystem",
-                                        desc: "Motion wants to replace your calendar, not work alongside it. If you already use tools you love, Motion forces you to abandon them or use clunky workarounds.",
-                                        source: "User Feedback"
-                                    },
-                                    {
-                                        title: "No 'Done For You' Service",
-                                        desc: "Motion gives you software and documentation. You're on your own to figure out how to set up AI employees for your specific business needs.",
-                                        source: "Motion Website"
-                                    }
+                                    { title: "Pick Motion if your problem is time", desc: "You need your tasks, projects and meetings planned into your calendar automatically, with project management and docs in the same tool." },
+                                    { title: "Pick Dooza if your problem is work nobody has time to do", desc: "Missed calls, an inbox that needs replies, social posts, lead lists. Dooza's AI employees do that work, and a Dooza engineer sets up your pilot." },
+                                    { title: "Pricing models differ", desc: "Motion is per seat with a monthly AI credit allowance. Dooza pricing depends on the product (see /pricing) and every product starts with a refundable pilot: 100% refund within 14 days." }
                                 ].map((item, idx) => (
-                                    <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl">
+                                    <div key={idx} className="bg-white border border-slate-200 p-6 rounded-xl">
                                         <div className="flex items-start gap-4">
-                                            <XCircle className="w-6 h-6 text-red-500 shrink-0 mt-1" />
+                                            <CheckCircle2 className="w-6 h-6 text-primary-600 shrink-0 mt-1" />
                                             <div>
                                                 <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
-                                                <p className="text-slate-600 mb-2">{item.desc}</p>
-                                                <p className="text-xs text-slate-400">Source: {item.source}</p>
+                                                <p className="text-slate-600">{item.desc}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -301,9 +270,9 @@ export default function BetterThanMotionContent() {
                             </p>
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { icon: Bot, title: "Purpose-Built AI Employees", desc: "Unlike Motion's add-on AI agents, Dooza's AI employees are our core product—trained specifically for business automation.", color: "primary" },
+                                    { icon: Bot, title: "Purpose-Built AI Employees", desc: "AI employees are Dooza's core product, built for business tasks rather than scheduling.", color: "primary" },
                                     { icon: Sliders, title: "Fully Customizable", desc: "Create AI employees tailored to YOUR workflow. Name them, train them on your data, and deploy them in minutes.", color: "blue" },
-                                    { icon: Phone, title: "Phone Call Capabilities", desc: "Our AI receptionist Rachel can make and receive calls 24/7. Motion can't do this at all.", color: "green" },
+                                    { icon: Phone, title: "Phone Call Capabilities", desc: "Our AI receptionist Rachel can make and receive calls 24/7.", color: "green" },
                                     { icon: HeadphonesIcon, title: "Built With a Dooza Engineer", desc: "We don't just give you software—a Dooza engineer scopes your pilot on a free 30-minute call and builds your custom AI employees FOR you.", color: "purple" },
                                     { icon: DollarSign, title: "Refundable Pilot", desc: "Every Dooza product starts with a refundable pilot—100% refund within 14 days. No credit meter to watch. Pricing depends on the product.", color: "emerald" },
                                     { icon: Zap, title: "Works With Your Stack", desc: "Dooza integrates with your existing tools—Gmail, Outlook, social platforms, CRMs—without forcing you to change how you work.", color: "orange" }
@@ -320,9 +289,9 @@ export default function BetterThanMotionContent() {
                         </section>
 
                         <section id="ai-employees" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">AI Employees: Motion vs Dooza</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What each one does</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                Let's compare what each platform's AI employees can actually do for your business:
+                                Motion's features as listed on its pricing page, next to Dooza's AI employees:
                             </p>
 
                             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -330,17 +299,16 @@ export default function BetterThanMotionContent() {
                                 <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                     <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                                         <span className="w-8 h-8 bg-slate-200 rounded-lg flex items-center justify-center text-sm font-bold">M</span>
-                                        Motion AI Employees
+                                        Motion (per its pricing page)
                                     </h3>
                                     <ul className="space-y-3 mb-6">
                                         {[
-                                            "Alfred - Executive Assistant (basic task creation)",
-                                            "Chip - Sales Rep (drafts outreach messages)",
-                                            "Suki - Marketing Associate (content suggestions)",
-                                            "Millie - Project Manager (task organization)",
-                                            "Clide - Customer Support (response drafts)",
-                                            "Spec - Recruiter (resume screening)",
-                                            "Dot - Research Analyst (web research)"
+                                            "AI Calendar: auto-plans your day",
+                                            "AI Project Manager with Gantt charts",
+                                            "AI Docs, Wiki and Notes",
+                                            "AI Chat",
+                                            "AI Workflows for repeatable projects and SOPs",
+                                            "Google and Outlook calendar sync"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-slate-600 text-sm">
                                                 <span className="text-slate-400 mt-1">•</span>
@@ -348,14 +316,8 @@ export default function BetterThanMotionContent() {
                                             </li>
                                         ))}
                                     </ul>
-                                    <div className="bg-red-50 p-4 rounded-lg border border-red-100">
-                                        <p className="text-red-700 text-sm font-medium">Limitations:</p>
-                                        <ul className="text-red-600 text-sm mt-2 space-y-1">
-                                            <li>• Requires $49/mo plan</li>
-                                            <li>• Limited to 10,000 credits/month</li>
-                                            <li>• No phone call capabilities</li>
-                                            <li>• Can't execute actions autonomously</li>
-                                        </ul>
+                                    <div className="bg-slate-100 p-4 rounded-lg border border-slate-200">
+                                        <p className="text-slate-700 text-sm">Pro AI $19/seat/mo annual ($29 monthly), 7,500 AI credits/seat/mo. Business AI $29/seat/mo annual, 15,000 credits. Checked Oct 7, 2026 on {' '}<a href="https://www.usemotion.com/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">usemotion.com/pricing</a>.</p>
                                     </div>
                                 </div>
 
@@ -406,23 +368,19 @@ export default function BetterThanMotionContent() {
                                         </tr>
                                     </thead>
                                     <tbody className="text-slate-600">
-                                        <tr><td className="p-4 border-b font-medium">Starting Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Varies by product — refundable pilot (see /pricing)</td><td className="p-4 border-b">$29/month (no AI)</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">AI Employees Price</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">100% refund within 14 days</td><td className="p-4 border-b text-red-500">Requires $49/mo plan</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Usage Limits</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">No credits</td><td className="p-4 border-b text-red-500">10,000 credits/month</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Phone Calls</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes (Rachel AI)</td><td className="p-4 border-b text-red-500">No</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Autonomous Actions</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - sends, posts, calls</td><td className="p-4 border-b text-red-500">No - drafts only</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Custom AI Employees</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Yes - fully customizable</td><td className="p-4 border-b">Limited customization</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Onboarding</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Dooza engineer (free 30-min scoping call)</td><td className="p-4 border-b text-red-500">Self-serve only</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Setup Time</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Same day</td><td className="p-4 border-b">Days to weeks</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Mobile App</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">Full-featured</td><td className="p-4 border-b text-red-500">Limited features</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Support Response</td><td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold">&lt;2 hours</td><td className="p-4 border-b">24-48 hours</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Built for</td><td className="p-4 border-b bg-primary-50/30">Doing tasks: calls, email, social, leads</td><td className="p-4 border-b">Planning time: calendar, tasks, projects</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Price</td><td className="p-4 border-b bg-primary-50/30">Depends on the product (see /pricing); 100% refund within 14 days</td><td className="p-4 border-b">$19/seat/mo annual or $29 monthly (Pro AI); $29/seat/mo annual (Business AI)</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Usage model</td><td className="p-4 border-b bg-primary-50/30">No credit meter</td><td className="p-4 border-b">7,500 (Pro AI) or 15,000 (Business AI) AI credits/seat/month</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Phone calls</td><td className="p-4 border-b bg-primary-50/30">Yes (Rachel, AI receptionist)</td><td className="p-4 border-b">Not listed on pricing page</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Calendar &amp; project management</td><td className="p-4 border-b bg-primary-50/30">Not a calendar app</td><td className="p-4 border-b">Yes: AI Calendar, AI Project Manager, Gantt</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Setup</td><td className="p-4 border-b bg-primary-50/30">Dooza engineer scopes the pilot on a free 30-minute call</td><td className="p-4 border-b">Free trial, self-serve</td></tr>
                                     </tbody>
                                 </table>
                             </div>
                         </section>
 
                         <section id="pricing" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Real Cost: Motion vs Dooza</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing: Motion vs Dooza</h2>
                             <p className="text-lg text-slate-600 mb-8">
                                 Here's how the two pricing models compare:
                             </p>
@@ -445,19 +403,17 @@ export default function BetterThanMotionContent() {
                                     </ul>
                                 </div>
                                 <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
-                                    <div className="text-slate-500 font-bold text-sm mb-2">MOTION (with AI Employees)</div>
-                                    <div className="text-4xl font-bold text-slate-900 mb-2">$49<span className="text-lg font-normal text-slate-500">/month</span></div>
-                                    <div className="text-lg text-slate-600 mb-4">$588/year total</div>
+                                    <div className="text-slate-500 font-bold text-sm mb-2">MOTION (Pro AI)</div>
+                                    <div className="text-4xl font-bold text-slate-900 mb-2">$19<span className="text-lg font-normal text-slate-500">/seat/month, billed annually</span></div>
+                                    <div className="text-lg text-slate-600 mb-4">$29/seat month-to-month · checked Oct 7, 2026 (<a href="https://www.usemotion.com/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">source</a>)</div>
                                     <ul className="space-y-3">
                                         {[
                                             "AI calendar & scheduling",
-                                            "10,000 credits/month (runs out)",
-                                            "No phone capabilities",
-                                            "Pre-built agents only",
-                                            "Self-serve setup",
-                                            "Standard support"
+                                            "AI project manager",
+                                            "7,500 AI credits/seat/month (Business AI: 15,000)",
+                                            "Free trial, self-serve setup"
                                         ].map((item, idx) => (
-                                            <li key={idx} className="flex gap-3"><XCircle className="w-5 h-5 text-red-400 shrink-0" /><span className="text-slate-600">{item}</span></li>
+                                            <li key={idx} className="flex gap-3"><CheckCircle2 className="w-5 h-5 text-slate-400 shrink-0" /><span className="text-slate-600">{item}</span></li>
                                         ))}
                                     </ul>
                                 </div>
@@ -470,16 +426,16 @@ export default function BetterThanMotionContent() {
 
 
                         <section id="migration" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Switching from Motion is Easy</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Adding Dooza (with or without Motion)</h2>
                             <p className="text-lg text-slate-600 mb-8">
                                 You don't need to migrate anything. Dooza works alongside your existing tools—we're not trying to replace your calendar.
                             </p>
                             <div className="space-y-4">
                                 {[
                                     { step: "1", title: "Book a Free Pilot Call", desc: "Schedule a free 30-minute call with a Dooza engineer. We'll learn about your business, scope your refundable pilot, and build your AI employees for you." },
-                                    { step: "2", title: "Connect Your Tools", desc: "One-click integrations with Gmail, Outlook, social platforms, CRMs, and more. Keep using what you love." },
+                                    { step: "2", title: "Connect Your Tools", desc: "Integrations with Gmail, Outlook, social platforms, CRMs, and more. Keep using what you love." },
                                     { step: "3", title: "Activate Your AI Employees", desc: "Your custom AI employees start working immediately—handling email, social media, calls, and more." },
-                                    { step: "4", title: "Cancel Motion", desc: "Once you see Dooza in action, you'll wonder why you ever paid for Motion's limited AI." }
+                                    { step: "4", title: "Decide on Motion", desc: "If you use Motion for planning, keep it: the two do different jobs. If you only bought it for AI help with tasks, compare what each one actually did for you during the pilot." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold shrink-0">{item.step}</div>
@@ -493,13 +449,13 @@ export default function BetterThanMotionContent() {
                         </section>
 
                         <section id="conclusion" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Verdict: Why Dooza Wins</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Verdict</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Motion is a decent calendar app that added AI employees as an afterthought. Dooza is an AI-native company that builds AI products and services for small businesses, and its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app is a <strong>purpose-built AI workforce</strong> that integrates with your existing calendar.
+                                    Motion is an AI calendar and project manager. Dooza is an AI-native company that builds AI products and services for small businesses, and its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app is a <strong>purpose-built AI workforce</strong> that integrates with your existing calendar.
                                 </p>
                                 <p>
-                                    If you want AI that can actually execute tasks autonomously—sending emails, posting to social media, making phone calls, generating leads—Dooza is the clear choice.
+                                    If you want AI that can actually execute tasks autonomously—sending emails, posting to social media, making phone calls, generating leads—Dooza is built for that. If you want your time planned, Motion is.
                                 </p>
                                 <p>
                                     And with no credit meter, a Dooza engineer scoping your setup, and a refundable pilot (100% refund within 14 days), you can prove it works before you commit. Pricing depends on the product&mdash;see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>.
@@ -535,12 +491,9 @@ export default function BetterThanMotionContent() {
                         <section className="scroll-mt-28 border-t border-slate-200 pt-8">
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Sources & References</h3>
                             <ul className="space-y-2 text-sm text-slate-600">
-                                <li>• <a href="https://www.trustpilot.com/review/www.usemotion.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Motion Reviews on Trustpilot</a></li>
-                                <li>• <a href="https://www.usemotion.com/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Motion Official Pricing</a></li>
-                                <li>• <a href="https://thebusinessdive.com/motion-app-review" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">The Business Dive - Motion App Review</a></li>
-                                <li>• <a href="https://bymilliepham.com/motion-review" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Motion App Review 2025 - By Millie Pham</a></li>
-                                <li>• <a href="https://www.g2.com/products/motionapp/reviews" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Motion Reviews on G2</a></li>
-                                <li>• <a href="https://max-productive.ai/ai-tools/motion-ai/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Motion AI Review 2025 - Max Productive</a></li>
+                                <li>• <a href="https://www.usemotion.com/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Motion pricing and plan features</a> (checked Oct 7, 2026)</li>
+                                <li>• <a href="https://www.usemotion.com/features/integrations" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Motion integrations</a> (checked Oct 7, 2026)</li>
+                                <li>• <a href="/pricing" className="text-primary-600 hover:underline">Dooza pricing</a></li>
                             </ul>
                         </section>
 
