@@ -313,7 +313,7 @@ export default function SeoForDoctorsDentistsContent() {
                             <div className="mt-8 bg-amber-50 border border-amber-200 p-6 rounded-xl">
                                 <p className="text-amber-800 font-medium text-center">
                                     "The owner and doctors at a medical practice are entirely too busy to give the proper amount of attention to marketing their healthcare business."
-                                    <span className="block text-sm text-amber-600 mt-2">— PatientGain Medical Marketing</span>
+                                    <span className="block text-sm text-amber-600 mt-2">— <a href="https://www.patientgain.com/medical-marketer" target="_blank" rel="noopener noreferrer" className="underline">PatientGain, &ldquo;Medical Marketer&rdquo;</a></span>
                                 </p>
                             </div>
                         </section>
