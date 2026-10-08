@@ -133,6 +133,11 @@ const Footer = ({ variant = 'light' }) => {
                                     Brand Resources
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/brand#press" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Press &amp; Collaborations
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div>
@@ -275,7 +280,7 @@ const Footer = ({ variant = 'light' }) => {
                         Dooza.ai is a product of Adam Laboratory Inc., a Delaware corporation.
                     </p>
                     <p className={`text-center text-xs md:text-left ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
-                        Vendors: corrections or additions to our comparisons? Email{' '}
+                        Press, guest posts, collaborations or comparison corrections:{' '}
                         <a href="mailto:achilles@dooza.org" className="underline">achilles@dooza.org</a>
                     </p>
                     <div className={`flex gap-2 ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>

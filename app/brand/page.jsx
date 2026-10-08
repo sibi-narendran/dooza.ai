@@ -245,6 +245,13 @@ export default function BrandPage() {
                                             <dd className="select-all text-slate-800">support@dooza.ai</dd>
                                         </div>
                                     </div>
+                                    <div id="press" className="flex gap-3 scroll-mt-24">
+                                        <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
+                                        <div>
+                                            <dt className="text-xs font-extrabold uppercase tracking-[2px] text-slate-500">Press, guest posts &amp; collaborations</dt>
+                                            <dd className="text-slate-800"><a href="mailto:achilles@dooza.org" className="select-all underline">achilles@dooza.org</a></dd>
+                                        </div>
+                                    </div>
                                     <div className="flex gap-3">
                                         <Globe className="mt-0.5 h-5 w-5 shrink-0 text-primary-600" />
                                         <div>
