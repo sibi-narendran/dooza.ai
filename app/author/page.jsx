@@ -194,7 +194,6 @@ export default function AuthorPage() {
                             "url": `${SITE_URL}/author`,
                             "logo": `${SITE_URL}/logo.png`,
                             "sameAs": [
-                                "https://twitter.com/sibinarendran",
                                 "https://www.linkedin.com/company/110144933/"
                             ],
                             "knowsAbout": [

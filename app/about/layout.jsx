@@ -53,12 +53,13 @@ export default function AboutLayout({ children }) {
     const orgSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Adam Laboratory Inc.",
+        "name": "Dooza",
         "legalName": "Adam Laboratory Inc.",
         "url": SITE_URL,
         "logo": `${SITE_URL}/logo.png`,
         "description": "Adam Laboratory Inc. is a Delaware C-Corporation and the company behind Dooza. Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.",
         "foundingDate": "2025",
+        "founder": { "@type": "Person", "name": "Sibi Narendran", "url": "https://twitter.com/sibinarendran" },
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "131 Continental Dr, Suite 305",
@@ -68,8 +69,9 @@ export default function AboutLayout({ children }) {
             "addressCountry": "US"
         },
         "sameAs": [
-            "https://twitter.com/sibinarendran",
-            "https://www.linkedin.com/company/110144933/"
+            "https://www.linkedin.com/company/110144933/",
+            "https://www.crunchbase.com/organization/dooza",
+            "https://www.youtube.com/channel/UCWpF_BoN_rxwAQT32Cfra3g"
         ]
     };
 
