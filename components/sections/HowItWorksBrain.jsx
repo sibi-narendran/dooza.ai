@@ -1,14 +1,18 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { motion, useReducedMotion } from 'framer-motion';
-import Lottie from 'lottie-react';
+
+// lottie-react is ~300 KB and this section is below the fold: load it on the client only, once the icon is near the viewport.
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import { Brain } from 'lucide-react';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 
-function useLottieJson(url) {
+function useLottieJson(url, enabled) {
     const [data, setData] = useState(null);
     useEffect(() => {
+        if (!enabled) return undefined;
         let alive = true;
         fetch(url)
             .then((res) => res.json())
@@ -19,7 +23,7 @@ function useLottieJson(url) {
         return () => {
             alive = false;
         };
-    }, [url]);
+    }, [url, enabled]);
     return data;
 }
 
@@ -56,16 +60,39 @@ const list = {
 };
 
 function StepIcon({ url }) {
-    const data = useLottieJson(url);
-    if (!data) return null;
+    const ref = useRef(null);
+    const [near, setNear] = useState(false);
+    useEffect(() => {
+        const el = ref.current;
+        if (!el || typeof IntersectionObserver === 'undefined') {
+            setNear(true);
+            return undefined;
+        }
+        const io = new IntersectionObserver(
+            (entries) => {
+                if (entries.some((e) => e.isIntersecting)) {
+                    setNear(true);
+                    io.disconnect();
+                }
+            },
+            { rootMargin: '300px' },
+        );
+        io.observe(el);
+        return () => io.disconnect();
+    }, []);
+    const data = useLottieJson(url, near);
     return (
-        <Lottie
-            animationData={data}
-            loop
-            autoplay
-            rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
-            style={{ width: '150%', height: '150%' }}
-        />
+        <div ref={ref} className="flex h-full w-full items-center justify-center">
+            {data && (
+                <Lottie
+                    animationData={data}
+                    loop
+                    autoplay
+                    rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+                    style={{ width: '150%', height: '150%', flexShrink: 0 }}
+                />
+            )}
+        </div>
     );
 }
 
