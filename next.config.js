@@ -44,6 +44,20 @@ const nextConfig = {
       "upgrade-insecure-requests",
     ].join('; ');
 
+    // Customer design previews in public/preview (built by Dooza's fulfilment agent):
+    // allow Google Fonts, and keep them out of search with noindex.
+    const previewCspHeader = [
+      "default-src 'self'",
+      "script-src 'self'",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "img-src 'self' data: https:",
+      "font-src 'self' data: https://fonts.gstatic.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "frame-ancestors 'none'",
+      "upgrade-insecure-requests",
+    ].join('; ');
+
     // Relaxed CSP for /voice/* demo pages only: the embedded voice widget
     // loads its script from unpkg and streams audio over the ElevenLabs
     // websocket, and needs microphone access. Kept off the rest of the site.
@@ -65,7 +79,7 @@ const nextConfig = {
     return [
       {
         // Everything except /voice/* keeps the strict site-wide policy
-        source: '/:path((?!voice).*)',
+        source: '/:path((?!voice|preview).*)',
         headers: [
           {
             key: 'Content-Security-Policy',
@@ -91,6 +105,17 @@ const nextConfig = {
             key: 'Strict-Transport-Security',
             value: 'max-age=31536000; includeSubDomains; preload',
           },
+        ],
+      },
+      {
+        source: '/preview/:path*',
+        headers: [
+          { key: 'Content-Security-Policy', value: previewCspHeader },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
         ],
       },
       {
@@ -138,6 +163,12 @@ const nextConfig = {
   // Redirects
   async redirects() {
     return [
+      {
+        // Customer previews use relative asset paths, so send them to index.html
+        source: '/preview/:slug',
+        destination: '/preview/:slug/index.html',
+        permanent: false,
+      },
       {
         source: '/workforce',
         destination: '/ai-solutions-for-business',

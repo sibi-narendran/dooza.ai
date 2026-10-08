@@ -45,7 +45,7 @@ export default function robots() {
         rules: allowedCrawlerUserAgents.map((userAgent) => ({
             userAgent,
             allow: '/',
-            disallow: ['/api/'],
+            disallow: ['/api/', '/preview/'],
         })),
         sitemap: 'https://www.dooza.ai/sitemap.xml',
         host: 'www.dooza.ai',
