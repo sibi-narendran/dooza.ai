@@ -182,6 +182,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/smith-ai-alternatives`,
+            lastModified: pageDate('2026-10-08'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/marblism-alternatives`,
             lastModified: pageDate('2026-10-07'),
             changeFrequency: 'monthly',

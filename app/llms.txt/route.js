@@ -109,6 +109,11 @@ const staticPages = [
         description: 'Alternatives to Marblism.',
     },
     {
+        title: 'Smith.ai Alternatives',
+        url: `${SITE_URL}/smith-ai-alternatives`,
+        description: 'Smith.ai costs $300/mo for 30 live-answered calls (checked October 8, 2026). 6 alternatives (PATLive, Ruby, Smith.ai AI, Goodcall, My AI Front Desk, Dooza) with what 60 calls a month costs on each.',
+    },
+    {
         title: 'AI Solutions for Business',
         url: `${SITE_URL}/ai-solutions-for-business`,
         description: 'AI solutions for small business workflows.',
