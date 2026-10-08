@@ -377,7 +377,7 @@ export default function PerplexityComputerVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza Workforce gives you <strong>role-specific AI employees</strong> that handle specific business functions. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and daily routines.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza Workforce gives you <strong>role-specific AI employees</strong> that handle specific business functions. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and daily routines.
                                 </p>
                                 <p>
                                     Each AI employee runs in the cloud on routines a Dooza engineer sets up with you during the pilot. You don't write prompts or design workflows. They do their job and report back, with your approval on anything sensitive.

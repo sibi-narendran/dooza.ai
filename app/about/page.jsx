@@ -15,7 +15,7 @@ const aboutFaqSchema = {
             "name": "What is Dooza?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days."
+                "text": "Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days."
             }
         },
         {
@@ -83,7 +83,7 @@ export default function AboutPage() {
                             Adam Laboratory Inc. is a technology company incorporated in the state of Delaware, United States. We build AI-powered products that help businesses grow, automate workflows, and scale operations efficiently.
                         </p>
                         <p className="text-slate-600 leading-relaxed">
-                            <strong>Dooza.ai</strong> is the flagship product of Adam Laboratory Inc. — Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza AI employees handle email, social media publishing on Facebook, Instagram, and LinkedIn, SEO, lead generation, legal documents, and phone calls, with your approval on anything sensitive.
+                            <strong>Dooza.ai</strong> is the flagship product of Adam Laboratory Inc. — Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza AI employees handle email, social media publishing on Facebook, Instagram, and LinkedIn, SEO, lead generation, legal documents, and phone calls, with your approval on anything sensitive.
                         </p>
                     </div>
                 </section>

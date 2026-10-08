@@ -107,7 +107,7 @@ const organizationSchema = {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description:
-        'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.',
+        'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days.',
     foundingDate: '2025',
     founder: {
         '@type': 'Person',

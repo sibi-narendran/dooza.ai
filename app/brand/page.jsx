@@ -56,7 +56,7 @@ const colors = [
 ];
 
 const boilerplate = {
-    oneLiner: 'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.',
+    oneLiner: 'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days.',
     paragraph: 'Dooza is an AI-native company that builds AI products and services for small businesses. Dooza Workforce is an AI workforce app with ready-made AI employees for email, social media, SEO, leads, legal documents, and calls. Dooza Agents is an AI agentic platform with custom AI agents built and maintained by Dooza engineers. Dooza also runs done-for-you services, including AI receptionist, AI customer support, AI visibility (GEO), and workflow automation. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza.ai is a product of Adam Laboratory Inc., a Delaware C-Corporation.',
 };
 
@@ -80,7 +80,7 @@ const brandSchema = {
         legalName: 'Adam Laboratory Inc.',
         url: SITE_URL,
         logo: `${SITE_URL}/brand/dooza-icon.png`,
-        description: 'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.',
+        description: 'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days.',
         foundingDate: '2025',
         founder: { '@type': 'Person', name: 'Sibi Narendran', url: 'https://twitter.com/sibinarendran' },
         email: 'support@dooza.ai',
