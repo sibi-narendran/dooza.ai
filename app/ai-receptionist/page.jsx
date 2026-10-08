@@ -165,7 +165,7 @@ export default function AiReceptionistPage({ searchParams }) {
                                 <p>The caller phones the next company in the search results.</p>
                             </div>
                             <p className="mt-8 border-l-4 border-primary-600 pl-4 text-lg font-semibold text-slate-800 sm:text-xl">
-                                Every missed call is a $300 service call or a $10,000 replacement.
+                                A missed call can be a service call, or a whole replacement job, that goes to the next company.
                             </p>
                         </div>
                         <div className="flex justify-center lg:justify-end">
@@ -255,7 +255,7 @@ export default function AiReceptionistPage({ searchParams }) {
                             <p className="mt-6 text-slate-600">
                                 Comparing options? Our free{' '}
                                 <Link href="/ai-receptionist-cost-calculator" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">AI receptionist cost calculator</Link>{' '}
-                                shows what your call volume would cost on 13 AI receptionists and 2 human answering services, from prices checked on each vendor’s site.
+                                shows what your call volume would cost on 13 AI receptionists and 5 human answering services, from prices checked on each vendor’s site.
                             </p>
                         )}
                     </div>
@@ -274,7 +274,7 @@ export default function AiReceptionistPage({ searchParams }) {
                                 Book a free pilot call
                             </Link>
                         </div>
-                        <p className="mt-4 text-sm text-slate-300">30 minutes. No card needed. Works with any phone.</p>
+                        <p className="mt-4 text-sm text-slate-300">The 30-minute call is free; the pilot is paid, with a 100% refund within 14 days. Works with any phone.</p>
                         <div className="mt-6">
                             <TextPilotLink source="pilot_section" tone="dark" />
                         </div>

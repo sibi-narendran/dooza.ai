@@ -38,19 +38,19 @@ import {
 const faqData = [
     {
         question: "What is the Karpathy loop?",
-        answer: "The Karpathy loop is the autonomous experimentation pattern behind Andrej Karpathy's autoresearch project. An AI agent edits a small training program, runs a 5-minute experiment, measures a fixed metric (val_bpb), keeps the change if the number improves, and reverts it if not. Over two days it ran about 700 experiments and kept roughly 20 real optimizations, with no human in the loop."
+        answer: "The Karpathy loop is the autonomous experimentation pattern behind Andrej Karpathy's autoresearch project. An AI agent edits a small training program, runs a 5-minute experiment, measures a fixed metric (val_bpb), keeps the change if the number improves, and reverts it if not. Over two days it ran about 700 experiments and found about 20 optimizations, as reported by Fortune (March 17, 2026)."
     },
     {
         question: "What is autoresearch?",
-        answer: "Autoresearch is Karpathy's open-source project from March 2026: roughly 630 lines of Python where an AI coding agent runs ML experiments overnight on a single GPU. It gained over 86,000 GitHub stars because the pattern is simple and reproducible: a verifiable metric, reversible Git commits, short feedback cycles, and a bounded environment."
+        answer: "Autoresearch is Karpathy's open-source project from March 2026: roughly 630 lines of Python where an AI coding agent runs ML experiments overnight on a single GPU. It has over 97,000 GitHub stars (checked October 8, 2026), and the pattern is simple and reproducible: a verifiable metric, reversible Git commits, short feedback cycles, and a bounded environment."
     },
     {
         question: "What is AgentHub?",
-        answer: "AgentHub was Karpathy's follow-up experiment, described as \"GitHub is for humans. AgentHub is for agents.\" It replaced branches, pull requests, and merges with a sprawling commit DAG plus a message board so swarms of AI agents could coordinate research. It was explicitly a sketch, and Karpathy later took the repository private."
+        answer: "AgentHub was Karpathy's follow-up experiment: a version of GitHub built for AI agents rather than humans. It replaced branches, pull requests, and merges with a sprawling commit DAG plus a message board so swarms of AI agents could coordinate research. Its README called it a work in progress and a sketch, and the original repository is no longer public (it returned 404 when we checked on October 8, 2026); community forks preserve it."
     },
     {
         question: "What are Anthropic's dynamic workflows?",
-        answer: "Dynamic workflows are a Claude Code feature (launched May 2026) where Claude writes a JavaScript orchestration script that spawns fresh-context sub-agents in parallel - up to 16 concurrent and 1,000 per run. Jarred Sumner used them to port Bun's 535,496 lines of Zig to Rust in 11 days with 99.8% of tests passing."
+        answer: "Dynamic workflows are a Claude Code feature where Claude writes a JavaScript orchestration script that spawns fresh-context sub-agents in parallel - up to 16 concurrent agents by default and 1,000 per run, per Anthropic's docs. Bun's team says it used about 50 dynamic workflows to port Bun's 535,496 lines of Zig to Rust in 11 days, merging once 100% of its test suite passed on all platforms."
     },
     {
         question: "What is graph engineering?",
@@ -58,7 +58,7 @@ const faqData = [
     },
     {
         question: "Does my small business need agent swarms and knowledge graphs?",
-        answer: "Probably not yet. The practical takeaway is the underlying discipline: give AI a verifiable goal, keep actions reversible, and store results outside the chat. A managed AI employee platform like Dooza applies exactly this - measurable tasks, human oversight, and persistent memory - without you building any infrastructure."
+        answer: "Probably not yet. The practical takeaway is the underlying discipline: give AI a verifiable goal, keep actions reversible, and store results outside the chat. A managed AI employee platform like Dooza applies the same discipline - defined tasks, your approval on anything sensitive, and reports on what was done - without you building any infrastructure."
     }
 ];
 
@@ -211,17 +211,17 @@ export default function GraphEngineeringContent() {
                                     On the night of March 7, 2026, Andrej Karpathy pushed a small project to GitHub and went to sleep. By morning, an AI agent had run dozens of machine learning experiments on its own - proposing changes, testing them, keeping the wins, discarding the losses, and committing everything to Git. No human touched the keyboard in between.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    That project, <strong>autoresearch</strong>, went on to collect over <strong>86,000 GitHub stars</strong>. Within days, Karpathy followed it with <strong>AgentHub</strong> - "GitHub for agents" - and within two months Anthropic shipped <strong>dynamic workflows</strong> that let Claude orchestrate up to 1,000 sub-agents at once. A widely-shared synthesis note now calls the whole progression <strong>"graph engineering."</strong>
+                                    That project, <strong>autoresearch</strong>, went on to collect over <strong>97,000 <a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">GitHub stars</a></strong> (checked October 8, 2026). Within days, Karpathy followed it with <strong>AgentHub</strong>, a GitHub for agents, and within two months Anthropic shipped <strong>dynamic workflows</strong> that let Claude orchestrate up to 1,000 sub-agents at once. A widely-shared synthesis note now calls the whole progression <strong>"graph engineering."</strong>
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    We read the paper, verified every reference in it, and in this post we'll walk you through exactly what happened, what actually matters, and what it means for businesses that just want AI to <em>do the work</em>.
+                                    In this post we'll walk you through exactly what happened, what actually matters, and what it means for businesses that just want AI to <em>do the work</em>.
                                 </p>
                             </div>
                         </section>
 
                         {/* What Actually Happened */}
                         <section id="what-happened" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What Actually Happened: A 5-Month Timeline</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What Actually Happened: The Timeline</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
                                     Between December 2024 and July 2026, the way professionals work with AI went through three distinct phases. Here's the sequence of real events:
@@ -237,27 +237,27 @@ export default function GraphEngineeringContent() {
                                     {
                                         date: "December 2025",
                                         title: "The agentic inflection point",
-                                        desc: "Karpathy (and many others) report a step change: coding agents stopped being helpful autocomplete and started producing large, correct chunks of work. Karpathy's own ratio flipped from writing ~80% of his code to delegating ~80% of it. He calls the disciplined version of this \"agentic engineering.\""
+                                        desc: "Karpathy (and many others) report a step change: coding agents stopped being helpful autocomplete and started producing large, correct chunks of work. Karpathy has said his split went from about 80% hand-written code to about 80% delegated to agents within weeks (reported by The Decoder; source below). He calls the disciplined version of this \"agentic engineering.\""
                                     },
                                     {
                                         date: "March 2026",
                                         title: "autoresearch launches - and breaks the internet",
-                                        desc: "Karpathy releases a ~630-line autonomous research loop. An agent edits train.py, runs 5-minute experiments, and keeps or reverts changes based on a fixed metric. Roughly 700 experiments in two days produced ~20 retained optimizations and an ~11% training speedup - on a model Karpathy had hand-tuned for years. Shopify CEO Tobi Lütke reported 19% on an internal model."
+                                        desc: "Karpathy releases a ~630-line autonomous research loop. An agent edits train.py, runs 5-minute experiments, and keeps or reverts changes based on a fixed metric. Over two days the agent ran about 700 experiments and found about 20 optimizations; applied to a larger model, they gave an 11% speedup in training time. Shopify CEO Tobi Lütke reported a 19% performance gain after 37 overnight experiments (both per Fortune; source below)."
                                     },
                                     {
                                         date: "March 2026",
-                                        title: "AgentHub: \"GitHub is for humans. AgentHub is for agents.\"",
-                                        desc: "Days later, Karpathy sketches the collaboration layer: one Go server, one SQLite database, one bare Git repo, and a message board. No main branch, no PRs, no merges - just a sprawling commit DAG that agent swarms traverse. He later took the repo private; it survives through community forks."
+                                        title: "AgentHub: a GitHub built for agents",
+                                        desc: "Days later, Karpathy sketches the collaboration layer: one Go server, one SQLite database, one bare Git repo, and a message board. No main branch, no PRs, no merges - just a sprawling commit DAG that agent swarms traverse. The original repo is no longer public (404 when we checked on October 8, 2026); it survives through community forks."
                                     },
                                     {
                                         date: "April 2026",
                                         title: "Sequoia AI Ascent: vibe coding vs agentic engineering",
-                                        desc: "Karpathy declares vibe coding already obsolete as a professional standard. Vibe coding raises the floor (anyone can build). Agentic engineering raises the ceiling (specs, diff review, eval loops, guardrails)."
+                                        desc: "Karpathy contrasts vibe coding with agentic engineering. In our reading: vibe coding raises the floor (anyone can build). Agentic engineering raises the ceiling (specs, diff review, eval loops, guardrails)."
                                     },
                                     {
                                         date: "May 2026",
-                                        title: "Anthropic ships dynamic workflows",
-                                        desc: "Claude Code can now write its own JavaScript orchestration scripts and spawn fresh-context sub-agents in parallel - up to 16 concurrent, 1,000 per run. The same month, Jarred Sumner uses them to port Bun's 535,496 lines of Zig to Rust in 11 days, passing 99.8% of the test suite."
+                                        title: "Dynamic workflows in Claude Code",
+                                        desc: "Claude Code can write its own JavaScript orchestration scripts and spawn fresh-context sub-agents in parallel - up to 16 concurrent by default, 1,000 per run. Bun's team reports using about 50 of them to port Bun's 535,496 lines of Zig to Rust in 11 days (May 3 to May 14), merging once 100% of the test suite passed on all platforms."
                                     },
                                     {
                                         date: "July 2026",
@@ -275,6 +275,7 @@ export default function GraphEngineeringContent() {
                                     </div>
                                 ))}
                             </div>
+                            <p className="text-xs text-slate-500 mb-8">Sources: <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Anthropic, Building Effective Agents</a>, <a href="https://the-decoder.com/former-tesla-ai-chief-andrej-karpathy-now-codes-mostly-in-english-just-three-months-after-calling-ai-agents-useless/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">The Decoder on Karpathy's 80/20 shift</a>, <a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">karpathy/autoresearch</a>, <a href="https://fortune.com/2026/03/17/andrej-karpathy-loop-autonomous-ai-agents-future/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Fortune, March 17, 2026</a>, <a href="https://github.com/ottogin/agenthub" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">AgentHub README (community fork)</a>, <a href="https://code.claude.com/docs/en/workflows" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Claude Code dynamic workflows docs</a>, <a href="https://bun.com/blog/bun-in-rust" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Bun, Rewriting Bun in Rust</a>. Checked October 8, 2026.</p>
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <div className="flex items-start gap-3">
                                     <Bot className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" />
@@ -311,7 +312,7 @@ export default function GraphEngineeringContent() {
                                 {[
                                     { icon: FlaskConical, title: "prepare.py (locked)", desc: "Fixed data preparation and evaluation. The agent is not allowed to touch it - so it can't cheat by making the test easier." },
                                     { icon: Cpu, title: "train.py (editable)", desc: "The ~630-line experimental surface: model, optimizer, hyperparameters. This is the only thing the agent changes." },
-                                    { icon: MessageSquare, title: "program.md (the boss)", desc: "Plain-English instructions: the metric, the rules, crash handling, commit/revert policy, when to escalate. Karpathy calls this \"programming the program.\"" }
+                                    { icon: MessageSquare, title: "program.md (the boss)", desc: "Plain-English instructions: the metric, the rules, crash handling, commit/revert policy, when to escalate. Karpathy's README says you are programming the program.md files instead of the Python." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-6 rounded-xl shadow-sm">
                                         <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center text-primary-600 mb-4">
@@ -362,7 +363,7 @@ export default function GraphEngineeringContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">AgentHub: GitHub for Agents, Not Humans</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    One agent emulates one PhD student. Karpathy's next post said the goal is to emulate <strong>a research community</strong> - "asynchronously massively collaborative for agents, think SETI@home style." AgentHub was his sketch of that layer.
+                                    One agent emulates one PhD student. Karpathy's next post said the goal is to emulate <strong>a research community</strong>: many agents collaborating asynchronously at massive scale, in the spirit of SETI@home. AgentHub was his sketch of that layer.
                                 </p>
                                 <p>
                                     The design is radical because of what it <em>deletes</em>. Human Git assumes a few contributors, a canonical main branch, and that merging is the goal. Agent research inverts all of it: thousands of agents explore simultaneously, most results are never merged, and a <strong>failed experiment is still valuable evidence</strong>. So AgentHub has no main branch, no pull requests, no merge queue. The primary operation isn't "merge this into main" - it's "traverse the search graph."
@@ -388,14 +389,14 @@ export default function GraphEngineeringContent() {
                             </div>
                             <div className="prose md:prose-lg text-slate-600 mb-6">
                                 <p>
-                                    Here's the insight the paper makes literal: <strong>the commit DAG is a knowledge graph</strong>. Commits are nodes. Parent links are edges. Each node carries the hypothesis, the code diff, the metric, the agent's identity, and the keep-or-discard verdict. Suddenly you can ask questions that are awkward in normal Git: <em>Which retained result has the best metric under a memory limit? Which experiments descend from the batch-size change? Which leaves have no evaluation yet?</em>
+                                    Here's the insight the synthesis note makes literal: <strong>the commit DAG is a knowledge graph</strong>. Commits are nodes. Parent links are edges. Each node carries the hypothesis, the code diff, the metric, the agent's identity, and the keep-or-discard verdict. Suddenly you can ask questions that are awkward in normal Git: <em>Which retained result has the best metric under a memory limit? Which experiments descend from the batch-size change? Which leaves have no evaluation yet?</em>
                                 </p>
                             </div>
                             <div className="bg-amber-50 border border-amber-200 p-4 rounded-xl">
                                 <div className="flex items-start gap-3">
                                     <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                                     <p className="text-amber-800 text-sm">
-                                        <strong>Reality check:</strong> AgentHub's own README warned "Work in progress. Just a sketch." Karpathy took the repo private within days of launch. The lesson is architectural, not a product you can download: when agents become numerous, single-main-branch thinking, human-paced review, and transcript-based memory are the first things that break.
+                                        <strong>Reality check:</strong> AgentHub's own README warned "Work in progress. Just a sketch." (preserved in a <a href="https://github.com/ottogin/agenthub" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">community fork</a>). The original repo is no longer public (404 when we checked on October 8, 2026). The lesson is architectural, not a product you can download: when agents become numerous, single-main-branch thinking, human-paced review, and transcript-based memory are the first things that break.
                                     </p>
                                 </div>
                             </div>
@@ -419,7 +420,7 @@ export default function GraphEngineeringContent() {
                                     {
                                         icon: Users,
                                         title: "2. Dynamic workflows (May 2026)",
-                                        desc: "Instead of you writing the orchestration, Claude writes a JavaScript script for your task: spawn fresh-context sub-agents in parallel (16 concurrent, 1,000 cap), filter findings, have reviewer agents try to refute them, then synthesize one cited report. Real-world proof: Bun's 535,496 lines of Zig ported to Rust in 11 days, 99.8% of tests passing."
+                                        desc: "Instead of you writing the orchestration, Claude writes a JavaScript script for your task: spawn fresh-context sub-agents in parallel (16 concurrent by default, 1,000 per run), filter findings, have reviewer agents try to refute them, then synthesize one cited report. Real-world example: Bun's team reports porting 535,496 lines of Zig to Rust in 11 days, merging once 100% of its test suite passed."
                                     },
                                     {
                                         icon: Network,
@@ -447,7 +448,7 @@ export default function GraphEngineeringContent() {
 
                         {/* Graph Memory */}
                         <section id="graph-memory" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Paper's Big Idea: Graphs as Shared Memory</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">The Big Idea: Graphs as Shared Memory</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
                                     The synthesis note's central claim is worth quoting in spirit: <strong>the bottleneck is usually not the next model call - it's the placement of memory and evaluation.</strong> Each architecture in this story externalizes a different kind of memory:
@@ -490,16 +491,16 @@ export default function GraphEngineeringContent() {
                                     The catchphrase: <strong>"The agent forgets; the graph does not."</strong> A swarm of agents that each rebuild the world from scratch in every context window wastes everything they learn. Agents that read and write a shared, typed, provenance-tracked graph compound each other's work across sessions. That's the jump from <em>agentic engineering</em> (humans orchestrating agents) to <em>graph engineering</em> (agents sharing durable state).
                                 </p>
                                 <p>
-                                    The paper is equally clear about the dangers: metrics get gamed (a ratchet optimizes what it can see), entity resolution can catastrophically merge the wrong things, 1,000-agent runs burn money fast, and a knowledge graph is only as honest as its sources. Their closing test for any such system: <em>every important output can be traced to an objective, a plan, an artifact, a source, a graph path, an evaluator decision, and a bounded execution record.</em>
+                                    The synthesis note is equally clear about the dangers: metrics get gamed (a ratchet optimizes what it can see), entity resolution can catastrophically merge the wrong things, 1,000-agent runs burn money fast, and a knowledge graph is only as honest as its sources. Their closing test for any such system: <em>every important output can be traced to an objective, a plan, an artifact, a source, a graph path, an evaluator decision, and a bounded execution record.</em>
                                 </p>
                             </div>
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <div className="flex items-start gap-3">
                                     <Search className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" />
                                     <div>
-                                        <h4 className="font-bold text-blue-900 mb-2">A Note on the Paper Itself</h4>
+                                        <h4 className="font-bold text-blue-900 mb-2">A Note on the Source</h4>
                                         <p className="text-blue-800 text-sm">
-                                            The document making these claims is an independently compiled study note - not by Karpathy or Anthropic. We verified its 12 references: the events are real and accurately described, with minor errors (it says Bun was ~750K lines; the actual figure is 535,496). The "graph engineering" framing is the compiler's synthesis - a good one, but an editorial conclusion, not gospel.
+                                            The "graph engineering" framing comes from an independently compiled study note - not by Karpathy or Anthropic. The events in this post are linked to their primary sources in the timeline above; the framing itself is the compiler's synthesis - a good one, but an editorial conclusion, not gospel.
                                         </p>
                                     </div>
                                 </div>
@@ -550,14 +551,14 @@ export default function GraphEngineeringContent() {
                             </div>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    This is precisely how we build <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline">AI employees at Dooza</Link>: each one has a defined role with measurable outcomes (posts published, calls answered, leads followed up), operates inside bounded permissions, keeps a durable memory of your business, and reports what it did so you can verify it. It's the Karpathy loop philosophy - verifiable, reversible, bounded, recorded - packaged so you never touch a Git repo. See it in action on the <Link href="/workforce" className="text-primary-600 hover:underline">Dooza Workforce platform</Link>, or read our guide on how to <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline">automate business processes</Link> with the same principles.
+                                    This is precisely how we build <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline">AI employees at Dooza</Link>: each one has a defined role with measurable outcomes (posts published, calls answered, leads followed up), operates inside bounded permissions, asks for your approval on anything sensitive, and reports what it did so you can verify it. It's the Karpathy loop philosophy - verifiable, reversible, bounded, recorded - packaged so you never touch a Git repo. See it in action on the <Link href="/workforce" className="text-primary-600 hover:underline">Dooza Workforce platform</Link>, or read our guide on how to <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline">automate business processes</Link> with the same principles.
                                 </p>
                             </div>
 
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Get AI Employees That Actually Do the Work</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Dooza gives you pre-built AI employees for email, social media, SEO, content, sales, and support - with measurable outcomes, human oversight, and persistent memory built in. Start with a refundable pilot: 100% refund within 14 days.
+                                    Dooza gives you pre-built AI employees for email, social media, SEO, content, sales, and support - with measurable outcomes and your approval on anything sensitive. Start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
@@ -575,7 +576,7 @@ export default function GraphEngineeringContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">When to Use What: A Practical Decision Guide</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    The paper ends with a decision framework we've adapted for non-research teams. The golden rule: <strong>use the least architecture that solves the problem.</strong>
+                                    The synthesis note ends with a decision framework we've adapted for non-research teams. The golden rule: <strong>use the least architecture that solves the problem.</strong>
                                 </p>
                             </div>
                             <div className="overflow-x-auto border border-slate-200 rounded-xl shadow-sm mb-8">
@@ -638,7 +639,7 @@ export default function GraphEngineeringContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Conclusion: The Path From Loops to Graphs</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    In five months, the field went from "a human prompts an agent" to "an agent runs 700 unattended experiments overnight" to "swarms of agents coordinating through shared graphs." Karpathy's README ends with a deliberately cinematic vision of autonomous swarms running across compute megastructures. The near-term reality is less cinematic and more useful.
+                                    In five months, the field went from "a human prompts an agent" to "an agent runs 700 unattended experiments in two days" to "swarms of agents coordinating through shared graphs." Karpathy's README opens with a deliberately cinematic vision of autonomous swarms running across compute megastructures. The near-term reality is less cinematic and more useful.
                                 </p>
                                 <p>
                                     The durable lesson isn't "use more agents." It's that <strong>progress came from engineering the environment</strong>: verifiable metrics, reversible actions, short feedback loops, bounded permissions, and memory that lives outside the context window. Loops, swarms, DAGs, and knowledge graphs are just increasingly sophisticated ways of placing that memory and evaluation.

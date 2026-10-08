@@ -85,6 +85,8 @@ Each product and service has its own price.
 - A Dooza engineer scopes your pilot on a free 30-minute call.
 - Workforce employees can start working the same day.
 - Custom agents are live in days.
+- AI Receptionist (done-for-you service): live on your existing line within 48 hours of the setup call (Sibi's own copy, commit a5862f7). Use "48 hours" for the receptionist; never "30 minutes", "same day" or "single day".
+- AI Receptionist answers in English only today and is not offered as a HIPAA service (no BAA). Never imply HIPAA compliance, legal privilege, or medical advice.
 
 ## Claims (AEO rules)
 

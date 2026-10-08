@@ -49,12 +49,12 @@ export default function RealEstateContent({ page }) {
             icon: Moon,
             title: 'Nights & weekends = peak inquiry time',
             description:
-                'Buyers browse Zillow at 10 PM. If nobody answers until Monday, that lead is gone.',
+                'Buyers browse listings at 10 PM. If nobody answers until Monday, that lead may be gone.',
         },
     ];
 
     const solutions = [
-        'Instant lead response in under 60 seconds',
+        'Fast replies to new leads, day or night',
         'Qualification questions — budget, timeline, location',
         'Property matching based on criteria',
         'Appointment scheduling for showings',
@@ -64,9 +64,9 @@ export default function RealEstateContent({ page }) {
     const benefits = [
         {
             icon: Zap,
-            title: 'Respond in under 60 seconds',
+            title: 'Reply fast, day or night',
             description:
-                'Every inquiry gets an instant, personalized reply — day or night. No lead left waiting.',
+                'Every inquiry gets a personalized reply, day or night, without waiting for you to be free.',
         },
         {
             icon: Clock,
@@ -82,7 +82,7 @@ export default function RealEstateContent({ page }) {
         },
         {
             icon: TrendingUp,
-            title: 'Close more deals',
+            title: 'Fewer leads go cold',
             description:
                 'Every lead gets a fast reply and steady follow-up, so fewer of the leads you already paid for go cold.',
         },
@@ -105,35 +105,32 @@ export default function RealEstateContent({ page }) {
             number: '3',
             title: 'Go live — leads get instant response',
             description:
-                'Flip the switch. Every new lead gets a reply in under 60 seconds, qualified and routed to your calendar.',
+                'Go live. New leads get a fast reply, qualified and routed to your calendar.',
         },
     ];
 
     const pricingPlans = [
         {
             name: 'In-house ISA',
-            price: '$4,000+',
-            period: '/mo',
+            price: 'Salary',
+            period: ' + management',
             description: 'Full-time inside sales agent',
             features: [
                 'Works 40 hrs/week',
                 'Needs training & management',
                 'PTO, sick days, turnover risk',
-                'Handles ~20 leads/day',
             ],
             tint: 'red',
             highlight: false,
         },
         {
             name: 'Virtual assistant',
-            price: '$1,500',
-            period: '/mo',
+            price: 'Hourly',
+            period: ' or monthly retainer',
             description: 'Outsourced lead handler',
             features: [
                 'Limited hours coverage',
-                'Variable quality',
-                'Language barriers possible',
-                'Handles ~30 leads/day',
+                'Quality depends on the person',
             ],
             tint: 'amber',
             highlight: false,
@@ -145,9 +142,9 @@ export default function RealEstateContent({ page }) {
             description: 'AI sales agent that never sleeps',
             features: [
                 'Works 24/7/365',
-                'Zero training required',
-                'Unlimited parallel conversations',
-                'Responds in under 60 seconds',
+                'We set it up for you',
+                'Many conversations at once',
+                'Fast replies, day or night',
             ],
             tint: 'green',
             highlight: true,
@@ -178,7 +175,7 @@ export default function RealEstateContent({ page }) {
 
                     {/* Hook line */}
                     <p className="text-center text-slate-600 text-lg md:text-xl max-w-2xl mx-auto mb-4">
-                        Deals often go to the agent who responds first. Are you first?
+                        When a lead contacts several agents, the fast reply has the edge. Are you first?
                     </p>
 
                     {/* Title */}
@@ -218,7 +215,7 @@ export default function RealEstateContent({ page }) {
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
                     <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI sales agent for real estate do?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI sales agent for real estate replies to every new lead in under 60 seconds, day or night, asks the qualification questions you set (budget, timeline, location), schedules showings on your calendar, and keeps following up with drip sequences until the lead is ready. Dooza sets it up and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI sales agent for real estate replies to every new lead fast, day or night, asks the qualification questions you set (budget, timeline, location), schedules showings on your calendar, and keeps following up with drip sequences until the lead is ready. Dooza sets it up and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
                 </div>
             </section>
 
@@ -229,7 +226,7 @@ export default function RealEstateContent({ page }) {
                         The leads are there. The follow-up isn&apos;t.
                     </h2>
                     <p className="text-center text-slate-600 text-lg max-w-2xl mx-auto mb-12">
-                        Most real estate teams lose deals not because of bad marketing — but because of slow response times.
+                        Good marketing can still lose leads to slow follow-up.
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -421,7 +418,7 @@ export default function RealEstateContent({ page }) {
                         Stop losing leads. Start closing more deals.
                     </h2>
                     <p className="text-slate-600 text-lg mb-8 max-w-xl mx-auto">
-                        Set up takes 30 minutes. Your first qualified lead could come tonight.
+                        A Dooza engineer scopes it on a free 30-minute call; custom agents are live in days.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a

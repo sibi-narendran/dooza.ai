@@ -234,7 +234,7 @@ const researchPages = [
     {
         title: 'AI receptionist cost calculator',
         url: `${SITE_URL}/ai-receptionist-cost-calculator`,
-        description: 'Free calculator: enter calls per month and minutes per call to compare 13 AI receptionists and 2 human answering services on published list prices.',
+        description: 'Free calculator: enter calls per month and minutes per call to compare 13 AI receptionists and 5 human answering services on published list prices.',
     },
 ];
 

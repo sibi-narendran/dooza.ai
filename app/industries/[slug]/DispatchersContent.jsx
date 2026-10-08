@@ -8,7 +8,6 @@ import Footer from '../../../components/Footer';
 import BookingModal from '../../../components/BookingModal';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SupportEmailLink from '../../../components/SupportEmailLink';
-import { testimonials } from '../../../lib/homeData';
 import {
     Radio,
     Truck,
@@ -28,7 +27,6 @@ import {
     Car,
     Wrench,
     MapPin,
-    Star,
     ShieldCheck,
     BadgeCheck,
     Handshake,
@@ -52,10 +50,6 @@ export default function DispatchersContent({ page }) {
     const toggleFaq = (index) => {
         setOpenFaq(openFaq === index ? null : index);
     };
-
-    const trustTestimonials = ['Hatrio AI', 'Interio Square', 'ACE Dreamers Motive']
-        .map(name => testimonials.find(t => t.author === name))
-        .filter(Boolean);
 
     const capabilityCards = [
         {
@@ -254,7 +248,7 @@ export default function DispatchersContent({ page }) {
                             How It Works
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Live the same day. Refundable pilot. No tech skills needed.
+                            Phone answering live within 48 hours. Refundable pilot. No tech skills needed.
                         </p>
                     </div>
 
@@ -337,56 +331,6 @@ export default function DispatchersContent({ page }) {
             {/* =============================== */}
             <section className="py-16 md:py-24 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight text-balance">
-                            What Dooza Customers Say
-                        </h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto text-pretty">
-                            Real businesses. Real AI employees. Real feedback.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 mb-12">
-                        {testimonials.filter(t => t.logo).map((item, idx) => (
-                            <a
-                                key={idx}
-                                href={item.website || item.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2.5 opacity-70 hover:opacity-100 transition-opacity"
-                            >
-                                <img src={item.logo} alt={item.author} width="32" height="32" className="h-8 w-auto object-contain" />
-                                <span className="text-sm font-semibold text-slate-600">{item.author}</span>
-                            </a>
-                        ))}
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-6 mb-12">
-                        {trustTestimonials.map((item, idx) => (
-                            <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition-all flex flex-col">
-                                <div className="flex items-center gap-3 mb-4">
-                                    {item.logo ? (
-                                        <div className="w-11 h-11 rounded-full bg-white border border-slate-100 flex items-center justify-center shrink-0 overflow-hidden">
-                                            <img src={item.logo} alt={item.author} width="44" height="44" className="object-contain p-1" />
-                                        </div>
-                                    ) : (
-                                        <div className="w-11 h-11 rounded-full bg-gradient-to-r from-primary-500 to-teal-500 flex items-center justify-center font-bold text-white text-sm shrink-0">
-                                            {item.initials}
-                                        </div>
-                                    )}
-                                    <div className="min-w-0">
-                                        <div className="font-bold text-slate-900 text-sm truncate">{item.author}</div>
-                                        <div className="text-xs text-slate-400 truncate">{item.role}</div>
-                                    </div>
-                                </div>
-                                <div className="flex gap-0.5 text-yellow-400 mb-3">
-                                    {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}
-                                </div>
-                                <p className="text-slate-700 text-sm leading-relaxed">&ldquo;{item.quote}&rdquo;</p>
-                            </div>
-                        ))}
-                    </div>
-
                     <div className="flex flex-wrap justify-center gap-4">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-sm font-medium text-slate-700">
                             <ShieldCheck size={16} className="text-primary-600" />

@@ -56,7 +56,7 @@ import {
 const faqData = [
     {
         question: "What is Accio Work?",
-        answer: "Accio Work is a desktop AI agent platform by Alibaba International (currently in beta v0.6.2). It runs locally on your computer and can access files, execute terminal commands, automate your browser, and call external APIs. It's heavily optimized for e-commerce sourcing and global trade workflows."
+        answer: "Accio Work is a desktop AI agent platform by Alibaba International announced in March 2026. It runs on your computer and can access files, execute terminal commands, automate your browser, and call external APIs. It's heavily optimized for e-commerce sourcing and global trade workflows."
     },
     {
         question: "How is Dooza different from Accio Work?",
@@ -72,7 +72,7 @@ const faqData = [
     },
     {
         question: "Does Accio Work handle social media and email?",
-        answer: "No — social media and email automation are among Accio Work's weakest areas. It's designed for product sourcing, store setup, and supply chain tasks. Dooza includes Maily for email automation and Somi for daily social media posting across all platforms."
+        answer: "Not as a core feature. We found no email inbox automation or social media posting in Accio's published materials (checked October 8, 2026). It's designed for product sourcing, store setup, and supply chain tasks. Dooza includes Maily for email automation and Somi for daily social media posting across all platforms."
     },
     {
         question: "Can I use both Accio Work and Dooza?",
@@ -80,7 +80,7 @@ const faqData = [
     },
     {
         question: "Does Dooza require technical skills?",
-        answer: "Zero technical skills required. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business, and every product starts with a refundable pilot: 100% refund within 14 days. Accio Work requires you to manage agent orchestration yourself and write clear, outcome-focused prompts."
+        answer: "No. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business, and every product starts with a refundable pilot: 100% refund within 14 days. Accio Work requires you to manage agent orchestration yourself and write clear, outcome-focused prompts."
     }
 ];
 
@@ -156,7 +156,7 @@ export default function AccioWorkVsDoozaContent() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
-                                <span>Updated September 8, 2026</span>
+                                <span>Updated October 7, 2026</span>
                             </div>
                         </div>
 
@@ -276,11 +276,11 @@ export default function AccioWorkVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Accio Work launched in March 2026 as Alibaba International's enterprise-grade AI agent platform. It's actually two products rolled into one brand:
+                                    Alibaba International announced Accio Work in March 2026 as its enterprise AI agent platform (<a href="https://www.digitalcommerce360.com/2026/03/24/alibaba-international-announces-ai-agent-fleets-via-accio-work/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Digital Commerce 360, March 24, 2026</a>). It's actually two products rolled into one brand:
                                 </p>
                                 <ul>
-                                    <li><strong>Accio (accio.com)</strong> — An AI-powered B2B sourcing engine integrated with Alibaba.com, 1688.com, AliExpress, and Europages. Trusted by 10M+ monthly active users for product discovery and supplier matching.</li>
-                                    <li><strong>Accio Work (work.accio.com)</strong> — A local-first desktop AI agent platform (Electron app for macOS only) that goes beyond sourcing. It can read local files, run terminal commands, control your browser, and call external APIs.</li>
+                                    <li><strong>Accio (accio.com)</strong> — An AI-powered B2B sourcing engine integrated with Alibaba.com, 1688.com, AliExpress, and Europages. Alibaba reported more than 10 million monthly active users for Accio in March 2026 (per the Digital Commerce 360 report above).</li>
+                                    <li><strong>Accio Work (work.accio.com)</strong> — A local-first desktop AI agent platform that goes beyond sourcing (check Accio's site for supported operating systems). It can read local files, run terminal commands, control your browser, and call external APIs.</li>
                                 </ul>
                                 <p>
                                     Think of it as <strong>Alibaba's supply chain wrapped in an AI agent shell</strong>. You describe what you want to sell, and Accio's agents handle market analysis, product sourcing, store design, listing creation, and logistics.
@@ -289,7 +289,7 @@ export default function AccioWorkVsDoozaContent() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                                 {[
-                                    { icon: HardDrive, title: "Desktop Agent", desc: "Runs locally on Mac only" },
+                                    { icon: HardDrive, title: "Desktop Agent", desc: "Runs locally on your computer" },
                                     { icon: ShoppingCart, title: "E-Commerce Focus", desc: "Sourcing, store setup, inventory" },
                                     { icon: Globe, title: "Browser Automation", desc: "Web scraping, form filling, multi-step flows" },
                                     { icon: Users, title: "Multi-Agent Teams", desc: "Delegation and group chat between agents" }
@@ -327,12 +327,10 @@ export default function AccioWorkVsDoozaContent() {
                                 {[
                                     "Heavily e-commerce focused — not useful for service businesses, agencies, or consultants",
                                     "Locked to Alibaba's ecosystem — limited supplier options beyond Alibaba's network",
-                                    "No email automation — cannot manage your inbox or send follow-ups",
-                                    "No social media posting — cannot create or schedule content",
-                                    "Cannot make or answer phone calls",
-                                    "Desktop-only — requires local installation and your computer running",
-                                    "Weak on marketing — user reviews report generic recommendations for advertising",
-                                    "Trustpilot concerns — allegations of recruiting people to write fake 5-star reviews",
+                                    "Email automation not listed — we found no inbox management or follow-ups in Accio's published materials (checked October 8, 2026)",
+                                    "Social media posting not listed — no content scheduling in Accio's published materials",
+                                    "Phone calls not listed — no call answering in Accio's published materials",
+                                    "Desktop app — runs on your own computer, so it needs local installation",
                                     "Requires agent orchestration skill — success depends on clear prompting"
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-3">
@@ -427,8 +425,7 @@ export default function AccioWorkVsDoozaContent() {
                                         {[
                                             "Built for e-commerce and global trade",
                                             "Tied to Alibaba's supplier ecosystem",
-                                            "Runs locally on your desktop (Electron app)",
-                                            "Stops when your computer sleeps",
+                                            "Runs locally on your desktop",
                                             "Best for: dropshippers & cross-border sellers",
                                             "Model: reactive — you prompt, agents execute"
                                         ].map((item, idx) => (
@@ -452,7 +449,7 @@ export default function AccioWorkVsDoozaContent() {
                                             "Works with 1,000+ apps via integrations",
                                             "Runs on cloud infrastructure 24/7",
                                             "Works while you sleep, travel, or vacation",
-                                            "Production-ready and managed by Dooza engineers",
+                                            "Set up and maintained by Dooza engineers",
                                             "Best for: SMBs needing autonomous operations",
                                             "Model: proactive — employees execute on schedule"
                                         ].map((item, idx) => (
@@ -468,7 +465,7 @@ export default function AccioWorkVsDoozaContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-900 mb-2">Think of It This Way</h4>
                                 <p className="text-blue-800">
-                                    Accio Work is like hiring a sourcing specialist who only works with Alibaba's warehouse. Dooza is like hiring six full-time employees — email manager, social media pro, SEO writer, sales rep, legal reviewer, and receptionist — who show up every day, know their job, and don't need supervision. <strong>One helps you find products. The other runs your business.</strong>
+                                    Accio Work is like hiring a sourcing specialist who only works with Alibaba's warehouse. Dooza is like hiring six full-time employees — email manager, social media pro, SEO writer, sales rep, legal reviewer, and receptionist — who show up every day, know their job, and ask for your approval on anything sensitive. <strong>One helps you find products. The other runs your business.</strong>
                                 </p>
                             </div>
                         </section>
@@ -489,19 +486,18 @@ export default function AccioWorkVsDoozaContent() {
                                     <tbody>
                                         {[
                                             { feature: "Type", accio: "Desktop AI agent (e-commerce)", dooza: "AI employee platform (all industries)" },
-                                            { feature: "Runs On", accio: "Mac desktop only (Electron app)", dooza: "Cloud — works on any device, anywhere" },
-                                            { feature: "Works When PC Off?", accio: "No — stops completely", dooza: "Yes — always running" },
+                                            { feature: "Runs On", accio: "Desktop app on your computer", dooza: "Cloud — works on any device, anywhere" },
                                             { feature: "Primary Focus", accio: "Product sourcing & global trade", dooza: "Full business operations" },
-                                            { feature: "Phone Calls", accio: "Not supported", dooza: "AI receptionist (Rachel)" },
-                                            { feature: "Social Media", accio: "Not supported", dooza: "Automated daily posting (Somi)" },
-                                            { feature: "Email Management", accio: "Not supported", dooza: "Full automation (Maily)" },
+                                            { feature: "Phone Calls", accio: "Not listed", dooza: "AI receptionist (Rachel)" },
+                                            { feature: "Social Media", accio: "Not listed", dooza: "Automated daily posting (Somi)" },
+                                            { feature: "Email Management", accio: "Not listed", dooza: "Full automation (Maily)" },
                                             { feature: "SEO Content", accio: "Not built-in", dooza: "Full pipeline (Ranky)" },
                                             { feature: "Sales Outreach", accio: "Not built-in", dooza: "Automated pipeline (Stan)" },
-                                            { feature: "Legal Review", accio: "Not supported", dooza: "Contract review (Linda)" },
+                                            { feature: "Legal Review", accio: "Not listed", dooza: "Contract review (Linda)" },
                                             { feature: "Supplier Sourcing", accio: "Core strength (Alibaba network)", dooza: "Not built-in" },
                                             { feature: "Product Listing", accio: "Automated via Alibaba", dooza: "Via integrations (Shopify, etc.)" },
                                             { feature: "Integrations", accio: "Telegram, Discord, DingTalk, Lark", dooza: "1,000+ app integrations" },
-                                            { feature: "Status", accio: "Beta (v0.6.2)", dooza: "Production-ready" },
+                                            { feature: "Status", accio: "Announced March 2026", dooza: "Live; pilot set up by a Dooza engineer" },
                                             { feature: "Setup & Onboarding", accio: "Desktop app, self-serve", dooza: "Free 30-min call to scope your pilot" },
                                             { feature: "Starting Price", accio: "Free plan; Pro from $19.9/mo", dooza: "Varies by product — refundable pilot (see /pricing)" },
                                             { feature: "Best For", accio: "E-commerce & dropshipping", dooza: "Any business needing AI operations" }
@@ -514,6 +510,7 @@ export default function AccioWorkVsDoozaContent() {
                                         ))}
                                     </tbody>
                                 </table>
+                                <p className="mt-2 text-xs text-slate-500">Accio Work facts from accio.com and Alibaba&apos;s March 2026 announcement (<a href="https://www.digitalcommerce360.com/2026/03/24/alibaba-international-announces-ai-agent-fleets-via-accio-work/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Digital Commerce 360, March 24, 2026</a>), checked October 8, 2026. &quot;Not listed&quot; means we found no such feature in Accio&apos;s published materials; check Accio&apos;s site before you decide.</p>
                             </div>
                         </section>
 
@@ -582,7 +579,7 @@ export default function AccioWorkVsDoozaContent() {
                                             "Need help with supplier negotiations and RFQs",
                                             "Want AI-assisted store setup and product listings",
                                             "Need automated customs and compliance documentation",
-                                            "Are comfortable with beta software and agent orchestration",
+                                            "Are comfortable with new software and agent orchestration",
                                             "Don't need email, social media, SEO, or phone automation"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
@@ -604,7 +601,7 @@ export default function AccioWorkVsDoozaContent() {
                                             "Want a 24/7 AI receptionist answering your phone",
                                             "Need lead generation and sales outreach on autopilot",
                                             "Want contract and legal document review",
-                                            "Prefer a production-ready platform with transparent pricing"
+                                            "Want a Dooza engineer to set up your pilot (pricing on /pricing)"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
@@ -692,7 +689,7 @@ export default function AccioWorkVsDoozaContent() {
                                     Accio Work and Dooza serve different masters.
                                 </p>
                                 <p>
-                                    <strong>Accio Work</strong> is a powerful e-commerce sourcing agent built by Alibaba, for Alibaba's ecosystem. If you're launching a dropshipping business or scaling cross-border trade, it's worth exploring — once it exits beta. But it doesn't handle email, social media, SEO, sales outreach, legal review, or phone calls. It's a single department head, not a workforce.
+                                    <strong>Accio Work</strong> is a powerful e-commerce sourcing agent built by Alibaba, for Alibaba's ecosystem. If you're launching a dropshipping business or scaling cross-border trade, it's worth exploring. But its published features don't cover email, social media, SEO, sales outreach, legal review, or phone calls. It's a single department head, not a workforce.
                                 </p>
                                 <p>
                                     <strong>Dooza</strong> gives you six AI employees that handle your entire business operation — autonomously, 24/7, in the cloud. Email gets answered. Social media gets posted. Blog content gets published. Phone calls get picked up. Leads get qualified. Contracts get reviewed. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
@@ -717,7 +714,7 @@ export default function AccioWorkVsDoozaContent() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-slate-900">Business operations?</p>
-                                            <p className="text-slate-600">Use Dooza. Six AI employees, 24/7 cloud operations, 1,000+ app integrations, transparent pricing, and zero technical skills required.</p>
+                                            <p className="text-slate-600">Use Dooza. Six AI employees, 24/7 cloud operations, 1,000+ app integrations, pricing on /pricing, and a Dooza engineer who sets up your pilot.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">

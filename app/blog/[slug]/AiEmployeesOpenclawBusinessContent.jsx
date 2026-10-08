@@ -49,7 +49,7 @@ import {
 const faqData = [
     {
         question: "What's the difference between an AI tool and an AI employee?",
-        answer: "An AI tool waits for you to ask it something. An AI employee shows up, does the work, and moves to the next task - whether you're watching or not. Businesses have budgets for employees ($4,000-6,000/month for a social media manager), making AI employees worth 100x more than AI tools."
+        answer: "An AI tool waits for you to ask it something. An AI employee shows up, does the work, and moves to the next task - whether you're watching or not. Businesses already budget for the jobs employees do, so an AI employee that does a whole job is easier to buy than one more tool."
     },
     {
         question: "Can I build a business on OpenClaw?",
@@ -139,7 +139,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                             AI Employees Are Coming. Here's How to <span className="text-primary-600">Build It as a Business</span> Before Everyone Else.
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-4">
-                            Most people building on OpenClaw are making the same mistake. They're building AI tools. They should be building AI employees. The difference is worth 100x in revenue.
+                            Most people building on OpenClaw are making the same mistake. They're building AI tools. They should be building AI employees. The difference shows up in what customers will pay.
                         </p>
                         <p className="text-sm text-slate-500 mb-8">
                             By <a href="https://twitter.com/sibinarendran" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Sibi Narendran</a>, Founder at Dooza
@@ -238,7 +238,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                                     They're building AI tools. They should be building AI employees.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    The difference is worth <strong>100x in revenue</strong>. Let me explain.
+                                    The difference shows up in <strong>what customers will pay</strong>. Let me explain.
                                 </p>
                             </div>
 

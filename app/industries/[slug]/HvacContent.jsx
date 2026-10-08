@@ -308,6 +308,7 @@ export default function HvacContent({ page }) {
                             </div>
                             <div>
                                 <p className="text-lg leading-8 text-slate-600">These Dooza experiences are tailored around each company’s services, markets, and call rules so you can hear how the receptionist behaves in context.</p>
+                                <p className="mt-3 text-sm font-semibold text-slate-700">Demo built for illustration; not a Dooza customer. Each demo uses the company’s public service info.</p>
                                 <Link href="/ai-receptionist" className="mt-4 inline-flex items-center gap-2 font-bold text-primary-700 underline underline-offset-4 hover:text-primary-900">
                                     Want it answering your own number? Start your refundable pilot
                                 </Link>
@@ -329,6 +330,7 @@ export default function HvacContent({ page }) {
                                             </div>
                                             <h3 className="mt-6 text-3xl font-bold leading-tight text-white">{demo.name}</h3>
                                             <p className="mt-3 flex items-center gap-2 text-sm text-slate-400"><MapPin className="h-4 w-4" />{demo.location}</p>
+                                            <p className="mt-2 text-xs text-slate-400">Demo built for illustration; not a Dooza customer.</p>
                                             <p className="mt-6 text-lg leading-8 text-slate-300">{demo.services}</p>
                                         </div>
                                         <div className="mt-8 flex items-center gap-2 border-t border-white/15 pt-5 font-bold text-primary-200"><Headphones className="h-5 w-5" />Open the interactive demo</div>

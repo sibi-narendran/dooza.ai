@@ -37,7 +37,7 @@ export default function SalonsContent({ page }) {
         {
             icon: PhoneOff,
             title: 'Missed bookings = lost revenue',
-            description: 'Every unanswered call is a client who books somewhere else. At $85 average ticket, 5 missed calls a day costs you $12,750/month.'
+            description: 'An unanswered call can be a client who books somewhere else. Example (illustrative, not typical): if you miss 5 calls a week that would have booked and a visit is worth $85 to you, that is $425 a week.'
         },
         {
             icon: CalendarX,
@@ -47,16 +47,16 @@ export default function SalonsContent({ page }) {
         {
             icon: Moon,
             title: 'After-hours calls = gone forever',
-            description: 'Many salon calls come outside business hours. No voicemail box in the world converts like a live answer.'
+            description: 'Some clients call after you close. A live answer can book them; a voicemail waits until morning.'
         }
     ];
 
     const solutions = [
         'Answers every call, instantly — no hold music, no voicemail',
-        'Books appointments by stylist availability and specialty',
-        'Confirms and reschedules automatically via SMS',
-        'Handles pricing and service FAQs with zero training time',
-        'Sends SMS appointment reminders to cut no-shows'
+        'Books appointments into your calendar, with the stylist the client asks for',
+        'Reschedules on your calendar and texts the confirmation',
+        'Answers pricing and service questions with only the answers you approve',
+        'Takes a message and texts you, or transfers the call, when a caller needs a person'
     ];
 
     const benefits = [
@@ -68,17 +68,17 @@ export default function SalonsContent({ page }) {
         {
             icon: Zap,
             title: 'No Hold Times',
-            description: 'Instant pickup on every call. No "please hold" — ever. Clients love it.'
+            description: 'Every call is picked up right away, with no hold queue.'
         },
         {
             icon: CalendarCheck,
-            title: 'Fewer No-Shows',
-            description: 'Automated SMS reminders before each appointment, so fewer clients forget.'
+            title: 'Messages, Not Voicemail',
+            description: 'When a caller needs you, it takes a message and texts you, or transfers the call.'
         },
         {
             icon: DollarSign,
-            title: 'More Revenue Per Chair',
-            description: 'Fill cancellation gaps instantly. Maximize every stylist hour, every single day.'
+            title: 'More Calls Booked',
+            description: 'Calls get answered while you are with a client, so open slots can still get booked.'
         }
     ];
 
@@ -86,37 +86,37 @@ export default function SalonsContent({ page }) {
         {
             number: '1',
             title: 'Connect your phone number',
-            description: 'Forward your salon line or get a new number. Takes 2 minutes.'
+            description: 'Forward your existing salon line. We set it up for you.'
         },
         {
             number: '2',
             title: 'Train on your services & stylists',
-            description: 'Add your service menu, stylist schedules, pricing, and policies. AI learns it all.'
+            description: 'On a free 30-minute call, we go through your service menu, stylists, pricing and policies.'
         },
         {
             number: '3',
-            title: 'Go live in 30 minutes',
-            description: 'Start answering calls, booking appointments, and capturing revenue immediately.'
+            title: 'Live within 48 hours',
+            description: 'It starts answering calls and booking appointments on your line within 48 hours of the setup call.'
         }
     ];
 
     const pricing = [
         {
             name: 'Human Receptionist',
-            price: '$2,500',
-            period: '/mo',
+            price: 'Salary',
+            period: ' + training',
             tint: 'bg-red-50 border-red-200',
-            priceColor: 'text-red-600 line-through',
-            features: ['Limited to business hours', 'Calls in sick', 'Training overhead', 'Only handles 1 call at a time'],
+            priceColor: 'text-red-600',
+            features: ['Usually business hours only', 'Sick days and turnover', 'Training time', 'One call at a time per person'],
             crossed: true
         },
         {
             name: 'Answering Service',
-            price: '$300',
-            period: '/mo',
+            price: 'Per minute',
+            period: ' or per call',
             tint: 'bg-amber-50 border-amber-200',
             priceColor: 'text-amber-600',
-            features: ['Generic scripts', 'No real-time booking', 'Per-minute charges add up', 'No salon-specific knowledge'],
+            features: ['Human agents answer from your script', 'Booking options vary by provider', 'Per-minute or per-call charges add up', 'Compare 5 human services in our cost calculator'],
             crossed: false
         },
         {
@@ -125,7 +125,7 @@ export default function SalonsContent({ page }) {
             period: ' · 100% refund in 14 days',
             tint: 'bg-green-50 border-green-300 ring-2 ring-green-200',
             priceColor: 'text-green-600',
-            features: ['24/7 call answering', 'Books by stylist & service', 'SMS reminders included', 'Salon-trained from day one'],
+            features: ['24/7 call answering', 'Books into your calendar', 'Takes messages and texts you', 'Set up on your services and policies'],
             crossed: false,
             highlight: true
         }
@@ -187,7 +187,7 @@ export default function SalonsContent({ page }) {
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
                     <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI receptionist for salons do?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI receptionist for salons answers every call 24/7, books appointments by stylist availability and specialty, confirms and reschedules by text, and sends SMS reminders to cut no-shows. Dooza sets it up on your existing number and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI receptionist for salons answers every call 24/7, books appointments into your calendar, texts the booking confirmation, and takes a message or transfers the call when a caller needs a person. Dooza sets it up on your existing number and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
                     <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
                 </div>
             </section>
@@ -197,7 +197,7 @@ export default function SalonsContent({ page }) {
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            The Missed-Call Problem Is Costing You Thousands
+                            Missed Calls Can Cost You Bookings
                         </h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                             While your stylists are creating masterpieces, your phone is sending clients to the competition.
@@ -271,10 +271,10 @@ export default function SalonsContent({ page }) {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            Live in 30 Minutes. Seriously.
+                            Live on Your Line Within 48 Hours
                         </h2>
                         <p className="text-lg text-slate-600">
-                            No IT team needed. No complicated setup. Just results.
+                            No IT team needed. We do the setup.
                         </p>
                     </div>
 
@@ -348,7 +348,7 @@ export default function SalonsContent({ page }) {
                         Ready to Stop Missing Bookings?
                     </h2>
                     <p className="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                        Let Dooza's AI receptionist fill every chair, every day.
+                        Let Dooza's AI receptionist answer every call, so fewer bookings slip away.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a

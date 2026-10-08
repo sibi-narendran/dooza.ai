@@ -454,7 +454,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                                     },
                                     {
                                         title: "Speed is Critical",
-                                        desc: "Lead response time matters. AI can reply in seconds, while a human might take minutes or hours. Studies show response within 5 minutes increases conversion 100x."
+                                        desc: "Lead response time matters. AI can reply in seconds, while a human might take minutes or hours. The faster you reply to a new inquiry, the better your odds of reaching the buyer before a competitor does."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-primary-50 border border-primary-100 p-5 rounded-xl">

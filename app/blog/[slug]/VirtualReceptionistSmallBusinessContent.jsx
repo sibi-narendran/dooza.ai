@@ -39,8 +39,8 @@ const faqData = [
     { question: "What is a virtual receptionist for small business?", answer: "A virtual receptionist answers your business calls remotely — greeting callers, taking messages, booking appointments, and routing urgent calls. Traditional services use human agents; AI virtual receptionists like Rachel do it with AI, 24/7." },
     { question: "How much does a virtual receptionist cost?", answer: "Traditional virtual receptionist services cost $250–$1,725/month for 50–500 minutes (Ruby) or $300–$2,100/month for 30–300 calls (Smith.ai), per their pricing pages (checked Oct 7, 2026). Dooza's AI receptionist Rachel answers calls 24/7; Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "Can an AI virtual receptionist handle real conversations?", answer: "Yes. Rachel uses natural language processing for multi-turn conversations — she asks qualifying questions, answers FAQs about your business, books appointments, and knows when to route calls to you directly." },
-    { question: "Is an AI receptionist reliable for a small business?", answer: "More reliable than human services. Rachel answers every call in under 1 second, never calls in sick, and works nights, weekends, and holidays. She handles the calls that human virtual receptionists miss after-hours." },
-    { question: "How do I switch from my current answering service to AI?", answer: "Book a free 30-minute call to scope your pilot, and a Dooza engineer configures Rachel with your business info, FAQs, and calendar. Most businesses switch in a single day." }
+    { question: "Is an AI receptionist reliable for a small business?", answer: "For routine calls, yes. Rachel answers 24/7, including nights, weekends, and holidays, books appointments, takes messages, and hands urgent calls to you based on rules you set. Live answering services also run 24/7; they can be the better pick for complex or sensitive calls. Rachel answers in English only and is not a HIPAA service. The refundable pilot lets you test her on your real calls first." },
+    { question: "How do I switch from my current answering service to AI?", answer: "Book a free 30-minute call to scope your pilot, and a Dooza engineer configures Rachel with your business info, FAQs, and calendar. Rachel is live on your existing line within 48 hours of the setup call." }
 ];
 
 export default function VirtualReceptionistSmallBusinessContent() {
@@ -106,7 +106,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                             Virtual Receptionist for <span className="text-primary-600">Small Business</span>: Why AI Beats Traditional Services
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Traditional virtual receptionists cost $300–$900/month and still miss after-hours calls. An AI receptionist answers 24/7 and starts with a refundable pilot — here's why small businesses are switching.
+                            Live virtual receptionist plans start at $189–$300/month for a small allowance of minutes or calls, with overage billed on top. An AI receptionist answers 24/7 and starts with a refundable pilot — here's why small businesses are switching.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -209,10 +209,10 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     You started your business to do what you love — not to answer phones. But every missed call is a missed customer.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    If you're a small business owner, you already know the problem: the phone rings while you're with a client, on a job site, or just trying to eat lunch. You can't answer every call. So you hire a virtual receptionist service — Ruby, Smith.ai, PATLive — and suddenly you're paying $250–$810/month for a small plan, with every extra minute or call billed on top.
+                                    If you're a small business owner, you already know the problem: the phone rings while you're with a client, on a job site, or just trying to eat lunch. You can't answer every call. So you hire a virtual receptionist service — Ruby, Smith.ai, PATLive — and suddenly you're paying $189–$810/month for a small plan, with every extra minute or call billed on top.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    But here's the part they don't tell you: those services still send callers to voicemail after 8 PM. They still charge per-minute overages. And on your busiest months, that "affordable" plan quietly doubles.
+                                    Here's the part that's easy to miss: those plans come with a fixed allowance. Every minute or call past it is billed extra, so on your busiest months the bill climbs with your call volume.
                                 </p>
 
                                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl my-8">
@@ -228,7 +228,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 </div>
 
                                 <p className="text-lg leading-relaxed">
-                                    There's a better way. AI virtual receptionists answer every call, 24/7/365. No per-minute billing. No after-hours gaps. No hold queues. Here's why small businesses are making the switch.
+                                    There's another way. AI virtual receptionists answer every call, 24/7/365, and handle the routine ones (bookings, FAQs, messages) end to end. Here's how the two compare.
                                 </p>
                             </div>
                         </section>
@@ -255,13 +255,13 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     },
                                     {
                                         title: "Virtual Receptionist",
-                                        cost: "$300–$900/mo",
-                                        desc: "Appointment booking, call screening, and custom scripts. Limited hours, per-minute overages.",
+                                        cost: "$189–$2,100/mo",
+                                        desc: "Appointment booking, call screening, and custom scripts. Fixed minute or call allowance, overage billed on top.",
                                         icon: Users
                                     },
                                     {
                                         title: "In-House Receptionist",
-                                        cost: "$3,500+/mo",
+                                        cost: "Full-time salary",
                                         desc: "Full-time, dedicated. But a single point of failure — sick days, vacations, lunch breaks.",
                                         icon: Building2
                                     }
@@ -286,22 +286,22 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                 {[
                                     {
                                         title: "Cost Creep",
-                                        desc: "Per-minute billing means your $230/month plan becomes $500+ on busy months. One unexpected spike and your phone bill rivals a part-time salary.",
+                                        desc: "Per-minute billing grows with your call volume. Example: PATLive's 100-minute plan is $189/month and each extra minute is $2.09, so a 200-minute month costs about $398 (PATLive pricing page, checked Oct 7, 2026).",
                                         icon: DollarSign
                                     },
                                     {
-                                        title: "Limited Hours",
-                                        desc: "Most services operate 8am–8pm. After-hours calls — the ones from urgent leads and emergencies — go straight to voicemail.",
+                                        title: "Every Call Has a Price",
+                                        desc: "Live services answer 24/7, but every minute or call counts against your plan. Busy evenings and weekends use up the allowance, so after-hours coverage costs as much as daytime coverage.",
                                         icon: Clock
                                     },
                                     {
                                         title: "Inconsistency",
-                                        desc: "A different agent answers every time. Callers never build rapport with your business. Your \"receptionist\" doesn't know your repeat customers.",
+                                        desc: "With a shared team of receptionists, the person who picks up can change from call to call, so callers may not get the same voice or someone who knows your repeat customers.",
                                         icon: Users
                                     },
                                     {
                                         title: "Slow Response",
-                                        desc: "Peak hours mean hold queues. 15–30 second wait times before a human picks up. In that time, impatient callers have already hung up.",
+                                        desc: "At peak times a live team is also answering other clients' calls, so callers can wait before a person picks up, and some hang up.",
                                         icon: AlertTriangle
                                     }
                                 ].map((item, idx) => (
@@ -321,7 +321,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
 
                             <div className="bg-red-50 border border-red-200 p-6 rounded-xl">
                                 <p className="text-slate-800 font-medium text-center">
-                                    You're paying $300–$900/month for a receptionist that still sends callers to voicemail after 8 PM.
+                                    Live services answer 24/7, but you pay for every minute or call, and the bill grows with your call volume.
                                 </p>
                             </div>
                         </section>
@@ -337,10 +337,10 @@ export default function VirtualReceptionistSmallBusinessContent() {
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { label: "Availability", traditional: "Business hours (8am–8pm)", ai: "24/7/365 — nights, weekends, holidays" },
-                                    { label: "Cost", traditional: "$300–$900/mo + per-minute overages", ai: "No per-minute overages — starts with a refundable pilot" },
-                                    { label: "Consistency", traditional: "Different agent each call", ai: "Same voice, same quality, every call" },
-                                    { label: "Speed", traditional: "15–30 second hold time", ai: "Answers in under 1 second" }
+                                    { label: "Availability", traditional: "24/7 at most services, billed per minute or call", ai: "24/7/365 — nights, weekends, holidays" },
+                                    { label: "Cost", traditional: "$189–$2,100/mo for a fixed allowance, plus overage", ai: "Pricing depends on the product (see /pricing); starts with a refundable pilot" },
+                                    { label: "Consistency", traditional: "Shared team; the person answering can change", ai: "Same voice and same instructions on every call" },
+                                    { label: "Peak times", traditional: "Callers can queue when the team is busy", ai: "Picks up every call, day or night" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-slate-50 border border-slate-200 p-5 rounded-xl">
                                         <h4 className="font-bold text-slate-900 mb-3">{item.label}</h4>
@@ -385,8 +385,8 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", ruby: "$250–$1,725 (50–500 min)", smith: "$300–$2,100 (30–300 calls)", patlive: "$99–$1,499 (50–1,000 min), or $49 pay-as-you-go", rachel: "Refundable pilot (see /pricing)" },
-                                            { feature: "Overage", ruby: "Not listed", smith: "$8.50–$11.50/call", patlive: "$1.54–$2.99/min", rachel: "None" },
+                                            { feature: "Monthly Cost", ruby: "$250–$1,725 (50–500 min)", smith: "$300–$2,100 (30–300 calls)", patlive: "$189–$479 (100–300 min)", rachel: "Refundable pilot (see /pricing)" },
+                                            { feature: "Overage", ruby: "Not listed", smith: "$8.50–$11.50/call", patlive: "$1.89–$2.09/min", rachel: "See /pricing" },
                                             { feature: "Hours of Operation", ruby: "24/7", smith: "24/7", patlive: "24/7", rachel: "24/7/365" },
                                             { feature: "Who answers", ruby: "Live receptionists", smith: "Live receptionists", patlive: "Live receptionists (US)", rachel: "AI receptionist" }
                                         ].map((row, idx) => (
@@ -424,11 +424,11 @@ export default function VirtualReceptionistSmallBusinessContent() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                                 {[
-                                    { icon: Zap, title: "Instant Pickup", desc: "Answers in under 1 second. No hold music. No rings. No wait." },
-                                    { icon: MessageSquare, title: "Natural Conversation", desc: "Multi-turn dialogue that callers can't distinguish from a human receptionist." },
+                                    { icon: Zap, title: "Instant Pickup", desc: "Picks up every call, day or night, nights and weekends included. No hold music." },
+                                    { icon: MessageSquare, title: "Natural Conversation", desc: "Multi-turn dialogue in natural English: answers questions, asks follow-ups, and takes details." },
                                     { icon: Target, title: "Lead Qualification", desc: "Custom screening questions to identify and score hot prospects automatically." },
                                     { icon: Calendar, title: "Appointment Booking", desc: "Checks your calendar and books meetings on the spot. No back-and-forth." },
-                                    { icon: ArrowRight, title: "Smart Routing", desc: "Urgent calls forwarded to your cell instantly. Everything else handled autonomously." },
+                                    { icon: ArrowRight, title: "Smart Routing", desc: "Urgent calls forwarded to your cell based on rules you set. Routine calls handled end to end." },
                                     { icon: Clock, title: "After-Hours Coverage", desc: "Nights, weekends, holidays — Rachel never goes home. Your business is always open." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -452,8 +452,8 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     {
                                         title: "Medical Practices",
                                         icon: Shield,
-                                        pain: "Patients calling after hours for appointments and prescription refills.",
-                                        solution: "Rachel books appointments and handles routine inquiries 24/7.",
+                                        pain: "Patients calling after hours to book or reschedule appointments.",
+                                        solution: "Rachel takes appointment requests and answers general questions (hours, location) 24/7. She is not a HIPAA service, so clinical or patient-record calls belong with a HIPAA-covered service.",
                                         link: { href: "/blog/seo-for-doctors-dentists", label: "Guide for medical practices" }
                                     },
                                     {
@@ -467,7 +467,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                         title: "Home Services",
                                         icon: Phone,
                                         pain: "Emergency plumbing, HVAC, or electrical calls at midnight go to voicemail.",
-                                        solution: "Rachel books emergency jobs instantly. No more lost revenue.",
+                                        solution: "Rachel takes the job details and alerts you, so urgent jobs reach you instead of voicemail.",
                                         link: null
                                     },
                                     {
@@ -537,7 +537,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     {[
                                         { label: "Ruby Receptionist (50 minutes/mo)", value: "$3,000/year", highlight: false },
                                         { label: "Smith.ai (30 calls/mo)", value: "$3,600/year", highlight: false },
-                                        { label: "In-House Receptionist", value: "$42,000+/year", highlight: true }
+                                        { label: "In-House Receptionist", value: "Full-time salary + benefits", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>
                                             <span className="text-slate-700">{item.label}</span>
@@ -568,12 +568,12 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     {
                                         step: "2",
                                         title: "Book a Free Pilot Call",
-                                        desc: "A Dooza engineer configures Rachel with your business info, FAQs, calendar, and call routing preferences in 30 minutes."
+                                        desc: "On a free 30-minute call, a Dooza engineer scopes your pilot, then configures Rachel with your business info, FAQs, calendar, and call routing preferences. She is live on your existing line within 48 hours of that call."
                                     },
                                     {
                                         step: "3",
                                         title: "Forward Your Calls",
-                                        desc: "Rachel starts answering immediately. You get detailed summaries after every call. Leads get booked."
+                                        desc: "Rachel starts answering your forwarded calls. You get a summary after every call. Leads get booked."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -589,7 +589,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Replace Your Answering Service?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop overpaying for limited-hour receptionists. Rachel answers every call, qualifies every lead, and books appointments — 24/7, starting with a refundable pilot.
+                                    Stop missing calls you could have booked. Rachel answers every call, qualifies every lead, and books appointments — 24/7, starting with a refundable pilot.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

@@ -46,17 +46,17 @@ export default function InsuranceAgentsContent({ page }) {
         {
             icon: PhoneCall,
             title: 'Quote shoppers call around',
-            description: 'Someone shopping for auto or home insurance often calls more than one agency. If yours doesn\'t pick up, the next one may get the quote. If you\'re on another line, you never knew you lost the deal.'
+            description: 'Someone shopping for auto or home insurance may call more than one agency. If yours doesn\'t pick up, the next one may get the quote, and you may never know the call came in.'
         },
         {
             icon: Timer,
             title: 'You\'re with a client while the phone rings',
-            description: 'You\'re reviewing a renewal, on hold with a carrier, or in a client meeting — and new prospects go straight to voicemail. Most won\'t call back.'
+            description: 'You\'re reviewing a renewal, on hold with a carrier, or in a client meeting — and new prospects go straight to voicemail. Some won\'t call back.'
         },
         {
             icon: Moon,
             title: 'Claims and emergencies don\'t wait for business hours',
-            description: 'Accidents at midnight, storm damage on a Sunday, certificate requests before 8 AM. Policyholders expect their agent to answer — or they start shopping for a new one.'
+            description: 'Accidents at midnight, storm damage on a Sunday, certificate requests before 8 AM. Policyholders want their agent to answer.'
         }
     ];
 
@@ -82,7 +82,7 @@ export default function InsuranceAgentsContent({ page }) {
         {
             icon: Shield,
             title: 'Sound like a big agency, even if it\'s just you',
-            description: 'Every caller hears a polished, professional receptionist on the first ring. Prospects trust agencies that answer — that trust binds policies.'
+            description: 'Every caller hears a polished, professional receptionist on the first ring. Callers hear a professional answer instead of voicemail.'
         },
         {
             icon: FileText,
@@ -95,7 +95,7 @@ export default function InsuranceAgentsContent({ page }) {
         {
             number: '1',
             title: 'Connect your agency number',
-            description: 'Forward your existing agency line to Dooza in under 5 minutes. Works with any phone provider: cell, landline, or VoIP. No new number needed.'
+            description: 'Forward your existing agency line to Dooza; we set it up for you. Works with any phone provider: cell, landline, or VoIP. No new number needed.'
         },
         {
             number: '2',
@@ -191,7 +191,7 @@ export default function InsuranceAgentsContent({ page }) {
                             The Problem Every Independent Agent Knows
                         </h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            You didn&apos;t get your license to be chained to a phone. But every missed call is a quote your competitor writes.
+                            You didn&apos;t get your license to be chained to a phone. But a missed call can be a quote your competitor writes.
                         </p>
                     </div>
 
@@ -349,7 +349,7 @@ export default function InsuranceAgentsContent({ page }) {
                         Stop Losing Policies to a Busy Line
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
-                        Every missed call is a quote your competitor writes. Dooza AI answers every call and captures every detail, so you never miss an opportunity.
+                        A missed call can be a quote your competitor writes. Dooza AI answers every call and captures every detail, so you never miss an opportunity.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a

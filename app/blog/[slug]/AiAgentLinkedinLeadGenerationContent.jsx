@@ -487,25 +487,6 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     </div>
                                 </div>
                             </div>
-
-                            <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
-                                <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
-                                    <TrendingUp className="w-5 h-5 text-blue-600" />
-                                    The Data on Personalization
-                                </h4>
-                                <div className="grid md:grid-cols-3 gap-4">
-                                    {[
-                                        { stat: "3x", desc: "higher response rate with personalized messages vs templates (LinkedIn data)" },
-                                        { stat: "40%", desc: "higher connection acceptance when referencing mutual connections or shared groups" },
-                                        { stat: "26%", desc: "higher open rate on InMail when the first line references the prospect's content" }
-                                    ].map((item, idx) => (
-                                        <div key={idx} className="text-center">
-                                            <div className="text-2xl font-bold text-blue-700">{item.stat}</div>
-                                            <p className="text-xs text-slate-600 mt-1">{item.desc}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
                         </section>
 
                         {/* Section 5: The Anti-Ban Playbook */}
@@ -526,7 +507,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
                                     },
                                     {
                                         rule: "Never send identical messages",
-                                        desc: "Every connection note and message should be unique. AI agents generate fresh copy for each prospect. If two messages share more than 40% of their text, LinkedIn's similarity detection can flag them."
+                                        desc: "Every connection note and message should be unique. AI agents generate fresh copy for each prospect. Near-identical messages sent at volume look automated, to recipients and to LinkedIn."
                                     },
                                     {
                                         rule: "Vary your activity timing",

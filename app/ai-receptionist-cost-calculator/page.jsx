@@ -9,7 +9,7 @@ import { compareReceptionistCosts, PRICES_CHECKED, PRICES_CHECKED_LABEL } from '
 
 const PATH = '/ai-receptionist-cost-calculator';
 const TITLE = 'AI Receptionist Cost Calculator: Compare 18 Services by Your Call Volume';
-const DESCRIPTION = `Free calculator: enter your calls per month and minutes per call to see what 13 AI receptionists and 2 human answering services would cost, from list prices checked ${PRICES_CHECKED_LABEL}.`;
+const DESCRIPTION = `Free calculator: enter your calls per month and minutes per call to see what 13 AI receptionists and 5 human answering services would cost, from list prices checked ${PRICES_CHECKED_LABEL}.`;
 
 export const metadata = {
     title: TITLE,
@@ -109,7 +109,7 @@ export default function AiReceptionistCostCalculatorPage() {
                             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">AI Receptionist Cost Calculator</h1>
                             <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-700">
                                 <strong>For 100 calls a month at about 3 minutes each, AI receptionists cost {aiLow} to {aiHigh} a month; human answering services cost {humanLow} to {humanHigh}.</strong>{' '}
-                                Enter your own call volume to compare 13 AI receptionists and 2 human answering services on their published list prices.
+                                Enter your own call volume to compare 13 AI receptionists and 5 human answering services on their published list prices.
                             </p>
                         </div>
 

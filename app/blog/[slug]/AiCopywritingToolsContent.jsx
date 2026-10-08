@@ -49,7 +49,7 @@ const faqData = [
     },
     {
         question: "Will AI replace human copywriters?",
-        answer: "AI augments copywriters rather than replacing them. According to industry data, 78% of copywriters now use AI tools to work faster. The best results come from combining AI efficiency with human creativity, strategy, and brand knowledge. AI handles the heavy lifting; humans add the magic."
+        answer: "AI augments copywriters rather than replacing them. Siege Media reports that 97% of content marketers plan to use AI to support their content work in 2026. The best results come from combining AI efficiency with human creativity, strategy, and brand knowledge. AI handles the heavy lifting; humans add the magic."
     },
     {
         question: "How much do AI copywriting tools cost?",
@@ -164,7 +164,7 @@ export default function AiCopywritingToolsContent() {
                             What is <span className="text-primary-600">AI Copywriting</span>? The Complete Guide for 2026
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            78% of marketers now use AI for content creation. Learn how AI copywriting tools work, why they're transforming marketing, and how to use them to create better content faster—without losing your brand voice.
+                            97% of content marketers plan to use AI in 2026 (Siege Media). Learn how AI copywriting tools work, why they're transforming marketing, and how to use them to create better content faster—without losing your brand voice.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -253,7 +253,7 @@ export default function AiCopywritingToolsContent() {
                                     Creating content is exhausting. You know you need to post on social media, write blog posts, send emails, and create ads—but there are only so many hours in a day.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    That's why <strong>78% of marketers now use AI copywriting tools</strong>, according to <a href="https://www.siegemedia.com/strategy/ai-writing-statistics" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Siege Media research</a>. These tools don't replace human creativity—they amplify it, helping you create more content in less time while maintaining quality.
+                                    That's why <strong>97% of content marketers plan to use AI in 2026</strong>, according to <a href="https://www.siegemedia.com/strategy/ai-writing-statistics" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Siege Media research</a>. These tools don't replace human creativity—they amplify it, helping you create more content in less time while maintaining quality.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     In this guide, you'll learn exactly what AI copywriting is, how it works, and how businesses are using it to transform their marketing. We'll compare the top tools and show you how to get started—even if you've never used AI before.
@@ -344,7 +344,7 @@ export default function AiCopywritingToolsContent() {
 
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
-                                    { stat: "78%", label: "of marketers use AI for content", source: "Siege Media", link: "https://www.siegemedia.com/strategy/ai-writing-statistics" },
+                                    { stat: "97%", label: "of content marketers plan to use AI in 2026", source: "Siege Media", link: "https://www.siegemedia.com/strategy/ai-writing-statistics" },
                                     { stat: "65%", label: "reduction in content production costs", source: "DemandSage", link: "https://www.demandsage.com/content-marketing-statistics/" },
                                     { stat: "2.5hrs", label: "saved daily using AI for content", source: "HubSpot", link: "https://www.hubspot.com/marketing-statistics" },
                                     { stat: "120%", label: "increase in organic traffic (6 months)", source: "Industry Research", link: "https://www.omnifunnelmarketing.com/blog/efficiency-unleashed-5-best-ai-copywriting-tools-beyond-chatgpt-in-2025" },
@@ -607,7 +607,7 @@ export default function AiCopywritingToolsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Try AI Copywriting?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Join the 78% of marketers already using AI to create better content faster. Start with a refundable pilot of Dooza's AI employees — 100% refund within 14 days.
+                                    Join the content marketers already using AI to create better content faster. Start with a refundable pilot of Dooza's AI employees — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

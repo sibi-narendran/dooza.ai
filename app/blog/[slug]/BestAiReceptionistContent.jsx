@@ -122,7 +122,7 @@ export default function BestAiReceptionistContent() {
                             The Best <span className="text-primary-600">AI Receptionist</span>: Why You Should Fire Your Voicemail
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Most callers won't leave a voicemail — they just call your competitor. Discover why an AI receptionist captures more leads, books more appointments, and costs a fraction of a human receptionist.
+                            Many callers won't leave a voicemail — they just call your competitor. Here's how an AI receptionist answers those calls, books appointments, and compares with voicemail, answering services and an in-house hire.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -213,13 +213,13 @@ export default function BestAiReceptionistContent() {
                                     Your voicemail is a lead-killing machine.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Most callers who reach voicemail won't leave a message. They hang up and call your competitor. Every unanswered ring is revenue walking out the door — and you don't even know it's happening.
+                                    Many callers who reach voicemail won't leave a message. They hang up and call your competitor. Every unanswered ring is revenue walking out the door — and you don't even know it's happening.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Picture this: it's 6 PM on a Tuesday. A homeowner discovers a burst pipe flooding their basement. They grab their phone and call three plumbers. Two go straight to voicemail. The third picks up instantly, asks the right questions — "Where's the leak? How bad is the flooding? What's your address?" — and books the emergency appointment on the spot. That third business just won <strong>$2,500 in revenue</strong> while the other two were still recording "Sorry we missed your call."
+                                    Picture this (an illustrative example): it's 6 PM on a Tuesday. A homeowner discovers a burst pipe flooding their basement. They grab their phone and call three plumbers. Two go straight to voicemail. The third picks up instantly, asks the right questions — "Where's the leak? How bad is the flooding? What's your address?" — and books the emergency appointment on the spot. That third business just won the job while the other two were still recording "Sorry we missed your call."
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">As we covered in our business automation guide</Link>, inbound call handling is one of the three biggest time-wasters for small businesses. But unlike email or social media, missed calls have an immediate, measurable cost — because the caller doesn't wait. They move on.
+                                    <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">As we covered in our business automation guide</Link>, inbound call handling eats a lot of a small team's day. But unlike email or social media, missed calls have an immediate, measurable cost — because the caller doesn't wait. They move on.
                                 </p>
 
                                 <div className="my-8">
@@ -236,7 +236,7 @@ export default function BestAiReceptionistContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">The Cost of Voicemail</h4>
                                             <p className="text-slate-700">
-                                                If you miss just 6 calls a week, that's 6 missed opportunities. At $200/lead, you could be losing up to <strong>$1,200/week</strong> — or <strong>$4,800/month</strong> — to voicemail.
+                                                Example (illustrative, not typical): if you miss 6 calls a week and a new customer is worth $200 to you, up to <strong>$1,200/week</strong> of work is at risk if none of those callers leave a message. Plug in your own numbers.
                                             </p>
                                         </div>
                                     </div>
@@ -304,12 +304,12 @@ export default function BestAiReceptionistContent() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                                 {[
-                                    { icon: Phone, title: "Answers Every Call", desc: "Picks up instantly, 24/7/365. No hold music, no voicemail." },
+                                    { icon: Phone, title: "Answers Every Call", desc: "Picks up every call, 24/7/365. No voicemail." },
                                     { icon: MessageSquare, title: "Natural Conversation", desc: "Uses NLP to have real, multi-turn conversations with callers." },
                                     { icon: Target, title: "Qualifies Leads", desc: "Asks your custom screening questions to identify hot prospects." },
                                     { icon: Calendar, title: "Books Appointments", desc: "Checks your calendar and books meetings on the spot." },
                                     { icon: FileText, title: "Call Summaries", desc: "Sends you a detailed summary after every call via email or SMS." },
-                                    { icon: AlertTriangle, title: "Routes Urgent Calls", desc: "Identifies emergencies and transfers to your cell immediately." }
+                                    { icon: AlertTriangle, title: "Routes Urgent Calls", desc: "Spots urgent calls and transfers them to your cell under rules you set." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-slate-50 border border-slate-200 p-5 rounded-xl">
                                         <div className="flex items-start gap-3">
@@ -344,13 +344,13 @@ export default function BestAiReceptionistContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", voicemail: "$0", virtual: "$300-935", inhouse: "Salary + benefits", rachel: "Refundable pilot (see /pricing)" },
-                                            { feature: "Availability", voicemail: "Always (but useless)", virtual: "Business hours + limited after-hours", inhouse: "Business hours", rachel: "24/7/365" },
-                                            { feature: "Call Capacity", voicemail: "Unlimited", virtual: "50-200 calls/mo", inhouse: "~40 calls/day", rachel: "Unlimited" },
+                                            { feature: "Monthly Cost", voicemail: "$0", virtual: "$250–$2,100 (Ruby, Smith.ai plans)", inhouse: "Salary + benefits", rachel: "Refundable pilot (see /pricing)" },
+                                            { feature: "Availability", voicemail: "Always (but useless)", virtual: "24/7, billed per minute or call", inhouse: "Business hours", rachel: "24/7/365" },
+                                            { feature: "Call Volume", voicemail: "Unlimited", virtual: "Plan allowance (e.g. 30–300 calls/mo at Smith.ai)", inhouse: "One call at a time", rachel: "Scoped to your call volume in the pilot" },
                                             { feature: "Lead Qualification", voicemail: "None", virtual: "Basic scripting", inhouse: "Trained judgment", rachel: "Custom AI qualification" },
-                                            { feature: "Appointment Booking", voicemail: "None", virtual: "Manual (adds cost)", inhouse: "Yes", rachel: "Automatic" },
-                                            { feature: "Setup Time", voicemail: "5 minutes", virtual: "1-2 weeks", inhouse: "2-4 weeks hiring", rachel: "30 minutes" },
-                                            { feature: "Consistency", voicemail: "N/A", virtual: "Varies by operator", inhouse: "Varies by person", rachel: "100% consistent" }
+                                            { feature: "Appointment Booking", voicemail: "None", virtual: "Varies by plan", inhouse: "Yes", rachel: "Automatic" },
+                                            { feature: "Setup Time", voicemail: "5 minutes", virtual: "Varies by provider", inhouse: "Hiring and training time", rachel: "Within 48 hours of the setup call" },
+                                            { feature: "Consistency", voicemail: "N/A", virtual: "Varies by operator", inhouse: "Varies by person", rachel: "Same instructions on every call" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -377,7 +377,7 @@ export default function BestAiReceptionistContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Rachel — AI Receptionist</h3>
                                         <p className="text-lg text-slate-700">
-                                            Rachel answers your business calls like your best employee — but she never takes a break, never calls in sick, and costs a fraction of a human hire.
+                                            Rachel answers your business calls like your best employee — but she never takes a break, never calls in sick, and starts with a refundable pilot.
                                         </p>
                                     </div>
                                 </div>
@@ -385,13 +385,13 @@ export default function BestAiReceptionistContent() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                                 {[
-                                    { icon: Zap, title: "Instant Pickup", desc: "Answers in under 1 second. No rings, no wait." },
-                                    { icon: MessageSquare, title: "Natural Conversation", desc: "Callers can't tell she's AI. Multi-turn dialogue." },
+                                    { icon: Zap, title: "Instant Pickup", desc: "Picks up every call, day or night." },
+                                    { icon: MessageSquare, title: "Natural Conversation", desc: "Natural multi-turn dialogue. We recommend telling callers it's an AI assistant." },
                                     { icon: Target, title: "Lead Qualification", desc: "Custom questions to score and qualify every caller." },
                                     { icon: Calendar, title: "Appointment Booking", desc: "Books directly into your calendar. No back-and-forth." },
-                                    { icon: ArrowRight, title: "Smart Routing", desc: "Urgent calls forwarded to your cell instantly." },
+                                    { icon: ArrowRight, title: "Smart Routing", desc: "Urgent calls forwarded to your cell under rules you set." },
                                     { icon: BarChart3, title: "Call Intelligence", desc: "Detailed analytics on every call. Trends and insights." },
-                                    { icon: Users, title: "Multi-Language", desc: "Supports English, Spanish, and more." },
+                                    { icon: Users, title: "English Only (Today)", desc: "Answers in English only today. Not offered as a HIPAA service." },
                                     { icon: Clock, title: "After-Hours Coverage", desc: "Works nights, weekends, and holidays." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -414,7 +414,7 @@ export default function BestAiReceptionistContent() {
                                     {
                                         title: "Medical Practices",
                                         icon: Shield,
-                                        desc: "Never miss a patient call. Book appointments and handle prescription refill requests 24/7.",
+                                        desc: "Book and reschedule appointments and answer general questions (hours, location) 24/7. Not a HIPAA service: clinical and patient-record calls belong with a HIPAA-covered service.",
                                         link: { href: "/blog/seo-for-doctors-dentists", label: "See our guide for medical practices" }
                                     },
                                     {
@@ -426,13 +426,13 @@ export default function BestAiReceptionistContent() {
                                     {
                                         title: "Home Services",
                                         icon: Phone,
-                                        desc: "Emergency plumbing call at midnight? Rachel books it instantly. No more lost emergency jobs.",
+                                        desc: "Emergency plumbing call at midnight? Rachel takes the details and alerts you under your rules, instead of sending it to voicemail.",
                                         link: null
                                     },
                                     {
                                         title: "Legal Firms",
                                         icon: FileText,
-                                        desc: "Screen potential clients, collect case details, and schedule consultations. Attorney-client privilege maintained.",
+                                        desc: "Screen potential clients, take basic intake details, and schedule consultations. Rachel does not give legal advice; have your firm set the intake rules.",
                                         link: null
                                     },
                                     {
@@ -469,13 +469,13 @@ export default function BestAiReceptionistContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Real Cost of Missed Calls</h2>
 
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl mb-8">
-                                <h3 className="font-bold text-slate-900 mb-4 text-lg">The Math Behind Missed Calls</h3>
+                                <h3 className="font-bold text-slate-900 mb-4 text-lg">The Math Behind Missed Calls (illustrative example; use your own numbers)</h3>
                                 <div className="space-y-3">
                                     {[
-                                        { label: "Missed calls/week (example)", value: "10" },
-                                        { label: "Most won't leave a voicemail", value: "up to 10 lost leads" },
-                                        { label: "Lead value (example)", value: "$300" },
-                                        { label: "Monthly lost revenue (4 weeks)", value: "up to $12,000", highlight: true }
+                                        { label: "Missed calls/week (example)", value: "6" },
+                                        { label: "If none leave a voicemail", value: "up to 6 lost leads" },
+                                        { label: "Value of a new customer (example)", value: "$200" },
+                                        { label: "Work at risk per month (4 weeks, example)", value: "up to $4,800", highlight: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className={`flex justify-between items-center py-2 px-4 rounded-lg ${item.highlight ? 'bg-primary-100 font-bold text-primary-800' : 'bg-white'}`}>
                                             <span className="text-slate-700">{item.label}</span>
@@ -487,24 +487,24 @@ export default function BestAiReceptionistContent() {
 
                             <div className="grid md:grid-cols-3 gap-6 mb-8">
                                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl text-center">
-                                    <div className="text-3xl font-bold text-red-600 mb-2">$4,200/mo</div>
+                                    <div className="text-3xl font-bold text-red-600 mb-2">Full salary</div>
                                     <p className="text-sm text-slate-700 font-medium">Human Receptionist</p>
                                     <p className="text-xs text-slate-500 mt-1">Salary + benefits + training</p>
                                 </div>
                                 <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl text-center">
                                     <div className="text-3xl font-bold text-amber-600 mb-2">$720/mo</div>
                                     <p className="text-sm text-slate-700 font-medium">Ruby Receptionist</p>
-                                    <p className="text-xs text-slate-500 mt-1">200 minutes/month plan (checked Oct 7, 2026)</p>
+                                    <p className="text-xs text-slate-500 mt-1">200 minutes/month plan (<a href="https://www.ruby.com/pricing/" target="_blank" rel="noopener noreferrer" className="underline">ruby.com/pricing</a>, checked Oct 6, 2026)</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
                                     <p className="text-sm text-green-800 font-medium">Rachel (Dooza)</p>
-                                    <p className="text-xs text-green-600 mt-1">Refundable pilot. Unlimited calls, 24/7. <Link href="/pricing" className="underline">See pricing</Link></p>
+                                    <p className="text-xs text-green-600 mt-1">Refundable pilot. Answers 24/7 in English. <Link href="/pricing" className="underline">See pricing</Link></p>
                                 </div>
                             </div>
 
                             <p className="text-lg font-bold text-slate-900 text-center">
-                                One captured lead can be worth more than a month of missed-call losses.
+                                Run your own numbers: missed calls a week × what a new customer is worth to you.
                             </p>
                         </section>
 
@@ -516,18 +516,18 @@ export default function BestAiReceptionistContent() {
                                 {[
                                     {
                                         step: "1",
-                                        title: "Start Your Pilot",
-                                        desc: "Create your account and meet your AI team. Every Dooza product starts with a refundable pilot — 100% refund within 14 days."
+                                        title: "Book Your Pilot Call",
+                                        desc: "Book a free 30-minute call to scope your pilot. Every Dooza product starts with a refundable pilot — 100% refund within 14 days."
                                     },
                                     {
                                         step: "2",
-                                        title: "Connect Your Phone",
-                                        desc: "Forward your business line to Rachel. Takes 5 minutes. Works with any phone system."
+                                        title: "We Set Up Rachel",
+                                        desc: "A Dooza engineer sets Rachel up with your business info and call rules. She is live on your existing line within 48 hours of the setup call."
                                     },
                                     {
                                         step: "3",
                                         title: "Start Capturing Leads",
-                                        desc: "Rachel answers your next call. You get a summary. Leads get booked. Revenue goes up."
+                                        desc: "Rachel answers your forwarded calls. You get a summary of each call. Leads get booked."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">

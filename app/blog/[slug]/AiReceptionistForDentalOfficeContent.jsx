@@ -38,9 +38,9 @@ import {
 } from 'lucide-react';
 
 const faqData = [
-    { question: "Is an AI receptionist HIPAA-compliant for dental offices?", answer: "Dooza's Rachel is designed with healthcare privacy in mind. She doesn't store patient health records, doesn't access your practice management system, and conversations are encrypted. She collects only the information needed to schedule appointments and triage urgency." },
-    { question: "Can the AI triage dental emergencies?", answer: "Yes. Rachel is configured with dental emergency protocols -- she asks the right questions (What happened? When? Pain level? Bleeding?), classifies urgency, and either books an emergency slot or provides after-hours instructions based on your practice's guidelines." },
-    { question: "How much does an AI receptionist cost compared to a dental front desk hire?", answer: "A dental front desk receptionist costs $3,500-4,500/month in salary alone, plus benefits and training. An answering service runs $500-1,200/month with limited hours. Dooza's Rachel gives you 24/7 call answering with dental-specific configuration for a fraction of either. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days." },
+    { question: "Is an AI receptionist HIPAA-compliant for dental offices?", answer: "Dooza's AI Receptionist is not offered as a HIPAA service, and Dooza does not sign a Business Associate Agreement (BAA). If your practice needs a HIPAA-covered phone vendor, choose one that signs a BAA. Rachel doesn't access your practice management system or store patient health records, uses encrypted connections, and collects only what is needed to book appointments and route urgent calls." },
+    { question: "Can the AI triage dental emergencies?", answer: "Rachel can sort urgent calls from routine ones using questions your practice approves (What happened? When? Pain level? Bleeding?). She then books an emergency slot, alerts the on-call dentist, or routes the caller to your emergency line. She takes a message and gives no medical or care advice: clinical questions go to your dental team." },
+    { question: "How much does an AI receptionist cost compared to a dental front desk hire?", answer: "A front desk hire means a full salary plus benefits and training, and covers business hours only. Human answering services price by minutes or calls: for example, PATLive starts at $189/month for 100 minutes and Smith.ai's virtual receptionists run $300-$2,100/month for 30-300 calls (vendor pricing pages, checked October 2026). Dooza's AI Receptionist answers 24/7. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "Can the AI handle dental insurance questions?", answer: "Rachel can be configured with your accepted insurance plans and common coverage questions. She tells callers whether you accept their insurance and what to bring to their appointment. For complex benefits questions, she routes the caller to your billing team." },
     { question: "Does the AI know the difference between a hygienist appointment and a dentist appointment?", answer: "Yes. During setup, you configure Rachel with your appointment types, durations, and provider assignments. She books cleanings with hygienists and procedures with dentists -- automatically matching the right provider to the right appointment type." }
 ];
@@ -107,7 +107,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                             Automating the <span className="text-primary-600">Front Desk</span>: How AI Handles Dental Emergencies & Scheduling
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Many dental calls come after hours, and many calls to small businesses go unanswered. An AI receptionist for your dental office picks up every call, triages emergencies, verifies insurance, and books the right appointment -- 24/7. Start with a refundable pilot: 100% refund within 14 days.
+                            Many dental calls come after hours, and many calls to small businesses go unanswered. An AI receptionist for your dental office picks up every call, routes emergencies, answers insurance questions, and books the right appointment -- 24/7. Start with a refundable pilot: 100% refund within 14 days.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -122,9 +122,7 @@ export default function AiReceptionistForDentalOfficeContent() {
 
                         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href={getProductSignupUrl('workforce')}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="/ai-receptionist/book"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
                                 Start your pilot
@@ -172,9 +170,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                             <div className="mt-8 pt-6 border-t border-slate-200">
                                 <p className="text-sm text-slate-600 mb-4">Never miss a patient call again</p>
                                 <a
-                                    href={getProductSignupUrl('workforce')}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    href="/ai-receptionist/book"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
                                     Start your pilot
@@ -197,10 +193,10 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     It's 10 PM on a Saturday night. A patient chips a tooth on a popcorn kernel. They grab their phone, call your office. Voicemail. They Google "emergency dentist near me" and book with your competitor.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    You just lost a patient -- and potentially <strong>$3,000+ in lifetime value</strong> -- because nobody answered the phone.
+                                    You just lost a patient -- and every visit they would have made over the years -- because nobody answered the phone.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    This isn't a hypothetical scenario. It happens to dental practices every single weekend. Many dental calls come after hours, and many calls to small businesses go unanswered entirely. That means a real share of your patients are calling when nobody is at the front desk -- and many of those calls are disappearing into voicemail purgatory.
+                                    That example is made up, but the pattern is common. Many dental calls come after hours, and many calls to small businesses go unanswered entirely. That means a real share of your patients are calling when nobody is at the front desk -- and many of those calls are disappearing into voicemail purgatory.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     <Link href="/blog/seo-for-doctors-dentists" className="text-primary-600 hover:underline font-medium">As we covered in our dental SEO guide</Link>, getting patients to find your practice online is only half the battle. The other half? Actually answering the phone when they call.
@@ -221,7 +217,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">The Real Cost of a Missed Call</h4>
                                             <p className="text-slate-700">
-                                                The average dental patient is worth <strong>$3,000-5,000 in lifetime value</strong> -- regular cleanings, X-rays, fillings, crowns, and referrals. Every missed call isn't just a missed appointment. It's a missed relationship that could have generated thousands in revenue over the next decade.
+                                                A new patient is rarely one appointment -- cleanings, X-rays, fillings, crowns, and referrals can follow for years. Every missed call isn't just a missed appointment. It's a missed relationship. Check your own records for what an average patient is worth to your practice.
                                             </p>
                                         </div>
                                     </div>
@@ -236,43 +232,34 @@ export default function AiReceptionistForDentalOfficeContent() {
                                 Your front desk receptionist is the first point of contact for every patient. But dental offices face a unique staffing challenge that makes consistent phone coverage nearly impossible.
                             </p>
 
-                            <div className="grid md:grid-cols-2 gap-6 mb-8">
-                                {[
-                                    { stat: "25-30%", label: "Annual turnover rate for dental front desk staff", source: "Dental Economics" },
-                                    { stat: "$3,000-5,000", label: "Cost to hire and train a single replacement", source: "ADA Practice Management" }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl text-center">
-                                        <div className="text-4xl font-bold text-red-600 mb-2">{item.stat}</div>
-                                        <p className="text-slate-700 font-medium mb-1">{item.label}</p>
-                                        <p className="text-xs text-red-500">{item.source}</p>
-                                    </div>
-                                ))}
-                            </div>
-
                             <div className="bg-red-50 border border-red-200 p-6 rounded-xl">
                                 <div className="flex items-start gap-3">
                                     <DollarSign className="w-6 h-6 text-red-600 shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="font-bold text-slate-900 mb-2">The True Cost: Do the Math</h4>
+                                        <h4 className="font-bold text-slate-900 mb-2">Do the Math With Your Own Numbers</h4>
                                         <p className="text-slate-700 mb-3">
-                                            If your practice misses just <strong>5 new patient calls per month</strong> -- which is conservative given the statistics above -- here's what that costs:
+                                            Illustrative formula, not a typical result. Use your own numbers:
                                         </p>
                                         <div className="space-y-2">
                                             <div className="flex justify-between items-center py-2 px-4 rounded-lg bg-white">
-                                                <span className="text-slate-700">Missed new patient calls/month</span>
-                                                <span className="text-slate-900 font-medium">5</span>
+                                                <span className="text-slate-700">Missed new-patient calls per month</span>
+                                                <span className="text-slate-900 font-medium">from your phone log</span>
                                             </div>
                                             <div className="flex justify-between items-center py-2 px-4 rounded-lg bg-white">
-                                                <span className="text-slate-700">Average patient lifetime value</span>
-                                                <span className="text-slate-900 font-medium">$4,000</span>
+                                                <span className="text-slate-700">x Share of those callers who book elsewhere</span>
+                                                <span className="text-slate-900 font-medium">your estimate</span>
+                                            </div>
+                                            <div className="flex justify-between items-center py-2 px-4 rounded-lg bg-white">
+                                                <span className="text-slate-700">x What a new patient is worth to your practice</span>
+                                                <span className="text-slate-900 font-medium">from your records</span>
                                             </div>
                                             <div className="flex justify-between items-center py-2 px-4 rounded-lg bg-red-100 font-bold text-red-800">
-                                                <span>Annual lost lifetime revenue</span>
-                                                <span className="text-xl">$240,000</span>
+                                                <span>= Revenue at risk each month</span>
+                                                <span className="text-xl">your number</span>
                                             </div>
                                         </div>
                                         <p className="text-sm text-red-600 mt-3">
-                                            That's a quarter million dollars walking out the door every year -- to competitors who simply answered the phone.
+                                            Not every missed caller is a lost patient, so be honest with the middle number.
                                         </p>
                                     </div>
                                 </div>
@@ -290,12 +277,12 @@ export default function AiReceptionistForDentalOfficeContent() {
 
                             <div className="grid gap-4 mb-8">
                                 {[
-                                    { icon: Clock, title: "24/7 Call Coverage", desc: "Including nights, weekends, and holidays. Dental emergencies don't follow business hours -- a knocked-out tooth at 9 PM needs immediate guidance, not a voicemail box." },
+                                    { icon: Clock, title: "24/7 Call Coverage", desc: "Including nights, weekends, and holidays. Dental emergencies don't follow business hours -- a knocked-out tooth at 9 PM needs to reach the on-call dentist, not a voicemail box." },
                                     { icon: AlertTriangle, title: "Emergency Triage Capability", desc: "The ability to ask the right questions and determine: is this urgent (needs to be seen today), moderate (book an emergency slot for tomorrow), or routine (schedule a regular appointment)?" },
-                                    { icon: Shield, title: "Insurance Verification", desc: "\"Do you take Delta Dental?\" \"Is Cigna accepted?\" \"What about MetLife?\" These are the most common first questions from new patients. If the phone can't answer them, the patient hangs up." },
+                                    { icon: Shield, title: "Insurance Questions", desc: "\"Do you take Delta Dental?\" \"Is Cigna accepted?\" \"What about MetLife?\" These are the most common first questions from new patients. If the phone can't answer them, the patient hangs up." },
                                     { icon: Calendar, title: "Smart Scheduling", desc: "Matching the right appointment type to the right provider -- cleanings with hygienists, procedures with dentists, emergencies with the first available slot. Not just blocking time, but intelligent routing." },
                                     { icon: Bell, title: "Appointment Reminders", desc: "No-shows cost dental practices thousands per month. Automated SMS reminders before appointments dramatically reduce missed visits and keep the schedule full." },
-                                    { icon: FileText, title: "HIPAA-Aware Call Handling", desc: "Patient privacy matters. Any phone system handling dental calls needs to be designed with healthcare privacy in mind -- no storing health records, encrypted conversations, and transparent data handling." }
+                                    { icon: FileText, title: "HIPAA-Aware Call Handling", desc: "Patient privacy matters. Ask any phone vendor whether it is a HIPAA service and signs a Business Associate Agreement (BAA) before patient calls go through it." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-4 bg-white border border-slate-200 p-5 rounded-xl hover:border-green-200 transition-colors">
                                         <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 shrink-0">
@@ -337,7 +324,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     {
                                         icon: AlertTriangle,
                                         title: "Emergency Triage",
-                                        desc: "Asks pain level, symptoms, and timing to classify urgency. Routes true emergencies to the on-call dentist. Provides immediate care instructions for everything else.",
+                                        desc: "Asks pain level, symptoms, and timing to classify urgency. Routes true emergencies to the on-call dentist or your emergency line. Takes a detailed message for everything else. Gives no medical or care advice.",
                                         color: "red"
                                     },
                                     {
@@ -355,7 +342,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     {
                                         icon: Bell,
                                         title: "Appointment Reminders",
-                                        desc: "Sends SMS reminders 48 hours and 2 hours before appointments. Reduces no-shows by 30% or more. Allows patients to confirm or reschedule via text.",
+                                        desc: "Can send SMS appointment reminders and let patients confirm or reschedule by text.",
                                         color: "amber"
                                     },
                                     {
@@ -399,9 +386,9 @@ export default function AiReceptionistForDentalOfficeContent() {
 
                         {/* Section 5: How AI Handles Dental Emergencies - TRANSFORMATION */}
                         <section id="emergency-handling" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">How AI Handles Dental Emergencies: 4 Real Scenarios</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">How AI Handles Dental Emergencies: 4 Example Scenarios</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                The real test of any dental phone system is how it handles emergencies. Here's exactly how an AI receptionist walks through the four most common dental emergency calls -- step by step.
+                                The real test of any dental phone system is how it handles emergencies. Example scenarios (illustrative, not customer calls): here's how an AI receptionist can walk through four common dental emergency calls -- step by step. In every case the AI takes a message or routes the call; care instructions come from your dentist.
                             </p>
 
                             {/* Scenario 1: Chipped Tooth - Moderate (Amber) */}
@@ -433,7 +420,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                                 <p className="text-sm text-amber-600 font-medium mb-1">Rachel classifies as MODERATE and responds:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- Books a Monday morning emergency slot with the dentist</li>
-                                                    <li>- Provides care instructions: "Avoid chewing on that side. If you have dental wax or sugar-free gum, you can cover the sharp edge to protect your tongue."</li>
+                                                    <li>- Takes a message for the dentist with what happened and the pain level (no care advice from the AI)</li>
                                                     <li>- Sends appointment confirmation via SMS</li>
                                                     <li>- Sends the dentist a summary of the call</li>
                                                 </ul>
@@ -471,8 +458,8 @@ export default function AiReceptionistForDentalOfficeContent() {
                                                 <p className="text-sm text-red-600 font-medium mb-1">Rachel classifies as URGENT and takes immediate action:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- Attempts to reach the on-call dentist via phone/text</li>
-                                                    <li>- Provides critical 30-minute reimplantation guidance: "Pick the tooth up by the crown -- the white part -- never the root. Rinse it gently with milk or saline. Try to place it back in the socket. If you can't, keep it in a glass of milk. Time is critical -- you have about 30 minutes for the best chance of saving the tooth."</li>
-                                                    <li>- If on-call dentist unreachable, provides nearest emergency dental clinic information</li>
+                                                    <li>- Takes the caller's name, number and what happened, and passes it straight to the dentist. Rachel gives no first-aid or care instructions: that is the dentist's call</li>
+                                                    <li>- If the on-call dentist is unreachable, routes the caller to the emergency line or clinic number your practice has set</li>
                                                     <li>- Sends urgent alert to the practice owner</li>
                                                 </ul>
                                             </div>
@@ -509,8 +496,8 @@ export default function AiReceptionistForDentalOfficeContent() {
                                                 <p className="text-sm text-green-600 font-medium mb-1">Rachel classifies as NON-URGENT and responds:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- Books a next-day appointment with the dentist</li>
-                                                    <li>- Advises temporary care: "Keep the crown safe and bring it with you. You can use temporary dental cement from any pharmacy -- Dentemp is a common brand -- to hold it in place until your appointment. Avoid chewing on that side."</li>
-                                                    <li>- Sends confirmation with appointment details and care instructions via SMS</li>
+                                                    <li>- Takes a message for the dentist about the crown (no care advice from the AI)</li>
+                                                    <li>- Sends confirmation with appointment details via SMS</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -551,7 +538,7 @@ export default function AiReceptionistForDentalOfficeContent() {
 
                             <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
                                 <p className="text-slate-700 font-medium text-center">
-                                    All four of these scenarios happened after business hours. Without an AI receptionist, every one of these patients would have reached voicemail -- and most would have called another practice instead.
+                                    These are scripted examples, not recordings of customer calls. The point: all four calls come after business hours, and without someone or something answering, each caller reaches voicemail.
                                 </p>
                             </div>
                         </section>
@@ -561,7 +548,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">HIPAA & Compliance: What You Need to Know</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    For any dental practice, patient privacy is non-negotiable. When considering an AI receptionist, HIPAA compliance is the first question -- and rightfully so. Here's how Rachel is designed with healthcare privacy at the core.
+                                    For any dental practice, patient privacy is non-negotiable. When considering an AI receptionist, HIPAA is the first question -- and rightfully so. The plain answer: <strong>Dooza's AI Receptionist is not offered as a HIPAA service, and Dooza does not sign a Business Associate Agreement (BAA).</strong> If your practice needs a HIPAA-covered phone vendor, choose one that signs a BAA. Here's what Rachel does and doesn't handle.
                                 </p>
                             </div>
 
@@ -571,7 +558,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                         <Shield size={28} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-4">Rachel's Privacy-First Design</h3>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-4">How Rachel Limits What She Handles</h3>
                                         <div className="space-y-4">
                                             {[
                                                 {
@@ -579,7 +566,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                                     desc: "Rachel doesn't store diagnoses, treatment history, or medical records. She handles scheduling and triage, not clinical data."
                                                 },
                                                 {
-                                                    title: "Encrypted Conversations",
+                                                    title: "Encrypted Connections",
                                                     desc: "Encrypted connections and your approval on anything sensitive."
                                                 },
                                                 {
@@ -614,7 +601,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The Key Distinction</h4>
                                         <p className="text-slate-700">
-                                            Rachel is a <strong>scheduling and triage tool</strong>, not a clinical tool. She doesn't give medical advice, doesn't access patient charts, and doesn't replace clinical judgment. She handles the administrative side of phone calls -- the same work your front desk receptionist does -- while routing clinical questions to your dental team.
+                                            Rachel is a <strong>scheduling and triage tool</strong>, not a clinical tool. She doesn't give medical or care advice, isn't a HIPAA service, doesn't access patient charts, and doesn't replace clinical judgment. She handles the administrative side of phone calls -- the same work your front desk receptionist does -- while routing clinical questions to your dental team.
                                         </p>
                                     </div>
                                 </div>
@@ -651,13 +638,13 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", desk: "$3,500-4,500", service: "$500-1,200", rachel: "Refundable pilot (see /pricing)" },
+                                            { feature: "Monthly Cost", desk: "Full salary + benefits", service: "$189-$2,100 (PATLive, Smith.ai; checked Oct 2026)", rachel: "Refundable pilot (see /pricing)" },
                                             { feature: "Availability", desk: "Business hours only", service: "Extended hours (varies)", rachel: "24/7/365" },
-                                            { feature: "Emergency Triage", desk: "Trained judgment", service: "Basic script only", rachel: "AI dental protocols" },
-                                            { feature: "Insurance Questions", desk: "Knowledgeable", service: "Usually can't answer", rachel: "Configured per practice" },
-                                            { feature: "Appointment Booking", desk: "Yes", service: "Message-taking only", rachel: "Automatic booking" },
-                                            { feature: "Setup Time", desk: "2-4 weeks hiring + training", service: "1-2 weeks", rachel: "Same day" },
-                                            { feature: "Consistency", desk: "Varies by person/day", service: "Varies by operator", rachel: "100% consistent" }
+                                            { feature: "Emergency Triage", desk: "Trained judgment", service: "Scripted (varies)", rachel: "Your approved questions + routing" },
+                                            { feature: "Insurance Questions", desk: "Knowledgeable", service: "Varies by vendor", rachel: "Configured per practice" },
+                                            { feature: "Appointment Booking", desk: "Yes", service: "Varies by vendor", rachel: "Automatic booking" },
+                                            { feature: "Setup Time", desk: "2-4 weeks hiring + training", service: "1-2 weeks", rachel: "Within 48 hours of setup call" },
+                                            { feature: "Consistency", desk: "Varies by person/day", service: "Varies by operator", rachel: "Follows your approved script" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -673,31 +660,31 @@ export default function AiReceptionistForDentalOfficeContent() {
                             {/* Pricing Cards */}
                             <div className="grid md:grid-cols-3 gap-6 mb-8">
                                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl text-center">
-                                    <div className="text-3xl font-bold text-red-600 mb-2">$3,500-4,500</div>
+                                    <div className="text-3xl font-bold text-red-600 mb-2">Full salary</div>
                                     <p className="text-sm text-slate-700 font-medium">Front Desk Receptionist</p>
                                     <p className="text-xs text-slate-500 mt-1">Salary + benefits + training</p>
                                     <p className="text-xs text-slate-500">Business hours only</p>
-                                    <p className="text-xs text-red-500 mt-2">$42,000-54,000/year</p>
+                                    <p className="text-xs text-red-500 mt-2">Plus hiring and training costs</p>
                                 </div>
                                 <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl text-center">
-                                    <div className="text-3xl font-bold text-amber-600 mb-2">$500-1,200</div>
-                                    <p className="text-sm text-slate-700 font-medium">Dental Answering Service</p>
+                                    <div className="text-3xl font-bold text-amber-600 mb-2">$189-2,100</div>
+                                    <p className="text-sm text-slate-700 font-medium">Human Answering Service</p>
                                     <p className="text-xs text-slate-500 mt-1">Limited call volume</p>
-                                    <p className="text-xs text-slate-500">No booking or triage</p>
-                                    <p className="text-xs text-amber-500 mt-2">$6,000-14,400/year</p>
+                                    <p className="text-xs text-slate-500">Booking varies by vendor</p>
+                                    <p className="text-xs text-amber-500 mt-2">PATLive, Smith.ai plans, checked Oct 2026</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
                                     <p className="text-xs text-green-700 font-bold mb-2">refundable pilot</p>
                                     <p className="text-sm text-green-800 font-medium">Rachel AI (Dooza)</p>
-                                    <p className="text-xs text-green-600 mt-1">Unlimited calls, 24/7</p>
+                                    <p className="text-xs text-green-600 mt-1">24/7 call answering</p>
                                     <p className="text-xs text-green-600">Emergency triage + booking</p>
                                     <p className="text-xs text-green-700 font-bold mt-2"><a href="/pricing" className="underline">Pricing depends on the product</a></p>
                                 </div>
                             </div>
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
-                                <p className="text-2xl font-bold text-green-700">Cover the phones 24/7 for a fraction of a full-time hire</p>
+                                <p className="text-2xl font-bold text-green-700">Cover the phones 24/7, with a refundable pilot</p>
                                 <p className="text-green-600 mt-2">And get 24/7 coverage, emergency triage, and smart scheduling included</p>
                             </div>
                         </section>
@@ -714,7 +701,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     <div>
                                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Rachel -- AI Receptionist for Dental Offices</h3>
                                         <p className="text-lg text-slate-700">
-                                            Rachel answers your practice phone like your best front desk employee -- but she never takes a day off, never puts a patient on hold, and costs a fraction of a front desk salary. She's specifically configurable for dental practices with emergency protocols, insurance knowledge, and smart provider matching.
+                                            Rachel answers your practice phone like your best front desk employee -- but she never takes a day off and never puts a patient on hold. She's specifically configurable for dental practices with emergency protocols, insurance knowledge, and smart provider matching.
                                         </p>
                                     </div>
                                 </div>
@@ -722,9 +709,9 @@ export default function AiReceptionistForDentalOfficeContent() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                                 {[
-                                    { icon: Zap, title: "Instant Pickup", desc: "Answers in under 1 second. No rings, no hold music, no voicemail." },
+                                    { icon: Zap, title: "Instant Pickup", desc: "Answers every call. No hold music, no voicemail." },
                                     { icon: AlertTriangle, title: "Emergency Triage", desc: "Dental emergency protocols classify urgency and route appropriately." },
-                                    { icon: Shield, title: "Insurance Knowledge", desc: "Knows your accepted plans. Answers coverage questions instantly." },
+                                    { icon: Shield, title: "Insurance Knowledge", desc: "Tells callers which plans you accept. Routes benefits questions to your team." },
                                     { icon: Calendar, title: "Smart Scheduling", desc: "Books hygienist vs. dentist appointments automatically." },
                                     { icon: MessageSquare, title: "SMS Reminders", desc: "Helps cut no-shows with automated appointment reminders." },
                                     { icon: UserPlus, title: "New Patient Intake", desc: "Collects info and sends forms before the first visit." },
@@ -752,7 +739,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                         <section id="getting-started" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Get Rachel Running for Your Dental Practice in 3 Steps</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                Setting up an AI receptionist for your dental office takes less time than a single patient appointment. Here's exactly how it works:
+                                Setting up starts with one free 30-minute call, and your line is live within 48 hours of it. Here's how it works:
                             </p>
 
                             <div className="space-y-4 mb-8">
@@ -760,7 +747,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     {
                                         step: "1",
                                         title: "Start Your Dooza Pilot",
-                                        desc: "Create your account at dooza.ai. You'll get access to Rachel and your full AI employee team. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+                                        desc: "Book a free pilot call. A Dooza engineer scopes your AI Receptionist pilot with you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
                                     },
                                     {
                                         step: "2",
@@ -770,7 +757,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     {
                                         step: "3",
                                         title: "Forward Your Office Phone Line to Rachel",
-                                        desc: "Set up call forwarding from your office phone to Rachel's number. Works with any phone system -- landline, VoIP, or cell. Takes about 5 minutes. Rachel answers your next call."
+                                        desc: "Set up call forwarding from your office phone to Rachel's number. Works with any phone system -- landline, VoIP, or cell. Your line is live within 48 hours of the setup call."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -786,10 +773,10 @@ export default function AiReceptionistForDentalOfficeContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Stop Losing Patients to Voicemail?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Every missed call is a missed patient. Every missed patient is $3,000-5,000 in lifetime revenue. Rachel answers every call, triages every emergency, and books every appointment. Start with a refundable pilot: 100% refund within 14 days.
+                                    Every missed call can be a missed patient. Rachel answers every call, routes emergencies, and books appointments. Start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
+                                    <a href="/ai-receptionist/book" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
                                         Start your pilot <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
@@ -816,13 +803,6 @@ export default function AiReceptionistForDentalOfficeContent() {
                         <section className="scroll-mt-28 border-t border-slate-200 pt-8">
                             <h3 className="text-xl font-bold text-slate-900 mb-4">Sources & References</h3>
                             <div className="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <h4 className="font-semibold text-slate-800 mb-3">Dental Industry Data</h4>
-                                    <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>- <a href="https://www.dentaleconomics.com/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Dental Economics -- Staff turnover rates in dental practices</a></li>
-                                        <li>- <a href="https://www.ada.org/resources/practice/practice-management" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">American Dental Association -- Practice management resources</a></li>
-                                    </ul>
-                                </div>
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">Healthcare Compliance</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
