@@ -82,7 +82,7 @@ const brandSchema = {
         logo: `${SITE_URL}/brand/dooza-icon.png`,
         description: 'Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.',
         foundingDate: '2025',
-        founder: { '@type': 'Person', name: 'Sibi Narendran' },
+        founder: { '@type': 'Person', name: 'Sibi Narendran', url: 'https://twitter.com/sibinarendran' },
         email: 'support@dooza.ai',
         address: {
             '@type': 'PostalAddress',
@@ -93,11 +93,9 @@ const brandSchema = {
             addressCountry: 'US',
         },
         sameAs: [
-            'https://twitter.com/sibinarendran',
             'https://www.linkedin.com/company/110144933/',
             'https://www.crunchbase.com/organization/dooza',
             'https://www.youtube.com/channel/UCWpF_BoN_rxwAQT32Cfra3g',
-            'https://www.g2.com/products/dooza',
         ],
     },
 };
