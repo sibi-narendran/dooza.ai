@@ -115,10 +115,8 @@ const organizationSchema = {
         url: 'https://twitter.com/sibinarendran',
     },
     sameAs: [
-        'https://twitter.com/sibinarendran',
         'https://www.linkedin.com/company/110144933/',
         'https://www.crunchbase.com/organization/dooza', 'https://www.youtube.com/channel/UCWpF_BoN_rxwAQT32Cfra3g',
-        'https://www.g2.com/products/dooza',
     ],
     contactPoint: [
         {
