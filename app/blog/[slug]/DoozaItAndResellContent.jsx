@@ -152,12 +152,12 @@ function InstagramEmbed({ permalink }) {
 
 // ─── FAQ Data ────────────────────────────────────────────────────────────────
 const faqData = [
-    { question: "How can I make money with AI in 2026?", answer: "The fastest way is the reseller model: pick one service (social media, SEO, email, lead generation, or phone answering), use an AI tool to deliver it on autopilot, and charge small businesses a flat monthly retainer. You keep the margin between the tool's cost and the client's retainer ($500–$2,000/month). With Dooza, pricing depends on the product, and every product starts with a refundable pilot: 100% refund within 14 days." },
-    { question: "Can I really resell AI tools as a service?", answer: "Yes — and it's how most modern AI agencies operate. You're not selling the tool; you're selling the outcome (posts published, leads booked, calls answered). Dooza, an AI-native company that builds AI products and services for small businesses, is designed so operators and agencies can deliver the work under their own brand." },
+    { question: "How can I make money with AI in 2026?", answer: "The fastest way is the reseller model: pick one service (social media, SEO, email, lead generation, or phone answering), use an AI tool to deliver it on autopilot, and charge small businesses a flat monthly retainer. You keep the margin between the tool's cost and the client's retainer. Retainers vary widely by city, niche and scope, and we haven't surveyed them. Before you set a price, look up 3–5 agencies or freelancers selling the same service to the same kind of client (their websites, Upwork, Clutch) and price against what they list. With Dooza, pricing depends on the product, and every product starts with a refundable pilot: 100% refund within 14 days." },
+    { question: "Can I really resell AI tools as a service?", answer: "Yes — and it's how most modern AI agencies operate. You're not selling the tool; you're selling the outcome (posts published, leads booked, calls answered). Dooza, an AI-native company that builds AI products and services for small businesses, can deliver that work for you; if you plan to deliver it to your own clients, confirm on the pilot call that your setup covers client work." },
     { question: "Do I need technical skills to start an AI side hustle?", answer: "No. With Dooza, an engineer scopes your pilot on a free 30-minute call and configures everything for you. You focus on finding clients and managing relationships. The AI handles execution. No coding, no prompt engineering, no infrastructure." },
-    { question: "What services sell best for an AI reseller business?", answer: "Six proven categories: social media management ($500–$2,000/mo), SEO content ($1,000–$5,000/mo), AI receptionist / call answering ($300–$800/mo), lead generation ($500–$1,500/mo), email management ($400–$1,000/mo), and appointment setting ($500–$1,200/mo)." },
-    { question: "How much money can you make reselling AI tools?", answer: "Three small clients on retainer can mean $2,800/month gross, and the AI tool is a small fraction of that. Scale to ten clients and you're at $10,000+/month. The constraint isn't execution (AI handles it) — it's sales." },
-    { question: "Is reselling AI tools legal and allowed?", answer: "Yes. Most AI employee platforms (including Dooza) explicitly encourage agencies, freelancers, and operators to use the service for client work. You own the client relationship; the AI does the work in the background." },
+    { question: "What services sell best for an AI reseller business?", answer: "Services small businesses already pay people for: social media management, SEO content, call answering, lead generation, email management and appointment setting. Prices vary widely, and we haven't surveyed them. Before you set a price, look up 3–5 agencies or freelancers selling the same service to the same kind of client (their websites, Upwork, Clutch) and price against what they list." },
+    { question: "How much money can you make reselling AI tools?", answer: "It depends on how many clients you sign and what they pay, and we have no survey of reseller incomes to quote. Work it out for yourself: (retainer you can charge − tool cost − your hours) × clients you can realistically sell. The constraint is usually sales, not delivery." },
+    { question: "Is reselling AI tools legal and allowed?", answer: "Selling a service you deliver with software is normal, but each tool has its own terms. Read them before you sign clients, and for Dooza ask on the free pilot call whether your client use is covered. You own the client relationship either way." },
 ];
 
 export default function DoozaItAndResellContent() {
@@ -285,10 +285,10 @@ export default function DoozaItAndResellContent() {
                                     Everyone wants to know how to make money with AI in 2026. Most of the advice is bad — build a wrapper app, sell a course, post AI-generated videos. The model that actually works is older and quieter: <strong>resell AI tools as a service</strong>.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    The idea is simple. Small businesses (dentists, salons, real estate agents, coaches, e-commerce shops) already pay humans $500–$5,000/month for tasks like social media, SEO, lead generation, and answering the phone. Modern AI tools can do those exact jobs for a fraction of that. The gap between those two numbers is your business.
+                                    The idea is simple. Small businesses (dentists, salons, real estate agents, coaches, e-commerce shops) already pay people every month for tasks like social media, SEO, lead generation, and answering the phone. AI tools can now do much of that work for less. The gap between those two numbers is your business.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    An influencer named Hamza (@hamza_clipss) summed up the whole model in a 20-second reel: <em>don&apos;t do the work yourself — let AI do it, and sell the output to other people</em>. We&apos;re going to expand that into a real playbook, with the math, the services that sell, and the exact tool we recommend (<Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>) for delivering the work.
+                                    An influencer named Hamza (@hamza_clipss) summed up the model in a short reel; paraphrased, it&apos;s: don&apos;t do the work yourself, let AI do it, and sell the output to other people. We&apos;re going to expand that into a real playbook, with how to price it, the services that sell, and the exact tool we recommend (<Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>) for delivering the work.
                                 </p>
                             </div>
                         </section>
@@ -311,8 +311,8 @@ export default function DoozaItAndResellContent() {
                                     <li><strong>Pick a service small businesses already pay for.</strong> Social media. SEO. Cold outbound. Receptionist. Email triage.</li>
                                     <li><strong>Configure a Dooza AI employee to do that one thing well.</strong> A Dooza engineer scopes it on a free 30-minute call, and you start with a refundable pilot — 100% refund within 14 days. You don&apos;t touch code.</li>
                                     <li><strong>Sell the output, not the tool.</strong> Your client doesn&apos;t need to know what&apos;s under the hood. They get posts, leads, blog articles, answered calls.</li>
-                                    <li><strong>Charge a service retainer.</strong> $500–$2,000/month is normal. Your tool cost is a fraction of that (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>).</li>
-                                    <li><strong>Repeat.</strong> One Dooza account can power the workflow for many clients if you keep configurations clean.</li>
+                                    <li><strong>Charge a service retainer.</strong> Price it against what 3–5 agencies or freelancers in your niche list for the same service. Know your tool cost before you quote (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>).</li>
+                                    <li><strong>Repeat.</strong> Add the next client once the first one is running without you checking every output.</li>
                                 </ol>
                                 <p>That&apos;s it. That&apos;s the entire reel, expanded.</p>
                             </div>
@@ -323,14 +323,14 @@ export default function DoozaItAndResellContent() {
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>Dooza ships six AI employees. Every one of them maps to a service small businesses already buy from humans:</p>
                                 <ul className="list-disc pl-6 space-y-2">
-                                    <li><strong>Social media manager</strong> → posts, captions, scheduling. Agencies charge $500–$2,000/month.</li>
-                                    <li><strong>SEO writer</strong> → ranking blog articles on autopilot. Retainers run $1,000–$5,000/month.</li>
-                                    <li><strong>AI receptionist</strong> → answers calls, books appointments. Services bill $300–$800/month.</li>
-                                    <li><strong>Cold outbound / lead gen</strong> → LinkedIn and email pipelines. $1,000–$3,000/month is the going rate.</li>
-                                    <li><strong>Email assistant</strong> → triage, replies, follow-ups. $400–$1,200/month.</li>
-                                    <li><strong>Legal admin</strong> → contracts, compliance docs. $500–$1,500/month.</li>
+                                    <li><strong>Social media manager</strong> → posts, captions, scheduling.</li>
+                                    <li><strong>SEO writer</strong> → blog articles drafted for review.</li>
+                                    <li><strong>AI receptionist</strong> → answers calls, books appointments.</li>
+                                    <li><strong>Cold outbound / lead gen</strong> → LinkedIn and email pipelines.</li>
+                                    <li><strong>Email assistant</strong> → triage, replies, follow-ups.</li>
+                                    <li><strong>Legal admin</strong> → contracts, compliance docs (drafts for a lawyer to review).</li>
                                 </ul>
-                                <p>You don&apos;t need to offer all six. Pick one. Get a client. Add the next.</p>
+                                <p>We haven&apos;t listed going rates because they vary too much by city and niche to quote honestly: check what local agencies list. You don&apos;t need to offer all six. Pick one. Get a client. Add the next.</p>
                             </div>
                         </section>
 
@@ -349,10 +349,10 @@ export default function DoozaItAndResellContent() {
                                     </div>
                                     <div>
                                         <div className="text-slate-400 text-sm mb-1">Client retainer</div>
-                                        <div className="text-3xl font-bold text-primary-400">$500–$2,000<span className="text-base text-slate-400">/mo</span></div>
+                                        <div className="text-3xl font-bold text-primary-400">Your price<span className="text-base text-slate-400"> (check local rates)</span></div>
                                     </div>
                                 </div>
-                                <p className="text-slate-300 text-center mt-6 italic">Prove it on your first client with a refundable pilot. Everything after is margin.</p>
+                                <p className="text-slate-300 text-center mt-6 italic">Prove it on your first client with a refundable pilot. Then price the next client from real numbers.</p>
                             </div>
                         </section>
 
