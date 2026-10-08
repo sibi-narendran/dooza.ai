@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 import { AdsFooter, AdsHeader, isAdsVisit, withSearchParams } from '@/components/ai-receptionist/AdsChrome';
 import DemoCallPlayer from '@/components/ai-receptionist/DemoCallPlayer';
 import FounderNote from '@/components/ai-receptionist/FounderNote';
@@ -108,9 +109,23 @@ export default function AiReceptionistPage({ searchParams }) {
         },
     };
 
+    const videoSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: 'What Is an AI Receptionist? How It Works in 5 Steps (+ What It Costs)',
+        description: "How an AI receptionist answers, qualifies, books and hands off a call in five steps, and what 100 calls a month costs on published plans. Made by Dooza.",
+        thumbnailUrl: ['https://i.ytimg.com/vi/g7nts4pBo4U/maxresdefault.jpg'],
+        uploadDate: '2026-10-08',
+        duration: 'PT4M8S',
+        embedUrl: 'https://www.youtube.com/embed/g7nts4pBo4U',
+        contentUrl: 'https://www.youtube.com/watch?v=g7nts4pBo4U',
+        author: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
+    };
+
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(RECEPTIONIST_FAQ)) }} />
 
             {adsMode ? <AdsHeader /> : <Navbar variant="light" />}
@@ -225,6 +240,17 @@ export default function AiReceptionistPage({ searchParams }) {
                                 </li>
                             ))}
                         </ol>
+                    </div>
+                </section>
+
+                {/* 6. Explainer video */}
+                <section id="video" className="px-4 py-16 sm:px-6 sm:py-24">
+                    <div className="mx-auto max-w-4xl">
+                        <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">What is an AI receptionist? The 4-minute version</h2>
+                        <p className="mt-4 text-base leading-relaxed text-slate-700">How a call is answered, qualified, booked and handed off, and what 100 calls a month costs on published plans.</p>
+                        <div className="mt-8">
+                            <YouTubeEmbed videoId="g7nts4pBo4U" title="What Is an AI Receptionist? How It Works in 5 Steps (+ What It Costs)" />
+                        </div>
                     </div>
                 </section>
 
