@@ -29,7 +29,7 @@ const pageUrl = `${SITE_URL}/workflow-automation`;
 
 export const metadata = {
     title: {
-        absolute: 'Dooza Agents Automation | The #1 Zapier Alternative with AI',
+        absolute: 'Done-for-You Zapier Alternative with AI | Dooza Agents',
     },
     description:
         'Workflow automation is a Dooza Agents service: Dooza engineers build and maintain AI-powered workflows across 1,000+ app integrations. Start with a refundable pilot: 100% refund within 14 days.',
@@ -52,7 +52,7 @@ export const metadata = {
         googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
     },
     openGraph: {
-        title: 'Dooza Agents Automation | The #1 Zapier Alternative with AI',
+        title: 'Done-for-You Zapier Alternative with AI | Dooza Agents',
         description: 'Build AI-powered workflows with 1,000+ app integrations. Visual builder, AI agents, and human-in-the-loop controls. Start with a refundable pilot.',
         url: pageUrl,
         siteName: 'Dooza',
@@ -61,7 +61,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Dooza Agents Automation | The #1 Zapier Alternative with AI',
+        title: 'Done-for-You Zapier Alternative with AI | Dooza Agents',
         description: 'Build AI-powered workflows with 1,000+ app integrations. Visual builder, AI agents, and human-in-the-loop controls.',
         images: [`${SITE_URL}/logo.png`],
     },
@@ -220,7 +220,7 @@ export default function WorkflowAutomationPage() {
                         <ScrollReveal>
                             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/80 px-4 py-2 text-sm font-bold text-primary-700 shadow-sm backdrop-blur">
                                 <Sparkles className="h-4 w-4" />
-                                The #1 Zapier Alternative with AI
+                                A Done-for-You Zapier Alternative with AI
                             </div>
                             <h1 className="mb-7 max-w-4xl mx-auto font-serif text-4xl font-extrabold leading-[1.06] tracking-tight text-slate-950 md:text-6xl lg:text-7xl">
                                 Automate everything with <span className="text-primary-600">AI workflows</span>

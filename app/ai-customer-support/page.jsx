@@ -34,7 +34,7 @@ const signupUrl = 'https://accounts.dooza.ai/signup';
 
 export const metadata = {
     title: {
-        absolute: 'AI Customer Support Automation | The #1 Zendesk Alternative | Dooza',
+        absolute: 'AI Customer Support Automation | A Zendesk Alternative | Dooza',
     },
     description:
         'AI customer support built and run by Dooza engineers. Answer routine tickets automatically, route sensitive ones to your team, and respond in seconds. Start with a refundable pilot: 100% refund within 14 days.',
@@ -57,7 +57,7 @@ export const metadata = {
         googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
     },
     openGraph: {
-        title: 'AI Customer Support Automation | The #1 Zendesk Alternative | Dooza',
+        title: 'AI Customer Support Automation | A Zendesk Alternative | Dooza',
         description: 'AI agents that handle customer support 24/7. Answer routine tickets automatically and respond in seconds. Start with a refundable pilot.',
         url: pageUrl,
         siteName: 'Dooza',
@@ -238,7 +238,7 @@ export default function AICustomerSupportPage() {
                             <ScrollReveal>
                                 <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/80 px-4 py-2 text-sm font-bold text-primary-700 shadow-sm backdrop-blur">
                                     <Sparkles className="h-4 w-4" />
-                                    The #1 Zendesk Alternative for AI-First Support
+                                    A Zendesk Alternative for AI-First Support
                                 </div>
                                 <h1 className="mb-7 max-w-xl font-serif text-4xl font-extrabold leading-[1.06] tracking-tight text-slate-950 md:text-6xl lg:text-7xl">
                                     AI support agents that <span className="text-primary-600">never sleep</span>
