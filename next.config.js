@@ -139,6 +139,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/workforce',
+        destination: '/ai-solutions-for-business',
+        permanent: true,
+      },
+      {
         source: '/press',
         destination: '/brand#press',
         permanent: false,

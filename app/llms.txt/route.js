@@ -14,11 +14,6 @@ const staticPages = [
         description: 'Dooza Agents: the AI agentic platform. Custom AI agents built and maintained by Dooza engineers. Starts with a refundable pilot: 100% refund within 14 days.',
     },
     {
-        title: 'Workforce',
-        url: `${SITE_URL}/workforce`,
-        description: 'Dooza Workforce: the AI workforce app. Ready-made AI employees for email, social, SEO, calls, and leads. Starts with a refundable pilot: 100% refund within 14 days.',
-    },
-    {
         title: 'Pricing',
         url: `${SITE_URL}/pricing`,
         description: 'Current Dooza plans and prices. Pricing depends on the product. Every plan starts as a refundable pilot: 100% refund within 14 days. No contracts.',
@@ -187,11 +182,6 @@ const staticPages = [
 
 const productPages = [
     {
-        title: 'Dooza Workforce (AI workforce app)',
-        url: `${SITE_URL}/workforce`,
-        description: 'Ready-made AI employees: Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation & sales outreach), Linda (legal documents), Rachel (phone calls & receptionist). Starts with a refundable pilot.',
-    },
-    {
         title: 'Dooza Agents (AI agentic platform)',
         url: SITE_URL,
         description: 'Custom AI agents built and maintained by Dooza engineers, live in days, with your approval on anything sensitive. Starts with a refundable pilot.',
@@ -273,7 +263,7 @@ const companyFacts = [
     'Founder: Sibi Narendran (https://sibinarendran.com)',
     'Brand colors: Dooza Teal #0F766E (primary), Teal Bright #0D9488, Ink #0F172A, Warm White #FAF9F7, Signal Amber #F59E0B',
     'What Dooza is: an AI-native company that builds AI products and services for small businesses',
-    'Products: Dooza Workforce (AI workforce app with ready-made AI employees) and Dooza Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
+    'Product: Dooza Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
     'Services (done for you): AI Receptionist, AI Customer Support, AI Visibility / GEO, Workflow Automation, industry solutions',
     'Offer: every product starts with a refundable pilot. The pilot is paid; ask within 14 days for a 100% refund. A Dooza engineer scopes it on a free 30-minute call.',
     `Pricing: depends on the product; current prices are listed only at ${SITE_URL}/pricing`,
