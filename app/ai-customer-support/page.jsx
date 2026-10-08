@@ -30,7 +30,7 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/Scroll
 import { SITE_URL } from '@/lib/site';
 
 const pageUrl = `${SITE_URL}/ai-customer-support`;
-const signupUrl = 'https://accounts.dooza.ai/signup';
+const signupUrl = '/book';
 
 export const metadata = {
     title: {

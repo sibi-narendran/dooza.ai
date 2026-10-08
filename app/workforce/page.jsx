@@ -50,7 +50,7 @@ const softwareSchema = {
     "applicationSubCategory": "AI Automation Platform",
     "operatingSystem": "Web, iOS, Android",
     "url": pageUrl,
-    "downloadUrl": "https://accounts.dooza.ai/signup?product=workforce",
+    "downloadUrl": "/book",
     "screenshot": `${SITE_URL}/logo.png`,
     "softwareVersion": "2.0",
     "releaseNotes": "AI Employees for business automation including email, social media, SEO, and lead generation",
@@ -179,7 +179,7 @@ const howToSchema = {
             "position": 1,
             "name": "Start Your Pilot",
             "text": "Create your Dooza account and start with a refundable pilot: 100% refund within 14 days. See plans at dooza.ai/pricing.",
-            "url": "https://accounts.dooza.ai/signup?product=workforce"
+            "url": "/book"
         },
         {
             "@type": "HowToStep",
