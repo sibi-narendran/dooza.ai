@@ -222,9 +222,9 @@ const researchPages = [
         url: `${SITE_URL}/new-trucking-companies`,
         description: 'Monthly count of new interstate for-hire carriers since 2021, by state and fleet size, and the share of each quarterly class that is inactive today. From the FMCSA Company Census, refreshed monthly, free to cite.',
     },    {
-        title: 'AI receptionist pricing comparison (21 services, checked October 6, 2026)',
+        title: 'AI receptionist pricing comparison (22 services, checked October 6–8, 2026)',
         url: `${SITE_URL}/blog/ai-receptionist-pricing`,
-        description: 'Entry prices, billing units and overage for 21 AI receptionist and answering services, checked on each vendor’s pricing page, plus what 100 calls a month costs on each.',
+        description: 'Entry prices, billing units and overage for 22 AI receptionist and answering services, checked on each vendor’s pricing page, plus what 100 calls a month costs on each.',
     },
     {
         title: 'AI receptionist cost calculator',
