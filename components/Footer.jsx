@@ -274,6 +274,10 @@ const Footer = ({ variant = 'light' }) => {
                     <p className={`text-center text-xs md:text-left ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
                         Dooza.ai is a product of Adam Laboratory Inc., a Delaware corporation.
                     </p>
+                    <p className={`text-center text-xs md:text-left ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
+                        Vendors: corrections or additions to our comparisons? Email{' '}
+                        <a href="mailto:achilles@dooza.org" className="underline">achilles@dooza.org</a>
+                    </p>
                     <div className={`flex gap-2 ${isDark ? 'text-gray-500' : 'text-slate-400'}`}>
                         <a
                             href="https://twitter.com/sibinarendran"
