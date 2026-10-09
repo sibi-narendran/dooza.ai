@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { getProductSignupUrl, CAL_BOOKING_URL } from '../../../lib/links';
+import { CAL_BOOKING_URL } from '../../../lib/links';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import BottomCTA from '../../../components/BottomCTA';
@@ -12,7 +12,6 @@ import {
     Umbrella,
     Car,
     Home,
-    HeartPulse,
     Briefcase,
     Timer,
     Moon,
@@ -61,9 +60,9 @@ export default function InsuranceAgentsContent({ page }) {
     ];
 
     const solutionBullets = [
-        'Answers every call 24/7: prospects, policyholders, and carriers',
+        'Answers calls when you can\'t: after hours, at lunch, while you\'re with a client',
         'Captures quote requests with line of business, current carrier, and renewal date',
-        'Handles policy questions and service requests using your agency\'s info',
+        'Answers routine agency questions (hours, address, how to send a document) from your agency\'s info; coverage questions go to a licensed agent',
         'Flags urgent claims in the message it takes for you',
         'Takes a clean message for you on every call'
     ];
@@ -72,12 +71,12 @@ export default function InsuranceAgentsContent({ page }) {
         {
             icon: Umbrella,
             title: 'Quote requests captured, ready to close',
-            description: 'Name, contact details, line of business, current carrier, and renewal date — collected on the first call and texted to you, so your callback is a quote, not an interview.'
+            description: 'Name, contact details, line of business, current carrier, and renewal date — collected on the first call, so your callback is a quote, not an interview.'
         },
         {
             icon: AlertTriangle,
             title: 'Urgent claims reach you, routine calls don\'t',
-            description: 'Accidents and property damage are flagged as urgent in the message it takes for you. Billing questions, ID card requests, and certificate inquiries get handled without interrupting you.'
+            description: 'Accidents and property damage are flagged as urgent in the message it takes for you. Billing questions and ID-card or certificate requests are taken as a message for your CSR, without interrupting you.'
         },
         {
             icon: Shield,
@@ -99,21 +98,19 @@ export default function InsuranceAgentsContent({ page }) {
         },
         {
             number: '2',
-            title: 'Set your lines, carriers & escalation rules',
+            title: 'Set your lines, carriers & urgent-call rules',
             description: 'Tell the AI which lines of business you write, your appointment availability, and what counts as urgent. It learns your agency inside and out.'
         },
         {
             number: '3',
             title: 'Go live and every call gets answered',
-            description: 'From the moment you flip the switch, every quote request, policy question, and claim call is answered professionally. You get text summaries so you stay in control.'
+            description: 'From the moment you flip the switch, every quote request, service request and claim call gets a professional answer and a clean message for your team.'
         }
     ];
 
     const segments = [
         { name: 'Auto & Home', icon: Car, color: 'bg-blue-100 text-blue-700 border-blue-200' },
-        { name: 'Life & Health', icon: HeartPulse, color: 'bg-red-100 text-red-700 border-red-200' },
         { name: 'Commercial Lines', icon: Briefcase, color: 'bg-amber-100 text-amber-700 border-amber-200' },
-        { name: 'Medicare & Senior', icon: Shield, color: 'bg-green-100 text-green-700 border-green-200' },
         { name: 'P&C Agencies', icon: Home, color: 'bg-purple-100 text-purple-700 border-purple-200' },
         { name: 'Independent Brokerages', icon: CalendarCheck, color: 'bg-slate-100 text-slate-700 border-slate-200' }
     ];
@@ -143,7 +140,7 @@ export default function InsuranceAgentsContent({ page }) {
                         </p>
 
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            AI Answering Service for <span className="text-primary-600">Independent Insurance Agents</span>: Every Quote, Claim &amp; Renewal Call Answered 24/7
+                            AI Answering Service for <span className="text-primary-600">Independent Insurance Agencies</span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10">
@@ -152,12 +149,11 @@ export default function InsuranceAgentsContent({ page }) {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href={getProductSignupUrl('workforce')}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href={CAL_BOOKING_URL}
+                                onClick={handleAction}
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                             >
-                                Get Started
+                                Start your pilot
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
@@ -175,8 +171,8 @@ export default function InsuranceAgentsContent({ page }) {
             {/* Answer-first block for AI engines and searchers: the sub-question, answered in one paragraph. */}
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
-                    <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI answering service for insurance agents do?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI answering service for insurance agents answers every call 24/7, captures quote requests with line of business, current carrier and renewal date, handles routine policy questions from your agency’s information, and flags urgent claims. Dooza sets it up for you, and it takes a message for you on every call. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI answering service for an insurance agency do?</h2>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI answering service for an independent insurance agency picks up the calls your team can’t: quote shoppers, policyholders reporting a claim, and service requests after hours or while you’re with a client. It takes down what you need to call back ready (name, line of business, current carrier, renewal date; for claims, policy number, date of loss and whether anyone is hurt), flags urgent claims in the message it takes for you, and leaves every coverage question to your licensed staff. It does not quote, bind or interpret coverage, the same line most states draw for unlicensed agency staff. Dooza sets it up for you on your existing number during a refundable pilot: 100% refund within 14 days. It answers in English only today.</p>
                     <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
                 </div>
             </section>
@@ -224,7 +220,7 @@ export default function InsuranceAgentsContent({ page }) {
                                 What Dooza AI Does for You
                             </h2>
                             <p className="text-lg text-slate-600">
-                                An AI agent that answers like your best front-office hire, works 24/7, and never takes a day off.
+                                An AI agent that answers like your best front-office hire and leaves every coverage question to your licensed staff.
                             </p>
                         </div>
 
@@ -322,7 +318,7 @@ export default function InsuranceAgentsContent({ page }) {
                             Built for Every Line of Business
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Dooza AI works for independent agents and brokerages across personal, commercial, and senior lines.
+                            Dooza AI works for independent agents and brokerages across personal and commercial lines.
                         </p>
                     </div>
 
@@ -340,6 +336,42 @@ export default function InsuranceAgentsContent({ page }) {
                 </div>
             </section>
 
+            {/* Licensing: what an unlicensed answerer may and may not do (citable block, sourced). */}
+            <section className="py-16 md:py-24 bg-white">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight text-center">
+                        What an Answering Service May Say for a Licensed Agency
+                    </h2>
+                    <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 text-center">
+                        An AI agent, like an unlicensed CSR, is not a licensed producer. Dooza scripts it to stay on the right side of that line.
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="border border-green-200 bg-green-50 rounded-2xl p-6">
+                            <h3 className="text-lg font-bold text-slate-900 mb-3">Can do</h3>
+                            <ul className="space-y-2 text-slate-700">
+                                <li>Take quote details (line, carrier, renewal date)</li>
+                                <li>Take first notice of a claim and pass it to you</li>
+                                <li>Take change requests for a producer to review</li>
+                                <li>Take a callback request with the best time</li>
+                            </ul>
+                        </div>
+                        <div className="border border-amber-200 bg-amber-50 rounded-2xl p-6">
+                            <h3 className="text-lg font-bold text-slate-900 mb-3">Leaves to your licensed staff</h3>
+                            <ul className="space-y-2 text-slate-700">
+                                <li>Quoting a premium</li>
+                                <li>Comparing carriers or products</li>
+                                <li>Advising on limits or coverage needs</li>
+                                <li>Interpreting a policy or saying whether a loss is covered</li>
+                                <li>Binding coverage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p className="mt-6 text-sm text-slate-500">
+                        Sources: <a href="https://risk.uticanational.com/eo/loss-control-articles/eo-tip-know-what-activities-an-unlicensed-csr-can-perform" className="underline" rel="noopener" target="_blank">Utica National E&amp;O tip on unlicensed CSRs</a> and <a href="https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-69B-222-060" className="underline" rel="noopener" target="_blank">Florida Admin. Code 69B-222.060</a> (checked Oct 9, 2026). Rules vary by state; check yours. This is not legal advice.
+                    </p>
+                </div>
+            </section>
+
             {/* =============================== */}
             {/* 8. CTA SECTION                  */}
             {/* =============================== */}
@@ -349,16 +381,15 @@ export default function InsuranceAgentsContent({ page }) {
                         Stop Losing Policies to a Busy Line
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
-                        A missed call can be a quote your competitor writes. Dooza AI answers every call and captures every detail, so you never miss an opportunity.
+                        A missed call can be a quote your competitor writes. Dooza AI picks up when you can't and captures the details, so your callback is ready to quote.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                            href={getProductSignupUrl('workforce')}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href={CAL_BOOKING_URL}
+                            onClick={handleAction}
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Get Started
+                            Start your pilot
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
