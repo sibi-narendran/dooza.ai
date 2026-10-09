@@ -445,7 +445,7 @@ export default function BestAiReceptionistContent() {
                                         title: "E-commerce",
                                         icon: DollarSign,
                                         desc: "Product questions, order status, returns — handled instantly without a call center.",
-                                        link: null
+                                        link: { href: "https://www.ringly.io/blog/ai-receptionist-for-ecommerce", label: "Ringly's guide: AI receptionist for ecommerce" }
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-slate-50 border border-slate-200 p-6 rounded-xl">
