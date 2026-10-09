@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: "Does the AI send appointment confirmations via text?",
-        answer: "Yes. After booking, Rachel sends an automatic SMS confirmation with appointment details, salon address, and any prep instructions. She also handles reminder texts to reduce no-shows."
+        answer: "Rachel confirms every booking with the client on the call: date, time, stylist and salon address. Reminder texts depend on your booking system; we check yours on the setup call."
     },
     {
         question: "Will clients know they're talking to an AI?",
@@ -398,8 +398,8 @@ export default function AiReceptionistForSalonsContent() {
                                     },
                                     {
                                         icon: Send,
-                                        title: "Sends SMS Confirmations",
-                                        desc: "Clients get an instant text with appointment details, stylist name, salon address, and prep instructions. Reminder texts can go out before the appointment."
+                                        title: "Confirms Bookings on the Call",
+                                        desc: "Before the client hangs up, Rachel reads back the date, time, stylist and salon address, plus any prep instructions."
                                     },
                                     {
                                         icon: RefreshCw,
@@ -470,7 +470,7 @@ export default function AiReceptionistForSalonsContent() {
                                                     "Rachel: 'Thanks for calling! How can I help you today?'",
                                                     "Client: 'I need highlights — how much and when?'",
                                                     "Rachel quotes $145 for partial highlights, offers Thursday at 10 AM with your colorist Sarah",
-                                                    "Client books. Gets an SMS confirmation."
+                                                    "Client books. Rachel confirms the time on the call."
                                                 ].map((item, idx) => (
                                                     <li key={idx} className="flex items-start gap-2 text-sm text-slate-600">
                                                         <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
@@ -519,7 +519,7 @@ export default function AiReceptionistForSalonsContent() {
                                                     "Rachel: 'I can help you reschedule! Let me check availability.'",
                                                     "Finds Saturday at 1 PM with the same stylist",
                                                     "Client confirms. Calendar updates instantly.",
-                                                    "SMS confirmation sent. No phone tag. No no-show."
+                                                    "Confirmed on the call. No phone tag."
                                                 ].map((item, idx) => (
                                                     <li key={idx} className="flex items-start gap-2 text-sm text-slate-600">
                                                         <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
@@ -617,7 +617,7 @@ export default function AiReceptionistForSalonsContent() {
                                                     "Rachel picks up instantly during peak hours",
                                                     "Checks availability: 'We have a 3 PM opening with Jessica.'",
                                                     "Client: 'Perfect — that gives me time before my event!'",
-                                                    "Booked, confirmed via SMS, stylist notified."
+                                                    "Booked and confirmed on the call."
                                                 ].map((item, idx) => (
                                                     <li key={idx} className="flex items-start gap-2 text-sm text-slate-600">
                                                         <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
@@ -659,7 +659,7 @@ export default function AiReceptionistForSalonsContent() {
                                             { factor: "Salon Knowledge", desk: "Requires training", virtual: "Scripted (varies)", rachel: "Configured with your full menu" },
                                             { factor: "Stylist Matching", desk: "If trained properly", virtual: "Varies by vendor", rachel: "Automatic, rules-based" },
                                             { factor: "Booking", desk: "Yes, when free", virtual: "Varies by vendor", rachel: "Books during the call" },
-                                            { factor: "SMS Confirmations", desk: "Manual", virtual: "Varies by vendor", rachel: "Automatic" },
+                                            { factor: "Booking Confirmation", desk: "Manual", virtual: "Varies by vendor", rachel: "Read back on the call" },
                                             { factor: "Sick Days / Vacations", desk: "Yes (PTO, sick days)", virtual: "N/A (shared pool)", rachel: "Never" },
                                             { factor: "Handles Rescheduling", desk: "Yes", virtual: "Varies by vendor", rachel: "Yes, during the call" }
                                         ].map((row, idx) => (
@@ -742,7 +742,7 @@ export default function AiReceptionistForSalonsContent() {
                                     { icon: ListChecks, title: "Service Menu Knowledge", desc: "Knows every service, price, and duration you offer." },
                                     { icon: UserCheck, title: "Stylist Matching", desc: "Routes clients to the right stylist based on specialty and availability." },
                                     { icon: Calendar, title: "Appointment Booking", desc: "Books the correct time slot for each service. No double-bookings." },
-                                    { icon: Send, title: "SMS Confirmations", desc: "Instant text with date, time, stylist, and prep instructions." },
+                                    { icon: Send, title: "Booking Confirmation", desc: "Reads back the date, time, stylist and prep instructions before the call ends." },
                                     { icon: RefreshCw, title: "Reschedule Handling", desc: "Manages changes and cancellations without phone tag." },
                                     { icon: Moon, title: "After-Hours Coverage", desc: "Nights, weekends, holidays — Rachel never clocks out." }
                                 ].map((item, idx) => (
@@ -769,7 +769,7 @@ export default function AiReceptionistForSalonsContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Setting up Rachel for your salon starts with one free 30-minute call, and your line is live within 48 hours of it. As we covered in our <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">guide to automating business processes</Link>, the best automation tools are the ones that are quick to set up and easy to measure.
+                                    Setting up Rachel for your salon starts with one free 30-minute call, and we set it up on your line with you during the pilot. As we covered in our <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">guide to automating business processes</Link>, the best automation tools are the ones that are quick to set up and easy to measure.
                                 </p>
                             </div>
 
@@ -788,7 +788,7 @@ export default function AiReceptionistForSalonsContent() {
                                     {
                                         step: "3",
                                         title: "Forward Your Phone Line",
-                                        desc: "Set up call forwarding from your salon phone to Rachel. Works with any phone provider, and your line is live within 48 hours of the setup call. From then on, every call is answered — even when every chair is full."
+                                        desc: "Set up call forwarding from your salon phone to Rachel. Works with any phone provider, and we set it up with you during the pilot. From then on, every call is answered — even when every chair is full."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">

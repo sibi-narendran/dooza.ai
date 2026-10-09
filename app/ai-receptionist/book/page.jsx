@@ -13,7 +13,7 @@ const pageUrl = `${SITE_URL}/ai-receptionist/book`;
 export const metadata = {
     title: { absolute: 'Book Your Free AI Receptionist Pilot Call | Dooza' },
     description:
-        'Book a free 30-minute pilot call. Then start a refundable pilot: your AI receptionist is set up and live on your line within 48 hours, with a 100% refund within 14 days.',
+        'Book a free 30-minute pilot call. Then start a refundable pilot: we set up your AI receptionist on your line with you, with a 100% refund within 14 days.',
     alternates: { canonical: pageUrl },
     robots: { index: false, follow: true },
     openGraph: {
@@ -27,7 +27,7 @@ export const metadata = {
 
 const PROMISES = [
     { icon: Timer, text: '30-minute meeting to collect your questions, hours, and calendar.' },
-    { icon: CalendarClock, text: 'Set up and live on your line within 48 hours. Works with any phone.' },
+    { icon: CalendarClock, text: 'Set up on your line with you during the pilot. Works with any phone.' },
     { icon: CreditCard, text: 'The call is free. The pilot is paid, with a 100% refund within 14 days.' },
 ];
 

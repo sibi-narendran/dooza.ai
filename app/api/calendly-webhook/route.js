@@ -200,7 +200,7 @@ async function sendConfirmationSms(apiKey, leadId, phone, firstName, when) {
     if (process.env.AI_RECEPTIONIST_CONFIRM_SMS === '0') return false;
     const marker = `booked for ${when}`;
     if (await alreadyTexted(apiKey, leadId, marker)) return false;
-    const text = `Hi ${firstName}, Sibi from Dooza. You're ${marker}. Your AI receptionist goes live within 48 hours of the call. Reply here with any questions.`;
+    const text = `Hi ${firstName}, Sibi from Dooza. You're ${marker}. We'll set up your AI receptionist with you during the pilot. Reply here with any questions.`;
     await closeFetch(apiKey, '/activity/sms/', {
         method: 'POST',
         body: JSON.stringify({
@@ -308,7 +308,7 @@ async function handleCreated(apiKey, payload) {
                 method: 'POST',
                 body: JSON.stringify({
                     lead_id: leadId,
-                    text: `AI receptionist pilot setup call with ${name}${business ? ` (${business})` : ''}. Collect questions, hours, calendar. Live within 48 hours.`,
+                    text: `AI receptionist pilot setup call with ${name}${business ? ` (${business})` : ''}. Collect questions, hours, calendar. Set up with them during the pilot.`,
                     date: event.start_time,
                     is_complete: false,
                 }),

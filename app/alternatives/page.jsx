@@ -27,7 +27,7 @@ export default function AlternativesPage() {
             slug: null,
             directLink: '/smith-ai-alternatives',
             tagline: '6 human and AI answering options, prices checked October 2026',
-            doozaAdvantage: 'AI receptionist set up for you in 48 hours, refundable pilot'
+            doozaAdvantage: 'AI receptionist set up for you on your line, refundable pilot'
         },
         {
             name: 'Marblism Alternatives',

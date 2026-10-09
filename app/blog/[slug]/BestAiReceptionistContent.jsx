@@ -349,7 +349,7 @@ export default function BestAiReceptionistContent() {
                                             { feature: "Call Volume", voicemail: "Unlimited", virtual: "Plan allowance (e.g. 30–300 calls/mo at Smith.ai)", inhouse: "One call at a time", rachel: "Scoped to your call volume in the pilot" },
                                             { feature: "Lead Qualification", voicemail: "None", virtual: "Basic scripting", inhouse: "Trained judgment", rachel: "Custom AI qualification" },
                                             { feature: "Appointment Booking", voicemail: "None", virtual: "Varies by plan", inhouse: "Yes", rachel: "Automatic" },
-                                            { feature: "Setup Time", voicemail: "5 minutes", virtual: "Varies by provider", inhouse: "Hiring and training time", rachel: "Within 48 hours of the setup call" },
+                                            { feature: "Setup Time", voicemail: "5 minutes", virtual: "Varies by provider", inhouse: "Hiring and training time", rachel: "Set up with you during the pilot" },
                                             { feature: "Consistency", voicemail: "N/A", virtual: "Varies by operator", inhouse: "Varies by person", rachel: "Same instructions on every call" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -522,7 +522,7 @@ export default function BestAiReceptionistContent() {
                                     {
                                         step: "2",
                                         title: "We Set Up Rachel",
-                                        desc: "A Dooza engineer sets Rachel up with your business info and call rules. She is live on your existing line within 48 hours of the setup call."
+                                        desc: "A Dooza engineer sets Rachel up with your business info and call rules. She is set up on your existing line with you during the pilot."
                                     },
                                     {
                                         step: "3",

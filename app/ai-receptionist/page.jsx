@@ -63,16 +63,16 @@ export const metadata = {
 const WHAT_IT_DOES = [
     { icon: PhoneCall, text: 'Answers every call in your company name, day and night, while you are on the tools.' },
     { icon: ListChecks, text: 'Asks what you would ask: address, what is wrong, how urgent, owner or tenant.' },
-    { icon: CalendarCheck, text: 'Books the job straight into your calendar or dispatch software.' },
-    { icon: MessageSquareText, text: 'Texts the caller a confirmation.' },
-    { icon: UserRound, text: 'Hands off to you or your dispatcher anytime, on the caller\'s request or by your rules.' },
+    { icon: CalendarCheck, text: 'Books the job on your Google or Outlook calendar.' },
+    { icon: MessageSquareText, text: 'Confirms the time and address with the caller before hanging up.' },
+    { icon: UserRound, text: 'Takes a message for you when a caller asks for a person.' },
     { icon: ShieldCheck, text: 'Never quotes a price or gives advice you have not approved.' },
 ];
 
 const PILOT_STEPS = [
     'Book a free 30-minute meeting. We collect your questions, hours, and calendar.',
-    'We set it up for you within 48 hours. Nothing for you to build.',
-    'It runs on your real calls. You listen to the recordings.',
+    'We set it up on your line with you during the pilot. Nothing for you to build.',
+    'It runs on your real calls.',
     'Not useful? Ask within 14 days and you get a 100% refund.',
 ];
 
@@ -104,7 +104,7 @@ export default function AiReceptionistPage({ searchParams }) {
         offers: {
             '@type': 'Offer',
             name: 'Refundable pilot',
-            description: 'Refundable pilot: set up and live on your line within 48 hours; 100% refund within 14 days. Pricing depends on the product; see https://www.dooza.ai/pricing.',
+            description: 'Refundable pilot: set up on your line with you; 100% refund within 14 days. Pricing depends on the product; see https://www.dooza.ai/pricing.',
             availability: 'https://schema.org/InStock',
         },
     };
@@ -150,7 +150,7 @@ export default function AiReceptionistPage({ searchParams }) {
                             </Link>
                         </div>
                         <p className="mt-5 text-sm font-medium text-slate-600">
-                            Refundable pilot: live on your line within 48 hours. 100% refund within 14 days.
+                            Refundable pilot: set up on your line with you. 100% refund within 14 days.
                         </p>
                     </div>
                 </section>

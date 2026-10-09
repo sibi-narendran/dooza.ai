@@ -54,9 +54,9 @@ export default function SalonsContent({ page }) {
     const solutions = [
         'Answers every call, instantly — no hold music, no voicemail',
         'Books appointments into your calendar, with the stylist the client asks for',
-        'Reschedules on your calendar and texts the confirmation',
+        'Reschedules on your calendar and confirms the new time on the call',
         'Answers pricing and service questions with only the answers you approve',
-        'Takes a message and texts you, or transfers the call, when a caller needs a person'
+        'Takes a message for you when a caller needs a person'
     ];
 
     const benefits = [
@@ -73,7 +73,7 @@ export default function SalonsContent({ page }) {
         {
             icon: CalendarCheck,
             title: 'Messages, Not Voicemail',
-            description: 'When a caller needs you, it takes a message and texts you, or transfers the call.'
+            description: 'When a caller needs you, it takes a message for you.'
         },
         {
             icon: DollarSign,
@@ -95,8 +95,8 @@ export default function SalonsContent({ page }) {
         },
         {
             number: '3',
-            title: 'Live within 48 hours',
-            description: 'It starts answering calls and booking appointments on your line within 48 hours of the setup call.'
+            title: 'Set up with you during the pilot',
+            description: 'We set it up on your line with you during the pilot, and it starts answering calls and booking appointments.'
         }
     ];
 
@@ -125,7 +125,7 @@ export default function SalonsContent({ page }) {
             period: ' · 100% refund in 14 days',
             tint: 'bg-green-50 border-green-300 ring-2 ring-green-200',
             priceColor: 'text-green-600',
-            features: ['24/7 call answering', 'Books into your calendar', 'Takes messages and texts you', 'Set up on your services and policies'],
+            features: ['24/7 call answering', 'Books into your calendar', 'Takes messages for you', 'Set up on your services and policies'],
             crossed: false,
             highlight: true
         }
@@ -187,7 +187,7 @@ export default function SalonsContent({ page }) {
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
                     <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI receptionist for salons do?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI receptionist for salons answers every call 24/7, books appointments into your calendar, texts the booking confirmation, and takes a message or transfers the call when a caller needs a person. Dooza sets it up on your existing number and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI receptionist for salons answers every call 24/7, books appointments into your calendar, confirms the booking with the caller on the call, and takes a message when a caller needs a person. Dooza sets it up on your existing number and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
                     <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
                 </div>
             </section>
@@ -271,7 +271,7 @@ export default function SalonsContent({ page }) {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            Live on Your Line Within 48 Hours
+                            Set Up on Your Line With You
                         </h2>
                         <p className="text-lg text-slate-600">
                             No IT team needed. We do the setup.

@@ -508,7 +508,7 @@ export default function AiForRealEstateAgentsContent() {
                                         <div>
                                             <h3 className="font-bold text-slate-900 text-xl mb-2">Rachel - AI Receptionist</h3>
                                             <p className="text-slate-600 mb-4">
-                                                Never miss another lead call. Rachel answers your phone 24/7, qualifies buyers and sellers, books showings, and transfers urgent calls to you. She sounds natural and knows your listings inside out.
+                                                Never miss another lead call. Rachel answers your phone 24/7, qualifies buyers and sellers, books showings, and takes a message for you on urgent calls. She sounds natural and knows your listings inside out.
                                             </p>
                                             <div className="bg-slate-50 p-4 rounded-lg">
                                                 <p className="text-sm text-slate-700">

@@ -70,7 +70,7 @@ const OPTIONS = [
         url: '/ai-receptionist',
         price: 'Pricing depends on the product; see /pricing',
         evaluate: 'Refundable pilot: 100% refund within 14 days',
-        bestFor: 'Busy owners who want it set up for them: we configure it on your line within 48 hours and tune it on your real calls.',
+        bestFor: 'Busy owners who want it set up for them: we set it up on your line with you and tune it on your real calls.',
         cost60: 'see /pricing',
     },
 ];
@@ -78,7 +78,7 @@ const OPTIONS = [
 const faqData = [
     {
         question: 'What are the best Smith.ai alternatives?',
-        answer: `For live human answering: PATLive (from $49/mo pay as you go, 14-day free trial) and Ruby (from $250/mo for 50 minutes). For AI answering: Smith.ai's own AI Receptionist (free plan, Pro $150/mo for 75 calls), Goodcall ($79/mo, unlimited minutes, 100 unique customers), My AI Front Desk ($99/mo for 200 minutes), and Dooza (done for you, live on your line within 48 hours, refundable pilot). Prices checked ${CHECKED} on each vendor's pricing page.`,
+        answer: `For live human answering: PATLive (from $49/mo pay as you go, 14-day free trial) and Ruby (from $250/mo for 50 minutes). For AI answering: Smith.ai's own AI Receptionist (free plan, Pro $150/mo for 75 calls), Goodcall ($79/mo, unlimited minutes, 100 unique customers), My AI Front Desk ($99/mo for 200 minutes), and Dooza (done for you, set up on your line with you during a refundable pilot). Prices checked ${CHECKED} on each vendor's pricing page.`,
     },
     {
         question: 'How much does Smith.ai cost?',
@@ -94,7 +94,7 @@ const faqData = [
     },
     {
         question: 'Is Dooza a good Smith.ai alternative?',
-        answer: 'Dooza fits if you want an AI receptionist set up for you: it answers in your company name day and night, asks your intake questions, books into your calendar or dispatch software, texts the caller a confirmation and hands off to you by your rules. It is live on your existing line within 48 hours of the setup call, and starts with a refundable pilot (100% refund within 14 days). It is not the right pick if you need live people, answering in languages other than English, or a HIPAA service: Dooza answers in English only and does not sign a BAA.',
+        answer: 'Dooza fits if you want an AI receptionist set up for you: it answers in your company name day and night, asks your intake questions, books on your calendar, confirms the booking with the caller on the call, and takes a message when a caller asks for a person. We set it up on your existing line with you during a refundable pilot (100% refund within 14 days). It is not the right pick if you need live people, answering in languages other than English, or a HIPAA service: Dooza answers in English only and does not sign a BAA.',
     },
     {
         question: 'Smith.ai vs Ruby: which is cheaper?',
@@ -147,7 +147,7 @@ export default function SmithAiAlternativesPage() {
                         <p className="mt-2 leading-relaxed">
                             If you want to keep live people, look at <strong>PATLive</strong> (from $49/mo, 14-day free trial) or <strong>Ruby</strong> (from $250/mo for 50 minutes).
                             If most of your calls are routine, an AI receptionist costs a fraction: <strong>Smith.ai&apos;s own AI Receptionist</strong> ($150/mo for 75 calls),
-                            <strong> Goodcall</strong> ($79/mo), <strong>My AI Front Desk</strong> ($99/mo) or <strong>Dooza</strong>, which sets it up for you on your line within 48 hours.
+                            <strong> Goodcall</strong> ($79/mo), <strong>My AI Front Desk</strong> ($99/mo) or <strong>Dooza</strong>, which sets it up on your line with you during the pilot.
                             At 60 calls a month, Smith.ai&apos;s live Starter plan comes to about $645; the AI options above cost $79 to $150 (list prices, checked {CHECKED}).
                         </p>
                     </section>
@@ -211,8 +211,8 @@ export default function SmithAiAlternativesPage() {
                         <h2 className="text-2xl font-extrabold text-slate-950">Where Dooza fits, and where it doesn&apos;t</h2>
                         <p className="mt-3 leading-relaxed">
                             Dooza&apos;s <Link className="text-primary-700 underline" href="/ai-receptionist">AI receptionist</Link> is done for you. It answers every call in your company name,
-                            asks your intake questions, books the job into your calendar or dispatch software, texts the caller a confirmation and hands off to you or your dispatcher by your rules.
-                            We set it up on your existing line within 48 hours of a free 30-minute call, and you listen to the recordings. It starts with a refundable pilot: 100% refund within 14 days.
+                            asks your intake questions, books the job on your calendar, confirms the booking with the caller on the call, and takes a message when a caller asks for a person.
+                            We set it up on your existing line with you after a free 30-minute call. It starts with a refundable pilot: 100% refund within 14 days.
                             Pricing is on <Link className="text-primary-700 underline" href="/pricing">/pricing</Link>.
                         </p>
                         <p className="mt-3 leading-relaxed">

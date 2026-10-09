@@ -40,7 +40,7 @@ const faqData = [
     { question: "How much does a virtual receptionist cost?", answer: "Traditional virtual receptionist services cost $250–$1,725/month for 50–500 minutes (Ruby) or $300–$2,100/month for 30–300 calls (Smith.ai), per their pricing pages (checked Oct 7, 2026). Dooza's AI receptionist Rachel answers calls 24/7; Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days." },
     { question: "Can an AI virtual receptionist handle real conversations?", answer: "Yes. Rachel uses natural language processing for multi-turn conversations — she asks qualifying questions, answers FAQs about your business, books appointments, and knows when to route calls to you directly." },
     { question: "Is an AI receptionist reliable for a small business?", answer: "For routine calls, yes. Rachel answers 24/7, including nights, weekends, and holidays, books appointments, takes messages, and hands urgent calls to you based on rules you set. Live answering services also run 24/7; they can be the better pick for complex or sensitive calls. Rachel answers in English only and is not a HIPAA service. The refundable pilot lets you test her on your real calls first." },
-    { question: "How do I switch from my current answering service to AI?", answer: "Book a free 30-minute call to scope your pilot, and a Dooza engineer configures Rachel with your business info, FAQs, and calendar. Rachel is live on your existing line within 48 hours of the setup call." }
+    { question: "How do I switch from my current answering service to AI?", answer: "Book a free 30-minute call to scope your pilot, and a Dooza engineer configures Rachel with your business info, FAQs, and calendar. Rachel is set up on your existing line with you during the pilot." }
 ];
 
 export default function VirtualReceptionistSmallBusinessContent() {
@@ -568,7 +568,7 @@ export default function VirtualReceptionistSmallBusinessContent() {
                                     {
                                         step: "2",
                                         title: "Book a Free Pilot Call",
-                                        desc: "On a free 30-minute call, a Dooza engineer scopes your pilot, then configures Rachel with your business info, FAQs, calendar, and call routing preferences. She is live on your existing line within 48 hours of that call."
+                                        desc: "On a free 30-minute call, a Dooza engineer scopes your pilot, then configures Rachel with your business info, FAQs, calendar, and which calls need a message for you. She is set up on your existing line with you during the pilot."
                                     },
                                     {
                                         step: "3",

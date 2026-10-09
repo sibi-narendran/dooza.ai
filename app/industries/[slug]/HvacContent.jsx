@@ -82,7 +82,7 @@ const operatingModel = [
         number: '02',
         label: 'Protect accuracy',
         title: 'Follow your rules, not a generic script',
-        description: 'Train the agent on your services, markets, hours, pricing guidance, transfer rules, and the details dispatch needs before a technician is assigned.',
+        description: 'Train the agent on your services, markets, hours, pricing guidance, urgent-call rules, and the details dispatch needs before a technician is assigned.',
         points: ['Market-specific instructions', 'Urgent-call escalation', 'Structured call summaries'],
     },
     {
@@ -364,7 +364,7 @@ export default function HvacContent({ page }) {
                         <div className="mt-10 grid gap-4 border-t border-white/15 pt-10 sm:grid-cols-3">
                             {[
                                 { icon: PhoneCall, title: 'Answer', text: 'Calls, overflow, after-hours and spikes.' },
-                                { icon: CalendarCheck, title: 'Book', text: 'Appointments, estimates and urgent handoffs.' },
+                                { icon: CalendarCheck, title: 'Book', text: 'Appointments, estimates and urgent messages.' },
                                 { icon: Route, title: 'Route', text: 'The right context to the right person.' },
                             ].map((item) => (
                                 <div key={item.title} className="flex items-start gap-4 p-4">

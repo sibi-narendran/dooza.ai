@@ -192,7 +192,7 @@ const servicePages = [
     {
         title: 'AI Receptionist',
         url: `${SITE_URL}/ai-receptionist`,
-        description: 'Done-for-you AI receptionist for contractors and trades (HVAC, plumbing, electrical, roofing): answers every call in your company name day and night, books jobs into your calendar or dispatch software, texts the caller a confirmation, and transfers upset or complex calls to a human by your rules. Live on your existing line within 48 hours of the setup call. English only; not a HIPAA service. Starts with a refundable pilot (100% refund within 14 days); pricing at /pricing.',
+        description: 'Done-for-you AI receptionist for contractors and trades (HVAC, plumbing, electrical, roofing): answers every call in your company name day and night, books jobs on your calendar, confirms the booking with the caller on the call, and takes a message when a caller asks for a person. Set up on your existing line with you during the pilot. English only; not a HIPAA service. Starts with a refundable pilot (100% refund within 14 days); pricing at /pricing.',
     },
     {
         title: 'AI Customer Support',

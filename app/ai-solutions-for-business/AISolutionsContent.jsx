@@ -666,7 +666,7 @@ export default function AISolutionsContent({ faqData }) {
                                 <div>
                                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-700">Most requested</p>
                                     <h3 className="mt-2 text-xl font-bold text-slate-900 group-hover:text-primary-700 transition-colors">AI Receptionist for the trades</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">For HVAC, plumbing, electrical, roofing and other trades. Answers every call in your company name while you are on the job, and books it on your calendar. Start with a refundable pilot: live on your line within 48 hours, 100% refund within 14 days.</p>
+                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">For HVAC, plumbing, electrical, roofing and other trades. Answers every call in your company name while you are on the job, and books it on your calendar. Start with a refundable pilot, set up on your line with you: 100% refund within 14 days.</p>
                                 </div>
                                 <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary-700 group-hover:gap-2 transition-all">
                                     Hear it answer a call <ArrowRight size={14} />

@@ -65,7 +65,7 @@ export default function PropertyManagementContent({ page }) {
     const solutionBullets = [
         'Answers tenant, owner and prospect calls 24/7 in your company\'s name',
         'Takes the property, unit, problem and urgency on every maintenance call',
-        'Follows your emergency list: transfers or texts your on-call person only when the rules say so',
+        'Follows your emergency list: flags true emergencies in the message it takes for your on-call person',
         'Logs routine requests with all the details for the next business day',
         'Answers leasing questions from your information and captures every prospect'
     ];

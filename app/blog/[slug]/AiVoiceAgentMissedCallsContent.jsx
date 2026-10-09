@@ -43,7 +43,7 @@ const faqData = [
     },
     {
         question: "Can an AI voice agent integrate with my CRM?",
-        answer: "Yes. Dooza's voice agent pushes caller data, qualification answers, and call summaries directly to your CRM. Every missed call becomes a lead record with full context — no manual data entry."
+        answer: "Many can. Dooza's voice agent takes each caller's details, qualification answers and a message for you, and books on your Google or Outlook calendar. Tell us your CRM on the setup call and we check what we can connect."
     },
     {
         question: "What happens during after-hours calls?",
@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "How fast is the setup?",
-        answer: "A Dooza engineer scopes your pilot on a free 30-minute call, then configures the voice agent with your business info, qualification questions, FAQs, and CRM integration. Most businesses can start taking calls the same day. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "A Dooza engineer scopes your pilot on a free 30-minute call, then sets up the voice agent with your business info, qualification questions and FAQs. We set it up on your line with you during the pilot. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "What's the ROI of an AI voice agent?",
@@ -398,7 +398,7 @@ export default function AiVoiceAgentMissedCallsContent() {
                                         title: "Push to CRM Pipeline",
                                         icon: BarChart3,
                                         desc: "Within seconds of the call ending, a new lead record appears in your CRM with the full conversation transcript, qualification data, and a priority score. No manual data entry. No sticky notes. No lost information.",
-                                        detail: "Integration works with popular CRMs. A Dooza engineer configures the field mappings so data lands exactly where your sales team expects it."
+                                        detail: "Ask any provider which CRMs it connects to. With Dooza, tell us your CRM on the setup call and we check what we can connect."
                                     },
                                     {
                                         step: "5",
@@ -762,11 +762,11 @@ export default function AiVoiceAgentMissedCallsContent() {
 
                         {/* Section 8: Getting Started */}
                         <section id="getting-started" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Deploy Your AI Voice Agent the Same Day</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Get Your AI Voice Agent Set Up in a Refundable Pilot</h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    You don't need an IT department, a phone system overhaul, or weeks of setup. A Dooza engineer scopes your pilot on a free 30-minute call, and most businesses can start capturing leads the same day. Here's the process.
+                                    You don't need an IT department, a phone system overhaul, or weeks of setup. A Dooza engineer scopes your pilot on a free 30-minute call, and we set it up on your line with you during the pilot. Here's the process.
                                 </p>
                             </div>
 
@@ -781,13 +781,13 @@ export default function AiVoiceAgentMissedCallsContent() {
                                     {
                                         step: "2",
                                         title: "Configure Your Voice Agent",
-                                        desc: "During pilot setup, a Dooza engineer sets up your voice agent with your business info, greeting script, qualification questions, FAQs, calendar integration, and CRM connection. You tell us what questions to ask — we handle the technical setup.",
+                                        desc: "During pilot setup, a Dooza engineer sets up your voice agent with your business info, greeting script, qualification questions, FAQs and calendar. You tell us what questions to ask — we handle the technical setup.",
                                         detail: "Your qualification criteria, business hours, appointment types, and escalation rules are all customized to match how your business operates."
                                     },
                                     {
                                         step: "3",
                                         title: "Go Live & Start Capturing Revenue",
-                                        desc: "Forward your business phone to your AI voice agent. Every call is answered, every caller is qualified, every lead hits your CRM, and every follow-up is triggered automatically. Check your dashboard the next morning — you'll see leads that would have been voicemails.",
+                                        desc: "Forward your business phone to your AI voice agent. Every call is answered, every caller is qualified, and you get a message with each lead's details. The next morning you'll see leads that would have been voicemails.",
                                         detail: "Check your dashboard after the first night and you will see calls that would have gone to voicemail. The AI works while you sleep."
                                     }
                                 ].map((item, idx) => (

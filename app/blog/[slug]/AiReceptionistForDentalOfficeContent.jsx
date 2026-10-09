@@ -421,7 +421,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- Books a Monday morning emergency slot with the dentist</li>
                                                     <li>- Takes a message for the dentist with what happened and the pain level (no care advice from the AI)</li>
-                                                    <li>- Sends appointment confirmation via SMS</li>
+                                                    <li>- Confirms the appointment with the caller on the call</li>
                                                     <li>- Sends the dentist a summary of the call</li>
                                                 </ul>
                                             </div>
@@ -497,7 +497,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- Books a next-day appointment with the dentist</li>
                                                     <li>- Takes a message for the dentist about the crown (no care advice from the AI)</li>
-                                                    <li>- Sends confirmation with appointment details via SMS</li>
+                                                    <li>- Confirms the appointment details with the caller on the call</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -640,10 +640,10 @@ export default function AiReceptionistForDentalOfficeContent() {
                                         {[
                                             { feature: "Monthly Cost", desk: "Full salary + benefits", service: "$189-$2,100 (PATLive, Smith.ai; checked Oct 2026)", rachel: "Refundable pilot (see /pricing)" },
                                             { feature: "Availability", desk: "Business hours only", service: "Extended hours (varies)", rachel: "24/7/365" },
-                                            { feature: "Emergency Triage", desk: "Trained judgment", service: "Scripted (varies)", rachel: "Your approved questions + routing" },
+                                            { feature: "Emergency Triage", desk: "Trained judgment", service: "Scripted (varies)", rachel: "Your approved questions + a message for the dentist" },
                                             { feature: "Insurance Questions", desk: "Knowledgeable", service: "Varies by vendor", rachel: "Configured per practice" },
                                             { feature: "Appointment Booking", desk: "Yes", service: "Varies by vendor", rachel: "Automatic booking" },
-                                            { feature: "Setup Time", desk: "2-4 weeks hiring + training", service: "1-2 weeks", rachel: "Within 48 hours of setup call" },
+                                            { feature: "Setup Time", desk: "2-4 weeks hiring + training", service: "1-2 weeks", rachel: "Set up with you during the pilot" },
                                             { feature: "Consistency", desk: "Varies by person/day", service: "Varies by operator", rachel: "Follows your approved script" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -710,11 +710,11 @@ export default function AiReceptionistForDentalOfficeContent() {
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                                 {[
                                     { icon: Zap, title: "Instant Pickup", desc: "Answers every call. No hold music, no voicemail." },
-                                    { icon: AlertTriangle, title: "Emergency Triage", desc: "Dental emergency protocols classify urgency and route appropriately." },
-                                    { icon: Shield, title: "Insurance Knowledge", desc: "Tells callers which plans you accept. Routes benefits questions to your team." },
+                                    { icon: AlertTriangle, title: "Emergency Triage", desc: "Dental emergency protocols classify urgency and take an urgent message for the dentist." },
+                                    { icon: Shield, title: "Insurance Knowledge", desc: "Tells callers which plans you accept. Takes a message for your team on benefits questions." },
                                     { icon: Calendar, title: "Smart Scheduling", desc: "Books hygienist vs. dentist appointments automatically." },
-                                    { icon: MessageSquare, title: "SMS Reminders", desc: "Helps cut no-shows with automated appointment reminders." },
-                                    { icon: UserPlus, title: "New Patient Intake", desc: "Collects info and sends forms before the first visit." },
+                                    { icon: MessageSquare, title: "Booking Confirmation", desc: "Reads back the date and time before the patient hangs up." },
+                                    { icon: UserPlus, title: "New Patient Intake", desc: "Collects new patient details on the call." },
                                     { icon: Phone, title: "After-Hours Coverage", desc: "Handles the calls that come outside business hours." },
                                     { icon: FileText, title: "Call Summaries", desc: "Detailed summary of every call sent to your team via email." }
                                 ].map((item, idx) => (
@@ -739,7 +739,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                         <section id="getting-started" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Get Rachel Running for Your Dental Practice in 3 Steps</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                Setting up starts with one free 30-minute call, and your line is live within 48 hours of it. Here's how it works:
+                                Setting up starts with one free 30-minute call, and we set it up on your line with you during the pilot. Here's how it works:
                             </p>
 
                             <div className="space-y-4 mb-8">
@@ -757,7 +757,7 @@ export default function AiReceptionistForDentalOfficeContent() {
                                     {
                                         step: "3",
                                         title: "Forward Your Office Phone Line to Rachel",
-                                        desc: "Set up call forwarding from your office phone to Rachel's number. Works with any phone system -- landline, VoIP, or cell. Your line is live within 48 hours of the setup call."
+                                        desc: "Set up call forwarding from your office phone to Rachel's number. Works with any phone system -- landline, VoIP, or cell. We set it up with you during the pilot."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">

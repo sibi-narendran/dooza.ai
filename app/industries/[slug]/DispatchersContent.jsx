@@ -248,7 +248,7 @@ export default function DispatchersContent({ page }) {
                             How It Works
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Phone answering live within 48 hours. Refundable pilot. No tech skills needed.
+                            Phone answering set up on your line with you during a refundable pilot. No tech skills needed.
                         </p>
                     </div>
 

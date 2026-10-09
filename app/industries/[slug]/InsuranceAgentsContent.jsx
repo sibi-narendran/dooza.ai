@@ -64,8 +64,8 @@ export default function InsuranceAgentsContent({ page }) {
         'Answers every call 24/7: prospects, policyholders, and carriers',
         'Captures quote requests with line of business, current carrier, and renewal date',
         'Handles policy questions and service requests using your agency\'s info',
-        'Detects urgent claims and escalates them to your phone instantly',
-        'Texts you a clean summary after every call'
+        'Flags urgent claims in the message it takes for you',
+        'Takes a clean message for you on every call'
     ];
 
     const benefitCards = [
@@ -77,7 +77,7 @@ export default function InsuranceAgentsContent({ page }) {
         {
             icon: AlertTriangle,
             title: 'Urgent claims reach you, routine calls don\'t',
-            description: 'Accidents and property damage are detected and escalated immediately. Billing questions, ID card requests, and certificate inquiries get handled without interrupting you.'
+            description: 'Accidents and property damage are flagged as urgent in the message it takes for you. Billing questions, ID card requests, and certificate inquiries get handled without interrupting you.'
         },
         {
             icon: Shield,
@@ -176,7 +176,7 @@ export default function InsuranceAgentsContent({ page }) {
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
                     <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI answering service for insurance agents do?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI answering service for insurance agents answers every call 24/7, captures quote requests with line of business, current carrier and renewal date, handles routine policy questions from your agency’s information, and escalates urgent claims to your phone. Dooza sets it up for you and texts you a summary after every call. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI answering service for insurance agents answers every call 24/7, captures quote requests with line of business, current carrier and renewal date, handles routine policy questions from your agency’s information, and flags urgent claims. Dooza sets it up for you, and it takes a message for you on every call. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
                     <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
                 </div>
             </section>
