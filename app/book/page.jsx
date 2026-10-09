@@ -1,5 +1,6 @@
 import BookPageClient from './BookPageClient';
 import Link from 'next/link';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_EMAIL } from '../../lib/contact';
 
 const bookingLoaderStyles = `
   .dooza-booking-shell {
@@ -184,6 +185,9 @@ export default function BookPage() {
                         </h1>
                         <p className="mt-1 text-sm leading-snug text-slate-600">
                             A Dooza engineer scopes your pilot with you: the job to hand to AI (calls, support, follow-up), what it should say, and what success looks like. Every pilot is refundable: 100% refund within 14 days.
+                        </p>
+                        <p className="mt-1 text-sm text-slate-600">
+                            Prefer to talk? Call or text <a href={`tel:${CONTACT_PHONE_E164}`} className="font-semibold text-primary-700 underline">{CONTACT_PHONE_DISPLAY}</a> or email <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-primary-700 underline">{CONTACT_EMAIL}</a>.
                         </p>
                     </div>
                 </div>

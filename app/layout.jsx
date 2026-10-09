@@ -4,6 +4,7 @@ import './globals.css';
 import CalEmbedLoader from '../components/CalEmbedLoader';
 import ColdAdSignupLinkRewriter from '../components/ColdAdSignupLinkRewriter';
 import BookingModalProvider from '../components/BookingModalProvider';
+import ContactClickTracker from '@/components/ContactClickTracker';
 import NavTrail from '../components/NavTrail';
 
 // Resource hints for external services - improves Core Web Vitals
@@ -157,6 +158,7 @@ export default function RootLayout({ children }) {
         <NavTrail />
         <BookingModalProvider>
           {children}
+          <ContactClickTracker />
         </BookingModalProvider>
 
         <ColdAdSignupLinkRewriter />
