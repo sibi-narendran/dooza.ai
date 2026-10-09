@@ -97,8 +97,6 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     ];
 
     const industries = [
-        { name: 'Salons & Beauty', detail: 'Bookings and calls', href: '/industries/salons', image: '/blog/ai-receptionist-for-salons.png' },
-        { name: 'Trades', detail: 'Calls, leads and scheduling', href: '/industries/trades', image: '/industries/home-services-ai-automation.png' },
         { name: 'Real Estate', detail: 'Lead follow-up', href: '/industries/real-estate', image: '/blog/ai-for-real-estate-agents.png' },
         { name: 'Truck Dispatchers', detail: 'Calls and operations', href: '/industries/dispatchers', image: '/industries/truck-dispatch-ai-employee.png' },
         { name: 'Insurance', detail: 'Quotes and renewals', href: '/industries/insurance-agents', image: '/blog/liberate-alternative-insurance-agencies.png' },

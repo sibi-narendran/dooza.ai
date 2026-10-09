@@ -1,4 +1,5 @@
-// Duplicate Supabase blog posts merged into one canonical post (old slug -> kept slug).
+// Duplicate Supabase blog posts merged into one canonical post (old slug -> kept slug),
+// and retired posts (old slug -> absolute path starting with '/', e.g. '/industries/insurance-agents').
 // Also excluded from the sitemap, RSS, llms.txt and the blog index.
 const mergedBlogPosts = require('./lib/mergedBlogPosts.json');
 
@@ -180,13 +181,34 @@ const nextConfig = {
         permanent: false,
       },
       {
+        // AI receptionist is no longer a Dooza offer (2026-10-09): retired pages
+        source: '/industries/trades',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/industries/property-management',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/industries/salons',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/smith-ai-alternatives',
+        destination: '/industries/insurance-agents',
+        permanent: true,
+      },
+      {
         source: '/industries/hvac',
-        destination: '/industries/trades',
+        destination: '/',
         permanent: true,
       },
       {
         source: '/industries/contractors',
-        destination: '/industries/trades',
+        destination: '/',
         permanent: true,
       },
       {
@@ -241,7 +263,7 @@ const nextConfig = {
       },
       {
         source: '/blog/ai-answering-service-for-business',
-        destination: '/blog/ai-answering-service-for-small-business',
+        destination: '/industries/insurance-agents',
         permanent: true,
       },
       {
@@ -261,7 +283,7 @@ const nextConfig = {
       },
       ...Object.entries(mergedBlogPosts).map(([from, to]) => ({
         source: `/blog/${from}`,
-        destination: `/blog/${to}`,
+        destination: to.startsWith('/') ? to : `/blog/${to}`,
         permanent: true,
       })),
     ];

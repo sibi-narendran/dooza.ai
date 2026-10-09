@@ -23,13 +23,6 @@ export default function AlternativesPage() {
             doozaAdvantage: 'Done for you: engineer-led setup, no credits, refundable pilot'
         },
         {
-            name: 'Smith.ai Alternatives',
-            slug: null,
-            directLink: '/smith-ai-alternatives',
-            tagline: '6 human and AI answering options, prices checked October 2026',
-            doozaAdvantage: 'AI receptionist set up for you on your line, refundable pilot'
-        },
-        {
             name: 'Marblism Alternatives',
             slug: null,
             directLink: '/marblism-alternatives',

@@ -3,27 +3,19 @@ import { SITE_URL } from '../../../lib/site';
 import { industryPages, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../../../lib/industryData';
 
 // Import industry content components
-import SalonsContent from './SalonsContent';
 import RealEstateContent from './RealEstateContent';
 import DispatchersContent from './DispatchersContent';
 import InsuranceAgentsContent from './InsuranceAgentsContent';
-import HvacContent from './HvacContent';
-import PropertyManagementContent from './PropertyManagementContent';
 
 // Map slugs to components
 const INDUSTRY_COMPONENTS = {
-    'salons': SalonsContent,
     'real-estate': RealEstateContent,
     'dispatchers': DispatchersContent,
     'insurance-agents': InsuranceAgentsContent,
-    'trades': HvacContent,
-    'property-management': PropertyManagementContent,
 };
 
-const LEGACY_INDUSTRY_SLUGS = {
-    contractors: 'trades',
-    hvac: 'trades',
-};
+// Retired slugs (hvac, contractors, trades, salons, property-management) redirect in next.config.js.
+const LEGACY_INDUSTRY_SLUGS = {};
 
 const INDUSTRY_SEO_TITLE_MAX_LENGTH = 56;
 const INDUSTRY_SEO_DESCRIPTION_MAX_LENGTH = 155;

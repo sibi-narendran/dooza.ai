@@ -19,33 +19,6 @@ export default function IndustriesPage() {
 
     const industries = [
         {
-            name: 'Salons & Beauty',
-            category: 'Appointments',
-            description: 'AI receptionist that books appointments, sends reminders, and never misses a call',
-            industrySlug: 'salons',
-            image: '/blog/ai-receptionist-for-salons.png',
-            imageAlt: 'Salon professional helping a client while AI handles incoming appointment calls',
-            benefits: ['24/7 appointment booking', 'Stylist-specific scheduling', 'SMS reminders & no-show reduction']
-        },
-        {
-            name: 'Trades',
-            category: 'Local services',
-            description: 'AI answering service that captures every call and lead — even when your team is on the job',
-            industrySlug: 'trades',
-            image: '/industries/home-services-ai-automation.png',
-            imageAlt: 'Trade professional using AI to organize customer calls, appointments, and routes',
-            benefits: ['Capture every lead', 'Emergency routing', 'Service and estimate booking']
-        },
-        {
-            name: 'Property Management',
-            category: 'Tenant calls',
-            description: 'AI answering service that sorts after-hours maintenance emergencies from routine requests by your rules',
-            industrySlug: 'property-management',
-            image: '/industries/home-services-ai-automation.png',
-            imageAlt: 'Property manager using AI to handle tenant maintenance calls after hours',
-            benefits: ['24/7 tenant calls', 'Emergency triage by your rules', 'Leasing call capture']
-        },
-        {
             name: 'Real Estate',
             category: 'Sales',
             description: 'AI sales agent that follows up on every lead 24/7 and books showings',

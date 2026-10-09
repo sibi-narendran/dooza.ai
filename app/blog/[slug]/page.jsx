@@ -30,16 +30,12 @@ import AiEmployeesOpenclawBusinessContent from './AiEmployeesOpenclawBusinessCon
 import AutomateBusinessProcessesContent from './AutomateBusinessProcessesContent';
 import BestAiReceptionistContent from './BestAiReceptionistContent';
 import AiStaffingContent from './AiStaffingContent';
-import VirtualReceptionistSmallBusinessContent from './VirtualReceptionistSmallBusinessContent';
 import BuildA20xCompanyContent from './BuildA20xCompanyContent';
 import HerEntireTeamWasAiContent from './HerEntireTeamWasAiContent';
 import AiSalesAgentGuideContent from './AiSalesAgentGuideContent';
 import OpenclawVsDoozaContent from './OpenclawVsDoozaContent';
-import AiReceptionistForSalonsContent from './AiReceptionistForSalonsContent';
 import AiAppointmentSetterContent from './AiAppointmentSetterContent';
-import AiReceptionistForDentalOfficeContent from './AiReceptionistForDentalOfficeContent';
 import AiAgentLinkedinLeadGenerationContent from './AiAgentLinkedinLeadGenerationContent';
-import AiVoiceAgentMissedCallsContent from './AiVoiceAgentMissedCallsContent';
 import AutomateEmployeePerformanceReviewsContent from './AutomateEmployeePerformanceReviewsContent';
 import AiLegalAssistantContent from './AiLegalAssistantContent';
 import OutrankVsDoozaRankyContent from './OutrankVsDoozaRankyContent';
@@ -89,16 +85,12 @@ const BLOG_COMPONENTS = {
     'automate-business-processes': AutomateBusinessProcessesContent,
     'best-ai-receptionist': BestAiReceptionistContent,
     'ai-staffing': AiStaffingContent,
-    'virtual-receptionist-for-small-business': VirtualReceptionistSmallBusinessContent,
     'build-a-20x-company': BuildA20xCompanyContent,
     'her-entire-team-was-ai': HerEntireTeamWasAiContent,
     'ai-sales-agent-guide': AiSalesAgentGuideContent,
     'openclaw-vs-dooza': OpenclawVsDoozaContent,
-    'ai-receptionist-for-salons': AiReceptionistForSalonsContent,
     'ai-appointment-setter': AiAppointmentSetterContent,
-    'ai-receptionist-for-dental-office': AiReceptionistForDentalOfficeContent,
     'ai-agent-linkedin-lead-generation': AiAgentLinkedinLeadGenerationContent,
-    'ai-voice-agent-missed-calls': AiVoiceAgentMissedCallsContent,
     'automate-employee-performance-reviews': AutomateEmployeePerformanceReviewsContent,
     'ai-legal-assistant': AiLegalAssistantContent,
     'outrank-vs-dooza-ranky': OutrankVsDoozaRankyContent,

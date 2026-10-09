@@ -78,10 +78,8 @@ const agents = [
 ];
 
 const industries = [
-    { name: 'Home Services', line: 'More booked jobs from search, ads and missed calls', href: '/industries/trades' },
     { name: 'Healthcare & Dental', line: 'New patient inquiries answered and scheduled', href: '/ai-receptionist' },
     { name: 'Legal', line: 'Intake calls qualified before they reach an attorney', href: '/industries/law-firms' },
-    { name: 'Beauty & Wellness', line: 'Bookings from Google, Instagram and after-hours chats', href: '/industries/salons' },
     { name: 'Real Estate', line: 'Every buyer and seller lead followed up in minutes', href: '/industries/real-estate' },
     { name: 'Insurance & Finance', line: 'Quote requests captured and routed the same day', href: '/industries/insurance-agents' },
     { name: 'Software & Agencies', line: 'Pipeline from AI search, content and paid campaigns', href: '/workforce' },
