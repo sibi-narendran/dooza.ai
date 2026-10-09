@@ -121,7 +121,7 @@ export default function DispatchersContent({ page }) {
         {
             icon: CheckCircle2,
             title: 'You stay in control',
-            description: 'It follows your rules and escalates what matters. Routine work never interrupts you.'
+            description: 'It follows your rules and flags what matters. Routine work never interrupts you.'
         },
         {
             icon: Truck,

@@ -74,7 +74,7 @@ export default function PropertyManagementContent({ page }) {
         {
             icon: AlertTriangle,
             title: 'Emergencies reach a person, routine calls wait',
-            description: 'You write the list of what is urgent and what to do for each case. Water leaks reach your on-call tech; a slow drain becomes a work order for the morning.'
+            description: 'You write the list of what is urgent and what to do for each case. Water leaks are flagged urgent for your on-call tech; a slow drain becomes a work order for the morning.'
         },
         {
             icon: Wrench,
@@ -178,7 +178,7 @@ export default function PropertyManagementContent({ page }) {
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
                     <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does a property management answering service do?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">A property management answering service answers tenant, owner and prospect calls when your office can’t, especially nights and weekends. For each maintenance call it takes the property, unit, problem and urgency, reaches your on-call person for true emergencies (by the rules you set), and logs routine requests for the next business day. Dooza’s AI answering service does this 24/7 and sends your team a summary of every call. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">A property management answering service answers tenant, owner and prospect calls when your office can’t, especially nights and weekends. For each maintenance call it takes the property, unit, problem and urgency, takes an urgent message for your on-call person on true emergencies (by the rules you set), and logs routine requests for the next business day. Dooza’s AI answering service does this 24/7 and sends your team a summary of every call. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
                     <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
                 </div>
             </section>

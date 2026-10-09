@@ -83,7 +83,7 @@ const operatingModel = [
         label: 'Protect accuracy',
         title: 'Follow your rules, not a generic script',
         description: 'Train the agent on your services, markets, hours, pricing guidance, urgent-call rules, and the details dispatch needs before a technician is assigned.',
-        points: ['Market-specific instructions', 'Urgent-call escalation', 'Structured call summaries'],
+        points: ['Market-specific instructions', 'Urgent-call flagging', 'Structured call summaries'],
     },
     {
         number: '03',
@@ -193,7 +193,7 @@ export default function HvacContent({ page }) {
                             </h1>
                             <div className="mt-8 grid gap-8 border-t border-primary-200 pt-7 lg:grid-cols-[1fr_auto] lg:items-end">
                                 <p className="max-w-3xl text-lg leading-8 text-slate-600 md:text-xl">
-                                    Dooza answers demand as it arrives—qualifying callers, booking the right next step, routing urgent work, and giving your team the context to move.
+                                    Dooza answers demand as it arrives—qualifying callers, booking the right next step, flagging urgent work, and giving your team the context to move.
                                 </p>
                                 <div className="flex flex-col gap-3 sm:flex-row">
                                     <a href={CAL_BOOKING_URL} onClick={openBooking} className="inline-flex min-h-12 items-center justify-center gap-2 bg-primary-700 px-6 py-3 font-bold text-white transition hover:bg-primary-800">
@@ -214,7 +214,7 @@ export default function HvacContent({ page }) {
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
                     <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI answering service for plumbers, HVAC and other trades do?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI answering service for the trades answers calls 24/7, answers common questions, captures the job and service area, qualifies the caller, books the next step and routes urgent work to your team with a structured call summary. Dooza sets it up and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI answering service for the trades answers calls 24/7, answers common questions, captures the job and service area, qualifies the caller, books the next step and flags urgent work for your team in a structured call summary. Dooza sets it up and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
                     <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
                 </div>
             </section>
