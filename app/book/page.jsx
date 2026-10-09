@@ -156,14 +156,14 @@ export const metadata = {
     },
     openGraph: {
         title: 'Book a Free Dooza Pilot Call | Dooza',
-        description: 'Pick a time to map your AI employees, workflow automation needs, integrations, and first launch plan.',
+        description: 'Pick a time for a free 30-minute call: a Dooza engineer scopes your pilot. Every pilot is refundable: 100% refund within 14 days.',
         url: 'https://www.dooza.ai/book',
         images: [{ url: 'https://www.dooza.ai/logo.png', width: 512, height: 512, alt: 'Dooza' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Book a Free Dooza Pilot Call | Dooza',
-        description: 'Pick a time to map your AI employees, workflow automation needs, integrations, and first launch plan.',
+        description: 'Pick a time for a free 30-minute call: a Dooza engineer scopes your pilot. Every pilot is refundable: 100% refund within 14 days.',
         images: ['https://www.dooza.ai/logo.png'],
     },
 };
@@ -179,9 +179,12 @@ export default function BookPage() {
                         </p>
                         <h1 className="text-lg font-black tracking-tight text-slate-950 sm:text-xl">
                             <Link href="/" className="transition hover:text-primary-700">
-                                Book a meeting
+                                Book your free 30-minute pilot call
                             </Link>
                         </h1>
+                        <p className="mt-1 text-sm leading-snug text-slate-600">
+                            A Dooza engineer scopes your pilot with you: the job to hand to AI (calls, support, follow-up), what it should say, and what success looks like. Every pilot is refundable: 100% refund within 14 days.
+                        </p>
                     </div>
                 </div>
 
@@ -193,22 +196,22 @@ export default function BookPage() {
                             <div className="dooza-loader-mark" aria-hidden="true">
                                 <span className="dooza-loader-pulse" />
                             </div>
-                            <p className="dooza-loader-title">Getting Dooza ready</p>
+                            <p className="dooza-loader-title">Opening the calendar</p>
                             <p className="dooza-loader-copy">
-                                Your pilot call is opening. We are lining up the workspace, automations, and next steps.
+                                Pick any open time. You will get a confirmation email with the call link.
                             </p>
                             <div className="dooza-loader-steps" aria-hidden="true">
                                 <div className="dooza-loader-step">
                                     <span className="dooza-loader-dot" />
-                                    AI team briefing
+                                    Free 30-minute call
                                 </div>
                                 <div className="dooza-loader-step">
                                     <span className="dooza-loader-dot" />
-                                    Calendar opening
+                                    With a Dooza engineer
                                 </div>
                                 <div className="dooza-loader-step">
                                     <span className="dooza-loader-dot" />
-                                    Pilot call preparing
+                                    Refundable pilot
                                 </div>
                             </div>
                         </div>
