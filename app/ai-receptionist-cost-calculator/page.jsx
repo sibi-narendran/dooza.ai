@@ -9,7 +9,7 @@ import { compareReceptionistCosts, PRICES_CHECKED, PRICES_CHECKED_LABEL } from '
 
 const PATH = '/ai-receptionist-cost-calculator';
 const TITLE = 'AI Receptionist Cost Calculator: Compare 18 Services by Your Call Volume';
-const DESCRIPTION = `Free calculator: enter your calls per month and minutes per call to see what 13 AI receptionists and 5 human answering services would cost, from list prices checked ${PRICES_CHECKED_LABEL}.`;
+const DESCRIPTION = `Free calculator: enter your calls per month and minutes per call to see what 14 AI receptionists and 5 human answering services would cost, from list prices checked ${PRICES_CHECKED_LABEL}.`;
 
 export const metadata = {
     title: TITLE,
@@ -39,7 +39,7 @@ const humanHigh = money(humanDefaults[humanDefaults.length - 1].result.cost);
 const faqItems = [
     {
         question: 'How much does an AI receptionist cost per month?',
-        answer: `For 100 calls a month at about 3 minutes each, the 13 AI receptionists in this calculator cost ${aiLow} to ${aiHigh} a month at list price (checked ${PRICES_CHECKED_LABEL}). Entry plans start at $0 to $199 a month, and most small-business plans cost $49 to $99.`,
+        answer: `For 100 calls a month at about 3 minutes each, the 14 AI receptionists in this calculator cost ${aiLow} to ${aiHigh} a month at list price (checked ${PRICES_CHECKED_LABEL}). Entry plans start at $0 to $199 a month, and most small-business plans cost $49 to $99.`,
     },
     {
         question: 'Is an AI receptionist cheaper than a human answering service?',
@@ -109,7 +109,7 @@ export default function AiReceptionistCostCalculatorPage() {
                             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">AI Receptionist Cost Calculator</h1>
                             <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-700">
                                 <strong>For 100 calls a month at about 3 minutes each, AI receptionists cost {aiLow} to {aiHigh} a month; human answering services cost {humanLow} to {humanHigh}.</strong>{' '}
-                                Enter your own call volume to compare 13 AI receptionists and 5 human answering services on their published list prices.
+                                Enter your own call volume to compare 14 AI receptionists and 5 human answering services on their published list prices.
                             </p>
                         </div>
 
