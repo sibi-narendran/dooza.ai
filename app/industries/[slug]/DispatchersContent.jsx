@@ -55,7 +55,7 @@ export default function DispatchersContent({ page }) {
         {
             icon: PhoneCall,
             title: 'Calls & texts',
-            description: 'Every driver, broker, and customer answered on the first ring.'
+            description: 'Every driver, broker, and customer gets an answer.'
         },
         {
             icon: CalendarCheck,

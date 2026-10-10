@@ -81,12 +81,12 @@ export default function InsuranceAgentsContent({ page }) {
         {
             icon: Shield,
             title: 'Sound like a big agency, even if it\'s just you',
-            description: 'Every caller hears a polished, professional receptionist on the first ring. Callers hear a professional answer instead of voicemail.'
+            description: 'Callers hear a professional answer instead of voicemail.'
         },
         {
             icon: FileText,
-            title: 'Every call logged automatically',
-            description: 'Caller details, reason for the call, and callback requests captured and summarized after every conversation. No sticky notes, no forgotten follow-ups.'
+            title: 'A clear message for every call',
+            description: 'Caller details, reason for the call and callback requests go to your team as a message. No sticky notes.'
         }
     ];
 
@@ -94,12 +94,12 @@ export default function InsuranceAgentsContent({ page }) {
         {
             number: '1',
             title: 'Connect your agency number',
-            description: 'Forward your existing agency line to Dooza; we set it up for you. Works with any phone provider: cell, landline, or VoIP. No new number needed.'
+            description: 'We set up call forwarding from your agency line with you.'
         },
         {
             number: '2',
             title: 'Set your lines, carriers & urgent-call rules',
-            description: 'Tell the AI which lines of business you write, your appointment availability, and what counts as urgent. It learns your agency inside and out.'
+            description: 'Tell us which lines of business you write, your appointment availability, and what counts as urgent.'
         },
         {
             number: '3',
