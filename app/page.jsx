@@ -184,7 +184,7 @@ export default function Home() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
                 />
             ))}
-            <Navbar variant="dark" showLogin={false} ctaType="demo" ctaSource="home_nav" />
+            <Navbar showLogin={false} ctaType="demo" ctaSource="home_nav" />
             <main id="main-content" className="bg-warm text-slate-900">
                 <HomeLanding />
             </main>
