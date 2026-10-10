@@ -52,7 +52,7 @@ function ContactRow({ placement, onDark = false }) {
 const report = [
     { time: '8:02 am', text: 'Replied to a new quote request from your website and offered two call times.' },
     { time: '9:40 am', text: 'Followed up with 5 leads who went quiet last week.' },
-    { time: '11:15 am', text: 'Drafted 6 answers to customer emails from your help docs.', approval: true },
+    { time: '11:15 am', text: 'Drafted 6 customer support replies from your help docs.', approval: true },
     { time: '2:30 pm', text: 'Sent friendly reminders on 3 overdue invoices.' },
     { time: '5:00 pm', text: 'Updated your CRM and sent you this summary.' },
 ];
@@ -103,7 +103,7 @@ const steps = [
 
 const jobs = [
     { title: 'Lead follow-up', text: 'Replies to new leads and keeps following up until they book or say no.' },
-    { title: 'Customer emails', text: 'Answers common questions from your own docs and drafts the rest for you.' },
+    { title: 'Customer support', text: 'Answers customer questions by email and chat from your own docs, and drafts the rest for you.' },
     { title: 'Calls and missed calls', text: 'Handles voice calls and texts back the people you could not pick up.' },
     { title: 'Invoice chasing', text: 'Sends polite reminders on unpaid invoices and tells you who paid.' },
     { title: 'Reviews and social posts', text: 'Replies to reviews and posts on your social accounts on a schedule.' },
@@ -120,7 +120,7 @@ const compareRows = [
 
 export const homeFaq = [
     { question: 'What does Dooza do?', answer: 'Dooza builds AI employees for small businesses. You tell us a job that eats your week, our engineers build an AI employee that does it inside your tools, and then we watch it, fix it and keep improving it every month. You approve anything sensitive.' },
-    { question: 'What is an AI employee?', answer: 'An AI agent that does one real job for your business, such as following up with leads, answering customer emails or chasing invoices. It works in the tools you already use, every day.' },
+    { question: 'What is an AI employee?', answer: 'An AI agent that does one real job for your business, such as following up with leads, answering customer support questions or chasing invoices. It works in the tools you already use, every day.' },
     { question: 'Do I need to be technical?', answer: 'No. You explain the job in plain words on a call. Dooza engineers do the building, the connecting and the upkeep.' },
     { question: 'Who maintains it?', answer: 'We do. Dooza monitors your AI employee, fixes mistakes and adds new skills as your business changes. You never maintain anything.' },
     { question: 'How fast is it live?', answer: 'Custom AI employees are live in days, usually within the first week of your pilot.' },
