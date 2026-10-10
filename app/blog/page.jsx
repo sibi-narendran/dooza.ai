@@ -74,6 +74,8 @@ export default async function Blog() {
     const uniqueDynamic = dynamicPosts.filter(p => !staticSlugs.has(p.slug) && !mergedBlogPosts[p.slug]);
     const allPosts = [...blogPosts, ...uniqueDynamic].map(toBlogPreview);
     const visiblePosts = allPosts.filter((post) => !post.noindex);
+    // Only the card fields go to the client: full post bodies made /blog 1.4 MB.
+    const listPosts = visiblePosts.map(({ id, slug, title, excerpt, date, category, image, imageAlt, readTime, tags }) => ({ id: id ?? slug, slug, title, excerpt: excerpt ?? null, date: date ?? null, category: category ?? null, image: image ?? null, imageAlt: imageAlt ?? null, readTime: readTime ?? null, tags: tags ?? [] }));
 
     // CollectionPage schema for blog listing
     const blogListSchema = {
@@ -196,7 +198,7 @@ export default async function Blog() {
                 </div>
             </section>
             <Suspense fallback={<BlogLoadingSkeleton />}>
-                <BlogPage posts={visiblePosts} />
+                <BlogPage posts={listPosts} />
             </Suspense>
             <BlogArchiveLinks posts={visiblePosts} />
             <Footer />

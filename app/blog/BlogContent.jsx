@@ -5,7 +5,6 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Clock, Calendar, Loader2 } from 'lucide-react';
-import { blogPosts } from '@/lib/blogData';
 import { supabase } from '@/lib/supabase';
 
 // Format ISO date to display format
@@ -73,7 +72,7 @@ export default function BlogPage({ posts }) {
         }
     };
 
-    const allPosts = (posts || blogPosts).filter((post) => !post.noindex);
+    const allPosts = (posts || []).filter((post) => !post.noindex);
     const sortedPosts = [...allPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const filteredPosts = sortedPosts.filter(post => {
