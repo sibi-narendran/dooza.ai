@@ -4,7 +4,7 @@ import GeoServicesContent from './GeoServicesContent';
 const pageUrl = `${SITE_URL}/generative-engine-optimization`;
 const pageTitle = 'Generative Engine Optimization (GEO) Services | Get Cited by AI | Dooza';
 const pageDescription =
-    'Dooza GEO services get your business cited by ChatGPT, Perplexity, Gemini and Google AI Overviews. Ranky, the AI SEO & Visibility Employee, does the work daily. Engineers set it up, and it starts with a refundable pilot — 100% refund within 14 days.';
+    'Dooza GEO services get your business cited by ChatGPT, Perplexity, Gemini and Google AI Overviews. Engineers set it up; starts with a refundable pilot.';
 
 export const metadata = {
     title: { absolute: pageTitle },

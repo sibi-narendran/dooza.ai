@@ -9,7 +9,7 @@ import { faqSchema } from '@/lib/homeData';
 
 export const metadata = {
     title: 'Dooza Pricing: Custom Plans, Scoped on a Free Call',
-    description: 'Dooza pricing is custom: a Dooza engineer scopes your AI agents or done-for-you service on a free 30-minute call. Every engagement starts as a refundable pilot: 100% refund within 14 days.',
+    description: 'Dooza pricing is custom: an engineer scopes your AI agents or done-for-you service on a free 30-minute call. Every pilot is 100% refundable for 14 days.',
     keywords: ['AI employees pricing', 'AI automation pricing', 'Dooza pricing', 'AI agents cost', 'business automation plans'],
     alternates: {
         canonical: 'https://www.dooza.ai/pricing',

@@ -3,7 +3,7 @@ import MarblismAlternativesContent from './MarblismAlternativesContent';
 
 export const metadata = {
     title: '7 Best Marblism Alternatives (2026): Pricing Checked October 2026',
-    description: 'Marblism costs $24/mo billed yearly or $44/mo monthly (checked October 7, 2026). We compared 7 Marblism alternatives on pricing, integrations, and setup, including a done-for-you option.',
+    description: 'Marblism costs $24/mo billed yearly or $44/mo monthly (checked Oct 7, 2026). 7 Marblism alternatives compared on pricing, integrations and setup.',
     keywords: [
         'Marblism alternatives', 'Marblism alternative', 'Marblism AI alternative',
         'Marblism AI alternatives', 'best Marblism alternative 2026',
