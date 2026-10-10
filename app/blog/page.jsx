@@ -95,18 +95,7 @@ export default async function Blog() {
             "AI Agents",
             "SEO for Medical Practices",
             "Productivity Software Comparisons"
-        ],
-        "mainEntity": {
-            "@type": "ItemList",
-            "numberOfItems": visiblePosts.length,
-            "itemListElement": visiblePosts.map((post, index) => ({
-                "@type": "ListItem",
-                "position": index + 1,
-                "url": `${SITE_URL}/blog/${post.slug}`,
-                "name": post.title,
-                "description": post.excerpt || post.title
-            }))
-        }
+        ]
     };
 
     // Blog schema for structured content
@@ -124,31 +113,13 @@ export default async function Blog() {
                 "url": `${SITE_URL}/logo.png`
             }
         },
+        // One lean entry per post (full Article schema lives on each post page); this list was 300+ KB.
         "blogPost": visiblePosts.map(post => ({
             "@type": "BlogPosting",
             "headline": post.title,
-            "description": post.excerpt || post.title,
             "url": `${SITE_URL}/blog/${post.slug}`,
             "datePublished": post.date,
-            "dateModified": post.modifiedDate || post.date,
-            "author": {
-                "@type": "Organization",
-                "name": post.author
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Dooza",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": `${SITE_URL}/logo.png`
-                }
-            },
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": `${SITE_URL}/blog/${post.slug}`
-            },
-            "image": post.image ? (post.image.startsWith('http') ? post.image : `${SITE_URL}${post.image}`) : `${SITE_URL}/logo.png`,
-            "keywords": post.tags?.join(', ')
+            "dateModified": post.modifiedDate || post.date
         }))
     };
 
