@@ -54,7 +54,7 @@ const organizationSchema = {
     description:
         'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days.',
     email: 'support@dooza.ai',
-    telephone: '+1-213-719-2533',
+    telephone: '+1-424-365-8980',
     foundingDate: '2025',
     founder: {
         '@type': 'Person',
@@ -70,14 +70,14 @@ const organizationSchema = {
             '@type': 'ContactPoint',
             contactType: 'customer service',
             email: 'support@dooza.ai',
-            telephone: '+1-213-719-2533',
+            telephone: '+1-424-365-8980',
             availableLanguage: ['English'],
         },
         {
             '@type': 'ContactPoint',
             contactType: 'sales',
             email: 'support@dooza.ai',
-            telephone: '+1-213-719-2533',
+            telephone: '+1-424-365-8980',
             availableLanguage: ['English'],
         },
     ],

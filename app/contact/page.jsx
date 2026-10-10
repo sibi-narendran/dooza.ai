@@ -20,8 +20,8 @@ const contactSchema = {
         legalName: 'Adam Laboratory Inc.',
         url: SITE_URL,
         email: CONTACT_EMAIL,
-        telephone: '+1-213-719-2533',
-        contactPoint: [{ '@type': 'ContactPoint', contactType: 'sales', telephone: '+1-213-719-2533', email: CONTACT_EMAIL, availableLanguage: ['English'] }],
+        telephone: '+1-424-365-8980',
+        contactPoint: [{ '@type': 'ContactPoint', contactType: 'sales', telephone: '+1-424-365-8980', email: CONTACT_EMAIL, availableLanguage: ['English'] }],
     },
 };
 
