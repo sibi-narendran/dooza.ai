@@ -16,7 +16,7 @@ const isProductRoute = (pathname) => (
     || pathname?.startsWith('/agents/')
 );
 
-const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = true, showIndustry = true, ctaType = 'signup', ctaSource = 'navbar', ctaLabel: ctaLabelOverride }) => {
+const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin = false, showIndustry = true, ctaType = 'signup', ctaSource = 'navbar', ctaLabel: ctaLabelOverride }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
