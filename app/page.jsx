@@ -118,7 +118,7 @@ const organizationSchema = {
     },
     sameAs: [
         'https://www.linkedin.com/company/110144933/',
-        'https://www.crunchbase.com/organization/dooza', 'https://www.youtube.com/channel/UCWpF_BoN_rxwAQT32Cfra3g', 'https://www.youtube.com/@thedooza',
+        'https://www.crunchbase.com/organization/dooza', 'https://www.youtube.com/channel/UCWpF_BoN_rxwAQT32Cfra3g', 'https://www.youtube.com/@thedooza', 'https://maps.google.com/?cid=8595948669186443072',
     ],
     contactPoint: [
         {
