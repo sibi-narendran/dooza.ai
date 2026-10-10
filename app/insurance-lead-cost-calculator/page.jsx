@@ -7,7 +7,7 @@ import { SITE_URL } from '@/lib/site';
 import { leadEconomics, LEAD_PRICE_SOURCES, SOURCES_CHECKED, SOURCES_CHECKED_LABEL } from '@/lib/insuranceLeadMath';
 
 const PATH = '/insurance-lead-cost-calculator';
-const TITLE = 'Exclusive vs Shared Insurance Leads: Cost per Policy Calculator (2026)';
+const TITLE = 'Exclusive vs Shared Insurance Leads Calculator (2026)';
 const DESCRIPTION = 'Free calculator for insurance agents: enter lead price, close rate and commission to see cost per sold policy for exclusive vs shared leads, plus 2026 lead prices with sources.';
 
 export const metadata = {
