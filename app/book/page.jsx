@@ -187,7 +187,7 @@ export default function BookPage() {
                             A Dooza engineer scopes your pilot with you: the job to hand to AI (calls, support, follow-up), what it should say, and what success looks like. Every pilot is refundable: 100% refund within 14 days.
                         </p>
                         <p className="mt-1 text-sm text-slate-600">
-                            Prefer to talk? Call or text <a href={`tel:${CONTACT_PHONE_E164}`} className="font-semibold text-primary-700 underline">{CONTACT_PHONE_DISPLAY}</a> or email <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-primary-700 underline">{CONTACT_EMAIL}</a>.
+                            No time that suits you? Email <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Call time that works for me')}`} className="font-semibold text-primary-700 underline">{CONTACT_EMAIL}</a> two times that work and we will fit you in. Or call or text <a href={`tel:${CONTACT_PHONE_E164}`} className="font-semibold text-primary-700 underline">{CONTACT_PHONE_DISPLAY}</a>.
                         </p>
                     </div>
                 </div>
