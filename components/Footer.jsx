@@ -30,11 +30,6 @@ const Footer = ({ variant = 'light' }) => {
                         <p className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>Products</p>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/workforce" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Dooza Workforce
-                                </Link>
-                            </li>
-                            <li>
                                 <Link href="/" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Dooza Agents
                                 </Link>
@@ -147,6 +142,11 @@ const Footer = ({ variant = 'light' }) => {
                             <li>
                                 <Link href="/ai-slop-checker" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Free AI Slop Checker
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/insurance-lead-cost-calculator" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Insurance Lead Cost Calculator
                                 </Link>
                             </li>
                             <li>
