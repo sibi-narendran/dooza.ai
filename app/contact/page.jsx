@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { SITE_URL } from '@/lib/site';
-import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_EMAIL } from '@/lib/contact';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL } from '@/lib/contact';
 
 export const metadata = {
     title: 'Contact Dooza: Call, Text or Email',
-    description: `Talk to Dooza: call or text ${CONTACT_PHONE_DISPLAY}, email ${CONTACT_EMAIL}, or book a free 30-minute pilot call.`,
+    description: `Talk to Dooza: call ${CONTACT_CALL_DISPLAY}, text ${CONTACT_PHONE_DISPLAY}, email ${CONTACT_EMAIL}, or book a free 30-minute pilot call.`,
     alternates: { canonical: `${SITE_URL}/contact` },
 };
 
@@ -33,9 +33,10 @@ export default function ContactPage() {
                 <h1 className="text-4xl font-bold tracking-tight">Contact Dooza</h1>
                 <p className="mt-4 text-lg text-slate-600">Talk to a person about your business. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
                 <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                    <a href={`tel:${CONTACT_PHONE_E164}`} className="rounded-2xl border border-slate-200 p-6 hover:border-primary-300">
+                    <a href={`tel:${CONTACT_CALL_E164}`} className="rounded-2xl border border-slate-200 p-6 hover:border-primary-300">
                         <p className="text-sm font-semibold uppercase tracking-wide text-primary-700">Call</p>
-                        <p className="mt-2 text-lg font-bold">{CONTACT_PHONE_DISPLAY}</p>
+                        <p className="mt-2 text-lg font-bold">{CONTACT_CALL_DISPLAY}</p>
+                        <p className="mt-1 text-sm text-slate-500">Answered 24/7 by Maya, our AI receptionist</p>
                     </a>
                     <a href={`sms:${CONTACT_PHONE_E164}`} className="rounded-2xl border border-slate-200 p-6 hover:border-primary-300">
                         <p className="text-sm font-semibold uppercase tracking-wide text-primary-700">Text</p>

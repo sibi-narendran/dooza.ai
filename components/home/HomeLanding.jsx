@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Schibsted_Grotesk } from 'next/font/google';
 import { Calendar, Phone, MessageSquare } from 'lucide-react';
 import { getBookingUrlWithUtm } from '@/lib/links';
-import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164 } from '@/lib/contact';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164 } from '@/lib/contact';
 import { testimonials } from '@/lib/homeData';
 
 // Homepage (Sibi 2026-10-10 19:49 + 20:05 "improve it design wise, read Claude design").
@@ -13,7 +13,7 @@ import { testimonials } from '@/lib/homeData';
 const display = Schibsted_Grotesk({ subsets: ['latin'], weight: ['500', '700', '800'], display: 'swap' });
 
 const book = (placement) => getBookingUrlWithUtm('website', 'cta', `homepage_${placement}`);
-const TEL = `tel:${CONTACT_PHONE_E164}`;
+const TEL = `tel:${CONTACT_CALL_E164}`;
 const SMS = `sms:${CONTACT_PHONE_E164}`;
 const INK = 'text-[#14213D]';
 const LINK = 'font-semibold text-[#0F766E] underline decoration-[#0F766E]/30 underline-offset-4 hover:decoration-[#0F766E]';
@@ -36,7 +36,7 @@ function ContactRow({ placement, onDark = false }) {
                 <Calendar className="h-5 w-5" aria-hidden="true" /> Book a free pilot call
             </a>
             <a href={TEL} className={`inline-flex items-center justify-center gap-2.5 rounded-xl border px-6 py-4 text-base font-semibold transition-colors ${ghost}`}>
-                <Phone className="h-5 w-5" aria-hidden="true" /> Call {CONTACT_PHONE_DISPLAY}
+                <Phone className="h-5 w-5" aria-hidden="true" /> Call {CONTACT_CALL_DISPLAY}
             </a>
         </div>
         <p className={`mt-4 text-[15px] ${onDark ? 'text-[#CFE7E2]' : 'text-slate-600'}`}>
@@ -126,7 +126,7 @@ export const homeFaq = [
     { question: 'How fast is it live?', answer: 'Custom AI employees are live in days, usually within the first week of your pilot.' },
     { question: 'How does the refundable pilot work?', answer: 'A Dooza engineer scopes it with you on a free 30-minute call, then builds your first AI employee and puts it live on your real work. The pilot is paid, and if you ask within 14 days you get a 100% refund.' },
     { question: 'How much does it cost?', answer: 'Pricing depends on the job. Every build starts with a refundable pilot: 100% refund within 14 days. See dooza.ai/pricing.' },
-    { question: 'Can I talk to a person?', answer: `Yes. Call or text ${CONTACT_PHONE_DISPLAY}, or book a free 30-minute call.` },
+    { question: 'How do I reach you?', answer: `Call ${CONTACT_CALL_DISPLAY} any time: Maya, our own AI receptionist, answers 24/7. Text ${CONTACT_PHONE_DISPLAY} and we reply within minutes. Or book a free 30-minute call with a Dooza engineer.` },
 ];
 
 // Lead with the quote that describes a result.

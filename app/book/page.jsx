@@ -1,6 +1,6 @@
 import BookPageClient from './BookPageClient';
 import Link from 'next/link';
-import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_EMAIL } from '../../lib/contact';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL } from '../../lib/contact';
 
 const bookingLoaderStyles = `
   .dooza-booking-shell {
@@ -187,7 +187,7 @@ export default function BookPage() {
                             A Dooza engineer scopes your pilot with you: the job to hand to AI (calls, support, follow-up), what it should say, and what success looks like. Every pilot is refundable: 100% refund within 14 days.
                         </p>
                         <p className="mt-1 text-sm text-slate-600">
-                            No time that suits you? Email <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Call time that works for me')}`} className="font-semibold text-primary-700 underline">{CONTACT_EMAIL}</a> two times that work and we will fit you in. Or call or text <a href={`tel:${CONTACT_PHONE_E164}`} className="font-semibold text-primary-700 underline">{CONTACT_PHONE_DISPLAY}</a>.
+                            No time that suits you? Email <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Call time that works for me')}`} className="font-semibold text-primary-700 underline">{CONTACT_EMAIL}</a> two times that work and we will fit you in. Or call <a href={`tel:${CONTACT_CALL_E164}`} className="font-semibold text-primary-700 underline">{CONTACT_CALL_DISPLAY}</a> or text <a href={`sms:${CONTACT_PHONE_E164}`} className="font-semibold text-primary-700 underline">{CONTACT_PHONE_DISPLAY}</a>.
                         </p>
                     </div>
                 </div>

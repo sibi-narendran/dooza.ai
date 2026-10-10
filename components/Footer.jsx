@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_EMAIL } from '../lib/contact';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL } from '../lib/contact';
 import Image from 'next/image';
 import { Twitter, Linkedin } from 'lucide-react';
 
@@ -276,8 +276,9 @@ const Footer = ({ variant = 'light' }) => {
                         Dooza.ai is a product of Adam Laboratory Inc., a Delaware corporation.
                     </p>
                     <p className={`text-center text-sm font-medium md:text-left ${isDark ? 'text-gray-300' : 'text-slate-700'}`}>
-                        Talk to us: call or text{' '}
-                        <a href={`tel:${CONTACT_PHONE_E164}`} className="underline">{CONTACT_PHONE_DISPLAY}</a>
+                        Talk to us: call{' '}
+                        <a href={`tel:${CONTACT_CALL_E164}`} className="underline">{CONTACT_CALL_DISPLAY}</a>
+                        {' '}· text{' '}<a href={`sms:${CONTACT_PHONE_E164}`} className="underline">{CONTACT_PHONE_DISPLAY}</a>
                         {' '}· <a href={`mailto:${CONTACT_EMAIL}`} className="underline">{CONTACT_EMAIL}</a>
                         {' '}· <Link href="/contact" className="underline">Contact</Link>
                     </p>
