@@ -109,6 +109,11 @@ const staticPages = [
         description: 'AI solutions for small business workflows.',
     },
     {
+        title: 'Insurance lead cost per policy calculator (exclusive vs shared, 2026 prices with sources)',
+        url: `${SITE_URL}/insurance-lead-cost-calculator`,
+        description: 'Free calculator for insurance agents: lead price, close rate and commission give cost per sold policy and break-even close rate for exclusive vs shared leads; 2026 lead prices (Medicare tiers, 27-vendor range, Meta and Google cost per lead) linked to sources, checked October 10, 2026.',
+    },
+    {
         title: 'Free AI Slop Checker',
         url: `${SITE_URL}/ai-slop-checker`,
         description: 'Free tool: paste text and flag 20+ patterns that make writing sound AI-generated. Private, runs in your browser.',

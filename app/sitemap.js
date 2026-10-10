@@ -230,6 +230,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/insurance-lead-cost-calculator`,
+            lastModified: pageDate('2026-10-10'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/ai-slop-checker`,
             lastModified: pageDate('2026-07-28'),
             changeFrequency: 'monthly',
