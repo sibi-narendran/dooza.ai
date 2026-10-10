@@ -40,6 +40,10 @@ const faqItems = [
         answer: `Break-even close rate = price per lead ÷ first-year commission per policy. With a $${DEFAULTS.commission} commission, a $${DEFAULTS.sharedCost} lead breaks even at ${ex.shared.breakEvenCloseRate}% and a $${DEFAULTS.exclusiveCost} lead at ${ex.exclusive.breakEvenCloseRate.toLocaleString('en-US', { maximumFractionDigits: 2 })}%. Renewals add to this, so year one is the conservative view.`,
     },
     {
+        question: 'How do I calculate ROI on insurance leads?',
+        answer: `ROI = (close rate × commission − price per lead) ÷ price per lead. A $${DEFAULTS.sharedCost} lead closing ${DEFAULTS.sharedClose}% with a $${DEFAULTS.commission} commission returns ${Math.round(ex.shared.roi)}% on lead spend; a $${DEFAULTS.exclusiveCost} lead closing ${DEFAULTS.exclusiveClose}% returns ${Math.round(ex.exclusive.roi)}%. This counts lead cost only: the time you spend calling each lead is extra.`,
+    },
+    {
         question: 'How much do insurance leads cost in 2026?',
         answer: 'It depends on the line and how the lead is sold. One 2026 review of 27 vendors (Insifter, reported by ActiveProspect) found most insurance leads cost $5 to $50, from under $1 for aged shared leads to $200+ for exclusive commercial ones. Elevarus puts Medicare leads at $5 to $15 shared, $15 to $40 real-time exclusive and $25 to $60 per live transfer (July 2026). Sources and dates are in the table on this page.',
     },

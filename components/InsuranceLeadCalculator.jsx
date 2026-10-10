@@ -47,6 +47,7 @@ export default function InsuranceLeadCalculator({ defaults }) {
         ['Cost per sold policy', fmt(shared.costPerPolicy), fmt(exclusive.costPerPolicy)],
         ['Profit per lead (first-year commission minus lead cost)', fmt(shared.profitPerLead), fmt(exclusive.profitPerLead)],
         ['Profit per 100 leads', fmt(shared.profitPer100), fmt(exclusive.profitPer100)],
+        ['ROI on lead spend', pct(shared.roi), pct(exclusive.roi)],
         ['Break-even close rate', pct(shared.breakEvenCloseRate), pct(exclusive.breakEvenCloseRate)],
     ];
 
