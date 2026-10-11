@@ -31,7 +31,8 @@ const PROMISES = [
     { icon: CreditCard, text: 'The call is free. The pilot is paid, with a 100% refund within 14 days.' },
 ];
 
-export default function AiReceptionistBookPage({ searchParams }) {
+export default async function AiReceptionistBookPage(props) {
+    const searchParams = await props.searchParams;
     const variant = getReceptionistVariant(searchParams?.v);
     const adsMode = isAdsVisit(searchParams);
 

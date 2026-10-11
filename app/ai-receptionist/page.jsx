@@ -81,7 +81,8 @@ const primaryButton =
 const secondaryButton =
     'inline-flex w-full items-center justify-center rounded-xl border-2 border-slate-300 bg-white px-6 py-4 text-base font-bold text-slate-900 transition hover:border-primary-600 hover:text-primary-800 sm:w-auto';
 
-export default function AiReceptionistPage({ searchParams }) {
+export default async function AiReceptionistPage(props) {
+    const searchParams = await props.searchParams;
     const variant = getReceptionistVariant(searchParams?.v);
     const adsMode = isAdsVisit(searchParams);
     const demo = RECEPTIONIST_DEMOS[variant.demo] || RECEPTIONIST_DEMOS.hvac;
