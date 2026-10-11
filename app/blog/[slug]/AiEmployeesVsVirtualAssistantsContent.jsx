@@ -47,8 +47,7 @@ const faqData = [
     },
     {
         question: "How much cheaper is AI than a virtual assistant?",
-        answer: "It depends on how much repetitive work you hand over. A human VA is paid for every hour they work; an AI platform charges a flat fee and works around the clock. For high-volume, repetitive tasks (scheduling, inbox triage, data entry) that usually makes AI cheaper per task. Dooza's pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days.",
-        answer: "AI won't fully replace human VAs—it will transform their role. AI handles routine tasks (data entry, scheduling, email triage), freeing human VAs to focus on high-value work requiring judgment, creativity, and emotional intelligence. The most effective businesses use both in a hybrid model."
+        answer: "It depends on how much repetitive work you hand over. A human VA is paid for every hour they work; an AI platform charges a flat fee and works around the clock. For high-volume, repetitive tasks (scheduling, inbox triage, data entry) that usually makes AI cheaper per task. Dooza's pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "What tasks can AI employees handle?",
