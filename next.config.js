@@ -10,6 +10,8 @@ const nextConfig = {
 
   // Allow external image domains (dynamic blog images)
   images: {
+    // Vercel Hobby image-optimisation quota hit 2026-10-11 (/_next/image returned 402, logo broken sitewide): serve originals.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
