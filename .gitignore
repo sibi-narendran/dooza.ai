@@ -44,3 +44,9 @@ tmp/
 docs/
 .gstack/
 open-seo/
+
+# Cloudflare / OpenNext
+.open-next/
+.wrangler/
+.dev.vars
+cloudflare-env.d.ts

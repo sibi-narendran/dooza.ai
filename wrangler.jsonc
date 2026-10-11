@@ -1,0 +1,27 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"main": ".open-next/worker.js",
+	"name": "dooza-site",
+	"compatibility_date": "2026-10-01",
+	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	// workers.dev only for stage 1; no routes / custom domains on dooza.ai yet.
+	"workers_dev": true,
+	"preview_urls": false,
+	"assets": {
+		"directory": ".open-next/assets",
+		"binding": "ASSETS"
+	},
+	"services": [
+		{
+			// Self-reference used by the memory queue for ISR revalidation (https://opennext.js.org/cloudflare/caching)
+			"binding": "WORKER_SELF_REFERENCE",
+			"service": "dooza-site"
+		}
+	],
+	// R2 is not enabled on the account (API code 10042), so the incremental cache is KV.
+	"kv_namespaces": [
+		{ "binding": "NEXT_INC_CACHE_KV", "id": "cdd897cc943b4fbd88fb7b25d0eec5b4" },
+		{ "binding": "NEXT_TAG_CACHE_KV", "id": "31d1cd07c1ce4f098b6d839d31614b9a" }
+	],
+	"observability": { "enabled": true }
+}
