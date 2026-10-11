@@ -63,6 +63,11 @@ export async function POST(request) {
         testEventCode,
     });
 
+    // No CAPI token (Meta ads off): acknowledge so cal.com doesn't retry.
+    if (capiResult.reason === 'missing_env') {
+        return NextResponse.json({ ok: true, capi: capiResult });
+    }
+
     if (!capiResult.ok) {
         return NextResponse.json({ ok: false, capi: capiResult }, { status: 502 });
     }
