@@ -22,3 +22,11 @@
 # Next.js build assets are content-hashed: cache forever (Cloudflare Workers static assets; OpenNext docs)
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Cloudflare staging hosts only: static assets get noindex (Worker-rendered pages get it from next.config.js headers()).
+# Host-scoped rules, so they never apply to www.dooza.ai or dooza.ai.
+https://next.dooza.ai/*
+  X-Robots-Tag: noindex, nofollow
+
+https://dooza-site.sibinarendran.workers.dev/*
+  X-Robots-Tag: noindex, nofollow

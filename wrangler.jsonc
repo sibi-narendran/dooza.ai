@@ -4,8 +4,10 @@
 	"name": "dooza-site",
 	"compatibility_date": "2026-10-01",
 	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
-	// workers.dev only for stage 1; no routes / custom domains on dooza.ai yet.
+	// Stage 1B: staging custom domain next.dooza.ai only (noindex via next.config.js headers + public/_headers).
+	// www.dooza.ai and the apex stay on Vercel until the cutover decision.
 	"workers_dev": true,
+	"routes": [{ "pattern": "next.dooza.ai", "custom_domain": true }],
 	"preview_urls": false,
 	"assets": {
 		"directory": ".open-next/assets",

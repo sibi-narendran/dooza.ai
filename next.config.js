@@ -150,6 +150,14 @@ const nextConfig = {
           },
         ],
       },
+      {
+        // Cloudflare staging hosts only (next.dooza.ai, *.workers.dev): keep them out of the index.
+        // Host match is anchored (^...$), so www.dooza.ai and dooza.ai never get this header.
+        // Static assets on these hosts get the same header from public/_headers.
+        source: '/:path*',
+        has: [{ type: 'host', value: '(?:next\\.dooza\\.ai|.+\\.workers\\.dev)' }],
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
     ];
   },
 
