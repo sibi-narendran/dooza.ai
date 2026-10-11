@@ -175,6 +175,13 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        // Apex -> www (was a Vercel domain redirect; on Cloudflare it lives here). Must stay first.
+        source: '/:path*',
+        has: [{ type: 'host', value: 'dooza.ai' }],
+        destination: 'https://www.dooza.ai/:path*',
+        permanent: true,
+      },
+      {
         // Customer previews use relative asset paths, so send them to index.html
         source: '/preview/:slug',
         destination: '/preview/:slug/index.html',

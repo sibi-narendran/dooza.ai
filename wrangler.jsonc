@@ -5,9 +5,15 @@
 	"compatibility_date": "2026-10-01",
 	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
 	// Stage 1B: staging custom domain next.dooza.ai only (noindex via next.config.js headers + public/_headers).
-	// www.dooza.ai and the apex stay on Vercel until the cutover decision.
+	// www.dooza.ai and the apex are served by this Worker via zone routes since 2026-10-11.
 	"workers_dev": true,
-	"routes": [{ "pattern": "next.dooza.ai", "custom_domain": true }],
+	"routes": [
+		{ "pattern": "next.dooza.ai", "custom_domain": true },
+		// Production cutover 2026-10-11 (Napoleon GO 13:47). DNS records stay as they were (proxied A/CNAME to Vercel);
+		// these zone routes take the traffic. Rollback = delete these two routes (Vercel answers again at once).
+		{ "pattern": "www.dooza.ai/*", "zone_name": "dooza.ai" },
+		{ "pattern": "dooza.ai/*", "zone_name": "dooza.ai" }
+	],
 	"preview_urls": false,
 	"assets": {
 		"directory": ".open-next/assets",
