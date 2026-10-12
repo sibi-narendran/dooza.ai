@@ -4,26 +4,26 @@ import { useState } from 'react';
 import { CAL_BOOKING_URL } from '../../../lib/links';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
-import BottomCTA from '../../../components/BottomCTA';
 import BookingModal from '../../../components/BookingModal';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import {
     Shield,
-    Umbrella,
-    Car,
-    Home,
-    Briefcase,
-    Timer,
-    Moon,
-    CheckCircle2,
-    PhoneCall,
-    AlertTriangle,
+    Truck,
     FileText,
     CalendarCheck,
+    PhoneCall,
     ArrowRight,
     ChevronDown,
     ChevronUp
 } from 'lucide-react';
+
+// Rows in each state's Monday list on 2026-10-12 (FMCSA open data, Dooza's own run). Same numbers as /trucking-insurance-leads.
+const STATE_COUNTS = [
+    { state: 'Illinois', renewals: 523, newAuthorities: 115 },
+    { state: 'Pennsylvania', renewals: 383, newAuthorities: 119 },
+    { state: 'Georgia', renewals: 202, newAuthorities: 102 },
+    { state: 'New York', renewals: 152, newAuthorities: 52 },
+];
 
 export default function InsuranceAgentsContent({ page }) {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -41,78 +41,31 @@ export default function InsuranceAgentsContent({ page }) {
         setOpenFaq(openFaq === index ? null : index);
     };
 
-    const problemCards = [
-        {
-            icon: PhoneCall,
-            title: 'Quote shoppers call around',
-            description: 'Someone shopping for auto or home insurance may call more than one agency. If yours doesn\'t pick up, the next one may get the quote, and you may never know the call came in.'
-        },
-        {
-            icon: Timer,
-            title: 'You\'re with a client while the phone rings',
-            description: 'You\'re reviewing a renewal, on hold with a carrier, or in a client meeting — and new prospects go straight to voicemail. Some won\'t call back.'
-        },
-        {
-            icon: Moon,
-            title: 'Claims and emergencies don\'t wait for business hours',
-            description: 'Accidents at midnight, storm damage on a Sunday, certificate requests before 8 AM. Policyholders want their agent to answer.'
-        }
-    ];
-
-    const solutionBullets = [
-        'Answers calls when you can\'t: after hours, at lunch, while you\'re with a client',
-        'Captures quote requests with line of business, current carrier, and renewal date',
-        'Answers routine agency questions (hours, address, how to send a document) from your agency\'s info; coverage questions go to a licensed agent',
-        'Flags urgent claims in the message it takes for you',
-        'Takes a clean message for you on every call'
-    ];
-
-    const benefitCards = [
-        {
-            icon: Umbrella,
-            title: 'Quote requests captured, ready to close',
-            description: 'Name, contact details, line of business, current carrier, and renewal date — collected on the first call, so your callback is a quote, not an interview.'
-        },
-        {
-            icon: AlertTriangle,
-            title: 'Urgent claims reach you, routine calls don\'t',
-            description: 'Accidents and property damage are flagged as urgent in the message it takes for you. Billing questions and ID-card or certificate requests are taken as a message for your CSR, without interrupting you.'
-        },
-        {
-            icon: Shield,
-            title: 'Sound like a big agency, even if it\'s just you',
-            description: 'Callers hear a professional answer instead of voicemail.'
-        },
+    const offerCards = [
         {
             icon: FileText,
-            title: 'A clear message for every call',
-            description: 'Caller details, reason for the call and callback requests go to your team as a message. No sticky notes.'
+            title: 'The Monday list',
+            description: 'Every Monday, the trucking companies in your state whose liability renews in about 30 to 60 days, with current insurer and limit, plus new authorities from the last 7 days. One agency per state. First week free, then $129 every 4 weeks.'
+        },
+        {
+            icon: CalendarCheck,
+            title: 'Held appointments',
+            description: 'We phone the truckers on your list and book the owners onto your calendar as quote calls. First held appointment free, then $150, charged only when the owner shows up and asks for a quote. Not offered in every state.'
         }
     ];
 
-    const steps = [
-        {
-            number: '1',
-            title: 'Connect your agency number',
-            description: 'We set up call forwarding from your agency line with you.'
-        },
-        {
-            number: '2',
-            title: 'Set your lines, carriers & urgent-call rules',
-            description: 'Tell us which lines of business you write, your appointment availability, and what counts as urgent.'
-        },
-        {
-            number: '3',
-            title: 'Go live and every call gets answered',
-            description: 'From the moment you flip the switch, every quote request, service request and claim call gets a professional answer and a clean message for your team.'
-        }
+    const listItems = [
+        <><strong>Renewals:</strong> fleets with 3 or more power units whose liability renews in roughly 30 to 60 days. The current insurer and liability limit are named from the insurer&apos;s federal filing (BMC-91X).</>,
+        <><strong>New authorities:</strong> trucking companies that applied for operating authority in the last 7 days and have no liability filing yet.</>,
+        <><strong>Each row:</strong> company, DOT and MC number, owner or officer name, phone and email as filed with FMCSA, city and power units, estimated renewal date.</>,
+        <><strong>In week one:</strong> a 90-day renewal calendar for your state and a first-call script for both lists.</>,
+        <><strong>Dead lead?</strong> Reply &ldquo;SWAP&rdquo; with the DOT number and a replacement comes in the next Monday list.</>
     ];
 
-    const segments = [
-        { name: 'Auto & Home', icon: Car, color: 'bg-blue-100 text-blue-700 border-blue-200' },
-        { name: 'Commercial Lines', icon: Briefcase, color: 'bg-amber-100 text-amber-700 border-amber-200' },
-        { name: 'P&C Agencies', icon: Home, color: 'bg-purple-100 text-purple-700 border-purple-200' },
-        { name: 'Independent Brokerages', icon: CalendarCheck, color: 'bg-slate-100 text-slate-700 border-slate-200' }
+    const priceItems = [
+        'Monday list: first week free, then $129 every 4 weeks, billed by card through Stripe.',
+        'One agency per state: once your state is claimed, nobody else gets that list from us.',
+        'Held appointments: first one free, then $150 each, charged only when the owner shows up and asks for a quote.'
     ];
 
     return (
@@ -132,15 +85,11 @@ export default function InsuranceAgentsContent({ page }) {
                     <div className="text-center max-w-4xl mx-auto">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
                             <Shield size={16} />
-                            <span>AI for Insurance Agents</span>
+                            <span>For independent agencies that write commercial trucking</span>
                         </div>
 
-                        <p className="text-lg md:text-xl text-blue-700 font-medium mb-4">
-                            You&apos;re on hold with a carrier. A prospect is calling. That call is a bound policy.
-                        </p>
-
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            AI Answering Service for <span className="text-primary-600">Independent Insurance Agencies</span>
+                            Trucking leads and booked quote calls for <span className="text-primary-600">independent insurance agencies</span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10">
@@ -153,113 +102,44 @@ export default function InsuranceAgentsContent({ page }) {
                                 onClick={handleAction}
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                             >
-                                Start your pilot
+                                Book a free 30-minute call
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <a
-                                href={CAL_BOOKING_URL}
-                                onClick={handleAction}
+                                href="/trucking-insurance-leads"
                                 className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                             >
-                                Book a free pilot call
+                                See this week&apos;s list sizes
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Answer-first block for AI engines and searchers: the sub-question, answered in one paragraph. */}
+            {/* Answer-first block for AI engines and searchers: what Dooza does for agencies, in one paragraph. */}
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
-                    <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI answering service for an insurance agency do?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI answering service for an independent insurance agency picks up the calls your team can’t: quote shoppers, policyholders reporting a claim, and service requests after hours or while you’re with a client. It takes down what you need to call back ready (name, line of business, current carrier, renewal date; for claims, policy number, date of loss and whether anyone is hurt), flags urgent claims in the message it takes for you, and leaves every coverage question to your licensed staff. It does not quote, bind or interpret coverage, the same line most states draw for unlicensed agency staff. Dooza sets it up for you on your existing number during a refundable pilot: 100% refund within 14 days. It answers in English only today.</p>
-                    <p className="mt-3 text-sm text-slate-500">Comparing options? See what your call volume would cost in our <a href="/ai-receptionist-cost-calculator" className="font-medium text-primary-700 underline">AI receptionist cost calculator</a>.</p>
-                    <p className="mt-4 text-base text-slate-700"><strong>Write commercial trucking?</strong> Get the trucking companies in your state renewing in 30-60 days, with current insurer, every Monday: <a href="/trucking-insurance-leads" className="font-semibold text-primary-700 underline">trucking insurance leads near renewal</a> (4 weeks free).</p>
-                    <p className="mt-2 text-sm text-slate-500">Buying leads? Work out your cost per sold policy, shared vs exclusive, in our <a href="/insurance-lead-cost-calculator" className="font-medium text-primary-700 underline">insurance lead cost calculator</a>.</p>
+                    <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does Dooza do for insurance agencies?</h2>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">Dooza finds trucking prospects for US independent insurance agencies that write commercial trucking. Every Monday you get a list for your state from public FMCSA data: trucking companies whose liability insurance renews in about 30 to 60 days, with their current insurer and limit named, plus new trucking authorities from the last 7 days that have no liability filing yet. One agency per state. The first week is free, then $129 every 4 weeks. If you would rather not dial, we can phone the truckers on your list and book owners onto your calendar as quote calls: the first held appointment is free, then $150, charged only when the owner shows up and asks for a quote.</p>
                 </div>
             </section>
 
             {/* =============================== */}
-            {/* 2. PROBLEM SECTION              */}
-            {/* =============================== */}
-            <section className="py-16 md:py-24 bg-white">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
-                            The Problem Every Independent Agent Knows
-                        </h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            You didn&apos;t get your license to be chained to a phone. But a missed call can be a quote your competitor writes.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {problemCards.map((card, idx) => (
-                            <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-red-200 hover:shadow-lg transition-all">
-                                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-4">
-                                    <card.icon size={24} />
-                                </div>
-                                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                                    {card.title}
-                                </h3>
-                                <p className="text-slate-600 text-sm leading-relaxed">
-                                    {card.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* =============================== */}
-            {/* 3. SOLUTION SECTION             */}
+            {/* 2. TWO OFFERS                   */}
             {/* =============================== */}
             <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-3xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
-                                What Dooza AI Does for You
-                            </h2>
-                            <p className="text-lg text-slate-600">
-                                An AI agent that answers like your best front-office hire and leaves every coverage question to your licensed staff.
-                            </p>
-                        </div>
-
-                        <div className="bg-white border border-slate-200 rounded-2xl p-8">
-                            <div className="space-y-5">
-                                {solutionBullets.map((bullet, idx) => (
-                                    <div key={idx} className="flex items-start gap-4">
-                                        <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                                            <CheckCircle2 size={18} className="text-green-600" />
-                                        </div>
-                                        <p className="text-lg text-slate-700 font-medium">
-                                            {bullet}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* =============================== */}
-            {/* 4. BENEFITS SECTION             */}
-            {/* =============================== */}
-            <section className="py-16 md:py-24 bg-white">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
-                            Why Independent Agents Choose Dooza
+                            Two ways to work with Dooza
                         </h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            Stop losing policies to missed calls. Run a bigger book of business without hiring.
+                            Dial the list yourself, or let us book the quote calls for you.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
-                        {benefitCards.map((card, idx) => (
+                        {offerCards.map((card, idx) => (
                             <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-200 hover:shadow-lg transition-all">
                                 <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 mb-4">
                                     <card.icon size={24} />
@@ -277,113 +157,131 @@ export default function InsuranceAgentsContent({ page }) {
             </section>
 
             {/* =============================== */}
-            {/* 5. HOW IT WORKS SECTION         */}
+            {/* 3. WHAT IS IN THE MONDAY LIST   */}
             {/* =============================== */}
-            <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
-                            How It Works
-                        </h2>
-                        <p className="text-lg text-slate-600">
-                            A Dooza engineer scopes your pilot on a free call. Start with a refundable pilot — 100% refund within 14 days.
-                        </p>
-                    </div>
-
-                    <div className="max-w-3xl mx-auto space-y-6">
-                        {steps.map((step, idx) => (
-                            <div key={idx} className="flex gap-5 items-start bg-white border border-slate-200 rounded-2xl p-6 hover:border-primary-200 transition-all">
-                                <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-xl shrink-0">
-                                    {step.number}
-                                </div>
-                                <div>
-                                    <h3 className="text-lg font-bold text-slate-900 mb-1">
-                                        {step.title}
-                                    </h3>
-                                    <p className="text-slate-600 leading-relaxed">
-                                        {step.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* =============================== */}
-            {/* 7. SEGMENTS SERVED SECTION      */}
-            {/* =============================== */}
-            <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
-                            Built for Every Line of Business
-                        </h2>
-                        <p className="text-lg text-slate-600">
-                            Dooza AI works for independent agents and brokerages across personal and commercial lines.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-                        {segments.map((segment, idx) => (
-                            <div
-                                key={idx}
-                                className={`flex items-center gap-3 px-5 py-4 rounded-xl border ${segment.color} font-medium text-sm`}
-                            >
-                                <segment.icon size={20} />
-                                <span>{segment.name}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Licensing: what an unlicensed answerer may and may not do (citable block, sourced). */}
             <section className="py-16 md:py-24 bg-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight text-center">
-                        What an Answering Service May Say for a Licensed Agency
-                    </h2>
-                    <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 text-center">
-                        An AI agent, like an unlicensed CSR, is not a licensed producer. Dooza scripts it to stay on the right side of that line.
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="border border-green-200 bg-green-50 rounded-2xl p-6">
-                            <h3 className="text-lg font-bold text-slate-900 mb-3">Can do</h3>
-                            <ul className="space-y-2 text-slate-700">
-                                <li>Take quote details (line, carrier, renewal date)</li>
-                                <li>Take first notice of a claim and pass it to you</li>
-                                <li>Take change requests for a producer to review</li>
-                                <li>Take a callback request with the best time</li>
-                            </ul>
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-3xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
+                                What is in the Monday list
+                            </h2>
+                            <p className="text-lg text-slate-600">
+                                Two lists for your state, as a spreadsheet, every Monday.
+                            </p>
                         </div>
-                        <div className="border border-amber-200 bg-amber-50 rounded-2xl p-6">
-                            <h3 className="text-lg font-bold text-slate-900 mb-3">Leaves to your licensed staff</h3>
-                            <ul className="space-y-2 text-slate-700">
-                                <li>Quoting a premium</li>
-                                <li>Comparing carriers or products</li>
-                                <li>Advising on limits or coverage needs</li>
-                                <li>Interpreting a policy or saying whether a loss is covered</li>
-                                <li>Binding coverage</li>
-                            </ul>
+
+                        <div className="bg-white border border-slate-200 rounded-2xl p-8">
+                            <div className="space-y-5">
+                                {listItems.map((item, idx) => (
+                                    <div key={idx} className="flex items-start gap-4">
+                                        <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                                            <Truck size={18} className="text-green-600" />
+                                        </div>
+                                        <p className="text-lg text-slate-700">
+                                            {item}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
+
+                        <div className="mt-8 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+                            <table className="w-full min-w-[480px] text-left text-sm">
+                                <thead>
+                                    <tr className="border-b border-slate-200 text-slate-600">
+                                        <th className="px-4 py-3 font-semibold">State</th>
+                                        <th className="px-4 py-3 font-semibold">Renewals (30-60 days)</th>
+                                        <th className="px-4 py-3 font-semibold">New authorities (last 7 days)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {STATE_COUNTS.map((r) => (
+                                        <tr key={r.state} className="border-b border-slate-100">
+                                            <td className="px-4 py-3 font-semibold text-slate-900">{r.state}</td>
+                                            <td className="px-4 py-3 text-slate-800">{r.renewals}</td>
+                                            <td className="px-4 py-3 text-slate-800">{r.newAuthorities}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        <p className="mt-2 text-xs text-slate-500">Rows in the Monday lists on October 12, 2026. Source: FMCSA open data, Dooza&apos;s weekly run of October 12, 2026. Numbers change every week.</p>
+                        <p className="mt-6 text-base text-slate-700">
+                            Every column and where it comes from: <a href="/trucking-insurance-leads" className="font-semibold text-primary-700 underline">trucking insurance leads near renewal</a>.
+                        </p>
                     </div>
-                    <p className="mt-6 text-sm text-slate-500">
-                        Sources: <a href="https://risk.uticanational.com/eo/loss-control-articles/eo-tip-know-what-activities-an-unlicensed-csr-can-perform" className="underline" rel="noopener" target="_blank">Utica National E&amp;O tip on unlicensed CSRs</a> and <a href="https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-69B-222-060" className="underline" rel="noopener" target="_blank">Florida Admin. Code 69B-222.060</a> (checked Oct 9, 2026). Rules vary by state; check yours. This is not legal advice.
+                </div>
+            </section>
+
+            {/* =============================== */}
+            {/* 4. HELD APPOINTMENTS            */}
+            {/* =============================== */}
+            <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
+                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 shrink-0">
+                            <PhoneCall size={24} />
+                        </div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                            Held appointments
+                        </h2>
+                    </div>
+                    <p className="text-lg text-slate-700 leading-relaxed">
+                        Rather not dial yourself? We phone the truckers on your list and book the owners onto your calendar as quote calls. The first held appointment is free. After that it is $150, charged only when the owner shows up and asks for a quote. We are starting with a few agencies, and it is not offered in every state. In Pennsylvania the list is the offer. Ask about your state on the call.
                     </p>
                 </div>
             </section>
 
             {/* =============================== */}
-            {/* 8. CTA SECTION                  */}
+            {/* 5. COST, RENEWAL DATES, RULES   */}
             {/* =============================== */}
             <section className="py-16 md:py-24 bg-white">
+                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                    <div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
+                            What it costs
+                        </h2>
+                        <ul className="space-y-3 text-lg text-slate-700 list-disc pl-6">
+                            {priceItems.map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                            ))}
+                        </ul>
+                        <p className="mt-4 text-base text-slate-700">
+                            Comparing with bought leads? Our <a href="/insurance-lead-cost-calculator" className="font-semibold text-primary-700 underline">insurance lead cost calculator</a> shows cost per sold policy from price per lead and close rate.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
+                            How renewal dates are estimated
+                        </h2>
+                        <p className="text-lg text-slate-700 leading-relaxed">
+                            FMCSA does not publish when a trucking policy expires. We take the next anniversary of the current liability filing&apos;s effective date, so treat each date as an estimate and confirm it on the call.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
+                            Calling rules
+                        </h2>
+                        <p className="text-lg text-slate-700 leading-relaxed">
+                            Many owner numbers are cell phones. Dial by hand and check the Do Not Call list before you call.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* =============================== */}
+            {/* 6. CTA SECTION                  */}
+            {/* =============================== */}
+            <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
-                        Stop Losing Policies to a Busy Line
+                        Is your state still open?
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
-                        A missed call can be a quote your competitor writes. Dooza AI picks up when you can't and captures the details, so your callback is ready to quote.
+                        Book a free 30-minute call. We check that your state is still open, answer your questions and start your free week.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
@@ -391,25 +289,24 @@ export default function InsuranceAgentsContent({ page }) {
                             onClick={handleAction}
                             className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                         >
-                            Start your pilot
+                            Book a free 30-minute call
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
-                            href={CAL_BOOKING_URL}
-                            onClick={handleAction}
+                            href="/trucking-insurance-leads"
                             className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                         >
-                            Book a free pilot call
+                            See this week&apos;s list sizes
                         </a>
                     </div>
                 </div>
             </section>
 
             {/* =============================== */}
-            {/* 9. FAQ SECTION                  */}
+            {/* 7. FAQ SECTION                  */}
             {/* =============================== */}
             {page.faqData && page.faqData.length > 0 && (
-                <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-100">
+                <section className="py-16 md:py-24 bg-white">
                     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
@@ -451,9 +348,8 @@ export default function InsuranceAgentsContent({ page }) {
             )}
 
             {/* =============================== */}
-            {/* BOTTOM CTA + FOOTER + MODAL     */}
+            {/* FOOTER + MODAL                  */}
             {/* =============================== */}
-            <BottomCTA openModal={handleAction} />
             <Footer />
             <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
         </div>
