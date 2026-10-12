@@ -111,7 +111,7 @@ const staticPages = [
     {
         title: 'Trucking insurance leads near renewal, every Monday (for insurance agencies)',
         url: `${SITE_URL}/trucking-insurance-leads`,
-        description: 'Weekly list for agencies that write commercial trucking: trucking companies in their state with liability renewing in 30-60 days (current insurer and limit from FMCSA BMC-91X filings, estimated renewal date) plus new authorities from the last 7 days. One agency per state; first 4 weeks free, then $129 per 4 weeks. Data: FMCSA open data.',
+        description: 'Weekly list for agencies that write commercial trucking: trucking companies in their state with liability renewing in 30-60 days (current insurer and limit from FMCSA BMC-91X filings, estimated renewal date) plus new authorities from the last 7 days. One agency per state; first week free, then $129 per 4 weeks. Data: FMCSA open data.',
     },
     {
         title: 'Insurance lead cost per policy calculator (exclusive vs shared, 2026 prices with sources)',

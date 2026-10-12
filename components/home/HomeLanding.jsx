@@ -152,6 +152,10 @@ export default function HomeLanding() {
                             <ContactRow placement="hero" />
                         </div>
                         <p className="mt-5 text-sm text-slate-500">Free call. Refundable pilot: 100% refund within 14 days.</p>
+                        <p className="mt-4 max-w-[34rem] text-[15px] text-slate-700">
+                            Insurance agency that writes trucking?{' '}
+                            <Link href="/trucking-insurance-leads" className={LINK}>Get the trucking companies in your state renewing in 30 to 60 days, every Monday</Link>.
+                        </p>
                     </div>
                     <DailyReport />
                 </div>

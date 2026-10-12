@@ -6,7 +6,7 @@ import { SITE_URL } from '@/lib/site';
 
 const PATH = '/trucking-insurance-leads';
 const TITLE = 'Trucking Insurance Leads Near Renewal, Every Monday';
-const DESCRIPTION = 'For agencies that write commercial trucking: every Monday, the trucking companies in your state renewing in 30-60 days, with current insurer, plus new authorities. One agency per state. 4 weeks free, then $129 per 4 weeks.';
+const DESCRIPTION = 'For agencies that write commercial trucking: every Monday, the trucking companies in your state renewing in 30-60 days, with current insurer, plus new authorities. One agency per state. First week free, then $129 per 4 weeks.';
 const UPDATED = '2026-10-12';
 const UPDATED_LABEL = 'October 12, 2026';
 const BOOK = '/book?utm_source=website&utm_medium=cta&utm_campaign=booking&utm_content=trucking-insurance-leads';
@@ -66,7 +66,7 @@ const schemas = [
         areaServed: 'US',
         audience: { '@type': 'BusinessAudience', audienceType: 'Independent insurance agencies that write commercial trucking' },
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
-        offers: { '@type': 'Offer', price: '129', priceCurrency: 'USD', description: 'Per 4 weeks, after 4 free weeks. One agency per state.' },
+        offers: { '@type': 'Offer', price: '129', priceCurrency: 'USD', description: 'Per 4 weeks, after a free first week. One agency per state.' },
     },
     {
         '@context': 'https://schema.org',
@@ -97,7 +97,7 @@ function Cta({ label = 'Claim your state' }) {
             <Link href={BOOK} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
                 {label}
             </Link>
-            <span className="text-sm text-slate-600">Free 30-minute call. First 4 weeks free, then $129 per 4 weeks.</span>
+            <span className="text-sm text-slate-600">Free 30-minute call. First week free, then $129 per 4 weeks.</span>
         </div>
     );
 }
@@ -118,7 +118,7 @@ export default function TruckingInsuranceLeadsPage() {
                         <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Trucking insurance leads near renewal, every Monday</h1>
                         <p className="mt-5 text-lg text-slate-700">
                             <strong>Every Monday you get the trucking companies in your state whose liability insurance renews in the next 30 to 60 days, with their current insurer named, plus the new trucking authorities from the past week that still need coverage.</strong>{' '}
-                            One agency per state. The first 4 weeks are free, then $129 every 4 weeks.
+                            One agency per state. The first week is free, then $129 every 4 weeks.
                         </p>
                         <div className="mt-8">
                             <Cta />
@@ -192,7 +192,7 @@ export default function TruckingInsuranceLeadsPage() {
 
                             <h2>What it costs</h2>
                             <ul>
-                                <li>First 4 weeks free.</li>
+                                <li>First week free.</li>
                                 <li>Then $129 every 4 weeks, billed by card through Stripe.</li>
                                 <li>One agency per state: once your state is claimed, nobody else gets that list from us.</li>
                             </ul>
@@ -211,7 +211,7 @@ export default function TruckingInsuranceLeadsPage() {
 
                         <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
                             <h2 className="text-2xl font-bold text-slate-900">Is your state still open?</h2>
-                            <p className="mt-2 text-slate-700">Book a free 30-minute call. We check that your state is still open, answer your questions and start your 4 free weeks.</p>
+                            <p className="mt-2 text-slate-700">Book a free 30-minute call. We check that your state is still open, answer your questions and start your free week.</p>
                             <div className="mt-5">
                                 <Cta label="Check my state" />
                             </div>
