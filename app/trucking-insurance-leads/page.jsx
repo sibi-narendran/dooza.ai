@@ -202,7 +202,7 @@ export default function TruckingInsuranceLeadsPage() {
 
                             <h2>Rather not dial yourself?</h2>
                             <p>
-                                We can phone the truckers on your list and book the owners onto your calendar as quote calls. The first held appointment is free; after that it is $150, charged only when the owner shows up and asks for a quote. We are starting with a few agencies; ask about it on the call.
+                                We can phone the truckers on your list and book the owners onto your calendar as quote calls. The first held appointment is free; after that it is $150, charged only when the owner shows up and asks for a quote. We are starting with a few agencies and it is not offered in every state (not in Pennsylvania, where the list is the offer); ask about it on the call.
                             </p>
 
                             <h2>Calling rules</h2>
