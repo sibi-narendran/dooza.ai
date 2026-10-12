@@ -28,6 +28,16 @@ const COLUMNS = [
     ['Estimated renewal date and days out', 'The next anniversary of the current filing’s effective date. Confirm it on the call.'],
 ];
 
+// Real rows from the Pennsylvania list of 2026-10-12 (/home/hercules/data/feeds/PA_2026-10-12.csv); names and contacts hidden.
+const SAMPLE_ROWS = [
+    ['Renewal', 'Feasterville Trevose', '12', 'GEICO Marine Insurance Company', '$750,000', 'Nov 11, 2026 (30 days)'],
+    ['Renewal', 'Hazleton', '4', 'GEICO General Insurance Company', '$750,000', 'Nov 11, 2026 (30 days)'],
+    ['Renewal', 'Montoursville', '3', 'Selective Way Insurance Company', '$750,000', 'Nov 11, 2026 (30 days)'],
+    ['Renewal', 'Montrose', '4', 'Travelers Indemnity Company', '$750,000', 'Nov 11, 2026 (30 days)'],
+    ['New authority', 'Allentown', '2', 'None filed yet', 'Needs at least $750,000', 'Applied Oct 11, 2026'],
+    ['New authority', 'McSherrystown', '1', 'None filed yet', 'Needs at least $750,000', 'Applied Oct 10, 2026'],
+];
+
 const faqItems = [
     {
         question: 'Is there an X-date list for trucking insurance?',
@@ -150,6 +160,34 @@ export default function TruckingInsuranceLeadsPage() {
                                         <tr key={col} className="border-b border-slate-100 align-top">
                                             <td className="px-4 py-3 font-semibold text-slate-900">{col}</td>
                                             <td className="px-4 py-3 text-slate-700">{src}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <section className="prose prose-slate mt-12 max-w-none">
+                            <h2>What the rows look like</h2>
+                            <p>Six real rows from the Pennsylvania list of October 12, 2026. In this public sample we hide the company name, DOT and MC number, owner, phone and email; your list has them all.</p>
+                        </section>
+                        <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+                            <table className="w-full min-w-[640px] text-left text-sm">
+                                <thead>
+                                    <tr className="border-b border-slate-200 text-slate-600">
+                                        <th className="px-4 py-3 font-semibold">List</th>
+                                        <th className="px-4 py-3 font-semibold">City</th>
+                                        <th className="px-4 py-3 font-semibold">Power units</th>
+                                        <th className="px-4 py-3 font-semibold">Current insurer</th>
+                                        <th className="px-4 py-3 font-semibold">Liability limit</th>
+                                        <th className="px-4 py-3 font-semibold">Estimated renewal / applied</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {SAMPLE_ROWS.map((r) => (
+                                        <tr key={r.join('|')} className="border-b border-slate-100 align-top">
+                                            {r.map((c, i) => (
+                                                <td key={i} className={`px-4 py-3 ${i === 0 ? 'font-semibold text-slate-900' : 'text-slate-700'}`}>{c}</td>
+                                            ))}
                                         </tr>
                                     ))}
                                 </tbody>
