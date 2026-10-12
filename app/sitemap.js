@@ -230,6 +230,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/trucking-insurance-leads`,
+            lastModified: pageDate('2026-10-12'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/insurance-lead-cost-calculator`,
             lastModified: pageDate('2026-10-10'),
             changeFrequency: 'monthly',

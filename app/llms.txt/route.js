@@ -109,6 +109,11 @@ const staticPages = [
         description: 'AI solutions for small business workflows.',
     },
     {
+        title: 'Trucking insurance leads near renewal, every Monday (for insurance agencies)',
+        url: `${SITE_URL}/trucking-insurance-leads`,
+        description: 'Weekly list for agencies that write commercial trucking: trucking companies in their state with liability renewing in 30-60 days (current insurer and limit from FMCSA BMC-91X filings, estimated renewal date) plus new authorities from the last 7 days. One agency per state; first 4 weeks free, then $129 per 4 weeks. Data: FMCSA open data.',
+    },
+    {
         title: 'Insurance lead cost per policy calculator (exclusive vs shared, 2026 prices with sources)',
         url: `${SITE_URL}/insurance-lead-cost-calculator`,
         description: 'Free calculator for insurance agents: lead price, close rate and commission give cost per sold policy and break-even close rate for exclusive vs shared leads; 2026 lead prices (Medicare tiers, 27-vendor range, Meta and Google cost per lead) linked to sources, checked October 10, 2026.',
