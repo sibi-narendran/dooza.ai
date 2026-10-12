@@ -30,6 +30,10 @@ const COLUMNS = [
 
 const faqItems = [
     {
+        question: 'Is there an X-date list for trucking insurance?',
+        answer: 'Not an official one: FMCSA does not publish when a trucking policy expires. Our Monday renewals list is the closest thing. It lists the trucking companies in your state with 3 or more power units whose liability filing (BMC-91X) is estimated to renew in the next 30 to 60 days, with the current insurer and limit named. The X-date is the next anniversary of the filing\'s effective date, so confirm it on the call.',
+    },
+    {
         question: 'Where does the trucking renewal data come from?',
         answer: 'Public FMCSA data on data.transportation.gov: the Company Census (contact details, fleet size), the insurance and authority history files, and the BMC-91X liability filings that insurers make for each carrier. We join them every week and keep the companies in your state.',
     },
