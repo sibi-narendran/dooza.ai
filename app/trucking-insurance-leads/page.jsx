@@ -200,6 +200,11 @@ export default function TruckingInsuranceLeadsPage() {
                                 Comparing it with bought leads? Our <Link href="/insurance-lead-cost-calculator">insurance lead cost calculator</Link> shows cost per sold policy from price per lead and close rate.
                             </p>
 
+                            <h2>Rather not dial yourself?</h2>
+                            <p>
+                                We can phone the truckers on your list and book the owners onto your calendar as quote calls. The first held appointment is free; after that it is $150, charged only when the owner shows up and asks for a quote. We are starting with a few agencies; ask about it on the call.
+                            </p>
+
                             <h2>Calling rules</h2>
                             <p>Many owner numbers are cell phones. Dial by hand and check the Do Not Call list before you call; the script is written for a first call by a licensed agent.</p>
                         </section>
