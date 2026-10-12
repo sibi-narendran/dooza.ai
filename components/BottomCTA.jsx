@@ -18,8 +18,9 @@ const BottomCTA = ({ openModal }) => {
     return (
         <div className="py-16 md:py-24 bg-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p className="text-lg font-bold text-primary-600 mb-3">Got busywork? Dooza it.</p>
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tight">
-                    Got busywork? Dooza it.
+                    Still doing it? The world is Doozaing.
                 </h2>
                 <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
                     Start with a refundable pilot — 100% refund within 14 days.
