@@ -3,6 +3,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
+import StateRenewalCounter from '@/components/StateRenewalCounter';
+import stateCounts from '@/lib/truckingStateCounts.json';
 
 const PATH = '/trucking-insurance-leads';
 const TITLE = 'Trucking Insurance Leads Near Renewal, Every Monday';
@@ -12,12 +14,9 @@ const UPDATED_LABEL = 'October 12, 2026';
 const BOOK = '/book?utm_source=website&utm_medium=cta&utm_campaign=booking&utm_content=trucking-insurance-leads';
 
 // Rows in each state's Monday list on 2026-10-12 (FMCSA open data, Dooza's own run).
-const STATE_COUNTS = [
-    { state: 'Illinois', renewals: 523, newAuthorities: 115 },
-    { state: 'Pennsylvania', renewals: 383, newAuthorities: 119 },
-    { state: 'Georgia', renewals: 202, newAuthorities: 102 },
-    { state: 'New York', renewals: 152, newAuthorities: 52 },
-];
+const STATE_COUNTS = stateCounts.states;
+const US_RENEWALS = STATE_COUNTS.reduce((n, x) => n + x.renewals, 0);
+const US_NEW = STATE_COUNTS.reduce((n, x) => n + x.newAuthorities, 0);
 
 const COLUMNS = [
     ['Company, DOT and MC number', 'From the FMCSA registration.'],
@@ -53,7 +52,7 @@ const faqItems = [
     },
     {
         question: 'Which states can I get?',
-        answer: 'Any US state where no other agency has claimed the list. Each state goes to one agency only. On October 12, 2026, the Monday lists ranged from 152 renewals (New York) to 523 (Illinois).',
+        answer: 'Any US state where no other agency has claimed the list. Each state goes to one agency only. On October 12, 2026 there were 6,808 such renewals and 2,057 new authorities across the 50 states and DC; the counter on this page shows your state.',
     },
     {
         question: 'How is this different from buying trucking insurance leads?',
@@ -196,28 +195,34 @@ export default function TruckingInsuranceLeadsPage() {
 
                         <section className="prose prose-slate mt-12 max-w-none">
                             <h2>How big is a list?</h2>
-                            <p>It depends on the state. Rows in the Monday lists on {UPDATED_LABEL}:</p>
+                            <p>It depends on the state. Across the US on {UPDATED_LABEL}: {US_RENEWALS.toLocaleString('en-US')} fleets with 3 or more power units renewing in 30 to 60 days, and {US_NEW.toLocaleString('en-US')} new authorities from the last 7 days. Pick your state:</p>
                         </section>
-                        <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
-                            <table className="w-full min-w-[480px] text-left text-sm">
-                                <thead>
-                                    <tr className="border-b border-slate-200 text-slate-600">
-                                        <th className="px-4 py-3 font-semibold">State</th>
-                                        <th className="px-4 py-3 font-semibold">Renewals (30-60 days)</th>
-                                        <th className="px-4 py-3 font-semibold">New authorities (last 7 days)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {STATE_COUNTS.map((r) => (
-                                        <tr key={r.state} className="border-b border-slate-100">
-                                            <td className="px-4 py-3 font-semibold text-slate-900">{r.state}</td>
-                                            <td className="px-4 py-3 text-slate-800">{r.renewals}</td>
-                                            <td className="px-4 py-3 text-slate-800">{r.newAuthorities}</td>
+                        <StateRenewalCounter states={STATE_COUNTS} runLabel={UPDATED_LABEL} />
+                        <details className="mt-4 rounded-2xl border border-slate-200 bg-white">
+                            <summary className="cursor-pointer px-4 py-3 text-sm font-semibold text-slate-900">All states, {UPDATED_LABEL}</summary>
+                            <div className="overflow-x-auto">
+                                <table className="w-full min-w-[640px] text-left text-sm">
+                                    <thead>
+                                        <tr className="border-b border-slate-200 text-slate-600">
+                                            <th className="px-4 py-3 font-semibold">State</th>
+                                            <th className="px-4 py-3 font-semibold">Renewals (30-60 days)</th>
+                                            <th className="px-4 py-3 font-semibold">New authorities (last 7 days)</th>
+                                            <th className="px-4 py-3 font-semibold">Most common current insurer</th>
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                    </thead>
+                                    <tbody>
+                                        {STATE_COUNTS.map((r) => (
+                                            <tr key={r.code} className="border-b border-slate-100">
+                                                <td className="px-4 py-3 font-semibold text-slate-900">{r.name}</td>
+                                                <td className="px-4 py-3 text-slate-800">{r.renewals}</td>
+                                                <td className="px-4 py-3 text-slate-800">{r.newAuthorities}</td>
+                                                <td className="px-4 py-3 text-slate-700">{r.topInsurers[0] ? `${r.topInsurers[0].name} (${r.topInsurers[0].count})` : '-'}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
                         <p className="mt-2 text-xs text-slate-500">Source: FMCSA open data, Dooza’s weekly run of {UPDATED_LABEL}. Numbers change every week.</p>
 
                         <section className="prose prose-slate mt-12 max-w-none">
