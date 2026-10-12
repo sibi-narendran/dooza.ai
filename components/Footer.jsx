@@ -20,6 +20,7 @@ const Footer = ({ variant = 'light' }) => {
                         </span>
                     </Link>
                     <p className={`text-sm max-w-xs text-center md:text-left ${isDark ? 'text-gray-500' : 'text-slate-500'}`}>
+                        <span className={`block font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>Don&rsquo;t do it. Dooza it.</span>
                         Build, grow, and scale your business with AI-powered solutions.
                     </p>
                 </div>

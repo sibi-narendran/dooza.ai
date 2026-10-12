@@ -176,7 +176,7 @@ export default function BookPage() {
                 <div className="mb-2 flex min-h-10 items-center px-1">
                     <div>
                         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-600">
-                            Dooza
+                            Dooza does it.
                         </p>
                         <h1 className="text-lg font-black tracking-tight text-slate-950 sm:text-xl">
                             <Link href="/" className="transition hover:text-primary-700">

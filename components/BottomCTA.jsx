@@ -19,7 +19,7 @@ const BottomCTA = ({ openModal }) => {
         <div className="py-16 md:py-24 bg-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tight">
-                    Ready to scale your business?
+                    Got busywork? Dooza it.
                 </h2>
                 <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
                     Start with a refundable pilot — 100% refund within 14 days.

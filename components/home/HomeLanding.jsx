@@ -141,6 +141,7 @@ export default function HomeLanding() {
             <section className="bg-[#EEF3F7] px-4 pb-16 pt-28 md:px-8 md:pb-24 md:pt-36">
                 <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
                     <div>
+                        <p className={`${display.className} mb-5 text-xl font-extrabold tracking-[-0.01em] text-primary-600 md:text-2xl`}>Don&rsquo;t do it. Dooza it.</p>
                         <h1 className={`${display.className} text-[2.6rem] font-extrabold leading-[1.02] tracking-[-0.03em] ${INK} sm:text-6xl lg:text-[4.25rem]`}>
                             We build you an AI&nbsp;employee. We keep it working.
                         </h1>
