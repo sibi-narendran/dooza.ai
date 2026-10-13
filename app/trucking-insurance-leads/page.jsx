@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
 import StateRenewalCounter from '@/components/StateRenewalCounter';
+import TruckingSampleForm from '@/components/TruckingSampleForm';
+import { CLAIMED_STATES } from '@/lib/truckingClaimedStates';
 import stateCounts from '@/lib/truckingStateCounts.json';
 
 const PATH = '/trucking-insurance-leads';
@@ -143,6 +145,9 @@ export default function TruckingInsuranceLeadsPage() {
                         </p>
                         <div className="mt-8">
                             <Cta />
+                            <p className="mt-3 text-sm text-slate-700">
+                                Not ready for a call? <a href="#sample" className="font-semibold text-primary-700 underline">Get 5 free rows from your state</a> by email first.
+                            </p>
                         </div>
 
                         <section className="prose prose-slate mt-14 max-w-none">
@@ -232,6 +237,11 @@ export default function TruckingInsuranceLeadsPage() {
                             </div>
                         </details>
                         <p className="mt-2 text-xs text-slate-500">Source: FMCSA open data, Dooza’s weekly run of {UPDATED_LABEL}. Numbers change every week.</p>
+
+                        <section id="sample" className="mt-12 scroll-mt-28">
+                            <h2 className="text-2xl font-bold text-slate-900">See real rows before you decide</h2>
+                            <TruckingSampleForm states={STATE_COUNTS} claimed={CLAIMED_STATES} />
+                        </section>
 
                         <section className="prose prose-slate mt-12 max-w-none">
                             <h2>Also in your first week</h2>
