@@ -268,7 +268,7 @@ export default function TruckingInsuranceLeadsPage() {
 
                             <h2>Rather not dial yourself?</h2>
                             <p>
-                                We can phone the truckers on your list and book the owners onto your calendar as quote calls. The first held appointment is free; after that it is $150, charged only when the owner shows up and asks for a quote. We are starting with a few agencies, so it is not offered in every state yet. In Pennsylvania and North Carolina it comes as a flat 4-week package of booked calls instead, with no per-call fee; ask about it on the call.
+                                We can phone the truckers on your list and book the owners onto your calendar as quote calls. It costs $299 for 4 booked quote calls, and the first one is free. We are starting with a few agencies, so it is not offered in every state yet. In Pennsylvania and North Carolina it comes as a flat 4-week package of booked calls instead, with no per-call fee; ask about it on the call.
                             </p>
 
                             <h2>Who is behind this list?</h2>
