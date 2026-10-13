@@ -281,7 +281,7 @@ export default function InsuranceAgentsContent({ page }) {
                         Is your state still open?
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
-                        Book a free 30-minute call. We check that your state is still open, answer your questions and start your free week.
+                        Book a free 30-minute call. We check that your state is still open, answer your questions and start your free week. Not ready for a call? Get 5 free rows from your state by email first.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
@@ -293,10 +293,10 @@ export default function InsuranceAgentsContent({ page }) {
                             <ArrowRight className="w-5 h-5" />
                         </a>
                         <a
-                            href="/trucking-insurance-leads"
+                            href="/trucking-insurance-leads?utm_source=website&utm_medium=internal&utm_campaign=industries-insurance#sample"
                             className="inline-flex items-center justify-center gap-2 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:-translate-y-1"
                         >
-                            See this week&apos;s list sizes
+                            Get 5 free rows from your state
                         </a>
                     </div>
                 </div>
