@@ -152,10 +152,11 @@ export default function TruckingInsuranceLeadsPage() {
 
                         <section className="prose prose-slate mt-14 max-w-none">
                             <h2>What is in each Monday list</h2>
-                            <p>Two lists for your state, as a spreadsheet:</p>
+                            <p>Three lists for your state, as a spreadsheet:</p>
                             <ul>
                                 <li><strong>Renewals:</strong> fleets with 3 or more power units whose liability renews in roughly 30 to 60 days.</li>
                                 <li><strong>New authorities:</strong> trucking companies that applied for operating authority in the last 7 days and have no liability filing yet. FMCSA won’t activate their authority until one is filed.</li>
+                                <li><strong>Cancelled, nothing new on file:</strong> trucking companies whose liability policy was cancelled and that have no new policy on file with FMCSA yet. Without one they lose their authority, so they need a quote now. Most states have only a few each week.</li>
                             </ul>
                         </section>
 
