@@ -254,7 +254,7 @@ export default function BestTruckingInsuranceLeadsPage() {
 
                             <h2>The free route</h2>
                             <p>
-                                FMCSA publishes carrier data for free on data.transportation.gov and SAFER: contact details, fleet size, authority history and the insurer&rsquo;s liability filing. It does not publish when a policy expires, so you would join the files and estimate renewal dates yourself. That join is what every data vendor above sells.
+                                FMCSA publishes carrier data for free on data.transportation.gov and SAFER: contact details, fleet size, authority history and the insurer&rsquo;s liability filing. It does not publish when a policy expires, so you would join the files and estimate renewal dates yourself. That join is what every data vendor above sells. Our free weekly count of <Link href="/trucking-insurance-market">which insurers gain and lose trucking companies in each state</Link> is built from the same filings.
                             </p>
                         </section>
 

@@ -236,6 +236,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/trucking-insurance-market`,
+            lastModified: pageDate('2026-10-13'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/best-trucking-insurance-leads`,
             lastModified: pageDate('2026-10-13'),
             changeFrequency: 'monthly',
