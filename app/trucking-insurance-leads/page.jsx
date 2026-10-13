@@ -39,6 +39,14 @@ const SAMPLE_ROWS = [
 
 const faqItems = [
     {
+        question: 'How does $129 compare with paying $35 a lead?',
+        answer: '$129 every 4 weeks is about $32 a week, flat, however many rows your state has. A per-lead vendor at $35 charges that for a single lead, often a trucker who asked for a quote and may be sold to several agents. Our rows have not asked for a quote: you make the first call, timed to their renewal, and nobody else in your state gets the list from us.',
+    },
+    {
+        question: 'Who is Dooza and where do the leads come from?',
+        answer: 'Dooza is a small US company (Adam Laboratory Inc., Delaware) founded by Sibi Narendran. We are not an insurance agency. The rows come from public FMCSA filings, joined every week by our software: you can check any company on FMCSA SAFER by its DOT number.',
+    },
+    {
         question: 'Is there an X-date list for trucking insurance?',
         answer: 'Not an official one: FMCSA does not publish when a trucking policy expires. Our Monday renewals list is the closest thing. It lists the trucking companies in your state with 3 or more power units whose liability filing (BMC-91X) is estimated to renew in the next 30 to 60 days, with the current insurer and limit named. The X-date is the next anniversary of the filing\'s effective date, so confirm it on the call.',
     },
@@ -250,6 +258,11 @@ export default function TruckingInsuranceLeadsPage() {
                             <h2>Rather not dial yourself?</h2>
                             <p>
                                 We can phone the truckers on your list and book the owners onto your calendar as quote calls. The first held appointment is free; after that it is $150, charged only when the owner shows up and asks for a quote. We are starting with a few agencies and it is not offered in every state (not in Pennsylvania, where the list is the offer); ask about it on the call.
+                            </p>
+
+                            <h2>Who is behind this list?</h2>
+                            <p>
+                                Dooza, a small US company (Adam Laboratory Inc., a Delaware corporation) founded by Sibi Narendran. We are not an insurance agency or carrier and we never sell insurance or contact truckers about insurance for ourselves. We build the list every week with software, including AI, from public FMCSA filings: the carrier census, operating authority history and the BMC-91X liability filings insurers make for each carrier. You can check any row against the carrier&rsquo;s public record on FMCSA&rsquo;s SAFER site using its DOT number.
                             </p>
 
                             <h2>Calling rules</h2>
