@@ -101,7 +101,7 @@ const staticPages = [
     {
         title: 'Marblism Alternatives',
         url: `${SITE_URL}/marblism-alternatives`,
-        description: 'Alternatives to Marblism.',
+        description: 'Marblism pricing ($24/mo billed yearly or $44/mo monthly for all 7 AI employees, checked 2026-10) and 7 alternatives compared on pricing, integrations and setup: Dooza, Sintra AI, Motion, NoimosAI, Lindy AI, Relevance AI and Cubeo AI.',
     },
     {
         title: 'AI Solutions for Business',
@@ -123,6 +123,7 @@ const staticPages = [
         url: `${SITE_URL}/best-trucking-insurance-leads`,
         description: 'Comparison for insurance agencies of trucking insurance lead sources, prices read on each vendor\'s own page on October 13, 2026: Trucking Leads ($399-$999/mo + $12-$18 per quote request), Get Insure Leads (aged from $12, exclusive $110, live transfer $225, appointment $325), Carrier IQ ($149-$249/mo), TruckLeads.io ($85-$300/mo), PollyAI ($39/mo + from $40/state), Truckr ($49-$349/mo), TruckInsureLeads and Commercial Truck Quotes (prices not published), Dooza ($129 per 4 weeks, one agency per state). Lead types, who each suits, 14-day test checklist.',
     },
+    { title: 'New trucking authority leads for insurance agents (reach new MC authorities before insurance is filed)', url: `${SITE_URL}/trucking-new-authority-leads`, description: 'For agents who write trucking: 2,057 US trucking companies applied for authority in the week to Oct 12, 2026 with no liability filing yet (FMCSA open data, Dooza weekly run). FMCSA deadline: insurer filing within 20 days of FMCSA Register publication, then 60 days before dismissal (about 80 days, not 90). Q3 2026: 22,204 new interstate for-hire carriers, 64% with one power unit. Weekly per-state list: first week free, then $129 per 4 weeks; 5 free sample rows.' },
     {
         title: 'Insurance lead cost per policy calculator (exclusive vs shared, 2026 prices with sources)',
         url: `${SITE_URL}/insurance-lead-cost-calculator`,
@@ -359,6 +360,7 @@ export async function GET() {
     const blogLinks = [
         ...blogPosts
             .filter((post) => !post.noindex)
+            .filter((post) => !researchPages.some((r) => r.url === `${SITE_URL}/blog/${post.slug}`)) // listed once, under Research and data
             .map((post) => ({
                 title: post.title,
                 url: `${SITE_URL}/blog/${post.slug}`,

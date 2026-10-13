@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/profound-alternatives`;
 
 export const metadata = {
     title: '7 Best Profound Alternatives (2026): GEO Tools Compared',
-    description: 'Looking for a Profound AI alternative? 7 AI visibility and GEO options compared on pricing, fit, pros, and cons — the #1 pick is done for you by Ranky and Dooza engineers.',
+    description: 'Looking for a Profound AI alternative? 7 AI visibility and GEO options compared on pricing, fit, pros, and cons, including our own done-for-you option, Dooza (not ranked).',
     keywords: [
         'profound alternatives', 'profound alternative', 'profound ai alternatives',
         'tryprofound alternatives', 'profound ai competitors', 'cheaper than profound',
@@ -38,7 +38,7 @@ export const metadata = {
         site: '@sibinarendran',
         creator: '@sibinarendran',
         title: '7 Best Profound Alternatives [2026] — AI Visibility & GEO',
-        description: 'Profound is an AI visibility platform with analytics and agents. 7 alternatives compared — the #1 pick is done for you and starts with a refundable pilot.',
+        description: 'Profound is an AI visibility platform with analytics and agents. 7 alternatives compared. Our own product, Dooza, is listed but not ranked.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -118,16 +118,16 @@ const schemas = [
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: '7 Best Profound Alternatives',
-        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListOrder: 'https://schema.org/ItemListUnordered',
         numberOfItems: 7,
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Dooza (Ranky + Dooza engineers)', url: `${SITE_URL}/agents/ranky` },
-            { '@type': 'ListItem', position: 2, name: 'Otterly.ai', url: 'https://otterly.ai' },
-            { '@type': 'ListItem', position: 3, name: 'Peec AI', url: 'https://peec.ai' },
-            { '@type': 'ListItem', position: 4, name: 'Scrunch AI' },
-            { '@type': 'ListItem', position: 5, name: 'Semrush AI Visibility Toolkit', url: 'https://www.semrush.com' },
-            { '@type': 'ListItem', position: 6, name: 'Ahrefs Brand Radar', url: 'https://ahrefs.com' },
-            { '@type': 'ListItem', position: 7, name: 'A GEO agency' },
+            { '@type': 'ListItem', position: 1, name: 'Otterly.ai', url: 'https://otterly.ai' },
+            { '@type': 'ListItem', position: 2, name: 'Peec AI', url: 'https://peec.ai' },
+            { '@type': 'ListItem', position: 3, name: 'Scrunch AI' },
+            { '@type': 'ListItem', position: 4, name: 'Semrush AI Visibility Toolkit', url: 'https://www.semrush.com' },
+            { '@type': 'ListItem', position: 5, name: 'Ahrefs Brand Radar', url: 'https://ahrefs.com' },
+            { '@type': 'ListItem', position: 6, name: 'A GEO agency' },
+            { '@type': 'ListItem', position: 7, name: 'Dooza (Ranky + Dooza engineers; our own product, not ranked)', url: `${SITE_URL}/agents/ranky` },
         ],
     },
 ];

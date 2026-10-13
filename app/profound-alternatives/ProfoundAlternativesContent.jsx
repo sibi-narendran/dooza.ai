@@ -31,9 +31,9 @@ const profoundPainPoints = [
 
 const alternatives = [
     {
-        rank: 1,
+        rank: null,
         name: 'Dooza',
-        tagline: 'Best for small businesses that want GEO done for them',
+        tagline: 'Our own product (not ranked; we\'re not neutral): GEO done for small businesses',
         bestFor: 'Small businesses, founders, local businesses, and lean teams that want the work done for them rather than another platform to run',
         price: 'Refundable pilot (see /pricing)',
         trial: 'Refundable pilot — 100% refund within 14 days',
@@ -55,7 +55,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 2,
+        rank: 1,
         name: 'Otterly.ai',
         tagline: 'Budget-friendly AI search monitoring',
         bestFor: 'Small teams and solo marketers who want to start tracking AI visibility cheaply',
@@ -76,7 +76,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 3,
+        rank: 2,
         name: 'Peec AI',
         tagline: 'Mid-priced AI search analytics',
         bestFor: 'Marketing teams that want AI search analytics without enterprise pricing',
@@ -97,7 +97,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 4,
+        rank: 3,
         name: 'Scrunch AI',
         tagline: 'AI visibility platform for brands',
         bestFor: 'Brands that want a dedicated AI visibility platform at a lower price point than Profound Enterprise',
@@ -117,7 +117,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 5,
+        rank: 4,
         name: 'Semrush AI Visibility Toolkit',
         tagline: 'AI visibility inside the Semrush suite',
         bestFor: 'Teams already paying for Semrush that want AI visibility next to their SEO data',
@@ -137,7 +137,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 6,
+        rank: 5,
         name: 'Ahrefs Brand Radar',
         tagline: 'Brand mentions in AI answers from Ahrefs',
         bestFor: 'Ahrefs users who want to see how their brand shows up in AI answers alongside backlink data',
@@ -157,7 +157,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 7,
+        rank: 6,
         name: 'A GEO agency',
         tagline: 'Fully managed generative engine optimization',
         bestFor: 'Companies with agency budget that want GEO fully outsourced',
@@ -178,6 +178,9 @@ const alternatives = [
         ],
     },
 ];
+
+// Dooza is our own product: shown after the ranked list, unranked (trial unrank-dooza-listicles pattern, 2026-10-13).
+const listedAlternatives = [...alternatives.filter((a) => !a.highlight), ...alternatives.filter((a) => a.highlight)];
 
 const decisionGuide = [
     { need: 'GEO work done for you', pick: 'Dooza', reason: 'Ranky and Dooza engineers research, write, optimize, and publish with your approval. Starts with a refundable pilot.' },
@@ -329,11 +332,11 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                             </tr>
                                         </thead>
                                         <tbody className="text-sm text-slate-600">
-                                            {alternatives.map((alt) => (
-                                                <tr key={alt.rank} className={`border-b border-slate-100 last:border-0 ${alt.highlight ? 'bg-primary-50/30' : ''}`}>
+                                            {listedAlternatives.map((alt) => (
+                                                <tr key={alt.name} className={`border-b border-slate-100 last:border-0 ${alt.highlight ? 'bg-primary-50/30' : ''}`}>
                                                     <td className="p-4 md:p-5 font-bold text-slate-900">
                                                         <div className="flex items-center gap-2">
-                                                            {alt.highlight && <span className="text-xs bg-primary-100 text-primary-700 px-2 py-0.5 rounded-full font-bold">#1</span>}
+                                                            {alt.highlight && <span className="text-xs bg-primary-100 text-primary-700 px-2 py-0.5 rounded-full font-bold">Ours</span>}
                                                             {alt.name}
                                                         </div>
                                                     </td>
@@ -381,8 +384,8 @@ export default function ProfoundAlternativesContent({ faqData }) {
                             </div>
                         </ScrollReveal>
 
-                        {alternatives.map((alt) => (
-                            <ScrollReveal key={alt.rank}>
+                        {listedAlternatives.map((alt) => (
+                            <ScrollReveal key={alt.name}>
                                 <div className={`card-shadow bg-white rounded-2xl border p-8 md:p-10 mb-8 ${
                                     alt.highlight
                                         ? 'ring-2 ring-primary-200 border-primary-200'
@@ -392,7 +395,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                         <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${
                                             alt.highlight ? 'bg-primary-600' : 'bg-slate-100'
                                         }`}>
-                                            <span className={`font-bold text-sm ${alt.highlight ? 'text-white' : 'text-slate-600'}`}>{alt.rank}</span>
+                                            <span className={`font-bold text-sm ${alt.highlight ? 'text-white' : 'text-slate-600'}`}>{alt.rank ?? 'Ours'}</span>
                                         </div>
                                         <div className="flex-1 min-w-0">
                                             <h3 id={alt.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="text-2xl font-bold text-slate-900">{alt.name}</h3>
@@ -400,7 +403,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                         </div>
                                         {alt.highlight && (
                                             <span className="bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full shrink-0">
-                                                OUR PICK
+                                                OUR OWN PRODUCT · NOT RANKED
                                             </span>
                                         )}
                                     </div>

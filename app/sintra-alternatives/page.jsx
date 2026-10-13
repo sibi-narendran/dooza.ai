@@ -3,7 +3,7 @@ import SintraAlternativesContent from './SintraAlternativesContent';
 
 export const metadata = {
     title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-    description: '7 Sintra AI alternatives compared on pricing, features, and limits (checked October 7, 2026). Self-serve apps vs done-for-you AI: the #1 pick starts with a refundable pilot.',
+    description: '7 Sintra AI alternatives compared on pricing, features, and limits (checked October 7, 2026). Self-serve apps vs done-for-you AI, including our own product, Dooza (not ranked).',
     keywords: [
         'sintra ai alternatives', 'best sintra alternative 2026', 'sintra ai competitors',
         'sintra alternative', 'sintra ai replacement', 'AI employee platforms',
@@ -24,7 +24,7 @@ export const metadata = {
     },
     openGraph: {
         title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-        description: 'Honest comparison of 7 Sintra AI alternatives — pricing, features, pros, cons. The #1 pick starts with a refundable pilot and engineer-led setup.',
+        description: 'Honest comparison of 7 Sintra AI alternatives — pricing, features, pros, cons. Our own product, Dooza, is listed but not ranked.',
         url: `${SITE_URL}/sintra-alternatives`,
         siteName: 'Dooza',
         type: 'article',
@@ -36,7 +36,7 @@ export const metadata = {
         site: '@sibinarendran',
         creator: '@sibinarendran',
         title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-        description: 'Sintra is a low-cost self-serve app. 7 alternatives compared, including done-for-you options — the #1 pick starts with a refundable pilot.',
+        description: 'Sintra is a low-cost self-serve app. 7 alternatives compared, including done-for-you options. Our own product, Dooza, is listed but not ranked.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -121,13 +121,13 @@ const schemas = [
         '@type': 'ItemList',
         name: '7 Best Sintra AI Alternatives',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Dooza', url: SITE_URL },
-            { '@type': 'ListItem', position: 2, name: 'Marblism', url: 'https://marblism.com' },
-            { '@type': 'ListItem', position: 3, name: 'Motion', url: 'https://usemotion.com' },
-            { '@type': 'ListItem', position: 4, name: 'NoimosAI', url: 'https://noimosai.com' },
-            { '@type': 'ListItem', position: 5, name: 'Lindy AI', url: 'https://lindy.ai' },
-            { '@type': 'ListItem', position: 6, name: 'Relevance AI', url: 'https://relevanceai.com' },
-            { '@type': 'ListItem', position: 7, name: 'Cubeo AI', url: 'https://cubeo.ai' },
+            { '@type': 'ListItem', position: 1, name: 'Marblism', url: 'https://marblism.com' },
+            { '@type': 'ListItem', position: 2, name: 'Motion', url: 'https://usemotion.com' },
+            { '@type': 'ListItem', position: 3, name: 'NoimosAI', url: 'https://noimosai.com' },
+            { '@type': 'ListItem', position: 4, name: 'Lindy AI', url: 'https://lindy.ai' },
+            { '@type': 'ListItem', position: 5, name: 'Relevance AI', url: 'https://relevanceai.com' },
+            { '@type': 'ListItem', position: 6, name: 'Cubeo AI', url: 'https://cubeo.ai' },
+            { '@type': 'ListItem', position: 7, name: 'Dooza (our own product, not ranked)', url: SITE_URL },
         ],
     },
 ];

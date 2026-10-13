@@ -23,9 +23,9 @@ const sintraPainPoints = [
 
 const alternatives = [
     {
-        rank: 1,
+        rank: null,
         name: 'Dooza',
-        tagline: 'Best overall Sintra alternative for SMBs',
+        tagline: 'Our own product (not ranked; we\'re not neutral): AI employees built and tuned for SMBs',
         bestFor: 'Small businesses that want AI employees or custom agents built and tuned for them',
         price: 'Refundable pilot (see /pricing)',
         trial: 'Refundable pilot — 100% refund within 14 days',
@@ -48,7 +48,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 2,
+        rank: 1,
         name: 'Marblism',
         tagline: 'Low-cost named-agent platform',
         bestFor: 'Budget-conscious solopreneurs who want an affordable AI team',
@@ -71,7 +71,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 3,
+        rank: 2,
         name: 'Motion',
         tagline: 'Project management and calendar suite with AI built in',
         bestFor: 'Teams already using Motion for PM/calendar who want AI features',
@@ -95,7 +95,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 4,
+        rank: 3,
         name: 'NoimosAI',
         tagline: 'Marketing-focused AI agent (deep but narrow)',
         bestFor: 'Marketing teams and agencies wanting specialized marketing automation',
@@ -119,7 +119,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 5,
+        rank: 4,
         name: 'Lindy AI',
         tagline: 'Self-serve AI teammate with a large integration library',
         bestFor: 'Teams who want a self-serve AI teammate in Slack and are happy to configure it themselves',
@@ -143,7 +143,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 6,
+        rank: 5,
         name: 'Relevance AI',
         tagline: 'Enterprise-grade AI workforce platform',
         bestFor: 'Mid-market and enterprise GTM teams (Canva and Autodesk case studies on its site)',
@@ -166,7 +166,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 7,
+        rank: 6,
         name: 'Cubeo AI',
         tagline: 'No-code AI agent and chatbot builder',
         bestFor: 'Businesses wanting simple AI chatbots on their website',
@@ -190,6 +190,9 @@ const alternatives = [
         ],
     },
 ];
+
+// Dooza is our own product: shown after the ranked list, unranked (trial unrank-dooza-listicles pattern, 2026-10-13).
+const listedAlternatives = [...alternatives.filter((a) => !a.highlight), ...alternatives.filter((a) => a.highlight)];
 
 // Sintra X pricing checked on sintra.ai/pricing, October 7, 2026. Sintra no longer sells single-helper plans.
 const sintraCostRows = [
@@ -312,11 +315,11 @@ export default function SintraAlternativesContent({ faqData }) {
                                             </tr>
                                         </thead>
                                         <tbody className="text-sm text-slate-600">
-                                            {alternatives.map((alt, i) => (
+                                            {listedAlternatives.map((alt, i) => (
                                                 <tr key={i} className={`border-b border-slate-100 last:border-0 ${alt.highlight ? 'bg-primary-50/30' : ''}`}>
                                                     <td className="p-4 md:p-5 font-bold text-slate-900">
                                                         <div className="flex items-center gap-2">
-                                                            {alt.highlight && <span className="text-xs bg-primary-100 text-primary-700 px-2 py-0.5 rounded-full font-bold">#1</span>}
+                                                            {alt.highlight && <span className="text-xs bg-primary-100 text-primary-700 px-2 py-0.5 rounded-full font-bold">Ours</span>}
                                                             {alt.name}
                                                         </div>
                                                     </td>
@@ -360,8 +363,8 @@ export default function SintraAlternativesContent({ faqData }) {
                             </div>
                         </ScrollReveal>
 
-                        {alternatives.map((alt) => (
-                            <ScrollReveal key={alt.rank}>
+                        {listedAlternatives.map((alt) => (
+                            <ScrollReveal key={alt.name}>
                                 <div className={`card-shadow bg-white rounded-2xl border p-8 md:p-10 mb-8 ${
                                     alt.highlight
                                         ? 'ring-2 ring-primary-200 border-primary-200'
@@ -372,7 +375,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                         <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${
                                             alt.highlight ? 'bg-primary-600' : 'bg-slate-100'
                                         }`}>
-                                            <span className={`font-bold text-sm ${alt.highlight ? 'text-white' : 'text-slate-600'}`}>{alt.rank}</span>
+                                            <span className={`font-bold text-sm ${alt.highlight ? 'text-white' : 'text-slate-600'}`}>{alt.rank ?? 'Ours'}</span>
                                         </div>
                                         <div className="flex-1 min-w-0">
                                             <h3 id={alt.name.toLowerCase().replace(/\s+/g, '-')} className="text-2xl font-bold text-slate-900">{alt.name}</h3>
@@ -380,7 +383,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                         </div>
                                         {alt.highlight && (
                                             <span className="bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full shrink-0">
-                                                OUR PICK
+                                                OUR OWN PRODUCT · NOT RANKED
                                             </span>
                                         )}
                                     </div>

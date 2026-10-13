@@ -193,6 +193,7 @@ export default function TruckingInsuranceMarketPage() {
                                 <Link href={`${LEADS}#sample`} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">Get 5 free rows from your state</Link>
                                 <Link href={LEADS} className="font-semibold text-primary-700 underline">How the list works</Link>
                             </div>
+                            <p className="mt-4 text-sm text-slate-600">Weighing other lead sources? See <Link href="/best-trucking-insurance-leads" className="font-semibold text-primary-700 underline">9 trucking insurance lead sources compared</Link>, with prices from their own sites.</p>
                         </div>
 
                         <section className="mt-12">
