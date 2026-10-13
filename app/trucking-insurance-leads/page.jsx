@@ -263,7 +263,7 @@ export default function TruckingInsuranceLeadsPage() {
                                 <li>One agency per state: once your state is claimed, nobody else gets that list from us.</li>
                             </ul>
                             <p>
-                                Comparing it with bought leads? Our <Link href="/insurance-lead-cost-calculator">insurance lead cost calculator</Link> shows cost per sold policy from price per lead and close rate. Comparing vendors? See <Link href="/best-trucking-insurance-leads">9 trucking lead sources compared</Link>, with prices from their own sites, and <Link href="/trucking-insurance-market">which insurers are winning trucking accounts this week</Link>.
+                                Comparing it with bought leads? Our <Link href="/insurance-lead-cost-calculator">insurance lead cost calculator</Link> shows cost per sold policy from price per lead and close rate. Comparing vendors? See <Link href="/best-trucking-insurance-leads">9 trucking lead sources compared</Link>, with prices from their own sites, and <Link href="/trucking-insurance-market">which insurers are winning trucking accounts this week</Link>. Want carriers before their first policy? See <Link href="/trucking-new-authority-leads">new trucking authority leads</Link>.
                             </p>
 
                             <h2>Rather not dial yourself?</h2>
