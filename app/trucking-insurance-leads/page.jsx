@@ -256,6 +256,12 @@ export default function TruckingInsuranceLeadsPage() {
                                 FMCSA does not publish when a trucking policy expires. Insurers do file each carrier’s liability policy (form BMC-91X) with its effective date, so we take the next anniversary of that date. Policies that run 6 months or were cancelled mid-term will show the wrong month, which is why the script asks the owner to confirm the date. Wrong number or dead lead? Reply “SWAP” with the DOT number and you get a replacement the next Monday.
                             </p>
 
+                            <h2>Who it fits, and who it doesn&rsquo;t</h2>
+                            <ul>
+                                <li><strong>Fits:</strong> an agency that already quotes trucking or commercial auto in its state and has someone who will phone owners every week. The list gives you the names and the timing; the calls are yours (or ours, see below).</li>
+                                <li><strong>Doesn&rsquo;t fit:</strong> an agency that doesn&rsquo;t write trucking yet, wants inbound leads who have already asked for a quote, or wants software. It is a weekly spreadsheet, not a CRM.</li>
+                            </ul>
+
                             <h2>What it costs</h2>
                             <ul>
                                 <li>First week free.</li>
