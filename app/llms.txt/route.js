@@ -240,7 +240,7 @@ const researchPages = [
     },    {
         title: 'AI receptionist pricing comparison (23 services, checked October 6–9, 2026)',
         url: `${SITE_URL}/blog/ai-receptionist-pricing`,
-        description: 'Entry prices, billing units and overage for 23 AI receptionist and answering services, checked on each vendor’s pricing page, plus what 100 calls a month costs on each.',
+        description: 'Entry prices, billing units and overage for 24 AI receptionist and answering services, checked on each vendor’s pricing page, plus what 100 calls a month costs on each.',
     },
     {
         title: 'AI receptionist cost calculator',
