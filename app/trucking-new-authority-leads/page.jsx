@@ -59,7 +59,7 @@ const faqItems = [
     },
     {
         question: 'What do new authorities cost from Dooza?',
-        answer: 'They come in the same weekly list as renewals: first week free, then $129 per 4 weeks; exclusive states on request. You can get 5 free rows from your state by email first. If you would rather not dial, we can book quote calls: $299 for 4 booked quote calls, and the first one is free.',
+        answer: 'They come in the same weekly list as renewals: first week free, then $129 per 4 weeks; exclusive states on request. You can get 5 free rows from your state by email first. If you would rather not dial, we can book quote calls: $499 every 4 weeks for up to 4 booked quote calls, or $150 for a single booked call (the first one is free).',
     },
     {
         question: 'Does Dooza sell insurance?',
@@ -217,7 +217,7 @@ export default function TruckingNewAuthorityLeadsPage() {
                                 New authorities come in the same Monday list as <Link href="/trucking-insurance-leads">trucking renewals in 30 to 60 days</Link>, with the current insurer named. First week free, then $129 every 4 weeks. Want your state to yourself? Exclusive states are available: book a call.
                             </p>
                             <p>
-                                Rather not dial yourself? We can phone the truckers on your list and book the owners onto your calendar as quote calls. It costs $299 for 4 booked quote calls, and the first one is free. It is not offered in every state yet.
+                                Rather not dial yourself? We can phone the truckers on your list and book the owners onto your calendar as quote calls. It costs $499 every 4 weeks for up to 4 booked quote calls, or $150 for a single booked call, and the first one is free. We take one agency per state for booked calls; ask about your state on the call.
                             </p>
                             <p>
                                 Comparing sources? See <Link href="/best-trucking-insurance-leads">9 trucking insurance lead sources compared</Link>, with prices from their own sites.
