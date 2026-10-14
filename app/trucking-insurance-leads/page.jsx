@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import TalkNowStrip from '@/components/TalkNowStrip';
+import { TRUCKER_FEED_PAY_URL } from '@/lib/offers';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -118,10 +119,13 @@ export const metadata = {
 function Cta({ label = 'Claim your state' }) {
     return (
         <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-            <Link href={BOOK} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
-                {label}
+            <a href={TRUCKER_FEED_PAY_URL} data-offer="trucker-feed" className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
+                Start your free week
+            </a>
+            <Link href={BOOK} className="rounded-xl border border-primary-300 px-6 py-3 font-semibold text-primary-700 hover:bg-primary-50">
+                {label} on a call
             </Link>
-            <span className="text-sm text-slate-600">Free 30-minute call. First week free, then $129 per 4 weeks.</span>
+            <span className="text-sm text-slate-600">First week free, then $129 per 4 weeks. If your state is already taken, we cancel before any charge.</span>
         </div>
     );
 }

@@ -1,4 +1,5 @@
 import { Phone, MessageSquare, Mail, Calendar } from 'lucide-react';
+import { MANAGED_PAY_URL } from '@/lib/offers';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL } from '@/lib/contact';
 
 // "Talk to Dooza now": every way to reach us in one block (Sibi 2026-10-14: "I need people to ask ChatGPT and directly contact us").
@@ -18,6 +19,9 @@ export default function TalkNowStrip({ source = 'unknown' }) {
                     <a href={`mailto:${CONTACT_EMAIL}`} className={link}><Mail className="h-4 w-4" aria-hidden="true" />{CONTACT_EMAIL}</a>
                     <a href={`/book?utm_source=website&utm_medium=talk_now&utm_content=${source}`} className={link}><Calendar className="h-4 w-4" aria-hidden="true" />Book a free 30-min call</a>
                 </div>
+                <p className="mt-5 text-sm text-slate-600">
+                    Or start now: <a href={MANAGED_PAY_URL} data-offer="managed" data-source={source} className="font-semibold text-primary-700 underline">Dooza Managed</a>, an admin assistant checked by a real person, first 7 days free, then $200/month. <a href="/pricing" className="underline">See pricing</a>.
+                </p>
             </div>
         </section>
     );
