@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import TalkNowStrip from '@/components/TalkNowStrip';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -299,7 +300,8 @@ export default function TruckingInsuranceLeadsPage() {
                             <FAQAccordion items={faqItems} />
                         </section>
                     </div>
-                </main>
+                    <TalkNowStrip source="trucking-insurance-leads" />
+                    </main>
                 <Footer />
             </div>
         </>

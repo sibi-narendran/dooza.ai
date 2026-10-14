@@ -1,4 +1,5 @@
 import BookingModalProvider from '@/components/BookingModalProvider';
+import TalkNowStrip from '@/components/TalkNowStrip';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SlopCheckerEmbed from '@/components/SlopCheckerEmbed';
@@ -373,7 +374,8 @@ export default function AiSlopCheckerPage() {
                             </div>
                         </section>
                     </div>
-                </main>
+                    <TalkNowStrip source="ai-slop-checker" />
+                    </main>
 
                 <Footer />
             </div>

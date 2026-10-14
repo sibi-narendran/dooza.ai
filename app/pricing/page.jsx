@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar';
+import TalkNowStrip from '@/components/TalkNowStrip';
 import Footer from '@/components/Footer';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
@@ -56,6 +57,7 @@ export default function PricingPage() {
                         <GrowPricingSection />
                         <FAQSection />
                         <FinalCTASection />
+                        <TalkNowStrip source="pricing" />
                     </main>
                     <Footer />
                 </div>

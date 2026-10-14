@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import TalkNowStrip from '@/components/TalkNowStrip';
 import { cache } from 'react';
 import { SITE_URL } from '../../../lib/site';
 import { blogPosts, generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '../../../lib/blogData';
@@ -340,6 +341,7 @@ export default async function BlogPostPage({ params }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
                 />
                 <BlogComponent post={staticPost} />
+                <TalkNowStrip source={`blog_${slug}`} />
             </>
         );
     }
@@ -365,6 +367,7 @@ export default async function BlogPostPage({ params }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
                 />
                 <DynamicBlogContent post={staticPost} />
+                <TalkNowStrip source={`blog_${slug}`} />
             </>
         );
     }
@@ -396,6 +399,7 @@ export default async function BlogPostPage({ params }) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
             />
             <DynamicBlogContent post={dynamicPost} />
+            <TalkNowStrip source={`blog_${slug}`} />
         </>
     );
 }
