@@ -6,7 +6,7 @@ import OfferCards from '@/components/OfferCards';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-    title: 'Start Today Without a Call | Dooza',
+    title: 'Start Today Without a Call',
     description: 'Start the Monday Trucker Feed ($129 every 4 weeks, first week free) or Dooza Managed ($200/month, first 7 days free) by card, no call needed.',
     alternates: { canonical: 'https://www.dooza.ai/start' },
     robots: { index: false, follow: true },
