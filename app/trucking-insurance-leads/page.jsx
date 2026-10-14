@@ -12,7 +12,7 @@ import stateCounts from '@/lib/truckingStateCounts.json';
 
 const PATH = '/trucking-insurance-leads';
 const TITLE = 'Trucking Insurance Leads Near Renewal, Every Monday';
-const DESCRIPTION = 'For agencies that write commercial trucking: every Monday, the trucking companies in your state renewing in 30-60 days, with current insurer, plus new authorities. One agency per state. First week free, then $129 per 4 weeks.';
+const DESCRIPTION = 'For agencies that write commercial trucking: every Monday, the trucking companies in your state renewing in 30-60 days, with current insurer, plus new authorities. First week free, then $129 per 4 weeks.';
 const UPDATED = '2026-10-12';
 const UPDATED_LABEL = 'October 12, 2026';
 const BOOK = '/book?utm_source=website&utm_medium=cta&utm_campaign=booking&utm_content=trucking-insurance-leads';
@@ -44,7 +44,7 @@ const SAMPLE_ROWS = [
 const faqItems = [
     {
         question: 'How does $129 compare with paying $35 a lead?',
-        answer: '$129 every 4 weeks is about $32 a week, flat, however many rows your state has. A per-lead vendor at $35 charges that for a single lead, often a trucker who asked for a quote and may be sold to several agents. Our rows have not asked for a quote: you make the first call, timed to their renewal, and nobody else in your state gets the list from us.',
+        answer: '$129 every 4 weeks is about $32 a week, flat, however many rows your state has. A per-lead vendor at $35 charges that for a single lead, often a trucker who asked for a quote and may be sold to several agents. Our rows have not asked for a quote: you make the first call, timed to their renewal.',
     },
     {
         question: 'Who is Dooza and where do the leads come from?',
@@ -64,11 +64,11 @@ const faqItems = [
     },
     {
         question: 'Which states can I get?',
-        answer: 'Any US state where no other agency has claimed the list. Each state goes to one agency only. On October 12, 2026 there were 6,808 such renewals and 2,057 new authorities across the 50 states and DC; the counter on this page shows your state.',
+        answer: 'Any US state. On October 12, 2026 there were 6,808 renewals in the 30 to 60 day window and 2,057 new authorities across the 50 states and DC; the counter on this page shows your state. Want your state to yourself? Exclusive states are available: book a call.',
     },
     {
         question: 'How is this different from buying trucking insurance leads?',
-        answer: 'Bought leads are usually truckers who asked for a quote, sold per lead and often to several agents. This list is contacts from public filings, timed to renewal, for a flat $129 per 4 weeks and only for your agency in your state. Nobody on it has asked for a quote yet: you make the first call.',
+        answer: 'Bought leads are usually truckers who asked for a quote, sold per lead and often to several agents. This list is contacts from public filings, timed to renewal, for a flat $129 per 4 weeks. Nobody on it has asked for a quote yet: you make the first call.',
     },
     {
         question: 'What if a number is wrong?',
@@ -91,7 +91,7 @@ const schemas = [
         areaServed: 'US',
         audience: { '@type': 'BusinessAudience', audienceType: 'Independent insurance agencies that write commercial trucking' },
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
-        offers: { '@type': 'Offer', price: '129', priceCurrency: 'USD', description: 'Per 4 weeks, after a free first week. One agency per state.' },
+        offers: { '@type': 'Offer', price: '129', priceCurrency: 'USD', description: 'Per 4 weeks, after a free first week.' },
     },
     {
         '@context': 'https://schema.org',
@@ -125,7 +125,7 @@ function Cta({ label = 'Claim your state' }) {
             <Link href={BOOK} className="rounded-xl border border-primary-300 px-6 py-3 font-semibold text-primary-700 hover:bg-primary-50">
                 {label} on a call
             </Link>
-            <span className="text-sm text-slate-600">First week free, then $129 per 4 weeks. If your state is already taken, we cancel before any charge.</span>
+            <span className="text-sm text-slate-600">First week free, then $129 per 4 weeks. Want your state to yourself? Exclusive states are available: book a call.</span>
         </div>
     );
 }
@@ -146,7 +146,7 @@ export default function TruckingInsuranceLeadsPage() {
                         <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Trucking insurance leads near renewal, every Monday</h1>
                         <p className="mt-5 text-lg text-slate-700">
                             <strong>Every Monday you get the trucking companies in your state whose liability insurance renews in the next 30 to 60 days, with their current insurer named, plus the new trucking authorities from the past week that still need coverage.</strong>{' '}
-                            One agency per state. The first week is free, then $129 every 4 weeks.
+                            The first week is free, then $129 every 4 weeks. Want your state to yourself? Exclusive states are available: book a call.
                         </p>
                         <div className="mt-8">
                             <Cta />
@@ -271,7 +271,7 @@ export default function TruckingInsuranceLeadsPage() {
                             <ul>
                                 <li>First week free.</li>
                                 <li>Then $129 every 4 weeks, billed by card through Stripe.</li>
-                                <li>One agency per state: once your state is claimed, nobody else gets that list from us.</li>
+                                <li>Want your state to yourself? Exclusive states are available: book a call.</li>
                             </ul>
                             <p>
                                 Comparing it with bought leads? Our <Link href="/insurance-lead-cost-calculator">insurance lead cost calculator</Link> shows cost per sold policy from price per lead and close rate. Comparing vendors? See <Link href="/best-trucking-insurance-leads">9 trucking lead sources compared</Link>, with prices from their own sites, and <Link href="/trucking-insurance-market">which insurers are winning trucking accounts this week</Link>. Want carriers before their first policy? See <Link href="/trucking-new-authority-leads">new trucking authority leads</Link>.

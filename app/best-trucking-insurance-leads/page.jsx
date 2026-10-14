@@ -82,7 +82,7 @@ const VENDORS = [
         url: LEADS_PAGE,
         internal: true,
         type: 'Weekly spreadsheet: renewals in 30-60 days (3+ power units, insurer named), new authorities, cancellations with nothing new on file',
-        price: 'First week free, then $129 per 4 weeks. One agency per state',
+        price: 'First week free, then $129 per 4 weeks. Exclusive states on request',
         trial: 'First week free, or 5 free rows by email',
         suits: 'Agencies that want one state to themselves and a short weekly call list, not software. No CRM; it is a spreadsheet.',
     },
@@ -116,7 +116,7 @@ const faqItems = [
     },
     {
         question: 'Shared or exclusive trucking leads?',
-        answer: 'Shared leads cost less but you race other agents to the same trucker. Exclusive leads cost more per lead but nobody else calls. Most data vendors do not say their lists are exclusive (Carrier IQ says its leads are not); Dooza’s list goes to one agency per state.',
+        answer: 'Shared leads cost less but you race other agents to the same trucker. Exclusive leads cost more per lead but nobody else calls. Most data vendors do not say their lists are exclusive (Carrier IQ says its leads are not); Dooza’s standard list can go to more than one agency, and exclusive states are available on request.',
     },
 ];
 
@@ -260,7 +260,7 @@ export default function BestTruckingInsuranceLeadsPage() {
 
                         <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
                             <h2 className="text-2xl font-bold text-slate-900">See real rows from your state</h2>
-                            <p className="mt-2 text-slate-700">Dooza&rsquo;s weekly list: renewals in 30 to 60 days with the current insurer named, new authorities and cancellations, for one agency per state. First week free, then $129 per 4 weeks.</p>
+                            <p className="mt-2 text-slate-700">Dooza&rsquo;s weekly list: renewals in 30 to 60 days with the current insurer named, new authorities and cancellations. First week free, then $129 per 4 weeks.</p>
                             <div className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                                 <Link href={`${LEADS_PAGE}#sample`} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">Get 5 free rows</Link>
                                 <Link href={LEADS_PAGE} className="font-semibold text-primary-700 underline">How the list works</Link>

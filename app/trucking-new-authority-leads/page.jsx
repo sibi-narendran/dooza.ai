@@ -59,7 +59,7 @@ const faqItems = [
     },
     {
         question: 'What do new authorities cost from Dooza?',
-        answer: 'They come in the same weekly list as renewals: first week free, then $129 per 4 weeks, one agency per state. You can get 5 free rows from your state by email first. If you would rather not dial, we can book quote calls: $299 for 4 booked quote calls, and the first one is free.',
+        answer: 'They come in the same weekly list as renewals: first week free, then $129 per 4 weeks; exclusive states on request. You can get 5 free rows from your state by email first. If you would rather not dial, we can book quote calls: $299 for 4 booked quote calls, and the first one is free.',
     },
     {
         question: 'Does Dooza sell insurance?',
@@ -214,7 +214,7 @@ export default function TruckingNewAuthorityLeadsPage() {
 
                             <h2>What it costs</h2>
                             <p>
-                                New authorities come in the same Monday list as <Link href="/trucking-insurance-leads">trucking renewals in 30 to 60 days</Link>, with the current insurer named. First week free, then $129 every 4 weeks. One agency per state: once your state is claimed, nobody else gets that list from us.
+                                New authorities come in the same Monday list as <Link href="/trucking-insurance-leads">trucking renewals in 30 to 60 days</Link>, with the current insurer named. First week free, then $129 every 4 weeks. Want your state to yourself? Exclusive states are available: book a call.
                             </p>
                             <p>
                                 Rather not dial yourself? We can phone the truckers on your list and book the owners onto your calendar as quote calls. It costs $299 for 4 booked quote calls, and the first one is free. It is not offered in every state yet.

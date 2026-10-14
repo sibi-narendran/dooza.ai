@@ -47,7 +47,7 @@ export default function StateRenewalCounter({ states, runLabel }) {
                         <Link href={book} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
                             Claim {s.name}
                         </Link>
-                        <span className="text-sm text-slate-600">One agency per state. First week free, then $129 per 4 weeks.</span>
+                        <span className="text-sm text-slate-600">First week free, then $129 per 4 weeks.</span>
                     </div>
                 </div>
             )}

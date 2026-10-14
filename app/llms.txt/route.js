@@ -111,7 +111,7 @@ const staticPages = [
     {
         title: 'Trucking insurance leads near renewal, every Monday (for insurance agencies)',
         url: `${SITE_URL}/trucking-insurance-leads`,
-        description: 'Weekly list for agencies that write commercial trucking: trucking companies in their state with liability renewing in 30-60 days (current insurer and limit from FMCSA BMC-91X filings, estimated renewal date) plus new authorities from the last 7 days. One agency per state; first week free, then $129 per 4 weeks. Free weekly counts for every US state (renewals in 30-60 days, new authorities, top 3 current insurers; Oct 12, 2026: 6,808 renewals, 2,057 new authorities nationwide). Data: FMCSA open data.',
+        description: 'Weekly list for agencies that write commercial trucking: trucking companies in their state with liability renewing in 30-60 days (current insurer and limit from FMCSA BMC-91X filings, estimated renewal date) plus new authorities from the last 7 days. Exclusive states on request; first week free, then $129 per 4 weeks. Free weekly counts for every US state (renewals in 30-60 days, new authorities, top 3 current insurers; Oct 12, 2026: 6,808 renewals, 2,057 new authorities nationwide). Data: FMCSA open data.',
     },
     {
         title: 'Trucking insurance market weekly: which insurers gain and lose US trucking companies, by state',
@@ -121,7 +121,7 @@ const staticPages = [
     {
         title: 'Best trucking insurance leads 2026: 9 sources compared (prices from vendors\' own sites)',
         url: `${SITE_URL}/best-trucking-insurance-leads`,
-        description: 'Comparison for insurance agencies of trucking insurance lead sources, prices read on each vendor\'s own page on October 13, 2026: Trucking Leads ($399-$999/mo + $12-$18 per quote request), Get Insure Leads (aged from $12, exclusive $110, live transfer $225, appointment $325), Carrier IQ ($149-$249/mo), TruckLeads.io ($85-$300/mo), PollyAI ($39/mo + from $40/state), Truckr ($49-$349/mo), TruckInsureLeads and Commercial Truck Quotes (prices not published), Dooza ($129 per 4 weeks, one agency per state). Lead types, who each suits, 14-day test checklist.',
+        description: 'Comparison for insurance agencies of trucking insurance lead sources, prices read on each vendor\'s own page on October 13, 2026: Trucking Leads ($399-$999/mo + $12-$18 per quote request), Get Insure Leads (aged from $12, exclusive $110, live transfer $225, appointment $325), Carrier IQ ($149-$249/mo), TruckLeads.io ($85-$300/mo), PollyAI ($39/mo + from $40/state), Truckr ($49-$349/mo), TruckInsureLeads and Commercial Truck Quotes (prices not published), Dooza ($129 per 4 weeks; exclusive states on request). Lead types, who each suits, 14-day test checklist.',
     },
     { title: 'New trucking authority leads for insurance agents (reach new MC authorities before insurance is filed)', url: `${SITE_URL}/trucking-new-authority-leads`, description: 'For agents who write trucking: 2,057 US trucking companies applied for authority in the week to Oct 12, 2026 with no liability filing yet (FMCSA open data, Dooza weekly run). FMCSA deadline: insurer filing within 20 days of FMCSA Register publication, then 60 days before dismissal (about 80 days, not 90). Q3 2026: 22,204 new interstate for-hire carriers, 64% with one power unit. Weekly per-state list: first week free, then $129 per 4 weeks; 5 free sample rows.' },
     {
