@@ -517,6 +517,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
 
                         <section id="costs" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Complete Cost Breakdown</h2>
+                            <p className="text-slate-700 mb-6">For current, dated prices from each VA service’s own pricing page (Time etc, Zirtual, Prialto, Boldly, Upwork), see our <a href="/blog/virtual-assistant-cost-small-business" className="text-primary-700 underline">virtual assistant cost breakdown, checked October 14, 2026</a>.</p>
                             <div className="overflow-x-auto border border-slate-200 rounded-xl shadow-sm mb-8">
                                 <table className="w-full border-collapse text-left bg-white text-sm">
                                     <thead className="bg-slate-50 text-slate-900">
