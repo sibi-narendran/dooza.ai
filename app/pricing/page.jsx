@@ -11,7 +11,7 @@ import { faqSchema } from '@/lib/homeData';
 
 export const metadata = {
     title: 'Dooza Pricing: Managed Assistant $200/mo, 7 Days Free',
-    description: 'Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Monday Trucker Feed for insurance agencies: $129 per 4 weeks. Custom AI builds scoped on a free call.',
+    description: 'Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Custom AI builds scoped on a free call.',
     keywords: ['AI employees pricing', 'AI automation pricing', 'Dooza pricing', 'AI agents cost', 'business automation plans'],
     alternates: {
         canonical: 'https://www.dooza.ai/pricing',
@@ -47,11 +47,11 @@ export default function PricingPage() {
                                 <span className="section-label mb-4 block text-primary-700">PRICING</span>
                                 <h1 className="font-serif text-4xl font-bold text-slate-900 md:text-6xl">Start today, first 7 days free</h1>
                                 <p className="mt-5 text-lg text-slate-600">
-                                    Two plans you can start right now by card, or a custom build scoped on a free call.
+                                    One plan you can start right now by card, or a custom build scoped on a free call.
                                 </p>
                             </div>
                             <div className="mt-10 px-4">
-                                <OfferCards source="pricing" />
+                                <OfferCards source="pricing" only="managed" />
                             </div>
                         </section>
                         <section className="pb-12">

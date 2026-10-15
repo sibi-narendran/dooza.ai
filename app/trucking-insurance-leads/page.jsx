@@ -304,7 +304,7 @@ export default function TruckingInsuranceLeadsPage() {
                             <FAQAccordion items={faqItems} />
                         </section>
                     </div>
-                    <TalkNowStrip source="trucking-insurance-leads" />
+                    <TalkNowStrip source="trucking-insurance-leads" offer="trucker-feed" />
                     </main>
                 <Footer />
             </div>

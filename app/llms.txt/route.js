@@ -16,7 +16,7 @@ const staticPages = [
     {
         title: 'Pricing',
         url: `${SITE_URL}/pricing`,
-        description: 'Dooza pricing is custom: scoped by a Dooza engineer on a free 30-minute call. Every engagement starts as a refundable pilot: 100% refund within 14 days. No contracts.',
+        description: 'Dooza Managed (an AI admin assistant checked by a real person): $200/month, first 7 days free, start by card. Custom builds are scoped by a Dooza engineer on a free 30-minute call and start as a refundable pilot: 100% refund within 14 days. Industry offers are priced on their own industry pages.',
     },
     {
         title: 'Partners',
@@ -282,7 +282,7 @@ const companyFacts = [
     'Product: Dooza Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
     'Services (done for you): AI Receptionist, AI Customer Support, AI Visibility / GEO, Workflow Automation, industry solutions',
     'Offer: every product starts with a refundable pilot. The pilot is paid; ask within 14 days for a 100% refund. A Dooza engineer scopes it on a free 30-minute call.',
-    `Pricing: custom, scoped on a free 30-minute call (${SITE_URL}/book); no public price list`,
+    `Pricing: Dooza Managed $200/month, first 7 days free (${SITE_URL}/pricing); custom builds scoped on a free 30-minute call (${SITE_URL}/book); industry offers priced on their industry pages`,
     'Integrations: 1,000+ app integrations',
     `Boilerplate: ${SITE_DESCRIPTION}`,
 ];
@@ -382,7 +382,7 @@ export async function GET() {
         '## Refundable Pilot',
         '- Every Dooza product starts with a refundable pilot: 100% refund within 14 days.',
         '- The pilot is paid. The 30-minute call to scope it is free.',
-        `- Prices are listed only at ${SITE_URL}/pricing.`,
+        `- General prices: ${SITE_URL}/pricing. Industry-specific offers are priced only on their own industry pages.`,
         '',
         section('Products', productPages),
         '',
