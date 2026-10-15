@@ -29,7 +29,7 @@ const pageUrl = `${SITE_URL}/workflow-automation`;
 
 export const metadata = {
     title: {
-        absolute: 'Done-for-You Zapier Alternative with AI | Dooza Agents',
+        absolute: 'Zapier Alternative with AI Agents, Done for You | Dooza',
     },
     description:
         'Workflow automation is a Dooza Agents service: Dooza engineers build and maintain AI-powered workflows across 1,000+ app integrations. Start with a refundable pilot: 100% refund within 14 days.',
@@ -52,7 +52,7 @@ export const metadata = {
         googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
     },
     openGraph: {
-        title: 'Done-for-You Zapier Alternative with AI | Dooza Agents',
+        title: 'Zapier Alternative with AI Agents, Done for You | Dooza',
         description: 'Build AI-powered workflows with 1,000+ app integrations. Visual builder, AI agents, and human-in-the-loop controls. Start with a refundable pilot.',
         url: pageUrl,
         siteName: 'Dooza',
@@ -61,7 +61,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Done-for-You Zapier Alternative with AI | Dooza Agents',
+        title: 'Zapier Alternative with AI Agents, Done for You | Dooza',
         description: 'Build AI-powered workflows with 1,000+ app integrations. Visual builder, AI agents, and human-in-the-loop controls.',
         images: [`${SITE_URL}/logo.png`],
     },

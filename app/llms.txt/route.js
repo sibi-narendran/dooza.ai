@@ -19,6 +19,11 @@ const staticPages = [
         description: 'Dooza Managed (an AI admin assistant checked by a real person): $200/month, first 7 days free, start by card. Custom builds are scoped by a Dooza engineer on a free 30-minute call and start as a refundable pilot: 100% refund within 14 days. Industry offers are priced on their own industry pages.',
     },
     {
+        title: 'AI admin assistant for small business (Dooza Managed)',
+        url: `${SITE_URL}/ai-admin-assistant`,
+        description: 'Dooza Managed: email Dooza your written admin tasks (email drafts and follow-ups, documents and forms, spreadsheets and data entry, research); AI does the work, a person checks it, done by the next business day, weekly report. $200/month, first 7 days free, cancel anytime. Not covered: phone calls or texts, logins to your accounts, payments, legal/tax/insurance advice. Compared with US VA services (published plans from $390/month for 10 hours, checked Oct 14, 2026).',
+    },
+    {
         title: 'Partners',
         url: `${SITE_URL}/partners`,
         description: 'Dooza partner program.',

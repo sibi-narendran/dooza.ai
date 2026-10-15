@@ -2,7 +2,7 @@ import { SITE_URL } from '@/lib/site';
 import GeoServicesContent from './GeoServicesContent';
 
 const pageUrl = `${SITE_URL}/generative-engine-optimization`;
-const pageTitle = 'Generative Engine Optimization (GEO) Services | Get Cited by AI | Dooza';
+const pageTitle = 'Generative Engine Optimization Agency for Small Business | Dooza';
 const pageDescription =
     'Dooza GEO services get your business cited by ChatGPT, Perplexity, Gemini and Google AI Overviews. Engineers set it up; starts with a refundable pilot.';
 

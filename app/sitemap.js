@@ -140,6 +140,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/ai-admin-assistant`,
+            lastModified: pageDate('2026-10-15'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/new-trucking-companies`,
             lastModified: pageDate('2026-10-06'),
             changeFrequency: 'monthly',
