@@ -63,6 +63,10 @@ const faqItems = [
         answer: 'They are estimates. FMCSA does not publish policy expiry dates, so we use the next anniversary of the current liability filing’s effective date. Some policies run 6 months or are cancelled mid-term, so treat each date as a reason to call and confirm it on the call.',
     },
     {
+        question: 'Are these confirmed trucking insurance leads?',
+        answer: 'No. Nobody on the list has asked for a quote or agreed to be contacted, and the renewal date is an estimate, not a confirmed X-date. Each row is a real trucking company from public FMCSA filings, with its current insurer, liability limit and the phone and email it filed with FMCSA. Its estimated renewal is 30 to 60 days out, so you make the first call and confirm the date on it. Wrong number? Reply “SWAP” with the DOT number for a replacement.',
+    },
+    {
         question: 'Which states can I get?',
         answer: 'Any US state. On October 12, 2026 there were 6,808 renewals in the 30 to 60 day window and 2,057 new authorities across the 50 states and DC; the counter on this page shows your state. Want your state to yourself? Exclusive states are available: book a call.',
     },
