@@ -18,7 +18,7 @@ import { trackFBViewContent } from '@/lib/analytics';
 const comparisonRows = [
     { feature: 'Price', dooza: 'Refundable pilot (see /pricing)', competitor: '$24/mo billed yearly or $44/mo billed monthly', doozaWins: false },
     { feature: 'Team Members', dooza: 'Scoped on your pilot call', competitor: 'Unlimited team members and businesses', doozaWins: false },
-    { feature: 'AI Employees', dooza: 'Maily, Somi, Ranky, Stan, Linda, Rachel + custom agents via Dooza Agents', competitor: '7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda)', doozaWins: false },
+    { feature: 'AI Employees', dooza: 'Maily, Somi, Ranky, Stan, Linda + custom agents via Dooza Agents', competitor: '7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda)', doozaWins: false },
     { feature: 'Included Work', dooza: 'Scoped on your pilot call', competitor: '50 hours of work per plan', doozaWins: false },
     { feature: 'Setup', dooza: 'Done for you: a Dooza engineer scopes your pilot on a free 30-min call, then builds and tunes it with you', competitor: 'Self-serve (you set it up and manage it)', doozaWins: true },
     { feature: 'Custom Agents', dooza: 'Built and maintained by Dooza engineers (Dooza Agents)', competitor: 'Fixed roster of 7 AI employees', doozaWins: true },

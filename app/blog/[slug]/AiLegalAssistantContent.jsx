@@ -40,10 +40,10 @@ import {
 const faqData = [
     { question: "What is an AI legal assistant for law firms?", answer: "An AI legal assistant is software that handles client intake calls — answering the phone 24/7, screening potential cases by practice area, gathering key facts, scheduling consultations, and following up with leads. It performs the administrative work of intake, not legal advice." },
     { question: "Is an AI legal assistant practicing law or violating ethics rules?", answer: "No. An AI legal assistant handles administrative intake tasks — the same work a receptionist or intake coordinator does. It doesn't give legal advice, interpret statutes, or recommend legal strategies. It screens, schedules, and gathers facts. Bar associations distinguish clearly between administrative support and the practice of law." },
-    { question: "How much does an AI legal assistant cost compared to a paralegal?", answer: "A paralegal or intake coordinator costs $3,500-5,500/month in salary alone, plus benefits. A legal answering service runs $500-1,500/month with limited hours. Dooza's Rachel gives you 24/7 call answering with law-firm-specific configuration for a fraction of either. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
-    { question: "Can the AI screen cases by practice area?", answer: "Yes. Rachel is configured with your firm's practice areas and screening criteria. She asks the right questions for PI, family law, criminal defense, estate planning, and more — then classifies urgency and routes to the appropriate attorney." },
-    { question: "Does the AI disclose that it's not a human attorney?", answer: "Absolutely. Rachel introduces herself by name and is transparent about being an AI assistant when asked. She never represents herself as an attorney and clearly communicates that she's helping with scheduling and intake, not providing legal advice." },
-    { question: "What happens when someone calls after hours?", answer: "Rachel answers 24/7 with the same quality as business hours. She screens the case, gathers facts, assesses urgency, and either books a next-day consultation or escalates urgent matters to the on-call attorney. 60%+ of legal intake calls happen outside business hours." }
+    { question: "How much does an AI legal assistant cost compared to a paralegal?", answer: "A paralegal or intake coordinator costs $3,500-5,500/month in salary alone, plus benefits. A legal answering service runs $500-1,500/month with limited hours. Dooza does not sell call answering or legal intake; Dooza Managed is an AI admin assistant for small businesses, checked by a real person, $200/month, first 7 days free." },
+    { question: "Can the AI screen cases by practice area?", answer: "Yes. A well-configured AI intake tool can be set up with your firm's practice areas and screening criteria, ask the right questions for PI, family law, criminal defense, estate planning, and more, then classify urgency and route to the appropriate attorney." },
+    { question: "Does the AI disclose that it's not a human attorney?", answer: "Absolutely. Any AI intake tool should be transparent about being an AI assistant when asked, never represent itself as an attorney, and make clear it is helping with scheduling and intake, not providing legal advice." },
+    { question: "What happens when someone calls after hours?", answer: "A well-configured AI intake tool answers 24/7 with the same quality as business hours. It screens the case, gathers facts, assesses urgency, and either books a next-day consultation or escalates urgent matters to the on-call attorney. 60%+ of legal intake calls happen outside business hours." }
 ];
 
 export default function AiLegalAssistantContent() {
@@ -60,7 +60,7 @@ export default function AiLegalAssistantContent() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['introduction', 'intake-crisis', 'what-firms-need', 'ai-legal-assistant', 'intake-scenarios', 'ethics-compliance', 'cost-comparison', 'meet-rachel', 'getting-started', 'faq'];
+            const sections = ['introduction', 'intake-crisis', 'what-firms-need', 'ai-legal-assistant', 'intake-scenarios', 'ethics-compliance', 'cost-comparison', 'where-dooza-fits', 'faq'];
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -154,8 +154,7 @@ export default function AiLegalAssistantContent() {
                                     { id: 'intake-scenarios', label: 'Intake Scenarios' },
                                     { id: 'ethics-compliance', label: 'Ethics & Compliance' },
                                     { id: 'cost-comparison', label: 'Cost Comparison' },
-                                    { id: 'meet-rachel', label: 'Meet Rachel' },
-                                    { id: 'getting-started', label: 'Getting Started' },
+                                    { id: 'where-dooza-fits', label: 'Where Dooza Fits' },
                                     { id: 'faq', label: 'FAQ' },
                                 ].map((item) => (
                                     <button
@@ -419,7 +418,7 @@ export default function AiLegalAssistantContent() {
                                                 <p className="text-slate-700 italic">"I was just in a car accident. The other driver ran a red light and hit me. I'm in the ER now. My neck and back are killing me. I need a lawyer."</p>
                                             </div>
                                             <div className="bg-white p-4 rounded-lg border border-red-100">
-                                                <p className="text-sm text-red-600 font-medium mb-1">Rachel asks screening questions:</p>
+                                                <p className="text-sm text-red-600 font-medium mb-1">The AI asks screening questions:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- "I'm sorry to hear about your accident. Let me help you. When did this happen?"</li>
                                                     <li>- "Where did the accident occur?"</li>
@@ -430,7 +429,7 @@ export default function AiLegalAssistantContent() {
                                                 </ul>
                                             </div>
                                             <div className="bg-white p-4 rounded-lg border border-red-100">
-                                                <p className="text-sm text-red-600 font-medium mb-1">Rachel classifies as URGENT PI case and takes action:</p>
+                                                <p className="text-sm text-red-600 font-medium mb-1">The AI classifies as URGENT PI case and takes action:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- Escalates to the on-call PI attorney via text/call with full intake summary</li>
                                                     <li>- Books a priority morning consultation if attorney is unavailable</li>
@@ -461,7 +460,7 @@ export default function AiLegalAssistantContent() {
                                                 <p className="text-slate-700 italic">"My ex just told me he's moving to another state with our kids. We have a custody agreement but he says he doesn't care. I don't know what to do."</p>
                                             </div>
                                             <div className="bg-white p-4 rounded-lg border border-amber-100">
-                                                <p className="text-sm text-amber-600 font-medium mb-1">Rachel asks family law screening questions:</p>
+                                                <p className="text-sm text-amber-600 font-medium mb-1">The AI asks family law screening questions:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- "I understand this is stressful. Let me connect you with help. Do you have a current custody order from a court?"</li>
                                                     <li>- "When did he say he's planning to move?"</li>
@@ -471,7 +470,7 @@ export default function AiLegalAssistantContent() {
                                                 </ul>
                                             </div>
                                             <div className="bg-white p-4 rounded-lg border border-amber-100">
-                                                <p className="text-sm text-amber-600 font-medium mb-1">Rachel classifies as MODERATE family law case and responds:</p>
+                                                <p className="text-sm text-amber-600 font-medium mb-1">The AI classifies as MODERATE family law case and responds:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- Books a Monday morning consultation with the family law attorney</li>
                                                     <li>- Collects names of both parents and children for conflict check</li>
@@ -501,7 +500,7 @@ export default function AiLegalAssistantContent() {
                                                 <p className="text-slate-700 italic">"My husband just got arrested for DUI. He's at the county jail. His arraignment is Monday morning. We need a lawyer right away."</p>
                                             </div>
                                             <div className="bg-white p-4 rounded-lg border border-red-100">
-                                                <p className="text-sm text-red-600 font-medium mb-1">Rachel asks criminal defense screening questions:</p>
+                                                <p className="text-sm text-red-600 font-medium mb-1">The AI asks criminal defense screening questions:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- "I understand — let me help you right away. When was he arrested?"</li>
                                                     <li>- "Which county jail is he being held at?"</li>
@@ -511,7 +510,7 @@ export default function AiLegalAssistantContent() {
                                                 </ul>
                                             </div>
                                             <div className="bg-white p-4 rounded-lg border border-red-100">
-                                                <p className="text-sm text-red-600 font-medium mb-1">Rachel classifies as URGENT criminal defense and takes action:</p>
+                                                <p className="text-sm text-red-600 font-medium mb-1">The AI classifies as URGENT criminal defense and takes action:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- Escalates to the on-call criminal defense attorney with full details</li>
                                                     <li>- If unavailable, books an emergency Saturday morning consultation</li>
@@ -542,7 +541,7 @@ export default function AiLegalAssistantContent() {
                                                 <p className="text-slate-700 italic">"Hi, my wife and I just had our first child and we want to set up a will and maybe a trust. We don't have anything in place. How much does that cost?"</p>
                                             </div>
                                             <div className="bg-white p-4 rounded-lg border border-green-100">
-                                                <p className="text-sm text-green-600 font-medium mb-1">Rachel handles the estate planning intake:</p>
+                                                <p className="text-sm text-green-600 font-medium mb-1">The AI handles the estate planning intake:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- "Congratulations! Let me help you get started. Do you currently have any estate planning documents — a will, trust, or power of attorney?"</li>
                                                     <li>- "How many children do you have, and what are their ages?"</li>
@@ -551,7 +550,7 @@ export default function AiLegalAssistantContent() {
                                                 </ul>
                                             </div>
                                             <div className="bg-white p-4 rounded-lg border border-green-100">
-                                                <p className="text-sm text-green-600 font-medium mb-1">Rachel classifies as ROUTINE estate planning and responds:</p>
+                                                <p className="text-sm text-green-600 font-medium mb-1">The AI classifies as ROUTINE estate planning and responds:</p>
                                                 <ul className="text-slate-700 text-sm space-y-1">
                                                     <li>- Books a 30-minute estate planning consultation for next week</li>
                                                     <li>- Provides general fee range: "Our estate planning consultations are complimentary. Basic will packages typically start at $1,500."</li>
@@ -590,7 +589,7 @@ export default function AiLegalAssistantContent() {
                                         <div className="space-y-4">
                                             {[
                                                 {
-                                                    title: "Administrative Intake (What Rachel Does)",
+                                                    title: "Administrative Intake (What an AI Intake Assistant Does)",
                                                     items: [
                                                         "Answering the phone and greeting callers",
                                                         "Asking screening questions (What happened? When? Where?)",
@@ -601,7 +600,7 @@ export default function AiLegalAssistantContent() {
                                                     color: "green"
                                                 },
                                                 {
-                                                    title: "Practicing Law (What Rachel Never Does)",
+                                                    title: "Practicing Law (What It Never Does)",
                                                     items: [
                                                         "Giving legal advice or opinions on case merit",
                                                         "Interpreting statutes, case law, or regulations",
@@ -639,22 +638,22 @@ export default function AiLegalAssistantContent() {
                                     {
                                         icon: Shield,
                                         title: "No Unauthorized Practice of Law (UPL)",
-                                        desc: "Rachel performs the same administrative tasks as a receptionist or intake coordinator. Answering phones, collecting information, and scheduling appointments is not the practice of law — it's office administration."
+                                        desc: "An AI intake assistant performs the same administrative tasks as a receptionist or intake coordinator. Answering phones, collecting information, and scheduling appointments is not the practice of law — it's office administration."
                                     },
                                     {
                                         icon: Users,
                                         title: "Transparent Disclosure",
-                                        desc: "Rachel introduces herself by name and is transparent about being an AI assistant. She never claims to be an attorney. When callers ask legal questions, she redirects to the scheduled consultation with their attorney."
+                                        desc: "An AI intake assistant should be transparent about being an AI. It never claims to be an attorney. When callers ask legal questions, it redirects to the scheduled consultation with their attorney."
                                     },
                                     {
                                         icon: FileText,
                                         title: "Confidentiality by Design",
-                                        desc: "Encrypted connections and your approval on anything sensitive. Rachel collects only intake-relevant information. She doesn't store case files or legal documents. Data handling follows best practices for law firm confidentiality."
+                                        desc: "Encrypted connections and your approval on anything sensitive. It should collect only intake-relevant information and not store case files or legal documents. Data handling follows best practices for law firm confidentiality."
                                     },
                                     {
                                         icon: Scale,
                                         title: "Attorney Oversight",
-                                        desc: "Every intake is summarized and sent to the assigned attorney for review. The attorney makes all legal decisions. Rachel handles the administrative pipeline; lawyers handle the law."
+                                        desc: "Every intake is summarized and sent to the assigned attorney for review. The attorney makes all legal decisions. The AI handles the administrative pipeline; lawyers handle the law."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-4 bg-white border border-slate-200 p-5 rounded-xl">
@@ -697,25 +696,23 @@ export default function AiLegalAssistantContent() {
                                             <th className="text-left py-3 px-4 font-bold text-slate-900">Feature</th>
                                             <th className="text-left py-3 px-4 font-bold text-slate-900">Paralegal /<br /><span className="font-normal text-xs text-slate-500">Intake Coordinator</span></th>
                                             <th className="text-left py-3 px-4 font-bold text-slate-900">Legal Answering<br /><span className="font-normal text-xs text-slate-500">Service</span></th>
-                                            <th className="text-left py-3 px-4 font-bold text-primary-700 bg-primary-50">Rachel AI<br /><span className="font-normal text-xs text-primary-500">Dooza</span></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", desk: "$3,500-5,500", service: "$500-1,500", rachel: "Refundable pilot (see /pricing)" },
-                                            { feature: "Availability", desk: "Business hours only", service: "Extended hours (varies)", rachel: "24/7/365" },
-                                            { feature: "Case Screening", desk: "Trained judgment", service: "Basic script only", rachel: "Practice-area protocols" },
-                                            { feature: "Fact Gathering", desk: "Thorough", service: "Name & number only", rachel: "Structured intake forms" },
-                                            { feature: "Consultation Booking", desk: "Yes", service: "Message-taking only", rachel: "Automatic booking" },
-                                            { feature: "Follow-Up", desk: "Inconsistent", service: "Not included", rachel: "Automated sequences" },
-                                            { feature: "Setup Time", desk: "2-6 weeks hiring + training", service: "1-2 weeks", rachel: "30 minutes" },
-                                            { feature: "Consistency", desk: "Varies by person/day", service: "Varies by operator", rachel: "100% consistent" }
+                                            { feature: "Monthly Cost", desk: "$3,500-5,500", service: "$500-1,500" },
+                                            { feature: "Availability", desk: "Business hours only", service: "Extended hours (varies)" },
+                                            { feature: "Case Screening", desk: "Trained judgment", service: "Basic script only" },
+                                            { feature: "Fact Gathering", desk: "Thorough", service: "Name & number only" },
+                                            { feature: "Consultation Booking", desk: "Yes", service: "Message-taking only" },
+                                            { feature: "Follow-Up", desk: "Inconsistent", service: "Not included" },
+                                            { feature: "Setup Time", desk: "2-6 weeks hiring + training", service: "1-2 weeks" },
+                                            { feature: "Consistency", desk: "Varies by person/day", service: "Varies by operator" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
                                                 <td className="py-3 px-4 text-slate-600">{row.desk}</td>
                                                 <td className="py-3 px-4 text-slate-600">{row.service}</td>
-                                                <td className="py-3 px-4 text-primary-700 font-medium bg-primary-50">{row.rachel}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -723,7 +720,7 @@ export default function AiLegalAssistantContent() {
                             </div>
 
                             {/* Pricing Cards */}
-                            <div className="grid md:grid-cols-3 gap-6 mb-8">
+                            <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl text-center">
                                     <div className="text-3xl font-bold text-red-600 mb-2">$3,500-5,500</div>
                                     <p className="text-sm text-slate-700 font-medium">Paralegal / Intake Coordinator</p>
@@ -738,115 +735,32 @@ export default function AiLegalAssistantContent() {
                                     <p className="text-xs text-slate-500">No screening or booking</p>
                                     <p className="text-xs text-amber-500 mt-2">$6,000-18,000/year</p>
                                 </div>
-                                <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">14-day</div>
-                                    <p className="text-sm text-green-800 font-medium">Rachel AI (Dooza)</p>
-                                    <p className="text-xs text-green-600 mt-1">Unlimited calls, 24/7</p>
-                                    <p className="text-xs text-green-600">Case screening + booking</p>
-                                    <p className="text-xs text-green-700 font-bold mt-2">Refundable pilot — <Link href="/pricing" className="underline">see pricing</Link></p>
-                                </div>
                             </div>
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
-                                <p className="text-2xl font-bold text-green-700">A fraction of the $42,000-66,000/year cost of a full-time hire</p>
-                                <p className="text-green-600 mt-2">And get 24/7 coverage, case screening, fact gathering, and automated follow-up included</p>
+                                <p className="text-2xl font-bold text-green-700">A full-time hire costs $42,000-66,000/year; a legal answering service costs $6,000-18,000/year</p>
+                                <p className="text-green-600 mt-2">Weigh both against what every missed call costs your firm</p>
                             </div>
                         </section>
 
-                        {/* Section 8: Meet Rachel */}
-                        <section id="meet-rachel" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Meet Rachel: Your Law Firm's AI Legal Assistant</h2>
-
-                            <div className="bg-gradient-to-br from-indigo-50 to-primary-50 border-2 border-indigo-200 p-8 rounded-2xl mb-8">
-                                <div className="flex flex-col md:flex-row items-center gap-8">
-                                    <div className="w-24 h-24 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shrink-0">
-                                        <Scale size={48} />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-2xl font-bold text-slate-900 mb-2">Rachel — AI Legal Assistant for Law Firms</h3>
-                                        <p className="text-lg text-slate-700">
-                                            Rachel answers your firm's phone like your best intake coordinator — but she never takes a day off, never puts a caller on hold, and costs a fraction of a full-time hire. She's specifically configurable for law firms with practice-area screening, urgency classification, and smart attorney matching.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                                {[
-                                    { icon: Zap, title: "Instant Pickup", desc: "Answers in under 1 second. No rings, no hold music, no voicemail." },
-                                    { icon: Target, title: "Case Screening", desc: "Practice-area-specific questions to qualify cases before attorney time is spent." },
-                                    { icon: ClipboardList, title: "Fact Collection", desc: "Structured intake gathering incident details, parties, and witnesses." },
-                                    { icon: Calendar, title: "Smart Scheduling", desc: "Books consultations with the right attorney by practice area." },
-                                    { icon: MessageSquare, title: "SMS Follow-Up", desc: "Consultation reminders, follow-ups, and post-call summaries." },
-                                    { icon: Phone, title: "After-Hours Coverage", desc: "Handles 60%+ of calls that come outside business hours." },
-                                    { icon: Shield, title: "Conflict Flagging", desc: "Collects all party names so your team can check conflicts." },
-                                    { icon: FileText, title: "Call Summaries", desc: "Detailed intake summary of every call sent to the assigned attorney." }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-indigo-200 transition-colors">
-                                        <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-3">
-                                            <item.icon size={20} />
-                                        </div>
-                                        <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
-                                        <p className="text-sm text-slate-600">{item.desc}</p>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className="prose md:prose-lg text-slate-600">
+                        {/* Section 8: Where Dooza fits */}
+                        <section id="where-dooza-fits" className="scroll-mt-28">
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Where Dooza Fits</h2>
+                            <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Want to make sure potential clients find your firm before they call? Pair Rachel with <Link href="/blog/ai-appointment-setter" className="text-primary-600 hover:underline font-medium">an AI appointment setter</Link> to capture and qualify leads across every channel — phone, web, and email.
+                                    Dooza does not sell call answering or legal intake. Dooza Managed is an AI admin assistant for small businesses, checked by a real person, $200/month, first 7 days free. It suits the email and admin work around your practice, not the phone line.
+                                </p>
+                                <p>
+                                    For a larger job, Dooza engineers build and maintain custom AI agents, scoped on a free 30-minute call.
                                 </p>
                             </div>
-                        </section>
-
-                        {/* Section 9: Getting Started */}
-                        <section id="getting-started" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Get Rachel Running for Your Law Firm in 3 Steps</h2>
-                            <p className="text-lg text-slate-600 mb-8">
-                                Setting up an AI legal assistant for your firm takes less time than drafting a standard engagement letter. Here's exactly how it works:
-                            </p>
-
-                            <div className="space-y-4 mb-8">
-                                {[
-                                    {
-                                        step: "1",
-                                        title: "Start Your Pilot",
-                                        desc: "Create your account at dooza.ai. You'll get access to Rachel and your full AI employee team. Every Dooza product starts with a refundable pilot — 100% refund within 14 days."
-                                    },
-                                    {
-                                        step: "2",
-                                        title: "Configure Your Practice Areas",
-                                        desc: "Set up your specific practice areas (PI, family law, criminal defense, estate planning, etc.), attorney assignments and schedules, screening criteria for each case type, and urgency classification rules. A Dooza engineer can scope and set this up with you on a free 30-minute pilot call."
-                                    },
-                                    {
-                                        step: "3",
-                                        title: "Forward Your Firm's Phone Line to Rachel",
-                                        desc: "Set up call forwarding from your office phone to Rachel's number. Works with any phone system — landline, VoIP, or cell. Takes about 5 minutes. Rachel answers your next call."
-                                    }
-                                ].map((item, idx) => (
-                                    <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
-                                        <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 font-bold shrink-0">{item.step}</div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
-                                            <p className="text-slate-600">{item.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className="bg-indigo-50 border border-indigo-100 p-8 rounded-xl text-center">
-                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Stop Losing Cases to Voicemail?</h3>
-                                <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Clients often hire the first attorney who responds. Every missed call is a missed case — and potentially $10,000-$50,000 in fees. Rachel answers every call, screens every case, and books every consultation. Start with a refundable pilot — 100% refund within 14 days.
-                                </p>
-                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Start your pilot <ArrowRight className="w-4 h-4" />
-                                    </a>
-                                    <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
-                                        <Calendar className="w-4 h-4" /> Book a free pilot call
-                                    </a>
-                                </div>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Link href="/pricing" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
+                                    See pricing <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
+                                    <Calendar className="w-4 h-4" /> Book a free call
+                                </a>
                             </div>
                         </section>
 

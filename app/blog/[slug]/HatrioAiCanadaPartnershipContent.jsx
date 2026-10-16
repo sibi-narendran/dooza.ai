@@ -52,7 +52,7 @@ const faqData = [
     },
     {
         question: "Why did Hatrio partner with Dooza?",
-        answer: "Hatrio already nails autonomous content production. Dooza handles everything around content — email, customer support, social distribution, sales outreach, SEO ranking, and phone calls. Together, Hatrio + Dooza gives any business or agency a complete AI workforce from content creation to customer conversion."
+        answer: "Hatrio already nails autonomous content production. Dooza handles everything around content — email, customer support, social distribution, sales outreach and SEO ranking. Together, Hatrio + Dooza gives any business or agency a complete AI workforce from content creation to customer conversion."
     },
     {
         question: "Does Hatrio actually use Dooza internally?",
@@ -60,7 +60,7 @@ const faqData = [
     },
     {
         question: "Can I use Hatrio and Dooza together?",
-        answer: "Absolutely. Hatrio produces the content (blog posts, SEO articles, brand-voiced copy). Dooza's AI employees distribute it, manage inbox replies, post to social, generate leads, and answer phone calls about it. It's a full content-to-customer pipeline with zero human bottlenecks."
+        answer: "Absolutely. Hatrio produces the content (blog posts, SEO articles, brand-voiced copy). Dooza's AI employees distribute it, manage inbox replies, post to social, and generate leads. It's a full content-to-customer pipeline with zero human bottlenecks."
     },
     {
         question: "What does this partnership mean for new users?",
@@ -514,7 +514,6 @@ export default function HatrioAiCanadaPartnershipContent() {
                                             "Email inbox (Maily)",
                                             "Social distribution (Somi)",
                                             "Site-wide SEO and ranking (Ranky)",
-                                            "Phone calls and booking (Rachel)",
                                             "Sales outreach and qualification (Stan)",
                                             "Contract and legal review (Linda)",
                                         ].map((item, idx) => (
@@ -560,7 +559,7 @@ export default function HatrioAiCanadaPartnershipContent() {
                                             { feature: "Social distribution", hatrio: "—", dooza: "✅ Somi handles it" },
                                             { feature: "Email replies from readers", hatrio: "—", dooza: "✅ Maily handles it" },
                                             { feature: "Inbound lead qualification", hatrio: "—", dooza: "✅ Stan handles it" },
-                                            { feature: "Phone calls & bookings", hatrio: "—", dooza: "✅ Rachel handles it" },
+                                            { feature: "Phone calls & bookings", hatrio: "—", dooza: "Not offered" },
                                             { feature: "Agency multi-client support", hatrio: "✅ Built for agencies", dooza: "Per-client workspaces" },
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -616,7 +615,7 @@ export default function HatrioAiCanadaPartnershipContent() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-slate-900">Need the business to run itself?</p>
-                                            <p className="text-slate-600">Hire Dooza's AI workforce — email, social, SEO, sales, legal, and phone calls. Start with a refundable pilot: 100% refund within 14 days (<Link href="/pricing" className="text-primary-600 hover:underline">see pricing</Link>).</p>
+                                            <p className="text-slate-600">Hire Dooza's AI workforce — email, social, SEO, sales and legal. Start with a refundable pilot: 100% refund within 14 days (<Link href="/pricing" className="text-primary-600 hover:underline">see pricing</Link>).</p>
                                         </div>
                                     </div>
                                 </div>

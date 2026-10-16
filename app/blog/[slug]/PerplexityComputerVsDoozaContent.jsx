@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: "Does Dooza answer phone calls?",
-        answer: "Yes. Dooza includes Rachel, an AI receptionist that answers phone calls, books appointments, and handles customer inquiries."
+        answer: "No. Dooza does not offer phone answering or a voice agent. Dooza Managed is an AI admin assistant for small businesses, checked by a real person, $200/month, first 7 days free."
     },
     {
         question: "Can Perplexity Computer run tasks on a schedule?",
@@ -144,7 +144,7 @@ export default function PerplexityComputerVsDoozaContent() {
                             <span>Comparison</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            Perplexity Computer vs Dooza: <span className="text-primary-600">Multi-Model Agent</span> or 6 AI Employees?
+                            Perplexity Computer vs Dooza: <span className="text-primary-600">Multi-Model Agent</span> or 5 AI Employees?
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                             Perplexity Computer is a multi-model AI agent you direct, now with scheduled tasks and access on paid Pro plans. Dooza gives you 6 role-specific AI employees set up for you, starting with a refundable pilot. Here's the honest breakdown, checked October 7, 2026.
@@ -163,7 +163,7 @@ export default function PerplexityComputerVsDoozaContent() {
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
                                 src="/blog/perplexity-computer-vs-dooza.png"
-                                alt="Perplexity Computer vs Dooza comparison — multi-model AI agent versus 6 AI employees with a refundable pilot"
+                                alt="Perplexity Computer vs Dooza comparison — multi-model AI agent versus 5 AI employees with a refundable pilot"
                                 priority={true}
                             />
                         </div>
@@ -389,7 +389,6 @@ export default function PerplexityComputerVsDoozaContent() {
                                     { icon: Mail, title: "Maily — Email Manager", desc: "Reads, drafts, and sends emails. Handles customer inquiries. Follows up automatically." },
                                     { icon: MessageSquare, title: "Somi — Social Media", desc: "Creates and posts content across platforms. Engages with comments. Runs on autopilot." },
                                     { icon: Search, title: "Ranky — SEO Specialist", desc: "Writes optimized blog posts. Tracks rankings. Builds your organic traffic." },
-                                    { icon: Phone, title: "Rachel — AI Receptionist", desc: "Answers phone calls 24/7. Books appointments. Handles customer inquiries live." },
                                     { icon: TrendingUp, title: "Stan — Sales Agent", desc: "Qualifies leads. Sends outreach. Books meetings. Manages your pipeline." },
                                     { icon: Shield, title: "Linda — Legal Assistant", desc: "Reviews contracts. Flags risks. Drafts legal documents." }
                                 ].map((item, idx) => (
@@ -409,7 +408,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The Key Difference</h4>
                                         <p className="text-slate-700">
-                                            Dooza's AI employees come with defined roles and routines that Dooza engineers configure for your business. Somi posts your social media on schedule. Rachel answers calls. Ranky publishes SEO content every week. <strong>You don't design the workflows; Dooza does.</strong>
+                                            Dooza's AI employees come with defined roles and routines that Dooza engineers configure for your business. Somi posts your social media on schedule. Ranky publishes SEO content every week. <strong>You don't design the workflows; Dooza does.</strong>
                                         </p>
                                     </div>
                                 </div>
@@ -467,7 +466,6 @@ export default function PerplexityComputerVsDoozaContent() {
                                             "Starts with a refundable pilot (100% refund within 14 days)",
                                             "Dooza engineers configure everything",
                                             "Role-specific — each employee does one job",
-                                            "Includes Rachel, an AI receptionist for phone calls",
                                             "Best for: owners who want work handled for them"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
@@ -506,7 +504,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                             { feature: "AI Models Used", perplexity: "Several frontier models; you can choose models for subtasks", dooza: "Chosen and managed by Dooza" },
                                             { feature: "Runs On", perplexity: "Perplexity cloud sandbox", dooza: "Cloud" },
                                             { feature: "Who Sets Up the Work", perplexity: "You (objectives and scheduled tasks)", dooza: "Dooza engineers, with you" },
-                                            { feature: "Phone Calls", perplexity: "General-purpose agent", dooza: "AI receptionist (Rachel)" },
+                                            { feature: "Phone Calls", perplexity: "General-purpose agent", dooza: "Not offered" },
                                             { feature: "Social Media", perplexity: "Possible as a task you set up", dooza: "Scheduled posting by Somi" },
                                             { feature: "Email Management", perplexity: "Via Gmail, Outlook and other connectors", dooza: "Handled by Maily" },
                                             { feature: "SEO Content", perplexity: "Can research & draft", dooza: "Full pipeline (Ranky)" },
@@ -605,7 +603,7 @@ export default function PerplexityComputerVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    Perplexity gives you a powerful agent at published prices, and you direct the work. Dooza starts with a <strong className="text-white">refundable pilot — 100% refund within 14 days</strong> — with 6 AI employees for your email, social media, SEO, sales, legal documents, and phone calls, configured for you by Dooza engineers.
+                                    Perplexity gives you a powerful agent at published prices, and you direct the work. Dooza starts with a <strong className="text-white">refundable pilot — 100% refund within 14 days</strong> — with 5 AI employees for your email, social media, SEO, sales, and legal documents, configured for you by Dooza engineers.
                                 </p>
                             </div>
                         </section>
@@ -696,7 +694,6 @@ export default function PerplexityComputerVsDoozaContent() {
                                         {[
                                             "Run a business that needs AI handling emails, social, SEO, and sales",
                                             "Want those roles set up and run for you by Dooza engineers",
-                                            "Need an AI receptionist that answers phone calls",
                                             "Would rather not design tasks or manage credits",
                                             "Want your approval on anything sensitive",
                                             "Want to start with a refundable pilot (100% refund within 14 days)"
@@ -741,17 +738,12 @@ export default function PerplexityComputerVsDoozaContent() {
                                     {
                                         scenario: "Product Launch",
                                         perplexity: "Computer builds landing pages, generates marketing copy, creates visual assets",
-                                        dooza: "Somi posts launch content to your connected social platforms. Maily handles inbound inquiries. Rachel answers calls."
+                                        dooza: "Somi posts launch content to your connected social platforms. Maily handles inbound inquiries."
                                     },
                                     {
                                         scenario: "Lead Generation",
                                         perplexity: "Computer researches prospects, analyzes market data, builds targeted lists",
                                         dooza: "Stan sends outreach, qualifies leads, and books meetings on your calendar"
-                                    },
-                                    {
-                                        scenario: "Phone Calls",
-                                        perplexity: "Computer prepares call notes, scripts and follow-up drafts",
-                                        dooza: "Rachel answers calls, books appointments, and handles customer inquiries"
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden">
@@ -794,8 +786,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
                                         { icon: DollarSign, text: "Refundable pilot — 100% refund within 14 days" },
-                                        { icon: Users, text: "6 specialized AI employees, not one general agent" },
-                                        { icon: Phone, text: "AI phone answering with Rachel" },
+                                        { icon: Users, text: "5 specialized AI employees, not one general agent" },
                                         { icon: Repeat, text: "Work designed and run for you" },
                                         { icon: HeartHandshake, text: "A Dooza engineer scopes your pilot and sets it up for you" },
                                         { icon: Brain, text: "Purpose-built for business — not research" }

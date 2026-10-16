@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: "Can Dooza AI employees make phone calls?",
-        answer: "Yes! Dooza's Rachel (AI Receptionist) can handle inbound and outbound calls 24/7. Motion's pricing page does not list phone answering; it is built around calendars, tasks and projects."
+        answer: "No. Dooza does not offer phone answering either. Dooza Managed is an AI admin assistant for small businesses, checked by a real person, $200/month, first 7 days free. Motion is built around calendars, tasks and projects."
     }
 ];
 
@@ -122,7 +122,7 @@ export default function BetterThanMotionContent() {
                             <span className="text-primary-600">Motion App</span> Alternative: Why Smart Businesses Choose Dooza
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-                            Motion is a strong AI calendar and project manager. If the work you need done is answering calls, email, social posts or leads, here is how Dooza compares, and when Motion is the better pick.
+                            Motion is a strong AI calendar and project manager. If the work you need done is answering email, social posts or leads, here is how Dooza compares, and when Motion is the better pick.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -207,7 +207,7 @@ export default function BetterThanMotionContent() {
                                     If you've been searching for AI productivity tools, you've probably stumbled upon <a href="https://www.usemotion.com" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Motion</a> (usemotion.com). It promises to be an "AI-powered SuperApp for Work" that manages your calendar, tasks, and now—AI employees.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>The honest difference:</strong> Motion plans your time. Dooza does work for you: AI employees that answer calls, reply to email, post on social and find leads. Many teams could use both.
+                                    <strong>The honest difference:</strong> Motion plans your time. Dooza does work for you: AI employees that reply to email, post on social and find leads. Many teams could use both.
                                 </p>
                                 <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl my-8">
                                     <div className="flex items-start gap-3">
@@ -247,7 +247,7 @@ export default function BetterThanMotionContent() {
                             <div className="space-y-6">
                                 {[
                                     { title: "Pick Motion if your problem is time", desc: "You need your tasks, projects and meetings planned into your calendar automatically, with project management and docs in the same tool." },
-                                    { title: "Pick Dooza if your problem is work nobody has time to do", desc: "Missed calls, an inbox that needs replies, social posts, lead lists. Dooza's AI employees do that work, and a Dooza engineer sets up your pilot." },
+                                    { title: "Pick Dooza if your problem is work nobody has time to do", desc: "An inbox that needs replies, social posts, lead lists. Dooza's AI employees do that work, and a Dooza engineer sets up your pilot." },
                                     { title: "Pricing models differ", desc: "Motion is per seat with a monthly AI credit allowance. Dooza pricing depends on the product (see /pricing) and every product starts with a refundable pilot: 100% refund within 14 days." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-6 rounded-xl">
@@ -266,13 +266,12 @@ export default function BetterThanMotionContent() {
                         <section id="why-dooza" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Dooza is the Smarter Choice for AI Employees</h2>
                             <p className="text-lg text-slate-600 mb-8">
-                                Dooza isn't trying to replace your calendar. We're laser-focused on one thing: <strong>giving you AI employees that actually work</strong>—handling email, social media, sales calls, customer support, and more. 24 hours a day, 7 days a week.
+                                Dooza isn't trying to replace your calendar. We're laser-focused on one thing: <strong>giving you AI employees that actually work</strong>—handling email, social media, customer support, and more. 24 hours a day, 7 days a week.
                             </p>
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { icon: Bot, title: "Purpose-Built AI Employees", desc: "AI employees are Dooza's core product, built for business tasks rather than scheduling.", color: "primary" },
                                     { icon: Sliders, title: "Fully Customizable", desc: "Create AI employees tailored to YOUR workflow. Name them, train them on your data, and deploy them in minutes.", color: "blue" },
-                                    { icon: Phone, title: "Phone Call Capabilities", desc: "Our AI receptionist Rachel can make and receive calls 24/7.", color: "green" },
                                     { icon: HeadphonesIcon, title: "Built With a Dooza Engineer", desc: "We don't just give you software—a Dooza engineer scopes your pilot on a free 30-minute call and builds your custom AI employees FOR you.", color: "purple" },
                                     { icon: DollarSign, title: "Refundable Pilot", desc: "Every Dooza product starts with a refundable pilot—100% refund within 14 days. No credit meter to watch. Pricing depends on the product.", color: "emerald" },
                                     { icon: Zap, title: "Works With Your Stack", desc: "Dooza integrates with your existing tools—Gmail, Outlook, social platforms, CRMs—without forcing you to change how you work.", color: "orange" }
@@ -333,7 +332,6 @@ export default function BetterThanMotionContent() {
                                             "Somi - Social Media Manager (posts autonomously)",
                                             "Stan - Lead Generator (finds and qualifies leads)",
                                             "Ranky - SEO & Visibility (optimizes your content)",
-                                            "Rachel - AI Receptionist (makes/receives calls)",
                                             "Linda - Legal Assistant (reviews contracts)",
                                             "Custom Employees - built with a Dooza engineer"
                                         ].map((item, idx) => (
@@ -368,10 +366,10 @@ export default function BetterThanMotionContent() {
                                         </tr>
                                     </thead>
                                     <tbody className="text-slate-600">
-                                        <tr><td className="p-4 border-b font-medium">Built for</td><td className="p-4 border-b bg-primary-50/30">Doing tasks: calls, email, social, leads</td><td className="p-4 border-b">Planning time: calendar, tasks, projects</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Built for</td><td className="p-4 border-b bg-primary-50/30">Doing tasks: email, social, leads</td><td className="p-4 border-b">Planning time: calendar, tasks, projects</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Price</td><td className="p-4 border-b bg-primary-50/30">Depends on the product (see /pricing); 100% refund within 14 days</td><td className="p-4 border-b">$19/seat/mo annual or $29 monthly (Pro AI); $29/seat/mo annual (Business AI)</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Usage model</td><td className="p-4 border-b bg-primary-50/30">No credit meter</td><td className="p-4 border-b">7,500 (Pro AI) or 15,000 (Business AI) AI credits/seat/month</td></tr>
-                                        <tr><td className="p-4 border-b font-medium">Phone calls</td><td className="p-4 border-b bg-primary-50/30">Yes (Rachel, AI receptionist)</td><td className="p-4 border-b">Not listed on pricing page</td></tr>
+                                        <tr><td className="p-4 border-b font-medium">Phone calls</td><td className="p-4 border-b bg-primary-50/30">Not offered</td><td className="p-4 border-b">Not listed on pricing page</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Calendar &amp; project management</td><td className="p-4 border-b bg-primary-50/30">Not a calendar app</td><td className="p-4 border-b">Yes: AI Calendar, AI Project Manager, Gantt</td></tr>
                                         <tr><td className="p-4 border-b font-medium">Setup</td><td className="p-4 border-b bg-primary-50/30">Dooza engineer scopes the pilot on a free 30-minute call</td><td className="p-4 border-b">Free trial, self-serve</td></tr>
                                     </tbody>
@@ -455,7 +453,7 @@ export default function BetterThanMotionContent() {
                                     Motion is an AI calendar and project manager. Dooza is an AI-native company that builds AI products and services for small businesses, and its <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza Managed</Link> plan gives you <strong>an AI admin assistant, checked by a real person</strong>, for email and admin work.
                                 </p>
                                 <p>
-                                    If you want AI that can actually execute tasks autonomously—sending emails, posting to social media, making phone calls, generating leads—Dooza is built for that. If you want your time planned, Motion is.
+                                    If you want AI that can actually execute tasks autonomously—sending emails, posting to social media, generating leads—Dooza is built for that. If you want your time planned, Motion is.
                                 </p>
                                 <p>
                                     And with no credit meter, a Dooza engineer scoping your setup, and a refundable pilot (100% refund within 14 days), you can prove it works before you commit. Pricing depends on the product&mdash;see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>.

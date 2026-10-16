@@ -15,7 +15,7 @@ import { Clock, Calendar, ArrowRightLeft, CheckCircle2, XCircle, AlertTriangle, 
 const faqData = [
     { question: "Is Dooza AI better than Lindy AI for small businesses?", answer: "It depends on whether you want to build it yourself or have it built for you. Lindy is a self-serve AI teammate billed per seat in credits: the Plus plan starts at $29.99/month for 3,000 credits (checked October 7, 2026). Dooza is an AI-native company that builds AI products and services for small businesses, and it is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you. Every Dooza product starts with a refundable pilot (100% refund within 14 days). If you are happy to configure agents yourself, or you need SOC 2 Type II or HIPAA, Lindy is the better pick." },
     { question: "How does Dooza pricing compare to Lindy AI?", answer: "Lindy sells one per-seat plan billed in credits: Plus from $29.99/month for 3,000 credits, Pro at $99.99 for 15,000 and Max at $199.99 for 35,000, plus custom Enterprise pricing (checked October 7, 2026). Lindy says a credit is about one cent, and its pricing page says: \u201cNo surprise bills. If the pool runs low, Lindy pauses and tells you.\u201d Admins can top up at $10 per 1,000 credits. Dooza does not meter work in credits. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days." },
-    { question: "Can Dooza AI replace Lindy AI for email and calendar automation?", answer: "For email, yes. Dooza's Maily AI employee handles email triage, drafting, categorization, and follow-ups 24/7. Lindy is stronger at calendar scheduling and meeting notes, so if those are your main needs, Lindy is the better fit. Dooza covers email plus social media, SEO, sales outreach, and phone calls. For calendar-heavy workflows, you can pair Dooza with a free calendar tool." },
+    { question: "Can Dooza AI replace Lindy AI for email and calendar automation?", answer: "For email, yes. Dooza's Maily AI employee handles email triage, drafting, categorization, and follow-ups 24/7. Lindy is stronger at calendar scheduling and meeting notes, so if those are your main needs, Lindy is the better fit. Dooza covers email plus social media, SEO and sales outreach. For calendar-heavy workflows, you can pair Dooza with a free calendar tool." },
     { question: "Does Lindy AI have features Dooza doesn't?", answer: "Yes. Lindy is SOC 2 Type II, GDPR, HIPAA, and PIPEDA compliant; its Enterprise plan adds SSO, audit logs, and a signed BAA for HIPAA; and it offers iMessage with your assistant and meeting recording on Google Meet, Zoom, and Teams. Dooza is not SOC 2 certified; it uses encrypted connections and asks for your approval on anything sensitive. On integrations the two are similar: Lindy lists 1,000+ integrations (its pricing page says 1,500+), and Dooza has 1,000+ app integrations." },
     { question: "How do I switch from Lindy AI to Dooza?", answer: "Book a free 30-minute call at dooza.ai so a Dooza engineer can scope your pilot, then start a refundable pilot (100% refund within 14 days). Set up the AI employees that match your Lindy workflows and run both platforms in parallel. Once you're confident Dooza handles your tasks, cancel Lindy. Workforce employees can start working the same day." }
 ];
@@ -169,7 +169,6 @@ export default function DoozaVsLindyAiContent() {
                                     <li><strong>Somi</strong> &mdash; Social media content creation and scheduling. Generates brand-matched content across LinkedIn, Instagram, X, and Facebook daily.</li>
                                     <li><strong>Ranky</strong> &mdash; SEO blog writing and keyword research. Publishes 4&ndash;8 optimized articles per month to your blog.</li>
                                     <li><strong>Stan</strong> &mdash; Sales outreach and lead follow-up. Responds to leads instantly, sends personalized sequences, books meetings.</li>
-                                    <li><strong>Rachel</strong> &mdash; AI receptionist. Answers phone calls 24/7, books appointments, handles FAQs without transfers.</li>
                                 </ul>
                                 <p className="mt-4">Dooza is an AI-native company that builds AI products and services for small businesses: <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza Managed</Link> (an AI admin assistant checked by a real person) and custom AI agents built by Dooza engineers. No credits to track. Pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>), and every product starts with a <strong>refundable pilot &mdash; 100% refund within 14 days</strong>.</p>
                             </div>
@@ -179,7 +178,7 @@ export default function DoozaVsLindyAiContent() {
                                 <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 shadow-sm" style={{ paddingTop: '56.25%' }}>
                                     <iframe className="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/NgBAXFK6nk4" title="AI Era with DOOZA.AI" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
                                 </div>
-                                <p className="text-sm text-slate-500 mt-3 text-center italic">Watch: how Dooza&apos;s AI employees handle real business tasks &mdash; email, social, SEO, sales, and calls.</p>
+                                <p className="text-sm text-slate-500 mt-3 text-center italic">Watch: how Dooza&apos;s AI employees handle real business tasks &mdash; email, social, SEO and sales.</p>
                             </div>
                         </section>
 
@@ -239,9 +238,9 @@ export default function DoozaVsLindyAiContent() {
                                         </tr>
                                         <tr className="bg-white">
                                             <td className="py-3 px-5 font-medium text-slate-900">Phone Calls / Receptionist</td>
-                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Rachel &mdash; 24/7 AI receptionist</td>
+                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Not offered</td>
                                             <td className="py-3 px-5 text-center text-sm text-slate-600">Lindy Phone Calls &mdash; inbound and outbound</td>
-                                            <td className="py-3 px-5 text-center"><span className="bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">Both</span></td>
+                                            <td className="py-3 px-5 text-center"><span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Lindy</span></td>
                                         </tr>
                                         <tr className="bg-slate-50">
                                             <td className="py-3 px-5 font-medium text-slate-900">Meeting Notes</td>
@@ -346,7 +345,7 @@ export default function DoozaVsLindyAiContent() {
                                     <li>Adjust your agents yourself when your process changes</li>
                                     <li>Get help by email and in group onboarding sessions (Enterprise adds dedicated support and enablement)</li>
                                 </ul>
-                                <p className="mt-4">Dooza takes the opposite approach: <strong>you don&apos;t build agents &mdash; Dooza builds them with you</strong>. A Dooza engineer scopes your pilot on a free 30-minute call, then sets up and tunes your AI employees (Maily, Somi, Ranky, Stan, Rachel) or custom agents with you. Workforce employees can start working the same day; custom agents are live in days.</p>
+                                <p className="mt-4">Dooza takes the opposite approach: <strong>you don&apos;t build agents &mdash; Dooza builds them with you</strong>. A Dooza engineer scopes your pilot on a free 30-minute call, then sets up and tunes your AI employees (Maily, Somi, Ranky, Stan) or custom agents with you. Workforce employees can start working the same day; custom agents are live in days.</p>
 
                                 <div className="bg-primary-50 border border-primary-100 p-6 rounded-2xl mt-6">
                                     <div className="flex items-start gap-3">
@@ -383,7 +382,7 @@ export default function DoozaVsLindyAiContent() {
                                 <p>Lindy&apos;s bill is predictable, but you still size a credit pool per seat, and when it runs out your agents pause until it resets or you top up. Dooza doesn&apos;t meter work in credits, so there is no pool to watch. Every Dooza product starts with a refundable pilot &mdash; 100% refund within 14 days.</p>
 
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3 flex items-center gap-2"><Zap className="w-5 h-5 text-amber-600" /> 2. Specialist AI Employees vs Generic Agents</h3>
-                                <p>Lindy gives you a general AI teammate with skills and templates that you shape yourself. Dooza gives you specialist employees for specific jobs. <strong>Maily handles email. Somi handles social. Ranky handles SEO. Stan handles sales. Rachel handles phones.</strong> Each employee is built for its domain, and a Dooza engineer tunes it to your business with you.</p>
+                                <p>Lindy gives you a general AI teammate with skills and templates that you shape yourself. Dooza gives you specialist employees for specific jobs. <strong>Maily handles email. Somi handles social. Ranky handles SEO. Stan handles sales.</strong> Each employee is built for its domain, and a Dooza engineer tunes it to your business with you.</p>
 
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3 flex items-center gap-2"><Users className="w-5 h-5 text-blue-600" /> 3. Hands-On Setup by a Dooza Engineer</h3>
                                 <p>A Dooza engineer scopes your pilot on a free 30-minute call and walks you through connecting your accounts, configuring preferences, and making sure your AI employees are working correctly. Lindy offers email support and group onboarding sessions, with dedicated support and enablement on Enterprise. When you&apos;re a founder with no time to spare, the difference between &quot;here&apos;s how to set it up&quot; and &quot;let me set this up for you&quot; is significant.</p>
@@ -494,7 +493,6 @@ export default function DoozaVsLindyAiContent() {
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /> Done with <strong>credit pools</strong> to size, watch, and top up</li>
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /> Want a Dooza engineer to <strong>build and tune it for you</strong></li>
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /> Want <strong>dedicated AI employees</strong> for specific roles, not a general assistant</li>
-                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /> Need a <strong>24/7 AI receptionist</strong> for phone calls and appointments</li>
                                     </ul>
                                     <div className="mt-6">
                                         <Link href="/book" onClick={handleAction} className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors text-sm">

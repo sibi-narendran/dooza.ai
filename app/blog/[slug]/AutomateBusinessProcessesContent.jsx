@@ -34,10 +34,10 @@ import {
 } from 'lucide-react';
 
 const faqData = [
-    { question: "What business processes can I automate without coding?", answer: "You can automate email management, social media posting, inbound call handling, lead generation, SEO content, and legal compliance — all without writing a single line of code. Dooza's AI employees handle these end-to-end, and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
+    { question: "What business processes can I automate without coding?", answer: "You can automate email management, social media posting, lead generation, SEO content, and legal compliance — all without writing a single line of code. Dooza's AI employees handle these end-to-end, and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
     { question: "How much time can business automation actually save?", answer: "Most small business owners save 15-25 hours per week. Specifically: 10+ hours on email, 6+ hours on social media, and 5+ hours on missed call follow-ups. That's roughly $6,200+/month in recovered productivity." },
-    { question: "How is Dooza different from Zapier or Make?", answer: "Zapier and Make connect apps with if-then rules — you still build and maintain every workflow. Dooza gives you AI employees that autonomously handle entire job functions like email, social media, and calls. No workflow building required." },
-    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides AI employees handling email, social, calls, leads, SEO, and legal. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
+    { question: "How is Dooza different from Zapier or Make?", answer: "Zapier and Make connect apps with if-then rules — you still build and maintain every workflow. Dooza gives you AI employees that autonomously handle entire job functions like email and social media. No workflow building required." },
+    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides AI employees handling email, social, leads, SEO, and legal. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
     { question: "Which business processes should I automate first?", answer: "Start with your biggest time drain. For most businesses, that's email management or social media. Audit where you spend the most hours, automate that first, then expand to calls, leads, and SEO." }
 ];
 
@@ -198,7 +198,7 @@ export default function AutomateBusinessProcessesContent() {
                                     According to McKinsey, <strong>60% of all work activities are automatable</strong> — and that number is rising fast with AI. Yet most small business owners are still doing everything manually, burning through the hours they should be spending growing their business.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Here's the good news: in 2026, you don't need developers or expensive consultants to automate your business. You don't need to learn Zapier workflows or hire a virtual assistant at $2,400/month. AI employees now handle entire job functions — email, social media, phone calls, lead generation — <strong>autonomously</strong>.
+                                    Here's the good news: in 2026, you don't need developers or expensive consultants to automate your business. You don't need to learn Zapier workflows or hire a virtual assistant at $2,400/month. AI employees now handle entire job functions — email, social media, lead generation — <strong>autonomously</strong>.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     This guide shows you exactly how to automate the three biggest time-wasters in your business, without writing a single line of code.
@@ -358,28 +358,8 @@ export default function AutomateBusinessProcessesContent() {
                                         Voicemail: most callers won't leave a message. Many calls simply go unanswered. Every missed call is a missed sale.
                                     </p>
                                 </div>
-                                <div className="bg-green-50 border-2 border-green-200 p-6 rounded-xl">
-                                    <h3 className="font-bold text-green-800 mb-4 flex items-center gap-2">
-                                        <CheckCircle2 className="w-5 h-5 text-green-600" />
-                                        After — Rachel (AI Receptionist)
-                                    </h3>
-                                    <p className="text-green-700">
-                                        Answers every call instantly. Qualifies leads. Books appointments. Sends you a summary. 24/7.
-                                    </p>
-                                </div>
                             </div>
 
-                            <div className="prose md:prose-lg text-slate-600 mb-8">
-                                <p className="text-lg leading-relaxed">
-                                    Rachel is your always-on AI receptionist. When a potential customer calls your business, Rachel picks up instantly — no hold music, no voicemail, no missed opportunity. She greets callers professionally, answers their questions, qualifies them as leads, and books appointments directly into your calendar.
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    After every call, Rachel sends you a detailed summary: who called, what they needed, how qualified they are, and what action was taken. You stay informed without being interrupted.
-                                </p>
-                                <p className="text-lg leading-relaxed">
-                                    <Link href="/blog/best-ai-receptionist" className="text-primary-600 hover:underline font-medium">Read our deep dive: The Best AI Receptionist →</Link>
-                                </p>
-                            </div>
 
                             <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl">
                                 <div className="flex items-start gap-3">
@@ -453,7 +433,6 @@ export default function AutomateBusinessProcessesContent() {
                                 {[
                                     { name: "Maily", role: "AI Email Manager", desc: "Reads, responds, follows up. Your inbox, handled.", icon: Mail },
                                     { name: "Somi", role: "AI Social Media Manager", desc: "Creates and posts content across all platforms.", icon: Share2 },
-                                    { name: "Rachel", role: "AI Receptionist", desc: "Answers calls, qualifies leads, books appointments.", icon: Phone },
                                     { name: "Stan", role: "AI Lead Generator", desc: "Finds and qualifies prospects while you sleep.", icon: Target },
                                     { name: "Ranky", role: "AI SEO & Visibility Employee", desc: "Writes blogs, optimizes Google, builds rankings.", icon: TrendingUp },
                                     { name: "Linda", role: "AI Legal Assistant", desc: "Handles compliance, contracts, and legal docs.", icon: Users }

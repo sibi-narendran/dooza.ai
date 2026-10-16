@@ -254,7 +254,7 @@ const implementationSteps = [
 
 const failureReasons = [
     { stat: 'Too much at once', label: 'Trying to automate every function on day one', reason: 'Start with one high-impact function, prove it, then expand.' },
-    { stat: 'Generic chatbots', label: 'Tools that are not built for a specific job', reason: 'Purpose-built AI employees do one job well (email, calls, leads) instead of answering everything vaguely.' },
+    { stat: 'Generic chatbots', label: 'Tools that are not built for a specific job', reason: 'Purpose-built AI employees do one job well (email, leads, SEO) instead of answering everything vaguely.' },
     { stat: 'No onboarding', label: 'Self-serve setup with nobody to help', reason: 'Guided setup by an engineer gets the first workflow live and tuned.' },
     { stat: 'Tool fatigue', label: 'Too many separate AI subscriptions', reason: 'One integrated platform is easier to run than five or more disconnected tools.' },
 ];
@@ -479,7 +479,7 @@ export default function AISolutionsContent({ faqData }) {
                                 <div className="bg-primary-500/10 backdrop-blur-sm border border-primary-400/20 rounded-2xl p-8">
                                     <p className="text-primary-300 font-bold text-sm uppercase tracking-wider mb-2">Dooza All-in-One</p>
                                     <div className="space-y-3 mb-6">
-                                        {['Maily — Email & support inbox', 'Somi — Social media', 'Ranky — SEO & AI visibility', 'Stan — Lead generation', 'Linda — Legal documents', 'Rachel — Phone calls'].map((agent, i) => (
+                                        {['Maily — Email & support inbox', 'Somi — Social media', 'Ranky — SEO & AI visibility', 'Stan — Lead generation', 'Linda — Legal documents'].map((agent, i) => (
                                             <div key={i} className="flex items-center gap-2.5 text-sm text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {agent}
@@ -659,19 +659,6 @@ export default function AISolutionsContent({ faqData }) {
                                     See how specific industries are using AI employees to automate their operations.
                                 </p>
                             </div>
-                        </ScrollReveal>
-
-                        <ScrollReveal>
-                            <Link href="/ai-receptionist" className="card-shadow group mb-6 flex flex-col gap-4 rounded-2xl border border-primary-200 bg-primary-50 p-8 transition-colors hover:border-primary-400 md:flex-row md:items-center md:justify-between">
-                                <div>
-                                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-700">Most requested</p>
-                                    <h3 className="mt-2 text-xl font-bold text-slate-900 group-hover:text-primary-700 transition-colors">AI Receptionist for the trades</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">For HVAC, plumbing, electrical, roofing and other trades. Answers every call in your company name while you are on the job, and books it on your calendar. Start with a refundable pilot, set up on your line with you: 100% refund within 14 days.</p>
-                                </div>
-                                <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary-700 group-hover:gap-2 transition-all">
-                                    Hear it answer a call <ArrowRight size={14} />
-                                </span>
-                            </Link>
                         </ScrollReveal>
 
                         <StaggerContainer className="grid md:grid-cols-3 gap-6">

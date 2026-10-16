@@ -43,7 +43,7 @@ const faqData = [
     },
     {
         question: 'What AI employees does Dooza offer?',
-        answer: 'Dooza\'s AI employees each own one job. Maily handles email through your Gmail or Outlook. Somi creates and schedules social media posts across Facebook, Instagram, and LinkedIn. Ranky handles SEO and AI visibility: keyword research, blog writing, and getting you cited by ChatGPT and Google. Stan finds and follows up with leads. Linda drafts legal documents like NDAs and contracts. Rachel (Voice Pro) answers calls and books appointments. Each one connects to your tools and works 24/7, with your approval on anything sensitive.',
+        answer: 'Dooza\'s AI employees each own one job. Maily handles email through your Gmail or Outlook. Somi creates and schedules social media posts across Facebook, Instagram, and LinkedIn. Ranky handles SEO and AI visibility: keyword research, blog writing, and getting you cited by ChatGPT and Google. Stan finds and follows up with leads. Linda drafts legal documents like NDAs and contracts. Each one connects to your tools and works 24/7, with your approval on anything sensitive.',
     },
     {
         question: 'How do I switch from Sintra AI to Dooza?',

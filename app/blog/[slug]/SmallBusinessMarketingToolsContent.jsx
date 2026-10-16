@@ -101,7 +101,7 @@ const toolCategories = [
         title: "Phone & Receptionist",
         description: "Answering calls and booking appointments",
         tools: ["Ruby ($250-1,725/mo)", "Smith.ai ($300-2,100/mo)", "Grasshopper"],
-        dooza: "Rachel answers calls 24/7"
+        dooza: "Not offered"
     },
     {
         icon: BarChart3,
@@ -485,7 +485,6 @@ export default function SmallBusinessMarketingToolsContent() {
                                         { employee: "Somi - Social Media Manager", included: true },
                                         { employee: "Ranky - SEO Specialist", included: true },
                                         { employee: "Stan - Lead Generator", included: true },
-                                        { employee: "Rachel - AI Receptionist", included: true },
                                         { employee: "Linda - Legal Assistant", included: true }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex justify-between items-center border-b border-green-200 pb-2">
@@ -532,10 +531,6 @@ export default function SmallBusinessMarketingToolsContent() {
                                             </li>
                                             <li className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                                                <span>Phone calls are answered even when you can't</span>
-                                            </li>
-                                            <li className="flex items-center gap-2">
-                                                <CheckCircle2 className="w-5 h-5 text-green-500" />
                                                 <span>You approve what goes out, but the work is done for you</span>
                                             </li>
                                         </ul>
@@ -572,7 +567,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                     {
                                         step: "3",
                                         title: "Let AI Take Over the Busywork",
-                                        desc: "Your AI employees start creating content, responding to leads, and handling calls. You approve what goes out and focus on running your business."
+                                        desc: "Your AI employees start creating content, and responding to leads. You approve what goes out and focus on running your business."
                                     },
                                     {
                                         step: "4",

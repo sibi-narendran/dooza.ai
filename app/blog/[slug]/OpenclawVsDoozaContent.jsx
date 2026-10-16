@@ -449,7 +449,7 @@ export default function OpenclawVsDoozaContent() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
                                 {[
-                                    { icon: Users, title: "6 Ready-Made AI Employees", desc: "Maily (Email), Somi (Social Media), Ranky (SEO), Rachel (Receptionist), Stan (Sales), Linda (Legal)." },
+                                    { icon: Users, title: "5 Ready-Made AI Employees", desc: "Maily (Email), Somi (Social Media), Ranky (SEO), Stan (Sales), Linda (Legal)." },
                                     { icon: Timer, title: "Scheduled Work", desc: "AI employees work on a schedule, do their job, and report back. Social posts in the morning, weekly reports on Monday." },
                                     { icon: ShieldCheck, title: "Security", desc: "Encrypted connections and your approval on anything sensitive." },
                                     { icon: Server, title: "Nothing to Host", desc: "No machine to keep on, no installs, no updates to apply. Dooza runs and maintains it." },
@@ -631,7 +631,7 @@ export default function OpenclawVsDoozaContent() {
                                         {[
                                             "You want AI employees working for your business without hosting anything",
                                             "You're a business owner, not a developer",
-                                            "You need email, social media, SEO, calls, sales, and legal handled",
+                                            "You need email, social media, SEO, sales, and legal handled",
                                             "You want it set up and maintained by Dooza engineers",
                                             "You want to start with a refundable pilot (100% refund within 14 days)"
                                         ].map((item, idx) => (
@@ -684,12 +684,12 @@ export default function OpenclawVsDoozaContent() {
                                     {
                                         step: "2",
                                         title: "Book a Free Pilot Call",
-                                        desc: "A Dooza engineer configures your AI employees — Maily (email), Somi (social), Ranky (SEO), Rachel (receptionist), Stan (sales), and Linda (legal) — to match your business, brand voice, and workflows."
+                                        desc: "A Dooza engineer configures your AI employees — Maily (email), Somi (social), Ranky (SEO), Stan (sales), and Linda (legal) — to match your business, brand voice, and workflows."
                                     },
                                     {
                                         step: "3",
                                         title: "Your AI Team Starts Working",
-                                        desc: "AI employees begin handling email, posting content, answering calls, generating leads, optimizing SEO, and drafting legal documents, with your approval on anything sensitive."
+                                        desc: "AI employees begin handling email, posting content, generating leads, optimizing SEO, and drafting legal documents, with your approval on anything sensitive."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">

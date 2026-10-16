@@ -34,7 +34,7 @@ const faqData = [
     },
     {
         question: "Is Dooza better than Outrank.so?",
-        answer: "Not for everyone. Outrank is the better pick if you want a self-serve tool you run yourself, with a published monthly price and its backlink credits. Dooza is the better pick if you want Dooza engineers to set up and run the SEO work with you, and want Ranky alongside other AI employees for email, social media, sales, and calls."
+        answer: "Not for everyone. Outrank is the better pick if you want a self-serve tool you run yourself, with a published monthly price and its backlink credits. Dooza is the better pick if you want Dooza engineers to set up and run the SEO work with you, and want Ranky alongside other AI employees for email, social media and sales."
     },
     {
         question: "How much does Outrank.so cost?",
@@ -42,7 +42,7 @@ const faqData = [
     },
     {
         question: "Why should I choose Dooza instead of Outrank.so?",
-        answer: "Choose Dooza if you want the SEO and AI-visibility work done for you rather than another tool to run. A Dooza engineer scopes your pilot on a free 30-minute call, Ranky is trained on your brand voice, and nothing goes live without your approval. Dooza also connects the content to its other AI employees for email, social media, sales, and calls."
+        answer: "Choose Dooza if you want the SEO and AI-visibility work done for you rather than another tool to run. A Dooza engineer scopes your pilot on a free 30-minute call, Ranky is trained on your brand voice, and nothing goes live without your approval. Dooza also connects the content to its other AI employees for email, social media and sales."
     },
     {
         question: "Can Dooza Ranky create SEO blog posts with YouTube videos?",
@@ -205,7 +205,7 @@ export default function OutrankSoAlternativeContent() {
                                 <div className="not-prose mt-8 bg-primary-50 border border-primary-100 rounded-2xl p-6">
                                     <p className="text-primary-900 font-bold text-lg mb-2">Quick verdict</p>
                                     <p className="text-primary-800">
-                                        Outrank.so is a good self-serve autopilot blog tool, and the better pick if you want to run it yourself at a published monthly price. Dooza is the better Outrank.so alternative if you want the work done for you, with your approval, plus specialist AI employees for email, social media, sales, and calls. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                        Outrank.so is a good self-serve autopilot blog tool, and the better pick if you want to run it yourself at a published monthly price. Dooza is the better Outrank.so alternative if you want the work done for you, with your approval, plus specialist AI employees for email, social media and sales. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
                                     </p>
                                 </div>
                             </div>
@@ -277,7 +277,7 @@ export default function OutrankSoAlternativeContent() {
                                     <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> takes a different approach. Dooza is an AI-native company, and instead of a self-serve content tool it gives you AI employees that Dooza engineers set up and run with you. <strong>Ranky</strong> is the AI SEO &amp; visibility employee: it researches topics, writes optimized blog posts, structures articles for search intent, adds internal links, schema, and FAQs, and publishes to your CMS with your approval.
                                 </p>
                                 <p>
-                                    The difference matters. A blog post about &quot;best AI receptionist for salons&quot; should connect to Rachel. A post about &quot;AI email assistant&quot; should connect to Maily. A comparison post should link readers to the exact Dooza employee that solves the problem. Dooza can think across the whole business, not just the article.
+                                    The difference matters. A post about &quot;AI email assistant&quot; should connect to Maily. A comparison post should link readers to the exact Dooza employee that solves the problem. Dooza can think across the whole business, not just the article.
                                 </p>
                             </div>
 
@@ -288,7 +288,7 @@ export default function OutrankSoAlternativeContent() {
                                         ['Ranky writes SEO content', 'Keyword-led, search-intent-aware articles with internal links, FAQs, and conversion sections.'],
                                         ['Somi turns posts into social content', 'Your blog can become LinkedIn, Instagram, X, and Facebook content instead of sitting alone.'],
                                         ['Maily handles email follow-up', 'When content creates replies or leads, Maily helps manage the inbox work.'],
-                                        ['Stan and Rachel convert demand', 'Sales follow-up and phone answering turn SEO traffic into booked conversations.']
+                                        ['Stan converts demand', 'Sales follow-up turns SEO traffic into booked conversations.']
                                     ].map(([title, copy]) => (
                                         <div key={title} className="bg-white/10 border border-white/10 rounded-xl p-5">
                                             <CheckCircle2 className="w-6 h-6 text-emerald-300 mb-3" />
@@ -363,7 +363,7 @@ export default function OutrankSoAlternativeContent() {
                                     Outrank.so lists its all-in-one plan at <strong>$99/month</strong> or $999/year, with add-ons for more articles (+$85/month for 60, +$160/month for 90), checked October 7, 2026 on <a href="https://www.outrank.so/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Outrank&apos;s pricing page</a>. It includes unlimited users in your organization, and lists a separate &quot;Human Curated&quot; option if you want people involved. If you only need SEO articles and will run the tool yourself, that is a clear, published price.
                                 </p>
                                 <p>
-                                    The case for Dooza is different: you are paying for the work to be done with you, not for a tool. Ranky is part of a broader AI workforce that can also help with email, social media, sales follow-up, and phone calls. Dooza pricing depends on the product (see <a href="/pricing" className="text-primary-600 hover:underline">pricing</a>), and every Dooza product starts with a refundable pilot — 100% refund within 14 days.
+                                    The case for Dooza is different: you are paying for the work to be done with you, not for a tool. Ranky is part of a broader AI workforce that can also help with email, social media and sales follow-up. Dooza pricing depends on the product (see <a href="/pricing" className="text-primary-600 hover:underline">pricing</a>), and every Dooza product starts with a refundable pilot — 100% refund within 14 days.
                                 </p>
                             </div>
 
@@ -395,7 +395,7 @@ export default function OutrankSoAlternativeContent() {
                                     Outrank.so is a solid tool if your goal is straightforward: publish SEO articles on a schedule you choose, with minimal involvement, at a published monthly price. It is easy to understand, automation-heavy, and it also covers backlinks, integrations, and AI search.
                                 </p>
                                 <p>
-                                    The best <strong>Outrank.so alternative</strong> is not another autopilot blog tool. It is a different model: Ranky and Dooza engineers do the SEO and AI-visibility work for you, with your approval, while the rest of the Dooza workforce handles the jobs around that content: social distribution, email responses, lead follow-up, and phone calls.
+                                    The best <strong>Outrank.so alternative</strong> is not another autopilot blog tool. It is a different model: Ranky and Dooza engineers do the SEO and AI-visibility work for you, with your approval, while the rest of the Dooza workforce handles the jobs around that content: social distribution, email responses and lead follow-up.
                                 </p>
                                 <p>
                                     If you want to run the tool yourself, Outrank.so is the better pick. If you want the work done for you, <strong>Dooza is the better choice</strong>, and you can start with a refundable pilot: 100% refund within 14 days.
@@ -441,7 +441,7 @@ export default function OutrankSoAlternativeContent() {
                         <div className="bg-slate-900 text-white p-6 rounded-2xl">
                             <h3 className="font-bold mb-3">Need more than blog posts?</h3>
                             <p className="text-sm text-slate-300 mb-5">
-                                Dooza gives you AI employees for SEO, email, social media, sales, and calls.
+                                Dooza gives you AI employees for SEO, email, social media and sales.
                             </p>
                             <Link href="/blog/ai-employees-vs-virtual-assistants" className="inline-flex items-center gap-2 text-primary-300 hover:text-primary-200 text-sm font-medium">
                                 See how AI employees work <ArrowRight className="w-4 h-4" />

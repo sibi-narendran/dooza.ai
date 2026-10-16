@@ -108,7 +108,7 @@ const scoreRows = [
     ['Setup time', 'One free pilot scoping call', 'Hours to weeks of workflow setup', 'Dooza'],
     ['Campaign newsletters', 'Good for practical business email', 'Strong in dedicated ESPs', 'Tie'],
     ['Pricing predictability', 'Refundable pilot, 100% refund within 14 days', 'Often contact, seat, or feature based', 'Dooza'],
-    ['Cross-channel automation', 'Email, sales, social, SEO, calls', 'Usually email first', 'Dooza'],
+    ['Cross-channel automation', 'Email, sales, social, SEO', 'Usually email first', 'Dooza'],
     ['Technical learning curve', 'Low', 'Medium to high', 'Dooza']
 ];
 
@@ -242,7 +242,7 @@ export default function EmailAutomationDoozaContent() {
 
                             <div className="my-8">
                                 <YouTubeEmbed videoId="NgBAXFK6nk4" title="AI Era with DOOZA.AI" />
-                                <p className="text-sm text-slate-500 text-center mt-3">Watch: how Dooza AI employees handle business automation across email, sales, SEO, social media, and calls.</p>
+                                <p className="text-sm text-slate-500 text-center mt-3">Watch: how Dooza AI employees handle business automation across email, sales, SEO and social media.</p>
                             </div>
 
                             <div className="bg-primary-50 border border-primary-100 p-6 rounded-xl">
@@ -307,7 +307,7 @@ export default function EmailAutomationDoozaContent() {
                                     ['Campaign tools do not manage your inbox', 'They can send newsletters, but they usually cannot read every incoming email and decide what needs action.'],
                                     ['Workflow builders require maintenance', 'Rules break, edge cases pile up, and someone has to keep updating the system.'],
                                     ['Templates become generic fast', 'Personalization tokens are not the same as understanding what a customer actually asked.'],
-                                    ['Email is connected to everything else', 'Sales, bookings, support, invoices, reviews, social proof, and phone calls all create email tasks.']
+                                    ['Email is connected to everything else', 'Sales, bookings, support, invoices, reviews and social proof all create email tasks.']
                                 ].map(([title, desc]) => (
                                     <div key={title} className="bg-red-50 border border-red-100 p-5 rounded-xl">
                                         <div className="flex gap-3 items-start">
@@ -452,7 +452,7 @@ export default function EmailAutomationDoozaContent() {
                                     ['Define response rules', 'Decide which emails can be drafted, which can be sent automatically, and which need approval.'],
                                     ['Train tone and context', 'Give Dooza examples of your best replies, your offers, your FAQs, and your preferred writing style.'],
                                     ['Start with follow-ups', 'Automate low-risk follow-ups first: reminders, check-ins, next steps, and appointment confirmations.'],
-                                    ['Expand into sales and support', 'Once Maily is handling simple flows well, connect email to Stan for sales outreach and Rachel for missed-call recovery.']
+                                    ['Expand into sales and support', 'Once Maily is handling simple flows well, connect email to Stan for sales outreach.']
                                 ].map(([title, desc], idx) => (
                                     <div key={title} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl">
                                         <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold shrink-0">{idx + 1}</div>

@@ -44,7 +44,7 @@ const faqData = [
     },
     {
         question: "How can a small business compete with larger companies using AI?",
-        answer: "By deploying AI employees across every operational function — email, social media, phone calls, lead generation, SEO, and legal compliance. Platforms like Dooza give small businesses the same AI superpowers that elite YC startups build with engineering teams, but without needing any technical skills. Dooza is an AI-native company that builds AI products and services for small businesses, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "By deploying AI employees across every operational function — email, social media, lead generation, SEO, and legal compliance. Platforms like Dooza give small businesses the same AI superpowers that elite YC startups build with engineering teams, but without needing any technical skills. Dooza is an AI-native company that builds AI products and services for small businesses, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How does Dooza relate to OpenClaw?",
@@ -514,23 +514,6 @@ export default function BuildA20xCompanyContent() {
                                     </div>
                                 </div>
 
-                                {/* Rachel */}
-                                <div className="bg-white border-2 border-slate-200 p-6 rounded-2xl hover:border-primary-200 transition-colors">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600">
-                                            <Phone size={24} />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-slate-900 text-lg">Rachel</h3>
-                                            <p className="text-sm text-slate-500">AI Receptionist</p>
-                                        </div>
-                                    </div>
-                                    <p className="text-slate-600 text-sm mb-3">Answers every call, qualifies leads, and books appointments — 24/7.</p>
-                                    <div className="bg-green-50 p-3 rounded-lg">
-                                        <p className="text-xs text-green-700 font-medium">Most callers won't leave a voicemail. Rachel answers every call.</p>
-                                    </div>
-                                </div>
-
                                 {/* Stan */}
                                 <div className="bg-white border-2 border-slate-200 p-6 rounded-2xl hover:border-primary-200 transition-colors">
                                     <div className="flex items-center gap-3 mb-4">
@@ -607,7 +590,7 @@ export default function BuildA20xCompanyContent() {
                                     {
                                         step: "2",
                                         title: "Your AI Employees Go Live",
-                                        desc: "Maily starts managing email. Somi begins posting to social media. Rachel answers calls. Stan generates leads. Ranky writes SEO content. Linda handles compliance. All working 24/7."
+                                        desc: "Maily starts managing email. Somi begins posting to social media. Stan generates leads. Ranky writes SEO content. Linda handles compliance. All working 24/7."
                                     },
                                     {
                                         step: "3",
@@ -659,7 +642,7 @@ export default function BuildA20xCompanyContent() {
                                     {
                                         step: "Week 2",
                                         title: "Deploy",
-                                        desc: "Start with your biggest bottleneck. For most businesses, that's email (Maily) or missed calls (Rachel). Book a free pilot call and start your refundable pilot.",
+                                        desc: "Start with your biggest bottleneck. For most businesses, that's email (Maily) or sales follow-up (Stan). Book a free pilot call and start your refundable pilot.",
                                         color: "bg-blue-50 border-blue-200",
                                         stepColor: "bg-blue-100 text-blue-700"
                                     },

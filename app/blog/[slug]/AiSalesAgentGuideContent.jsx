@@ -411,7 +411,7 @@ export default function AiSalesAgentGuideContent() {
                                     {
                                         scenario: "It's Saturday afternoon and someone calls asking about your service",
                                         before: "Voicemail. They call your competitor.",
-                                        after: "Rachel (your AI receptionist) answers instantly, qualifies the caller, and books a Monday morning call with your sales team. The lead is warm and waiting."
+                                        after: "Whoever picks up first wins: a fast reply, a qualified lead, and a Monday morning call booked with your sales team. The lead is warm and waiting."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden">
@@ -509,7 +509,7 @@ export default function AiSalesAgentGuideContent() {
                                         title: "Home Services",
                                         icon: Building2,
                                         desc: "Capture emergency leads at midnight, qualify project scope, and book estimates. Plumbers, electricians, and HVAC companies win on response time.",
-                                        link: { href: "/blog/best-ai-receptionist", label: "See our AI receptionist guide" }
+                                        link: null
                                     },
                                     {
                                         title: "Financial Services",
@@ -566,7 +566,6 @@ export default function AiSalesAgentGuideContent() {
                                     { icon: Repeat, title: "Persistent Follow-Up", desc: "5+ touchpoints over weeks. Personalized, not spammy. Never gives up early." },
                                     { icon: BarChart3, title: "Lead Scoring", desc: "Ranks every prospect by fit and engagement so your team knows who's hot." },
                                     { icon: Mail, title: "Email Outreach", desc: "Personalized cold outreach at scale. Warms lists without burning your domain." },
-                                    { icon: Phone, title: "Works With Rachel", desc: "Stan + Rachel = inbound calls qualified and booked automatically." },
                                     { icon: TrendingUp, title: "Pipeline Visibility", desc: "Full activity log. See every conversation, every touchpoint, every outcome." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -581,7 +580,7 @@ export default function AiSalesAgentGuideContent() {
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Stan doesn't work alone. He's part of your <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">full AI workforce</Link> — working alongside Rachel (receptionist), Maily (email), Somi (social media), Ranky (SEO), and Linda (legal) to turn your business into a lead-generating machine.
+                                    Stan doesn't work alone. He's part of your <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">full AI workforce</Link> — working alongside Maily (email), Somi (social media), Ranky (SEO), and Linda (legal) to turn your business into a lead-generating machine.
                                 </p>
                             </div>
                         </section>

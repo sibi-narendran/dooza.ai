@@ -162,7 +162,7 @@ export default function AiAppointmentSetterContent() {
                                     { id: 'head-to-head', label: 'Head-to-Head' },
                                     { id: 'when-agency-wins', label: 'When Agency Wins' },
                                     { id: 'real-numbers', label: 'The Real Numbers' },
-                                    { id: 'meet-stan-rachel', label: 'Meet Stan & Rachel' },
+                                    { id: 'meet-stan', label: 'Meet Stan' },
                                     { id: 'getting-started', label: 'Getting Started' },
                                     { id: 'faq', label: 'FAQ' },
                                 ].map((item) => (
@@ -522,13 +522,13 @@ export default function AiAppointmentSetterContent() {
                             </div>
                         </section>
 
-                        {/* Section 8: Meet Stan & Rachel (TRANSFORMATION) */}
-                        <section id="meet-stan-rachel" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Meet Stan & Rachel: Your AI Appointment Setting Team</h2>
+                        {/* Section 8: Meet Stan (TRANSFORMATION) */}
+                        <section id="meet-stan" className="scroll-mt-28">
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Meet Stan: Your AI Appointment Setting Agent</h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza gives you two AI employees that cover both sides of appointment setting — outbound and inbound. Together, they replace your agency, your SDR, and your missed-call problem. Learn more about Rachel in our <Link href="/blog/best-ai-receptionist" className="text-primary-600 hover:underline font-medium">AI receptionist deep dive</Link>.
+                                    Dooza gives you an AI sales employee for the outbound side of appointment setting. Stan replaces your agency and your SDR.
                                 </p>
                             </div>
 
@@ -537,7 +537,7 @@ export default function AiAppointmentSetterContent() {
                                     "Instead of having an agent that was master at this conversation… it started to make more sense to have an AI that was only trained on first message and another AI that was trained only on second message… the more specialized we can make them."
                                 </p>
                                 <p className="text-slate-600 text-sm">
-                                    Dooza splits the work the same way: Stan handles lead generation and sales outreach, and Rachel answers phone calls as an AI receptionist.
+                                    Dooza splits the work the same way: Stan handles lead generation and sales outreach.
                                 </p>
                                 <p className="text-xs text-slate-500 mt-2">— Alex Hormozi, talking with Replit CEO Amjad Masad (Replit, October 2025; lightly trimmed)</p>
                             </div>
@@ -571,40 +571,11 @@ export default function AiAppointmentSetterContent() {
                                         ))}
                                     </div>
                                 </div>
-
-                                {/* Rachel Card */}
-                                <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 p-8 rounded-2xl">
-                                    <div className="flex items-center gap-4 mb-6">
-                                        <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center text-white shrink-0">
-                                            <Phone size={36} />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-xl font-bold text-slate-900">Rachel</h3>
-                                            <p className="text-sm text-green-600 font-medium">AI Receptionist — Inbound</p>
-                                        </div>
-                                    </div>
-                                    <p className="text-slate-700 mb-6">
-                                        Rachel handles incoming calls, qualifies every lead, and books appointments on the spot. She's your front desk that never takes a break.
-                                    </p>
-                                    <div className="space-y-3">
-                                        {[
-                                            { icon: Zap, text: "Answers every call instantly — no rings, no voicemail" },
-                                            { icon: MessageSquare, text: "Natural conversation with multi-turn dialogue" },
-                                            { icon: Target, text: "Lead qualification with your custom screening questions" },
-                                            { icon: Clock, text: "24/7 availability including nights, weekends, holidays" }
-                                        ].map((feature, idx) => (
-                                            <div key={idx} className="flex items-start gap-3">
-                                                <feature.icon className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
-                                                <span className="text-sm text-slate-700">{feature.text}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
                             </div>
 
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    Together, Stan and Rachel cover the full appointment-setting funnel. Stan chases down new leads and nurtures cold prospects. Rachel catches every inbound call and converts warm leads. No agency required.
+                                    Stan chases down new leads and nurtures cold prospects. No agency required.
                                 </p>
                             </div>
                         </section>
@@ -618,7 +589,7 @@ export default function AiAppointmentSetterContent() {
                                     {
                                         step: "1",
                                         title: "Start Your Dooza Pilot",
-                                        desc: "Create your account and meet Stan and Rachel — your AI sales agent and AI receptionist. Every pilot is refundable: 100% refund within 14 days."
+                                        desc: "Create your account and meet Stan, your AI sales agent. Every pilot is refundable: 100% refund within 14 days."
                                     },
                                     {
                                         step: "2",

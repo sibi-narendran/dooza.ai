@@ -36,7 +36,7 @@ import {
 const faqData = [
     {
         question: "What is AI staffing?",
-        answer: "AI staffing means using AI employees to fill operational roles in your business — email management, social media, receptionist, lead generation, SEO, and legal compliance. Unlike AI tools that wait for prompts, AI employees work autonomously on schedules."
+        answer: "AI staffing means using AI employees to fill operational roles in your business — email management, social media, lead generation, SEO, and legal compliance. Unlike AI tools that wait for prompts, AI employees work autonomously on schedules."
     },
     {
         question: "How much does AI staffing cost compared to hiring?",
@@ -44,7 +44,7 @@ const faqData = [
     },
     {
         question: "Can AI employees really replace human workers?",
-        answer: "AI employees handle repetitive work — email, posting, answering calls, generating leads. Humans should focus on the work that needs judgment, creativity, and relationship building. The best model is a hybrid workforce."
+        answer: "AI employees handle repetitive work — email, posting, generating leads. Humans should focus on the work that needs judgment, creativity, and relationship building. The best model is a hybrid workforce."
     },
     {
         question: "How fast can I onboard AI employees?",
@@ -118,7 +118,7 @@ export default function AiStaffingContent() {
                             <span className="text-primary-600">AI Staffing</span>: Building a Workforce That Runs 24/7
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Hiring is slow and expensive. What if you could fill 6 roles the same day, starting with a refundable pilot? AI staffing is replacing traditional hiring for small businesses.
+                            Hiring is slow and expensive. What if you could fill 5 roles the same day, starting with a refundable pilot? AI staffing is replacing traditional hiring for small businesses.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -207,7 +207,7 @@ export default function AiStaffingContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    Hiring a person means job ads, interviews, onboarding and weeks of waiting before they are productive. What if you could fill 6 roles the same day, with a refundable pilot?
+                                    Hiring a person means job ads, interviews, onboarding and weeks of waiting before they are productive. What if you could fill 5 roles the same day, with a refundable pilot?
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     AI staffing isn't about replacing humans. It's about filling the operational gaps that small businesses can't afford to fill with traditional hiring.
@@ -230,7 +230,7 @@ export default function AiStaffingContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">The Staffing Reality</h4>
                                             <p className="text-slate-700">
-                                                Small businesses need help with email, social media, phones, lead gen, SEO, and legal — but hiring 6 employees means six salaries plus benefits, payroll taxes and training. AI staffing fills these roles for <strong>a fraction of that</strong>, and Dooza starts every product with a <strong>refundable pilot</strong> (100% refund within 14 days).
+                                                Small businesses need help with email, social media, lead gen, SEO, and legal — but hiring 5 employees means five salaries plus benefits, payroll taxes and training. AI staffing fills these roles for <strong>a fraction of that</strong>, and Dooza starts every product with a <strong>refundable pilot</strong> (100% refund within 14 days).
                                             </p>
                                         </div>
                                     </div>
@@ -332,7 +332,6 @@ export default function AiStaffingContent() {
                                         {[
                                             { role: "Email Manager", agent: "Maily", doozaCost: "Included" },
                                             { role: "Social Media Manager", agent: "Somi", doozaCost: "Included" },
-                                            { role: "Receptionist", agent: "Rachel", doozaCost: "Included" },
                                             { role: "Lead Generation Specialist", agent: "Stan", doozaCost: "Included" },
                                             { role: "SEO Specialist", agent: "Ranky", doozaCost: "Included" },
                                             { role: "Legal/Compliance Assistant", agent: "Linda", doozaCost: "Included" }
@@ -344,7 +343,7 @@ export default function AiStaffingContent() {
                                             </tr>
                                         ))}
                                         <tr className="border-t-2 border-slate-300 bg-slate-50 font-bold">
-                                            <td className="p-4 text-slate-900">All six roles</td>
+                                            <td className="p-4 text-slate-900">All five roles</td>
                                             <td className="p-4 text-primary-700 bg-primary-100">AI Employees</td>
                                             <td className="p-4 text-primary-700 bg-primary-100"><Link href="/pricing" className="underline">Refundable pilot (see pricing)</Link></td>
                                         </tr>
@@ -354,7 +353,7 @@ export default function AiStaffingContent() {
 
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl text-center">
                                 <p className="text-xl font-bold text-green-800">
-                                    <span className="text-3xl">Six roles, one workforce.</span> Same functions as a human team, without the payroll.
+                                    <span className="text-3xl">Five roles, one workforce.</span> Same functions as a human team, without the payroll.
                                 </p>
                             </div>
                         </section>
@@ -449,32 +448,6 @@ export default function AiStaffingContent() {
                                     </div>
                                 </div>
 
-                                {/* Rachel */}
-                                <div className="bg-white border-2 border-slate-200 p-6 rounded-2xl hover:border-primary-200 transition-colors">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600">
-                                            <Phone size={24} />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-slate-900 text-lg">Rachel</h3>
-                                            <p className="text-sm text-slate-500">AI Receptionist</p>
-                                        </div>
-                                    </div>
-                                    <ul className="space-y-2 text-slate-600 mb-4">
-                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />Answers every call in under 1 second</li>
-                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />Qualifies leads with custom questions</li>
-                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />Books appointments directly in your calendar</li>
-                                    </ul>
-                                    <div className="bg-green-50 p-3 rounded-lg text-center">
-                                        <p className="text-sm font-bold text-green-700">Picks up the callers voicemail would lose</p>
-                                    </div>
-                                    <div className="mt-3 text-center">
-                                        <Link href="/blog/best-ai-receptionist" className="text-primary-600 hover:underline text-sm font-medium inline-flex items-center gap-1">
-                                            Learn more about Rachel <ArrowRight className="w-3 h-3" />
-                                        </Link>
-                                    </div>
-                                </div>
-
                                 {/* Stan */}
                                 <div className="bg-white border-2 border-slate-200 p-6 rounded-2xl hover:border-primary-200 transition-colors">
                                     <div className="flex items-center gap-3 mb-4">
@@ -554,7 +527,7 @@ export default function AiStaffingContent() {
                                         {[
                                             "Repetitive email responses",
                                             "Social media posting",
-                                            "Phone answering & lead qualification",
+                                            "Lead qualification",
                                             "Data entry & CRM updates",
                                             "Blog writing & SEO",
                                             "Scheduling & calendar management"
@@ -611,7 +584,7 @@ export default function AiStaffingContent() {
                                     {
                                         step: "2",
                                         title: "Start With Your Bottleneck",
-                                        desc: "Which role would save you the most time or money? For most businesses, it's email (Maily) or calls (Rachel)."
+                                        desc: "Which role would save you the most time or money? For most businesses, it's email (Maily) or sales follow-up (Stan)."
                                     },
                                     {
                                         step: "3",
@@ -661,7 +634,7 @@ export default function AiStaffingContent() {
                                         Solo Consultant
                                     </h3>
                                     <p className="text-blue-700">
-                                        You're a one-person shop. Maily handles your email. Somi posts to LinkedIn. Rachel answers calls. You get time back to serve clients.
+                                        You're a one-person shop. Maily handles your email. Somi posts to LinkedIn. You get time back to serve clients.
                                     </p>
                                 </div>
 
@@ -681,7 +654,7 @@ export default function AiStaffingContent() {
                                         Local Service Business
                                     </h3>
                                     <p className="text-green-700">
-                                        You run a plumbing company. Rachel captures emergency calls at 3 AM. Somi posts before/after photos. Maily follows up on quotes. Calls that used to go to voicemail get answered, and nothing falls through the cracks.
+                                        You run a plumbing company. Somi posts before/after photos. Maily follows up on quotes, and nothing falls through the cracks.
                                     </p>
                                 </div>
                             </div>

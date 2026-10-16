@@ -696,7 +696,7 @@ export default function AiAgentLinkedinLeadGenerationContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Stan doesn't work alone. He's part of your <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">full AI workforce</Link> — working alongside Rachel (AI receptionist for inbound calls), Maily (email management), Somi (social media), Ranky (SEO), and Linda (legal compliance). When Stan generates a lead, the rest of the team supports the relationship — answering calls, sending emails, nurturing on social.
+                                    Stan doesn't work alone. He's part of your <Link href="/blog/ai-staffing" className="text-primary-600 hover:underline font-medium">full AI workforce</Link> — working alongside Maily (email management), Somi (social media), Ranky (SEO), and Linda (legal compliance). When Stan generates a lead, the rest of the team supports the relationship — sending emails, nurturing on social.
                                 </p>
                                 <p>
                                     Pricing depends on the product (<Link href="/pricing" className="text-primary-600 hover:underline font-medium">see pricing</Link>), and every Dooza product starts with a <strong>refundable pilot: 100% refund within 14 days</strong> — with AI employees working 24/7.

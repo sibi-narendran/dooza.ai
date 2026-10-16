@@ -72,7 +72,7 @@ const alternatives = [
         priceNote: "100% refund within 14 days",
         pros: [
             "Free 30-minute call to scope your pilot, no coding required",
-            "Six ready-made AI employees: Maily, Somi, Ranky, Stan, Linda and Rachel",
+            "Five ready-made AI employees: Maily, Somi, Ranky, Stan and Linda",
             "Encrypted connections and your approval on anything sensitive",
             "Model costs included; pricing depends on the product",
             "A Dooza engineer sets up and maintains your AI employees",
@@ -544,7 +544,7 @@ export default function MoltbotAlternativesContent() {
                                     {
                                         icon: Bot,
                                         title: "Ready-Made AI Employees",
-                                        desc: "Maily (email), Somi (social media), Ranky (SEO), Stan (sales), Linda (legal) and Rachel (phone receptionist)."
+                                        desc: "Maily (email), Somi (social media), Ranky (SEO), Stan (sales) and Linda (legal)."
                                     },
                                     {
                                         icon: Zap,

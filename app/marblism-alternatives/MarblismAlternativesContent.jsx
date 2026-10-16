@@ -32,7 +32,7 @@ const alternatives = [
         bestFor: 'SMBs and teams that want AI employees built and tuned for them instead of DIY setup',
         price: 'Refundable pilot (see /pricing)',
         trial: 'Refundable pilot — 100% refund within 14 days',
-        agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents), Rachel (phone calls)',
+        agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents)',
         integrations: '1,000+ app integrations',
         creditSystem: false,
         namedAgents: true,

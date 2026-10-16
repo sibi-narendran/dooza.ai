@@ -14,10 +14,10 @@ import { Clock, Calendar, ArrowRightLeft } from 'lucide-react';
 
 const faqData = [
     { question: "Can AI fully replace a virtual assistant?", answer: "For repetitive, rule-based tasks \u2014 yes. AI employees handle email triage, social media scheduling, SEO content, lead follow-ups, appointment booking, and data entry better and cheaper than a human VA. But for tasks requiring genuine judgment, relationship building, or creative strategy, a human still wins. Most businesses find AI covers 70\u201380% of what their VA did, and the remaining 20\u201330% either goes to a part-time specialist or gets handled by the founder." },
-    { question: "Which tasks are best suited for AI over a virtual assistant?", answer: "AI outperforms human VAs at email management, social media posting, SEO blog writing, lead follow-up sequences, FAQ-style customer support, appointment scheduling, and data entry/reporting. These are high-volume, repetitive tasks where speed, consistency, and 24/7 availability matter more than judgment. Dooza\u2019s AI employees \u2014 Maily, Somi, Ranky, Stan, and Rachel \u2014 each handle one of these roles autonomously." },
+    { question: "Which tasks are best suited for AI over a virtual assistant?", answer: "AI outperforms human VAs at email management, social media posting, SEO blog writing, lead follow-up sequences, FAQ-style customer support, appointment scheduling, and data entry/reporting. These are high-volume, repetitive tasks where speed, consistency, and 24/7 availability matter more than judgment. Dooza\u2019s AI employees \u2014 Maily, Somi, Ranky, and Stan \u2014 each handle one of these roles autonomously." },
     { question: "How much do businesses save when switching from a VA to AI?", answer: "The average virtual assistant costs $1,500\u2013$4,000/month, or $18,000\u2013$48,000/year. Dooza\u2019s AI employees cover the same repetitive tasks \u2014 24/7, with no sick days or timezone gaps. Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days, so you can measure the savings on your own tasks before committing." },
     { question: "How long does it take to transition from a VA to AI employees?", answer: "Most businesses complete the switch in 2\u20134 weeks. Week 1: audit your VA\u2019s task list and identify what\u2019s automatable. Week 2: set up AI employees and run them in parallel with your VA. Week 3: shift primary workload to AI and let your VA handle exceptions. Week 4: full cutover with a human check-in once daily. A Dooza engineer scopes your pilot on a free 30-minute call and walks you through the entire process." },
-    { question: "Can Dooza replace multiple virtual assistants at once?", answer: "Yes. Each Dooza AI employee specializes in one role \u2014 Maily for email, Somi for social media, Ranky for SEO, Stan for sales outreach, and Rachel for phone calls and appointment booking. Together they cover work that would otherwise require 2\u20133 VAs at $1,500\u2013$4,000 each. Every Dooza product starts with a refundable pilot \u2014 100% refund within 14 days." }
+    { question: "Can Dooza replace multiple virtual assistants at once?", answer: "Yes. Each Dooza AI employee specializes in one role \u2014 Maily for email, Somi for social media, Ranky for SEO, and Stan for sales outreach. Together they cover work that would otherwise require 2\u20133 VAs at $1,500\u2013$4,000 each. Every Dooza product starts with a refundable pilot \u2014 100% refund within 14 days." }
 ];
 
 export default function ReplaceVaWithAiContent() {
@@ -184,7 +184,6 @@ export default function ReplaceVaWithAiContent() {
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3">4. Lead Follow-Up Sequences</h3>
                                 <p>A lead comes in at 8pm. Your VA sees it at 9am the next day. By then, the lead has already booked a call with your competitor. Stan &mdash; Dooza&apos;s sales AI employee &mdash; follows up instantly, sends a personalized sequence, and books the meeting before your VA finishes her morning coffee. Speed-to-lead is the #1 predictor of conversion. AI wins here by default.</p>
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3">5. Appointment Booking and Phone Calls</h3>
-                                <p>Rachel &mdash; Dooza&apos;s AI receptionist &mdash; answers calls 24/7, books appointments directly into your calendar, and handles common questions without transferring to anyone. Your VA can do this too, but only during business hours. Every missed call after 5pm is a missed opportunity.</p>
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3">6. FAQ Customer Support</h3>
                                 <p>&quot;What are your business hours?&quot; &quot;Do you offer refunds?&quot; &quot;How do I reset my password?&quot; Your VA answers these 30 times a week. AI answers them 30 times a minute &mdash; in any language, with zero wait time, with perfect consistency.</p>
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3">7. Data Entry and Reporting</h3>
@@ -194,7 +193,7 @@ export default function ReplaceVaWithAiContent() {
                                 <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 shadow-sm" style={{ paddingTop: '56.25%' }}>
                                     <iframe className="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/NgBAXFK6nk4" title="AI Era with DOOZA.AI" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
                                 </div>
-                                <p className="text-sm text-slate-500 mt-3 text-center italic">Watch: how Dooza&apos;s AI employees handle real business tasks &mdash; email, social, SEO, and calls.</p>
+                                <p className="text-sm text-slate-500 mt-3 text-center italic">Watch: how Dooza&apos;s AI employees handle real business tasks &mdash; email, social and SEO.</p>
                             </div>
                         </section>
 
@@ -289,7 +288,6 @@ export default function ReplaceVaWithAiContent() {
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li>Move &quot;Automate&quot; tasks fully to AI &mdash; your VA stops doing them</li>
                                     <li>VA focuses on &quot;Assist&quot; tasks (reviewing AI output) and &quot;Human Only&quot; work</li>
-                                    <li>Set up Rachel (AI receptionist) if phone calls are part of the workflow</li>
                                     <li>Check-in: are there tasks you expected AI to handle that need more tuning? Adjust now</li>
                                 </ul>
                                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-3">Week 4: Full Cutover</h3>

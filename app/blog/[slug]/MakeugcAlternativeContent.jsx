@@ -31,11 +31,11 @@ import {
 const faqData = [
     {
         question: "What is the best MakeUGC alternative?",
-        answer: "It depends on the job. For AI UGC ad creatives, the closest alternatives are Creatify, Arcads, and HeyGen; Creatify can also launch ads straight to Meta, TikTok, YouTube, Snap, and Amazon ad accounts. Dooza is the alternative for businesses that want the work done for them: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email, sales, and calls, and nothing goes out without your approval."
+        answer: "It depends on the job. For AI UGC ad creatives, the closest alternatives are Creatify, Arcads, and HeyGen; Creatify can also launch ads straight to Meta, TikTok, YouTube, Snap, and Amazon ad accounts. Dooza is the alternative for businesses that want the work done for them: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email and sales, and nothing goes out without your approval."
     },
     {
         question: "Is Dooza better than MakeUGC?",
-        answer: "Not for UGC ad creatives. MakeUGC is the better pick if you want to generate many UGC-style video ads yourself, with 1,000+ AI creators, product-holding avatars, and fast variations; its Enterprise plan adds an AI media buyer, custom AI workflows, and API access. Dooza is the better pick if you want social video and posting done for you, together with SEO, email, sales, and calls, starting with a refundable pilot (100% refund within 14 days)."
+        answer: "Not for UGC ad creatives. MakeUGC is the better pick if you want to generate many UGC-style video ads yourself, with 1,000+ AI creators, product-holding avatars, and fast variations; its Enterprise plan adds an AI media buyer, custom AI workflows, and API access. Dooza is the better pick if you want social video and posting done for you, together with SEO, email and sales, starting with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Why do people look for MakeUGC alternatives?",
@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "Which MakeUGC competitors should I compare?",
-        answer: "Common MakeUGC competitors and adjacent AI UGC tools include Creatify, Arcads, HeyGen, Synthesia, Captions, invideo, Predis.ai, AutoUGC, and Infinite UGC. Most compete on avatar quality, scripts, URL-to-video, pricing, languages, or ad launching. Dooza is a different kind of alternative: a done-for-you setup where Dooza engineers run AI employees across video, social, SEO, email, sales, and calls."
+        answer: "Common MakeUGC competitors and adjacent AI UGC tools include Creatify, Arcads, HeyGen, Synthesia, Captions, invideo, Predis.ai, AutoUGC, and Infinite UGC. Most compete on avatar quality, scripts, URL-to-video, pricing, languages, or ad launching. Dooza is a different kind of alternative: a done-for-you setup where Dooza engineers run AI employees across video, social, SEO, email and sales."
     },
     {
         question: "Who should still use MakeUGC?",
@@ -79,12 +79,12 @@ const competitors = [
 ];
 
 const comparisonRows = [
-    ['Primary job', 'Generate AI UGC-style video ads', 'Done-for-you AI employees for video, social, SEO, email, sales, and calls', 'Depends'],
+    ['Primary job', 'Generate AI UGC-style video ads', 'Done-for-you AI employees for video, social, SEO, email and sales', 'Depends'],
     ['Who does the work', 'You run the tool', 'Dooza engineers set up and run it with you; you approve', 'Depends'],
     ['UGC ad creation', '1,000+ AI creators, product-holding avatars, fast variations', 'Short-form video via the UGC Reel Creator, as one part of the workforce', 'MakeUGC'],
     ['Automatic posting', 'Not part of its public positioning', 'Somi plans and posts social content with your approval', 'Dooza'],
     ['Advanced options', 'Enterprise: AI media buyer, custom AI workflows, API access', '1,000+ app integrations', 'Tie'],
-    ['Beyond video', 'Focused on video ads', 'SEO (Ranky), email (Maily), sales (Stan), calls (Rachel)', 'Dooza'],
+    ['Beyond video', 'Focused on video ads', 'SEO (Ranky), email (Maily), sales (Stan)', 'Dooza'],
     ['How you start', 'Self-serve sign-up', 'Refundable pilot (100% refund within 14 days); pricing depends on the product', 'Depends']
 ];
 
@@ -209,14 +209,14 @@ export default function MakeugcAlternativeContent() {
                                     MakeUGC does its job well: creating UGC-style video ads with AI, fast, in many variations. If ad creatives are what you need, MakeUGC or one of the UGC tools below is likely the better pick.
                                 </p>
                                 <p>
-                                    <strong>Dooza</strong> is a different kind of alternative. Dooza is an AI-native company: Dooza engineers set up AI employees that handle short-form video and social posting alongside SEO content, email replies, sales follow-up, and calls, and nothing goes out without your approval.
+                                    <strong>Dooza</strong> is a different kind of alternative. Dooza is an AI-native company: Dooza engineers set up AI employees that handle short-form video and social posting alongside SEO content, email replies and sales follow-up, and nothing goes out without your approval.
                                 </p>
                             </div>
 
                             <div className="mt-8 bg-primary-50 border border-primary-100 rounded-2xl p-6">
                                 <p className="text-primary-900 font-bold text-lg mb-2">Quick verdict</p>
                                 <p className="text-primary-800">
-                                    MakeUGC is the better pick for self-serve AI UGC ad generation. Dooza is the better pick if you want social video and posting done for you as part of a wider setup across SEO, email, sales, and calls, starting with a refundable pilot: 100% refund within 14 days.
+                                    MakeUGC is the better pick for self-serve AI UGC ad generation. Dooza is the better pick if you want social video and posting done for you as part of a wider setup across SEO, email and sales, starting with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>
@@ -231,7 +231,7 @@ export default function MakeugcAlternativeContent() {
                                     That makes it attractive for ecommerce operators and performance marketers who want to test more ad creatives. Instead of waiting days for creator footage, a team can generate multiple versions of a product pitch, test hooks, and ship more creative volume.
                                 </p>
                                 <p>
-                                    Its Enterprise plan adds an AI media buyer, custom AI workflows, and API access. What MakeUGC does not position itself around is organic social posting or the non-video work: SEO, email follow-up, sales, and calls. That is where the comparison with Dooza comes in.
+                                    Its Enterprise plan adds an AI media buyer, custom AI workflows, and API access. What MakeUGC does not position itself around is organic social posting or the non-video work: SEO, email follow-up and sales. That is where the comparison with Dooza comes in.
                                 </p>
                             </div>
 
@@ -322,7 +322,7 @@ export default function MakeugcAlternativeContent() {
 
                             <div className="mt-8 space-y-5">
                                 {[
-                                    { icon: Bot, title: 'Dooza works like an AI team, not a single-purpose video tool', copy: 'Somi can support social content, Ranky can support SEO, Stan can support sales, Maily can support email, and Rachel can support calls. Your video work does not sit alone.' },
+                                    { icon: Bot, title: 'Dooza works like an AI team, not a single-purpose video tool', copy: 'Somi can support social content, Ranky can support SEO, Stan can support sales, and Maily can support email. Your video work does not sit alone.' },
                                     { icon: Send, title: 'Done for you, with your approval', copy: 'A Dooza engineer scopes your pilot on a free 30-minute call and sets up the workflow with you, including social posting. You approve what goes out.' },
                                     { icon: Repeat, title: 'One video can become a full content cycle', copy: 'A product video can become a Short, Reel, TikTok caption, LinkedIn post, SEO blog section, email follow-up, sales message, and FAQ answer.' },
                                     { icon: TrendingUp, title: 'SEO, AEO, and GEO around your videos', copy: 'Ranky, Dooza\'s AI SEO & visibility employee, handles search-driven content around your videos so Google and AI answer engines have more context to understand and recommend your business.' },
@@ -382,7 +382,7 @@ export default function MakeugcAlternativeContent() {
                                     If your job is creating more ad creatives, MakeUGC is a strong choice, and Creatify, Arcads, and HeyGen are the closest alternatives. Creatify is worth a look if you also want ads launched to your ad accounts; Predis.ai or Infinite UGC if you want organic posting.
                                 </p>
                                 <p>
-                                    Choose <strong>Dooza</strong> if you want the work done for you: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email, sales, and calls, and you approve what goes out. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                    Choose <strong>Dooza</strong> if you want the work done for you: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email and sales, and you approve what goes out. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
 
@@ -429,7 +429,7 @@ export default function MakeugcAlternativeContent() {
                             <div className="bg-slate-900 text-white p-6 rounded-2xl">
                                 <DollarSign className="w-8 h-8 text-primary-400 mb-4" />
                                 <h3 className="font-bold mb-2">Want it done for you?</h3>
-                                <p className="text-sm text-slate-300 mb-4">Dooza gives you AI employees for content, posting, SEO, email, sales, and calls.</p>
+                                <p className="text-sm text-slate-300 mb-4">Dooza gives you AI employees for content, posting, SEO, email and sales.</p>
                                 <a
                                     href={getProductSignupUrl('somi')}
                                     target="_blank"

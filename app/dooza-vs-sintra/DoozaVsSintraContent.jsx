@@ -18,7 +18,7 @@ import { trackFBViewContent } from '@/lib/analytics';
 const comparisonRows = [
     { feature: 'Price', dooza: 'Refundable pilot (see /pricing)', competitor: '$48.50/mo (discounted from $97); $15.60/mo on a 12-month commitment (checked October 7, 2026)', doozaWins: false },
     { feature: 'Task / Usage Limits', dooza: 'No credits', competitor: '250 credits per month, plus paid top-ups', doozaWins: true },
-    { feature: 'Number of AI Agents', dooza: 'Maily, Somi, Ranky, Stan, Linda, Rachel', competitor: '12+ helpers that call on each other automatically', doozaWins: false },
+    { feature: 'Number of AI Agents', dooza: 'Maily, Somi, Ranky, Stan, Linda', competitor: '12+ helpers that call on each other automatically', doozaWins: false },
     { feature: 'Onboarding', dooza: 'Dooza engineer scopes your pilot on a free 30-min call', competitor: 'Call with a Sintra specialist, plus two weeks of hands-on help', doozaWins: false },
     { feature: 'Who Builds It', dooza: 'Dooza engineers build and tune your AI employees or custom agents with you', competitor: 'You run it yourself in the app (Sintra: "Zero technical setup. Simply chat and ask.")', doozaWins: true },
     { feature: 'Custom Agents', dooza: 'Custom agents built and maintained by Dooza engineers', competitor: 'Helper Builder: create your own custom helper', doozaWins: false },

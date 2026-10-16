@@ -33,7 +33,7 @@ import {
 } from 'lucide-react';
 
 const faqData = [
-    { question: 'What is the best AI agentic AI tool for automation in the USA?', answer: 'For small businesses, agencies, real estate teams, clinics, salons, and local service companies in the USA, Dooza is one of the best agentic AI automation tools because it combines specialist AI employees for email, SEO, social media, sales, and phone calls in one platform.' },
+    { question: 'What is the best AI agentic AI tool for automation in the USA?', answer: 'For small businesses, agencies, real estate teams, clinics, salons, and local service companies in the USA, Dooza is one of the best agentic AI automation tools because it combines specialist AI employees for email, SEO, social media and sales in one platform.' },
     { question: 'What makes an AI tool agentic?', answer: 'An agentic AI tool does more than generate text. It can understand a goal, use connected tools, take multi-step actions, and complete workflows such as replying to leads, writing SEO content, posting updates, or booking appointments.' },
     { question: 'Can agentic AI automate a small business?', answer: 'Yes. Agentic AI can automate repeatable workflows like inbox triage, lead follow-up, blog publishing, social media scheduling, appointment booking, customer FAQs, and reporting. The best results come from using specialized agents with clear guardrails.' },
     { question: 'Is Dooza built for USA businesses?', answer: 'Yes. Dooza is designed for businesses that sell, book, market, and communicate online in the United States, including local service businesses, agencies, consultants, medical practices, real estate agents, and e-commerce teams.' },
@@ -64,12 +64,6 @@ const employeeRoles = [
         name: 'Stan',
         role: 'Sales automation',
         text: 'Responds to leads, sends outreach, qualifies prospects, and helps book more sales conversations.'
-    },
-    {
-        icon: Phone,
-        name: 'Rachel',
-        role: 'Phone automation',
-        text: 'Answers calls, handles FAQs, books appointments, and prevents missed-call revenue loss.'
     }
 ];
 
@@ -78,7 +72,7 @@ const comparisonRows = [
     ['Pricing', 'Varies by product; every product starts with a refundable pilot (100% refund within 14 days)', 'Often usage-based, credit-based, or tool-by-tool'],
     ['Setup', 'A Dooza engineer scopes your pilot on a free 30-minute call', 'Manual prompt and workflow design'],
     ['Best use case', 'Small business operations in the USA', 'Technical experiments or narrow single-task automations'],
-    ['Outcome', 'Email, SEO, social, sales, and calls handled together', 'Usually one workflow at a time']
+    ['Outcome', 'Email, SEO, social and sales handled together', 'Usually one workflow at a time']
 ];
 
 export default function BestAiAgenticAiToolForAutomationUsaContent() {
@@ -143,7 +137,7 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                             Best AI Agentic AI Tool for <span className="text-primary-600">Automation in USA</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            A practical 2026 guide for American founders, agencies, and small businesses choosing an agentic AI platform that can automate real operations: email, SEO, social media, sales, and phone calls.
+                            A practical 2026 guide for American founders, agencies, and small businesses choosing an agentic AI platform that can automate real operations: email, SEO, social media and sales.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>13 min read</span></div>
@@ -227,7 +221,7 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                                 <div className="bg-primary-50 border border-primary-100 rounded-xl p-6 not-prose">
                                     <p className="text-primary-900 font-semibold mb-2">Quick answer</p>
                                     <p className="text-slate-700">
-                                        If you want agentic AI automation for a USA business, choose a platform that combines role-based agents, a low-risk way to start, real workflow execution, GEO/SEO support, and fast setup. Dooza is the strongest fit for small businesses that want practical automation across email, SEO, social media, sales, and phone calls.
+                                        If you want agentic AI automation for a USA business, choose a platform that combines role-based agents, a low-risk way to start, real workflow execution, GEO/SEO support, and fast setup. Dooza is the strongest fit for small businesses that want practical automation across email, SEO, social media and sales.
                                     </p>
                                 </div>
                             </div>
@@ -295,7 +289,7 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                                     Many AI tools give you a model, a prompt box, or a workflow builder. Dooza gives you specialist AI employees. That difference matters because business owners do not just need an AI that can think. They need an AI that has a job.
                                 </p>
                                 <p>
-                                    Dooza is especially strong for USA businesses because it covers the operational tasks that most directly affect revenue: replying to leads, answering calls, publishing content, ranking in search, maintaining social presence, and keeping customer communication organized.
+                                    Dooza is especially strong for USA businesses because it covers the operational tasks that most directly affect revenue: replying to leads, publishing content, ranking in search, maintaining social presence, and keeping customer communication organized.
                                 </p>
                             </div>
 
@@ -321,7 +315,7 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Best Agentic AI Automation Use Cases</h2>
                             <div className="grid md:grid-cols-2 gap-5">
                                 {[
-                                    { icon: Headphones, title: 'Local service businesses', text: 'Answer calls, capture job requests, qualify leads, and follow up after quotes.' },
+                                    { icon: Headphones, title: 'Local service businesses', text: 'Capture job requests, qualify leads, and follow up after quotes.' },
                                     { icon: Search, title: 'SEO and content teams', text: 'Create service-area pages, helpful blog posts, FAQ content, and AI-answer-friendly summaries.' },
                                     { icon: DollarSign, title: 'Sales teams', text: 'Respond to new inquiries, personalize outreach, and keep prospects from going cold.' },
                                     { icon: ShieldCheck, title: 'Professional services', text: 'Manage intake, route questions, draft replies, and reduce repetitive admin work.' }
@@ -385,7 +379,7 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                             <div className="space-y-4">
                                 {[
                                     { step: 'Week 1', title: 'Map repeatable work', text: 'List the tasks your team repeats daily: inbox sorting, missed-call handling, lead replies, social posts, SEO content, and appointment booking.' },
-                                    { step: 'Week 2', title: 'Assign AI employees', text: 'Give each workflow to the right Dooza employee. Maily handles email, Rachel handles phones, Ranky handles SEO, Somi handles social, and Stan handles sales follow-up.' },
+                                    { step: 'Week 2', title: 'Assign AI employees', text: 'Give each workflow to the right Dooza employee. Maily handles email, Ranky handles SEO, Somi handles social, and Stan handles sales follow-up.' },
                                     { step: 'Week 3', title: 'Connect tools and guardrails', text: 'Connect accounts, define approvals, write brand rules, and set escalation paths for anything that needs a human decision.' },
                                     { step: 'Week 4', title: 'Measure and expand', text: 'Track response time, booked calls, published content, lead follow-up, and hours saved. Then expand automation to the next bottleneck.' }
                                 ].map((item) => (
@@ -407,13 +401,13 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                                     If you are searching for the <strong>best AI agentic AI tool for automation in USA</strong>, the winner should be judged by execution, not hype. Can it answer customers? Can it follow up with leads? Can it publish content? Can it support SEO and GEO? Can it run without constant debugging?
                                 </p>
                                 <p>
-                                    Dooza is built for exactly that. It gives USA businesses an AI workforce that handles practical work across email, social media, SEO, sales, and phone calls, with a setup model that makes sense for non-technical operators.
+                                    Dooza is built for exactly that. It gives USA businesses an AI workforce that handles practical work across email, social media, SEO and sales, with a setup model that makes sense for non-technical operators.
                                 </p>
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center mt-8">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Automate Your Business With Dooza</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Start with AI employees built for real business operations: email, SEO, social media, sales, and phone calls. Every Dooza product starts with a refundable pilot — 100% refund within 14 days.
+                                    Start with AI employees built for real business operations: email, SEO, social media and sales. Every Dooza product starts with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

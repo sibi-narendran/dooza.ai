@@ -35,7 +35,7 @@ const faqData = [
     },
     {
         question: 'How are Dooza and Marblism different?',
-        answer: 'Dooza is an AI-native company that builds AI products and services for small businesses. Its AI employees each have one job (Maily, Somi, Ranky, Stan, Linda, and Rachel). Marblism offers 7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, and Linda) in every plan. The biggest difference is setup: Dooza is done for you (a Dooza engineer scopes, builds, and tunes your AI employees or custom agents with you), while Marblism is self-serve and costs less for a self-serve user.',
+        answer: 'Dooza is an AI-native company that builds AI products and services for small businesses. Its AI employees each have one job (Maily, Somi, Ranky, Stan, and Linda). Marblism offers 7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, and Linda) in every plan. The biggest difference is setup: Dooza is done for you (a Dooza engineer scopes, builds, and tunes your AI employees or custom agents with you), while Marblism is self-serve and costs less for a self-serve user.',
     },
     {
         question: 'How much does Marblism cost?',
@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: 'What AI employees does Dooza offer?',
-        answer: 'Dooza\'s AI employees each own one job. Maily handles email through your Gmail or Outlook. Somi creates and schedules social media posts across Facebook, Instagram, and LinkedIn. Ranky handles SEO and AI visibility: keyword research, blog writing, and getting you cited by ChatGPT and Google. Stan finds and follows up with leads. Linda drafts legal documents like NDAs and contracts. Rachel (Voice Pro) answers calls and books appointments. Each one connects to your tools and works 24/7, with your approval on anything sensitive.',
+        answer: 'Dooza\'s AI employees each own one job. Maily handles email through your Gmail or Outlook. Somi creates and schedules social media posts across Facebook, Instagram, and LinkedIn. Ranky handles SEO and AI visibility: keyword research, blog writing, and getting you cited by ChatGPT and Google. Stan finds and follows up with leads. Linda drafts legal documents like NDAs and contracts. Each one connects to your tools and works 24/7, with your approval on anything sensitive.',
     },
     {
         question: 'Can AI employees really replace human workers?',

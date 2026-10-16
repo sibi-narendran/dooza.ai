@@ -470,10 +470,6 @@ export default function MarketingAutomationToolsContent() {
                                                 <CheckCircle2 className="w-5 h-5 text-green-500" />
                                                 <span><strong>Stan</strong> generates leads—finds and qualifies prospects</span>
                                             </li>
-                                            <li className="flex items-center gap-2">
-                                                <CheckCircle2 className="w-5 h-5 text-green-500" />
-                                                <span><strong>Rachel</strong> answers phones—24/7 call handling</span>
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>

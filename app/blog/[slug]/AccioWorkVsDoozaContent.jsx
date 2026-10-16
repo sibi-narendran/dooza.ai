@@ -64,7 +64,7 @@ const faqData = [
     },
     {
         question: "Can Accio Work answer phone calls?",
-        answer: "No. Accio Work is a desktop agent — it works with files, browsers, and terminal commands on your computer. Dooza includes Rachel, an AI receptionist that answers phone calls, books appointments, and handles customer inquiries 24/7."
+        answer: "No. Accio Work is a desktop agent — it works with files, browsers, and terminal commands on your computer. Dooza does not offer phone answering either. Dooza Managed is an AI admin assistant for small businesses, checked by a real person, $200/month, first 7 days free."
     },
     {
         question: "Is Accio Work free?",
@@ -374,7 +374,6 @@ export default function AccioWorkVsDoozaContent() {
                                     { icon: Mail, title: "Maily — Email Manager", desc: "Reads, drafts, and sends emails. Handles customer inquiries. Follows up automatically." },
                                     { icon: MessageSquare, title: "Somi — Social Media", desc: "Creates and posts content across platforms. Engages with comments. Runs on autopilot." },
                                     { icon: Search, title: "Ranky — SEO Specialist", desc: "Writes optimized blog posts. Tracks rankings. Builds your organic traffic." },
-                                    { icon: Phone, title: "Rachel — AI Receptionist", desc: "Answers phone calls 24/7. Books appointments. Handles customer inquiries live." },
                                     { icon: TrendingUp, title: "Stan — Sales Agent", desc: "Qualifies leads. Sends outreach. Books meetings. Manages your pipeline." },
                                     { icon: Shield, title: "Linda — Legal Assistant", desc: "Reviews contracts. Flags risks. Drafts legal documents." }
                                 ].map((item, idx) => (
@@ -394,7 +393,7 @@ export default function AccioWorkVsDoozaContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The Key Difference</h4>
                                         <p className="text-slate-700">
-                                            Dooza's AI employees don't wait for instructions. They have defined roles, scheduled routines, and autonomous decision-making. Somi posts your social media at 9am whether you're awake or not. Rachel answers calls at 2am. Ranky publishes SEO content every week. <strong>They work like employees, not agents you need to prompt.</strong>
+                                            Dooza's AI employees don't wait for instructions. They have defined roles, scheduled routines, and autonomous decision-making. Somi posts your social media at 9am whether you're awake or not. Ranky publishes SEO content every week. <strong>They work like employees, not agents you need to prompt.</strong>
                                         </p>
                                     </div>
                                 </div>
@@ -465,7 +464,7 @@ export default function AccioWorkVsDoozaContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-900 mb-2">Think of It This Way</h4>
                                 <p className="text-blue-800">
-                                    Accio Work is like hiring a sourcing specialist who only works with Alibaba's warehouse. Dooza is like hiring six full-time employees — email manager, social media pro, SEO writer, sales rep, legal reviewer, and receptionist — who show up every day, know their job, and ask for your approval on anything sensitive. <strong>One helps you find products. The other runs your business.</strong>
+                                    Accio Work is like hiring a sourcing specialist who only works with Alibaba's warehouse. Dooza is like hiring five full-time employees — email manager, social media pro, SEO writer, sales rep, and legal reviewer — who show up every day, know their job, and ask for your approval on anything sensitive. <strong>One helps you find products. The other runs your business.</strong>
                                 </p>
                             </div>
                         </section>
@@ -488,7 +487,7 @@ export default function AccioWorkVsDoozaContent() {
                                             { feature: "Type", accio: "Desktop AI agent (e-commerce)", dooza: "AI employee platform (all industries)" },
                                             { feature: "Runs On", accio: "Desktop app on your computer", dooza: "Cloud — works on any device, anywhere" },
                                             { feature: "Primary Focus", accio: "Product sourcing & global trade", dooza: "Full business operations" },
-                                            { feature: "Phone Calls", accio: "Not listed", dooza: "AI receptionist (Rachel)" },
+                                            { feature: "Phone Calls", accio: "Not listed", dooza: "Not offered" },
                                             { feature: "Social Media", accio: "Not listed", dooza: "Automated daily posting (Somi)" },
                                             { feature: "Email Management", accio: "Not listed", dooza: "Full automation (Maily)" },
                                             { feature: "SEO Content", accio: "Not built-in", dooza: "Full pipeline (Ranky)" },
@@ -598,7 +597,6 @@ export default function AccioWorkVsDoozaContent() {
                                             "Need email handled automatically every day",
                                             "Want social media posted daily without lifting a finger",
                                             "Need SEO content that ranks on Google",
-                                            "Want a 24/7 AI receptionist answering your phone",
                                             "Need lead generation and sales outreach on autopilot",
                                             "Want contract and legal document review",
                                             "Want a Dooza engineer to set up your pilot (pricing on /pricing)"
@@ -657,7 +655,6 @@ export default function AccioWorkVsDoozaContent() {
                                                 "Customer email support (Maily)",
                                                 "Social media marketing (Somi)",
                                                 "SEO and organic traffic (Ranky)",
-                                                "Customer phone calls (Rachel)",
                                                 "Lead generation and sales (Stan)"
                                             ].map((item, idx) => (
                                                 <div key={idx} className="flex items-start gap-2">
@@ -692,7 +689,7 @@ export default function AccioWorkVsDoozaContent() {
                                     <strong>Accio Work</strong> is a powerful e-commerce sourcing agent built by Alibaba, for Alibaba's ecosystem. If you're launching a dropshipping business or scaling cross-border trade, it's worth exploring. But its published features don't cover email, social media, SEO, sales outreach, legal review, or phone calls. It's a single department head, not a workforce.
                                 </p>
                                 <p>
-                                    <strong>Dooza</strong> gives you six AI employees that handle your entire business operation — autonomously, 24/7, in the cloud. Email gets answered. Social media gets posted. Blog content gets published. Phone calls get picked up. Leads get qualified. Contracts get reviewed. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                    <strong>Dooza</strong> gives you five AI employees that handle your entire business operation — autonomously, 24/7, in the cloud. Email gets answered. Social media gets posted. Blog content gets published. Leads get qualified. Contracts get reviewed. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
 

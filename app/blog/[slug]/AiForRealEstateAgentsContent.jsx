@@ -502,25 +502,6 @@ export default function AiForRealEstateAgentsContent() {
                             <div className="space-y-6 mb-8">
                                 <div className="bg-white border-2 border-slate-200 p-6 rounded-xl hover:border-primary-200 transition-colors">
                                     <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center text-pink-600 shrink-0">
-                                            <Phone size={24} />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-slate-900 text-xl mb-2">Rachel - AI Receptionist</h3>
-                                            <p className="text-slate-600 mb-4">
-                                                Never miss another lead call. Rachel answers your phone 24/7, qualifies buyers and sellers, books showings, and takes a message for you on urgent calls. She sounds natural and knows your listings inside out.
-                                            </p>
-                                            <div className="bg-slate-50 p-4 rounded-lg">
-                                                <p className="text-sm text-slate-700">
-                                                    <strong>Real estate impact:</strong> Buyers often work with the first agent who responds. Rachel ensures that's always you—even at 2 AM when a relocating buyer calls from another time zone.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white border-2 border-slate-200 p-6 rounded-xl hover:border-primary-200 transition-colors">
-                                    <div className="flex items-start gap-4">
                                         <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
                                             <Mail size={24} />
                                         </div>

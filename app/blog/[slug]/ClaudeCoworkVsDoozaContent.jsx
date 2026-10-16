@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: "Does Dooza handle phone calls?",
-        answer: "Yes. Dooza includes Rachel, an AI receptionist that answers phone calls, books appointments, and handles customer inquiries. If phone answering is the main job you need done, compare that directly rather than a general-purpose agent."
+        answer: "No. Dooza does not offer phone answering or a voice agent. Dooza Managed is an AI admin assistant for small businesses, checked by a real person, $200/month, first 7 days free. If phone answering is the main job you need done, look at a dedicated voice-agent vendor."
     },
     {
         question: "Can I use both Claude Cowork and Dooza?",
@@ -360,7 +360,6 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     { icon: Mail, title: "Maily — Email Manager", desc: "Reads, drafts, and sends emails. Handles customer inquiries. Follows up automatically." },
                                     { icon: MessageSquare, title: "Somi — Social Media", desc: "Creates and posts content across platforms. Engages with comments. Runs on autopilot." },
                                     { icon: Search, title: "Ranky — SEO Specialist", desc: "Writes optimized blog posts. Tracks rankings. Builds your organic traffic." },
-                                    { icon: Phone, title: "Rachel — AI Receptionist", desc: "Answers phone calls 24/7. Books appointments. Handles customer inquiries live." },
                                     { icon: TrendingUp, title: "Stan — Sales Agent", desc: "Qualifies leads. Sends outreach. Books meetings. Manages your pipeline." },
                                     { icon: Shield, title: "Linda — Legal Assistant", desc: "Reviews contracts. Flags risks. Drafts legal documents." }
                                 ].map((item, idx) => (
@@ -380,7 +379,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">The Key Difference</h4>
                                         <p className="text-slate-700">
-                                            Dooza's AI employees come with defined roles and routines that Dooza engineers configure for your business. Somi posts your social media on schedule. Rachel answers calls. Ranky publishes SEO content every week. <strong>You don't design the workflows; Dooza does.</strong>
+                                            Dooza's AI employees come with defined roles and routines that Dooza engineers configure for your business. Somi posts your social media on schedule. Ranky publishes SEO content every week. <strong>You don't design the workflows; Dooza does.</strong>
                                         </p>
                                     </div>
                                 </div>
@@ -436,7 +435,6 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             "AI employees have defined roles & routines",
                                             "Runs in the cloud",
                                             "Dooza engineers configure the work for your business",
-                                            "Includes Rachel, an AI receptionist for phone calls",
                                             "Role-specific — each employee does one job",
                                             "Best for: business owners who want work handled for them",
                                             "Starts with a refundable pilot (100% refund within 14 days)"
@@ -477,7 +475,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             { feature: "Runs On", cowork: "Desktop app, web and mobile (beta); new Pro/Max tasks run in the cloud", dooza: "Cloud" },
                                             { feature: "Works When PC Off?", cowork: "Yes — scheduled tasks run in the cloud", dooza: "Yes" },
                                             { feature: "Who Sets Up the Work", cowork: "You", dooza: "Dooza engineers, with you" },
-                                            { feature: "Phone Calls", cowork: "General-purpose agent", dooza: "AI receptionist (Rachel)" },
+                                            { feature: "Phone Calls", cowork: "General-purpose agent", dooza: "Not offered" },
                                             { feature: "Social Media Posting", cowork: "Possible as a task you set up", dooza: "Scheduled posting by Somi" },
                                             { feature: "Email Management", cowork: "Via Gmail and other connectors", dooza: "Handled by Maily" },
                                             { feature: "SEO Content", cowork: "Can research & draft", dooza: "Full pipeline (Ranky)" },
@@ -575,7 +573,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza gives you <strong className="text-white">six role-specific AI employees configured for your business by Dooza engineers</strong>. Pricing depends on the product (see <Link href="/pricing" className="text-white underline">pricing</Link>), and every product starts with a refundable pilot &mdash; 100% refund within 14 days.
+                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza gives you <strong className="text-white">five role-specific AI employees configured for your business by Dooza engineers</strong>. Pricing depends on the product (see <Link href="/pricing" className="text-white underline">pricing</Link>), and every product starts with a refundable pilot &mdash; 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>
@@ -615,7 +613,6 @@ export default function ClaudeCoworkVsDoozaContent() {
                                         {[
                                             "Run a business that needs AI handling emails, social, SEO, and sales",
                                             "Want those roles set up and run for you by Dooza engineers",
-                                            "Need an AI receptionist that answers phone calls",
                                             "Would rather not design workflows yourself",
                                             "Want your approval on anything sensitive",
                                             "Want to start with a refundable pilot (100% refund within 14 days)"
@@ -655,7 +652,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     {
                                         scenario: "Morning Routine",
                                         cowork: "A scheduled Claude Cowork task summarizes key documents and prepares your daily brief",
-                                        dooza: "Dooza's Maily has handled customer emails. Somi posted your social content on schedule. Rachel has been answering calls."
+                                        dooza: "Dooza's Maily has handled customer emails. Somi posted your social content on schedule."
                                     },
                                     {
                                         scenario: "Content Production",
@@ -666,11 +663,6 @@ export default function ClaudeCoworkVsDoozaContent() {
                                         scenario: "Sales & Lead Gen",
                                         cowork: "Use Cowork to build prospect lists and analyze CRM data in your spreadsheets",
                                         dooza: "Dooza's Stan sends outreach, qualifies leads, and books meetings on your calendar."
-                                    },
-                                    {
-                                        scenario: "Phone Calls",
-                                        cowork: "Use Claude to prepare call notes and follow-up drafts",
-                                        dooza: "Dooza's Rachel answers calls, books appointments, and handles customer inquiries."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden">
@@ -713,8 +705,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
                                         { icon: Repeat, text: "Work designed and run for you" },
-                                        { icon: Users, text: "6 specialized AI employees, not one generalist" },
-                                        { icon: Phone, text: "AI phone answering with Rachel" },
+                                        { icon: Users, text: "5 specialized AI employees, not one generalist" },
                                         { icon: DollarSign, text: "Refundable pilot — 100% refund within 14 days" },
                                         { icon: HeartHandshake, text: "A Dooza engineer scopes your pilot on a free 30-min call" },
                                         { icon: Brain, text: "Your approval on anything sensitive" }
