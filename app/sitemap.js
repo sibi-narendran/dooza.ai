@@ -254,6 +254,12 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/certificates-for-agencies`,
+            lastModified: pageDate('2026-10-16'),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/trucking-insurance-market`,
             lastModified: pageDate('2026-10-13'),
             changeFrequency: 'weekly',
