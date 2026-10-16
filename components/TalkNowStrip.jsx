@@ -21,7 +21,9 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) 
                     <a href={`/book?utm_source=website&utm_medium=talk_now&utm_content=${source}`} className={link}><Calendar className="h-4 w-4" aria-hidden="true" />Book a free 30-min call</a>
                 </div>
                 <p className="mt-5 text-sm text-slate-600">
-                    {offer === 'trucker-feed' ? (
+                    {offer === 'cpa-1099' ? (
+                        <>Or start now: email one client&rsquo;s two QuickBooks reports to <a href={`mailto:${CONTACT_EMAIL}?subject=Free%201099%20client`} data-offer="cpa-1099" data-source={source} className="font-semibold text-primary-700 underline">{CONTACT_EMAIL}</a>. First client free, then $99 per client.</>
+                    ) : offer === 'trucker-feed' ? (
                         <>Or start now: the <a href={TRUCKER_FEED_PAY_URL} data-offer="trucker-feed" data-source={source} className="font-semibold text-primary-700 underline">Monday Trucker Feed</a>, first week free, then $129 every 4 weeks.</>
                     ) : (
                         <>Or start now: <a href={MANAGED_PAY_URL} data-offer="managed" data-source={source} className="font-semibold text-primary-700 underline">Dooza Managed</a>, an admin assistant checked by a real person, first 7 days free, then $200/month. <a href="/pricing" className="underline">See pricing</a>.</>

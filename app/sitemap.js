@@ -242,6 +242,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/1099-prep-for-cpa-firms`,
+            lastModified: pageDate('2026-10-16'),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/trucking-insurance-market`,
             lastModified: pageDate('2026-10-13'),
             changeFrequency: 'weekly',
