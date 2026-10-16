@@ -159,10 +159,6 @@ export default function HomeLanding() {
                             <Link href="/ai-admin-assistant" className={LINK}>Dooza Managed</Link>: an AI admin assistant whose work is checked by a real person. First 7 days free, then $200/month.{' '}
                             <a href={MANAGED_PAY_URL} data-offer="managed" data-source="homepage_hero" className={LINK}>Start free</a>.
                         </p>
-                        <p className="mt-4 max-w-[34rem] text-[15px] text-slate-700">
-                            Insurance agency that writes trucking?{' '}
-                            <Link href="/trucking-insurance-leads" className={LINK}>Get the trucking companies in your state renewing in 30 to 60 days, every Monday</Link>.
-                        </p>
                     </div>
                     <DailyReport />
                 </div>
