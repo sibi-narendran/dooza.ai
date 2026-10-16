@@ -6,11 +6,11 @@
 > - **NOT offers (do not sell, script, pitch or promise):** AI Receptionist / phone answering / Rachel voice (not an offer since 2026-10-12, decision #15; /ai-receptionist pages stay indexed but frozen); Dooza Workforce app (abandoned 2026-10-08).
 > - Videos, pitches and new pages: check claims against this banner first.
 
-Every page, blog post, generated article, and CTA must match this file. If copy disagrees with it, the copy is wrong. Last updated 2026-09-29, when we moved to the AI-native company and refundable-pilot model.
+Every page, blog post, generated article, and CTA must match this file. If copy disagrees with it, the copy is wrong. Last updated 2026-10-16 (offers banner + one-sentence now Managed; Workforce app and receptionist retired).
 
 ## One sentence (use verbatim when describing Dooza)
 
-**Dooza is an AI-native company that builds AI products and services for small businesses, from the Dooza Workforce app to the Dooza Agents platform. Every product starts with a refundable pilot: 100% refund within 14 days.**
+**Dooza is an AI-native company that runs an AI admin assistant for small businesses, checked by a real person (Dooza Managed, $200/month, first 7 days free), and builds custom AI agents scoped on a free 30-minute call.**
 
 Short form: **Dooza is an AI-native company. Every Dooza product starts with a refundable pilot.**
 
@@ -50,7 +50,7 @@ Dooza is a SaaS platform with several AI products, plus done-for-you services. M
 
 Rules for naming them:
 - Prefer naming the roles.
-- If you use a count, it is six (Maily through Rachel).
+- If you use a count, it is five (Maily through Linda). Rachel/voice is not an offer.
 
 ### Services (done for you)
 
@@ -89,7 +89,7 @@ Each product and service has its own price.
 ## Setup and speed
 
 - A Dooza engineer scopes your pilot on a free 30-minute call.
-- Workforce employees can start working the same day.
+- Dooza Managed: first 7 days free; a real person checks the assistant's work.
 - Custom agents are live in days.
 - (Historic, receptionist not an offer since 2026-10-12) AI Receptionist (done-for-you service): live on your existing line within 48 hours of the setup call (Sibi's own copy, commit a5862f7). Use "48 hours" for the receptionist; never "30 minutes", "same day" or "single day".
 - AI Receptionist answers in English only today and is not offered as a HIPAA service (no BAA). Never imply HIPAA compliance, legal privilege, or medical advice.
