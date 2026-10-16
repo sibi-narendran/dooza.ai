@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
-import { CONTACT_EMAIL } from '@/lib/contact';
+import { REPLY_EMAIL } from '@/lib/contact';
 import { NOTARY_RENEWAL_PAY_URL } from '@/lib/offers';
 
 // Texas notary renewal offer page (Odysseus 2026-10-16 02:15; facts: icp_factory/FACTCHECK_2026-10-15 + SOS pages checked 10-16).
@@ -14,7 +14,7 @@ const TITLE = 'Texas Notary Renewal Checklist: First One Free';
 const DESCRIPTION = 'Texas notary commission expiring? We send a step-by-step renewal checklist with your dates: education course, surety bond, SOSPortal application and oath. First renewal free, then $20.';
 const UPDATED_LABEL = 'October 16, 2026';
 const BOOK = '/book?utm_source=website&utm_medium=cta&utm_campaign=booking&utm_content=texas-notary-renewal';
-const START = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Free notary renewal')}&body=${encodeURIComponent('Name as on your commission:\nCommission expiry date:\nOther notaries in your office renewing soon (optional):')}`;
+const START = `mailto:${REPLY_EMAIL}?subject=${encodeURIComponent('Free notary renewal')}&body=${encodeURIComponent('Name as on your commission:\nCommission expiry date:\nOther notaries in your office renewing soon (optional):')}`;
 
 const STEPS = [
     ['1. Education requirement', 'Complete the notary education requirement through the SOS Notary Portal. We tell you where to find it and when to do it.'],
@@ -166,7 +166,7 @@ export default function TexasNotaryRenewalPage() {
                         <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
                             <h2 className="text-2xl font-bold text-slate-900">Start your free renewal</h2>
                             <p className="mt-2 text-slate-700">
-                                Email <a href={START} className="font-semibold text-primary-700 underline">{CONTACT_EMAIL}</a> with your name and commission expiry date, or book a free 30-minute call.
+                                Email <a href={START} className="font-semibold text-primary-700 underline">{REPLY_EMAIL}</a> with your name and commission expiry date, or book a free 30-minute call.
                             </p>
                             <div className="mt-5">
                                 <Cta />

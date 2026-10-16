@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
-import { CONTACT_EMAIL } from '@/lib/contact';
+import { REPLY_EMAIL } from '@/lib/contact';
 
 // CPA 1099 offer page (Odysseus card /home/odysseus/learned/knowledge/offers/CPA_WORK_1099_2026-10-15.md).
 // Reply-stage page: Orion links it after a yes; not linked in cold email 1. Truth rules: no client counts, no testimonials, we prepare, the firm files.
@@ -13,7 +13,7 @@ const TITLE = '1099-NEC Prep for CPA Firms: First Client Free';
 const DESCRIPTION = 'For CPA and EA firms: send two QuickBooks reports, get back who needs a 1099-NEC under the new $2,000 rule, who is missing a W-9, and ready-to-send W-9 requests. First client free, then $99 per client.';
 const UPDATED_LABEL = 'October 16, 2026';
 const BOOK = '/book?utm_source=website&utm_medium=cta&utm_campaign=booking&utm_content=1099-prep-for-cpa-firms';
-const START = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Free 1099 client')}&body=${encodeURIComponent('Firm name:\nYour name:\nClient (nickname is fine):\n\nAttach: Vendor Contact List + Transaction List by Vendor (2026 year to date), Tax ID column removed.')}`;
+const START = `mailto:${REPLY_EMAIL}?subject=${encodeURIComponent('Free 1099 client')}&body=${encodeURIComponent('Firm name:\nYour name:\nClient (nickname is fine):\n\nAttach: Vendor Contact List + Transaction List by Vendor (2026 year to date), Tax ID column removed.')}`;
 
 const RETURNS = [
     ['Who likely needs a 1099-NEC', 'Each vendor paid $2,000 or more for services in 2026, with the total and the payments behind it.'],
@@ -195,7 +195,7 @@ export default function Cpa1099Page() {
                         <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
                             <h2 className="text-2xl font-bold text-slate-900">Start with one client</h2>
                             <p className="mt-2 text-slate-700">
-                                Email the two reports to <a href={START} className="font-semibold text-primary-700 underline">{CONTACT_EMAIL}</a> with “Free 1099 client” in the subject, or book a free 30-minute call first.
+                                Email the two reports to <a href={START} className="font-semibold text-primary-700 underline">{REPLY_EMAIL}</a> with “Free 1099 client” in the subject, or book a free 30-minute call first.
                             </p>
                             <div className="mt-5">
                                 <Cta label="Book a call first" />
