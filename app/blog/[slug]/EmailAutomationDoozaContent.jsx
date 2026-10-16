@@ -40,7 +40,7 @@ const faqData = [
     },
     {
         question: 'How is Dooza different from Mailchimp or ActiveCampaign?',
-        answer: 'Mailchimp and ActiveCampaign are primarily campaign and sequence tools. Dooza is an AI-native company that builds AI products and services for small businesses, including Maily in the Dooza Workforce app. Instead of only sending preset campaigns, Dooza can understand context, draft replies, follow up with leads, and coordinate email with sales, social, SEO, and phone workflows.'
+        answer: 'Mailchimp and ActiveCampaign are primarily campaign and sequence tools. Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant that handles email and admin work. Instead of only sending preset campaigns, Dooza can understand context, draft replies, follow up with leads, and coordinate email with sales, social, SEO, and phone workflows.'
     },
     {
         question: 'Can Dooza automate email follow-ups?',
@@ -395,7 +395,7 @@ export default function EmailAutomationDoozaContent() {
                                     {
                                         icon: DollarSign,
                                         title: '3. Pricing is easier to understand',
-                                        desc: 'Email platforms often become more expensive as contacts, seats, or advanced features increase. Dooza pricing depends on the product, every product starts with a refundable pilot (100% refund within 14 days), and the Workforce app includes AI employees beyond email, which makes the total value stronger.'
+                                        desc: 'Email platforms often become more expensive as contacts, seats, or advanced features increase. Dooza pricing depends on the product, every product starts with a refundable pilot (100% refund within 14 days), and Dooza Managed covers admin work beyond email, which makes the total value stronger.'
                                     },
                                     {
                                         icon: ShieldCheck,

@@ -64,7 +64,7 @@ const faqData = [
     },
     {
         question: "Is Perplexity Computer better than Dooza for business?",
-        answer: "They solve different problems. Perplexity Computer is a general-purpose agent you direct: you set the objectives and any scheduled tasks. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Workforce app gives you role-specific AI employees for email, social media, SEO, sales, legal documents and phone calls, configured for you by Dooza engineers. Pick Perplexity if you want to run your own agent; pick Dooza if you want those roles handled for you."
+        answer: "They solve different problems. Perplexity Computer is a general-purpose agent you direct: you set the objectives and any scheduled tasks. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Managed plan gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. Pick Perplexity if you want to run your own agent; pick Dooza if you want those roles handled for you."
     },
     {
         question: "Does Dooza answer phone calls?",
@@ -377,7 +377,7 @@ export default function PerplexityComputerVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza Workforce gives you <strong>role-specific AI employees</strong> that handle specific business functions. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and daily routines.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot. Dooza Managed gives you <strong>an AI admin assistant, checked by a real person</strong>, for email and admin work. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and daily routines.
                                 </p>
                                 <p>
                                     Each AI employee runs in the cloud on routines a Dooza engineer sets up with you during the pilot. You don't write prompts or design workflows. They do their job and report back, with your approval on anything sensitive.
@@ -502,7 +502,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Type", perplexity: "Multi-model AI agent", dooza: "Done-for-you AI employees (Dooza Workforce)" },
+                                            { feature: "Type", perplexity: "Multi-model AI agent", dooza: "AI admin assistant checked by a real person (Dooza Managed)" },
                                             { feature: "AI Models Used", perplexity: "Several frontier models; you can choose models for subtasks", dooza: "Chosen and managed by Dooza" },
                                             { feature: "Runs On", perplexity: "Perplexity cloud sandbox", dooza: "Cloud" },
                                             { feature: "Who Sets Up the Work", perplexity: "You (objectives and scheduled tasks)", dooza: "Dooza engineers, with you" },

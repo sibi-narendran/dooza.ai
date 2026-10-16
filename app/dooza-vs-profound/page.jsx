@@ -78,7 +78,7 @@ const faqData = [
     },
     {
         question: 'How much does Dooza cost?',
-        answer: 'Pricing depends on the product; every Dooza product starts with a refundable pilot — 100% refund within 14 days. Ranky is part of Dooza Workforce, and if you want engineers to build a custom agent with you, that runs on Dooza Agents. Current plans are listed at dooza.ai/pricing, and a free 30-minute call scopes your pilot.',
+        answer: 'Pricing depends on the product; every Dooza product starts with a refundable pilot — 100% refund within 14 days. If you want engineers to build a custom AI agent with you, Dooza builds and maintains it. Current plans are listed at dooza.ai/pricing, and a free 30-minute call scopes your pilot.',
     },
     {
         question: 'Does Dooza have SOC 2 like Profound?',

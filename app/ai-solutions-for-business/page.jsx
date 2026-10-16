@@ -54,7 +54,7 @@ const faqData = [
     },
     {
         question: 'What is the best AI tool for business in 2026?',
-        answer: 'It depends on your needs. For all-in-one AI employees: Dooza Workforce. For email marketing: Mailchimp or Klaviyo. For SEO: Semrush (from $139/mo, checked Oct 2026). For customer support: Intercom. For project management: ClickUp with AI. For the best value across multiple functions, an all-in-one platform eliminates the cost and complexity of managing separate tools.',
+        answer: 'It depends on your needs. For email and admin work checked by a real person: Dooza Managed. For email marketing: Mailchimp or Klaviyo. For SEO: Semrush (from $139/mo, checked Oct 2026). For customer support: Intercom. For project management: ClickUp with AI. For the best value across multiple functions, an all-in-one platform eliminates the cost and complexity of managing separate tools.',
     },
     {
         question: 'Is AI worth it for small businesses?',

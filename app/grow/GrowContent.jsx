@@ -82,7 +82,7 @@ const industries = [
     { name: 'Legal', line: 'Intake calls qualified before they reach an attorney', href: '/industries/law-firms' },
     { name: 'Real Estate', line: 'Every buyer and seller lead followed up in minutes', href: '/industries/real-estate' },
     { name: 'Insurance & Finance', line: 'Quote requests captured and routed the same day', href: '/industries/insurance-agents' },
-    { name: 'Software & Agencies', line: 'Pipeline from AI search, content and paid campaigns', href: '/workforce' },
+    { name: 'Software & Agencies', line: 'Pipeline from AI search, content and paid campaigns', href: '/pricing' },
 ];
 
 const integrations = ['Google Ads', 'Meta Ads', 'Google Business Profile', 'WordPress', 'Shopify', 'Wix', 'Webflow', 'Google Calendar', 'HubSpot', 'Close CRM', 'Calendly', 'ChatGPT', 'Perplexity', 'Gemini'];

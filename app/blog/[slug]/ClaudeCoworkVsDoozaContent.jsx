@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: "How is Dooza different from Claude Cowork?",
-        answer: "Claude Cowork is a general-purpose agent you direct yourself: you describe tasks, connect your apps and set up any schedules. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Workforce app gives you role-specific AI employees for email, social media, SEO, sales, legal documents and phone calls, set up for you by Dooza engineers. Every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "Claude Cowork is a general-purpose agent you direct yourself: you describe tasks, connect your apps and set up any schedules. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Managed plan gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. Every Dooza product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Can Claude Cowork run tasks while I sleep?",
@@ -348,7 +348,7 @@ export default function ClaudeCoworkVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is an AI-native company that builds AI products and services for small businesses. Its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app gives you <strong>purpose-built AI employees</strong> that handle specific business functions autonomously, and <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza Agents</Link> is its AI agentic platform for custom agents. Not a general-purpose agent you have to direct. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses. Its <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza Managed</Link> plan gives you <strong>an AI admin assistant, checked by a real person</strong>, and Dooza engineers build <Link href="/book" className="text-primary-600 hover:underline font-medium">custom AI agents</Link>. Not a general-purpose agent you have to direct. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows.
                                 </p>
                                 <p>
                                     Each AI employee runs in the cloud on routines a Dooza engineer sets up with you during the pilot. They do their job and report back, with your approval on anything sensitive.
@@ -473,7 +473,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Type", cowork: "General-purpose AI agent (part of Claude)", dooza: "Done-for-you AI employees (Dooza Workforce)" },
+                                            { feature: "Type", cowork: "General-purpose AI agent (part of Claude)", dooza: "AI admin assistant checked by a real person (Dooza Managed)" },
                                             { feature: "Runs On", cowork: "Desktop app, web and mobile (beta); new Pro/Max tasks run in the cloud", dooza: "Cloud" },
                                             { feature: "Works When PC Off?", cowork: "Yes — scheduled tasks run in the cloud", dooza: "Yes" },
                                             { feature: "Who Sets Up the Work", cowork: "You", dooza: "Dooza engineers, with you" },

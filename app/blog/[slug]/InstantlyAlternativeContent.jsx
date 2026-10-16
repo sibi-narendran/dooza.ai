@@ -200,7 +200,7 @@ export default function InstantlyAlternativeContent() {
                                     Instantly.ai is popular because it solves outbound well. It helps teams connect email accounts, warm inboxes, find leads in a 450M+ B2B database, send campaigns, manage replies, call and SMS from its CRM, and test deliverability. It also sells done-for-you email setup. For outbound teams, that is valuable.
                                 </p>
                                 <p>
-                                    Many small businesses need more than outbound: answer replies, publish content, post on social, answer the phone, and keep customers moving. That is where <strong>Dooza</strong> fits. Dooza is an AI-native company; its Workforce app gives you specialist AI employees, and Dooza engineers set them up with you.
+                                    Many small businesses need more than outbound: answer replies, publish content, post on social, and keep customers moving. That is where <strong>Dooza</strong> fits. Dooza is an AI-native company; its Managed plan gives you an AI admin assistant, checked by a real person, and Dooza engineers build custom AI agents with you.
                                 </p>
                             </div>
 
@@ -275,7 +275,7 @@ export default function InstantlyAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Dooza: The Done-for-You Alternative to Instantly.ai</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days. Instead of asking you to assemble a stack of tools, Dooza engineers set up specialist AI employees that own business functions.
+                                    <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot. Instead of asking you to assemble a stack of tools, Dooza engineers set up specialist AI employees that own business functions.
                                 </p>
                                 <p>
                                     That is the key difference. Instantly helps you run outbound. Dooza runs the work around it, with your approval on anything sensitive. Your sales AI employee can follow up. Your email AI employee can manage replies. Your SEO AI employee can publish content that makes prospects trust you. Your social AI employee can distribute ideas. Your receptionist can answer the phone when leads call.
@@ -363,7 +363,7 @@ export default function InstantlyAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Relevant YouTube Video: See Dooza&apos;s AI Employees in Action</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    This comparison is easier to understand when you see the category difference. Instantly is an outbound platform. Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days. Watch how Dooza&apos;s AI employees handle business work beyond outbound campaigns.
+                                    This comparison is easier to understand when you see the category difference. Instantly is an outbound platform. Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot. Watch how Dooza&apos;s AI employees handle business work beyond outbound campaigns.
                                 </p>
                             </div>
                             <YouTubeEmbed videoId="NgBAXFK6nk4" title="AI Era with DOOZA.AI" />

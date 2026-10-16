@@ -363,7 +363,7 @@ export default function DoozaItAndResellContent() {
                                     Freelancers tired of trading hours for dollars. Side-hustlers who want recurring revenue instead of one-off gigs. Existing agencies who are bleeding margin on junior staff. Operators who like sales but hate execution.
                                 </p>
                                 <p>
-                                    If that&apos;s you, the reel wasn&apos;t a hype clip — it was a memo. The tools to run a one-person agency that looks like a ten-person one already exist. Dooza is an AI-native company that builds AI products and services for small businesses, and its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app is one of them. Hamza just told you out loud.
+                                    If that&apos;s you, the reel wasn&apos;t a hype clip — it was a memo. The tools to run a one-person agency that looks like a ten-person one already exist. Dooza is an AI-native company that builds AI products and services for small businesses, and its <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza Managed</Link> plan is one of them. Hamza just told you out loud.
                                 </p>
                                 <p>
                                     Don&apos;t do it. <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza it</Link>. Sell it to other people.

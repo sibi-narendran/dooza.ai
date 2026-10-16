@@ -52,7 +52,7 @@ const organizationSchema = {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description:
-        'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days.',
+        'Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot.',
     email: 'support@dooza.ai',
     telephone: '+1-424-365-8980',
     foundingDate: '2025',

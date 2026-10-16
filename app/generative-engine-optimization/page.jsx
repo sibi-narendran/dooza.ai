@@ -62,7 +62,7 @@ const faqData = [
     {
         question: 'How much do GEO services from Dooza cost?',
         answer:
-            'Pricing depends on the product, and every Dooza product starts with a refundable pilot — 100% refund within 14 days. Ranky is part of Dooza Workforce; a Dooza engineer scopes your pilot on a free 30-minute call. There are no long-term contracts, and current plans are listed at dooza.ai/pricing.',
+            'Pricing depends on the product, and every Dooza product starts with a refundable pilot — 100% refund within 14 days. A Dooza engineer scopes your pilot on a free 30-minute call. There are no long-term contracts, and current plans are listed at dooza.ai/pricing.',
     },
     {
         question: 'Is GEO different from SEO?',

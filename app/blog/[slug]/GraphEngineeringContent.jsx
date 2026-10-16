@@ -551,7 +551,7 @@ export default function GraphEngineeringContent() {
                             </div>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    This is precisely how we build <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline">AI employees at Dooza</Link>: each one has a defined role with measurable outcomes (posts published, calls answered, leads followed up), operates inside bounded permissions, asks for your approval on anything sensitive, and reports what it did so you can verify it. It's the Karpathy loop philosophy - verifiable, reversible, bounded, recorded - packaged so you never touch a Git repo. See it in action on the <Link href="/workforce" className="text-primary-600 hover:underline">Dooza Workforce platform</Link>, or read our guide on how to <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline">automate business processes</Link> with the same principles.
+                                    This is precisely how we build <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline">AI employees at Dooza</Link>: each one has a defined role with measurable outcomes (posts published, calls answered, leads followed up), operates inside bounded permissions, asks for your approval on anything sensitive, and reports what it did so you can verify it. It's the Karpathy loop philosophy - verifiable, reversible, bounded, recorded - packaged so you never touch a Git repo. Dooza engineers can build this for you: <Link href="/book" className="text-primary-600 hover:underline">book a free 30-minute call</Link>, or read our guide on how to <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline">automate business processes</Link> with the same principles.
                                 </p>
                             </div>
 
@@ -645,7 +645,7 @@ export default function GraphEngineeringContent() {
                                     The durable lesson isn't "use more agents." It's that <strong>progress came from engineering the environment</strong>: verifiable metrics, reversible actions, short feedback loops, bounded permissions, and memory that lives outside the context window. Loops, swarms, DAGs, and knowledge graphs are just increasingly sophisticated ways of placing that memory and evaluation.
                                 </p>
                                 <p>
-                                    For most businesses, the winning move is to skip the infrastructure and apply the philosophy directly: pick work with measurable outcomes, give it to <Link href="/workforce" className="text-primary-600 hover:underline">AI employees</Link> that operate inside guardrails, and verify results on a short cycle. That's the Karpathy loop, productized - and it's available today, no GPU required.
+                                    For most businesses, the winning move is to skip the infrastructure and apply the philosophy directly: pick work with measurable outcomes, give it to <Link href="/pricing" className="text-primary-600 hover:underline">AI employees</Link> that operate inside guardrails, and verify results on a short cycle. That's the Karpathy loop, productized - and it's available today, no GPU required.
                                 </p>
                             </div>
                         </section>

@@ -48,7 +48,7 @@ const faqData = [
     },
     {
         question: "How does Dooza relate to OpenClaw?",
-        answer: "OpenClaw is an open-source AI agent framework you can self-host. Dooza is a managed alternative to self-hosting OpenClaw: instead of running servers, scheduling, security, and a dashboard yourself, you get ready-made AI employees in Dooza Workforce, the AI workforce app, or custom agents on Dooza Agents, the AI agentic platform. Nothing to build or maintain yourself."
+        answer: "OpenClaw is an open-source AI agent framework you can self-host. Dooza is a managed alternative to self-hosting OpenClaw: instead of running servers, scheduling, security, and a dashboard yourself, you get an AI admin assistant from Dooza Managed, checked by a real person, or custom AI agents built and maintained by Dooza engineers. Nothing to build or maintain yourself."
     },
     {
         question: "Do I need technical skills to use AI employees?",
@@ -243,7 +243,7 @@ export default function BuildA20xCompanyContent() {
                                         <div>
                                             <h4 className="font-bold text-slate-900 mb-2">Dooza's Mission</h4>
                                             <p className="text-slate-700">
-                                                Dooza is an AI-native company that builds AI products and services for small businesses. Dooza Workforce packages <strong>ready-to-deploy AI employees</strong> for any business, a managed alternative to self-hosting open-source agent frameworks like OpenClaw. No engineering team. No YC backing required. Six AI employees, starting with a refundable pilot.
+                                                Dooza is an AI-native company that builds AI products and services for small businesses. Dooza Managed gives you <strong>an AI admin assistant checked by a real person</strong>, a managed alternative to self-hosting open-source agent frameworks like OpenClaw. No engineering team. No YC backing required. For bigger jobs, Dooza engineers build custom AI agents, starting with a refundable pilot.
                                             </p>
                                         </div>
                                     </div>
@@ -475,7 +475,7 @@ export default function BuildA20xCompanyContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">How Dooza Delivers 20X to Every Business</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza Workforce gives you pre-built AI employees that any business can deploy, fully managed, so you never self-host an agent framework like OpenClaw. No custom engineering. No months of R&D. Here's how Dooza's AI employees map to the exact strategies YC companies are using:
+                                    Dooza Managed gives you an AI admin assistant that is fully managed and checked by a real person, so you never self-host an agent framework like OpenClaw. No custom engineering. No months of R&D. Here's how AI employees map to the exact strategies YC companies are using:
                                 </p>
                             </div>
 

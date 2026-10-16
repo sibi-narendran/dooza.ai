@@ -43,7 +43,7 @@ const faqData = [
     },
     {
         question: "What is a good Moltbot (OpenClaw) alternative for businesses?",
-        answer: "It depends on what you want to avoid. If you don't want to host and maintain an agent yourself, Dooza is a managed alternative to self-hosting OpenClaw: Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app gives you ready-made AI employees for email, social media, SEO, sales, legal documents and phone calls, set up by Dooza engineers. ChatGPT or Claude suit people who want a general-purpose assistant they direct; Zapier suits people who want to build app-to-app automations; Reclaim or Motion suit calendar and project planning. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "It depends on what you want to avoid. If you don't want to host and maintain an agent yourself, Dooza is a managed alternative to self-hosting OpenClaw: Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Managed plan gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. ChatGPT or Claude suit people who want a general-purpose assistant they direct; Zapier suits people who want to build app-to-app automations; Reclaim or Motion suit calendar and project planning. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Why consider alternatives to self-hosting OpenClaw?",
@@ -67,7 +67,7 @@ const alternatives = [
     {
         name: "Dooza",
         tagline: "Managed AI Employees for Business",
-        description: "Dooza is a managed alternative to self-hosting OpenClaw. Its Dooza Workforce app gives you ready-made AI employees for email, social media, SEO, sales, legal documents and phone calls, set up and maintained by Dooza engineers, with encrypted connections and your approval on anything sensitive.",
+        description: "Dooza is a managed alternative to self-hosting OpenClaw. Its Dooza Managed plan gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call.",
         price: "Refundable pilot",
         priceNote: "100% refund within 14 days",
         pros: [

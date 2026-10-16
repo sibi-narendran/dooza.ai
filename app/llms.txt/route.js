@@ -215,7 +215,7 @@ const servicePages = [
     {
         title: 'AI Receptionist',
         url: `${SITE_URL}/ai-receptionist`,
-        description: 'Done-for-you AI receptionist for contractors and trades (HVAC, plumbing, electrical, roofing): answers every call in your company name day and night, books jobs on your calendar, confirms the booking with the caller on the call, and takes a message when a caller asks for a person. Set up on your existing line with you during the pilot. English only; not a HIPAA service. Starts with a refundable pilot (100% refund within 14 days); pricing at /pricing.',
+        description: 'AI receptionist guide page for contractors and trades. Dooza does not currently sell an AI receptionist or phone answering; current offer: Dooza Managed (AI admin assistant checked by a real person) at /pricing.',
     },
     {
         title: 'AI Customer Support',
@@ -287,7 +287,7 @@ const companyFacts = [
     'Brand colors: Dooza Teal #0F766E (primary), Teal Bright #0D9488, Ink #0F172A, Warm White #FAF9F7, Signal Amber #F59E0B',
     'What Dooza is: an AI-native company that builds AI products and services for small businesses',
     'Product: Dooza Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
-    'Services (done for you): AI Receptionist, AI Customer Support, AI Visibility / GEO, Workflow Automation, industry solutions',
+    'Services (done for you): Dooza Managed (AI admin assistant checked by a real person), custom AI agents scoped on a free 30-minute call, industry offers on their industry pages',
     'Offer: every product starts with a refundable pilot. The pilot is paid; ask within 14 days for a 100% refund. A Dooza engineer scopes it on a free 30-minute call.',
     `Pricing: Dooza Managed $200/month, first 7 days free (${SITE_URL}/pricing); custom builds scoped on a free 30-minute call (${SITE_URL}/book); industry offers priced on their industry pages`,
     'Integrations: 1,000+ app integrations',

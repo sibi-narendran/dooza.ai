@@ -379,7 +379,7 @@ export default function CutCostsFunnel() {
                             <h2 className="mt-4 text-[1.9rem] font-extrabold leading-tight text-slate-900">Thanks!</h2>
                             <p className="mt-2 text-lg text-slate-600">We&apos;ll text you soon.</p>
                             <Link
-                                href="/workforce"
+                                href="/pricing"
                                 className="mt-7 flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-primary-600 bg-white px-6 py-4 text-lg font-bold text-primary-700 transition active:scale-[0.97]"
                             >
                                 Meet your AI team <ArrowRight className="h-5 w-5" />

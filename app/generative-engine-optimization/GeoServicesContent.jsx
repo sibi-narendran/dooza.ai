@@ -593,7 +593,7 @@ export default function GeoServicesContent({ faqData }) {
                         </ScrollReveal>
                         <div className="grid gap-6 md:grid-cols-2">
                             <div className="rounded-2xl border border-primary-400/20 bg-primary-500/10 p-8">
-                                <p className="mb-2 text-sm font-bold uppercase tracking-wider text-primary-300">Ranky on Dooza Workforce</p>
+                                <p className="mb-2 text-sm font-bold uppercase tracking-wider text-primary-300">AI visibility with Dooza</p>
                                 <div className="mb-1 text-3xl font-bold text-white">Refundable pilot</div>
                                 <p className="mb-5 text-sm text-slate-400">100% refund within 14 days. Pricing depends on the product — see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.</p>
                                 <ul className="space-y-2.5 text-sm">

@@ -57,7 +57,7 @@ const faqData = [
     },
     {
         question: "Is Dooza good for solopreneurs?",
-        answer: "Dooza is an AI-native company that builds AI products and services for small businesses, including solopreneurs who need AI automation without technical complexity. The Dooza Workforce app gives you pre-built AI employees for email, social media, SEO, sales, and more. Unlike building your own tool stack or using developer-focused platforms like MoltBot, Dooza requires no coding, no integrations, and no maintenance—making it ideal for one-person businesses. Every Dooza product starts with a refundable pilot — 100% refund within 14 days."
+        answer: "Dooza is an AI-native company that builds AI products and services for small businesses, including solopreneurs who need AI automation without technical complexity. Dooza Managed gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. Unlike building your own tool stack or using developer-focused platforms like MoltBot, Dooza requires no coding, no integrations, and no maintenance—making it ideal for one-person businesses. Every Dooza product starts with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "How much time can AI tools save solopreneurs?",

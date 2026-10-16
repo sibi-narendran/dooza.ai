@@ -59,7 +59,7 @@ const faqData = [
     },
     {
         question: "What are the best alternatives to OpenClaw?",
-        answer: "For non-technical users and businesses, Dooza is a managed alternative to self-hosting OpenClaw, with similar automation capabilities (email, social media, SEO, content creation) without the security risks, technical complexity, or unpredictable API bills. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Workforce app provides pre-built AI employees with encrypted connections and your approval on anything sensitive, and every product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "For non-technical users and businesses, Dooza is a managed alternative to self-hosting OpenClaw, with similar automation capabilities (email, social media, SEO, content creation) without the security risks, technical complexity, or unpredictable API bills. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Managed plan gives you an AI admin assistant, checked by a real person, Dooza engineers build custom AI agents, and every product starts with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Why did ClawdBot change its name to OpenClaw?",

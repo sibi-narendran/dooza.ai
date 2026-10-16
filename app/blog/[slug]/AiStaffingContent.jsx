@@ -40,7 +40,7 @@ const faqData = [
     },
     {
         question: "How much does AI staffing cost compared to hiring?",
-        answer: "Traditional hiring means recruiting costs, salary, benefits, payroll taxes, equipment and training for every role, and the bill grows with each person you add. Dooza Workforce, the AI workforce app from Dooza, covers email, social, phones, lead generation, SEO and legal documents with AI employees instead. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Traditional hiring means recruiting costs, salary, benefits, payroll taxes, equipment and training for every role, and the bill grows with each person you add. Dooza Managed gives you an AI admin assistant for email and admin work, checked by a real person, instead, and Dooza engineers build custom AI agents for bigger jobs. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Can AI employees really replace human workers?",

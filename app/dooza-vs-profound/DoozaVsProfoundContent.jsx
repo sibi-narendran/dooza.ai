@@ -275,7 +275,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
                                 <div className="bg-primary-500/10 backdrop-blur-sm border border-primary-400/20 rounded-2xl p-8">
                                     <p className="text-primary-300 font-bold text-sm uppercase tracking-wider mb-2">Dooza</p>
                                     <div className="text-3xl font-bold text-white mb-1">Refundable pilot</div>
-                                    <p className="text-sm text-slate-400 mb-5">Ranky on Dooza Workforce. Pricing depends on the product — <Link href="/pricing" className="underline text-primary-300">see /pricing</Link>.</p>
+                                    <p className="text-sm text-slate-400 mb-5">AI visibility with Dooza. Pricing depends on the product — <Link href="/pricing" className="underline text-primary-300">see /pricing</Link>.</p>
                                     <ul className="space-y-2.5 text-sm">
                                         {[
                                             'Ranky: SEO + GEO in one AI employee',

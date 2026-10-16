@@ -56,8 +56,8 @@ const colors = [
 ];
 
 const boilerplate = {
-    oneLiner: 'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days.',
-    paragraph: 'Dooza is an AI-native company that builds AI products and services for small businesses. Dooza Workforce is an AI workforce app with ready-made AI employees for email, social media, SEO, leads, legal documents, and calls. Dooza Agents is an AI agentic platform with custom AI agents built and maintained by Dooza engineers. Dooza also runs done-for-you services, including AI receptionist, AI customer support, AI visibility (GEO), and workflow automation. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza.ai is a product of Adam Laboratory Inc., a Delaware C-Corporation.',
+    oneLiner: 'Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot.',
+    paragraph: 'Dooza is an AI-native company that builds AI products and services for small businesses. Dooza Managed is an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free. Dooza also builds custom AI agents, maintained by Dooza engineers and scoped on a free 30-minute call. Dooza also runs done-for-you services, including AI customer support, AI visibility (GEO), and workflow automation. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza.ai is a product of Adam Laboratory Inc., a Delaware C-Corporation.',
 };
 
 function SectionTitle({ children, sub }) {
@@ -80,7 +80,7 @@ const brandSchema = {
         legalName: 'Adam Laboratory Inc.',
         url: SITE_URL,
         logo: `${SITE_URL}/brand/dooza-icon.png`,
-        description: 'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days.',
+        description: 'Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot.',
         foundingDate: '2025',
         founder: { '@type': 'Person', name: 'Sibi Narendran', url: 'https://twitter.com/sibinarendran' },
         email: 'support@dooza.ai',
@@ -202,9 +202,9 @@ export default function BrandPage() {
                         </SectionTitle>
                         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Workforce</h3>
-                                <p className="mt-1 text-sm leading-relaxed text-slate-600">AI workforce app: ready-made AI employees for email, social, SEO, leads, and calls. Starts with a refundable pilot.</p>
-                                <Link href="/workforce" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai/workforce →</Link>
+                                <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Managed</h3>
+                                <p className="mt-1 text-sm leading-relaxed text-slate-600">AI admin assistant for email and admin work, checked by a real person. First 7 days free.</p>
+                                <Link href="/pricing" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai/pricing →</Link>
                             </div>
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
                                 <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Agents</h3>

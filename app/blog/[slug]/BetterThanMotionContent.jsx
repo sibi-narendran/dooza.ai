@@ -36,7 +36,7 @@ import {
 const faqData = [
     {
         question: "Is Dooza really better than Motion for AI employees?",
-        answer: "It depends on the job. Motion is an AI calendar and project manager (auto-planned days, AI project management, docs and workflows). Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app is purpose-built for AI employees that handle real business tasks—email, social media, calls, sales, and more—24/7 without you needing to manage a calendar."
+        answer: "It depends on the job. Motion is an AI calendar and project manager (auto-planned days, AI project management, docs and workflows). Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Managed plan gives you an AI admin assistant, checked by a real person, for email and admin work, so you don't have to manage a calendar yourself."
     },
     {
         question: "Can I customize AI employees in Dooza?",
@@ -452,7 +452,7 @@ export default function BetterThanMotionContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">The Verdict</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Motion is an AI calendar and project manager. Dooza is an AI-native company that builds AI products and services for small businesses, and its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app is a <strong>purpose-built AI workforce</strong> that integrates with your existing calendar.
+                                    Motion is an AI calendar and project manager. Dooza is an AI-native company that builds AI products and services for small businesses, and its <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza Managed</Link> plan gives you <strong>an AI admin assistant, checked by a real person</strong>, for email and admin work.
                                 </p>
                                 <p>
                                     If you want AI that can actually execute tasks autonomously—sending emails, posting to social media, making phone calls, generating leads—Dooza is built for that. If you want your time planned, Motion is.

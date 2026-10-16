@@ -67,7 +67,7 @@ const faqData = [
     },
     {
         question: "Is Dooza an alternative to self-hosting OpenClaw?",
-        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Workforce app is a managed alternative to self-hosting OpenClaw. Dooza runs and maintains the AI employees for you, with encrypted connections and your approval on anything sensitive."
+        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Managed plan is a managed alternative to self-hosting OpenClaw. Dooza runs and maintains an AI admin assistant for you, and a real person checks its work."
     },
     {
         question: "What if I want to customize my AI employees?",
@@ -443,7 +443,7 @@ export default function OpenclawVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days. Instead of hosting an agent yourself, you get AI employees that Dooza engineers set up and run for you.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot. Instead of hosting an agent yourself, you get AI employees that Dooza engineers set up and run for you.
                                 </p>
                             </div>
 

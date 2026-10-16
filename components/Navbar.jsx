@@ -92,7 +92,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     }, [isOpen]);
 
     const products = [
-        { name: 'Dooza Workforce', href: '/workforce' },
+        { name: 'Dooza Managed', href: '/pricing' },
         { name: 'Dooza Agents', href: '/' },
     ];
 

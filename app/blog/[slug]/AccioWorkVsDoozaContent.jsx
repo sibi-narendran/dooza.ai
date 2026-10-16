@@ -362,7 +362,7 @@ export default function AccioWorkVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is an AI-native company that builds AI products and services for small businesses. Its <Link href="/workforce" className="text-primary-600 hover:underline font-medium">Dooza Workforce</Link> app gives you <strong>purpose-built AI employees</strong> that handle specific business functions autonomously. Not a sourcing tool. Not a desktop agent. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows — for any industry.
+                                    Dooza is an AI-native company that builds AI products and services for small businesses. Its <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza Managed</Link> plan gives you <strong>an AI admin assistant, checked by a real person</strong>, for email and admin work. Not a sourcing tool. Not a desktop agent. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and workflows — for any industry.
                                 </p>
                                 <p>
                                     Each AI employee runs in the cloud 24/7. They don't need your computer. They don't need you to assign tasks. They wake up, do their job, and report back — just like a real employee.

@@ -767,7 +767,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                                     Every problem in this article is one we hit while experimenting with OpenClaw. If you&apos;d rather not solve them yourself, <strong>Dooza</strong> is a managed alternative to self-hosting OpenClaw. Dooza is an AI-native company that builds AI products and services for small businesses.
                                 </p>
                                 <p>
-                                    With <Link href="/workforce" className="text-primary-600 hover:underline">Dooza Workforce</Link>, businesses hire AI employees that work as a team. Social media. Customer support. SEO. Business development. Each agent with its own workspace. Real-time chat. Scheduled tasks. No-code tools.
+                                    With <Link href="/pricing" className="text-primary-600 hover:underline">Dooza Managed</Link>, a business gets an AI admin assistant, checked by a real person, and Dooza engineers build custom AI agents for bigger jobs.
                                 </p>
                                 <p>
                                     No servers to run, no tenancy to build, no security layers to wire up yourself. Encrypted connections and your approval on anything sensitive.

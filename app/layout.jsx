@@ -31,7 +31,7 @@ export const metadata = {
     default: 'Dooza | AI-Native Company: AI Workforce App & AI Agents Platform',
     template: '%s | Dooza',
   },
-  description: 'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days.',
+  description: 'Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot.',
   keywords: ['AI employees', 'AI employees for small business', 'forward deployed engineers', 'AI deployment services', 'AI agents', 'business automation', 'AI for small business', 'email automation', 'social media AI'],
   authors: [{ name: 'Dooza Team' }],
   creator: 'Dooza',
@@ -53,7 +53,7 @@ export const metadata = {
     url: 'https://www.dooza.ai',
     siteName: 'Dooza',
     title: 'Dooza | AI-Native Company: AI Workforce App & AI Agents Platform',
-    description: 'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days.',
+    description: 'Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot.',
     images: [
       {
         url: 'https://www.dooza.ai/logo.png',
@@ -68,7 +68,7 @@ export const metadata = {
     site: '@sibinarendran',
     creator: '@sibinarendran',
     title: 'Dooza | AI-Native Company: AI Workforce App & AI Agents Platform',
-    description: 'Dooza is an AI-native company: the Dooza Workforce app and the Dooza Agents platform. Every product starts with a refundable pilot — 100% refund within 14 days.',
+    description: 'Dooza is an AI-native company: Dooza Managed (an AI admin assistant checked by a real person, first 7 days free) and custom AI agents built by Dooza engineers.',
     images: ['https://www.dooza.ai/logo.png'],
   },
   alternates: {

@@ -46,7 +46,7 @@ const faqData = [
     },
     {
         question: 'What does it mean that Dooza is an AI-native company?',
-        answer: 'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. In the Workforce app, Maily, Somi, Ranky, Stan, and Rachel each own a business function across email, social, SEO, sales, and phone, and Dooza engineers set them up with you. Smartlead also now calls itself an AI-native operating system for sales teams; the difference is scope (outbound sales vs several business functions) and that Dooza does the setup with you.'
+        answer: 'Dooza is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you customer support and AI visibility services. Dooza Managed gives small businesses an AI admin assistant, checked by a real person, for email and admin work, and Dooza engineers set it up with you. Smartlead also now calls itself an AI-native operating system for sales teams; the difference is scope (outbound sales vs several business functions) and that Dooza does the setup with you.'
     },
     {
         question: 'Can Dooza replace Smartlead for cold outreach?',
@@ -231,7 +231,7 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                                     Smartlead has earned attention because it solves outbound well: sending cold email at scale across many inboxes while protecting deliverability. It includes campaign sequences, mailbox rotation, warmup, a master inbox, analytics, agency-friendly options, calling with SmartDialer, and done-for-you mailbox setup.
                                 </p>
                                 <p>
-                                    But outbound is only one slice of growth. Someone still has to publish content, post on social media, answer inbound calls, reply to customers, and move leads toward a booked conversation. That is where <strong>Dooza</strong> fits. Dooza is an AI-native company; its Workforce app gives you AI employees, and Dooza engineers set them up with you.
+                                    But outbound is only one slice of growth. Someone still has to publish content, post on social media, reply to customers, and move leads toward a booked conversation. That is where <strong>Dooza</strong> fits. Dooza is an AI-native company; its Managed plan gives you an AI admin assistant, checked by a real person, and Dooza engineers build custom AI agents with you.
                                 </p>
                             </div>
 
@@ -311,7 +311,7 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Dooza: The Done-for-You Alternative to Smartlead</h2>
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
-                                    <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> is an AI-native company that builds AI products and services for small businesses, from custom AI agents built and maintained by Dooza engineers to done-for-you AI receptionist, customer support and AI visibility services. Every product starts with a refundable pilot: 100% refund within 14 days. Instead of one campaign engine, Dooza engineers set up a workforce of AI employees that handle practical work across the business.
+                                    <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link> is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot. Instead of one campaign engine, Dooza engineers set up a workforce of AI employees that handle practical work across the business.
                                 </p>
                                 <p>
                                     That difference matters. Smartlead runs outbound email and calling. Dooza helps you create the content that brings leads in, follow up with those leads, post on social channels, answer inbound calls, and keep customer communication moving, with your approval on anything sensitive.
