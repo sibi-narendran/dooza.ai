@@ -5,6 +5,7 @@ import { Calendar, Phone, MessageSquare } from 'lucide-react';
 import { getBookingUrlWithUtm } from '@/lib/links';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164 } from '@/lib/contact';
 import { testimonials } from '@/lib/homeData';
+import { MANAGED_PAY_URL } from '@/lib/offers';
 import HomeInlineBooking from '@/components/home/HomeInlineBooking';
 
 // Homepage (Sibi 2026-10-10 19:49 + 20:05 "improve it design wise, read Claude design").
@@ -105,7 +106,7 @@ const steps = [
 const jobs = [
     { title: 'Lead follow-up', text: 'Replies to new leads and keeps following up until they book or say no.' },
     { title: 'Customer support', text: 'Answers customer questions by email and chat from your own docs, and drafts the rest for you.' },
-    { title: 'Calls and missed calls', text: 'Handles voice calls and texts back the people you could not pick up.' },
+    { title: 'Inbox and scheduling', text: 'Sorts your email, drafts the replies and books meetings on your calendar.' },
     { title: 'Invoice chasing', text: 'Sends polite reminders on unpaid invoices and tells you who paid.' },
     { title: 'Reviews and social posts', text: 'Replies to reviews and posts on your social accounts on a schedule.' },
     { title: 'Admin and reports', text: 'Keeps your CRM and sheets up to date and sends you a short daily summary.' },
@@ -153,6 +154,11 @@ export default function HomeLanding() {
                             <ContactRow placement="hero" />
                         </div>
                         <p className="mt-5 text-sm text-slate-500">Free call. Refundable pilot: 100% refund within 14 days.</p>
+                        <p className="mt-4 max-w-[34rem] text-[15px] text-slate-700" data-offer="managed" data-source="homepage_hero">
+                            Just need admin help?{' '}
+                            <Link href="/ai-admin-assistant" className={LINK}>Dooza Managed</Link>: an AI admin assistant whose work is checked by a real person. First 7 days free, then $200/month.{' '}
+                            <a href={MANAGED_PAY_URL} data-offer="managed" data-source="homepage_hero" className={LINK}>Start free</a>.
+                        </p>
                         <p className="mt-4 max-w-[34rem] text-[15px] text-slate-700">
                             Insurance agency that writes trucking?{' '}
                             <Link href="/trucking-insurance-leads" className={LINK}>Get the trucking companies in your state renewing in 30 to 60 days, every Monday</Link>.
