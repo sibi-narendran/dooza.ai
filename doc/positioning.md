@@ -1,5 +1,11 @@
 # Dooza Positioning — Source of Truth
 
+> **CURRENT OFFERS (2026-10-16, overrides anything below that disagrees):**
+> - Sold now: **Dooza Managed**, an AI admin assistant checked by a real person, $200/month, first 7 days free (`/pricing`, lib/offers.js MANAGED_PAY_URL). Custom agents: scoped on a free 30-minute call (`/book`), refundable pilot.
+> - Industry (ICP) offers live ONLY on their own pages, never on home, /pricing or blog (Sibi 2026-10-15): Monday Trucker Feed (trucking pages), 1099-NEC prep for CPA firms (`/1099-prep-for-cpa-firms`), Texas notary renewal (`/texas-notary-renewal`). Terms come from Odysseus's offer cards.
+> - **NOT offers (do not sell, script, pitch or promise):** AI Receptionist / phone answering / Rachel voice (not an offer since 2026-10-12, decision #15; /ai-receptionist pages stay indexed but frozen); Dooza Workforce app (abandoned 2026-10-08).
+> - Videos, pitches and new pages: check claims against this banner first.
+
 Every page, blog post, generated article, and CTA must match this file. If copy disagrees with it, the copy is wrong. Last updated 2026-09-29, when we moved to the AI-native company and refundable-pilot model.
 
 ## One sentence (use verbatim when describing Dooza)
@@ -25,7 +31,7 @@ Dooza is a SaaS platform with several AI products, plus done-for-you services. M
 
 | Product | What it is | Link |
 |---|---|---|
-| **Dooza Workforce** | AI workforce app with ready-made AI employees | `/workforce` |
+| **Dooza Workforce** (abandoned 2026-10-08, do not market) | AI workforce app with ready-made AI employees | `/workforce` |
 | **Dooza Agents** | AI agentic platform with custom AI agents built and maintained by Dooza engineers | `/` |
 
 ### AI employees and agents
@@ -37,7 +43,7 @@ Dooza is a SaaS platform with several AI products, plus done-for-you services. M
 | Ranky | SEO & AI visibility |
 | Stan | Lead generation & sales outreach |
 | Linda | Legal documents |
-| Rachel (Voice Pro) | Phone calls & receptionist |
+| Rachel (Voice Pro) | Phone calls & receptionist (NOT an offer since 2026-10-12) |
 | Outbound Pro | Outbound campaigns |
 | Lead Gen Pro | Prospect lists |
 | UGC Reel Creator | Short-form video |
@@ -50,7 +56,7 @@ Rules for naming them:
 
 | Service | Link |
 |---|---|
-| AI Receptionist | `/ai-receptionist` |
+| AI Receptionist (NOT an offer since 2026-10-12; page frozen) | `/ai-receptionist` |
 | AI Customer Support | `/ai-customer-support`, `/customer-support-automation-agency` |
 | AI Visibility / GEO | `/generative-engine-optimization` |
 | Workflow Automation | `/workflow-automation` |
@@ -85,7 +91,7 @@ Each product and service has its own price.
 - A Dooza engineer scopes your pilot on a free 30-minute call.
 - Workforce employees can start working the same day.
 - Custom agents are live in days.
-- AI Receptionist (done-for-you service): live on your existing line within 48 hours of the setup call (Sibi's own copy, commit a5862f7). Use "48 hours" for the receptionist; never "30 minutes", "same day" or "single day".
+- (Historic, receptionist not an offer since 2026-10-12) AI Receptionist (done-for-you service): live on your existing line within 48 hours of the setup call (Sibi's own copy, commit a5862f7). Use "48 hours" for the receptionist; never "30 minutes", "same day" or "single day".
 - AI Receptionist answers in English only today and is not offered as a HIPAA service (no BAA). Never imply HIPAA compliance, legal privilege, or medical advice.
 
 ## Claims (AEO rules)
