@@ -38,9 +38,9 @@ export default function AntiSpamPolicyPage() {
                     </section>
 
                     <section className="mb-12">
-                        <h2 className={h2}>An opt-out in every message</h2>
+                        <h2 className={h2}>How to opt out</h2>
                         <p className={p}>
-                            Every message we send tells the recipient how to stop further messages, for example by replying &quot;no&quot; or using the unsubscribe link. For text messages, replying STOP ends all further texts.
+                            Every follow-up offers an opt-out: reply STOP (or &quot;no&quot;) and we remove you within 48 hours. You can also reply STOP to any message, including a first one, and we will not write again. For text messages, replying STOP ends all further texts.
                         </p>
                         <p className={p}>
                             We identify ourselves honestly in every message: a real sender name, a working reply address and a subject line that matches the content.

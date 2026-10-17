@@ -2,13 +2,13 @@ import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
     title: 'Anti-Spam Policy - Dooza',
-    description: 'How Dooza sends email: business-to-business only, an opt-out in every message, and removal requests honoured within 48 hours.',
+    description: 'How Dooza sends email: business-to-business only, an opt-out in every follow-up, and removal requests honoured within 48 hours.',
     alternates: {
         canonical: `${SITE_URL}/anti-spam-policy`,
     },
     openGraph: {
         title: 'Anti-Spam Policy - Dooza',
-        description: 'How Dooza sends email: business-to-business only, an opt-out in every message, and removal requests honoured within 48 hours.',
+        description: 'How Dooza sends email: business-to-business only, an opt-out in every follow-up, and removal requests honoured within 48 hours.',
         url: `${SITE_URL}/anti-spam-policy`,
         siteName: SITE_NAME,
         type: 'website',
