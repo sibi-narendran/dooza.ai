@@ -308,6 +308,12 @@ export default async function sitemap() {
             priority: 0.7,
         },
         {
+            url: `${SITE_URL}/anti-spam-policy`,
+            lastModified: pageDate('2026-10-17'),
+            changeFrequency: 'yearly',
+            priority: 0.3,
+        },
+        {
             url: `${SITE_URL}/terms`,
             lastModified: pageDate('2026-07-21'),
             changeFrequency: 'monthly',
