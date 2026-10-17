@@ -254,6 +254,12 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/california-warn-notices-list`,
+            lastModified: pageDate('2026-10-17'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/connecticut-new-business-list`,
             lastModified: pageDate('2026-10-17'),
             changeFrequency: 'weekly',
