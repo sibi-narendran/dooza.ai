@@ -11,7 +11,7 @@ import { REPLY_EMAIL } from '@/lib/contact';
 // prices from Odysseus's card, no past-client claims. Run the checker on the config before shipping.
 //
 // cfg: { path, slug, offer, title, description, updated, eyebrow, h1, leadStrong, leadRest, startSubject, startBody,
-//        startLabel, priceNote, sendIntro, send: [[item, what]], never: [..], costs: [string | {text, linkText, href}],
+//        startLabel, priceNote, sendHeading, sendIntro, areaServed, send: [[item, what]], never: [..], costs: [string | {text, linkText, href}],
 //        faq: [{question, answer}], service: {name, serviceType, audienceType, offers}, crumb, fallbackEmail, whoBehind }
 
 const DEFAULT_WHO = 'Sibi Narendran, founder of Dooza, a small US company (Adam Laboratory Inc., a Delaware corporation).';
@@ -37,7 +37,7 @@ function schemasFor(cfg) {
             serviceType: cfg.service.serviceType,
             url,
             description: cfg.description,
-            areaServed: { '@type': 'Country', name: 'United States' },
+            areaServed: cfg.areaServed || { '@type': 'Country', name: 'United States' },
             audience: { '@type': 'BusinessAudience', audienceType: cfg.service.audienceType },
             provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
             offers: cfg.service.offers.map((o) => ({ '@type': 'Offer', priceCurrency: 'USD', ...o })),
@@ -97,7 +97,7 @@ export default function ReplyStagePage({ cfg }) {
                         </div>
 
                         <section className="prose prose-slate mt-14 max-w-none">
-                            <h2>What to send</h2>
+                            <h2>{cfg.sendHeading || 'What to send'}</h2>
                             {cfg.sendIntro && <p>{cfg.sendIntro}</p>}
                         </section>
                         <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
