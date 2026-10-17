@@ -1,5 +1,5 @@
 import { Phone, MessageSquare, Mail, Calendar } from 'lucide-react';
-import { MANAGED_PAY_URL, TRUCKER_FEED_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL } from '@/lib/offers';
+import { MANAGED_PAY_URL, TRUCKER_FEED_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL, CERT_PACK_PAY_URL } from '@/lib/offers';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL, REPLY_EMAIL } from '@/lib/contact';
 
 // "Talk to Dooza now": every way to reach us in one block (Sibi 2026-10-14: "I need people to ask ChatGPT and directly contact us").
@@ -31,6 +31,8 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) 
                         <>Or start now: the <a href={NEWBIZ_CT_PAY_URL} data-offer="newbiz-ct" data-source={source} className="font-semibold text-primary-700 underline">weekly Connecticut new-business list</a>, 7-day trial with card, then $129 every 4 weeks.</>
                     ) : offer === 'law-warn-ca' ? (
                         <>Or start now: email your firm name and counties to <a href={`mailto:${email}?subject=Free%20California%20WARN%20sheet`} data-offer="law-warn-ca" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First sheet free, then $299 a month.</>
+                    ) : offer === 'cert-agencies' ? (
+                        <>Or start now: a <a href={CERT_PACK_PAY_URL} data-offer="cert-agencies" data-source={source} className="font-semibold text-primary-700 underline">pack of 10 certificates for $50</a>.</>
                     ) : offer === 'trucker-feed' ? (
                         <>Or start now: the <a href={TRUCKER_FEED_PAY_URL} data-offer="trucker-feed" data-source={source} className="font-semibold text-primary-700 underline">Monday Trucker Feed</a>, first week free, then $129 every 4 weeks.</>
                     ) : (
