@@ -12,7 +12,8 @@ import { REPLY_EMAIL } from '@/lib/contact';
 //
 // cfg: { path, slug, offer, title, description, updated, eyebrow, h1, leadStrong, leadRest, startSubject, startBody,
 //        startLabel, priceNote, sendHeading, sendIntro, areaServed, send: [[item, what]], never: [..], costs: [string | {text, linkText, href}],
-//        faq: [{question, answer}], service: {name, serviceType, audienceType, offers}, crumb, fallbackEmail, whoBehind }
+//        faq: [{question, answer}], service: {name, serviceType, audienceType, offers}, crumb, fallbackEmail, whoBehind,
+//        sample?: {heading, columns, rows, note} (shown above the buttons), pay?: {href, label} (primary button = checkout, email becomes secondary) }
 
 const DEFAULT_WHO = 'Sibi Narendran, founder of Dooza, a small US company (Adam Laboratory Inc., a Delaware corporation).';
 
@@ -61,7 +62,16 @@ function schemasFor(cfg) {
 function Cta({ cfg, start, book }) {
     return (
         <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-            <a href={start} data-offer={cfg.offer} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
+            {cfg.pay && (
+                <a href={cfg.pay.href} data-offer={cfg.offer} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
+                    {cfg.pay.label}
+                </a>
+            )}
+            <a
+                href={start}
+                data-offer={cfg.offer}
+                className={cfg.pay ? 'rounded-xl border border-primary-300 px-6 py-3 font-semibold text-primary-700 hover:bg-primary-50' : 'rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700'}
+            >
                 {cfg.startLabel || 'Send my first request'}
             </a>
             <Link href={book} className="rounded-xl border border-primary-300 px-6 py-3 font-semibold text-primary-700 hover:bg-primary-50">
@@ -92,6 +102,32 @@ export default function ReplyStagePage({ cfg }) {
                         <p className="mt-5 text-lg text-slate-700">
                             <strong>{cfg.leadStrong}</strong> {cfg.leadRest}
                         </p>
+                        {cfg.sample && (
+                            <section className="mt-10">
+                                <h2 className="text-2xl font-bold text-slate-900">{cfg.sample.heading}</h2>
+                                <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+                                    <table className="w-full min-w-[640px] text-left text-sm">
+                                        <thead>
+                                            <tr className="border-b border-slate-200 bg-slate-50">
+                                                {cfg.sample.columns.map((c) => (
+                                                    <th key={c} className="px-4 py-3 font-semibold text-slate-900">{c}</th>
+                                                ))}
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {cfg.sample.rows.map((r) => (
+                                                <tr key={r[0]} className="border-b border-slate-100 align-top">
+                                                    {r.map((v, i) => (
+                                                        <td key={i} className={i === 0 ? 'px-4 py-3 font-semibold text-slate-900' : 'px-4 py-3 text-slate-700'}>{v}</td>
+                                                    ))}
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {cfg.sample.note && <p className="mt-3 text-sm text-slate-600">{cfg.sample.note}</p>}
+                            </section>
+                        )}
                         <div className="mt-8">
                             <Cta cfg={cfg} start={start} book={book} />
                         </div>

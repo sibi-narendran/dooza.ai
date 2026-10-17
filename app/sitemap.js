@@ -260,6 +260,24 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/trucking-renewals/fl`,
+            lastModified: pageDate('2026-10-17'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/trucking-renewals/tx`,
+            lastModified: pageDate('2026-10-17'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/trucking-renewals/ca`,
+            lastModified: pageDate('2026-10-17'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/connecticut-new-business-list`,
             lastModified: pageDate('2026-10-17'),
             changeFrequency: 'weekly',
