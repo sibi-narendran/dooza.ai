@@ -61,17 +61,17 @@ const report = [
 
 // Motion (Sibi 2026-10-17 07:02 "claude motion to better our website"): the report plays once like a live day:
 // entries arrive one by one, the approval chip flips to approved, the engineer check draws in. CSS only, no loop;
-// prefers-reduced-motion shows the static card.
+// prefers-reduced-motion shows the static card. Whole sequence ~3 s (LEGENDS P22, NN/g: too long is the common failure).
 const reportMotion = `
 @keyframes dr-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @keyframes dr-out { to { opacity: 0; } }
 @keyframes dr-draw { from { stroke-dashoffset: 24; } to { stroke-dashoffset: 0; } }
 @keyframes dr-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
-.dr-item { animation: dr-in .5s cubic-bezier(.2,.7,.2,1) both; }
-.dr-wait { animation: dr-out .3s ease 5.2s both; }
-.dr-ok { animation: dr-in .4s ease 5.4s both; }
-.dr-foot { animation: dr-in .5s ease 6s both; }
-.dr-check { stroke-dasharray: 24; animation: dr-draw .6s ease 6.3s both; }
+.dr-item { animation: dr-in .4s cubic-bezier(.2,.7,.2,1) both; }
+.dr-wait { animation: dr-out .25s ease 2.1s both; }
+.dr-ok { animation: dr-in .3s ease 2.3s both; }
+.dr-foot { animation: dr-in .4s ease 2.5s both; }
+.dr-check { stroke-dasharray: 24; animation: dr-draw .45s ease 2.7s both; }
 .dr-live { animation: dr-pulse 1.6s ease-in-out 0s 4; }
 @media (prefers-reduced-motion: reduce) {
   .dr-item, .dr-foot, .dr-check, .dr-live, .dr-wait { animation: none; }
@@ -93,7 +93,7 @@ function DailyReport() {
                 </div>
                 <ol className="px-6 py-2">
                     {report.map((r, i) => (
-                        <li key={r.time} style={{ animationDelay: `${0.4 + i * 0.85}s` }} className="dr-item grid grid-cols-[4.5rem_1fr] gap-3 border-b border-dashed border-[#14213D]/10 py-3 last:border-0">
+                        <li key={r.time} style={{ animationDelay: `${0.2 + i * 0.3}s` }} className="dr-item grid grid-cols-[4.5rem_1fr] gap-3 border-b border-dashed border-[#14213D]/10 py-3 last:border-0">
                             <span className="pt-px text-sm tabular-nums text-slate-400">{r.time}</span>
                             <span className={`text-[15px] leading-snug ${INK}`}>
                                 {r.text}
