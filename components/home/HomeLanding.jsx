@@ -100,8 +100,8 @@ function DailyReport() {
                                 {r.approval && (
                                     <span className="mt-2 flex flex-wrap items-center gap-2">
                                         <span className="grid">
-                                            <span className="dr-wait col-start-1 row-start-1 rounded bg-[#FFE27A] px-1.5 py-0.5 text-xs font-semibold text-[#14213D]">Waiting for your OK</span>
-                                            <span className="dr-ok col-start-1 row-start-1 rounded bg-[#E6F4F1] px-1.5 py-0.5 text-xs font-semibold text-[#0F766E]" aria-hidden="true">Approved by you</span>
+                                            <span className="dr-wait col-start-1 justify-self-start row-start-1 rounded bg-[#FFE27A] px-1.5 py-0.5 text-xs font-semibold text-[#14213D]">Waiting for your OK</span>
+                                            <span className="dr-ok col-start-1 justify-self-start row-start-1 rounded bg-[#E6F4F1] px-1.5 py-0.5 text-xs font-semibold text-[#0F766E]" aria-hidden="true">Approved by you</span>
                                         </span>
                                         <span className="text-xs text-slate-500">Nothing sensitive goes out without you</span>
                                     </span>
