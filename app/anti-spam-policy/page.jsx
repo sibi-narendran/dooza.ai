@@ -61,6 +61,9 @@ export default function AntiSpamPolicyPage() {
                             <a href="mailto:napoleon@dooza.org" className="text-blue-600 hover:underline">napoleon@dooza.org</a>{' '}
                             with the address that received it. We will remove it and reply to confirm.
                         </p>
+                        <p className={p}>
+                            Postal address: Dooza (Adam Laboratory Inc.), 1111b S Governors Ave STE 34259, Dover, DE 19904, USA.
+                        </p>
                     </section>
                 </div>
             </main>
