@@ -32,7 +32,7 @@ const faqItems = [
     },
     {
         question: 'How fast?',
-        answer: 'The same business day for requests in by 2 pm Central, Monday to Friday. Later requests come back the next business day.',
+        answer: 'The same business day for requests in by 2 pm Central, Monday to Friday.',
     },
     {
         question: 'How much does it cost?',
@@ -129,7 +129,7 @@ export default function CertificatesForAgenciesPage() {
 
                         <section className="prose prose-slate mt-14 max-w-none">
                             <h2>What to send</h2>
-                            <p>One email per certificate request. If something is missing, we ask before we fill anything in.</p>
+                            <p>One email per certificate request.</p>
                         </section>
                         <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
                             <table className="w-full min-w-[560px] text-left text-sm">
