@@ -13,11 +13,11 @@ const cfg = {
     eyebrow: 'For Connecticut insurance agents, CPAs, payroll and IT firms',
     h1: 'Every new Connecticut business in your county, each Monday, with email',
     leadStrong: 'Each Monday you get a file of every business registered in your county the week before: name, type, date, town, mailing address and the email the owner gave the state.',
-    leadRest: 'Last week (October 10 to 16, 2026) that was 971 new businesses registered with the State. First 5 from your own town are free; then 7 days free and $129 every 4 weeks.',
+    leadRest: 'Last week (October 10 to 16, 2026) that was 971 new businesses registered with the State. First 5 from your own town are free; then a 7-day trial (card at start) and $129 every 4 weeks.',
     startSubject: 'Free sample: new businesses in my town',
     startBody: 'My town:\nMy county:\nWhat I sell to new businesses:',
     startLabel: 'Get 5 free rows',
-    priceNote: '5 rows free, then 7 days free, $129 every 4 weeks.',
+    priceNote: '5 sample rows now, 7-day trial with card, then $129 every 4 weeks.',
     sendHeading: 'What is in each Monday file',
     sendIntro: 'The source is the Connecticut business registry, published as open data on data.ct.gov and updated daily. New registrations October 10 to 16, 2026, not counting rejected filings: 971, including Fairfield County 255, Hartford County 215 and New Haven County 171. In the 30 days to October 16: 4,893.',
     send: [
@@ -35,7 +35,7 @@ const cfg = {
     ],
     costs: [
         '5 rows from your own town, free.',
-        'Then 7 days free.',
+        'Then a 7-day free trial; card at start, cancel before it ends and you pay nothing.',
         'Then $129 every 4 weeks.',
     ],
     faq: [
@@ -57,7 +57,7 @@ const cfg = {
         },
         {
             question: 'How much does it cost?',
-            answer: 'The first 5 rows from your own town are free. Then 7 days free, then $129 every 4 weeks.',
+            answer: 'The first 5 rows from your own town are free. Then a 7-day trial (you add a card at the start; cancel within 7 days and you pay nothing), then $129 every 4 weeks.',
         },
         {
             question: 'Do you contact the businesses for me?',
@@ -72,7 +72,7 @@ const cfg = {
         name: 'Weekly new Connecticut business list',
         serviceType: 'New business registration list',
         audienceType: 'Insurance agents, CPAs, bookkeepers, payroll and IT firms',
-        offers: [{ price: '129', description: 'Every 4 weeks after a 7-day free trial. First 5 rows from your town free.' }],
+        offers: [{ price: '129', description: 'Every 4 weeks after a 7-day trial (card at start). First 5 rows from your town free.' }],
     },
     areaServed: { '@type': 'State', name: 'Connecticut' },
     crumb: 'Connecticut New Business List',
