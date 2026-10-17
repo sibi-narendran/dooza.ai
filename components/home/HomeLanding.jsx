@@ -59,27 +59,50 @@ const report = [
     { time: '5:00 pm', text: 'Updated your CRM and sent you this summary.' },
 ];
 
+// Motion (Sibi 2026-10-17 07:02 "claude motion to better our website"): the report plays once like a live day:
+// entries arrive one by one, the approval chip flips to approved, the engineer check draws in. CSS only, no loop;
+// prefers-reduced-motion shows the static card.
+const reportMotion = `
+@keyframes dr-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes dr-out { to { opacity: 0; } }
+@keyframes dr-draw { from { stroke-dashoffset: 24; } to { stroke-dashoffset: 0; } }
+@keyframes dr-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+.dr-item { animation: dr-in .5s cubic-bezier(.2,.7,.2,1) both; }
+.dr-wait { animation: dr-out .3s ease 5.2s both; }
+.dr-ok { animation: dr-in .4s ease 5.4s both; }
+.dr-foot { animation: dr-in .5s ease 6s both; }
+.dr-check { stroke-dasharray: 24; animation: dr-draw .6s ease 6.3s both; }
+.dr-live { animation: dr-pulse 1.6s ease-in-out 0s 4; }
+@media (prefers-reduced-motion: reduce) {
+  .dr-item, .dr-foot, .dr-check, .dr-live, .dr-wait { animation: none; }
+  .dr-ok { animation: none; opacity: 0; }
+}`;
+
 function DailyReport() {
     return (
         <figure className="relative mx-auto w-full max-w-[30rem] lg:mx-0 lg:ml-auto">
+            <style dangerouslySetInnerHTML={{ __html: reportMotion }} />
             <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl bg-[#14213D]/[0.06]" aria-hidden="true" />
             <div className="relative rounded-2xl border border-[#14213D]/10 bg-white shadow-[0_24px_60px_-28px_rgba(20,33,61,0.35)]">
                 <div className="flex items-start justify-between gap-4 border-b border-[#14213D]/10 px-6 pb-4 pt-5">
                     <div>
                         <p className={`${display.className} text-lg font-bold ${INK}`}>Daily report</p>
-                        <p className="text-sm text-slate-500">From your AI employee, Riley</p>
+                        <p className="flex items-center gap-2 text-sm text-slate-500"><span className="dr-live h-2 w-2 rounded-full bg-[#0F766E]" aria-hidden="true" />From your AI employee, Riley</p>
                     </div>
                     <p className="rounded-md bg-[#E6F4F1] px-2.5 py-1 text-xs font-semibold text-[#0F766E]">Example</p>
                 </div>
                 <ol className="px-6 py-2">
-                    {report.map((r) => (
-                        <li key={r.time} className="grid grid-cols-[4.5rem_1fr] gap-3 border-b border-dashed border-[#14213D]/10 py-3 last:border-0">
+                    {report.map((r, i) => (
+                        <li key={r.time} style={{ animationDelay: `${0.4 + i * 0.85}s` }} className="dr-item grid grid-cols-[4.5rem_1fr] gap-3 border-b border-dashed border-[#14213D]/10 py-3 last:border-0">
                             <span className="pt-px text-sm tabular-nums text-slate-400">{r.time}</span>
                             <span className={`text-[15px] leading-snug ${INK}`}>
                                 {r.text}
                                 {r.approval && (
                                     <span className="mt-2 flex flex-wrap items-center gap-2">
-                                        <span className="rounded bg-[#FFE27A] px-1.5 py-0.5 text-xs font-semibold text-[#14213D]">Waiting for your OK</span>
+                                        <span className="grid">
+                                            <span className="dr-wait col-start-1 row-start-1 rounded bg-[#FFE27A] px-1.5 py-0.5 text-xs font-semibold text-[#14213D]">Waiting for your OK</span>
+                                            <span className="dr-ok col-start-1 row-start-1 rounded bg-[#E6F4F1] px-1.5 py-0.5 text-xs font-semibold text-[#0F766E]" aria-hidden="true">Approved by you</span>
+                                        </span>
                                         <span className="text-xs text-slate-500">Nothing sensitive goes out without you</span>
                                     </span>
                                 )}
@@ -87,8 +110,8 @@ function DailyReport() {
                         </li>
                     ))}
                 </ol>
-                <figcaption className="flex items-center gap-3 rounded-b-2xl bg-[#EEF3F7] px-6 py-4 text-sm text-slate-600">
-                    <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-[#0F766E]" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                <figcaption className="dr-foot flex items-center gap-3 rounded-b-2xl bg-[#EEF3F7] px-6 py-4 text-sm text-slate-600">
+                    <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-[#0F766E]" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path className="dr-check" d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     Work checked by your Dooza engineer, who fixes anything Riley gets wrong.
                 </figcaption>
             </div>
