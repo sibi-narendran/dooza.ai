@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { getBookingUrlFromPath } from '@/lib/links';
 
 // Remembers the visitor's path through the site for this tab (sessionStorage only: page paths
-// and the external referrer's hostname, nothing personal). /book sends it to Calendly as utm_term,
+// and the external referrer's hostname; plus a reply link's ?ref/&email, only to prefill Stripe). /book sends it to Calendly as utm_term,
 // so each booking shows which page brought the visitor there. Added by Alive-Web 2026-10-07.
 export default function NavTrail() {
     const pathname = usePathname();
@@ -24,6 +24,13 @@ export default function NavTrail() {
                 } catch {}
                 s.setItem('dz_ref', ref || 'direct');
             }
+            // Reply-stage links (Orion) carry ?ref=<lead id>&email=; keep them for this tab so the
+            // Stripe button can say who paid (2026-10-18).
+            const q = new URLSearchParams(window.location.search);
+            const rid = (q.get('ref') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 200);
+            const em = q.get('email') || '';
+            if (rid) s.setItem('dz_rid', rid);
+            if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) s.setItem('dz_em', em);
         } catch {
             // Storage blocked: bookings keep their normal UTM tags.
         }
@@ -41,6 +48,24 @@ export default function NavTrail() {
         };
         document.addEventListener('click', onClick, true);
         return () => document.removeEventListener('click', onClick, true);
+    }, []);
+    // Stripe payment links: add client_reference_id + prefilled_email from the reply link, at click.
+    useEffect(() => {
+        const onPay = (e) => {
+            const a = e.target.closest?.('a[href^="https://buy.stripe.com/"]');
+            if (!a) return;
+            try {
+                const s = window.sessionStorage;
+                const u = new URL(a.href);
+                const rid = s.getItem('dz_rid');
+                const em = s.getItem('dz_em');
+                if (rid && !u.searchParams.get('client_reference_id')) u.searchParams.set('client_reference_id', rid);
+                if (em && !u.searchParams.get('prefilled_email')) u.searchParams.set('prefilled_email', em);
+                a.href = u.toString();
+            } catch {}
+        };
+        document.addEventListener('click', onPay, true);
+        return () => document.removeEventListener('click', onPay, true);
     }, []);
     return null;
 }
