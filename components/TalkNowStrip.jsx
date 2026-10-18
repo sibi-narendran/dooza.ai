@@ -1,5 +1,5 @@
 import { Phone, MessageSquare, Mail, Calendar } from 'lucide-react';
-import { MANAGED_PAY_URL, TRUCKER_FEED_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL, CERT_PACK_PAY_URL, LAW_WARN_CA_PAY_URL } from '@/lib/offers';
+import { MANAGED_PAY_URL, TRUCKER_FEED_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL, CERT_PACK_PAY_URL, LAW_WARN_CA_PAY_URL, tagPay } from '@/lib/offers';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL, REPLY_EMAIL } from '@/lib/contact';
 
 // "Talk to Dooza now": every way to reach us in one block (Sibi 2026-10-14: "I need people to ask ChatGPT and directly contact us").
@@ -24,19 +24,19 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) 
                 </div>
                 <p className="mt-5 text-sm text-slate-600">
                     {offer === 'notary-renewal' ? (
-                        <>Or start now: email your name and commission expiry date to <a href={`mailto:${email}?subject=Free%20notary%20renewal`} data-offer="notary-renewal" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First renewal free, then <a href={NOTARY_RENEWAL_PAY_URL} data-offer="notary-renewal" data-source={source} className="underline">$20 per renewal</a>.</>
+                        <>Or start now: email your name and commission expiry date to <a href={`mailto:${email}?subject=Free%20notary%20renewal`} data-offer="notary-renewal" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First renewal free, then <a href={tagPay(NOTARY_RENEWAL_PAY_URL, source)} data-offer="notary-renewal" data-source={source} className="underline">$20 per renewal</a>.</>
                     ) : offer === 'cpa-1099' ? (
                         <>Or start now: email one client&rsquo;s two QuickBooks reports to <a href={`mailto:${email}?subject=Free%201099%20client`} data-offer="cpa-1099" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First client free, then $99 per client.</>
                     ) : offer === 'newbiz-ct' ? (
-                        <>Or start now: the <a href={NEWBIZ_CT_PAY_URL} data-offer="newbiz-ct" data-source={source} className="font-semibold text-primary-700 underline">weekly Connecticut new-business list</a>, 7-day trial with card, then $129 every 4 weeks.</>
+                        <>Or start now: the <a href={tagPay(NEWBIZ_CT_PAY_URL, source)} data-offer="newbiz-ct" data-source={source} className="font-semibold text-primary-700 underline">weekly Connecticut new-business list</a>, 7-day trial with card, then $129 every 4 weeks.</>
                     ) : offer === 'law-warn-ca' ? (
-                        <>Or start now: email your firm name and counties to <a href={`mailto:${email}?subject=Free%20California%20WARN%20sheet`} data-offer="law-warn-ca" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First sheet free, then $299 a month. Ready to subscribe? <a href={LAW_WARN_CA_PAY_URL} data-offer="law-warn-ca" data-source={source} className="underline">Start the $299/month plan</a>.</>
+                        <>Or start now: email your firm name and counties to <a href={`mailto:${email}?subject=Free%20California%20WARN%20sheet`} data-offer="law-warn-ca" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First sheet free, then $299 a month. Ready to subscribe? <a href={tagPay(LAW_WARN_CA_PAY_URL, source)} data-offer="law-warn-ca" data-source={source} className="underline">Start the $299/month plan</a>.</>
                     ) : offer === 'cert-agencies' ? (
-                        <>Or start now: a <a href={CERT_PACK_PAY_URL} data-offer="cert-agencies" data-source={source} className="font-semibold text-primary-700 underline">pack of 10 certificates for $50</a>.</>
+                        <>Or start now: a <a href={tagPay(CERT_PACK_PAY_URL, source)} data-offer="cert-agencies" data-source={source} className="font-semibold text-primary-700 underline">pack of 10 certificates for $50</a>.</>
                     ) : offer === 'trucker-feed' ? (
-                        <>Or start now: the <a href={TRUCKER_FEED_PAY_URL} data-offer="trucker-feed" data-source={source} className="font-semibold text-primary-700 underline">Monday Trucker Feed</a>, first week free, then $129 every 4 weeks.</>
+                        <>Or start now: the <a href={tagPay(TRUCKER_FEED_PAY_URL, source)} data-offer="trucker-feed" data-source={source} className="font-semibold text-primary-700 underline">Monday Trucker Feed</a>, first week free, then $129 every 4 weeks.</>
                     ) : (
-                        <>Or start now: <a href={MANAGED_PAY_URL} data-offer="managed" data-source={source} className="font-semibold text-primary-700 underline">Dooza Managed</a>, an admin assistant checked by a real person, first 7 days free, then $200/month. <a href="/pricing" className="underline">See pricing</a>.</>
+                        <>Or start now: <a href={tagPay(MANAGED_PAY_URL, source)} data-offer="managed" data-source={source} className="font-semibold text-primary-700 underline">Dooza Managed</a>, an admin assistant checked by a real person, first 7 days free, then $200/month. <a href="/pricing" className="underline">See pricing</a>.</>
                     )}
                 </p>
             </div>

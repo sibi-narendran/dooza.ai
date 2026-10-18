@@ -5,33 +5,96 @@ import { TRUCKER_FEED_PAY_URL } from '@/lib/offers';
 // BET7 step 2 reply-stage pages, one per state (Odysseus 2026-10-17 21:01 k49dpid5): sample with no card, checkout right below it
 // (clone of TruckerDB; learnings/research/2026-10-17-list-sellers-free-to-paid.md in Odysseus's home).
 // Rows: real incorporated fleets from /home/odysseus/data/feeds/<ST>_bet7_2026-10-12.csv (FMCSA open data); phone, email, officer, DOT/MC hidden.
-// Counts = rows in each state's October 12 list. Renewal dates are estimates (anniversary of the current BMC-91X filing).
+// Counts = rows in each state's latest list (listDate); samples re-picked 10-18 (Dec 1-9 dates, 8-60 power units). Renewal dates are estimates (anniversary of the current BMC-91X filing).
 const STATES = {
     fl: {
         name: 'Florida',
         total: 203,
+        listDate: 'October 12',
         rows: [
-            ['Atlantic Truck Lines Inc', 'Jacksonville', '19', 'Northland Insurance Company', '$750,000', 'Nov 18, 2026'],
-            ['M&M Transport Inc', 'Ocoee', '18', 'CorePointe Insurance Company', '$750,000', 'Nov 18, 2026'],
-            ['Camacho Logistics Corp', 'Cape Coral', '28', 'Sentry Select Insurance Company', '$750,000', 'Nov 20, 2026'],
+            ['Royal Trucking Express Inc', 'Orlando', '50', 'Prime Property & Casualty Insurance Inc', '$750,000', 'Dec 1, 2026'],
+            ['Aloha Freightways Inc', 'Miami', '29', 'Sentry Select Insurance Company', '$1,000,000', 'Dec 1, 2026'],
+            ['B & J Transport Inc', 'Auburndale', '10', 'Canal Insurance Company', '$750,000', 'Dec 1, 2026'],
         ],
     },
     tx: {
         name: 'Texas',
         total: 582,
+        listDate: 'October 12',
         rows: [
-            ['4J Express LLC', 'Anthony', '16', 'MS Transverse Insurance Company', '$750,000', 'Nov 18, 2026'],
-            ['Ironhorse Unlimited Inc', 'Malakoff', '9', 'Berkley Regional Insurance Company', '$1,000,000', 'Nov 18, 2026'],
-            ['AGD Trucking LLC', 'San Antonio', '9', 'Cimarron Insurance Company', '$750,000', 'Nov 18, 2026'],
+            ['Bee-Line Transportation Inc', 'Houston', '57', 'Great West Casualty Company', '$1,000,000', 'Dec 1, 2026'],
+            ['Arrow Freight Management Inc', 'El Paso', '27', 'Northland Insurance Company', '$750,000', 'Dec 1, 2026'],
+            ['Rocking 8 Transportation Inc', 'Houston', '27', 'Zurich American Insurance Company', '$1,000,000', 'Dec 1, 2026'],
         ],
     },
     ca: {
         name: 'California',
         total: 548,
+        listDate: 'October 12',
         rows: [
-            ['Comandos Transport Inc', 'Calexico', '11', 'Incline Americas Insurance Company', '$750,000', 'Nov 18, 2026'],
-            ['ACX Intermodal Inc', 'Wilmington', '7', 'Travelers Indemnity Company', '$1,000,000', 'Nov 19, 2026'],
-            ['BMD Trans Inc', 'Yuba City', '14', 'Technology Insurance Company, Inc', '$750,000', 'Nov 19, 2026'],
+            ['Rust & Sons Trucking Inc', 'El Cajon', '55', 'Hartford Fire Insurance Company', '$1,000,000', 'Dec 1, 2026'],
+            ['Henean Trucking Inc', 'Santa Ana', '45', 'Great West Casualty Company', '$1,000,000', 'Dec 1, 2026'],
+            ['Last Piece Logistics LLC', 'Clovis', '22', 'Old Republic Insurance Company', '$1,000,000', 'Dec 1, 2026'],
+        ],
+    },
+    ny: {
+        name: 'New York',
+        total: 136,
+        listDate: 'October 10',
+        rows: [
+            ['DNT Express LLC', 'Menands', '49', 'Zurich American Insurance Company', '$750,000', 'Dec 1, 2026'],
+            ['Lanpher’s Transport Inc', 'Syracuse', '42', 'Lancer Insurance Company', '$5,000,000', 'Dec 1, 2026'],
+            ['Serafini Transportation Corp', 'Binghamton', '30', 'National Interstate Insurance Company', '$1,500,000', 'Dec 1, 2026'],
+        ],
+    },
+    il: {
+        name: 'Illinois',
+        total: 471,
+        listDate: 'October 10',
+        rows: [
+            ['STA Express Inc', 'Oswego', '60', 'MS Transverse Insurance Company', '$750,000', 'Dec 1, 2026'],
+            ['Chicago Suburban Express Inc', 'Forest View', '33', 'Selective Insurance Company of South Carolina', '$750,000', 'Dec 1, 2026'],
+            ['Hetzels Overland Transport Inc', 'Effingham', '33', 'Great West Casualty Company', '$1,000,000', 'Dec 1, 2026'],
+        ],
+    },
+    ok: {
+        name: 'Oklahoma',
+        total: 69,
+        listDate: 'October 10',
+        rows: [
+            ['Roll-Offs Trucking Inc', 'Mead', '20', 'Canal Insurance Company', '$750,000', 'Dec 1, 2026'],
+            ['Bronco Haulers LLC', 'Chickasha', '12', 'Great West Casualty Company', '$1,000,000', 'Dec 1, 2026'],
+            ['Taz Trucking LLC', 'Poteau', '32', 'National Interstate Insurance Company', '$1,000,000', 'Dec 6, 2026'],
+        ],
+    },
+    ks: {
+        name: 'Kansas',
+        total: 105,
+        listDate: 'October 13',
+        rows: [
+            ['RC Trucking Inc', 'Gridley', '38', 'National Interstate Insurance Company', '$750,000', 'Dec 1, 2026'],
+            ['5AB Carrier LLC', 'Olathe', '16', 'MS Transverse Insurance Company', '$750,000', 'Dec 1, 2026'],
+            ['G & L Transport LLC', 'Garden City', '10', 'Northland Insurance Company', '$750,000', 'Dec 3, 2026'],
+        ],
+    },
+    ma: {
+        name: 'Massachusetts',
+        total: 111,
+        listDate: 'October 13',
+        rows: [
+            ['Falcon Express Logistics LLC', 'Beverly', '30', 'Greenwich Insurance Company', '$1,000,000', 'Dec 1, 2026'],
+            ['Nichols Trucking Company Inc', 'Middleboro', '17', 'Union Insurance Company', '$750,000', 'Dec 1, 2026'],
+            ['Lajoie Brothers Transport Company LLC', 'Charlton', '10', 'Acadia Insurance Company', '$750,000', 'Dec 1, 2026'],
+        ],
+    },
+    ky: {
+        name: 'Kentucky',
+        total: 88,
+        listDate: 'October 10',
+        rows: [
+            ['Hayes Brothers Trucking Inc', 'Benton', '12', 'Sentry Select Insurance Company', '$1,000,000', 'Dec 1, 2026'],
+            ['Dedicated Trucking Service LLC', 'Louisville', '11', 'Canal Insurance Company', '$750,000', 'Dec 1, 2026'],
+            ['AGP Transport LLC', 'Shepherdsville', '46', 'Navigators Insurance Company', '$750,000', 'Dec 2, 2026'],
         ],
     },
 };
@@ -51,25 +114,25 @@ function cfgFor(code) {
         slug: `trucking-renewals-${code}`,
         offer: 'trucker-feed',
         title: `${s.name} Trucking Renewals List, Every Monday`,
-        description: `${s.name} trucking companies renewing their insurance in 30-60 days, with current insurer and fleet size. ${s.total} fleets in the October 12 list. 3 shown free; 7-day trial, then $129 per 4 weeks.`,
-        updated: 'October 17, 2026',
+        description: `${s.name} trucking companies renewing their insurance in 30-60 days, with current insurer and fleet size. ${s.total} fleets in the ${s.listDate} list. 3 shown free; $129 every 4 weeks, 7-day free trial, cancel any time.`,
+        updated: 'October 18, 2026',
         eyebrow: `For agencies that write trucking in ${s.name}`,
         h1: `${s.name} fleets due to renew in 30-60 days, every Monday`,
         leadStrong: `Each Monday: every ${s.name} trucking company with 3 or more power units whose liability filing comes up for renewal in 30 to 60 days, with its current insurer.`,
-        leadRest: `Three real rows from the October 12 list are below. ${more} more ${s.name} fleets are in that list.`,
+        leadRest: `Three real rows from the ${s.listDate} list are below. ${more} more ${s.name} fleets are in that list.`,
         sample: {
-            heading: `3 real ${s.name} fleets from the October 12 list`,
+            heading: `3 real ${s.name} fleets from the ${s.listDate} list`,
             columns: ['Company', 'City', 'Power units', 'Current insurer', 'Liability limit', 'Est. renewal'],
             rows: s.rows,
             note: `Here we hide owner, phone, email, DOT and MC number; your list has them. ${more} more ${s.name} fleets in the same list.`,
         },
-        pay: { href: TRUCKER_FEED_PAY_URL, label: 'Start the 7-day trial' },
+        pay: { href: TRUCKER_FEED_PAY_URL, label: 'Start the 7-day free trial' },
         startSubject: `Trucking renewals: ${s.name}`,
         startBody: 'My agency:\nCounties or cities I write:\n',
         startLabel: 'Ask a question first',
-        priceNote: '7-day trial, then $129 every 4 weeks. Cancel any time.',
+        priceNote: '$129 every 4 weeks, 7-day free trial, cancel any time.',
         sendHeading: 'What is in each Monday list',
-        sendIntro: `Built from FMCSA open data (data.transportation.gov): carrier registrations plus the federal liability filings insurers make (BMC-91X). The October 12 ${s.name} list had ${s.total} fleets.`,
+        sendIntro: `Built from FMCSA open data (data.transportation.gov): carrier registrations plus the federal liability filings insurers make (BMC-91X). The ${s.listDate} ${s.name} list had ${s.total} fleets.`,
         send: [
             ['Company, DOT and MC number', 'From the FMCSA registration.'],
             ['Owner or officer name', 'As filed with FMCSA.'],
@@ -84,8 +147,8 @@ function cfgFor(code) {
             'Promise the renewal date. It is an estimate from the filing date; policies can change mid-term.',
         ],
         costs: [
-            { text: '7-day trial, then $129 every 4 weeks.', linkText: 'Start the trial', href: TRUCKER_FEED_PAY_URL },
-            'Cancel any time before the next 4 weeks start.',
+            { text: '$129 every 4 weeks, 7-day free trial, cancel any time.', linkText: 'Start the trial', href: TRUCKER_FEED_PAY_URL },
+            'To stop, cancel before the next 4 weeks start.',
         ],
         faq: [
             {
@@ -102,11 +165,11 @@ function cfgFor(code) {
             },
             {
                 question: `How many ${s.name} fleets are in a list?`,
-                answer: `The October 12 ${s.name} list had ${s.total} fleets. The number changes each week.`,
+                answer: `The ${s.listDate} ${s.name} list had ${s.total} fleets. The number changes each week.`,
             },
             {
                 question: 'How much does it cost?',
-                answer: 'A 7-day trial, then $129 every 4 weeks. Cancel any time.',
+                answer: '$129 every 4 weeks, 7-day free trial, cancel any time.',
             },
         ],
         service: {

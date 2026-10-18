@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
 import { REPLY_EMAIL } from '@/lib/contact';
+import { tagPay } from '@/lib/offers';
 
 // Reply-stage page from one config object (same layout as /certificates-for-agencies, 2026-10-17).
 // Orion links these in replies to Odysseus's arms; one config = one page. Truth rules live in each config: never-list,
@@ -63,7 +64,7 @@ function Cta({ cfg, start, book }) {
     return (
         <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
             {cfg.pay && (
-                <a href={cfg.pay.href} data-offer={cfg.offer} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
+                <a href={tagPay(cfg.pay.href, cfg.slug)} data-offer={cfg.offer} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
                     {cfg.pay.label}
                 </a>
             )}
@@ -165,7 +166,7 @@ export default function ReplyStagePage({ cfg }) {
                                     ) : (
                                         <li key={c.href}>
                                             {c.text}{' '}
-                                            <a href={c.href} data-offer={cfg.offer} className="font-semibold text-primary-700 underline">
+                                            <a href={tagPay(c.href, cfg.slug)} data-offer={cfg.offer} className="font-semibold text-primary-700 underline">
                                                 {c.linkText}
                                             </a>
                                             .
