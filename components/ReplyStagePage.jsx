@@ -14,7 +14,7 @@ import { tagPay } from '@/lib/offers';
 // cfg: { path, slug, offer, title, description, updated, eyebrow, h1, leadStrong, leadRest, startSubject, startBody,
 //        startLabel, priceNote, sendHeading, sendIntro, areaServed, send: [[item, what]], never: [..], costs: [string | {text, linkText, href}],
 //        faq: [{question, answer}], service: {name, serviceType, audienceType, offers}, crumb, fallbackEmail, whoBehind,
-//        sample?: {heading, columns, rows, note} (shown above the buttons), pay?: {href, label} (primary button = checkout, email becomes secondary) }
+//        sample?: {heading, columns, rows, note, csv?: {href, label}}, overPay?: [lines shown right over the buttons] (shown above the buttons), pay?: {href, label} (primary button = checkout, email becomes secondary) }
 
 const DEFAULT_WHO = 'Sibi Narendran, founder of Dooza, a small US company (Adam Laboratory Inc., a Delaware corporation).';
 
@@ -127,9 +127,23 @@ export default function ReplyStagePage({ cfg }) {
                                     </table>
                                 </div>
                                 {cfg.sample.note && <p className="mt-3 text-sm text-slate-600">{cfg.sample.note}</p>}
+                                {cfg.sample.csv && (
+                                    <p className="mt-2 text-sm">
+                                        <a href={cfg.sample.csv.href} download className="font-semibold text-primary-700 underline hover:text-primary-800">
+                                            {cfg.sample.csv.label}
+                                        </a>
+                                    </p>
+                                )}
                             </section>
                         )}
                         <div className="mt-8">
+                            {cfg.overPay && (
+                                <div className="mb-4 space-y-1">
+                                    {cfg.overPay.map((line, i) => (
+                                        <p key={i} className={i === 0 ? 'text-base font-semibold text-slate-900' : 'text-sm text-slate-600'}>{line}</p>
+                                    ))}
+                                </div>
+                            )}
                             <Cta cfg={cfg} start={start} book={book} />
                         </div>
 
