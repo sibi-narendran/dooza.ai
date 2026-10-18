@@ -65,7 +65,14 @@ export default function NavTrail() {
             } catch {}
         };
         document.addEventListener('click', onPay, true);
-        return () => document.removeEventListener('click', onPay, true);
+        // Same tags on every pay link at load, so each button's href already carries them (Orion 10-18: 2nd button looked bare).
+        const tagAll = () => document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach((a) => onPay({ target: a }));
+        tagAll();
+        const t = setTimeout(tagAll, 1500);
+        return () => {
+            clearTimeout(t);
+            document.removeEventListener('click', onPay, true);
+        };
     }, []);
     return null;
 }
