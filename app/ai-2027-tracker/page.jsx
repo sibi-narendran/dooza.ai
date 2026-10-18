@@ -85,7 +85,7 @@ export default function Ai2027TrackerPage() {
                             {[
                                 { n: warning.length, t: 'warning shots already arrived in 2026' },
                                 { n: `${happened.length}/${milestones.length}`, t: 'key milestones already happened' },
-                                { n: `${hits}/${graded.length}`, t: 'predictions graded so far that hit' },
+                                { n: `${hits}/${predictions.length}`, t: `predictions hit so far (${graded.length} graded)` },
                                 { n: <NextDue predictions={predictions} checked={checked} />, t: 'days until the next prediction is due' },
                             ].map((s) => (
                                 <div key={s.t} className="bg-white border border-slate-200 rounded-xl p-4 text-center">
