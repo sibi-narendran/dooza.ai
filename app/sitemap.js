@@ -386,6 +386,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/ai-2027-tracker`,
+            lastModified: pageDate('2026-10-18'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/ai-slop-checker`,
             lastModified: pageDate('2026-07-28'),
             changeFrequency: 'monthly',
