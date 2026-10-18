@@ -6,7 +6,8 @@ import { TRUCKER_FEED_PAY_URL } from '@/lib/offers';
 // trailer dealers. Pay link = Monday Trucker Feed, one state, 7-day trial.
 // Rows: FMCSA new authorities (applied in the last 7 days, no liability filed yet), Argus feed files:
 // TX = /home/argus/data/feeds/for-hercules/TX_2026-10-16_verified.csv (173 new_authority rows, applied Oct 9-15).
-// FL = /home/argus/data/feeds/dealer1/FL_2026-10-18_full.csv (160 new_authority rows, Oct 11-17). More states when Argus's files land.
+// FL = /home/argus/data/feeds/dealer1/FL_2026-10-18_full.csv (160 new_authority rows, Oct 11-17).
+// CA/IN/OH = /home/argus/data/feeds/dealer1/<ST>_2026-10-18_full.csv (146/53/89 new_authority rows). No phones/officers/emails on the page (Argus 10-18 09:43). More states when Argus's files land.
 const PRICE = '$129 every 4 weeks, first week free, cancel any time.';
 const STATES = {
     tx: {
@@ -35,6 +36,48 @@ const STATES = {
             ['Great Things Logistics Group LLC', 'Port Charlotte', '2', 'Oct 16, 2026'],
             ['Mackey Trucking LLC', 'Daytona Beach', '1', 'Oct 16, 2026'],
             ['Vbird Logistics LLC', 'Fort Myers', '1', 'Oct 16, 2026'],
+        ],
+    },
+    ca: {
+        name: 'California',
+        total: 146,
+        week: 'October 11 to 17',
+        rows: [
+            ['Naaj Transport Inc', 'Stockton', '1', 'Oct 17, 2026'],
+            ['Japp Logisitics LLC', 'Hollister', '1', 'Oct 16, 2026'],
+            ['Altaris Crane & Rigging LLC', 'Planada', '1', 'Oct 16, 2026'],
+            ['Glx Solutions LLC', 'El Centro', '1', 'Oct 16, 2026'],
+            ['3 Tigers Trucking LLC', 'Turlock', '1', 'Oct 16, 2026'],
+            ['Exclusive Express LLC', 'Moreno Valley', '3', 'Oct 15, 2026'],
+            ['Fulloa Transport LLC', 'Los Banos', '1', 'Oct 15, 2026'],
+        ],
+    },
+    in: {
+        name: 'Indiana',
+        total: 53,
+        week: 'October 12 to 17',
+        rows: [
+            ['Mangoya Express LLC', 'Fishers', '2', 'Oct 17, 2026'],
+            ['Sbj Transport LLC', 'Lagrange', '2', 'Oct 16, 2026'],
+            ['Rm Trucks LLC', 'Indianapolis', '1', 'Oct 16, 2026'],
+            ['Marks Logistics LLC', 'Indianapolis', '1', 'Oct 16, 2026'],
+            ['Nc Truck Rental Inc', 'Greenwood', '4', 'Oct 15, 2026'],
+            ['White Horse Freight Inc', 'Greenwood', '2', 'Oct 15, 2026'],
+            ['Pmv Trucking LLC', 'Burnettsville', '1', 'Oct 15, 2026'],
+        ],
+    },
+    oh: {
+        name: 'Ohio',
+        total: 89,
+        week: 'October 11 to 17',
+        rows: [
+            ['Centris LLC', 'Mason', '2', 'Oct 16, 2026'],
+            ['Yodha Transport LLC', 'Fairfield Township', '1', 'Oct 16, 2026'],
+            ['Singhtech Solutions LLC', 'Northfield', '12', 'Oct 15, 2026'],
+            ['Barley\'s Trucking LLC', 'Mansfield', '4', 'Oct 15, 2026'],
+            ['Stokes Signature Trucking LLC', 'Fostoria', '3', 'Oct 15, 2026'],
+            ['Avtar Trucking Inc', 'West Chester', '2', 'Oct 15, 2026'],
+            ['Fluid Freight Systems LLC', 'Independence', '1', 'Oct 15, 2026'],
         ],
     },
 };
