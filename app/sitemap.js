@@ -272,6 +272,12 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/new-trucking-companies/fl`,
+            lastModified: pageDate('2026-10-18'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/trucking-renewals/fl`,
             lastModified: pageDate('2026-10-18'),
             changeFrequency: 'weekly',

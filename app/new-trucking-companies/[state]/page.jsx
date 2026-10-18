@@ -5,7 +5,8 @@ import { TRUCKER_FEED_PAY_URL } from '@/lib/offers';
 // DEALER1 reply-stage pages (Odysseus 2026-10-18 09:22 4f8mumzz): new trucking companies per state, every Monday, for used-truck and
 // trailer dealers. Pay link = Monday Trucker Feed, one state, 7-day trial.
 // Rows: FMCSA new authorities (applied in the last 7 days, no liability filed yet), Argus feed files:
-// TX = /home/argus/data/feeds/for-hercules/TX_2026-10-16_verified.csv (173 new_authority rows, applied Oct 9-15). More states when Argus's files land.
+// TX = /home/argus/data/feeds/for-hercules/TX_2026-10-16_verified.csv (173 new_authority rows, applied Oct 9-15).
+// FL = /home/argus/data/feeds/dealer1/FL_2026-10-18_full.csv (160 new_authority rows, Oct 11-17). More states when Argus's files land.
 const PRICE = '$129 every 4 weeks, first week free, cancel any time.';
 const STATES = {
     tx: {
@@ -20,6 +21,20 @@ const STATES = {
             ['Legendx Transport Inc', 'Bryan', '5', 'Oct 13, 2026'],
             ['Xline LLC', 'Fate', '5', 'Oct 13, 2026'],
             ['Conerstone Transit LLC', 'Friendswood', '4', 'Oct 13, 2026'],
+        ],
+    },
+    fl: {
+        name: 'Florida',
+        total: 160,
+        week: 'October 11 to 17',
+        rows: [
+            ['Diamond Trip Services Corp', 'Titusville', '3', 'Oct 16, 2026'],
+            ['Top Team Hauling LLC', 'Melbourne', '2', 'Oct 16, 2026'],
+            ['Omdd Family LLC', 'Kissimmee', '2', 'Oct 16, 2026'],
+            ['E Team Freight LLC', 'Miami', '2', 'Oct 16, 2026'],
+            ['Great Things Logistics Group LLC', 'Port Charlotte', '2', 'Oct 16, 2026'],
+            ['Mackey Trucking LLC', 'Daytona Beach', '1', 'Oct 16, 2026'],
+            ['Vbird Logistics LLC', 'Fort Myers', '1', 'Oct 16, 2026'],
         ],
     },
 };
