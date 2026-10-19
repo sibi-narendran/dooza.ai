@@ -57,7 +57,8 @@ export default function NavTrail() {
             try {
                 const s = window.sessionStorage;
                 const u = new URL(a.href);
-                const rid = s.getItem('dz_rid');
+                // No reply link: tag organic site checkouts site-<button source> so Stripe shows which page sold (10-19).
+                const rid = s.getItem('dz_rid') || (a.dataset.source ? `site-${a.dataset.source}` : '');
                 const em = s.getItem('dz_em');
                 if (rid && !u.searchParams.get('client_reference_id')) u.searchParams.set('client_reference_id', rid);
                 if (em && !u.searchParams.get('prefilled_email')) u.searchParams.set('prefilled_email', em);
