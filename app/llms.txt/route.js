@@ -121,7 +121,7 @@ const staticPages = [
     {
         title: 'Trucking insurance market weekly: which insurers gain and lose US trucking companies, by state',
         url: `${SITE_URL}/trucking-insurance-market`,
-        description: 'Weekly count from public FMCSA BMC-91X liability filings, insurers grouped by parent: new filings (brand-new carriers vs won from another insurer group), filings ended, net, for the US and each state. Week of Oct 5-11, 2026: 2,087 new filings (1,426 brand-new carriers), 1,514 ended; Progressive gained 823, GEICO/Berkshire Hathaway 269, CarrierGuard RRG 81 (most won from other insurers: 56). Updated every Monday; quotable with a link.',
+        description: 'Weekly count from public FMCSA BMC-91X liability filings, insurers grouped by parent: new filings (brand-new carriers vs won from another insurer group), filings ended, net, for the US and each state. Week of Oct 11-17, 2026: 1,864 new filings (1,240 brand-new carriers), 1,369 ended; Progressive gained 805, GEICO/Berkshire Hathaway 178, CarrierGuard RRG 83 (most won from other insurers: 51). Updated every Monday; quotable with a link.',
     },
     {
         title: 'Best trucking insurance leads 2026: 9 sources compared (prices from vendors\' own sites)',

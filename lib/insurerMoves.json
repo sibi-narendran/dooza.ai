@@ -1,7 +1,7 @@
 {
  "window": [
-  "2026-10-05",
-  "2026-10-11"
+  "2026-10-11",
+  "2026-10-17"
  ],
  "caveats": [
   "Window ends 2 days before the run: FMCSA filings post 1-3 days late.",
@@ -12,178 +12,178 @@
   "BMC-91X liability filings only (for-hire interstate carriers); intrastate-only fleets are not in this data."
  ],
  "stats": {
-  "gain_skipped_renewal": 744,
-  "gains": 2109,
-  "loss_skipped_same_group": 1005,
-  "losses_CANCEL": 653,
-  "losses_TERM_REPL": 875
+  "gains": 1882,
+  "gain_skipped_renewal": 780,
+  "losses_TERM_REPL": 833,
+  "losses_CANCEL": 551,
+  "loss_skipped_same_group": 994
  },
  "us": {
-  "gained": 2087,
-  "newCarriers": 1426,
-  "lost": 1514,
+  "gained": 1864,
+  "newCarriers": 1240,
+  "lost": 1369,
   "top": [
    {
     "insurer": "Progressive",
-    "gained": 823,
-    "newCarriers": 703,
-    "wonFromRivals": 120,
-    "lost": 412,
-    "net": 411
+    "gained": 805,
+    "newCarriers": 680,
+    "wonFromRivals": 125,
+    "lost": 343,
+    "net": 462
    },
    {
     "insurer": "GEICO / Berkshire Hathaway",
-    "gained": 269,
-    "newCarriers": 215,
-    "wonFromRivals": 54,
-    "lost": 216,
-    "net": 53
+    "gained": 178,
+    "newCarriers": 143,
+    "wonFromRivals": 35,
+    "lost": 210,
+    "net": -32
    },
    {
     "insurer": "CarrierGuard RRG",
-    "gained": 81,
-    "newCarriers": 25,
-    "wonFromRivals": 56,
+    "gained": 83,
+    "newCarriers": 32,
+    "wonFromRivals": 51,
     "lost": 3,
-    "net": 78
+    "net": 80
    },
    {
     "insurer": "Great West Casualty (Old Republic)",
-    "gained": 74,
+    "gained": 64,
     "newCarriers": 35,
-    "wonFromRivals": 39,
-    "lost": 78,
-    "net": -4
-   },
-   {
-    "insurer": "Canal",
-    "gained": 60,
-    "newCarriers": 27,
-    "wonFromRivals": 33,
-    "lost": 40,
-    "net": 20
-   },
-   {
-    "insurer": "Accredited Specialty Insurance",
-    "gained": 53,
-    "newCarriers": 27,
-    "wonFromRivals": 26,
-    "lost": 54,
-    "net": -1
+    "wonFromRivals": 29,
+    "lost": 64,
+    "net": 0
    },
    {
     "insurer": "Travelers / Northland",
-    "gained": 38,
-    "newCarriers": 8,
-    "wonFromRivals": 30,
-    "lost": 40,
-    "net": -2
+    "gained": 47,
+    "newCarriers": 9,
+    "wonFromRivals": 38,
+    "lost": 35,
+    "net": 12
    },
    {
-    "insurer": "Southlake Specialty Insurance",
-    "gained": 35,
-    "newCarriers": 22,
-    "wonFromRivals": 13,
-    "lost": 20,
+    "insurer": "Canal",
+    "gained": 45,
+    "newCarriers": 12,
+    "wonFromRivals": 33,
+    "lost": 30,
     "net": 15
    },
    {
-    "insurer": "Agency Insurance Of Maryland",
-    "gained": 30,
-    "newCarriers": 26,
-    "wonFromRivals": 4,
-    "lost": 6,
-    "net": 24
+    "insurer": "Accredited Specialty Insurance",
+    "gained": 45,
+    "newCarriers": 22,
+    "wonFromRivals": 23,
+    "lost": 58,
+    "net": -13
+   },
+   {
+    "insurer": "Southlake Specialty Insurance",
+    "gained": 28,
+    "newCarriers": 14,
+    "wonFromRivals": 14,
+    "lost": 19,
+    "net": 9
    },
    {
     "insurer": "Highlander Specialty Insurance",
     "gained": 27,
-    "newCarriers": 16,
-    "wonFromRivals": 11,
-    "lost": 24,
-    "net": 3
+    "newCarriers": 11,
+    "wonFromRivals": 16,
+    "lost": 20,
+    "net": 7
    },
    {
     "insurer": "Ms Transverse Specialty Insurance",
-    "gained": 25,
-    "newCarriers": 17,
-    "wonFromRivals": 8,
-    "lost": 19,
-    "net": 6
-   },
-   {
-    "insurer": "Blue Hill Specialty Insurance",
-    "gained": 24,
-    "newCarriers": 18,
-    "wonFromRivals": 6,
-    "lost": 12,
-    "net": 12
+    "gained": 21,
+    "newCarriers": 12,
+    "wonFromRivals": 9,
+    "lost": 16,
+    "net": 5
    },
    {
     "insurer": "Integon Indemnity",
-    "gained": 19,
-    "newCarriers": 17,
-    "wonFromRivals": 2,
-    "lost": 9,
-    "net": 10
-   },
-   {
-    "insurer": "Brooklyn Specialty Insurance Rrg",
-    "gained": 17,
-    "newCarriers": 13,
-    "wonFromRivals": 4,
-    "lost": 5,
-    "net": 12
-   },
-   {
-    "insurer": "Acuity, A Mutual Insurance",
-    "gained": 15,
-    "newCarriers": 6,
-    "wonFromRivals": 9,
+    "gained": 21,
+    "newCarriers": 20,
+    "wonFromRivals": 1,
     "lost": 6,
-    "net": 9
+    "net": 15
+   },
+   {
+    "insurer": "Agency Insurance Of Maryland",
+    "gained": 20,
+    "newCarriers": 15,
+    "wonFromRivals": 5,
+    "lost": 5,
+    "net": 15
+   },
+   {
+    "insurer": "Benchmark Specialty Insurance",
+    "gained": 17,
+    "newCarriers": 12,
+    "wonFromRivals": 5,
+    "lost": 13,
+    "net": 4
+   },
+   {
+    "insurer": "Sutton Specialty Insurance",
+    "gained": 17,
+    "newCarriers": 9,
+    "wonFromRivals": 8,
+    "lost": 6,
+    "net": 11
+   },
+   {
+    "insurer": "National Transportation Insurance Risk Retention Group, Llc",
+    "gained": 15,
+    "newCarriers": 9,
+    "wonFromRivals": 6,
+    "lost": 8,
+    "net": 7
    }
   ],
   "losers": [
    {
-    "insurer": "Trisura Specialty Insurance",
-    "gained": 5,
+    "insurer": "Motor Transport Mutual Risk Retention Group",
+    "gained": 3,
     "newCarriers": 1,
-    "wonFromRivals": 4,
-    "lost": 26,
-    "net": -21
+    "wonFromRivals": 2,
+    "lost": 38,
+    "net": -35
    },
    {
-    "insurer": "Motor Transport Mutual Risk Retention Group",
-    "gained": 9,
-    "newCarriers": 5,
-    "wonFromRivals": 4,
-    "lost": 25,
-    "net": -16
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 178,
+    "newCarriers": 143,
+    "wonFromRivals": 35,
+    "lost": 210,
+    "net": -32
+   },
+   {
+    "insurer": "Sentry",
+    "gained": 3,
+    "newCarriers": 0,
+    "wonFromRivals": 3,
+    "lost": 17,
+    "net": -14
+   },
+   {
+    "insurer": "Accredited Specialty Insurance",
+    "gained": 45,
+    "newCarriers": 22,
+    "wonFromRivals": 23,
+    "lost": 58,
+    "net": -13
    },
    {
     "insurer": "Everspan Insurance",
     "gained": 10,
-    "newCarriers": 5,
-    "wonFromRivals": 5,
+    "newCarriers": 3,
+    "wonFromRivals": 7,
     "lost": 23,
     "net": -13
-   },
-   {
-    "insurer": "Occidental Fire & Casualty Of North Carolina",
-    "gained": 1,
-    "newCarriers": 0,
-    "wonFromRivals": 1,
-    "lost": 12,
-    "net": -11
-   },
-   {
-    "insurer": "Qualitas Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 11,
-    "net": -11
    }
   ]
  },
@@ -191,264 +191,36 @@
   {
    "code": "AL",
    "name": "Alabama",
-   "gained": 23,
-   "lost": 15,
-   "newCarriers": 20,
+   "gained": 17,
+   "lost": 16,
+   "newCarriers": 13,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 18,
-     "newCarriers": 17,
-     "wonFromRivals": 1,
-     "lost": 9,
-     "net": 9
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 4,
-     "net": -2
-    },
-    {
-     "insurer": "Integon Indemnity",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Texas Insurance",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Canal",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": 0
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "GEICO / Berkshire Hathaway",
-    "gained": 2,
-    "newCarriers": 1,
-    "wonFromRivals": 1,
-    "lost": 4,
-    "net": -2
-   }
-  },
-  {
-   "code": "AZ",
-   "name": "Arizona",
-   "gained": 41,
-   "lost": 24,
-   "newCarriers": 31,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 22,
-     "newCarriers": 19,
-     "wonFromRivals": 3,
-     "lost": 8,
-     "net": 14
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 6,
-     "newCarriers": 6,
-     "wonFromRivals": 0,
-     "lost": 6,
-     "net": 0
-    },
-    {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 3,
-     "newCarriers": 1,
+     "gained": 11,
+     "newCarriers": 9,
      "wonFromRivals": 2,
-     "lost": 3,
-     "net": 0
-    },
-    {
-     "insurer": "New Horizon Insurance",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Canal",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Travelers / Northland",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 2,
-    "net": -2
-   }
-  },
-  {
-   "code": "AR",
-   "name": "Arkansas",
-   "gained": 15,
-   "lost": 12,
-   "newCarriers": 8,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 7,
-     "newCarriers": 5,
-     "wonFromRivals": 2,
-     "lost": 2,
-     "net": 5
-    },
-    {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 1,
-     "net": 1
-    },
-    {
-     "insurer": "Canal",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 3,
-     "net": -1
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Shelter General Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 2,
-    "net": -2
-   }
-  },
-  {
-   "code": "CA",
-   "name": "California",
-   "gained": 261,
-   "lost": 233,
-   "newCarriers": 147,
-   "top": [
-    {
-     "insurer": "Southlake Specialty Insurance",
-     "gained": 31,
-     "newCarriers": 20,
-     "wonFromRivals": 11,
-     "lost": 17,
-     "net": 14
-    },
-    {
-     "insurer": "Ms Transverse Specialty Insurance",
-     "gained": 20,
-     "newCarriers": 14,
-     "wonFromRivals": 6,
-     "lost": 18,
-     "net": 2
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 18,
-     "newCarriers": 6,
-     "wonFromRivals": 12,
-     "lost": 0,
-     "net": 18
-    },
-    {
-     "insurer": "Progressive",
-     "gained": 18,
-     "newCarriers": 5,
-     "wonFromRivals": 13,
-     "lost": 21,
-     "net": -3
-    },
-    {
-     "insurer": "New Horizon Insurance",
-     "gained": 13,
-     "newCarriers": 3,
-     "wonFromRivals": 10,
-     "lost": 3,
-     "net": 10
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Motor Transport Mutual Risk Retention Group",
-    "gained": 1,
-    "newCarriers": 0,
-    "wonFromRivals": 1,
-    "lost": 18,
-    "net": -17
-   }
-  },
-  {
-   "code": "CO",
-   "name": "Colorado",
-   "gained": 30,
-   "lost": 11,
-   "newCarriers": 26,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 18,
-     "newCarriers": 17,
-     "wonFromRivals": 1,
-     "lost": 3,
-     "net": 15
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 10,
-     "newCarriers": 7,
-     "wonFromRivals": 3,
-     "lost": 4,
+     "lost": 5,
      "net": 6
     },
     {
-     "insurer": "Acuity, A Mutual Insurance",
-     "gained": 1,
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 3,
+     "newCarriers": 2,
+     "wonFromRivals": 1,
+     "lost": 5,
+     "net": -2
+    },
+    {
+     "insurer": "Canal",
+     "gained": 2,
      "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
+     "wonFromRivals": 1,
+     "lost": 1,
      "net": 1
     },
     {
-     "insurer": "Accredited Specialty Insurance",
+     "insurer": "Lancer Insurance",
      "gained": 1,
      "newCarriers": 1,
      "wonFromRivals": 0,
@@ -465,47 +237,40 @@
     }
    ],
    "biggestLoser": {
-    "insurer": "Great West Casualty (Old Republic)",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 1,
-    "net": -1
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 3,
+    "newCarriers": 2,
+    "wonFromRivals": 1,
+    "lost": 5,
+    "net": -2
    }
   },
   {
-   "code": "CT",
-   "name": "Connecticut",
-   "gained": 15,
-   "lost": 9,
-   "newCarriers": 12,
+   "code": "AK",
+   "name": "Alaska",
+   "gained": 0,
+   "lost": 0,
+   "newCarriers": 0,
+   "top": [],
+   "biggestLoser": null
+  },
+  {
+   "code": "AZ",
+   "name": "Arizona",
+   "gained": 31,
+   "lost": 24,
+   "newCarriers": 26,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 5,
-     "newCarriers": 5,
-     "wonFromRivals": 0,
-     "lost": 4,
-     "net": 1
-    },
-    {
-     "insurer": "National Indemnity",
-     "gained": 2,
-     "newCarriers": 1,
+     "gained": 19,
+     "newCarriers": 18,
      "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
+     "lost": 7,
+     "net": 12
     },
     {
      "insurer": "CarrierGuard RRG",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Plymouth Rock Assurance",
      "gained": 2,
      "newCarriers": 2,
      "wonFromRivals": 0,
@@ -513,7 +278,251 @@
      "net": 2
     },
     {
-     "insurer": "Concert Specialty Insurance",
+     "insurer": "New Horizon Insurance",
+     "gained": 2,
+     "newCarriers": 1,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 2
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 2,
+     "newCarriers": 2,
+     "wonFromRivals": 0,
+     "lost": 4,
+     "net": -2
+    },
+    {
+     "insurer": "Incline Americas Insurance",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Accredited Specialty Insurance",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 4,
+    "net": -4
+   }
+  },
+  {
+   "code": "AR",
+   "name": "Arkansas",
+   "gained": 6,
+   "lost": 8,
+   "newCarriers": 5,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 5,
+     "newCarriers": 5,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": 4
+    },
+    {
+     "insurer": "United States Fire Insurance",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Occidental Fire & Casualty Of North Carolina",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    },
+    {
+     "insurer": "Arch Insurance",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Great West Casualty (Old Republic)",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 2,
+    "net": -2
+   }
+  },
+  {
+   "code": "CA",
+   "name": "California",
+   "gained": 238,
+   "lost": 219,
+   "newCarriers": 126,
+   "top": [
+    {
+     "insurer": "Southlake Specialty Insurance",
+     "gained": 26,
+     "newCarriers": 13,
+     "wonFromRivals": 13,
+     "lost": 17,
+     "net": 9
+    },
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 24,
+     "newCarriers": 14,
+     "wonFromRivals": 10,
+     "lost": 1,
+     "net": 23
+    },
+    {
+     "insurer": "Progressive",
+     "gained": 22,
+     "newCarriers": 11,
+     "wonFromRivals": 11,
+     "lost": 15,
+     "net": 7
+    },
+    {
+     "insurer": "Ms Transverse Specialty Insurance",
+     "gained": 15,
+     "newCarriers": 9,
+     "wonFromRivals": 6,
+     "lost": 14,
+     "net": 1
+    },
+    {
+     "insurer": "Hyundai Marine & Fire Insurance , Ltd. (U.S. Branch)",
+     "gained": 12,
+     "newCarriers": 8,
+     "wonFromRivals": 4,
+     "lost": 7,
+     "net": 5
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Motor Transport Mutual Risk Retention Group",
+    "gained": 1,
+    "newCarriers": 1,
+    "wonFromRivals": 0,
+    "lost": 18,
+    "net": -17
+   }
+  },
+  {
+   "code": "CO",
+   "name": "Colorado",
+   "gained": 27,
+   "lost": 18,
+   "newCarriers": 20,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 19,
+     "newCarriers": 17,
+     "wonFromRivals": 2,
+     "lost": 9,
+     "net": 10
+    },
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Benchmark Specialty Insurance",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Spinnaker Specialty Insurance",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Canal",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 1,
+    "newCarriers": 1,
+    "wonFromRivals": 0,
+    "lost": 3,
+    "net": -2
+   }
+  },
+  {
+   "code": "CT",
+   "name": "Connecticut",
+   "gained": 16,
+   "lost": 7,
+   "newCarriers": 12,
+   "top": [
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 5,
+     "newCarriers": 5,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": 4
+    },
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 3,
+     "newCarriers": 1,
+     "wonFromRivals": 2,
+     "lost": 0,
+     "net": 3
+    },
+    {
+     "insurer": "Progressive",
+     "gained": 3,
+     "newCarriers": 3,
+     "wonFromRivals": 0,
+     "lost": 3,
+     "net": 0
+    },
+    {
+     "insurer": "Travelers / Northland",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Star Mutual Rrg",
      "gained": 1,
      "newCarriers": 1,
      "wonFromRivals": 0,
@@ -533,257 +542,55 @@
   {
    "code": "DE",
    "name": "Delaware",
-   "gained": 10,
-   "lost": 8,
+   "gained": 6,
+   "lost": 0,
    "newCarriers": 5,
    "top": [
     {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 4,
-     "newCarriers": 3,
+     "insurer": "Accredited Specialty Insurance",
+     "gained": 3,
+     "newCarriers": 2,
      "wonFromRivals": 1,
-     "lost": 1,
-     "net": 3
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 2,
-     "newCarriers": 0,
-     "wonFromRivals": 2,
      "lost": 0,
-     "net": 2
+     "net": 3
     },
     {
      "insurer": "Progressive",
      "gained": 2,
      "newCarriers": 2,
      "wonFromRivals": 0,
-     "lost": 3,
-     "net": -1
+     "lost": 0,
+     "net": 2
     },
     {
-     "insurer": "CarrierGuard RRG",
+     "insurer": "Daily Underwriters",
      "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
      "lost": 0,
      "net": 1
-    },
-    {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 1,
-     "net": 0
     }
    ],
-   "biggestLoser": {
-    "insurer": "Progressive",
-    "gained": 2,
-    "newCarriers": 2,
-    "wonFromRivals": 0,
-    "lost": 3,
-    "net": -1
-   }
+   "biggestLoser": null
   },
   {
    "code": "DC",
    "name": "District of Columbia",
-   "gained": 1,
-   "lost": 1,
+   "gained": 0,
+   "lost": 2,
    "newCarriers": 0,
    "top": [
     {
-     "insurer": "Prime Insurance",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Wesco Insurance",
+     "insurer": "Mt. Hawley Insurance",
      "gained": 0,
      "newCarriers": 0,
      "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Wesco Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 1,
-    "net": -1
-   }
-  },
-  {
-   "code": "FL",
-   "name": "Florida",
-   "gained": 141,
-   "lost": 113,
-   "newCarriers": 103,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 48,
-     "newCarriers": 39,
-     "wonFromRivals": 9,
-     "lost": 29,
-     "net": 19
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 28,
-     "newCarriers": 25,
-     "wonFromRivals": 3,
-     "lost": 21,
-     "net": 7
-    },
-    {
-     "insurer": "Brooklyn Specialty Insurance Rrg",
-     "gained": 13,
-     "newCarriers": 10,
-     "wonFromRivals": 3,
-     "lost": 3,
-     "net": 10
-    },
-    {
-     "insurer": "Southwind Risk Retention Group",
-     "gained": 11,
-     "newCarriers": 8,
-     "wonFromRivals": 3,
-     "lost": 4,
-     "net": 7
-    },
-    {
-     "insurer": "Canal",
-     "gained": 7,
-     "newCarriers": 2,
-     "wonFromRivals": 5,
-     "lost": 5,
-     "net": 2
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Trisura Specialty Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 9,
-    "net": -9
-   }
-  },
-  {
-   "code": "GA",
-   "name": "Georgia",
-   "gained": 86,
-   "lost": 56,
-   "newCarriers": 66,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 44,
-     "newCarriers": 36,
-     "wonFromRivals": 8,
-     "lost": 19,
-     "net": 25
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 13,
-     "newCarriers": 12,
-     "wonFromRivals": 1,
-     "lost": 11,
-     "net": 2
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 5,
-     "newCarriers": 3,
-     "wonFromRivals": 2,
-     "lost": 0,
-     "net": 5
-    },
-    {
-     "insurer": "Cimarron Insurance",
-     "gained": 3,
-     "newCarriers": 2,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 3
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 3,
-     "newCarriers": 2,
-     "wonFromRivals": 1,
      "lost": 2,
-     "net": 1
+     "net": -2
     }
    ],
    "biggestLoser": {
-    "insurer": "Accredited Specialty Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 3,
-    "net": -3
-   }
-  },
-  {
-   "code": "ID",
-   "name": "Idaho",
-   "gained": 12,
-   "lost": 6,
-   "newCarriers": 9,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 7,
-     "newCarriers": 6,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 5
-    },
-    {
-     "insurer": "Pioneer Specialty Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Great American / National Interstate",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Canal",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Travelers / Northland",
+    "insurer": "Mt. Hawley Insurance",
     "gained": 0,
     "newCarriers": 0,
     "wonFromRivals": 0,
@@ -792,150 +599,135 @@
    }
   },
   {
-   "code": "IL",
-   "name": "Illinois",
-   "gained": 157,
-   "lost": 113,
-   "newCarriers": 93,
+   "code": "FL",
+   "name": "Florida",
+   "gained": 133,
+   "lost": 106,
+   "newCarriers": 90,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 91,
-     "newCarriers": 77,
-     "wonFromRivals": 14,
-     "lost": 37,
-     "net": 54
+     "gained": 49,
+     "newCarriers": 39,
+     "wonFromRivals": 10,
+     "lost": 21,
+     "net": 28
     },
     {
      "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 12,
-     "newCarriers": 7,
-     "wonFromRivals": 5,
-     "lost": 17,
-     "net": -5
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 7,
-     "newCarriers": 0,
-     "wonFromRivals": 7,
-     "lost": 1,
-     "net": 6
-    },
-    {
-     "insurer": "Travelers / Northland",
-     "gained": 7,
-     "newCarriers": 0,
-     "wonFromRivals": 7,
-     "lost": 5,
-     "net": 2
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 7,
-     "newCarriers": 2,
-     "wonFromRivals": 5,
-     "lost": 6,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "GEICO / Berkshire Hathaway",
-    "gained": 12,
-    "newCarriers": 7,
-    "wonFromRivals": 5,
-    "lost": 17,
-    "net": -5
-   }
-  },
-  {
-   "code": "IN",
-   "name": "Indiana",
-   "gained": 64,
-   "lost": 55,
-   "newCarriers": 37,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 25,
-     "newCarriers": 20,
-     "wonFromRivals": 5,
-     "lost": 18,
-     "net": 7
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 15,
-     "newCarriers": 11,
-     "wonFromRivals": 4,
+     "gained": 19,
+     "newCarriers": 16,
+     "wonFromRivals": 3,
      "lost": 19,
-     "net": -4
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 4,
-     "newCarriers": 0,
-     "wonFromRivals": 4,
-     "lost": 4,
      "net": 0
     },
     {
-     "insurer": "Db Insurance , Ltd (U.S.Branch)",
-     "gained": 3,
-     "newCarriers": 0,
-     "wonFromRivals": 3,
-     "lost": 1,
-     "net": 2
+     "insurer": "Brooklyn Specialty Insurance Rrg",
+     "gained": 12,
+     "newCarriers": 8,
+     "wonFromRivals": 4,
+     "lost": 2,
+     "net": 10
     },
     {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 3,
-     "newCarriers": 1,
-     "wonFromRivals": 2,
-     "lost": 2,
-     "net": 1
+     "insurer": "Commodore Risk Retention Group",
+     "gained": 10,
+     "newCarriers": 5,
+     "wonFromRivals": 5,
+     "lost": 1,
+     "net": 9
+    },
+    {
+     "insurer": "Canal",
+     "gained": 5,
+     "newCarriers": 0,
+     "wonFromRivals": 5,
+     "lost": 5,
+     "net": 0
     }
    ],
    "biggestLoser": {
-    "insurer": "GEICO / Berkshire Hathaway",
-    "gained": 15,
-    "newCarriers": 11,
-    "wonFromRivals": 4,
-    "lost": 19,
+    "insurer": "Trisura Specialty Insurance",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 6,
+    "net": -6
+   }
+  },
+  {
+   "code": "GA",
+   "name": "Georgia",
+   "gained": 62,
+   "lost": 56,
+   "newCarriers": 44,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 31,
+     "newCarriers": 25,
+     "wonFromRivals": 6,
+     "lost": 18,
+     "net": 13
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 7,
+     "newCarriers": 6,
+     "wonFromRivals": 1,
+     "lost": 10,
+     "net": -3
+    },
+    {
+     "insurer": "Canal",
+     "gained": 4,
+     "newCarriers": 3,
+     "wonFromRivals": 1,
+     "lost": 1,
+     "net": 3
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 3,
+     "newCarriers": 2,
+     "wonFromRivals": 1,
+     "lost": 2,
+     "net": 1
+    },
+    {
+     "insurer": "Evolum Risk Retention Group",
+     "gained": 2,
+     "newCarriers": 1,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 2
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Siriuspoint America Insurance",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 4,
     "net": -4
    }
   },
   {
-   "code": "IA",
-   "name": "Iowa",
-   "gained": 19,
-   "lost": 13,
-   "newCarriers": 15,
+   "code": "HI",
+   "name": "Hawaii",
+   "gained": 0,
+   "lost": 0,
+   "newCarriers": 0,
+   "top": [],
+   "biggestLoser": null
+  },
+  {
+   "code": "ID",
+   "name": "Idaho",
+   "gained": 3,
+   "lost": 3,
+   "newCarriers": 1,
    "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 11,
-     "newCarriers": 9,
-     "wonFromRivals": 2,
-     "lost": 4,
-     "net": 7
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 5,
-     "newCarriers": 4,
-     "wonFromRivals": 1,
-     "lost": 4,
-     "net": 1
-    },
-    {
-     "insurer": "Secura Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
     {
      "insurer": "Sentry",
      "gained": 1,
@@ -945,10 +737,205 @@
      "net": 1
     },
     {
-     "insurer": "Vanliner Insurance",
+     "insurer": "Progressive",
      "gained": 1,
      "newCarriers": 1,
      "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "W. R. Berkley",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    },
+    {
+     "insurer": "Accelerant Specialty Insurance",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Great West Casualty (Old Republic)",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 1,
+    "net": -1
+   }
+  },
+  {
+   "code": "IL",
+   "name": "Illinois",
+   "gained": 154,
+   "lost": 113,
+   "newCarriers": 87,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 90,
+     "newCarriers": 69,
+     "wonFromRivals": 21,
+     "lost": 33,
+     "net": 57
+    },
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 12,
+     "newCarriers": 1,
+     "wonFromRivals": 11,
+     "lost": 0,
+     "net": 12
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 10,
+     "newCarriers": 7,
+     "wonFromRivals": 3,
+     "lost": 22,
+     "net": -12
+    },
+    {
+     "insurer": "Canal",
+     "gained": 5,
+     "newCarriers": 0,
+     "wonFromRivals": 5,
+     "lost": 0,
+     "net": 5
+    },
+    {
+     "insurer": "Ms Transverse Insurance",
+     "gained": 5,
+     "newCarriers": 2,
+     "wonFromRivals": 3,
+     "lost": 3,
+     "net": 2
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 10,
+    "newCarriers": 7,
+    "wonFromRivals": 3,
+    "lost": 22,
+    "net": -12
+   }
+  },
+  {
+   "code": "IN",
+   "name": "Indiana",
+   "gained": 52,
+   "lost": 47,
+   "newCarriers": 30,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 28,
+     "newCarriers": 20,
+     "wonFromRivals": 8,
+     "lost": 13,
+     "net": 15
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 7,
+     "newCarriers": 5,
+     "wonFromRivals": 2,
+     "lost": 14,
+     "net": -7
+    },
+    {
+     "insurer": "Db Insurance , Ltd (U.S.Branch)",
+     "gained": 3,
+     "newCarriers": 0,
+     "wonFromRivals": 3,
+     "lost": 0,
+     "net": 3
+    },
+    {
+     "insurer": "Accredited Specialty Insurance",
+     "gained": 3,
+     "newCarriers": 1,
+     "wonFromRivals": 2,
+     "lost": 3,
+     "net": 0
+    },
+    {
+     "insurer": "Incline Americas Insurance",
+     "gained": 2,
+     "newCarriers": 0,
+     "wonFromRivals": 2,
+     "lost": 0,
+     "net": 2
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 7,
+    "newCarriers": 5,
+    "wonFromRivals": 2,
+    "lost": 14,
+    "net": -7
+   }
+  },
+  {
+   "code": "IA",
+   "name": "Iowa",
+   "gained": 18,
+   "lost": 10,
+   "newCarriers": 16,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 7,
+     "newCarriers": 7,
+     "wonFromRivals": 0,
+     "lost": 4,
+     "net": 3
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 5,
+     "newCarriers": 4,
+     "wonFromRivals": 1,
+     "lost": 1,
+     "net": 4
+    },
+    {
+     "insurer": "Farm Bureau Property And Casualty Insurance",
+     "gained": 2,
+     "newCarriers": 2,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 2
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 2,
+     "newCarriers": 2,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 2
+    },
+    {
+     "insurer": "National Fire & Marine Insurance",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
      "lost": 0,
      "net": 1
     }
@@ -958,56 +945,56 @@
     "gained": 0,
     "newCarriers": 0,
     "wonFromRivals": 0,
-    "lost": 2,
-    "net": -2
+    "lost": 1,
+    "net": -1
    }
   },
   {
    "code": "KS",
    "name": "Kansas",
-   "gained": 20,
-   "lost": 8,
-   "newCarriers": 19,
+   "gained": 12,
+   "lost": 9,
+   "newCarriers": 8,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 12,
-     "newCarriers": 11,
+     "gained": 7,
+     "newCarriers": 6,
      "wonFromRivals": 1,
-     "lost": 3,
-     "net": 9
-    },
-    {
-     "insurer": "Farm Bureau Property And Casualty Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
+     "lost": 4,
+     "net": 3
     },
     {
      "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
+     "gained": 3,
+     "newCarriers": 2,
+     "wonFromRivals": 1,
      "lost": 0,
-     "net": 1
+     "net": 3
     },
     {
-     "insurer": "National American Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
+     "insurer": "Travelers / Northland",
+     "gained": 2,
+     "newCarriers": 0,
+     "wonFromRivals": 2,
      "lost": 0,
-     "net": 1
+     "net": 2
     },
     {
-     "insurer": "Universal Casualty Risk Retention Group",
-     "gained": 1,
-     "newCarriers": 1,
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 0,
+     "newCarriers": 0,
      "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
+     "lost": 1,
+     "net": -1
+    },
+    {
+     "insurer": "Sentry",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
     }
    ],
    "biggestLoser": {
@@ -1022,93 +1009,85 @@
   {
    "code": "KY",
    "name": "Kentucky",
-   "gained": 23,
-   "lost": 18,
-   "newCarriers": 14,
+   "gained": 19,
+   "lost": 8,
+   "newCarriers": 18,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 12,
-     "newCarriers": 10,
-     "wonFromRivals": 2,
-     "lost": 8,
-     "net": 4
+     "gained": 15,
+     "newCarriers": 15,
+     "wonFromRivals": 0,
+     "lost": 5,
+     "net": 10
     },
     {
      "insurer": "Canal",
-     "gained": 4,
-     "newCarriers": 3,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 2
-    },
-    {
-     "insurer": "National Indemnity",
      "gained": 2,
-     "newCarriers": 0,
-     "wonFromRivals": 2,
+     "newCarriers": 1,
+     "wonFromRivals": 1,
      "lost": 0,
      "net": 2
     },
     {
-     "insurer": "Cimarron Insurance",
+     "insurer": "Accelerant National Insurance",
      "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
      "lost": 0,
      "net": 1
     },
     {
-     "insurer": "Navigators Insurance",
+     "insurer": "Great West Casualty (Old Republic)",
      "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
      "lost": 0,
      "net": 1
+    },
+    {
+     "insurer": "Travelers / Northland",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
     }
    ],
    "biggestLoser": {
-    "insurer": "Sentry",
+    "insurer": "Travelers / Northland",
     "gained": 0,
     "newCarriers": 0,
     "wonFromRivals": 0,
-    "lost": 2,
-    "net": -2
+    "lost": 1,
+    "net": -1
    }
   },
   {
    "code": "LA",
    "name": "Louisiana",
-   "gained": 10,
-   "lost": 10,
-   "newCarriers": 4,
+   "gained": 9,
+   "lost": 9,
+   "newCarriers": 6,
    "top": [
     {
-     "insurer": "CarrierGuard RRG",
+     "insurer": "Blue Hill Specialty Insurance",
+     "gained": 3,
+     "newCarriers": 3,
+     "wonFromRivals": 0,
+     "lost": 2,
+     "net": 1
+    },
+    {
+     "insurer": "Professional Transportation Risk Retention Group",
      "gained": 2,
-     "newCarriers": 0,
-     "wonFromRivals": 2,
+     "newCarriers": 2,
+     "wonFromRivals": 0,
      "lost": 0,
      "net": 2
     },
     {
-     "insurer": "Blue Hill Specialty Insurance",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": 1
-    },
-    {
-     "insurer": "Timber Creek Casualty Insurance A Risk Retention Group",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": 1
-    },
-    {
-     "insurer": "Circle Star Insurance , A Risk Retention Group",
+     "insurer": "Greenwich Insurance",
      "gained": 1,
      "newCarriers": 0,
      "wonFromRivals": 1,
@@ -1116,7 +1095,15 @@
      "net": 1
     },
     {
-     "insurer": "National Independent Truckers Insurance , Rrg",
+     "insurer": "CarrierGuard RRG",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Ascot Insurance",
      "gained": 1,
      "newCarriers": 0,
      "wonFromRivals": 1,
@@ -1136,134 +1123,37 @@
   {
    "code": "ME",
    "name": "Maine",
-   "gained": 4,
-   "lost": 3,
-   "newCarriers": 1,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 3,
-     "newCarriers": 1,
-     "wonFromRivals": 2,
-     "lost": 1,
-     "net": 2
-    },
-    {
-     "insurer": "Canal",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 0,
-     "newCarriers": 0,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    },
-    {
-     "insurer": "Travelers / Northland",
-     "gained": 0,
-     "newCarriers": 0,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Accredited Specialty Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 1,
-    "net": -1
-   }
+   "gained": 0,
+   "lost": 0,
+   "newCarriers": 0,
+   "top": [],
+   "biggestLoser": null
   },
   {
    "code": "MD",
    "name": "Maryland",
-   "gained": 30,
-   "lost": 18,
-   "newCarriers": 21,
+   "gained": 33,
+   "lost": 26,
+   "newCarriers": 23,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 11,
-     "newCarriers": 10,
-     "wonFromRivals": 1,
-     "lost": 8,
-     "net": 3
+     "gained": 17,
+     "newCarriers": 15,
+     "wonFromRivals": 2,
+     "lost": 10,
+     "net": 7
     },
     {
      "insurer": "Agency Insurance Of Maryland",
-     "gained": 7,
-     "newCarriers": 6,
-     "wonFromRivals": 1,
-     "lost": 4,
-     "net": 3
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 3,
-     "newCarriers": 2,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 1
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Benchmark Specialty Insurance",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Sentry",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 1,
-    "net": -1
-   }
-  },
-  {
-   "code": "MA",
-   "name": "Massachusetts",
-   "gained": 17,
-   "lost": 6,
-   "newCarriers": 16,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 8,
-     "newCarriers": 7,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 6
-    },
-    {
-     "insurer": "Safety Insurance",
-     "gained": 4,
-     "newCarriers": 4,
-     "wonFromRivals": 0,
-     "lost": 0,
+     "gained": 5,
+     "newCarriers": 3,
+     "wonFromRivals": 2,
+     "lost": 1,
      "net": 4
     },
     {
-     "insurer": "Pilgrim Insurance",
+     "insurer": "Daily Underwriters",
      "gained": 2,
      "newCarriers": 2,
      "wonFromRivals": 0,
@@ -1271,15 +1161,15 @@
      "net": 2
     },
     {
-     "insurer": "Great American / National Interstate",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 2,
+     "newCarriers": 0,
+     "wonFromRivals": 2,
+     "lost": 3,
+     "net": -1
     },
     {
-     "insurer": "Commerce Insurance",
+     "insurer": "Navigators Insurance",
      "gained": 1,
      "newCarriers": 1,
      "wonFromRivals": 0,
@@ -1288,7 +1178,7 @@
     }
    ],
    "biggestLoser": {
-    "insurer": "GEICO / Berkshire Hathaway",
+    "insurer": "Motor Transport Mutual Risk Retention Group",
     "gained": 0,
     "newCarriers": 0,
     "wonFromRivals": 0,
@@ -1297,55 +1187,105 @@
    }
   },
   {
-   "code": "MI",
-   "name": "Michigan",
-   "gained": 56,
-   "lost": 39,
-   "newCarriers": 43,
+   "code": "MA",
+   "name": "Massachusetts",
+   "gained": 17,
+   "lost": 10,
+   "newCarriers": 14,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 28,
-     "newCarriers": 27,
+     "gained": 7,
+     "newCarriers": 6,
      "wonFromRivals": 1,
-     "lost": 18,
-     "net": 10
+     "lost": 6,
+     "net": 1
     },
     {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 8,
+     "insurer": "Safety Insurance",
+     "gained": 5,
      "newCarriers": 5,
-     "wonFromRivals": 3,
-     "lost": 8,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": 4
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 2,
+     "newCarriers": 1,
+     "wonFromRivals": 1,
+     "lost": 1,
+     "net": 1
+    },
+    {
+     "insurer": "Corepointe Insurance",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Pilgrim Insurance",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 1,
      "net": 0
+    }
+   ],
+   "biggestLoser": null
+  },
+  {
+   "code": "MI",
+   "name": "Michigan",
+   "gained": 49,
+   "lost": 26,
+   "newCarriers": 34,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 30,
+     "newCarriers": 27,
+     "wonFromRivals": 3,
+     "lost": 9,
+     "net": 21
     },
     {
      "insurer": "Amerisure Mutual Insurance",
-     "gained": 5,
-     "newCarriers": 1,
+     "gained": 6,
+     "newCarriers": 2,
      "wonFromRivals": 4,
      "lost": 0,
-     "net": 5
+     "net": 6
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 6,
+     "newCarriers": 4,
+     "wonFromRivals": 2,
+     "lost": 2,
+     "net": 4
     },
     {
      "insurer": "Accredited Specialty Insurance",
-     "gained": 4,
-     "newCarriers": 2,
-     "wonFromRivals": 2,
-     "lost": 5,
-     "net": -1
+     "gained": 3,
+     "newCarriers": 0,
+     "wonFromRivals": 3,
+     "lost": 3,
+     "net": 0
     },
     {
-     "insurer": "Canal",
-     "gained": 2,
-     "newCarriers": 2,
+     "insurer": "Amguard Insurance ; 21873; 42390",
+     "gained": 1,
+     "newCarriers": 1,
      "wonFromRivals": 0,
      "lost": 0,
-     "net": 2
+     "net": 1
     }
    ],
    "biggestLoser": {
-    "insurer": "Arch Insurance",
+    "insurer": "Concert Specialty Insurance",
     "gained": 0,
     "newCarriers": 0,
     "wonFromRivals": 0,
@@ -1356,44 +1296,44 @@
   {
    "code": "MN",
    "name": "Minnesota",
-   "gained": 45,
-   "lost": 25,
-   "newCarriers": 30,
+   "gained": 52,
+   "lost": 24,
+   "newCarriers": 37,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 28,
-     "newCarriers": 25,
-     "wonFromRivals": 3,
-     "lost": 9,
-     "net": 19
+     "gained": 34,
+     "newCarriers": 29,
+     "wonFromRivals": 5,
+     "lost": 6,
+     "net": 28
     },
     {
      "insurer": "Great West Casualty (Old Republic)",
-     "gained": 4,
-     "newCarriers": 2,
-     "wonFromRivals": 2,
-     "lost": 5,
-     "net": -1
+     "gained": 5,
+     "newCarriers": 4,
+     "wonFromRivals": 1,
+     "lost": 7,
+     "net": -2
     },
     {
      "insurer": "Travelers / Northland",
-     "gained": 2,
+     "gained": 4,
      "newCarriers": 0,
-     "wonFromRivals": 2,
-     "lost": 0,
-     "net": 2
+     "wonFromRivals": 4,
+     "lost": 1,
+     "net": 3
     },
     {
      "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 0
+     "gained": 3,
+     "newCarriers": 3,
+     "wonFromRivals": 0,
+     "lost": 4,
+     "net": -1
     },
     {
-     "insurer": "Secura Insurance",
+     "insurer": "National Liability & Fire Insurance",
      "gained": 1,
      "newCarriers": 0,
      "wonFromRivals": 1,
@@ -1403,63 +1343,63 @@
    ],
    "biggestLoser": {
     "insurer": "Great West Casualty (Old Republic)",
-    "gained": 4,
-    "newCarriers": 2,
-    "wonFromRivals": 2,
-    "lost": 5,
-    "net": -1
+    "gained": 5,
+    "newCarriers": 4,
+    "wonFromRivals": 1,
+    "lost": 7,
+    "net": -2
    }
   },
   {
    "code": "MS",
    "name": "Mississippi",
-   "gained": 29,
-   "lost": 22,
-   "newCarriers": 19,
+   "gained": 18,
+   "lost": 9,
+   "newCarriers": 15,
    "top": [
     {
      "insurer": "Blue Hill Specialty Insurance",
-     "gained": 12,
-     "newCarriers": 10,
-     "wonFromRivals": 2,
-     "lost": 11,
-     "net": 1
+     "gained": 10,
+     "newCarriers": 9,
+     "wonFromRivals": 1,
+     "lost": 2,
+     "net": 8
     },
     {
      "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 6,
+     "gained": 4,
      "newCarriers": 4,
-     "wonFromRivals": 2,
-     "lost": 3,
+     "wonFromRivals": 0,
+     "lost": 1,
      "net": 3
     },
     {
-     "insurer": "Travelers / Northland",
-     "gained": 2,
-     "newCarriers": 0,
-     "wonFromRivals": 2,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 1,
-     "net": 1
-    },
-    {
-     "insurer": "Benchmark Specialty Insurance",
+     "insurer": "Concert Specialty Insurance",
      "gained": 1,
      "newCarriers": 0,
      "wonFromRivals": 1,
      "lost": 0,
      "net": 1
+    },
+    {
+     "insurer": "Travelers / Northland",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Texas Insurance",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
     }
    ],
    "biggestLoser": {
-    "insurer": "Highlander Specialty Insurance",
+    "insurer": "Navigators Insurance",
     "gained": 0,
     "newCarriers": 0,
     "wonFromRivals": 0,
@@ -1470,20 +1410,20 @@
   {
    "code": "MO",
    "name": "Missouri",
-   "gained": 37,
-   "lost": 15,
-   "newCarriers": 28,
+   "gained": 25,
+   "lost": 16,
+   "newCarriers": 17,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 23,
-     "newCarriers": 21,
-     "wonFromRivals": 2,
-     "lost": 3,
-     "net": 20
+     "gained": 12,
+     "newCarriers": 11,
+     "wonFromRivals": 1,
+     "lost": 5,
+     "net": 7
     },
     {
-     "insurer": "Incline Americas Insurance",
+     "insurer": "W. R. Berkley",
      "gained": 2,
      "newCarriers": 0,
      "wonFromRivals": 2,
@@ -1491,318 +1431,15 @@
      "net": 2
     },
     {
-     "insurer": "Canal",
-     "gained": 2,
-     "newCarriers": 0,
-     "wonFromRivals": 2,
-     "lost": 1,
-     "net": 1
-    },
-    {
      "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 3,
-     "net": -1
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
      "gained": 2,
      "newCarriers": 2,
      "wonFromRivals": 0,
      "lost": 4,
      "net": -2
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Great West Casualty (Old Republic)",
-    "gained": 2,
-    "newCarriers": 2,
-    "wonFromRivals": 0,
-    "lost": 4,
-    "net": -2
-   }
-  },
-  {
-   "code": "MT",
-   "name": "Montana",
-   "gained": 6,
-   "lost": 3,
-   "newCarriers": 4,
-   "top": [
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
     },
     {
-     "insurer": "Progressive",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 3,
-     "net": -1
-    },
-    {
-     "insurer": "National Indemnity",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Universal Casualty Risk Retention Group",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Progressive",
-    "gained": 2,
-    "newCarriers": 2,
-    "wonFromRivals": 0,
-    "lost": 3,
-    "net": -1
-   }
-  },
-  {
-   "code": "NE",
-   "name": "Nebraska",
-   "gained": 11,
-   "lost": 11,
-   "newCarriers": 6,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 6,
-     "newCarriers": 4,
-     "wonFromRivals": 2,
-     "lost": 3,
-     "net": 3
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 3,
-     "newCarriers": 2,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 1
-    },
-    {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 2,
-     "newCarriers": 0,
-     "wonFromRivals": 2,
-     "lost": 2,
-     "net": 0
-    },
-    {
-     "insurer": "Acuity, A Mutual Insurance",
-     "gained": 0,
-     "newCarriers": 0,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    },
-    {
-     "insurer": "National Specialty Insurance",
-     "gained": 0,
-     "newCarriers": 0,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Great West Casualty (Old Republic)",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 2,
-    "net": -2
-   }
-  },
-  {
-   "code": "NV",
-   "name": "Nevada",
-   "gained": 25,
-   "lost": 24,
-   "newCarriers": 15,
-   "top": [
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 11,
-     "newCarriers": 8,
-     "wonFromRivals": 3,
-     "lost": 4,
-     "net": 7
-    },
-    {
-     "insurer": "W. R. Berkley",
-     "gained": 3,
-     "newCarriers": 0,
-     "wonFromRivals": 3,
-     "lost": 0,
-     "net": 3
-    },
-    {
-     "insurer": "Progressive",
-     "gained": 3,
-     "newCarriers": 3,
-     "wonFromRivals": 0,
-     "lost": 8,
-     "net": -5
-    },
-    {
-     "insurer": "Star Mutual Rrg",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Everspan Insurance",
-     "gained": 2,
-     "newCarriers": 0,
-     "wonFromRivals": 2,
-     "lost": 0,
-     "net": 2
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Progressive",
-    "gained": 3,
-    "newCarriers": 3,
-    "wonFromRivals": 0,
-    "lost": 8,
-    "net": -5
-   }
-  },
-  {
-   "code": "NH",
-   "name": "New Hampshire",
-   "gained": 2,
-   "lost": 0,
-   "newCarriers": 2,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "National Indemnity",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": null
-  },
-  {
-   "code": "NJ",
-   "name": "New Jersey",
-   "gained": 68,
-   "lost": 54,
-   "newCarriers": 48,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 26,
-     "newCarriers": 25,
-     "wonFromRivals": 1,
-     "lost": 19,
-     "net": 7
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 7,
-     "newCarriers": 4,
-     "wonFromRivals": 3,
-     "lost": 0,
-     "net": 7
-    },
-    {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 7,
-     "newCarriers": 4,
-     "wonFromRivals": 3,
-     "lost": 7,
-     "net": 0
-    },
-    {
-     "insurer": "Universal Casualty Risk Retention Group",
-     "gained": 4,
-     "newCarriers": 2,
-     "wonFromRivals": 2,
-     "lost": 0,
-     "net": 4
-    },
-    {
-     "insurer": "Insure Line Transportation Insurance Rrg, Llc",
-     "gained": 4,
-     "newCarriers": 3,
-     "wonFromRivals": 1,
-     "lost": 1,
-     "net": 3
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Great West Casualty (Old Republic)",
-    "gained": 1,
-    "newCarriers": 0,
-    "wonFromRivals": 1,
-    "lost": 3,
-    "net": -2
-   }
-  },
-  {
-   "code": "NM",
-   "name": "New Mexico",
-   "gained": 11,
-   "lost": 4,
-   "newCarriers": 9,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 7,
-     "newCarriers": 6,
-     "wonFromRivals": 1,
-     "lost": 3,
-     "net": 4
-    },
-    {
-     "insurer": "Brooklyn Specialty Insurance Rrg",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Everspan Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Central Mutual Insurance",
+     "insurer": "Circle Star Insurance , A Risk Retention Group",
      "gained": 1,
      "newCarriers": 0,
      "wonFromRivals": 1,
@@ -1816,814 +1453,6 @@
      "wonFromRivals": 0,
      "lost": 0,
      "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "GEICO / Berkshire Hathaway",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 1,
-    "net": -1
-   }
-  },
-  {
-   "code": "NY",
-   "name": "New York",
-   "gained": 20,
-   "lost": 13,
-   "newCarriers": 20,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 14,
-     "newCarriers": 14,
-     "wonFromRivals": 0,
-     "lost": 4,
-     "net": 10
-    },
-    {
-     "insurer": "Motor Transport Mutual Risk Retention Group",
-     "gained": 3,
-     "newCarriers": 3,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 3
-    },
-    {
-     "insurer": "Travelers / Northland",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "National Liability & Fire Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Corepointe Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "National Specialty Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 5,
-    "net": -5
-   }
-  },
-  {
-   "code": "NC",
-   "name": "North Carolina",
-   "gained": 73,
-   "lost": 49,
-   "newCarriers": 55,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 38,
-     "newCarriers": 32,
-     "wonFromRivals": 6,
-     "lost": 16,
-     "net": 22
-    },
-    {
-     "insurer": "Integon Indemnity",
-     "gained": 16,
-     "newCarriers": 15,
-     "wonFromRivals": 1,
-     "lost": 9,
-     "net": 7
-    },
-    {
-     "insurer": "Incline Casualty",
-     "gained": 3,
-     "newCarriers": 2,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 1
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Canal",
-     "gained": 2,
-     "newCarriers": 0,
-     "wonFromRivals": 2,
-     "lost": 2,
-     "net": 0
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Great West Casualty (Old Republic)",
-    "gained": 1,
-    "newCarriers": 1,
-    "wonFromRivals": 0,
-    "lost": 3,
-    "net": -2
-   }
-  },
-  {
-   "code": "ND",
-   "name": "North Dakota",
-   "gained": 8,
-   "lost": 7,
-   "newCarriers": 5,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 3,
-     "newCarriers": 1,
-     "wonFromRivals": 2,
-     "lost": 3,
-     "net": 0
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 0
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Mid-Continent Casualty",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Travelers / Northland",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "National Indemnity",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 1,
-    "net": -1
-   }
-  },
-  {
-   "code": "OH",
-   "name": "Ohio",
-   "gained": 125,
-   "lost": 89,
-   "newCarriers": 86,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 64,
-     "newCarriers": 59,
-     "wonFromRivals": 5,
-     "lost": 25,
-     "net": 39
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 17,
-     "newCarriers": 14,
-     "wonFromRivals": 3,
-     "lost": 22,
-     "net": -5
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 8,
-     "newCarriers": 0,
-     "wonFromRivals": 8,
-     "lost": 0,
-     "net": 8
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 7,
-     "newCarriers": 2,
-     "wonFromRivals": 5,
-     "lost": 3,
-     "net": 4
-    },
-    {
-     "insurer": "Canal",
-     "gained": 7,
-     "newCarriers": 5,
-     "wonFromRivals": 2,
-     "lost": 4,
-     "net": 3
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "GEICO / Berkshire Hathaway",
-    "gained": 17,
-    "newCarriers": 14,
-    "wonFromRivals": 3,
-    "lost": 22,
-    "net": -5
-   }
-  },
-  {
-   "code": "OK",
-   "name": "Oklahoma",
-   "gained": 22,
-   "lost": 22,
-   "newCarriers": 13,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 12,
-     "newCarriers": 9,
-     "wonFromRivals": 3,
-     "lost": 6,
-     "net": 6
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 4,
-     "newCarriers": 3,
-     "wonFromRivals": 1,
-     "lost": 7,
-     "net": -3
-    },
-    {
-     "insurer": "Circle Star Insurance , A Risk Retention Group",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Canal",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "GEICO / Berkshire Hathaway",
-    "gained": 4,
-    "newCarriers": 3,
-    "wonFromRivals": 1,
-    "lost": 7,
-    "net": -3
-   }
-  },
-  {
-   "code": "OR",
-   "name": "Oregon",
-   "gained": 11,
-   "lost": 6,
-   "newCarriers": 9,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 6,
-     "newCarriers": 5,
-     "wonFromRivals": 1,
-     "lost": 1,
-     "net": 5
-    },
-    {
-     "insurer": "Canal",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Cimarron Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Travelers / Northland",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": 0
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Continental Divide Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 1,
-    "net": -1
-   }
-  },
-  {
-   "code": "PA",
-   "name": "Pennsylvania",
-   "gained": 116,
-   "lost": 77,
-   "newCarriers": 73,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 30,
-     "newCarriers": 25,
-     "wonFromRivals": 5,
-     "lost": 24,
-     "net": 6
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 29,
-     "newCarriers": 22,
-     "wonFromRivals": 7,
-     "lost": 16,
-     "net": 13
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 9,
-     "newCarriers": 4,
-     "wonFromRivals": 5,
-     "lost": 1,
-     "net": 8
-    },
-    {
-     "insurer": "Agency Insurance Of Maryland",
-     "gained": 8,
-     "newCarriers": 7,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 8
-    },
-    {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 5,
-     "newCarriers": 1,
-     "wonFromRivals": 4,
-     "lost": 5,
-     "net": 0
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Everspan Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 6,
-    "net": -6
-   }
-  },
-  {
-   "code": "RI",
-   "name": "Rhode Island",
-   "gained": 7,
-   "lost": 3,
-   "newCarriers": 5,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 5,
-     "newCarriers": 4,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 5
-    },
-    {
-     "insurer": "National Indemnity",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "National Specialty Insurance",
-     "gained": 0,
-     "newCarriers": 0,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    },
-    {
-     "insurer": "Canal",
-     "gained": 0,
-     "newCarriers": 0,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 0,
-     "newCarriers": 0,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "National Specialty Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 1,
-    "net": -1
-   }
-  },
-  {
-   "code": "SC",
-   "name": "South Carolina",
-   "gained": 34,
-   "lost": 17,
-   "newCarriers": 26,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 21,
-     "newCarriers": 19,
-     "wonFromRivals": 2,
-     "lost": 5,
-     "net": 16
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 4,
-     "newCarriers": 3,
-     "wonFromRivals": 1,
-     "lost": 5,
-     "net": -1
-    },
-    {
-     "insurer": "Canal",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 0
-    },
-    {
-     "insurer": "Sentry",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "GEICO / Berkshire Hathaway",
-    "gained": 4,
-    "newCarriers": 3,
-    "wonFromRivals": 1,
-    "lost": 5,
-    "net": -1
-   }
-  },
-  {
-   "code": "SD",
-   "name": "South Dakota",
-   "gained": 7,
-   "lost": 1,
-   "newCarriers": 7,
-   "top": [
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Vanliner Insurance",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Progressive",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": 1
-    },
-    {
-     "insurer": "Third Coast Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": null
-  },
-  {
-   "code": "TN",
-   "name": "Tennessee",
-   "gained": 28,
-   "lost": 25,
-   "newCarriers": 22,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 12,
-     "newCarriers": 12,
-     "wonFromRivals": 0,
-     "lost": 8,
-     "net": 4
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 8,
-     "newCarriers": 6,
-     "wonFromRivals": 2,
-     "lost": 5,
-     "net": 3
-    },
-    {
-     "insurer": "Agency Insurance Of Maryland",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": 1
-    },
-    {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Ms Transverse Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Cincinnati Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 3,
-    "net": -3
-   }
-  },
-  {
-   "code": "TX",
-   "name": "Texas",
-   "gained": 229,
-   "lost": 199,
-   "newCarriers": 147,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 51,
-     "newCarriers": 43,
-     "wonFromRivals": 8,
-     "lost": 48,
-     "net": 3
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 49,
-     "newCarriers": 43,
-     "wonFromRivals": 6,
-     "lost": 37,
-     "net": 12
-    },
-    {
-     "insurer": "Highlander Specialty Insurance",
-     "gained": 24,
-     "newCarriers": 16,
-     "wonFromRivals": 8,
-     "lost": 16,
-     "net": 8
-    },
-    {
-     "insurer": "CarrierGuard RRG",
-     "gained": 9,
-     "newCarriers": 4,
-     "wonFromRivals": 5,
-     "lost": 1,
-     "net": 8
-    },
-    {
-     "insurer": "Worth Insurance",
-     "gained": 6,
-     "newCarriers": 2,
-     "wonFromRivals": 4,
-     "lost": 1,
-     "net": 5
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Trisura Specialty Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 6,
-    "net": -6
-   }
-  },
-  {
-   "code": "UT",
-   "name": "Utah",
-   "gained": 14,
-   "lost": 11,
-   "newCarriers": 9,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 9,
-     "newCarriers": 8,
-     "wonFromRivals": 1,
-     "lost": 10,
-     "net": -1
-    },
-    {
-     "insurer": "Evolum Risk Retention Group",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Acuity, A Mutual Insurance",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Pioneer Specialty Insurance",
-     "gained": 1,
-     "newCarriers": 1,
-     "wonFromRivals": 0,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Progressive",
-    "gained": 9,
-    "newCarriers": 8,
-    "wonFromRivals": 1,
-    "lost": 10,
-    "net": -1
-   }
-  },
-  {
-   "code": "VT",
-   "name": "Vermont",
-   "gained": 0,
-   "lost": 1,
-   "newCarriers": 0,
-   "top": [
-    {
-     "insurer": "Cincinnati Insurance",
-     "gained": 0,
-     "newCarriers": 0,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Cincinnati Insurance",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 1,
-    "net": -1
-   }
-  },
-  {
-   "code": "VA",
-   "name": "Virginia",
-   "gained": 47,
-   "lost": 30,
-   "newCarriers": 37,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 20,
-     "newCarriers": 17,
-     "wonFromRivals": 3,
-     "lost": 5,
-     "net": 15
-    },
-    {
-     "insurer": "Agency Insurance Of Maryland",
-     "gained": 12,
-     "newCarriers": 10,
-     "wonFromRivals": 2,
-     "lost": 1,
-     "net": 11
-    },
-    {
-     "insurer": "GEICO / Berkshire Hathaway",
-     "gained": 3,
-     "newCarriers": 3,
-     "wonFromRivals": 0,
-     "lost": 5,
-     "net": -2
-    },
-    {
-     "insurer": "Acuity, A Mutual Insurance",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 2
-    },
-    {
-     "insurer": "Accredited Specialty Insurance",
-     "gained": 2,
-     "newCarriers": 2,
-     "wonFromRivals": 0,
-     "lost": 2,
-     "net": 0
     }
    ],
    "biggestLoser": {
@@ -2636,79 +1465,56 @@
    }
   },
   {
-   "code": "WA",
-   "name": "Washington",
-   "gained": 42,
-   "lost": 23,
-   "newCarriers": 30,
-   "top": [
-    {
-     "insurer": "Progressive",
-     "gained": 25,
-     "newCarriers": 19,
-     "wonFromRivals": 6,
-     "lost": 4,
-     "net": 21
-    },
-    {
-     "insurer": "Great West Casualty (Old Republic)",
-     "gained": 7,
-     "newCarriers": 6,
-     "wonFromRivals": 1,
-     "lost": 5,
-     "net": 2
-    },
-    {
-     "insurer": "Universal Casualty Risk Retention Group",
-     "gained": 2,
-     "newCarriers": 1,
-     "wonFromRivals": 1,
-     "lost": 2,
-     "net": 0
-    },
-    {
-     "insurer": "Canal",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    },
-    {
-     "insurer": "Great Divide Insurance",
-     "gained": 1,
-     "newCarriers": 0,
-     "wonFromRivals": 1,
-     "lost": 0,
-     "net": 1
-    }
-   ],
-   "biggestLoser": {
-    "insurer": "Sentry",
-    "gained": 0,
-    "newCarriers": 0,
-    "wonFromRivals": 0,
-    "lost": 2,
-    "net": -2
-   }
-  },
-  {
-   "code": "WV",
-   "name": "West Virginia",
-   "gained": 1,
+   "code": "MT",
+   "name": "Montana",
+   "gained": 3,
    "lost": 1,
-   "newCarriers": 1,
+   "newCarriers": 3,
    "top": [
     {
      "insurer": "Progressive",
+     "gained": 2,
+     "newCarriers": 2,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": 1
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
      "gained": 1,
      "newCarriers": 1,
      "wonFromRivals": 0,
      "lost": 0,
      "net": 1
+    }
+   ],
+   "biggestLoser": null
+  },
+  {
+   "code": "NE",
+   "name": "Nebraska",
+   "gained": 10,
+   "lost": 3,
+   "newCarriers": 9,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 10,
+     "newCarriers": 9,
+     "wonFromRivals": 1,
+     "lost": 1,
+     "net": 9
     },
     {
-     "insurer": "Everspan Insurance",
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    },
+    {
+     "insurer": "Accredited Specialty Insurance",
      "gained": 0,
      "newCarriers": 0,
      "wonFromRivals": 0,
@@ -2717,7 +1523,7 @@
     }
    ],
    "biggestLoser": {
-    "insurer": "Everspan Insurance",
+    "insurer": "GEICO / Berkshire Hathaway",
     "gained": 0,
     "newCarriers": 0,
     "wonFromRivals": 0,
@@ -2726,27 +1532,330 @@
    }
   },
   {
-   "code": "WI",
-   "name": "Wisconsin",
-   "gained": 27,
-   "lost": 9,
-   "newCarriers": 24,
+   "code": "NV",
+   "name": "Nevada",
+   "gained": 14,
+   "lost": 16,
+   "newCarriers": 5,
+   "top": [
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 2,
+     "newCarriers": 2,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 2
+    },
+    {
+     "insurer": "Everspan Insurance",
+     "gained": 2,
+     "newCarriers": 0,
+     "wonFromRivals": 2,
+     "lost": 1,
+     "net": 1
+    },
+    {
+     "insurer": "Travelers / Northland",
+     "gained": 2,
+     "newCarriers": 1,
+     "wonFromRivals": 1,
+     "lost": 1,
+     "net": 1
+    },
+    {
+     "insurer": "Evolum Risk Retention Group",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "W. R. Berkley",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Progressive",
+    "gained": 1,
+    "newCarriers": 1,
+    "wonFromRivals": 0,
+    "lost": 3,
+    "net": -2
+   }
+  },
+  {
+   "code": "NH",
+   "name": "New Hampshire",
+   "gained": 3,
+   "lost": 0,
+   "newCarriers": 3,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 17,
-     "newCarriers": 17,
+     "gained": 3,
+     "newCarriers": 3,
      "wonFromRivals": 0,
-     "lost": 3,
-     "net": 14
+     "lost": 0,
+     "net": 3
+    }
+   ],
+   "biggestLoser": null
+  },
+  {
+   "code": "NJ",
+   "name": "New Jersey",
+   "gained": 55,
+   "lost": 31,
+   "newCarriers": 42,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 22,
+     "newCarriers": 20,
+     "wonFromRivals": 2,
+     "lost": 7,
+     "net": 15
     },
     {
-     "insurer": "GEICO / Berkshire Hathaway",
+     "insurer": "Accredited Specialty Insurance",
+     "gained": 7,
+     "newCarriers": 7,
+     "wonFromRivals": 0,
+     "lost": 13,
+     "net": -6
+    },
+    {
+     "insurer": "CarrierGuard RRG",
      "gained": 5,
      "newCarriers": 4,
      "wonFromRivals": 1,
-     "lost": 3,
+     "lost": 0,
+     "net": 5
+    },
+    {
+     "insurer": "Concert Specialty Insurance",
+     "gained": 4,
+     "newCarriers": 3,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 4
+    },
+    {
+     "insurer": "Insure Line Transportation Insurance Rrg, Llc",
+     "gained": 3,
+     "newCarriers": 2,
+     "wonFromRivals": 1,
+     "lost": 1,
      "net": 2
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Accredited Specialty Insurance",
+    "gained": 7,
+    "newCarriers": 7,
+    "wonFromRivals": 0,
+    "lost": 13,
+    "net": -6
+   }
+  },
+  {
+   "code": "NM",
+   "name": "New Mexico",
+   "gained": 9,
+   "lost": 5,
+   "newCarriers": 7,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 7,
+     "newCarriers": 7,
+     "wonFromRivals": 0,
+     "lost": 3,
+     "net": 4
+    },
+    {
+     "insurer": "Bus Risk Retention Group",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "National Union Fire Ins. Of Pitsbgh. Pa",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    },
+    {
+     "insurer": "State Farm",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "National Union Fire Ins. Of Pitsbgh. Pa",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 1,
+    "net": -1
+   }
+  },
+  {
+   "code": "NY",
+   "name": "New York",
+   "gained": 13,
+   "lost": 14,
+   "newCarriers": 13,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 8,
+     "newCarriers": 8,
+     "wonFromRivals": 0,
+     "lost": 4,
+     "net": 4
+    },
+    {
+     "insurer": "Corepointe Insurance",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "National Independent Truckers Insurance , Rrg",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Crum & Forster Specialty Insurance",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "National Specialty Insurance",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 3,
+    "net": -3
+   }
+  },
+  {
+   "code": "NC",
+   "name": "North Carolina",
+   "gained": 76,
+   "lost": 45,
+   "newCarriers": 54,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 30,
+     "newCarriers": 26,
+     "wonFromRivals": 4,
+     "lost": 16,
+     "net": 14
+    },
+    {
+     "insurer": "Integon Indemnity",
+     "gained": 21,
+     "newCarriers": 20,
+     "wonFromRivals": 1,
+     "lost": 6,
+     "net": 15
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 4,
+     "newCarriers": 1,
+     "wonFromRivals": 3,
+     "lost": 0,
+     "net": 4
+    },
+    {
+     "insurer": "Everspan Insurance",
+     "gained": 4,
+     "newCarriers": 1,
+     "wonFromRivals": 3,
+     "lost": 2,
+     "net": 2
+    },
+    {
+     "insurer": "Travelers / Northland",
+     "gained": 3,
+     "newCarriers": 0,
+     "wonFromRivals": 3,
+     "lost": 2,
+     "net": 1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Evolum Risk Retention Group",
+    "gained": 1,
+    "newCarriers": 0,
+    "wonFromRivals": 1,
+    "lost": 4,
+    "net": -3
+   }
+  },
+  {
+   "code": "ND",
+   "name": "North Dakota",
+   "gained": 10,
+   "lost": 7,
+   "newCarriers": 7,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 6,
+     "newCarriers": 5,
+     "wonFromRivals": 1,
+     "lost": 3,
+     "net": 3
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 2,
+     "newCarriers": 1,
+     "wonFromRivals": 1,
+     "lost": 2,
+     "net": 0
     },
     {
      "insurer": "Acuity, A Mutual Insurance",
@@ -2757,7 +1866,162 @@
      "net": 1
     },
     {
-     "insurer": "Ms Transverse Insurance",
+     "insurer": "Travelers / Northland",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Great West Casualty (Old Republic)",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 1,
+    "net": -1
+   }
+  },
+  {
+   "code": "OH",
+   "name": "Ohio",
+   "gained": 119,
+   "lost": 93,
+   "newCarriers": 70,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 65,
+     "newCarriers": 54,
+     "wonFromRivals": 11,
+     "lost": 27,
+     "net": 38
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 13,
+     "newCarriers": 10,
+     "wonFromRivals": 3,
+     "lost": 27,
+     "net": -14
+    },
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 8,
+     "newCarriers": 0,
+     "wonFromRivals": 8,
+     "lost": 0,
+     "net": 8
+    },
+    {
+     "insurer": "W. R. Berkley",
+     "gained": 5,
+     "newCarriers": 0,
+     "wonFromRivals": 5,
+     "lost": 1,
+     "net": 4
+    },
+    {
+     "insurer": "Travelers / Northland",
+     "gained": 5,
+     "newCarriers": 0,
+     "wonFromRivals": 5,
+     "lost": 1,
+     "net": 4
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 13,
+    "newCarriers": 10,
+    "wonFromRivals": 3,
+    "lost": 27,
+    "net": -14
+   }
+  },
+  {
+   "code": "OK",
+   "name": "Oklahoma",
+   "gained": 29,
+   "lost": 14,
+   "newCarriers": 22,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 15,
+     "newCarriers": 14,
+     "wonFromRivals": 1,
+     "lost": 5,
+     "net": 10
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 7,
+     "newCarriers": 5,
+     "wonFromRivals": 2,
+     "lost": 5,
+     "net": 2
+    },
+    {
+     "insurer": "United States Fire Insurance",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Travelers / Northland",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Great West Casualty (Old Republic)",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 2,
+    "net": -2
+   }
+  },
+  {
+   "code": "OR",
+   "name": "Oregon",
+   "gained": 19,
+   "lost": 11,
+   "newCarriers": 15,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 16,
+     "newCarriers": 13,
+     "wonFromRivals": 3,
+     "lost": 5,
+     "net": 11
+    },
+    {
+     "insurer": "Benchmark Specialty Insurance",
      "gained": 1,
      "newCarriers": 1,
      "wonFromRivals": 0,
@@ -2765,7 +2029,456 @@
      "net": 1
     },
     {
-     "insurer": "Everspan Insurance",
+     "insurer": "Acuity, A Mutual Insurance",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": 0
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Travelers / Northland",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 2,
+    "net": -2
+   }
+  },
+  {
+   "code": "PA",
+   "name": "Pennsylvania",
+   "gained": 111,
+   "lost": 73,
+   "newCarriers": 75,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 49,
+     "newCarriers": 41,
+     "wonFromRivals": 8,
+     "lost": 13,
+     "net": 36
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 10,
+     "newCarriers": 8,
+     "wonFromRivals": 2,
+     "lost": 18,
+     "net": -8
+    },
+    {
+     "insurer": "Agency Insurance Of Maryland",
+     "gained": 8,
+     "newCarriers": 7,
+     "wonFromRivals": 1,
+     "lost": 3,
+     "net": 5
+    },
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 5,
+     "newCarriers": 2,
+     "wonFromRivals": 3,
+     "lost": 0,
+     "net": 5
+    },
+    {
+     "insurer": "Travelers / Northland",
+     "gained": 5,
+     "newCarriers": 1,
+     "wonFromRivals": 4,
+     "lost": 0,
+     "net": 5
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 10,
+    "newCarriers": 8,
+    "wonFromRivals": 2,
+    "lost": 18,
+    "net": -8
+   }
+  },
+  {
+   "code": "RI",
+   "name": "Rhode Island",
+   "gained": 2,
+   "lost": 2,
+   "newCarriers": 2,
+   "top": [
+    {
+     "insurer": "Canal",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Progressive",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": 0
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 1,
+    "net": -1
+   }
+  },
+  {
+   "code": "SC",
+   "name": "South Carolina",
+   "gained": 36,
+   "lost": 17,
+   "newCarriers": 25,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 19,
+     "newCarriers": 14,
+     "wonFromRivals": 5,
+     "lost": 8,
+     "net": 11
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 6,
+     "newCarriers": 4,
+     "wonFromRivals": 2,
+     "lost": 4,
+     "net": 2
+    },
+    {
+     "insurer": "Daily Underwriters",
+     "gained": 2,
+     "newCarriers": 2,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 2
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 2,
+     "newCarriers": 2,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 2
+    },
+    {
+     "insurer": "Evolum Risk Retention Group",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Cimarron Insurance",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 1,
+    "net": -1
+   }
+  },
+  {
+   "code": "SD",
+   "name": "South Dakota",
+   "gained": 4,
+   "lost": 1,
+   "newCarriers": 4,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 3,
+     "newCarriers": 3,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 3
+    },
+    {
+     "insurer": "Accredited Specialty Insurance",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Great West Casualty (Old Republic)",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 1,
+    "net": -1
+   }
+  },
+  {
+   "code": "TN",
+   "name": "Tennessee",
+   "gained": 42,
+   "lost": 28,
+   "newCarriers": 30,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 28,
+     "newCarriers": 24,
+     "wonFromRivals": 4,
+     "lost": 10,
+     "net": 18
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 5,
+     "newCarriers": 5,
+     "wonFromRivals": 0,
+     "lost": 11,
+     "net": -6
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 2,
+     "newCarriers": 1,
+     "wonFromRivals": 1,
+     "lost": 1,
+     "net": 1
+    },
+    {
+     "insurer": "Texas Insurance",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 5,
+    "newCarriers": 5,
+    "wonFromRivals": 0,
+    "lost": 11,
+    "net": -6
+   }
+  },
+  {
+   "code": "TX",
+   "name": "Texas",
+   "gained": 213,
+   "lost": 181,
+   "newCarriers": 135,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 56,
+     "newCarriers": 50,
+     "wonFromRivals": 6,
+     "lost": 32,
+     "net": 24
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 39,
+     "newCarriers": 33,
+     "wonFromRivals": 6,
+     "lost": 32,
+     "net": 7
+    },
+    {
+     "insurer": "Highlander Specialty Insurance",
+     "gained": 21,
+     "newCarriers": 10,
+     "wonFromRivals": 11,
+     "lost": 16,
+     "net": 5
+    },
+    {
+     "insurer": "CarrierGuard RRG",
+     "gained": 10,
+     "newCarriers": 5,
+     "wonFromRivals": 5,
+     "lost": 1,
+     "net": 9
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 7,
+     "newCarriers": 2,
+     "wonFromRivals": 5,
+     "lost": 1,
+     "net": 6
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Canal",
+    "gained": 3,
+    "newCarriers": 1,
+    "wonFromRivals": 2,
+    "lost": 10,
+    "net": -7
+   }
+  },
+  {
+   "code": "UT",
+   "name": "Utah",
+   "gained": 12,
+   "lost": 6,
+   "newCarriers": 10,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 9,
+     "newCarriers": 9,
+     "wonFromRivals": 0,
+     "lost": 4,
+     "net": 5
+    },
+    {
+     "insurer": "Evolum Risk Retention Group",
+     "gained": 2,
+     "newCarriers": 1,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 2
+    },
+    {
+     "insurer": "Canal",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    },
+    {
+     "insurer": "Cincinnati Insurance",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "GEICO / Berkshire Hathaway",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 1,
+    "net": -1
+   }
+  },
+  {
+   "code": "VT",
+   "name": "Vermont",
+   "gained": 0,
+   "lost": 0,
+   "newCarriers": 0,
+   "top": [],
+   "biggestLoser": null
+  },
+  {
+   "code": "VA",
+   "name": "Virginia",
+   "gained": 31,
+   "lost": 23,
+   "newCarriers": 20,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 13,
+     "newCarriers": 11,
+     "wonFromRivals": 2,
+     "lost": 10,
+     "net": 3
+    },
+    {
+     "insurer": "Agency Insurance Of Maryland",
+     "gained": 6,
+     "newCarriers": 5,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 6
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 3,
+     "newCarriers": 2,
+     "wonFromRivals": 1,
+     "lost": 2,
+     "net": 1
+    },
+    {
+     "insurer": "Accredited Specialty Insurance",
+     "gained": 2,
+     "newCarriers": 0,
+     "wonFromRivals": 2,
+     "lost": 0,
+     "net": 2
+    },
+    {
+     "insurer": "Benchmark Insurance",
      "gained": 1,
      "newCarriers": 0,
      "wonFromRivals": 1,
@@ -2778,27 +2491,149 @@
     "gained": 1,
     "newCarriers": 1,
     "wonFromRivals": 0,
+    "lost": 5,
+    "net": -4
+   }
+  },
+  {
+   "code": "WA",
+   "name": "Washington",
+   "gained": 37,
+   "lost": 18,
+   "newCarriers": 26,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 23,
+     "newCarriers": 20,
+     "wonFromRivals": 3,
+     "lost": 7,
+     "net": 16
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 4,
+     "newCarriers": 3,
+     "wonFromRivals": 1,
+     "lost": 3,
+     "net": 1
+    },
+    {
+     "insurer": "Canal",
+     "gained": 3,
+     "newCarriers": 0,
+     "wonFromRivals": 3,
+     "lost": 0,
+     "net": 3
+    },
+    {
+     "insurer": "Sutton Specialty Insurance",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Travelers / Northland",
+    "gained": 1,
+    "newCarriers": 0,
+    "wonFromRivals": 1,
     "lost": 2,
     "net": -1
    }
   },
   {
-   "code": "WY",
-   "name": "Wyoming",
-   "gained": 7,
-   "lost": 2,
-   "newCarriers": 6,
+   "code": "WV",
+   "name": "West Virginia",
+   "gained": 4,
+   "lost": 5,
+   "newCarriers": 3,
    "top": [
     {
      "insurer": "Progressive",
-     "gained": 5,
-     "newCarriers": 5,
+     "gained": 2,
+     "newCarriers": 2,
      "wonFromRivals": 0,
-     "lost": 0,
-     "net": 5
+     "lost": 2,
+     "net": 0
     },
     {
-     "insurer": "CarrierGuard RRG",
+     "insurer": "Travelers / Northland",
+     "gained": 1,
+     "newCarriers": 0,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Phoenix Insurance",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    },
+    {
+     "insurer": "Liberty Mutual",
+     "gained": 0,
+     "newCarriers": 0,
+     "wonFromRivals": 0,
+     "lost": 1,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Phoenix Insurance",
+    "gained": 0,
+    "newCarriers": 0,
+    "wonFromRivals": 0,
+    "lost": 1,
+    "net": -1
+   }
+  },
+  {
+   "code": "WI",
+   "name": "Wisconsin",
+   "gained": 11,
+   "lost": 7,
+   "newCarriers": 9,
+   "top": [
+    {
+     "insurer": "Progressive",
+     "gained": 6,
+     "newCarriers": 6,
+     "wonFromRivals": 0,
+     "lost": 4,
+     "net": 2
+    },
+    {
+     "insurer": "Acuity, A Mutual Insurance",
+     "gained": 2,
+     "newCarriers": 1,
+     "wonFromRivals": 1,
+     "lost": 0,
+     "net": 2
+    },
+    {
+     "insurer": "National Liability & Fire Insurance",
      "gained": 1,
      "newCarriers": 0,
      "wonFromRivals": 1,
@@ -2814,28 +2649,69 @@
      "net": 1
     },
     {
-     "insurer": "Circle Star Insurance , A Risk Retention Group",
-     "gained": 0,
-     "newCarriers": 0,
+     "insurer": "Ooida Risk Retention Group",
+     "gained": 1,
+     "newCarriers": 1,
      "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
-    },
-    {
-     "insurer": "Clear Blue Insurance",
-     "gained": 0,
-     "newCarriers": 0,
-     "wonFromRivals": 0,
-     "lost": 1,
-     "net": -1
+     "lost": 0,
+     "net": 1
     }
    ],
    "biggestLoser": {
-    "insurer": "Circle Star Insurance , A Risk Retention Group",
+    "insurer": "Benchmark Specialty Insurance",
     "gained": 0,
     "newCarriers": 0,
     "wonFromRivals": 0,
     "lost": 1,
+    "net": -1
+   }
+  },
+  {
+   "code": "WY",
+   "name": "Wyoming",
+   "gained": 4,
+   "lost": 2,
+   "newCarriers": 4,
+   "top": [
+    {
+     "insurer": "National Indemnity",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Great West Casualty (Old Republic)",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "GEICO / Berkshire Hathaway",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 0,
+     "net": 1
+    },
+    {
+     "insurer": "Progressive",
+     "gained": 1,
+     "newCarriers": 1,
+     "wonFromRivals": 0,
+     "lost": 2,
+     "net": -1
+    }
+   ],
+   "biggestLoser": {
+    "insurer": "Progressive",
+    "gained": 1,
+    "newCarriers": 1,
+    "wonFromRivals": 0,
+    "lost": 2,
     "net": -1
    }
   }

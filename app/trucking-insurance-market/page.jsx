@@ -7,7 +7,7 @@ import moves from '@/lib/insurerMoves.json';
 
 // Weekly. Data: Argus's insurer_moves run (FMCSA BMC-91X filings); transform: /home/achilles/tools/insurer_report.py.
 const PATH = '/trucking-insurance-market';
-const UPDATED = '2026-10-13';
+const UPDATED = '2026-10-19';
 const fmt = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const FROM = fmt(moves.window[0]);
 const TO = fmt(moves.window[1]);
