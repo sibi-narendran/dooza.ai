@@ -33,6 +33,17 @@ const CHIP = {
     UNKNOWN: 'bg-slate-100 text-slate-700',
 };
 
+function Sources({ list }) {
+    if (!list?.length) return null;
+    return (
+        <span className="text-xs text-slate-500">
+            {list.map((x) => (
+                <span key={x.url}> <a className="underline" href={x.url} target="_blank" rel="noopener">{x.name}</a></span>
+            ))}
+        </span>
+    );
+}
+
 const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -64,7 +75,7 @@ export default function Ai2027TrackerPage() {
                             <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
                                 <a className="underline" href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a> (April 2025)
                                 made dated calls about AI from mid-2025 on. Here is each call next to what has really happened, with a
-                                source. Calls whose date hasn&apos;t come yet are marked and checked when it does.
+                                source. Calls whose date hasn&apos;t come yet show what has happened so far and how long is left.
                             </p>
                             <p className="mt-3 text-sm text-slate-500">
                                 By <a className="underline" href="https://www.sibinarendran.com" target="_blank" rel="noopener">Sibi Narendran</a>, founder of Dooza · updated {fmt(checked)}
@@ -99,12 +110,11 @@ export default function Ai2027TrackerPage() {
                                                 </td>
                                                 <td className="p-3 text-slate-600">
                                                     {r.reality}
-                                                    {r.source_url ? (
-                                                        <> <a className="text-xs underline text-slate-500" href={r.source_url} target="_blank" rel="noopener">{r.source_name}</a></>
-                                                    ) : null}
+                                                    <Sources list={r.sources} />
                                                 </td>
                                                 <td className="p-3 whitespace-nowrap">
                                                     <span className={`inline-block rounded-full px-2 py-0.5 text-xs font-semibold ${CHIP[r.status]}`}>{labels[r.status]}</span>
+                                                    {r.togo ? <span className="block mt-1 text-xs text-slate-500">{r.togo}</span> : null}
                                                 </td>
                                             </tr>
                                         ))}
@@ -115,7 +125,9 @@ export default function Ai2027TrackerPage() {
 
                         <section className="mt-14" aria-labelledby="milestones">
                             <h2 id="milestones" className="text-2xl font-bold text-slate-900">The big milestones: AI 2027&apos;s date vs the real date</h2>
-                            <p className="mt-2 text-slate-600">Warnings arrived early; the capability jumps have not arrived yet.</p>
+                            <p className="mt-2 text-slate-600">
+                                Two warnings arrived months early. The capability milestones are still inside AI 2027&apos;s window; the dotted line is the time left.
+                            </p>
                             <div className="mt-6 bg-white border border-slate-200 rounded-xl p-4 overflow-x-auto">
                                 <div className="min-w-[640px]" dangerouslySetInnerHTML={{ __html: svg }} />
                             </div>
@@ -130,7 +142,7 @@ export default function Ai2027TrackerPage() {
                                                 <td className="p-3 font-medium text-slate-900">{m.label}</td>
                                                 <td className="p-3 text-slate-600 whitespace-nowrap">{mon(m.a2027)}</td>
                                                 <td className="p-3 whitespace-nowrap">{m.status}</td>
-                                                <td className="p-3 text-slate-600">{m.evidence}</td>
+                                                <td className="p-3 text-slate-600">{m.evidence}<Sources list={m.sources} /></td>
                                             </tr>
                                         ))}
                                     </tbody>
