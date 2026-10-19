@@ -1,7 +1,7 @@
 import ReplyStagePage, { replyStageMetadata } from '@/components/ReplyStagePage';
 
 // LAW-WARN1 reply-stage page (Odysseus 2026-10-17 18:18 da3zgq3p; card /home/odysseus/work/drafts/law_leads_arm_card_2026-10-17.md).
-// Sibi 17:27 leads-only: B2B list from the public Cal-WARN file. Shows only what the email promises (first sheet free, then $299/mo).
+// Sibi 17:27 leads-only: B2B list from the public Cal-WARN file. Shows only what the email promises ($299 a month, paid first; Odysseus 10-19 08:04 cut 'free').
 // Counts checked 2026-10-17 on EDD warn_report1.xlsx (processed 09-17..10-14, effective minus notice date < 60 days).
 // Never: violation, owes, liable, we are lawyers, we recommend lawyers, fee split, exclusive.
 const cfg = {
@@ -9,16 +9,17 @@ const cfg = {
     slug: 'california-warn-notices-list',
     offer: 'law-warn-ca',
     title: 'California WARN Notices With Under 60 Days Notice, Weekly',
-    description: 'Weekly sheet of California WARN notices that gave workers under 60 days notice. 49 such notices, 1,805 workers, Sep 17 to Oct 14, 2026. First sheet free.',
+    description: 'Weekly sheet of California WARN notices that gave workers under 60 days notice. 49 such notices, 1,805 workers, Sep 17 to Oct 14, 2026. $299 a month, paid first.',
     updated: 'October 17, 2026',
     eyebrow: 'For California employment law firms',
     h1: 'Every California WARN notice that gave under 60 days notice, each week',
     leadStrong: 'Each week you get a sheet of the California WARN notices that gave workers less than the 60 days the Cal-WARN Act asks for: company, site, county, workers, notice date, layoff date and days short.',
-    leadRest: 'From September 17 to October 14, 2026, the state processed 138 WARN notices; 49 of them gave under 60 days notice, covering 1,805 workers. First sheet free, then $299 a month.',
-    startSubject: 'Free sheet: California short-notice WARN notices',
+    leadRest: 'From September 17 to October 14, 2026, the state processed 138 WARN notices; 49 of them gave under 60 days notice, covering 1,805 workers. $299 a month, paid first. Weekly sheet.',
+    startSubject: 'Question: California short-notice WARN sheet',
     startBody: 'Firm:\nCounties you cover:\nAnything you want flagged (industry, size):',
-    startLabel: 'Get this week’s sheet free',
-    priceNote: 'First sheet free, then $299 a month.',
+    startLabel: 'Ask a question by email',
+    pay: { href: 'https://buy.stripe.com/5kQbJ16Wn0VT3KQ5UV3AY11', label: 'Start: $299 a month' },
+    priceNote: '$299 a month, paid first. Weekly sheet.',
     sendHeading: 'What is in each weekly sheet',
     sendIntro: 'The source is the WARN report the California Employment Development Department (EDD) publishes and updates every Tuesday and Thursday. September 17 to October 14, 2026: 138 notices processed, 49 with under 60 days between the notice date and the layoff date (1,805 workers), 31 of them in Los Angeles County. In 3, the notice was dated after the layoff date. A short notice is not by itself a violation: Cal-WARN has exceptions, so you check each one.',
     send: [
@@ -36,8 +37,8 @@ const cfg = {
         'Claim the list is yours alone. It is public record; we save you the pulling, checking and sorting each week.',
     ],
     costs: [
-        'This week’s sheet, free.',
-        'Then $299 a month for the weekly California sheet.',
+        '$299 a month, paid first.',
+        'Weekly sheet. Cancel any time.',
     ],
     faq: [
         {
@@ -58,7 +59,7 @@ const cfg = {
         },
         {
             question: 'How much does it cost?',
-            answer: 'This week’s sheet is free. After that, $299 a month for the weekly California sheet.',
+            answer: '$299 a month, paid first. Weekly sheet.',
         },
         {
             question: 'Do you contact workers or refer cases?',
@@ -73,7 +74,7 @@ const cfg = {
         name: 'Weekly California short-notice WARN sheet',
         serviceType: 'WARN notice data list',
         audienceType: 'Employment law firms',
-        offers: [{ price: '299', description: 'Per month, after a free first sheet.' }],
+        offers: [{ price: '299', description: 'Per month, paid first. Weekly sheet.' }],
     },
     areaServed: { '@type': 'State', name: 'California' },
     crumb: 'California WARN Notices List',
