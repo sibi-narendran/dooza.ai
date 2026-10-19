@@ -9,8 +9,8 @@ import { TRUCKER_FEED_PAY_URL } from '@/lib/offers';
 const STATES = {
     fl: {
         name: 'Florida',
-        total: 203,
-        listDate: 'October 12',
+        total: 209,
+        listDate: 'October 19',
         rows: [
             ['Royal Trucking Express Inc', 'Orlando', '50', 'Prime Property & Casualty Insurance Inc', '$750,000', 'Dec 1, 2026'],
             ['Aloha Freightways Inc', 'Miami', '29', 'Sentry Select Insurance Company', '$1,000,000', 'Dec 1, 2026'],
