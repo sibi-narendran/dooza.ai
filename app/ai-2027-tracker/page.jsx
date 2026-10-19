@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { SITE_URL } from '@/lib/site';
 import { ai2027Tracker } from '@/lib/ai2027TrackerData';
+import Ai2027Calls, { Sources } from '@/components/Ai2027Calls';
 
 const PATH = '/ai-2027-tracker';
 const { checked, stats, rows, labels, svg, milestones, warning } = ai2027Tracker;
@@ -22,27 +23,6 @@ export const metadata = {
     twitter: { card: 'summary_large_image', title: TITLE, description: DESC },
 };
 
-const CHIP = {
-    HAPPENED: 'bg-emerald-100 text-emerald-800',
-    EARLY: 'bg-emerald-100 text-emerald-800',
-    LATE: 'bg-amber-100 text-amber-800',
-    PARTLY: 'bg-amber-100 text-amber-800',
-    NOT_YET: 'bg-rose-100 text-rose-800',
-    MISSED: 'bg-rose-100 text-rose-800',
-    NOT_DUE: 'bg-slate-100 text-slate-700',
-    UNKNOWN: 'bg-slate-100 text-slate-700',
-};
-
-function Sources({ list }) {
-    if (!list?.length) return null;
-    return (
-        <span className="text-xs text-slate-500">
-            {list.map((x) => (
-                <span key={x.url}> <a className="underline" href={x.url} target="_blank" rel="noopener">{x.name}</a></span>
-            ))}
-        </span>
-    );
-}
 
 const articleSchema = {
     '@context': 'https://schema.org',
@@ -64,7 +44,7 @@ export default function Ai2027TrackerPage() {
             <div className="min-h-screen bg-slate-50">
                 <Navbar />
                 <main className="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-5xl mx-auto">
+                    <div className="max-w-3xl mx-auto">
                         <div className="text-center mb-10">
                             <span className="inline-block rounded-full bg-primary-50 text-primary-700 text-xs font-semibold px-3 py-1 mb-4">
                                 Live tracker · last checked {fmt(checked)}
@@ -75,7 +55,7 @@ export default function Ai2027TrackerPage() {
                             <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
                                 <a className="underline" href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a> (April 2025)
                                 made dated calls about AI from mid-2025 on. Here is each call next to what has really happened, with a
-                                source. Calls whose date hasn&apos;t come yet show what has happened so far and how long is left.
+                                source. Calls whose date hasn&apos;t come yet show progress so far and the time left. (OpenBrain is AI 2027&apos;s name for the leading lab.)
                             </p>
                             <p className="mt-3 text-sm text-slate-500">
                                 By <a className="underline" href="https://www.sibinarendran.com" target="_blank" rel="noopener">Sibi Narendran</a>, founder of Dooza · updated {fmt(checked)}
@@ -91,84 +71,43 @@ export default function Ai2027TrackerPage() {
                             ))}
                         </section>
 
-                        <section className="mt-14" aria-labelledby="calls">
-                            <h2 id="calls" className="text-2xl font-bold text-slate-900">Every AI 2027 call, and what really happened</h2>
-                            <div className="mt-4 overflow-x-auto">
-                                <table className="w-full text-sm bg-white border border-slate-200 rounded-xl">
-                                    <thead className="text-left text-slate-500">
-                                        <tr><th className="p-3">AI 2027 date</th><th className="p-3">AI 2027 said</th><th className="p-3">What really happened</th><th className="p-3">Verdict</th></tr>
-                                    </thead>
-                                    <tbody>
-                                        {rows.map((r) => (
-                                            <tr key={r.n} className="border-t border-slate-100 align-top">
-                                                <td className="p-3 text-slate-600 whitespace-nowrap">{r.when}</td>
-                                                <td className="p-3 text-slate-900">
-                                                    {r.prediction}
-                                                    {r.a2027_url ? (
-                                                        <> <a className="text-xs underline text-slate-500" href={r.a2027_url} target="_blank" rel="noopener">AI 2027</a></>
-                                                    ) : null}
-                                                </td>
-                                                <td className="p-3 text-slate-600">
-                                                    {r.reality}
-                                                    <Sources list={r.sources} />
-                                                </td>
-                                                <td className="p-3 whitespace-nowrap">
-                                                    <span className={`inline-block rounded-full px-2 py-0.5 text-xs font-semibold ${CHIP[r.status]}`}>{labels[r.status]}</span>
-                                                    {r.togo ? <span className="block mt-1 text-xs text-slate-500">{r.togo}</span> : null}
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                        <section className="mt-12" aria-labelledby="calls">
+                            <h2 id="calls" className="text-2xl font-bold text-slate-900">Every call, in order</h2>
+                            <Ai2027Calls rows={rows} labels={labels} checked={checked} />
                         </section>
 
                         <section className="mt-14" aria-labelledby="milestones">
-                            <h2 id="milestones" className="text-2xl font-bold text-slate-900">The big milestones: AI 2027&apos;s date vs the real date</h2>
+                            <h2 id="milestones" className="text-2xl font-bold text-slate-900">The big milestones</h2>
                             <p className="mt-2 text-slate-600">
                                 Two warnings arrived months early. The capability milestones are still inside AI 2027&apos;s window; the dotted line is the time left.
                             </p>
-                            <div className="mt-6 bg-white border border-slate-200 rounded-xl p-4 overflow-x-auto">
-                                <div className="min-w-[640px]" dangerouslySetInnerHTML={{ __html: svg }} />
-                            </div>
-                            <div className="mt-4 overflow-x-auto">
-                                <table className="w-full text-sm bg-white border border-slate-200 rounded-xl">
-                                    <thead className="text-left text-slate-500">
-                                        <tr><th className="p-3">Milestone</th><th className="p-3">AI 2027 said</th><th className="p-3">Reality</th><th className="p-3">Evidence</th></tr>
-                                    </thead>
-                                    <tbody>
-                                        {milestones.map((m) => (
-                                            <tr key={m.label} className="border-t border-slate-100 align-top">
-                                                <td className="p-3 font-medium text-slate-900">{m.label}</td>
-                                                <td className="p-3 text-slate-600 whitespace-nowrap">{mon(m.a2027)}</td>
-                                                <td className="p-3 whitespace-nowrap">{m.status}</td>
-                                                <td className="p-3 text-slate-600">{m.evidence}<Sources list={m.sources} /></td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                            <div className="hidden sm:block mt-6 bg-white border border-slate-200 rounded-2xl p-4" dangerouslySetInnerHTML={{ __html: svg }} />
+                            <ul className="mt-4 space-y-3">
+                                {milestones.map((m) => (
+                                    <li key={m.label} className="rounded-2xl border border-slate-200 bg-white p-4">
+                                        <p className="font-semibold text-slate-900">{m.label}</p>
+                                        <p className="mt-1 flex flex-wrap gap-x-3 text-sm">
+                                            <span className="text-slate-500">AI 2027: {mon(m.a2027)}</span>
+                                            <span className={m.real ? 'font-bold text-emerald-700' : 'font-bold text-primary-700'}>{m.status}</span>
+                                        </p>
+                                        <p className="mt-2 text-[15px] text-slate-700">{m.evidence}</p>
+                                        <Sources list={m.sources} />
+                                    </li>
+                                ))}
+                            </ul>
                         </section>
 
                         <section className="mt-14" aria-labelledby="warning-shots">
                             <h2 id="warning-shots" className="text-2xl font-bold text-slate-900">What happened that AI 2027 didn&apos;t date</h2>
-                            <p className="mt-2 text-slate-600">Real events of 2026, and where (if anywhere) AI 2027 had them.</p>
-                            <div className="mt-4 overflow-x-auto">
-                                <table className="w-full text-sm bg-white border border-slate-200 rounded-xl">
-                                    <thead className="text-left text-slate-500">
-                                        <tr><th className="p-3">Date</th><th className="p-3">What happened</th><th className="p-3">AI 2027 had it</th></tr>
-                                    </thead>
-                                    <tbody>
-                                        {warning.map((w) => (
-                                            <tr key={w.date} className="border-t border-slate-100 align-top">
-                                                <td className="p-3 text-slate-600 whitespace-nowrap">{w.date}</td>
-                                                <td className="p-3 text-slate-900 [&_a]:underline" dangerouslySetInnerHTML={{ __html: w.what }} />
-                                                <td className="p-3 text-slate-600">{w.ai2027}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                            <ul className="mt-4 space-y-3">
+                                {warning.map((w) => (
+                                    <li key={w.date} className="rounded-2xl border border-slate-200 bg-white p-4">
+                                        <p className="text-xs font-bold text-slate-500">{w.date}</p>
+                                        <p className="mt-1 text-[15px] text-slate-900 [&_a]:underline" dangerouslySetInnerHTML={{ __html: w.what }} />
+                                        <p className="mt-2 text-xs text-slate-500">AI 2027: {w.ai2027}</p>
+                                    </li>
+                                ))}
+                            </ul>
                         </section>
 
                         <p className="mt-14 text-sm text-slate-500">

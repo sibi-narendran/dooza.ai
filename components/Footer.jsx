@@ -141,6 +141,11 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/ai-2027-tracker" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    AI 2027 Tracker
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/ai-slop-checker" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Free AI Slop Checker
                                 </Link>
