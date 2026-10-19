@@ -28,9 +28,9 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) 
                     ) : offer === 'cpa-1099' ? (
                         <>Or start now: email one client&rsquo;s two QuickBooks reports to <a href={`mailto:${email}?subject=Free%201099%20client`} data-offer="cpa-1099" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First client free, then $99 per client.</>
                     ) : offer === 'newbiz-ct' ? (
-                        <>Or start now: the <a href={tagPay(NEWBIZ_CT_PAY_URL, source)} data-offer="newbiz-ct" data-source={source} className="font-semibold text-primary-700 underline">weekly Connecticut new-business list</a>, 7-day trial with card, then $129 every 4 weeks.</>
+                        <>Or start now: the <a href={tagPay(NEWBIZ_CT_PAY_URL, source)} data-offer="newbiz-ct" data-source={source} className="font-semibold text-primary-700 underline">weekly Connecticut new-business list</a>: 5 sample rows, then $129 every 4 weeks.</>
                     ) : offer === 'law-warn-ca' ? (
-                        <>Or start now: email your firm name and counties to <a href={`mailto:${email}?subject=Free%20California%20WARN%20sheet`} data-offer="law-warn-ca" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First sheet free, then $299 a month. Ready to subscribe? <a href={tagPay(LAW_WARN_CA_PAY_URL, source)} data-offer="law-warn-ca" data-source={source} className="underline">Start the $299/month plan</a>.</>
+                        <>Or start now: the <a href={tagPay(LAW_WARN_CA_PAY_URL, source)} data-offer="law-warn-ca" data-source={source} className="font-semibold text-primary-700 underline">weekly California WARN sheet</a>, $299 a month, paid first.</>
                     ) : offer === 'cert-agencies' ? (
                         <>Or start now: a <a href={tagPay(CERT_PACK_PAY_URL, source)} data-offer="cert-agencies" data-source={source} className="font-semibold text-primary-700 underline">pack of 10 certificates for $50</a>.</>
                     ) : offer === 'trucker-feed' ? (
