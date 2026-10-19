@@ -1,12 +1,12 @@
 {
- "runDate": "2026-10-12",
+ "runDate": "2026-10-19",
  "source": "FMCSA open data (data.transportation.gov); renewal dates are estimates (anniversary of the current BMC-91X policy)",
  "states": [
   {
    "code": "AL",
    "name": "Alabama",
-   "renewals": 76,
-   "newAuthorities": 21,
+   "renewals": 82,
+   "newAuthorities": 19,
    "topInsurers": [
     {
      "name": "Progressive Specialty Ins. Co.",
@@ -14,23 +14,23 @@
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 8
+     "count": 7
     },
     {
      "name": "Sentry Select Insurance Company",
-     "count": 5
+     "count": 6
     }
    ]
   },
   {
    "code": "AK",
    "name": "Alaska",
-   "renewals": 8,
+   "renewals": 7,
    "newAuthorities": 1,
    "topInsurers": [
     {
      "name": "Umialik Insurance Company",
-     "count": 5
+     "count": 3
     },
     {
      "name": "Lancer Insurance Company",
@@ -45,19 +45,19 @@
   {
    "code": "AZ",
    "name": "Arizona",
-   "renewals": 99,
-   "newAuthorities": 37,
+   "renewals": 97,
+   "newAuthorities": 28,
    "topInsurers": [
     {
      "name": "United Financial Casualty Company",
-     "count": 14
+     "count": 16
     },
     {
      "name": "Geico Marine Insurance Company",
-     "count": 14
+     "count": 10
     },
     {
-     "name": "Sentry Select Insurance Company",
+     "name": "Great West Casualty Co.",
      "count": 6
     }
    ]
@@ -65,16 +65,16 @@
   {
    "code": "AR",
    "name": "Arkansas",
-   "renewals": 53,
-   "newAuthorities": 15,
+   "renewals": 58,
+   "newAuthorities": 10,
    "topInsurers": [
     {
      "name": "Progressive Northwestern Ins. Co.",
-     "count": 6
+     "count": 9
     },
     {
      "name": "Northland Insurance Company",
-     "count": 5
+     "count": 6
     },
     {
      "name": "Great West Casualty Co.",
@@ -85,59 +85,59 @@
   {
    "code": "CA",
    "name": "California",
-   "renewals": 603,
-   "newAuthorities": 210,
+   "renewals": 593,
+   "newAuthorities": 151,
    "topInsurers": [
     {
      "name": "United Financial Casualty Company",
-     "count": 59
+     "count": 56
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 53
+     "count": 49
     },
     {
      "name": "Southlake Specialty Insurance Company",
-     "count": 29
+     "count": 27
     }
    ]
   },
   {
    "code": "CO",
    "name": "Colorado",
-   "renewals": 92,
-   "newAuthorities": 32,
+   "renewals": 93,
+   "newAuthorities": 20,
    "topInsurers": [
     {
      "name": "Great West Casualty Co.",
-     "count": 16
+     "count": 13
     },
     {
      "name": "Artisan & Truckers Casualty Company",
-     "count": 11
+     "count": 12
     },
     {
-     "name": "Sentry Select Insurance Company",
-     "count": 7
+     "name": "Geico Marine Insurance Company",
+     "count": 9
     }
    ]
   },
   {
    "code": "CT",
    "name": "Connecticut",
-   "renewals": 58,
-   "newAuthorities": 23,
+   "renewals": 56,
+   "newAuthorities": 16,
    "topInsurers": [
     {
      "name": "Progressive Casualty Insurance Company",
-     "count": 9
+     "count": 8
     },
     {
      "name": "Central Mutual Insurance Company",
      "count": 6
     },
     {
-     "name": "Canal Insurance Co.",
+     "name": "Sentry Select Insurance Company",
      "count": 4
     }
    ]
@@ -145,9 +145,13 @@
   {
    "code": "DE",
    "name": "Delaware",
-   "renewals": 14,
-   "newAuthorities": 10,
+   "renewals": 18,
+   "newAuthorities": 8,
    "topInsurers": [
+    {
+     "name": "Canal Insurance Co.",
+     "count": 2
+    },
     {
      "name": "Donegal Mutual Insurance Company",
      "count": 2
@@ -155,10 +159,6 @@
     {
      "name": "Selective Way Insurance Company",
      "count": 2
-    },
-    {
-     "name": "Philadelphia Indemnity Insurance Company",
-     "count": 1
     }
    ]
   },
@@ -166,7 +166,7 @@
    "code": "DC",
    "name": "District of Columbia",
    "renewals": 1,
-   "newAuthorities": 1,
+   "newAuthorities": 0,
    "topInsurers": [
     {
      "name": "State National Insurance Co., Inc.",
@@ -177,52 +177,52 @@
   {
    "code": "FL",
    "name": "Florida",
-   "renewals": 236,
-   "newAuthorities": 162,
+   "renewals": 232,
+   "newAuthorities": 169,
    "topInsurers": [
     {
      "name": "Geico Marine Insurance Company",
-     "count": 27
+     "count": 29
     },
     {
      "name": "Progressive Express Insurance Company",
-     "count": 24
+     "count": 20
     },
     {
-     "name": "Trisura Specialty Insurance Company",
-     "count": 18
+     "name": "Canal Insurance Co.",
+     "count": 15
     }
    ]
   },
   {
    "code": "GA",
    "name": "Georgia",
-   "renewals": 201,
-   "newAuthorities": 102,
+   "renewals": 211,
+   "newAuthorities": 69,
    "topInsurers": [
     {
-     "name": "Great West Casualty Co.",
+     "name": "Progressive Mountain Insurance Company Of Ohi",
      "count": 29
     },
     {
-     "name": "Progressive Mountain Insurance Company Of Ohi",
-     "count": 28
+     "name": "Great West Casualty Co.",
+     "count": 27
     },
     {
      "name": "Sentry Select Insurance Company",
-     "count": 18
+     "count": 19
     }
    ]
   },
   {
    "code": "HI",
    "name": "Hawaii",
-   "renewals": 2,
-   "newAuthorities": 0,
+   "renewals": 4,
+   "newAuthorities": 1,
    "topInsurers": [
     {
      "name": "Island Insurance Company Ltd",
-     "count": 1
+     "count": 3
     },
     {
      "name": "Mid-Pacific Insurance Company Inc.",
@@ -233,19 +233,19 @@
   {
    "code": "ID",
    "name": "Idaho",
-   "renewals": 59,
-   "newAuthorities": 8,
+   "renewals": 64,
+   "newAuthorities": 6,
    "topInsurers": [
     {
-     "name": "United Financial Casualty Company",
-     "count": 12
-    },
-    {
      "name": "Great West Casualty Co.",
-     "count": 12
+     "count": 14
     },
     {
-     "name": "Western Community Insurance Company",
+     "name": "United Financial Casualty Company",
+     "count": 13
+    },
+    {
+     "name": "Western National Mutual Insurance Co.",
      "count": 4
     }
    ]
@@ -253,112 +253,112 @@
   {
    "code": "IL",
    "name": "Illinois",
-   "renewals": 523,
-   "newAuthorities": 115,
+   "renewals": 541,
+   "newAuthorities": 109,
    "topInsurers": [
     {
      "name": "Artisan & Truckers Casualty Company",
-     "count": 71
+     "count": 73
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 52
+     "count": 51
     },
     {
      "name": "Geico Marine Insurance Company",
-     "count": 43
+     "count": 48
     }
    ]
   },
   {
    "code": "IN",
    "name": "Indiana",
-   "renewals": 225,
-   "newAuthorities": 53,
+   "renewals": 216,
+   "newAuthorities": 55,
    "topInsurers": [
     {
-     "name": "Geico Marine Insurance Company",
-     "count": 26
-    },
-    {
      "name": "Great West Casualty Co.",
-     "count": 24
+     "count": 23
     },
     {
-     "name": "Acuity, A Mutual Insurance Company",
-     "count": 16
+     "name": "Geico Marine Insurance Company",
+     "count": 22
+    },
+    {
+     "name": "Progressive Southeastern Insurance Company",
+     "count": 18
     }
    ]
   },
   {
    "code": "IA",
    "name": "Iowa",
-   "renewals": 136,
-   "newAuthorities": 14,
+   "renewals": 154,
+   "newAuthorities": 13,
    "topInsurers": [
     {
      "name": "Acuity, A Mutual Insurance Company",
      "count": 24
     },
     {
-     "name": "Progressive Northern Insurance Company",
-     "count": 16
+     "name": "Great West Casualty Co.",
+     "count": 22
     },
     {
-     "name": "Great West Casualty Co.",
-     "count": 14
+     "name": "Progressive Northern Insurance Company",
+     "count": 16
     }
    ]
   },
   {
    "code": "KS",
    "name": "Kansas",
-   "renewals": 110,
-   "newAuthorities": 16,
+   "renewals": 101,
+   "newAuthorities": 12,
    "topInsurers": [
     {
-     "name": "Great West Casualty Co.",
-     "count": 21
+     "name": "United Financial Casualty Company",
+     "count": 22
     },
     {
-     "name": "United Financial Casualty Company",
-     "count": 19
+     "name": "Great West Casualty Co.",
+     "count": 17
     },
     {
      "name": "Northland Insurance Company",
-     "count": 10
+     "count": 8
     }
    ]
   },
   {
    "code": "KY",
    "name": "Kentucky",
-   "renewals": 91,
-   "newAuthorities": 26,
+   "renewals": 92,
+   "newAuthorities": 30,
    "topInsurers": [
     {
-     "name": "Sentry Select Insurance Company",
-     "count": 13
-    },
-    {
      "name": "United Financial Casualty Company",
-     "count": 10
+     "count": 14
     },
     {
-     "name": "Canal Insurance Co.",
-     "count": 6
+     "name": "Sentry Select Insurance Company",
+     "count": 11
+    },
+    {
+     "name": "Acuity, A Mutual Insurance Company",
+     "count": 8
     }
    ]
   },
   {
    "code": "LA",
    "name": "Louisiana",
-   "renewals": 36,
-   "newAuthorities": 27,
+   "renewals": 37,
+   "newAuthorities": 10,
    "topInsurers": [
     {
      "name": "Houston Specialty Insurance Company",
-     "count": 8
+     "count": 7
     },
     {
      "name": "Great West Casualty Co.",
@@ -373,16 +373,16 @@
   {
    "code": "ME",
    "name": "Maine",
-   "renewals": 24,
+   "renewals": 28,
    "newAuthorities": 6,
    "topInsurers": [
     {
      "name": "Acuity, A Mutual Insurance Company",
-     "count": 5
+     "count": 6
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 4
+     "count": 5
     },
     {
      "name": "Acadia Insurance Company",
@@ -393,79 +393,79 @@
   {
    "code": "MD",
    "name": "Maryland",
-   "renewals": 127,
-   "newAuthorities": 35,
+   "renewals": 125,
+   "newAuthorities": 45,
    "topInsurers": [
     {
      "name": "Progressive Casualty Insurance Company",
-     "count": 20
+     "count": 19
     },
     {
      "name": "Erie Insurance Exchange",
-     "count": 18
+     "count": 17
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 15
+     "count": 14
     }
    ]
   },
   {
    "code": "MA",
    "name": "Massachusetts",
-   "renewals": 115,
-   "newAuthorities": 33,
+   "renewals": 135,
+   "newAuthorities": 22,
    "topInsurers": [
     {
+     "name": "Arbella Protection Insurance Company",
+     "count": 28
+    },
+    {
      "name": "The Commerce Insurance Company",
-     "count": 22
+     "count": 27
     },
     {
      "name": "Safety Insurance Co.",
-     "count": 19
-    },
-    {
-     "name": "Arbella Protection Insurance Company",
-     "count": 18
+     "count": 20
     }
    ]
   },
   {
    "code": "MI",
    "name": "Michigan",
-   "renewals": 167,
-   "newAuthorities": 45,
+   "renewals": 177,
+   "newAuthorities": 39,
    "topInsurers": [
     {
-     "name": "Great West Casualty Co.",
+     "name": "Fremont Insurance Company",
      "count": 18
     },
     {
      "name": "Progressive Michigan Insurance Company",
-     "count": 17
+     "count": 16
     },
     {
      "name": "Auto Owners Insurance Company",
-     "count": 14
+     "count": 15
     }
    ]
   },
   {
    "code": "MN",
    "name": "Minnesota",
-   "renewals": 193,
-   "newAuthorities": 61,
+   "renewals": 186,
+   "newAuthorities": 29,
    "topInsurers": [
     {
      "name": "Great West Casualty Co.",
-     "count": 40
+     "count": 39
     },
     {
      "name": "United Financial Casualty Company",
-     "count": 15
+     "count": 16
     },
     {
-     "name": "Western National Mutual Insurance Co.",
+     "name": "Northland Insurance Company",
      "count": 13
     }
    ]
@@ -474,18 +474,18 @@
    "code": "MS",
    "name": "Mississippi",
    "renewals": 58,
-   "newAuthorities": 19,
+   "newAuthorities": 15,
    "topInsurers": [
     {
-     "name": "Sentry Select Insurance Company",
-     "count": 6
-    },
-    {
      "name": "Blue Hill Specialty Insurance Company Inc",
-     "count": 6
+     "count": 7
     },
     {
      "name": "Great West Casualty Co.",
+     "count": 6
+    },
+    {
+     "name": "Sentry Select Insurance Company",
      "count": 5
     }
    ]
@@ -493,27 +493,27 @@
   {
    "code": "MO",
    "name": "Missouri",
-   "renewals": 143,
-   "newAuthorities": 32,
+   "renewals": 162,
+   "newAuthorities": 25,
    "topInsurers": [
     {
      "name": "Progressive Casualty Insurance Company",
-     "count": 31
+     "count": 25
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 18
+     "count": 19
     },
     {
      "name": "Acuity, A Mutual Insurance Company",
-     "count": 13
+     "count": 12
     }
    ]
   },
   {
    "code": "MT",
    "name": "Montana",
-   "renewals": 32,
+   "renewals": 31,
    "newAuthorities": 3,
    "topInsurers": [
     {
@@ -522,10 +522,10 @@
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 7
+     "count": 8
     },
     {
-     "name": "Amguard Insurance Company",
+     "name": "Philadelphia Indemnity Insurance Company",
      "count": 2
     }
    ]
@@ -533,128 +533,128 @@
   {
    "code": "NE",
    "name": "Nebraska",
-   "renewals": 83,
-   "newAuthorities": 17,
+   "renewals": 81,
+   "newAuthorities": 8,
    "topInsurers": [
     {
      "name": "Great West Casualty Co.",
-     "count": 24
+     "count": 23
     },
     {
      "name": "Progressive Northern Insurance Company",
-     "count": 11
+     "count": 12
     },
     {
      "name": "Auto Owners Insurance Company",
-     "count": 7
+     "count": 5
     }
    ]
   },
   {
    "code": "NV",
    "name": "Nevada",
-   "renewals": 52,
-   "newAuthorities": 25,
+   "renewals": 55,
+   "newAuthorities": 9,
    "topInsurers": [
     {
      "name": "Great West Casualty Co.",
-     "count": 14
+     "count": 10
     },
     {
      "name": "United Financial Casualty Company",
-     "count": 5
+     "count": 6
     },
     {
-     "name": "Concert Specialty Insurance Company",
-     "count": 3
+     "name": "Northland Insurance Company",
+     "count": 4
     }
    ]
   },
   {
    "code": "NH",
    "name": "New Hampshire",
-   "renewals": 28,
-   "newAuthorities": 4,
+   "renewals": 29,
+   "newAuthorities": 6,
    "topInsurers": [
     {
      "name": "United Financial Casualty Company",
-     "count": 6
+     "count": 8
     },
     {
      "name": "Acadia Insurance Company",
      "count": 5
     },
     {
-     "name": "Safety Insurance Co.",
-     "count": 2
+     "name": "Geico Marine Insurance Company",
+     "count": 1
     }
    ]
   },
   {
    "code": "NJ",
    "name": "New Jersey",
-   "renewals": 189,
-   "newAuthorities": 99,
+   "renewals": 186,
+   "newAuthorities": 85,
    "topInsurers": [
     {
      "name": "Drive New Jersey Insurance Company",
-     "count": 18
-    },
-    {
-     "name": "American Millennium Insurance Company",
      "count": 16
     },
     {
+     "name": "American Millennium Insurance Company",
+     "count": 11
+    },
+    {
      "name": "Occidental Fire And Casualty Co. Of N.C.",
-     "count": 12
+     "count": 10
     }
    ]
   },
   {
    "code": "NM",
    "name": "New Mexico",
-   "renewals": 63,
-   "newAuthorities": 9,
+   "renewals": 62,
+   "newAuthorities": 4,
    "topInsurers": [
     {
      "name": "United Financial Casualty Company",
-     "count": 23
+     "count": 22
     },
     {
      "name": "Great West Casualty Co.",
      "count": 6
     },
     {
-     "name": "National Indemnity Company",
-     "count": 3
+     "name": "Bitco General Insurance Corporation",
+     "count": 2
     }
    ]
   },
   {
    "code": "NY",
    "name": "New York",
-   "renewals": 151,
-   "newAuthorities": 52,
+   "renewals": 159,
+   "newAuthorities": 46,
    "topInsurers": [
     {
      "name": "Lancer Insurance Company",
-     "count": 10
+     "count": 15
     },
     {
-     "name": "Progressive Casualty Insurance Company",
-     "count": 8
+     "name": "Old Republic Insurance Company",
+     "count": 9
     },
     {
      "name": "Sentry Select Insurance Company",
-     "count": 7
+     "count": 9
     }
    ]
   },
   {
    "code": "NC",
    "name": "North Carolina",
-   "renewals": 178,
-   "newAuthorities": 55,
+   "renewals": 181,
+   "newAuthorities": 58,
    "topInsurers": [
     {
      "name": "Progressive Southeastern Insurance Company",
@@ -662,7 +662,7 @@
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 14
+     "count": 15
     },
     {
      "name": "Incline Casualty Company",
@@ -673,36 +673,36 @@
   {
    "code": "ND",
    "name": "North Dakota",
-   "renewals": 47,
-   "newAuthorities": 5,
+   "renewals": 48,
+   "newAuthorities": 11,
    "topInsurers": [
     {
      "name": "Great West Casualty Co.",
-     "count": 14
+     "count": 13
     },
     {
-     "name": "Berkley Regional Insurance Company",
-     "count": 4
+     "name": "United Financial Casualty Company",
+     "count": 6
     },
     {
      "name": "Acuity, A Mutual Insurance Company",
-     "count": 4
+     "count": 5
     }
    ]
   },
   {
    "code": "OH",
    "name": "Ohio",
-   "renewals": 404,
-   "newAuthorities": 97,
+   "renewals": 398,
+   "newAuthorities": 92,
    "topInsurers": [
     {
      "name": "Geico Marine Insurance Company",
-     "count": 52
+     "count": 58
     },
     {
      "name": "Progressive Preferred Insurance Co.",
-     "count": 47
+     "count": 43
     },
     {
      "name": "Great West Casualty Co.",
@@ -713,7 +713,7 @@
   {
    "code": "OK",
    "name": "Oklahoma",
-   "renewals": 84,
+   "renewals": 91,
    "newAuthorities": 22,
    "topInsurers": [
     {
@@ -722,27 +722,27 @@
     },
     {
      "name": "Geico Marine Insurance Company",
-     "count": 10
+     "count": 11
     },
     {
-     "name": "Great West Casualty Co.",
-     "count": 8
+     "name": "Shelter General Insurance Company",
+     "count": 6
     }
    ]
   },
   {
    "code": "OR",
    "name": "Oregon",
-   "renewals": 94,
-   "newAuthorities": 16,
+   "renewals": 86,
+   "newAuthorities": 13,
    "topInsurers": [
     {
      "name": "Great West Casualty Co.",
-     "count": 16
+     "count": 15
     },
     {
      "name": "Artisan & Truckers Casualty Company",
-     "count": 8
+     "count": 12
     },
     {
      "name": "Pioneer Specialty Insurance Company",
@@ -753,39 +753,39 @@
   {
    "code": "PA",
    "name": "Pennsylvania",
-   "renewals": 380,
-   "newAuthorities": 119,
+   "renewals": 375,
+   "newAuthorities": 110,
    "topInsurers": [
     {
      "name": "Geico Marine Insurance Company",
-     "count": 43
+     "count": 48
     },
     {
      "name": "United Financial Casualty Company",
-     "count": 36
+     "count": 32
     },
     {
-     "name": "Erie Insurance Exchange",
-     "count": 32
+     "name": "Great West Casualty Co.",
+     "count": 24
     }
    ]
   },
   {
    "code": "RI",
    "name": "Rhode Island",
-   "renewals": 20,
-   "newAuthorities": 10,
+   "renewals": 22,
+   "newAuthorities": 6,
    "topInsurers": [
     {
-     "name": "The Cincinnati Insurance Co.",
-     "count": 2
+     "name": "United Financial Casualty Company",
+     "count": 3
     },
     {
      "name": "Selective Insurance Company Of South Carolina",
      "count": 2
     },
     {
-     "name": "The Phoenix Insurance Co",
+     "name": "National Indemnity Company",
      "count": 2
     }
    ]
@@ -793,36 +793,36 @@
   {
    "code": "SC",
    "name": "South Carolina",
-   "renewals": 85,
-   "newAuthorities": 26,
+   "renewals": 86,
+   "newAuthorities": 29,
    "topInsurers": [
     {
      "name": "Geico Marine Insurance Company",
-     "count": 16
+     "count": 17
     },
     {
      "name": "Progressive Northern Insurance Company",
-     "count": 9
+     "count": 7
     },
     {
      "name": "Northland Insurance Company",
-     "count": 7
+     "count": 6
     }
    ]
   },
   {
    "code": "SD",
    "name": "South Dakota",
-   "renewals": 41,
-   "newAuthorities": 4,
+   "renewals": 38,
+   "newAuthorities": 2,
    "topInsurers": [
     {
      "name": "Great West Casualty Co.",
-     "count": 16
+     "count": 15
     },
     {
      "name": "Acuity, A Mutual Insurance Company",
-     "count": 6
+     "count": 5
     },
     {
      "name": "Midwest Family Mutual Insurance Company",
@@ -833,72 +833,72 @@
   {
    "code": "TN",
    "name": "Tennessee",
-   "renewals": 144,
-   "newAuthorities": 31,
+   "renewals": 143,
+   "newAuthorities": 30,
    "topInsurers": [
     {
      "name": "Progressive Hawaii Insurance Corp",
-     "count": 18
+     "count": 22
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 16
+     "count": 15
     },
     {
-     "name": "Geico Marine Insurance Company",
-     "count": 12
+     "name": "Acuity, A Mutual Insurance Company",
+     "count": 10
     }
    ]
   },
   {
    "code": "TX",
    "name": "Texas",
-   "renewals": 664,
-   "newAuthorities": 239,
+   "renewals": 688,
+   "newAuthorities": 213,
    "topInsurers": [
     {
-     "name": "Geico County Mutual Insurance Co.",
-     "count": 68
+     "name": "Progressive County Mutual",
+     "count": 64
     },
     {
-     "name": "Progressive County Mutual",
-     "count": 58
+     "name": "Geico County Mutual Insurance Co.",
+     "count": 64
     },
     {
      "name": "Highlander Specialty Insurance Company",
-     "count": 57
+     "count": 56
     }
    ]
   },
   {
    "code": "UT",
    "name": "Utah",
-   "renewals": 64,
+   "renewals": 67,
    "newAuthorities": 12,
    "topInsurers": [
     {
      "name": "United Financial Casualty Company",
-     "count": 13
+     "count": 11
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 6
+     "count": 9
     },
     {
      "name": "Pioneer Specialty Insurance Company",
-     "count": 5
+     "count": 4
     }
    ]
   },
   {
    "code": "VT",
    "name": "Vermont",
-   "renewals": 15,
+   "renewals": 17,
    "newAuthorities": 2,
    "topInsurers": [
     {
      "name": "United Financial Casualty Company",
-     "count": 5
+     "count": 6
     },
     {
      "name": "Acuity, A Mutual Insurance Company",
@@ -913,59 +913,59 @@
   {
    "code": "VA",
    "name": "Virginia",
-   "renewals": 157,
-   "newAuthorities": 42,
+   "renewals": 146,
+   "newAuthorities": 37,
    "topInsurers": [
     {
      "name": "Progressive Northern Insurance Company",
-     "count": 26
+     "count": 20
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 24
+     "count": 19
     },
     {
      "name": "Canal Insurance Co.",
-     "count": 10
+     "count": 9
     }
    ]
   },
   {
    "code": "WA",
    "name": "Washington",
-   "renewals": 164,
-   "newAuthorities": 40,
+   "renewals": 161,
+   "newAuthorities": 36,
    "topInsurers": [
     {
      "name": "Great West Casualty Co.",
-     "count": 41
+     "count": 39
     },
     {
      "name": "United Financial Casualty Company",
-     "count": 34
+     "count": 31
     },
     {
      "name": "Western National Mutual Insurance Co.",
-     "count": 11
+     "count": 12
     }
    ]
   },
   {
    "code": "WV",
    "name": "West Virginia",
-   "renewals": 32,
-   "newAuthorities": 4,
+   "renewals": 26,
+   "newAuthorities": 6,
    "topInsurers": [
-    {
-     "name": "Great West Casualty Co.",
-     "count": 5
-    },
     {
      "name": "Accelerant National Insurance Company",
      "count": 4
     },
     {
-     "name": "The Travelers Indemnity Co. Of Connecticut",
+     "name": "Progressive Classic Insurance Company",
+     "count": 4
+    },
+    {
+     "name": "Great West Casualty Co.",
      "count": 3
     }
    ]
@@ -973,27 +973,27 @@
   {
    "code": "WI",
    "name": "Wisconsin",
-   "renewals": 145,
-   "newAuthorities": 16,
+   "renewals": 132,
+   "newAuthorities": 21,
    "topInsurers": [
-    {
-     "name": "Artisan & Truckers Casualty Company",
-     "count": 26
-    },
     {
      "name": "Great West Casualty Co.",
      "count": 26
     },
     {
+     "name": "Artisan & Truckers Casualty Company",
+     "count": 25
+    },
+    {
      "name": "Acuity, A Mutual Insurance Company",
-     "count": 22
+     "count": 15
     }
    ]
   },
   {
    "code": "WY",
    "name": "Wyoming",
-   "renewals": 42,
+   "renewals": 40,
    "newAuthorities": 4,
    "topInsurers": [
     {
@@ -1002,11 +1002,11 @@
     },
     {
      "name": "Great West Casualty Co.",
-     "count": 8
+     "count": 7
     },
     {
      "name": "Acuity, A Mutual Insurance Company",
-     "count": 3
+     "count": 4
     }
    ]
   }

@@ -13,11 +13,11 @@ import stateCounts from '@/lib/truckingStateCounts.json';
 const PATH = '/trucking-insurance-leads';
 const TITLE = 'Trucking Insurance Leads Near Renewal, Every Monday';
 const DESCRIPTION = 'For agencies that write commercial trucking: every Monday, the trucking companies in your state renewing in 30-60 days, with current insurer, plus new authorities. First week free, then $129 per 4 weeks.';
-const UPDATED = '2026-10-12';
-const UPDATED_LABEL = 'October 12, 2026';
+const UPDATED = '2026-10-19';
+const UPDATED_LABEL = 'October 19, 2026';
 const BOOK = '/book?utm_source=website&utm_medium=cta&utm_campaign=booking&utm_content=trucking-insurance-leads';
 
-// Rows in each state's Monday list on 2026-10-12 (FMCSA open data, Dooza's own run).
+// Rows in each state's Monday list on 2026-10-19 (FMCSA open data, Dooza's own run).
 const STATE_COUNTS = stateCounts.states;
 const US_RENEWALS = STATE_COUNTS.reduce((n, x) => n + x.renewals, 0);
 const US_NEW = STATE_COUNTS.reduce((n, x) => n + x.newAuthorities, 0);
@@ -68,7 +68,7 @@ const faqItems = [
     },
     {
         question: 'Which states can I get?',
-        answer: 'Any US state. On October 12, 2026 there were 6,808 renewals in the 30 to 60 day window and 2,057 new authorities across the 50 states and DC; the counter on this page shows your state. Want your state to yourself? Exclusive states are available: book a call.',
+        answer: 'Any US state. On October 19, 2026 there were 6,876 renewals in the 30 to 60 day window and 1,773 new authorities across the 50 states and DC; the counter on this page shows your state. Want your state to yourself? Exclusive states are available: book a call.',
     },
     {
         question: 'How is this different from buying trucking insurance leads?',
