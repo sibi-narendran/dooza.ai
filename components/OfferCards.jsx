@@ -8,7 +8,7 @@ const OFFERS = [
         tagline: 'An admin assistant for your business: AI does the work, a real person checks it.',
         price: '$200',
         per: '/month',
-        terms: 'First 7 days free. Cancel anytime.',
+        terms: '$0 today. $200 after 7 days, only if you don\'t cancel first.',
         points: [
             'Email drafts and follow-up sequences',
             'Documents and forms',
@@ -26,7 +26,7 @@ const OFFERS = [
         tagline: 'For insurance agencies that write trucking.',
         price: '$129',
         per: '/4 weeks',
-        terms: 'First week free. Cancel anytime.',
+        terms: '$0 today. $129 after 7 days, only if you don\'t cancel first.',
         points: [
             'Every Monday: trucking companies in your state whose insurance looks due in 30-60 days',
             'Company, owner name and phone, trucks, current insurer',
