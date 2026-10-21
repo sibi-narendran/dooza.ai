@@ -198,9 +198,9 @@ const nextConfig = {
         permanent: false,
       },
       {
-        // AI receptionist is no longer a Dooza offer (2026-10-09): retired pages
+        // AI receptionist retired 2026-10-09, offer back 2026-10-21 ($149): retired URLs now point to the matching receptionist page
         source: '/industries/trades',
-        destination: '/',
+        destination: '/garage-door-answering-service',
         permanent: true,
       },
       {
@@ -210,22 +210,22 @@ const nextConfig = {
       },
       {
         source: '/industries/salons',
-        destination: '/',
+        destination: '/ai-receptionist',
         permanent: true,
       },
       {
         source: '/smith-ai-alternatives',
-        destination: '/industries/insurance-agents',
+        destination: '/blog/best-ai-receptionist',
         permanent: true,
       },
       {
         source: '/industries/hvac',
-        destination: '/',
+        destination: '/hvac-answering-service',
         permanent: true,
       },
       {
         source: '/industries/contractors',
-        destination: '/',
+        destination: '/hvac-answering-service',
         permanent: true,
       },
       {
