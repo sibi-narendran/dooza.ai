@@ -40,8 +40,15 @@ export default function AlternativesPage() {
             name: 'Gorgias Alternatives',
             slug: null,
             directLink: '/gorgias-alternatives',
-            tagline: '8 Shopify helpdesks compared — ticket pricing, AI fees, fit',
+            tagline: '10 helpdesks compared — ticket pricing, AI fees, fit',
             doozaAdvantage: 'Support done for you, inside Gorgias or your inbox'
+        },
+        {
+            name: 'Smith.ai Alternatives',
+            slug: null,
+            directLink: '/smith-ai-alternatives',
+            tagline: '8 answering services compared — price, billing unit, human vs AI',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes, month to month'
         },
         {
             name: 'Dooza vs Profound',
