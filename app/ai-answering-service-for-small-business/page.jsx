@@ -22,7 +22,7 @@ export const metadata = {
 // 500 minutes a month = about 166 calls of 3 minutes. Server-rendered so the comparison is in the HTML.
 const SCENARIO = { calls: 166, avgMinutes: 3, uniqueShare: 1 };
 const rows = compareReceptionistCosts(SCENARIO).filter((r) => r.result);
-const money = (n) => `$${n.toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
+const money = (n) => `$${n.toLocaleString('en-US', Number.isInteger(n) ? {} : { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
 const faqItems = [
     {

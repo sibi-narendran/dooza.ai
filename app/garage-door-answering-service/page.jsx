@@ -16,7 +16,7 @@ const SCENARIO = { calls: 100, avgMinutes: 3, uniqueShare: 1 };
 const rows = compareReceptionistCosts(SCENARIO).filter((r) => r.result);
 const ai = rows.filter((r) => r.kind === 'ai');
 const human = rows.filter((r) => r.kind === 'human');
-const money = (n) => `$${n.toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
+const money = (n) => `$${n.toLocaleString('en-US', Number.isInteger(n) ? {} : { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 const aiRange = `${money(ai[0].result.cost)} to ${money(ai[ai.length - 1].result.cost)}`;
 const humanRange = `${money(human[0].result.cost)} to ${money(human[human.length - 1].result.cost)}`;
 
