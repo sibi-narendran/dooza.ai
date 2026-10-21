@@ -58,6 +58,13 @@ export default function AlternativesPage() {
             doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Ruby’s $1,725 for 500 human minutes'
         },
         {
+            name: 'Ambs Call Center Alternatives',
+            slug: null,
+            directLink: '/ambs-call-center-alternatives',
+            tagline: '8 answering services compared — Ambs Call Center’s live, AI and hybrid minute plans vs AI and human options',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Ambs’ listed $600 for 500 live minutes or $350 for 500 AI minutes'
+        },
+        {
             name: 'MAP Communications Alternatives',
             slug: null,
             directLink: '/map-communications-alternatives',

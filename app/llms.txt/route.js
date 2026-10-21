@@ -274,6 +274,11 @@ const servicePages = [
         description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
+        title: 'Ambs Call Center Alternatives',
+        url: `${SITE_URL}/ambs-call-center-alternatives`,
+        description: 'Ambs Call Center pricing (ambscallcenter.com/pricing; Real People: $149/month for 100 minutes, $330 for 250, $600 for 500, $1,195 for 1,000, $2,945 for 2,500+, excess $1.20-$1.29/min; AI Receptionist: Starter $19/month plus $0.79 per AI minute, $75 for 100, $185 for 250, $350 for 500, $650 for 1,000; Real People + AI from $168 for 100 minutes; $85 one-time set-up fee; work time in 30-second increments) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes; Ambs AI costs less up to 196 minutes a month), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
+    },
+    {
         title: 'MAP Communications Alternatives',
         url: `${SITE_URL}/map-communications-alternatives`,
         description: 'MAP Communications pricing (live answering billed by minutes: Pay As You Go $49/month plus $1.37/min, Business $179 for 125 minutes, Enterprise $339 for 250, Premium $649 for 500; every plan lists 24/7 coverage, English and Spanish, a toll-free number, HIPAA, PCI-DSS, HITRUST and SOC-2, no long-term contracts) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
