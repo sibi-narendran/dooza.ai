@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: "Is Accio Work free?",
-        answer: "Yes. Accio Work has a free plan (forever, web search only). Paid plans are Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year), per accio.com (checked October 7, 2026). Dooza pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
+        answer: "Yes. Accio Work has a Free tier (a one-time 7-day onboarding allowance with bonus credits, then a base daily credit allowance). Paid plans are Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year), per accio.com (checked October 21, 2026). Dooza pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Does Accio Work handle social media and email?",
@@ -522,7 +522,7 @@ export default function AccioWorkVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    <strong>Accio Work has a free plan (forever, web search only) and three paid plans: Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year).</strong> That is how Accio itself answers &quot;How much does Accio Work cost?&quot; on <a href="https://www.accio.com/wow/index.html" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">accio.com</a> (page updated August 2026, checked October 7, 2026). Check Accio&apos;s site for what each plan includes before you buy.
+                                    <strong>Accio Work has a Free tier (a one-time 7-day onboarding allowance with bonus credits, then a base daily credit allowance) and three paid plans: Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year).</strong> That is how Accio itself answers &quot;How much does Accio Work cost?&quot; on <a href="https://www.accio.com/wow/index.html" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">accio.com</a> (page updated August 2026, checked October 7, 2026). Check Accio&apos;s site for what each plan includes before you buy.
                                 </p>
                             </div>
 
@@ -537,7 +537,7 @@ export default function AccioWorkVsDoozaContent() {
                                     </thead>
                                     <tbody>
                                         {[
-                                            { plan: 'Free (forever, web search only)', monthly: '$0', yearly: '$0' },
+                                            { plan: 'Free (7-day onboarding allowance, then daily credits)', monthly: '$0', yearly: '$0' },
                                             { plan: 'Pro', monthly: 'from $19.9', yearly: '$199' },
                                             { plan: 'Elite', monthly: 'from $99', yearly: '$999' },
                                             { plan: 'Ultra', monthly: 'from $199', yearly: '$1,999' },

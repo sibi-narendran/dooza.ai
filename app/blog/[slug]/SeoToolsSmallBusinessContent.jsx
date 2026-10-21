@@ -65,7 +65,7 @@ const faqData = [
 const seoTools = [
     {
         name: "Semrush",
-        price: "Free plan; $139-549/mo",
+        price: "Free plan; $139-299/mo; Advanced custom",
         bestFor: "Enterprise, agencies",
         pros: ["55+ tools", "Comprehensive PPC + SEO", "Large keyword database"],
         cons: ["Expensive for SMBs", "Overwhelming features", "Learning curve"],

@@ -86,7 +86,7 @@ const toolCategories = [
         icon: Search,
         title: "SEO & Content",
         description: "Blog posts, keyword research, and search optimization",
-        tools: ["Semrush ($139-549/mo)", "Ahrefs ($29-449/mo)", "Surfer SEO ($49-299/mo, billed yearly)"],
+        tools: ["Semrush ($139-299/mo; Advanced custom)", "Ahrefs ($29-449/mo)", "Surfer SEO ($49-299/mo, billed yearly)"],
         dooza: "Ranky writes and optimizes content"
     },
     {

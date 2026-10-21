@@ -59,7 +59,7 @@ const categories = [
         id: 'ai-seo-content',
         desc: 'Research keywords, write optimized content, track rankings, and build topical authority. AI creates content that ranks without manual research.',
         topTools: [
-            { name: 'Semrush', price: '$139–549/mo' },
+            { name: 'Semrush', price: '$139–299/mo; Advanced custom' },
             { name: 'Surfer SEO', price: '$49–299/mo (billed yearly)' },
             { name: 'Jasper AI', price: '$59–69/seat/mo' },
         ],

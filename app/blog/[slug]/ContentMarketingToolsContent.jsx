@@ -105,7 +105,7 @@ const contentTools = [
         category: "SEO & Research",
         icon: Target,
         tools: [
-            { name: "Semrush", price: "$139-549/mo", desc: "All-in-one SEO" },
+            { name: "Semrush", price: "$139-299/mo; Advanced custom", desc: "All-in-one SEO" },
             { name: "Ahrefs", price: "$29-449/mo", desc: "Backlinks & SEO" },
             { name: "Surfer SEO", price: "$49-299/mo", desc: "Content optimization (billed yearly)" }
         ]
