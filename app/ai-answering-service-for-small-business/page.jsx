@@ -9,7 +9,7 @@ import { compareReceptionistCosts } from '@/lib/receptionistPricing';
 const PATH = '/ai-answering-service-for-small-business';
 const PAY_URL = 'https://buy.stripe.com/eVqcN51C31ZX0yEfvv3AY19?client_reference_id=recep-ai-answering-service-for-small-business';
 const TITLE = 'AI Answering Service for Small Business: $149/mo, 500 Min';
-const DESCRIPTION = 'Dooza answers your calls when you can’t, takes the message and emails it to you with the transcript. $149/month for up to 500 minutes, $0.30/min after, month to month.';
+const DESCRIPTION = 'AI answering service and virtual receptionist alternative: Dooza answers missed calls and emails you each message with the transcript. $149/mo, 500 min.';
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -28,6 +28,10 @@ const faqItems = [
     {
         question: 'How much does an AI answering service cost for a small business?',
         answer: 'Entry plans run from about $25 to $200 a month; human answering services start at about $49 (pay as you go) to $350 a month (public prices checked October 6–14, 2026). Dooza’s AI answering service is $149 a month for up to 500 minutes, then $0.30 a minute, month to month.',
+    },
+    {
+        question: 'Is it the same as a virtual receptionist?',
+        answer: 'It covers the message-taking part of a virtual receptionist with AI instead of a person: it answers when you can’t, asks the caller your questions and emails you the message with the transcript and a link to the recording. It does not book appointments or send texts, which some human virtual receptionist services do.',
     },
     {
         question: 'What does the Dooza AI answering service do?',
