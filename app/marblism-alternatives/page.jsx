@@ -79,6 +79,18 @@ const faqData = [
         answer: 'Marblism\'s pricing page does not mention a free trial but offers a 7-day money-back guarantee (checked October 7, 2026); check marblism.com/pricing for current terms. Alternatives offer different ways to evaluate: Dooza starts with a refundable pilot (100% refund within 14 days), Motion offers a free trial, and Lindy AI gives $50 in free credits that last 7 days (checked October 7, 2026).',
     },
     {
+        question: 'What is the best Marblism alternative for a small service business?',
+        answer: 'It depends on who sets it up. If you will build the workflows yourself, Lindy AI connects to Calendly, Google Calendar and Outlook for bookings and follow-ups. If you want it done for you, Dooza Managed runs an AI admin assistant checked by a real person ($200/month, first 7 days free). Before switching, note that Marblism already includes Eva (emails answered, meetings booked) and Rachel (calls answered, jobs booked into your calendar), per marblism.com (checked October 21, 2026).',
+    },
+    {
+        question: 'Is there a Marblism alternative that works for ecommerce?',
+        answer: 'Marblism lists Shopify among the tools it works with, but none of its 7 AI employees is a store-support role (checked October 21, 2026). Sintra AI has an eCommerce helper, Commet, that creates landing pages and improves product pages, and Lindy AI lists a Shopify integration for building your own store workflows. Check each vendor\'s integrations page for your store platform before you buy.',
+    },
+    {
+        question: 'What is the best Marblism alternative for social media and content?',
+        answer: 'NoimosAI is built for marketing: it drafts posts and has a Social Listening Agent. Sintra AI\'s Soshie helper writes and schedules social media posts. Marblism already includes Sonny, an AI Social Media Manager, so if social is your only need, compare output quality before switching (checked October 21, 2026).',
+    },
+    {
         question: 'Which AI employee platform has the best onboarding?',
         answer: 'Several platforms now offer human onboarding help: Sintra AI offers a call with a specialist plus two weeks of hands-on help, Motion\'s pricing page lists White Glove Onboarding and Support, and Lindy AI offers live onboarding sessions (checked October 7, 2026). Dooza is different because it is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you, instead of showing you how to configure them yourself.',
     },
@@ -91,7 +103,7 @@ const schemas = [
         name: metadata.title,
         description: metadata.description,
         url: `${SITE_URL}/marblism-alternatives`,
-        dateModified: '2026-10-07',
+        dateModified: '2026-10-21',
         publisher: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {
