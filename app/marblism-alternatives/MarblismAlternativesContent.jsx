@@ -32,8 +32,8 @@ const alternatives = [
         name: 'Dooza',
         tagline: 'Best done-for-you option — engineer-led setup, custom agents, 1,000+ integrations',
         bestFor: 'SMBs and teams that want AI employees built and tuned for them instead of DIY setup',
-        price: 'Refundable pilot (see /pricing)',
-        trial: 'Refundable pilot — 100% refund within 14 days',
+        price: 'Managed: 7 days free, then $200/mo; custom agents: refundable pilot',
+        trial: 'Managed: first 7 days free; custom agents: refundable pilot',
         agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents)',
         integrations: '1,000+ app integrations',
         creditSystem: false,
@@ -41,7 +41,7 @@ const alternatives = [
         highlight: true,
         pros: [
             'Done for you: a Dooza engineer builds and tunes your AI employees with you',
-            'Refundable pilot — 100% refund within 14 days if it is not the right fit',
+            'Dooza Managed: first 7 days free, then $200/month, checked by a real person',
             'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you',
             '1,000+ app integrations',
             'Custom agents built and maintained by Dooza engineers (Dooza Agents)',
@@ -50,7 +50,7 @@ const alternatives = [
             'Fewer named AI employees than Sintra\'s 12+ helpers',
             'Costs more than Marblism for a self-serve user',
             'Newer platform with a smaller user base',
-            'No free tier — the pilot is paid, with a 100% refund within 14 days',
+            'No free tier after the 7-day Managed trial; custom agents are a paid, refundable pilot',
         ],
     },
     {
@@ -199,7 +199,7 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Done for you: engineer-led setup, custom agents, refundable pilot, 1,000+ integrations' },
+    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Done for you: engineer-led setup, custom agents, Managed 7 days free then $200/mo, 1,000+ integrations' },
     { need: 'Most AI agents', pick: 'Sintra AI', reason: '12+ named helpers that work together; 250 credits a month on every plan, with paid top-ups' },
     { need: 'AI teammate in Slack', pick: 'Lindy AI', reason: '1,000+ integrations (1,500+ on its pricing page), 40+ skills, setup in about 2 minutes, per Lindy' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Canva and Autodesk case studies, multi-agent workforces, 2,000+ integrations. Pricing through sales' },
@@ -502,7 +502,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-base text-slate-400 mt-8 max-w-3xl mx-auto text-center leading-relaxed">
-                                For a self-serve user who wants many AI employees at a low price, Marblism is good value. Dooza fits when you would rather not set it up yourself: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents (Dooza Agents) with you, with your approval on anything sensitive. Every Dooza product starts with a refundable pilot — 100% refund within 14 days. Pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
+                                For a self-serve user who wants many AI employees at a low price, Marblism is good value. Dooza fits when you would rather not set it up yourself: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents (Dooza Agents) with you, with your approval on anything sensitive. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot. Pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -571,7 +571,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Marblism Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start with a refundable pilot — 100% refund within 14 days. Book a free 30-minute call with a Dooza engineer to scope it.
+                                Try Dooza Managed free for 7 days, then $200/month, or book a free 30-minute call with a Dooza engineer to scope it.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="marblism_alt_cta">Start your pilot</SignupButton>

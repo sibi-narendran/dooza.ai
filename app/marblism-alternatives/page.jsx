@@ -24,7 +24,7 @@ export const metadata = {
     },
     openGraph: {
         title: '7 Best Marblism Alternatives (2026): Pricing Checked October 2026',
-        description: 'Marblism pricing checked October 7, 2026, plus 7 alternatives compared — including a done-for-you option with engineer-led setup and a refundable pilot.',
+        description: 'Marblism pricing checked October 7, 2026, plus 7 alternatives compared — including a done-for-you option with Dooza Managed: 7 days free, then $200/month.',
         url: `${SITE_URL}/marblism-alternatives`,
         siteName: 'Dooza',
         type: 'article',
@@ -48,7 +48,7 @@ const faqData = [
     },
     {
         question: 'Is Dooza better than Marblism?',
-        answer: 'It depends on how you want to work. Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you, with 1,000+ app integrations and a refundable pilot (100% refund within 14 days). Marblism is self-serve and costs less: $24/mo billed yearly or $44/mo monthly for all 7 AI employees, 50 hours of work, and unlimited team members (checked October 7, 2026). If you want the lowest-cost self-serve option, Marblism is the better pick.',
+        answer: 'It depends on how you want to work. Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you, with 1,000+ app integrations. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days). Marblism is self-serve and costs less: $24/mo billed yearly or $44/mo monthly for all 7 AI employees, 50 hours of work, and unlimited team members (checked October 7, 2026). If you want the lowest-cost self-serve option, Marblism is the better pick.',
     },
     {
         question: 'Why do people look for Marblism alternatives?',
@@ -60,7 +60,7 @@ const faqData = [
     },
     {
         question: 'Is Marblism worth it?',
-        answer: 'For a self-serve user who wants many AI employees at a low price, Marblism is good value: all 7 AI employees, 50 hours of work, and unlimited team members from $24/month billed yearly. If you do not have time to set up and tune them yourself, consider a done-for-you option like Dooza, where a Dooza engineer builds and tunes your AI employees with you and every product starts with a refundable pilot (100% refund within 14 days).',
+        answer: 'For a self-serve user who wants many AI employees at a low price, Marblism is good value: all 7 AI employees, 50 hours of work, and unlimited team members from $24/month billed yearly. If you do not have time to set up and tune them yourself, consider a done-for-you option like Dooza, where a Dooza engineer builds and tunes your AI employees with you and Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days).',
     },
     {
         question: 'Which Marblism alternative has the most integrations?',
@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: 'Is there a free alternative to Marblism?',
-        answer: 'Cubeo AI has a free plan with 100 credits a month, and Lindy AI gives $50 in free credits that last 7 days. Relevance AI\'s pricing page now lists only an Enterprise plan through sales (checked October 7, 2026). Dooza is not free: every Dooza product starts with a paid, refundable pilot — 100% refund if you ask within 14 days.',
+        answer: 'Cubeo AI has a free plan with 100 credits a month, and Lindy AI gives $50 in free credits that last 7 days. Relevance AI\'s pricing page now lists only an Enterprise plan through sales (checked October 7, 2026). Dooza is not free after the trial: Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days).',
     },
     {
         question: 'What is the cheapest Marblism alternative?',
@@ -76,7 +76,7 @@ const faqData = [
     },
     {
         question: 'Does Marblism have a free trial?',
-        answer: 'Marblism\'s pricing page does not mention a free trial but offers a 7-day money-back guarantee (checked October 7, 2026); check marblism.com/pricing for current terms. Alternatives offer different ways to evaluate: Dooza starts with a refundable pilot (100% refund within 14 days), Motion offers a free trial, and Lindy AI gives $50 in free credits that last 7 days (checked October 7, 2026).',
+        answer: 'Marblism\'s pricing page does not mention a free trial but offers a 7-day money-back guarantee (checked October 7, 2026); check marblism.com/pricing for current terms. Alternatives offer different ways to evaluate: Dooza Managed is free for the first 7 days, Motion offers a free trial, and Lindy AI gives $50 in free credits that last 7 days (checked October 7, 2026).',
     },
     {
         question: 'What is the best Marblism alternative for a small service business?',

@@ -29,15 +29,15 @@ const alternatives = [
         name: 'Dooza',
         tagline: 'Our own product (not ranked; we\'re not neutral): AI employees built and tuned for SMBs',
         bestFor: 'Small businesses that want AI employees or custom agents built and tuned for them',
-        price: 'Refundable pilot (see /pricing)',
-        trial: 'Refundable pilot — 100% refund within 14 days',
+        price: 'Managed: 7 days free, then $200/mo; custom agents: refundable pilot',
+        trial: 'Managed: first 7 days free; custom agents: refundable pilot',
         agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents)',
         integrations: '1,000+ app integrations',
         creditSystem: false,
         namedAgents: true,
         highlight: true,
         pros: [
-            'Refundable pilot — 100% refund within 14 days if it is not the right fit',
+            'Dooza Managed: first 7 days free, then $200/month, checked by a real person',
             'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you',
             'No credit system and no per-seat fees',
             '1,000+ app integrations',
@@ -45,7 +45,7 @@ const alternatives = [
         cons: [
             'Fewer named AI employees than Sintra\'s 12+ helpers',
             'Newer platform with a smaller user base',
-            'No free tier — the pilot is paid, with a 100% refund within 14 days',
+            'No free tier after the 7-day Managed trial; custom agents are a paid, refundable pilot',
             'Not the lowest-priced option: self-serve apps like Sintra cost less if you are happy to run the AI yourself',
         ],
     },
@@ -201,11 +201,11 @@ const sintraCostRows = [
     { plan: 'Sintra X, 1-month plan', shown: '$48.50/mo (list $97)', upfront: '$48.50', credits: '250 per month' },
     { plan: 'Sintra X, 3-month plan', shown: '$23.60/mo', upfront: '$70.80', credits: '250 per month' },
     { plan: 'Sintra X, 12-month plan', shown: '$15.60/mo', upfront: '$187.20', credits: '250 per month' },
-    { plan: 'Dooza', shown: 'Refundable pilot (see /pricing)', upfront: 'Pilot, 100% refundable within 14 days', credits: 'No credits', dooza: true },
+    { plan: 'Dooza', shown: 'Managed $200/mo', upfront: '$0 for the first 7 days', credits: 'No credits', dooza: true },
 ];
 
 const decisionGuide = [
-    { need: 'Done for you', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you; refundable pilot; 1,000+ integrations' },
+    { need: 'Done for you', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you; Managed is 7 days free, then $200/mo; 1,000+ integrations' },
     { need: 'Lowest price, self-serve', pick: 'Sintra (12-month) or Cubeo AI', reason: 'Sintra is $15.60/mo if you pay $187.20 for a year; Cubeo starts at \u20ac14.17/mo yearly and has a free plan (checked October 7, 2026)' },
     { need: 'Low-cost named agents', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 7 named agents, unlimited team members, and no credit system' },
     { need: 'AI teammate in Slack', pick: 'Lindy AI', reason: '1,000+ integrations (1,500+ on its pricing page), 40+ skills, setup in about 2 minutes, per Lindy' },
@@ -262,7 +262,7 @@ export default function SintraAlternativesContent({ faqData }) {
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="sintra_alt_hero">Start your pilot</SignupButton>
-                                <BookDemoButton source="sintra_alt_hero">Book a free pilot call</BookDemoButton>
+                                <BookDemoButton source="sintra_alt_hero">Book a 15-min call</BookDemoButton>
                             </div>
                         </div>
                     </div>
@@ -448,7 +448,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
                                             <SignupButton source="sintra_alt_dooza_card">Start your pilot</SignupButton>
-                                            <BookDemoButton source="sintra_alt_dooza_card">Book a free pilot call</BookDemoButton>
+                                            <BookDemoButton source="sintra_alt_dooza_card">Book a 15-min call</BookDemoButton>
                                         </div>
                                     )}
                                 </div>
@@ -509,7 +509,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                 </div>
                                 <div className="bg-slate-50 rounded-2xl border border-slate-100 p-6">
                                     <h3 className="font-bold text-slate-900 mb-2">Refund windows differ</h3>
-                                    <p className="text-sm text-slate-600 leading-relaxed">Sintra offers a 14-day money-back guarantee. Dooza has no credits, and every Dooza product starts with a refundable pilot — 100% refund within 14 days.</p>
+                                    <p className="text-sm text-slate-600 leading-relaxed">Sintra offers a 14-day money-back guarantee. Dooza has no credits: Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot.</p>
                                 </div>
                             </div>
                             <p className="text-sm text-slate-500 mt-6 italic text-center">
@@ -585,11 +585,11 @@ export default function SintraAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Sintra Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start with a refundable pilot — 100% refund within 14 days. Book a free 30-minute call with a Dooza engineer to scope it. No sales pitch, just a walkthrough of what Dooza handles for your business.
+                                Try Dooza Managed free for 7 days, then $200/month, or book a free 30-minute call with a Dooza engineer to scope it. No sales pitch, just a walkthrough of what Dooza handles for your business.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="sintra_alt_cta">Start your pilot</SignupButton>
-                                <BookDemoButton source="sintra_alt_cta">Book a free pilot call</BookDemoButton>
+                                <BookDemoButton source="sintra_alt_cta">Book a 15-min call</BookDemoButton>
                             </div>
                         </ScrollReveal>
                     </div>

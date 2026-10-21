@@ -44,7 +44,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is the best alternative to Sintra AI?',
-        answer: 'It depends on your needs. Dooza is the best all-around alternative for SMBs — it offers named AI employees with no credit system, a Dooza engineer who scopes your pilot on a free 30-minute call, and a refundable pilot (100% refund within 14 days). Marblism starts at $24/mo on a yearly plan. Lindy AI is a Slack-based AI teammate that lists 1,500+ integrations on its pricing page (checked October 7, 2026). If you want the lowest price and are happy to run the AI yourself, Sintra\'s own 12-month plan ($15.60/mo) is hard to beat.',
+        answer: 'It depends on your needs. Dooza is the best all-around alternative for SMBs — it offers named AI employees with no credit system, and Dooza Managed, an AI admin assistant checked by a real person: first 7 days free, then $200/month. Marblism starts at $24/mo on a yearly plan. Lindy AI is a Slack-based AI teammate that lists 1,500+ integrations on its pricing page (checked October 7, 2026). If you want the lowest price and are happy to run the AI yourself, Sintra\'s own 12-month plan ($15.60/mo) is hard to beat.',
     },
     {
         question: 'Why are people leaving Sintra AI?',
@@ -56,11 +56,11 @@ const faqData = [
     },
     {
         question: 'How much does Sintra AI cost?',
-        answer: 'Sintra X has a $97/mo list price but sells at $48.50/mo month to month, $23.60/mo on a 3-month plan ($70.80 up front), or $15.60/mo on a 12-month plan ($187.20 up front). Every plan includes 250 credits a month, with paid top-ups for advanced actions. Sintra no longer sells single-helper plans. Dooza has no credit system; pricing depends on the product and every Dooza product starts with a refundable pilot (see dooza.ai/pricing). Sintra prices checked October 7, 2026.',
+        answer: 'Sintra X has a $97/mo list price but sells at $48.50/mo month to month, $23.60/mo on a 3-month plan ($70.80 up front), or $15.60/mo on a 12-month plan ($187.20 up front). Every plan includes 250 credits a month, with paid top-ups for advanced actions. Sintra no longer sells single-helper plans. Dooza has no credit system: Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days). Sintra prices checked October 7, 2026.',
     },
     {
         question: 'Is Sintra AI free?',
-        answer: "No. Sintra's pricing page lists only paid plans (from $15.60/mo on a 12-month plan to $48.50/mo month to month) and no free plan or free trial. Every plan comes with a 14-day money-back guarantee: ask within 14 days for a full refund. Dooza works the same way on refunds: no free trial, and every product starts with a refundable pilot (100% refund within 14 days). If you want a free plan, Cubeo AI has one (see the comparison above). Sintra prices checked October 7, 2026 on sintra.ai/pricing.",
+        answer: "No. Sintra's pricing page lists only paid plans (from $15.60/mo on a 12-month plan to $48.50/mo month to month) and no free plan or free trial. Every plan comes with a 14-day money-back guarantee: ask within 14 days for a full refund. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days). If you want a free plan, Cubeo AI has one (see the comparison above). Sintra prices checked October 7, 2026 on sintra.ai/pricing.",
     },
     {
         question: 'Can Sintra AI helpers talk to each other?',
@@ -72,19 +72,19 @@ const faqData = [
     },
     {
         question: 'Is Dooza better than Sintra AI?',
-        answer: 'It depends on how you want to work. Sintra is the better pick if you want a low-cost self-serve app with 12+ ready-made helpers: $15.60/mo on a 12-month plan, with 250 credits a month and paid top-ups (checked October 7, 2026). Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you. Dooza has named AI employees for email, social media, SEO, leads, legal, and calls, with 1,000+ app integrations, and every Dooza product starts with a refundable pilot — 100% refund within 14 days.',
+        answer: 'It depends on how you want to work. Sintra is the better pick if you want a low-cost self-serve app with 12+ ready-made helpers: $15.60/mo on a 12-month plan, with 250 credits a month and paid top-ups (checked October 7, 2026). Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you. Dooza has named AI employees for email, social media, SEO, leads, legal, and calls, with 1,000+ app integrations, and Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days).',
     },
     {
         question: 'What is the cheapest Sintra AI alternative?',
-        answer: 'Cubeo AI starts at \u20ac17/month (\u20ac14.17/month billed yearly), and Marblism starts at $24/month on a yearly plan. Sintra itself drops to $15.60/month if you pay $187.20 for a year up front (prices checked October 7, 2026). Dooza is not the lowest-priced option; it has no credits and no per-seat fees, and every Dooza product starts with a refundable pilot (see dooza.ai/pricing).',
+        answer: 'Cubeo AI starts at \u20ac17/month (\u20ac14.17/month billed yearly), and Marblism starts at $24/month on a yearly plan. Sintra itself drops to $15.60/month if you pay $187.20 for a year up front (prices checked October 7, 2026). Dooza is not the lowest-priced option; it has no credits and no per-seat fees, and Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days).',
     },
     {
         question: 'Do any Sintra alternatives offer a free trial?',
-        answer: 'Dooza does not offer a free trial; every Dooza product starts with a paid, refundable pilot — 100% refund if you ask within 14 days. Cubeo AI has a free plan with 100 credits a month. Lindy gives $50 in free credits that last 7 days. Motion and NoimosAI offer free trials. Relevance AI\'s pricing page now lists only an Enterprise plan through sales (checked October 7, 2026). Marblism has a 7-day money-back guarantee, and Sintra has a 14-day one.',
+        answer: 'Yes: Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days). Cubeo AI has a free plan with 100 credits a month. Lindy gives $50 in free credits that last 7 days. Motion and NoimosAI offer free trials. Relevance AI\'s pricing page now lists only an Enterprise plan through sales (checked October 7, 2026). Marblism has a 7-day money-back guarantee, and Sintra has a 14-day one.',
     },
     {
         question: 'How do I switch from Sintra AI to another platform?',
-        answer: 'Most alternatives let you run both platforms side by side during the transition. Dooza offers a free 30-minute call where a Dooza engineer scopes your refundable pilot, then builds and tunes your AI employees or custom agents with you.',
+        answer: 'Most alternatives let you run both platforms side by side during the transition. Dooza offers a free 30-minute call where a Dooza engineer scopes your custom agents, then builds and tunes your AI employees or custom agents with you.',
     },
 ];
 
