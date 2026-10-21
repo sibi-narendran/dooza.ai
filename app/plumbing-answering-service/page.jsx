@@ -133,7 +133,7 @@ export default function PlumbingAnsweringServicePage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Plumbing answering service prices: 120 calls a month</h2>
                             <p className="mt-3 text-slate-700">
-                                120 calls at about 4 minutes each is 480 minutes. Each row is the cheapest published plan that covers that usage plus published overage, from the vendor’s own pricing page (linked), checked October 6–14, 2026. We sell one of these, so check the pricing pages yourself. Change the numbers in the <Link href="/ai-receptionist-cost-calculator" className="text-primary-700 underline">cost calculator</Link>.
+                                120 calls at about 4 minutes each is 480 minutes. Each row is the cheapest published plan that covers that usage plus published overage, from the vendor’s own pricing page (linked), checked October 6–14, 2026. We sell one of these, so check the pricing pages yourself. Change the numbers in the <Link href="/ai-receptionist-cost-calculator" className="text-primary-700 underline">cost calculator</Link>. Run an HVAC company? See the <Link href="/hvac-answering-service" className="text-primary-700 underline">HVAC answering service</Link> page.
                             </p>
                             <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
                                 <table className="w-full text-sm">

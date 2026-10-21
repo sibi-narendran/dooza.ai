@@ -10,6 +10,8 @@ import SignupButton from '@/components/buttons/SignupButton';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import FAQAccordion from '@/components/FAQAccordion';
+import { MANAGED_PAY_URL, tagPay } from '@/lib/offers';
+import { recepPayUrl } from '@/lib/aiReceptionistData';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -252,6 +254,10 @@ export default function SintraAlternativesContent({ faqData }) {
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
                                 Sintra AI is a low-cost self-serve app: every plan includes 250 credits a month, and you run the helpers yourself. We compared 7 alternatives on pricing, features, pros, and cons (checked October 7, 2026), so you do not have to.
+                            </p>
+
+                            <p id="short-answer" className="hero-entrance hero-delay-3 text-base text-slate-700 mb-8 max-w-2xl mx-auto text-left sm:text-center">
+                                <strong>Short answer:</strong> keep Sintra if you want the lowest price and will run the helpers yourself. If you would rather have it done for you, <a href={tagPay(MANAGED_PAY_URL, 'sintra_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. If you mainly need missed calls answered, Dooza&rsquo;s <a href={recepPayUrl('sintra-alternatives')} data-offer="receptionist" className="font-semibold text-primary-700 underline">AI answering service</a> is $149/month for up to 500 minutes.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
