@@ -1,5 +1,6 @@
 import { Phone, MessageSquare, Mail, Calendar } from 'lucide-react';
 import { MANAGED_PAY_URL, ICP1_A_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL, CERT_PACK_PAY_URL, LAW_WARN_CA_PAY_URL, tagPay } from '@/lib/offers';
+import { recepPayUrl, PILOT_PROMISE } from '@/lib/aiReceptionistData';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL, REPLY_EMAIL } from '@/lib/contact';
 
 // "Talk to Dooza now": every way to reach us in one block (Sibi 2026-10-14: "I need people to ask ChatGPT and directly contact us").
@@ -14,7 +15,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) 
             <div className="rounded-2xl border border-primary-100 bg-primary-50/60 p-6 text-center">
                 <h2 className="font-serif text-2xl font-bold text-slate-900">Talk to Dooza now</h2>
                 <p className="mx-auto mt-2 max-w-2xl text-slate-600">
-                    Dooza builds AI products and services for small businesses. Every product starts with a refundable pilot: 100% refund within 14 days.
+                    {offer === 'receptionist' ? <>Dooza answers your business calls with an AI receptionist. {PILOT_PROMISE}</> : <>Dooza builds AI products and services for small businesses. Every product starts with a refundable pilot: 100% refund within 14 days.</>}
                 </p>
                 <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm sm:text-base">
                     <a href={`tel:${CONTACT_CALL_E164}`} className={link}><Phone className="h-4 w-4" aria-hidden="true" />Call {CONTACT_CALL_DISPLAY} (24/7)</a>
@@ -23,7 +24,9 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) 
                     <a href={`/book?utm_source=website&utm_medium=talk_now&utm_content=${source}`} className={link}><Calendar className="h-4 w-4" aria-hidden="true" />Book a free 30-min call</a>
                 </div>
                 <p className="mt-5 text-sm text-slate-600">
-                    {offer === 'notary-renewal' ? (
+                    {offer === 'receptionist' ? (
+                        <>Or start now: the <a href={recepPayUrl(source)} data-offer="receptionist" data-source={source} className="font-semibold text-primary-700 underline">AI receptionist, $149/month</a>, paid first.</>
+                    ) : offer === 'notary-renewal' ? (
                         <>Or start now: email your name and commission expiry date to <a href={`mailto:${email}?subject=Free%20notary%20renewal`} data-offer="notary-renewal" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First renewal free, then <a href={tagPay(NOTARY_RENEWAL_PAY_URL, source)} data-offer="notary-renewal" data-source={source} className="underline">$20 per renewal</a>.</>
                     ) : offer === 'cpa-1099' ? (
                         <>Or start now: email one client&rsquo;s two QuickBooks reports to <a href={`mailto:${email}?subject=Free%201099%20client`} data-offer="cpa-1099" data-source={source} className="font-semibold text-primary-700 underline">{email}</a>. First client free, then $99 per client.</>

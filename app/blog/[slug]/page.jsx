@@ -341,7 +341,7 @@ export default async function BlogPostPage({ params }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
                 />
                 <BlogComponent post={staticPost} />
-                <TalkNowStrip source={`blog_${slug}`} />
+                <TalkNowStrip source={`blog_${slug}`} offer={slug === 'best-ai-receptionist' ? 'receptionist' : 'managed'} />
             </>
         );
     }
@@ -367,7 +367,7 @@ export default async function BlogPostPage({ params }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
                 />
                 <DynamicBlogContent post={staticPost} />
-                <TalkNowStrip source={`blog_${slug}`} />
+                <TalkNowStrip source={`blog_${slug}`} offer={slug === 'best-ai-receptionist' ? 'receptionist' : 'managed'} />
             </>
         );
     }
@@ -399,7 +399,7 @@ export default async function BlogPostPage({ params }) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
             />
             <DynamicBlogContent post={dynamicPost} />
-            <TalkNowStrip source={`blog_${slug}`} />
+            <TalkNowStrip source={`blog_${slug}`} offer={slug === 'best-ai-receptionist' ? 'receptionist' : 'managed'} />
         </>
     );
 }
