@@ -63,7 +63,7 @@ export default function SupportGuidePage({ page }) {
             {schemas.map((schema, i) => (
                 <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             ))}
-            <Navbar showLogin={false} ctaType="demo" ctaSource={`${source}_nav`} ctaLabel={OFFER.ctaShort} />
+            <Navbar showLogin={false} ctaType="demo" ctaSource={`${source}_nav`} ctaLabel="Book a free call" />
             <main id="main-content" className={`${sora.className} sg-root bg-white pt-[68px] text-[#1a1a1a]`}>
                 <style>{'.sg-root :is(h1,h2,h3,h4), .sg-root .font-serif { font-family: inherit; }'}</style>
                 {/* Hero */}

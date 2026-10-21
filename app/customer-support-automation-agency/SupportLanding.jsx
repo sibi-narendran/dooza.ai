@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { useBookingModal } from '@/components/BookingModalProvider';
 import { trackDemoClick } from '@/lib/analytics';
+import { supportPay, trackSupportPay } from '@/lib/offers';
 import { CALLBACK_NUMBER_DISPLAY, CALLBACK_NUMBER_E164 } from '@/lib/aiReceptionistData';
 
 /* Palette lifted from the reference layout */
@@ -43,20 +44,21 @@ function Reveal({ children, delay = 0, className = '' }) {
 }
 
 function Cta({ source, children = 'Start my 14-day trial', tone = 'lime', size = 'md' }) {
-    const { openModal } = useBookingModal();
     const tones = {
         lime: 'bg-[#E3F770] text-black hover:bg-[#d4ea55]',
         plum: 'bg-[#7C1B5A] text-white hover:bg-[#65164a]',
     };
     const sizes = { sm: 'px-4 py-2 text-sm', md: 'px-6 py-2 text-base', lg: 'px-6 py-2.5 text-lg' };
     return (
-        <button
-            type="button"
-            onClick={() => { openModal(); trackDemoClick(source); }}
+        <a
+            href={supportPay(source)}
+            data-offer="support"
+            data-source={source}
+            onClick={() => trackSupportPay(source)}
             className={`inline-flex items-center justify-center rounded-lg font-normal transition-colors ${tones[tone]} ${sizes[size]}`}
         >
             {children}
-        </button>
+        </a>
     );
 }
 
@@ -748,10 +750,9 @@ export default function SupportLanding({ faqs }) {
 }
 
 function SampleLink() {
-    const { openModal } = useBookingModal();
     return (
-        <button type="button" onClick={() => { openModal(); trackDemoClick('support_topbar'); }} className="ml-2 underline underline-offset-4" style={{ color: LIME }}>
+        <a href={supportPay('support_topbar')} data-offer="support" data-source="support_topbar" onClick={() => trackSupportPay('support_topbar')} className="ml-2 underline underline-offset-4" style={{ color: LIME }}>
             Start my 14-day trial →
-        </button>
+        </a>
     );
 }

@@ -121,7 +121,7 @@ export default function CustomerSupportAutomationAgencyPage() {
             {schemas.map((schema, index) => (
                 <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             ))}
-            <Navbar showLogin={false} ctaType="demo" ctaSource="support_automation_nav" ctaLabel="Start free trial" />
+            <Navbar showLogin={false} ctaType="demo" ctaSource="support_automation_nav" ctaLabel="Book a free call" />
             <main id="main-content" className={`${sora.className} cs-root bg-white pt-[68px] font-normal text-[#1a1a1a]`}>
                 <SupportLanding faqs={faqData} />
             </main>

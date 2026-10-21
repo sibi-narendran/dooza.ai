@@ -1,7 +1,6 @@
 'use client';
 
-import { useBookingModal } from '@/components/BookingModalProvider';
-import { trackDemoClick } from '@/lib/analytics';
+import { supportPay, trackSupportPay } from '@/lib/offers';
 
 const TONES = {
     lime: 'bg-[#E3F770] text-black hover:bg-[#d4ea55]',
@@ -9,14 +8,15 @@ const TONES = {
 };
 
 export default function GuideCta({ source, children, tone = 'plum', className = '' }) {
-    const { openModal } = useBookingModal();
     return (
-        <button
-            type="button"
-            onClick={() => { openModal(); trackDemoClick(source); }}
+        <a
+            href={supportPay(source)}
+            data-offer="support"
+            data-source={source}
+            onClick={() => trackSupportPay(source)}
             className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-colors ${TONES[tone]} ${className}`}
         >
             {children}
-        </button>
+        </a>
     );
 }
