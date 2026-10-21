@@ -40,7 +40,7 @@ const comparisonRows = [
     { feature: 'On-page SEO & schema', dooza: 'Ranky handles titles, meta, schema, and internal links', competitor: 'Agents create new content and optimize what is already published; your team reviews and ships', winner: 'tie' },
     { feature: 'Off-site presence', dooza: 'Drafts brand-voice comments on Reddit, LinkedIn, YouTube; builds Reddit and Quora presence', competitor: 'Shows which sources answer engines cite; AI Marketer suggests publisher outreach', winner: 'tie' },
     { feature: 'Human setup', dooza: 'A Dooza engineer scopes your pilot and sets it up with you', competitor: 'Self-serve 7-day trial and Agency Growth plan; Enterprise requires a demo', winner: 'dooza' },
-    { feature: 'Starting price', dooza: 'Refundable pilot (see /pricing)', competitor: 'Agency Growth $99/mo (self-serve, for agencies); Enterprise custom, demo required (checked October 7, 2026)', winner: 'tie' },
+    { feature: 'Starting price', dooza: 'Refundable pilot (see /pricing)', competitor: 'Agency Growth (self-serve, for agencies; no listed price); Enterprise custom, demo required (checked October 21, 2026)', winner: 'tie' },
     { feature: 'Try before you commit', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: '7-day free trial (50 prompts, 3 engines)', winner: 'tie' },
     { feature: 'Enterprise security', dooza: 'Not SOC 2 certified; encrypted connections and your approval on anything sensitive', competitor: 'SSO/SAML + SOC 2 on Enterprise', winner: 'profound' },
     { feature: 'API & data exports', dooza: '1,000+ app integrations; Close CRM, Notion, Drive context', competitor: 'API and exports on Enterprise', winner: 'profound' },
@@ -333,7 +333,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
                             <div className="mt-10 bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
                                 <h3 className="text-white font-bold text-lg mb-3">Profound&apos;s self-serve agency plan</h3>
                                 <p className="text-slate-300 text-sm leading-relaxed mb-3">
-                                    Profound&apos;s pricing page also has an agency tab: <strong className="text-white">Agency Growth at $99/month</strong>, for agencies pitching prospects and managing clients, with full client workspaces as an add-on for <strong className="text-white">$399/month</strong>. Enterprise is custom-priced, with custom AI Marketer credits (checked October 7, 2026).
+                                    Profound&apos;s pricing page also has an agency tab: <strong className="text-white">Agency Growth (no listed price)</strong>, for agencies pitching prospects and managing clients, with full client workspaces as an add-on for <strong className="text-white">$399/month</strong>. Enterprise is custom-priced, with custom AI Marketer credits (checked October 7, 2026).
                                 </p>
                                 <p className="text-slate-400 text-xs">
                                     Source:{' '}

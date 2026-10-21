@@ -23,7 +23,7 @@ const quickAnswer = [
 ];
 
 const profoundPainPoints = [
-    { icon: CreditCard, title: 'Enterprise is custom-priced', desc: 'Profound\'s pricing page lists a 7-day free Trial, a self-serve Agency Growth plan at $99/month (client workspaces are a $399/month add-on), and a custom-priced Enterprise plan that needs a demo (checked October 7, 2026).' },
+    { icon: CreditCard, title: 'Enterprise is custom-priced', desc: 'Profound\'s pricing page lists a 7-day free Trial, a self-serve Agency Growth plan with no listed price (client workspaces are a $399/month add-on), and a custom-priced Enterprise plan that needs a demo (checked October 21, 2026).' },
     { icon: Building2, title: 'Built for enterprise', desc: 'SSO/SAML, SOC 2, API, 9 answer engines, and Slack support are great for large brands — and more than most small teams will use.' },
     { icon: BarChart3, title: 'A platform your team runs', desc: 'Profound pairs analytics with Profound Agents that research, write, and publish, with an approval step before anything goes live. Your team still runs the platform. Small businesses without a marketing team often want it done for them.' },
     { icon: Target, title: 'The trial is narrow', desc: 'The Trial covers 50 prompts for 7 days across 3 answer engines, with limited AI Marketer credits and no API or support.' },
@@ -354,7 +354,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                                             <tr className="bg-slate-50/60">
                                                 <td className="p-4 md:p-5 font-bold text-slate-500">Profound (for reference)</td>
                                                 <td className="p-4 md:p-5 text-slate-500">Brands and agencies that want to run an AI visibility platform with analytics and agents</td>
-                                                <td className="p-4 md:p-5 text-slate-500">7-day free trial; Agency Growth $99/mo; Enterprise custom</td>
+                                                <td className="p-4 md:p-5 text-slate-500">7-day free trial; Agency Growth (no listed price); Enterprise custom</td>
                                                 <td className="p-4 md:p-5 text-slate-500">Analytics + agents</td>
                                                 <td className="p-4 md:p-5 text-center"><XCircle size={18} className="text-red-400 mx-auto" aria-label="No" /></td>
                                             </tr>

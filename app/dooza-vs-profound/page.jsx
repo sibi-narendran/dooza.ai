@@ -50,7 +50,7 @@ const faqData = [
     },
     {
         question: 'How much does Profound cost in 2026?',
-        answer: 'Profound\'s pricing page (checked October 7, 2026) lists a 7-day free Trial (50 prompts, 3 answer engines), a self-serve Agency Growth plan at $99/month with full client workspaces as an add-on for $399/month, and an Enterprise plan with custom pricing and custom AI Marketer credits that requires a demo. Check tryprofound.com/pricing for current rates.',
+        answer: 'Profound\'s pricing page (checked October 7, 2026) lists a 7-day free Trial (50 prompts, 3 answer engines), a self-serve Agency Growth plan (no listed price) with full client workspaces as an add-on for $399/month, and an Enterprise plan with custom pricing and custom AI Marketer credits that requires a demo. Check tryprofound.com/pricing for current rates.',
     },
     {
         question: 'Is Dooza a Profound alternative?',
@@ -66,7 +66,7 @@ const faqData = [
     },
     {
         question: 'Is Profound worth it for a small business?',
-        answer: 'It depends on who will run it. Profound\'s plans are a 7-day trial, a $99/month Agency Growth plan for agencies, and custom-priced Enterprise (checked October 7, 2026). It suits teams with someone to run the platform and review its Agents\' work. A small business without that person often gets more from having the work done for it — content, schema, and citations.',
+        answer: 'It depends on who will run it. Profound\'s plans are a 7-day trial, a self-serve Agency Growth plan for agencies (no listed price), and custom-priced Enterprise (checked October 21, 2026). It suits teams with someone to run the platform and review its Agents\' work. A small business without that person often gets more from having the work done for it — content, schema, and citations.',
     },
     {
         question: 'Can I use Dooza and Profound together?',

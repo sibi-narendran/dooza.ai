@@ -54,7 +54,7 @@ const faqData = [
     },
     {
         question: 'How much does Profound cost?',
-        answer: 'Profound\'s pricing page (checked October 7, 2026) lists a free 7-day Trial (50 prompts, 3 answer engines), a self-serve Agency Growth plan at $99/month with full client workspaces as an add-on for $399/month, and Enterprise with custom pricing and custom AI Marketer credits.',
+        answer: 'Profound\'s pricing page (checked October 7, 2026) lists a free 7-day Trial (50 prompts, 3 answer engines), a self-serve Agency Growth plan (no listed price) with full client workspaces as an add-on for $399/month, and Enterprise with custom pricing and custom AI Marketer credits.',
     },
     {
         question: 'What is the cheapest Profound alternative?',
