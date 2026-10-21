@@ -21,7 +21,7 @@ import { SITE_URL } from '@/lib/site';
 const PATH = '/lindy-alternatives';
 const CHECKED = 'October 21, 2026';
 const TITLE = 'Lindy Alternatives: 8 Options Compared (2026 Prices)';
-const DESCRIPTION = 'Lindy is from $29.99/mo per active user for 3,000 credits (checked Oct 21, 2026). Compare 8 Lindy alternatives, from DIY builders to done-for-you.';
+const DESCRIPTION = 'Lindy is from $49.99/mo per active user for 5,000 credits (checked Oct 21, 2026). Compare 8 Lindy alternatives, from DIY builders to done-for-you.';
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -69,11 +69,11 @@ const faqItems = [
     },
     {
         question: 'Is Dooza better than Lindy?',
-        answer: 'It depends on how you want to work. Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you, with 1,000+ app integrations. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days). Lindy is self-serve and costs less: from $29.99 a month per user for 3,000 credits, with $50 in free credits to start (checked October 21, 2026). If you want to build and configure your own agents, Lindy is the better pick.',
+        answer: 'It depends on how you want to work. Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you, with 1,000+ app integrations. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days). Lindy is self-serve and starts lower: from $49.99 a month per user for 5,000 credits, with $50 in free credits to start (checked October 21, 2026). If you want to build and configure your own agents, Lindy is the better pick.',
     },
     {
         question: 'How much does Lindy cost?',
-        answer: 'According to Lindy\'s pricing page (checked October 21, 2026), the Free plan is $0 with $50 in credits that last 7 days. The Team plan starts at $29.99/mo for 3,000 credits; more credits cost more (for example 5,000 credits for $49.99, 15,000 for $99.99 and 35,000 for $199.99), and you can top up at $10 per 1,000 credits. Every active user in your workspace is billed, from $29.99 a month for 3,000 credits each. Enterprise is custom. See lindy.ai/pricing for current prices.',
+        answer: 'According to Lindy\'s pricing page (checked October 21, 2026), the Free plan is $0 with $50 in credits that last 7 days. The Team plan starts at $49.99/mo for 5,000 credits; more credits cost more (for example 15,000 for $99.99 and 35,000 for $199.99), and you can top up at $10 per 1,000 credits. Every active user in your workspace is billed, from $49.99 a month for 5,000 credits each. Enterprise is custom. See lindy.ai/pricing for current prices.',
     },
     {
         question: 'Does Lindy have a free plan or free trial?',
@@ -103,7 +103,7 @@ const faqItems = [
 
 const lindyPainPoints = [
     { icon: Wrench, title: 'You Build It Yourself', desc: 'Lindy is a self-serve teammate: you set up its skills, routines and approvals yourself (Lindy offers live onboarding on Team). If you would rather have someone build and tune it with you, a done-for-you option fits better.' },
-    { icon: DollarSign, title: 'Credits Per Seat', desc: 'Every active user in your workspace is billed, from $29.99 a month for 3,000 credits each (checked October 21, 2026). Bigger jobs use more credits, so heavy use means a bigger credit tier or top-ups at $10 per 1,000 credits.' },
+    { icon: DollarSign, title: 'Credits Per Seat', desc: 'Every active user in your workspace is billed, from $49.99 a month for 5,000 credits each (checked October 21, 2026). Bigger jobs use more credits, so heavy use means a bigger credit tier or top-ups at $10 per 1,000 credits.' },
     { icon: Clock, title: 'Pauses When Credits Run Out', desc: 'If the pool runs low, Lindy pauses credit-using actions until credits reset or an admin tops up. Monthly credits do not roll over.' },
     { icon: Users, title: 'Short Free Window', desc: 'The free plan is $50 in credits that last 7 days. Some alternatives have free-forever plans, a 14-day trial, or a self-hosted edition.' },
     { icon: Bot, title: 'No Named AI Employees', desc: 'Lindy gives you one teammate with 40+ skills that you configure. If you want pre-built, named AI employees, look at Sintra AI or Marblism.' },
@@ -306,7 +306,7 @@ const alternatives = [
 
 const decisionGuide = [
     { need: 'Done for you', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you' },
-    { need: 'An AI teammate in Slack you configure yourself', pick: 'Lindy', reason: 'Slack-native teammate, 40+ skills plus create your own, 1,500+ integrations, approvals built in. From $29.99/mo per active user for 3,000 credits' },
+    { need: 'An AI teammate in Slack you configure yourself', pick: 'Lindy', reason: 'Slack-native teammate, 40+ skills plus create your own, 1,500+ integrations, approvals built in. From $49.99/mo per active user for 5,000 credits' },
     { need: 'Pre-built, named AI employees', pick: 'Sintra AI or Marblism', reason: 'Sintra: all 12 helpers, $15.60/mo on the 12-month plan. Marblism: all 7 AI Employees, $24/mo billed yearly' },
     { need: 'Many builders, one bill', pick: 'Gumloop', reason: 'Unlimited seats and agents; Pro starts at $37/month with 20k credits a month' },
     { need: 'Free agent plan', pick: 'Zapier Agents or Cubeo AI', reason: 'Zapier Agents: 400 activities a month free. Cubeo AI: free forever plan with 100 credits a month' },
@@ -409,7 +409,7 @@ export default function LindyAlternativesPage() {
                                 </p>
 
                                 <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                    Lindy is a self-serve AI teammate billed in credits: from $29.99/mo per active user for 3,000 credits, with $50 in free credits that last 7 days (pricing checked {CHECKED}). We compared 8 alternatives on pricing, how they meter usage, setup, pros, and cons — so you do not have to.
+                                    Lindy is a self-serve AI teammate billed in credits: from $49.99/mo per active user for 5,000 credits, with $50 in free credits that last 7 days (pricing checked {CHECKED}). We compared 8 alternatives on pricing, how they meter usage, setup, pros, and cons — so you do not have to.
                                 </p>
 
                                 <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">

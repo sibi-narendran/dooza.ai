@@ -69,7 +69,7 @@ export default function AlternativesPage() {
             slug: null,
             directLink: '/lindy-alternatives',
             tagline: '8 alternatives compared — Lindy’s per-user credit plans vs AI agent builders and done-for-you options',
-            doozaAdvantage: 'Done for you: Dooza Managed is free for the first 7 days, then $200/month, vs Lindy’s self-serve credits from $29.99/mo per active user'
+            doozaAdvantage: 'Done for you: Dooza Managed is free for the first 7 days, then $200/month, vs Lindy’s self-serve credits from $49.99/mo per active user'
         },
         {
             name: 'Ambs Call Center Alternatives',

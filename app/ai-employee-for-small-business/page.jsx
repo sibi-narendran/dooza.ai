@@ -22,7 +22,7 @@ const H2 = 'font-serif text-2xl font-bold text-slate-900';
 const faqItems = [
     {
         question: 'How much does it cost to hire an AI employee?',
-        answer: 'Most cost $25 to $200 a month. DIY tools like Teammates.ai start at $25/month and Lindy at $29.99/month per user (checked Oct 21, 2026), and you set them up. Dooza Managed is $200/month after a free first 7 days, with a person checking the work.',
+        answer: 'Most cost $25 to $200 a month. DIY tools like Teammates.ai start at $25/month and Lindy at $49.99/month per user (checked Oct 21, 2026), and you set them up. Dooza Managed is $200/month after a free first 7 days, with a person checking the work.',
     },
     {
         question: 'How do I hire an AI employee?',
@@ -106,7 +106,7 @@ const ROWS = [
     {
         who: 'Lindy (Team)',
         src: 'https://www.lindy.ai/pricing',
-        price: 'From $29.99/month per user for 3,000 credits. Top-ups $10 per 1,000 credits. $50 in free credits for 7 days.',
+        price: 'From $49.99/month per user for 5,000 credits. Top-ups $10 per 1,000 credits. $50 in free credits for 7 days.',
         unit: 'Build your own AI agents and workflows',
         fixes: 'You',
     },

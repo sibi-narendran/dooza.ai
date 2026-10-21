@@ -24,7 +24,7 @@ const faqItems = [
     },
     {
         question: 'How much does an AI agent cost for a small business?',
-        answer: 'DIY tools start free, and entry paid plans run from $9 to $29.99 a month (Make, Zapier, n8n, Lindy, checked Oct 21, 2026). Dooza Managed is $200 a month with the first 7 days free. Custom Dooza agents are quoted on a free 30-minute call.',
+        answer: 'DIY tools start free, and entry paid plans run from $9 to $49.99 a month (Make, Zapier, n8n, Lindy, checked Oct 21, 2026). Dooza Managed is $200 a month with the first 7 days free. Custom Dooza agents are quoted on a free 30-minute call.',
     },
     {
         question: 'Is Dooza an AI agent agency?',
@@ -112,7 +112,7 @@ const SOURCES = [
     { label: 'n8n pricing (Starter "20€ /mo, billed annually", 2.5K executions; Community Edition self-hosted)', href: 'https://n8n.io/pricing/' },
     { label: 'Make pricing (Free "$0/mo", 1,000 credits; Core "$9/mo" at 10,000 credits/mo; page offers "Save 15%" on annual billing)', href: 'https://www.make.com/pricing' },
     { label: 'Zapier pricing (Free "$0/month", 100 tasks; Professional "Starting from $19.99/month"; "Pay yearly (Save 33%)" toggle)', href: 'https://zapier.com/pricing' },
-    { label: 'Lindy pricing (Free "$0", "$50 in credits"; Team "$29.99/mo" for 3,000 credits; "Every active user in your workspace is billed")', href: 'https://www.lindy.ai/pricing' },
+    { label: 'Lindy pricing (Free "$0", "$50 in credits"; Team "$49.99/mo" for 5,000 credits; "Every active user in your workspace is billed")', href: 'https://www.lindy.ai/pricing' },
     { label: 'Dooza pricing', href: 'https://www.dooza.ai/pricing' },
     { label: 'Dooza home (how it works, jobs, FAQ)', href: 'https://www.dooza.ai/' },
     { label: 'Dooza AI admin assistant', href: 'https://www.dooza.ai/ai-admin-assistant' },

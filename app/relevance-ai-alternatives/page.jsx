@@ -64,7 +64,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'How much does Relevance AI cost?',
-        answer: 'Relevance AI has no public price on its pricing page (checked October 21, 2026). The page lists one plan, Enterprise, with "Custom Actions" and "Custom Vendor Credits", and the only way to get a price is "Talk to sales". If you need a listed price, Lindy starts at $29.99/month per user for 3,000 credits, Gumloop starts at $37/month, and Zapier Agents Pro is $33.33/month billed annually ($400 a year) (all checked October 21, 2026).',
+        answer: 'Relevance AI has no public price on its pricing page (checked October 21, 2026). The page lists one plan, Enterprise, with "Custom Actions" and "Custom Vendor Credits", and the only way to get a price is "Talk to sales". If you need a listed price, Lindy starts at $49.99/month per user for 5,000 credits, Gumloop starts at $37/month, and Zapier Agents Pro is $33.33/month billed annually ($400 a year) (all checked October 21, 2026).',
     },
     {
         question: 'Is Relevance AI free?',
@@ -72,7 +72,7 @@ const faqData = [
     },
     {
         question: 'What are the best Relevance AI alternatives in 2026?',
-        answer: 'For a small business that wants it done for you: Dooza. For building your own agents with listed prices: Lindy (from $29.99/month per user), Gumloop (from $37/month), Zapier Agents (free, or $33.33/month billed annually), n8n (from 20€/month billed annually) and CrewAI (free Basic plan). For ready-made AI employees you run yourself: Sintra AI (from $15.60/month on a 12-month plan) and Marblism ($24/month billed yearly). Cubeo AI is a no-code chatbot and agent builder with a free plan. Prices checked October 21, 2026.',
+        answer: 'For a small business that wants it done for you: Dooza. For building your own agents with listed prices: Lindy (from $49.99/month per user), Gumloop (from $37/month), Zapier Agents (free, or $33.33/month billed annually), n8n (from 20€/month billed annually) and CrewAI (free Basic plan). For ready-made AI employees you run yourself: Sintra AI (from $15.60/month on a 12-month plan) and Marblism ($24/month billed yearly). Cubeo AI is a no-code chatbot and agent builder with a free plan. Prices checked October 21, 2026.',
     },
     {
         question: 'Is Dooza better than Relevance AI?',
@@ -142,14 +142,14 @@ const alternatives = [
         url: 'https://www.lindy.ai/pricing',
         tagline: 'Self-serve AI teammate with a large integration library',
         bestFor: 'Teams who want a self-serve AI teammate in Slack and are happy to configure it themselves',
-        price: 'From $29.99/mo per active user for 3,000 credits; 15,000 credits for $99.99 (checked October 21, 2026)',
+        price: 'From $49.99/mo per active user for 5,000 credits; 15,000 credits for $99.99 (checked October 21, 2026)',
         trial: '$50 in free credits, valid for 7 days, no credit card required',
         builder: 'You (Lindy offers live onboarding on Team)',
         agents: '40+ skills, plus create your own; scheduled routines',
         integrations: '1,500+ integrations + MCP (pricing page)',
         highlight: false,
         pros: [
-            'Listed price: from $29.99/month per user for 3,000 credits, with bigger credit packs on the same page',
+            'Listed price: from $49.99/month per user for 5,000 credits, with bigger credit packs on the same page',
             '1,500+ integrations plus MCP support',
             'SOC 2 and GDPR; Enterprise adds SSO, audit logs and HIPAA with a signed BAA',
             '$50 in free credits to try it for 7 days',
@@ -326,7 +326,7 @@ const alternatives = [
 const decisionGuide = [
     { need: 'Done for you (small business)', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you' },
     { need: 'Enterprise AI workforce you build and govern', pick: 'Relevance AI or CrewAI Enterprise', reason: 'Relevance AI lists unlimited agents, users and workforces, 2,000+ integrations, SSO, RBAC and audit logs. CrewAI Enterprise can deploy in your own VPC. Both price through sales' },
-    { need: 'Self-serve AI teammate in Slack', pick: 'Lindy AI', reason: 'From $29.99/month for 3,000 credits, 1,500+ integrations, $50 in free credits for 7 days' },
+    { need: 'Self-serve AI teammate in Slack', pick: 'Lindy AI', reason: 'From $49.99/month for 5,000 credits, 1,500+ integrations, $50 in free credits for 7 days' },
     { need: 'Build agents with a listed price', pick: 'Gumloop', reason: 'Pro starts at $37/month with unlimited agents and seats, 14-day free trial' },
     { need: 'Already on Zapier', pick: 'Zapier Agents', reason: 'Free for 400 activities a month; Pro $33.33/month billed annually for 1,500' },
     { need: 'Self-host or pay per execution', pick: 'n8n', reason: 'Starter 20€/month billed annually for 2.5K executions; Community Edition self-hosted from GitHub' },

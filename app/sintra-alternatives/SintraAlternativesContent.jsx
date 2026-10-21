@@ -125,7 +125,7 @@ const alternatives = [
         name: 'Lindy AI',
         tagline: 'Self-serve AI teammate with a large integration library',
         bestFor: 'Teams who want a self-serve AI teammate in Slack and are happy to configure it themselves',
-        price: 'From $29.99/user/mo for 3,000 credits; 15,000 credits for $99.99, 35,000 for $199.99, plus Enterprise (checked October 7, 2026)',
+        price: 'From $49.99/user/mo for 5,000 credits; 15,000 credits for $99.99, 35,000 for $199.99, plus Enterprise (checked October 21, 2026)',
         trial: '$50 in free credits, valid for 7 days',
         agents: '40+ skills, plus create your own; ready-made templates',
         integrations: '1,500+ (pricing page); 1,000+ (integrations page)',
@@ -608,6 +608,12 @@ export default function SintraAlternativesContent({ faqData }) {
                             </Link>
                             <Link href="/marblism-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 Marblism Alternatives →
+                            </Link>
+                            <Link href="/lindy-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                Lindy Alternatives →
+                            </Link>
+                            <Link href="/relevance-ai-alternatives" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
+                                Relevance AI Alternatives →
                             </Link>
                             <Link href="/ai-solutions-for-business" className="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 border border-primary-100 px-4 py-2 rounded-lg hover:border-primary-200 transition-colors">
                                 AI Solutions for Business →

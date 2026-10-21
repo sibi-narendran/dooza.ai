@@ -45,7 +45,7 @@ const faqData = [
     },
     {
         question: "How much does Lindy AI cost compared to alternatives?",
-        answer: "Lindy is billed per seat in credits: Plus from $29.99/month for 3,000 credits, Pro $99.99 for 15,000, Max $199.99 for 35,000, and custom Enterprise pricing. A credit is about one cent, and new users get $50 in credits for 7 days. Gumloop Pro starts at $37/month with a 14-day free trial, and Zapier has a free plan (100 tasks/month) with Professional from $19.99/month. All checked October 7, 2026, on each vendor's pricing page. Dooza uses no credits; pricing depends on the product, and custom Dooza agents start with a refundable pilot (see dooza.ai/pricing)."
+        answer: "Lindy is billed per seat in credits: Team from $49.99/month for 5,000 credits, 15,000 credits for $99.99, 35,000 for $199.99, and custom Enterprise pricing. A credit is about one cent, and new users get $50 in credits for 7 days. Gumloop Pro starts at $37/month with a 14-day free trial, and Zapier has a free plan (100 tasks/month) with Professional from $19.99/month. Lindy checked October 21, 2026, the others October 7, 2026, on each vendor's pricing page. Dooza uses no credits; pricing depends on the product, and custom Dooza agents start with a refundable pilot (see dooza.ai/pricing)."
     },
     {
         question: "Is Lindy AI good for small businesses?",
@@ -287,7 +287,7 @@ export default function LindyAiAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">What is Lindy AI?</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    <a href="https://www.lindy.ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Lindy AI</a> describes itself as "an AI teammate that gets work done for you and your team." It is self-serve: Lindy says setup takes 2 minutes, and you start from ready-made templates and 40+ skills, or create your own. Lindy connects to thousands of apps, and computer use (browsing for you) is available on the Pro and Max levels.
+                                    <a href="https://www.lindy.ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Lindy AI</a> describes itself as "an AI teammate that gets work done for you and your team." It is self-serve: Lindy says setup takes 2 minutes, and you start from ready-made templates and 40+ skills, or create your own. Lindy connects to thousands of apps, and it offers computer use (browsing for you).
                                 </p>
                                 <p>
                                     According to <a href="https://www.unite.ai/lindy-ai-review/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Unite.AI's review</a>, Lindy represents "a new wave of autonomous AI agents that can act on your behalf rather than merely respond to prompts."
@@ -302,6 +302,7 @@ export default function LindyAiAlternativeContent() {
                                     <li><strong>Type:</strong> Self-serve AI teammate</li>
                                     <li><strong>Best For:</strong> Email, meetings, scheduling, and everyday work tasks</li>
                                     <li><strong>Pricing:</strong> Per seat in credits; Plus from $29.99/month for 3,000 credits, about one cent per credit (checked October 7, 2026, on <a href="https://www.lindy.ai/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">lindy.ai/pricing</a>)</li>
+                                    <li><strong>Compare:</strong> <Link href="/lindy-alternatives" className="text-primary-600 hover:underline">Lindy alternatives compared side by side, with prices</Link></li>
                                     <li><strong>Trial:</strong> $50 in credits, valid for 7 days</li>
                                     <li><strong>Certifications:</strong> SOC 2 Type II, GDPR, HIPAA, and PIPEDA compliant</li>
                                 </ul>

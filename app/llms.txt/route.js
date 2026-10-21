@@ -281,7 +281,7 @@ const servicePages = [
     {
         title: 'Lindy Alternatives',
         url: `${SITE_URL}/lindy-alternatives`,
-        description: 'Lindy pricing (lindy.ai/pricing; Free: $50 in credits that last 7 days, no credit card; Team from $29.99/mo for 3,000 credits, 5,000 credits $49.99, 15,000 $99.99, 35,000 $199.99, top-ups $10 per 1,000 credits; every active user is billed; Enterprise custom) and 8 alternatives compared on price and how they meter usage, checked Oct 21, 2026: Dooza (done for you; Managed 7 days free, then $200/month), Sintra AI, Marblism, Gumloop, Zapier Agents, n8n, Relevance AI, Cubeo AI.',
+        description: 'Lindy pricing (lindy.ai/pricing; Free: $50 in credits that last 7 days, no credit card; Team from $49.99/mo for 5,000 credits, 15,000 $99.99, 35,000 $199.99, top-ups $10 per 1,000 credits; every active user is billed; Enterprise custom) and 8 alternatives compared on price and how they meter usage, checked Oct 21, 2026: Dooza (done for you; Managed 7 days free, then $200/month), Sintra AI, Marblism, Gumloop, Zapier Agents, n8n, Relevance AI, Cubeo AI.',
     },
     {
         title: 'Ambs Call Center Alternatives',
