@@ -391,7 +391,7 @@ export default function SmithAiAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Human or AI answering?</h2>
                             <p className="mt-3 text-slate-700">
-                                Smith.ai’s human-first plan, Ruby and Abby put a trained person on the line. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: Smith.ai’s human plans start at $300 for 30 calls and Ruby at $250 for 50 minutes.
+                                Smith.ai’s human-first plan, Ruby and Abby put a trained person on the line. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: Smith.ai’s human plans start at $300 for 30 calls and Ruby at $250 for 50 minutes. Comparing against Ruby instead? See <Link href="/ruby-alternatives" className={link}>Ruby Receptionist alternatives</Link>.
                             </p>
                             <p className="mt-3 text-slate-700">
                                 AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-answering-service-for-small-business" className={link}>AI answering service for small business</Link>.

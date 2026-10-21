@@ -269,6 +269,11 @@ const servicePages = [
         description: 'Smith.ai pricing (human-first from $300/month for 30 calls; AI receptionist free for 25 calls, Pro $150/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
+        title: 'Ruby Receptionist Alternatives',
+        url: `${SITE_URL}/ruby-alternatives`,
+        description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+    },
+    {
         title: 'AI Receptionist',
         url: `${SITE_URL}/ai-receptionist`,
         description: 'Dooza AI receptionist for contractors and trades: $149/month for up to 500 minutes. Details at /ai-answering-service-for-small-business.',

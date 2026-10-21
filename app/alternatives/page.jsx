@@ -51,6 +51,13 @@ export default function AlternativesPage() {
             doozaAdvantage: 'AI answering at $149/month for 500 minutes, month to month'
         },
         {
+            name: 'Ruby Receptionist Alternatives',
+            slug: null,
+            directLink: '/ruby-alternatives',
+            tagline: '8 answering services compared — Ruby’s minute plans vs AI and human options',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Ruby’s $1,725 for 500 human minutes'
+        },
+        {
             name: 'Dooza vs Profound',
             slug: null,
             directLink: '/dooza-vs-profound',
