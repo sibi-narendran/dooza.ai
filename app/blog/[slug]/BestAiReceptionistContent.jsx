@@ -306,7 +306,7 @@ export default function BestAiReceptionistContent() {
                                     Many callers who reach voicemail won't leave a message. They hang up and call your competitor. Every unanswered ring is revenue walking out the door — and you don't even know it's happening.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Picture this (an illustrative example): it's 6 PM on a Tuesday. A homeowner discovers a burst pipe flooding their basement. They grab their phone and call three plumbers. Two go straight to voicemail. The third picks up instantly, asks the right questions — "Where's the leak? How bad is the flooding? What's your address?" — and books the emergency appointment on the spot. That third business just won the job while the other two were still recording "Sorry we missed your call."
+                                    Picture this (an illustrative example): it's 6 PM on a Tuesday. A homeowner discovers a burst pipe flooding their basement. They grab their phone and call three plumbers. Two go straight to voicemail. The third picks up instantly, asks the right questions — "Where's the leak? How bad is the flooding? What's your address?" — and books the emergency appointment on the spot. That third business just won the job while the other two were still recording "Sorry we missed your call." (We built pages for exactly this: <Link href="/plumbing-answering-service" className="text-primary-600 hover:underline font-medium">plumbing answering service</Link> and <Link href="/hvac-answering-service" className="text-primary-600 hover:underline font-medium">HVAC answering service</Link>.)
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">As we covered in our business automation guide</Link>, inbound call handling eats a lot of a small team's day. But unlike email or social media, missed calls have an immediate, measurable cost — because the caller doesn't wait. They move on.
@@ -517,7 +517,7 @@ export default function BestAiReceptionistContent() {
                                         title: "Home Services",
                                         icon: Phone,
                                         desc: "Emergency plumbing call at midnight? Rachel takes the message and emails it to you with the transcript, instead of sending it to voicemail.",
-                                        link: null
+                                        link: { href: "/plumbing-answering-service", label: "See our answering service for plumbers" }
                                     },
                                     {
                                         title: "Legal Firms",
