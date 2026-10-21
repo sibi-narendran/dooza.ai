@@ -35,7 +35,7 @@ const faqItems = [
     },
     {
         question: 'Does it book appointments or send text messages?',
-        answer: 'No. It does not book onto calendars, send texts, sync to a CRM or record calls. If you need calendar booking, pick a booking-capable vendor from our comparison of 20 services.',
+        answer: 'No. It does not book onto calendars, send texts or sync to a CRM. It does record calls (callers hear that the call is recorded) and emails you the transcript and a link to the recording. If you need calendar booking, pick a booking-capable vendor from our comparison of 20 services.',
     },
     {
         question: 'What happens if two people call at once?',

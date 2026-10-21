@@ -253,7 +253,7 @@ export default async function AiReceptionistPage(props) {
                 <section id="video" className="px-4 py-16 sm:px-6 sm:py-24">
                     <div className="mx-auto max-w-4xl">
                         <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">What is an AI receptionist? The 4-minute version</h2>
-                        <p className="mt-4 text-base leading-relaxed text-slate-700">How a call is answered, qualified, booked and handed off, and what 100 calls a month costs on published plans.</p>
+                        <p className="mt-4 text-base leading-relaxed text-slate-700">How AI receptionists in general answer, qualify, book and hand off a call, and what 100 calls a month costs on published plans.</p>
                         <div className="mt-8">
                             <YouTubeEmbed videoId="g7nts4pBo4U" title="What Is an AI Receptionist? How It Works in 5 Steps (+ What It Costs)" />
                         </div>

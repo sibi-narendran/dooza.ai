@@ -260,7 +260,7 @@ export default function MarblismAlternativesContent({ faqData }) {
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="marblism_alt_hero">Start your pilot</SignupButton>
-                                <BookDemoButton source="marblism_alt_hero">Book a free pilot call</BookDemoButton>
+                                <BookDemoButton source="marblism_alt_hero">Book a 15-min call</BookDemoButton>
                             </div>
                         </div>
                     </div>
@@ -446,7 +446,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
                                             <SignupButton source="marblism_alt_dooza_card">Start your pilot</SignupButton>
-                                            <BookDemoButton source="marblism_alt_dooza_card">Book a free pilot call</BookDemoButton>
+                                            <BookDemoButton source="marblism_alt_dooza_card">Book a 15-min call</BookDemoButton>
                                         </div>
                                     )}
                                 </div>
@@ -575,7 +575,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="marblism_alt_cta">Start your pilot</SignupButton>
-                                <BookDemoButton source="marblism_alt_cta">Book a free pilot call</BookDemoButton>
+                                <BookDemoButton source="marblism_alt_cta">Book a 15-min call</BookDemoButton>
                             </div>
                         </ScrollReveal>
                     </div>

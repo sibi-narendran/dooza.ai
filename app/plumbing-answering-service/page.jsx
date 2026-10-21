@@ -41,7 +41,7 @@ const faqItems = [
     },
     {
         question: 'What does the Dooza plumbing answering service do?',
-        answer: 'It answers the calls you miss, asks the questions you give it (address, what is wrong, how urgent), takes the message and emails it to you with the call transcript. It does not book onto your calendar or dispatch software, send texts or record calls, and it takes one call at a time.',
+        answer: 'It answers the calls you miss, asks the questions you give it (address, what is wrong, how urgent), takes the message and emails it to you with the call transcript. It does not book onto your calendar or dispatch software, does not send texts, and takes one call at a time.',
     },
     {
         question: 'What should an answering service ask a plumbing caller?',
