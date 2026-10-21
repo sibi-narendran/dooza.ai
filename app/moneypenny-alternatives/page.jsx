@@ -423,7 +423,7 @@ export default function MoneypennyAlternativesPage() {
                                 </div>
                             </div>
                             <p className="mt-4 text-slate-700">
-                                <strong>Where Moneypenny does more:</strong> every Moneypenny AI Answering plan on its pricing page lists human escalation. Dooza has no person to hand a call to: it takes the message and emails it to you. If callers must be able to reach a person, Moneypenny or another human service fits better.
+                                <strong>Where Moneypenny does more:</strong> every Moneypenny AI Answering plan on its pricing page lists human escalation. Dooza has no person to hand a call to: it takes the message and emails it to you. If callers must be able to reach a person, Moneypenny or another human service fits better. Comparing against MAP Communications instead? See <Link href="/map-communications-alternatives" className={link}>MAP Communications alternatives</Link>.
                             </p>
                             <p className="mt-4 text-slate-700">
                                 <strong>Cheaper on paper:</strong> Moneypenny’s AI plan ($99/month for 50 calls), Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes) and My AI Front Desk ($99 for 200 minutes) cost less than Dooza to start, and Smith.ai’s AI plan is free for 25 calls. If your call volume is low or you need booking, start there. Dooza makes sense when you want one flat price that covers up to 500 minutes a month, a stated $0.30 overage, and each caller’s message in your inbox.

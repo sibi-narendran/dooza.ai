@@ -58,6 +58,20 @@ export default function AlternativesPage() {
             doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Ruby’s $1,725 for 500 human minutes'
         },
         {
+            name: 'MAP Communications Alternatives',
+            slug: null,
+            directLink: '/map-communications-alternatives',
+            tagline: '8 answering services compared — MAP’s live answering minute plans vs AI and human options',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes vs MAP’s $649 for 500 live answering minutes'
+        },
+        {
+            name: 'Answering Service Care Alternatives',
+            slug: null,
+            directLink: '/answering-service-care-alternatives',
+            tagline: '8 answering services compared — Answering Service Care’s live agent minute plans vs AI and human options',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Answering Service Care’s $639 for 500 live agent minutes'
+        },
+        {
             name: 'Posh Virtual Receptionist Alternatives',
             slug: null,
             directLink: '/posh-alternatives',

@@ -274,6 +274,16 @@ const servicePages = [
         description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
+        title: 'MAP Communications Alternatives',
+        url: `${SITE_URL}/map-communications-alternatives`,
+        description: 'MAP Communications pricing (live answering billed by minutes: Pay As You Go $49/month plus $1.37/min, Business $179 for 125 minutes, Enterprise $339 for 250, Premium $649 for 500; every plan lists 24/7 coverage, English and Spanish, a toll-free number, HIPAA, PCI-DSS, HITRUST and SOC-2, no long-term contracts) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
+    },
+    {
+        title: 'Answering Service Care Alternatives',
+        url: `${SITE_URL}/answering-service-care-alternatives`,
+        description: 'Answering Service Care pricing (answeringservicecare.com; live answering plans billed monthly: Starter $40/month pay as you go at $1.75/min, $179 for 100 minutes, $329 for 250, $639 for 500, overage $1.35-$1.75/min; the page also mentions a $50 start-up fee; AI plans from $25/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
+    },
+    {
         title: 'Posh Virtual Receptionist Alternatives',
         url: `${SITE_URL}/posh-alternatives`,
         description: 'Posh Virtual Receptionist pricing (posh.com, the live answering service, not Poshmark; live receptionist plans from $65/month plus $2.30/min to $975 for 500 minutes and $1,900 for 1,000; AI + Live plans $130 for 50 mixed minutes to $975 for 500; free trial of seven days or 250 minutes; month to month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Moneypenny, Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, Rosie.',
