@@ -180,7 +180,7 @@ export default function AiAnsweringServicePage() {
                                 </table>
                             </div>
                             <p className="mt-3 text-sm text-slate-600">
-                                Services that publish no price at this volume are left out. Try your own numbers in the <Link href="/ai-receptionist-cost-calculator" className="text-primary-700 underline">AI receptionist cost calculator</Link>. Trade-specific prices: <Link href="/hvac-answering-service" className="text-primary-700 underline">HVAC answering service</Link> and <Link href="/plumbing-answering-service" className="text-primary-700 underline">plumbing answering service</Link>.
+                                Services that publish no price at this volume are left out. Try your own numbers in the <Link href="/ai-receptionist-cost-calculator" className="text-primary-700 underline">AI receptionist cost calculator</Link>. Trade-specific prices: <Link href="/hvac-answering-service" className="text-primary-700 underline">HVAC</Link>, <Link href="/plumbing-answering-service" className="text-primary-700 underline">plumbing</Link> and <Link href="/garage-door-answering-service" className="text-primary-700 underline">garage door</Link> answering services.
                             </p>
                         </section>
 
