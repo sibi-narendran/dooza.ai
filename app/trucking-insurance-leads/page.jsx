@@ -298,7 +298,7 @@ export default function TruckingInsuranceLeadsPage() {
 
                         <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
                             <h2 className="text-2xl font-bold text-slate-900">Is your state still open?</h2>
-                            <p className="mt-2 text-slate-700">Book a free 30-minute call. We check that your state is still open, answer your questions and start your free week.</p>
+                            <p className="mt-2 text-slate-700">Book a free 30-minute call. We check that your state is still open, answer your questions and send the payment link.</p>
                             <div className="mt-5">
                                 <Cta label="Check my state" />
                             </div>
