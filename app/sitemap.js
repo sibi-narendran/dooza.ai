@@ -380,6 +380,30 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/trucking-renewals/oh`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/trucking-renewals/pa`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/trucking-renewals/in`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/trucking-renewals/ga`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/connecticut-new-business-list`,
             lastModified: pageDate('2026-10-17'),
             changeFrequency: 'weekly',
