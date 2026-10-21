@@ -253,6 +253,7 @@ function getPostSeoDescription(post) {
 const SUPPORT_SLUGS = new Set([
     ...blogPosts.filter(p => p.category === 'Customer Support Automation').map(p => p.slug),
     'gorgias-pricing', 'gorgias-ai', 'customer-service-outsourcing-cost', 'best-customer-service-outsourcing-companies',
+    'customer-support-workflow-automation', 'ai-chatbot-vs-ai-employee-customer-support',
 ]);
 const stripOffer = (slug) => (slug === 'best-ai-receptionist' ? 'receptionist' : SUPPORT_SLUGS.has(slug) ? 'support' : 'managed');
 
