@@ -278,6 +278,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/patlive-alternatives`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/ai-receptionist-cost-calculator`,
             lastModified: pageDate('2026-10-06'),
             changeFrequency: 'monthly',

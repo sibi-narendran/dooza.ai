@@ -58,6 +58,13 @@ export default function AlternativesPage() {
             doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Ruby’s $1,725 for 500 human minutes'
         },
         {
+            name: 'PATLive Alternatives',
+            slug: null,
+            directLink: '/patlive-alternatives',
+            tagline: '9 answering services compared — PATLive’s human minute plans vs AI and human options',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes vs PATLive’s $759 for 500 human minutes'
+        },
+        {
             name: 'Dooza vs Profound',
             slug: null,
             directLink: '/dooza-vs-profound',

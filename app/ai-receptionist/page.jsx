@@ -287,7 +287,10 @@ export default async function AiReceptionistPage(props) {
                             <p className="mt-6 text-slate-600">
                                 Comparing options? Our free{' '}
                                 <Link href="/ai-receptionist-cost-calculator" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">AI receptionist cost calculator</Link>{' '}
-                                shows what your call volume would cost on 13 AI receptionists and 5 human answering services, from prices checked on each vendor’s site.
+                                shows what your call volume would cost on 13 AI receptionists and 5 human answering services, from prices checked on each vendor’s site.{' '}
+                                Switching from a live-receptionist service? See{' '}
+                                <Link href="/smith-ai-alternatives" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">Smith.ai alternatives</Link>{' '}and{' '}
+                                <Link href="/ruby-alternatives" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">Ruby alternatives</Link>.
                             </p>
                         )}
                     </div>

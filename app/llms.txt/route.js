@@ -274,6 +274,11 @@ const servicePages = [
         description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
+        title: 'PATLive Alternatives',
+        url: `${SITE_URL}/patlive-alternatives`,
+        description: 'PATLive pricing (human-only live call answering: $49/month pay as you go at $2.99/min, $99 for 50 minutes to $759 for 500 at $1.79/min extra; 14-day free trial, no contracts) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+    },
+    {
         title: 'AI Receptionist',
         url: `${SITE_URL}/ai-receptionist`,
         description: 'Dooza AI receptionist for contractors and trades: $149/month for up to 500 minutes. Details at /ai-answering-service-for-small-business.',

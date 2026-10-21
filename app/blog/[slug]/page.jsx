@@ -249,6 +249,13 @@ function getPostSeoDescription(post) {
     );
 }
 
+// TalkNowStrip offer per post: customer-support posts sell Dooza AI customer support (Sibi 10-21 20:06).
+const SUPPORT_SLUGS = new Set([
+    ...blogPosts.filter(p => p.category === 'Customer Support Automation').map(p => p.slug),
+    'gorgias-pricing', 'gorgias-ai', 'customer-service-outsourcing-cost', 'best-customer-service-outsourcing-companies',
+]);
+const stripOffer = (slug) => (slug === 'best-ai-receptionist' ? 'receptionist' : SUPPORT_SLUGS.has(slug) ? 'support' : 'managed');
+
 // Generate metadata for each blog post
 export async function generateMetadata({ params }) {
     const { slug } = await params;
@@ -341,7 +348,7 @@ export default async function BlogPostPage({ params }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
                 />
                 <BlogComponent post={staticPost} />
-                <TalkNowStrip source={`blog_${slug}`} offer={slug === 'best-ai-receptionist' ? 'receptionist' : 'managed'} />
+                <TalkNowStrip source={`blog_${slug}`} offer={stripOffer(slug)} />
             </>
         );
     }
@@ -367,7 +374,7 @@ export default async function BlogPostPage({ params }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
                 />
                 <DynamicBlogContent post={staticPost} />
-                <TalkNowStrip source={`blog_${slug}`} offer={slug === 'best-ai-receptionist' ? 'receptionist' : 'managed'} />
+                <TalkNowStrip source={`blog_${slug}`} offer={stripOffer(slug)} />
             </>
         );
     }
@@ -399,7 +406,7 @@ export default async function BlogPostPage({ params }) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
             />
             <DynamicBlogContent post={dynamicPost} />
-            <TalkNowStrip source={`blog_${slug}`} offer={slug === 'best-ai-receptionist' ? 'receptionist' : 'managed'} />
+            <TalkNowStrip source={`blog_${slug}`} offer={stripOffer(slug)} />
         </>
     );
 }
