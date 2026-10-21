@@ -116,7 +116,12 @@ const staticPages = [
     {
         title: 'Trucking insurance leads near renewal, every Monday (for insurance agencies)',
         url: `${SITE_URL}/trucking-insurance-leads`,
-        description: 'Weekly list for agencies that write commercial trucking: trucking companies in their state with liability renewing in 30-60 days (current insurer and limit from FMCSA BMC-91X filings, estimated renewal date) plus new authorities from the last 7 days. Exclusive states on request; first week free, then $129 per 4 weeks. Free weekly counts for every US state (renewals in 30-60 days, new authorities, top 3 current insurers; Oct 19, 2026: 6,876 renewals, 1,773 new authorities nationwide). Data: FMCSA open data.',
+        description: 'Weekly list for agencies that write commercial trucking: trucking companies in their state with liability renewing in 30-60 days (current insurer and limit from FMCSA BMC-91X filings, estimated renewal date) plus new authorities from the last 7 days. $129 per 4 weeks, paid first, month to month; exclusive states (one agency per state, $399/month) at /exclusive-trucking-insurance-leads. Free weekly counts for every US state (renewals in 30-60 days, new authorities, top 3 current insurers; Oct 19, 2026: 6,876 renewals, 1,773 new authorities nationwide). Data: FMCSA open data.',
+    },
+    {
+        title: 'Exclusive trucking insurance leads: one agency per state (for insurance agencies)',
+        url: `${SITE_URL}/exclusive-trucking-insurance-leads`,
+        description: 'Weekly list of trucking companies in one US state with liability renewing in about 30-60 days (phone, current insurer, limit; FMCSA open data), sold to one agency per state: $399/month for one state, $699/month for two, if the state is ever sold to another agent the buyer gets all their money back; shared list $129 per 4 weeks. Month to month, paid first. Example: Arizona list Oct 21, 2026 = 96 fleets with 3+ power units. Taken or on hold Oct 21, 2026: TX (South Texas), IL, NY, IA, GA, PA, FL. Comparison: exclusive web truck leads $110 each at Get Insure Leads (Oct 21, 2026).',
     },
     {
         title: 'Trucking insurance market weekly: which insurers gain and lose US trucking companies, by state',

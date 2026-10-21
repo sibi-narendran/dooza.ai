@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import TalkNowStrip from '@/components/TalkNowStrip';
-import { TRUCKER_FEED_PAY_URL } from '@/lib/offers';
+import { ICP1_A_PAY_URL } from '@/lib/offers';
+
+const PAY_URL = `${ICP1_A_PAY_URL}?client_reference_id=feed-site`;
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -12,7 +14,7 @@ import stateCounts from '@/lib/truckingStateCounts.json';
 
 const PATH = '/trucking-insurance-leads';
 const TITLE = 'Trucking Insurance Leads Near Renewal, Every Monday';
-const DESCRIPTION = 'For agencies that write commercial trucking: every Monday, the trucking companies in your state renewing in 30-60 days, with current insurer, plus new authorities. First week free, then $129 per 4 weeks.';
+const DESCRIPTION = 'For agencies that write commercial trucking: every Monday, the trucking companies in your state renewing in 30-60 days, with current insurer, plus new authorities. Paid first, $129 every 4 weeks, month to month.';
 const UPDATED = '2026-10-19';
 const UPDATED_LABEL = 'October 19, 2026';
 const BOOK = '/book?utm_source=website&utm_medium=cta&utm_campaign=booking&utm_content=trucking-insurance-leads';
@@ -95,7 +97,7 @@ const schemas = [
         areaServed: 'US',
         audience: { '@type': 'BusinessAudience', audienceType: 'Independent insurance agencies that write commercial trucking' },
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
-        offers: { '@type': 'Offer', price: '129', priceCurrency: 'USD', description: 'Per 4 weeks, after a free first week.' },
+        offers: { '@type': 'Offer', price: '129', priceCurrency: 'USD', description: 'Per 4 weeks, paid first, month to month.' },
     },
     {
         '@context': 'https://schema.org',
@@ -123,13 +125,13 @@ export const metadata = {
 function Cta({ label = 'Claim your state' }) {
     return (
         <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-            <a href={TRUCKER_FEED_PAY_URL} data-offer="trucker-feed" className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
-                Start your free week
+            <a href={PAY_URL} data-offer="trucker-feed" className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
+                Get your state list ($129)
             </a>
             <Link href={BOOK} className="rounded-xl border border-primary-300 px-6 py-3 font-semibold text-primary-700 hover:bg-primary-50">
                 {label} on a call
             </Link>
-            <span className="text-sm text-slate-600">First week free, then $129 per 4 weeks. Want your state to yourself? Exclusive states are available: book a call.</span>
+            <span className="text-sm text-slate-600">Paid first, $129 every 4 weeks, month to month, cancel any time. Want your state to yourself? <Link href="/exclusive-trucking-insurance-leads" className="underline">Exclusive states</Link>.</span>
         </div>
     );
 }
@@ -150,7 +152,7 @@ export default function TruckingInsuranceLeadsPage() {
                         <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Trucking insurance leads near renewal, every Monday</h1>
                         <p className="mt-5 text-lg text-slate-700">
                             <strong>Every Monday you get the trucking companies in your state whose liability insurance renews in the next 30 to 60 days, with their current insurer named, plus the new trucking authorities from the past week that still need coverage.</strong>{' '}
-                            The first week is free, then $129 every 4 weeks. Want your state to yourself? Exclusive states are available: book a call.
+                            Paid first, $129 every 4 weeks, month to month, cancel any time. Want your state to yourself? <Link href="/exclusive-trucking-insurance-leads">See exclusive states</Link>.
                         </p>
                         <div className="mt-8">
                             <Cta />
@@ -273,9 +275,8 @@ export default function TruckingInsuranceLeadsPage() {
 
                             <h2>What it costs</h2>
                             <ul>
-                                <li>First week free.</li>
-                                <li>Then $129 every 4 weeks, billed by card through Stripe.</li>
-                                <li>Want your state to yourself? Exclusive states are available: book a call.</li>
+                                <li>$129 every 4 weeks, paid first, billed by card through Stripe. Month to month, cancel any time.</li>
+                                <li>Want your state to yourself? See <Link href="/exclusive-trucking-insurance-leads">exclusive states and which are open</Link>.</li>
                             </ul>
                             <p>
                                 Comparing it with bought leads? Our <Link href="/insurance-lead-cost-calculator">insurance lead cost calculator</Link> shows cost per sold policy from price per lead and close rate. Comparing vendors? See <Link href="/best-trucking-insurance-leads">9 trucking lead sources compared</Link>, with prices from their own sites, and <Link href="/trucking-insurance-market">which insurers are winning trucking accounts this week</Link>. Want carriers before their first policy? See <Link href="/trucking-new-authority-leads">new trucking authority leads</Link>.
