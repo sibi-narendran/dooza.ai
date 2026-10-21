@@ -58,11 +58,25 @@ export default function AlternativesPage() {
             doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Ruby’s $1,725 for 500 human minutes'
         },
         {
+            name: 'Moneypenny Alternatives',
+            slug: null,
+            directLink: '/moneypenny-alternatives',
+            tagline: '8 answering services compared — Moneypenny’s AI call plans and people minute plans vs AI and human options',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Moneypenny’s $985 for 500 people minutes or $775 for 500 AI calls'
+        },
+        {
             name: 'PATLive Alternatives',
             slug: null,
             directLink: '/patlive-alternatives',
             tagline: '9 answering services compared — PATLive’s human minute plans vs AI and human options',
             doozaAdvantage: 'AI answering at $149/month for 500 minutes vs PATLive’s $759 for 500 human minutes'
+        },
+        {
+            name: 'Abby Connect Alternatives',
+            slug: null,
+            directLink: '/abby-connect-alternatives',
+            tagline: '9 answering services compared — Abby’s human + AI minute plans vs AI and human options',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Abby’s $1,380 for 500 Abby Minutes (an AI minute counts as half)'
         },
         {
             name: 'Dooza vs Profound',

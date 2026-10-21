@@ -274,9 +274,19 @@ const servicePages = [
         description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
+        title: 'Moneypenny Alternatives',
+        url: `${SITE_URL}/moneypenny-alternatives`,
+        description: 'Moneypenny US pricing (AI Answering billed by calls: $99/month for 50 calls to $775 for 500, with human escalation; People Answering billed by minutes: $165/month for 50 minutes to $985 for 500; 30 days’ notice to cancel) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+    },
+    {
         title: 'PATLive Alternatives',
         url: `${SITE_URL}/patlive-alternatives`,
         description: 'PATLive pricing (human-only live call answering: $49/month pay as you go at $2.99/min, $99 for 50 minutes to $759 for 500 at $1.79/min extra; 14-day free trial, no contracts) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+    },
+    {
+        title: 'Abby Connect Alternatives',
+        url: `${SITE_URL}/abby-connect-alternatives`,
+        description: 'Abby Connect pricing (human or AI answering billed in Abby Minutes: $164/month for 50 to $1,380 for 500; one AI minute counts as half an Abby Minute; overage at the plan rate; free trial, month to month) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, PATLive, Smith.ai, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'AI Receptionist',

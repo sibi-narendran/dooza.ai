@@ -278,7 +278,19 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/moneypenny-alternatives`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/patlive-alternatives`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/abby-connect-alternatives`,
             lastModified: pageDate('2026-10-21'),
             changeFrequency: 'monthly',
             priority: 0.9,

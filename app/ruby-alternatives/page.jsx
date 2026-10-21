@@ -142,6 +142,7 @@ const alternatives = [
         price: 'Human-first from $300/month for 30 calls ($11.50 per extra call). AI receptionist: free for 25 calls a month, Pro from $150/month at $2.00 per call.',
         bestFor: 'Businesses that want live people on the phone, or a low-volume AI plan from the same vendor.',
         extra: '/smith-ai-alternatives',
+        extraLabel: 'Smith.ai alternatives compared',
     },
     {
         name: 'Abby Connect',
@@ -149,6 +150,8 @@ const alternatives = [
         what: 'A receptionist service where one plan covers both human and AI answering. Its page says your Abby Minutes double when you choose AI, that every plan comes with a free trial, and that Abby is month to month.',
         price: 'From $164/month for 50 Abby Minutes; $1,380/month for 500. Overage at your plan’s Abby Minute rate.',
         bestFor: 'Teams that want humans and AI under one plan.',
+        extra: '/abby-connect-alternatives',
+        extraLabel: 'Abby Connect alternatives compared',
     },
     {
         name: 'Goodcall',
@@ -370,7 +373,7 @@ export default function RubyAlternativesPage() {
                                         <p className="mt-2 text-slate-700"><strong>Price:</strong> {a.price}</p>
                                         <p className="mt-2 text-slate-700"><strong>Best for:</strong> {a.bestFor}</p>
                                         {a.extra ? (
-                                            <p className="mt-2 text-slate-700"><Link href={a.extra} className={link}>Smith.ai alternatives compared</Link></p>
+                                            <p className="mt-2 text-slate-700"><Link href={a.extra} className={link}>{a.extraLabel}</Link></p>
                                         ) : null}
                                     </div>
                                 ))}
@@ -409,7 +412,7 @@ export default function RubyAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Human or AI answering?</h2>
                             <p className="mt-3 text-slate-700">
-                                Ruby, Smith.ai’s human-first plans and Abby put a trained person on the line. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: Ruby starts at $250 for 50 minutes and Smith.ai’s human plans at $300 for 30 calls. If you run a law firm and every caller needs a careful intake conversation, a human service like Ruby or Smith.ai may suit you better than Dooza. Comparing against PATLive instead? See <Link href="/patlive-alternatives" className={link}>PATLive alternatives</Link>.
+                                Ruby, Smith.ai’s human-first plans and Abby put a trained person on the line. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: Ruby starts at $250 for 50 minutes and Smith.ai’s human plans at $300 for 30 calls. If you run a law firm and every caller needs a careful intake conversation, a human service like Ruby or Smith.ai may suit you better than Dooza. Comparing against PATLive instead? See <Link href="/patlive-alternatives" className={link}>PATLive alternatives</Link>. Or Moneypenny? See <Link href="/moneypenny-alternatives" className={link}>Moneypenny alternatives</Link>.
                             </p>
                             <p className="mt-3 text-slate-700">
                                 AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-answering-service-for-small-business" className={link}>AI answering service for small business</Link> and <Link href="/ai-receptionist" className={link}>AI receptionist</Link>.
