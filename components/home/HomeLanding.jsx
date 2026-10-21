@@ -182,8 +182,15 @@ export default function HomeLanding() {
                             <Link href="/ai-admin-assistant" className={LINK}>Dooza Managed</Link>: an AI admin assistant whose work is checked by a real person. First 7 days free, then $200/month.{' '}
                             <a href={MANAGED_PAY_URL} data-offer="managed" data-source="homepage_hero" className={LINK}>Start free</a>.
                         </p>
+                        <p className="mt-3 max-w-[34rem] text-[15px] text-slate-700" data-source="homepage_hero_trucking">
+                            Write trucking insurance?{' '}
+                            <Link href="/trucking-insurance-leads?utm_source=website&utm_medium=internal&utm_campaign=homepage_hero" className={LINK}>See this week&rsquo;s new trucking companies</Link>.
+                        </p>
                     </div>
-                    <DailyReport />
+                    {/* Clarity 10-18..10-21: 13 dead clicks on / ; the report card looks clickable, so it opens the booking page. */}
+                    <a href={book('report')} target="_blank" rel="noopener noreferrer" aria-label="Book a free pilot call" className="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0F766E]">
+                        <DailyReport />
+                    </a>
                 </div>
             </section>
 
