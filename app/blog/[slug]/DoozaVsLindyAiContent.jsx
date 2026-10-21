@@ -203,7 +203,7 @@ export default function DoozaVsLindyAiContent() {
                                         <tr className="bg-white">
                                             <td className="py-3 px-5 font-medium text-slate-900">Pricing Model</td>
                                             <td className="py-3 px-5 text-center text-sm text-slate-600">Refundable pilot (see /pricing), no credits</td>
-                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Per-seat credits &mdash; Plus from $29.99/mo for 3,000 credits (checked October 7, 2026)</td>
+                                            <td className="py-3 px-5 text-center text-sm text-slate-600">Per-seat credits &mdash; Team from $49.99/mo for 5,000 credits (checked October 21, 2026)</td>
                                             <td className="py-3 px-5 text-center"><span className="bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">Depends</span></td>
                                         </tr>
                                         <tr className="bg-slate-50">
@@ -308,7 +308,7 @@ export default function DoozaVsLindyAiContent() {
                                         <div className="text-slate-400 text-sm font-semibold mb-2">LINDY AI</div>
                                         <div className="text-3xl font-bold">$49.99+<span className="text-base text-slate-400">/mo per seat</span></div>
                                         <div className="text-slate-400 text-sm mt-3 space-y-1">
-                                            <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-slate-400" /> 3,000 credits on Plus</div>
+                                            <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-slate-400" /> 5,000 credits on Team</div>
                                             <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-slate-400" /> Pro $99.99 (15,000) &middot; Max $199.99 (35,000)</div>
                                             <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-slate-400" /> A credit is about one cent</div>
                                             <div className="flex items-center gap-2 justify-center"><CheckCircle2 className="w-3 h-3 text-slate-400" /> Pauses and tells you when credits run low</div>
@@ -506,7 +506,7 @@ export default function DoozaVsLindyAiContent() {
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" /> Happy to <strong>set up and run your own agents</strong>, starting today</li>
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" /> Primarily need <strong>meeting notes and calendar management</strong></li>
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" /> Require <strong>SOC 2 Type II, HIPAA, or GDPR compliance</strong></li>
-                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" /> Want <strong>published self-serve pricing</strong> (from $29.99/mo per seat, checked October 7, 2026)</li>
+                                        <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" /> Want <strong>published self-serve pricing</strong> (from $49.99/mo per user, checked October 21, 2026)</li>
                                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" /> Need <strong>SSO and audit logs</strong> on an Enterprise plan</li>
                                     </ul>
                                 </div>

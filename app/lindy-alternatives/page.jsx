@@ -635,9 +635,9 @@ export default function LindyAlternativesPage() {
                                             <tbody className="text-sm">
                                                 {[
                                                     { item: 'Free', value: '$0 — $50 in credits; free credits last 7 days; no credit card required' },
-                                                    { item: 'Team (starting price)', value: '$29.99/mo for 3,000 credits a month' },
+                                                    { item: 'Team (starting price)', value: '$49.99/mo for 5,000 credits a month' },
                                                     { item: 'More monthly credits', value: '5,000 credits $49.99; 15,000 credits $99.99; 35,000 credits $199.99 (up to 1,750,000 credits $9,999.50)' },
-                                                    { item: 'Who is billed', value: 'Every active user in your workspace, from $29.99 a month for 3,000 credits each; credits pooled across the team' },
+                                                    { item: 'Who is billed', value: 'Every active user in your workspace, from $49.99 a month for 5,000 credits each; credits pooled across the team' },
                                                     { item: 'Top-ups', value: '$10 per 1,000 credits' },
                                                     { item: 'When credits run out', value: 'Lindy pauses credit-using actions until credits reset' },
                                                     { item: 'Included on Team', value: 'Live onboarding, computer use, choose your model for each task' },

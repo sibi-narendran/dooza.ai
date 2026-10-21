@@ -301,7 +301,7 @@ export default function LindyAiAlternativeContent() {
                                 <ul className="space-y-2 text-slate-600">
                                     <li><strong>Type:</strong> Self-serve AI teammate</li>
                                     <li><strong>Best For:</strong> Email, meetings, scheduling, and everyday work tasks</li>
-                                    <li><strong>Pricing:</strong> Per seat in credits; Plus from $29.99/month for 3,000 credits, about one cent per credit (checked October 7, 2026, on <a href="https://www.lindy.ai/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">lindy.ai/pricing</a>)</li>
+                                    <li><strong>Pricing:</strong> Per active user in credits; Team from $49.99/month for 5,000 credits (checked October 21, 2026, on <a href="https://www.lindy.ai/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">lindy.ai/pricing</a>)</li>
                                     <li><strong>Compare:</strong> <Link href="/lindy-alternatives" className="text-primary-600 hover:underline">Lindy alternatives compared side by side, with prices</Link></li>
                                     <li><strong>Trial:</strong> $50 in credits, valid for 7 days</li>
                                     <li><strong>Certifications:</strong> SOC 2 Type II, GDPR, HIPAA, and PIPEDA compliant</li>
@@ -482,7 +482,7 @@ export default function LindyAiAlternativeContent() {
                                         </tr>
                                         <tr>
                                             <td className="p-4 border-b font-medium">Starting Price</td>
-                                            <td className="p-4 border-b">$29.99/month per seat (3,000 credits)</td>
+                                            <td className="p-4 border-b">$49.99/month per user (5,000 credits)</td>
                                             <td className="p-4 border-b bg-primary-50/30 text-green-600 font-semibold"><Link href="/pricing" className="hover:underline">Refundable pilot (see /pricing)</Link></td>
                                             <td className="p-4 border-b">$37/month (14-day free trial)</td>
                                             <td className="p-4 border-b">$0 free plan; Professional $19.99/month</td>
@@ -528,7 +528,7 @@ export default function LindyAiAlternativeContent() {
                                     <h3 className="font-bold text-slate-900 mb-4">Stay with Lindy AI if you...</h3>
                                     <ul className="space-y-2 text-slate-600">
                                         <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Want to build and tweak your own agents</li>
-                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Want published per-seat pricing (from $29.99/month)</li>
+                                        <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Want published per-seat pricing (from $49.99/month)</li>
                                         <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Need SOC 2 Type II, HIPAA, or GDPR compliance</li>
                                         <li className="flex gap-2"><ArrowRight className="w-4 h-4 text-slate-400 shrink-0 mt-1" /> Rely on meeting notes and calendar scheduling</li>
                                     </ul>

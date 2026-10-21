@@ -100,7 +100,7 @@ const ROWS = [
             'Free self-hosted Community Edition; Cloud Starter €20/mo billed annually (checked Oct 21, 2026)',
             'Free plan; Core from $9/mo (checked Oct 21, 2026)',
             'Free plan (100 tasks/mo); Professional from $19.99/mo (billing period per vendor page) (checked Oct 21, 2026)',
-            'Free with $50 in credits; Team from $29.99/mo per active user for 3,000 credits (checked Oct 21, 2026)',
+            'Free with $50 in credits; Team from $49.99/mo per active user for 5,000 credits (checked Oct 21, 2026)',
         ],
     },
     { label: 'Skills needed', cells: ['Explain the job in plain words', 'Workflow logic; self-hosting needs a server', 'Workflow logic', 'Basic workflow setup', 'Writing prompts and agent instructions'] },
