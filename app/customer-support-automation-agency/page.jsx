@@ -14,7 +14,7 @@ export const metadata = {
         absolute: 'AI Customer Support for Online Stores, Live in 48 Hours | Dooza',
     },
     description:
-        'AI answers your customers first, a Dooza team handles the rest, and you approve before anything sends. Works inside Gmail, Shopify Inbox or Gorgias. Free 20-message sample, then 14 days free, then $300/month. No setup fee, month-to-month.',
+        'AI answers your customers first, a Dooza team handles the rest, and you approve before anything sends. Works inside Gmail, Shopify Inbox or Gorgias. 14-day free trial (card at signup), then $300/month. No setup fee, month-to-month.',
     keywords: [
         'customer support automation agency',
         'customer support outsourcing for small business',
@@ -53,9 +53,9 @@ const faqData = [
             'Dooza AI drafts answers to your store\'s customer emails and chats from your policies, products and past replies. A Dooza specialist checks anything the AI is unsure about, and anything sensitive, like refunds or complaints, goes to you. It works inside the inbox you already use.',
     },
     {
-        question: 'What is the free 20-message sample?',
+        question: 'How does the 14-day free trial work?',
         answer:
-            'Send us 20 recent customer messages and we write the answers in your voice, free, before you decide anything. You see exactly how your own customers would be answered.',
+            'You add a card at signup and we set Dooza up with you on a call, live in 48 hours. For 14 days every reply waits for your approval before it sends, so you see exactly how your own customers are answered. Cancel within the 14 days and you pay nothing; after that it is $300 a month.',
     },
     {
         question: 'Will AI send replies without my approval?',
@@ -70,7 +70,7 @@ const faqData = [
     {
         question: 'How much does it cost, and for how many messages?',
         answer:
-            'The 20-message sample and the 14-day trial are free. After that it is $300 a month for up to 250 customer messages, month-to-month, with no setup fee. If your store is busier, we agree the price with you before you pay any more.',
+            'The 14-day trial is free (card at signup; cancel within 14 days and you pay nothing). After that it is $300 a month for up to 250 customer messages, month-to-month, with no setup fee. If your store is busier, we agree the price with you before you pay any more.',
     },
     {
         question: 'Why not hire a VA or use the AI in Shopify Inbox or Gorgias?',
@@ -121,7 +121,7 @@ export default function CustomerSupportAutomationAgencyPage() {
             {schemas.map((schema, index) => (
                 <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             ))}
-            <Navbar showLogin={false} ctaType="demo" ctaSource="support_automation_nav" ctaLabel="Get my free sample" />
+            <Navbar showLogin={false} ctaType="demo" ctaSource="support_automation_nav" ctaLabel="Start free trial" />
             <main id="main-content" className={`${sora.className} cs-root bg-white pt-[68px] font-normal text-[#1a1a1a]`}>
                 <SupportLanding faqs={faqData} />
             </main>

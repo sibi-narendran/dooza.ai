@@ -42,7 +42,7 @@ function Reveal({ children, delay = 0, className = '' }) {
     );
 }
 
-function Cta({ source, children = 'Get my free sample', tone = 'lime', size = 'md' }) {
+function Cta({ source, children = 'Start my 14-day trial', tone = 'lime', size = 'md' }) {
     const { openModal } = useBookingModal();
     const tones = {
         lime: 'bg-[#E3F770] text-black hover:bg-[#d4ea55]',
@@ -160,7 +160,7 @@ function Hero() {
                             AI drafts the reply, a Dooza specialist checks it, and you tap approve. Right inside your Gmail, Shopify Inbox or Gorgias.
                         </p>
                         <Cta source="support_hero" size="lg" />
-                        <div className="mt-4 text-base text-white/85">Free 20-message sample, then 14 days free, then $300/month.</div>
+                        <div className="mt-4 text-base text-white/85">14-day free trial, card at signup, then $300/month.</div>
                         <div className="mt-8 flex items-center gap-3 border-t border-white/15 pt-6">
                             <Image src="/founder-sibi.jpeg" alt="Sibi Narendran, founder of Dooza" width={44} height={44} className="h-11 w-11 rounded-full object-cover" />
                             <p className="text-sm leading-snug text-white/85">&ldquo;I&apos;ll set this up with you myself.&rdquo;<br /><span className="text-white/70">Sibi Narendran, founder · text {CALLBACK_NUMBER_DISPLAY}</span></p>
@@ -513,9 +513,9 @@ function Examples() {
         <section className="bg-[#F6F2EF]">
             <div className="mx-auto max-w-[1344px] border-x border-[#b0b0b0] px-5 py-20 md:px-16">
                 <Reveal className="mb-10 text-center">
-                    <Eyebrow>The 20-message test</Eyebrow>
-                    <h2 className="mb-4 mt-6 text-3xl leading-[1.3] tracking-[-1px] text-[#1a1a1a] md:text-[40px]">See your own customers answered before you pay</h2>
-                    <p className="mx-auto max-w-2xl text-base text-[#1a1a1a]">Send us 20 recent customer messages. We write every answer in your voice and show you, free. The examples below are illustrative; your sample uses your own messages.</p>
+                    <Eyebrow>Example replies</Eyebrow>
+                    <h2 className="mb-4 mt-6 text-3xl leading-[1.3] tracking-[-1px] text-[#1a1a1a] md:text-[40px]">How Dooza answers a store's customers</h2>
+                    <p className="mx-auto max-w-2xl text-base text-[#1a1a1a]">The examples below are illustrative. In your 14-day trial, every reply to your own customers waits for your approval before it sends.</p>
                 </Reveal>
                 <div className="rounded-2xl bg-white p-4 md:p-5">
                     <div className="grid items-center gap-8 md:grid-cols-[300px_1fr]">
@@ -557,20 +557,13 @@ const MONTHLY_LIMIT = 250;
 const steps = [
     {
         step: 'Step 1',
-        name: 'Free sample',
-        price: '$0',
-        per: '20 of your messages',
-        points: ['Send us 20 recent customer messages', 'We answer every one in your voice', 'You judge the replies before deciding anything'],
-    },
-    {
-        step: 'Step 2',
         name: 'Free trial',
         price: '$0',
         per: 'for 14 days',
         points: ['Set up with you on a call, live in 48 hours', 'You approve every reply before it sends', 'A WhatsApp group with your Dooza team'],
     },
     {
-        step: 'Step 3',
+        step: 'Step 2',
         name: 'Support',
         price: '$300',
         per: `per month, up to ${MONTHLY_LIMIT} messages`,
@@ -585,10 +578,10 @@ function Pricing() {
             <div className="mx-auto max-w-[1344px] border-x border-t border-[#b0b0b0] px-5 py-20 md:px-16 md:py-24">
                 <Reveal className="mb-12 text-center">
                     <Eyebrow>Pricing</Eyebrow>
-                    <h2 className="mb-4 mt-6 text-3xl leading-[1.3] tracking-[-1px] text-[#1a1a1a] md:text-[40px]">See it work before you pay anything</h2>
-                    <p className="mx-auto max-w-2xl text-base text-[#1a1a1a]">Two free steps, then one monthly price. Busier than {MONTHLY_LIMIT} messages a month? We agree the price with you before you pay any more.</p>
+                    <h2 className="mb-4 mt-6 text-3xl leading-[1.3] tracking-[-1px] text-[#1a1a1a] md:text-[40px]">14 days free, then one monthly price</h2>
+                    <p className="mx-auto max-w-2xl text-base text-[#1a1a1a]">Start with a 14-day free trial (card at signup), then one monthly price. Busier than {MONTHLY_LIMIT} messages a month? We agree the price with you before you pay any more.</p>
                 </Reveal>
-                <div className="grid gap-4 md:grid-cols-3">
+                <div className="grid gap-4 md:mx-auto md:max-w-4xl md:grid-cols-2">
                     {steps.map((p, k) => (
                         <Reveal key={p.name} delay={k * 0.1} className={`flex flex-col rounded-xl p-8 ${p.dark ? 'bg-[#422839] text-white' : 'border border-[#b0b0b0] bg-[#F6F2EF] text-[#1a1a1a]'}`}>
                             <div className={`mb-1 text-xs uppercase tracking-[3px] ${p.dark ? 'text-[#E3F770]' : 'text-[#7C1B5A]'}`}>{p.step}</div>
@@ -605,7 +598,7 @@ function Pricing() {
                 </div>
                 <div className="mt-10 text-center">
                     <Cta source="support_pricing" tone="plum" size="lg" />
-                    <div className="mt-3 text-sm text-slate-600">Starts with step 1. No card needed for the sample.</div>
+                    <div className="mt-3 text-sm text-slate-600">Card at signup. Cancel within the 14 days and you pay nothing.</div>
                 </div>
             </div>
         </section>
@@ -735,7 +728,7 @@ export default function SupportLanding({ faqs }) {
                 @media (prefers-reduced-motion: reduce) { .cs-drift, .cs-marquee, .cs-float, .cs-spin, .cs-caret { animation: none; } .cs-rise { opacity: 1; animation: none; } }
             `}</style>
             <div className="bg-[#1a1a1a] px-4 py-2.5 text-center text-sm text-white md:text-[15px]">
-                Free sample: send us 20 customer messages and see them answered in your voice.{' '}
+                14-day free trial, card at signup, then $300/month for up to 250 customer messages.{' '}
                 <SampleLink />
             </div>
             <Hero />
@@ -758,7 +751,7 @@ function SampleLink() {
     const { openModal } = useBookingModal();
     return (
         <button type="button" onClick={() => { openModal(); trackDemoClick('support_topbar'); }} className="ml-2 underline underline-offset-4" style={{ color: LIME }}>
-            Get my free sample →
+            Start my 14-day trial →
         </button>
     );
 }
