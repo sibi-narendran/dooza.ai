@@ -140,6 +140,18 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/ai-employee-for-small-business`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/done-for-you-ai-agents`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/ai-admin-assistant`,
             lastModified: pageDate('2026-10-15'),
             changeFrequency: 'monthly',

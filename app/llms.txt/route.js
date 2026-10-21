@@ -24,6 +24,16 @@ const staticPages = [
         description: 'Dooza Managed: email Dooza your written admin tasks (email drafts and follow-ups, documents and forms, spreadsheets and data entry, research); AI does the work, a person checks it, done by the next business day, weekly report. $200/month, first 7 days free, cancel anytime. Not covered: phone calls or texts, logins to your accounts, payments, legal/tax/insurance advice. Compared with US VA services (published plans from $390/month for 10 hours, checked Oct 14, 2026).',
     },
     {
+        title: 'AI employee for small business: what it is, what it costs, how to hire one',
+        url: `${SITE_URL}/ai-employee-for-small-business`,
+        description: 'What an AI employee is, what it costs (Dooza Managed $200/month with the first 7 days free, compared with DIY AI tools and a human VA, prices checked Oct 21, 2026), what it can do, and how to hire one. Phone answering is the separate Dooza AI answering service, $149/month for up to 500 minutes.',
+    },
+    {
+        title: 'Done-for-you AI agents for small business',
+        url: `${SITE_URL}/done-for-you-ai-agents`,
+        description: 'Dooza builds, runs and improves AI agents for small businesses, checked by a person. Done-for-you vs DIY tools (n8n, Make, Zapier, Lindy) compared on setup, upkeep and price (checked Oct 21, 2026). Dooza Managed $200/month, first 7 days free; custom agents scoped on a free 30-minute call.',
+    },
+    {
         title: 'Partners',
         url: `${SITE_URL}/partners`,
         description: 'Dooza partner program.',
