@@ -305,7 +305,7 @@ export default function AiAgentsVsAgenticAiContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Conclusion</h2>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Build Your AI Workforce?</h3>
-                                <p className="text-slate-600 mb-6 max-w-xl mx-auto">Book a free 30-minute call to scope your pilot. Every Dooza product starts with a refundable pilot: 100% refund within 14 days. <a href="/pricing" className="text-primary-600 hover:underline font-medium">See pricing</a>.</p>
+                                <p className="text-slate-600 mb-6 max-w-xl mx-auto">Book a free 30-minute call to scope your pilot. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days. <a href="/pricing" className="text-primary-600 hover:underline font-medium">See pricing</a>.</p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
                                         Start your pilot <ArrowRight className="w-4 h-4" />

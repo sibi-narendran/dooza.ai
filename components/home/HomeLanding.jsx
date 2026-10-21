@@ -150,7 +150,7 @@ export const homeFaq = [
     { question: 'Who maintains it?', answer: 'We do. Dooza monitors your AI employee, fixes mistakes and adds new skills as your business changes. You never maintain anything.' },
     { question: 'How fast is it live?', answer: 'Custom AI employees are live in days, usually within the first week of your pilot.' },
     { question: 'How does the refundable pilot work?', answer: 'A Dooza engineer scopes it with you on a free 30-minute call, then builds your first AI employee and puts it live on your real work. The pilot is paid, and if you ask within 14 days you get a 100% refund.' },
-    { question: 'How much does it cost?', answer: 'Pricing depends on the job. Every build starts with a refundable pilot: 100% refund within 14 days. See dooza.ai/pricing.' },
+    { question: 'How much does it cost?', answer: 'Dooza Managed, an AI admin assistant checked by a real person, is free for the first 7 days, then $200/month. Custom AI employees are priced by the job and start with a refundable pilot: 100% refund within 14 days. See dooza.ai/pricing.' },
     { question: 'How do I reach you?', answer: `Call ${CONTACT_CALL_DISPLAY} any time: Maya, our own AI receptionist, answers 24/7. Text ${CONTACT_PHONE_DISPLAY} and we reply within minutes. Or book a free 30-minute call with a Dooza engineer.` },
 ];
 

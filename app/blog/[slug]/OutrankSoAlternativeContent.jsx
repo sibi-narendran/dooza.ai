@@ -30,7 +30,7 @@ import {
 const faqData = [
     {
         question: "What is the best Outrank.so alternative?",
-        answer: "It depends on who you want doing the work. Outrank.so is a strong self-serve autopilot tool: it plans keywords, writes in your voice, adds internal links and YouTube videos, and publishes to your CMS. Dooza Ranky is the alternative if you want the work done for you: Ranky, Dooza's AI SEO & visibility employee, and Dooza engineers research, write, and publish with your approval, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "It depends on who you want doing the work. Outrank.so is a strong self-serve autopilot tool: it plans keywords, writes in your voice, adds internal links and YouTube videos, and publishes to your CMS. Dooza Ranky is the alternative if you want the work done for you: Ranky, Dooza's AI SEO & visibility employee, and Dooza engineers research, write, and publish with your approval, and custom Dooza agents start with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Is Dooza better than Outrank.so?",
@@ -205,7 +205,7 @@ export default function OutrankSoAlternativeContent() {
                                 <div className="not-prose mt-8 bg-primary-50 border border-primary-100 rounded-2xl p-6">
                                     <p className="text-primary-900 font-bold text-lg mb-2">Quick verdict</p>
                                     <p className="text-primary-800">
-                                        Outrank.so is a good self-serve autopilot blog tool, and the better pick if you want to run it yourself at a published monthly price. Dooza is the better Outrank.so alternative if you want the work done for you, with your approval, plus specialist AI employees for email, social media and sales. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                        Outrank.so is a good self-serve autopilot blog tool, and the better pick if you want to run it yourself at a published monthly price. Dooza is the better Outrank.so alternative if you want the work done for you, with your approval, plus specialist AI employees for email, social media and sales. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.
                                     </p>
                                 </div>
                             </div>
@@ -363,7 +363,7 @@ export default function OutrankSoAlternativeContent() {
                                     Outrank.so lists its all-in-one plan at <strong>$99/month</strong> or $999/year, with add-ons for more articles (+$85/month for 60, +$160/month for 90), checked October 7, 2026 on <a href="https://www.outrank.so/pricing" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Outrank&apos;s pricing page</a>. It includes unlimited users in your organization, and lists a separate &quot;Human Curated&quot; option if you want people involved. If you only need SEO articles and will run the tool yourself, that is a clear, published price.
                                 </p>
                                 <p>
-                                    The case for Dooza is different: you are paying for the work to be done with you, not for a tool. Ranky is part of a broader AI workforce that can also help with email, social media and sales follow-up. Dooza pricing depends on the product (see <a href="/pricing" className="text-primary-600 hover:underline">pricing</a>), and every Dooza product starts with a refundable pilot — 100% refund within 14 days.
+                                    The case for Dooza is different: you are paying for the work to be done with you, not for a tool. Ranky is part of a broader AI workforce that can also help with email, social media and sales follow-up. Dooza pricing depends on the product (see <a href="/pricing" className="text-primary-600 hover:underline">pricing</a>), and custom Dooza agents start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                             </div>
 

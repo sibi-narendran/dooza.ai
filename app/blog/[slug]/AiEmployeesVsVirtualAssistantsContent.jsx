@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "How much cheaper is AI than a virtual assistant?",
-        answer: "It depends on how much repetitive work you hand over. A human VA is paid for every hour they work; an AI platform charges a flat fee and works around the clock. For high-volume, repetitive tasks (scheduling, inbox triage, data entry) that usually makes AI cheaper per task. Dooza's pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "It depends on how much repetitive work you hand over. A human VA is paid for every hour they work; an AI platform charges a flat fee and works around the clock. For high-volume, repetitive tasks (scheduling, inbox triage, data entry) that usually makes AI cheaper per task. Dooza's pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "What tasks can AI employees handle?",
@@ -643,7 +643,7 @@ export default function AiEmployeesVsVirtualAssistantsContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { icon: Bot, title: "Pre-built AI Employees", desc: "Email assistant, social media manager, SEO specialist, sales rep—all ready to work on day one." },
-                                    { icon: DollarSign, title: "Refundable Pilot", desc: "Every Dooza product starts with a refundable pilot: 100% refund within 14 days. Pricing depends on the product." },
+                                    { icon: DollarSign, title: "Refundable Pilot", desc: "Custom Dooza agents start with a refundable pilot: 100% refund within 14 days. Pricing depends on the product." },
                                     { icon: Zap, title: "Guided Setup", desc: "A Dooza engineer scopes your pilot on a free 30-minute call. Connect your tools and start automating, with no coding." },
                                     { icon: Shield, title: "Secure by Design", desc: "Encrypted connections and your approval on anything sensitive." }
                                 ].map((item, idx) => (

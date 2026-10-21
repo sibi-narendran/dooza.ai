@@ -31,7 +31,7 @@ const doozaAdvantages = [
     { icon: Users, title: 'Done For You', desc: 'You do not set it up alone. A Dooza engineer builds and tunes your AI employees with you, with your approval on anything sensitive.' },
     { icon: Zap, title: 'A Real Engineer', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees with you. Not a chatbot — a real person.' },
     { icon: Puzzle, title: '1,000+ App Integrations', desc: 'Gmail, Slack, LinkedIn, Shopify, Notion, YouTube and more, connected for you during setup.' },
-    { icon: Shield, title: 'Refundable Pilot', desc: 'Every Dooza product starts with a refundable pilot. If it is not right for you, ask within 14 days for a 100% refund.' },
+    { icon: Shield, title: 'Refundable Pilot', desc: 'Custom Dooza agents start with a refundable pilot. If it is not right for you, ask within 14 days for a 100% refund.' },
 ];
 
 export default function DoozaVsMarblismContent({ faqData }) {
@@ -193,7 +193,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                     Marblism plans start at $24/month billed yearly, or $44/month billed monthly. Every plan includes all 7 AI employees, 50 hours of work, unlimited team members, and unlimited businesses. Its pricing page does not mention a free trial but offers a 7-day money-back guarantee. Source: <a href="https://www.marblism.com/pricing" target="_blank" rel="noopener noreferrer" className="underline text-primary-300">marblism.com/pricing</a>.
                                 </p>
                                 <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
-                                    For a self-serve user, Marblism is the cheaper option. Dooza fits when you want it done for you: a Dooza engineer scopes your pilot on a free 30-minute call, builds and tunes your AI employees or custom agents with you, and every product starts with a refundable pilot (100% refund within 14 days). Dooza pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
+                                    For a self-serve user, Marblism is the cheaper option. Dooza fits when you want it done for you: a Dooza engineer scopes your pilot on a free 30-minute call, builds and tunes your AI employees or custom agents with you, and custom Dooza agents start with a refundable pilot (100% refund within 14 days). Dooza pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
                                 </p>
                             </div>
                         </ScrollReveal>

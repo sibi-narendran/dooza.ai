@@ -69,7 +69,7 @@ const faqData = [
     },
     {
         question: "Can Dooza build a custom AI employee for me?",
-        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses. On Dooza Agents, its AI agentic platform, Dooza engineers build and maintain custom AI agents for you and handle hosting, tenancy, security, and deployment, which makes it a managed alternative to self-hosting OpenClaw. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses. On Dooza Agents, its AI agentic platform, Dooza engineers build and maintain custom AI agents for you and handle hosting, tenancy, security, and deployment, which makes it a managed alternative to self-hosting OpenClaw. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Is it safe to give AI employees access to business data?",

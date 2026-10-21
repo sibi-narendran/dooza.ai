@@ -37,7 +37,7 @@ const faqData = [
     },
     {
         question: "What is Ranky and how can she help?",
-        answer: "Ranky is Dooza's AI SEO & visibility employee. Ranky and Dooza engineers research keywords, write and optimize content, and publish it with your approval, to help your business rank on Google and get cited by AI search engines. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Ranky is Dooza's AI SEO & visibility employee. Ranky and Dooza engineers research keywords, write and optimize content, and publish it with your approval, to help your business rank on Google and get cited by AI search engines. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     }
 ];
 

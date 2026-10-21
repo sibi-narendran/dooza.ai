@@ -107,7 +107,7 @@ export default function AboutPage() {
                             </div>
                             <h3 className="text-lg font-semibold text-slate-900 mb-2">AI Employees</h3>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                Dooza Workforce is an AI workforce app with ready-made AI employees. Dooza Agents is an AI agentic platform with custom AI agents built and maintained by Dooza engineers. Every product starts with a refundable pilot; see <a href="/pricing" className="font-medium text-primary-700 underline">pricing</a>.
+                                Dooza Workforce is an AI workforce app with ready-made AI employees. Dooza Agents is an AI agentic platform with custom AI agents built and maintained by Dooza engineers. Custom Dooza agents start with a refundable pilot; see <a href="/pricing" className="font-medium text-primary-700 underline">pricing</a>.
                             </p>
                         </div>
                     </div>

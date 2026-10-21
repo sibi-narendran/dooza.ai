@@ -31,7 +31,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'Is Dooza really better than Sintra AI?',
-        answer: 'It depends on how you want to work. Sintra AI is a low-cost self-serve app: 12+ helpers that call on each other automatically, 250 credits per month on every plan with paid top-ups, and a call with a Sintra specialist plus two weeks of hands-on help (checked October 7, 2026). If you are happy to run the AI yourself, Sintra costs less. Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you, with no credit meter. Every Dooza product starts with a refundable pilot (100% refund within 14 days).',
+        answer: 'It depends on how you want to work. Sintra AI is a low-cost self-serve app: 12+ helpers that call on each other automatically, 250 credits per month on every plan with paid top-ups, and a call with a Sintra specialist plus two weeks of hands-on help (checked October 7, 2026). If you are happy to run the AI yourself, Sintra costs less. Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you, with no credit meter. Custom Dooza agents start with a refundable pilot (100% refund within 14 days).',
     },
     {
         question: 'Does Sintra AI have a credit limit?',
@@ -47,11 +47,11 @@ const faqData = [
     },
     {
         question: 'How do I switch from Sintra AI to Dooza?',
-        answer: 'Book a free 30-minute call and a Dooza engineer scopes your pilot with you. Every Dooza product starts with a refundable pilot — 100% refund within 14 days. You can run both platforms side by side during the transition. See /pricing for current plans.',
+        answer: 'Book a free 30-minute call and a Dooza engineer scopes your pilot with you. Custom Dooza agents start with a refundable pilot — 100% refund within 14 days. You can run both platforms side by side during the transition. See /pricing for current plans.',
     },
     {
         question: 'How does Dooza pricing compare to Sintra AI?',
-        answer: 'Sintra AI is $48.50/month on a 1-month plan or $15.60/month on a 12-month plan ($187.20 up front), and every plan includes 250 credits a month with paid top-ups (checked October 7, 2026). Sintra is the cheaper option if you are happy to run it yourself. Dooza has no credits and no per-seat fees, and every Dooza product starts with a refundable pilot (100% refund within 14 days). Pricing depends on the product; current plans are listed at dooza.ai/pricing.',
+        answer: 'Sintra AI is $48.50/month on a 1-month plan or $15.60/month on a 12-month plan ($187.20 up front), and every plan includes 250 credits a month with paid top-ups (checked October 7, 2026). Sintra is the cheaper option if you are happy to run it yourself. Dooza has no credits and no per-seat fees, and custom Dooza agents start with a refundable pilot (100% refund within 14 days). Pricing depends on the product; current plans are listed at dooza.ai/pricing.',
     },
     {
         question: 'What is an AI employee and how does it work?',

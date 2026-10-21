@@ -40,7 +40,7 @@ const faqData = [
     },
     {
         question: "How much does AI staffing cost compared to hiring?",
-        answer: "Traditional hiring means recruiting costs, salary, benefits, payroll taxes, equipment and training for every role, and the bill grows with each person you add. Dooza Managed gives you an AI admin assistant for email and admin work, checked by a real person, instead, and Dooza engineers build custom AI agents for bigger jobs. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Traditional hiring means recruiting costs, salary, benefits, payroll taxes, equipment and training for every role, and the bill grows with each person you add. Dooza Managed gives you an AI admin assistant for email and admin work, checked by a real person, instead, and Dooza engineers build custom AI agents for bigger jobs. Pricing depends on the product, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Can AI employees really replace human workers?",
@@ -589,7 +589,7 @@ export default function AiStaffingContent() {
                                     {
                                         step: "3",
                                         title: "Onboard Your First AI Employee",
-                                        desc: "Book a free 30-minute call to scope your pilot. A Dooza engineer configures your AI employee, and it can start working the same day. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+                                        desc: "Book a free 30-minute call to scope your pilot. A Dooza engineer configures your AI employee, and it can start working the same day. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
                                     },
                                     {
                                         step: "4",

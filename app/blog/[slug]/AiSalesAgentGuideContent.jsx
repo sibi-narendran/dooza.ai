@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: "How much does an AI sales agent cost compared to hiring an SDR?",
-        answer: "A human SDR costs $4,000-$7,000/month in base salary alone, plus commission, benefits, and management overhead. Dooza's AI sales agent (Stan) works as part of a six-employee AI team for a fraction of a single junior hire. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "A human SDR costs $4,000-$7,000/month in base salary alone, plus commission, benefits, and management overhead. Dooza's AI sales agent (Stan) works as part of a six-employee AI team for a fraction of a single junior hire. Pricing depends on the product, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Will prospects know they're talking to an AI?",

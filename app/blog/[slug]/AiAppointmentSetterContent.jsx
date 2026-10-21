@@ -43,11 +43,11 @@ const faqData = [
     },
     {
         question: "Is an AI appointment setter cheaper per meeting than an agency?",
-        answer: "AI appointment setters often book more meetings for the money because they respond instantly and never skip a follow-up, and there is no per-meeting fee. With Dooza there's no per-meeting fee, so your cost per meeting keeps falling as volume grows. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "AI appointment setters often book more meetings for the money because they respond instantly and never skip a follow-up, and there is no per-meeting fee. With Dooza there's no per-meeting fee, so your cost per meeting keeps falling as volume grows. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How much does an AI appointment setter cost per meeting?",
-        answer: "Agencies usually charge a monthly retainer, a per-meeting fee, or both. Dooza charges no per-meeting fee, so your cost per meeting falls as volume grows. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Agencies usually charge a monthly retainer, a per-meeting fee, or both. Dooza charges no per-meeting fee, so your cost per meeting falls as volume grows. Pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Do I still need an appointment setting agency if I use AI?",

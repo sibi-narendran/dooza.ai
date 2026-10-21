@@ -234,7 +234,7 @@ const implementationSteps = [
         title: 'Trial One AI Tool',
         time: 'Week 1',
         desc: 'Start with a single AI solution for your biggest time sink. Use a low-cost entry point or a refundable pilot. Do not try to automate everything at once — that is the #1 cause of AI failure.',
-        actionItems: ['Pick one function (email, social, or SEO)', 'Start a pilot (every Dooza product starts with a refundable pilot: 100% refund within 14 days)', 'Set up the AI with your brand voice and guidelines'],
+        actionItems: ['Pick one function (email, social, or SEO)', 'Start a pilot (custom Dooza agents start with a refundable pilot: 100% refund within 14 days)', 'Set up the AI with your brand voice and guidelines'],
     },
     {
         step: 3,

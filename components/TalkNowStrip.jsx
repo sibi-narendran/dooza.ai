@@ -15,7 +15,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) 
             <div className="rounded-2xl border border-primary-100 bg-primary-50/60 p-6 text-center">
                 <h2 className="font-serif text-2xl font-bold text-slate-900">Talk to Dooza now</h2>
                 <p className="mx-auto mt-2 max-w-2xl text-slate-600">
-                    {offer === 'receptionist' ? <>Dooza answers your business calls with an AI receptionist. {PILOT_PROMISE}</> : <>Dooza builds AI products and services for small businesses. Every product starts with a refundable pilot: 100% refund within 14 days.</>}
+                    {offer === 'receptionist' ? <>Dooza answers your business calls with an AI receptionist. {PILOT_PROMISE}</> : <>Dooza builds AI products and services for small businesses. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.</>}
                 </p>
                 <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm sm:text-base">
                     <a href={`tel:${CONTACT_CALL_E164}`} className={link}><Phone className="h-4 w-4" aria-hidden="true" />Call {CONTACT_CALL_DISPLAY} (24/7)</a>

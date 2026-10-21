@@ -382,7 +382,7 @@ export default function RevidAlternativeContent() {
                                     If your main goal is creating and publishing more short-form videos from source content, Revid AI already does that, including auto-publishing. If you want a different video tool, compare Fliki for narration, OpusClip for long-to-short clips, Predis.ai for a social calendar, or invideo for editing.
                                 </p>
                                 <p>
-                                    Choose <strong>Dooza</strong> if you want the work done for you: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email and sales, and you approve what goes out. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                    Choose <strong>Dooza</strong> if you want the work done for you: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email and sales, and you approve what goes out. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
 

@@ -3,7 +3,9 @@
 > **CURRENT OFFERS (2026-10-16, overrides anything below that disagrees):**
 > - Sold now: **Dooza Managed**, an AI admin assistant checked by a real person, $200/month, first 7 days free (`/pricing`, lib/offers.js MANAGED_PAY_URL). Custom agents: scoped on a free 30-minute call (`/book`), refundable pilot.
 > - Industry (ICP) offers live ONLY on their own pages, never on home, /pricing or blog (Sibi 2026-10-15): Monday Trucker Feed (trucking pages), 1099-NEC prep for CPA firms (`/1099-prep-for-cpa-firms`), Texas notary renewal (`/texas-notary-renewal`). Terms come from Odysseus's offer cards.
-> - **NOT offers (do not sell, script, pitch or promise):** AI Receptionist / phone answering / Rachel voice (not an offer since 2026-10-12, decision #15; /ai-receptionist pages stay indexed but frozen); Dooza Workforce app (abandoned 2026-10-08).
+> - **AI answering service / AI receptionist IS an offer again (Sibi 2026-10-21 12:51 "Do all"):** $149/month for up to 500 minutes, then $0.30/min, month to month, full refund if cancelled within 14 days of the first charge; answers, asks your questions, emails message + transcript + recording link; does NOT book onto calendars or send texts. Pages: /ai-answering-service-for-small-business, /hvac-, /plumbing-, /garage-door-answering-service, /ai-receptionist. Terms from Odysseus's offer card.
+> - **NOT offers (do not sell, script, pitch or promise):** Dooza Workforce app (abandoned 2026-10-08).
+> - "Every Dooza product starts with a refundable pilot" is no longer true: only custom agents do. Managed = 7 days free; answering service = paid first, 14-day refund.
 > - Videos, pitches and new pages: check claims against this banner first.
 
 Every page, blog post, generated article, and CTA must match this file. If copy disagrees with it, the copy is wrong. Last updated 2026-10-16 (offers banner + one-sentence now Managed; Workforce app and receptionist retired).

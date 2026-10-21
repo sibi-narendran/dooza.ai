@@ -44,7 +44,7 @@ const faqData = [
     },
     {
         question: "Is marketing automation worth it for small businesses?",
-        answer: "Usually, if it takes repetitive work off your plate: in DemandSage's roundup, 36% of marketers say handling repetitive tasks is automation's most important benefit, and in Backlinko's, 25% of marketers call their automation \"very successful\". The key is choosing the right tool. Enterprise platforms like HubSpot or Marketo are overkill (and overpriced) for most SMBs. AI-powered automation like Dooza provides similar benefits without the enterprise setup, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "Usually, if it takes repetitive work off your plate: in DemandSage's roundup, 36% of marketers say handling repetitive tasks is automation's most important benefit, and in Backlinko's, 25% of marketers call their automation \"very successful\". The key is choosing the right tool. Enterprise platforms like HubSpot or Marketo are overkill (and overpriced) for most SMBs. AI-powered automation like Dooza provides similar benefits without the enterprise setup, and custom Dooza agents start with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "What's the difference between marketing automation and AI automation?",
@@ -533,7 +533,7 @@ export default function MarketingAutomationToolsContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Automate Smarter?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Skip the complex workflows and expensive platforms. Get AI employees that actually do the work. Pricing depends on the product; every Dooza product starts with a refundable pilot — 100% refund within 14 days.
+                                    Skip the complex workflows and expensive platforms. Get AI employees that actually do the work. Pricing depends on the product; custom Dooza agents start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

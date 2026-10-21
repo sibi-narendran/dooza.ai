@@ -41,11 +41,11 @@ import {
 const faqData = [
     {
         question: "What AI tools do solopreneurs need in 2026?",
-        answer: "Solopreneurs in 2026 need AI tools for content creation (ChatGPT, Jasper), visual design (Canva AI, Midjourney), email management (Superhuman), social media scheduling (Buffer, Hootsuite), meeting transcription (Otter.ai), automation (Zapier, Make), and accounting (QuickBooks). However, managing 7+ subscriptions can cost several hundred dollars a month once subscriptions stack up. Platforms like Dooza consolidate these functions into pre-built AI employees in one app. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
+        answer: "Solopreneurs in 2026 need AI tools for content creation (ChatGPT, Jasper), visual design (Canva AI, Midjourney), email management (Superhuman), social media scheduling (Buffer, Hootsuite), meeting transcription (Otter.ai), automation (Zapier, Make), and accounting (QuickBooks). However, managing 7+ subscriptions can cost several hundred dollars a month once subscriptions stack up. Platforms like Dooza consolidate these functions into pre-built AI employees in one app. Pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "How much do AI tools cost for a solopreneur?",
-        answer: "Individual AI tools vary widely, from free tiers to tens of dollars a month each (see each vendor’s pricing page). A full stack covering content creation, design, email, social media, automation, and accounting adds up quickly. All-in-one platforms like Dooza bundle multiple AI employees into one app, which can replace several overlapping subscriptions and reduce tool fatigue. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days."
+        answer: "Individual AI tools vary widely, from free tiers to tens of dollars a month each (see each vendor’s pricing page). A full stack covering content creation, design, email, social media, automation, and accounting adds up quickly. All-in-one platforms like Dooza bundle multiple AI employees into one app, which can replace several overlapping subscriptions and reduce tool fatigue. Dooza pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "Can AI replace a virtual assistant for solopreneurs?",
@@ -57,7 +57,7 @@ const faqData = [
     },
     {
         question: "Is Dooza good for solopreneurs?",
-        answer: "Dooza is an AI-native company that builds AI products and services for small businesses, including solopreneurs who need AI automation without technical complexity. Dooza Managed gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. Unlike building your own tool stack or using developer-focused platforms like MoltBot, Dooza requires no coding, no integrations, and no maintenance—making it ideal for one-person businesses. Every Dooza product starts with a refundable pilot — 100% refund within 14 days."
+        answer: "Dooza is an AI-native company that builds AI products and services for small businesses, including solopreneurs who need AI automation without technical complexity. Dooza Managed gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. Unlike building your own tool stack or using developer-focused platforms like MoltBot, Dooza requires no coding, no integrations, and no maintenance—making it ideal for one-person businesses. Custom Dooza agents start with a refundable pilot — 100% refund within 14 days."
     },
     {
         question: "How much time can AI tools save solopreneurs?",
@@ -721,7 +721,7 @@ export default function AiToolsForSolopreneursContent() {
                                     {
                                         step: "2",
                                         title: "Start a Dooza Pilot",
-                                        desc: "Every Dooza product starts with a refundable pilot — 100% refund within 14 days. See how the AI employees work on real tasks—an email, a social post, a blog outline."
+                                        desc: "Custom Dooza agents start with a refundable pilot — 100% refund within 14 days. See how the AI employees work on real tasks—an email, a social post, a blog outline."
                                     },
                                     {
                                         step: "3",

@@ -54,7 +54,7 @@ const faqData = [
     },
     {
         question: 'Is Dooza a Profound alternative?',
-        answer: 'Yes, for small businesses that want GEO done for them. Profound is a platform with analytics and agents that your team runs. With Dooza, the work is done for you: Ranky, Dooza\'s AI SEO & visibility employee, and Dooza engineers track your core prompts, research topics, fix on-page SEO and schema, publish GEO-ready content with your approval, and monitor brand mentions. Every Dooza product starts with a refundable pilot — 100% refund within 14 days.',
+        answer: 'Yes, for small businesses that want GEO done for them. Profound is a platform with analytics and agents that your team runs. With Dooza, the work is done for you: Ranky, Dooza\'s AI SEO & visibility employee, and Dooza engineers track your core prompts, research topics, fix on-page SEO and schema, publish GEO-ready content with your approval, and monitor brand mentions. Custom Dooza agents start with a refundable pilot — 100% refund within 14 days.',
     },
     {
         question: 'What is the difference between Dooza and Profound?',
@@ -78,7 +78,7 @@ const faqData = [
     },
     {
         question: 'How much does Dooza cost?',
-        answer: 'Pricing depends on the product; every Dooza product starts with a refundable pilot — 100% refund within 14 days. If you want engineers to build a custom AI agent with you, Dooza builds and maintains it. Current plans are listed at dooza.ai/pricing, and a free 30-minute call scopes your pilot.',
+        answer: 'Pricing depends on the product; custom Dooza agents start with a refundable pilot — 100% refund within 14 days. If you want engineers to build a custom AI agent with you, Dooza builds and maintains it. Current plans are listed at dooza.ai/pricing, and a free 30-minute call scopes your pilot.',
     },
     {
         question: 'Does Dooza have SOC 2 like Profound?',

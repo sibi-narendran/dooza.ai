@@ -62,7 +62,7 @@ const faqData = [
     },
     {
         question: 'Is there a free Profound alternative?',
-        answer: 'Profound itself offers a free 7-day trial. Most alternatives offer trials or entry plans rather than permanent free tiers; check each vendor\'s site. Dooza does not offer a free trial; every Dooza product starts with a paid, refundable pilot — 100% refund within 14 days.',
+        answer: 'Profound itself offers a free 7-day trial. Most alternatives offer trials or entry plans rather than permanent free tiers; check each vendor\'s site. Dooza Managed starts with 7 days free; custom Dooza agents start with a paid, refundable pilot — 100% refund within 14 days.',
     },
     {
         question: 'What is the difference between an AI visibility tool and a GEO service?',

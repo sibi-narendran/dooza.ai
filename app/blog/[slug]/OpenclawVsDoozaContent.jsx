@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "What is the difference between OpenClaw and Dooza?",
-        answer: "OpenClaw is an agent you host and run yourself. Dooza is a managed alternative to self-hosting OpenClaw: Dooza engineers set up and run AI employees for your business, so there is nothing to install, secure or update. Every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "OpenClaw is an agent you host and run yourself. Dooza is a managed alternative to self-hosting OpenClaw: Dooza engineers set up and run AI employees for your business, so there is nothing to install, secure or update. Custom Dooza agents start with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Can I use OpenClaw for business?",
@@ -586,7 +586,7 @@ export default function OpenclawVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl text-center">
                                 <p className="text-slate-400 text-sm mb-2">The difference</p>
                                 <p className="text-3xl font-bold mb-2">Your time vs. a managed service</p>
-                                <p className="text-slate-400">OpenClaw costs nothing to license and asks for your time. Dooza pricing depends on the product, and every product starts with a refundable pilot — 100% refund within 14 days.</p>
+                                <p className="text-slate-400">OpenClaw costs nothing to license and asks for your time. Dooza pricing depends on the product, and custom Dooza agents start with a refundable pilot — 100% refund within 14 days.</p>
                             </div>
                         </section>
 
@@ -679,7 +679,7 @@ export default function OpenclawVsDoozaContent() {
                                     {
                                         step: "1",
                                         title: "Start Your Pilot",
-                                        desc: "Every Dooza product starts with a refundable pilot — 100% refund within 14 days. Pricing depends on the product; see /pricing."
+                                        desc: "Custom Dooza agents start with a refundable pilot — 100% refund within 14 days. Pricing depends on the product; see /pricing."
                                     },
                                     {
                                         step: "2",

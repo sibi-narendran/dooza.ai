@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: "How is Dooza different from Claude Cowork?",
-        answer: "Claude Cowork is a general-purpose agent you direct yourself: you describe tasks, connect your apps and set up any schedules. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Managed plan gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. Every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "Claude Cowork is a general-purpose agent you direct yourself: you describe tasks, connect your apps and set up any schedules. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Managed plan gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. Custom Dooza agents start with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Can Claude Cowork run tasks while I sleep?",
@@ -64,7 +64,7 @@ const faqData = [
     },
     {
         question: "How does pricing compare — Claude Cowork or Dooza?",
-        answer: "Per claude.com/pricing (checked October 7, 2026), Claude Pro is $17/month billed annually or $20 billed monthly, and Max starts at $100/month ($100 or $200 tiers, with 5x or 20x Pro's usage). Usage limits apply on every plan, and Anthropic notes Cowork uses limits faster than chat. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Per claude.com/pricing (checked October 7, 2026), Claude Pro is $17/month billed annually or $20 billed monthly, and Max starts at $100/month ($100 or $200 tiers, with 5x or 20x Pro's usage). Usage limits apply on every plan, and Anthropic notes Cowork uses limits faster than chat. Dooza pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Does Dooza handle phone calls?",
@@ -573,7 +573,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza gives you <strong className="text-white">five role-specific AI employees configured for your business by Dooza engineers</strong>. Pricing depends on the product (see <Link href="/pricing" className="text-white underline">pricing</Link>), and every product starts with a refundable pilot &mdash; 100% refund within 14 days.
+                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza gives you <strong className="text-white">five role-specific AI employees configured for your business by Dooza engineers</strong>. Pricing depends on the product (see <Link href="/pricing" className="text-white underline">pricing</Link>), and custom Dooza agents start with a refundable pilot &mdash; 100% refund within 14 days.
                                 </p>
                             </div>
                         </section>

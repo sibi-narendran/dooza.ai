@@ -173,7 +173,7 @@ const faqs = [
     },
     {
         question: 'Can I get a refund?',
-        answer: 'Yes. Every Dooza product starts with a refundable pilot: you pay for the pilot, and if you ask within 14 days you get a 100% refund. Pricing depends on the product; see dooza.ai/pricing.',
+        answer: 'Yes. Custom Dooza agents start with a refundable pilot: you pay for the pilot, and if you ask within 14 days you get a 100% refund. Pricing depends on the product; see dooza.ai/pricing.',
     },
     {
         question: 'Will AI send replies without my approval?',
@@ -440,7 +440,7 @@ export default function AutomatedCustomerSupportPage() {
                                 Start with a refundable pilot.
                             </h2>
                             <p className="mx-auto mt-4 max-w-xl text-lg font-semibold text-slate-600">
-                                Pricing depends on the product; every Dooza product starts with a refundable pilot.{' '}
+                                Pricing depends on the product; custom Dooza agents start with a refundable pilot.{' '}
                                 <Link href="/pricing" className="text-primary-700 underline">See pricing</Link>
                             </p>
                         </div>

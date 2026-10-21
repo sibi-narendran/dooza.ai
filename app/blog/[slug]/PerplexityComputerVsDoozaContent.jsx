@@ -60,7 +60,7 @@ const faqData = [
     },
     {
         question: "How much does Perplexity Computer cost?",
-        answer: "Per Perplexity's help center and enterprise pricing page (checked October 7, 2026): paid consumer Pro plans include a weekly amount of Computer usage; Max is $200/month or $2,000/year with 10,000 credits a month; Enterprise Pro ($40/seat/month, $34 billed annually) includes access to Computer; Enterprise Max is $325/seat/month or $3,250/year. Tasks use credits: Light tasks 100–350, Complex 350–950, Heavy 875–2,275 and Mega 2,400–9,800. Dooza pricing depends on the product (see /pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Per Perplexity's help center and enterprise pricing page (checked October 7, 2026): paid consumer Pro plans include a weekly amount of Computer usage; Max is $200/month or $2,000/year with 10,000 credits a month; Enterprise Pro ($40/seat/month, $34 billed annually) includes access to Computer; Enterprise Max is $325/seat/month or $3,250/year. Tasks use credits: Light tasks 100–350, Complex 350–950, Heavy 875–2,275 and Mega 2,400–9,800. Dooza pricing depends on the product (see /pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Is Perplexity Computer better than Dooza for business?",
@@ -644,7 +644,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     <p>Max includes 10,000 credits a month. By Perplexity&apos;s own ranges, that is roughly 10 to 28 Complex tasks, or one to four Mega tasks.</p>
                                     <p>Unused monthly plan credits don&apos;t roll over; credits you buy stay in your account until used.</p>
                                     <p>Auto-refill is off by default. The monthly spending cap defaults to $200, and you can set it anywhere up to $5,000.</p>
-                                    <p className="font-bold">Dooza pricing depends on the product (see /pricing), and every product starts with a refundable pilot.</p>
+                                    <p className="font-bold">Dooza pricing depends on the product (see /pricing), and custom Dooza agents start with a refundable pilot.</p>
                                 </div>
                             </div>
 
@@ -777,7 +777,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     Perplexity Computer is one of the most technically ambitious AI agents available. Multi-model routing, persistent memory, 400+ connectors and Scheduled Tasks make it a strong tool for researchers, developers, and power users.
                                 </p>
                                 <p>
-                                    If you want <strong>specific business roles handled for you</strong>, without designing tasks or managing credits yourself, Dooza is the better fit, and every product starts with a refundable pilot — 100% refund within 14 days.
+                                    If you want <strong>specific business roles handled for you</strong>, without designing tasks or managing credits yourself, Dooza is the better fit, and custom Dooza agents start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                             </div>
 

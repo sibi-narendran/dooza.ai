@@ -204,7 +204,7 @@ const whyDooza = [
     { icon: Wrench, title: 'Done for you, not another platform', desc: 'Profound and several tools on this list now have agents or content features your team operates. With Dooza, Ranky and Dooza engineers do the work for you — content, on-page SEO, schema, internal links, and off-site presence — and you approve what goes live.' },
     { icon: Users, title: 'Humans set it up', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds it with you. Ranky can start working the same day.' },
     { icon: Quote, title: 'Built for how AI cites', desc: 'Specific citable claims, third-party citations, schema, Reddit and Quora presence, and consistent NAP — the inputs answer engines use.' },
-    { icon: CreditCard, title: 'A refundable pilot, not a sales cycle', desc: 'Every Dooza product starts with a refundable pilot — 100% refund within 14 days — with no contracts. Pricing is listed on /pricing; no demo required to see it.' },
+    { icon: CreditCard, title: 'A refundable pilot, not a sales cycle', desc: 'Custom Dooza agents start with a refundable pilot — 100% refund within 14 days — with no contracts. Pricing is listed on /pricing; no demo required to see it.' },
 ];
 
 export default function ProfoundAlternativesContent({ faqData }) {
@@ -599,7 +599,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Get GEO Done for You</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-                                Book a free 30-minute call and a Dooza engineer will scope your pilot — no contracts. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                Book a free 30-minute call and a Dooza engineer will scope your pilot — no contracts. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <BookDemoButton source="profound_alt_cta" variant="primary">Book a free pilot call</BookDemoButton>

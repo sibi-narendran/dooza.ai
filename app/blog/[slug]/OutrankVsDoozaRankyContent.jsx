@@ -205,7 +205,7 @@ export default function OutrankVsDoozaRankyContent() {
                                     If you&apos;ve been looking into AI-powered SEO blog writing tools, you&apos;ve probably come across <strong>Outrank.so</strong>. It promises SEO on autopilot: a keyword plan, articles written in your voice, publishing to your CMS, a backlink exchange, and visibility in ChatGPT and Google. It is a capable tool, and for many teams it is the right one.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>Dooza Ranky</strong> takes a different approach. Ranky is Dooza&apos;s AI SEO &amp; visibility employee, and the work is done for you: Ranky and Dooza engineers research, write, optimize, and publish, and nothing goes live without your approval. Dooza is an AI-native company, and every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                    <strong>Dooza Ranky</strong> takes a different approach. Ranky is Dooza&apos;s AI SEO &amp; visibility employee, and the work is done for you: Ranky and Dooza engineers research, write, optimize, and publish, and nothing goes live without your approval. Dooza is an AI-native company, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     So the real question is not which tool has more features. It is whether you want to run an SEO tool yourself, or have the work done for you. This comparison uses Outrank&apos;s own website (checked October 7, 2026) for every claim about Outrank, and says where each one is the better pick.
@@ -390,7 +390,7 @@ export default function OutrankVsDoozaRankyContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Pricing Comparison</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Outrank publishes a single plan with article add-ons. Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                    Outrank publishes a single plan with article add-ons. Dooza pricing depends on the product, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
                             <div className="grid md:grid-cols-2 gap-6">
@@ -493,7 +493,7 @@ export default function OutrankVsDoozaRankyContent() {
                                     Outrank.so is a capable self-serve SEO autopilot with a published price, flexible volume, solid integrations, and a focus on AI search. If you want to run SEO content yourself, it is a strong pick.
                                 </p>
                                 <p className="mb-6">
-                                    Dooza Ranky is for businesses that want the work done for them. Ranky and Dooza engineers research, write, optimize, and publish, you approve what goes live, and the content connects to the rest of Dooza&apos;s AI workforce. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                    Dooza Ranky is for businesses that want the work done for them. Ranky and Dooza engineers research, write, optimize, and publish, you approve what goes live, and the content connects to the rest of Dooza&apos;s AI workforce. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">

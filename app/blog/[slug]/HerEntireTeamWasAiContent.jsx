@@ -82,7 +82,7 @@ const faqData = [
     },
     {
         question: "How much does an AI team cost compared to hiring?",
-        answer: "Hiring six human employees for email, social media, SEO, phone, sales, and legal would cost ₹1.75–2.95 lakh/month in India. Dooza Managed covers the email and admin part of that for a small fraction of the cost; pricing depends on the product, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "Hiring six human employees for email, social media, SEO, phone, sales, and legal would cost ₹1.75–2.95 lakh/month in India. Dooza Managed covers the email and admin part of that for a small fraction of the cost; pricing depends on the product, and custom Dooza agents start with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Is this only for tech companies?",

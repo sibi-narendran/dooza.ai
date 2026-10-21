@@ -82,7 +82,7 @@ const faqData = [
     },
     {
         question: 'Can I get a refund if it\'s not working?',
-        answer: 'Yes. Every Dooza product starts with a refundable pilot: you pay for the pilot, and if you ask within 14 days you get a 100% refund.',
+        answer: 'Yes. Custom Dooza agents start with a refundable pilot: you pay for the pilot, and if you ask within 14 days you get a 100% refund.',
     },
 ];
 
@@ -358,7 +358,7 @@ export default function CustomerSupportSimplePage() {
                                 <div className="text-center md:text-right md:pl-8 md:border-l md:border-slate-100">
                                     <p className="text-2xl font-extrabold text-slate-900 mb-1">100% refund within 14 days</p>
                                     <p className="text-xs text-slate-500 mb-6">
-                                        Pricing depends on the product; every Dooza product starts with a refundable pilot.{' '}
+                                        Pricing depends on the product; custom Dooza agents start with a refundable pilot.{' '}
                                         <Link href="/pricing" className="font-semibold text-primary-700 underline">See pricing</Link>
                                     </p>
                                     <a

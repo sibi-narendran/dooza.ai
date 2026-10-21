@@ -44,7 +44,7 @@ const faqData = [
     },
     {
         question: "How does Dooza pricing compare to Motion?",
-        answer: "Motion's pricing page (checked Oct 7, 2026) lists Pro AI at $19 per seat per month billed annually or $29 month-to-month, with 7,500 AI credits per seat per month, and Business AI at $29 per seat per month billed annually, with 15,000 credits. Dooza does not meter work in credits. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Motion's pricing page (checked Oct 7, 2026) lists Pro AI at $19 per seat per month billed annually or $29 month-to-month, with 7,500 AI credits per seat per month, and Business AI at $29 per seat per month billed annually, with 15,000 credits. Dooza does not meter work in credits. Pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Does Dooza work if I already use Google Calendar?",
@@ -248,7 +248,7 @@ export default function BetterThanMotionContent() {
                                 {[
                                     { title: "Pick Motion if your problem is time", desc: "You need your tasks, projects and meetings planned into your calendar automatically, with project management and docs in the same tool." },
                                     { title: "Pick Dooza if your problem is work nobody has time to do", desc: "An inbox that needs replies, social posts, lead lists. Dooza's AI employees do that work, and a Dooza engineer sets up your pilot." },
-                                    { title: "Pricing models differ", desc: "Motion is per seat with a monthly AI credit allowance. Dooza pricing depends on the product (see /pricing) and every product starts with a refundable pilot: 100% refund within 14 days." }
+                                    { title: "Pricing models differ", desc: "Motion is per seat with a monthly AI credit allowance. Dooza pricing depends on the product (see /pricing) and custom Dooza agents start with a refundable pilot: 100% refund within 14 days." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-6 rounded-xl">
                                         <div className="flex items-start gap-4">
@@ -273,7 +273,7 @@ export default function BetterThanMotionContent() {
                                     { icon: Bot, title: "Purpose-Built AI Employees", desc: "AI employees are Dooza's core product, built for business tasks rather than scheduling.", color: "primary" },
                                     { icon: Sliders, title: "Fully Customizable", desc: "Create AI employees tailored to YOUR workflow. Name them, train them on your data, and deploy them in minutes.", color: "blue" },
                                     { icon: HeadphonesIcon, title: "Built With a Dooza Engineer", desc: "We don't just give you software—a Dooza engineer scopes your pilot on a free 30-minute call and builds your custom AI employees FOR you.", color: "purple" },
-                                    { icon: DollarSign, title: "Refundable Pilot", desc: "Every Dooza product starts with a refundable pilot—100% refund within 14 days. No credit meter to watch. Pricing depends on the product.", color: "emerald" },
+                                    { icon: DollarSign, title: "Refundable Pilot", desc: "Custom Dooza agents start with a refundable pilot—100% refund within 14 days. No credit meter to watch. Pricing depends on the product.", color: "emerald" },
                                     { icon: Zap, title: "Works With Your Stack", desc: "Dooza integrates with your existing tools—Gmail, Outlook, social platforms, CRMs—without forcing you to change how you work.", color: "orange" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">

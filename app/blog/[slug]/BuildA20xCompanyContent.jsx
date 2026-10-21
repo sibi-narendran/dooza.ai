@@ -44,7 +44,7 @@ const faqData = [
     },
     {
         question: "How can a small business compete with larger companies using AI?",
-        answer: "By deploying AI employees across every operational function — email, social media, lead generation, SEO, and legal compliance. Platforms like Dooza give small businesses the same AI superpowers that elite YC startups build with engineering teams, but without needing any technical skills. Dooza is an AI-native company that builds AI products and services for small businesses, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "By deploying AI employees across every operational function — email, social media, lead generation, SEO, and legal compliance. Platforms like Dooza give small businesses the same AI superpowers that elite YC startups build with engineering teams, but without needing any technical skills. Dooza is an AI-native company that builds AI products and services for small businesses, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How does Dooza relate to OpenClaw?",
@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: "How is this different from hiring a virtual assistant?",
-        answer: "A human virtual assistant works set hours and usually covers one role at a time. Dooza's AI employees run around the clock across several job functions (email, social media, SEO, sales and more), and every Dooza product starts with a refundable pilot (100% refund within 14 days). They take the repetitive work so people can focus on the parts that need judgment and creativity."
+        answer: "A human virtual assistant works set hours and usually covers one role at a time. Dooza's AI employees run around the clock across several job functions (email, social media, SEO, sales and more), and custom Dooza agents start with a refundable pilot (100% refund within 14 days). They take the repetitive work so people can focus on the parts that need judgment and creativity."
     }
 ];
 

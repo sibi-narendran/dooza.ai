@@ -36,7 +36,7 @@ const faqData = [
     },
     {
         question: 'What is the best email automation tool for small businesses?',
-        answer: 'For small businesses that want email handled without building complicated workflows, Dooza is the clear winner. Maily, Dooza\'s AI email employee, can triage inboxes, draft replies, send follow-ups, and support sales or customer workflows. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.'
+        answer: 'For small businesses that want email handled without building complicated workflows, Dooza is the clear winner. Maily, Dooza\'s AI email employee, can triage inboxes, draft replies, send follow-ups, and support sales or customer workflows. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.'
     },
     {
         question: 'How is Dooza different from Mailchimp or ActiveCampaign?',
@@ -395,7 +395,7 @@ export default function EmailAutomationDoozaContent() {
                                     {
                                         icon: DollarSign,
                                         title: '3. Pricing is easier to understand',
-                                        desc: 'Email platforms often become more expensive as contacts, seats, or advanced features increase. Dooza pricing depends on the product, every product starts with a refundable pilot (100% refund within 14 days), and Dooza Managed covers admin work beyond email, which makes the total value stronger.'
+                                        desc: 'Email platforms often become more expensive as contacts, seats, or advanced features increase. Dooza pricing depends on the product, custom Dooza agents start with a refundable pilot (100% refund within 14 days), and Dooza Managed covers admin work beyond email, which makes the total value stronger.'
                                     },
                                     {
                                         icon: ShieldCheck,

@@ -33,7 +33,7 @@ import {
 const faqData = [
     {
         question: "What is the best Instantly.ai alternative for small businesses?",
-        answer: "If cold email is the whole job, Instantly itself is hard to beat, and the closest alternatives are other cold email platforms. Dooza is the alternative for small businesses that want more than outbound: Dooza is an AI-native company, and its engineers set up AI employees for sales follow-up, inbox work, SEO, and social media, with your approval on anything sensitive. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "If cold email is the whole job, Instantly itself is hard to beat, and the closest alternatives are other cold email platforms. Dooza is the alternative for small businesses that want more than outbound: Dooza is an AI-native company, and its engineers set up AI employees for sales follow-up, inbox work, SEO, and social media, with your approval on anything sensitive. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Is Dooza better than Instantly.ai?",
@@ -77,7 +77,7 @@ const comparisonRows = [
     ['Phone', 'Outbound calls and SMS from the browser in Instantly CRM', 'Not offered', 'Instantly'],
     ['Beyond outreach', 'Outreach, CRM, website visitors, inbox placement', 'SEO (Ranky), social (Somi), inbox (Maily), sales (Stan)', 'Dooza'],
     ['Cold email scale', 'Light Speed plan: 500,000 emails a month; 450M+ B2B lead database', 'Practical follow-up rather than high-volume sending', 'Instantly'],
-    ['Pricing', 'Published: Outreach from $47/month, bundles from $94/month (checked October 7, 2026)', 'Pricing by product; every product starts with a refundable pilot (100% refund within 14 days)', 'Instantly']
+    ['Pricing', 'Published: Outreach from $47/month, bundles from $94/month (checked October 7, 2026)', 'Pricing by product; custom Dooza agents start with a refundable pilot (100% refund within 14 days)', 'Instantly']
 ];
 
 export default function InstantlyAlternativeContent() {
@@ -343,7 +343,7 @@ export default function InstantlyAlternativeContent() {
                                     Dooza&apos;s value is not &quot;we send more cold emails.&quot; It is an AI workforce set up for you: Maily for email, Stan for sales, Ranky for SEO, and Somi for social media.
                                 </p>
                                 <p>
-                                    Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days. See <Link href="/pricing" className="text-primary-600 hover:underline">Dooza pricing</Link> for current plans.
+                                    Dooza pricing depends on the product, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days. See <Link href="/pricing" className="text-primary-600 hover:underline">Dooza pricing</Link> for current plans.
                                 </p>
                             </div>
 

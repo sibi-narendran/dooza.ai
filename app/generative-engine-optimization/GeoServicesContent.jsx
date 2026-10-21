@@ -618,7 +618,7 @@ export default function GeoServicesContent({ faqData }) {
                             </div>
                         </div>
                         <p className="mt-6 text-center text-sm text-slate-400">
-                            Pricing depends on the product. Every Dooza product starts with a refundable pilot. See current plans on the <Link href="/pricing" className="font-semibold text-primary-300 hover:underline">pricing page</Link>.
+                            Pricing depends on the product. Custom Dooza agents start with a refundable pilot. See current plans on the <Link href="/pricing" className="font-semibold text-primary-300 hover:underline">pricing page</Link>.
                         </p>
                     </div>
                 </section>

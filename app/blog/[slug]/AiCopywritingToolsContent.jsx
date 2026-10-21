@@ -53,7 +53,7 @@ const faqData = [
     },
     {
         question: "How much do AI copywriting tools cost?",
-        answer: "Standalone AI copywriting tools like Jasper AI ($49-$125/month) and Copy.ai ($49-$249/month) focus only on writing. Dooza does not sell a dedicated AI copywriting tool. Dooza Managed gives you an AI admin assistant, checked by a real person, for email and admin work, and Dooza engineers can build custom AI agents for content workflows. Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Standalone AI copywriting tools like Jasper AI ($49-$125/month) and Copy.ai ($49-$249/month) focus only on writing. Dooza does not sell a dedicated AI copywriting tool. Dooza Managed gives you an AI admin assistant, checked by a real person, for email and admin work, and Dooza engineers can build custom AI agents for content workflows. Dooza pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Can AI write in my brand voice?",

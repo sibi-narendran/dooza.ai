@@ -39,7 +39,7 @@ const faqData = [
     },
     {
         question: 'How much does Marblism cost?',
-        answer: 'According to Marblism\'s pricing page (checked October 7, 2026), plans start at $24/month billed yearly or $44/month billed monthly. Every plan includes all 7 AI employees, 50 hours of work, unlimited team members, and unlimited businesses. The pricing page does not mention a free trial; it offers a 7-day money-back guarantee. Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot (100% refund within 14 days) — see dooza.ai/pricing.',
+        answer: 'According to Marblism\'s pricing page (checked October 7, 2026), plans start at $24/month billed yearly or $44/month billed monthly. Every plan includes all 7 AI employees, 50 hours of work, unlimited team members, and unlimited businesses. The pricing page does not mention a free trial; it offers a 7-day money-back guarantee. Dooza pricing depends on the product, and custom Dooza agents start with a refundable pilot (100% refund within 14 days) — see dooza.ai/pricing.',
     },
     {
         question: 'Which has better integrations — Dooza or Marblism?',
@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: 'How do I switch from Marblism to Dooza?',
-        answer: 'Book a free 30-minute call and a Dooza engineer will scope your pilot, configure your AI employees, and connect your tools. Every Dooza product starts with a refundable pilot — 100% refund within 14 days. See /pricing for current plans.',
+        answer: 'Book a free 30-minute call and a Dooza engineer will scope your pilot, configure your AI employees, and connect your tools. Custom Dooza agents start with a refundable pilot — 100% refund within 14 days. See /pricing for current plans.',
     },
     {
         question: 'What AI employees does Dooza offer?',

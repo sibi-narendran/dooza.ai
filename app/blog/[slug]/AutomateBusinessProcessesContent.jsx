@@ -34,10 +34,10 @@ import {
 } from 'lucide-react';
 
 const faqData = [
-    { question: "What business processes can I automate without coding?", answer: "You can automate email management, social media posting, lead generation, SEO content, and legal compliance — all without writing a single line of code. Dooza's AI employees handle these end-to-end, and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
+    { question: "What business processes can I automate without coding?", answer: "You can automate email management, social media posting, lead generation, SEO content, and legal compliance — all without writing a single line of code. Dooza's AI employees handle these end-to-end, and custom Dooza agents start with a refundable pilot — 100% refund within 14 days." },
     { question: "How much time can business automation actually save?", answer: "Most small business owners save 15-25 hours per week. Specifically: 10+ hours on email, 6+ hours on social media, and 5+ hours on missed call follow-ups. That's roughly $6,200+/month in recovered productivity." },
     { question: "How is Dooza different from Zapier or Make?", answer: "Zapier and Make connect apps with if-then rules — you still build and maintain every workflow. Dooza gives you AI employees that autonomously handle entire job functions like email and social media. No workflow building required." },
-    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides AI employees handling email, social, leads, SEO, and legal. Pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot — 100% refund within 14 days." },
+    { question: "How much does business process automation cost?", answer: "Traditional options range from $500-2,400/month (tool stacks or virtual assistants). Dooza provides AI employees handling email, social, leads, SEO, and legal. Pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot — 100% refund within 14 days." },
     { question: "Which business processes should I automate first?", answer: "Start with your biggest time drain. For most businesses, that's email management or social media. Audit where you spend the most hours, automate that first, then expand to calls, leads, and SEO." }
 ];
 

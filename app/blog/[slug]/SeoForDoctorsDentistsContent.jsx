@@ -61,7 +61,7 @@ const faqData = [
     },
     {
         question: "How much does medical SEO typically cost?",
-        answer: "According to PatientGain and industry surveys, traditional medical SEO agencies charge $999-$5,000/month. With Dooza, Ranky handles your SEO—daily blog posts, Google Business Profile updates, and AI optimization included. Dooza pricing depends on the product (see dooza.ai/pricing), and every product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "According to PatientGain and industry surveys, traditional medical SEO agencies charge $999-$5,000/month. With Dooza, Ranky handles your SEO—daily blog posts, Google Business Profile updates, and AI optimization included. Dooza pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How long until I see results from SEO?",

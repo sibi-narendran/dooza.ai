@@ -50,7 +50,7 @@ const faqData = [
     },
     {
         question: 'How much does AI cost for a small business?',
-        answer: 'Prices checked on vendor pricing pages in Oct 2026: Hootsuite starts at $99/month, Semrush at $139/month (monthly billing), and Intercom at $29 per seat per month plus usage fees. Buying separate tools for email, social, SEO, support, and leads means five subscriptions. All-in-one platforms like Dooza bundle multiple AI employees in one product. Dooza pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days (see dooza.ai/pricing).',
+        answer: 'Prices checked on vendor pricing pages in Oct 2026: Hootsuite starts at $99/month, Semrush at $139/month (monthly billing), and Intercom at $29 per seat per month plus usage fees. Buying separate tools for email, social, SEO, support, and leads means five subscriptions. All-in-one platforms like Dooza bundle multiple AI employees in one product. Dooza pricing depends on the product, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days (see dooza.ai/pricing).',
     },
     {
         question: 'What is the best AI tool for business in 2026?',
@@ -62,7 +62,7 @@ const faqData = [
     },
     {
         question: 'How do I start using AI in my business?',
-        answer: 'Step 1: Audit which tasks consume the most time (email, social media, content, support). Step 2: Trial one AI tool for your biggest time sink. Step 3: Measure results after a few weeks. Step 4: Expand to other areas. With Dooza, a Dooza engineer scopes your pilot on a free 30-minute call, and every product starts with a refundable pilot: 100% refund within 14 days.',
+        answer: 'Step 1: Audit which tasks consume the most time (email, social media, content, support). Step 2: Trial one AI tool for your biggest time sink. Step 3: Measure results after a few weeks. Step 4: Expand to other areas. With Dooza, a Dooza engineer scopes your pilot on a free 30-minute call, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days.',
     },
     {
         question: 'Will AI replace my employees?',

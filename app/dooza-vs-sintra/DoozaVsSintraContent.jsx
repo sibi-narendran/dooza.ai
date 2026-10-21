@@ -31,7 +31,7 @@ const doozaAdvantages = [
     { icon: Infinity, title: 'Done for You', desc: 'Sintra is a self-serve app you run yourself. Dooza engineers build and tune your AI employees, and build and maintain custom agents, so you are not configuring it alone.' },
     { icon: Zap, title: 'A Real Engineer', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you. Not a chatbot — a real person.' },
     { icon: Shield, title: 'No Credits, No Per-Seat Fees', desc: 'No "original price" vs "discounted" confusion and no credit meter. Pricing depends on the product — see /pricing.' },
-    { icon: Puzzle, title: 'Refundable Pilot', desc: 'Every Dooza product starts with a refundable pilot. If it is not right for you, ask within 14 days for a 100% refund.' },
+    { icon: Puzzle, title: 'Refundable Pilot', desc: 'Custom Dooza agents start with a refundable pilot. If it is not right for you, ask within 14 days for a 100% refund.' },
 ];
 
 // Quoted from Sintra's own pages, checked October 7, 2026.
@@ -48,7 +48,7 @@ const switchReasons = [
     { title: 'You do not want to ration credits', desc: 'Sintra includes 250 credits a month on every plan; when they run out, helpers stop until you buy a top-up or the month resets. Dooza has no credit meter.' },
     { title: 'You want it built for you', desc: 'Sintra gives you a specialist call and two weeks of hands-on help, then you run the helpers yourself. A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you.' },
     { title: 'Sintra is the better pick on price', desc: 'If you are happy to run the AI yourself, Sintra is hard to beat: $15.60/mo on a 12-month plan ($187.20 up front), with 12+ helpers that work together (checked October 7, 2026).' },
-    { title: 'The refundable pilot removes the risk', desc: 'Every Dooza product starts with a refundable pilot — 100% refund within 14 days — and a Dooza engineer scopes it with you on a free 30-minute call.' },
+    { title: 'The refundable pilot removes the risk', desc: 'Custom Dooza agents start with a refundable pilot — 100% refund within 14 days — and a Dooza engineer scopes it with you on a free 30-minute call.' },
 ];
 
 export default function DoozaVsSintraContent({ faqData }) {

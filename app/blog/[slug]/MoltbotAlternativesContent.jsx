@@ -43,7 +43,7 @@ const faqData = [
     },
     {
         question: "What is a good Moltbot (OpenClaw) alternative for businesses?",
-        answer: "It depends on what you want to avoid. If you don't want to host and maintain an agent yourself, Dooza is a managed alternative to self-hosting OpenClaw: Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Managed plan gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. ChatGPT or Claude suit people who want a general-purpose assistant they direct; Zapier suits people who want to build app-to-app automations; Reclaim or Motion suit calendar and project planning. Every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "It depends on what you want to avoid. If you don't want to host and maintain an agent yourself, Dooza is a managed alternative to self-hosting OpenClaw: Dooza is an AI-native company that builds AI products and services for small businesses, and its Dooza Managed plan gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. ChatGPT or Claude suit people who want a general-purpose assistant they direct; Zapier suits people who want to build app-to-app automations; Reclaim or Motion suit calendar and project planning. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Why consider alternatives to self-hosting OpenClaw?",
@@ -55,7 +55,7 @@ const faqData = [
     },
     {
         question: "How much do Moltbot alternatives cost?",
-        answer: "As of October 7, 2026, per each vendor's own pricing pages: ChatGPT Plus is $20/month and ChatGPT Pro tiers are $100, $200 or $500/month; Claude Pro is $17/month billed annually or $20 monthly, and Max starts at $100/month; Zapier has a free plan, Professional from $19.99/month and Team from $69/month; Reclaim has a free Lite plan and paid plans from $10/user/month billed annually; Motion's Pro AI plan is $19/seat/month billed annually or $29 monthly. OpenClaw itself is free; you pay for models and hosting. Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "As of October 7, 2026, per each vendor's own pricing pages: ChatGPT Plus is $20/month and ChatGPT Pro tiers are $100, $200 or $500/month; Claude Pro is $17/month billed annually or $20 monthly, and Max starts at $100/month; Zapier has a free plan, Professional from $19.99/month and Team from $69/month; Reclaim has a free Lite plan and paid plans from $10/user/month billed annually; Motion's Pro AI plan is $19/seat/month billed annually or $29 monthly. OpenClaw itself is free; you pay for models and hosting. Dooza pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "Can Dooza build a custom agent like the one I built in OpenClaw?",

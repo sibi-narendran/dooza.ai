@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: "I'm not tech-savvy. Can I still use AI tools?",
-        answer: "Absolutely. Dooza's AI employees are designed for busy agents, not tech experts. A Dooza engineer scopes your setup on a free 30-minute call, and every product starts with a refundable pilot (100% refund within 14 days). You don't need to configure anything—just tell us about your business and we handle the rest. If you can use email, you can use Dooza."
+        answer: "Absolutely. Dooza's AI employees are designed for busy agents, not tech experts. A Dooza engineer scopes your setup on a free 30-minute call, and custom Dooza agents start with a refundable pilot (100% refund within 14 days). You don't need to configure anything—just tell us about your business and we handle the rest. If you can use email, you can use Dooza."
     },
     {
         question: "How does AI help with lead response time?",
@@ -67,7 +67,7 @@ const faqData = [
     },
     {
         question: "How much does a traditional real estate VA cost compared to Dooza?",
-        answer: "A human virtual assistant for real estate starts around $1,299/month at Wishup (checked Oct 2026), and an in-house assistant costs more. Dooza gives you AI employees working 24/7, with no hourly limits. Pricing depends on the product, and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "A human virtual assistant for real estate starts around $1,299/month at Wishup (checked Oct 2026), and an in-house assistant costs more. Dooza gives you AI employees working 24/7, with no hourly limits. Pricing depends on the product, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "How quickly will I see results?",

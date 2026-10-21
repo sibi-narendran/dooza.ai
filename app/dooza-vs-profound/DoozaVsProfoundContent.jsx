@@ -24,7 +24,7 @@ const summaryBullets = [
 
 const doozaAdvantages = [
     { icon: Wrench, title: 'Done for you, not another platform to run', desc: 'Profound gives your team a platform with agents to run and review. With Dooza, Ranky and Dooza engineers research topics, write GEO-ready content, fix on-page SEO, and publish it to your site — you approve what goes live.' },
-    { icon: Target, title: 'A refundable pilot, not a sales cycle', desc: 'Every Dooza product starts with a refundable pilot — 100% refund within 14 days — and pricing is listed on /pricing. Profound\'s Enterprise plan is custom-priced and requires a demo.' },
+    { icon: Target, title: 'A refundable pilot, not a sales cycle', desc: 'Custom Dooza agents start with a refundable pilot — 100% refund within 14 days — and pricing is listed on /pricing. Profound\'s Enterprise plan is custom-priced and requires a demo.' },
     { icon: Users, title: 'Engineers set it up with you', desc: 'A Dooza engineer scopes your pilot on a free 30-minute call, builds your prompt set and baseline, and sets up Ranky with you.' },
     { icon: Quote, title: 'Built around how answer engines cite', desc: 'Ranky writes specific, citable claims with third-party sources, adds schema markup, keeps your name, address, and phone consistent, and shows up on Reddit and Quora threads.' },
 ];
@@ -265,7 +265,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
                                 <p className="section-label mb-3">Pricing Breakdown</p>
                                 <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white">Profound Pricing vs Dooza Pricing</h2>
                                 <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
-                                    Profound&apos;s pricing page lists a 7-day free trial, a self-serve Agency Growth plan, and custom Enterprise pricing. Dooza lists its pricing on /pricing, and every product starts with a refundable pilot.
+                                    Profound&apos;s pricing page lists a 7-day free trial, a self-serve Agency Growth plan, and custom Enterprise pricing. Dooza lists its pricing on /pricing, and custom Dooza agents start with a refundable pilot.
                                 </p>
                             </div>
                         </ScrollReveal>
@@ -481,7 +481,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">Get Your AI Visibility Work Done for You</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-                                Book a free 30-minute call and a Dooza engineer will scope your pilot — Ranky can start working the same day. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                Book a free 30-minute call and a Dooza engineer will scope your pilot — Ranky can start working the same day. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <BookDemoButton source="profound_cta" variant="primary">Book a free pilot call</BookDemoButton>

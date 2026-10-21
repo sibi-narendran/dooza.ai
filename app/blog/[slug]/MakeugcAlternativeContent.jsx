@@ -382,7 +382,7 @@ export default function MakeugcAlternativeContent() {
                                     If your job is creating more ad creatives, MakeUGC is a strong choice, and Creatify, Arcads, and HeyGen are the closest alternatives. Creatify is worth a look if you also want ads launched to your ad accounts; Predis.ai or Infinite UGC if you want organic posting.
                                 </p>
                                 <p>
-                                    Choose <strong>Dooza</strong> if you want the work done for you: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email and sales, and you approve what goes out. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                    Choose <strong>Dooza</strong> if you want the work done for you: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email and sales, and you approve what goes out. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
 

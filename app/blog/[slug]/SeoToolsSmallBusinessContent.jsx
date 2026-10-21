@@ -46,7 +46,7 @@ const faqData = [
     },
     {
         question: "Is Ahrefs or Semrush better for small businesses?",
-        answer: "For many small businesses both are more than they need. Per their pricing pages (checked Oct 7, 2026): Ahrefs has a free tier, a $29/month Starter plan and full plans from $129/month (Lite); Semrush has a free plan and paid plans from $139/month. Moz starts at $49/month and SE Ranking at $129/month. If you'd rather have the work done than a tool, Dooza's Ranky does SEO for you (see dooza.ai/pricing; every Dooza product starts with a refundable pilot)."
+        answer: "For many small businesses both are more than they need. Per their pricing pages (checked Oct 7, 2026): Ahrefs has a free tier, a $29/month Starter plan and full plans from $129/month (Lite); Semrush has a free plan and paid plans from $139/month. Moz starts at $49/month and SE Ranking at $129/month. If you'd rather have the work done than a tool, Dooza's Ranky does SEO for you (see dooza.ai/pricing; custom Dooza agents start with a refundable pilot)."
     },
     {
         question: "How long does SEO take to show results?",

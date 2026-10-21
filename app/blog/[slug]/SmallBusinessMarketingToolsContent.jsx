@@ -43,7 +43,7 @@ import {
 const faqData = [
     {
         question: "What marketing tools do small businesses actually need?",
-        answer: "At minimum, small businesses need: email marketing, social media management, SEO/website optimization, and analytics. Many businesses also benefit from CRM, paid ads management, and content creation tools. The challenge is these often require 5-10 separate subscriptions costing $200-500/month combined. Dooza consolidates these into AI employees, and every Dooza product starts with a refundable pilot (100% refund within 14 days)."
+        answer: "At minimum, small businesses need: email marketing, social media management, SEO/website optimization, and analytics. Many businesses also benefit from CRM, paid ads management, and content creation tools. The challenge is these often require 5-10 separate subscriptions costing $200-500/month combined. Dooza consolidates these into AI employees, and custom Dooza agents start with a refundable pilot (100% refund within 14 days)."
     },
     {
         question: "How much should a small business spend on marketing tools?",
@@ -544,7 +544,7 @@ export default function SmallBusinessMarketingToolsContent() {
                                     The Small Business AI Advantage
                                 </h4>
                                 <p className="text-blue-700">
-                                    According to <a href="https://localiq.com/blog/small-business-marketing-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">LocaliQ</a>, small businesses using AI see a <strong>25% increase in marketing ROI</strong>. Dooza is an AI-native company that builds AI products and services for small businesses, and <strong>every Dooza product starts with a refundable pilot — 100% refund within 14 days</strong>.
+                                    According to <a href="https://localiq.com/blog/small-business-marketing-trends-report-2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">LocaliQ</a>, small businesses using AI see a <strong>25% increase in marketing ROI</strong>. Dooza is an AI-native company that builds AI products and services for small businesses, and <strong>custom Dooza agents start with a refundable pilot — 100% refund within 14 days</strong>.
                                 </p>
                             </div>
                         </section>

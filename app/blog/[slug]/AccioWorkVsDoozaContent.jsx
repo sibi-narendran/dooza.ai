@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: "Is Accio Work free?",
-        answer: "Yes. Accio Work has a free plan (forever, web search only). Paid plans are Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year), per accio.com (checked October 7, 2026). Dooza pricing depends on the product (see dooza.ai/pricing), and every Dooza product starts with a refundable pilot: 100% refund within 14 days."
+        answer: "Yes. Accio Work has a free plan (forever, web search only). Paid plans are Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year), per accio.com (checked October 7, 2026). Dooza pricing depends on the product (see dooza.ai/pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Does Accio Work handle social media and email?",
@@ -80,7 +80,7 @@ const faqData = [
     },
     {
         question: "Does Dooza require technical skills?",
-        answer: "No. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business, and every product starts with a refundable pilot: 100% refund within 14 days. Accio Work requires you to manage agent orchestration yourself and write clear, outcome-focused prompts."
+        answer: "No. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days. Accio Work requires you to manage agent orchestration yourself and write clear, outcome-focused prompts."
     }
 ];
 
@@ -556,7 +556,7 @@ export default function AccioWorkVsDoozaContent() {
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-slate-900 mb-2">How Dooza is priced</h4>
                                 <p className="text-slate-700 text-sm">
-                                    Dooza is a different kind of product: a Dooza engineer scopes and sets up your AI employees with you, for work beyond product sourcing. Pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza pricing</Link>), and every Dooza product starts with a refundable pilot: 100% refund within 14 days. If you only need sourcing research, Accio&apos;s free plan is the cheaper place to start.
+                                    Dooza is a different kind of product: a Dooza engineer scopes and sets up your AI employees with you, for work beyond product sourcing. Pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza pricing</Link>), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days. If you only need sourcing research, Accio&apos;s free plan is the cheaper place to start.
                                 </p>
                             </div>
                         </section>
@@ -689,7 +689,7 @@ export default function AccioWorkVsDoozaContent() {
                                     <strong>Accio Work</strong> is a powerful e-commerce sourcing agent built by Alibaba, for Alibaba's ecosystem. If you're launching a dropshipping business or scaling cross-border trade, it's worth exploring. But its published features don't cover email, social media, SEO, sales outreach, legal review, or phone calls. It's a single department head, not a workforce.
                                 </p>
                                 <p>
-                                    <strong>Dooza</strong> gives you five AI employees that handle your entire business operation — autonomously, 24/7, in the cloud. Email gets answered. Social media gets posted. Blog content gets published. Leads get qualified. Contracts get reviewed. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                    <strong>Dooza</strong> gives you five AI employees that handle your entire business operation — autonomously, 24/7, in the cloud. Email gets answered. Social media gets posted. Blog content gets published. Leads get qualified. Contracts get reviewed. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
 

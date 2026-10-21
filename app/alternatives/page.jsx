@@ -77,7 +77,7 @@ export default function AlternativesPage() {
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                             See how Dooza compares to other AI tools and marketing platforms.
-                            Dooza is an AI-native company that builds AI products and services for small businesses. Every product starts with a refundable pilot — 100% refund within 14 days.
+                            Dooza is an AI-native company that builds AI products and services for small businesses. Custom Dooza agents start with a refundable pilot — 100% refund within 14 days.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 mb-8">
                             <div className="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full">

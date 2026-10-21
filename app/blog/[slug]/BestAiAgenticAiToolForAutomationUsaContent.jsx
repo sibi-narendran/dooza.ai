@@ -69,7 +69,7 @@ const employeeRoles = [
 
 const comparisonRows = [
     ['Business roles', 'Pre-built AI employees', 'Generic agents or blank workflow builders'],
-    ['Pricing', 'Varies by product; every product starts with a refundable pilot (100% refund within 14 days)', 'Often usage-based, credit-based, or tool-by-tool'],
+    ['Pricing', 'Varies by product; custom Dooza agents start with a refundable pilot (100% refund within 14 days)', 'Often usage-based, credit-based, or tool-by-tool'],
     ['Setup', 'A Dooza engineer scopes your pilot on a free 30-minute call', 'Manual prompt and workflow design'],
     ['Best use case', 'Small business operations in the USA', 'Technical experiments or narrow single-task automations'],
     ['Outcome', 'Email, SEO, social and sales handled together', 'Usually one workflow at a time']
@@ -407,7 +407,7 @@ export default function BestAiAgenticAiToolForAutomationUsaContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center mt-8">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Automate Your Business With Dooza</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Start with AI employees built for real business operations: email, SEO, social media and sales. Every Dooza product starts with a refundable pilot — 100% refund within 14 days.
+                                    Start with AI employees built for real business operations: email, SEO, social media and sales. Custom Dooza agents start with a refundable pilot — 100% refund within 14 days.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={getProductSignupUrl('workforce')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">

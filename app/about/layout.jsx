@@ -9,7 +9,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'About Us - Dooza | Adam Laboratory Inc.',
-        description: 'Dooza is an AI-native company, built by Adam Laboratory Inc., that makes AI products and services for small businesses. Every product starts with a refundable pilot.',
+        description: 'Dooza is an AI-native company, built by Adam Laboratory Inc., that makes AI products and services for small businesses. Custom Dooza agents start with a refundable pilot.',
         url: `${SITE_URL}/about`,
         siteName: SITE_NAME,
         type: 'website',
@@ -25,7 +25,7 @@ export const metadata = {
     twitter: {
         card: 'summary',
         title: 'About Us - Dooza | Adam Laboratory Inc.',
-        description: 'Dooza is an AI-native company, built by Adam Laboratory Inc. Every product starts with a refundable pilot.',
+        description: 'Dooza is an AI-native company, built by Adam Laboratory Inc. Custom Dooza agents start with a refundable pilot.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

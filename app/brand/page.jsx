@@ -57,7 +57,7 @@ const colors = [
 
 const boilerplate = {
     oneLiner: 'Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot.',
-    paragraph: 'Dooza is an AI-native company that builds AI products and services for small businesses. Dooza Managed is an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free. Dooza also builds custom AI agents, maintained by Dooza engineers and scoped on a free 30-minute call. Dooza also runs done-for-you services, including AI customer support, AI visibility (GEO), and workflow automation. Every product starts with a refundable pilot: 100% refund within 14 days. Dooza.ai is a product of Adam Laboratory Inc., a Delaware C-Corporation.',
+    paragraph: 'Dooza is an AI-native company that builds AI products and services for small businesses. Dooza Managed is an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free. Dooza also builds custom AI agents, maintained by Dooza engineers and scoped on a free 30-minute call. Dooza also runs done-for-you services, including AI customer support, AI visibility (GEO), and workflow automation. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days. Dooza.ai is a product of Adam Laboratory Inc., a Delaware C-Corporation.',
 };
 
 function SectionTitle({ children, sub }) {

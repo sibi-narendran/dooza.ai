@@ -31,7 +31,7 @@ export default function ContactPage() {
             <Navbar />
             <main className="mx-auto max-w-3xl px-4 pb-20 pt-28 sm:px-6">
                 <h1 className="text-4xl font-bold tracking-tight">Contact Dooza</h1>
-                <p className="mt-4 text-lg text-slate-600">Talk to a person about your business. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                <p className="mt-4 text-lg text-slate-600">Talk to a person about your business. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.</p>
                 <div className="mt-10 grid gap-4 sm:grid-cols-3">
                     <a href={`tel:${CONTACT_CALL_E164}`} className="rounded-2xl border border-slate-200 p-6 hover:border-primary-300">
                         <p className="text-sm font-semibold uppercase tracking-wide text-primary-700">Call</p>

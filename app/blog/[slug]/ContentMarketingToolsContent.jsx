@@ -496,7 +496,7 @@ export default function ContentMarketingToolsContent() {
                                     </div>
                                 </div>
                                 <p className="text-center text-green-700 font-bold mt-6 text-lg">
-                                    Consolidate your tool stack and get your hours back — pricing depends on the product, and every Dooza product starts with a refundable pilot
+                                    Consolidate your tool stack and get your hours back — pricing depends on the product, and custom Dooza agents start with a refundable pilot
                                 </p>
                             </div>
                         </section>

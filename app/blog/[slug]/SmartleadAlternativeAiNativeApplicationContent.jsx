@@ -34,7 +34,7 @@ import {
 const faqData = [
     {
         question: 'What is the best Smartlead alternative?',
-        answer: 'If outbound is the whole job, Smartlead itself is hard to beat, and the closest alternatives are other outbound platforms. Dooza is the alternative for small businesses that want more than outbound: Dooza is an AI-native company, and its engineers set up AI employees for email, SEO, social media and sales follow-up, with your approval on anything sensitive. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.'
+        answer: 'If outbound is the whole job, Smartlead itself is hard to beat, and the closest alternatives are other outbound platforms. Dooza is the alternative for small businesses that want more than outbound: Dooza is an AI-native company, and its engineers set up AI employees for email, SEO, social media and sales follow-up, with your approval on anything sensitive. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.'
     },
     {
         question: 'Is Dooza better than Smartlead?',
@@ -80,7 +80,7 @@ const comparisonRows = [
     ['Phone', 'Outbound calls and email from one dashboard; SmartDialer for AI multichannel calls', 'Not offered', 'Depends'],
     ['Beyond outbound', 'Focused on outbound sales', 'SEO (Ranky), social (Somi), inbox (Maily), sales (Stan)', 'Dooza'],
     ['Setup model', 'Self-serve, or Done For You Mailboxes (domains, DNS, SPF, DKIM, DMARC handled)', 'A Dooza engineer scopes your refundable pilot and sets up the AI employees with you', 'Tie'],
-    ['Pricing model', '$39 to $379/month plus optional add-ons (checked October 7, 2026)', 'Pricing depends on the product; every product starts with a refundable pilot (100% refund within 14 days)', 'Smartlead']
+    ['Pricing model', '$39 to $379/month plus optional add-ons (checked October 7, 2026)', 'Pricing depends on the product; custom Dooza agents start with a refundable pilot (100% refund within 14 days)', 'Smartlead']
 ];
 
 const doozaWins = [
@@ -107,7 +107,7 @@ const doozaWins = [
     {
         icon: ShieldCheck,
         title: '5. Dooza gives you broader leverage',
-        desc: 'Outbound is one growth channel. Dooza also helps with SEO content, social distribution, inbox responses, lead handling, and appointment booking. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.'
+        desc: 'Outbound is one growth channel. Dooza also helps with SEO content, social distribution, inbox responses, lead handling, and appointment booking. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.'
     }
 ];
 
@@ -377,7 +377,7 @@ export default function SmartleadAlternativeAiNativeApplicationContent() {
                                     Your total depends on which add-ons you use (SmartSenders, SmartDelivery, SmartDialer, Email Verification, SmartServers, white-label workspaces) and on who runs the campaigns and watches replies.
                                 </p>
                                 <p>
-                                    Dooza's value is different. You are not buying an outbound tool. You are buying AI employees, set up by Dooza engineers, that help with email, SEO, social media and sales follow-up. Dooza pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline">pricing</Link>), and every product starts with a refundable pilot.
+                                    Dooza's value is different. You are not buying an outbound tool. You are buying AI employees, set up by Dooza engineers, that help with email, SEO, social media and sales follow-up. Dooza pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline">pricing</Link>), and custom Dooza agents start with a refundable pilot.
                                 </p>
                             </div>
 

@@ -37,7 +37,7 @@ import {
 const faqData = [
     {
         question: "What is the best Lindy AI alternative?",
-        answer: "It depends on what you want instead. If you want AI built for you, Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you, and every Dooza product starts with a refundable pilot (100% refund within 14 days). If you want to keep building yourself, Gumloop (Pro from $37/month, 14-day free trial) suits agentic workflows, and Zapier (free plan; Professional from $19.99/month; 9,000+ apps) suits app-to-app automation with AI steps. Prices checked October 7, 2026."
+        answer: "It depends on what you want instead. If you want AI built for you, Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents with you, and custom Dooza agents start with a refundable pilot (100% refund within 14 days). If you want to keep building yourself, Gumloop (Pro from $37/month, 14-day free trial) suits agentic workflows, and Zapier (free plan; Professional from $19.99/month; 9,000+ apps) suits app-to-app automation with AI steps. Prices checked October 7, 2026."
     },
     {
         question: "Why do teams look for a Lindy AI alternative?",
@@ -45,7 +45,7 @@ const faqData = [
     },
     {
         question: "How much does Lindy AI cost compared to alternatives?",
-        answer: "Lindy is billed per seat in credits: Plus from $29.99/month for 3,000 credits, Pro $99.99 for 15,000, Max $199.99 for 35,000, and custom Enterprise pricing. A credit is about one cent, and new users get $50 in credits for 7 days. Gumloop Pro starts at $37/month with a 14-day free trial, and Zapier has a free plan (100 tasks/month) with Professional from $19.99/month. All checked October 7, 2026, on each vendor's pricing page. Dooza uses no credits; pricing depends on the product, and every Dooza product starts with a refundable pilot (see dooza.ai/pricing)."
+        answer: "Lindy is billed per seat in credits: Plus from $29.99/month for 3,000 credits, Pro $99.99 for 15,000, Max $199.99 for 35,000, and custom Enterprise pricing. A credit is about one cent, and new users get $50 in credits for 7 days. Gumloop Pro starts at $37/month with a 14-day free trial, and Zapier has a free plan (100 tasks/month) with Professional from $19.99/month. All checked October 7, 2026, on each vendor's pricing page. Dooza uses no credits; pricing depends on the product, and custom Dooza agents start with a refundable pilot (see dooza.ai/pricing)."
     },
     {
         question: "Is Lindy AI good for small businesses?",
@@ -57,7 +57,7 @@ const faqData = [
     },
     {
         question: "What does Dooza offer that Lindy AI doesn't?",
-        answer: "Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees (email, social, SEO, sales, phones) or custom agents with you. There's no credit system, and every product starts with a refundable pilot: 100% refund within 14 days. Lindy is self-serve: you set up your own agents from templates and 40+ skills, billed per seat in credits. Lindy has compliance certifications (SOC 2 Type II, HIPAA) that Dooza doesn't."
+        answer: "Dooza is done for you: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees (email, social, SEO, sales, phones) or custom agents with you. There's no credit system, and custom Dooza agents start with a refundable pilot: 100% refund within 14 days. Lindy is self-serve: you set up your own agents from templates and 40+ skills, billed per seat in credits. Lindy has compliance certifications (SOC 2 Type II, HIPAA) that Dooza doesn't."
     }
 ];
 
@@ -65,7 +65,7 @@ const alternatives = [
     {
         name: "Dooza",
         tagline: "Done-for-You AI Employees and Custom Agents",
-        description: "Dooza builds AI employees for email, social media, SEO, sales, and phones, plus custom agents. A Dooza engineer scopes your pilot on a free 30-minute call and builds it with you. No credit system to track. Every Dooza product starts with a refundable pilot.",
+        description: "Dooza builds AI employees for email, social media, SEO, sales, and phones, plus custom agents. A Dooza engineer scopes your pilot on a free 30-minute call and builds it with you. No credit system to track. Custom Dooza agents start with a refundable pilot.",
         price: "14-day",
         priceNote: "refundable pilot",
         pros: [
@@ -564,7 +564,7 @@ export default function LindyAiAlternativeContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">How to Switch from Lindy AI to Dooza</h2>
                             <div className="space-y-4">
                                 {[
-                                    { step: "1", title: "Start Your Dooza Pilot", desc: "Book a free 30-minute call so a Dooza engineer can scope your pilot. Every Dooza product starts with a refundable pilot: 100% refund within 14 days." },
+                                    { step: "1", title: "Start Your Dooza Pilot", desc: "Book a free 30-minute call so a Dooza engineer can scope your pilot. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days." },
                                     { step: "2", title: "Choose Your AI Employees", desc: "Select from pre-built roles: email assistant, social media manager, SEO specialist, sales rep, and more." },
                                     { step: "3", title: "Connect Your Tools", desc: "Link your email, calendar, CRM, and social accounts with one-click integrations." },
                                     { step: "4", title: "Get Onboarding Help", desc: "A Dooza engineer will help you replicate your Lindy workflows during your pilot." },

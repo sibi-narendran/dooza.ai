@@ -215,7 +215,7 @@ export default function RealEstateContent({ page }) {
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
                     <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does an AI sales agent for real estate do?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI sales agent for real estate replies to every new lead fast, day or night, asks the qualification questions you set (budget, timeline, location), schedules showings on your calendar, and keeps following up with drip sequences until the lead is ready. Dooza sets it up and runs it for you. Every Dooza product starts with a refundable pilot: 100% refund within 14 days.</p>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI sales agent for real estate replies to every new lead fast, day or night, asks the qualification questions you set (budget, timeline, location), schedules showings on your calendar, and keeps following up with drip sequences until the lead is ready. Dooza sets it up and runs it for you. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.</p>
                 </div>
             </section>
 
