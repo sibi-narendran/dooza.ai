@@ -174,7 +174,7 @@ export default function GarageDoorAnsweringServicePage() {
                                     <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
                                         <li>Answers the calls you miss</li>
                                         <li>Asks your questions: address, what is wrong, how urgent</li>
-                                        <li>Emails you each message with the call transcript</li>
+                                        <li>Emails you each message with the call transcript and a link to the recording (callers hear that the call is recorded)</li>
                                         <li>$149/month for up to 500 minutes; $0.30/min after</li>
                                     </ul>
                                 </div>
@@ -182,7 +182,7 @@ export default function GarageDoorAnsweringServicePage() {
                                     <h3 className="font-bold text-slate-900">Not included</h3>
                                     <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
                                         <li>Booking onto your calendar or dispatch software</li>
-                                        <li>Text messages, call recordings</li>
+                                        <li>Text messages</li>
                                         <li>Two calls at once (the second caller is asked to call back)</li>
                                     </ul>
                                 </div>

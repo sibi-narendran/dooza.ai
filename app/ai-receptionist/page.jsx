@@ -64,7 +64,7 @@ export const metadata = {
 const WHAT_IT_DOES = [
     { icon: PhoneCall, text: 'Answers every call in your company name, day and night, while you are on the tools.' },
     { icon: ListChecks, text: 'Asks what you would ask: address, what is wrong, how urgent, owner or tenant.' },
-    { icon: MessageSquareText, text: 'Emails you every message with the call transcript.' },
+    { icon: MessageSquareText, text: 'Emails you every message with the call transcript and a link to the recording.' },
     { icon: CalendarCheck, text: 'Repeats the address back to the caller before hanging up.' },
     { icon: UserRound, text: 'Takes a message for you when a caller asks for a person.' },
     { icon: ShieldCheck, text: 'Never quotes a price or gives advice you have not approved.' },

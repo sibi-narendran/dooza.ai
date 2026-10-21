@@ -120,7 +120,7 @@ export default function AiAnsweringServicePage() {
                                         <li>Answers when you can’t pick up</li>
                                         <li>Asks the questions you give it</li>
                                         <li>Takes the caller’s message</li>
-                                        <li>Emails you each message with the call transcript</li>
+                                        <li>Emails you each message with the call transcript and a link to the recording (callers hear that the call is recorded)</li>
                                         <li>Up to 500 minutes a month; $0.30/min after</li>
                                     </ul>
                                 </div>
@@ -130,7 +130,6 @@ export default function AiAnsweringServicePage() {
                                         <li>Calendar booking</li>
                                         <li>Text messages</li>
                                         <li>CRM integrations</li>
-                                        <li>Call recordings</li>
                                         <li>Two calls at once (the second caller is asked to call back)</li>
                                     </ul>
                                 </div>

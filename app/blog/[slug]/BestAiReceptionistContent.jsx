@@ -284,10 +284,10 @@ export default function BestAiReceptionistContent() {
                                 <h3 className="font-bold text-slate-900 mb-2">The Dooza AI receptionist, in plain terms</h3>
                                 <ul className="list-disc pl-5 text-slate-700 space-y-1">
                                     <li>Answers your calls when you can't, takes the caller's message.</li>
-                                    <li>Emails you each message with the call transcript.</li>
+                                    <li>Emails you each message with the call transcript and a link to the recording (callers hear that the call is recorded).</li>
                                     <li>$149/month for up to 500 minutes, then $0.30/min. Month to month, paid up front. Cancel within 14 days of your first charge for a full refund.</li>
                                     <li>We confirm your go-live date at intake.</li>
-                                    <li>Not included: text messages, calendar booking, CRM integrations, call recordings. It takes one call at a time.</li>
+                                    <li>Not included: text messages, calendar booking, CRM integrations. It takes one call at a time.</li>
                                 </ul>
                                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
                                     <a href={PAY_URL} className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Get it: $149/month <ArrowRight className="w-4 h-4" /></a>
@@ -478,9 +478,9 @@ export default function BestAiReceptionistContent() {
                                     { icon: Zap, title: "Answers When You Can't", desc: "Picks up the calls you miss instead of voicemail." },
                                     { icon: MessageSquare, title: "Natural Conversation", desc: "Natural multi-turn dialogue. We recommend telling callers it's an AI assistant." },
                                     { icon: Target, title: "Your Questions", desc: "Asks the questions you give it and writes down the answers." },
-                                    { icon: Mail, title: "Messages by Email", desc: "Every message emailed to you with the call transcript." },
+                                    { icon: Mail, title: "Messages by Email", desc: "Every message emailed to you with the call transcript and a link to the recording." },
                                     { icon: AlertTriangle, title: "One Call at a Time", desc: "A second caller at the same moment is asked to call back." },
-                                    { icon: XCircle, title: "Not Included", desc: "No text messages, calendar booking, CRM sync or call recordings." },
+                                    { icon: XCircle, title: "Not Included", desc: "No text messages, calendar booking or CRM sync." },
                                     { icon: Users, title: "English Only (Today)", desc: "Answers in English only today. Not offered as a HIPAA service." },
                                     { icon: Clock, title: "Month to Month", desc: "$149/month for 500 minutes, $0.30/min after. No contract." }
                                 ].map((item, idx) => (
