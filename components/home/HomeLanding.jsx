@@ -182,6 +182,10 @@ export default function HomeLanding() {
                             <Link href="/ai-admin-assistant" className={LINK}>Dooza Managed</Link>: an AI admin assistant whose work is checked by a real person. First 7 days free, then $200/month.{' '}
                             <a href={MANAGED_PAY_URL} data-offer="managed" data-source="homepage_hero" className={LINK}>Start free</a>.
                         </p>
+                        <p className="mt-3 max-w-[34rem] text-[15px] text-slate-700" data-offer="receptionist" data-source="homepage_hero_receptionist">
+                            Missing calls on jobs?{' '}
+                            <Link href="/ai-answering-service-for-small-business?utm_source=website&utm_medium=internal&utm_campaign=homepage_hero_receptionist" className={LINK}>Dooza AI answering service</Link>: picks up when you can&rsquo;t and emails you each message with the transcript. $149/month for up to 500 minutes.
+                        </p>
                         <p className="mt-3 max-w-[34rem] text-[15px] text-slate-700" data-source="homepage_hero_trucking">
                             Write trucking insurance?{' '}
                             <Link href="/trucking-insurance-leads?utm_source=website&utm_medium=internal&utm_campaign=homepage_hero" className={LINK}>See this week&rsquo;s new trucking companies</Link>.
