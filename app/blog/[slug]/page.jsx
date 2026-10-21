@@ -255,6 +255,13 @@ const SUPPORT_SLUGS = new Set([
     'gorgias-pricing', 'gorgias-ai', 'customer-service-outsourcing-cost', 'best-customer-service-outsourcing-companies',
     'customer-support-workflow-automation', 'ai-chatbot-vs-ai-employee-customer-support',
     'ai-customer-support-automation-small-business', 'deploy-ai-customer-support-agent-without-coding',
+    'ai-helpdesk-automation-what-to-automate-first', 'automating-customer-support-emails-with-ai', 'ai-customer-support-for-ecommerce-stores',
+    'done-for-you-ai-customer-support-deployment', 'customer-support-automation-checklist', 'ai-support-ticket-triage',
+    'ai-first-response-automation-customer-service', 'ai-customer-support-escalation-workflow', 'ai-faq-automation-customer-support',
+    'ai-customer-support-service-businesses', 'gmail-support-automation-with-ai', 'ai-support-reporting-daily-summaries',
+    'ai-order-status-support-automation', 'ai-customer-service-implementation-plan', 'best-ai-agents-for-customer-support',
+    'conversational-ai-for-customer-support', 'generative-ai-for-customer-support', 'generative-ai-customer-support',
+    'automated-customer-support-system', 'customer-service-and-support-automation',
 ]);
 const stripOffer = (slug) => (slug === 'best-ai-receptionist' ? 'receptionist' : SUPPORT_SLUGS.has(slug) ? 'support' : 'managed');
 
