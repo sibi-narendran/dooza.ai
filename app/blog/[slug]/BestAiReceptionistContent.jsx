@@ -56,6 +56,18 @@ const faqData = [
         answer: "A human receptionist costs a salary plus benefits. Virtual receptionist services start at $250/month for 50 minutes (Ruby) or $300/month for 30 calls (Smith.ai), checked Oct 7, 2026. AI answering services start at about $25-$50/month (prices checked Oct 2026 in the table above). Dooza's AI receptionist is $149/month for up to 500 minutes, then $0.30/min, month to month."
     },
     {
+        question: "Is there a free AI answering service?",
+        answer: "Yes, a few have free plans: in the table above, Quo (OpenPhone) Sona and Phonely list free plans, with limits on calls or minutes (prices checked Oct 2026). Free plans suit testing; a business that gets real call volume usually needs a paid plan. Dooza's AI answering service is $149/month for up to 500 minutes, with a full refund if you cancel within 14 days of your first charge."
+    },
+    {
+        question: "Can AI answer my business phone calls?",
+        answer: "Yes. You forward your business number (all calls, or only the ones you miss) to the AI answering service. It picks up, answers common questions, asks the questions you set and sends you the message. Dooza's sends you each message by email with the transcript and a recording link, and tells callers the call is recorded."
+    },
+    {
+        question: "Will AI replace receptionists?",
+        answer: "For routine calls, often yes: after-hours calls, overflow, opening hours and taking messages are what small businesses hand to AI first, because it costs a fraction of a salary. Sensitive or complex calls still go to a person. Many owners use AI for the calls they would otherwise miss and keep a person for the rest."
+    },
+    {
         question: "Can an AI receptionist handle complex conversations?",
         answer: "Modern AI receptionists handle multi-turn conversations and answer common questions; many can qualify leads and route complex calls to a person. Dooza's AI receptionist keeps it simple: it asks the questions you give it, takes the message and emails it to you with the transcript."
     },
