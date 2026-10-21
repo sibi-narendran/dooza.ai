@@ -10,15 +10,6 @@ import { recepPayUrl } from '@/lib/aiReceptionistData';
 const PATH = '/hvac-answering-service';
 const PAY_URL = recepPayUrl('hvac-answering-service');
 const TITLE = 'HVAC Answering Service: AI vs Human Prices Compared (2026)';
-const DESCRIPTION = 'What an HVAC answering service costs for 120 calls a month: 15 AI receptionists and 5 human answering services at list prices checked Oct 2026, plus Dooza at $149/month.';
-
-export const metadata = {
-    title: { absolute: TITLE },
-    description: DESCRIPTION,
-    alternates: { canonical: `${SITE_URL}${PATH}` },
-    openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, type: 'website', images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'HVAC answering service prices compared' }] },
-    twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [`${SITE_URL}/logo.png`] },
-};
 
 // Example HVAC shop: 120 calls a month, about 4 minutes each (service calls run longer than "what are your hours").
 const SCENARIO = { calls: 120, avgMinutes: 4, uniqueShare: 1 };
@@ -28,6 +19,16 @@ const human = rows.filter((r) => r.kind === 'human');
 const money = (n) => `$${n.toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
 const aiRange = `${money(ai[0].result.cost)} to ${money(ai[ai.length - 1].result.cost)}`;
 const humanRange = `${money(human[0].result.cost)} to ${money(human[human.length - 1].result.cost)}`;
+
+const DESCRIPTION = `What an HVAC answering service costs for 120 calls a month: ${ai.length} AI receptionists and ${human.length} human answering services at list prices checked Oct 2026, plus Dooza at $149/month.`;
+
+export const metadata = {
+    title: { absolute: TITLE },
+    description: DESCRIPTION,
+    alternates: { canonical: `${SITE_URL}${PATH}` },
+    openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, type: 'website', images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'HVAC answering service prices compared' }] },
+    twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [`${SITE_URL}/logo.png`] },
+};
 
 const faqItems = [
     {
