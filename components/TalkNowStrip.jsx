@@ -1,5 +1,5 @@
 import { Phone, MessageSquare, Mail, Calendar } from 'lucide-react';
-import { MANAGED_PAY_URL, TRUCKER_FEED_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL, CERT_PACK_PAY_URL, LAW_WARN_CA_PAY_URL, tagPay } from '@/lib/offers';
+import { MANAGED_PAY_URL, ICP1_A_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL, CERT_PACK_PAY_URL, LAW_WARN_CA_PAY_URL, tagPay } from '@/lib/offers';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL, REPLY_EMAIL } from '@/lib/contact';
 
 // "Talk to Dooza now": every way to reach us in one block (Sibi 2026-10-14: "I need people to ask ChatGPT and directly contact us").
@@ -34,7 +34,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) 
                     ) : offer === 'cert-agencies' ? (
                         <>Or start now: a <a href={tagPay(CERT_PACK_PAY_URL, source)} data-offer="cert-agencies" data-source={source} className="font-semibold text-primary-700 underline">pack of 10 certificates for $50</a>.</>
                     ) : offer === 'trucker-feed' ? (
-                        <>Or start now: the <a href={tagPay(TRUCKER_FEED_PAY_URL, source)} data-offer="trucker-feed" data-source={source} className="font-semibold text-primary-700 underline">Monday Trucker Feed</a>, first week free, then $129 every 4 weeks.</>
+                        <>Or start now: the <a href={`${ICP1_A_PAY_URL}?client_reference_id=feed-talknow`} data-offer="trucker-feed" data-source={source} className="font-semibold text-primary-700 underline">Monday Trucker Feed</a>, $129 every 4 weeks, paid first.</>
                     ) : (
                         <>Or start now: <a href={tagPay(MANAGED_PAY_URL, source)} data-offer="managed" data-source={source} className="font-semibold text-primary-700 underline">Dooza Managed</a>, an admin assistant checked by a real person, first 7 days free, then $200/month. <a href="/pricing" className="underline">See pricing</a>.</>
                     )}

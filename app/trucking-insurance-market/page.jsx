@@ -42,7 +42,7 @@ const faqItems = [
     },
     {
         question: 'Can I get the trucking companies behind these numbers?',
-        answer: 'Yes, for insurance agencies: Dooza sends agencies a weekly list of trucking companies renewing in 30 to 60 days with their current insurer named, plus new authorities and cancellations. First week free, then $129 per 4 weeks.',
+        answer: 'Yes, for insurance agencies: Dooza sends agencies a weekly list of trucking companies renewing in 30 to 60 days with their current insurer named, plus new authorities and cancellations. $129 per 4 weeks, paid first.',
     },
 ];
 
@@ -188,7 +188,7 @@ export default function TruckingInsuranceMarketPage() {
 
                         <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
                             <h2 className="text-2xl font-bold text-slate-900">Write trucking? Get the companies behind the numbers</h2>
-                            <p className="mt-2 text-slate-700">Every Monday, agencies get the trucking companies renewing in 30 to 60 days with their current insurer named, plus new authorities and cancellations. First week free, then $129 per 4 weeks.</p>
+                            <p className="mt-2 text-slate-700">Every Monday, agencies get the trucking companies renewing in 30 to 60 days with their current insurer named, plus new authorities and cancellations. $129 per 4 weeks, paid first.</p>
                             <div className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                                 <Link href={`${LEADS}#sample`} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">Get 5 free rows from your state</Link>
                                 <Link href={LEADS} className="font-semibold text-primary-700 underline">How the list works</Link>

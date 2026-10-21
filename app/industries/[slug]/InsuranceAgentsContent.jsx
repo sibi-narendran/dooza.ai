@@ -45,7 +45,7 @@ export default function InsuranceAgentsContent({ page }) {
         {
             icon: FileText,
             title: 'The Monday list',
-            description: 'Every Monday, the trucking companies in your state whose liability renews in about 30 to 60 days, with current insurer and limit, plus new authorities from the last 7 days. First week free, then $129 every 4 weeks.'
+            description: 'Every Monday, the trucking companies in your state whose liability renews in about 30 to 60 days, with current insurer and limit, plus new authorities from the last 7 days. $129 every 4 weeks, paid first.'
         },
         {
             icon: CalendarCheck,
@@ -63,7 +63,7 @@ export default function InsuranceAgentsContent({ page }) {
     ];
 
     const priceItems = [
-        'Monday list: first week free, then $129 every 4 weeks, billed by card through Stripe.',
+        'Monday list: $129 every 4 weeks, paid first, billed by card through Stripe.',
         'Want your state to yourself? Exclusive states are available: book a call.',
         'Booked quote calls: $499 per 4 weeks for up to 4, or $150 for one (the first one is free).'
     ];
@@ -120,7 +120,7 @@ export default function InsuranceAgentsContent({ page }) {
             <section data-answer-block className="bg-white px-4 py-10 sm:px-6">
                 <div className="mx-auto max-w-3xl">
                     <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does Dooza do for insurance agencies?</h2>
-                    <p className="mt-3 text-lg leading-relaxed text-slate-700">Dooza finds trucking prospects for US independent insurance agencies that write commercial trucking. Every Monday you get a list for your state from public FMCSA data: trucking companies whose liability insurance renews in about 30 to 60 days, with their current insurer and limit named, plus new trucking authorities from the last 7 days that have no liability filing yet. The first week is free, then $129 every 4 weeks. If you would rather not dial, we can phone the truckers on your list and book owners onto your calendar as quote calls: $499 every 4 weeks for up to 4 booked quote calls, or $150 for a single booked call (the first one is free).</p>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">Dooza finds trucking prospects for US independent insurance agencies that write commercial trucking. Every Monday you get a list for your state from public FMCSA data: trucking companies whose liability insurance renews in about 30 to 60 days, with their current insurer and limit named, plus new trucking authorities from the last 7 days that have no liability filing yet. $129 every 4 weeks, paid first. If you would rather not dial, we can phone the truckers on your list and book owners onto your calendar as quote calls: $499 every 4 weeks for up to 4 booked quote calls, or $150 for a single booked call (the first one is free).</p>
                 </div>
             </section>
 
@@ -281,7 +281,7 @@ export default function InsuranceAgentsContent({ page }) {
                         Is your state still open?
                     </h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
-                        Book a free 30-minute call. We check that your state is still open, answer your questions and start your free week. Not ready for a call? Get 5 free rows from your state by email first.
+                        Book a free 30-minute call. We check that your state is still open, answer your questions and send the payment link. Not ready for a call? Get 5 free rows from your state by email first.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a

@@ -82,8 +82,8 @@ const VENDORS = [
         url: LEADS_PAGE,
         internal: true,
         type: 'Weekly spreadsheet: renewals in 30-60 days (3+ power units, insurer named), new authorities, cancellations with nothing new on file',
-        price: 'First week free, then $129 per 4 weeks. Exclusive states on request',
-        trial: 'First week free, or 5 free rows by email',
+        price: '$129 per 4 weeks, paid first. One state to yourself: $399 a month',
+        trial: '5 free rows by email',
         suits: 'Agencies that want one state to themselves and a short weekly call list, not software. No CRM; it is a spreadsheet.',
     },
 ];
@@ -260,7 +260,7 @@ export default function BestTruckingInsuranceLeadsPage() {
 
                         <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
                             <h2 className="text-2xl font-bold text-slate-900">See real rows from your state</h2>
-                            <p className="mt-2 text-slate-700">Dooza&rsquo;s weekly list: renewals in 30 to 60 days with the current insurer named, new authorities and cancellations. First week free, then $129 per 4 weeks.</p>
+                            <p className="mt-2 text-slate-700">Dooza&rsquo;s weekly list: renewals in 30 to 60 days with the current insurer named, new authorities and cancellations. $129 per 4 weeks, paid first.</p>
                             <div className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                                 <Link href={`${LEADS_PAGE}#sample`} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">Get 5 free rows</Link>
                                 <Link href={LEADS_PAGE} className="font-semibold text-primary-700 underline">How the list works</Link>

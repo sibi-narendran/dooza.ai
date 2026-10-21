@@ -1,13 +1,13 @@
 import { notFound } from 'next/navigation';
 import ReplyStagePage, { replyStageMetadata } from '@/components/ReplyStagePage';
-import { TRUCKER_FEED_PAY_URL } from '@/lib/offers';
+import { ICP1_A_PAY_URL } from '@/lib/offers';
 
 // DEALER1 reply-stage pages (Odysseus 2026-10-18 09:22 4f8mumzz): new trucking companies per state, every Monday, for used-truck and
 // trailer dealers. Pay link = Monday Trucker Feed, one state, 7-day trial.
 // Rows: FMCSA new authorities (applied in the last 7 days, no liability filed yet), Argus feed files:
 // Weekly (Argus standing Monday job, /home/argus/data/feeds/achilles/<ST>_new_authority_<date>.csv): 2026-10-19 pull = TX 219, FL 170,
 // CA 152, IN 57, OH 97 (applied Oct 12-19). Sample rows = newest with city + power units. No phones/officers/emails on the page (Argus 10-18 09:43).
-const PRICE = '$129 every 4 weeks, first week free, cancel any time.';
+const PRICE = '$129 every 4 weeks, paid first, month to month, cancel any time.';
 const STATES = {
     tx: {
         name: 'Texas',
@@ -109,13 +109,13 @@ function cfgFor(code) {
             csv: { href: `/samples/new-trucking-companies-${code}.csv`, label: `Download these ${s.rows.length} rows (CSV, no card, no signup)` },
             note: `Here we hide owner, phone, email and DOT number; your list has them. ${more} more new ${s.name} carriers in the same week.`,
         },
-        pay: { href: TRUCKER_FEED_PAY_URL, label: 'Start the free week' },
+        pay: { href: `${ICP1_A_PAY_URL}?client_reference_id=feed-newco-${code}`, label: 'Get the list ($129)' },
         startSubject: `New trucking companies: ${s.name}`,
         startBody: 'My dealership:\nCities I sell in:\n',
         startLabel: 'Ask a question first',
         priceNote: PRICE,
         overPay: [
-            '$129 every 4 weeks (about $32 a week) · first week free · cancel any time',
+            '$129 every 4 weeks (about $32 a week) · paid first · cancel any time',
             `Source: FMCSA open data (data.transportation.gov) · ${s.week}: ${s.total} new ${s.name} carriers`,
             'Run by Sibi Narendran, founder of Dooza.',
         ],
@@ -134,7 +134,7 @@ function cfgFor(code) {
             'Promise a carrier is buying. A new authority is a reason to call, not a purchase order.',
         ],
         costs: [
-            { text: PRICE, linkText: 'Start the free week', href: TRUCKER_FEED_PAY_URL },
+            { text: PRICE, linkText: 'Get the list', href: `${ICP1_A_PAY_URL}?client_reference_id=feed-newco-${code}` },
             'To stop, cancel before the next 4 weeks start.',
         ],
         faq: [
@@ -159,7 +159,7 @@ function cfgFor(code) {
             name: `New ${s.name} trucking companies list`,
             serviceType: 'New trucking company lead list',
             audienceType: 'Truck and trailer dealers',
-            offers: [{ price: '129', description: 'Every 4 weeks after a free first week.' }],
+            offers: [{ price: '129', description: 'Every 4 weeks, paid first.' }],
         },
         areaServed: { '@type': 'State', name: s.name },
         crumb: `New ${s.name} Trucking Companies`,

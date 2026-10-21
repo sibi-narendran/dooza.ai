@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import ReplyStagePage, { replyStageMetadata } from '@/components/ReplyStagePage';
-import { TRUCKER_FEED_PAY_URL } from '@/lib/offers';
+import { ICP1_A_PAY_URL } from '@/lib/offers';
 
 // BET7 step 2 reply-stage pages, one per state (Odysseus 2026-10-17 21:01 k49dpid5): sample with no card, checkout right below it
 // (clone of TruckerDB; learnings/research/2026-10-17-list-sellers-free-to-paid.md in Odysseus's home).
@@ -154,7 +154,7 @@ function cfgFor(code) {
         slug: `trucking-renewals-${code}`,
         offer: 'trucker-feed',
         title: `${s.name} Trucking Renewals List, Every Monday`,
-        description: `${s.name} trucking companies renewing their insurance in 30-60 days, with current insurer and fleet size. ${s.total} fleets in the ${s.listDate} list. ${s.rows.length} shown free; $129 every 4 weeks, 7-day free trial, cancel any time.`,
+        description: `${s.name} trucking companies renewing their insurance in 30-60 days, with current insurer and fleet size. ${s.total} fleets in the ${s.listDate} list. ${s.rows.length} shown free; $129 every 4 weeks, paid first, cancel any time.`,
         updated: 'October 18, 2026',
         eyebrow: `For agencies that write trucking in ${s.name}`,
         h1: `${s.name} fleets due to renew in 30-60 days, every Monday`,
@@ -167,13 +167,13 @@ function cfgFor(code) {
             rows: s.rows,
             note: `Here we hide owner, phone, email, DOT and MC number; your list has them. ${more} more ${s.name} fleets in the same list.`,
         },
-        pay: { href: TRUCKER_FEED_PAY_URL, label: 'Start the 7-day free trial' },
+        pay: { href: `${ICP1_A_PAY_URL}?client_reference_id=feed-renewals-${code}`, label: 'Get the list ($129)' },
         startSubject: `Trucking renewals: ${s.name}`,
         startBody: 'My agency:\nCounties or cities I write:\n',
         startLabel: 'Ask a question first',
-        priceNote: '$129 every 4 weeks, 7-day free trial, cancel any time.',
+        priceNote: '$129 every 4 weeks, paid first, month to month, cancel any time.',
         overPay: [
-            '$129 every 4 weeks (about $32 a week) · 7-day free trial · cancel any time',
+            '$129 every 4 weeks (about $32 a week) · paid first · cancel any time',
             `Source: FMCSA open data (data.transportation.gov) · ${s.listDate} list: ${s.total} ${s.name} fleets renewing in 30-60 days`,
             'Run by Sibi Narendran, founder of Dooza.',
         ],
@@ -193,7 +193,7 @@ function cfgFor(code) {
             'Promise the renewal date. It is an estimate from the filing date; policies can change mid-term.',
         ],
         costs: [
-            { text: '$129 every 4 weeks, 7-day free trial, cancel any time.', linkText: 'Start the trial', href: TRUCKER_FEED_PAY_URL },
+            { text: '$129 every 4 weeks, paid first, month to month, cancel any time.', linkText: 'Get the list', href: `${ICP1_A_PAY_URL}?client_reference_id=feed-renewals-${code}` },
             'To stop, cancel before the next 4 weeks start.',
         ],
         faq: [
@@ -215,7 +215,7 @@ function cfgFor(code) {
             },
             {
                 question: 'How much does it cost?',
-                answer: '$129 every 4 weeks, 7-day free trial, cancel any time.',
+                answer: '$129 every 4 weeks, paid first, month to month, cancel any time.',
             },
         ],
         service: {

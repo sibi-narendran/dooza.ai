@@ -59,7 +59,7 @@ const faqItems = [
     },
     {
         question: 'What do new authorities cost from Dooza?',
-        answer: 'They come in the same weekly list as renewals: first week free, then $129 per 4 weeks; exclusive states on request. You can get 5 free rows from your state by email first. If you would rather not dial, we can book quote calls: $499 every 4 weeks for up to 4 booked quote calls, or $150 for a single booked call (the first one is free).',
+        answer: 'They come in the same weekly list as renewals: $129 per 4 weeks, paid first; exclusive states on request. You can get 5 free rows from your state by email first. If you would rather not dial, we can book quote calls: $499 every 4 weeks for up to 4 booked quote calls, or $150 for a single booked call (the first one is free).',
     },
     {
         question: 'Does Dooza sell insurance?',
@@ -109,7 +109,7 @@ function Cta({ label = 'Claim your state' }) {
             <Link href={BOOK} className="rounded-xl bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">
                 {label}
             </Link>
-            <span className="text-sm text-slate-600">Free 30-minute call. First week free, then $129 per 4 weeks.</span>
+            <span className="text-sm text-slate-600">Free 30-minute call. Paid first, $129 per 4 weeks.</span>
         </div>
     );
 }
@@ -214,7 +214,7 @@ export default function TruckingNewAuthorityLeadsPage() {
 
                             <h2>What it costs</h2>
                             <p>
-                                New authorities come in the same Monday list as <Link href="/trucking-insurance-leads">trucking renewals in 30 to 60 days</Link>, with the current insurer named. First week free, then $129 every 4 weeks. Want your state to yourself? Exclusive states are available: book a call.
+                                New authorities come in the same Monday list as <Link href="/trucking-insurance-leads">trucking renewals in 30 to 60 days</Link>, with the current insurer named. $129 every 4 weeks, paid first. Want your state to yourself? Exclusive states are available: book a call.
                             </p>
                             <p>
                                 Rather not dial yourself? We can phone the truckers on your list and book the owners onto your calendar as quote calls. It costs $499 every 4 weeks for up to 4 booked quote calls, or $150 for a single booked call, and the first one is free. We take one agency per state for booked calls; ask about your state on the call.
@@ -231,7 +231,7 @@ export default function TruckingNewAuthorityLeadsPage() {
 
                         <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
                             <h2 className="text-2xl font-bold text-slate-900">Is your state still open?</h2>
-                            <p className="mt-2 text-slate-700">Book a free 30-minute call. We check that your state is still open, answer your questions and start your free week.</p>
+                            <p className="mt-2 text-slate-700">Book a free 30-minute call. We check that your state is still open, answer your questions and send the payment link.</p>
                             <div className="mt-5">
                                 <Cta label="Check my state" />
                             </div>

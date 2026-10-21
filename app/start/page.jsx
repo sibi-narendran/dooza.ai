@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
     title: 'Start Today Without a Call',
-    description: 'Start the Monday Trucker Feed by card, no call needed: first week free, then $129 every 4 weeks.',
+    description: 'Start the Monday Trucker Feed by card, no call needed: $129 every 4 weeks, paid first.',
     alternates: { canonical: 'https://www.dooza.ai/start' },
     robots: { index: false, follow: true },
 };
@@ -21,7 +21,7 @@ export default function StartPage() {
                     <div className="mx-auto max-w-3xl px-4 text-center">
                         <h1 className="font-serif text-4xl font-bold text-slate-900 md:text-5xl">Start today, no call needed</h1>
                         <p className="mt-5 text-lg text-slate-600">
-                            Liked the free sample? Start by card below. The first week is free and you can cancel anytime.
+                            Liked the free sample? Start by card below. $129 every 4 weeks, paid first, cancel anytime.
                         </p>
                     </div>
                     <div className="mt-10 px-4">
