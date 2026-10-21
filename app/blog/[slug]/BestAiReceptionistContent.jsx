@@ -327,7 +327,7 @@ export default function BestAiReceptionistContent() {
                                 <li><strong>Money-back period instead of a trial:</strong> Trillet AI Receptionist 28 days, Nextiva XBert 30 days, Smith.ai Virtual Receptionists (human) 30 days. Dooza has no free trial: you get a full refund if you cancel within 14 days of your first charge.</li>
                                 <li><strong>Free demo, pay when you go live:</strong> Goodcall lets you build and test a demo agent free and pay when you connect a number.</li>
                             </ul>
-                            <p className="text-slate-600 mt-4">All checked on each vendor's pricing page on October 21, 2026. A free plan suits a business with a handful of calls a month. If you get more than that, compare the paid plans in the table above by your monthly minutes or calls.</p>
+                            <p className="text-slate-600 mt-4">Already on Smith.ai and weighing a switch? See our <a href="/smith-ai-alternatives" className="text-primary-600 underline">Smith.ai alternatives</a> comparison. All checked on each vendor's pricing page on October 21, 2026. A free plan suits a business with a handful of calls a month. If you get more than that, compare the paid plans in the table above by your monthly minutes or calls.</p>
                         </section>
 
                         <section id="how-to-pick" className="scroll-mt-28">

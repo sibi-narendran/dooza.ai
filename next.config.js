@@ -214,11 +214,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/smith-ai-alternatives',
-        destination: '/blog/best-ai-receptionist',
-        permanent: true,
-      },
-      {
         source: '/industries/hvac',
         destination: '/hvac-answering-service',
         permanent: true,
