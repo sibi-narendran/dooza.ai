@@ -58,6 +58,20 @@ export default function AlternativesPage() {
             doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Ruby’s $1,725 for 500 human minutes'
         },
         {
+            name: 'Relevance AI Alternatives',
+            slug: null,
+            directLink: '/relevance-ai-alternatives',
+            tagline: '9 alternatives compared — Relevance AI lists no public price, alternatives with listed prices',
+            doozaAdvantage: 'Done for you: engineer-led setup, custom agents, refundable pilot'
+        },
+        {
+            name: 'Lindy Alternatives',
+            slug: null,
+            directLink: '/lindy-alternatives',
+            tagline: '8 alternatives compared — Lindy’s per-user credit plans vs AI agent builders and done-for-you options',
+            doozaAdvantage: 'Done for you: Dooza Managed is free for the first 7 days, then $200/month, vs Lindy’s self-serve credits from $29.99/mo per active user'
+        },
+        {
             name: 'Ambs Call Center Alternatives',
             slug: null,
             directLink: '/ambs-call-center-alternatives',

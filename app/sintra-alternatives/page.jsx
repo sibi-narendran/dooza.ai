@@ -80,7 +80,7 @@ const faqData = [
     },
     {
         question: 'Do any Sintra alternatives offer a free trial?',
-        answer: 'Yes: Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days). Cubeo AI has a free plan with 100 credits a month. Lindy gives $50 in free credits that last 7 days. Motion and NoimosAI offer free trials. Relevance AI\'s pricing page now lists only an Enterprise plan through sales (checked October 7, 2026). Marblism has a 7-day money-back guarantee, and Sintra has a 14-day one.',
+        answer: 'Yes: Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot (100% refund within 14 days). Cubeo AI has a free plan with 100 credits a month. Lindy gives $50 in free credits that last 7 days. Motion and NoimosAI offer free trials. Relevance AI\'s pricing page now lists only an Enterprise plan through sales (checked October 7, 2026). For listed-price options, see dooza.ai/relevance-ai-alternatives. Marblism has a 7-day money-back guarantee, and Sintra has a 14-day one.',
     },
     {
         question: 'How do I switch from Sintra AI to another platform?',

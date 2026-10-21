@@ -44,7 +44,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'What are the best Marblism alternatives in 2026?',
-        answer: 'The top Marblism alternatives in 2026 are Dooza (best done-for-you option — engineer-led setup, custom agents, 1,000+ integrations), Sintra AI (largest agent roster with 12+ helpers), Motion (project management with AI), NoimosAI (marketing-focused AI agent), Lindy AI (self-serve AI teammate in Slack), Relevance AI (enterprise scale), and Cubeo AI (no-code builder with a free plan). The best choice depends on whether you prioritize price, setup help, integrations, or agent variety.',
+        answer: 'The top Marblism alternatives in 2026 are Dooza (best done-for-you option — engineer-led setup, custom agents, 1,000+ integrations), Sintra AI (largest agent roster with 12+ helpers), Motion (project management with AI), NoimosAI (marketing-focused AI agent), Lindy AI (self-serve AI teammate in Slack), Relevance AI (enterprise scale), and Cubeo AI (no-code builder with a free plan). The best choice depends on whether you prioritize price, setup help, integrations, or agent variety. Comparing against Lindy instead? See dooza.ai/lindy-alternatives for Lindy pricing and 8 Lindy alternatives.',
     },
     {
         question: 'Is Dooza better than Marblism?',

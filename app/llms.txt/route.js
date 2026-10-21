@@ -274,6 +274,16 @@ const servicePages = [
         description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
+        title: 'Relevance AI Alternatives',
+        url: `${SITE_URL}/relevance-ai-alternatives`,
+        description: 'Relevance AI pricing (relevanceai.com/pricing lists one Enterprise plan, "Talk to sales", no public price; Custom Actions, Custom Vendor Credits, 2,000+ Integrations, SSO, RBAC & Audit Logs) and 9 alternatives compared on listed price and who builds the agents, checked Oct 21, 2026: Dooza (done for you; Dooza Managed 7 days free, then $200/month), Lindy ($49.99/mo for 5,000 credits), Gumloop (Pro from $37/month), Zapier Agents (free or $33.33/month billed annually), n8n (from 20€/mo billed annually), CrewAI (free Basic plan), Sintra AI ($15.60/mo on 12 months), Marblism ($24/mo billed yearly), Cubeo AI (free plan; 17€/month Starter). Includes Marblism vs Relevance AI.',
+    },
+    {
+        title: 'Lindy Alternatives',
+        url: `${SITE_URL}/lindy-alternatives`,
+        description: 'Lindy pricing (lindy.ai/pricing; Free: $50 in credits that last 7 days, no credit card; Team from $29.99/mo for 3,000 credits, 5,000 credits $49.99, 15,000 $99.99, 35,000 $199.99, top-ups $10 per 1,000 credits; every active user is billed; Enterprise custom) and 8 alternatives compared on price and how they meter usage, checked Oct 21, 2026: Dooza (done for you; Managed 7 days free, then $200/month), Sintra AI, Marblism, Gumloop, Zapier Agents, n8n, Relevance AI, Cubeo AI.',
+    },
+    {
         title: 'Ambs Call Center Alternatives',
         url: `${SITE_URL}/ambs-call-center-alternatives`,
         description: 'Ambs Call Center pricing (ambscallcenter.com/pricing; Real People: $149/month for 100 minutes, $330 for 250, $600 for 500, $1,195 for 1,000, $2,945 for 2,500+, excess $1.20-$1.29/min; AI Receptionist: Starter $19/month plus $0.79 per AI minute, $75 for 100, $185 for 250, $350 for 500, $650 for 1,000; Real People + AI from $168 for 100 minutes; $85 one-time set-up fee; work time in 30-second increments) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes; Ambs AI costs less up to 196 minutes a month), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',

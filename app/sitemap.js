@@ -278,6 +278,18 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/relevance-ai-alternatives`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/lindy-alternatives`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/ambs-call-center-alternatives`,
             lastModified: pageDate('2026-10-21'),
             changeFrequency: 'monthly',
