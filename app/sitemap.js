@@ -278,6 +278,18 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/posh-alternatives`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${SITE_URL}/voicenation-alternatives`,
+            lastModified: pageDate('2026-10-21'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/moneypenny-alternatives`,
             lastModified: pageDate('2026-10-21'),
             changeFrequency: 'monthly',

@@ -58,6 +58,20 @@ export default function AlternativesPage() {
             doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Ruby’s $1,725 for 500 human minutes'
         },
         {
+            name: 'Posh Virtual Receptionist Alternatives',
+            slug: null,
+            directLink: '/posh-alternatives',
+            tagline: '8 answering services compared — Posh’s live receptionist minute plans and AI + Live plans vs AI and human options',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes vs Posh’s $975 for 500 live receptionist minutes'
+        },
+        {
+            name: 'VoiceNation Alternatives',
+            slug: null,
+            directLink: '/voicenation-alternatives',
+            tagline: '8 answering services compared — VoiceNation (now Moneypenny US) people minute plans and AI call plans vs AI and human options',
+            doozaAdvantage: 'AI answering at $149/month for 500 minutes vs VoiceNation/Moneypenny’s $985 for 500 people minutes or $775 for 500 AI calls'
+        },
+        {
             name: 'Moneypenny Alternatives',
             slug: null,
             directLink: '/moneypenny-alternatives',

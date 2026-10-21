@@ -325,6 +325,9 @@ export default function MoneypennyAlternativesPage() {
                             <p className="mt-3 text-slate-700">
                                 These services bill in different units: per call, per minute, per Abby Minute or per unique customer. Moneypenny’s AI plans count calls and its People plans count minutes. A 10-minute call costs one call on Moneypenny AI or Upfirst but 10 minutes on Dooza or Rosie, so compare on your own call pattern. A human service’s minute is receptionist time, so it is not directly comparable with an AI minute. The closest like-for-like line: Moneypenny’s 500 People minutes cost $985 a month and Dooza’s up to 500 minutes cost $149, but Moneypenny’s are human minutes and Dooza is AI. Moneypenny’s 500 AI calls cost $775; if your calls averaged 3 minutes, 500 calls would use 1,500 Dooza minutes, which is $149 + 1,000 × $0.30 = $449. Prices checked {CHECKED}.
                             </p>
+                            <p className="mt-3 text-slate-700">
+                                Prices move: <a href="https://fitsmallbusiness.com/best-answering-service/" className={link} target="_blank" rel="noopener noreferrer">FitSmallBusiness’s answering service guide</a> (updated October 8, 2026) is a good overview of the human services, but it lists Moneypenny’s AI answering from $69 for 25 calls; on {CHECKED} Moneypenny’s US pricing page started its AI plans at $99 for 50 calls, and its 50-minute People plan at $165 with extra minutes at $2.85. Check the vendor’s own page before you buy.
+                            </p>
                             <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
                                 <table className="w-full text-sm">
                                     <thead className="bg-slate-50">
