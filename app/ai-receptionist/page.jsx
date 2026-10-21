@@ -23,6 +23,7 @@ import { RECEPTIONIST_DEMOS } from '@/lib/aiReceptionistDemos';
 import {
     DEMO_PHONE_E164,
     PILOT_PROMISE,
+    recepPayUrl,
     RECEPTIONIST_FAQ,
     RECEPTIONIST_KEYWORDS,
     RECEPTIONIST_VARIANTS,
@@ -63,17 +64,17 @@ export const metadata = {
 const WHAT_IT_DOES = [
     { icon: PhoneCall, text: 'Answers every call in your company name, day and night, while you are on the tools.' },
     { icon: ListChecks, text: 'Asks what you would ask: address, what is wrong, how urgent, owner or tenant.' },
-    { icon: CalendarCheck, text: 'Books the job on your Google or Outlook calendar.' },
-    { icon: MessageSquareText, text: 'Confirms the time and address with the caller before hanging up.' },
+    { icon: MessageSquareText, text: 'Emails you every message with the call transcript.' },
+    { icon: CalendarCheck, text: 'Repeats the address back to the caller before hanging up.' },
     { icon: UserRound, text: 'Takes a message for you when a caller asks for a person.' },
     { icon: ShieldCheck, text: 'Never quotes a price or gives advice you have not approved.' },
 ];
 
 const PILOT_STEPS = [
-    'Book a free 30-minute meeting. We collect your questions, hours, and calendar.',
-    'We set it up on your line with you during the pilot. Nothing for you to build.',
-    'It runs on your real calls.',
-    'Not useful? Ask within 14 days and you get a 100% refund.',
+    'Pay $149 for the first month (up to 500 minutes, $0.30/min after). No contract.',
+    'Intake: we collect your services, hours and the questions callers should be asked, and confirm your go-live date.',
+    'It answers the calls you miss and emails you each message with the transcript.',
+    'Not useful? Cancel within 14 days of your first charge for a full refund.',
 ];
 
 const primaryButton =
@@ -87,12 +88,13 @@ export default async function AiReceptionistPage(props) {
     const adsMode = isAdsVisit(searchParams);
     const demo = RECEPTIONIST_DEMOS[variant.demo] || RECEPTIONIST_DEMOS.hvac;
     const bookHref = withSearchParams('/ai-receptionist/book', searchParams);
+    const payHref = recepPayUrl(variant.key === 'default' ? 'ai-receptionist' : `ai-receptionist-${variant.key}`);
 
     const serviceSchema = {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'AI Receptionist for Contractors and Trades',
-        serviceType: 'AI phone answering and job booking for HVAC, plumbing, electrical, roofing and other trades',
+        serviceType: 'AI phone answering and message taking for HVAC, plumbing, electrical, roofing and other trades',
         description: base.metaDescription,
         url: pageUrl,
         areaServed: 'US',
@@ -104,8 +106,11 @@ export default async function AiReceptionistPage(props) {
         },
         offers: {
             '@type': 'Offer',
-            name: 'Refundable pilot',
-            description: 'Refundable pilot: set up on your line with you; 100% refund within 14 days. Pricing depends on the product; see https://www.dooza.ai/pricing.',
+            name: 'AI receptionist, monthly',
+            price: '149',
+            priceCurrency: 'USD',
+            url: 'https://buy.stripe.com/eVqcN51C31ZX0yEfvv3AY19?client_reference_id=recep-ai-receptionist',
+            description: 'Up to 500 minutes a month, then $0.30 per minute. Month to month, paid up front. Cancel within 14 days of your first charge for a full refund.',
             availability: 'https://schema.org/InStock',
         },
     };
@@ -146,12 +151,12 @@ export default async function AiReceptionistPage(props) {
                             <PlayDemoButton source="hero" demoPhone={DEMO_PHONE_E164} className={primaryButton}>
                                 Hear It Answer A Call
                             </PlayDemoButton>
-                            <Link href={bookHref} className={secondaryButton}>
-                                Start your refundable pilot
-                            </Link>
+                            <a href={payHref} className={secondaryButton}>
+                                Get it: $149/month
+                            </a>
                         </div>
                         <p className="mt-5 text-sm font-medium text-slate-600">
-                            Refundable pilot: set up on your line with you. 100% refund within 14 days.
+                            {PILOT_PROMISE} <Link href={bookHref} className="underline">Questions? Book a free call.</Link>
                         </p>
                     </div>
                 </section>
@@ -163,7 +168,7 @@ export default async function AiReceptionistPage(props) {
                             Hear it answer a call
                         </h2>
                         <p className="mt-2 text-center text-slate-600">
-                            Forty-eight seconds. One after-hours call, answered, qualified, and booked.
+                            Forty-eight seconds. One after-hours call, answered and the details taken.
                         </p>
                         <div className="mt-6">
                             <DemoCallPlayer demo={demo} demoKey={variant.demo} label={variant.demoLabel} />
@@ -227,10 +232,10 @@ export default async function AiReceptionistPage(props) {
                     </div>
                 </section>
 
-                {/* 5. How the pilot works */}
+                {/* 5. How it works */}
                 <section id="how-it-works" className="bg-primary-50 px-4 py-16 sm:px-6 sm:py-24">
                     <div className="mx-auto max-w-4xl">
-                        <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">How the refundable pilot works</h2>
+                        <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">How it works</h2>
                         <ol className="mt-8 grid gap-4 sm:grid-cols-2">
                             {PILOT_STEPS.map((step, index) => (
                                 <li key={step} className="flex gap-4 rounded-2xl border border-primary-100 bg-white p-5 shadow-sm">
@@ -291,17 +296,17 @@ export default async function AiReceptionistPage(props) {
                 {/* 6. Book the pilot meeting */}
                 <section id="pilot" className="scroll-mt-16 bg-slate-950 px-4 pb-24 pt-16 text-white sm:px-6 sm:pb-28 sm:pt-24">
                     <div className="mx-auto max-w-2xl text-center">
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">Refundable pilot</p>
-                        <h2 className="mt-4 text-3xl font-extrabold tracking-tight !text-white sm:text-4xl">Book a meeting here.</h2>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">$149/month · month to month</p>
+                        <h2 className="mt-4 text-3xl font-extrabold tracking-tight !text-white sm:text-4xl">Stop sending callers to voicemail.</h2>
                         <p className="mt-4 text-lg leading-relaxed text-slate-200 sm:text-xl">
                             {PILOT_PROMISE}
                         </p>
                         <div className="mt-8">
-                            <Link href={bookHref} className="inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-8 py-4 text-lg font-bold text-slate-950 shadow-lg shadow-primary-900/30 transition hover:bg-primary-400 sm:w-auto">
-                                Book a free pilot call
-                            </Link>
+                            <a href={payHref} className="inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-8 py-4 text-lg font-bold text-slate-950 shadow-lg shadow-primary-900/30 transition hover:bg-primary-400 sm:w-auto">
+                                Get it: $149/month
+                            </a>
                         </div>
-                        <p className="mt-4 text-sm text-slate-300">The 30-minute call is free; the pilot is paid, with a 100% refund within 14 days. Works with any phone.</p>
+                        <p className="mt-4 text-sm text-slate-300">Works with any phone. <Link href={bookHref} className="underline">Questions first? Book a free 30-minute call.</Link></p>
                         <div className="mt-6">
                             <TextPilotLink source="pilot_section" tone="dark" />
                         </div>
@@ -314,7 +319,7 @@ export default async function AiReceptionistPage(props) {
 
             {adsMode ? <AdsFooter /> : <Footer variant="light" />}
 
-            <StickyCtaBar demoPhone={DEMO_PHONE_E164} bookHref={bookHref} />
+            <StickyCtaBar demoPhone={DEMO_PHONE_E164} bookHref={payHref} label="Get it: $149/mo" />
         </>
     );
 }

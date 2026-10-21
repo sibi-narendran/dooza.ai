@@ -280,7 +280,7 @@ const nextConfig = {
       },
       {
         source: '/blog/ai-answering-service-for-business',
-        destination: '/industries/insurance-agents',
+        destination: '/ai-answering-service-for-small-business',
         permanent: true,
       },
       {

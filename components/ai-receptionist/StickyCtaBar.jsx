@@ -8,7 +8,7 @@ import { trackReceptionistEvent } from '@/lib/analytics';
 
 // Mobile-only bar that keeps both actions one tap away once the hero scrolls
 // away. Hides while the booking section is on screen.
-export default function StickyCtaBar({ demoPhone = null, bookHref = '/ai-receptionist/book' }) {
+export default function StickyCtaBar({ demoPhone = null, bookHref = '/ai-receptionist/book', label = 'Start your refundable pilot' }) {
     const [pastHero, setPastHero] = useState(false);
     const [pilotVisible, setPilotVisible] = useState(false);
 
@@ -49,7 +49,7 @@ export default function StickyCtaBar({ demoPhone = null, bookHref = '/ai-recepti
                     onClick={() => trackReceptionistEvent('sticky_book_click')}
                     className="flex flex-1 items-center justify-center rounded-xl bg-primary-700 px-4 py-3 text-sm font-bold text-white"
                 >
-                    Start your refundable pilot
+                    {label}
                 </Link>
             </div>
         </div>

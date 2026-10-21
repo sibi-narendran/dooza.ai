@@ -59,7 +59,7 @@ const faqItems = [
     },
     {
         question: 'Does Dooza offer an AI receptionist?',
-        answer: 'Yes. Dooza builds and runs a done-for-you AI receptionist on your existing number, tuned to your services, prices and calendar. Pricing is on dooza.ai/pricing, and every Dooza product starts with a refundable pilot: 100% refund within 14 days.',
+        answer: 'Yes. Dooza’s AI receptionist answers when you can’t, takes the caller’s message and emails it to you with the transcript. It costs $149 a month for up to 500 minutes, then $0.30 a minute, month to month, with a full refund if you cancel within 14 days of your first charge (see dooza.ai/ai-answering-service-for-small-business).',
     },
 ];
 
@@ -131,9 +131,9 @@ export default function AiReceptionistCostCalculatorPage() {
                                 <li><strong>The same customers calling often</strong>: per-unique-caller pricing (Goodcall) gets cheaper.</li>
                                 <li><strong>Hundreds of calls a month</strong>: flat unlimited plans (NextPhone) catch up.</li>
                             </ul>
-                            <h2>Want it done for you?</h2>
+                            <h2>Dooza’s AI answering service</h2>
                             <p>
-                                Self-serve tools are cheap because you write the scripts, FAQs and routing yourself. Dooza’s <Link href="/ai-receptionist">AI receptionist</Link> is set up and tuned by our engineers on your existing number. Pricing depends on the product (see <Link href="/pricing">Dooza pricing</Link>). Every Dooza product starts with a refundable pilot: 100% refund within 14 days.
+                                Dooza’s <Link href="/ai-answering-service-for-small-business">AI answering service</Link> answers when you can’t, takes the caller’s message and emails it to you with the transcript: $149 a month for up to 500 minutes, then $0.30 a minute, month to month. It does not book onto calendars or send texts.
                             </p>
                         </section>
 

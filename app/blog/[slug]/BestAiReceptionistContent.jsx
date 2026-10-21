@@ -19,7 +19,6 @@ const included = (v) => (v.entry.inc === Infinity ? 'Unlimited calls' : v.entry.
 const overage = (v) => (v.entry.over === null ? 'Move up a plan' : v.entry.over === 0 ? 'None' : `$${v.entry.over.toFixed(2)}/${v.unit === 'min' || v.unit === 'min30' ? 'min' : v.unit === 'caller' ? 'caller' : v.unit === 'interaction' ? 'interaction' : 'call'}`);
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
-import BottomCTA from '../../../components/BottomCTA';
 import BookingModal from '../../../components/BookingModal';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import RelatedPosts from '../../../components/RelatedPosts';
@@ -58,7 +57,7 @@ const faqData = [
     },
     {
         question: "Can an AI receptionist handle complex conversations?",
-        answer: "Modern AI receptionists like Rachel use natural language processing to handle multi-turn conversations, answer FAQs, qualify leads with custom questions, and know when to route to a human for complex issues."
+        answer: "Modern AI receptionists handle multi-turn conversations and answer common questions; many can qualify leads and route complex calls to a person. Dooza's AI receptionist keeps it simple: it asks the questions you give it, takes the message and emails it to you with the transcript."
     },
     {
         question: "What's the best AI virtual receptionist for lead qualification?",
@@ -66,7 +65,7 @@ const faqData = [
     },
     {
         question: "Will callers know they're talking to an AI?",
-        answer: "Rachel uses natural, conversational language that sounds professional and human-like. We recommend telling callers they're speaking with an AI assistant, for example in the greeting. She introduces herself by name and maintains context throughout the conversation."
+        answer: "Modern AI voices sound natural, but we recommend telling callers they're speaking with an AI assistant, for example in the greeting."
     },
     {
         question: "How many calls does the average small business miss?",
@@ -157,7 +156,7 @@ export default function BestAiReceptionistContent() {
                                 Get the Dooza AI receptionist: $149/month
                                 <ArrowRight className="w-5 h-5" />
                             </a>
-                            <span className="text-sm text-slate-500">Up to 500 minutes, then $0.30/min · month to month · <a href={CAL_BOOKING_URL} onClick={handleAction} className="underline">or book a call first</a></span>
+                            <span className="text-sm text-slate-500">Up to 500 minutes, then $0.30/min · month to month · full refund if you cancel within 14 days · <a href={CAL_BOOKING_URL} onClick={handleAction} className="underline">or book a call first</a></span>
                         </div>
                     </div>
                 </div>
@@ -272,7 +271,7 @@ export default function BestAiReceptionistContent() {
                                     { need: 'Lots of short calls', pick: 'A per-minute plan (Marlie, Trillet, My AI Front Desk) usually beats a per-call plan.' },
                                     { need: 'Few but long calls', pick: 'A per-call plan (Quo Sona, OnCrew, Upfirst) usually beats a per-minute plan.' },
                                     { need: 'You want one fixed bill', pick: 'NextPhone Pro ($199 flat, unlimited calls) or Rosie (no overage; you move up a plan).' },
-                                    { need: 'You want a person to answer', pick: 'MAP Communications ($179 for 125 minutes) or PATLive ($189 for 100 minutes); expect 3–10x the AI price per minute.' },
+                                    { need: 'You want a person to answer', pick: 'MAP Communications ($179 for 125 minutes) or PATLive ($189 for 100 minutes); expect several times the AI price per minute.' },
                                     { need: 'You miss calls on jobs and want every message emailed with a transcript', pick: 'The Dooza AI receptionist: $149/month for up to 500 minutes, $0.30/min after, month to month.' },
                                 ].map((r) => (
                                     <div key={r.need} className="bg-white border border-slate-200 p-4 rounded-xl">
@@ -286,7 +285,7 @@ export default function BestAiReceptionistContent() {
                                 <ul className="list-disc pl-5 text-slate-700 space-y-1">
                                     <li>Answers your calls when you can't, takes the caller's message.</li>
                                     <li>Emails you each message with the call transcript.</li>
-                                    <li>$149/month for up to 500 minutes, then $0.30/min. Month to month, paid up front.</li>
+                                    <li>$149/month for up to 500 minutes, then $0.30/min. Month to month, paid up front. Cancel within 14 days of your first charge for a full refund.</li>
                                     <li>We confirm your go-live date at intake.</li>
                                     <li>Not included: text messages, calendar booking, CRM integrations, call recordings. It takes one call at a time.</li>
                                 </ul>
@@ -436,10 +435,10 @@ export default function BestAiReceptionistContent() {
                                     <tbody>
                                         {[
                                             { feature: "Monthly Cost", voicemail: "$0", virtual: "$250–$2,100/mo (Ruby, Smith.ai plans, checked Oct 2026)", inhouse: "Salary + benefits", rachel: "$149/mo, 500 min (Dooza)" },
-                                            { feature: "Availability", voicemail: "Always (but useless)", virtual: "24/7, billed per minute or call", inhouse: "Business hours", rachel: "24/7/365" },
+                                            { feature: "Availability", voicemail: "Always (but useless)", virtual: "24/7, billed per minute or call", inhouse: "Business hours", rachel: "Answers when you can't" },
                                             { feature: "Call Volume", voicemail: "Unlimited", virtual: "Plan allowance (e.g. 30–300 calls/mo at Smith.ai)", inhouse: "One call at a time", rachel: "500 min/mo included, then $0.30/min; one call at a time" },
-                                            { feature: "Lead Qualification", voicemail: "None", virtual: "Basic scripting", inhouse: "Trained judgment", rachel: "Custom AI qualification" },
-                                            { feature: "Appointment Booking", voicemail: "None", virtual: "Varies by plan", inhouse: "Yes", rachel: "Automatic" },
+                                            { feature: "Lead Qualification", voicemail: "None", virtual: "Basic scripting", inhouse: "Trained judgment", rachel: "Asks the questions you set" },
+                                            { feature: "Appointment Booking", voicemail: "None", virtual: "Varies by plan", inhouse: "Yes", rachel: "Not included" },
                                             { feature: "Setup Time", voicemail: "5 minutes", virtual: "Varies by provider", inhouse: "Hiring and training time", rachel: "Go-live date confirmed at intake" },
                                             { feature: "Consistency", voicemail: "N/A", virtual: "Varies by operator", inhouse: "Varies by person", rachel: "Same instructions on every call" }
                                         ].map((row, idx) => (
@@ -476,14 +475,14 @@ export default function BestAiReceptionistContent() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                                 {[
-                                    { icon: Zap, title: "Instant Pickup", desc: "Picks up every call, day or night." },
+                                    { icon: Zap, title: "Answers When You Can't", desc: "Picks up the calls you miss instead of voicemail." },
                                     { icon: MessageSquare, title: "Natural Conversation", desc: "Natural multi-turn dialogue. We recommend telling callers it's an AI assistant." },
                                     { icon: Target, title: "Your Questions", desc: "Asks the questions you give it and writes down the answers." },
                                     { icon: Mail, title: "Messages by Email", desc: "Every message emailed to you with the call transcript." },
                                     { icon: AlertTriangle, title: "One Call at a Time", desc: "A second caller at the same moment is asked to call back." },
                                     { icon: XCircle, title: "Not Included", desc: "No text messages, calendar booking, CRM sync or call recordings." },
                                     { icon: Users, title: "English Only (Today)", desc: "Answers in English only today. Not offered as a HIPAA service." },
-                                    { icon: Clock, title: "After-Hours Coverage", desc: "Works nights, weekends, and holidays." }
+                                    { icon: Clock, title: "Month to Month", desc: "$149/month for 500 minutes, $0.30/min after. No contract." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-3">
@@ -505,25 +504,25 @@ export default function BestAiReceptionistContent() {
                                     {
                                         title: "Medical Practices",
                                         icon: Shield,
-                                        desc: "Book and reschedule appointments and answer general questions (hours, location) 24/7. Not a HIPAA service: clinical and patient-record calls belong with a HIPAA-covered service.",
+                                        desc: "AI receptionists in general can book appointments and answer hours and location questions. Dooza's is not a HIPAA service: clinical and patient-record calls belong with a HIPAA-covered service.",
                                         link: { href: "/blog/seo-for-doctors-dentists", label: "See our guide for medical practices" }
                                     },
                                     {
                                         title: "Real Estate Agents",
                                         icon: TrendingUp,
-                                        desc: "Capture buyer leads at 2 AM. Qualify prospects and schedule showings automatically.",
+                                        desc: "Capture buyer leads at 2 AM: the caller's name, number and what they want, emailed to you.",
                                         link: { href: "/blog/ai-for-real-estate-agents", label: "See our guide for real estate agents" }
                                     },
                                     {
                                         title: "Home Services",
                                         icon: Phone,
-                                        desc: "Emergency plumbing call at midnight? Rachel takes the details and alerts you under your rules, instead of sending it to voicemail.",
+                                        desc: "Emergency plumbing call at midnight? Rachel takes the message and emails it to you with the transcript, instead of sending it to voicemail.",
                                         link: null
                                     },
                                     {
                                         title: "Legal Firms",
                                         icon: FileText,
-                                        desc: "Screen potential clients, take basic intake details, and schedule consultations. Rachel does not give legal advice; have your firm set the intake rules.",
+                                        desc: "Take basic intake details from potential clients and email them to you. Rachel does not give legal advice; have your firm set the intake rules.",
                                         link: null
                                     },
                                     {
@@ -689,7 +688,6 @@ export default function BestAiReceptionistContent() {
                 </div>
             </div>
 
-            <BottomCTA openModal={handleAction} />
             <Footer />
             <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
         </div>

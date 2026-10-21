@@ -11,14 +11,14 @@ import { CALLBACK_NUMBER_DISPLAY, PILOT_PROMISE, getReceptionistVariant } from '
 const pageUrl = `${SITE_URL}/ai-receptionist/book`;
 
 export const metadata = {
-    title: { absolute: 'Book Your Free AI Receptionist Pilot Call | Dooza' },
+    title: { absolute: 'Book a Free AI Receptionist Call | Dooza' },
     description:
-        'Book a free 30-minute pilot call. Then start a refundable pilot: we set up your AI receptionist on your line with you, with a 100% refund within 14 days.',
+        'Book a free 30-minute call about the Dooza AI receptionist: $149/month for up to 500 minutes. Cancel within 14 days of your first charge for a full refund.',
     alternates: { canonical: pageUrl },
     robots: { index: false, follow: true },
     openGraph: {
-        title: 'Book Your Free AI Receptionist Pilot Call | Dooza',
-        description: 'A free 30-minute pilot call, then a refundable pilot on your real calls: 100% refund within 14 days.',
+        title: 'Book a Free AI Receptionist Call | Dooza',
+        description: 'A free 30-minute call about the Dooza AI receptionist: $149/month, month to month.',
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
@@ -26,9 +26,9 @@ export const metadata = {
 };
 
 const PROMISES = [
-    { icon: Timer, text: '30-minute meeting to collect your questions, hours, and calendar.' },
-    { icon: CalendarClock, text: 'Set up on your line with you during the pilot. Works with any phone.' },
-    { icon: CreditCard, text: 'The call is free. The pilot is paid, with a 100% refund within 14 days.' },
+    { icon: Timer, text: 'Free 30-minute call: your questions answered, your setup scoped.' },
+    { icon: CalendarClock, text: 'Works with any phone. We confirm your go-live date at intake.' },
+    { icon: CreditCard, text: '$149/month, month to month. Cancel within 14 days of your first charge for a full refund.' },
 ];
 
 export default async function AiReceptionistBookPage(props) {
@@ -43,7 +43,7 @@ export default async function AiReceptionistBookPage(props) {
             <main id="main-content" className="bg-slate-50 text-slate-900">
                 <section className={`px-4 pb-20 sm:px-6 ${adsMode ? 'pt-10 sm:pt-14' : 'pt-28 sm:pt-32'}`}>
                     <div className="mx-auto max-w-3xl text-center">
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-700">Free pilot call</p>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-700">Free call</p>
                         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl md:text-5xl">
                             Book a meeting here.
                         </h1>
