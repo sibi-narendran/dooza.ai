@@ -153,11 +153,11 @@ function cfgFor(code) {
         path: `/trucking-renewals/${code}`,
         slug: `trucking-renewals-${code}`,
         offer: 'trucker-feed',
-        title: `${s.name} Trucking Renewals List, Every Monday`,
-        description: `${s.name} trucking companies renewing their insurance in 30-60 days, with current insurer and fleet size. ${s.total} fleets in the ${s.listDate} list. ${s.rows.length} shown free; $129 every 4 weeks, paid first, cancel any time.`,
+        title: `${s.name} Trucking Insurance X-Dates, Every Monday`,
+        description: `${s.name} trucking insurance x-dates: fleets renewing in 30-60 days (estimated), with current insurer and fleet size. ${s.total} fleets in the ${s.listDate} list. ${s.rows.length} shown free; $129 every 4 weeks, paid first, cancel any time.`,
         updated: 'October 18, 2026',
         eyebrow: `For agencies that write trucking in ${s.name}`,
-        h1: `${s.name} fleets due to renew in 30-60 days, every Monday`,
+        h1: `${s.name} trucking insurance x-dates: fleets due to renew in 30-60 days, every Monday`,
         leadStrong: `Each Monday: every ${s.name} trucking company with 3 or more power units whose liability filing comes up for renewal in 30 to 60 days, with its current insurer.`,
         leadRest: `${s.rows.length} real rows from the ${s.listDate} list are below (download them as CSV, no card). ${more} more ${s.name} fleets are in that list.`,
         sample: {
@@ -204,6 +204,10 @@ function cfgFor(code) {
             {
                 question: 'Where does the data come from?',
                 answer: 'FMCSA open data on data.transportation.gov: the carrier census (registration, contacts, power units) and the insurance filings insurers send to FMCSA (BMC-91X). It is public record; we match and sort it each week.',
+            },
+            {
+                question: 'What is an x-date in trucking insurance?',
+                answer: `The x-date (expiration date) is when a fleet’s current policy ends, the day an agency wants to be quoting by. Here it is estimated from the federal liability filing: each ${s.name} fleet in the list has an estimated x-date 30 to 60 days out, with its current insurer and liability limit.`,
             },
             {
                 question: 'How sure is the renewal date?',

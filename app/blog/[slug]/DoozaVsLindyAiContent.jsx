@@ -170,7 +170,7 @@ export default function DoozaVsLindyAiContent() {
                                     <li><strong>Ranky</strong> &mdash; SEO blog writing and keyword research. Publishes 4&ndash;8 optimized articles per month to your blog.</li>
                                     <li><strong>Stan</strong> &mdash; Sales outreach and lead follow-up. Responds to leads instantly, sends personalized sequences, books meetings.</li>
                                 </ul>
-                                <p className="mt-4">Dooza is an AI-native company that builds AI products and services for small businesses: <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza Managed</Link> (an AI admin assistant checked by a real person) and custom AI agents built by Dooza engineers. No credits to track. Pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>), and every product starts with a <strong>refundable pilot &mdash; 100% refund within 14 days</strong>.</p>
+                                <p className="mt-4">Dooza is an AI-native company that builds AI products and services for small businesses: <Link href="/pricing" className="text-primary-600 hover:underline font-medium">Dooza Managed</Link> (an AI admin assistant checked by a real person) and custom AI agents built by Dooza engineers. No credits to track. Pricing depends on the product (see <Link href="/pricing" className="text-primary-600 hover:underline font-medium">pricing</Link>), and custom Dooza agents start with a <strong>refundable pilot &mdash; 100% refund within 14 days</strong>.</p>
                             </div>
 
                             {/* YouTube Video - Dooza AI */}
