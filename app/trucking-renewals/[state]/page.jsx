@@ -222,7 +222,7 @@ function cfgFor(code) {
             name: `${s.name} trucking renewals list`,
             serviceType: 'Trucking insurance renewal list',
             audienceType: 'Commercial insurance agencies that write trucking',
-            offers: [{ price: '129', description: 'Every 4 weeks after a 7-day trial.' }],
+            offers: [{ price: '129', description: 'Every 4 weeks, paid first.' }],
         },
         areaServed: { '@type': 'State', name: s.name },
         crumb: `${s.name} Trucking Renewals`,
