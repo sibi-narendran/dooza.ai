@@ -197,10 +197,10 @@ export default function AIEmployeesTransformingBusinessContent() {
                                     Running a small business means wearing many hats. One moment you're answering emails, the next you're posting on social media.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>Most small business owners spend over 60% of their time on tasks that could be automated</strong>. According to <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">McKinsey's research on AI productivity</a>, that's where AI employees come in.
+                                    <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">McKinsey estimates</a> that today's technology could, in theory, automate work activities that take up 60 to 70 percent of employees' time. That is where AI employees come in.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    For more on small business best practices, the <a href="https://www.sba.gov/business-guide/launch-your-business" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">U.S. Small Business Administration</a> offers excellent resources.
+                                    Want the short version: what an AI employee is, what it costs and how to hire one? Read our guide to <a href="/ai-employee-for-small-business" className="text-primary-600 hover:underline font-medium">hiring an AI employee for your small business</a>, or see <a href="/done-for-you-ai-agents" className="text-primary-600 hover:underline font-medium">done-for-you AI agents</a> if you want us to build and run it.
                                 </p>
                             </div>
                         </section>
