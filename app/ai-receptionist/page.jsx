@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HearItFirst from '@/components/HearItFirst';
 import {
     CalendarCheck,
     ListChecks,
@@ -158,6 +159,7 @@ export default async function AiReceptionistPage(props) {
                         <p className="mt-5 text-sm font-medium text-slate-600">
                             {PILOT_PROMISE} <Link href={bookHref} className="underline">Questions? Book a free call.</Link>
                         </p>
+                        <HearItFirst source="ai-receptionist" />
                     </div>
                 </section>
 
