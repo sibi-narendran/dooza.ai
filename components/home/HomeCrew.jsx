@@ -78,7 +78,7 @@ export default function HomeCrew() {
                     <Link href="/blog" className="hover:text-[#14213D]">Blog</Link>
                 </nav>
                 <a href={crewSignupUrl('home-header')} data-offer="crew" data-source="home-header" className="rounded-full bg-[#14213D] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#0F766E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">
-                    Start free
+                    Try it free
                 </a>
             </header>
 
@@ -87,10 +87,10 @@ export default function HomeCrew() {
                     <div>
                         <p className="text-base font-semibold text-[#0F766E]">Dooza Crew</p>
                         <h1 className="mt-3 text-[42px] font-extrabold leading-[1.02] tracking-[-0.035em] md:text-[64px]">
-                            AI employees that run your business with your team.
+                            Hire your first AI employee in 2 minutes.
                         </h1>
                         <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#46566E] md:text-xl">
-                            Each one has its own computer, browser, card and phone number. Put them in a group with your staff and run sales, service and admin from one chat.
+                            Give it a job in plain words and watch it work on its own computer, with a browser, a phone number and a card. Add your staff to the same chat. Free for 7 days.
                         </p>
                         <div className="mt-9 max-w-xl">
                             <CrewPrompt placement="home-hero" tone="light" />
@@ -102,7 +102,7 @@ export default function HomeCrew() {
                 <section className="border-t border-[#D5DEE8] bg-white px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
                         <SectionTitle sub="Whatever you can do on a computer, your AI crew can do. These are the tools every AI employee starts with.">
-                            Every AI employee gets a desk.
+                            It works like a real employee.
                         </SectionTitle>
                         <dl className="divide-y divide-[#E3E9F0] border-y border-[#E3E9F0]">
                             {kit.map((k) => (
@@ -118,7 +118,7 @@ export default function HomeCrew() {
                 <section className="px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
                         <SectionTitle sub="Your people and your AI employees share one group. Anyone can hand out a job. Nothing is sent or paid until a person you choose approves it.">
-                            Run the whole business inside.
+                            Hand it whole departments.
                         </SectionTitle>
                         <dl className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
                             {departments.map((d) => (
@@ -133,7 +133,7 @@ export default function HomeCrew() {
 
                 <section id="how" className="scroll-mt-8 border-t border-[#D5DEE8] bg-white px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
-                        <SectionTitle>Set up in a few minutes.</SectionTitle>
+                        <SectionTitle>Start in 2 minutes.</SectionTitle>
                         <ol className="mt-12 grid gap-10 md:grid-cols-3">
                             {steps.map((s, i) => (
                                 <li key={s.title}>
@@ -149,7 +149,7 @@ export default function HomeCrew() {
                 <section id="price" className="scroll-mt-8 bg-[#14213D] px-4 py-20 text-white md:px-8 md:py-28">
                     <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h2 className="text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[44px]">Try your crew free for 7 days.</h2>
+                            <h2 className="text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[44px]">Try it free for 7 days.</h2>
                             <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/75">
                                 Then $49 a month for your whole crew, with $20 of AI usage included. Cancel any time in the trial and you pay nothing.
                             </p>

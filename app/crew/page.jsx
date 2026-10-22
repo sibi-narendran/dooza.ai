@@ -1,6 +1,5 @@
 // /crew: Dooza Crew, the hosted AI agent team (built by @daedalus, Sibi 2026-10-22). Copy and claim limits from
-// Daedalus's spec (/home/daedalus/work/drafts/product_page_spec.md) + work/ORDERS.md. DRAFT on branch crew-draft: ship
-// only on Daedalus's "live", then drop the noindex below and add /crew to app/sitemap.js.
+// Daedalus's spec (/home/daedalus/work/drafts/product_page_spec.md) + work/ORDERS.md. Live since 2026-10-22 (Daedalus 'live' 16:06).
 // Landing in Grok's style (Sibi 15:53): one prompt box is the hero, monochrome ink, nothing competing with it.
 // Crew price and CTA live only here (Sibi 15:34: each page keeps its own offer).
 // Do not claim: SOC2/compliance, unlimited usage, model names, uptime, user counts, "built-in" integrations.
@@ -64,7 +63,6 @@ export const metadata = {
     title: { absolute: TITLE },
     description: DESCRIPTION,
     alternates: { canonical: `${SITE_URL}${PATH}` },
-    robots: { index: false, follow: true }, // DRAFT: remove on live
     openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, type: 'website' },
     twitter: { card: 'summary', title: TITLE, description: DESCRIPTION },
 };

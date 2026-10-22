@@ -49,18 +49,18 @@ export default function CrewPrompt({ placement = 'crew-hero', tone = 'dark', cen
                     onChange={(e) => setTask(e.target.value)}
                     onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) go(e); }}
                     rows={3}
-                    placeholder="What should your crew do?"
+                    placeholder="What should your AI employee do?"
                     className={`block w-full resize-none bg-transparent px-3 py-2 text-lg focus:outline-none ${t.input}`}
                 />
                 <div className="flex items-center justify-between gap-3 px-2 pb-1 pt-2">
-                    <span className={`text-xs ${t.hint}`}>Free for 7 days, then $49 a month</span>
+                    <span className={`text-xs ${t.hint}`}>Free for 7 days, then $49/mo. Cancel anytime.</span>
                     <button
                         type="submit"
                         data-offer="crew"
                         data-source={placement}
                         className={`shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${t.button}`}
                     >
-                        Start your crew
+                        Try it free
                     </button>
                 </div>
             </form>
