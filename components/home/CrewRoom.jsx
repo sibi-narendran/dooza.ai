@@ -79,7 +79,7 @@ function FileEvent({ name, meta }) {
 function SpendEvent() {
     return (
         <div className="mt-1 rounded-2xl border border-[#E2E8F0] bg-white px-4 py-3">
-            <div className="flex items-baseline justify-between text-sm text-[#14213D]">
+            <div className="flex min-w-[240px] items-baseline justify-between gap-4 text-sm text-[#14213D]">
                 <span className="font-semibold">$0.84 of $20 this month</span>
                 <span className="text-xs text-[#64748B]">hard cap</span>
             </div>
