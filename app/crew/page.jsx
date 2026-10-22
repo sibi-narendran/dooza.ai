@@ -74,13 +74,15 @@ export default function CrewPage() {
                 <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
             ))}
             <div className="min-h-screen bg-[#0B1220] text-white">
-                <header className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 md:px-8">
+                <div className="sticky top-0 z-40 border-b border-white/10 bg-[#0B1220]/95 backdrop-blur">
+                <header className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8 md:py-4">
                     <Link href="/" className="flex items-center gap-2">
                         <Image src="/logo.png" alt="Dooza" width={28} height={28} className="rounded" />
                         <span className={`${display.className} text-lg font-bold`}>Dooza Crew</span>
                     </Link>
                     <a href={signup('crew-header')} data-offer="crew" data-source="crew-header" className="rounded-full border border-white/25 px-4 py-2 text-sm font-semibold hover:border-white/60">Sign in or start</a>
                 </header>
+                </div>
 
                 <main>
                     <section className="flex min-h-[78vh] items-center px-4 pb-16 pt-10 md:px-8">

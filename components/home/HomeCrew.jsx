@@ -66,7 +66,8 @@ function SectionTitle({ children, sub }) {
 export default function HomeCrew() {
     return (
         <div className={`${display.className} crew-home bg-[#EEF3F7] text-[#14213D]`}>
-            <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-5 md:px-8">
+            <div className="sticky top-0 z-40 border-b border-[#D5DEE8]/70 bg-[#EEF3F7]/95 backdrop-blur">
+            <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8 md:py-4">
                 <Link href="/" className="flex items-center gap-2">
                     <Image src="/logo.png" alt="Dooza" width={30} height={30} className="rounded" />
                     <span className="text-lg font-extrabold tracking-[-0.02em]">Dooza</span>
@@ -81,6 +82,7 @@ export default function HomeCrew() {
                     Try it free
                 </a>
             </header>
+            </div>
 
             <main id="main-content">
                 <section className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-8 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pt-16">
