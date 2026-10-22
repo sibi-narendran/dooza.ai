@@ -236,6 +236,11 @@ const staticPages = [
 
 const productPages = [
     {
+        title: 'Dooza Crew (self-serve AI agent team)',
+        url: 'https://crew.dooza.ai/?utm_source=llms&utm_medium=aeo',
+        description: 'Self-serve AI agent team: a master agent plus helper agents it creates and briefs, each user\'s agents in their own gVisor sandbox with their own headless browser and files, managed from a private chat app on web or phone. 7-day free trial (card required), then $49/month including $20 of AI usage.',
+    },
+    {
         title: 'Dooza Agents (AI agentic platform)',
         url: SITE_URL,
         description: 'Custom AI agents built and maintained by Dooza engineers, live in days, with your approval on anything sensitive. Starts with a refundable pilot.',
@@ -402,6 +407,7 @@ const companyFacts = [
     'Founder: Sibi Narendran (https://sibinarendran.com)',
     'Brand colors: Dooza Teal #0F766E (primary), Teal Bright #0D9488, Ink #0F172A, Warm White #FAF9F7, Signal Amber #F59E0B',
     'What Dooza is: an AI-native company that builds AI products and services for small businesses',
+    'Self-serve product: Dooza Crew (https://crew.dooza.ai), your own AI agent team in a private sandbox, 7-day free trial then $49/month including $20 of AI usage',
     'Product: Dooza Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
     'Services (done for you): Dooza Managed (AI admin assistant checked by a real person), Dooza AI answering service (AI receptionist), custom AI agents scoped on a free 30-minute call, industry offers on their industry pages',
     'Offers: Dooza Managed is free for the first 7 days, then $200/month. The AI answering service is $149/month, full refund if you cancel within 14 days of the first charge. Custom AI agents start with a paid, refundable pilot (100% refund within 14 days), scoped by a Dooza engineer on a free 30-minute call.',
@@ -503,6 +509,7 @@ export async function GET() {
         `RSS: ${SITE_URL}/rss.xml`,
         '',
         '## Offers and trials',
+        '- Dooza Crew (self-serve AI agent team, https://crew.dooza.ai): 7-day free trial (card required), then $49/month including $20 of AI usage.',
         '- Dooza Managed (AI admin assistant checked by a real person): first 7 days free, then $200/month.',
         '- Dooza AI answering service: $149/month for up to 500 minutes; full refund if you cancel within 14 days of the first charge.',
         '- Custom AI agents start with a paid, refundable pilot: 100% refund within 14 days. The 30-minute call to scope it is free.',
