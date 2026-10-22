@@ -163,7 +163,7 @@ export default function GarageDoorAnsweringServicePage() {
                                     </tbody>
                                 </table>
                             </div>
-                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>.</p>
+                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>. Not trade-specific? See the <Link href="/ai-answering-service-for-small-business" className="text-primary-700 underline">AI answering service for small business</Link> ($149/mo, 500 minutes).</p>
                         </section>
 
                         <section className="mt-14">
