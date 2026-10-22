@@ -94,6 +94,9 @@ export default function HomeCrew() {
                         </p>
                         <div className="mt-9 max-w-xl">
                             <CrewPrompt placement="home-hero" tone="light" />
+                            <p className="mt-4 text-sm text-[#46566E]">
+                                Rather talk first? <Link href="/book" data-source="home-hero-book" className="font-semibold text-[#0F766E] underline underline-offset-4 hover:text-[#14213D]">Book a 30-minute call</Link>.
+                            </p>
                         </div>
                     </div>
                     <CrewRoom />
@@ -175,6 +178,9 @@ export default function HomeCrew() {
                                 </li>
                             ))}
                         </ul>
+                        <p className="mt-6 text-[17px] text-[#46566E]">
+                            Not sure which fits? <Link href="/book" data-source="home-dfy-book" className="font-semibold text-[#0F766E] underline underline-offset-4 hover:text-[#14213D]">Book a 30-minute call</Link> and we will tell you.
+                        </p>
                     </div>
                 </section>
 
