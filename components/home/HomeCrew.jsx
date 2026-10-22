@@ -120,7 +120,7 @@ export default function HomeCrew() {
                             preload="none"
                             poster="/video/dooza-crew-new-teammate.jpg"
                         >
-                            <source src="/video/dooza-crew-new-teammate.mp4" type="video/mp4" />
+                            <source src="/media/dooza-crew-new-teammate.mp4" type="video/mp4" />
                         </video>
                     </div>
                 </section>
