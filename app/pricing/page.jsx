@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar';
+import HearItFirst from '@/components/HearItFirst';
 import TalkNowStrip from '@/components/TalkNowStrip';
 import OfferCards from '@/components/OfferCards';
 import Footer from '@/components/Footer';
@@ -52,6 +53,7 @@ export default function PricingPage() {
                             </div>
                             <div className="mt-10 px-4">
                                 <OfferCards source="pricing" only={['answering', 'managed']} />
+                                <HearItFirst source="pricing" />
                                 <p className="mt-4 text-center text-sm text-slate-600"><a href="/ai-admin-assistant" className="font-semibold text-primary-700 underline">What Dooza Managed does, and how it compares with a virtual assistant</a></p>
                             </div>
                         </section>

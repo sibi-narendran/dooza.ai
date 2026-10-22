@@ -1,4 +1,5 @@
 import BookingModalProvider from '@/components/BookingModalProvider';
+import HearItFirst from '@/components/HearItFirst';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -135,6 +136,7 @@ export default function AiReceptionistCostCalculatorPage() {
                             <p>
                                 Dooza’s <Link href="/ai-answering-service-for-small-business">AI answering service</Link> answers when you can’t, takes the caller’s message and emails it to you with the transcript: $149 a month for up to 500 minutes, then $0.30 a minute, month to month. It does not book onto calendars or send texts.
                             </p>
+                            <HearItFirst source="ai-receptionist-cost-calculator" />
                         </section>
 
                         <section className="mt-12">
