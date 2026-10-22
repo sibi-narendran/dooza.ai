@@ -77,7 +77,7 @@ export default function OfferCards({ source = 'unknown', only }) {
                     </ul>
                     <div className="mt-auto pt-6">
                         <a href={o.pay} data-offer={o.id} data-source={source} className="block rounded-full bg-primary-700 px-6 py-3 text-center font-bold text-white hover:bg-primary-800">{o.cta || 'Start 7 days free'}</a>
-                        <a href={`/book?utm_source=website&utm_medium=offer&utm_content=${o.id}_${source}`} className="mt-3 block text-center text-sm font-semibold text-primary-700 underline">Or book a 15-min call first</a>
+                        <a href={`/book?utm_source=website&utm_medium=offer&utm_content=${o.id}_${source}`} className="mt-3 block text-center text-sm font-semibold text-primary-700 underline">Or book a free 30-min call first</a>
                         {o.more && <a href={o.more.href} className="mt-2 block text-center text-sm text-slate-600 underline">{o.more.label}</a>}
                         <p className="mt-3 text-center text-xs text-slate-500">{o.note}</p>
                     </div>

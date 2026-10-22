@@ -133,7 +133,7 @@ function Cta() {
                 </a>
             </div>
             <p className="mt-3 text-sm text-slate-600">
-                Email us your state; we reply the same day with the payment link if it is open. Paid first, month to month, cancel any time. Rather talk? <Link href={BOOK} className="font-semibold text-primary-700 underline">Book 15 minutes</Link>.
+                Email us your state; we reply the same day with the payment link if it is open. Paid first, month to month, cancel any time. Rather talk? <Link href={BOOK} className="font-semibold text-primary-700 underline">Book a free 30-minute call</Link>.
             </p>
         </div>
     );

@@ -44,6 +44,7 @@ function normalizeArticleHeadings(html) {
 
 export default function DynamicBlogContent({ post }) {
     const tocData = post.tocData || [];
+    const isAnswering = /receptionist|answering|call-assistant|missed-call/.test(post.slug || '');
     const articleContent = normalizeArticleHeadings(post.content);
 
     return (
@@ -94,14 +95,13 @@ export default function DynamicBlogContent({ post }) {
                                 <TocSidebar tocData={tocData} />
 
                                 <div className="mt-8 pt-6 border-t border-slate-200">
-                                    <p className="text-sm text-slate-600 mb-4">Automate your business with AI</p>
+                                    <p className="text-sm text-slate-600 mb-4">{isAnswering ? 'Stop missing calls: $149/month' : 'Automate your business with AI'}</p>
                                     <a
-                                        href={getProductSignupUrl('workforce')}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                        href={isAnswering ? '/ai-answering-service-for-small-business' : getProductSignupUrl('workforce')}
+                                        {...(isAnswering ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
                                         className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                     >
-                                        Start your pilot
+                                        {isAnswering ? 'See the answering service' : 'Start your pilot'}
                                     </a>
                                 </div>
 
@@ -146,6 +146,28 @@ export default function DynamicBlogContent({ post }) {
                         )}
 
                         {/* CTA Block */}
+                        {isAnswering ? (
+                        <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Stop Missing Calls for $149/Month</h3>
+                            <p className="text-slate-600 mb-6 max-w-xl mx-auto">
+                                Dooza&apos;s AI answering service picks up 24/7, asks your questions and emails you the message, transcript and recording link. Up to 500 minutes, month to month, full refund if you cancel within 14 days of the first charge.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a
+                                    href="/ai-answering-service-for-small-business"
+                                    className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all sm:w-auto"
+                                >
+                                    See how it works <ArrowRight className="w-4 h-4" />
+                                </a>
+                                <a
+                                    href={getBookingUrlWithUtm('blog', 'cta', post.slug)}
+                                    className="inline-flex w-full items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all sm:w-auto"
+                                >
+                                    <Calendar className="w-4 h-4" /> Book a free 30-minute call
+                                </a>
+                            </div>
+                        </div>
+                        ) : (
                         <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                             <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Start Your Pilot?</h3>
                             <p className="text-slate-600 mb-6 max-w-xl mx-auto">
@@ -168,6 +190,7 @@ export default function DynamicBlogContent({ post }) {
                                 </a>
                             </div>
                         </div>
+                        )}
 
                         <RelatedPosts
                             currentSlug={post.slug}

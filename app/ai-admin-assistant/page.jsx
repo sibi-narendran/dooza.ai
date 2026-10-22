@@ -106,7 +106,7 @@ export default function AiAdminAssistantPage() {
                             <p className="mt-4 text-slate-600">Updated {UPDATED_LABEL}.</p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                                 <a href={MANAGED_PAY_URL} data-offer="managed" data-source="ai-admin-assistant-hero" className="rounded-full bg-primary-700 px-7 py-3 text-center font-bold text-white hover:bg-primary-800">Start 7 days free</a>
-                                <a href={BOOK} className="rounded-full border border-slate-300 bg-white px-7 py-3 text-center font-semibold text-slate-800 hover:border-slate-400">Book a 15-min call first</a>
+                                <a href={BOOK} className="rounded-full border border-slate-300 bg-white px-7 py-3 text-center font-semibold text-slate-800 hover:border-slate-400">Book a free 30-min call first</a>
                             </div>
                             <ManagedTaskFlow className="mt-10" />
                         </div>
