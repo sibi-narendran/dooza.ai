@@ -207,8 +207,8 @@ export default function BrandPage() {
                                 <Link href="/pricing" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai/pricing →</Link>
                             </div>
                             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Agents</h3>
-                                <p className="mt-1 text-sm leading-relaxed text-slate-600">AI agentic platform: custom AI agents built and maintained by Dooza engineers. Starts with a refundable pilot.</p>
+                                <h3 className="font-sans text-lg font-extrabold text-slate-950">Dooza Crew</h3>
+                                <p className="mt-1 text-sm leading-relaxed text-slate-600">AI employees with their own computer, browser and phone, in one chat with your staff. Free for 7 days, then $49 a month.</p>
                                 <Link href="/" className="mt-3 inline-block text-sm font-bold text-primary-700 hover:text-primary-900">dooza.ai →</Link>
                             </div>
                         </div>
