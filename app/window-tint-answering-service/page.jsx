@@ -11,8 +11,9 @@ const PATH = '/window-tint-answering-service';
 const PAY_URL = recepPayUrl('window-tint-answering-service');
 const TITLE = 'AI Receptionist for Window Tint Shops: Prices (2026)';
 
-// Example window tint shop: 100 calls a month, about 3 minutes each (car tint quote, film type, tint law, home or office film quote).
-const SCENARIO = { calls: 100, avgMinutes: 3, uniqueShare: 1 };
+// Example window tint shop: 80 calls a month, about 2 minutes each (mostly short price-check calls: vehicle, film type, when).
+// Own scenario on purpose: sibling trade pages use 100x3 (garage door) and 120x4 (HVAC, plumbing), so this table differs.
+const SCENARIO = { calls: 80, avgMinutes: 2, uniqueShare: 1 };
 const rows = compareReceptionistCosts(SCENARIO).filter((r) => r.result);
 const ai = rows.filter((r) => r.kind === 'ai');
 const human = rows.filter((r) => r.kind === 'human');
@@ -20,7 +21,7 @@ const money = (n) => `$${n.toLocaleString('en-US', Number.isInteger(n) ? {} : { 
 const aiRange = `${money(ai[0].result.cost)} to ${money(ai[ai.length - 1].result.cost)}`;
 const humanRange = `${money(human[0].result.cost)} to ${money(human[human.length - 1].result.cost)}`;
 
-const DESCRIPTION = `What an AI receptionist or answering service costs a window tint or window film shop at 100 calls a month: ${ai.length} AI receptionists and ${human.length} human answering services at list prices checked Oct 2026, plus Dooza at $149/month.`;
+const DESCRIPTION = `What an AI receptionist or answering service costs a window tint or window film shop at 80 calls a month: ${ai.length} AI receptionists and ${human.length} human answering services at list prices checked Oct 2026, plus Dooza at $149/month.`;
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -33,7 +34,7 @@ export const metadata = {
 const faqItems = [
     {
         question: 'How much does an answering service cost a window tint shop?',
-        answer: `For an example window tint shop taking 100 calls a month at about 3 minutes each (300 minutes), AI answering services cost ${aiRange} a month and human answering services cost ${humanRange} a month at list prices checked October 6–14, 2026. Dooza’s AI answering service is $149 a month for up to 500 minutes.`,
+        answer: `For an example window tint shop taking 80 calls a month at about 2 minutes each (160 minutes), AI answering services cost ${aiRange} a month and human answering services cost ${humanRange} a month at list prices checked October 6–14, 2026. Dooza’s AI answering service is $149 a month for up to 500 minutes.`,
     },
     {
         question: 'AI receptionist or human answering service for a tint shop?',
@@ -110,7 +111,7 @@ export default function WindowTintAnsweringServicePage() {
                             <span className="mb-4 inline-block rounded-full bg-primary-50 px-3 py-1 text-xs font-semibold text-primary-700">Prices checked October 6–14, 2026</span>
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">AI Receptionist for Window Tint Shops: What It Costs, AI vs Human</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
-                                <strong>For a window tint shop taking 100 calls a month at about 3 minutes each, an AI answering service costs {aiRange} a month and a human answering service costs {humanRange}, at public list prices.</strong>{' '}
+                                <strong>For a window tint shop taking 80 calls a month at about 2 minutes each, an AI answering service costs {aiRange} a month and a human answering service costs {humanRange}, at public list prices.</strong>{' '}
                                 The full table is below. Dooza’s AI answering service is $149 a month for up to 500 minutes: it answers the calls you miss and emails you each message with the transcript.
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
@@ -131,9 +132,9 @@ export default function WindowTintAnsweringServicePage() {
                         </section>
 
                         <section className="mt-14">
-                            <h2 className="text-2xl font-bold text-slate-900">Window tint shop answering service prices: 100 calls a month</h2>
+                            <h2 className="text-2xl font-bold text-slate-900">Window tint shop answering service prices: 80 calls a month</h2>
                             <p className="mt-3 text-slate-700">
-                                100 calls at about 3 minutes each is 300 minutes. Each row is the cheapest published plan that covers that usage plus published overage, from the vendor’s own pricing page (linked), checked October 6–14, 2026. We sell one of these, so check the pricing pages yourself. Change the numbers in the <Link href="/ai-receptionist-cost-calculator" className="text-primary-700 underline">cost calculator</Link>. Other trades: <Link href="/hvac-answering-service" className="text-primary-700 underline">HVAC</Link>, <Link href="/plumbing-answering-service" className="text-primary-700 underline">plumbing</Link> and <Link href="/garage-door-answering-service" className="text-primary-700 underline">garage door</Link> answering service prices.
+                                80 calls at about 2 minutes each is 160 minutes (our example assumes mostly short price-check calls: vehicle, film, when). At that length Dooza’s 500 included minutes cover about 250 calls a month. Each row is the cheapest published plan that covers that usage plus published overage, from the vendor’s own pricing page (linked), checked October 6–14, 2026. We sell one of these, so check the pricing pages yourself. Change the numbers in the <Link href="/ai-receptionist-cost-calculator" className="text-primary-700 underline">cost calculator</Link>. Other trades: <Link href="/hvac-answering-service" className="text-primary-700 underline">HVAC</Link>, <Link href="/plumbing-answering-service" className="text-primary-700 underline">plumbing</Link> and <Link href="/garage-door-answering-service" className="text-primary-700 underline">garage door</Link> answering service prices.
                             </p>
                             <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
                                 <table className="w-full text-sm">
