@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HearItFirst from '@/components/HearItFirst';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -118,6 +119,7 @@ export default function GarageDoorAnsweringServicePage() {
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">Month to month. Cancel within 14 days of your first charge for a full refund.</p>
+                            <HearItFirst source="garage-door-answering-service" />
                         </section>
 
                         <section className="mt-14">
