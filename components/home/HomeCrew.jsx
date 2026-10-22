@@ -11,6 +11,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import CrewPrompt from '@/components/crew/CrewPrompt';
 import { crewSignupUrl } from '@/lib/crewUrl';
 import CrewRoom from '@/components/home/CrewRoom';
+import { testimonials } from '@/lib/homeData';
 
 const display = Schibsted_Grotesk({ subsets: ['latin'], weight: ['500', '600', '700', '800'], display: 'swap' });
 
@@ -53,6 +54,9 @@ export const homeFaq = [
     { question: 'Can I start today?', answer: 'Seats are limited. When they are full you can join the waitlist and we email you when a seat opens.' },
     { question: 'Do you still build AI agents for us?', answer: 'Yes. If you would rather we do it for you, see Dooza Managed, custom AI agents and the AI answering service. Each has its own page and price.' },
 ];
+
+// Testimonials are from Dooza customers on the same AI-employee product before it was named Crew (Sibi 2026-10-22 17:18).
+const quoteSource = (q) => q.website || q.linkedin;
 
 function SectionTitle({ children, sub }) {
     return (
@@ -104,6 +108,23 @@ export default function HomeCrew() {
                     <CrewRoom />
                 </section>
 
+                {/* Brand film (Sibi 2026-10-22 17:18). 720p re-encode, 8.7 MB; loads only on play. */}
+                <section aria-labelledby="film-title" className="bg-[#0F172A] px-4 py-16 text-white md:px-8 md:py-24">
+                    <div className="mx-auto max-w-5xl">
+                        <h2 id="film-title" className="text-center text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[44px]">Meet your new teammate.</h2>
+                        <p className="mx-auto mt-4 max-w-xl text-center text-lg text-white/70">100 seconds on what it is like to work with an AI employee.</p>
+                        <video
+                            className="mt-10 aspect-video w-full rounded-2xl bg-black shadow-2xl"
+                            controls
+                            playsInline
+                            preload="none"
+                            poster="/video/dooza-crew-new-teammate.jpg"
+                        >
+                            <source src="/video/dooza-crew-new-teammate.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </section>
+
                 <section className="border-t border-[#E2E8F0] bg-white px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
                         <SectionTitle sub="Whatever you can do on a computer, your AI crew can do. These are the tools every AI employee starts with.">
@@ -133,6 +154,32 @@ export default function HomeCrew() {
                                 </div>
                             ))}
                         </dl>
+                    </div>
+                </section>
+
+                <section aria-labelledby="customers-title" className="border-t border-[#E2E8F0] bg-white px-4 py-20 md:px-8 md:py-28">
+                    <div className="mx-auto max-w-7xl">
+                        <h2 id="customers-title" className="max-w-2xl text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[44px]">What teams say about their AI employees.</h2>
+                        <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            {testimonials.map((q) => (
+                                <li key={q.author} className="flex flex-col rounded-2xl border border-[#E2E8F0] bg-[#FAF9F7] p-7">
+                                    <blockquote className="flex-1 text-[17px] leading-relaxed text-[#0F172A]">&ldquo;{q.quote}&rdquo;</blockquote>
+                                    <div className="mt-6 flex items-center gap-4">
+                                        <span className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#E2E8F0] bg-white">
+                                            <Image src={q.logo} alt={q.author} width={56} height={56} className="h-full w-full object-contain p-1" />
+                                        </span>
+                                        <div className="min-w-0">
+                                            {quoteSource(q) ? (
+                                                <a href={quoteSource(q)} target="_blank" rel="noopener noreferrer" className="font-bold hover:text-[#0F766E]">{q.author}</a>
+                                            ) : (
+                                                <p className="font-bold">{q.author}</p>
+                                            )}
+                                            <p className="text-sm text-[#475569]">{q.role}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </section>
 
