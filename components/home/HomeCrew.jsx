@@ -247,7 +247,15 @@ export default function HomeCrew() {
                             </p>
                             <p className="mt-4 text-[15px] text-white/75">Seats are limited. When they are full, join the waitlist.</p>
                         </div>
-                        <CrewPrompt placement="home-price" />
+                        {/* One chat box on the page (Sibi 2026-10-22 20:17): price and bottom sections link to sign-up and offer a call or text. */}
+                        <div className="rounded-2xl bg-white p-7 text-[#14213D] md:p-9">
+                            <a href={crewSignupUrl('home-price')} data-source="home-price" className="block rounded-xl bg-[#0F766E] px-6 py-4 text-center text-lg font-semibold text-white hover:bg-[#115E59]">Start your free trial</a>
+                            <p className={`mt-6 text-[17px] ${MUTED}`}>Questions first? Talk to us at Dooza.</p>
+                            <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-[17px]">
+                                <a href="tel:+14243658980" data-source="home-price-call" className={LINK}>Call +1 (424) 365-8980</a>
+                                <a href="sms:+12137192533" data-source="home-price-text" className={LINK}>Text +1 (213) 719-2533</a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -284,8 +292,10 @@ export default function HomeCrew() {
                 <section className="px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
                         <h2 className={`${D} max-w-[16ch] text-[40px] font-extrabold leading-[0.98] tracking-[-0.04em] md:text-[72px]`}>Give your crew its first job.</h2>
-                        <div className="mt-10 max-w-2xl">
-                            <CrewPrompt placement="home-bottom" tone="light" />
+                        <div className="mt-10 flex max-w-2xl flex-wrap items-center gap-x-8 gap-y-4">
+                            <a href={crewSignupUrl('home-bottom')} data-source="home-bottom" className="rounded-xl bg-[#0F766E] px-7 py-4 text-lg font-semibold text-white hover:bg-[#115E59]">Start your free trial</a>
+                            <a href="tel:+14243658980" data-source="home-bottom-call" className={`text-[17px] ${LINK}`}>Call us: +1 (424) 365-8980</a>
+                            <a href="sms:+12137192533" data-source="home-bottom-text" className={`text-[17px] ${LINK}`}>Text us: +1 (213) 719-2533</a>
                         </div>
                     </div>
                 </section>
