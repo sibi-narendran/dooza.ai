@@ -206,7 +206,7 @@ export default function DynamicBlogContent({ post }) {
                 </div>
             </div>
 
-            <BottomCTA />
+            {!isAnswering && <BottomCTA />}
             <Footer />
         </div>
     );
