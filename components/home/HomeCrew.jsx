@@ -3,17 +3,22 @@
 // voice calls, groups with human staff). Price per Daedalus 15:56 (Sibi 15:46): free 7-day trial, then $49/month.
 // Do not claim: user counts, uptime, SOC2/compliance, model names, "built-in" integrations.
 // The other bets keep their own pages and offers (Sibi 15:34); this page only links to them.
-// Design: light mist + ink, teal = AI. One bold element (CrewRoom); everything else quiet.
+// Design v3 (Sibi 2026-10-22 17:59, frontend-design skill): the subject is staffing, so the page borrows its vernacular.
+// Colour carries meaning: teal = AI employee, amber = a person on your staff. Paper white + cool sage wash (no cream),
+// ink #14213D. Bricolage Grotesque for display, Instrument Sans for reading. One bold element: the live group chat (CrewRoom) beside a full-width
+// headline. The org chart is the one structural device, because it shows the real point: AI and staff on one team.
 import Link from 'next/link';
 import Image from 'next/image';
-import { Schibsted_Grotesk } from 'next/font/google';
+import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import FAQAccordion from '@/components/FAQAccordion';
 import CrewPrompt from '@/components/crew/CrewPrompt';
 import { crewSignupUrl } from '@/lib/crewUrl';
 import CrewRoom from '@/components/home/CrewRoom';
 import { testimonials } from '@/lib/homeData';
 
-const display = Schibsted_Grotesk({ subsets: ['latin'], weight: ['500', '600', '700', '800'], display: 'swap' });
+const display = Bricolage_Grotesque({ subsets: ['latin'], weight: ['600', '700', '800'], display: 'swap' });
+const body = Instrument_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap' });
+const D = display.className;
 
 export const PRICE_LINE = 'Free for 7 days, then $49 a month with $20 of AI usage included. Cancel any time in the trial and pay nothing.';
 
@@ -58,65 +63,130 @@ export const homeFaq = [
 // Testimonials are from Dooza customers on the same AI-employee product before it was named Crew (Sibi 2026-10-22 17:18).
 const quoteSource = (q) => q.website || q.linkedin;
 
-function SectionTitle({ children, sub }) {
-    return (
-        <div className="max-w-2xl">
-            <h2 className={`${display.className} text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] text-[#0F172A] md:text-[44px]`}>{children}</h2>
-            {sub ? <p className="mt-4 text-lg leading-relaxed text-[#475569]">{sub}</p> : null}
-        </div>
-    );
+const INK = 'text-[#14213D]';
+const MUTED = 'text-[#4B5567]';
+const H2 = `${D} text-[34px] font-bold leading-[1.05] tracking-[-0.03em] md:text-[52px]`;
+const LINK = 'font-semibold text-[#0F766E] underline decoration-2 underline-offset-4 hover:text-[#14213D]';
+
+function Seat({ kind }) {
+    // Small legend dot: teal = AI employee, amber = person on your staff.
+    return <span aria-hidden="true" className={`inline-block h-2.5 w-2.5 shrink-0 rounded-full ${kind === 'ai' ? 'bg-[#0F766E]' : 'bg-[#F2B53A]'}`} />;
 }
 
 export default function HomeCrew() {
     return (
-        <div className={`${display.className} crew-home bg-[#FAF9F7] text-[#0F172A]`}>
+        <div className={`${body.className} crew-home bg-white ${INK}`}>
             {/* fixed, not sticky: iOS Safari drops sticky under body overflow-x (Sibi 17:57 bar left on scroll) */}
-            <div className="fixed inset-x-0 top-0 z-40 border-b border-[#E2E8F0]/70 bg-[#FAF9F7]/95 backdrop-blur">
-            <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8 md:py-4">
-                <Link href="/" className="flex items-center gap-2">
-                    <Image src="/logo.png" alt="Dooza" width={30} height={30} className="rounded" />
-                    <span className="text-lg font-extrabold tracking-[-0.02em]">Dooza</span>
-                </Link>
-                <nav aria-label="Main" className="hidden items-center gap-7 text-[15px] font-medium text-[#475569] md:flex">
-                    <a href="#how" className="hover:text-[#0F172A]">How it works</a>
-                    <a href="#price" className="hover:text-[#0F172A]">Price</a>
-                    <a href="#done-for-you" className="hover:text-[#0F172A]">Done for you</a>
-                    <Link href="/blog" className="hover:text-[#0F172A]">Blog</Link>
-                </nav>
-                <a href={crewSignupUrl('home-header')} data-offer="crew" data-source="home-header" className="rounded-full bg-primary-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F172A]">
-                    Try it free
-                </a>
-            </header>
+            <div className="fixed inset-x-0 top-0 z-40 border-b border-[#14213D]/10 bg-white/95 backdrop-blur">
+                <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8 md:py-4">
+                    <Link href="/" className="flex items-center gap-2">
+                        <Image src="/logo.png" alt="Dooza" width={30} height={30} className="rounded" />
+                        <span className={`${D} text-lg font-bold tracking-[-0.02em]`}>Dooza</span>
+                    </Link>
+                    <nav aria-label="Main" className={`hidden items-center gap-7 text-[15px] font-medium md:flex ${MUTED}`}>
+                        <a href="#how" className="hover:text-[#14213D]">How it works</a>
+                        <a href="#price" className="hover:text-[#14213D]">Price</a>
+                        <a href="#done-for-you" className="hover:text-[#14213D]">Done for you</a>
+                        <Link href="/blog" className="hover:text-[#14213D]">Blog</Link>
+                    </nav>
+                    <a href={crewSignupUrl('home-header')} data-offer="crew" data-source="home-header" className="rounded-full bg-[#0F766E] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#14213D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">
+                        Try it free
+                    </a>
+                </header>
             </div>
             <div aria-hidden="true" className="h-[65px] md:h-[73px]" />
 
             <main id="main-content">
-                <section className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-8 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pt-16">
-                    <div>
-                        <p className="text-base font-semibold text-[#0F766E]">Dooza Crew</p>
-                        <h1 className="mt-3 text-[42px] font-extrabold leading-[1.02] tracking-[-0.035em] md:text-[64px]">
-                            Hire your first AI employee in 2 minutes.
-                        </h1>
-                        <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#475569] md:text-xl">
-                            Give it a job in plain words and watch it work on its own computer, with a browser, a phone number and a card. Add your staff to the same chat. Free for 7 days.
-                        </p>
-                        <div className="mt-9 max-w-xl">
-                            <CrewPrompt placement="home-hero" tone="light" />
-                            <p className="mt-4 text-sm text-[#475569]">
-                                Rather talk first? <Link href="/book" data-source="home-hero-book" className="font-semibold text-[#0F766E] underline underline-offset-4 hover:text-[#0F172A]">Book a 30-minute call</Link>.
+                <section className="relative overflow-hidden">
+                    {/* Faint floor-plan grid: the crew's office. Decoration only. */}
+                    <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[linear-gradient(#14213D0D_1px,transparent_1px),linear-gradient(90deg,#14213D0D_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
+                    <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-10 md:px-8 lg:pb-28 lg:pt-20">
+                    <h1 className={`${D} max-w-[15ch] text-[46px] font-extrabold leading-[0.95] tracking-[-0.045em] sm:text-[64px] lg:text-[104px]`}>
+                        Hire your first AI employee in 2 minutes.
+                    </h1>
+                    <div className="mt-10 grid items-start gap-12 lg:mt-14 lg:grid-cols-[5fr_7fr] lg:gap-16">
+                        <div className="lg:pt-2">
+                            <p className={`max-w-[34rem] text-lg leading-relaxed md:text-xl ${MUTED}`}>
+                                With Dooza Crew you give it a job in plain words and watch it work on its own computer, with a browser, a phone number and a card. Add your staff to the same chat. Free for 7 days.
+                            </p>
+                            <div className="mt-8">
+                                <CrewPrompt placement="home-hero" tone="light" />
+                                <p className={`mt-5 text-[15px] ${MUTED}`}>
+                                    Rather talk first? <Link href="/book" data-source="home-hero-book" className={LINK}>Book a 30-minute call</Link>.
+                                </p>
+                            </div>
+                        </div>
+                        <CrewRoom />
+                    </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="team-title" className="bg-[#EEF3F1] px-4 py-20 md:px-8 md:py-28">
+                    <div className="mx-auto max-w-7xl">
+                        <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+                            <div className="max-w-2xl">
+                                <h2 id="team-title" className={H2}>Hand it whole departments.</h2>
+                                <p className={`mt-5 text-lg leading-relaxed ${MUTED}`}>
+                                    Your people and your AI employees share one group. Anyone can hand out a job. Nothing is sent or paid until a person you choose approves it.
+                                </p>
+                            </div>
+                            <p className={`flex flex-wrap gap-x-6 gap-y-2 text-[15px] ${MUTED}`}>
+                                <span className="flex items-center gap-2"><Seat kind="human" /> Your staff</span>
+                                <span className="flex items-center gap-2"><Seat kind="ai" /> AI employee</span>
                             </p>
                         </div>
+
+                        {/* Org chart: you and your staff at the top, one line down to each department. */}
+                        <div className="mt-14">
+                            <div className="flex justify-center">
+                                <div className="flex items-center gap-3 rounded-full border-2 border-[#14213D] bg-white px-5 py-2.5 text-[17px] font-semibold">
+                                    <Seat kind="human" /> You and your staff approve
+                                </div>
+                            </div>
+                            <ul className="relative mt-8 grid gap-px overflow-hidden rounded-2xl border border-[#14213D]/15 bg-[#14213D]/15 md:grid-cols-2 lg:mt-8 lg:grid-cols-5 lg:overflow-visible lg:rounded-none lg:border-0 lg:bg-transparent lg:pt-10">
+                                <span aria-hidden="true" className="absolute left-[10%] right-[10%] top-0 hidden h-10 border-x-2 border-t-2 border-[#14213D]/30 lg:block" />
+                                <span aria-hidden="true" className="absolute left-1/2 top-[-2rem] hidden h-8 w-0.5 bg-[#14213D]/30 lg:block" />
+                                {departments.map((d) => (
+                                    <li key={d.name} className="relative bg-white p-6 lg:mx-2 lg:rounded-2xl lg:border lg:border-[#14213D]/15">
+                                        <span aria-hidden="true" className="absolute -top-10 left-1/2 hidden h-10 w-0.5 bg-[#14213D]/30 lg:block" />
+                                        <h3 className={`${D} text-xl font-bold tracking-[-0.01em]`}>{d.name}</h3>
+                                        <p className="mt-3 flex items-center gap-2 text-sm font-semibold text-[#0F766E]"><Seat kind="ai" /> AI employee</p>
+                                        <p className={`mt-2 text-[16px] leading-relaxed ${MUTED}`}>{d.jobs}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
-                    <CrewRoom />
+                </section>
+
+                <section className="px-4 py-20 md:px-8 md:py-28">
+                    <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
+                        <div className="max-w-xl">
+                            <h2 className={H2}>It works like a real employee.</h2>
+                            <p className={`mt-5 text-lg leading-relaxed ${MUTED}`}>
+                                Whatever you can do on a computer, your AI crew can do. These are the tools every AI employee starts with.
+                            </p>
+                        </div>
+                        <dl className="border-t-2 border-[#14213D]">
+                            {kit.map((k) => (
+                                <div key={k.name} className="grid gap-1 border-b border-[#14213D]/15 py-6 sm:grid-cols-[200px_1fr] sm:gap-8">
+                                    <dt className="text-xl font-bold tracking-[-0.01em]">{k.name}</dt>
+                                    <dd className={`text-[17px] leading-relaxed ${MUTED}`}>{k.text}</dd>
+                                </div>
+                            ))}
+                        </dl>
+                    </div>
                 </section>
 
                 {/* Brand film (Sibi 2026-10-22 17:18). 720p re-encode, 8.7 MB; loads only on play. */}
-                <section aria-labelledby="film-title" className="bg-[#0F172A] px-4 py-16 text-white md:px-8 md:py-24">
-                    <div className="mx-auto max-w-5xl">
-                        <h2 id="film-title" className="text-center text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[44px]">Meet your new teammate.</h2>
-                        <p className="mx-auto mt-4 max-w-xl text-center text-lg text-white/70">100 seconds on what it is like to work with an AI employee.</p>
+                <section aria-labelledby="film-title" className="bg-[#14213D] px-4 py-20 text-white md:px-8 md:py-28">
+                    <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[4fr_8fr] lg:gap-16">
+                        <div>
+                            <h2 id="film-title" className={H2}>Meet your new teammate.</h2>
+                            <p className="mt-5 max-w-sm text-lg leading-relaxed text-white/70">100 seconds on what it is like to work with an AI employee.</p>
+                        </div>
                         <video
-                            className="mt-10 aspect-video w-full rounded-2xl bg-black shadow-2xl"
+                            className="aspect-video w-full rounded-2xl bg-black"
                             controls
                             playsInline
                             preload="none"
@@ -127,48 +197,16 @@ export default function HomeCrew() {
                     </div>
                 </section>
 
-                <section className="border-t border-[#E2E8F0] bg-white px-4 py-20 md:px-8 md:py-28">
-                    <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-                        <SectionTitle sub="Whatever you can do on a computer, your AI crew can do. These are the tools every AI employee starts with.">
-                            It works like a real employee.
-                        </SectionTitle>
-                        <dl className="divide-y divide-[#E2E8F0] border-y border-[#E2E8F0]">
-                            {kit.map((k) => (
-                                <div key={k.name} className="grid gap-1 py-5 sm:grid-cols-[180px_1fr] sm:gap-8">
-                                    <dt className="text-lg font-bold">{k.name}</dt>
-                                    <dd className="text-[17px] leading-relaxed text-[#475569]">{k.text}</dd>
-                                </div>
-                            ))}
-                        </dl>
-                    </div>
-                </section>
-
-                <section className="px-4 py-20 md:px-8 md:py-28">
+                <section aria-labelledby="customers-title" className="px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
-                        <SectionTitle sub="Your people and your AI employees share one group. Anyone can hand out a job. Nothing is sent or paid until a person you choose approves it.">
-                            Hand it whole departments.
-                        </SectionTitle>
-                        <dl className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-                            {departments.map((d) => (
-                                <div key={d.name} className="border-l-2 border-[#0F766E] pl-5">
-                                    <dt className="text-xl font-bold">{d.name}</dt>
-                                    <dd className="mt-2 text-[17px] leading-relaxed text-[#475569]">{d.jobs}</dd>
-                                </div>
-                            ))}
-                        </dl>
-                    </div>
-                </section>
-
-                <section aria-labelledby="customers-title" className="border-t border-[#E2E8F0] bg-white px-4 py-20 md:px-8 md:py-28">
-                    <div className="mx-auto max-w-7xl">
-                        <h2 id="customers-title" className="max-w-2xl text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[44px]">What teams say about their AI employees.</h2>
-                        <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        <h2 id="customers-title" className={`max-w-3xl ${H2}`}>What teams say about their AI employees.</h2>
+                        <ul className="mt-14 grid gap-x-16 md:grid-cols-2">
                             {testimonials.map((q) => (
-                                <li key={q.author} className="flex flex-col rounded-2xl border border-[#E2E8F0] bg-[#FAF9F7] p-7">
-                                    <blockquote className="flex-1 text-[17px] leading-relaxed text-[#0F172A]">&ldquo;{q.quote}&rdquo;</blockquote>
+                                <li key={q.author} className="flex flex-col border-t-2 border-[#14213D] py-8">
+                                    <blockquote className="flex-1 text-[21px] font-medium leading-[1.4] tracking-[-0.01em]">&ldquo;{q.quote}&rdquo;</blockquote>
                                     <div className="mt-6 flex items-center gap-4">
-                                        <span className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#E2E8F0] bg-white">
-                                            <Image src={q.logo} alt={q.author} width={56} height={56} className="h-full w-full object-contain p-1" />
+                                        <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#14213D]/15 bg-white">
+                                            <Image src={q.logo} alt={q.author} width={48} height={48} className="h-full w-full object-contain p-1" />
                                         </span>
                                         <div className="min-w-0">
                                             {quoteSource(q) ? (
@@ -176,7 +214,7 @@ export default function HomeCrew() {
                                             ) : (
                                                 <p className="font-bold">{q.author}</p>
                                             )}
-                                            <p className="text-sm text-[#475569]">{q.role}</p>
+                                            <p className={`text-sm ${MUTED}`}>{q.role}</p>
                                         </div>
                                     </div>
                                 </li>
@@ -185,67 +223,68 @@ export default function HomeCrew() {
                     </div>
                 </section>
 
-                <section id="how" className="scroll-mt-8 border-t border-[#E2E8F0] bg-white px-4 py-20 md:px-8 md:py-28">
+                <section id="how" className="scroll-mt-20 bg-[#EEF3F1] px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
-                        <SectionTitle>Start in 2 minutes.</SectionTitle>
-                        <ol className="mt-12 grid gap-10 md:grid-cols-3">
+                        <h2 className={H2}>Start in 2 minutes.</h2>
+                        <ol className="mt-14 grid gap-10 md:grid-cols-3 md:gap-12">
                             {steps.map((s, i) => (
-                                <li key={s.title}>
-                                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-700 text-base font-bold text-white">{i + 1}</span>
-                                    <h3 className="mt-5 text-xl font-bold">{s.title}</h3>
-                                    <p className="mt-2 text-[17px] leading-relaxed text-[#475569]">{s.text}</p>
+                                <li key={s.title} className="border-t-2 border-[#14213D] pt-6">
+                                    <span className={`${D} text-[56px] font-extrabold leading-none tracking-[-0.04em] text-[#0F766E]`}>{i + 1}</span>
+                                    <h3 className={`${D} mt-4 text-xl font-bold tracking-[-0.01em]`}>{s.title}</h3>
+                                    <p className={`mt-2 text-[17px] leading-relaxed ${MUTED}`}>{s.text}</p>
                                 </li>
                             ))}
                         </ol>
                     </div>
                 </section>
 
-                <section id="price" className="scroll-mt-8 bg-primary-900 px-4 py-20 text-white md:px-8 md:py-28">
+                <section id="price" className="scroll-mt-20 bg-[#0F766E] px-4 py-20 text-white md:px-8 md:py-28">
                     <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h2 className="text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[44px]">Try it free for 7 days.</h2>
-                            <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/75">
+                            <h2 className={H2}>Try it free for 7 days.</h2>
+                            <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/85">
                                 Then $49 a month for your whole crew, with $20 of AI usage included. Cancel any time in the trial and you pay nothing.
                             </p>
-                            <p className="mt-4 text-sm text-white/60">Seats are limited. When they are full, join the waitlist.</p>
+                            <p className="mt-4 text-[15px] text-white/75">Seats are limited. When they are full, join the waitlist.</p>
                         </div>
                         <CrewPrompt placement="home-price" />
                     </div>
                 </section>
 
-                <section id="done-for-you" className="scroll-mt-8 px-4 py-20 md:px-8 md:py-24">
+                <section id="done-for-you" className="scroll-mt-20 px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
-                        <SectionTitle sub="Prefer that we build and run it for you? Each service has its own page and price.">
-                            Or let us do it for you.
-                        </SectionTitle>
-                        <ul className="mt-10 divide-y divide-[#E2E8F0] border-y border-[#E2E8F0]">
+                        <div className="max-w-2xl">
+                            <h2 className={H2}>Or let us do it for you.</h2>
+                            <p className={`mt-5 text-lg leading-relaxed ${MUTED}`}>Prefer that we build and run it for you? Each service has its own page and price.</p>
+                        </div>
+                        <ul className="mt-12 border-t-2 border-[#14213D]">
                             {otherWays.map((o) => (
-                                <li key={o.href}>
+                                <li key={o.href} className="border-b border-[#14213D]/15">
                                     <Link href={o.href} className="group grid gap-1 py-6 sm:grid-cols-[260px_1fr_auto] sm:items-center sm:gap-8">
-                                        <span className="text-lg font-bold group-hover:text-[#0F766E]">{o.name}</span>
-                                        <span className="text-[17px] text-[#475569]">{o.text}</span>
-                                        <span className="text-sm font-semibold text-[#0F766E] underline-offset-4 group-hover:underline">See the service</span>
+                                        <span className="text-xl font-bold tracking-[-0.01em] group-hover:text-[#0F766E]">{o.name}</span>
+                                        <span className={`text-[17px] ${MUTED}`}>{o.text}</span>
+                                        <span className="text-[15px] font-semibold text-[#0F766E] underline-offset-4 group-hover:underline">See the service</span>
                                     </Link>
                                 </li>
                             ))}
                         </ul>
-                        <p className="mt-6 text-[17px] text-[#475569]">
-                            Not sure which fits? <Link href="/book" data-source="home-dfy-book" className="font-semibold text-[#0F766E] underline underline-offset-4 hover:text-[#0F172A]">Book a 30-minute call</Link> and we will tell you.
+                        <p className={`mt-6 text-[17px] ${MUTED}`}>
+                            Not sure which fits? <Link href="/book" data-source="home-dfy-book" className={LINK}>Book a 30-minute call</Link> and we will tell you.
                         </p>
                     </div>
                 </section>
 
-                <section className="border-t border-[#E2E8F0] bg-white px-4 py-20 md:px-8 md:py-24">
-                    <div className="mx-auto max-w-3xl">
-                        <h2 className="mb-8 text-3xl font-extrabold tracking-[-0.025em] md:text-4xl">Questions</h2>
+                <section className="bg-[#EEF3F1] px-4 py-20 md:px-8 md:py-24">
+                    <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[5fr_7fr] lg:gap-16">
+                        <h2 className={H2}>Questions</h2>
                         <FAQAccordion items={homeFaq} />
                     </div>
                 </section>
 
                 <section className="px-4 py-20 md:px-8 md:py-28">
-                    <div className="mx-auto max-w-2xl text-center">
-                        <h2 className="text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[44px]">Give your crew its first job.</h2>
-                        <div className="mt-9 text-left">
+                    <div className="mx-auto max-w-7xl">
+                        <h2 className={`${D} max-w-[16ch] text-[40px] font-extrabold leading-[0.98] tracking-[-0.04em] md:text-[72px]`}>Give your crew its first job.</h2>
+                        <div className="mt-10 max-w-2xl">
                             <CrewPrompt placement="home-bottom" tone="light" />
                         </div>
                     </div>
