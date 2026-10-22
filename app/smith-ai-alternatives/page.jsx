@@ -335,6 +335,7 @@ export default function SmithAiAlternativesPage() {
                                     </span>
                                 ))}{' '}
                                 Monthly list prices; some vendors discount annual billing. For 20 services in one place, see our <Link href="/blog/best-ai-receptionist" className={link}>best AI receptionist comparison</Link>.
+                                {' '}An independent check: <a href="https://contractorguidepro.com/ai-voice-agents-contractors-2026" target="_blank" rel="noopener noreferrer" className={link}>Contractor Guide Pro’s AI voice agents comparison for contractors</a> (updated July 24, 2026) also lists Smith.ai’s hybrid plan at $300 a month for 30 calls.
                             </p>
                         </section>
 
