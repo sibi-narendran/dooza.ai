@@ -10,14 +10,14 @@ import FinalCTASection from '@/components/sections/FinalCTASection';
 import { faqSchema } from '@/lib/homeData';
 
 export const metadata = {
-    title: 'Dooza Pricing: Managed Assistant $200/mo, 7 Days Free',
-    description: 'Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Custom AI builds scoped on a free call.',
+    title: 'Dooza Pricing: AI Answering $149/mo, Assistant $200/mo',
+    description: 'AI answering service $149/month for 500 minutes. Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Custom builds on a free call.',
     keywords: ['AI employees pricing', 'AI automation pricing', 'Dooza pricing', 'AI agents cost', 'business automation plans'],
     alternates: {
         canonical: 'https://www.dooza.ai/pricing',
     },
     openGraph: {
-        title: 'Dooza Pricing: Managed Assistant $200/mo, 7 Days Free',
+        title: 'Dooza Pricing: AI Answering $149/mo, Assistant $200/mo',
         description: 'Custom pricing, scoped on a free 30-minute call. Every engagement starts as a refundable pilot: 100% refund within 14 days.',
         url: 'https://www.dooza.ai/pricing',
         type: 'website',
@@ -25,7 +25,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Dooza Pricing: Managed Assistant $200/mo, 7 Days Free',
+        title: 'Dooza Pricing: AI Answering $149/mo, Assistant $200/mo',
         description: 'Custom pricing, scoped on a free 30-minute call. Every engagement starts as a refundable pilot: 100% refund within 14 days.',
         images: ['https://www.dooza.ai/logo.png'],
     },
@@ -45,13 +45,13 @@ export default function PricingPage() {
                         <section className="pt-32 pb-12 md:pt-40">
                             <div className="mx-auto max-w-4xl px-4 text-center">
                                 <span className="section-label mb-4 block text-primary-700">PRICING</span>
-                                <h1 className="font-serif text-4xl font-bold text-slate-900 md:text-6xl">Start today, first 7 days free</h1>
+                                <h1 className="font-serif text-4xl font-bold text-slate-900 md:text-6xl">Two plans you can start today</h1>
                                 <p className="mt-5 text-lg text-slate-600">
-                                    One plan you can start right now by card, or a custom build scoped on a free call.
+                                    An AI answering service for your phone, or an admin assistant checked by a real person. Or a custom build scoped on a free call.
                                 </p>
                             </div>
                             <div className="mt-10 px-4">
-                                <OfferCards source="pricing" only="managed" />
+                                <OfferCards source="pricing" only={['answering', 'managed']} />
                                 <p className="mt-4 text-center text-sm text-slate-600"><a href="/ai-admin-assistant" className="font-semibold text-primary-700 underline">What Dooza Managed does, and how it compares with a virtual assistant</a></p>
                             </div>
                         </section>

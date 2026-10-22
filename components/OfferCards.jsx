@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react';
 import { MANAGED_PAY_URL, ICP1_A_PAY_URL } from '@/lib/offers';
+import { RECEP_PAY_URL } from '@/lib/aiReceptionistData';
 
 const OFFERS = [
     {
@@ -21,6 +22,25 @@ const OFFERS = [
         pay: MANAGED_PAY_URL,
     },
     {
+        // $149 answering offer (Sibi 2026-10-21 "SELL WHAT PEOPLE BUY"; terms = PILOT_PROMISE / positioning.md).
+        id: 'answering',
+        name: 'AI Answering Service',
+        tagline: 'Answers your calls when you can\'t and emails you each message with the transcript.',
+        price: '$149',
+        per: '/month',
+        terms: 'Paid first, month to month. Full refund if you cancel within 14 days.',
+        cta: 'Get it: $149/month',
+        points: [
+            'Answers when you can\'t pick up',
+            'Asks the questions you give it',
+            'Emails you each message with the transcript and a recording link',
+            'Up to 500 minutes a month; $0.30/min after',
+        ],
+        note: 'Not included: calendar booking, text messages, CRM integrations.',
+        more: { href: '/ai-answering-service-for-small-business', label: 'How it works and what it costs elsewhere' },
+        pay: `${RECEP_PAY_URL}?client_reference_id=recep-offercard`,
+    },
+    {
         id: 'trucker-feed',
         name: 'Monday Trucker Feed',
         tagline: 'For insurance agencies that write trucking.',
@@ -40,7 +60,8 @@ const OFFERS = [
 ];
 
 export default function OfferCards({ source = 'unknown', only }) {
-    const offers = only ? OFFERS.filter((o) => o.id === only) : OFFERS;
+    const ids = only ? [].concat(only) : null;
+    const offers = ids ? OFFERS.filter((o) => ids.includes(o.id)) : OFFERS.filter((o) => o.id !== 'answering');
     return (
         <div className={`mx-auto grid max-w-5xl gap-6 ${offers.length > 1 ? 'md:grid-cols-2' : ''}`}>
             {offers.map((o) => (
