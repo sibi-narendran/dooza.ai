@@ -135,6 +135,14 @@ const jobs = [
     { title: 'Admin and reports', text: 'Keeps your CRM and sheets up to date and sends you a short daily summary.' },
 ];
 
+// What each AI employee is given, like a new hire's first day (Sibi 2026-10-22 13:14).
+const kit = [
+    { title: 'Its own email address', text: 'Sends, reads and replies to email like a member of your team.' },
+    { title: 'Its own phone number', text: 'Makes and answers calls and speaks with your customers.' },
+    { title: 'Its own computer and browser', text: 'Logs into your websites and tools and does the work on screen, the way a person would.' },
+    { title: 'Its own payment card', text: 'Pays for approved purchases, so it can finish a job end to end.' },
+];
+
 const compareRows = [
     { label: 'Who sets it up', diy: 'You', hire: 'You train them', dooza: 'We do' },
     { label: 'When it gets something wrong', diy: 'You figure it out', hire: 'You manage it', dooza: 'We fix it' },
@@ -211,6 +219,22 @@ export default function HomeLanding() {
                             </li>
                         ))}
                     </ol>
+                </div>
+            </section>
+
+            {/* Kit: what each AI employee gets on day one */}
+            <section id="its-own-tools" className="px-4 pb-20 md:px-8 md:pb-28">
+                <div className="mx-auto max-w-6xl">
+                    <h2 className={`${H2} max-w-2xl`}>Each AI employee gets its own email, phone, computer and card.</h2>
+                    <p className="mt-4 max-w-2xl text-lg text-slate-600">Like a new hire on day one. Anything sensitive still waits for your OK.</p>
+                    <dl className="mt-10 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
+                        {kit.map((k) => (
+                            <div key={k.title} className="border-t-2 border-[#14213D] pt-5">
+                                <dt className={`${display.className} text-lg font-bold ${INK}`}>{k.title}</dt>
+                                <dd className="mt-1 text-[15px] leading-relaxed text-slate-600">{k.text}</dd>
+                            </div>
+                        ))}
+                    </dl>
                 </div>
             </section>
 

@@ -14,7 +14,7 @@ const PATH = '/ai-employee-for-small-business';
 const SOURCE = 'ai_employee_smb';
 const TITLE = 'Hire an AI Employee for Your Small Business';
 const DESCRIPTION = 'An AI employee does one real job in your tools. See what it costs (Dooza $200/mo, first 7 days free, vs Sintra, Lindy, a VA) and how to hire one.';
-const UPDATED_LABEL = 'October 21, 2026';
+const UPDATED_LABEL = 'October 22, 2026';
 const book = (placement) => `/book?utm_source=website&utm_medium=page&utm_content=${SOURCE}_${placement}`;
 const LINK = 'font-semibold text-primary-700 underline';
 const H2 = 'font-serif text-2xl font-bold text-slate-900';
@@ -183,6 +183,7 @@ export default function AiEmployeeForSmallBusinessPage() {
                                 <li><strong>Follow up:</strong> with leads, quotes or unpaid invoices.</li>
                                 <li><strong>Answer:</strong> customer questions or the phone.</li>
                             </ul>
+                            <p className="mt-4 text-slate-700">A Dooza AI employee gets the same kit as a new hire: <strong>its own email address, its own phone number</strong> (it makes and answers calls and speaks with customers), <strong>its own computer and browser</strong> to work in your websites and tools, and <strong>its own payment card</strong> for approved purchases.</p>
                             <p className="mt-4 text-slate-700">It is not a person. It does not make judgment calls on its own. Good setups make it ask before anything sensitive goes out.</p>
                         </div>
                     </section>
