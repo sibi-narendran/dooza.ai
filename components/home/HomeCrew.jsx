@@ -70,7 +70,8 @@ function SectionTitle({ children, sub }) {
 export default function HomeCrew() {
     return (
         <div className={`${display.className} crew-home bg-[#FAF9F7] text-[#0F172A]`}>
-            <div className="sticky top-0 z-40 border-b border-[#E2E8F0]/70 bg-[#FAF9F7]/95 backdrop-blur">
+            {/* fixed, not sticky: iOS Safari drops sticky under body overflow-x (Sibi 17:57 bar left on scroll) */}
+            <div className="fixed inset-x-0 top-0 z-40 border-b border-[#E2E8F0]/70 bg-[#FAF9F7]/95 backdrop-blur">
             <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8 md:py-4">
                 <Link href="/" className="flex items-center gap-2">
                     <Image src="/logo.png" alt="Dooza" width={30} height={30} className="rounded" />
@@ -87,6 +88,7 @@ export default function HomeCrew() {
                 </a>
             </header>
             </div>
+            <div aria-hidden="true" className="h-[65px] md:h-[73px]" />
 
             <main id="main-content">
                 <section className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-8 md:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pt-16">
