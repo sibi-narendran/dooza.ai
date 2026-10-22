@@ -20,6 +20,7 @@ import Footer from '@/components/Footer';
 import BookDemoButton from '@/components/buttons/BookDemoButton';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
+import IcpCrew from '@/components/crew/IcpCrew';
 
 const pageUrl = `${SITE_URL}/industries/law-firms`;
 
@@ -484,6 +485,8 @@ export default function LawFirmsPage() {
                         </div>
                     </div>
                 </section>
+
+                <IcpCrew slug="law-firms" />
 
                 <LawFirmComparisonSection />
 

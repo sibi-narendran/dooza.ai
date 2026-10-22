@@ -16,6 +16,7 @@ import {
     ChevronDown,
     ChevronUp
 } from 'lucide-react';
+import IcpCrew from '@/components/crew/IcpCrew';
 
 // Rows in each state's Monday list on 2026-10-12 (FMCSA open data, Dooza's own run). Same numbers as /trucking-insurance-leads.
 const STATE_COUNTS = [
@@ -123,6 +124,8 @@ export default function InsuranceAgentsContent({ page }) {
                     <p className="mt-3 text-lg leading-relaxed text-slate-700">Dooza finds trucking prospects for US independent insurance agencies that write commercial trucking. Every Monday you get a list for your state from public FMCSA data: trucking companies whose liability insurance renews in about 30 to 60 days, with their current insurer and limit named, plus new trucking authorities from the last 7 days that have no liability filing yet. $129 every 4 weeks, paid first. If you would rather not dial, we can phone the truckers on your list and book owners onto your calendar as quote calls: $499 every 4 weeks for up to 4 booked quote calls, or $150 for a single booked call (the first one is free).</p>
                 </div>
             </section>
+
+            <IcpCrew slug="insurance-agents" />
 
             {/* =============================== */}
             {/* 2. TWO OFFERS                   */}

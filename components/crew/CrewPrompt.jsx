@@ -58,7 +58,7 @@ export default function CrewPrompt({ placement = 'crew-hero', tone = 'dark', cen
                         type="submit"
                         data-offer="crew"
                         data-source={placement}
-                        className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${t.button}`}
+                        className={`shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${t.button}`}
                     >
                         Start your crew
                     </button>

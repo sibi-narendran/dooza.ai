@@ -34,6 +34,7 @@ import {
     ChevronDown,
     ChevronUp
 } from 'lucide-react';
+import IcpCrew from '@/components/crew/IcpCrew';
 
 export default function DispatchersContent({ page }) {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -197,6 +198,8 @@ export default function DispatchersContent({ page }) {
                     </div>
                 </div>
             </section>
+
+            <IcpCrew slug="dispatchers" />
 
             {/* =============================== */}
             {/* 2. CAPABILITIES SECTION         */}

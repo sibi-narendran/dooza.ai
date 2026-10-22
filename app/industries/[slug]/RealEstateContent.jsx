@@ -19,6 +19,7 @@ import {
     ChevronDown,
     ArrowRight,
 } from 'lucide-react';
+import IcpCrew from '@/components/crew/IcpCrew';
 
 export default function RealEstateContent({ page }) {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -218,6 +219,8 @@ export default function RealEstateContent({ page }) {
                     <p className="mt-3 text-lg leading-relaxed text-slate-700">An AI sales agent for real estate replies to every new lead fast, day or night, asks the qualification questions you set (budget, timeline, location), schedules showings on your calendar, and keeps following up with drip sequences until the lead is ready. Dooza sets it up and runs it for you. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.</p>
                 </div>
             </section>
+
+            <IcpCrew slug="real-estate" />
 
             {/* ── Problem ── */}
             <section className="py-16 md:py-24 bg-white">
