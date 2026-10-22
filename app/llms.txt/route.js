@@ -264,6 +264,11 @@ const servicePages = [
         description: 'AI vs human answering service prices for garage door companies, and the Dooza AI answering service ($149/month, 500 minutes).',
     },
     {
+        title: 'AI Receptionist for Window Tint Shops',
+        url: `${SITE_URL}/window-tint-answering-service`,
+        description: 'AI vs human answering service prices for window tint and window film shops (100 calls a month), and the Dooza AI receptionist ($149/month, 500 minutes).',
+    },
+    {
         title: 'Smith.ai Alternatives',
         url: `${SITE_URL}/smith-ai-alternatives`,
         description: 'Smith.ai pricing (human-first from $300/month for 30 calls; AI receptionist free for 25 calls, Pro $150/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',

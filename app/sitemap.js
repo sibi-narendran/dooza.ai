@@ -266,6 +266,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/window-tint-answering-service`,
+            lastModified: pageDate('2026-10-22'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/smith-ai-alternatives`,
             lastModified: pageDate('2026-10-21'),
             changeFrequency: 'monthly',

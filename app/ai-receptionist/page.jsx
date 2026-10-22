@@ -217,6 +217,7 @@ export default async function AiReceptionistPage(props) {
                     <div className="mx-auto max-w-4xl">
                         <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">Built for the trades</h2>
                         <p className="mt-3 text-slate-600">{TRADES_LIST}</p>
+                        {!adsMode && <p className="mt-2 text-slate-600">Prices by trade: <Link href="/hvac-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">HVAC</Link>, <Link href="/plumbing-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">plumbing</Link>, <Link href="/garage-door-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">garage door</Link> and <Link href="/window-tint-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">window tint</Link>.</p>}
                         <div className="mt-8 grid gap-4 md:grid-cols-3">
                             {TRADE_MOMENTS.map((moment, index) => (
                                 <div
