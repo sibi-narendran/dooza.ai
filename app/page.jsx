@@ -1,15 +1,15 @@
 import BookingModalProvider from '@/components/BookingModalProvider';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import HomeLanding, { homeFaq } from '@/components/home/HomeLanding';
+import HomeCrew, { homeFaq } from '@/components/home/HomeCrew';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata = {
-    title: { absolute: 'Dooza | AI Employees Built, Run and Improved for Your Business' },
+    title: { absolute: 'Dooza: AI Employees With a Computer, Browser and Phone' },
     description:
-        'Dooza builds AI employees for small businesses, runs them in your tools and improves them every month. Refundable pilot: 100% refund within 14 days.',
+        'Dooza Crew gives your business AI employees with their own computer, browser, card and phone number. Work with them and your staff in one chat. Free for 7 days.',
     keywords: [
-        'Dooza Agents',
+        'Dooza Crew',
+        'AI employees',
         'AI agent builder',
         'AI agents for marketing',
         'AI sales agent',
@@ -24,9 +24,9 @@ export const metadata = {
         canonical: SITE_URL,
     },
     openGraph: {
-        title: 'Dooza | AI Employees Built, Run and Improved for Your Business',
+        title: 'Dooza: AI Employees With a Computer, Browser and Phone',
         description:
-            'Tell us the work that eats your week. Dooza builds an AI employee that does it, watches it every day and makes it better every month.',
+            'Dooza Crew gives your business AI employees with their own computer, browser, card and phone number. Work with them and your staff in one chat. Free for 7 days.',
         url: SITE_URL,
         siteName: 'Dooza',
         type: 'website',
@@ -36,9 +36,9 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: 'Dooza | AI Employees Built, Run and Improved for Your Business',
+        title: 'Dooza: AI Employees With a Computer, Browser and Phone',
         description:
-            'Tell us the work that eats your week. Dooza builds an AI employee that does it, watches it every day and makes it better every month.',
+            'Dooza Crew gives your business AI employees with their own computer, browser, card and phone number. Work with them and your staff in one chat. Free for 7 days.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -102,7 +102,7 @@ const websiteSchema = {
     name: 'Dooza',
     alternateName: 'Dooza AI',
     url: SITE_URL,
-    description: 'Dooza builds, runs and improves AI employees for small businesses.',
+    description: 'Dooza gives small businesses AI employees: Dooza Crew, plus done-for-you AI agents and services.',
     publisher: {
         '@type': 'Organization',
         name: 'Dooza',
@@ -185,10 +185,7 @@ export default function Home() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
                 />
             ))}
-            <Navbar showLogin={false} ctaType="demo" ctaSource="home_nav" />
-            <main id="main-content" className="bg-warm text-slate-900">
-                <HomeLanding />
-            </main>
+            <HomeCrew />
             <Footer />
         </BookingModalProvider>
     );

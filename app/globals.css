@@ -37,6 +37,12 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
 }
 
+/* Dooza Crew homepage (2026-10-22): headings take the section's color and the component's font. */
+.crew-home :is(h1, h2, h3, h4) {
+  color: inherit;
+  font-family: inherit;
+}
+
 a {
   overflow-wrap: anywhere;
 }

@@ -16,9 +16,9 @@ const display = Schibsted_Grotesk({ subsets: ['latin'], weight: ['500', '700', '
 
 const PATH = '/crew';
 const TITLE = 'Dooza Crew: Your Own AI Team, Each With Its Own Computer';
-const DESCRIPTION = 'Whatever you can do on a computer, your AI crew can do. A master agent builds your team of AI agents, each with a real browser and files. $50 trial, fully refundable within 7 days.';
+const DESCRIPTION = 'Whatever you can do on a computer, your AI crew can do. A master agent builds your team of AI agents, each with a real browser and files. Free for 7 days, then $49 a month.';
 const signup = (placement) => `https://crew.dooza.ai/?utm_source=dooza&utm_medium=page&utm_content=${placement}`;
-const PRICE_LINE = '$50 trial, fully refundable within 7 days. Then $49 a month, including $20 of AI usage.';
+const PRICE_LINE = 'Free for 7 days, then $49 a month with $20 of AI usage included.';
 
 const steps = [
     { title: 'Tell it the job', text: 'Type what you want done, in plain words, the way you would brief a new hire.' },
@@ -37,8 +37,8 @@ const crews = [
 const faqItems = [
     { question: 'What is Dooza Crew?', answer: 'Your own team of AI agents in one chat. You sign up and get a master agent. Tell it what you need and it creates more agents; each one gets a real browser and files on your own isolated computer.' },
     { question: 'What can my crew do?', answer: 'Whatever you can do on a computer: research, write, fill in forms, follow up on email, update spreadsheets, check websites. You give the job in plain words and the agents do it in their own browser.' },
-    { question: 'How much does Dooza Crew cost?', answer: 'A $50 trial, fully refundable within 7 days of paying, no questions asked. Then $49 a month, including $20 of AI usage.' },
-    { question: 'How do I get a refund?', answer: 'Email support within 7 days of paying and you get a full refund.' },
+    { question: 'How much does Dooza Crew cost?', answer: 'Free for 7 days. Then $49 a month, with $20 of AI usage included. Cancel during the trial and you pay nothing.' },
+    { question: 'Do I pay anything today?', answer: 'No. The first 7 days are free. You add a card at sign-up and pay $49 a month only if you keep your crew after the trial.' },
     { question: 'Are there ready crews for my industry?', answer: 'Yes, for real estate, trucking and dispatch, insurance agencies, law firms and customer support. Your master agent sets up the crew for you on day one.' },
     { question: 'Can anyone sign up?', answer: 'Seats are limited. When they are full, you can join the waitlist.' },
 ];
@@ -51,7 +51,7 @@ const schemas = [
         url: `${SITE_URL}${PATH}`,
         description: DESCRIPTION,
         brand: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
-        offers: { '@type': 'Offer', price: '50', priceCurrency: 'USD', url: signup('crew-schema'), description: 'Trial, fully refundable within 7 days, then $49 a month including $20 of AI usage.' },
+        offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', url: signup('crew-schema'), description: 'Free 7-day trial, then $49 a month including $20 of AI usage.' },
     },
     {
         '@context': 'https://schema.org',
