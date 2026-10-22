@@ -21,7 +21,7 @@ import { SITE_URL } from '@/lib/site';
 const PATH = '/lindy-alternatives';
 const CHECKED = 'October 21, 2026';
 const TITLE = 'Lindy Alternatives: 8 Options Compared (2026 Prices)';
-const DESCRIPTION = 'Lindy is from $49.99/mo per active user for 5,000 credits (checked Oct 21, 2026). Compare 8 Lindy alternatives, from DIY builders to done-for-you.';
+const DESCRIPTION = 'Lindy is from $29.99 or $49.99/mo per active user (its pricing page showed both on Oct 22, 2026). Compare 8 Lindy alternatives, from DIY builders to done-for-you.';
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -409,7 +409,7 @@ export default function LindyAlternativesPage() {
                                 </p>
 
                                 <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                    Lindy is a self-serve AI teammate billed in credits: from $49.99/mo per active user for 5,000 credits, with $50 in free credits that last 7 days (pricing checked {CHECKED}). We compared 8 alternatives on pricing, how they meter usage, setup, pros, and cons — so you do not have to.
+                                    Lindy is a self-serve AI teammate billed in credits: from $29.99/mo for 3,000 credits or $49.99/mo for 5,000 per active user (the pricing page showed both on Oct 22, 2026), with $50 in free credits that last 7 days (pricing checked {CHECKED}). We compared 8 alternatives on pricing, how they meter usage, setup, pros, and cons — so you do not have to.
                                 </p>
 
                                 <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -636,6 +636,7 @@ export default function LindyAlternativesPage() {
                                                 {[
                                                     { item: 'Free', value: '$0 — $50 in credits; free credits last 7 days; no credit card required' },
                                                     { item: 'Team (starting price)', value: '$49.99/mo for 5,000 credits a month' },
+                                                    { item: 'Two prices on Oct 22, 2026', value: 'Lindy\'s pricing page showed two cards that day: from $29.99 a month for 3,000 credits, and from $49.99 a month for 5,000 credits. Check lindy.ai/pricing before you buy.' },
                                                     { item: 'More monthly credits', value: '5,000 credits $49.99; 15,000 credits $99.99; 35,000 credits $199.99 (up to 1,750,000 credits $9,999.50)' },
                                                     { item: 'Who is billed', value: 'Every active user in your workspace, from $49.99 a month for 5,000 credits each; credits pooled across the team' },
                                                     { item: 'Top-ups', value: '$10 per 1,000 credits' },

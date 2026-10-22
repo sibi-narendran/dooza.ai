@@ -26,6 +26,10 @@ const money = (n) => `$${n.toLocaleString('en-US', Number.isInteger(n) ? {} : { 
 
 const faqItems = [
     {
+        question: 'Is this an AI receptionist for small business?',
+        answer: 'Yes, for the answering part. Like an AI receptionist, it picks up when you can’t, asks callers the questions you give it, and emails you each message with the transcript and a recording link. It costs $149/month for up to 500 minutes ($0.30/min after). It does not book appointments, send texts or update a CRM, so if you need those, a full AI receptionist plan is the better fit.',
+    },
+    {
         question: 'How much does an AI answering service cost for a small business?',
         answer: 'Entry plans run from about $19 to $200 a month; human answering services start at about $49 (pay as you go) to $350 a month (public prices checked October 6–21, 2026). Dooza’s AI answering service is $149 a month for up to 500 minutes, then $0.30 a minute, month to month.',
     },
