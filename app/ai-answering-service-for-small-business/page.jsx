@@ -3,6 +3,7 @@ import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
+import HearItFirst from '@/components/HearItFirst';
 import { SITE_URL } from '@/lib/site';
 import { compareReceptionistCosts } from '@/lib/receptionistPricing';
 
@@ -117,6 +118,7 @@ export default function AiAnsweringServicePage() {
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">Paid up front, no contract. Cancel within 14 days of your first charge for a full refund. We confirm your go-live date at intake.</p>
+                            <HearItFirst source="ai-answering-service-for-small-business" />
                         </section>
 
                         <section className="mt-14">
