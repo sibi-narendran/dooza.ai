@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: "Does Dooza answer phone calls?",
-        answer: "No. Dooza does not offer phone answering or a voice agent. Dooza Managed is an AI admin assistant for small businesses, checked by a real person, $200/month, first 7 days free."
+        answer: "Yes, inbound calls. Dooza's AI answering service picks up inbound calls 24/7: $149/month for up to 500 minutes, then $0.30/min, month to month, full refund if cancelled within 14 days of the first charge (dooza.ai/ai-answering-service-for-small-business). It answers, asks your questions and emails you the message, transcript and recording link; it does not book onto calendars or send texts. Dooza Managed, the AI admin assistant checked by a real person ($200/month, first 7 days free), covers written admin work, not phones."
     },
     {
         question: "Can Perplexity Computer run tasks on a schedule?",

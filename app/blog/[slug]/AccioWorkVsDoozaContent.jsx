@@ -64,7 +64,11 @@ const faqData = [
     },
     {
         question: "Can Accio Work answer phone calls?",
-        answer: "No. Accio Work is a desktop agent — it works with files, browsers, and terminal commands on your computer. Dooza does not offer phone answering either. Dooza Managed is an AI admin assistant for small businesses, checked by a real person, $200/month, first 7 days free."
+        answer: "No. Accio Work is a desktop agent — it works with files, browsers, and terminal commands on your computer. Dooza does: Dooza's AI answering service picks up inbound calls 24/7: $149/month for up to 500 minutes, then $0.30/min, month to month, full refund if cancelled within 14 days of the first charge (dooza.ai/ai-answering-service-for-small-business). It answers, asks your questions and emails you the message, transcript and recording link; it does not book onto calendars or send texts. Dooza Managed, the AI admin assistant checked by a real person ($200/month, first 7 days free), covers written admin work, not phones."
+    },
+    {
+        question: "How much does accio.com cost?",
+        answer: "Accio Work (accio.com) has a Free plan, then Pro at $19.9/month (4,000 membership credits), Elite at $99/month (20,000 credits) and Ultra at $199/month (40,000 credits); paying annually saves 15% (accio.com pricing page, checked October 22, 2026)."
     },
     {
         question: "Is Accio Work free?",
@@ -144,7 +148,7 @@ export default function AccioWorkVsDoozaContent() {
                             <span>Comparison</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            Accio Work Review: <span className="text-primary-600">Pricing, Features</span> & Verdict
+                            Accio Work (accio.com) Review: <span className="text-primary-600">Pricing, Features</span> & Verdict
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                             Accio Work is Alibaba's e-commerce AI agent. Dooza gives you an entire AI workforce for any business. One is locked to sourcing. The other runs your entire operation. Here's the honest breakdown.
