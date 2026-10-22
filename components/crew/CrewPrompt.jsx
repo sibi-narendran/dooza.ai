@@ -6,11 +6,11 @@ import { crewSignupUrl } from '@/lib/crewUrl';
 // Grok-style hero box (Sibi 2026-10-22 15:53). The typed task rides along to crew.dooza.ai as ?task= (Daedalus 15:56:
 // kept through sign-up, handed to the master agent as its first job); utm_content stays per placement for attribution.
 const DEFAULT_EXAMPLES = [
-    'Call back new leads in 5 minutes',
-    'Find new trucking companies and draft intros',
+    'Find me new leads',
+    'Book me 3 sales meetings',
+    'Reply to all my emails',
+    'Post on my social media every day',
     'Write a blog post a day',
-    'Track competitor prices weekly',
-    'Turn call notes into follow-ups',
 ];
 
 const TONES = {
