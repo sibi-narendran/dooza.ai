@@ -38,12 +38,6 @@ export default async function sitemap() {
             priority: 0.4,
         },
         {
-            url: `${SITE_URL}/crew`,
-            lastModified: pageDate('2026-10-22'),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
             url: `${SITE_URL}/pricing`,
             lastModified: pageDate('2026-06-13'),
             changeFrequency: 'weekly',

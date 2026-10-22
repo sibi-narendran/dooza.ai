@@ -182,6 +182,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // One Crew page (Sibi 2026-10-22 16:28): the homepage is the Dooza Crew landing
+        source: '/crew',
+        destination: '/',
+        permanent: true,
+      },
+      {
         // Customer previews use relative asset paths, so send them to index.html
         source: '/preview/:slug',
         destination: '/preview/:slug/index.html',

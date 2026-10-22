@@ -32,11 +32,6 @@ const Footer = ({ variant = 'light' }) => {
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Dooza Agents
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/crew" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Dooza Crew
                                 </Link>
                             </li>
