@@ -87,7 +87,7 @@ export default function CrewPage() {
                 <main>
                     <section className="flex min-h-[78vh] items-center px-4 pb-16 pt-10 md:px-8">
                         <div className="mx-auto w-full max-w-3xl text-center">
-                            <h1 className={`${display.className} text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] md:text-6xl`}>
+                            <h1 className={`${display.className} text-white text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] md:text-6xl`}>
                                 Whatever you can do on a computer, your AI crew can do.
                             </h1>
                             <p className="mx-auto mt-5 max-w-xl text-lg text-white/70">
@@ -102,12 +102,12 @@ export default function CrewPage() {
 
                     <section className="border-t border-white/10 px-4 py-20 md:px-8">
                         <div className="mx-auto max-w-5xl">
-                            <h2 className={`${display.className} text-3xl font-extrabold tracking-[-0.02em] md:text-4xl`}>How it works</h2>
+                            <h2 className={`${display.className} text-white text-3xl font-extrabold tracking-[-0.02em] md:text-4xl`}>How it works</h2>
                             <ol className="mt-10 grid gap-10 md:grid-cols-3">
                                 {steps.map((s, i) => (
                                     <li key={s.title}>
                                         <span className={`${display.className} text-5xl font-extrabold text-white/20`}>{i + 1}</span>
-                                        <h3 className="mt-3 text-lg font-semibold">{s.title}</h3>
+                                        <h3 className="mt-3 text-lg font-semibold text-white">{s.title}</h3>
                                         <p className="mt-2 text-white/65">{s.text}</p>
                                     </li>
                                 ))}
@@ -117,7 +117,7 @@ export default function CrewPage() {
 
                     <section className="border-t border-white/10 px-4 py-20 md:px-8">
                         <div className="mx-auto max-w-5xl">
-                            <h2 className={`${display.className} text-3xl font-extrabold tracking-[-0.02em] md:text-4xl`}>Ready crews for your industry</h2>
+                            <h2 className={`${display.className} text-white text-3xl font-extrabold tracking-[-0.02em] md:text-4xl`}>Ready crews for your industry</h2>
                             <p className="mt-4 max-w-2xl text-lg text-white/65">Your master agent sets up the crew for you on day one.</p>
                             <dl className="mt-10 divide-y divide-white/10 border-y border-white/10">
                                 {crews.map((c) => (
@@ -132,14 +132,14 @@ export default function CrewPage() {
 
                     <section className="border-t border-white/10 px-4 py-20 md:px-8">
                         <div className="mx-auto max-w-3xl">
-                            <h2 className={`${display.className} mb-8 text-3xl font-extrabold tracking-[-0.02em] md:text-4xl`}>Questions</h2>
+                            <h2 className={`${display.className} text-white mb-8 text-3xl font-extrabold tracking-[-0.02em] md:text-4xl`}>Questions</h2>
                             <FAQAccordion items={faqItems} />
                         </div>
                     </section>
 
                     <section className="border-t border-white/10 px-4 py-20 md:px-8">
                         <div className="mx-auto max-w-3xl text-center">
-                            <h2 className={`${display.className} text-3xl font-extrabold tracking-[-0.02em] md:text-4xl`}>Give your crew its first job</h2>
+                            <h2 className={`${display.className} text-white text-3xl font-extrabold tracking-[-0.02em] md:text-4xl`}>Give your crew its first job</h2>
                             <div className="mt-8">
                                 <CrewPrompt placement="crew-bottom" />
                             </div>

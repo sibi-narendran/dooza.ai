@@ -5,11 +5,11 @@ import { useState } from 'react';
 // Grok-style hero box (Sibi 2026-10-22 15:53). The typed task rides along to crew.dooza.ai as ?task=, so the
 // master agent can start on it after sign-up; utm_content stays per placement for attribution.
 const EXAMPLES = [
-    'Reply to every new lead in my inbox within 5 minutes',
-    'Find 50 trucking companies that started this month and draft intros',
-    'Write and post one blog article a day for my website',
-    'Check my competitors’ prices every Monday and send me a summary',
-    'Turn my client calls into follow-up emails and CRM notes',
+    'Answer new leads in 5 minutes',
+    'Find new trucking companies and draft intros',
+    'Write a blog post a day',
+    'Track competitor prices weekly',
+    'Turn call notes into follow-ups',
 ];
 
 export function crewSignupUrl(placement, task) {
