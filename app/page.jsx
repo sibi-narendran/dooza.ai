@@ -1,14 +1,13 @@
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-// Dooza Crew homepage (Sibi 2026-10-22). Previous homepage: components/home/HomeLanding.jsx (rollback = swap this import).
-import HomeCrew, { homeFaq } from '@/components/home/HomeCrew';
+import HomeLanding, { homeFaq } from '@/components/home/HomeLanding';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata = {
-    title: { absolute: 'Dooza Crew | Your Own AI Team, Each Agent With Its Own Computer' },
+    title: { absolute: 'Dooza | AI Employees Built, Run and Improved for Your Business' },
     description:
-        'Whatever you can do on a computer, your AI crew can do. Your own team of AI agents, each with a real computer and browser, in one chat. $50 trial, fully refundable within 7 days.',
+        'Dooza builds AI employees for small businesses, runs them in your tools and improves them every month. Refundable pilot: 100% refund within 14 days.',
     keywords: [
         'Dooza Agents',
         'AI agent builder',
@@ -25,9 +24,9 @@ export const metadata = {
         canonical: SITE_URL,
     },
     openGraph: {
-        title: 'Dooza Crew | Your Own AI Team, Each Agent With Its Own Computer',
+        title: 'Dooza | AI Employees Built, Run and Improved for Your Business',
         description:
-            'Your own team of AI agents, each with a real computer and browser, in one chat. A master agent builds the rest of your team. $50 trial, fully refundable within 7 days.',
+            'Tell us the work that eats your week. Dooza builds an AI employee that does it, watches it every day and makes it better every month.',
         url: SITE_URL,
         siteName: 'Dooza',
         type: 'website',
@@ -37,9 +36,9 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: 'Dooza Crew | Your Own AI Team, Each Agent With Its Own Computer',
+        title: 'Dooza | AI Employees Built, Run and Improved for Your Business',
         description:
-            'Your own team of AI agents, each with a real computer and browser, in one chat. A master agent builds the rest of your team. $50 trial, fully refundable within 7 days.',
+            'Tell us the work that eats your week. Dooza builds an AI employee that does it, watches it every day and makes it better every month.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -53,7 +52,7 @@ const organizationSchema = {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description:
-        'Dooza is an AI-native company. Its main product is Dooza Crew: your own team of AI agents, each with a real computer and browser, in one chat. Dooza also offers Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot.',
+        'Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot, and Dooza Crew, your own team of AI agents, each with a real computer and browser, in one chat.',
     email: 'support@dooza.ai',
     telephone: '+1-424-365-8980',
     foundingDate: '2025',
@@ -103,7 +102,7 @@ const websiteSchema = {
     name: 'Dooza',
     alternateName: 'Dooza AI',
     url: SITE_URL,
-    description: 'Dooza Crew: your own team of AI agents, each with a real computer and browser, in one chat.',
+    description: 'Dooza builds, runs and improves AI employees for small businesses.',
     publisher: {
         '@type': 'Organization',
         name: 'Dooza',
@@ -118,15 +117,46 @@ const websiteSchema = {
     },
 };
 
-// Product schema for Dooza Crew (prices from the Crew brief, Sibi 2026-10-22)
+// Service Schema for the build-and-maintain offering
 const agentsServiceSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: 'Dooza Crew',
-    url: `${SITE_URL}/crew`,
-    description: 'Your own team of AI agents, each with a real computer and browser, in one chat. A master agent builds the rest of your team.',
-    brand: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
-    offers: { '@type': 'Offer', price: '50', priceCurrency: 'USD', url: 'https://crew.dooza.ai/', description: 'Trial, fully refundable within 7 days, then $49 a month including $20 of AI usage.' },
+    '@type': 'Service',
+    name: 'Dooza AI employees',
+    serviceType: 'Done-for-you AI employees: custom AI agents built, monitored and improved by Dooza engineers',
+    url: SITE_URL,
+    description:
+        'Dooza builds AI employees for small businesses: custom AI agents that do a real job inside your tools. Dooza engineers build them, monitor them daily and improve them every month, with your approval on anything sensitive. Start with a refundable pilot: 100% refund within 14 days.',
+    provider: {
+        '@type': 'Organization',
+        name: 'Dooza',
+        url: SITE_URL,
+    },
+    areaServed: {
+        '@type': 'Place',
+        name: 'Worldwide',
+    },
+    audience: {
+        '@type': 'BusinessAudience',
+        audienceType: 'Founders, small businesses, and operations teams',
+    },
+    hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Dooza AI employee services',
+        itemListElement: [
+            'AI employee design from a plain-language brief',
+            'AI employee build and tool connection',
+            'Company context and knowledge setup',
+            'Human approval workflow setup',
+            'Ongoing monitoring, maintenance, and improvement',
+        ].map((service, index) => ({
+            '@type': 'Offer',
+            position: index + 1,
+            itemOffered: {
+                '@type': 'Service',
+                name: service,
+            },
+        })),
+    },
 };
 
 // FAQ Schema generated from the on-page FAQ
@@ -157,7 +187,7 @@ export default function Home() {
             ))}
             <Navbar showLogin={false} ctaType="demo" ctaSource="home_nav" />
             <main id="main-content" className="bg-warm text-slate-900">
-                <HomeCrew />
+                <HomeLanding />
             </main>
             <Footer />
         </BookingModalProvider>

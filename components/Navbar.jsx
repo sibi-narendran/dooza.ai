@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ArrowRight, Calendar, ChevronDown, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
 import { getProductSignupUrl, getProductSigninUrl } from '@/lib/links';
-import { crewUrl } from '@/lib/crew';
 import { trackDemoClick, trackSignupClick } from '@/lib/analytics';
 import { useBookingModal } from '@/components/BookingModalProvider';
 
@@ -31,12 +30,10 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     const isDark = variant === 'dark';
     const solidNav = scrolled || isOpen;
     const productPage = isProductRoute(pathname);
-    // Dooza Crew is the main product (Sibi 2026-10-22): outside product pages the nav button starts a crew.
-    const isDemoCta = productPage ? ctaType === 'demo' : false;
-    const ctaHref = signupUrl || (productPage ? getProductSignupUrl('workforce') : crewUrl(`nav${!pathname || pathname === '/' ? '-home' : pathname.replace(/\//g, '-')}`));
+    const isDemoCta = productPage ? ctaType === 'demo' : true;
     const ctaLabel = ctaLabelOverride || (productPage
         ? signupLabel || (isDemoCta ? 'Book a free call' : 'Start your pilot')
-        : 'Start your crew');
+        : 'Book a free call');
 
     const handleDemoClick = () => {
         openModal();
@@ -97,6 +94,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
     const products = [
         { name: 'Dooza Managed', href: '/pricing' },
         { name: 'Dooza Agents', href: '/' },
+        { name: 'Dooza Crew', href: '/crew' },
     ];
 
     const industries = [
@@ -401,7 +399,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                             </button>
                         ) : (
                             <a
-                                href={ctaHref}
+                                href={signupUrl || getProductSignupUrl('workforce')}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => trackSignupClick('navbar')}
@@ -611,7 +609,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                             </button>
                         ) : (
                             <a
-                                href={ctaHref}
+                                href={signupUrl || getProductSignupUrl('workforce')}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => {
