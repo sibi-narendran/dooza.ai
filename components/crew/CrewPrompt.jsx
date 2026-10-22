@@ -18,15 +18,15 @@ const TONES = {
         form: 'border-white/15 bg-white/[0.06] shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] focus-within:border-white/40',
         input: 'text-white placeholder:text-white/45',
         hint: 'text-white/55',
-        button: 'bg-white text-[#14213D] hover:bg-[#E6F4F1] focus-visible:outline-white',
+        button: 'bg-white text-primary-900 hover:bg-primary-50 focus-visible:outline-white',
         chip: 'border-white/15 text-white/75 hover:border-white/40 hover:text-white',
     },
     light: {
-        form: 'border-[#C9D4E0] bg-white shadow-[0_20px_50px_-30px_rgba(20,33,61,0.5)] focus-within:border-[#14213D]',
-        input: 'text-[#14213D] placeholder:text-[#7A889C]',
-        hint: 'text-[#5B6B82]',
-        button: 'bg-[#14213D] text-white hover:bg-[#0F766E] focus-visible:outline-[#14213D]',
-        chip: 'border-[#C9D4E0] bg-white/60 text-[#46566E] hover:border-[#14213D] hover:text-[#14213D]',
+        form: 'border-[#CBD5E1] bg-white shadow-[0_20px_50px_-30px_rgba(15,23,42,0.5)] focus-within:border-[#0F172A]',
+        input: 'text-[#0F172A] placeholder:text-[#94A3B8]',
+        hint: 'text-[#64748B]',
+        button: 'bg-primary-700 text-white hover:bg-primary-800 focus-visible:outline-[#0F172A]',
+        chip: 'border-[#CBD5E1] bg-white/60 text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A]',
     },
 };
 

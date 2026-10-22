@@ -32,7 +32,7 @@ function Avatar({ person }) {
     return (
         <span
             aria-hidden="true"
-            className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold ${agent ? 'bg-[#0F766E] text-white' : 'bg-[#E3E9F0] text-[#14213D]'}`}
+            className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold ${agent ? 'bg-[#0F766E] text-white' : 'bg-[#E2E8F0] text-[#0F172A]'}`}
         >
             {person.initials}
         </span>
@@ -41,31 +41,31 @@ function Avatar({ person }) {
 
 function CallEvent({ live }) {
     return (
-        <div className="mt-1 flex items-center gap-3 rounded-2xl border border-[#D5DEE8] bg-white px-4 py-3">
-            <span className="text-sm font-semibold text-[#14213D]">Calling (555) 010-0182</span>
+        <div className="mt-1 flex items-center gap-3 rounded-2xl border border-[#E2E8F0] bg-white px-4 py-3">
+            <span className="text-sm font-semibold text-[#0F172A]">Calling (555) 010-0182</span>
             <span className="crew-wave flex h-5 items-end gap-[3px]" aria-hidden="true">
                 {[0, 1, 2, 3, 4, 5, 6].map((i) => (
                     <span key={i} className={`w-[3px] rounded-full bg-[#0F766E] ${live ? 'crew-bar' : ''}`} style={{ height: `${30 + ((i * 37) % 70)}%`, animationDelay: `${i * 90}ms` }} />
                 ))}
             </span>
-            <span className="ml-auto text-xs tabular-nums text-[#5B6B82]">0:42</span>
+            <span className="ml-auto text-xs tabular-nums text-[#64748B]">0:42</span>
         </div>
     );
 }
 
 function BrowserEvent() {
     return (
-        <div className="mt-1 overflow-hidden rounded-2xl border border-[#D5DEE8] bg-white">
-            <div className="flex items-center gap-2 border-b border-[#E3E9F0] px-3 py-2">
-                <span className="h-2 w-2 rounded-full bg-[#D5DEE8]" />
-                <span className="h-2 w-2 rounded-full bg-[#D5DEE8]" />
-                <span className="ml-2 truncate rounded-md bg-[#EEF3F7] px-2 py-0.5 text-xs text-[#5B6B82]">supplier.example/toner-tn760</span>
+        <div className="mt-1 overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white">
+            <div className="flex items-center gap-2 border-b border-[#E2E8F0] px-3 py-2">
+                <span className="h-2 w-2 rounded-full bg-[#E2E8F0]" />
+                <span className="h-2 w-2 rounded-full bg-[#E2E8F0]" />
+                <span className="ml-2 truncate rounded-md bg-[#FAF9F7] px-2 py-0.5 text-xs text-[#64748B]">supplier.example/toner-tn760</span>
             </div>
             <div className="relative px-3 py-3">
-                <div className="h-2 w-2/3 rounded bg-[#E3E9F0]" />
-                <div className="mt-2 h-2 w-1/2 rounded bg-[#E3E9F0]" />
-                <div className="mt-3 inline-block rounded-md bg-[#14213D] px-2 py-1 text-xs font-semibold text-white">$38.40</div>
-                <span className="crew-cursor absolute left-1/2 top-3 h-3 w-3 rotate-45 border-l-2 border-t-2 border-[#14213D]" aria-hidden="true" />
+                <div className="h-2 w-2/3 rounded bg-[#E2E8F0]" />
+                <div className="mt-2 h-2 w-1/2 rounded bg-[#E2E8F0]" />
+                <div className="mt-3 inline-block rounded-md bg-[#0F172A] px-2 py-1 text-xs font-semibold text-white">$38.40</div>
+                <span className="crew-cursor absolute left-1/2 top-3 h-3 w-3 rotate-45 border-l-2 border-t-2 border-[#0F172A]" aria-hidden="true" />
             </div>
         </div>
     );
@@ -73,14 +73,14 @@ function BrowserEvent() {
 
 function CardEvent({ approved }) {
     return (
-        <div className="mt-1 flex flex-wrap items-center gap-3 rounded-2xl border border-[#D5DEE8] bg-white px-4 py-3">
-            <span className="flex h-7 w-10 items-end rounded-md bg-[#14213D] p-1" aria-hidden="true">
+        <div className="mt-1 flex flex-wrap items-center gap-3 rounded-2xl border border-[#E2E8F0] bg-white px-4 py-3">
+            <span className="flex h-7 w-10 items-end rounded-md bg-[#0F172A] p-1" aria-hidden="true">
                 <span className="h-1 w-4 rounded-sm bg-white/60" />
             </span>
-            <span className="text-sm text-[#14213D]">
+            <span className="text-sm text-[#0F172A]">
                 <span className="font-semibold">Team card</span> ending 4417, $38.40
             </span>
-            <span className={`ml-auto rounded-full px-3 py-1 text-xs font-semibold transition-colors duration-500 ${approved ? 'bg-[#0F766E] text-white' : 'bg-[#FFF4DC] text-[#8A5A00]'}`}>
+            <span className={`ml-auto rounded-full px-3 py-1 text-xs font-semibold transition-colors duration-500 ${approved ? 'bg-[#0F766E] text-white' : 'bg-[#FEF3C7] text-[#B45309]'}`}>
                 {approved ? 'Approved' : 'Needs approval'}
             </span>
         </div>
@@ -112,7 +112,7 @@ export default function CrewRoom() {
     const visible = SCRIPT.slice(0, shown);
 
     return (
-        <figure className="relative rounded-[28px] border border-[#D5DEE8] bg-[#F8FAFC] shadow-[0_30px_80px_-40px_rgba(20,33,61,0.45)]">
+        <figure className="relative rounded-[28px] border border-[#E2E8F0] bg-[#F8FAFC] shadow-[0_30px_80px_-40px_rgba(15,23,42,0.45)]">
             <style>{`
                 @keyframes crew-bar { 0%,100% { transform: scaleY(.35) } 50% { transform: scaleY(1) } }
                 .crew-bar { transform-origin: bottom; animation: crew-bar .8s ease-in-out infinite; }
@@ -122,10 +122,10 @@ export default function CrewRoom() {
                 .crew-in { animation: crew-in .35s ease-out both; }
                 @media (prefers-reduced-motion: reduce) { .crew-bar, .crew-cursor, .crew-in { animation: none; } }
             `}</style>
-            <div className="flex items-center justify-between gap-3 border-b border-[#E3E9F0] px-5 py-4">
+            <div className="flex items-center justify-between gap-3 border-b border-[#E2E8F0] px-5 py-4">
                 <div>
-                    <p className="text-sm font-bold text-[#14213D]">Front office</p>
-                    <p className="text-xs text-[#5B6B82]">2 people and 3 AI employees</p>
+                    <p className="text-sm font-bold text-[#0F172A]">Front office</p>
+                    <p className="text-xs text-[#64748B]">2 people and 3 AI employees</p>
                 </div>
                 <div className="flex -space-x-2">
                     {Object.values(PEOPLE).map((p) => (
@@ -141,12 +141,12 @@ export default function CrewRoom() {
                         <li key={`${i}-${m.who}`} className={`crew-in flex gap-2.5 ${mine ? 'flex-row-reverse' : ''}`}>
                             <Avatar person={p} />
                             <div className={`max-w-[85%] ${mine ? 'text-right' : ''}`}>
-                                <p className="mb-1 text-xs text-[#5B6B82]">
-                                    <span className="font-semibold text-[#14213D]">{p.name}</span>
+                                <p className="mb-1 text-xs text-[#64748B]">
+                                    <span className="font-semibold text-[#0F172A]">{p.name}</span>
                                     {p.kind === 'agent' ? <span className="ml-1.5 text-[#0F766E]">AI</span> : null}
                                 </p>
                                 {m.text ? (
-                                    <p className={`inline-block rounded-2xl px-4 py-2.5 text-left text-[15px] leading-snug ${mine ? 'bg-[#14213D] text-white' : 'bg-white text-[#14213D] ring-1 ring-[#E3E9F0]'}`}>{m.text}</p>
+                                    <p className={`inline-block rounded-2xl px-4 py-2.5 text-left text-[15px] leading-snug ${mine ? 'bg-primary-700 text-white' : 'bg-white text-[#0F172A] ring-1 ring-[#E2E8F0]'}`}>{m.text}</p>
                                 ) : null}
                                 {m.event === 'call' ? <CallEvent live={i === shown - 1} /> : null}
                                 {m.event === 'browser' ? <BrowserEvent /> : null}

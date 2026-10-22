@@ -57,28 +57,28 @@ export const homeFaq = [
 function SectionTitle({ children, sub }) {
     return (
         <div className="max-w-2xl">
-            <h2 className={`${display.className} text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] text-[#14213D] md:text-[44px]`}>{children}</h2>
-            {sub ? <p className="mt-4 text-lg leading-relaxed text-[#46566E]">{sub}</p> : null}
+            <h2 className={`${display.className} text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] text-[#0F172A] md:text-[44px]`}>{children}</h2>
+            {sub ? <p className="mt-4 text-lg leading-relaxed text-[#475569]">{sub}</p> : null}
         </div>
     );
 }
 
 export default function HomeCrew() {
     return (
-        <div className={`${display.className} crew-home bg-[#EEF3F7] text-[#14213D]`}>
-            <div className="sticky top-0 z-40 border-b border-[#D5DEE8]/70 bg-[#EEF3F7]/95 backdrop-blur">
+        <div className={`${display.className} crew-home bg-[#FAF9F7] text-[#0F172A]`}>
+            <div className="sticky top-0 z-40 border-b border-[#E2E8F0]/70 bg-[#FAF9F7]/95 backdrop-blur">
             <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8 md:py-4">
                 <Link href="/" className="flex items-center gap-2">
                     <Image src="/logo.png" alt="Dooza" width={30} height={30} className="rounded" />
                     <span className="text-lg font-extrabold tracking-[-0.02em]">Dooza</span>
                 </Link>
-                <nav aria-label="Main" className="hidden items-center gap-7 text-[15px] font-medium text-[#46566E] md:flex">
-                    <a href="#how" className="hover:text-[#14213D]">How it works</a>
-                    <a href="#price" className="hover:text-[#14213D]">Price</a>
-                    <a href="#done-for-you" className="hover:text-[#14213D]">Done for you</a>
-                    <Link href="/blog" className="hover:text-[#14213D]">Blog</Link>
+                <nav aria-label="Main" className="hidden items-center gap-7 text-[15px] font-medium text-[#475569] md:flex">
+                    <a href="#how" className="hover:text-[#0F172A]">How it works</a>
+                    <a href="#price" className="hover:text-[#0F172A]">Price</a>
+                    <a href="#done-for-you" className="hover:text-[#0F172A]">Done for you</a>
+                    <Link href="/blog" className="hover:text-[#0F172A]">Blog</Link>
                 </nav>
-                <a href={crewSignupUrl('home-header')} data-offer="crew" data-source="home-header" className="rounded-full bg-[#14213D] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#0F766E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">
+                <a href={crewSignupUrl('home-header')} data-offer="crew" data-source="home-header" className="rounded-full bg-primary-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F172A]">
                     Try it free
                 </a>
             </header>
@@ -91,29 +91,29 @@ export default function HomeCrew() {
                         <h1 className="mt-3 text-[42px] font-extrabold leading-[1.02] tracking-[-0.035em] md:text-[64px]">
                             Hire your first AI employee in 2 minutes.
                         </h1>
-                        <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#46566E] md:text-xl">
+                        <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#475569] md:text-xl">
                             Give it a job in plain words and watch it work on its own computer, with a browser, a phone number and a card. Add your staff to the same chat. Free for 7 days.
                         </p>
                         <div className="mt-9 max-w-xl">
                             <CrewPrompt placement="home-hero" tone="light" />
-                            <p className="mt-4 text-sm text-[#46566E]">
-                                Rather talk first? <Link href="/book" data-source="home-hero-book" className="font-semibold text-[#0F766E] underline underline-offset-4 hover:text-[#14213D]">Book a 30-minute call</Link>.
+                            <p className="mt-4 text-sm text-[#475569]">
+                                Rather talk first? <Link href="/book" data-source="home-hero-book" className="font-semibold text-[#0F766E] underline underline-offset-4 hover:text-[#0F172A]">Book a 30-minute call</Link>.
                             </p>
                         </div>
                     </div>
                     <CrewRoom />
                 </section>
 
-                <section className="border-t border-[#D5DEE8] bg-white px-4 py-20 md:px-8 md:py-28">
+                <section className="border-t border-[#E2E8F0] bg-white px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
                         <SectionTitle sub="Whatever you can do on a computer, your AI crew can do. These are the tools every AI employee starts with.">
                             It works like a real employee.
                         </SectionTitle>
-                        <dl className="divide-y divide-[#E3E9F0] border-y border-[#E3E9F0]">
+                        <dl className="divide-y divide-[#E2E8F0] border-y border-[#E2E8F0]">
                             {kit.map((k) => (
                                 <div key={k.name} className="grid gap-1 py-5 sm:grid-cols-[180px_1fr] sm:gap-8">
                                     <dt className="text-lg font-bold">{k.name}</dt>
-                                    <dd className="text-[17px] leading-relaxed text-[#46566E]">{k.text}</dd>
+                                    <dd className="text-[17px] leading-relaxed text-[#475569]">{k.text}</dd>
                                 </div>
                             ))}
                         </dl>
@@ -129,29 +129,29 @@ export default function HomeCrew() {
                             {departments.map((d) => (
                                 <div key={d.name} className="border-l-2 border-[#0F766E] pl-5">
                                     <dt className="text-xl font-bold">{d.name}</dt>
-                                    <dd className="mt-2 text-[17px] leading-relaxed text-[#46566E]">{d.jobs}</dd>
+                                    <dd className="mt-2 text-[17px] leading-relaxed text-[#475569]">{d.jobs}</dd>
                                 </div>
                             ))}
                         </dl>
                     </div>
                 </section>
 
-                <section id="how" className="scroll-mt-8 border-t border-[#D5DEE8] bg-white px-4 py-20 md:px-8 md:py-28">
+                <section id="how" className="scroll-mt-8 border-t border-[#E2E8F0] bg-white px-4 py-20 md:px-8 md:py-28">
                     <div className="mx-auto max-w-7xl">
                         <SectionTitle>Start in 2 minutes.</SectionTitle>
                         <ol className="mt-12 grid gap-10 md:grid-cols-3">
                             {steps.map((s, i) => (
                                 <li key={s.title}>
-                                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#14213D] text-base font-bold text-white">{i + 1}</span>
+                                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-700 text-base font-bold text-white">{i + 1}</span>
                                     <h3 className="mt-5 text-xl font-bold">{s.title}</h3>
-                                    <p className="mt-2 text-[17px] leading-relaxed text-[#46566E]">{s.text}</p>
+                                    <p className="mt-2 text-[17px] leading-relaxed text-[#475569]">{s.text}</p>
                                 </li>
                             ))}
                         </ol>
                     </div>
                 </section>
 
-                <section id="price" className="scroll-mt-8 bg-[#14213D] px-4 py-20 text-white md:px-8 md:py-28">
+                <section id="price" className="scroll-mt-8 bg-primary-900 px-4 py-20 text-white md:px-8 md:py-28">
                     <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
                         <div>
                             <h2 className="text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[44px]">Try it free for 7 days.</h2>
@@ -169,24 +169,24 @@ export default function HomeCrew() {
                         <SectionTitle sub="Prefer that we build and run it for you? Each service has its own page and price.">
                             Or let us do it for you.
                         </SectionTitle>
-                        <ul className="mt-10 divide-y divide-[#D5DEE8] border-y border-[#D5DEE8]">
+                        <ul className="mt-10 divide-y divide-[#E2E8F0] border-y border-[#E2E8F0]">
                             {otherWays.map((o) => (
                                 <li key={o.href}>
                                     <Link href={o.href} className="group grid gap-1 py-6 sm:grid-cols-[260px_1fr_auto] sm:items-center sm:gap-8">
                                         <span className="text-lg font-bold group-hover:text-[#0F766E]">{o.name}</span>
-                                        <span className="text-[17px] text-[#46566E]">{o.text}</span>
+                                        <span className="text-[17px] text-[#475569]">{o.text}</span>
                                         <span className="text-sm font-semibold text-[#0F766E] underline-offset-4 group-hover:underline">See the service</span>
                                     </Link>
                                 </li>
                             ))}
                         </ul>
-                        <p className="mt-6 text-[17px] text-[#46566E]">
-                            Not sure which fits? <Link href="/book" data-source="home-dfy-book" className="font-semibold text-[#0F766E] underline underline-offset-4 hover:text-[#14213D]">Book a 30-minute call</Link> and we will tell you.
+                        <p className="mt-6 text-[17px] text-[#475569]">
+                            Not sure which fits? <Link href="/book" data-source="home-dfy-book" className="font-semibold text-[#0F766E] underline underline-offset-4 hover:text-[#0F172A]">Book a 30-minute call</Link> and we will tell you.
                         </p>
                     </div>
                 </section>
 
-                <section className="border-t border-[#D5DEE8] bg-white px-4 py-20 md:px-8 md:py-24">
+                <section className="border-t border-[#E2E8F0] bg-white px-4 py-20 md:px-8 md:py-24">
                     <div className="mx-auto max-w-3xl">
                         <h2 className="mb-8 text-3xl font-extrabold tracking-[-0.025em] md:text-4xl">Questions</h2>
                         <FAQAccordion items={homeFaq} />
