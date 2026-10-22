@@ -4,9 +4,9 @@ import HomeCrew, { homeFaq } from '@/components/home/HomeCrew';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata = {
-    title: { absolute: 'Dooza: AI Employees With a Computer, Browser and Phone' },
+    title: { absolute: 'Dooza: AI Employees With Their Own Computer and Browser' },
     description:
-        'Dooza Crew gives your business AI employees with their own computer, browser, card and phone number. Work with them and your staff in one chat. Free for 7 days.',
+        'Dooza Crew gives your business AI employees with their own computer and browser. Work with them and your staff in one chat. Free for 7 days.',
     keywords: [
         'Dooza Crew',
         'AI employees',
@@ -24,9 +24,9 @@ export const metadata = {
         canonical: SITE_URL,
     },
     openGraph: {
-        title: 'Dooza: AI Employees With a Computer, Browser and Phone',
+        title: 'Dooza: AI Employees With Their Own Computer and Browser',
         description:
-            'Dooza Crew gives your business AI employees with their own computer, browser, card and phone number. Work with them and your staff in one chat. Free for 7 days.',
+            'Dooza Crew gives your business AI employees with their own computer and browser. Work with them and your staff in one chat. Free for 7 days.',
         url: SITE_URL,
         siteName: 'Dooza',
         type: 'website',
@@ -36,9 +36,9 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@sibinarendran',
         creator: '@sibinarendran',
-        title: 'Dooza: AI Employees With a Computer, Browser and Phone',
+        title: 'Dooza: AI Employees With Their Own Computer and Browser',
         description:
-            'Dooza Crew gives your business AI employees with their own computer, browser, card and phone number. Work with them and your staff in one chat. Free for 7 days.',
+            'Dooza Crew gives your business AI employees with their own computer and browser. Work with them and your staff in one chat. Free for 7 days.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

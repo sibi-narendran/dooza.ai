@@ -16,7 +16,7 @@ export default function IcpCrew({ slug }) {
                     <p className="text-base font-semibold text-[#0F766E]">Dooza Crew</p>
                     <h2 className="mt-2 text-3xl font-extrabold leading-[1.1] tracking-[-0.025em] md:text-[40px]">Your {crew.industry} AI crew</h2>
                     <p className="mt-4 max-w-xl text-lg leading-relaxed text-[#475569]">
-                        Three AI employees your master agent sets up on day one. Each has its own computer, browser and phone number, and works with your team in one group chat.
+                        Three AI employees your master agent sets up on day one. Each has its own computer and browser, and works with your team in one group chat.
                     </p>
                     <ul className="mt-8 divide-y divide-[#E2E8F0] border-y border-[#E2E8F0]">
                         {crew.employees.map((e) => (
@@ -36,7 +36,7 @@ export default function IcpCrew({ slug }) {
                 <div className="lg:pt-24">
                     <p className="mb-4 text-lg font-bold">Give your crew its first job</p>
                     <CrewPrompt placement={`icp-${slug}`} tone="light" examples={crew.examples} />
-                    <p className="mt-5 text-sm text-[#64748B]">Nothing is sent or paid until a person you choose approves it.</p>
+                    <p className="mt-5 text-sm text-[#64748B]">Nothing leaves the company until a person you choose approves it.</p>
                 </div>
             </div>
         </section>
