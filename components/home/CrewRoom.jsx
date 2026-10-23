@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Homepage hero animation (Sibi 2026-10-22 15:56: "Claude can make own animations in code"; redone 20:30 "Front office ...
 // i want this part redone"). A scripted chat between you and your AI crew: the master agent splits a job, helpers work in
@@ -92,6 +92,8 @@ function SpendEvent() {
 
 export default function CrewRoom() {
     const [shown, setShown] = useState(SCRIPT.length);
+    const [overflow, setOverflow] = useState(false);
+    const listRef = useRef(null);
 
     useEffect(() => {
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
@@ -111,7 +113,18 @@ export default function CrewRoom() {
         return () => clearTimeout(timer);
     }, []);
 
-        const visible = SCRIPT.slice(0, shown);
+    // Fill from the top like a real chat (Sibi 10-23 09:43: top half was empty at the start); once the thread is taller than
+    // the window, follow the newest message and fade the top edge.
+    useEffect(() => {
+        const el = listRef.current;
+        if (!el) return;
+        const more = el.scrollHeight > el.clientHeight + 1;
+        setOverflow(more);
+        if (shown <= 1) el.scrollTop = 0;
+        else el.scrollTo({ top: el.scrollHeight, behavior: 'smooth' });
+    }, [shown]);
+
+    const visible = SCRIPT.slice(0, shown);
 
     return (
         <figure className="relative rounded-[28px] border border-[#E2E8F0] bg-[#F8FAFC] shadow-[0_30px_80px_-40px_rgba(15,23,42,0.45)]">
@@ -133,7 +146,7 @@ export default function CrewRoom() {
                     ))}
                 </div>
             </div>
-            <ol className="flex h-[440px] flex-col justify-end gap-3 overflow-hidden px-4 py-5 [mask-image:linear-gradient(to_bottom,transparent,black_14%)] sm:px-5" aria-label="Example chat between you and your AI crew">
+            <ol ref={listRef} className={`flex h-[440px] flex-col justify-start gap-3 overflow-hidden px-4 py-5 sm:px-5 ${overflow ? '[mask-image:linear-gradient(to_bottom,transparent,black_14%)]' : ''}`} aria-label="Example chat between you and your AI crew">
                 {visible.map((m, i) => {
                     const p = PEOPLE[m.who];
                     const mine = m.who === 'you';
