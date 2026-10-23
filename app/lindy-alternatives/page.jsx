@@ -128,7 +128,7 @@ const alternatives = [
             'Dooza Managed: first 7 days free, then $200/month, checked by a real person',
             'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you',
             '1,000+ app integrations',
-            'Custom agents built and maintained by Dooza engineers (Dooza Agents)',
+            'Custom agents built and maintained by Dooza engineers (Dooza Custom AI Agents)',
         ],
         cons: [
             'Fewer named AI employees than Sintra\'s 12 helpers',
@@ -655,7 +655,7 @@ export default function LindyAlternativesPage() {
                                     </div>
                                 </div>
                                 <p className="text-base text-slate-400 mt-8 max-w-3xl mx-auto text-center leading-relaxed">
-                                    For a builder who wants to configure their own AI teammate, Lindy is good value. Dooza fits when you would rather not set it up yourself: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents (Dooza Agents) with you, with your approval on anything sensitive. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot. Pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
+                                    For a builder who wants to configure their own AI teammate, Lindy is good value. Dooza fits when you would rather not set it up yourself: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents (Dooza Custom AI Agents) with you, with your approval on anything sensitive. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot. Pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
                                 </p>
                             </ScrollReveal>
                         </div>

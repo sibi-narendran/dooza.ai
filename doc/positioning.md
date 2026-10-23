@@ -35,7 +35,7 @@ Dooza is a SaaS platform with several AI products, plus done-for-you services. M
 | Product | What it is | Link |
 |---|---|---|
 | **Dooza Workforce** (abandoned 2026-10-08, do not market) | AI workforce app with ready-made AI employees | `/workforce` |
-| **Dooza Agents** | AI agentic platform with custom AI agents built and maintained by Dooza engineers | `/` |
+| **Dooza Custom AI Agents** | AI agentic platform with custom AI agents built and maintained by Dooza engineers | `/` |
 
 ### AI employees and agents
 

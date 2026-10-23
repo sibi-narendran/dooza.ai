@@ -111,7 +111,7 @@ const managedFeatures = [
     'Scoped with a Dooza engineer on a free pilot call',
     'Built and maintained by Dooza engineers',
     'Complete setup handled by our team',
-    'Dooza Agents connected for writing workflows',
+    'Dooza Custom AI Agents connected for writing workflows',
     'Priority workflow setup and review',
     '1,000+ app integrations',
     'Connect Shopify, Zendesk, Freshdesk, and more',

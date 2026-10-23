@@ -32,7 +32,7 @@ export const metadata = {
         absolute: 'Zapier Alternative with AI Agents, Done for You | Dooza',
     },
     description:
-        'Workflow automation is a Dooza Agents service: Dooza engineers build and maintain AI-powered workflows across 1,000+ app integrations. Start with a refundable pilot: 100% refund within 14 days.',
+        'Workflow automation is a Dooza Custom AI Agents service: Dooza engineers build and maintain AI-powered workflows across 1,000+ app integrations. Start with a refundable pilot: 100% refund within 14 days.',
     keywords: [
         'workflow automation',
         'Zapier alternative',
@@ -57,7 +57,7 @@ export const metadata = {
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
-        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Agents Automation' }],
+        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Custom AI Agents Automation' }],
     },
     twitter: {
         card: 'summary_large_image',
@@ -140,8 +140,8 @@ const integrationRows = [
 
 const faqData = [
     {
-        question: 'What is Dooza Agents?',
-        answer: 'Dooza Agents is Dooza\'s AI agentic platform: custom AI agents built and maintained by Dooza engineers. Workflow automation is one Dooza Agents use case, where agents connect your business tools and run intelligent workflows that classify, draft, decide, and act on your behalf. Dooza is an AI-native company that builds AI products and services for small businesses.',
+        question: 'What is Dooza Custom AI Agents?',
+        answer: 'Dooza Custom AI Agents is Dooza\'s AI agentic platform: custom AI agents built and maintained by Dooza engineers. Workflow automation is one Dooza Custom AI Agents use case, where agents connect your business tools and run intelligent workflows that classify, draft, decide, and act on your behalf. Dooza is an AI-native company that builds AI products and services for small businesses.',
     },
     {
         question: 'How is Dooza different from Zapier?',
@@ -149,7 +149,7 @@ const faqData = [
     },
     {
         question: 'How many integrations are available?',
-        answer: 'Dooza Agents supports 1,000+ app integrations including Gmail, Slack, Salesforce, HubSpot, Shopify, Stripe, and more. You can also connect any API through webhooks and custom code.',
+        answer: 'Dooza Custom AI Agents supports 1,000+ app integrations including Gmail, Slack, Salesforce, HubSpot, Shopify, Stripe, and more. You can also connect any API through webhooks and custom code.',
     },
     {
         question: 'Can I migrate my Zapier workflows?',
@@ -165,7 +165,7 @@ const schemas = [
     {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Dooza Agents Automation',
+        name: 'Dooza Custom AI Agents Automation',
         url: pageUrl,
         description: metadata.description,
         isPartOf: { '@type': 'WebSite', name: 'Dooza', url: SITE_URL },
@@ -180,11 +180,11 @@ const schemas = [
     {
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'Dooza Agents',
+        name: 'Dooza Custom AI Agents',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         url: pageUrl,
-        description: 'Workflow automation built on Dooza Agents, Dooza\'s AI agentic platform: custom AI agents built and maintained by Dooza engineers, with 1,000+ app integrations.',
+        description: 'Workflow automation built on Dooza Custom AI Agents, Dooza\'s AI agentic platform: custom AI agents built and maintained by Dooza engineers, with 1,000+ app integrations.',
         offers: {
             '@type': 'Offer',
             name: 'Refundable pilot',
@@ -226,7 +226,7 @@ export default function WorkflowAutomationPage() {
                                 Automate everything with <span className="text-primary-600">AI workflows</span>
                             </h1>
                             <p className="mb-9 max-w-2xl mx-auto text-lg leading-relaxed text-slate-600 md:text-xl">
-                                Connect 1,000+ apps, build AI-powered automations, and run your business on autopilot. Dooza engineers build and maintain the workflows on Dooza Agents. Start with a refundable pilot.
+                                Connect 1,000+ apps, build AI-powered automations, and run your business on autopilot. Dooza engineers build and maintain the workflows on Dooza Custom AI Agents. Start with a refundable pilot.
                             </p>
                             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                 <a

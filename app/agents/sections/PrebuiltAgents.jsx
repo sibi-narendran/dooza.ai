@@ -12,7 +12,7 @@ const cards = [
             { src: '/agents/deepagent/icon-globe.webp', width: 129, height: 129, alt: 'Web' },
         ],
         description:
-            'Use Dooza Agents to send a discount email when a cart is abandoned and the cart value is over $100.',
+            'Use Dooza Custom AI Agents to send a discount email when a cart is abandoned and the cart value is over $100.',
     },
     {
         title: 'Sales team automation — HubSpot',

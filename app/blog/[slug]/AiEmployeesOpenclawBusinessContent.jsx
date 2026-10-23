@@ -69,7 +69,7 @@ const faqData = [
     },
     {
         question: "Can Dooza build a custom AI employee for me?",
-        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses. On Dooza Agents, its AI agentic platform, Dooza engineers build and maintain custom AI agents for you and handle hosting, tenancy, security, and deployment, which makes it a managed alternative to self-hosting OpenClaw. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
+        answer: "Yes. Dooza is an AI-native company that builds AI products and services for small businesses. On Dooza Custom AI Agents, its AI agentic platform, Dooza engineers build and maintain custom AI agents for you and handle hosting, tenancy, security, and deployment, which makes it a managed alternative to self-hosting OpenClaw. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
     },
     {
         question: "Is it safe to give AI employees access to business data?",
@@ -777,7 +777,7 @@ export default function AiEmployeesOpenclawBusinessContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl mb-8">
                                 <h3 className="text-xl font-bold text-slate-900 mb-4">Need a Custom AI Employee?</h3>
                                 <p className="text-slate-600 mb-6">
-                                    On <Link href="/" className="text-primary-600 hover:underline">Dooza Agents</Link>, Dooza engineers build and maintain custom AI agents for your business. Here&apos;s how it works:
+                                    On <Link href="/" className="text-primary-600 hover:underline">Dooza Custom AI Agents</Link>, Dooza engineers build and maintain custom AI agents for your business. Here&apos;s how it works:
                                 </p>
                                 <div className="space-y-3">
                                     {[

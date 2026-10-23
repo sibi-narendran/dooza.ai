@@ -127,7 +127,7 @@ const alternatives = [
             'Dooza Managed: first 7 days free, then $200/month, checked by a real person',
             'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you',
             '1,000+ app integrations',
-            'Custom agents built and maintained by Dooza engineers (Dooza Agents)',
+            'Custom agents built and maintained by Dooza engineers (Dooza Custom AI Agents)',
         ],
         cons: [
             'Fewer integrations than Relevance AI\'s listed 2,000+',
@@ -655,7 +655,7 @@ export default function RelevanceAiAlternativesPage() {
                                 </div>
                             </div>
                             <p className="text-base text-slate-400 mt-8 max-w-3xl mx-auto text-center leading-relaxed">
-                                If your company has a team that will design, test and run many agents, with SSO and audit logs, Relevance AI is built for that. Dooza fits when you would rather not set it up yourself: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents (Dooza Agents) with you, with your approval on anything sensitive. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot. Pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
+                                If your company has a team that will design, test and run many agents, with SSO and audit logs, Relevance AI is built for that. Dooza fits when you would rather not set it up yourself: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents (Dooza Custom AI Agents) with you, with your approval on anything sensitive. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot. Pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
                             </p>
                         </ScrollReveal>
                     </div>

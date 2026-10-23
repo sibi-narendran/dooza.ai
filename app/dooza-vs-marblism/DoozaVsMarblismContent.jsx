@@ -18,10 +18,10 @@ import { trackFBViewContent } from '@/lib/analytics';
 const comparisonRows = [
     { feature: 'Price', dooza: 'Refundable pilot (see /pricing)', competitor: '$24/mo billed yearly or $44/mo billed monthly', doozaWins: false },
     { feature: 'Team Members', dooza: 'Scoped on your pilot call', competitor: 'Unlimited team members and businesses', doozaWins: false },
-    { feature: 'AI Employees', dooza: 'Maily, Somi, Ranky, Stan, Linda + custom agents via Dooza Agents', competitor: '7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda)', doozaWins: false },
+    { feature: 'AI Employees', dooza: 'Maily, Somi, Ranky, Stan, Linda + Dooza Custom AI Agents', competitor: '7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda)', doozaWins: false },
     { feature: 'Included Work', dooza: 'Scoped on your pilot call', competitor: '50 hours of work per plan', doozaWins: false },
     { feature: 'Setup', dooza: 'Done for you: a Dooza engineer scopes your pilot on a free 30-min call, then builds and tunes it with you', competitor: 'Self-serve (you set it up and manage it)', doozaWins: true },
-    { feature: 'Custom Agents', dooza: 'Built and maintained by Dooza engineers (Dooza Agents)', competitor: 'Fixed roster of 7 AI employees', doozaWins: true },
+    { feature: 'Custom Agents', dooza: 'Built and maintained by Dooza engineers (Dooza Custom AI Agents)', competitor: 'Fixed roster of 7 AI employees', doozaWins: true },
     { feature: 'Integrations', dooza: '1,000+ app integrations', competitor: 'See marblism.com for supported tools', doozaWins: true },
     { feature: 'Try Before Committing', dooza: 'Refundable pilot — 100% refund within 14 days', competitor: '7-day money-back guarantee (no free trial mentioned on its pricing page)', doozaWins: true },
     { feature: 'Best For', dooza: 'Owners who want it done for them', competitor: 'Lowest-cost self-serve option', doozaWins: false },
@@ -205,7 +205,7 @@ export default function DoozaVsMarblismContent({ faqData }) {
                                     <div className="text-3xl font-bold text-white mb-1">Refundable pilot</div>
                                     <p className="text-sm text-slate-400 mb-5">Done for you. 100% refund within 14 days. Pricing depends on the product — <Link href="/pricing" className="underline text-primary-300">see /pricing</Link>.</p>
                                     <ul className="space-y-2.5 text-sm">
-                                        {['AI employees with one job each', 'Custom agents via Dooza Agents', 'Built and tuned with you by a Dooza engineer', '1,000+ app integrations', 'Free 30-minute call to scope your pilot', '100% refund within 14 days'].map((item, i) => (
+                                        {['AI employees with one job each', 'Dooza Custom AI Agents', 'Built and tuned with you by a Dooza engineer', '1,000+ app integrations', 'Free 30-minute call to scope your pilot', '100% refund within 14 days'].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2.5 text-slate-300">
                                                 <CheckCircle2 size={16} className="text-primary-400 shrink-0" />
                                                 {item}

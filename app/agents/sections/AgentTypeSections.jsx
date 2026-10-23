@@ -37,7 +37,7 @@ function FrameChrome({ title, dark = false }) {
     );
 }
 
-function WhiteImageCard({ src, width, height, alt, title = 'Dooza Agents', imageClassName = 'h-auto w-full rounded-2xl' }) {
+function WhiteImageCard({ src, width, height, alt, title = 'Dooza Custom AI Agents', imageClassName = 'h-auto w-full rounded-2xl' }) {
     return (
         <div className="scroll-reveal">
             <div className="animate-float group overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-xl shadow-slate-200/60 transition duration-300 hover:shadow-2xl hover:shadow-primary-100/50">

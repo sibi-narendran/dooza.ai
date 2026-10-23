@@ -59,7 +59,7 @@ const faqData = [
     },
     {
         question: "Can Dooza build a custom agent like the one I built in OpenClaw?",
-        answer: "Yes. Dooza Agents is Dooza's AI agentic platform: Dooza engineers build and maintain custom agents around your workflows and handle hosting and security, with encrypted connections and your approval on anything sensitive. If you need local-only processing or full control of the code, self-hosted OpenClaw may still suit you better."
+        answer: "Yes. Dooza Custom AI Agents is Dooza's AI agentic platform: Dooza engineers build and maintain custom agents around your workflows and handle hosting and security, with encrypted connections and your approval on anything sensitive. If you need local-only processing or full control of the code, self-hosted OpenClaw may still suit you better."
     }
 ];
 
@@ -598,7 +598,7 @@ export default function MoltbotAlternativesContent() {
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">For Developers: Custom Agents Without Self-Hosting</h2>
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    If you've built custom agents in OpenClaw and would rather not host and maintain them, Dooza Agents is Dooza's AI agentic platform: Dooza engineers build and maintain custom agents for you.
+                                    If you've built custom agents in OpenClaw and would rather not host and maintain them, Dooza Custom AI Agents is Dooza's AI agentic platform: Dooza engineers build and maintain custom agents for you.
                                 </p>
                             </div>
                             <div className="bg-slate-50 border border-slate-200 p-6 rounded-xl mb-6">

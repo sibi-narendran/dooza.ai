@@ -216,8 +216,8 @@ const budgetTiers = [
         label: 'Scaling Operations',
         color: 'slate',
         recommendation: 'Run an AI employee platform at the core with enterprise-grade specialized tools for your most impactful functions.',
-        bestPick: 'Dooza Agents: custom AI agents built and maintained by Dooza engineers, done for you.',
-        tools: ['Dooza Agents (custom agents built by engineers)', 'HubSpot (CRM + marketing)', 'Intercom (advanced support, priced per seat plus usage)'],
+        bestPick: 'Dooza Custom AI Agents: custom AI agents built and maintained by Dooza engineers, done for you.',
+        tools: ['Dooza Custom AI Agents (custom agents built by engineers)', 'HubSpot (CRM + marketing)', 'Intercom (advanced support, priced per seat plus usage)'],
     },
 ];
 

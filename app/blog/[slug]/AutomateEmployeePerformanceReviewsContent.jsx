@@ -952,7 +952,7 @@ export default function AutomateEmployeePerformanceReviewsContent() {
                                     {
                                         icon: Database,
                                         title: "Automated Data Collection",
-                                        desc: "Dooza Agents are custom AI agents built and maintained by Dooza engineers. They can be set up to pull work data from the tools your team already uses, so managers spend less time gathering it by hand."
+                                        desc: "Dooza Custom AI Agents are custom AI agents built and maintained by Dooza engineers. They can be set up to pull work data from the tools your team already uses, so managers spend less time gathering it by hand."
                                     },
                                     {
                                         icon: BarChart3,

@@ -11,7 +11,7 @@ const staticPages = [
     {
         title: 'Home',
         url: SITE_URL,
-        description: 'Dooza Agents: the AI agentic platform. Custom AI agents built and maintained by Dooza engineers. Starts with a refundable pilot: 100% refund within 14 days.',
+        description: 'Dooza Custom AI Agents: the AI agentic platform. Custom AI agents built and maintained by Dooza engineers. Starts with a refundable pilot: 100% refund within 14 days.',
     },
     {
         title: 'Pricing',
@@ -180,7 +180,7 @@ const staticPages = [
     {
         title: 'AI Customer Support (done for you)',
         url: `${SITE_URL}/customer-support-ai`,
-        description: 'AI customer support workflows for email, chat and tickets, built and run by Dooza Agents and AI employees.',
+        description: 'AI customer support workflows for email, chat and tickets, built and run by Dooza Custom AI Agents and AI employees.',
     },
     {
         title: 'Automated Customer Service',
@@ -215,7 +215,7 @@ const staticPages = [
     {
         title: 'How to Start an AI Automation Agency',
         url: `${SITE_URL}/start-ai-automation-agency`,
-        description: 'Package repeatable workflows, choose offers and deliver with Dooza Agents.',
+        description: 'Package repeatable workflows, choose offers and deliver with Dooza Custom AI Agents.',
     },
     {
         title: 'Industries',
@@ -241,7 +241,7 @@ const productPages = [
         description: 'Self-serve AI agent team: a master agent plus helper agents it creates and briefs, each user\'s agents in their own gVisor sandbox with their own headless browser and files, managed from a private chat app on web or phone. 7-day free trial (card required), then $49/month including $20 of AI usage.',
     },
     {
-        title: 'Dooza Agents (AI agentic platform)',
+        title: 'Dooza Custom AI Agents (AI agentic platform)',
         url: SITE_URL,
         description: 'Custom AI agents built and maintained by Dooza engineers, live in days, with your approval on anything sensitive. Starts with a refundable pilot.',
     },
@@ -408,7 +408,7 @@ const companyFacts = [
     'Brand colors: Dooza Teal #0F766E (primary), Teal Bright #0D9488, Ink #0F172A, Warm White #FAF9F7, Signal Amber #F59E0B',
     'What Dooza is: an AI-native company that builds AI products and services for small businesses',
     'Self-serve product: Dooza Crew (https://crew.dooza.ai), your own AI agent team in a private sandbox, 7-day free trial then $49/month including $20 of AI usage',
-    'Product: Dooza Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
+    'Product: Dooza Custom AI Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
     'Services (done for you): Dooza Managed (AI admin assistant checked by a real person), Dooza AI answering service (AI receptionist), custom AI agents scoped on a free 30-minute call, industry offers on their industry pages',
     'Offers: Dooza Managed is free for the first 7 days, then $200/month. The AI answering service is $149/month, full refund if you cancel within 14 days of the first charge. Custom AI agents start with a paid, refundable pilot (100% refund within 14 days), scoped by a Dooza engineer on a free 30-minute call.',
     `Pricing: Dooza Managed $200/month, first 7 days free (${SITE_URL}/pricing); AI answering service $149/month for 500 minutes (${SITE_URL}/ai-answering-service-for-small-business); custom builds scoped on a free 30-minute call (${SITE_URL}/book); industry offers priced on their industry pages`,

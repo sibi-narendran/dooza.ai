@@ -71,7 +71,7 @@ const faqData = [
     },
     {
         question: "What if I want to customize my AI employees?",
-        answer: "A Dooza engineer scopes your pilot on a free 30-minute call and configures AI employees to match your business, brand voice, and workflows. If you need something the ready-made employees don't cover, Dooza Agents is the AI agentic platform where Dooza engineers build and maintain custom agents for you."
+        answer: "A Dooza engineer scopes your pilot on a free 30-minute call and configures AI employees to match your business, brand voice, and workflows. If you need something the ready-made employees don't cover, Dooza Custom AI Agents is the AI agentic platform where Dooza engineers build and maintain custom agents for you."
     }
 ];
 
@@ -507,7 +507,7 @@ export default function OpenclawVsDoozaContent() {
                                             { feature: "Serving separate clients", openclaw: "Not a hostile multi-tenant boundary; extra isolation needed", dooza: "Each business has its own account" },
                                             { feature: "Support", openclaw: "Docs, GitHub, Discord community", dooza: "Dooza engineers" },
                                             { feature: "Maintenance", openclaw: "You apply updates and fixes", dooza: "Done for you" },
-                                            { feature: "Control and customisation", openclaw: "Full control over every layer", dooza: "Configured to your workflows; custom agents via Dooza Agents" }
+                                            { feature: "Control and customisation", openclaw: "Full control over every layer", dooza: "Configured to your workflows; Dooza Custom AI Agents" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -650,7 +650,7 @@ export default function OpenclawVsDoozaContent() {
                                     Need a Custom Agent?
                                 </h4>
                                 <p className="text-slate-700">
-                                    If you want <strong>custom AI agents</strong> but don&apos;t want to host and maintain them, Dooza Agents is Dooza&apos;s AI agentic platform: Dooza engineers build and maintain custom agents around your workflows, and handle hosting, security, and deployment. <strong>You define the job. We run the agent.</strong>
+                                    If you want <strong>custom AI agents</strong> but don&apos;t want to host and maintain them, Dooza Custom AI Agents is Dooza&apos;s AI agentic platform: Dooza engineers build and maintain custom agents around your workflows, and handle hosting, security, and deployment. <strong>You define the job. We run the agent.</strong>
                                 </p>
                                 <p className="text-slate-600 text-sm mt-3">
                                     <Link href="/blog/ai-employees-openclaw-business" className="text-primary-600 hover:underline font-medium">Read our guide to AI employees and OpenClaw &rarr;</Link>

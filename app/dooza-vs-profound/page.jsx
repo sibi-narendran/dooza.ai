@@ -90,7 +90,7 @@ const faqData = [
     },
     {
         question: 'How fast can I get started with Dooza?',
-        answer: 'Book a free 30-minute call and a Dooza engineer scopes your refundable pilot. Workforce employees like Ranky can start working the same day, and custom agents on Dooza Agents are live in days. Profound Enterprise requires a demo before pricing is shared.',
+        answer: 'Book a free 30-minute call and a Dooza engineer scopes your refundable pilot. Workforce employees like Ranky can start working the same day, and Dooza Custom AI Agents are live in days. Profound Enterprise requires a demo before pricing is shared.',
     },
 ];
 
