@@ -27,7 +27,7 @@ const kit = [
     { name: 'Its own computer', text: 'A private machine with files, spreadsheets and code. Work stays there between jobs.' },
     { name: 'A real browser', text: 'It opens sites, logs in with your accounts, fills in forms and does research the way you would.' },
     { name: 'Your staff in one chat', text: 'Add your people to the same group chat, on web or phone. Anyone can hand out a job and see the work.' },
-    { name: 'Watch every step', text: 'You watch every step live in chat.' },
+    { name: 'Your approval first', text: 'Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
 ];
 
 const departments = [
@@ -51,11 +51,11 @@ const otherWays = [
 ];
 
 export const homeFaq = [
-    { question: 'What is Dooza?', answer: 'Dooza gives your business AI employees. With Dooza Crew you get a master agent that builds a team of AI employees for you. Each one has its own computer and a real browser, and they work with your staff in one group chat. You watch every step live in chat.' },
+    { question: 'What is Dooza?', answer: 'Dooza gives your business AI employees. With Dooza Crew you get a master agent that builds a team of AI employees for you. Each one has its own computer and a real browser, and they work with your staff in one group chat. You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
     { question: 'What can an AI employee do?', answer: 'Whatever you can do on a computer: research, write, fill in forms, update spreadsheets, draft email and chat replies for your approval. You give the job in plain words.' },
     { question: 'Can my staff work with the AI employees?', answer: 'Yes. Create a group, add your people and your AI employees, and work in one chat. Your staff can give jobs, see the work, and watch every step live.' },
     { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month, with $20 of AI usage included. Cancel during the trial and you pay nothing.' },
-    { question: 'Which channels can it use?', answer: 'You talk to your crew in a private chat app on web or phone, and your staff can join the same chat. You watch every step live in chat.' },
+    { question: 'Which channels can it use?', answer: 'You talk to your crew in a private chat app on web or phone, and your staff can join the same chat. You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
     { question: 'Can I start today?', answer: 'Seats are limited. When they are full you can join the waitlist and we email you when a seat opens.' },
     { question: 'Do you still build AI agents for us?', answer: 'Yes. If you would rather we do it for you, see Dooza Managed, custom AI agents and the AI answering service. Each has its own page and price.' },
 ];
@@ -127,7 +127,7 @@ export default function HomeCrew() {
                             <div className="max-w-2xl">
                                 <h2 id="team-title" className={H2}>Hand it whole departments.</h2>
                                 <p className={`mt-5 text-lg leading-relaxed ${MUTED}`}>
-                                    Your people and your AI employees share one group. Anyone can hand out a job. You watch every step live in chat.
+                                    Your people and your AI employees share one group. Anyone can hand out a job. You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.
                                 </p>
                             </div>
                             <p className={`flex flex-wrap gap-x-6 gap-y-2 text-[15px] ${MUTED}`}>

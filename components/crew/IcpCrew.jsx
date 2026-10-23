@@ -36,7 +36,7 @@ export default function IcpCrew({ slug }) {
                 <div className="lg:pt-24">
                     <p className="mb-4 text-lg font-bold">Give your crew its first job</p>
                     <CrewPrompt placement={`icp-${slug}`} tone="light" examples={crew.examples} />
-                    <p className="mt-5 text-sm text-[#64748B]">You watch every step live in chat.</p>
+                    <p className="mt-5 text-sm text-[#64748B]">You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.</p>
                 </div>
             </div>
         </section>
