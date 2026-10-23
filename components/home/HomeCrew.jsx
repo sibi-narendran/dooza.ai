@@ -243,7 +243,7 @@ export default function HomeCrew() {
                         <div>
                             <h2 className={H2}><a href={crewSignupUrl('home-price-h2')} data-source="home-price-h2" className="decoration-white/60 underline-offset-8 hover:underline">Try it free for 7 days.</a></h2>
                             <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/85">
-                                <a href={crewSignupUrl('home-price-text')} data-source="home-price-text" className="hover:underline">Then $49 a month for your whole crew, with $20 of AI usage included. Cancel any time in the trial and you pay nothing.</a>
+                                <a href={crewSignupUrl('home-price-copy')} data-source="home-price-copy" className="hover:underline">Then $49 a month for your whole crew, with $20 of AI usage included. Cancel any time in the trial and you pay nothing.</a>
                             </p>
                             <p className="mt-4 text-[15px] text-white/75">Seats are limited. When they are full, join the waitlist.</p>
                         </div>
