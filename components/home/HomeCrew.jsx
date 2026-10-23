@@ -27,7 +27,7 @@ const kit = [
     { name: 'Its own computer', text: 'A private machine with files, spreadsheets and code. Work stays there between jobs.' },
     { name: 'A real browser', text: 'It opens sites, logs in with your accounts, fills in forms and does research the way you would.' },
     { name: 'Your staff in one chat', text: 'Add your people to the same group chat, on web or phone. Anyone can hand out a job and see the work.' },
-    { name: 'Your approval first', text: 'Anything that leaves the company waits for your Approve tap.' },
+    { name: 'Watch every step', text: 'You watch every step live in chat.' },
 ];
 
 const departments = [
@@ -41,7 +41,7 @@ const departments = [
 const steps = [
     { title: 'Tell it the job', text: 'Type what you need in plain words, the way you would brief a new hire.' },
     { title: 'Your master agent hires the crew', text: 'It creates the AI employees the job needs and gives each one its computer, browser and tools.' },
-    { title: 'Add your people', text: 'Invite your staff to a group with the AI employees. They ask, report and wait for approval in one chat.' },
+    { title: 'Add your people', text: 'Invite your staff to a group with the AI employees. They ask and report in one chat.' },
 ];
 
 const otherWays = [
@@ -51,11 +51,11 @@ const otherWays = [
 ];
 
 export const homeFaq = [
-    { question: 'What is Dooza?', answer: 'Dooza gives your business AI employees. With Dooza Crew you get a master agent that builds a team of AI employees for you. Each one has its own computer and a real browser, and they work with your staff in one group chat. Anything that leaves the company waits for your approval.' },
+    { question: 'What is Dooza?', answer: 'Dooza gives your business AI employees. With Dooza Crew you get a master agent that builds a team of AI employees for you. Each one has its own computer and a real browser, and they work with your staff in one group chat. You watch every step live in chat.' },
     { question: 'What can an AI employee do?', answer: 'Whatever you can do on a computer: research, write, fill in forms, update spreadsheets, draft email and chat replies for your approval. You give the job in plain words.' },
-    { question: 'Can my staff work with the AI employees?', answer: 'Yes. Create a group, add your people and your AI employees, and work in one chat. Your staff can give jobs, see the work and approve anything before it leaves the company.' },
+    { question: 'Can my staff work with the AI employees?', answer: 'Yes. Create a group, add your people and your AI employees, and work in one chat. Your staff can give jobs, see the work, and watch every step live.' },
     { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month, with $20 of AI usage included. Cancel during the trial and you pay nothing.' },
-    { question: 'Which channels can it use?', answer: 'You talk to your crew in a private chat app on web or phone, and your staff can join the same chat. Anything it sends outside the company waits for your approval.' },
+    { question: 'Which channels can it use?', answer: 'You talk to your crew in a private chat app on web or phone, and your staff can join the same chat. You watch every step live in chat.' },
     { question: 'Can I start today?', answer: 'Seats are limited. When they are full you can join the waitlist and we email you when a seat opens.' },
     { question: 'Do you still build AI agents for us?', answer: 'Yes. If you would rather we do it for you, see Dooza Managed, custom AI agents and the AI answering service. Each has its own page and price.' },
 ];
@@ -127,7 +127,7 @@ export default function HomeCrew() {
                             <div className="max-w-2xl">
                                 <h2 id="team-title" className={H2}>Hand it whole departments.</h2>
                                 <p className={`mt-5 text-lg leading-relaxed ${MUTED}`}>
-                                    Your people and your AI employees share one group. Anyone can hand out a job. Nothing leaves the company until a person you choose approves it.
+                                    Your people and your AI employees share one group. Anyone can hand out a job. You watch every step live in chat.
                                 </p>
                             </div>
                             <p className={`flex flex-wrap gap-x-6 gap-y-2 text-[15px] ${MUTED}`}>
@@ -140,7 +140,7 @@ export default function HomeCrew() {
                         <div className="mt-14">
                             <div className="flex justify-center">
                                 <div className="flex items-center gap-3 rounded-full border-2 border-[#14213D] bg-white px-5 py-2.5 text-[17px] font-semibold">
-                                    <Seat kind="human" /> You and your staff approve
+                                    <Seat kind="human" /> You and your staff watch
                                 </div>
                             </div>
                             <ul className="relative mt-8 grid gap-px overflow-hidden rounded-2xl border border-[#14213D]/15 bg-[#14213D]/15 md:grid-cols-2 lg:mt-8 lg:grid-cols-5 lg:overflow-visible lg:rounded-none lg:border-0 lg:bg-transparent lg:pt-10">
