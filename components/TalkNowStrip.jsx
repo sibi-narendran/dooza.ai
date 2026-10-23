@@ -6,8 +6,8 @@ import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTAC
 
 // "Talk to Dooza now": every way to reach us in one block (Sibi 2026-10-14: "I need people to ask ChatGPT and directly contact us").
 // Clicks on tel:/sms:/mailto: are tracked by ContactClickTracker (app/layout.jsx).
-// offer: 'managed' on common pages; 'crew' on general blog posts (homepage = Dooza Crew since Sibi 10-22 15:56; 2026-10-23 evolve); ICP pages pass their own offer (Sibi 10-15: never mix ICP offers and prices with common pages).
-export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) {
+// offer: 'crew' by default (Sibi 10-22: every CTA → Crew; was 'managed' until 2026-10-23); 'crew' on general blog posts (homepage = Dooza Crew since Sibi 10-22 15:56; 2026-10-23 evolve); ICP pages pass their own offer (Sibi 10-15: never mix ICP offers and prices with common pages).
+export default function TalkNowStrip({ source = 'unknown', offer = 'crew' }) {
     // Reply-stage offers: email lands in Close, where Orion answers (2026-10-16).
     const email = ['notary-renewal', 'cpa-1099', 'newbiz-ct', 'law-warn-ca'].includes(offer) ? REPLY_EMAIL : CONTACT_EMAIL;
     const link = 'inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white px-4 py-2 font-semibold text-primary-800 hover:border-primary-400 hover:bg-primary-50';
