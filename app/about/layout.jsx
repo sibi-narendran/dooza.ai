@@ -2,7 +2,7 @@ import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
     title: 'About Us - Dooza | Adam Laboratory Inc.',
-    description: 'Dooza is an AI-native company, built by Adam Laboratory Inc. (Delaware C-Corp), making AI products and services for small businesses: Dooza Workforce and Dooza Custom AI Agents.',
+    description: 'Dooza is an AI-native company, built by Adam Laboratory Inc. (Delaware C-Corp), making AI products and services for small businesses: Dooza Crew, Dooza Managed and Dooza Custom AI Agents.',
     keywords: ['about Dooza', 'Adam Laboratory Inc', 'AI company', 'AI-native company', 'Delaware corporation'],
     alternates: {
         canonical: `${SITE_URL}/about`,
