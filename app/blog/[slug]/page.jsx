@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import TalkNowStrip from '@/components/TalkNowStrip';
+import CrewBlogBar from '@/components/CrewBlogBar';
 import { cache } from 'react';
 import { SITE_URL } from '../../../lib/site';
 import { blogPosts, generateArticleSchema, generateFAQSchema, generateBreadcrumbSchema } from '../../../lib/blogData';
@@ -358,6 +359,7 @@ export default async function BlogPostPage({ params }) {
                 />
                 <BlogComponent post={staticPost} />
                 <TalkNowStrip source={`blog_${slug}`} offer={stripOffer(slug)} />
+                {stripOffer(slug) === 'crew' && <CrewBlogBar source={slug} />}
             </>
         );
     }
@@ -384,6 +386,7 @@ export default async function BlogPostPage({ params }) {
                 />
                 <DynamicBlogContent post={staticPost} />
                 <TalkNowStrip source={`blog_${slug}`} offer={stripOffer(slug)} />
+                {stripOffer(slug) === 'crew' && <CrewBlogBar source={slug} />}
             </>
         );
     }
@@ -416,6 +419,7 @@ export default async function BlogPostPage({ params }) {
             />
             <DynamicBlogContent post={dynamicPost} />
             <TalkNowStrip source={`blog_${slug}`} offer={stripOffer(slug)} />
+                {stripOffer(slug) === 'crew' && <CrewBlogBar source={slug} />}
         </>
     );
 }
