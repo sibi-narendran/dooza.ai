@@ -16,6 +16,7 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/Scroll
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { trackFBViewContent } from '@/lib/analytics';
+import { crewSignupUrl } from '@/lib/crewUrl';
 
 const sintraPainPoints = [
     { icon: CreditCard, title: '250 Credits a Month', desc: 'Every Sintra plan includes 250 credits per month, shared by all helpers and reset monthly. Advanced actions use credits; when they run out, you buy top-ups or wait for the reset.' },
@@ -257,7 +258,7 @@ export default function SintraAlternativesContent({ faqData }) {
                             </p>
 
                             <p id="short-answer" className="hero-entrance hero-delay-3 text-base text-slate-700 mb-8 max-w-2xl mx-auto text-left sm:text-center">
-                                <strong>Short answer:</strong> keep Sintra if you want the lowest price and will run the helpers yourself. If you would rather have it done for you, <a href={tagPay(MANAGED_PAY_URL, 'sintra_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. If you mainly need missed calls answered, Dooza&rsquo;s <a href={recepPayUrl('sintra-alternatives')} data-offer="receptionist" className="font-semibold text-primary-700 underline">AI answering service</a> is $149/month for up to 500 minutes.
+                                <strong>Short answer:</strong> keep Sintra if you want the lowest price and will run the helpers yourself. If you want AI employees that do the work at a similar price, <a href={crewSignupUrl('sintra_alt_short')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> gives you a lead agent with helper agents that you chat with from web or phone and that ask before sending anything: free for 7 days, then $49/month with $20 of AI usage included. If you would rather have it fully done for you, <a href={tagPay(MANAGED_PAY_URL, 'sintra_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. If you mainly need missed calls answered, Dooza&rsquo;s <a href={recepPayUrl('sintra-alternatives')} data-offer="receptionist" className="font-semibold text-primary-700 underline">AI answering service</a> is $149/month for up to 500 minutes.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -585,7 +586,7 @@ export default function SintraAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Sintra Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Try Dooza Managed free for 7 days, then $200/month, or book a free 30-minute call with a Dooza engineer to scope it. No sales pitch, just a walkthrough of what Dooza handles for your business.
+                                Start Dooza Crew free for 7 days, then $49/month with $20 of AI usage included. Want it done for you? Dooza Managed is $200/month, or book a free 30-minute call with a Dooza engineer. No sales pitch, just a walkthrough of what Dooza handles for your business.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="sintra_alt_cta">Start your pilot</SignupButton>

@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowRight } from 'lucide-react';
-import { getProductSignupUrl } from '@/lib/links';
+import { crewSignupUrl } from '@/lib/crewUrl';
 import { trackSignupClick, trackFBLead } from '@/lib/analytics';
 
 export default function SignupButton({ source = 'unknown', children = 'Start your pilot', className = '', size = 'lg', variant = 'primary' }) {
@@ -15,7 +15,8 @@ export default function SignupButton({ source = 'unknown', children = 'Start you
 
     return (
         <a
-            href={getProductSignupUrl('workforce')}
+            href={crewSignupUrl(source)}
+            data-offer="crew"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => { trackSignupClick(source); trackFBLead(`${source}_signup`); }}
