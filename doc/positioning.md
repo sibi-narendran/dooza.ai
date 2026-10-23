@@ -4,11 +4,12 @@
 > - Sold now: **Dooza Managed**, an AI admin assistant checked by a real person, $200/month, first 7 days free (`/pricing`, lib/offers.js MANAGED_PAY_URL). Custom agents: scoped on a free 30-minute call (`/book`), refundable pilot.
 > - Industry (ICP) offers live ONLY on their own pages, never on home, /pricing or blog (Sibi 2026-10-15): Monday Trucker Feed (trucking pages), 1099-NEC prep for CPA firms (`/1099-prep-for-cpa-firms`), Texas notary renewal (`/texas-notary-renewal`). Terms come from Odysseus's offer cards.
 > - **AI answering service / AI receptionist IS an offer again (Sibi 2026-10-21 12:51 "Do all"):** $149/month for up to 500 minutes, then $0.30/min, month to month, full refund if cancelled within 14 days of the first charge; answers, asks your questions, emails message + transcript + recording link; does NOT book onto calendars or send texts. Pages: /ai-answering-service-for-small-business, /hvac-, /plumbing-, /garage-door-answering-service, /ai-receptionist. Terms from Odysseus's offer card.
+> - **Dooza Crew (live since 2026-10-22; Sibi's scoreboard = Crew sign-ups):** a lead AI agent plus helper agents per user, chatted with on web or phone; agents browse the web and write files in their own isolated workspace; before an agent sends or pays it asks in chat (Approve / Edit / Reject). Terms as on https://crew.dooza.ai: 7-day free trial (card required), then $49/month including $20 of AI usage; hard AI-spend cap per account. Seats are limited (waitlist when full). EXCEPTION to the "free trial" and "$49 outside /pricing" bans below: Crew copy (crew.dooza.ai, Crew blog posts and comparisons, listings) may state exactly these Crew terms. Never apply them to Managed, agents or the answering service.
 > - **NOT offers (do not sell, script, pitch or promise):** Dooza Workforce app (abandoned 2026-10-08).
 > - "Every Dooza product starts with a refundable pilot" is no longer true: only custom agents do. Managed = 7 days free; answering service = paid first, 14-day refund.
 > - Videos, pitches and new pages: check claims against this banner first.
 
-Every page, blog post, generated article, and CTA must match this file. If copy disagrees with it, the copy is wrong. Last updated 2026-10-16 (offers banner + one-sentence now Managed; Workforce app and receptionist retired).
+Every page, blog post, generated article, and CTA must match this file. If copy disagrees with it, the copy is wrong. Last updated 2026-10-23 (Dooza Crew line added to the banner); 2026-10-16 (offers banner + one-sentence now Managed; Workforce app and receptionist retired).
 
 ## One sentence (use verbatim when describing Dooza)
 
