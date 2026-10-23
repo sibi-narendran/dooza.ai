@@ -518,6 +518,24 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/carrier411-alternative`,
+            lastModified: pageDate('2026-10-13'),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/truckerdb-alternative`,
+            lastModified: pageDate('2026-10-13'),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/carrieriq-alternative`,
+            lastModified: pageDate('2026-10-13'),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/trucking-new-authority-leads`,
             lastModified: pageDate('2026-10-13'),
             changeFrequency: 'weekly',

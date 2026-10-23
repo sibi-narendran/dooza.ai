@@ -221,6 +221,9 @@ export default function BestTruckingInsuranceLeadsPage() {
                                 <li><strong>You want a short weekly call list and one state to yourself:</strong> a weekly list like <Link href={LEADS_PAGE}>Dooza&rsquo;s trucking renewal list</Link>. It is a spreadsheet, not a CRM, so pick a data platform if you want software.</li>
                                 <li><strong>You have no time to dial:</strong> pay per appointment or live transfer (Get Insure Leads lists $225 a live transfer and $325 a confirmed appointment), or ask Dooza about booked calls for your state.</li>
                             </ul>
+                            <p>
+                                Weighing one vendor? Side-by-side pages: <Link href="/carrieriq-alternative">Carrier IQ alternative</Link>, <Link href="/truckerdb-alternative">TruckerDB alternative</Link> and <Link href="/carrier411-alternative">Carrier411 alternative</Link> (Carrier411 is a broker tool, not an agent one).
+                            </p>
 
                             <h2>Lead types in one table</h2>
                         </section>
