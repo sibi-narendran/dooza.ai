@@ -241,9 +241,9 @@ export default function HomeCrew() {
                 <section id="price" className="scroll-mt-20 bg-[#0F766E] px-4 py-20 text-white md:px-8 md:py-28">
                     <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h2 className={H2}>Try it free for 7 days.</h2>
+                            <h2 className={H2}><a href={crewSignupUrl('home-price-h2')} data-source="home-price-h2" className="decoration-white/60 underline-offset-8 hover:underline">Try it free for 7 days.</a></h2>
                             <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/85">
-                                Then $49 a month for your whole crew, with $20 of AI usage included. Cancel any time in the trial and you pay nothing.
+                                <a href={crewSignupUrl('home-price-text')} data-source="home-price-text" className="hover:underline">Then $49 a month for your whole crew, with $20 of AI usage included. Cancel any time in the trial and you pay nothing.</a>
                             </p>
                             <p className="mt-4 text-[15px] text-white/75">Seats are limited. When they are full, join the waitlist.</p>
                         </div>
