@@ -127,7 +127,17 @@ const aiTools = [
         icon: Zap,
         color: "orange",
         description: "Connect your apps, automate workflows, and eliminate repetitive tasks. The glue that holds your tech stack together.",
-        features: ["App connections", "Workflows", "Triggers", "500+ integrations"]
+        features: ["App connections", "Workflows", "Triggers", "500+ integrations"],
+        note: (
+            <>
+                <strong>For spreadsheets, reports and decks:</strong>{' '}
+                <a href="https://ajelix.com" className="text-primary-600 hover:underline" target="_blank" rel="noopener">Ajelix</a>{' '}
+                is a European agentic AI workspace that turns raw data into analysis, Excel files, documents and
+                presentations, with custom agents and workflow automation in the same place. It runs on European cloud
+                infrastructure or inside your own, which matters if your clients ask where their data lives. Plans start at
+                $39 per user per month (Lite, billed monthly).
+            </>
+        )
     },
     {
         name: "AI Accounting",
