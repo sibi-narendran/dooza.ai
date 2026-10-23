@@ -107,7 +107,7 @@ export default function AboutPage() {
                             </div>
                             <h3 className="text-lg font-semibold text-slate-900 mb-2">AI Employees</h3>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                Dooza Workforce is an AI workforce app with ready-made AI employees. Dooza Custom AI Agents is an AI agentic platform with custom AI agents built and maintained by Dooza engineers. Custom Dooza agents start with a refundable pilot; see <a href="/pricing" className="font-medium text-primary-700 underline">pricing</a>.
+                                Dooza Crew gives each user a lead AI agent plus helper agents in their own isolated workspace, chatted with on web or phone (<a href="https://crew.dooza.ai/?utm_source=dooza&utm_medium=page&utm_campaign=about" className="font-medium text-primary-700 underline">crew.dooza.ai</a>). Dooza Custom AI Agents is an AI agentic platform with custom AI agents built and maintained by Dooza engineers. Custom Dooza agents start with a refundable pilot; see <a href="/pricing" className="font-medium text-primary-700 underline">pricing</a>.
                             </p>
                         </div>
                     </div>
@@ -141,7 +141,15 @@ export default function AboutPage() {
                                 </tr>
                                 <tr>
                                     <td className="px-6 py-4 text-sm font-medium text-slate-500 bg-slate-50">Product</td>
-                                    <td className="px-6 py-4 text-sm text-slate-900">Dooza.ai — AI employees for small businesses (Dooza Workforce and Dooza Custom AI Agents)</td>
+                                    <td className="px-6 py-4 text-sm text-slate-900">Dooza.ai: Dooza Crew (an AI agent team per user), Dooza Managed (an AI admin assistant checked by a real person) and Dooza Custom AI Agents</td>
+                                </tr>
+                                <tr>
+                                    <td className="px-6 py-4 text-sm font-medium text-slate-500 bg-slate-50">Founder</td>
+                                    <td className="px-6 py-4 text-sm text-slate-900"><a href="https://twitter.com/sibinarendran" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Sibi Narendran</a></td>
+                                </tr>
+                                <tr>
+                                    <td className="px-6 py-4 text-sm font-medium text-slate-500 bg-slate-50">Verify</td>
+                                    <td className="px-6 py-4 text-sm text-slate-900">Search file number 10208844 on the <a href="https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Delaware Division of Corporations entity search</a></td>
                                 </tr>
                             </tbody>
                         </table>
