@@ -1,11 +1,12 @@
 import { Phone, MessageSquare, Mail, Calendar } from 'lucide-react';
 import { MANAGED_PAY_URL, supportPay, ICP1_A_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL, CERT_PACK_PAY_URL, LAW_WARN_CA_PAY_URL, tagPay } from '@/lib/offers';
 import { recepPayUrl, PILOT_PROMISE } from '@/lib/aiReceptionistData';
+import { crewSignupUrl } from '@/lib/crewUrl';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL, REPLY_EMAIL } from '@/lib/contact';
 
 // "Talk to Dooza now": every way to reach us in one block (Sibi 2026-10-14: "I need people to ask ChatGPT and directly contact us").
 // Clicks on tel:/sms:/mailto: are tracked by ContactClickTracker (app/layout.jsx).
-// offer: 'managed' on common pages; ICP pages pass their own offer (Sibi 10-15: never mix ICP offers and prices with common pages).
+// offer: 'managed' on common pages; 'crew' on general blog posts (homepage = Dooza Crew since Sibi 10-22 15:56; 2026-10-23 evolve); ICP pages pass their own offer (Sibi 10-15: never mix ICP offers and prices with common pages).
 export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) {
     // Reply-stage offers: email lands in Close, where Orion answers (2026-10-16).
     const email = ['notary-renewal', 'cpa-1099', 'newbiz-ct', 'law-warn-ca'].includes(offer) ? REPLY_EMAIL : CONTACT_EMAIL;
@@ -38,6 +39,8 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'managed' }) 
                         <>Or start now: the <a href={tagPay(LAW_WARN_CA_PAY_URL, source)} data-offer="law-warn-ca" data-source={source} className="font-semibold text-primary-700 underline">weekly California WARN sheet</a>, $299 a month, paid first.</>
                     ) : offer === 'cert-agencies' ? (
                         <>Or start now: a <a href={tagPay(CERT_PACK_PAY_URL, source)} data-offer="cert-agencies" data-source={source} className="font-semibold text-primary-700 underline">pack of 10 certificates for $50</a>.</>
+                    ) : offer === 'crew' ? (
+                        <>Or start now: <a href={crewSignupUrl(`strip-${source}`)} data-offer="crew" data-source={source} className="font-semibold text-primary-700 underline">Dooza Crew</a>, AI employees you chat with from web or phone that ask before sending anything: free for 7 days, then $49 a month with $20 of AI usage included. Want it done for you instead? <a href={tagPay(MANAGED_PAY_URL, source)} data-offer="managed" data-source={source} className="underline">Dooza Managed</a>, $200/month.</>
                     ) : offer === 'trucker-feed' ? (
                         <>Or start now: the <a href={`${ICP1_A_PAY_URL}?client_reference_id=feed-talknow`} data-offer="trucker-feed" data-source={source} className="font-semibold text-primary-700 underline">Monday Trucker Feed</a>, $129 every 4 weeks, paid first.</>
                     ) : (

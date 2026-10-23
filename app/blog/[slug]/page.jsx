@@ -263,7 +263,7 @@ const SUPPORT_SLUGS = new Set([
     'conversational-ai-for-customer-support', 'generative-ai-for-customer-support', 'generative-ai-customer-support',
     'automated-customer-support-system', 'customer-service-and-support-automation',
 ]);
-const stripOffer = (slug) => (slug === 'best-ai-receptionist' ? 'receptionist' : SUPPORT_SLUGS.has(slug) ? 'support' : 'managed');
+const stripOffer = (slug) => (slug === 'best-ai-receptionist' ? 'receptionist' : SUPPORT_SLUGS.has(slug) ? 'support' : 'crew');
 
 // Generate metadata for each blog post
 export async function generateMetadata({ params }) {
