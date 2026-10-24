@@ -1,5 +1,6 @@
 'use client';
 
+import { crewSignupUrl } from '@/lib/crewUrl';
 import { useEffect, useRef, useState } from 'react';
 
 // Homepage hero animation (Sibi 2026-10-22 15:56: "Claude can make own animations in code"; redone 20:30 "Front office ...
@@ -169,6 +170,17 @@ export default function CrewRoom() {
                     );
                 })}
             </ol>
+            {/* The panel drew dead clicks in Clarity (10-24): the whole panel now opens sign-up with this job pre-filled. */}
+            <div className="border-t border-[#E2E8F0] px-5 py-4">
+                <a
+                    href={crewSignupUrl('home-demo', SCRIPT[0].text)}
+                    data-offer="crew"
+                    data-source="home-demo"
+                    className="text-[15px] font-semibold text-[#0F766E] after:absolute after:inset-0 after:rounded-[28px] after:content-[''] hover:underline"
+                >
+                    Give your crew this job, free for 7 days →
+                </a>
+            </div>
             <figcaption className="sr-only">An example Dooza Crew chat: you give one job, the master agent splits it between two AI helpers who research in their own browser and save results to Files, with AI spend capped.</figcaption>
         </figure>
     );
