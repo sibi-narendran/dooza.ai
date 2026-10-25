@@ -4,6 +4,7 @@
 // before sending; NO phone calls, SMS or PDF form filling; no load board or TMS named as tested) and 08:04 (per-organization
 // price, $20 AI usage included, hard cap). Design: home v3 tokens, same as /insurance-agents.
 import Link from 'next/link';
+import CrewNav from '@/components/crew/CrewNav';
 import Image from 'next/image';
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -97,12 +98,8 @@ export default function DispatchCrew() {
                         <span className={`${D} text-lg font-bold tracking-[-0.02em]`}>Dooza</span>
                         <span className={`hidden text-sm sm:inline ${MUTED}`}>for truck dispatchers</span>
                     </Link>
-                    <nav aria-label="Main" className={`hidden items-center gap-7 text-[15px] font-medium md:flex ${MUTED}`}>
-                        <a href="#agents" className="hover:text-[#14213D]">The agents</a>
-                        <a href="#how" className="hover:text-[#14213D]">How it works</a>
-                        <a href="#price" className="hover:text-[#14213D]">Price</a>
-                    </nav>
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 md:gap-8">
+                    <CrewNav />
                     <Link href="/book" data-source="dsp-header-book" className="hidden text-sm font-semibold text-[#14213D] underline decoration-2 underline-offset-4 hover:text-[#0F766E] sm:inline">Questions? Book a call</Link>
                     <a href={crewSignupUrl('dsp-header')} data-offer="crew" data-source="dsp-header" className="rounded-full bg-[#0F766E] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#14213D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">
                         Try it free

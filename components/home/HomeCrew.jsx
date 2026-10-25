@@ -9,6 +9,7 @@
 // ink #14213D. Bricolage Grotesque for display, Instrument Sans for reading. One bold element: the live group chat (CrewRoom) beside a full-width
 // headline. The org chart is the one structural device, because it shows the real point: AI and staff on one team.
 import Link from 'next/link';
+import CrewNav from '@/components/crew/CrewNav';
 import Image from 'next/image';
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -83,15 +84,12 @@ export default function HomeCrew() {
                         <Image src="/logo.png" alt="Dooza" width={30} height={30} className="rounded" />
                         <span className={`${D} text-lg font-bold tracking-[-0.02em]`}>Dooza</span>
                     </Link>
-                    <nav aria-label="Main" className={`hidden items-center gap-7 text-[15px] font-medium md:flex ${MUTED}`}>
-                        <a href="#how" className="hover:text-[#14213D]">How it works</a>
-                        <a href="#price" className="hover:text-[#14213D]">Price</a>
-                        <a href="#done-for-you" className="hover:text-[#14213D]">Done for you</a>
-                        <Link href="/blog" className="hover:text-[#14213D]">Blog</Link>
-                    </nav>
+                    <div className="flex items-center gap-4 md:gap-8">
+                    <CrewNav />
                     <a href={crewSignupUrl('home-header')} data-offer="crew" data-source="home-header" className="rounded-full bg-[#0F766E] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#14213D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">
                         Try it free
                     </a>
+                    </div>
                 </header>
             </div>
             <div aria-hidden="true" className="h-[65px] md:h-[73px]" />
