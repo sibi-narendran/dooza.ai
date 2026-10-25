@@ -27,7 +27,7 @@ const EXAMPLES = [
     'Every morning, list what renews in the next 60 days',
     'Sort my inbox and draft replies to certificate requests',
     'Pull dec pages for these 10 clients from the carrier portals',
-    'Email every new quote request within 10 minutes',
+    'Answer every new quote request within the hour',
     'Find commercial clients with no umbrella policy',
 ];
 
@@ -60,8 +60,8 @@ export const insuranceAgents = [
     {
         name: 'Follow-up agent',
         pain: 'Fifty leads called, six answered.',
-        job: 'Answers new quote requests by email within minutes, looks up the business, and follows up on a schedule until they reply or book a call with you.',
-        task: 'Email every new quote request within 10 minutes and follow up every 2 days until they reply.',
+        job: 'Drafts a reply to each new quote request within the hour, looks up the business, and follows up on a schedule until they reply or book a call with you.',
+        task: 'Check for new quote requests every hour, draft a reply to each and follow up every 2 days until they reply.',
     },
 ];
 
@@ -103,9 +103,12 @@ export default function InsuranceCrew() {
                         <a href="#how" className="hover:text-[#14213D]">How it works</a>
                         <a href="#price" className="hover:text-[#14213D]">Price</a>
                     </nav>
+                    <div className="flex items-center gap-4">
+                    <Link href="/book" data-source="ins-header-book" className="hidden text-sm font-semibold text-[#14213D] underline decoration-2 underline-offset-4 hover:text-[#0F766E] sm:inline">Questions? Book a call</Link>
                     <a href={crewSignupUrl('ins-header')} data-offer="crew" data-source="ins-header" className="rounded-full bg-[#0F766E] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#14213D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">
                         Try it free
                     </a>
+                    </div>
                 </header>
             </div>
             <div aria-hidden="true" className="h-[65px] md:h-[73px]" />
@@ -232,6 +235,10 @@ export default function InsuranceCrew() {
                         <h2 id="faq-title" className={H2}>Questions agents ask</h2>
                         <div className="mt-10">
                             <FAQAccordion items={insuranceFaq} />
+                        </div>
+                        <div className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-[#14213D]/15 bg-[#EEF3F1] p-6 sm:flex-row sm:items-center sm:justify-between">
+                            <p className="text-lg font-semibold">Still have a doubt? Ask a person.</p>
+                            <Link href="/book" data-source="ins-faq-book" className="rounded-full bg-[#14213D] px-6 py-3 text-[15px] font-semibold text-white hover:bg-[#0F766E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">Book a 30-minute call</Link>
                         </div>
                     </div>
                 </section>

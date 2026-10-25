@@ -200,6 +200,7 @@ export default function DispatchersContent({ page }) {
             </section>
 
             <IcpCrew slug="dispatchers" />
+            <p className="mx-auto max-w-3xl px-4 pb-10 text-center text-lg text-slate-700 sm:px-6">See all five dispatch agents working together: <a href="/truck-dispatchers" className="font-semibold text-teal-700 underline">AI employees for truck dispatchers</a>.</p>
 
             {/* =============================== */}
             {/* 2. CAPABILITIES SECTION         */}

@@ -13,9 +13,9 @@ const NIGHT = [
     { time: '7:58 am', who: 'You', text: 'Approved 7 drafts from your phone before the office opened.', human: true },
 ];
 
-export default function NightShift({ displayClass = '' }) {
+export default function NightShift({ displayClass = '', items = NIGHT }) {
     const ref = useRef(null);
-    const [lit, setLit] = useState(NIGHT.length);
+    const [lit, setLit] = useState(items.length);
 
     useEffect(() => {
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
@@ -25,7 +25,7 @@ export default function NightShift({ displayClass = '' }) {
             const r = el.getBoundingClientRect();
             const vh = window.innerHeight;
             const p = Math.min(1, Math.max(0, (vh * 0.75 - r.top) / (r.height * 0.85)));
-            setLit(Math.round(p * NIGHT.length));
+            setLit(Math.round(p * items.length));
         };
         onScroll();
         window.addEventListener('scroll', onScroll, { passive: true });
@@ -45,8 +45,8 @@ export default function NightShift({ displayClass = '' }) {
                     <p className="mt-4 text-sm text-white/60">An example night. Numbers are illustrative.</p>
                 </div>
                 <ol ref={ref} className="relative border-l-2 border-white/15 pl-8">
-                    <span aria-hidden="true" className="absolute -left-[2px] top-0 w-[2px] bg-[#F2B53A] transition-[height] duration-500 ease-out" style={{ height: `${(lit / NIGHT.length) * 100}%` }} />
-                    {NIGHT.map((n, i) => {
+                    <span aria-hidden="true" className="absolute -left-[2px] top-0 w-[2px] bg-[#F2B53A] transition-[height] duration-500 ease-out" style={{ height: `${(lit / items.length) * 100}%` }} />
+                    {items.map((n, i) => {
                         const on = i < lit;
                         return (
                             <li key={n.time} className={`relative pb-10 transition-opacity duration-500 last:pb-0 ${on ? 'opacity-100' : 'opacity-35'}`}>

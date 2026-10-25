@@ -124,6 +124,11 @@ const staticPages = [
         description: 'AI solutions for small business workflows.',
     },
     {
+        title: 'AI employees for truck dispatchers',
+        url: `${SITE_URL}/truck-dispatchers`,
+        description: 'Dooza Crew for truck dispatchers and dispatch services: AI employees that search load boards for loads that fit your trucks, sort the broker inbox and copy rate confirmations into your load sheet, put invoice packets together (rate con + POD) and draft the invoice email, find and follow up with new brokers, and track carrier insurance and authority dates. Asks your approval before anything goes out; you book the loads. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
+    },
+    {
         title: 'AI employees for independent insurance agents',
         url: `${SITE_URL}/insurance-agents`,
         description: 'Dooza Crew for independent insurance agencies: AI employees that work carrier portals, the shared inbox, certificates of insurance, renewal reminders and lead follow-up around the clock, asking your approval before anything goes out. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
