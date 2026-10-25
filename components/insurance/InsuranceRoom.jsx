@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 // /insurance-agents hero animation (Sibi 2026-10-25 08:05: "a lot of animations", one agent per pain point). A scripted night
 // at an independent agency: a certificate request arrives after hours, the agents handle it, the owner approves in the morning.
 // Only what Edison confirmed for Crew on 10-25 08:08: webmail via its own browser, web portals after the user signs in once,
-// hourly wake-ups, Files, approval before sending. No phone calls, no SMS, no PDF form filling. Client and carrier names are made up.
+// hourly wake-ups, Files, approval before sending. Phone calls included (Sibi 10-25 20:00), no SMS claim, no PDF form filling. Client and carrier names are made up.
 const PEOPLE = {
     you: { name: 'You', kind: 'human', initials: 'Y' },
     inbox: { name: 'Inbox agent', kind: 'agent', initials: 'I' },

@@ -83,7 +83,7 @@ export default function IndustryCrew({ c }) {
                                 </div>
                                 <div className="md:pt-9">
                                     <p className={`text-[17px] leading-relaxed ${MUTED}`}>
-                                        Crew agents do not take calls yet. For the phones, the <Link href="/ai-receptionist" className={LINK}>Dooza AI phone agent</Link> picks up and emails you each message with the transcript, and your Inbox agent can sort those emails like any other.
+                                        Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.
                                     </p>
                                 </div>
                             </li>

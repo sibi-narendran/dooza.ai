@@ -48,7 +48,6 @@ const steps = [
 const otherWays = [
     { name: 'Dooza Managed', text: 'An AI admin assistant whose work a real person checks.', href: '/pricing' },
     { name: 'Custom AI agents', text: 'Our engineers build and run an agent for one job in your tools.', href: '/done-for-you-ai-agents' },
-    { name: 'AI phone agent', text: 'An AI agent that answers your business calls, day and night.', href: '/ai-receptionist' },
 ];
 
 export const homeFaq = [
@@ -58,7 +57,7 @@ export const homeFaq = [
     { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap. Cancel during the trial and you pay nothing.' },
     { question: 'Which channels can it use?', answer: 'You talk to your crew in a private chat app on web or phone, and your staff can join the same chat. You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
     { question: 'Can I start today?', answer: 'Seats are limited. When they are full you can join the waitlist and we email you when a seat opens.' },
-    { question: 'Do you still build AI agents for us?', answer: 'Yes. If you would rather we do it for you, see Dooza Managed, custom AI agents and the AI phone agent. Each has its own page and price.' },
+    { question: 'Do you still build AI agents for us?', answer: 'Yes. If you would rather we do it for you, see Dooza Managed and custom AI agents. Each has its own page and price.' },
 ];
 
 // Testimonials are from Dooza customers on the same AI-employee product before it was named Crew (Sibi 2026-10-22 17:18).
