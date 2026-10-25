@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
 
-// Standard nav (Sibi 2026-10-25 08:44-08:48): AI Employees menu (Crew + industries + custom agents) | Pricing | About | Blog | Log in.
+// Standard nav (Sibi 2026-10-25 08:44-08:48): AI Employees menu (Crew + industries + custom agents) | Pricing | About | Blog. Log in is a button in SiteHeader.
 // CSS-only dropdown (hover/focus on desktop, <details> via MobileMenu on mobile) so the Crew pages stay server-rendered.
 // Mobile panel spans the bar's width (it hung 15px off-screen at 390px, Sibi 10-25 09:07).
 const LINKS = [
@@ -60,7 +60,6 @@ export default function CrewNav() {
                     </div>
                 </div>
                 {LINKS.map((l) => <Link key={l.href} href={l.href} className="hover:text-[#14213D]">{l.name}</Link>)}
-                <a href="https://crew.dooza.ai/login" className="hover:text-[#14213D]">Log in</a>
             </nav>
             <MobileMenu>
                 <summary className="cursor-pointer list-none text-sm font-semibold text-[#14213D] [&::-webkit-details-marker]:hidden">Menu</summary>
@@ -69,7 +68,6 @@ export default function CrewNav() {
                     <CrewMenu />
                     <div className="my-2 border-t border-[#14213D]/10" />
                     {LINKS.map((l) => <Link key={l.href} href={l.href} className={`${ITEM} text-[15px] font-semibold text-[#14213D]`}>{l.name}</Link>)}
-                    <a href="https://crew.dooza.ai/login" className={`${ITEM} text-[15px] font-semibold text-[#14213D]`}>Log in</a>
                 </div>
             </MobileMenu>
         </>
