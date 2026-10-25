@@ -1,7 +1,7 @@
 // /truck-dispatchers: Dooza Crew for truck dispatchers (Sibi 2026-10-25 08:20: "Do the same for truck dispatchers", same
 // build as /insurance-agents: one agent per pain, agents work with each other, a meeting link for doubts). Product facts:
 // Edison 10-25 08:08 (portals and webmail in its own browser after the user signs in once, hourly wake-ups, Files, approval
-// before sending; NO phone calls, SMS or PDF form filling; no load board or TMS named as tested) and 08:04 (per-organization
+// before sending; NO phone calls or SMS; fillable PDF/Excel/Word filling YES (Edison 10-25 10:38); no load board or TMS named as tested) and 08:04 (per-organization
 // price, $20 AI usage included, hard cap). Design: home v3 tokens, same as /insurance-agents.
 import Link from 'next/link';
 import SiteHeader from '@/components/crew/SiteHeader';
@@ -89,6 +89,7 @@ export const dispatchFaq = [
     { question: 'Does it work with DAT or Truckstop?', answer: 'It works in web-based tools you can log in to with a browser, including load boards, webmail and factoring portals. We have not certified any specific load board or TMS yet, so try it on yours during the 7-day free trial, and check your load board\'s terms for automated searching.' },
     { question: 'Can it make check calls or text drivers?', answer: 'Not yet. Crew agents work in browsers, email and files. For inbound calls, the Dooza AI phone agent picks up and emails you each message with the transcript ($149 a month for 500 minutes).' },
     { question: 'Can it book loads for me?', answer: 'It finds the loads that fit and drafts the email to the broker. You call or approve before anything is booked.' },
+    { question: 'Can it fill broker setup packets?', answer: 'Yes, when the packet is a fillable PDF or a web form. Upload the packet and it fills in your carrier\'s details, such as the W-9, from your files, saves the filled copy to Files and drafts the email back to the broker for your approval. Scanned PDFs without form fields cannot be filled.' },
     { question: 'Is my carriers\' data safe?', answer: 'Every account runs in its own isolated sandbox with its own browser and files. You type your passwords and 2FA codes yourself, and nothing is sent without your approval.' },
     { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with $20 of AI usage included and a hard cap. Cancel during the trial and you pay nothing.' },
     { question: 'I still have questions. Can I talk to someone?', answer: 'Yes. Book a 30-minute call at dooza.ai/book and we will walk through your desk with you.' },

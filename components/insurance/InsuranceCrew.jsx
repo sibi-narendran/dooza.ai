@@ -2,8 +2,8 @@
 // industry called independent insurance agents ... one agent per pain point ... Dooza for insurance agents, we understand
 // your pain and work"). Pains from content/research/independent-insurance-agents-pains-2026-10-25.md (Big I 2026 study via
 // Insurance Journal, r/InsuranceProfessional and r/InsuranceAgent threads). Product facts: Edison 10-25 08:08 (portals and
-// webmail in its own browser after the user signs in once, hourly wake-ups, Files, approval before sending; NO phone calls,
-// SMS or PDF form filling; no AMS named as tested) and 08:04 (per-organization price, $20 AI usage included, hard cap).
+// webmail in its own browser after the user signs in once, hourly wake-ups, Files, approval before sending; NO phone calls
+// or SMS; fillable PDF, Excel and Word filling YES (Edison 10-25 10:38, pypdf tested on IRS W-9); no AMS named as tested) and 08:04 (per-organization price, $20 AI usage included, hard cap).
 // Design: home v3 tokens (teal = AI, amber = your staff). The bold element is the hero chat; the roster is rows, not cards.
 import Link from 'next/link';
 import SiteHeader from '@/components/crew/SiteHeader';
@@ -89,7 +89,7 @@ export const insuranceFaq = [
     { question: 'What is Dooza Crew for insurance agents?', answer: 'Dooza Crew gives an independent agency AI employees: one for carrier portals, one for the inbox, one for certificates and changes, one for renewals, one for lead follow-up. Each has its own computer and browser, works around the clock, and works with your staff in one chat. Before it sends anything, it asks you to approve.' },
     { question: 'Does it work with Applied Epic, EZLynx or HawkSoft?', answer: 'It works in web-based systems you can log in to with a browser: carrier portals, webmail and agency tools. We have not certified any specific agency management system yet, so try it on yours during the 7-day free trial.' },
     { question: 'Can it answer our phones?', answer: 'Not yet. Crew agents work in browsers, email and files. For calls, the Dooza AI phone agent picks up and emails you each message with the transcript ($149 a month for 500 minutes).' },
-    { question: 'Can it fill ACORD forms?', answer: 'It fills web forms and portal screens, including certificate and change requests in carrier and agency portals. It does not fill PDF forms yet.' },
+    { question: 'Can it fill ACORD forms?', answer: 'Yes, if you upload your fillable copy. It fills fillable PDF forms such as ACORD 25 and 125, plus Excel and Word files, and saves the filled form to Files for you to check. It also fills web forms and portal screens, including certificate and change requests in carrier and agency portals. Scanned PDFs without form fields cannot be filled.' },
     { question: 'Is our client data safe?', answer: 'Every account runs in its own isolated sandbox with its own browser and files. You type your passwords and 2FA codes yourself, and nothing is sent without your approval.' },
     { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with $20 of AI usage included and a hard cap. Cancel during the trial and you pay nothing.' },
     { question: 'Can my CSRs and producers use it?', answer: 'Yes. Users are unlimited. Add your team to the same chat and everyone can hand out jobs and see the work.' },
