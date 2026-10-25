@@ -113,6 +113,11 @@ const staticPages = [
         description: 'Dooza Crew for truck dispatchers and dispatch services: AI employees that search load boards for loads that fit your trucks, sort the broker inbox and copy rate confirmations into your load sheet, put invoice packets together (rate con + POD) and draft the invoice email, find and follow up with new brokers, and track carrier insurance and authority dates. Asks your approval before anything goes out; you book the loads. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
     },
     {
+        title: 'AI agents for accountants',
+        url: `${SITE_URL}/ai-agents-for-accountants`,
+        description: 'Dooza Crew for accounting, CPA, tax and bookkeeping firms: AI agents that chase clients for missing documents, sort the firm inbox and file attachments by client, download statements from bank and card portals, track returns, extensions and estimated payments coming due, fill engagement letters and organizers, and find new clients. Asks your approval before anything goes out; no tax prep, filing or advice. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
+    },
+    {
         title: 'AI employees for independent insurance agents',
         url: `${SITE_URL}/insurance-agents`,
         description: 'Dooza Crew for independent insurance agencies: AI employees that work carrier portals, the shared inbox, certificates of insurance, renewal reminders and lead follow-up around the clock, asking your approval before anything goes out. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
@@ -453,6 +458,11 @@ export async function GET() {
             title: 'Dooza for truck dispatchers',
             url: `${SITE_URL}/truck-dispatchers`,
             description: 'Dooza Crew AI employees for truck dispatch services.',
+        },
+        {
+            title: 'Dooza for accountants',
+            url: `${SITE_URL}/ai-agents-for-accountants`,
+            description: 'Dooza Crew AI agents for accounting, CPA and bookkeeping firms.',
         },
     ];
 
