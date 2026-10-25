@@ -15,6 +15,7 @@ const INDUSTRIES = [
     { name: 'Truck Dispatchers', detail: 'Load boards, brokers, billing', href: '/truck-dispatchers' },
     { name: 'Accountants', detail: 'Client documents, statements, deadlines', href: '/ai-agents-for-accountants' },
     { name: 'Law Firms', detail: 'Intake, client updates, records, dockets', href: '/ai-agents-for-law-firms' },
+    { name: 'Owner-Operators', detail: 'Invoices, PODs, detention, IFTA', href: '/ai-agents-for-truck-drivers' },
 ];
 
 const ITEM = 'block rounded-lg px-3 py-2.5 hover:bg-[#EEF3F1] focus-visible:bg-[#EEF3F1] focus-visible:outline-none';

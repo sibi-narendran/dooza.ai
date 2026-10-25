@@ -118,6 +118,11 @@ const staticPages = [
         description: 'Dooza Crew for accounting, CPA, tax and bookkeeping firms: AI agents that chase clients for missing documents, sort the firm inbox and file attachments by client, download statements from bank and card portals, track returns, extensions and estimated payments coming due, fill engagement letters and organizers, and find new clients. Asks your approval before anything goes out; no tax prep, filing or advice. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
     },
     {
+        title: 'AI agents for owner-operator truck drivers',
+        url: `${SITE_URL}/ai-agents-for-truck-drivers`,
+        description: 'Dooza Crew for owner-operators and small fleets with their own authority: AI agents that build invoice packets (rate con, POD, BOL) and draft the broker email, follow up on invoices past 30 days, scan load boards with your login and draft broker emails (you book), bill detention from BOL or ELD times, sort fuel receipts and miles by state for IFTA, and track insurance, UCR, IRP, 2290 and medical card dates. You approve every message; it never books loads or files returns. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
+    },
+    {
         title: 'AI agents for law firms',
         url: `${SITE_URL}/ai-agents-for-law-firms`,
         description: 'Dooza Crew for small law firms and solo attorneys: AI agents that reply to new web inquiries with intake questions and a booking link, draft client status updates from matter notes, chase clients for missing documents and signatures, fill records request letters and follow up with providers, check court portals for new docket entries, and follow up on unpaid invoices. A person approves every message; no legal advice, signatures or court filing. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
@@ -468,6 +473,11 @@ export async function GET() {
             title: 'Dooza for accountants',
             url: `${SITE_URL}/ai-agents-for-accountants`,
             description: 'Dooza Crew AI agents for accounting, CPA and bookkeeping firms.',
+        },
+        {
+            title: 'Dooza for owner-operators',
+            url: `${SITE_URL}/ai-agents-for-truck-drivers`,
+            description: 'Dooza Crew AI agents for owner-operator truck drivers and small fleets.',
         },
         {
             title: 'Dooza for law firms',
