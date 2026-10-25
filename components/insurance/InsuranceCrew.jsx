@@ -32,8 +32,14 @@ const EXAMPLES = [
     'Find commercial clients with no umbrella policy',
 ];
 
-// One agent per pain. Pain lines paraphrase what agents and CSRs wrote (research file above); no invented numbers.
+// One agent per pain. Sales agent added on Sibi's order 2026-10-25 09:34 ("add getting leads sales agent to both industries"). Pain lines paraphrase what agents and CSRs wrote (research file above); no invented numbers.
 export const insuranceAgents = [
+    {
+        name: 'Sales agent',
+        pain: 'No time to prospect while you service the book.',
+        job: 'Finds businesses that fit your appetite in public sources you point it to, like new business filings in your state or new trucking authorities, builds the list with their websites and public contact details in Files, and drafts a personal first email to each. Nothing goes out until you tap Approve; then it follows up until they reply and hands every reply to the Follow-up agent.',
+        task: 'Find 25 new businesses in my state that fit our commercial appetite, list them in Files with their website and public contact details, and draft a first email to each for my approval.',
+    },
     {
         name: 'Portal agent',
         pain: 'The same client, typed into fifteen carrier portals.',
@@ -121,7 +127,7 @@ export default function InsuranceCrew() {
                         <div className="max-w-3xl">
                             <h2 id="agents-title" className={H2}>One agent for each thing that eats your day.</h2>
                             <p className={`mt-5 text-lg leading-relaxed ${MUTED}`}>
-                                Hire one or all five. Each has its own computer, its own browser and its own job. And they work with each other: the Inbox agent hands a certificate request to the Service agent, the Renewals agent hands its remarket list to the Portal agent for new quotes, and you see every handoff in your chat.
+                                Hire one or all six. Each has its own computer, its own browser and its own job. And they work with each other: the Sales agent hands every reply to the Follow-up agent, the Inbox agent hands a certificate request to the Service agent, the Renewals agent hands its remarket list to the Portal agent for new quotes, and you see every handoff in your chat.
                             </p>
                         </div>
                         <ol className="mt-14 divide-y divide-[#14213D]/15 border-y border-[#14213D]/15">

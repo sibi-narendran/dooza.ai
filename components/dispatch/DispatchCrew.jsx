@@ -31,8 +31,14 @@ const EXAMPLES = [
     'Find 20 brokers who move reefer freight out of Georgia',
 ];
 
-// One agent per pain. Pain lines are the everyday dispatch desk; no invented numbers.
+// One agent per pain. Sales agent added on Sibi's order 2026-10-25 09:34 ("add getting leads sales agent to both industries"). Pain lines are the everyday dispatch desk; no invented numbers.
 export const dispatchAgents = [
+    {
+        name: 'Sales agent',
+        pain: 'No time to find your next carrier.',
+        job: 'Finds new carriers that fit your service in the public FMCSA records (new authorities by state, equipment and fleet size) and on their websites, builds the list with their public contact details in Files, and drafts a short first email offering your dispatch service. Nothing goes out until you tap Approve; then it follows up until they reply or book a call with you.',
+        task: 'Find 25 new trucking authorities in Texas with 1 to 5 trucks, list them in Files with their public contact details, and draft a first email offering our dispatch service for my approval.',
+    },
     {
         name: 'Load board agent',
         pain: 'Hours a day refreshing load boards.',
@@ -120,7 +126,7 @@ export default function DispatchCrew() {
                         <div className="max-w-3xl">
                             <h2 id="agents-title" className={H2}>One agent for each thing that eats your day.</h2>
                             <p className={`mt-5 text-lg leading-relaxed ${MUTED}`}>
-                                Hire one or all five. Each has its own computer, its own browser and its own job. And they work with each other: the Inbox agent hands a delivered load to the Billing agent, the Broker agent passes a new setup packet to the Compliance agent, and you see every handoff in your chat.
+                                Hire one or all six. Each has its own computer, its own browser and its own job. And they work with each other: the Sales agent hands a carrier who signs to the Load board agent, the Inbox agent hands a delivered load to the Billing agent, the Broker agent passes a new setup packet to the Compliance agent, and you see every handoff in your chat.
                             </p>
                         </div>
                         <ol className="mt-14 divide-y divide-[#14213D]/15 border-y border-[#14213D]/15">
