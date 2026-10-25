@@ -32,7 +32,7 @@ const kit = [
 ];
 
 const departments = [
-    { name: 'Sales', jobs: 'Answer new leads in minutes, call them back, book the meeting, follow up until they reply.' },
+    { name: 'Sales', jobs: 'Find new leads, write the first email to each, follow up until they reply. You approve every send.' },
     { name: 'Customer service', jobs: 'Draft replies to customer email and chat from your own docs, sent once you approve.' },
     { name: 'Operations', jobs: 'Order supplies, chase invoices, update the spreadsheet, check every vendor portal.' },
     { name: 'Marketing', jobs: 'Write the blog post and the newsletter, post to social, watch what competitors charge.' },
