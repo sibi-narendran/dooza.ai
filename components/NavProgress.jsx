@@ -12,7 +12,7 @@ export default function NavProgress() {
 
     useEffect(() => {
         const onClick = (e) => {
-            if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+            if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
             const a = e.target.closest?.('a[href]');
             if (!a || a.target === '_blank' || a.hasAttribute('download')) return;
             const url = new URL(a.href, location.href);
@@ -21,10 +21,11 @@ export default function NavProgress() {
             setLoading(true);
         };
         const stop = () => setLoading(false);
-        document.addEventListener('click', onClick);
+        // capture: next/link calls preventDefault in its own handler, before a bubbling listener would run
+        document.addEventListener('click', onClick, true);
         window.addEventListener('pageshow', stop);
         return () => {
-            document.removeEventListener('click', onClick);
+            document.removeEventListener('click', onClick, true);
             window.removeEventListener('pageshow', stop);
         };
     }, []);
