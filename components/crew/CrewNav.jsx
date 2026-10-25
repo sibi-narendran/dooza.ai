@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 
 // Standard nav (Sibi 2026-10-25 08:44-08:48): AI Employees menu (Crew + industries + custom agents) | Pricing | About | Blog | Log in.
-// CSS-only dropdown (hover/focus on desktop, <details> on mobile) so the Crew pages stay server-rendered.
+// CSS-only dropdown (hover/focus on desktop, <details> via MobileMenu on mobile) so the Crew pages stay server-rendered.
 const LINKS = [
     { name: 'Pricing', href: '/#price' },
     { name: 'About', href: '/about' },
@@ -60,7 +61,7 @@ export default function CrewNav() {
                 {LINKS.map((l) => <Link key={l.href} href={l.href} className="hover:text-[#14213D]">{l.name}</Link>)}
                 <a href="https://crew.dooza.ai/login" className="hover:text-[#14213D]">Log in</a>
             </nav>
-            <details className="relative md:hidden">
+            <MobileMenu>
                 <summary className="cursor-pointer list-none text-sm font-semibold text-[#14213D] [&::-webkit-details-marker]:hidden">Menu</summary>
                 <div className="absolute right-0 top-full z-50 mt-3 w-64 rounded-xl border border-[#14213D]/10 bg-white p-2 shadow-lg">
                     <p className="px-3 pb-1 pt-1 text-xs font-semibold uppercase tracking-wide text-[#4B5567]">AI Employees</p>
@@ -69,7 +70,7 @@ export default function CrewNav() {
                     {LINKS.map((l) => <Link key={l.href} href={l.href} className={`${ITEM} text-[15px] font-semibold text-[#14213D]`}>{l.name}</Link>)}
                     <a href="https://crew.dooza.ai/login" className={`${ITEM} text-[15px] font-semibold text-[#14213D]`}>Log in</a>
                 </div>
-            </details>
+            </MobileMenu>
         </>
     );
 }
