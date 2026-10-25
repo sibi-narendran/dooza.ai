@@ -5,13 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ArrowRight, Calendar, ChevronDown, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
-import { getProductSignupUrl, getProductSigninUrl } from '@/lib/links';
+import { getProductSignupUrl } from '@/lib/links';
 import { trackDemoClick, trackSignupClick } from '@/lib/analytics';
 import { useBookingModal } from '@/components/BookingModalProvider';
 
-// Standard nav links (Sibi 2026-10-25 08:44); Industries is a separate button.
+// Standard nav (Sibi 2026-10-25 08:44-08:48): AI Employees menu (Crew + industries) | Pricing | About | Blog | Log in | CTA.
+export const CREW_LOGIN_URL = 'https://crew.dooza.ai/login';
 export const NAV_LINKS = [
-    { name: 'Product', href: '/' },
     { name: 'Pricing', href: '/#price' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
@@ -99,7 +99,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
         };
     }, [isOpen]);
 
-    // Standard nav + Industries as a button (Sibi 2026-10-25 08:44).
+    // Industries live inside the AI Employees menu (Sibi 2026-10-25 08:46).
     const industries = [
         { name: 'Insurance Agents', detail: 'Portals, inbox, renewals', href: '/insurance-agents', image: '/blog/liberate-alternative-insurance-agencies.png' },
         { name: 'Truck Dispatchers', detail: 'Load boards, brokers, billing', href: '/truck-dispatchers', image: '/industries/truck-dispatch-ai-employee.png' },
@@ -136,18 +136,6 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                         </Link>
 
                         <div className="hidden md:flex items-center space-x-8">
-                            {NAV_LINKS.map((item) => (
-                                <Link
-                                    key={item.href}
-                                    href={item.href}
-                                    className={`text-[15px] font-medium transition-colors ${isDark
-                                        ? 'text-gray-300 hover:text-white'
-                                        : 'text-slate-600 hover:text-primary-600'
-                                        }`}
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
 
                             {showIndustry && (
                                 <div className="relative" ref={industriesDropdownRef}>
@@ -162,13 +150,13 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         aria-expanded={industriesOpen}
                                         aria-haspopup="true"
                                         aria-controls="industries-dropdown"
-                                        aria-label="Industry menu"
-                                        className={`flex items-center gap-1 rounded-full border px-4 py-1.5 text-[15px] font-medium transition-colors ${isDark
-                                            ? 'border-white/20 text-gray-200 hover:bg-white/10 hover:text-white'
-                                            : 'border-slate-300 text-slate-700 hover:border-primary-600 hover:text-primary-700'
+                                        aria-label="AI Employees menu"
+                                        className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
+                                            ? 'text-gray-300 hover:text-white'
+                                            : 'text-slate-600 hover:text-primary-600'
                                             }`}
                                     >
-                                        Industries
+                                        AI Employees
                                         <ChevronDown className={`w-4 h-4 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
                                     </button>
 
@@ -183,11 +171,11 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         >
                                             <div className="mb-4 flex items-start justify-between gap-4">
                                                 <div>
-                                                    <p className={`text-base font-semibold ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                                                        Dooza for industries
-                                                    </p>
+                                                    <Link href="/" onClick={() => setIndustriesOpen(false)} className={`text-base font-semibold hover:underline ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                                                        Dooza Crew: build your AI team &rarr;
+                                                    </Link>
                                                     <p className={`mt-1 text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
-                                                        AI employees built around one industry's daily work.
+                                                        By industry: AI employees built around one industry's daily work.
                                                     </p>
                                                 </div>
                                                 <div className="flex shrink-0 gap-2">
@@ -243,27 +231,40 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                                     </Link>
                                                 ))}
                                             </div>
-
+                                            <p className={`mt-3 border-t pt-3 text-sm ${isDark ? 'border-white/10 text-gray-400' : 'border-slate-100 text-slate-500'}`}>
+                                                Done for you:{' '}
+                                                <Link href="/done-for-you-ai-agents" onClick={() => setIndustriesOpen(false)} className={`font-semibold hover:underline ${isDark ? 'text-white' : 'text-slate-900'}`}>Custom AI agents</Link>
+                                            </p>
                                         </div>
                                     )}
                                 </div>
                             )}
+                            {NAV_LINKS.map((item) => (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    className={`text-[15px] font-medium transition-colors ${isDark
+                                        ? 'text-gray-300 hover:text-white'
+                                        : 'text-slate-600 hover:text-primary-600'
+                                        }`}
+                                >
+                                    {item.name}
+                                </Link>
+                            ))}
 
                         </div>
                     </div>
 
                     <div className="hidden md:flex items-center space-x-6">
-                        {showLogin && (
+                        {(
                             <a
-                                href={loginUrl || getProductSigninUrl('workforce')}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href={loginUrl || CREW_LOGIN_URL}
                                 className={`text-[15px] font-medium transition-colors ${isDark
                                     ? 'text-gray-300 hover:text-white'
                                     : 'text-slate-600 hover:text-primary-600'
                                     }`}
                             >
-                                Login
+                                Log in
                             </a>
                         )}
                         {isDemoCta ? (
@@ -338,7 +339,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                             <>
                                 <div className="flex items-center justify-between px-3 py-2">
                                     <div className={`text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
-                                        Industries
+                                        AI Employees by industry
                                     </div>
                                 </div>
                                 <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto px-3 pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -367,18 +368,16 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                             </>
                         )}
 
-                        {showLogin && (
+                        {(
                             <a
-                                href={loginUrl || getProductSigninUrl('workforce')}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href={loginUrl || CREW_LOGIN_URL}
                                 onClick={() => setIsOpen(false)}
                                 className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
                                     ? 'text-gray-300 hover:bg-white/5'
                                     : 'text-slate-600 hover:bg-slate-50'
                                     }`}
                             >
-                                Login
+                                Log in
                             </a>
                         )}
                         {isDemoCta ? (
