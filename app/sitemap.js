@@ -200,6 +200,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/insurance-agents`,
+            lastModified: pageDate('2026-10-25'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/industries`,
             lastModified: pageDate('2026-06-13'),
             changeFrequency: 'weekly',
