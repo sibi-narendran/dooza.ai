@@ -61,6 +61,9 @@ export default function TryStart({ placement, examples = true }) {
             <p className="mt-3 text-[14px] leading-snug text-[#4B5567]">
                 $0 today. Card needed to start. Then $49 a month for your whole team. Cancel before day 8 and you pay nothing.
             </p>
+            <p className="mt-2 text-[14px] text-[#4B5567]">
+                Already have an account? <a href="https://crew.dooza.ai/login" data-source={`try-${placement}-login`} className="font-semibold text-[#0F766E] underline underline-offset-2 hover:text-[#14213D]">Log in</a>
+            </p>
             {examples && (
                 <ul className="mt-4 flex flex-wrap gap-2">
                     {EXAMPLES.map((ex) => (

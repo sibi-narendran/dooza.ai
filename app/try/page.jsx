@@ -45,6 +45,10 @@ export default function TryPage() {
             <header className="mx-auto flex max-w-5xl items-center px-4 pt-5 md:px-6">
                 <Image src="/logo.png" alt="Dooza" width={32} height={32} priority />
                 <span className={`${D} ml-2 text-xl font-bold tracking-[-0.02em]`}>Dooza Crew</span>
+                {/* Existing users sign in here (Sibi 2026-10-25 10:08 "why there is no login option?"). */}
+                <a href="https://crew.dooza.ai/login" data-source="try-header-login" className="ml-auto whitespace-nowrap rounded-full border border-[#14213D]/25 px-4 py-2 text-sm font-semibold text-[#14213D] hover:border-[#14213D]">
+                    Log in
+                </a>
             </header>
 
             <main>
