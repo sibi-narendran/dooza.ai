@@ -19,6 +19,8 @@ const OFFERS = [
             'Weekly report of what got done',
         ],
         note: 'Limited to 3 new businesses this month.',
+        // Above the pay button (Odysseus 2026-10-25 12:01): 10 Managed checkout opens/7d, 0 paid.
+        beforePay: 'Start free for 7 days. Card now, first charge $200 on day 8; cancel before then and pay nothing. Within 1 business day we email you how to send your first task; each task is done by the next business day.',
         pay: MANAGED_PAY_URL,
     },
     {
@@ -76,6 +78,7 @@ export default function OfferCards({ source = 'unknown', only }) {
                         ))}
                     </ul>
                     <div className="mt-auto pt-6">
+                        {o.beforePay && <p className="mb-3 text-sm text-slate-700">{o.beforePay}</p>}
                         <a href={o.pay} data-offer={o.id} data-source={source} className="block rounded-full bg-primary-700 px-6 py-3 text-center font-bold text-white hover:bg-primary-800">{o.cta || 'Start 7 days free'}</a>
                         <a href={`/book?utm_source=website&utm_medium=offer&utm_content=${o.id}_${source}`} className="mt-3 block text-center text-sm font-semibold text-primary-700 underline">Or book a free 30-min call first</a>
                         {o.more && <a href={o.more.href} className="mt-2 block text-center text-sm text-slate-600 underline">{o.more.label}</a>}

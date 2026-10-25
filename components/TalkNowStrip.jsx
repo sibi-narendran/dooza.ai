@@ -44,7 +44,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'crew' }) {
                     ) : offer === 'trucker-feed' ? (
                         <>Or start now: the <a href={`${ICP1_A_PAY_URL}?client_reference_id=feed-talknow`} data-offer="trucker-feed" data-source={source} className="font-semibold text-primary-700 underline">Monday Trucker Feed</a>, $129 every 4 weeks, paid first.</>
                     ) : (
-                        <>Or start now: <a href={tagPay(MANAGED_PAY_URL, source)} data-offer="managed" data-source={source} className="font-semibold text-primary-700 underline">Dooza Managed</a>, an admin assistant checked by a real person, first 7 days free, then $200/month. <a href="/pricing" className="underline">See pricing</a>.</>
+                        <>Or start now: <a href={tagPay(MANAGED_PAY_URL, source)} data-offer="managed" data-source={source} className="font-semibold text-primary-700 underline">Dooza Managed</a>, an admin assistant checked by a real person. Start free for 7 days. Card now, first charge $200 on day 8; cancel before then and pay nothing. Within 1 business day we email you how to send your first task; each task is done by the next business day. <a href="/pricing" className="underline">See pricing</a>.</>
                     )}
                 </p>
             </div>
