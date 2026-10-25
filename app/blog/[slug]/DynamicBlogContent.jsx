@@ -95,13 +95,13 @@ export default function DynamicBlogContent({ post }) {
                                 <TocSidebar tocData={tocData} />
 
                                 <div className="mt-8 pt-6 border-t border-slate-200">
-                                    <p className="text-sm text-slate-600 mb-4">{isAnswering ? 'Stop missing calls: $149/month' : 'Automate your business with AI'}</p>
+                                    <p className="text-sm text-slate-600 mb-4">{isAnswering ? 'Stop missing calls: $149/month' : 'AI agents that do your busywork'}</p>
                                     <a
-                                        href={isAnswering ? '/ai-receptionist' : getProductSignupUrl('workforce')}
+                                        href={isAnswering ? '/ai-receptionist' : getProductSignupUrl('workforce', { source: 'blog-sidebar' })}
                                         {...(isAnswering ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
                                         className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                     >
-                                        {isAnswering ? 'See the answering service' : 'Start your pilot'}
+                                        {isAnswering ? 'See the answering service' : 'Try Dooza Crew'}
                                     </a>
                                 </div>
 
@@ -169,18 +169,18 @@ export default function DynamicBlogContent({ post }) {
                         </div>
                         ) : (
                         <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
-                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Start Your Pilot?</h3>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Try Dooza Crew</h3>
                             <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                Automate your business with AI employees that work 24/7. Start with a refundable pilot: 100% refund within 14 days.
+                                A lead AI agent plus helper agents that browse the web, write files and ask you before they send or pay. 7-day free trial (card required), then $49/month including $20 of AI usage.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href={getProductSignupUrl('workforce')}
+                                    href={getProductSignupUrl('workforce', { source: 'blog-end' })}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all sm:w-auto"
                                 >
-                                    Start your pilot <ArrowRight className="w-4 h-4" />
+                                    Start your free trial <ArrowRight className="w-4 h-4" />
                                 </a>
                                 <a
                                     href={getBookingUrlWithUtm('blog', 'cta', post.slug)}
