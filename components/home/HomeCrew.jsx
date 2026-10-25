@@ -28,6 +28,7 @@ const kit = [
     { name: 'Its own computer', text: 'A private machine with files, spreadsheets and code. Work stays there between jobs.' },
     { name: 'A real browser', text: 'It opens sites, logs in with your accounts, fills in forms and does research the way you would.' },
     { name: 'Your staff in one chat', text: 'Add your people to the same group chat, on web or phone. Anyone can hand out a job and see the work.' },
+    { name: 'Phone calls included', text: 'Crew agents take your business phone calls too. It is in your Crew plan, so there is no separate phone service to buy.' },
     { name: 'Your approval first', text: 'Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
 ];
 
@@ -36,6 +37,7 @@ const departments = [
     { name: 'Customer service', jobs: 'Draft replies to customer email and chat from your own docs, sent once you approve.' },
     { name: 'Operations', jobs: 'Order supplies, chase invoices, update the spreadsheet, check every vendor portal.' },
     { name: 'Marketing', jobs: 'Write the blog post and the newsletter, post to social, watch what competitors charge.' },
+    { name: 'Reception', jobs: 'Take your business phone calls, so callers are not sent to voicemail. Included in your Crew plan.' },
     { name: 'Admin', jobs: 'Sort the inbox, keep the calendar, turn call notes into tasks for the right person.' },
 ];
 
@@ -55,6 +57,7 @@ export const homeFaq = [
     { question: 'What can an AI employee do?', answer: 'Whatever you can do on a computer: research, write, fill in forms, update spreadsheets, draft email and chat replies for your approval. You give the job in plain words.' },
     { question: 'Can my staff work with the AI employees?', answer: 'Yes. Create a group, add your people and your AI employees, and work in one chat. Your staff can give jobs, see the work, and watch every step live.' },
     { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap. Cancel during the trial and you pay nothing.' },
+    { question: 'Can Dooza Crew answer phone calls?', answer: 'Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.' },
     { question: 'Which channels can it use?', answer: 'You talk to your crew in a private chat app on web or phone, and your staff can join the same chat. You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
     { question: 'Can I start today?', answer: 'Seats are limited. When they are full you can join the waitlist and we email you when a seat opens.' },
     { question: 'Do you still build AI agents for us?', answer: 'Yes. If you would rather we do it for you, see Dooza Managed and custom AI agents. Each has its own page and price.' },
@@ -89,7 +92,7 @@ export default function HomeCrew() {
                     <div className="mt-10 grid items-start gap-12 lg:mt-14 lg:grid-cols-[5fr_7fr] lg:gap-16">
                         <div className="lg:pt-2">
                             <p className={`max-w-[34rem] text-lg leading-relaxed md:text-xl ${MUTED}`}>
-                                With Dooza Crew you give it a job in plain words and watch it work on its own computer, with its own browser. Add your staff to the same chat. Free for 7 days.
+                                With Dooza Crew you give it a job in plain words and watch it work on its own computer, with its own browser. It takes your phone calls too, included in your plan. Add your staff to the same chat. Free for 7 days.
                             </p>
                             <div className="mt-8">
                                 <CrewPrompt placement="home-hero" tone="light" />

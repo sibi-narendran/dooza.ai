@@ -36,6 +36,10 @@ function CrewMenu() {
                 <span className="block text-[15px] font-semibold text-[#14213D]">Dooza Crew</span>
                 <span className="block text-sm text-[#4B5567]">Build your team of AI employees</span>
             </Link>
+            <Link href="/ai-receptionist" data-source="crew-nav-calls" className={ITEM}>
+                <span className="block text-[15px] font-semibold text-[#14213D]">Phone calls</span>
+                <span className="block text-sm text-[#4B5567]">Crew answers your calls, included in your plan</span>
+            </Link>
             <p className="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-[#4B5567]">By industry</p>
             <IndustryLinks />
             <p className="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-[#4B5567]">Done for you</p>
