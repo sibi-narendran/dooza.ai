@@ -21,7 +21,7 @@ const display = Bricolage_Grotesque({ subsets: ['latin'], weight: ['600', '700',
 const body = Instrument_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap' });
 const D = display.className;
 
-export const PRICE_LINE = 'Free for 7 days, then $49 a month with $20 of AI usage included. Cancel any time in the trial and pay nothing.';
+export const PRICE_LINE = 'Free for 7 days, then $49 a month for your whole organization (unlimited users and agents, no per-seat fee) with $20 of AI usage included. Cancel any time in the trial and pay nothing.';
 
 const kit = [
     { name: 'Its own computer', text: 'A private machine with files, spreadsheets and code. Work stays there between jobs.' },
@@ -54,7 +54,7 @@ export const homeFaq = [
     { question: 'What is Dooza?', answer: 'Dooza gives your business AI employees. With Dooza Crew you get a master agent that builds a team of AI employees for you. Each one has its own computer and a real browser, and they work with your staff in one group chat. You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
     { question: 'What can an AI employee do?', answer: 'Whatever you can do on a computer: research, write, fill in forms, update spreadsheets, draft email and chat replies for your approval. You give the job in plain words.' },
     { question: 'Can my staff work with the AI employees?', answer: 'Yes. Create a group, add your people and your AI employees, and work in one chat. Your staff can give jobs, see the work, and watch every step live.' },
-    { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month, with $20 of AI usage included. Cancel during the trial and you pay nothing.' },
+    { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with $20 of AI usage included. Cancel during the trial and you pay nothing.' },
     { question: 'Which channels can it use?', answer: 'You talk to your crew in a private chat app on web or phone, and your staff can join the same chat. You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
     { question: 'Can I start today?', answer: 'Seats are limited. When they are full you can join the waitlist and we email you when a seat opens.' },
     { question: 'Do you still build AI agents for us?', answer: 'Yes. If you would rather we do it for you, see Dooza Managed, custom AI agents and the AI answering service. Each has its own page and price.' },
@@ -243,7 +243,7 @@ export default function HomeCrew() {
                         <div>
                             <h2 className={H2}><a href={crewSignupUrl('home-price-h2')} data-source="home-price-h2" className="decoration-white/60 underline-offset-8 hover:underline">Try it free for 7 days.</a></h2>
                             <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/85">
-                                <a href={crewSignupUrl('home-price-copy')} data-source="home-price-copy" className="hover:underline">Then $49 a month for your whole crew, with $20 of AI usage included. Cancel any time in the trial and you pay nothing.</a>
+                                <a href={crewSignupUrl('home-price-copy')} data-source="home-price-copy" className="hover:underline">Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with $20 of AI usage included. Cancel any time in the trial and you pay nothing.</a>
                             </p>
                             <p className="mt-4 text-[15px] text-white/75">Seats are limited. When they are full, join the waitlist.</p>
                         </div>
