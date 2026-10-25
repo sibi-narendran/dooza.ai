@@ -1,7 +1,14 @@
 import Link from 'next/link';
 
-// Nav = two sections only (Sibi 2026-10-25 08:26): "AI employees" and "Dooza for industries".
+// Standard nav (Product, Pricing, About, Blog) + Industries as a button (Sibi 2026-10-25 08:44).
 // CSS-only dropdown (hover/focus on desktop, <details> on mobile) so the Crew pages stay server-rendered.
+const LINKS = [
+    { name: 'Product', href: '/' },
+    { name: 'Pricing', href: '/#price' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+];
+
 const INDUSTRIES = [
     { name: 'Insurance Agents', detail: 'Portals, inbox, renewals', href: '/insurance-agents' },
     { name: 'Truck Dispatchers', detail: 'Load boards, brokers, billing', href: '/truck-dispatchers' },
@@ -22,10 +29,10 @@ export default function CrewNav() {
     return (
         <>
             <nav aria-label="Main" className="hidden items-center gap-7 text-[15px] font-medium text-[#4B5567] md:flex">
-                <Link href="/" className="hover:text-[#14213D]">AI employees</Link>
+                {LINKS.map((l) => <Link key={l.href} href={l.href} className="hover:text-[#14213D]">{l.name}</Link>)}
                 <div className="group relative">
-                    <button type="button" aria-haspopup="true" className="flex items-center gap-1 hover:text-[#14213D] focus-visible:text-[#14213D]">
-                        Dooza for industries
+                    <button type="button" aria-haspopup="true" className="flex items-center gap-1 rounded-full border border-[#14213D]/25 px-4 py-1.5 hover:border-[#0F766E] hover:text-[#14213D] focus-visible:text-[#14213D]">
+                        Industries
                         <svg aria-hidden="true" viewBox="0 0 20 20" className="h-4 w-4 fill-current"><path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z" /></svg>
                     </button>
                     <div className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
@@ -38,8 +45,8 @@ export default function CrewNav() {
             <details className="relative md:hidden">
                 <summary className="cursor-pointer list-none text-sm font-semibold text-[#14213D] [&::-webkit-details-marker]:hidden">Menu</summary>
                 <div className="absolute right-0 top-full z-50 mt-3 w-64 rounded-xl border border-[#14213D]/10 bg-white p-2 shadow-lg">
-                    <Link href="/" className={`${ITEM} text-[15px] font-semibold text-[#14213D]`}>AI employees</Link>
-                    <p className="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-[#4B5567]">Dooza for industries</p>
+                    {LINKS.map((l) => <Link key={l.href} href={l.href} className={`${ITEM} text-[15px] font-semibold text-[#14213D]`}>{l.name}</Link>)}
+                    <p className="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-[#4B5567]">Industries</p>
                     <IndustryLinks />
                 </div>
             </details>

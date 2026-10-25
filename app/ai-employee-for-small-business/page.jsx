@@ -237,7 +237,7 @@ export default function AiEmployeeForSmallBusinessPage() {
                             <ol className="mt-6 grid gap-4 sm:grid-cols-2">
                                 <li className="rounded-2xl border border-slate-200 bg-white p-5">
                                     <h3 className="font-bold text-slate-900">1. Answer the phone when you can&rsquo;t</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">It picks up, asks your questions and sends you the message. Dooza&rsquo;s <a href="/ai-answering-service-for-small-business" className={LINK}>AI answering service</a> costs $149/month for up to 500 minutes and emails you each message with the transcript. It does not book onto calendars or send texts.</p>
+                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">It picks up, asks your questions and sends you the message. Dooza&rsquo;s <a href="/ai-receptionist" className={LINK}>AI answering service</a> costs $149/month for up to 500 minutes and emails you each message with the transcript. It does not book onto calendars or send texts.</p>
                                 </li>
                                 <li className="rounded-2xl border border-slate-200 bg-white p-5">
                                     <h3 className="font-bold text-slate-900">2. Inbox and admin</h3>

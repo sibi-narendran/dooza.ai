@@ -118,8 +118,8 @@ const vendors = [
 
 const alternatives = [
     {
-        name: 'Dooza AI answering service',
-        href: '/ai-answering-service-for-small-business',
+        name: 'Dooza AI phone agent',
+        href: '/ai-receptionist',
         internal: true,
         what: 'An AI that answers your calls when you can’t, asks the caller the questions you give it, and emails you the message with the transcript and a link to the recording. Run by us, the company that publishes this page.',
         price: '$149/month for up to 500 minutes, then $0.30/min. Month to month. Full refund if you cancel within 14 days of your first charge.',
@@ -239,7 +239,7 @@ const schemas = [
         '@type': 'Service',
         name: 'Dooza AI Answering Service',
         serviceType: 'AI phone answering service for small businesses',
-        url: `${SITE_URL}/ai-answering-service-for-small-business`,
+        url: `${SITE_URL}/ai-receptionist`,
         areaServed: 'US',
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
@@ -397,7 +397,7 @@ export default function SmithAiAlternativesPage() {
                                 Smith.ai’s human-first plan, Ruby and Abby put a trained person on the line. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: Smith.ai’s human plans start at $300 for 30 calls and Ruby at $250 for 50 minutes. Comparing against Ruby instead? See <Link href="/ruby-alternatives" className={link}>Ruby Receptionist alternatives</Link>.
                             </p>
                             <p className="mt-3 text-slate-700">
-                                AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-answering-service-for-small-business" className={link}>AI answering service for small business</Link>.
+                                AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-receptionist" className={link}>AI answering service for small business</Link>.
                             </p>
                         </section>
 

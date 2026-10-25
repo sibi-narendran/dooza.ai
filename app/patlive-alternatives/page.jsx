@@ -138,8 +138,8 @@ const sourceUrls = [...new Set(vendors.map((v) => v.url))];
 
 const alternatives = [
     {
-        name: 'Dooza AI answering service',
-        href: '/ai-answering-service-for-small-business',
+        name: 'Dooza AI phone agent',
+        href: '/ai-receptionist',
         internal: true,
         what: 'An AI that answers your calls when you can’t, asks the caller the questions you give it, and emails you the message with the transcript and a link to the recording. It is AI, not a person. Run by us, the company that publishes this page.',
         price: '$149/month for up to 500 minutes, then $0.30/min. Month to month, no free trial. Full refund if you cancel within 14 days of your first charge.',
@@ -274,7 +274,7 @@ const schemas = [
         '@type': 'Service',
         name: 'Dooza AI Answering Service',
         serviceType: 'AI phone answering service for small businesses',
-        url: `${SITE_URL}/ai-answering-service-for-small-business`,
+        url: `${SITE_URL}/ai-receptionist`,
         areaServed: 'US',
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
@@ -314,7 +314,7 @@ export default function PatliveAlternativesPage() {
                         <section className="text-center">
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">PATLive Alternatives for Small Businesses (2026 Prices)</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
-                                <strong>The best PATLive alternative depends on whether you need a live person or just need every call answered. PATLive uses human receptionists only, and its pricing page lists $99 a month for 50 minutes and $759 for 500, plus $1.79 a minute after that. Dooza’s AI answering service costs $149 a month for up to 500 minutes, then $0.30 a minute. Prices checked {CHECKED} on each vendor’s own page.</strong>
+                                <strong>The best PATLive alternative depends on whether you need a live person or just need every call answered. PATLive uses human receptionists only, and its pricing page lists $99 a month for 50 minutes and $759 for 500, plus $1.79 a minute after that. Dooza’s AI phone agent costs $149 a month for up to 500 minutes, then $0.30 a minute. Prices checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
                                 <a href={PAY_URL} className={primaryButton}>Get Dooza: $149/month</a>
@@ -433,7 +433,7 @@ export default function PatliveAlternativesPage() {
                                 PATLive, Ruby, Smith.ai’s human-first plans and Abby put a trained person on the line. PATLive’s pricing page lists call screening and transfers, appointment scheduling, new client intake and emergency dispatch in every plan, and bilingual answering at no extra cost. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: PATLive’s 500-minute plan is $759 a month and Ruby’s is $1,725. If you run a law firm and every caller needs a careful intake conversation, a human service like PATLive or Ruby may suit you better than Dooza. Or Posh? See <Link href="/posh-alternatives" className={link}>Posh alternatives</Link>.
                             </p>
                             <p className="mt-3 text-slate-700">
-                                AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-answering-service-for-small-business" className={link}>AI answering service for small business</Link> and <Link href="/ai-receptionist" className={link}>AI receptionist</Link>.
+                                AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-receptionist" className={link}>AI answering service for small business</Link> and <Link href="/ai-receptionist" className={link}>AI receptionist</Link>.
                             </p>
                         </section>
 

@@ -37,7 +37,7 @@ const OFFERS = [
             'Up to 500 minutes a month; $0.30/min after',
         ],
         note: 'Not included: calendar booking, text messages, CRM integrations.',
-        more: { href: '/ai-answering-service-for-small-business', label: 'How it works and what it costs elsewhere' },
+        more: { href: '/ai-receptionist', label: 'How it works and what it costs elsewhere' },
         pay: `${RECEP_PAY_URL}?client_reference_id=recep-offercard`,
     },
     {

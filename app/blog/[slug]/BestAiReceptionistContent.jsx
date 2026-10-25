@@ -81,7 +81,7 @@ const faqData = [
     },
     {
         question: "Is there a free AI answering service?",
-        answer: "Yes, but only a few have a free plan you can keep, and they cap it. Of the 20 services compared here, Phonely's Free plan is $0 a month for 100 minutes, and Smith.ai's AI Receptionist Free plan is $0 for 25 calls a month, then $3.00 per call (checked Oct 21, 2026). Most others offer a 7- or 14-day free trial or a money-back period instead. Dooza's AI answering service has no free trial: it is $149/month for up to 500 minutes, with a full refund if you cancel within 14 days of your first charge."
+        answer: "Yes, but only a few have a free plan you can keep, and they cap it. Of the 20 services compared here, Phonely's Free plan is $0 a month for 100 minutes, and Smith.ai's AI Receptionist Free plan is $0 for 25 calls a month, then $3.00 per call (checked Oct 21, 2026). Most others offer a 7- or 14-day free trial or a money-back period instead. Dooza's AI phone agent has no free trial: it is $149/month for up to 500 minutes, with a full refund if you cancel within 14 days of your first charge."
     },
     {
         question: "What is the difference between an AI and a human answering service?",
@@ -189,7 +189,7 @@ export default function BestAiReceptionistContent() {
                         </div>
 
                         <p className="mt-4 text-sm text-slate-600">By <strong>Sibi Narendran</strong>, founder of Dooza</p>
-                        <p className="mt-2 text-sm text-slate-600 max-w-2xl mx-auto"><strong>Disclosure:</strong> Dooza sells one of the services compared here, the <Link href="/ai-answering-service-for-small-business" className="underline">Dooza AI answering service</Link> ($149/month for up to 500 minutes). It is listed first and marked "ours".</p>
+                        <p className="mt-2 text-sm text-slate-600 max-w-2xl mx-auto"><strong>Disclosure:</strong> Dooza sells one of the services compared here, the <Link href="/ai-receptionist" className="underline">Dooza AI phone agent</Link> ($149/month for up to 500 minutes). It is listed first and marked "ours".</p>
 
                         <div className="mt-10 flex flex-col items-center gap-2">
                             <a
@@ -526,7 +526,7 @@ export default function BestAiReceptionistContent() {
                         <section id="who-needs" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-4">Who Uses an AI Answering Service?</h2>
                             <p className="text-slate-600">It suits owners who miss calls while they work, such as <Link href="/plumbing-answering-service" className="text-primary-600 hover:underline">plumbers</Link>, <Link href="/hvac-answering-service" className="text-primary-600 hover:underline">HVAC</Link> and <Link href="/garage-door-answering-service" className="text-primary-600 hover:underline">garage door</Link> companies, and offices whose calls go to voicemail after hours.</p>
-                            <p className="text-slate-600 mt-2">Ours answers when you can't and emails you each message with the transcript and a recording link, $149/month for up to 500 minutes; it does not book appointments or send texts. Details: <Link href="/ai-answering-service-for-small-business" className="text-primary-600 hover:underline font-medium">AI answering service for small business</Link>.</p>
+                            <p className="text-slate-600 mt-2">Ours answers when you can't and emails you each message with the transcript and a recording link, $149/month for up to 500 minutes; it does not book appointments or send texts. Details: <Link href="/ai-receptionist" className="text-primary-600 hover:underline font-medium">AI answering service for small business</Link>.</p>
                         </section>
 
                         {/* Section 7: The Real Cost */}
@@ -652,7 +652,7 @@ export default function BestAiReceptionistContent() {
                                         {RECEPTIONIST_VENDORS.map((v) => (
                                             <li key={v.url}>• <a href={v.url} target="_blank" rel="noopener noreferrer nofollow" className="text-primary-600 hover:underline">{v.name}</a></li>
                                         ))}
-                                        <li>• <Link href="/ai-answering-service-for-small-business" className="text-primary-600 hover:underline">Dooza AI answering service (ours)</Link></li>
+                                        <li>• <Link href="/ai-receptionist" className="text-primary-600 hover:underline">Dooza AI phone agent (ours)</Link></li>
                                     </ul>
                                     <h4 className="font-semibold text-slate-800 mb-3">Virtual Receptionist Pricing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">

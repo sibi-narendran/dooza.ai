@@ -138,8 +138,8 @@ const sourceUrls = [...new Set(vendors.map((v) => v.url))];
 
 const alternatives = [
     {
-        name: 'Dooza AI answering service',
-        href: '/ai-answering-service-for-small-business',
+        name: 'Dooza AI phone agent',
+        href: '/ai-receptionist',
         internal: true,
         what: 'An AI that answers your calls when you can’t, asks the caller the questions you give it, and emails you the message with the transcript and a link to the recording. Run by us, the company that publishes this page.',
         price: '$149/month for up to 500 minutes, then $0.30/min. Month to month, no free trial. Full refund if you cancel within 14 days of your first charge.',
@@ -272,7 +272,7 @@ const schemas = [
         '@type': 'Service',
         name: 'Dooza AI Answering Service',
         serviceType: 'AI phone answering service for small businesses',
-        url: `${SITE_URL}/ai-answering-service-for-small-business`,
+        url: `${SITE_URL}/ai-receptionist`,
         areaServed: 'US',
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
@@ -312,7 +312,7 @@ export default function MoneypennyAlternativesPage() {
                         <section className="text-center">
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Moneypenny Alternatives for Small Businesses (2026 US Prices)</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
-                                <strong>The best Moneypenny alternative depends on whether callers must be able to reach a person or you just need every call answered. Moneypenny’s US pricing page lists AI Answering from $99 a month for 50 calls and People Answering from $165 for 50 minutes. Dooza’s AI answering service costs $149 a month for up to 500 minutes, then $0.30 a minute. Prices checked {CHECKED} on each vendor’s own page.</strong>
+                                <strong>The best Moneypenny alternative depends on whether callers must be able to reach a person or you just need every call answered. Moneypenny’s US pricing page lists AI Answering from $99 a month for 50 calls and People Answering from $165 for 50 minutes. Dooza’s AI phone agent costs $149 a month for up to 500 minutes, then $0.30 a minute. Prices checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
                                 <a href={PAY_URL} className={primaryButton}>Get Dooza: $149/month</a>
@@ -438,7 +438,7 @@ export default function MoneypennyAlternativesPage() {
                                 Moneypenny’s People Answering, Ruby, Smith.ai’s human-first plans and Abby put a trained person on the line. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: Moneypenny’s People plans start at $165 for 50 minutes, Ruby at $250 for 50 minutes and Smith.ai’s human plans at $300 for 30 calls. If every caller needs a careful conversation with a person, a human service may suit you better than Dooza. Comparing against PATLive instead? See <Link href="/patlive-alternatives" className={link}>PATLive alternatives</Link>.
                             </p>
                             <p className="mt-3 text-slate-700">
-                                AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-answering-service-for-small-business" className={link}>AI answering service for small business</Link> and <Link href="/ai-receptionist" className={link}>AI receptionist</Link>.
+                                AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-receptionist" className={link}>AI answering service for small business</Link> and <Link href="/ai-receptionist" className={link}>AI receptionist</Link>.
                             </p>
                         </section>
 

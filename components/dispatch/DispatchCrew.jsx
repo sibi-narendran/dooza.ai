@@ -81,7 +81,7 @@ const guardrails = [
 export const dispatchFaq = [
     { question: 'What is Dooza Crew for truck dispatchers?', answer: 'Dooza Crew gives a dispatch business AI employees: one for load boards, one for the inbox, one for billing, one for finding brokers, one for carrier compliance. Each has its own computer and browser, works around the clock, and works with your dispatchers in one chat. Before it sends anything, it asks you to approve.' },
     { question: 'Does it work with DAT or Truckstop?', answer: 'It works in web-based tools you can log in to with a browser, including load boards, webmail and factoring portals. We have not certified any specific load board or TMS yet, so try it on yours during the 7-day free trial, and check your load board\'s terms for automated searching.' },
-    { question: 'Can it make check calls or text drivers?', answer: 'Not yet. Crew agents work in browsers, email and files. For inbound calls, the Dooza AI answering service picks up and emails you each message with the transcript ($149 a month for 500 minutes).' },
+    { question: 'Can it make check calls or text drivers?', answer: 'Not yet. Crew agents work in browsers, email and files. For inbound calls, the Dooza AI phone agent picks up and emails you each message with the transcript ($149 a month for 500 minutes).' },
     { question: 'Can it book loads for me?', answer: 'It finds the loads that fit and drafts the email to the broker. You call or approve before anything is booked.' },
     { question: 'Is my carriers\' data safe?', answer: 'Every account runs in its own isolated sandbox with its own browser and files. You type your passwords and 2FA codes yourself, and nothing is sent without your approval.' },
     { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with $20 of AI usage included and a hard cap. Cancel during the trial and you pay nothing.' },
@@ -167,7 +167,7 @@ export default function DispatchCrew() {
                                 </div>
                                 <div className="md:pt-9">
                                     <p className={`text-[17px] leading-relaxed ${MUTED}`}>
-                                        Crew agents do not make calls or send texts yet. For inbound calls, the <Link href="/ai-answering-service-for-small-business" className={LINK}>Dooza AI answering service</Link> picks up and emails you each message with the transcript, and your Inbox agent can sort those emails like any other.
+                                        Crew agents do not make calls or send texts yet. For inbound calls, the <Link href="/ai-receptionist" className={LINK}>Dooza AI phone agent</Link> picks up and emails you each message with the transcript, and your Inbox agent can sort those emails like any other.
                                     </p>
                                 </div>
                             </li>

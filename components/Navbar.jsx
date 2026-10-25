@@ -9,6 +9,14 @@ import { getProductSignupUrl, getProductSigninUrl } from '@/lib/links';
 import { trackDemoClick, trackSignupClick } from '@/lib/analytics';
 import { useBookingModal } from '@/components/BookingModalProvider';
 
+// Standard nav links (Sibi 2026-10-25 08:44); Industries is a separate button.
+export const NAV_LINKS = [
+    { name: 'Product', href: '/' },
+    { name: 'Pricing', href: '/#price' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+];
+
 const PRODUCT_ROUTES = ['/', '/workforce'];
 
 const isProductRoute = (pathname) => (
@@ -91,7 +99,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
         };
     }, [isOpen]);
 
-    // Nav = two sections only (Sibi 2026-10-25 08:26): "AI employees" and "Dooza for industries".
+    // Standard nav + Industries as a button (Sibi 2026-10-25 08:44).
     const industries = [
         { name: 'Insurance Agents', detail: 'Portals, inbox, renewals', href: '/insurance-agents', image: '/blog/liberate-alternative-insurance-agencies.png' },
         { name: 'Truck Dispatchers', detail: 'Load boards, brokers, billing', href: '/truck-dispatchers', image: '/industries/truck-dispatch-ai-employee.png' },
@@ -128,15 +136,18 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                         </Link>
 
                         <div className="hidden md:flex items-center space-x-8">
-                            <Link
-                                href="/"
-                                className={`text-[15px] font-medium transition-colors ${isDark
-                                    ? 'text-gray-300 hover:text-white'
-                                    : 'text-slate-600 hover:text-primary-600'
-                                    }`}
-                            >
-                                AI employees
-                            </Link>
+                            {NAV_LINKS.map((item) => (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    className={`text-[15px] font-medium transition-colors ${isDark
+                                        ? 'text-gray-300 hover:text-white'
+                                        : 'text-slate-600 hover:text-primary-600'
+                                        }`}
+                                >
+                                    {item.name}
+                                </Link>
+                            ))}
 
                             {showIndustry && (
                                 <div className="relative" ref={industriesDropdownRef}>
@@ -152,12 +163,12 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         aria-haspopup="true"
                                         aria-controls="industries-dropdown"
                                         aria-label="Industry menu"
-                                        className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
-                                            ? 'text-gray-300 hover:text-white'
-                                            : 'text-slate-600 hover:text-primary-600'
+                                        className={`flex items-center gap-1 rounded-full border px-4 py-1.5 text-[15px] font-medium transition-colors ${isDark
+                                            ? 'border-white/20 text-gray-200 hover:bg-white/10 hover:text-white'
+                                            : 'border-slate-300 text-slate-700 hover:border-primary-600 hover:text-primary-700'
                                             }`}
                                     >
-                                        Dooza for industries
+                                        Industries
                                         <ChevronDown className={`w-4 h-4 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
                                     </button>
 
@@ -307,16 +318,19 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                     }`}
                 >
                     <div className="px-4 pt-2 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] space-y-2">
-                        <Link
-                            href="/"
-                            onClick={() => setIsOpen(false)}
-                            className={`block px-3 py-3 rounded-lg font-medium ${isDark
-                                ? 'text-gray-300 hover:bg-white/5'
-                                : 'text-slate-600 hover:bg-slate-50'
-                                }`}
-                        >
-                            AI employees
-                        </Link>
+                        {NAV_LINKS.map((item) => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                onClick={() => setIsOpen(false)}
+                                className={`block px-3 py-3 rounded-lg font-medium ${isDark
+                                    ? 'text-gray-300 hover:bg-white/5'
+                                    : 'text-slate-600 hover:bg-slate-50'
+                                    }`}
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 
@@ -324,7 +338,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                             <>
                                 <div className="flex items-center justify-between px-3 py-2">
                                     <div className={`text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
-                                        Dooza for industries
+                                        Industries
                                     </div>
                                 </div>
                                 <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto px-3 pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

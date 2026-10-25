@@ -35,7 +35,7 @@ export const metadata = {
 const faqItems = [
     {
         question: 'How much does an answering service cost a window tint shop?',
-        answer: `For an example window tint shop taking 80 calls a month at about 2 minutes each (160 minutes), AI answering services cost ${aiRange} a month and human answering services cost ${humanRange} a month at list prices checked October 6–14, 2026. Dooza’s AI answering service is $149 a month for up to 500 minutes.`,
+        answer: `For an example window tint shop taking 80 calls a month at about 2 minutes each (160 minutes), AI answering services cost ${aiRange} a month and human answering services cost ${humanRange} a month at list prices checked October 6–14, 2026. Dooza’s AI phone agent is $149 a month for up to 500 minutes.`,
     },
     {
         question: 'AI receptionist or human answering service for a tint shop?',
@@ -113,7 +113,7 @@ export default function WindowTintAnsweringServicePage() {
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">AI Receptionist for Window Tint Shops: What It Costs, AI vs Human</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
                                 <strong>For a window tint shop taking 80 calls a month at about 2 minutes each, an AI answering service costs {aiRange} a month and a human answering service costs {humanRange}, at public list prices.</strong>{' '}
-                                The full table is below. Dooza’s AI answering service is $149 a month for up to 500 minutes: it answers the calls you miss and emails you each message with the transcript.
+                                The full table is below. Dooza’s AI phone agent is $149 a month for up to 500 minutes: it answers the calls you miss and emails you each message with the transcript.
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
                                 <a href={PAY_URL} className={primaryButton}>Get it: $149/month</a>
@@ -166,7 +166,7 @@ export default function WindowTintAnsweringServicePage() {
                                     </tbody>
                                 </table>
                             </div>
-                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>. Not trade-specific? See the <Link href="/ai-answering-service-for-small-business" className="text-primary-700 underline">AI answering service for small business</Link> ($149/mo, 500 minutes).</p>
+                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>. Not trade-specific? See the <Link href="/ai-receptionist" className="text-primary-700 underline">AI answering service for small business</Link> ($149/mo, 500 minutes).</p>
                         </section>
 
                         <section className="mt-14">

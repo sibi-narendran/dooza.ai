@@ -82,7 +82,7 @@ const guardrails = [
 export const insuranceFaq = [
     { question: 'What is Dooza Crew for insurance agents?', answer: 'Dooza Crew gives an independent agency AI employees: one for carrier portals, one for the inbox, one for certificates and changes, one for renewals, one for lead follow-up. Each has its own computer and browser, works around the clock, and works with your staff in one chat. Before it sends anything, it asks you to approve.' },
     { question: 'Does it work with Applied Epic, EZLynx or HawkSoft?', answer: 'It works in web-based systems you can log in to with a browser: carrier portals, webmail and agency tools. We have not certified any specific agency management system yet, so try it on yours during the 7-day free trial.' },
-    { question: 'Can it answer our phones?', answer: 'Not yet. Crew agents work in browsers, email and files. For calls, the Dooza AI answering service picks up and emails you each message with the transcript ($149 a month for 500 minutes).' },
+    { question: 'Can it answer our phones?', answer: 'Not yet. Crew agents work in browsers, email and files. For calls, the Dooza AI phone agent picks up and emails you each message with the transcript ($149 a month for 500 minutes).' },
     { question: 'Can it fill ACORD forms?', answer: 'It fills web forms and portal screens, including certificate and change requests in carrier and agency portals. It does not fill PDF forms yet.' },
     { question: 'Is our client data safe?', answer: 'Every account runs in its own isolated sandbox with its own browser and files. You type your passwords and 2FA codes yourself, and nothing is sent without your approval.' },
     { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with $20 of AI usage included and a hard cap. Cancel during the trial and you pay nothing.' },
@@ -168,7 +168,7 @@ export default function InsuranceCrew() {
                                 </div>
                                 <div className="md:pt-9">
                                     <p className={`text-[17px] leading-relaxed ${MUTED}`}>
-                                        Crew agents do not take calls yet. For the phones, the <Link href="/ai-answering-service-for-small-business" className={LINK}>Dooza AI answering service</Link> picks up and emails you each message with the transcript, and your Inbox agent can sort those emails like any other.
+                                        Crew agents do not take calls yet. For the phones, the <Link href="/ai-receptionist" className={LINK}>Dooza AI phone agent</Link> picks up and emails you each message with the transcript, and your Inbox agent can sort those emails like any other.
                                     </p>
                                 </div>
                             </li>

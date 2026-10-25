@@ -192,7 +192,7 @@ export default function HomeLanding() {
                         </p>
                         <p className="mt-3 max-w-[34rem] text-[15px] text-slate-700" data-offer="receptionist" data-source="homepage_hero_receptionist">
                             Missing calls on jobs?{' '}
-                            <Link href="/ai-answering-service-for-small-business?utm_source=website&utm_medium=internal&utm_campaign=homepage_hero_receptionist" className={LINK}>Dooza AI answering service</Link>: picks up when you can&rsquo;t and emails you each message with the transcript. $149/month for up to 500 minutes.
+                            <Link href="/ai-receptionist?utm_source=website&utm_medium=internal&utm_campaign=homepage_hero_receptionist" className={LINK}>Dooza AI phone agent</Link>: picks up when you can&rsquo;t and emails you each message with the transcript. $149/month for up to 500 minutes.
                         </p>
                         <p className="mt-3 max-w-[34rem] text-[15px] text-slate-700" data-source="homepage_hero_trucking">
                             Write trucking insurance?{' '}

@@ -116,7 +116,7 @@ const SOURCES = [
     { label: 'Dooza pricing', href: 'https://www.dooza.ai/pricing' },
     { label: 'Dooza home (how it works, jobs, FAQ)', href: 'https://www.dooza.ai/' },
     { label: 'Dooza AI admin assistant', href: 'https://www.dooza.ai/ai-admin-assistant' },
-    { label: 'Dooza AI answering service', href: 'https://www.dooza.ai/ai-answering-service-for-small-business' },
+    { label: 'Dooza AI phone agent', href: 'https://www.dooza.ai/ai-receptionist' },
     { label: 'Dooza llms.txt', href: 'https://www.dooza.ai/llms.txt' },
 ];
 
@@ -183,7 +183,7 @@ export default function DoneForYouAiAgentsPage() {
                             <h2 className="font-serif text-2xl font-bold text-slate-900">What we build</h2>
                             <p className="mt-3 text-slate-700">These are the jobs Dooza already takes on. If a job repeats every week, bring it to the call. See <a href="/blog/ai-agents-examples-small-business" className={A}>25 real AI agent examples for small business</a> for more ideas.</p>
                             <ol className="mt-4 list-decimal space-y-3 pl-5 text-slate-700">
-                                <li><strong>Call answering.</strong> The <a href="/ai-answering-service-for-small-business" className={A}>Dooza AI answering service</a> picks up when you can&rsquo;t. It takes the caller&rsquo;s message and emails it to you with the transcript and a recording link. It costs $149 a month for up to 500 minutes, then $0.30 a minute. It does not book onto calendars or send texts.</li>
+                                <li><strong>Call answering.</strong> The <a href="/ai-receptionist" className={A}>Dooza AI phone agent</a> picks up when you can&rsquo;t. It takes the caller&rsquo;s message and emails it to you with the transcript and a recording link. It costs $149 a month for up to 500 minutes, then $0.30 a minute. It does not book onto calendars or send texts.</li>
                                 <li><strong>Lead follow-up.</strong> Replies to new leads and keeps following up until they book or say no.</li>
                                 <li><strong>Inbox and admin.</strong> Sorts your email and drafts replies. For written admin work (email drafts, documents and forms, spreadsheets, research), <a href="/pricing" className={A}>Dooza Managed</a> has AI do the task and a real person check it. Tasks come back by the next business day.</li>
                                 <li><strong>Scheduling.</strong> Books meetings on your calendar as part of an inbox agent.</li>
@@ -213,7 +213,7 @@ export default function DoneForYouAiAgentsPage() {
                             <p className="mt-3 text-slate-700"><strong>How much does an AI agent cost?</strong> It depends on who builds and runs it.</p>
                             <ul className="mt-4 list-disc space-y-3 pl-5 text-slate-700">
                                 <li><strong>Dooza Managed (admin assistant):</strong> $200 a month. $0 today, and $200 after 7 days only if you don&rsquo;t cancel first. See <a href="/pricing" className={A}>pricing</a>.</li>
-                                <li><strong>Dooza AI answering service:</strong> $149 a month for up to 500 minutes, then $0.30 a minute. Month to month, with a full refund if you cancel within 14 days of the first charge.</li>
+                                <li><strong>Dooza AI phone agent:</strong> $149 a month for up to 500 minutes, then $0.30 a minute. Month to month, with a full refund if you cancel within 14 days of the first charge.</li>
                                 <li><strong>Custom AI agents:</strong> priced by the job. A Dooza engineer quotes it on a <a href={BOOK} data-source={SOURCE} className={A}>free 30-minute call</a>. Every custom build starts as a paid pilot with a 100% refund within 14 days.</li>
                                 <li><strong>DIY tools:</strong> from free to about $30 a month for the entry paid plans in the table above, plus your own time to build and maintain the workflows.</li>
                             </ul>

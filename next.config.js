@@ -337,7 +337,12 @@ const nextConfig = {
       },
       {
         source: '/blog/ai-answering-service-for-business',
-        destination: '/ai-answering-service-for-small-business',
+        destination: '/ai-receptionist',
+        permanent: true,
+      },
+      {
+        source: '/ai-answering-service-for-small-business',
+        destination: '/ai-receptionist',
         permanent: true,
       },
       {

@@ -97,7 +97,7 @@ export default function DynamicBlogContent({ post }) {
                                 <div className="mt-8 pt-6 border-t border-slate-200">
                                     <p className="text-sm text-slate-600 mb-4">{isAnswering ? 'Stop missing calls: $149/month' : 'Automate your business with AI'}</p>
                                     <a
-                                        href={isAnswering ? '/ai-answering-service-for-small-business' : getProductSignupUrl('workforce')}
+                                        href={isAnswering ? '/ai-receptionist' : getProductSignupUrl('workforce')}
                                         {...(isAnswering ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
                                         className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                     >
@@ -154,7 +154,7 @@ export default function DynamicBlogContent({ post }) {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href="/ai-answering-service-for-small-business"
+                                    href="/ai-receptionist"
                                     className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all sm:w-auto"
                                 >
                                     See how it works <ArrowRight className="w-4 h-4" />

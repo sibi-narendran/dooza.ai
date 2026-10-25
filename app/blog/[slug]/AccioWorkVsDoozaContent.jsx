@@ -64,7 +64,7 @@ const faqData = [
     },
     {
         question: "Can Accio Work answer phone calls?",
-        answer: "No. Accio Work is a desktop agent — it works with files, browsers, and terminal commands on your computer. Dooza does: Dooza's AI answering service picks up inbound calls 24/7: $149/month for up to 500 minutes, then $0.30/min, month to month, full refund if cancelled within 14 days of the first charge (dooza.ai/ai-answering-service-for-small-business). It answers, asks your questions and emails you the message, transcript and recording link; it does not book onto calendars or send texts. Dooza Managed, the AI admin assistant checked by a real person ($200/month, first 7 days free), covers written admin work, not phones."
+        answer: "No. Accio Work is a desktop agent — it works with files, browsers, and terminal commands on your computer. Dooza does: Dooza's AI phone agent picks up inbound calls 24/7: $149/month for up to 500 minutes, then $0.30/min, month to month, full refund if cancelled within 14 days of the first charge (dooza.ai/ai-receptionist). It answers, asks your questions and emails you the message, transcript and recording link; it does not book onto calendars or send texts. Dooza Managed, the AI admin assistant checked by a real person ($200/month, first 7 days free), covers written admin work, not phones."
     },
     {
         question: "How much does accio.com cost?",

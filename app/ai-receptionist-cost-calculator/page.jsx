@@ -60,7 +60,7 @@ const faqItems = [
     },
     {
         question: 'Does Dooza offer an AI receptionist?',
-        answer: 'Yes. Dooza’s AI receptionist answers when you can’t, takes the caller’s message and emails it to you with the transcript. It costs $149 a month for up to 500 minutes, then $0.30 a minute, month to month, with a full refund if you cancel within 14 days of your first charge (see dooza.ai/ai-answering-service-for-small-business).',
+        answer: 'Yes. Dooza’s AI receptionist answers when you can’t, takes the caller’s message and emails it to you with the transcript. It costs $149 a month for up to 500 minutes, then $0.30 a minute, month to month, with a full refund if you cancel within 14 days of your first charge (see dooza.ai/ai-receptionist).',
     },
 ];
 
@@ -132,9 +132,9 @@ export default function AiReceptionistCostCalculatorPage() {
                                 <li><strong>The same customers calling often</strong>: per-unique-caller pricing (Goodcall) gets cheaper.</li>
                                 <li><strong>Hundreds of calls a month</strong>: flat unlimited plans (NextPhone) catch up.</li>
                             </ul>
-                            <h2>Dooza’s AI answering service</h2>
+                            <h2>Dooza’s AI phone agent</h2>
                             <p>
-                                Dooza’s <Link href="/ai-answering-service-for-small-business">AI answering service</Link> answers when you can’t, takes the caller’s message and emails it to you with the transcript: $149 a month for up to 500 minutes, then $0.30 a minute, month to month. It does not book onto calendars or send texts.
+                                Dooza’s <Link href="/ai-receptionist">AI answering service</Link> answers when you can’t, takes the caller’s message and emails it to you with the transcript: $149 a month for up to 500 minutes, then $0.30 a minute, month to month. It does not book onto calendars or send texts.
                             </p>
                             <HearItFirst source="ai-receptionist-cost-calculator" />
                         </section>
