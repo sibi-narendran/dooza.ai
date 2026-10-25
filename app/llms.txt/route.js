@@ -124,6 +124,11 @@ const staticPages = [
         description: 'AI solutions for small business workflows.',
     },
     {
+        title: 'AI employees for independent insurance agents',
+        url: `${SITE_URL}/insurance-agents`,
+        description: 'Dooza Crew for independent insurance agencies: AI employees that work carrier portals, the shared inbox, certificates of insurance, renewal reminders and lead follow-up around the clock, asking your approval before anything goes out. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
+    },
+    {
         title: 'Trucking insurance leads near renewal, every Monday (for insurance agencies)',
         url: `${SITE_URL}/trucking-insurance-leads`,
         description: 'Weekly list for agencies that write commercial trucking: trucking companies in their state with liability renewing in 30-60 days (current insurer and limit from FMCSA BMC-91X filings, estimated renewal date) plus new authorities from the last 7 days. $129 per 4 weeks, paid first, month to month; exclusive states (one agency per state, $399/month) at /exclusive-trucking-insurance-leads. Free weekly counts for every US state (renewals in 30-60 days, new authorities, top 3 current insurers; Oct 19, 2026: 6,876 renewals, 1,773 new authorities nationwide). Data: FMCSA open data.',

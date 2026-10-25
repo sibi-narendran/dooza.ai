@@ -122,6 +122,7 @@ export default function InsuranceAgentsContent({ page }) {
                 <div className="mx-auto max-w-3xl">
                     <h2 className="text-2xl font-bold tracking-tight text-slate-900">What does Dooza do for insurance agencies?</h2>
                     <p className="mt-3 text-lg leading-relaxed text-slate-700">Dooza finds trucking prospects for US independent insurance agencies that write commercial trucking. Every Monday you get a list for your state from public FMCSA data: trucking companies whose liability insurance renews in about 30 to 60 days, with their current insurer and limit named, plus new trucking authorities from the last 7 days that have no liability filing yet. $129 every 4 weeks, paid first. If you would rather not dial, we can phone the truckers on your list and book owners onto your calendar as quote calls: $499 every 4 weeks for up to 4 booked quote calls, or $150 for a single booked call (the first one is free).</p>
+                    <p className="mt-3 text-lg leading-relaxed text-slate-700">Want help with the agency&apos;s daily admin instead (carrier portals, inbox, certificates, renewals, lead follow-up)? See <a href="/insurance-agents" className="font-semibold text-teal-700 underline">AI employees for independent insurance agents</a>: $49 a month for your whole agency, free for 7 days.</p>
                 </div>
             </section>
 
