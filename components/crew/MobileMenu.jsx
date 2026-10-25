@@ -16,7 +16,7 @@ export default function MobileMenu({ children }) {
     return (
         <details
             ref={ref}
-            className="relative md:hidden"
+            className="md:hidden"
             onClick={(e) => { if (e.target.closest('a')) ref.current.open = false; }}
         >
             {children}

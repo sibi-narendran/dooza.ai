@@ -9,7 +9,7 @@
 // ink #14213D. Bricolage Grotesque for display, Instrument Sans for reading. One bold element: the live group chat (CrewRoom) beside a full-width
 // headline. The org chart is the one structural device, because it shows the real point: AI and staff on one team.
 import Link from 'next/link';
-import CrewNav from '@/components/crew/CrewNav';
+import SiteHeader from '@/components/crew/SiteHeader';
 import Image from 'next/image';
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -77,22 +77,7 @@ function Seat({ kind }) {
 export default function HomeCrew() {
     return (
         <div className={`${body.className} crew-home bg-white ${INK}`}>
-            {/* fixed, not sticky: iOS Safari drops sticky under body overflow-x (Sibi 17:57 bar left on scroll) */}
-            <div className="fixed inset-x-0 top-0 z-40 border-b border-[#14213D]/10 bg-white/95 backdrop-blur">
-                <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8 md:py-4">
-                    <Link href="/" className="flex items-center gap-2">
-                        <Image src="/logo.png" alt="Dooza" width={30} height={30} className="rounded" />
-                        <span className={`${D} text-lg font-bold tracking-[-0.02em]`}>Dooza</span>
-                    </Link>
-                    <div className="flex items-center gap-4 md:gap-8">
-                    <CrewNav />
-                    <a href={crewSignupUrl('home-header')} data-offer="crew" data-source="home-header" className="rounded-full bg-[#0F766E] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#14213D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">
-                        Try it free
-                    </a>
-                    </div>
-                </header>
-            </div>
-            <div aria-hidden="true" className="h-[65px] md:h-[73px]" />
+            <SiteHeader source="home-header" />
 
             <main id="main-content">
                 <section className="relative overflow-hidden">

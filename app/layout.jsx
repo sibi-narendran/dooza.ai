@@ -6,6 +6,7 @@ import ColdAdSignupLinkRewriter from '../components/ColdAdSignupLinkRewriter';
 import BookingModalProvider from '../components/BookingModalProvider';
 import ContactClickTracker from '@/components/ContactClickTracker';
 import NavTrail from '../components/NavTrail';
+import NavProgress from '../components/NavProgress';
 
 // Resource hints for external services - improves Core Web Vitals
 const resourceHints = [
@@ -156,6 +157,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${inter.className} antialiased`}>
         <NavTrail />
+        <NavProgress />
         <BookingModalProvider>
           {children}
           <ContactClickTracker />

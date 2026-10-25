@@ -6,7 +6,7 @@
 // SMS or PDF form filling; no AMS named as tested) and 08:04 (per-organization price, $20 AI usage included, hard cap).
 // Design: home v3 tokens (teal = AI, amber = your staff). The bold element is the hero chat; the roster is rows, not cards.
 import Link from 'next/link';
-import CrewNav from '@/components/crew/CrewNav';
+import SiteHeader from '@/components/crew/SiteHeader';
 import Image from 'next/image';
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -92,23 +92,7 @@ export const insuranceFaq = [
 export default function InsuranceCrew() {
     return (
         <div className={`${body.className} bg-white ${INK}`}>
-            <div className="fixed inset-x-0 top-0 z-40 border-b border-[#14213D]/10 bg-white/95 backdrop-blur">
-                <header className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8 md:py-4">
-                    <Link href="/" className="flex items-center gap-2">
-                        <Image src="/logo.png" alt="Dooza" width={30} height={30} className="rounded" />
-                        <span className={`${D} text-lg font-bold tracking-[-0.02em]`}>Dooza</span>
-                        <span className={`hidden text-sm sm:inline ${MUTED}`}>for insurance agents</span>
-                    </Link>
-                    <div className="flex items-center gap-4 md:gap-8">
-                    <CrewNav />
-                    <Link href="/book" data-source="ins-header-book" className="hidden text-sm font-semibold text-[#14213D] underline decoration-2 underline-offset-4 hover:text-[#0F766E] sm:inline">Questions? Book a call</Link>
-                    <a href={crewSignupUrl('ins-header')} data-offer="crew" data-source="ins-header" className="rounded-full bg-[#0F766E] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#14213D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">
-                        Try it free
-                    </a>
-                    </div>
-                </header>
-            </div>
-            <div aria-hidden="true" className="h-[65px] md:h-[73px]" />
+            <SiteHeader tagline="for insurance agents" bookSource="ins-header-book" source="ins-header" />
 
             <main id="main-content">
                 <section className="relative overflow-hidden">

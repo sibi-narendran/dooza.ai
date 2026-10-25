@@ -3,6 +3,7 @@ import MobileMenu from './MobileMenu';
 
 // Standard nav (Sibi 2026-10-25 08:44-08:48): AI Employees menu (Crew + industries + custom agents) | Pricing | About | Blog | Log in.
 // CSS-only dropdown (hover/focus on desktop, <details> via MobileMenu on mobile) so the Crew pages stay server-rendered.
+// Mobile panel spans the bar's width (it hung 15px off-screen at 390px, Sibi 10-25 09:07).
 const LINKS = [
     { name: 'Pricing', href: '/#price' },
     { name: 'About', href: '/about' },
@@ -63,7 +64,7 @@ export default function CrewNav() {
             </nav>
             <MobileMenu>
                 <summary className="cursor-pointer list-none text-sm font-semibold text-[#14213D] [&::-webkit-details-marker]:hidden">Menu</summary>
-                <div className="absolute right-0 top-full z-50 mt-3 w-64 rounded-xl border border-[#14213D]/10 bg-white p-2 shadow-lg">
+                <div className="absolute inset-x-4 top-full z-50 mt-2 max-h-[calc(100dvh-5rem)] overflow-y-auto rounded-xl border border-[#14213D]/10 bg-white p-2 shadow-lg">
                     <p className="px-3 pb-1 pt-1 text-xs font-semibold uppercase tracking-wide text-[#4B5567]">AI Employees</p>
                     <CrewMenu />
                     <div className="my-2 border-t border-[#14213D]/10" />
