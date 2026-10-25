@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: "Can Dooza AI employees make phone calls?",
-        answer: "It answers them, it does not make outbound calls. Dooza's AI phone agent picks up inbound calls 24/7: $149/month for up to 500 minutes, then $0.30/min, month to month, full refund if cancelled within 14 days of the first charge (dooza.ai/ai-receptionist). It answers, asks your questions and emails you the message, transcript and recording link; it does not book onto calendars or send texts. Dooza Managed, the AI admin assistant checked by a real person ($200/month, first 7 days free), covers written admin work, not phones. Motion is built around calendars, tasks and projects."
+        answer: "Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Dooza Crew is $49 per organization per month after a 7-day free trial (card required). Dooza Managed, the AI admin assistant checked by a real person ($200/month, first 7 days free), covers written admin work, not phones. Motion is built around calendars, tasks and projects."
     }
 ];
 

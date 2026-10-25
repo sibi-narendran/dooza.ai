@@ -1,6 +1,5 @@
 import { Phone, MessageSquare, Mail, Calendar } from 'lucide-react';
 import { MANAGED_PAY_URL, supportPay, ICP1_A_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL, CERT_PACK_PAY_URL, LAW_WARN_CA_PAY_URL, tagPay } from '@/lib/offers';
-import { recepPayUrl, PILOT_PROMISE } from '@/lib/aiReceptionistData';
 import { crewSignupUrl } from '@/lib/crewUrl';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL, REPLY_EMAIL } from '@/lib/contact';
 
@@ -16,7 +15,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'crew' }) {
             <div className="rounded-2xl border border-primary-100 bg-primary-50/60 p-6 text-center">
                 <h2 className="font-serif text-2xl font-bold text-slate-900">Talk to Dooza now</h2>
                 <p className="mx-auto mt-2 max-w-2xl text-slate-600">
-                    {offer === 'support' ? <>Dooza AI customer support: AI drafts every customer reply, a Dooza team checks it, and you approve before anything sends.</> : offer === 'receptionist' ? <>Dooza answers your business calls with an AI receptionist. {PILOT_PROMISE}</> : <>Dooza builds AI products and services for small businesses. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.</>}
+                    {offer === 'support' ? <>Dooza AI customer support: AI drafts every customer reply, a Dooza team checks it, and you approve before anything sends.</> : offer === 'receptionist' ? <>Dooza Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.</> : <>Dooza builds AI products and services for small businesses. Custom Dooza agents start with a refundable pilot: 100% refund within 14 days.</>}
                 </p>
                 <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm sm:text-base">
                     <a href={`tel:${CONTACT_CALL_E164}`} className={link}><Phone className="h-4 w-4" aria-hidden="true" />Call {CONTACT_CALL_DISPLAY} (24/7)</a>
@@ -26,7 +25,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'crew' }) {
                 </div>
                 <p className="mt-5 text-sm text-slate-600">
                     {offer === 'receptionist' ? (
-                        <>Or start now: the <a href={recepPayUrl(source)} data-offer="receptionist" data-source={source} className="font-semibold text-primary-700 underline">AI receptionist, $149/month</a>, paid first.</>
+                        <>Or start now: <a href={crewSignupUrl(`strip-${source}`)} data-offer="crew" data-source={source} className="font-semibold text-primary-700 underline">Dooza Crew</a>, $49 per organization per month after a 7-day free trial (card required).</>
                     ) : offer === 'support' ? (
                         <>Or start now: <a href={supportPay(source)} data-offer="support" data-source={source} className="font-semibold text-primary-700 underline">Dooza AI customer support</a>, 14-day free trial (card at signup), then $300/month for up to 250 customer messages. <a href="/customer-support-automation-agency" className="underline">How it works</a>.</>
                     ) : offer === 'notary-renewal' ? (

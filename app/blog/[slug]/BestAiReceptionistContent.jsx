@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { CAL_BOOKING_URL } from '../../../lib/links';
 import { RECEPTIONIST_VENDORS, unitLabel } from '../../../lib/receptionistPricing';
+import { crewSignupUrl } from '../../../lib/crewUrl';
 
-const PAY_URL = 'https://buy.stripe.com/eVqcN51C31ZX0yEfvv3AY19?client_reference_id=recep-best-ai-receptionist';
+const CREW_URL = (placement) => crewSignupUrl(`best-ai-receptionist-${placement}`);
 
 // Vendors whose own pricing page shows a $0 plan, checked Oct 21, 2026 (Quo no longer shows a free Sona tier).
 const FREE_PLAN_CHECKED = new Set(['Phonely', 'Smith.ai AI Receptionist']);
@@ -77,11 +78,11 @@ const faqData = [
     },
     {
         question: "How much does an AI receptionist cost compared to a human?",
-        answer: "A human receptionist costs a salary plus benefits. Virtual receptionist services start at $250/month for 50 minutes (Ruby) or $300/month for 30 calls (Smith.ai), checked Oct 7, 2026. AI answering services start at about $19-$50/month (prices checked Oct 2026 in the table above). Dooza's AI receptionist is $149/month for up to 500 minutes, then $0.30/min, month to month."
+        answer: "A human receptionist costs a salary plus benefits. Virtual receptionist services start at $250/month for 50 minutes (Ruby) or $300/month for 30 calls (Smith.ai), checked Oct 7, 2026. AI answering services start at about $19-$50/month (prices checked Oct 2026 in the table above). Dooza Crew agents take phone calls too, and it is included in your Crew plan: $49 per organization per month after a 7-day free trial (card required)."
     },
     {
         question: "Is there a free AI answering service?",
-        answer: "Yes, but only a few have a free plan you can keep, and they cap it. Of the 20 services compared here, Phonely's Free plan is $0 a month for 100 minutes, and Smith.ai's AI Receptionist Free plan is $0 for 25 calls a month, then $3.00 per call (checked Oct 21, 2026). Most others offer a 7- or 14-day free trial or a money-back period instead. Dooza's AI phone agent has no free trial: it is $149/month for up to 500 minutes, with a full refund if you cancel within 14 days of your first charge."
+        answer: "Yes, but only a few have a free plan you can keep, and they cap it. Of the 20 services compared here, Phonely's Free plan is $0 a month for 100 minutes, and Smith.ai's AI Receptionist Free plan is $0 for 25 calls a month, then $3.00 per call (checked Oct 21, 2026). Most others offer a 7- or 14-day free trial or a money-back period instead. Dooza Crew has a 7-day free trial (card required), then $49 per organization per month, and phone calls are included in the plan."
     },
     {
         question: "What is the difference between an AI and a human answering service?",
@@ -89,7 +90,7 @@ const faqData = [
     },
     {
         question: "Can AI answer my business phone calls?",
-        answer: "Yes. You forward your business number to an AI answering service, either all calls or only the ones you miss. It picks up, answers common questions, asks the questions you set and passes the message on; depending on the vendor it can also book appointments, send texts or update your CRM, so check each vendor's page. Dooza's answers when you can't, emails you each message with the transcript and a recording link, and does not book appointments or send texts."
+        answer: "Yes. You forward your business number to an AI answering service, either all calls or only the ones you miss. It picks up, answers common questions, asks the questions you set and passes the message on; depending on the vendor it can also book appointments, send texts or update your CRM, so check each vendor's page. Dooza Crew agents take phone calls too, included in your Crew plan."
     },
     {
         question: "Will AI replace receptionists?",
@@ -97,11 +98,11 @@ const faqData = [
     },
     {
         question: "Can an AI receptionist handle complex conversations?",
-        answer: "Modern AI receptionists handle multi-turn conversations and answer common questions; many can qualify leads and route complex calls to a person. Dooza's AI receptionist keeps it simple: it asks the questions you give it, takes the message and emails it to you with the transcript."
+        answer: "Modern AI receptionists handle multi-turn conversations and answer common questions; many can qualify leads and route complex calls to a person. Dooza Crew agents take phone calls too, and before an agent sends or pays it asks you in chat (Approve / Edit / Reject)."
     },
     {
         question: "What's the best AI virtual receptionist for lead qualification?",
-        answer: "The best one asks your own screening questions on every call, books qualified callers straight onto your calendar, sends urgent or high-value calls to a person under rules you set, and gives your team a written summary of each call. Test any vendor on those four points with a live trial call before you sign. If you mainly need every missed call answered and the message emailed to you, Dooza's AI receptionist does that for $149/month (500 minutes included); it does not book onto calendars, so pick a booking-capable vendor if you need that."
+        answer: "The best one asks your own screening questions on every call, books qualified callers straight onto your calendar, sends urgent or high-value calls to a person under rules you set, and gives your team a written summary of each call. Test any vendor on those four points with a live trial call before you sign. If you mainly need every missed call answered and the message emailed to you, Dooza Crew agents take phone calls too, included in a $49 per organization per month plan after a 7-day free trial (card required)."
     },
     {
         question: "Will callers know they're talking to an AI?",
@@ -189,17 +190,18 @@ export default function BestAiReceptionistContent() {
                         </div>
 
                         <p className="mt-4 text-sm text-slate-600">By <strong>Sibi Narendran</strong>, founder of Dooza</p>
-                        <p className="mt-2 text-sm text-slate-600 max-w-2xl mx-auto"><strong>Disclosure:</strong> Dooza sells one of the services compared here, the <Link href="/ai-receptionist" className="underline">Dooza AI phone agent</Link> ($149/month for up to 500 minutes). It is listed first and marked "ours".</p>
+                        <p className="mt-2 text-sm text-slate-600 max-w-2xl mx-auto"><strong>Disclosure:</strong> Dooza sells one of the services compared here, <a href={CREW_URL('disclosure')} data-offer="crew" className="underline">Dooza Crew</a>, whose agents take phone calls too ($49 per organization per month after a 7-day free trial). It is listed first and marked "ours".</p>
 
                         <div className="mt-10 flex flex-col items-center gap-2">
                             <a
-                                href={PAY_URL}
+                                href={CREW_URL('hero')}
+                                data-offer="crew"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get the Dooza AI receptionist: $149/month
+                                Try Dooza Crew free for 7 days
                                 <ArrowRight className="w-5 h-5" />
                             </a>
-                            <span className="text-sm text-slate-500">Up to 500 minutes, then $0.30/min · month to month · full refund if you cancel within 14 days · <a href={CAL_BOOKING_URL} onClick={handleAction} className="underline">or book a call first</a></span>
+                            <span className="text-sm text-slate-500">Then $49 per organization per month · card required · phone calls included · <a href={CAL_BOOKING_URL} onClick={handleAction} className="underline">or book a call first</a></span>
                         </div>
                     </div>
                 </div>
@@ -244,12 +246,13 @@ export default function BestAiReceptionistContent() {
                             <div className="mt-8 pt-6 border-t border-slate-200">
                                 <p className="text-sm text-slate-600 mb-4">Never miss a call again</p>
                                 <a
-                                    href={PAY_URL}
+                                    href={CREW_URL('sidebar')}
+                                    data-offer="crew"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    $149/month: get it
+                                    Try Dooza Crew free
                                 </a>
-                                <p className="text-xs text-slate-500 mt-2 text-center">500 min included · month to month</p>
+                                <p className="text-xs text-slate-500 mt-2 text-center">7-day free trial · $49 per organization per month</p>
                             </div>
 
                             <div className="mt-6">
@@ -281,12 +284,12 @@ export default function BestAiReceptionistContent() {
                                     </thead>
                                     <tbody>
                                         <tr className="border-t border-slate-200 bg-primary-50">
-                                            <td className="py-3 px-3 font-semibold text-slate-900">Dooza AI Receptionist <span className="text-xs font-normal text-slate-500">(ours)</span><span className="block text-xs font-normal text-slate-500 mt-1">Best for: getting each missed call's message by email with the transcript (no booking or texts)</span></td>
+                                            <td className="py-3 px-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span><span className="block text-xs font-normal text-slate-500 mt-1">Best for: AI agents you chat with on web or phone; phone calls are included in your Crew plan</span></td>
                                             <td className="py-3 px-3">AI</td>
-                                            <td className="py-3 px-3 font-semibold">$149/mo</td>
-                                            <td className="py-3 px-3">500 min</td>
-                                            <td className="py-3 px-3">$0.30/min</td>
-                                            <td className="py-3 px-3">per minute</td>
+                                            <td className="py-3 px-3 font-semibold">$49/mo after a 7-day free trial</td>
+                                            <td className="py-3 px-3">Phone calls included</td>
+                                            <td className="py-3 px-3">No separate phone service</td>
+                                            <td className="py-3 px-3">per organization</td>
                                         </tr>
                                         {COMPARE_ROWS.map((v) => (
                                             <tr key={v.name} className="border-t border-slate-200">
@@ -324,7 +327,7 @@ export default function BestAiReceptionistContent() {
                             <ul className="list-disc pl-5 text-slate-600 space-y-2">
                                 <li><strong>Free plan:</strong> <a href="https://www.phonely.ai/pricing" target="_blank" rel="noopener noreferrer nofollow" className="text-primary-600 underline">Phonely</a> (100 minutes a month; its page puts that at about 50 calls), <a href="https://smith.ai/pricing/ai-receptionist" target="_blank" rel="noopener noreferrer nofollow" className="text-primary-600 underline">Smith.ai AI Receptionist</a> (25 calls a month).</li>
                                 <li><strong>Free trial:</strong> OnCrew 14 days (no credit card required), Upfirst 14 days, Marlie 14 days, RingCentral AI Receptionist 14 days, PATLive 14 days (human answering), Rosie 7 days, Dialzara 7 days, NextPhone 7 days, My AI Front Desk 7 days. Abby Connect (human answering) says every plan has a free trial but does not state the length.</li>
-                                <li><strong>Money-back period instead of a trial:</strong> Trillet AI Receptionist 28 days, Nextiva XBert 30 days, Smith.ai Virtual Receptionists (human) 30 days. Dooza has no free trial: you get a full refund if you cancel within 14 days of your first charge.</li>
+                                <li><strong>Money-back period instead of a trial:</strong> Trillet AI Receptionist 28 days, Nextiva XBert 30 days, Smith.ai Virtual Receptionists (human) 30 days. Dooza Crew has a 7-day free trial (card required).</li>
                                 <li><strong>Free demo, pay when you go live:</strong> Goodcall lets you build and test a demo agent free and pay when you connect a number.</li>
                             </ul>
                             <p className="text-slate-600 mt-4">Already on Smith.ai and weighing a switch? See our <a href="/smith-ai-alternatives" className="text-primary-600 underline">Smith.ai alternatives</a> comparison. All checked on each vendor's pricing page on October 21, 2026. A free plan suits a business with a handful of calls a month. If you get more than that, compare the paid plans in the table above by your monthly minutes or calls.</p>
@@ -339,7 +342,7 @@ export default function BestAiReceptionistContent() {
                                     { need: 'Few but long calls', pick: 'A per-call plan (Quo Sona, OnCrew, Upfirst) usually beats a per-minute plan.' },
                                     { need: 'You want one fixed bill', pick: 'NextPhone Pro ($199 flat, unlimited calls) or Rosie (no overage; you move up a plan).' },
                                     { need: 'You want a person to answer', pick: 'PATLive ($99 for 50 minutes) or MAP Communications ($179 for 125 minutes); expect several times the AI price per minute.' },
-                                    { need: 'You miss calls on jobs and want every message emailed with a transcript', pick: 'The Dooza AI receptionist: $149/month for up to 500 minutes, $0.30/min after, month to month.' },
+                                    { need: 'You want phone calls handled by AI agents you also chat with', pick: 'Dooza Crew: agents take phone calls too, included in the plan, $49 per organization per month after a 7-day free trial.' },
                                 ].map((r) => (
                                     <div key={r.need} className="bg-white border border-slate-200 p-4 rounded-xl">
                                         <p className="font-bold text-slate-900">{r.need}</p>
@@ -348,16 +351,15 @@ export default function BestAiReceptionistContent() {
                                 ))}
                             </div>
                             <div className="bg-primary-50 border border-primary-100 p-6 rounded-xl mt-6">
-                                <h3 className="font-bold text-slate-900 mb-2">The Dooza AI receptionist, in plain terms</h3>
+                                <h3 className="font-bold text-slate-900 mb-2">Dooza Crew, in plain terms</h3>
                                 <ul className="list-disc pl-5 text-slate-700 space-y-1">
-                                    <li>Answers your calls when you can't, takes the caller's message.</li>
-                                    <li>Emails you each message with the call transcript and a link to the recording (callers hear that the call is recorded).</li>
-                                    <li>$149/month for up to 500 minutes, then $0.30/min. Month to month, paid up front. Cancel within 14 days of your first charge for a full refund.</li>
-                                    <li>We confirm your go-live date at intake.</li>
-                                    <li>Not included: text messages, calendar booking, CRM integrations. It takes one call at a time.</li>
+                                    <li>AI agents (a lead agent plus helper agents) you chat with on web or phone; they browse the web and write files in their own workspace.</li>
+                                    <li>Before an agent sends or pays it asks you in chat (Approve / Edit / Reject).</li>
+                                    <li>Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.</li>
+                                    <li>$49 per organization per month after a 7-day free trial (card required). Unlimited users and agents; AI usage included with a hard spending cap.</li>
                                 </ul>
                                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                                    <a href={PAY_URL} className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Get it: $149/month <ArrowRight className="w-4 h-4" /></a>
+                                    <a href={CREW_URL('plain-terms')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Try Dooza Crew free for 7 days <ArrowRight className="w-4 h-4" /></a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">Book a call first</a>
                                 </div>
                             </div>
@@ -496,18 +498,15 @@ export default function BestAiReceptionistContent() {
                                             <th className="text-left py-3 px-4 font-bold text-slate-900">Voicemail</th>
                                             <th className="text-left py-3 px-4 font-bold text-slate-900">Virtual Receptionist<br /><span className="font-normal text-xs text-slate-500">(Ruby, Smith.ai)</span></th>
                                             <th className="text-left py-3 px-4 font-bold text-slate-900">In-House Receptionist</th>
-                                            <th className="text-left py-3 px-4 font-bold text-primary-700 bg-primary-50">Dooza AI (ours)</th>
+                                            <th className="text-left py-3 px-4 font-bold text-primary-700 bg-primary-50">Dooza Crew (ours)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Monthly Cost", voicemail: "$0", virtual: "$250–$2,100/mo (Ruby, Smith.ai plans, checked Oct 2026)", inhouse: "Salary + benefits", rachel: "$149/mo, 500 min (Dooza)" },
-                                            { feature: "Availability", voicemail: "Always (but useless)", virtual: "24/7, billed per minute or call", inhouse: "Business hours", rachel: "Answers when you can't" },
-                                            { feature: "Call Volume", voicemail: "Unlimited", virtual: "Plan allowance (e.g. 30–300 calls/mo at Smith.ai)", inhouse: "One call at a time", rachel: "500 min/mo included, then $0.30/min; one call at a time" },
-                                            { feature: "Lead Qualification", voicemail: "None", virtual: "Basic scripting", inhouse: "Trained judgment", rachel: "Asks the questions you set" },
-                                            { feature: "Appointment Booking", voicemail: "None", virtual: "Varies by plan", inhouse: "Yes", rachel: "Not included" },
-                                            { feature: "Setup Time", voicemail: "5 minutes", virtual: "Varies by provider", inhouse: "Hiring and training time", rachel: "Go-live date confirmed at intake" },
-                                            { feature: "Consistency", voicemail: "N/A", virtual: "Varies by operator", inhouse: "Varies by person", rachel: "Same instructions on every call" }
+                                            { feature: "Monthly Cost", voicemail: "$0", virtual: "$250–$2,100/mo (Ruby, Smith.ai plans, checked Oct 2026)", inhouse: "Salary + benefits", rachel: "$49/mo per organization after a 7-day free trial (Dooza Crew)" },
+                                            { feature: "Availability", voicemail: "Always (but useless)", virtual: "24/7, billed per minute or call", inhouse: "Business hours", rachel: "Crew agents take phone calls too" },
+                                            { feature: "Call Volume", voicemail: "Unlimited", virtual: "Plan allowance (e.g. 30–300 calls/mo at Smith.ai)", inhouse: "One call at a time", rachel: "Included in your Crew plan, no separate phone service to buy" },
+                                            { feature: "Approval", voicemail: "None", virtual: "Varies by plan", inhouse: "Trained judgment", rachel: "Agents ask you in chat before they send or pay" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -526,7 +525,7 @@ export default function BestAiReceptionistContent() {
                         <section id="who-needs" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-4">Who Uses an AI Answering Service?</h2>
                             <p className="text-slate-600">It suits owners who miss calls while they work, such as <Link href="/plumbing-answering-service" className="text-primary-600 hover:underline">plumbers</Link>, <Link href="/hvac-answering-service" className="text-primary-600 hover:underline">HVAC</Link> and <Link href="/garage-door-answering-service" className="text-primary-600 hover:underline">garage door</Link> companies, and offices whose calls go to voicemail after hours.</p>
-                            <p className="text-slate-600 mt-2">Ours answers when you can't and emails you each message with the transcript and a recording link, $149/month for up to 500 minutes; it does not book appointments or send texts. Details: <Link href="/ai-receptionist" className="text-primary-600 hover:underline font-medium">AI answering service for small business</Link>.</p>
+                            <p className="text-slate-600 mt-2">Ours is <a href={CREW_URL('who-uses')} data-offer="crew" className="text-primary-600 hover:underline font-medium">Dooza Crew</a>: its agents take phone calls too, included in your Crew plan, so there is no separate phone service to buy.</p>
                         </section>
 
                         {/* Section 7: The Real Cost */}
@@ -562,9 +561,9 @@ export default function BestAiReceptionistContent() {
                                     <p className="text-xs text-slate-500 mt-1">200 minutes/month plan (<a href="https://www.ruby.com/pricing/" target="_blank" rel="noopener noreferrer" className="underline">ruby.com/pricing</a>, checked Oct 6, 2026)</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">$149/mo</div>
-                                    <p className="text-sm text-green-800 font-medium">Dooza AI receptionist</p>
-                                    <p className="text-xs text-green-600 mt-1">$149/mo for 500 minutes, month to month. Answers in English.</p>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
+                                    <p className="text-sm text-green-800 font-medium">Dooza Crew</p>
+                                    <p className="text-xs text-green-600 mt-1">Per organization, after a 7-day free trial (card required). Phone calls included.</p>
                                 </div>
                             </div>
 
@@ -582,17 +581,17 @@ export default function BestAiReceptionistContent() {
                                     {
                                         step: "1",
                                         title: "Sign Up",
-                                        desc: "Pay $149 for the first month (or book a free call first if you have questions)."
+                                        desc: "Start the 7-day free trial (card required), then $49 per organization per month. Or book a free call first if you have questions."
                                     },
                                     {
                                         step: "2",
-                                        title: "We Set It Up",
-                                        desc: "A Dooza engineer sets it up with your business info and the questions to ask. We confirm your go-live date at intake."
+                                        title: "Tell Your Agent",
+                                        desc: "Chat with your lead agent on web or phone and tell it what you need."
                                     },
                                     {
                                         step: "3",
-                                        title: "Stop Losing Callers",
-                                        desc: "It answers your forwarded calls. Each message lands in your email with the transcript."
+                                        title: "Calls Included",
+                                        desc: "Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy."
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-4 items-start bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
@@ -607,7 +606,7 @@ export default function BestAiReceptionistContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    <Link href="/ai-receptionist" className="text-primary-600 hover:underline font-medium">Hear the Dooza AI receptionist answer a call &rarr;</Link>
+                                    <a href={CREW_URL('hear')} data-offer="crew" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free for 7 days &rarr;</a>
                                     <br />
                                     <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Learn how to automate your entire business &rarr;</Link>
                                 </p>
@@ -616,11 +615,11 @@ export default function BestAiReceptionistContent() {
                             <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Fire Your Voicemail?</h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Stop losing callers to voicemail. The Dooza AI receptionist answers when you can't and emails you every message with the transcript. $149/month for up to 500 minutes, month to month.
+                                    Stop losing callers to voicemail. Crew agents take phone calls too, included in your Crew plan: $49 per organization per month after a 7-day free trial (card required).
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <a href={PAY_URL} className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get it: $149/month <ArrowRight className="w-4 h-4" />
+                                    <a href={CREW_URL('final')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
+                                        Try Dooza Crew free <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book a free call
@@ -652,7 +651,7 @@ export default function BestAiReceptionistContent() {
                                         {RECEPTIONIST_VENDORS.map((v) => (
                                             <li key={v.url}>• <a href={v.url} target="_blank" rel="noopener noreferrer nofollow" className="text-primary-600 hover:underline">{v.name}</a></li>
                                         ))}
-                                        <li>• <Link href="/ai-receptionist" className="text-primary-600 hover:underline">Dooza AI phone agent (ours)</Link></li>
+                                        <li>• <a href={CREW_URL('sources')} data-offer="crew" className="text-primary-600 hover:underline">Dooza Crew (ours)</a></li>
                                     </ul>
                                     <h4 className="font-semibold text-slate-800 mb-3">Virtual Receptionist Pricing</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">

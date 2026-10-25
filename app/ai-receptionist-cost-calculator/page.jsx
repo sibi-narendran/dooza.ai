@@ -1,5 +1,5 @@
 import BookingModalProvider from '@/components/BookingModalProvider';
-import HearItFirst from '@/components/HearItFirst';
+import { crewSignupUrl } from '@/lib/crewUrl';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -60,7 +60,7 @@ const faqItems = [
     },
     {
         question: 'Does Dooza offer an AI receptionist?',
-        answer: 'Yes. Dooza’s AI receptionist answers when you can’t, takes the caller’s message and emails it to you with the transcript. It costs $149 a month for up to 500 minutes, then $0.30 a minute, month to month, with a full refund if you cancel within 14 days of your first charge (see dooza.ai/ai-receptionist).',
+        answer: 'Dooza Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew costs $49 per organization per month after a 7-day free trial (card required); see dooza.ai/ai-receptionist.',
     },
 ];
 
@@ -123,7 +123,7 @@ export default function AiReceptionistCostCalculatorPage() {
                             </p>
                             <p>
                                 Every price was checked on the vendor’s own pricing page on {PRICES_CHECKED_LABEL}, and we re-check monthly. The full breakdown, including entry plans, billing quirks and hidden costs, is in our{' '}
-                                <Link href="/blog/ai-receptionist-pricing">AI receptionist pricing comparison</Link>. Dooza sells a done-for-you AI receptionist, so we are not neutral: that is why every source is linked in the table.
+                                <Link href="/blog/ai-receptionist-pricing">AI receptionist pricing comparison</Link>. Dooza sells Dooza Crew, whose agents take phone calls too, so we are not neutral: that is why every source is linked in the table.
                             </p>
                             <h2>Which kind of plan fits your calls</h2>
                             <ul>
@@ -132,11 +132,10 @@ export default function AiReceptionistCostCalculatorPage() {
                                 <li><strong>The same customers calling often</strong>: per-unique-caller pricing (Goodcall) gets cheaper.</li>
                                 <li><strong>Hundreds of calls a month</strong>: flat unlimited plans (NextPhone) catch up.</li>
                             </ul>
-                            <h2>Dooza’s AI phone agent</h2>
+                            <h2>Dooza Crew</h2>
                             <p>
-                                Dooza’s <Link href="/ai-receptionist">AI answering service</Link> answers when you can’t, takes the caller’s message and emails it to you with the transcript: $149 a month for up to 500 minutes, then $0.30 a minute, month to month. It does not book onto calendars or send texts.
+                                <Link href="/ai-receptionist">Dooza Crew</Link> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew is $49 per organization per month after a 7-day free trial (card required). <a href={crewSignupUrl('ai-receptionist-cost-calculator-content')} data-offer="crew">Try Dooza Crew free for 7 days</a>.
                             </p>
-                            <HearItFirst source="ai-receptionist-cost-calculator" />
                         </section>
 
                         <section className="mt-12">

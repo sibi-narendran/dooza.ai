@@ -20,7 +20,7 @@ const staticPages = [
     {
         title: 'AI employee for small business: what it is, what it costs, how to hire one',
         url: `${SITE_URL}/ai-employee-for-small-business`,
-        description: 'What an AI employee is, what it costs (Dooza Managed $200/month with the first 7 days free, compared with DIY AI tools and a human VA, prices checked Oct 21, 2026), what it can do, and how to hire one. Phone answering is the separate Dooza AI phone agent, $149/month for up to 500 minutes.',
+        description: 'What an AI employee is, what it costs (Dooza Managed $200/month with the first 7 days free, compared with DIY AI tools and a human VA, prices checked Oct 21, 2026), what it can do, and how to hire one. Phone answering is included in Dooza Crew: Crew agents take phone calls too.',
     },
     {
         title: 'Done-for-you AI agents for small business',
@@ -250,37 +250,37 @@ const servicePages = [
     {
         title: 'AI Answering Service for Small Business',
         url: `${SITE_URL}/ai-receptionist`,
-        description: 'Dooza AI phone agent (AI receptionist): $149/month for up to 500 minutes, then $0.30/minute, month to month, full refund if you cancel within 14 days of the first charge. Answers when you cannot, asks your questions, emails you each message with the transcript and a recording link. Does not book onto calendars or send texts.',
+        description: 'Phone answering is now part of Dooza Crew: Crew agents take phone calls too, included in the $49/month Crew plan (per organization, after a 7-day free trial), so there is no separate phone service to buy. This page compares AI and human answering options.',
     },
     {
         title: 'HVAC Answering Service',
         url: `${SITE_URL}/hvac-answering-service`,
-        description: 'AI vs human answering service prices for HVAC companies, and the Dooza AI phone agent ($149/month, 500 minutes).',
+        description: 'AI vs human answering service prices for HVAC companies, and Dooza Crew, where AI agents take phone calls as part of the $49/month Crew plan.',
     },
     {
         title: 'Plumbing Answering Service',
         url: `${SITE_URL}/plumbing-answering-service`,
-        description: 'AI vs human answering service prices for plumbers, and the Dooza AI phone agent ($149/month, 500 minutes).',
+        description: 'AI vs human answering service prices for plumbers, and Dooza Crew, where AI agents take phone calls as part of the $49/month Crew plan.',
     },
     {
         title: 'Garage Door Answering Service',
         url: `${SITE_URL}/garage-door-answering-service`,
-        description: 'AI vs human answering service prices for garage door companies, and the Dooza AI phone agent ($149/month, 500 minutes).',
+        description: 'AI vs human answering service prices for garage door companies, and Dooza Crew, where AI agents take phone calls as part of the $49/month Crew plan.',
     },
     {
         title: 'AI Receptionist for Window Tint Shops',
         url: `${SITE_URL}/window-tint-answering-service`,
-        description: 'AI vs human answering service prices for window tint and window film shops (100 calls a month), and the Dooza AI receptionist ($149/month, 500 minutes).',
+        description: 'AI vs human answering service prices for window tint and window film shops (100 calls a month), and Dooza Crew, where AI agents take phone calls as part of the $49/month Crew plan.',
     },
     {
         title: 'Smith.ai Alternatives',
         url: `${SITE_URL}/smith-ai-alternatives`,
-        description: 'Smith.ai pricing (human-first from $300/month for 30 calls; AI receptionist free for 25 calls, Pro $150/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'Smith.ai pricing (human-first from $300/month for 30 calls; AI receptionist free for 25 calls, Pro $150/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Ruby, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'Ruby Receptionist Alternatives',
         url: `${SITE_URL}/ruby-alternatives`,
-        description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'Relevance AI Alternatives',
@@ -295,47 +295,47 @@ const servicePages = [
     {
         title: 'Ambs Call Center Alternatives',
         url: `${SITE_URL}/ambs-call-center-alternatives`,
-        description: 'Ambs Call Center pricing (ambscallcenter.com/pricing; Real People: $149/month for 100 minutes, $330 for 250, $600 for 500, $1,195 for 1,000, $2,945 for 2,500+, excess $1.20-$1.29/min; AI Receptionist: Starter $19/month plus $0.79 per AI minute, $75 for 100, $185 for 250, $350 for 500, $650 for 1,000; Real People + AI from $168 for 100 minutes; $85 one-time set-up fee; work time in 30-second increments) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes; Ambs AI costs less up to 196 minutes a month), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
+        description: 'Ambs Call Center pricing (ambscallcenter.com/pricing; Real People: $149/month for 100 minutes, $330 for 250, $600 for 500, $1,195 for 1,000, $2,945 for 2,500+, excess $1.20-$1.29/min; AI Receptionist: Starter $19/month plus $0.79 per AI minute, $75 for 100, $185 for 250, $350 for 500, $650 for 1,000; Real People + AI from $168 for 100 minutes; $85 one-time set-up fee; work time in 30-second increments) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
     },
     {
         title: 'MAP Communications Alternatives',
         url: `${SITE_URL}/map-communications-alternatives`,
-        description: 'MAP Communications pricing (live answering billed by minutes: Pay As You Go $49/month plus $1.37/min, Business $179 for 125 minutes, Enterprise $339 for 250, Premium $649 for 500; every plan lists 24/7 coverage, English and Spanish, a toll-free number, HIPAA, PCI-DSS, HITRUST and SOC-2, no long-term contracts) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
+        description: 'MAP Communications pricing (live answering billed by minutes: Pay As You Go $49/month plus $1.37/min, Business $179 for 125 minutes, Enterprise $339 for 250, Premium $649 for 500; every plan lists 24/7 coverage, English and Spanish, a toll-free number, HIPAA, PCI-DSS, HITRUST and SOC-2, no long-term contracts) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
     },
     {
         title: 'Answering Service Care Alternatives',
         url: `${SITE_URL}/answering-service-care-alternatives`,
-        description: 'Answering Service Care pricing (answeringservicecare.com; live answering plans billed monthly: Starter $40/month pay as you go at $1.75/min, $179 for 100 minutes, $329 for 250, $639 for 500, overage $1.35-$1.75/min; the page also mentions a $50 start-up fee; AI plans from $25/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
+        description: 'Answering Service Care pricing (answeringservicecare.com; live answering plans billed monthly: Starter $40/month pay as you go at $1.75/min, $179 for 100 minutes, $329 for 250, $639 for 500, overage $1.35-$1.75/min; the page also mentions a $50 start-up fee; AI plans from $25/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
     },
     {
         title: 'Posh Virtual Receptionist Alternatives',
         url: `${SITE_URL}/posh-alternatives`,
-        description: 'Posh Virtual Receptionist pricing (posh.com, the live answering service, not Poshmark; live receptionist plans from $65/month plus $2.30/min to $975 for 500 minutes and $1,900 for 1,000; AI + Live plans $130 for 50 mixed minutes to $975 for 500; free trial of seven days or 250 minutes; month to month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Moneypenny, Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, Rosie.',
+        description: 'Posh Virtual Receptionist pricing (posh.com, the live answering service, not Poshmark; live receptionist plans from $65/month plus $2.30/min to $975 for 500 minutes and $1,900 for 1,000; AI + Live plans $130 for 50 mixed minutes to $975 for 500; free trial of seven days or 250 minutes; month to month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Moneypenny, Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, Rosie.',
     },
     {
         title: 'VoiceNation Alternatives',
         url: `${SITE_URL}/voicenation-alternatives`,
-        description: 'VoiceNation pricing (voicenation.com/pricing redirects to Moneypenny’s US pricing; VoiceNation joined the Moneypenny group in 2020. People Answering billed by minutes: $165/month for 50 minutes to $985 for 500; AI Answering billed by calls: $99/month for 50 calls to $775 for 500, with human escalation; 30 days’ notice to cancel) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'VoiceNation pricing (voicenation.com/pricing redirects to Moneypenny’s US pricing; VoiceNation joined the Moneypenny group in 2020. People Answering billed by minutes: $165/month for 50 minutes to $985 for 500; AI Answering billed by calls: $99/month for 50 calls to $775 for 500, with human escalation; 30 days’ notice to cancel) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'Moneypenny Alternatives',
         url: `${SITE_URL}/moneypenny-alternatives`,
-        description: 'Moneypenny US pricing (AI Answering billed by calls: $99/month for 50 calls to $775 for 500, with human escalation; People Answering billed by minutes: $165/month for 50 minutes to $985 for 500; 30 days’ notice to cancel) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'Moneypenny US pricing (AI Answering billed by calls: $99/month for 50 calls to $775 for 500, with human escalation; People Answering billed by minutes: $165/month for 50 minutes to $985 for 500; 30 days’ notice to cancel) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'PATLive Alternatives',
         url: `${SITE_URL}/patlive-alternatives`,
-        description: 'PATLive pricing (human-only live call answering: $49/month pay as you go at $2.99/min, $99 for 50 minutes to $759 for 500 at $1.79/min extra; 14-day free trial, no contracts) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'PATLive pricing (human-only live call answering: $49/month pay as you go at $2.99/min, $99 for 50 minutes to $759 for 500 at $1.79/min extra; 14-day free trial, no contracts) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'Abby Connect Alternatives',
         url: `${SITE_URL}/abby-connect-alternatives`,
-        description: 'Abby Connect pricing (human or AI answering billed in Abby Minutes: $164/month for 50 to $1,380 for 500; one AI minute counts as half an Abby Minute; overage at the plan rate; free trial, month to month) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza ($149/month for 500 minutes), Ruby, PATLive, Smith.ai, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'Abby Connect pricing (human or AI answering billed in Abby Minutes: $164/month for 50 to $1,380 for 500; one AI minute counts as half an Abby Minute; overage at the plan rate; free trial, month to month) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew ($49/month per organization after a 7-day free trial; Crew agents take phone calls too, included), Ruby, PATLive, Smith.ai, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'AI Receptionist',
         url: `${SITE_URL}/ai-receptionist`,
-        description: 'Dooza AI receptionist for contractors and trades: $149/month for up to 500 minutes. Details at /ai-receptionist.',
+        description: 'AI call answering for contractors and trades: Crew agents take phone calls too, included in the Dooza Crew plan. Details at /ai-receptionist.',
     },
     {
         title: 'AI Customer Support',
@@ -398,9 +398,9 @@ const companyFacts = [
     'What Dooza is: an AI-native company that builds AI products and services for small businesses',
     'Self-serve product: Dooza Crew (https://crew.dooza.ai), your own AI agent team in a private sandbox, 7-day free trial then $49/month per organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap',
     'Product: Dooza Custom AI Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
-    'Services (done for you): Dooza Managed (AI admin assistant checked by a real person), Dooza AI phone agent (AI receptionist), custom AI agents scoped on a free 30-minute call, industry offers on their industry pages',
-    'Offers: Dooza Managed is free for the first 7 days, then $200/month. The AI answering service is $149/month, full refund if you cancel within 14 days of the first charge. Custom AI agents start with a paid, refundable pilot (100% refund within 14 days), scoped by a Dooza engineer on a free 30-minute call.',
-    `Pricing: Dooza Managed $200/month, first 7 days free (${SITE_URL}/pricing); AI answering service $149/month for 500 minutes (${SITE_URL}/ai-receptionist); custom builds scoped on a free 30-minute call (${SITE_URL}/book); industry offers priced on their industry pages`,
+    'Services (done for you): Dooza Managed (AI admin assistant checked by a real person), custom AI agents scoped on a free 30-minute call, industry offers on their industry pages',
+    'Offers: Dooza Managed is free for the first 7 days, then $200/month. Dooza Crew agents take phone calls too, included in the Crew plan; there is no separate phone service. Custom AI agents start with a paid, refundable pilot (100% refund within 14 days), scoped by a Dooza engineer on a free 30-minute call.',
+    `Pricing: Dooza Managed $200/month, first 7 days free (${SITE_URL}/pricing); phone calls included in Dooza Crew; custom builds scoped on a free 30-minute call (${SITE_URL}/book); industry offers priced on their industry pages`,
     'Integrations: 1,000+ app integrations',
     `Boilerplate: ${SITE_DESCRIPTION}`,
 ];
@@ -511,7 +511,7 @@ export async function GET() {
         '## Offers and trials',
         '- Dooza Crew (self-serve AI agent team, https://crew.dooza.ai): 7-day free trial (card required), then $49/month per organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap.',
         '- Dooza Managed (AI admin assistant checked by a real person): first 7 days free, then $200/month.',
-        '- Dooza AI phone agent: $149/month for up to 500 minutes; full refund if you cancel within 14 days of the first charge.',
+        '- Phone calls: included in Dooza Crew (Crew agents take phone calls too); no separate phone service.',
         '- Custom AI agents start with a paid, refundable pilot: 100% refund within 14 days. The 30-minute call to scope it is free.',
         `- General prices: ${SITE_URL}/pricing. Industry-specific offers are priced only on their own industry pages.`,
         '',

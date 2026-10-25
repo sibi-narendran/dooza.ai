@@ -5,10 +5,10 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
-import { recepPayUrl } from '@/lib/aiReceptionistData';
+import { crewSignupUrl } from '@/lib/crewUrl';
 
 const PATH = '/ambs-call-center-alternatives';
-const PAY_URL = recepPayUrl('ambs-call-center-alternatives');
+const PAY_URL = crewSignupUrl('ambs-call-center-alternatives-cta');
 const CHECKED = 'October 21, 2026';
 const TITLE = 'Ambs Call Center Alternatives: 8 Options, 2026';
 const DESCRIPTION = 'Ambs Call Center lists live answering from $149 for 100 minutes to $600 for 500, and AI from $19 a month. Compare 8 alternatives at listed prices.';
@@ -157,12 +157,12 @@ const sourceUrls = [...new Set(vendors.map((v) => v.url))];
 
 const alternatives = [
     {
-        name: 'Dooza AI phone agent',
+        name: 'Dooza Crew',
         href: '/ai-receptionist',
         internal: true,
-        what: 'An AI that answers your calls when you can’t, asks the caller the questions you give it, and emails you the message with the transcript and a link to the recording. Run by us, the company that publishes this page.',
-        price: '$149/month for up to 500 minutes, then $0.30/min. Month to month, no free trial. Full refund if you cancel within 14 days of your first charge.',
-        bestFor: 'Owners who miss calls on the job and want each caller’s message in their inbox, without calendar booking, texting or a person to hand calls to.',
+        what: 'AI agents (a lead agent plus helper agents) you chat with on web or phone. They browse the web, write files in their own workspace and take phone calls, and they ask you in chat before they send or pay. Run by us, the company that publishes this page.',
+        price: '$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
+        bestFor: 'Teams that want AI agents that do more than answer calls, with the phone included in one plan.',
     },
     {
         name: 'Posh',
@@ -241,16 +241,16 @@ const faqItems = [
         answer: 'Its pricing page says all plans incur a flat $85 one-time set-up fee, that work time is calculated in 30-second increments and rounded up, that direct connect call patching is billed at 6¢ per minute, and that extra locations cost $5 a month per location plus an $85 set-up charge per location. Work time includes answering, taking messages, transfers and sending emails and texts.',
     },
     {
-        question: 'Is Dooza cheaper than Ambs Call Center?',
-        answer: `Not at low volume. On listed prices, Ambs’ AI Receptionist costs less than Dooza up to 196 minutes a month: the Starter plan is $19 plus $0.79 a minute ($19 + 164 × $0.79 = $148.56; 165 minutes is $149.35), and its 100-minute AI plan at $75 plus $0.77 per extra minute stays under $149 up to 196 minutes ($148.92; 197 minutes is $149.69). Above that, Dooza’s $149 for up to 500 minutes costs less than Ambs’ $350 AI plan or $600 Real People plan for 500 minutes. Ambs offers live agents; Dooza does not. Prices checked ${CHECKED}, before Ambs’ $85 set-up fee.`,
+        question: 'How does Dooza Crew pricing compare with Ambs Call Center?',
+        answer: `Dooza Crew is $49 per organization per month after a 7-day free trial (card required), with phone calls included in your Crew plan. It is priced per organization, not per call or per minute, so it does not map onto Ambs Call Center’s units. Competitor prices on this page are listed prices checked ${CHECKED}.`,
     },
     {
         question: 'What is the cheapest Ambs Call Center alternative?',
         answer: 'On list price, Smith.ai’s AI receptionist is free for 25 calls a month, Upfirst starts at $24.95 a month for 30 calls, Dialzara at $29 for 60 minutes and Rosie at $49 for 250 minutes. All four are AI services, and Ambs’ own AI Starter plan is $19 a month plus $0.79 a minute. Among live services on this page, Posh’s $65 plan has the lowest entry price, billed per minute on top; Ambs’ Real People plans start at $149 for 100 minutes.',
     },
     {
-        question: 'Can I cancel Dooza any time?',
-        answer: 'Yes. Dooza is month to month with no contract, and you pay the first month up front; there is no free trial. If you cancel within 14 days of your first charge, you get a full refund.',
+        question: 'How much does Dooza Crew cost?',
+        answer: 'Dooza Crew is $49 per organization per month after a 7-day free trial (card required). Users and agents are unlimited, and AI usage is included with a hard spending cap. Crew agents take phone calls too, and it is included in your Crew plan.',
     },
 ];
 
@@ -292,17 +292,17 @@ const schemas = [
     {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'Dooza AI Answering Service',
-        serviceType: 'AI phone answering service for small businesses',
+        name: 'Dooza Crew',
+        serviceType: 'AI agents that take phone calls and do web work for small businesses',
         url: `${SITE_URL}/ai-receptionist`,
         areaServed: 'US',
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
             '@type': 'Offer',
-            name: 'AI answering service, monthly',
-            price: '149',
+            name: 'Dooza Crew, monthly per organization',
+            price: '49',
             priceCurrency: 'USD',
-            description: 'Up to 500 minutes a month, then $0.30 per minute. Month to month, paid up front. Cancel within 14 days of your first charge for a full refund.',
+            description: '$49 per organization per month after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -334,10 +334,10 @@ export default function AmbsCallCenterAlternativesPage() {
                         <section className="text-center">
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Ambs Call Center Alternatives (2026 Prices)</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
-                                <strong>The best Ambs Call Center alternative depends on whether callers must reach a live agent or you just need every call answered. Ambs’ pricing page lists live answering from $149 a month for 100 minutes to $600 for 500 minutes, and an AI Receptionist from $19 a month plus $0.79 a minute. Dooza’s AI phone agent costs $149 a month for up to 500 minutes, then $0.30 a minute. Listed prices, checked {CHECKED} on each vendor’s own page.</strong>
+                                <strong>The best Ambs Call Center alternative depends on whether callers must reach a live agent or you just need every call answered. Ambs’ pricing page lists live answering from $149 a month for 100 minutes to $600 for 500 minutes, and an AI Receptionist from $19 a month plus $0.79 a minute. Dooza Crew costs $49 a month per organization after a 7-day free trial, and Crew agents take phone calls too. Listed prices, checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} className={primaryButton}>Get Dooza: $149/month</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page (Dooza). Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
@@ -347,7 +347,7 @@ export default function AmbsCallCenterAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Ambs Call Center alternatives compared</h2>
                             <p className="mt-3 text-slate-700">
-                                These services bill in different units: per call, per minute or per Abby Minute. Ambs bills by work time, and a human service’s minute is agent time, so it is not directly comparable with an AI minute. The closest like-for-like lines: Ambs’ 500 Real People minutes have a listed price of $600 a month and its 500 AI minutes $350, while Dooza’s up to 500 minutes cost $149. Prices checked {CHECKED}.
+                                These services bill in different units: per call, per minute or per Abby Minute. Ambs bills by work time, and a human service’s minute is agent time, so it is not directly comparable with an AI minute. The closest like-for-like lines: Ambs’ 500 Real People minutes have a listed price of $600 a month and its 500 AI minutes $350. Dooza Crew is priced per organization ($49 a month after a 7-day free trial), not per minute or per call. Prices checked {CHECKED}.
                             </p>
                             <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
                                 <table className="w-full text-sm">
@@ -363,12 +363,12 @@ export default function AmbsCallCenterAlternativesPage() {
                                     </thead>
                                     <tbody>
                                         <tr className="border-t border-slate-200 bg-primary-50">
-                                            <td className="px-3 py-3 font-semibold text-slate-900">Dooza <span className="text-xs font-normal text-slate-500">(ours)</span></td>
+                                            <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
-                                            <td className="px-3 py-3">Minutes</td>
-                                            <td className="px-3 py-3 font-semibold">$149/month for 500 minutes</td>
-                                            <td className="px-3 py-3">One plan</td>
-                                            <td className="px-3 py-3">$0.30/min</td>
+                                            <td className="px-3 py-3">Per organization</td>
+                                            <td className="px-3 py-3 font-semibold">$49/month per organization, 7-day free trial</td>
+                                            <td className="px-3 py-3">Takes calls: included in Crew</td>
+                                            <td className="px-3 py-3">AI usage included, hard spending cap</td>
                                         </tr>
                                         {vendors.map((v) => (
                                             <tr key={v.name} className="border-t border-slate-200">
@@ -419,35 +419,32 @@ export default function AmbsCallCenterAlternativesPage() {
                         </section>
 
                         <section className="mt-14">
-                            <h2 className="text-2xl font-bold text-slate-900">Where Dooza fits, and what it does not do</h2>
+                            <h2 className="text-2xl font-bold text-slate-900">Where Dooza Crew fits</h2>
                             <p className="mt-3 text-slate-700">
-                                Dooza is one plan: $149 a month for up to 500 minutes, then $0.30 a minute, month to month. It answers when you can’t pick up, asks the caller your questions, and emails you the message with the transcript and a link to the recording. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
+                                Dooza Crew is $49 a month per organization after a 7-day free trial. Crew agents take phone calls too, and it is included in your Crew plan, so there is no separate phone service to buy. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
                             </p>
                             <div className="mt-6 grid gap-4 sm:grid-cols-2">
                                 <div className="rounded-xl border border-primary-100 bg-primary-50 p-5">
-                                    <h3 className="font-bold text-slate-900">Dooza does</h3>
+                                    <h3 className="font-bold text-slate-900">Dooza Crew does</h3>
                                     <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
-                                        <li>Answer your calls when you can’t</li>
-                                        <li>Ask the questions you give it</li>
-                                        <li>Email you the message, transcript and recording link</li>
-                                        <li>Up to 500 minutes a month; $0.30/min after</li>
+                                        <li>Take phone calls (included in your Crew plan)</li>
+                                        <li>Chat with you on web or phone</li>
+                                        <li>Browse the web and write files in its own workspace</li>
+                                        <li>Ask you to Approve, Edit or Reject before it sends or pays</li>
                                     </ul>
                                 </div>
                                 <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                    <h3 className="font-bold text-slate-900">Dooza does not</h3>
+                                    <h3 className="font-bold text-slate-900">Dooza Crew does not</h3>
                                     <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
-                                        <li>Book onto your calendar</li>
-                                        <li>Send texts</li>
                                         <li>Give you a human receptionist</li>
-                                        <li>Do live transfers</li>
                                     </ul>
                                 </div>
                             </div>
                             <p className="mt-4 text-slate-700">
-                                <strong>Where Ambs Call Center does more:</strong> Ambs puts real people on your calls, or real people plus AI on one plan. Its pricing page lists 24/7/365 coverage, 100% U.S.-based agents, bilingual answering in English and Spanish, dispatching, emergency line coverage, no holiday charges, local phone numbers, and real-time message delivery by email, text (SMS) or live transfer. It also lists data sent directly into your software, the MyAmbs web portal and integrations with Zapier and more. Dooza has no person to hand a call to, sends no texts and does no transfers: it takes the message and emails it to you. If callers must be able to reach a person, Ambs or another human service fits better.
+                                <strong>Where Ambs Call Center does more:</strong> Ambs puts real people on your calls, or real people plus AI on one plan. Its pricing page lists 24/7/365 coverage, 100% U.S.-based agents, bilingual answering in English and Spanish, dispatching, emergency line coverage, no holiday charges, local phone numbers, and real-time message delivery by email, text (SMS) or live transfer. It also lists data sent directly into your software, the MyAmbs web portal and integrations with Zapier and more. Dooza Crew agents are AI, not a person on the line. If callers must be able to reach a person, Ambs or another human service fits better.
                             </p>
                             <p className="mt-4 text-slate-700">
-                                <strong>Cheaper on paper:</strong> Ambs’ own AI Receptionist costs less than Dooza at low volume. Its Starter plan is $19 a month plus $0.79 per AI minute, which stays under $149 up to 164 minutes ($19 + 164 × $0.79 = $148.56; 165 minutes is $149.35). Its 100-minute AI plan ($75, then $0.77 a minute) stays under $149 up to 196 minutes ($75 + 96 × $0.77 = $148.92; 197 minutes is $149.69). Those are listed prices before Ambs’ $85 one-time set-up fee. Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes) and Moneypenny’s AI plan ($99/month for 50 calls) also cost less than Dooza to start, and Smith.ai’s AI plan is free for 25 calls. If your call volume is low or you need booking, start there. Dooza makes sense when you want one flat price that covers up to 500 minutes a month, a stated $0.30 overage, and each caller’s message in your inbox.
+                                <strong>Other entry prices:</strong> Ambs’ own AI Receptionist has a Starter plan at $19 a month plus $0.79 per AI minute, and a 100-minute AI plan at $75, then $0.77 a minute. Those are listed prices before Ambs’ $85 one-time set-up fee. Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes) and Moneypenny’s AI plan ($99/month for 50 calls). Smith.ai’s AI plan is free for 25 calls. If your call volume is low or you need booking, start there. Dooza Crew is $49 a month per organization after a 7-day free trial, with phone calls included in your Crew plan, for teams that want agents that do more than answer calls.
                             </p>
                         </section>
 
@@ -457,7 +454,7 @@ export default function AmbsCallCenterAlternativesPage() {
                                 Ambs’ Real People plans, Posh, Moneypenny’s People Answering, Ruby, Smith.ai’s human-first plans and Abby put a trained person on the line. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: Ambs’ Real People plans start at $149 for 100 minutes, Posh’s plans with minutes included at $130 for 50, Moneypenny’s People plans at $165 for 50 minutes, Ruby at $250 for 50 minutes and Smith.ai’s human plans at $300 for 30 calls. If every caller needs a careful conversation with a person, a human service may suit you better than Dooza. Comparing against PATLive instead? See <Link href="/patlive-alternatives" className={link}>PATLive alternatives</Link>.
                             </p>
                             <p className="mt-3 text-slate-700">
-                                AI services such as Dooza, Ambs’ AI Receptionist, Rosie, Upfirst and Dialzara cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-receptionist" className={link}>AI answering service for small business</Link> and <Link href="/ai-receptionist" className={link}>AI receptionist</Link>.
+                                AI services such as Dooza Crew, Ambs’ AI Receptionist, Rosie, Upfirst and Dialzara cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-receptionist" className={link}>AI answering service for small business</Link> and <Link href="/ai-receptionist" className={link}>AI receptionist</Link>.
                             </p>
                         </section>
 
@@ -468,9 +465,9 @@ export default function AmbsCallCenterAlternativesPage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
-                            <p className="mt-3 text-slate-300">$149/month for up to 500 minutes, then $0.30/min. Month to month. Cancel within 14 days of your first charge for a full refund.</p>
+                            <p className="mt-3 text-slate-300">$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} className={primaryButton}>Get Dooza: $149/month</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>

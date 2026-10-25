@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { compareReceptionistCosts, unitLabel, PRICES_CHECKED_LABEL } from '@/lib/receptionistPricing';
-import { useBookingModal } from '@/components/BookingModalProvider';
+import { crewSignupUrl } from '@/lib/crewUrl';
 
 const fmt = (n) => `$${n.toLocaleString('en-US', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 })}`;
 
@@ -30,7 +30,6 @@ export default function ReceptionistCostCalculator({ defaultCalls = 100, default
     const [calls, setCalls] = useState(String(defaultCalls));
     const [minutes, setMinutes] = useState(String(defaultMinutes));
     const [unique, setUnique] = useState(String(defaultUnique));
-    const { openModal } = useBookingModal();
 
     const input = {
         calls: Math.max(0, Math.min(5000, Number(calls) || 0)),
@@ -89,11 +88,11 @@ export default function ReceptionistCostCalculator({ defaultCalls = 100, default
 
             <div className="mt-6 flex flex-col items-start gap-3 rounded-2xl border border-slate-200 p-5 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-slate-800">
-                    Rather not set up and tune one yourself? Dooza builds a done-for-you AI receptionist on your existing number.
+                    Rather not set up and tune one yourself? Dooza Crew agents take phone calls too, included in your Crew plan.
                 </p>
-                <button type="button" onClick={openModal} className="shrink-0 rounded-xl bg-primary-600 px-5 py-3 font-semibold text-white hover:bg-primary-700">
-                    Book a free 30-minute call
-                </button>
+                <a href={crewSignupUrl('ai-receptionist-cost-calculator-cta')} data-offer="crew" className="shrink-0 rounded-xl bg-primary-600 px-5 py-3 font-semibold text-white hover:bg-primary-700">
+                    Try Dooza Crew free for 7 days
+                </a>
             </div>
         </div>
     );

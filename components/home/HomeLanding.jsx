@@ -6,6 +6,7 @@ import { getBookingUrlWithUtm } from '@/lib/links';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164 } from '@/lib/contact';
 import { testimonials } from '@/lib/homeData';
 import { MANAGED_PAY_URL } from '@/lib/offers';
+import { crewSignupUrl } from '@/lib/crewUrl';
 import HomeInlineBooking from '@/components/home/HomeInlineBooking';
 
 // Homepage (Sibi 2026-10-10 19:49 + 20:05 "improve it design wise, read Claude design").
@@ -190,9 +191,9 @@ export default function HomeLanding() {
                             <Link href="/pricing" className={LINK}>Dooza Managed</Link>: an AI admin assistant whose work is checked by a real person. First 7 days free, then $200/month.{' '}
                             <a href={MANAGED_PAY_URL} data-offer="managed" data-source="homepage_hero" className={LINK}>Start free</a>.
                         </p>
-                        <p className="mt-3 max-w-[34rem] text-[15px] text-slate-700" data-offer="receptionist" data-source="homepage_hero_receptionist">
+                        <p className="mt-3 max-w-[34rem] text-[15px] text-slate-700" data-offer="crew" data-source="homepage_hero_calls">
                             Missing calls on jobs?{' '}
-                            <Link href="/ai-receptionist?utm_source=website&utm_medium=internal&utm_campaign=homepage_hero_receptionist" className={LINK}>Dooza AI phone agent</Link>: picks up when you can&rsquo;t and emails you each message with the transcript. $149/month for up to 500 minutes.
+                            <a href={crewSignupUrl('homepage-hero-calls')} data-offer="crew" className={LINK}>Dooza Crew</a> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.
                         </p>
                         <p className="mt-3 max-w-[34rem] text-[15px] text-slate-700" data-source="homepage_hero_trucking">
                             Write trucking insurance?{' '}

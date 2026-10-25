@@ -5,13 +5,13 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
-import { recepPayUrl } from '@/lib/aiReceptionistData';
+import { crewSignupUrl } from '@/lib/crewUrl';
 
 const PATH = '/smith-ai-alternatives';
-const PAY_URL = recepPayUrl('smith-ai-alternatives');
+const PAY_URL = crewSignupUrl('smith-ai-alternatives-cta');
 const CHECKED = 'October 21, 2026';
 const TITLE = 'Smith.ai Alternatives: 8 Answering Services (2026)';
-const DESCRIPTION = 'Smith.ai pricing and 8 alternatives (AI and human) compared on price and billing unit, checked Oct 21, 2026. Dooza: $149/mo for 500 minutes, month to month.';
+const DESCRIPTION = 'Smith.ai pricing and 8 alternatives (AI and human) compared on price and billing unit, checked Oct 21, 2026. Dooza Crew: $49/mo per organization after a 7-day free trial.';
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -118,12 +118,12 @@ const vendors = [
 
 const alternatives = [
     {
-        name: 'Dooza AI phone agent',
+        name: 'Dooza Crew',
         href: '/ai-receptionist',
         internal: true,
-        what: 'An AI that answers your calls when you can’t, asks the caller the questions you give it, and emails you the message with the transcript and a link to the recording. Run by us, the company that publishes this page.',
-        price: '$149/month for up to 500 minutes, then $0.30/min. Month to month. Full refund if you cancel within 14 days of your first charge.',
-        bestFor: 'Owners who miss calls on the job and want each caller’s message in their inbox, without booking, texting or transfers.',
+        what: 'AI agents (a lead agent plus helper agents) you chat with on web or phone. They browse the web, write files in their own workspace and take phone calls, and they ask you in chat before they send or pay. Run by us, the company that publishes this page.',
+        price: '$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
+        bestFor: 'Teams that want AI agents that do more than answer calls, with the phone included in one plan.',
     },
     {
         name: 'Ruby',
@@ -186,16 +186,16 @@ const faqItems = [
         answer: `On list price, Upfirst starts at $24.95 a month for 30 calls, Dialzara at $29 a month for 60 minutes and Rosie at $49 a month for 250 minutes (checked ${CHECKED}). Smith.ai’s own AI plan is free for 25 calls. The cheapest plan is not always the best fit: check the billing unit and whether it books, texts or transfers.`,
     },
     {
-        question: 'Is Dooza cheaper than Smith.ai?',
-        answer: 'Dooza costs $149 a month for up to 500 minutes, then $0.30 a minute. Smith.ai’s human-first plans start at $300 a month for 30 calls. Smith.ai’s AI receptionist is free for 25 calls a month and its Pro plan starts at $150 a month at $2.00 per call, so at very low volume Smith.ai’s AI plan costs less. Dooza is AI, not a human receptionist.',
+        question: 'How does Dooza Crew pricing compare with Smith.ai?',
+        answer: 'Dooza Crew costs $49 per organization per month after a 7-day free trial (card required), with phone calls included in your Crew plan. Smith.ai’s human-first plans start at $300 a month for 30 calls. Smith.ai’s AI receptionist is free for 25 calls a month and its Pro plan starts at $150 a month at $2.00 per call. Dooza Crew agents are AI, not a human receptionist.',
     },
     {
-        question: 'Does Dooza book appointments, send texts or transfer calls?',
-        answer: 'No. Dooza answers your calls, asks the questions you give it and emails you the message with the transcript and a link to the recording. It does not book onto calendars, send texts or do live transfers. If you need those, Upfirst and Rosie list booking on their pricing pages, and Smith.ai includes transfer destinations.',
+        question: 'Does Dooza Crew take phone calls?',
+        answer: 'Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Upfirst and Rosie list booking on their pricing pages, and Smith.ai includes transfer destinations.',
     },
     {
-        question: 'Is there a contract or a refund?',
-        answer: 'Dooza is month to month with no contract, and you pay the first month up front. If you cancel within 14 days of your first charge, you get a full refund. Check each other vendor’s terms on its own site.',
+        question: 'Is there a free trial?',
+        answer: 'Dooza Crew has a 7-day free trial (card required), then $49 per organization per month. Check each other vendor’s terms on its own site.',
     },
 ];
 
@@ -237,17 +237,17 @@ const schemas = [
     {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'Dooza AI Answering Service',
-        serviceType: 'AI phone answering service for small businesses',
+        name: 'Dooza Crew',
+        serviceType: 'AI agents that take phone calls and do web work for small businesses',
         url: `${SITE_URL}/ai-receptionist`,
         areaServed: 'US',
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
             '@type': 'Offer',
-            name: 'AI answering service, monthly',
-            price: '149',
+            name: 'Dooza Crew, monthly per organization',
+            price: '49',
             priceCurrency: 'USD',
-            description: 'Up to 500 minutes a month, then $0.30 per minute. Month to month, paid up front. Cancel within 14 days of your first charge for a full refund.',
+            description: '$49 per organization per month after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -279,10 +279,10 @@ export default function SmithAiAlternativesPage() {
                         <section className="text-center">
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Smith.ai Alternatives for Small Businesses (2026 Prices)</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
-                                <strong>The best Smith.ai alternative depends on who should answer. If you want AI to answer your calls, ask your questions and email you each message, Dooza costs $149 a month for up to 500 minutes. Smith.ai’s human receptionists start at $300 for 30 calls; its AI plan is free for 25 calls.</strong>
+                                <strong>The best Smith.ai alternative depends on who should answer. If you want AI agents that take your calls and do web work for you, Dooza Crew costs $49 a month per organization after a 7-day free trial. Smith.ai’s human receptionists start at $300 for 30 calls; its AI plan is free for 25 calls.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} className={primaryButton}>Get Dooza: $149/month</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page. Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
@@ -308,12 +308,12 @@ export default function SmithAiAlternativesPage() {
                                     </thead>
                                     <tbody>
                                         <tr className="border-t border-slate-200 bg-primary-50">
-                                            <td className="px-3 py-3 font-semibold text-slate-900">Dooza <span className="text-xs font-normal text-slate-500">(ours)</span></td>
+                                            <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
-                                            <td className="px-3 py-3">Minutes</td>
-                                            <td className="px-3 py-3 font-semibold">$149/month for 500 minutes</td>
-                                            <td className="px-3 py-3">One plan</td>
-                                            <td className="px-3 py-3">$0.30/min</td>
+                                            <td className="px-3 py-3">Per organization</td>
+                                            <td className="px-3 py-3 font-semibold">$49/month per organization, 7-day free trial</td>
+                                            <td className="px-3 py-3">Takes calls: included in Crew</td>
+                                            <td className="px-3 py-3">AI usage included, hard spending cap</td>
                                         </tr>
                                         {vendors.map((v) => (
                                             <tr key={v.name} className="border-t border-slate-200">
@@ -362,32 +362,29 @@ export default function SmithAiAlternativesPage() {
                         </section>
 
                         <section className="mt-14">
-                            <h2 className="text-2xl font-bold text-slate-900">Where Dooza fits, and what it does not do</h2>
+                            <h2 className="text-2xl font-bold text-slate-900">Where Dooza Crew fits</h2>
                             <p className="mt-3 text-slate-700">
-                                Dooza is one plan: $149 a month for up to 500 minutes, then $0.30 a minute, month to month. It answers when you can’t pick up, asks the caller your questions, and emails you the message with the transcript and a link to the recording. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
+                                Dooza Crew is $49 a month per organization after a 7-day free trial. Crew agents take phone calls too, and it is included in your Crew plan, so there is no separate phone service to buy. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
                             </p>
                             <div className="mt-6 grid gap-4 sm:grid-cols-2">
                                 <div className="rounded-xl border border-primary-100 bg-primary-50 p-5">
-                                    <h3 className="font-bold text-slate-900">Dooza does</h3>
+                                    <h3 className="font-bold text-slate-900">Dooza Crew does</h3>
                                     <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
-                                        <li>Answer your calls when you can’t</li>
-                                        <li>Ask the questions you give it</li>
-                                        <li>Email you the message, transcript and recording link</li>
-                                        <li>Up to 500 minutes a month; $0.30/min after</li>
+                                        <li>Take phone calls (included in your Crew plan)</li>
+                                        <li>Chat with you on web or phone</li>
+                                        <li>Browse the web and write files in its own workspace</li>
+                                        <li>Ask you to Approve, Edit or Reject before it sends or pays</li>
                                     </ul>
                                 </div>
                                 <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                    <h3 className="font-bold text-slate-900">Dooza does not</h3>
+                                    <h3 className="font-bold text-slate-900">Dooza Crew does not</h3>
                                     <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
-                                        <li>Book onto your calendar</li>
-                                        <li>Send texts</li>
-                                        <li>Do live transfers to you or your team</li>
                                         <li>Give you a human receptionist</li>
                                     </ul>
                                 </div>
                             </div>
                             <p className="mt-4 text-slate-700">
-                                <strong>Cheaper on paper:</strong> Rosie ($49/month for 250 minutes) and Upfirst ($24.95/month for 30 calls) cost less than Dooza to start, and so do Dialzara’s $29 plan and Smith.ai’s free AI plan. If your call volume is low or you need booking, start there. Dooza makes sense when you want one flat price that covers about 500 minutes a month and each caller’s message in your inbox.
+                                <strong>Other entry prices:</strong> Rosie ($49/month for 250 minutes) and Upfirst ($24.95/month for 30 calls). Dialzara’s $29 plan and Smith.ai’s free AI plan are also listed. If your call volume is low or you need booking, start there. Dooza Crew is $49 a month per organization after a 7-day free trial, with phone calls included in your Crew plan, for teams that want agents that do more than answer calls.
                             </p>
                         </section>
 
@@ -397,7 +394,7 @@ export default function SmithAiAlternativesPage() {
                                 Smith.ai’s human-first plan, Ruby and Abby put a trained person on the line. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: Smith.ai’s human plans start at $300 for 30 calls and Ruby at $250 for 50 minutes. Comparing against Ruby instead? See <Link href="/ruby-alternatives" className={link}>Ruby Receptionist alternatives</Link>.
                             </p>
                             <p className="mt-3 text-slate-700">
-                                AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-receptionist" className={link}>AI answering service for small business</Link>.
+                                AI services such as Dooza Crew, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-receptionist" className={link}>AI answering service for small business</Link>.
                             </p>
                         </section>
 
@@ -408,9 +405,9 @@ export default function SmithAiAlternativesPage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
-                            <p className="mt-3 text-slate-300">$149/month for up to 500 minutes, then $0.30/min. Month to month. Cancel within 14 days of your first charge for a full refund.</p>
+                            <p className="mt-3 text-slate-300">$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} className={primaryButton}>Get Dooza: $149/month</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>

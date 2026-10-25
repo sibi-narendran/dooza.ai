@@ -12,7 +12,7 @@ import BookDemoButton from '@/components/buttons/BookDemoButton';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import FAQAccordion from '@/components/FAQAccordion';
 import { MANAGED_PAY_URL, tagPay } from '@/lib/offers';
-import { recepPayUrl } from '@/lib/aiReceptionistData';
+import { crewSignupUrl } from '@/lib/crewUrl';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -312,7 +312,7 @@ const decisionGuide = [
     { need: 'Free agent plan', pick: 'Zapier Agents or Cubeo AI', reason: 'Zapier Agents: 400 activities a month free. Cubeo AI: free forever plan with 100 credits a month' },
     { need: 'Self-hosting and full control', pick: 'n8n', reason: 'Self-hosted Community Edition on GitHub; cloud Starter 20€/mo billed annually' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: '2,000+ integrations, unlimited agents and users, dedicated account manager. Pricing through sales' },
-    { need: 'Missed calls answered', pick: 'Dooza AI answering service', reason: '$149/month for up to 500 minutes' },
+    { need: 'Missed calls answered', pick: 'Dooza Crew', reason: 'Crew agents take phone calls too; included in your Crew plan, so there is no separate phone service to buy' },
 ];
 
 const schemas = [
@@ -405,7 +405,7 @@ export default function LindyAlternativesPage() {
                                 </h1>
 
                                 <p id="short-answer" className="hero-entrance hero-delay-3 text-base text-slate-700 mb-6 max-w-2xl mx-auto text-left sm:text-center">
-                                    <strong>Short answer:</strong> keep Lindy if you want to build and configure your own AI agents and will run them yourself. If you would rather have it done for you, <a href={tagPay(MANAGED_PAY_URL, 'lindy_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. It is for SMBs and teams that want AI employees built and tuned for them instead of DIY setup. If you mainly need missed calls answered, Dooza&rsquo;s <a href={recepPayUrl('lindy-alternatives')} data-offer="receptionist" className="font-semibold text-primary-700 underline">AI answering service</a> is $149/month for up to 500 minutes.
+                                    <strong>Short answer:</strong> keep Lindy if you want to build and configure your own AI agents and will run them yourself. If you would rather have it done for you, <a href={tagPay(MANAGED_PAY_URL, 'lindy_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. It is for SMBs and teams that want AI employees built and tuned for them instead of DIY setup. If you mainly need missed calls answered, <a href={crewSignupUrl('lindy-alternatives-calls')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.
                                 </p>
 
                                 <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">

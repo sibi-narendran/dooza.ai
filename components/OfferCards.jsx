@@ -1,6 +1,6 @@
 import { Check } from 'lucide-react';
 import { MANAGED_PAY_URL, ICP1_A_PAY_URL } from '@/lib/offers';
-import { RECEP_PAY_URL } from '@/lib/aiReceptionistData';
+import { crewSignupUrl } from '@/lib/crewUrl';
 
 const OFFERS = [
     {
@@ -24,23 +24,23 @@ const OFFERS = [
         pay: MANAGED_PAY_URL,
     },
     {
-        // $149 answering offer (Sibi 2026-10-21 "SELL WHAT PEOPLE BUY"; terms = PILOT_PROMISE / positioning.md).
-        id: 'answering',
-        name: 'AI Answering Service',
-        tagline: 'Answers your calls when you can\'t and emails you each message with the transcript.',
-        price: '$149',
-        per: '/month',
-        terms: 'Paid first, month to month. Full refund if you cancel within 14 days.',
-        cta: 'Get it: $149/month',
+        // Crew offer replaces the dropped $149 answering offer (Sibi 2026-10-25: phone calls are part of Dooza Crew).
+        id: 'crew',
+        crew: true,
+        name: 'Dooza Crew',
+        tagline: 'AI agents you chat with on web or phone. Phone calls are included, so there is no separate phone service to buy.',
+        price: '$49',
+        per: '/month per organization',
+        terms: '7-day free trial (card required), then $49 per organization per month.',
+        cta: 'Start 7 days free',
         points: [
-            'Answers when you can\'t pick up',
-            'Asks the questions you give it',
-            'Emails you each message with the transcript and a recording link',
-            'Up to 500 minutes a month; $0.30/min after',
+            'A lead agent plus helper agents you chat with on web or phone',
+            'They browse the web and write files in their own workspace',
+            'Before an agent sends or pays it asks you in chat (Approve / Edit / Reject)',
+            'Crew agents take phone calls too, included in your Crew plan',
+            'Unlimited users and agents; AI usage included with a hard spending cap',
         ],
-        note: 'Not included: calendar booking, text messages, CRM integrations.',
-        more: { href: '/ai-receptionist', label: 'How it works and what it costs elsewhere' },
-        pay: `${RECEP_PAY_URL}?client_reference_id=recep-offercard`,
+        note: 'Card required for the 7-day free trial.',
     },
     {
         id: 'trucker-feed',
@@ -63,7 +63,7 @@ const OFFERS = [
 
 export default function OfferCards({ source = 'unknown', only }) {
     const ids = only ? [].concat(only) : null;
-    const offers = ids ? OFFERS.filter((o) => ids.includes(o.id)) : OFFERS.filter((o) => o.id !== 'answering');
+    const offers = ids ? OFFERS.filter((o) => ids.includes(o.id)) : OFFERS.filter((o) => o.id !== 'crew');
     return (
         <div className={`mx-auto grid max-w-5xl gap-6 ${offers.length > 1 ? 'md:grid-cols-2' : ''}`}>
             {offers.map((o) => (
@@ -79,7 +79,7 @@ export default function OfferCards({ source = 'unknown', only }) {
                     </ul>
                     <div className="mt-auto pt-6">
                         {o.beforePay && <p className="mb-3 text-sm text-slate-700">{o.beforePay}</p>}
-                        <a href={o.pay} data-offer={o.id} data-source={source} className="block rounded-full bg-primary-700 px-6 py-3 text-center font-bold text-white hover:bg-primary-800">{o.cta || 'Start 7 days free'}</a>
+                        <a href={o.crew ? crewSignupUrl(`offercard-${source}`) : o.pay} data-offer={o.id} data-source={source} className="block rounded-full bg-primary-700 px-6 py-3 text-center font-bold text-white hover:bg-primary-800">{o.cta || 'Start 7 days free'}</a>
                         <a href={`/book?utm_source=website&utm_medium=offer&utm_content=${o.id}_${source}`} className="mt-3 block text-center text-sm font-semibold text-primary-700 underline">Or book a free 30-min call first</a>
                         {o.more && <a href={o.more.href} className="mt-2 block text-center text-sm text-slate-600 underline">{o.more.label}</a>}
                         <p className="mt-3 text-center text-xs text-slate-500">{o.note}</p>

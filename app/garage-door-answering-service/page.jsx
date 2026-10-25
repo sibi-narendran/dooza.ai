@@ -1,15 +1,14 @@
 import Link from 'next/link';
-import HearItFirst from '@/components/HearItFirst';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
 import { compareReceptionistCosts } from '@/lib/receptionistPricing';
-import { recepPayUrl } from '@/lib/aiReceptionistData';
+import { crewSignupUrl } from '@/lib/crewUrl';
 
 const PATH = '/garage-door-answering-service';
-const PAY_URL = recepPayUrl('garage-door-answering-service');
+const PAY_URL = crewSignupUrl('garage-door-answering-service-cta');
 const TITLE = 'Garage Door Answering Service: AI vs Human Prices (2026)';
 
 // Example garage door company: 100 calls a month, about 3 minutes each (stuck door, broken spring, new door quote).
@@ -21,7 +20,7 @@ const money = (n) => `$${n.toLocaleString('en-US', Number.isInteger(n) ? {} : { 
 const aiRange = `${money(ai[0].result.cost)} to ${money(ai[ai.length - 1].result.cost)}`;
 const humanRange = `${money(human[0].result.cost)} to ${money(human[human.length - 1].result.cost)}`;
 
-const DESCRIPTION = `What a garage door answering service costs for 100 calls a month: ${ai.length} AI receptionists and ${human.length} human answering services at list prices checked Oct 2026, plus Dooza at $149/month.`;
+const DESCRIPTION = `What a garage door answering service costs for 100 calls a month: ${ai.length} AI receptionists and ${human.length} human answering services at list prices checked Oct 2026, plus Dooza Crew at $49/month.`;
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -34,27 +33,23 @@ export const metadata = {
 const faqItems = [
     {
         question: 'How much does a garage door answering service cost?',
-        answer: `For an example garage door company taking 100 calls a month at about 3 minutes each (300 minutes), AI answering services cost ${aiRange} a month and human answering services cost ${humanRange} a month at list prices checked October 6–14, 2026. Dooza’s AI phone agent is $149 a month for up to 500 minutes.`,
+        answer: `For an example garage door company taking 100 calls a month at about 3 minutes each (300 minutes), AI answering services cost ${aiRange} a month and human answering services cost ${humanRange} a month at list prices checked October 6–14, 2026. Dooza Crew is $49 a month per organization after a 7-day free trial, and Crew agents take phone calls too.`,
     },
     {
         question: 'AI or human answering service for a garage door company?',
         answer: 'A human service handles judgment calls and upset customers better and costs several times more per minute. An AI service is cheaper and picks up nights and weekends without per-minute human rates. One setup: AI for overflow and after hours, a person for the office day.',
     },
     {
-        question: 'What does the Dooza garage door answering service do?',
-        answer: 'It answers the calls you miss, asks the questions you give it (address, what is wrong with the door, how urgent), takes the message and emails it to you with the call transcript. It does not book onto your calendar or dispatch software, does not send texts, and takes one call at a time.',
+        question: 'Can Dooza Crew take calls for a garage door business?',
+        answer: 'Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew agents are AI agents you chat with on web or phone; they browse the web and write files in their own workspace, and before an agent sends or pays it asks you in chat (Approve / Edit / Reject).',
     },
     {
         question: 'What should an answering service ask a garage door caller?',
         answer: 'The address, a callback number, what the door is doing (won’t open, won’t close, off its track, loud bang from a broken spring), whether a car is stuck inside or the house is left open, and whether they want a repair or a quote on a new door or opener. With those answers you know on the callback whether it is tonight’s job or a booked visit.',
     },
     {
-        question: 'Is there a contract?',
-        answer: 'No. $149 a month for up to 500 minutes, then $0.30 a minute, month to month, paid up front. Cancel within 14 days of your first charge for a full refund.',
-    },
-    {
-        question: 'Does it work with my phone?',
-        answer: 'It works with any line that can forward calls: you forward your business line or your cell when you can’t answer. We confirm your go-live date at intake.',
+        question: 'How much does Dooza Crew cost?',
+        answer: '$49 per organization per month after a 7-day free trial (card required). Users and agents are unlimited, and AI usage is included with a hard spending cap.',
     },
 ];
 
@@ -62,18 +57,18 @@ const schemas = [
     {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'Dooza Garage Door Answering Service',
-        serviceType: 'AI answering service for garage door companies',
+        name: 'Dooza Crew',
+        serviceType: 'AI agents that take phone calls and do web work for garage door businesses',
         description: DESCRIPTION,
         url: `${SITE_URL}${PATH}`,
         areaServed: 'US',
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
             '@type': 'Offer',
-            name: 'AI answering service, monthly',
-            price: '149',
+            name: 'Dooza Crew, monthly per organization',
+            price: '49',
             priceCurrency: 'USD',
-            description: 'Up to 500 minutes a month, then $0.30 per minute. Month to month, paid up front. Cancel within 14 days of your first charge for a full refund.',
+            description: '$49 per organization per month after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -112,14 +107,13 @@ export default function GarageDoorAnsweringServicePage() {
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Garage Door Answering Service: What It Costs, AI vs Human</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
                                 <strong>For a garage door company taking 100 calls a month at about 3 minutes each, an AI answering service costs {aiRange} a month and a human answering service costs {humanRange}, at public list prices.</strong>{' '}
-                                The full table is below. Dooza’s AI phone agent is $149 a month for up to 500 minutes: it answers the calls you miss and emails you each message with the transcript.
+                                The full table is below. Dooza Crew is $49 a month per organization after a 7-day free trial, and Crew agents take phone calls too.
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} className={primaryButton}>Get it: $149/month</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
-                            <p className="mt-4 text-sm text-slate-600">Month to month. Cancel within 14 days of your first charge for a full refund.</p>
-                            <HearItFirst source="garage-door-answering-service" />
+                            <p className="mt-4 text-sm text-slate-600">$49 a month per organization after a 7-day free trial (card required).</p>
                         </section>
 
                         <section className="mt-14">
@@ -149,10 +143,10 @@ export default function GarageDoorAnsweringServicePage() {
                                     </thead>
                                     <tbody>
                                         <tr className="border-t border-slate-200 bg-primary-50">
-                                            <td className="px-3 py-3 font-semibold text-slate-900">Dooza <span className="text-xs font-normal text-slate-500">(ours)</span></td>
+                                            <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
-                                            <td className="px-3 py-3">Monthly</td>
-                                            <td className="px-3 py-3 font-semibold">$149</td>
+                                            <td className="px-3 py-3">Per organization, 7-day free trial</td>
+                                            <td className="px-3 py-3 font-semibold">$49</td>
                                         </tr>
                                         {rows.map((r) => (
                                             <tr key={r.name} className="border-t border-slate-200">
@@ -165,31 +159,21 @@ export default function GarageDoorAnsweringServicePage() {
                                     </tbody>
                                 </table>
                             </div>
-                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>. Not trade-specific? See the <Link href="/ai-receptionist" className="text-primary-700 underline">AI answering service for small business</Link> ($149/mo, 500 minutes).</p>
+                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>. Not trade-specific? See the <Link href="/ai-receptionist" className="text-primary-700 underline">AI answering service for small business</Link> (Dooza Crew: $49/mo per organization).</p>
                         </section>
 
                         <section className="mt-14">
-                            <h2 className="text-2xl font-bold text-slate-900">What Dooza’s garage door answering service does, and doesn’t</h2>
-                            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                                <div className="rounded-xl border border-primary-100 bg-primary-50 p-5">
-                                    <h3 className="font-bold text-slate-900">Included</h3>
-                                    <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
-                                        <li>Answers the calls you miss</li>
-                                        <li>Asks your questions: address, what is wrong, how urgent</li>
-                                        <li>Emails you each message with the call transcript and a link to the recording (callers hear that the call is recorded)</li>
-                                        <li>$149/month for up to 500 minutes; $0.30/min after</li>
-                                    </ul>
-                                </div>
-                                <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                    <h3 className="font-bold text-slate-900">Not included</h3>
-                                    <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
-                                        <li>Booking onto your calendar or dispatch software</li>
-                                        <li>Text messages</li>
-                                        <li>Two calls at once (the second caller is asked to call back)</li>
-                                    </ul>
-                                </div>
+                            <h2 className="text-2xl font-bold text-slate-900">What Dooza Crew does for a garage door business</h2>
+                            <div className="mt-6 rounded-xl border border-primary-100 bg-primary-50 p-5">
+                                <h3 className="font-bold text-slate-900">Included</h3>
+                                <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
+                                    <li>Crew agents take phone calls too, included in your Crew plan</li>
+                                    <li>AI agents you chat with on web or phone</li>
+                                    <li>They browse the web and write files in their own workspace</li>
+                                    <li>Before an agent sends or pays, it asks you in chat (Approve / Edit / Reject)</li>
+                                    <li>$49/month per organization after a 7-day free trial; unlimited users and agents</li>
+                                </ul>
                             </div>
-                            <p className="mt-4 text-slate-700"><Link href="/ai-receptionist" className="text-primary-700 underline">Hear a demo call (HVAC example; a garage door call works the same way)</Link>.</p>
                         </section>
 
                         <section className="mt-14">
@@ -199,9 +183,9 @@ export default function GarageDoorAnsweringServicePage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop losing garage door calls to voicemail</h2>
-                            <p className="mt-3 text-slate-300">$149/month for up to 500 minutes. Month to month. Cancel within 14 days of your first charge for a full refund.</p>
+                            <p className="mt-3 text-slate-300">$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} className={primaryButton}>Get it: $149/month</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>

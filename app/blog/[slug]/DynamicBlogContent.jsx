@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getProductSignupUrl, getBookingUrlWithUtm } from '../../../lib/links';
+import { crewSignupUrl } from '../../../lib/crewUrl';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import BottomCTA from '../../../components/BottomCTA';
@@ -95,13 +96,13 @@ export default function DynamicBlogContent({ post }) {
                                 <TocSidebar tocData={tocData} />
 
                                 <div className="mt-8 pt-6 border-t border-slate-200">
-                                    <p className="text-sm text-slate-600 mb-4">{isAnswering ? 'Stop missing calls: $149/month' : 'AI agents that do your busywork'}</p>
+                                    <p className="text-sm text-slate-600 mb-4">{isAnswering ? 'Crew agents take phone calls too' : 'AI agents that do your busywork'}</p>
                                     <a
-                                        href={isAnswering ? '/ai-receptionist' : getProductSignupUrl('workforce', { source: 'blog-sidebar' })}
-                                        {...(isAnswering ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                                        href={isAnswering ? crewSignupUrl('blog-sidebar-calls') : getProductSignupUrl('workforce', { source: 'blog-sidebar' })}
+                                        {...(isAnswering ? { 'data-offer': 'crew' } : { target: '_blank', rel: 'noopener noreferrer' })}
                                         className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                     >
-                                        {isAnswering ? 'See the answering service' : 'Try Dooza Crew'}
+                                        Try Dooza Crew
                                     </a>
                                 </div>
 
@@ -148,16 +149,17 @@ export default function DynamicBlogContent({ post }) {
                         {/* CTA Block */}
                         {isAnswering ? (
                         <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
-                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Stop Missing Calls for $149/Month</h3>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Stop Missing Calls with Dooza Crew</h3>
                             <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                Dooza&apos;s AI answering service picks up 24/7, asks your questions and emails you the message, transcript and recording link. Up to 500 minutes, month to month, full refund if you cancel within 14 days of the first charge.
+                                Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. $49 per organization per month after a 7-day free trial (card required).
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href="/ai-receptionist"
+                                    href={crewSignupUrl('blog-cta-calls')}
+                                    data-offer="crew"
                                     className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all sm:w-auto"
                                 >
-                                    See how it works <ArrowRight className="w-4 h-4" />
+                                    Try Dooza Crew free <ArrowRight className="w-4 h-4" />
                                 </a>
                                 <a
                                     href={getBookingUrlWithUtm('blog', 'cta', post.slug)}

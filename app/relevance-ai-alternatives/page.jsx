@@ -8,7 +8,7 @@ import BookDemoButton from '@/components/buttons/BookDemoButton';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import FAQAccordion from '@/components/FAQAccordion';
 import { MANAGED_PAY_URL, tagPay } from '@/lib/offers';
-import { recepPayUrl } from '@/lib/aiReceptionistData';
+import { crewSignupUrl } from '@/lib/crewUrl';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -420,7 +420,7 @@ export default function RelevanceAiAlternativesPage() {
                             </h1>
 
                             <p id="short-answer" className="hero-entrance hero-delay-3 text-base text-slate-700 mb-8 max-w-2xl mx-auto text-left sm:text-center">
-                                <strong>Short answer:</strong> Relevance AI fits companies that want to build and govern their own AI workforce, and it has no public price on its pricing page (checked {CHECKED}): one Enterprise plan, &ldquo;Talk to sales&rdquo;. If you are a small business and would rather have it done for you, <a href={tagPay(MANAGED_PAY_URL, 'relevance_ai_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. If you mainly need missed calls answered, Dooza&rsquo;s <a href={recepPayUrl('relevance-ai-alternatives')} data-offer="receptionist" className="font-semibold text-primary-700 underline">AI answering service</a> is $149/month for up to 500 minutes. If you want to build agents yourself at a listed price, start with Lindy, Gumloop, Zapier Agents or n8n below.
+                                <strong>Short answer:</strong> Relevance AI fits companies that want to build and govern their own AI workforce, and it has no public price on its pricing page (checked {CHECKED}): one Enterprise plan, &ldquo;Talk to sales&rdquo;. If you are a small business and would rather have it done for you, <a href={tagPay(MANAGED_PAY_URL, 'relevance_ai_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. If you mainly need missed calls answered, <a href={crewSignupUrl('relevance-ai-alternatives-calls')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. If you want to build agents yourself at a listed price, start with Lindy, Gumloop, Zapier Agents or n8n below.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">

@@ -1,30 +1,21 @@
 import Link from 'next/link';
-import HearItFirst from '@/components/HearItFirst';
 import {
-    CalendarCheck,
     ListChecks,
     MessageSquareText,
     PhoneCall,
     ShieldCheck,
-    UserRound,
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import { AdsFooter, AdsHeader, isAdsVisit, withSearchParams } from '@/components/ai-receptionist/AdsChrome';
-import DemoCallPlayer from '@/components/ai-receptionist/DemoCallPlayer';
-import FounderNote from '@/components/ai-receptionist/FounderNote';
 import MissedCallVideo from '@/components/ai-receptionist/MissedCallVideo';
-import PlayDemoButton from '@/components/ai-receptionist/PlayDemoButton';
 import StickyCtaBar from '@/components/ai-receptionist/StickyCtaBar';
-import TextPilotLink from '@/components/ai-receptionist/TextPilotLink';
+import { crewSignupUrl } from '@/lib/crewUrl';
 import { SITE_URL } from '@/lib/site';
 import { generateFAQSchema } from '@/lib/industryData';
-import { RECEPTIONIST_DEMOS } from '@/lib/aiReceptionistDemos';
 import {
-    DEMO_PHONE_E164,
     PILOT_PROMISE,
-    recepPayUrl,
     RECEPTIONIST_FAQ,
     RECEPTIONIST_KEYWORDS,
     RECEPTIONIST_VARIANTS,
@@ -52,7 +43,7 @@ export const metadata = {
         url: pageUrl,
         siteName: 'Dooza',
         type: 'website',
-        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza AI receptionist' }],
+        images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Dooza Crew AI receptionist' }],
     },
     twitter: {
         card: 'summary_large_image',
@@ -63,19 +54,17 @@ export const metadata = {
 };
 
 const WHAT_IT_DOES = [
-    { icon: PhoneCall, text: 'Answers every call in your company name, day and night, while you are on the tools.' },
-    { icon: ListChecks, text: 'Asks what you would ask: address, what is wrong, how urgent, owner or tenant.' },
-    { icon: MessageSquareText, text: 'Emails you every message with the call transcript and a link to the recording.' },
-    { icon: CalendarCheck, text: 'Repeats the address back to the caller before hanging up.' },
-    { icon: UserRound, text: 'Takes a message for you when a caller asks for a person.' },
-    { icon: ShieldCheck, text: 'Never quotes a price or gives advice you have not approved.' },
+    { icon: PhoneCall, text: 'Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.' },
+    { icon: MessageSquareText, text: 'You chat with your agents (a lead agent plus helper agents) on web or phone.' },
+    { icon: ListChecks, text: 'They browse the web and write files in their own workspace.' },
+    { icon: ShieldCheck, text: 'Before an agent sends or pays, it asks you in chat: Approve, Edit or Reject.' },
 ];
 
 const PILOT_STEPS = [
-    'Pay $149 for the first month (up to 500 minutes, $0.30/min after). No contract.',
-    'Intake: we collect your services, hours and the questions callers should be asked, and confirm your go-live date.',
-    'It answers the calls you miss and emails you each message with the transcript.',
-    'Not useful? Cancel within 14 days of your first charge for a full refund.',
+    'Start the 7-day free trial (card required).',
+    'Chat with your lead agent on web or phone.',
+    'Crew agents take phone calls too, included in your Crew plan.',
+    'Before an agent sends or pays, it asks you in chat: Approve, Edit or Reject.',
 ];
 
 const primaryButton =
@@ -87,15 +76,14 @@ export default async function AiReceptionistPage(props) {
     const searchParams = await props.searchParams;
     const variant = getReceptionistVariant(searchParams?.v);
     const adsMode = isAdsVisit(searchParams);
-    const demo = RECEPTIONIST_DEMOS[variant.demo] || RECEPTIONIST_DEMOS.hvac;
-    const bookHref = withSearchParams('/ai-receptionist/book', searchParams);
-    const payHref = recepPayUrl(variant.key === 'default' ? 'ai-receptionist' : `ai-receptionist-${variant.key}`);
+    const bookHref = withSearchParams('/book', searchParams);
+    const payHref = crewSignupUrl(variant.key === 'default' ? 'ai-receptionist-cta' : `ai-receptionist-${variant.key}-cta`);
 
     const serviceSchema = {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'AI Receptionist for Contractors and Trades',
-        serviceType: 'AI phone answering and message taking for HVAC, plumbing, electrical, roofing and other trades',
+        name: 'Dooza Crew',
+        serviceType: 'AI agents that take phone calls and do web work for HVAC, plumbing, electrical, roofing and other trades',
         description: base.metaDescription,
         url: pageUrl,
         areaServed: 'US',
@@ -107,11 +95,11 @@ export default async function AiReceptionistPage(props) {
         },
         offers: {
             '@type': 'Offer',
-            name: 'AI receptionist, monthly',
-            price: '149',
+            name: 'Dooza Crew, monthly per organization',
+            price: '49',
             priceCurrency: 'USD',
-            url: 'https://buy.stripe.com/eVqcN51C31ZX0yEfvv3AY19?client_reference_id=recep-ai-receptionist',
-            description: 'Up to 500 minutes a month, then $0.30 per minute. Month to month, paid up front. Cancel within 14 days of your first charge for a full refund.',
+            url: 'https://crew.dooza.ai',
+            description: '$49 per organization per month after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
             availability: 'https://schema.org/InStock',
         },
     };
@@ -149,32 +137,13 @@ export default async function AiReceptionistPage(props) {
                             {variant.subhead}
                         </p>
                         <div id="hero-actions" className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                            <PlayDemoButton source="hero" demoPhone={DEMO_PHONE_E164} className={primaryButton}>
-                                Hear It Answer A Call
-                            </PlayDemoButton>
-                            <a href={payHref} className={secondaryButton}>
-                                Get it: $149/month
+                            <a href={payHref} data-offer="crew" className={primaryButton}>
+                                Try Dooza Crew free for 7 days
                             </a>
                         </div>
                         <p className="mt-5 text-sm font-medium text-slate-600">
                             {PILOT_PROMISE} <Link href={bookHref} className="underline">Questions? Book a free call.</Link>
                         </p>
-                        <HearItFirst source="ai-receptionist" />
-                    </div>
-                </section>
-
-                {/* Demo */}
-                <section id="demo" className="scroll-mt-20 bg-slate-50 px-4 py-12 sm:px-6 sm:py-16">
-                    <div className="mx-auto max-w-2xl">
-                        <h2 className="text-center text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">
-                            Hear it answer a call
-                        </h2>
-                        <p className="mt-2 text-center text-slate-600">
-                            Forty-eight seconds. One after-hours call, answered and the details taken.
-                        </p>
-                        <div className="mt-6">
-                            <DemoCallPlayer demo={demo} demoKey={variant.demo} label={variant.demoLabel} />
-                        </div>
                     </div>
                 </section>
 
@@ -217,9 +186,9 @@ export default async function AiReceptionistPage(props) {
                 {/* 4. Built for the trades */}
                 <section id="who-its-for" className="px-4 py-16 sm:px-6 sm:py-24">
                     <div className="mx-auto max-w-4xl">
-                        <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">Built for the trades</h2>
+                        <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">Calls missed on the job</h2>
                         <p className="mt-3 text-slate-600">{TRADES_LIST}</p>
-                        {!adsMode && <p className="mt-2 text-slate-600">Prices by trade: <Link href="/hvac-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">HVAC</Link>, <Link href="/plumbing-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">plumbing</Link>, <Link href="/garage-door-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">garage door</Link> and <Link href="/window-tint-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">window tint</Link>. Any other small business: <Link href="/ai-receptionist" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">AI answering service for small business</Link> ($149/mo, 500 minutes).</p>}
+                        {!adsMode && <p className="mt-2 text-slate-600">Prices by trade: <Link href="/hvac-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">HVAC</Link>, <Link href="/plumbing-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">plumbing</Link>, <Link href="/garage-door-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">garage door</Link> and <Link href="/window-tint-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">window tint</Link>. Any other small business: <Link href="/ai-receptionist" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">AI answering service for small business</Link> (Dooza Crew: $49/mo per organization).</p>}
                         <div className="mt-8 grid gap-4 md:grid-cols-3">
                             {TRADE_MOMENTS.map((moment, index) => (
                                 <div
@@ -228,10 +197,10 @@ export default async function AiReceptionistPage(props) {
                                 >
                                     <h3 className="text-lg font-bold text-slate-950">{moment.name}</h3>
                                     <p className="mt-3 text-slate-600">{moment.pain}</p>
-                                    <p className="mt-2 font-semibold text-slate-900">{moment.outcome}</p>
                                 </div>
                             ))}
                         </div>
+                        <p className="mt-6 font-semibold text-slate-900">Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.</p>
                     </div>
                 </section>
 
@@ -272,16 +241,7 @@ export default async function AiReceptionistPage(props) {
                                 <div key={item.key} className="py-5">
                                     <dt className="text-lg font-bold text-slate-950">{item.question}</dt>
                                     <dd className="mt-1 text-slate-600">
-                                        {item.key === 'robot' ? (
-                                            <>
-                                                <PlayDemoButton source="faq" demoPhone={DEMO_PHONE_E164} className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">
-                                                    Play the demo call
-                                                </PlayDemoButton>{' '}
-                                                and judge for yourself. It speaks naturally, waits for the caller, and handles interruptions.
-                                            </>
-                                        ) : (
-                                            item.answer
-                                        )}
+                                        {item.answer}
                                     </dd>
                                 </div>
                             ))}
@@ -302,30 +262,24 @@ export default async function AiReceptionistPage(props) {
                 {/* 6. Book the pilot meeting */}
                 <section id="pilot" className="scroll-mt-16 bg-slate-950 px-4 pb-24 pt-16 text-white sm:px-6 sm:pb-28 sm:pt-24">
                     <div className="mx-auto max-w-2xl text-center">
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">$149/month · month to month</p>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">$49/month per organization · 7-day free trial</p>
                         <h2 className="mt-4 text-3xl font-extrabold tracking-tight !text-white sm:text-4xl">Stop sending callers to voicemail.</h2>
                         <p className="mt-4 text-lg leading-relaxed text-slate-200 sm:text-xl">
                             {PILOT_PROMISE}
                         </p>
                         <div className="mt-8">
-                            <a href={payHref} className="inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-8 py-4 text-lg font-bold text-slate-950 shadow-lg shadow-primary-900/30 transition hover:bg-primary-400 sm:w-auto">
-                                Get it: $149/month
+                            <a href={payHref} data-offer="crew" className="inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-8 py-4 text-lg font-bold text-slate-950 shadow-lg shadow-primary-900/30 transition hover:bg-primary-400 sm:w-auto">
+                                Try Dooza Crew free for 7 days
                             </a>
                         </div>
-                        <p className="mt-4 text-sm text-slate-300">Works with any phone. <Link href={bookHref} className="underline">Questions first? Book a free 30-minute call.</Link></p>
-                        <div className="mt-6">
-                            <TextPilotLink source="pilot_section" tone="dark" />
-                        </div>
-                        <div className="mx-auto mt-8 max-w-md">
-                            <FounderNote tone="dark" lead="Who you will meet" />
-                        </div>
+                        <p className="mt-4 text-sm text-slate-300"><Link href={bookHref} className="underline">Questions first? Book a free call.</Link></p>
                     </div>
                 </section>
             </main>
 
             {adsMode ? <AdsFooter /> : <Footer variant="light" />}
 
-            <StickyCtaBar demoPhone={DEMO_PHONE_E164} bookHref={payHref} label="Get it: $149/mo" />
+            <StickyCtaBar bookHref={payHref} label="Try Dooza Crew free" />
         </>
     );
 }

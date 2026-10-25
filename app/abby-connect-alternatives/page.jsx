@@ -5,10 +5,10 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import { SITE_URL } from '@/lib/site';
-import { recepPayUrl } from '@/lib/aiReceptionistData';
+import { crewSignupUrl } from '@/lib/crewUrl';
 
 const PATH = '/abby-connect-alternatives';
-const PAY_URL = recepPayUrl('abby-connect-alternatives');
+const PAY_URL = crewSignupUrl('abby-connect-alternatives-cta');
 const CHECKED = 'October 21, 2026';
 const TITLE = 'Abby Connect Alternatives: 9 Options, 2026 Prices';
 const DESCRIPTION = 'Abby Connect starts at $164 a month for 50 Abby Minutes. Compare 9 AI and human answering services, with prices read from each vendor’s own page.';
@@ -130,12 +130,12 @@ const sourceUrls = [...new Set(vendors.map((v) => v.url))];
 
 const alternatives = [
     {
-        name: 'Dooza AI phone agent',
+        name: 'Dooza Crew',
         href: '/ai-receptionist',
         internal: true,
-        what: 'An AI that answers your calls when you can’t, asks the caller the questions you give it, and emails you the message with the transcript and a link to the recording. Run by us, the company that publishes this page.',
-        price: '$149/month for up to 500 minutes, then $0.30/min. Month to month, no free trial. Full refund if you cancel within 14 days of your first charge.',
-        bestFor: 'Owners who miss calls on the job and want each caller’s message in their inbox, without calendar booking or texting.',
+        what: 'AI agents (a lead agent plus helper agents) you chat with on web or phone. They browse the web, write files in their own workspace and take phone calls, and they ask you in chat before they send or pay. Run by us, the company that publishes this page.',
+        price: '$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
+        bestFor: 'Teams that want AI agents that do more than answer calls, with the phone included in one plan.',
     },
     {
         name: 'Ruby',
@@ -216,15 +216,15 @@ const faqItems = [
     },
     {
         question: 'Is there a free Abby Connect alternative?',
-        answer: `Smith.ai’s AI receptionist has a free plan for 25 calls a month ($3.00 per call after that), and Goodcall lets you start free with a demo agent. Others offer free trials: Upfirst and PATLive for 14 days, Dialzara, My AI Front Desk and Rosie for 7 days. Dooza has no free trial; you get a full refund if you cancel within 14 days of your first charge. Checked ${CHECKED}.`,
+        answer: `Smith.ai’s AI receptionist has a free plan for 25 calls a month ($3.00 per call after that), and Goodcall lets you start free with a demo agent. Others offer free trials: Upfirst and PATLive for 14 days, Dialzara, My AI Front Desk and Rosie for 7 days. Dooza Crew has a 7-day free trial (card required). Checked ${CHECKED}.`,
     },
     {
         question: 'What is a cheaper alternative to Abby Connect?',
-        answer: `An AI answering service. Abby’s plans start at $164 a month for 50 Abby Minutes. Dooza costs $149 a month for up to 500 minutes, then $0.30 a minute. Upfirst ($24.95 for 30 calls), Dialzara ($29 for 60 minutes), Rosie ($49 for 250 minutes) and Goodcall ($79 for 100 unique customers) start lower still. AI is not a person: it does not handle upset callers or judgment calls the way a trained receptionist does. Prices checked ${CHECKED}.`,
+        answer: `An AI answering service. Abby’s plans start at $164 a month for 50 Abby Minutes. Dooza Crew costs $49 a month per organization after a 7-day free trial, with phone calls included in your Crew plan. Upfirst ($24.95 for 30 calls), Dialzara ($29 for 60 minutes), Rosie ($49 for 250 minutes) and Goodcall ($79 for 100 unique customers) list lower entry prices. AI is not a person: it does not handle upset callers or judgment calls the way a trained receptionist does. Prices checked ${CHECKED}.`,
     },
     {
-        question: 'Can I cancel Dooza any time?',
-        answer: 'Yes. Dooza is month to month with no contract, and you pay the first month up front; there is no free trial. If you cancel within 14 days of your first charge, you get a full refund.',
+        question: 'How much does Dooza Crew cost?',
+        answer: 'Dooza Crew is $49 per organization per month after a 7-day free trial (card required). Users and agents are unlimited, and AI usage is included with a hard spending cap. Crew agents take phone calls too, and it is included in your Crew plan.',
     },
 ];
 
@@ -266,17 +266,17 @@ const schemas = [
     {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'Dooza AI Answering Service',
-        serviceType: 'AI phone answering service for small businesses',
+        name: 'Dooza Crew',
+        serviceType: 'AI agents that take phone calls and do web work for small businesses',
         url: `${SITE_URL}/ai-receptionist`,
         areaServed: 'US',
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
             '@type': 'Offer',
-            name: 'AI answering service, monthly',
-            price: '149',
+            name: 'Dooza Crew, monthly per organization',
+            price: '49',
             priceCurrency: 'USD',
-            description: 'Up to 500 minutes a month, then $0.30 per minute. Month to month, paid up front. Cancel within 14 days of your first charge for a full refund.',
+            description: '$49 per organization per month after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -308,10 +308,10 @@ export default function AbbyConnectAlternativesPage() {
                         <section className="text-center">
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Abby Connect Alternatives for Small Businesses (2026 Prices)</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
-                                <strong>The best Abby Connect alternative depends on whether you need a person on the line or just need every call answered. Abby’s pricing page lists $164 a month for 50 Abby Minutes and $1,380 for 500; an AI minute counts as half an Abby Minute. Dooza’s AI phone agent costs $149 a month for up to 500 minutes, then $0.30 a minute. Prices checked {CHECKED} on each vendor’s own page.</strong>
+                                <strong>The best Abby Connect alternative depends on whether you need a person on the line or just need every call answered. Abby’s pricing page lists $164 a month for 50 Abby Minutes and $1,380 for 500; an AI minute counts as half an Abby Minute. Dooza Crew costs $49 a month per organization after a 7-day free trial, and Crew agents take phone calls too. Prices checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} className={primaryButton}>Get Dooza: $149/month</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page (Dooza). Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
@@ -321,7 +321,7 @@ export default function AbbyConnectAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Abby Connect alternatives compared</h2>
                             <p className="mt-3 text-slate-700">
-                                These services bill in different units: per call, per minute, per Abby Minute or per unique customer. A 10-minute call costs one call on Upfirst but 10 minutes on Rosie, so compare on your own call pattern. A human service’s minute is receptionist time, so it is not directly comparable with an AI minute. Abby Minutes need care: Abby counts one minute of human answering as one Abby Minute and one minute of AI answering as half, so 500 Abby Minutes are not 500 call minutes unless every call goes to a person. The closest like-for-like line: Abby’s Growth plan costs $1,380 a month for 500 Abby Minutes (500 human minutes, or up to 1,000 AI minutes); Dooza costs $149 for up to 500 AI minutes, so 1,000 minutes on Dooza would come to $299 with the $0.30 overage. Prices checked {CHECKED}.
+                                These services bill in different units: per call, per minute, per Abby Minute or per unique customer. A 10-minute call costs one call on Upfirst but 10 minutes on Rosie, so compare on your own call pattern. A human service’s minute is receptionist time, so it is not directly comparable with an AI minute. Abby Minutes need care: Abby counts one minute of human answering as one Abby Minute and one minute of AI answering as half, so 500 Abby Minutes are not 500 call minutes unless every call goes to a person. The closest like-for-like line: Abby’s Growth plan costs $1,380 a month for 500 Abby Minutes (500 human minutes, or up to 1,000 AI minutes). Prices checked {CHECKED}.
                             </p>
                             <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
                                 <table className="w-full text-sm">
@@ -337,12 +337,12 @@ export default function AbbyConnectAlternativesPage() {
                                     </thead>
                                     <tbody>
                                         <tr className="border-t border-slate-200 bg-primary-50">
-                                            <td className="px-3 py-3 font-semibold text-slate-900">Dooza <span className="text-xs font-normal text-slate-500">(ours)</span></td>
+                                            <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
-                                            <td className="px-3 py-3">Minutes</td>
-                                            <td className="px-3 py-3 font-semibold">$149/month for 500 minutes</td>
-                                            <td className="px-3 py-3">One plan</td>
-                                            <td className="px-3 py-3">$0.30/min</td>
+                                            <td className="px-3 py-3">Per organization</td>
+                                            <td className="px-3 py-3 font-semibold">$49/month per organization, 7-day free trial</td>
+                                            <td className="px-3 py-3">Takes calls: included in Crew</td>
+                                            <td className="px-3 py-3">AI usage included, hard spending cap</td>
                                         </tr>
                                         {vendors.map((v) => (
                                             <tr key={v.name} className="border-t border-slate-200">
@@ -393,32 +393,29 @@ export default function AbbyConnectAlternativesPage() {
                         </section>
 
                         <section className="mt-14">
-                            <h2 className="text-2xl font-bold text-slate-900">Where Dooza fits, and what it does not do</h2>
+                            <h2 className="text-2xl font-bold text-slate-900">Where Dooza Crew fits</h2>
                             <p className="mt-3 text-slate-700">
-                                Dooza is one plan: $149 a month for up to 500 minutes, then $0.30 a minute, month to month. It answers when you can’t pick up, asks the caller your questions, and emails you the message with the transcript and a link to the recording. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
+                                Dooza Crew is $49 a month per organization after a 7-day free trial. Crew agents take phone calls too, and it is included in your Crew plan, so there is no separate phone service to buy. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
                             </p>
                             <div className="mt-6 grid gap-4 sm:grid-cols-2">
                                 <div className="rounded-xl border border-primary-100 bg-primary-50 p-5">
-                                    <h3 className="font-bold text-slate-900">Dooza does</h3>
+                                    <h3 className="font-bold text-slate-900">Dooza Crew does</h3>
                                     <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
-                                        <li>Answer your calls when you can’t</li>
-                                        <li>Ask the questions you give it</li>
-                                        <li>Email you the message, transcript and recording link</li>
-                                        <li>Up to 500 minutes a month; $0.30/min after</li>
+                                        <li>Take phone calls (included in your Crew plan)</li>
+                                        <li>Chat with you on web or phone</li>
+                                        <li>Browse the web and write files in its own workspace</li>
+                                        <li>Ask you to Approve, Edit or Reject before it sends or pays</li>
                                     </ul>
                                 </div>
                                 <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-                                    <h3 className="font-bold text-slate-900">Dooza does not</h3>
+                                    <h3 className="font-bold text-slate-900">Dooza Crew does not</h3>
                                     <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700">
-                                        <li>Book onto your calendar</li>
-                                        <li>Send texts</li>
                                         <li>Give you a human receptionist</li>
-                                        <li>Do live transfers</li>
                                     </ul>
                                 </div>
                             </div>
                             <p className="mt-4 text-slate-700">
-                                <strong>Cheaper on paper:</strong> Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes), Goodcall ($79 for 100 unique customers) and My AI Front Desk ($99 for 200 minutes) cost less than Dooza to start, and Smith.ai’s AI plan is free for 25 calls. If your call volume is low or you need booking, start there. Abby is not cheaper to start ($164 for 50 Abby Minutes), but if you want both humans and AI under one plan, Dooza cannot do that. Dooza makes sense when you want one flat price that covers up to 500 minutes a month, a stated $0.30 overage, and each caller’s message in your inbox.
+                                <strong>Other entry prices:</strong> Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes), Goodcall ($79 for 100 unique customers) and My AI Front Desk ($99 for 200 minutes) are listed at those prices, and Smith.ai’s AI plan is free for 25 calls. If your call volume is low or you need booking, start there. Abby starts at $164 for 50 Abby Minutes, and covers both humans and AI under one plan. Dooza Crew is $49 a month per organization after a 7-day free trial, with phone calls included in your Crew plan.
                             </p>
                         </section>
 
@@ -428,7 +425,7 @@ export default function AbbyConnectAlternativesPage() {
                                 Abby’s human receptionists, Ruby, PATLive and Smith.ai’s human-first plans put a trained person on the line. A person handles upset callers, judgment calls and sales conversations better than AI does, and you pay for it: Abby starts at $164 for 50 Abby Minutes, PATLive at $99 for 50 minutes, Ruby at $250 for 50 minutes and Smith.ai’s human plans at $300 for 30 calls. If you run a law firm and every caller needs a careful intake conversation, a human service like Abby, Ruby or PATLive may suit you better than Dooza. Weighing Ambs Call Center instead? See <Link href="/ambs-call-center-alternatives" className={link}>Ambs Call Center alternatives</Link>.
                             </p>
                             <p className="mt-3 text-slate-700">
-                                AI services such as Dooza, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. Abby sells both: its AI answering uses half an Abby Minute per minute, so the same plan covers more AI time than human time. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-receptionist" className={link}>AI answering service for small business</Link> and <Link href="/ai-receptionist" className={link}>AI receptionist</Link>.
+                                AI services such as Dooza Crew, Rosie, Upfirst and Goodcall cost a fraction of that. They are not a human receptionist. Abby sells both: its AI answering uses half an Abby Minute per minute, so the same plan covers more AI time than human time. A common setup is a person for the office day and AI for overflow and after hours. More detail: <Link href="/ai-receptionist" className={link}>AI answering service for small business</Link> and <Link href="/ai-receptionist" className={link}>AI receptionist</Link>.
                             </p>
                         </section>
 
@@ -439,9 +436,9 @@ export default function AbbyConnectAlternativesPage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
-                            <p className="mt-3 text-slate-300">$149/month for up to 500 minutes, then $0.30/min. Month to month. Cancel within 14 days of your first charge for a full refund.</p>
+                            <p className="mt-3 text-slate-300">$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} className={primaryButton}>Get Dooza: $149/month</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>

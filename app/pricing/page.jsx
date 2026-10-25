@@ -1,5 +1,4 @@
 import Navbar from '@/components/Navbar';
-import HearItFirst from '@/components/HearItFirst';
 import TalkNowStrip from '@/components/TalkNowStrip';
 import OfferCards from '@/components/OfferCards';
 import Footer from '@/components/Footer';
@@ -11,14 +10,14 @@ import FinalCTASection from '@/components/sections/FinalCTASection';
 import { faqSchema } from '@/lib/homeData';
 
 export const metadata = {
-    title: 'Dooza Pricing: AI Answering $149/mo, Assistant $200/mo',
-    description: 'AI answering service $149/month for 500 minutes. Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Custom builds on a free call.',
+    title: 'Dooza Pricing: Crew $49/mo, Assistant $200/mo',
+    description: 'Dooza Crew: AI agents you chat with on web or phone, $49 per organization per month after a 7-day free trial; phone calls included. Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Custom builds on a free call.',
     keywords: ['AI employees pricing', 'AI automation pricing', 'Dooza pricing', 'AI agents cost', 'business automation plans'],
     alternates: {
         canonical: 'https://www.dooza.ai/pricing',
     },
     openGraph: {
-        title: 'Dooza Pricing: AI Answering $149/mo, Assistant $200/mo',
+        title: 'Dooza Pricing: Crew $49/mo, Assistant $200/mo',
         description: 'Custom pricing, scoped on a free 30-minute call. Every engagement starts as a refundable pilot: 100% refund within 14 days.',
         url: 'https://www.dooza.ai/pricing',
         type: 'website',
@@ -26,7 +25,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Dooza Pricing: AI Answering $149/mo, Assistant $200/mo',
+        title: 'Dooza Pricing: Crew $49/mo, Assistant $200/mo',
         description: 'Custom pricing, scoped on a free 30-minute call. Every engagement starts as a refundable pilot: 100% refund within 14 days.',
         images: ['https://www.dooza.ai/logo.png'],
     },
@@ -48,12 +47,11 @@ export default function PricingPage() {
                                 <span className="section-label mb-4 block text-primary-700">PRICING</span>
                                 <h1 className="font-serif text-4xl font-bold text-slate-900 md:text-6xl">Two plans you can start today</h1>
                                 <p className="mt-5 text-lg text-slate-600">
-                                    An AI answering service for your phone, or an admin assistant checked by a real person. Or a custom build scoped on a free call.
+                                    Dooza Crew, AI agents you chat with on web or phone (phone calls included), or an admin assistant checked by a real person. Or a custom build scoped on a free call.
                                 </p>
                             </div>
                             <div className="mt-10 px-4">
-                                <OfferCards source="pricing" only={['answering', 'managed']} />
-                                <HearItFirst source="pricing" />
+                                <OfferCards source="pricing" only={['crew', 'managed']} />
                             </div>
                         </section>
                         <section className="pb-12">
