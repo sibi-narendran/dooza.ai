@@ -45,7 +45,7 @@ const steps = [
 ];
 
 const otherWays = [
-    { name: 'Dooza Managed', text: 'An AI admin assistant whose work a real person checks.', href: '/ai-admin-assistant' },
+    { name: 'Dooza Managed', text: 'An AI admin assistant whose work a real person checks.', href: '/pricing' },
     { name: 'Custom AI agents', text: 'Our engineers build and run an agent for one job in your tools.', href: '/done-for-you-ai-agents' },
     { name: 'AI answering service', text: 'Every call to your business answered, day and night.', href: '/ai-answering-service-for-small-business' },
 ];

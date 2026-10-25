@@ -1,7 +1,6 @@
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '../../lib/site';
 import { agentPages } from '../../lib/agentData';
 import { blogPosts } from '../../lib/blogData';
-import { industryPages } from '../../lib/industryData';
 import { supabaseServer } from '../../lib/supabaseServer';
 import mergedBlogPosts from '../../lib/mergedBlogPosts.json';
 
@@ -17,11 +16,6 @@ const staticPages = [
         title: 'Pricing',
         url: `${SITE_URL}/pricing`,
         description: 'Dooza Managed (an AI admin assistant checked by a real person): $200/month, first 7 days free, start by card. Custom builds are scoped by a Dooza engineer on a free 30-minute call and start as a refundable pilot: 100% refund within 14 days. Industry offers are priced on their own industry pages.',
-    },
-    {
-        title: 'AI admin assistant for small business (Dooza Managed)',
-        url: `${SITE_URL}/ai-admin-assistant`,
-        description: 'Dooza Managed: email Dooza your written admin tasks (email drafts and follow-ups, documents and forms, spreadsheets and data entry, research); AI does the work, a person checks it, done by the next business day, weekly report. $200/month, first 7 days free, cancel anytime. Not covered: phone calls or texts, logins to your accounts, payments, legal/tax/insurance advice. Compared with US VA services (published plans from $390/month for 10 hours, checked Oct 14, 2026).',
     },
     {
         title: 'AI employee for small business: what it is, what it costs, how to hire one',
@@ -57,11 +51,6 @@ const staticPages = [
         title: 'Dooza vs Marblism',
         url: `${SITE_URL}/dooza-vs-marblism`,
         description: 'Comparison of Dooza and Marblism.',
-    },
-    {
-        title: 'Generative Engine Optimization (GEO) Services',
-        url: `${SITE_URL}/generative-engine-optimization`,
-        description: 'Done-for-you GEO: Ranky, Dooza\'s AI SEO & Visibility Employee, gets businesses cited by ChatGPT, Perplexity, Gemini, and Google AI Overviews.',
     },
     {
         title: 'Dooza vs Profound',
@@ -117,11 +106,6 @@ const staticPages = [
         title: 'Marblism Alternatives',
         url: `${SITE_URL}/marblism-alternatives`,
         description: 'Marblism pricing ($24/mo billed yearly or $44/mo monthly for all 7 AI employees, checked 2026-10) and 7 alternatives compared on pricing, integrations and setup: Dooza, Sintra AI, Motion, NoimosAI, Lindy AI, Relevance AI and Cubeo AI.',
-    },
-    {
-        title: 'AI Solutions for Business',
-        url: `${SITE_URL}/ai-solutions-for-business`,
-        description: 'AI solutions for small business workflows.',
     },
     {
         title: 'AI employees for truck dispatchers',
@@ -183,11 +167,6 @@ const staticPages = [
         description: 'Free tool: paste text and flag 20+ patterns that make writing sound AI-generated. Private, runs in your browser.',
     },
     {
-        title: 'Dooza Grow',
-        url: `${SITE_URL}/grow`,
-        description: 'Done-for-you growth engine for small businesses: AI agents for SEO and GEO, paid ads, website and lead conversion, set up by Dooza engineers.',
-    },
-    {
         title: 'AI Customer Support (done for you)',
         url: `${SITE_URL}/customer-support-ai`,
         description: 'AI customer support workflows for email, chat and tickets, built and run by Dooza Custom AI Agents and AI employees.',
@@ -226,11 +205,6 @@ const staticPages = [
         title: 'How to Start an AI Automation Agency',
         url: `${SITE_URL}/start-ai-automation-agency`,
         description: 'Package repeatable workflows, choose offers and deliver with Dooza Custom AI Agents.',
-    },
-    {
-        title: 'Industries',
-        url: `${SITE_URL}/industries`,
-        description: 'Industry-specific AI employee use cases.',
     },
     {
         title: 'About',
@@ -354,19 +328,9 @@ const servicePages = [
         description: 'Done-for-you AI customer support built and maintained by Dooza engineers.',
     },
     {
-        title: 'AI Visibility / GEO',
-        url: `${SITE_URL}/generative-engine-optimization`,
-        description: 'Done-for-you generative engine optimization so ChatGPT, Perplexity, Gemini, and Google AI Overviews cite your business.',
-    },
-    {
         title: 'Workflow Automation',
         url: `${SITE_URL}/workflow-automation`,
         description: 'Done-for-you workflow automation across your existing tools.',
-    },
-    {
-        title: 'Industry solutions',
-        url: `${SITE_URL}/industries`,
-        description: 'AI products and services packaged for specific industries.',
     },
 ];
 
@@ -479,22 +443,18 @@ export async function GET() {
         description: page.metaDescription || page.heroDescription || page.role,
     }));
 
-    const industryLinks = industryPages.map((page) => ({
-        title: page.title,
-        url: `${SITE_URL}/industries/${page.slug}`,
-        description: page.metaDescription,
-    })).concat([
+    const industryLinks = [
         {
-            title: 'AI Workflow Automation for Law Firms',
-            url: `${SITE_URL}/industries/law-firms`,
-            description: 'Dooza helps law firms automate intake, conflict-check prep, onboarding, document collection, client updates, billing reminders, and approvals.',
+            title: 'Dooza for insurance agents',
+            url: `${SITE_URL}/insurance-agents`,
+            description: 'Dooza Crew AI employees for independent insurance agencies.',
         },
         {
-            title: 'AI Customer Support Automation for Stores',
-            url: `${SITE_URL}/industries/customer-support`,
-            description: 'Dooza sets up and manages AI that answers phone calls, sends quotes, and handles customer support across email and chat for ecommerce stores and SMBs.',
+            title: 'Dooza for truck dispatchers',
+            url: `${SITE_URL}/truck-dispatchers`,
+            description: 'Dooza Crew AI employees for truck dispatch services.',
         },
-    ]);
+    ];
 
     const blogLinks = [
         ...blogPosts

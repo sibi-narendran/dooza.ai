@@ -66,8 +66,8 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/ai-admin-assistant" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    AI Admin Assistant
+                                <Link href="/pricing" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Dooza Managed
                                 </Link>
                             </li>
                             <li>
@@ -96,13 +96,13 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/industries/law-firms" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Law Firms
+                                <Link href="/insurance-agents" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Insurance Agents
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/industries/customer-support" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Store Customer Ops
+                                <Link href="/truck-dispatchers" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Truck Dispatchers
                                 </Link>
                             </li>
                         </ul>
@@ -176,16 +176,6 @@ const Footer = ({ variant = 'light' }) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/grow" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    Dooza Grow
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/generative-engine-optimization" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    GEO Services
-                                </Link>
-                            </li>
-                            <li>
                                 <Link href="/dooza-vs-profound" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Dooza vs Profound
                                 </Link>
@@ -208,11 +198,6 @@ const Footer = ({ variant = 'light' }) => {
                             <li>
                                 <Link href="/gorgias-alternatives" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
                                     Gorgias Alternatives
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/ai-solutions-for-business" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-                                    AI Solutions for Business
                                 </Link>
                             </li>
                             <li>

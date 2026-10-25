@@ -755,7 +755,7 @@ export default function RelevanceAiAlternativesPage() {
                             <Link href="/marblism-alternatives" className={chip}>Marblism Alternatives →</Link>
                             <Link href="/sintra-alternatives" className={chip}>Sintra AI Alternatives →</Link>
                             <Link href="/dooza-vs-marblism" className={chip}>Dooza vs Marblism →</Link>
-                            <Link href="/ai-solutions-for-business" className={chip}>AI Solutions for Business →</Link>
+                            <Link href="/" className={chip}>Dooza Crew AI employees →</Link>
                             <Link href="/alternatives" className={chip}>All Comparisons →</Link>
                         </div>
                     </div>

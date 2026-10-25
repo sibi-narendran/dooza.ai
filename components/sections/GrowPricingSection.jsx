@@ -29,11 +29,6 @@ export default function GrowPricingSection() {
                         </div>
                     ))}
                 </div>
-                <p className="mt-6 text-center">
-                    <Link href="/grow/pricing" className="inline-flex items-center gap-1 text-sm font-semibold text-primary-700 hover:text-primary-900">
-                        Full Dooza Grow pricing <ArrowRight className="h-4 w-4" />
-                    </Link>
-                </p>
             </div>
         </section>
     );

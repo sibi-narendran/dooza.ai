@@ -91,17 +91,10 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
         };
     }, [isOpen]);
 
-    const products = [
-        { name: 'Dooza Managed', href: '/pricing' },
-        { name: 'Dooza Crew', href: '/' },
-    ];
-
+    // Nav = two sections only (Sibi 2026-10-25 08:26): "AI employees" and "Dooza for industries".
     const industries = [
-        { name: 'Real Estate', detail: 'Lead follow-up', href: '/industries/real-estate', image: '/blog/ai-for-real-estate-agents.png' },
-        { name: 'Truck Dispatchers', detail: 'Calls and operations', href: '/industries/dispatchers', image: '/industries/truck-dispatch-ai-employee.png' },
-        { name: 'Insurance', detail: 'Quotes and renewals', href: '/industries/insurance-agents', image: '/blog/liberate-alternative-insurance-agencies.png' },
-        { name: 'Law Firms', detail: 'Intake and follow-up', href: '/industries/law-firms', image: '/blog/ai-legal-assistant.png' },
-        { name: 'Customer Support', detail: 'Support at scale', href: '/industries/customer-support', image: '/industries/customer-support-ai-employee.png' },
+        { name: 'Insurance Agents', detail: 'Portals, inbox, renewals', href: '/insurance-agents', image: '/blog/liberate-alternative-insurance-agencies.png' },
+        { name: 'Truck Dispatchers', detail: 'Load boards, brokers, billing', href: '/truck-dispatchers', image: '/industries/truck-dispatch-ai-employee.png' },
     ];
 
     const scrollIndustries = (direction) => {
@@ -135,65 +128,15 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                         </Link>
 
                         <div className="hidden md:flex items-center space-x-8">
-                            {/* Products Dropdown */}
-                            <div className="relative" ref={dropdownRef}>
-                                <button
-                                    onClick={() => {
-                                        setProductsOpen(!productsOpen);
-                                        setIndustriesOpen(false);
-                                    }}
-                                    onKeyDown={(e) => {
-                                        if (e.key === 'Escape') setProductsOpen(false);
-                                    }}
-                                    aria-expanded={productsOpen}
-                                    aria-haspopup="true"
-                                    aria-controls="products-dropdown"
-                                    aria-label="Products menu"
-                                    className={`flex items-center gap-1 text-[15px] font-medium transition-colors ${isDark
-                                        ? 'text-gray-300 hover:text-white'
-                                        : 'text-slate-600 hover:text-primary-600'
-                                        }`}
-                                >
-                                    Products
-                                    <ChevronDown className={`w-4 h-4 transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
-                                </button>
-
-                                {productsOpen && (
-                                    <div
-                                        id="products-dropdown"
-                                        role="menu"
-                                        className={`absolute top-full left-0 mt-2 min-w-[180px] rounded-xl shadow-xl border overflow-hidden ${isDark
-                                            ? 'bg-[#12121a] border-white/10'
-                                            : 'bg-white border-slate-100'
-                                        }`}
-                                    >
-                                        <div className="py-2">
-                                            {products.map((product) => (
-                                                <Link
-                                                    key={product.name}
-                                                    href={product.href}
-                                                    role="menuitem"
-                                                    onClick={() => setProductsOpen(false)}
-                                                    onKeyDown={(e) => {
-                                                        if (e.key === 'Escape') setProductsOpen(false);
-                                                    }}
-                                                    className={`block px-4 py-2.5 text-[15px] font-medium transition-colors ${isDark
-                                                        ? 'text-gray-300 hover:bg-white/5 hover:text-white'
-                                                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                                                        }`}
-                                                >
-                                                    {product.name}
-                                                    {product.comingSoon && (
-                                                        <span className="ml-2 text-[11px] font-semibold px-1.5 py-0.5 rounded-full bg-primary-100 text-primary-600">
-                                                            Soon
-                                                        </span>
-                                                    )}
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
+                            <Link
+                                href="/"
+                                className={`text-[15px] font-medium transition-colors ${isDark
+                                    ? 'text-gray-300 hover:text-white'
+                                    : 'text-slate-600 hover:text-primary-600'
+                                    }`}
+                            >
+                                AI employees
+                            </Link>
 
                             {showIndustry && (
                                 <div className="relative" ref={industriesDropdownRef}>
@@ -214,7 +157,7 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                             : 'text-slate-600 hover:text-primary-600'
                                             }`}
                                     >
-                                        Industry
+                                        Dooza for industries
                                         <ChevronDown className={`w-4 h-4 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
                                     </button>
 
@@ -230,10 +173,10 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                             <div className="mb-4 flex items-start justify-between gap-4">
                                                 <div>
                                                     <p className={`text-base font-semibold ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                                                        Built for your industry
+                                                        Dooza for industries
                                                     </p>
                                                     <p className={`mt-1 text-sm ${isDark ? 'text-gray-400' : 'text-slate-500'}`}>
-                                                        See how an AI employee fits the way your business works.
+                                                        AI employees built around one industry's daily work.
                                                     </p>
                                                 </div>
                                                 <div className="flex shrink-0 gap-2">
@@ -290,83 +233,11 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                                 ))}
                                             </div>
 
-                                            <div className={`mt-3 flex items-center justify-between gap-3 border-t pt-3 ${isDark ? 'border-white/10' : 'border-slate-100'}`}>
-                                                <div className="flex items-center gap-4">
-                                                    <Link
-                                                        href="/ai-admin-assistant"
-                                                        onClick={() => setIndustriesOpen(false)}
-                                                        className={`text-sm font-semibold transition-colors ${isDark ? 'text-primary-300 hover:text-white' : 'text-primary-700 hover:text-primary-900'}`}
-                                                    >
-                                                        AI Admin Assistant
-                                                    </Link>
-                                                    <Link
-                                                        href="/grow"
-                                                        onClick={() => setIndustriesOpen(false)}
-                                                        className={`text-sm font-semibold transition-colors ${isDark ? 'text-primary-300 hover:text-white' : 'text-primary-700 hover:text-primary-900'}`}
-                                                    >
-                                                        Dooza Grow
-                                                    </Link>
-                                                    <Link
-                                                        href="/generative-engine-optimization"
-                                                        onClick={() => setIndustriesOpen(false)}
-                                                        className={`text-sm font-semibold transition-colors ${isDark ? 'text-primary-300 hover:text-white' : 'text-primary-700 hover:text-primary-900'}`}
-                                                    >
-                                                        GEO Services
-                                                    </Link>
-                                                    <Link
-                                                        href="/ai-solutions-for-business"
-                                                        onClick={() => setIndustriesOpen(false)}
-                                                        className={`text-sm font-semibold transition-colors ${isDark ? 'text-gray-300 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
-                                                    >
-                                                        Other solutions
-                                                    </Link>
-                                                </div>
-                                                <Link
-                                                    href="/industries"
-                                                    onClick={() => setIndustriesOpen(false)}
-                                                    className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${isDark
-                                                        ? 'bg-white text-black hover:bg-gray-100'
-                                                        : 'bg-primary-700 text-white hover:bg-primary-800'
-                                                        }`}
-                                                >
-                                                    View all industries
-                                                    <ArrowRight className="h-4 w-4" />
-                                                </Link>
-                                            </div>
                                         </div>
                                     )}
                                 </div>
                             )}
 
-                            <Link
-                                href="/pricing"
-                                className={`text-[15px] font-medium transition-colors ${isDark
-                                    ? 'text-gray-300 hover:text-white'
-                                    : 'text-slate-600 hover:text-primary-600'
-                                    }`}
-                            >
-                                Pricing
-                            </Link>
-
-                            <Link
-                                href="/partners"
-                                className={`text-[15px] font-medium transition-colors ${isDark
-                                    ? 'text-gray-300 hover:text-white'
-                                    : 'text-slate-600 hover:text-primary-600'
-                                    }`}
-                            >
-                                Partners
-                            </Link>
-
-                            <Link
-                                href="/blog"
-                                className={`text-[15px] font-medium transition-colors ${isDark
-                                    ? 'text-gray-300 hover:text-white'
-                                    : 'text-slate-600 hover:text-primary-600'
-                                    }`}
-                            >
-                                Blog
-                            </Link>
                         </div>
                     </div>
 
@@ -436,28 +307,16 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                     }`}
                 >
                     <div className="px-4 pt-2 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] space-y-2">
-                        {/* Mobile Products Section */}
-                        <div className={`px-3 py-2 text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
-                            Products
-                        </div>
-                        {products.map((product) => (
-                            <Link
-                                key={product.name}
-                                href={product.href}
-                                onClick={() => setIsOpen(false)}
-                                className={`block px-3 py-3 rounded-lg font-medium ${isDark
-                                    ? 'text-gray-300 hover:bg-white/5'
-                                    : 'text-slate-600 hover:bg-slate-50'
-                                    }`}
-                            >
-                                {product.name}
-                                {product.comingSoon && (
-                                    <span className="ml-2 text-[11px] font-semibold px-1.5 py-0.5 rounded-full bg-primary-100 text-primary-600">
-                                        Soon
-                                    </span>
-                                )}
-                            </Link>
-                        ))}
+                        <Link
+                            href="/"
+                            onClick={() => setIsOpen(false)}
+                            className={`block px-3 py-3 rounded-lg font-medium ${isDark
+                                ? 'text-gray-300 hover:bg-white/5'
+                                : 'text-slate-600 hover:bg-slate-50'
+                                }`}
+                        >
+                            AI employees
+                        </Link>
 
                         <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
 
@@ -465,15 +324,8 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                             <>
                                 <div className="flex items-center justify-between px-3 py-2">
                                     <div className={`text-sm font-semibold ${isDark ? 'text-gray-400' : 'text-slate-400'}`}>
-                                        Industry
+                                        Dooza for industries
                                     </div>
-                                    <Link
-                                        href="/industries"
-                                        onClick={() => setIsOpen(false)}
-                                        className={`text-xs font-semibold ${isDark ? 'text-gray-300' : 'text-primary-700'}`}
-                                    >
-                                        View all
-                                    </Link>
                                 </div>
                                 <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto px-3 pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                                     {industries.map((industry) => (
@@ -498,85 +350,9 @@ const Navbar = ({ variant = 'light', loginUrl, signupUrl, signupLabel, showLogin
                                         </Link>
                                     ))}
                                 </div>
-                                <Link
-                                    href="/ai-admin-assistant"
-                                    onClick={() => setIsOpen(false)}
-                                    className={`mx-3 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-semibold ${isDark
-                                        ? 'bg-primary-500/15 text-white'
-                                        : 'bg-primary-50 text-primary-800'
-                                        }`}
-                                >
-                                    AI Admin Assistant
-                                    <ArrowRight className="h-4 w-4" />
-                                </Link>
-                                <Link
-                                    href="/grow"
-                                    onClick={() => setIsOpen(false)}
-                                    className={`mx-3 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-semibold ${isDark
-                                        ? 'bg-primary-500/15 text-white'
-                                        : 'bg-primary-50 text-primary-800'
-                                        }`}
-                                >
-                                    Dooza Grow
-                                    <ArrowRight className="h-4 w-4" />
-                                </Link>
-                                <Link
-                                    href="/generative-engine-optimization"
-                                    onClick={() => setIsOpen(false)}
-                                    className={`mx-3 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-semibold ${isDark
-                                        ? 'bg-primary-500/15 text-white'
-                                        : 'bg-primary-50 text-primary-800'
-                                        }`}
-                                >
-                                    GEO Services
-                                    <ArrowRight className="h-4 w-4" />
-                                </Link>
-                                <Link
-                                    href="/ai-solutions-for-business"
-                                    onClick={() => setIsOpen(false)}
-                                    className={`mx-3 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-semibold ${isDark
-                                        ? 'bg-white/5 text-white'
-                                        : 'bg-slate-100 text-slate-900'
-                                        }`}
-                                >
-                                    Other solutions
-                                    <ArrowRight className="h-4 w-4" />
-                                </Link>
                             </>
                         )}
 
-                        <div className={`my-2 border-t ${isDark ? 'border-white/10' : 'border-slate-100'}`}></div>
-
-                        <Link
-                            href="/pricing"
-                            onClick={() => setIsOpen(false)}
-                            className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
-                                ? 'text-gray-300 hover:bg-white/5'
-                                : 'text-slate-600 hover:bg-slate-50'
-                                }`}
-                        >
-                            Pricing
-                        </Link>
-                        <Link
-                            href="/partners"
-                            onClick={() => setIsOpen(false)}
-                            className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
-                                ? 'text-gray-300 hover:bg-white/5'
-                                : 'text-slate-600 hover:bg-slate-50'
-                                }`}
-                        >
-                            Partners
-                        </Link>
-                        <Link
-                            href="/blog"
-                            onClick={() => setIsOpen(false)}
-                            className={`block w-full text-center px-3 py-3 text-base font-medium rounded-lg ${isDark
-                                ? 'text-gray-300 hover:bg-white/5'
-                                : 'text-slate-600 hover:bg-slate-50'
-                                }`}
-                        >
-                            Blog
-                        </Link>
                         {showLogin && (
                             <a
                                 href={loginUrl || getProductSigninUrl('workforce')}

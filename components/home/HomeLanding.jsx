@@ -187,7 +187,7 @@ export default function HomeLanding() {
                         <p className="mt-5 text-sm text-slate-500">Free call. Refundable pilot: 100% refund within 14 days.</p>
                         <p className="mt-4 max-w-[34rem] text-[15px] text-slate-700" data-offer="managed" data-source="homepage_hero">
                             Just need admin help?{' '}
-                            <Link href="/ai-admin-assistant" className={LINK}>Dooza Managed</Link>: an AI admin assistant whose work is checked by a real person. First 7 days free, then $200/month.{' '}
+                            <Link href="/pricing" className={LINK}>Dooza Managed</Link>: an AI admin assistant whose work is checked by a real person. First 7 days free, then $200/month.{' '}
                             <a href={MANAGED_PAY_URL} data-offer="managed" data-source="homepage_hero" className={LINK}>Start free</a>.
                         </p>
                         <p className="mt-3 max-w-[34rem] text-[15px] text-slate-700" data-offer="receptionist" data-source="homepage_hero_receptionist">
@@ -291,10 +291,8 @@ export default function HomeLanding() {
                     </table>
                     <p className="mt-10 max-w-2xl text-lg leading-relaxed text-slate-600">
                         We work with{' '}
-                        <Link href="/industries/insurance-agents" className={LINK}>insurance agencies</Link>,{' '}
-                        <Link href="/industries/dispatchers" className={LINK}>trucking and dispatch companies</Link>,{' '}
-                        <Link href="/industries/real-estate" className={LINK}>real estate teams</Link> and{' '}
-                        <Link href="/ai-solutions-for-business" className={LINK}>other service businesses</Link>.
+                        <Link href="/insurance-agents" className={LINK}>insurance agencies</Link> and{' '}
+                        <Link href="/truck-dispatchers" className={LINK}>truck dispatchers</Link>.
                     </p>
                 </div>
             </section>

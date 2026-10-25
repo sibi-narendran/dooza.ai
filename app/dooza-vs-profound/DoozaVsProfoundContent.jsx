@@ -503,7 +503,7 @@ export default function DoozaVsProfoundContent({ faqData }) {
                         <div className="flex flex-wrap gap-3">
                             {[
                                 { href: '/profound-alternatives', label: 'Best Profound Alternatives' },
-                                { href: '/generative-engine-optimization', label: 'Generative Engine Optimization Services' },
+                                { href: '/blog/what-is-generative-engine-optimization', label: 'What is generative engine optimization?' },
                                 { href: '/agents/ranky', label: 'Meet Ranky' },
                                 { href: '/blog/profound-ai-pricing', label: 'Profound AI Pricing 2026' },
                                 { href: '/blog/best-geo-tools', label: 'Best GEO Tools' },

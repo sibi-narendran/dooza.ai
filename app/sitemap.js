@@ -1,5 +1,4 @@
 import { blogPosts } from '../lib/blogData';
-import { industryPages } from '../lib/industryData';
 import { agentPages } from '../lib/agentData';
 import { SITE_URL } from '../lib/site';
 import { automationSeoPageSlugs } from '../lib/seoAutomationPages';
@@ -86,18 +85,6 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
-            url: `${SITE_URL}/grow`,
-            lastModified: pageDate('2026-09-30'),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${SITE_URL}/grow/pricing`,
-            lastModified: pageDate('2026-09-30'),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
             url: `${SITE_URL}/customer-service-outsourcing`,
             lastModified: pageDate('2026-09-30'),
             changeFrequency: 'monthly',
@@ -152,32 +139,14 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
-            url: `${SITE_URL}/ai-admin-assistant`,
-            lastModified: pageDate('2026-10-15'),
-            changeFrequency: 'monthly',
-            priority: 0.9,
-        },
-        {
             url: `${SITE_URL}/new-trucking-companies`,
             lastModified: pageDate('2026-10-06'),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: `${SITE_URL}/generative-engine-optimization`,
-            lastModified: pageDate('2026-09-25'),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
             url: `${SITE_URL}/sintra-alternatives`,
             lastModified: pageDate('2026-10-07'),
-            changeFrequency: 'monthly',
-            priority: 0.9,
-        },
-        {
-            url: `${SITE_URL}/ai-solutions-for-business`,
-            lastModified: pageDate('2026-03-31'),
             changeFrequency: 'monthly',
             priority: 0.9,
         },
@@ -210,24 +179,6 @@ export default async function sitemap() {
             lastModified: pageDate('2026-10-25'),
             changeFrequency: 'weekly',
             priority: 0.9,
-        },
-        {
-            url: `${SITE_URL}/industries`,
-            lastModified: pageDate('2026-06-13'),
-            changeFrequency: 'weekly',
-            priority: 0.8,
-        },
-        {
-            url: `${SITE_URL}/industries/customer-support`,
-            lastModified: pageDate('2026-06-13'),
-            changeFrequency: 'weekly',
-            priority: 0.85,
-        },
-        {
-            url: `${SITE_URL}/industries/law-firms`,
-            lastModified: pageDate('2026-06-16'),
-            changeFrequency: 'weekly',
-            priority: 0.85,
         },
         {
             url: `${SITE_URL}/workflow-automation`,
@@ -643,14 +594,6 @@ export default async function sitemap() {
         // Supabase unavailable — skip dynamic posts
     }
 
-    // Dynamic industry pages
-    const industryPageEntries = industryPages.map((page) => ({
-        url: `${SITE_URL}/industries/${page.slug}`,
-        lastModified: new Date(page.modifiedDate || page.date),
-        changeFrequency: 'monthly',
-        priority: 0.8,
-        images: page.image ? [`${SITE_URL}${page.image}`] : [],
-    }));
 
     // Agent landing pages
     const agentPageEntries = agentPages.map((page) => ({
@@ -680,7 +623,6 @@ export default async function sitemap() {
         ...customerServiceToolPageEntries,
         ...blogPages,
         ...dynamicBlogPages,
-        ...industryPageEntries,
         ...agentPageEntries,
     ]);
 }

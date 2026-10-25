@@ -188,6 +188,62 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // Nav = 2 sections (Sibi 2026-10-25 08:26): old pages removed, 301 to the nearest live page
+        source: '/industries',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/industries/insurance-agents',
+        destination: '/insurance-agents',
+        permanent: true,
+      },
+      {
+        source: '/industries/dispatchers',
+        destination: '/truck-dispatchers',
+        permanent: true,
+      },
+      {
+        source: '/industries/real-estate',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/industries/law-firms',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/industries/customer-support',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ai-solutions-for-business',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/grow',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/grow/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/generative-engine-optimization',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ai-admin-assistant',
+        destination: '/pricing',
+        permanent: true,
+      },
+      {
         // Customer previews use relative asset paths, so send them to index.html
         source: '/preview/:slug',
         destination: '/preview/:slug/index.html',
@@ -195,7 +251,7 @@ const nextConfig = {
       },
       {
         source: '/workforce',
-        destination: '/ai-solutions-for-business',
+        destination: '/',
         permanent: true,
       },
       {
@@ -241,12 +297,12 @@ const nextConfig = {
       },
       {
         source: '/studio',
-        destination: '/workforce',
+        destination: '/',
         permanent: true,
       },
       {
         source: '/agent-builder',
-        destination: '/workforce',
+        destination: '/',
         permanent: true,
       },
       {

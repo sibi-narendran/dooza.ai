@@ -84,7 +84,7 @@ export const metadata = {
 const ROWS = [
     {
         who: 'Dooza Managed',
-        href: '/ai-admin-assistant',
+        href: '/pricing',
         price: '$200/month, first 7 days free',
         unit: 'Written admin tasks by email (emails, documents, spreadsheets, research). AI does the work, a real person checks it. Back by the next business day.',
         fixes: 'Dooza',
@@ -241,7 +241,7 @@ export default function AiEmployeeForSmallBusinessPage() {
                                 </li>
                                 <li className="rounded-2xl border border-slate-200 bg-white p-5">
                                     <h3 className="font-bold text-slate-900">2. Inbox and admin</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">It drafts replies, fills in documents and forms, and keeps spreadsheets up to date. This is what <a href="/ai-admin-assistant" className={LINK}>Dooza Managed</a> does, with a person checking each task.</p>
+                                    <p className="mt-2 text-sm leading-relaxed text-slate-600">It drafts replies, fills in documents and forms, and keeps spreadsheets up to date. This is what <a href="/pricing" className={LINK}>Dooza Managed</a> does, with a person checking each task.</p>
                                 </li>
                                 <li className="rounded-2xl border border-slate-200 bg-white p-5">
                                     <h3 className="font-bold text-slate-900">3. Lead follow-up</h3>

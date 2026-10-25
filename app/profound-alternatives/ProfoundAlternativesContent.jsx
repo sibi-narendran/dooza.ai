@@ -621,7 +621,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                         <div className="flex flex-wrap gap-3">
                             {[
                                 { href: '/dooza-vs-profound', label: 'Dooza vs Profound' },
-                                { href: '/generative-engine-optimization', label: 'Generative Engine Optimization Services' },
+                                { href: '/blog/what-is-generative-engine-optimization', label: 'What is generative engine optimization?' },
                                 { href: '/agents/ranky', label: 'Meet Ranky' },
                                 { href: '/blog/profound-ai-pricing', label: 'Profound AI Pricing 2026' },
                                 { href: '/blog/best-geo-tools', label: 'Best GEO Tools' },
