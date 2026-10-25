@@ -110,6 +110,11 @@ const Footer = ({ variant = 'light' }) => {
                                     Accountants
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/ai-agents-for-law-firms" className={`text-sm py-1 inline-block transition-colors ${isDark ? 'text-gray-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}>
+                                    Law Firms
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div>

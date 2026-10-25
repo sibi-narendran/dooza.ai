@@ -171,7 +171,7 @@ export default function DynamicBlogContent({ post }) {
                         <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                             <h3 className="text-2xl font-bold text-slate-900 mb-4">Try Dooza Crew</h3>
                             <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                A lead AI agent plus helper agents that browse the web, write files and ask you before they send or pay. 7-day free trial (card required), then $49/month including $20 of AI usage.
+                                A lead AI agent plus helper agents that browse the web, write files and ask you before they send or pay. 7-day free trial (card required), then $49/month with AI usage included and a hard spending cap.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a

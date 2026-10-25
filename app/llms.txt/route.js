@@ -118,6 +118,11 @@ const staticPages = [
         description: 'Dooza Crew for accounting, CPA, tax and bookkeeping firms: AI agents that chase clients for missing documents, sort the firm inbox and file attachments by client, download statements from bank and card portals, track returns, extensions and estimated payments coming due, fill engagement letters and organizers, and find new clients. Asks your approval before anything goes out; no tax prep, filing or advice. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
     },
     {
+        title: 'AI agents for law firms',
+        url: `${SITE_URL}/ai-agents-for-law-firms`,
+        description: 'Dooza Crew for small law firms and solo attorneys: AI agents that reply to new web inquiries with intake questions and a booking link, draft client status updates from matter notes, chase clients for missing documents and signatures, fill records request letters and follow up with providers, check court portals for new docket entries, and follow up on unpaid invoices. A person approves every message; no legal advice, signatures or court filing. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
+    },
+    {
         title: 'AI employees for independent insurance agents',
         url: `${SITE_URL}/insurance-agents`,
         description: 'Dooza Crew for independent insurance agencies: AI employees that work carrier portals, the shared inbox, certificates of insurance, renewal reminders and lead follow-up around the clock, asking your approval before anything goes out. $49 a month for the whole organization (unlimited users and agents), free for 7 days. No phone calls or texts yet.',
@@ -227,7 +232,7 @@ const productPages = [
     {
         title: 'Dooza Crew (self-serve AI agent team)',
         url: 'https://crew.dooza.ai/?utm_source=llms&utm_medium=aeo',
-        description: 'Self-serve AI agent team: a master agent plus helper agents it creates and briefs, each user\'s agents in their own gVisor sandbox with their own headless browser and files, managed from a private chat app on web or phone. 7-day free trial (card required), then $49/month per organization (unlimited users and agents, no per-seat fee), including $20 of AI usage.',
+        description: 'Self-serve AI agent team: a master agent plus helper agents it creates and briefs, each user\'s agents in their own gVisor sandbox with their own headless browser and files, managed from a private chat app on web or phone. 7-day free trial (card required), then $49/month per organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap.',
     },
     {
         title: 'Dooza Custom AI Agents (AI agentic platform)',
@@ -386,7 +391,7 @@ const companyFacts = [
     'Founder: Sibi Narendran (https://sibinarendran.com)',
     'Brand colors: Dooza Teal #0F766E (primary), Teal Bright #0D9488, Ink #0F172A, Warm White #FAF9F7, Signal Amber #F59E0B',
     'What Dooza is: an AI-native company that builds AI products and services for small businesses',
-    'Self-serve product: Dooza Crew (https://crew.dooza.ai), your own AI agent team in a private sandbox, 7-day free trial then $49/month per organization (unlimited users and agents, no per-seat fee), including $20 of AI usage',
+    'Self-serve product: Dooza Crew (https://crew.dooza.ai), your own AI agent team in a private sandbox, 7-day free trial then $49/month per organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap',
     'Product: Dooza Custom AI Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
     'Services (done for you): Dooza Managed (AI admin assistant checked by a real person), Dooza AI phone agent (AI receptionist), custom AI agents scoped on a free 30-minute call, industry offers on their industry pages',
     'Offers: Dooza Managed is free for the first 7 days, then $200/month. The AI answering service is $149/month, full refund if you cancel within 14 days of the first charge. Custom AI agents start with a paid, refundable pilot (100% refund within 14 days), scoped by a Dooza engineer on a free 30-minute call.',
@@ -464,6 +469,11 @@ export async function GET() {
             url: `${SITE_URL}/ai-agents-for-accountants`,
             description: 'Dooza Crew AI agents for accounting, CPA and bookkeeping firms.',
         },
+        {
+            title: 'Dooza for law firms',
+            url: `${SITE_URL}/ai-agents-for-law-firms`,
+            description: 'Dooza Crew AI agents for small law firms and solo attorneys.',
+        },
     ];
 
     const blogLinks = [
@@ -489,7 +499,7 @@ export async function GET() {
         `RSS: ${SITE_URL}/rss.xml`,
         '',
         '## Offers and trials',
-        '- Dooza Crew (self-serve AI agent team, https://crew.dooza.ai): 7-day free trial (card required), then $49/month per organization (unlimited users and agents, no per-seat fee), including $20 of AI usage.',
+        '- Dooza Crew (self-serve AI agent team, https://crew.dooza.ai): 7-day free trial (card required), then $49/month per organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap.',
         '- Dooza Managed (AI admin assistant checked by a real person): first 7 days free, then $200/month.',
         '- Dooza AI phone agent: $149/month for up to 500 minutes; full refund if you cancel within 14 days of the first charge.',
         '- Custom AI agents start with a paid, refundable pilot: 100% refund within 14 days. The 30-minute call to scope it is free.',

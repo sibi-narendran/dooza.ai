@@ -3,7 +3,7 @@
 // your pain and work"). Pains from content/research/independent-insurance-agents-pains-2026-10-25.md (Big I 2026 study via
 // Insurance Journal, r/InsuranceProfessional and r/InsuranceAgent threads). Product facts: Edison 10-25 08:08 (portals and
 // webmail in its own browser after the user signs in once, hourly wake-ups, Files, approval before sending; NO phone calls
-// or SMS; fillable PDF, Excel and Word filling YES (Edison 10-25 10:38, pypdf tested on IRS W-9); no AMS named as tested) and 08:04 (per-organization price, $20 AI usage included, hard cap).
+// or SMS; fillable PDF, Excel and Word filling YES (Edison 10-25 10:38, pypdf tested on IRS W-9); no AMS named as tested) and 08:04 (per-organization price, AI usage included (hard spending cap), hard cap).
 // Design: home v3 tokens (teal = AI, amber = your staff). The bold element is the hero chat; the roster is rows, not cards.
 import Link from 'next/link';
 import SiteHeader from '@/components/crew/SiteHeader';
@@ -91,7 +91,7 @@ export const insuranceFaq = [
     { question: 'Can it answer our phones?', answer: 'Not yet. Crew agents work in browsers, email and files. For calls, the Dooza AI phone agent picks up and emails you each message with the transcript ($149 a month for 500 minutes).' },
     { question: 'Can it fill ACORD forms?', answer: 'Yes, if you upload your fillable copy. It fills fillable PDF forms such as ACORD 25 and 125, plus Excel and Word files, and saves the filled form to Files for you to check. It also fills web forms and portal screens, including certificate and change requests in carrier and agency portals. Scanned PDFs without form fields cannot be filled.' },
     { question: 'Is our client data safe?', answer: 'Every account runs in its own isolated sandbox with its own browser and files. You type your passwords and 2FA codes yourself, and nothing is sent without your approval.' },
-    { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with $20 of AI usage included and a hard cap. Cancel during the trial and you pay nothing.' },
+    { question: 'How much does it cost?', answer: 'Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap. Cancel during the trial and you pay nothing.' },
     { question: 'Can my CSRs and producers use it?', answer: 'Yes. Users are unlimited. Add your team to the same chat and everyone can hand out jobs and see the work.' },
 ];
 
@@ -206,7 +206,7 @@ export default function InsuranceCrew() {
                         <div>
                             <h2 id="price-title" className={`${H2} text-white`}>Less than a day of a CSR&apos;s pay. For the month.</h2>
                             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-                                Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with $20 of AI usage included and a hard cap. Cancel during the trial and you pay nothing.
+                                Free for 7 days. Then $49 a month for your whole organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap. Cancel during the trial and you pay nothing.
                             </p>
                         </div>
                         <div className="lg:text-right">

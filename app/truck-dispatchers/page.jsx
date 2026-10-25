@@ -24,7 +24,7 @@ const schemas = [
         url: URL,
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         audience: { '@type': 'BusinessAudience', audienceType: 'Truck dispatchers and dispatch services' },
-        offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', description: 'Per organization per month after a 7-day free trial; unlimited users and agents; $20 of AI usage included.' },
+        offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', description: 'Per organization per month after a 7-day free trial; unlimited users and agents; AI usage included with a hard spending cap.' },
     },
     {
         '@context': 'https://schema.org',
