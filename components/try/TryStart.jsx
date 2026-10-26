@@ -55,11 +55,11 @@ export default function TryStart({ placement, examples = true }) {
                     data-source={`try-${placement}`}
                     className="mt-1 w-full rounded-xl bg-[#0F766E] px-5 py-4 text-[17px] font-semibold text-white transition-colors hover:bg-[#0B5D57] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]"
                 >
-                    Start my 7 free days
+                    Start free, no card needed
                 </button>
             </form>
             <p className="mt-3 text-[14px] leading-snug text-[#4B5567]">
-                $0 today. Card needed to start. Then $49 a month for your whole team. Cancel before day 8 and you pay nothing.
+                Free to try. No card needed. $49/month when you keep your crew.
             </p>
             <p className="mt-2 text-[14px] text-[#4B5567]">
                 Already have an account? <a href="https://crew.dooza.ai/login" data-source={`try-${placement}-login`} className="font-semibold text-[#0F766E] underline underline-offset-2 hover:text-[#14213D]">Log in</a>

@@ -1,7 +1,7 @@
 // /try: landing page for the Facebook ads, in front of crew.dooza.ai (Sibi 2026-10-25 09:48 via Edison: "FB ad -> sign-up
 // conversion is yours; your own lead page in front of crew.dooza.ai"). Before it: 54 FB humans, 0 emails on the one-screen
 // sign-up page. So this page does the selling the sign-up page can't: the ad's hook (clone yourself), a real Crew recording,
-// the card + price terms up front, and one action (no nav). Claims only from the homepage (HomeCrew.jsx) and crew.dooza.ai.
+// the price terms up front (no card since Sibi 2026-10-26 21:44), and one action (no nav). Claims only from the homepage (HomeCrew.jsx) and crew.dooza.ai.
 // noindex: an ad landing page, the homepage is the indexed Crew page.
 import Image from 'next/image';
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
@@ -14,7 +14,7 @@ const MUTED = 'text-[#4B5567]';
 
 export const metadata = {
     title: { absolute: 'Clone Yourself With AI Employees | Dooza Crew' },
-    description: 'Give an AI employee a job in plain words. It works on its own computer and browser and shows you the proof. Free for 7 days.',
+    description: 'Give an AI employee a job in plain words. It works on its own computer and browser and shows you the proof. Free to try, no card needed.',
     alternates: { canonical: 'https://www.dooza.ai/try' },
     robots: { index: false, follow: true },
 };
@@ -33,7 +33,7 @@ const steps = [
 ];
 
 const faq = [
-    { q: 'Do I pay today?', a: 'No. $0 today. You add a card to start the 7 free days. After that it is $49 a month for your whole organization, with AI usage included and a hard spending cap. Cancel before day 8 and you pay nothing.' },
+    { q: 'Do I pay today?', a: 'No. Free to try. No card needed. $49/month when you keep your crew, for your whole organization, with AI usage included and a hard spending cap.' },
     { q: 'Can it send things without me?', a: 'Before it clicks Send or Pay, it asks you in chat: Approve, Edit or Reject.' },
     { q: 'Can my staff use it too?', a: 'Yes. Unlimited users and agents, no per-seat fee. Add your people to the same chat, on web or phone.' },
     { q: 'Can it take phone calls?', a: 'Yes. Crew agents take phone calls too, included in the plan. The rest of the work happens on a computer: browser, files, spreadsheets, email drafts.' },
