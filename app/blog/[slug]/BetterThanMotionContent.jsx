@@ -56,7 +56,7 @@ const faqData = [
     },
     {
         question: "Can Dooza AI employees make phone calls?",
-        answer: "Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Dooza Crew is $49 per organization per month after a 7-day free trial (no card needed). Dooza Managed, the AI admin assistant checked by a real person ($200/month, first 7 days free), covers written admin work, not phones. Motion is built around calendars, tasks and projects."
+        answer: "Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Dooza Crew is free to try (no card needed). Dooza Managed, the AI admin assistant checked by a real person ($200/month, first 7 days free), covers written admin work, not phones. Motion is built around calendars, tasks and projects."
     }
 ];
 

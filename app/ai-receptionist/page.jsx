@@ -95,11 +95,11 @@ export default async function AiReceptionistPage(props) {
         },
         offers: {
             '@type': 'Offer',
-            name: 'Dooza Crew, monthly per organization',
-            price: '49',
+            name: 'Dooza Crew, free to try',
+            price: '0',
             priceCurrency: 'USD',
             url: 'https://crew.dooza.ai',
-            description: '$49 per organization per month after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.',
+            description: 'Free to try. No card needed. Phone calls are included.',
             availability: 'https://schema.org/InStock',
         },
     };
@@ -138,7 +138,7 @@ export default async function AiReceptionistPage(props) {
                         </p>
                         <div id="hero-actions" className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
                             <a href={payHref} data-offer="crew" className={primaryButton}>
-                                Try Dooza Crew free for 7 days
+                                Try Dooza Crew free
                             </a>
                         </div>
                         <p className="mt-5 text-sm font-medium text-slate-600">
@@ -188,7 +188,7 @@ export default async function AiReceptionistPage(props) {
                     <div className="mx-auto max-w-4xl">
                         <h2 className="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">Calls missed on the job</h2>
                         <p className="mt-3 text-slate-600">{TRADES_LIST}</p>
-                        {!adsMode && <p className="mt-2 text-slate-600">Prices by trade: <Link href="/hvac-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">HVAC</Link>, <Link href="/plumbing-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">plumbing</Link>, <Link href="/garage-door-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">garage door</Link> and <Link href="/window-tint-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">window tint</Link>. Any other small business: <Link href="/ai-receptionist" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">AI answering service for small business</Link> (Dooza Crew: $49/mo per organization).</p>}
+                        {!adsMode && <p className="mt-2 text-slate-600">Prices by trade: <Link href="/hvac-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">HVAC</Link>, <Link href="/plumbing-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">plumbing</Link>, <Link href="/garage-door-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">garage door</Link> and <Link href="/window-tint-answering-service" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">window tint</Link>. Any other small business: <Link href="/ai-receptionist" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">AI answering service for small business</Link> (Dooza Crew: free to try).</p>}
                         <div className="mt-8 grid gap-4 md:grid-cols-3">
                             {TRADE_MOMENTS.map((moment, index) => (
                                 <div
@@ -262,14 +262,14 @@ export default async function AiReceptionistPage(props) {
                 {/* 6. Book the pilot meeting */}
                 <section id="pilot" className="scroll-mt-16 bg-slate-950 px-4 pb-24 pt-16 text-white sm:px-6 sm:pb-28 sm:pt-24">
                     <div className="mx-auto max-w-2xl text-center">
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">$49/month per organization · 7-day free trial</p>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">Free to try · 7-day free trial</p>
                         <h2 className="mt-4 text-3xl font-extrabold tracking-tight !text-white sm:text-4xl">Stop sending callers to voicemail.</h2>
                         <p className="mt-4 text-lg leading-relaxed text-slate-200 sm:text-xl">
                             {PILOT_PROMISE}
                         </p>
                         <div className="mt-8">
                             <a href={payHref} data-offer="crew" className="inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-8 py-4 text-lg font-bold text-slate-950 shadow-lg shadow-primary-900/30 transition hover:bg-primary-400 sm:w-auto">
-                                Try Dooza Crew free for 7 days
+                                Try Dooza Crew free
                             </a>
                         </div>
                         <p className="mt-4 text-sm text-slate-300"><Link href={bookHref} className="underline">Questions first? Book a free call.</Link></p>

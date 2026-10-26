@@ -20,7 +20,7 @@ const OFFERS = [
         ],
         note: 'Limited to 3 new businesses this month.',
         // Above the pay button (Odysseus 2026-10-25 12:01): 10 Managed checkout opens/7d, 0 paid.
-        beforePay: 'Start free for 7 days. Card now, first charge $200 on day 8; cancel before then and pay nothing. Within 1 business day we email you how to send your first task; each task is done by the next business day.',
+        beforePay: 'Start free. Card now, first charge $200 on day 8; cancel before then and pay nothing. Within 1 business day we email you how to send your first task; each task is done by the next business day.',
         pay: MANAGED_PAY_URL,
     },
     {
@@ -31,16 +31,16 @@ const OFFERS = [
         tagline: 'AI agents you chat with on web or phone. Phone calls are included, so there is no separate phone service to buy.',
         price: '$49',
         per: '/month per organization',
-        terms: '7-day free trial (no card needed), then $49 per organization per month.',
+        terms: 'free to try (no card needed).',
         cta: 'Start 7 days free',
         points: [
             'A lead agent plus helper agents you chat with on web or phone',
             'They browse the web and write files in their own workspace',
             'Before an agent sends or pays it asks you in chat (Approve / Edit / Reject)',
             'Crew agents take phone calls too, included in your Crew plan',
-            'Unlimited users and agents; AI usage included with a hard spending cap',
+            'Unlimited users and agents',
         ],
-        note: '7-day free trial, no card needed.',
+        note: 'Free to try. No card needed.',
     },
     {
         id: 'trucker-feed',

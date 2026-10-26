@@ -44,11 +44,11 @@ const CREW_URL = 'https://crew.dooza.ai/?utm_source=dooza&utm_medium=blog&utm_co
 const faqData = [
     {
         question: "What is the best AI tool for solopreneurs in 2026?",
-        answer: "Our top pick is Dooza Crew (our product, so weigh that). You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans the job, builds the helper agents it needs (for example a researcher, a writer or an outreach agent) and reports back. Every agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. Before it clicks Send or Pay it asks you to Approve, Edit or Reject. Crew is free for 7 days (no card needed), then $49 per month per organization with unlimited users and agents. Alongside it, most solopreneurs also use single-purpose tools for writing (ChatGPT, Jasper), design (Canva AI, Midjourney), email (Superhuman), social scheduling (Buffer, Hootsuite), meeting notes (Otter.ai), automation (Zapier, Make) and accounting (QuickBooks)."
+        answer: "Our top pick is Dooza Crew (our product, so weigh that). You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans the job, builds the helper agents it needs (for example a researcher, a writer or an outreach agent) and reports back. Every agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. Before it clicks Send or Pay it asks you to Approve, Edit or Reject. Crew is free to try (no card needed). Alongside it, most solopreneurs also use single-purpose tools for writing (ChatGPT, Jasper), design (Canva AI, Midjourney), email (Superhuman), social scheduling (Buffer, Hootsuite), meeting notes (Otter.ai), automation (Zapier, Make) and accounting (QuickBooks)."
     },
     {
         question: "How much do AI tools cost for a solopreneur?",
-        answer: "Individual AI tools vary widely, from free tiers to tens of dollars a month each (see each vendor’s pricing page). A full stack covering content creation, design, email, social media, automation, and accounting adds up quickly. Dooza Crew, our top pick, is free for 7 days (no card needed), then $49 per month per organization, with unlimited users and agents and AI usage included with a hard spending cap."
+        answer: "Individual AI tools vary widely, from free tiers to tens of dollars a month each (see each vendor’s pricing page). A full stack covering content creation, design, email, social media, automation, and accounting adds up quickly. Dooza Crew, our top pick, is free to try (no card needed)."
     },
     {
         question: "Can AI replace a virtual assistant for solopreneurs?",
@@ -60,7 +60,7 @@ const faqData = [
     },
     {
         question: "Is Dooza Crew good for solopreneurs?",
-        answer: "We think so, and it is our top pick, but it is our own product, so judge for yourself with the free trial. You describe the job in plain words from the web or your phone, and Dooza plans it and builds the helper agents it needs. Each agent has its own computer and browser in a private, isolated workspace, you watch every step live in chat, and it asks you to Approve, Edit or Reject before it clicks Send or Pay. Agents can take phone calls, included in the plan. No coding is needed. It is free for 7 days (no card needed), then $49 per month per organization."
+        answer: "We think so, and it is our top pick, but it is our own product, so judge for yourself with the free trial. You describe the job in plain words from the web or your phone, and Dooza plans it and builds the helper agents it needs. Each agent has its own computer and browser in a private, isolated workspace, you watch every step live in chat, and it asks you to Approve, Edit or Reject before it clicks Send or Pay. Agents can take phone calls, included in the plan. No coding is needed. It is free to try (no card needed)."
     },
     {
         question: "How much time can AI tools save solopreneurs?",
@@ -158,7 +158,7 @@ const doozaEmployees = [
     { name: "Watch live in chat", desc: "You see every step as it happens, and your staff can join the same chat", icon: MessageSquare },
     { name: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject", icon: ShieldCheck },
     { name: "Phone calls", desc: "Agents can take phone calls, included in the plan", icon: Phone },
-    { name: "One flat price", desc: "$49/mo per organization, unlimited users and agents, AI usage included with a hard spending cap", icon: DollarSign },
+    { name: "Free to try", desc: "no card needed", icon: DollarSign },
     { name: "Risk-free start", desc: "7 days free (no card needed). No card needed", icon: Timer }
 ];
 
@@ -240,7 +240,7 @@ export default function AiToolsForSolopreneursContent() {
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                             <strong>Our top pick for solopreneurs is Dooza Crew</strong> (our own product, disclosed):
                             you tell a master agent the job in plain words and it builds the helper agents it needs.
-                            Free for 7 days, then $49/month per organization. Below: Crew, plus the essential
+                            Free to try. Below: Crew, plus the essential
                             single-purpose AI tools by category.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
@@ -298,7 +298,7 @@ export default function AiToolsForSolopreneursContent() {
                             </nav>
 
                             <div className="mt-8 pt-6 border-t border-slate-200">
-                                <p className="text-sm text-slate-600 mb-4">Try a team of agents, free for 7 days</p>
+                                <p className="text-sm text-slate-600 mb-4">Try a team of agents, free</p>
                                 <a
                                     href={CREW_URL}
                                     target="_blank"
@@ -325,7 +325,7 @@ export default function AiToolsForSolopreneursContent() {
                                     <strong>Short answer:</strong> our top pick for solopreneurs is{' '}
                                     <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a>,
                                     which is our product. You tell Dooza, your master agent, the job in plain words and it builds
-                                    the helper agents it needs and reports back. It is free for 7 days (no card needed), then $49/month per organization.
+                                    the helper agents it needs and reports back. It is free to try (no card needed).
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     You're running a one-person empire. Content creation, customer service, sales,
@@ -442,7 +442,7 @@ export default function AiToolsForSolopreneursContent() {
                                         "You watch every step live in chat, and your staff can join the same chat",
                                         "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject",
                                         "Agents can take phone calls, included in the plan",
-                                        "$49/month per organization, unlimited users and agents, AI usage included with a hard spending cap",
+                                        "free to try",
                                         "7 days free (no card needed). No card needed"
                                     ].map((point, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
@@ -457,7 +457,7 @@ export default function AiToolsForSolopreneursContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                 >
-                                    Try Dooza Crew free for 7 days <ArrowRight className="w-4 h-4" />
+                                    Try Dooza Crew free <ArrowRight className="w-4 h-4" />
                                 </a>
                             </div>
 
@@ -619,7 +619,7 @@ export default function AiToolsForSolopreneursContent() {
                                             rel="noopener noreferrer"
                                             className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors"
                                         >
-                                            Try Dooza Crew free for 7 days
+                                            Try Dooza Crew free
                                         </a>
                                     </div>
                                 </div>
@@ -641,7 +641,7 @@ export default function AiToolsForSolopreneursContent() {
                                     },
                                     {
                                         title: "One Login, One Bill",
-                                        desc: "Forget juggling subscriptions. One flat price per organization, with AI usage included and a hard spending cap.",
+                                        desc: "Forget juggling subscriptions. One plan for the whole organization.",
                                         icon: DollarSign
                                     },
                                     {
@@ -682,7 +682,7 @@ export default function AiToolsForSolopreneursContent() {
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Monthly Cost</td>
                                             <td className="p-4">$89.98+ for 4 verified tools (checked Oct 2026)</td>
-                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">$49 per organization, after a 7-day free trial (no card needed)</td>
+                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">Free to try (no card needed)</td>
                                         </tr>
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Annual Cost</td>
@@ -771,7 +771,7 @@ export default function AiToolsForSolopreneursContent() {
                                     },
                                     {
                                         step: "2",
-                                        title: "Try Dooza Crew free for 7 days",
+                                        title: "Try Dooza Crew free",
                                         desc: "No card needed. Give Dooza a real task in plain words, such as researching a prospect list or drafting a blog outline, and watch the agents work live in chat."
                                     },
                                     {
@@ -801,8 +801,8 @@ export default function AiToolsForSolopreneursContent() {
                                     Stop Managing Tools. Start Building Your Business.
                                 </h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Tell Dooza the job in plain words and let a team of agents do it. Free for 7 days
-                                    (no card needed), then $49/month per organization.
+                                    Tell Dooza the job in plain words and let a team of agents do it. Free to try
+                                    (no card needed), then free to try.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a
@@ -811,7 +811,7 @@ export default function AiToolsForSolopreneursContent() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
-                                        Try Dooza Crew free for 7 days <ArrowRight className="w-4 h-4" />
+                                        Try Dooza Crew free <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
                             </div>

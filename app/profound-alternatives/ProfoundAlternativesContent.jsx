@@ -17,7 +17,7 @@ import { trackFBViewContent } from '@/lib/analytics';
 import { crewSignupUrl } from '@/lib/crewUrl';
 
 const quickAnswer = [
-    { pick: 'Dooza Crew (our product, top pick)', why: 'Our top pick for a small business: a hosted team of AI agents you brief in plain words, for one flat $49/mo per organization with unlimited users and agents, AI usage included with a hard spending cap.' },
+    { pick: 'Dooza Crew (our product, top pick)', why: 'Our top pick for a small business: a hosted team of AI agents you brief in plain words, free to try.' },
     { pick: 'Dooza Ranky (done for you)', why: 'Best for small businesses that want GEO done for them — Ranky and Dooza engineers do the work with your approval, and it starts with a refundable pilot.' },
     { pick: 'Otterly.ai', why: 'Best budget AI visibility tracker — Lite is $29/month (checked October 7, 2026).' },
     { pick: 'Peec AI', why: 'Best mid-priced AI search analytics for marketing teams.' },
@@ -37,23 +37,23 @@ const alternatives = [
         name: 'Dooza Crew',
         tagline: 'Our product, top pick: a hosted team of AI agents for small businesses',
         bestFor: 'Small businesses, founders, and lean teams that want a team of AI agents doing the work rather than another platform to run',
-        price: '$49/mo per organization (unlimited users and agents)',
-        trial: '7 days free, no card needed',
+        price: 'free to try',
+        trial: 'Free to try, no card needed',
         type: 'Hosted team of AI agents',
         doesWork: true,
         highlight: true,
         crewSource: 'profound_alt_crew_top',
         what: 'Dooza Crew is a hosted team of AI agents for small businesses. You brief a lead agent in plain words from the web or phone; it builds helper agents (a researcher, a writer, an outreach agent), splits the job between them, and saves the work to your files.',
         topPickReasons: [
-            'One flat price: $49/mo per organization with unlimited users and agents.',
+            'Free to try, no card needed.',
             'No surprise AI bills: AI usage is included, with a hard spending cap.',
             'You stay in control: before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat.',
             'Real tools: every agent has its own computer and browser in a private, isolated workspace, and agents take phone calls, included.',
             'Works with your team: your staff join the same chat and watch every step live.',
-            'Risk-free start: 7 days free, no card needed.',
+            'Risk-free start: free to try, no card needed.',
         ],
         pros: [
-            'One flat price for the whole organization: no per-seat fees',
+            'One plan for the whole organization: no per-seat fees',
             'Want GEO done for you? Ranky, Dooza\'s AI SEO & visibility employee, and Dooza engineers research, write, optimize, and publish with your approval; custom agents start with a refundable pilot (100% refund within 14 days)',
         ],
         cons: [
@@ -191,7 +191,7 @@ const alternatives = [
 const listedAlternatives = [...alternatives].sort((a, b) => a.rank - b.rank);
 
 const decisionGuide = [
-    { need: 'A team of AI agents for a small business (our top pick)', pick: 'Dooza Crew', reason: 'One flat $49/mo per organization with unlimited users and agents, AI usage included with a hard spending cap, and it asks you to Approve, Edit or Reject before it clicks Send or Pay. 7 days free.' },
+    { need: 'A team of AI agents for a small business (our top pick)', pick: 'Dooza Crew', reason: 'Free to try, and it asks you to Approve, Edit or Reject before it clicks Send or Pay. Free to try.' },
     { need: 'GEO work done for you', pick: 'Dooza Ranky', reason: 'Ranky and Dooza engineers research, write, optimize, and publish with your approval. Starts with a refundable pilot.' },
     { need: 'Cheapest AI visibility tracking', pick: 'Otterly.ai', reason: 'Low entry price among dedicated trackers (Lite $29/mo, checked October 7, 2026).' },
     { need: 'Mid-market AI search analytics', pick: 'Peec AI', reason: 'Mid-priced AI search analytics (Starter $95/mo, checked October 7, 2026).' },
@@ -255,7 +255,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Profound (tryprofound.com) is an AI visibility platform with analytics and agents, sold as a self-serve agency plan and custom-priced Enterprise. For a small business, our top pick is our own product, Dooza Crew: a hosted team of AI agents you brief in plain words, for one flat $49/mo per organization. Want GEO done for you? Ranky and Dooza engineers do the generative engine optimization work with your approval, and it starts with a refundable pilot — 100% refund within 14 days. For lower-cost monitoring only, look at Otterly.ai or Peec AI.
+                                Profound (tryprofound.com) is an AI visibility platform with analytics and agents, sold as a self-serve agency plan and custom-priced Enterprise. For a small business, our top pick is our own product, Dooza Crew: a hosted team of AI agents you brief in plain words, free to try. Want GEO done for you? Ranky and Dooza engineers do the generative engine optimization work with your approval, and it starts with a refundable pilot — 100% refund within 14 days. For lower-cost monitoring only, look at Otterly.ai or Peec AI.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -481,7 +481,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
 
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <a href={crewSignupUrl('profound_alt_crew_top')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Start Dooza Crew free for 7 days <ArrowRight size={16} /></a>
+                                            <a href={crewSignupUrl('profound_alt_crew_top')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Start Dooza Crew free to try <ArrowRight size={16} /></a>
                                             <BookDemoButton source="profound_alt_dooza_card" variant="inverse">Book a free pilot call</BookDemoButton>
                                         </div>
                                     )}

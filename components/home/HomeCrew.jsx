@@ -1,7 +1,7 @@
 // Homepage = Dooza Crew landing (Sibi 2026-10-22 15:56: "what we sell is AI employees and that is basically Dooza
 // Crew"). Claims from Daedalus's brief (achilles_crew_main.md) + Sibi 15:56 (computer, browser, card, phone number,
 // voice calls, groups with human staff). 2026-10-22 20:2x: card, phone number, voice calls and WhatsApp/Telegram cut;
-// Daedalus checked code 20:13, trial users get none of them today. Price per Daedalus 15:56 (Sibi 15:46): free 7-day trial, then $49/month.
+// Daedalus checked code 20:13, trial users get none of them today. Price per Daedalus 15:56 (Sibi 15:46): free trial, then $49/month.
 // Do not claim: user counts, uptime, SOC2/compliance, model names, "built-in" integrations.
 // The other bets keep their own pages and offers (Sibi 15:34); this page only links to them.
 // Design v3 (Sibi 2026-10-22 17:59, frontend-design skill): the subject is staffing, so the page borrows its vernacular.
@@ -92,7 +92,7 @@ export default function HomeCrew() {
                     <div className="mt-10 grid items-start gap-12 lg:mt-14 lg:grid-cols-[5fr_7fr] lg:gap-16">
                         <div className="lg:pt-2">
                             <p className={`max-w-[34rem] text-lg leading-relaxed md:text-xl ${MUTED}`}>
-                                With Dooza Crew you give it a job in plain words and watch it work on its own computer, with its own browser. It takes your phone calls too, included in your plan. Add your staff to the same chat. Free for 7 days.
+                                With Dooza Crew you give it a job in plain words and watch it work on its own computer, with its own browser. It takes your phone calls too, included in your plan. Add your staff to the same chat. Free to try.
                             </p>
                             <div className="mt-8">
                                 <CrewPrompt placement="home-hero" tone="light" />

@@ -3,7 +3,7 @@ import SintraAlternativesContent from './SintraAlternativesContent';
 
 export const metadata = {
     title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-    description: '7 Sintra AI alternatives compared on pricing, features, and limits (checked October 7, 2026). Our top pick: our own product, Dooza Crew, at $49/mo per organization.',
+    description: '7 Sintra AI alternatives compared on pricing, features, and limits (checked October 7, 2026). Our top pick: our own product, Dooza Crew,, free to try.',
     keywords: [
         'sintra ai alternatives', 'best sintra alternative 2026', 'sintra ai competitors',
         'sintra alternative', 'sintra ai replacement', 'AI employee platforms',
@@ -44,7 +44,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is the best alternative to Sintra AI?',
-        answer: 'For a small business, our top pick is Dooza Crew (our product): one flat $49/mo per organization with unlimited users and agents, AI usage included with a hard spending cap, and before it clicks Send or Pay it asks you to Approve, Edit or Reject in chat; 7 days free. If you want it done for you, Dooza Managed is an AI admin assistant checked by a real person: first 7 days free, then $200/month. Marblism starts at $24/mo on a yearly plan. Lindy AI is a Slack-based AI teammate that lists 1,500+ integrations on its pricing page (checked October 7, 2026). If you want the lowest price and are happy to run the AI yourself, Sintra\'s own 12-month plan ($15.60/mo) is hard to beat.',
+        answer: 'For a small business, our top pick is Dooza Crew (our product): free to try, and before it clicks Send or Pay it asks you to Approve, Edit or Reject in chat. If you want it done for you, Dooza Managed is an AI admin assistant checked by a real person: first 7 days free, then $200/month. Marblism starts at $24/mo on a yearly plan. Lindy AI is a Slack-based AI teammate that lists 1,500+ integrations on its pricing page (checked October 7, 2026). If you want the lowest price and are happy to run the AI yourself, Sintra\'s own 12-month plan ($15.60/mo) is hard to beat.',
     },
     {
         question: 'Why are people leaving Sintra AI?',

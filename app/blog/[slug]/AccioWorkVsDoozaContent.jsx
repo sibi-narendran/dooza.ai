@@ -56,11 +56,11 @@ import {
 const faqData = [
     {
         question: "How much does Accio Work cost?",
-        answer: "Accio Work (accio.com) has a Free plan, then Pro at $19.9/month ($199/year), Elite at $99/month ($999/year) and Ultra at $199/month ($1,999/year). Accio lists Ultra as \"For enterprises\" with a Contact sales button (accio.com/wow, checked October 26, 2026). Prices change, so check Accio's page before you buy. For comparison, Dooza Crew is free for 7 days (no card needed), then $49/month per organization with unlimited users and agents, AI usage included and a hard spending cap."
+        answer: "Accio Work (accio.com) has a Free plan, then Pro at $19.9/month ($199/year), Elite at $99/month ($999/year) and Ultra at $199/month ($1,999/year). Accio lists Ultra as \"For enterprises\" with a Contact sales button (accio.com/wow, checked October 26, 2026). Prices change, so check Accio's page before you buy. For comparison, Dooza Crew is free to try (no card needed)."
     },
     {
         question: "Is Accio Work free?",
-        answer: "Partly. Accio describes its Free plan as \"Free forever, web search only\" and says Accio Work is a free desktop AI agent with no credit card required to start (accio.com/wow, checked October 26, 2026). Deeper features need a paid plan: Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year). Dooza Crew is free for 7 days (no card needed), then $49/month per organization. No card needed."
+        answer: "Partly. Accio describes its Free plan as \"Free forever, web search only\" and says Accio Work is a free desktop AI agent with no credit card required to start (accio.com/wow, checked October 26, 2026). Deeper features need a paid plan: Pro from $19.9/month ($199/year), Elite from $99/month ($999/year) and Ultra from $199/month ($1,999/year). Dooza Crew is free to try (no card needed). No card needed."
     },
     {
         question: "What is Accio Work?",
@@ -72,7 +72,7 @@ const faqData = [
     },
     {
         question: "What is a good Accio Work alternative for a small business?",
-        answer: "For a small business that is not sourcing from Alibaba, our top pick is Dooza Crew (our product). You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back. Each agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. It is $49/month per organization after a 7-day free trial (no card needed), and agents can take phone calls, included. If you do cross-border sourcing on Alibaba, Accio Work fits that job better."
+        answer: "For a small business that is not sourcing from Alibaba, our top pick is Dooza Crew (our product). You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back. Each agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. It is free to try (no card needed), and agents can take phone calls, included. If you do cross-border sourcing on Alibaba, Accio Work fits that job better."
     },
     {
         question: "How is Dooza Crew different from Accio Work?",
@@ -80,7 +80,7 @@ const faqData = [
     },
     {
         question: "Can Accio Work answer phone calls?",
-        answer: "We found no phone-call feature in Accio's published materials (checked October 26, 2026). Dooza Crew agents can take phone calls, and it is included in the plan: $49 per organization per month after a 7-day free trial (no card needed)."
+        answer: "We found no phone-call feature in Accio's published materials (checked October 26, 2026). Dooza Crew agents can take phone calls, and it is included in the plan: free to try (no card needed)."
     },
     {
         question: "Does Accio Work handle social media and email?",
@@ -88,7 +88,7 @@ const faqData = [
     },
     {
         question: "Can I use both Accio Work and Dooza Crew?",
-        answer: "Yes. If you run an e-commerce business, Accio Work can handle product sourcing and supplier work inside Alibaba's ecosystem, while Dooza Crew handles research, writing and outreach jobs you describe in plain words. Crew has a 7-day free trial (no card needed), so you can test it next to Accio."
+        answer: "Yes. If you run an e-commerce business, Accio Work can handle product sourcing and supplier work inside Alibaba's ecosystem, while Dooza Crew handles research, writing and outreach jobs you describe in plain words. Crew has a free trial (no card needed), so you can test it next to Accio."
     },
     {
         question: "Does Dooza Crew require technical skills?",
@@ -161,7 +161,7 @@ export default function AccioWorkVsDoozaContent() {
                             Accio Work (accio.com) Review: <span className="text-primary-600">Pricing, Features</span> & Verdict
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Accio Work is Alibaba's e-commerce sourcing agent. Pricing: Free, Pro $19.9/mo, Elite $99/mo, Ultra $199/mo (checked October 26, 2026). Dooza Crew, our product and our top pick for small businesses, is a team of agents for any business: free for 7 days, then $49/mo per organization.
+                            Accio Work is Alibaba's e-commerce sourcing agent. Pricing: Free, Pro $19.9/mo, Elite $99/mo, Ultra $199/mo (checked October 26, 2026). Dooza Crew, our product and our top pick for small businesses, is a team of agents for any business: free to try.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -181,7 +181,7 @@ export default function AccioWorkVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try Dooza Crew free for 7 days
+                                Try Dooza Crew free
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -233,7 +233,7 @@ export default function AccioWorkVsDoozaContent() {
                             </nav>
 
                             <div className="mt-8 pt-6 border-t border-slate-200">
-                                <p className="text-sm text-slate-600 mb-4">Try a team of agents, free for 7 days</p>
+                                <p className="text-sm text-slate-600 mb-4">Try a team of agents, free</p>
                                 <a
                                     href={CREW_URL}
                                     target="_blank"
@@ -260,7 +260,7 @@ export default function AccioWorkVsDoozaContent() {
                                     <strong>Accio Work pricing in short:</strong> a Free plan, Pro at $19.9/month, Elite at $99/month and Ultra at $199/month (accio.com, checked October 26, 2026). Annual billing is $199, $999 and $1,999 a year. It is a desktop AI agent from Alibaba International, built for e-commerce sourcing.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    <strong>Is it right for your business?</strong> If you source products from Alibaba, it may be. If you run any other small business, we think <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a> is the better pick: you tell Dooza the job in plain words, it builds the helper agents it needs, and you pay $49 a month per organization after a 7-day free trial (no card needed). Dooza Crew is our product, so weigh that, and read where Accio is stronger below.
+                                    <strong>Is it right for your business?</strong> If you source products from Alibaba, it may be. If you run any other small business, we think <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a> is the better pick: you tell Dooza the job in plain words, it builds the helper agents it needs, and you pay free to try (no card needed). Dooza Crew is our product, so weigh that, and read where Accio is stronger below.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     Alibaba's Accio Work promises to let anyone launch and run a global e-commerce business using AI agents: product sourcing, store setup, supplier negotiations, even customs documentation. All from your desktop. This review separates published facts from positioning claims and explains where each product fits.
@@ -366,7 +366,7 @@ export default function AccioWorkVsDoozaContent() {
                                     You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans the job, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back. Each agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. Agents can take phone calls, included.
                                 </p>
                                 <p>
-                                    Crew is the main product from <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>. It costs <strong>$49 a month per organization</strong> (unlimited users and agents), with AI usage included and a hard spending cap. It starts free for 7 days (no card needed). No card needed.
+                                    Crew is the main product from <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>. It is <strong>free to try</strong> (unlimited users and agents). It starts free (no card needed). No card needed.
                                 </p>
                             </div>
 
@@ -376,8 +376,8 @@ export default function AccioWorkVsDoozaContent() {
                                     { icon: MessageSquare, title: "Watch live in chat", desc: "You see every step as it happens, and your staff can join the same chat." },
                                     { icon: ShieldCheck, title: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat." },
                                     { icon: Phone, title: "Phone calls", desc: "Agents can take phone calls, included in the plan." },
-                                    { icon: DollarSign, title: "One flat price", desc: "$49/mo per organization, unlimited users and agents, AI usage included with a hard spending cap." },
-                                    { icon: Timer, title: "Risk-free start", desc: "7 days free (no card needed). No card needed." }
+                                    { icon: DollarSign, title: "Free to try", desc: "no card needed." },
+                                    { icon: Timer, title: "Risk-free start", desc: "Free to try. No card needed." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-3">
@@ -397,7 +397,7 @@ export default function AccioWorkVsDoozaContent() {
                                         <p className="text-slate-700">
                                             It is one flat price with no surprise AI bills, you stay in control because it asks before it sends or pays, and you do not need a supplier network to get value from it. <strong>Watch for:</strong> Crew has no sourcing network. If Alibaba suppliers are the core of your business, Accio Work fits that job better.
                                         </p>
-                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free for 7 days</a></p>
+                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -452,7 +452,7 @@ export default function AccioWorkVsDoozaContent() {
                                             "Each agent has its own computer and browser, private and isolated",
                                             "Watch every step live in chat",
                                             "Agents can take phone calls, included",
-                                            "$49/mo per organization, 7 days free (no card needed)",
+                                            "free to try (no card needed)",
                                             "Asks you to Approve, Edit or Reject before Send or Pay"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
@@ -498,9 +498,9 @@ export default function AccioWorkVsDoozaContent() {
                                             { feature: "Supplier Sourcing", accio: "Core strength (Alibaba network)", dooza: "No supplier network" },
                                             { feature: "Approval", accio: "See Accio's site", dooza: "Approve, Edit or Reject before Send or Pay" },
                                             { feature: "Workspace", accio: "Your own computer", dooza: "Each agent has its own computer and browser, private and isolated" },
-                                            { feature: "Status", accio: "Announced March 2026", dooza: "Live; 7 days free" },
+                                            { feature: "Status", accio: "Announced March 2026", dooza: "Live; free to try" },
                                             { feature: "Setup", accio: "Desktop app, self-serve", dooza: "Tell Dooza the job in plain words" },
-                                            { feature: "Starting Price", accio: "Free plan; Pro from $19.9/mo", dooza: "Free 7 days (no card needed), then $49/mo per organization" },
+                                            { feature: "Starting Price", accio: "Free plan; Pro from $19.9/mo", dooza: "Free to try (no card needed)" },
                                             { feature: "Best For", accio: "E-commerce & dropshipping", dooza: "Small businesses that want a team of agents" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -558,7 +558,7 @@ export default function AccioWorkVsDoozaContent() {
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-slate-900 mb-2">How Dooza Crew is priced</h4>
                                 <p className="text-slate-700 text-sm">
-                                    Free for 7 days (no card needed), then $49/mo per organization (unlimited users and agents) with AI usage included and a hard spending cap. No card needed. Agents can take phone calls, included. If you only need sourcing research, Accio&apos;s free plan is the cheaper place to start. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free for 7 days</a>.
+                                    Free to try (no card needed). No card needed. Agents can take phone calls, included. If you only need sourcing research, Accio&apos;s free plan is the cheaper place to start. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free</a>.
                                 </p>
                             </div>
                         </section>
@@ -600,8 +600,8 @@ export default function AccioWorkVsDoozaContent() {
                                             "Want a researcher, a writer or an outreach agent built for the job",
                                             "Want agents that can take phone calls",
                                             "Want to approve before anything is sent or paid",
-                                            "Want one flat price: $49/mo per organization, AI usage included",
-                                            "Want to try it free for 7 days (no card needed) and cancel any time before day 8"
+                                            "Want one flat price: free to try",
+                                            "Want to try it free (no card needed) and cancel any time before day 8"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
@@ -691,7 +691,7 @@ export default function AccioWorkVsDoozaContent() {
                                     <strong>Accio Work</strong> is an e-commerce sourcing agent built by Alibaba, for Alibaba's ecosystem. If you are launching a dropshipping business or scaling cross-border trade, it is worth exploring, and its free plan costs nothing to try. Its published materials do not list email, social media, outreach, or phone calls.
                                 </p>
                                 <p>
-                                    <strong>Dooza Crew</strong> is our top pick for a small business. You tell Dooza the job in plain words, it builds the helper agents it needs, each agent works in its own private computer and browser, and you watch every step live in chat. It is free for 7 days (no card needed), then $49 a month per organization.
+                                    <strong>Dooza Crew</strong> is our top pick for a small business. You tell Dooza the job in plain words, it builds the helper agents it needs, each agent works in its own private computer and browser, and you watch every step live in chat. It is free to try (no card needed).
                                 </p>
                             </div>
 
@@ -713,7 +713,7 @@ export default function AccioWorkVsDoozaContent() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-slate-900">Business operations?</p>
-                                            <p className="text-slate-600">Use Dooza Crew. A master agent that builds helper agents for each job, phone calls included, $49/mo per organization, 7 days free.</p>
+                                            <p className="text-slate-600">Use Dooza Crew. A master agent that builds helper agents for each job, phone calls included, free to try.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
@@ -735,10 +735,10 @@ export default function AccioWorkVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Try Dooza Crew free for 7 days
+                                    Try Dooza Crew free
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
-                                <p className="text-sm text-slate-500 mt-3">No card needed. Then $49/mo per organization.</p>
+                                <p className="text-sm text-slate-500 mt-3">No card needed. Free to try.</p>
                             </div>
                         </section>
 

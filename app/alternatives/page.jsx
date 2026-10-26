@@ -48,14 +48,14 @@ export default function AlternativesPage() {
             slug: null,
             directLink: '/smith-ai-alternatives',
             tagline: '8 answering services compared — price, billing unit, human vs AI',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew, month to month'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew, month to month'
         },
         {
             name: 'Ruby Receptionist Alternatives',
             slug: null,
             directLink: '/ruby-alternatives',
             tagline: '8 answering services compared — Ruby’s minute plans vs AI and human options',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew vs Ruby’s $1,725 for 500 human minutes'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew vs Ruby’s $1,725 for 500 human minutes'
         },
         {
             name: 'Relevance AI Alternatives',
@@ -76,56 +76,56 @@ export default function AlternativesPage() {
             slug: null,
             directLink: '/ambs-call-center-alternatives',
             tagline: '8 answering services compared — Ambs Call Center’s live, AI and hybrid minute plans vs AI and human options',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew vs Ambs’ listed $600 for 500 live minutes or $350 for 500 AI minutes'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew vs Ambs’ listed $600 for 500 live minutes or $350 for 500 AI minutes'
         },
         {
             name: 'MAP Communications Alternatives',
             slug: null,
             directLink: '/map-communications-alternatives',
             tagline: '8 answering services compared — MAP’s live answering minute plans vs AI and human options',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew vs MAP’s $649 for 500 live answering minutes'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew vs MAP’s $649 for 500 live answering minutes'
         },
         {
             name: 'Answering Service Care Alternatives',
             slug: null,
             directLink: '/answering-service-care-alternatives',
             tagline: '8 answering services compared — Answering Service Care’s live agent minute plans vs AI and human options',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew vs Answering Service Care’s $639 for 500 live agent minutes'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew vs Answering Service Care’s $639 for 500 live agent minutes'
         },
         {
             name: 'Posh Virtual Receptionist Alternatives',
             slug: null,
             directLink: '/posh-alternatives',
             tagline: '8 answering services compared — Posh’s live receptionist minute plans and AI + Live plans vs AI and human options',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew vs Posh’s $975 for 500 live receptionist minutes'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew vs Posh’s $975 for 500 live receptionist minutes'
         },
         {
             name: 'VoiceNation Alternatives',
             slug: null,
             directLink: '/voicenation-alternatives',
             tagline: '8 answering services compared — VoiceNation (now Moneypenny US) people minute plans and AI call plans vs AI and human options',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew vs VoiceNation/Moneypenny’s $985 for 500 people minutes or $775 for 500 AI calls'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew vs VoiceNation/Moneypenny’s $985 for 500 people minutes or $775 for 500 AI calls'
         },
         {
             name: 'Moneypenny Alternatives',
             slug: null,
             directLink: '/moneypenny-alternatives',
             tagline: '8 answering services compared — Moneypenny’s AI call plans and people minute plans vs AI and human options',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew vs Moneypenny’s $985 for 500 people minutes or $775 for 500 AI calls'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew vs Moneypenny’s $985 for 500 people minutes or $775 for 500 AI calls'
         },
         {
             name: 'PATLive Alternatives',
             slug: null,
             directLink: '/patlive-alternatives',
             tagline: '9 answering services compared — PATLive’s human minute plans vs AI and human options',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew vs PATLive’s $759 for 500 human minutes'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew vs PATLive’s $759 for 500 human minutes'
         },
         {
             name: 'Abby Connect Alternatives',
             slug: null,
             directLink: '/abby-connect-alternatives',
             tagline: '9 answering services compared — Abby’s human + AI minute plans vs AI and human options',
-            doozaAdvantage: 'Dooza Crew at $49/month per organization after a 7-day free trial, phone calls included in Crew vs Abby’s $1,380 for 500 Abby Minutes (an AI minute counts as half)'
+            doozaAdvantage: 'Dooza Crew, free to try, phone calls included in Crew vs Abby’s $1,380 for 500 Abby Minutes (an AI minute counts as half)'
         },
         {
             name: 'Dooza vs Profound',

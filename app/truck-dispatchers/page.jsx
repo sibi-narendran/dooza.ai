@@ -5,7 +5,7 @@ import { SITE_URL } from '@/lib/site';
 
 const URL = `${SITE_URL}/truck-dispatchers`;
 const TITLE = 'AI Employees for Truck Dispatchers | Dooza';
-const DESC = 'AI employees for truck dispatchers: load boards, broker inbox, invoices, new brokers and carrier compliance, 24/7, with your approval. Free 7 days.';
+const DESC = 'AI employees for truck dispatchers: load boards, broker inbox, invoices, new brokers and carrier compliance, 24/7, with your approval. Free to try.';
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -24,7 +24,7 @@ const schemas = [
         url: URL,
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         audience: { '@type': 'BusinessAudience', audienceType: 'Truck dispatchers and dispatch services' },
-        offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', description: 'Per organization per month after a 7-day free trial; unlimited users and agents; AI usage included with a hard spending cap.' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Free to try. No card needed. Unlimited users and agents.' },
     },
     {
         '@context': 'https://schema.org',

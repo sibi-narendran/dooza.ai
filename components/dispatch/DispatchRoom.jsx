@@ -175,7 +175,7 @@ export default function DispatchRoom() {
                     data-source="dsp-demo"
                     className="text-[15px] font-semibold text-[#0F766E] after:absolute after:inset-0 after:rounded-[28px] after:content-[''] hover:underline"
                 >
-                    Hire your Load board agent, free for 7 days
+                    Hire your Load board agent, free
                 </a>
             </div>
             <figcaption className="sr-only">An example night at a dispatch desk: the Inbox agent receives a proof of delivery at 9:47 pm, the Billing agent puts the rate con and POD together and drafts the invoice email, which waits for the dispatcher, who approves it at 6:58 am; the Load board agent then lists five loads that fit the empty trucks. Names are made up.</figcaption>

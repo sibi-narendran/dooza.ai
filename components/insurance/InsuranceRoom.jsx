@@ -176,7 +176,7 @@ export default function InsuranceRoom() {
                     data-source="ins-demo"
                     className="text-[15px] font-semibold text-[#0F766E] after:absolute after:inset-0 after:rounded-[28px] after:content-[''] hover:underline"
                 >
-                    Hire your Renewals agent, free for 7 days
+                    Hire your Renewals agent, free
                 </a>
             </div>
             <figcaption className="sr-only">An example night at an independent insurance agency: the Inbox agent spots a certificate request at 9:47 pm, the Service agent prepares it in a web portal and saves it to Files, the reply waits for the owner, who approves it at 7:58 am; the Renewals agent then reports which policies renew in the next 45 days. Names are made up.</figcaption>

@@ -213,7 +213,7 @@ export default function DoneForYouAiAgentsPage() {
                             <p className="mt-3 text-slate-700"><strong>How much does an AI agent cost?</strong> It depends on who builds and runs it.</p>
                             <ul className="mt-4 list-disc space-y-3 pl-5 text-slate-700">
                                 <li><strong>Dooza Managed (admin assistant):</strong> $200 a month. $0 today, and $200 after 7 days only if you don&rsquo;t cancel first. See <a href="/pricing" className={A}>pricing</a>.</li>
-                                <li><strong>Dooza Crew:</strong> $49 per organization per month after a 7-day free trial (no card needed). Phone calls are included, so there is no separate phone service to buy.</li>
+                                <li><strong>Dooza Crew:</strong> free to try (no card needed). Phone calls are included, so there is no separate phone service to buy.</li>
                                 <li><strong>Custom AI agents:</strong> priced by the job. A Dooza engineer quotes it on a <a href={BOOK} data-source={SOURCE} className={A}>free 30-minute call</a>. Every custom build starts as a paid pilot with a 100% refund within 14 days.</li>
                                 <li><strong>DIY tools:</strong> from free to about $30 a month for the entry paid plans in the table above, plus your own time to build and maintain the workflows.</li>
                             </ul>

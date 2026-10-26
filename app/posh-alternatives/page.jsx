@@ -151,7 +151,7 @@ const alternatives = [
         href: '/ai-receptionist',
         internal: true,
         what: 'AI agents (a lead agent plus helper agents) you chat with on web or phone. They browse the web, write files in their own workspace and take phone calls, and they ask you in chat before they send or pay. Run by us, the company that publishes this page.',
-        price: '$49/month per organization after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.',
+        price: 'free to try (no card needed). Phone calls are included in your Crew plan.',
         bestFor: 'Teams that want AI agents that do more than answer calls, with the phone included in one plan.',
     },
     {
@@ -234,11 +234,11 @@ const faqItems = [
     },
     {
         question: 'How does Dooza Crew pricing compare with Posh?',
-        answer: `Dooza Crew is $49 per organization per month after a 7-day free trial (no card needed), with phone calls included in your Crew plan. It is priced per organization, not per call or per minute, so it does not map onto Posh’s units. Competitor prices on this page are listed prices checked ${CHECKED}.`,
+        answer: `Dooza Crew is free to try (no card needed), with phone calls included in your Crew plan. It is not billed per call or per minute, so it does not map onto Posh’s units. Competitor prices on this page are listed prices checked ${CHECKED}.`,
     },
     {
         question: 'How much does Dooza Crew cost?',
-        answer: 'Dooza Crew is $49 per organization per month after a 7-day free trial (no card needed). Users and agents are unlimited, and AI usage is included with a hard spending cap. Crew agents take phone calls too, and it is included in your Crew plan.',
+        answer: 'Dooza Crew is free to try (no card needed). Crew agents take phone calls too, and it is included in your Crew plan.',
     },
 ];
 
@@ -287,10 +287,10 @@ const schemas = [
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
             '@type': 'Offer',
-            name: 'Dooza Crew, monthly per organization',
-            price: '49',
+            name: 'Dooza Crew, free to try',
+            price: '0',
             priceCurrency: 'USD',
-            description: '$49 per organization per month after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.',
+            description: 'Free to try. No card needed. Phone calls are included.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -322,10 +322,10 @@ export default function PoshAlternativesPage() {
                         <section className="text-center">
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Posh Virtual Receptionist Alternatives (2026 Prices)</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
-                                <strong>The best Posh alternative depends on whether callers must reach a live receptionist or you just need every call answered. Posh Virtual Receptionist’s pricing page lists live receptionist plans from $65 a month plus $2.30 a minute up to $975 for 500 minutes. Dooza Crew costs $49 a month per organization after a 7-day free trial, and Crew agents take phone calls too. Prices checked {CHECKED} on each vendor’s own page.</strong>
+                                <strong>The best Posh alternative depends on whether callers must reach a live receptionist or you just need every call answered. Posh Virtual Receptionist’s pricing page lists live receptionist plans from $65 a month plus $2.30 a minute up to $975 for 500 minutes. Dooza Crew is free to try, and Crew agents take phone calls too. Prices checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page (Dooza). Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
@@ -335,7 +335,7 @@ export default function PoshAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Posh alternatives compared</h2>
                             <p className="mt-3 text-slate-700">
-                                This page is about Posh Virtual Receptionist (posh.com), the live answering service, not Poshmark. These services bill in different units: per call, per minute, per Abby Minute or per unique customer. Posh bills by receptionist minutes, which its page defines as the time a receptionist spends on the phone with your callers or completing an activity for your account; its AI + Live plans bill mixed minutes. A human service’s minute is receptionist time, so it is not directly comparable with an AI minute. The closest like-for-like line: Posh’s 500 receptionist minutes cost $975 a month. Dooza Crew is priced per organization ($49 a month after a 7-day free trial), not per minute or per call. Prices checked {CHECKED}.
+                                This page is about Posh Virtual Receptionist (posh.com), the live answering service, not Poshmark. These services bill in different units: per call, per minute, per Abby Minute or per unique customer. Posh bills by receptionist minutes, which its page defines as the time a receptionist spends on the phone with your callers or completing an activity for your account; its AI + Live plans bill mixed minutes. A human service’s minute is receptionist time, so it is not directly comparable with an AI minute. The closest like-for-like line: Posh’s 500 receptionist minutes cost $975 a month. Dooza Crew is priced per organization (free to try), not per minute or per call. Prices checked {CHECKED}.
                             </p>
                             <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
                                 <table className="w-full text-sm">
@@ -354,9 +354,9 @@ export default function PoshAlternativesPage() {
                                             <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
                                             <td className="px-3 py-3">Per organization</td>
-                                            <td className="px-3 py-3 font-semibold">$49/month per organization, 7-day free trial</td>
+                                            <td className="px-3 py-3 font-semibold">Free to try</td>
                                             <td className="px-3 py-3">Takes calls: included in Crew</td>
-                                            <td className="px-3 py-3">AI usage included, hard spending cap</td>
+                                            <td className="px-3 py-3">Free to try, no card needed</td>
                                         </tr>
                                         {vendors.map((v) => (
                                             <tr key={v.name} className="border-t border-slate-200">
@@ -409,7 +409,7 @@ export default function PoshAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Where Dooza Crew fits</h2>
                             <p className="mt-3 text-slate-700">
-                                Dooza Crew is $49 a month per organization after a 7-day free trial. Crew agents take phone calls too, and it is included in your Crew plan, so there is no separate phone service to buy. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
+                                Dooza Crew is free to try. Crew agents take phone calls too, and it is included in your Crew plan, so there is no separate phone service to buy. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
                             </p>
                             <div className="mt-6 grid gap-4 sm:grid-cols-2">
                                 <div className="rounded-xl border border-primary-100 bg-primary-50 p-5">
@@ -432,7 +432,7 @@ export default function PoshAlternativesPage() {
                                 <strong>Where Posh does more:</strong> Posh puts live receptionists on your calls, available 24/7 including after hours, per its pricing page. The same page says it can transfer relevant calls to you based on the status you set in its app, offers bilingual English and Spanish receptionists, can integrate with your software for tasks like appointment scheduling and lead intake, and can make outbound calls on your behalf. Its app also lets you text or call from your business number. On its AI + Live plans, callers can pivot to a live receptionist at any time. Dooza Crew agents are AI, not a person on the line. If callers must be able to reach a person, Posh or another human service fits better.
                             </p>
                             <p className="mt-4 text-slate-700">
-                                <strong>Other entry prices:</strong> Moneypenny’s AI plan ($99/month for 50 calls), Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes) and Goodcall ($79 for 100 unique customers). Smith.ai’s AI plan is free for 25 calls. Posh’s own Chïc plan ($65 a month plus $2.30 a minute) is listed on this page. If your call volume is low or you need booking, start there. Dooza Crew is $49 a month per organization after a 7-day free trial, with phone calls included in your Crew plan, for teams that want agents that do more than answer calls.
+                                <strong>Other entry prices:</strong> Moneypenny’s AI plan ($99/month for 50 calls), Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes) and Goodcall ($79 for 100 unique customers). Smith.ai’s AI plan is free for 25 calls. Posh’s own Chïc plan ($65 a month plus $2.30 a minute) is listed on this page. If your call volume is low or you need booking, start there. Dooza Crew is free to try, with phone calls included in your Crew plan, for teams that want agents that do more than answer calls.
                             </p>
                         </section>
 
@@ -453,9 +453,9 @@ export default function PoshAlternativesPage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
-                            <p className="mt-3 text-slate-300">$49/month per organization after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.</p>
+                            <p className="mt-3 text-slate-300">Free to try (no card needed). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>
