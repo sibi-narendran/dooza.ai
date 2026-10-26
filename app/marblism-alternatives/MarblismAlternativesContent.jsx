@@ -38,7 +38,6 @@ const alternatives = [
         highlight: true,
         topPickReasons: [
             'Free to try, no card needed.',
-            'No surprise AI bills: AI usage is included, with a hard spending cap.',
             'You stay in control: before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat.',
             'Real tools: every agent has its own computer and browser in a private, isolated workspace, and agents take phone calls, included.',
             'Works with your team: your staff join the same chat and watch every step live.',

@@ -61,7 +61,7 @@ const WHAT_IT_DOES = [
 ];
 
 const PILOT_STEPS = [
-    'Start the 7-day free trial (no card needed).',
+    'Start free (no card needed).',
     'Chat with your lead agent on web or phone.',
     'Crew agents take phone calls too, included in your Crew plan.',
     'Before an agent sends or pays, it asks you in chat: Approve, Edit or Reject.',
@@ -262,7 +262,7 @@ export default async function AiReceptionistPage(props) {
                 {/* 6. Book the pilot meeting */}
                 <section id="pilot" className="scroll-mt-16 bg-slate-950 px-4 pb-24 pt-16 text-white sm:px-6 sm:pb-28 sm:pt-24">
                     <div className="mx-auto max-w-2xl text-center">
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">Free to try · 7-day free trial</p>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary-300">Free to try · No card needed</p>
                         <h2 className="mt-4 text-3xl font-extrabold tracking-tight !text-white sm:text-4xl">Stop sending callers to voicemail.</h2>
                         <p className="mt-4 text-lg leading-relaxed text-slate-200 sm:text-xl">
                             {PILOT_PROMISE}

@@ -490,7 +490,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             { feature: "Workspace", cowork: "Your desktop, or the cloud for new Pro/Max tasks", dooza: "Each agent has its own computer and browser, private and isolated" },
                                             { feature: "Technical Skill", cowork: "Low (you manage tasks)", dooza: "None (plain words)" },
                                             { feature: "Starting Price", cowork: "Pro $17/mo annual or $20 monthly (checked Oct 7, 2026)", dooza: "Free to try (no card needed)" },
-                                            { feature: "Higher Usage", cowork: "Max $100 or $200/mo (checked Oct 7, 2026)", dooza: "AI usage included with a hard spending cap" },
+                                            { feature: "Higher Usage", cowork: "Max $100 or $200/mo (checked Oct 7, 2026)", dooza: "Free to try, no card needed" },
                                             { feature: "Best For", cowork: "People who want to direct their own agent", dooza: "Small businesses that want a team of agents" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -565,7 +565,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             { text: "Free to try (no card needed)", good: true },
                                             { text: "No card needed", good: true },
                                             { text: "Unlimited users and agents", good: true },
-                                            { text: "AI usage included, with a hard spending cap", good: true }
+                                            { text: "Free to try, no card needed", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />

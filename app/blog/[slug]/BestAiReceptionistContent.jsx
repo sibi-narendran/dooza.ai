@@ -356,7 +356,7 @@ export default function BestAiReceptionistContent() {
                                     <li>AI agents (a lead agent plus helper agents) you chat with on web or phone; they browse the web and write files in their own workspace.</li>
                                     <li>Before an agent sends or pays it asks you in chat (Approve / Edit / Reject).</li>
                                     <li>Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.</li>
-                                    <li>Free to try (no card needed). Unlimited users and agents; AI usage included with a hard spending cap.</li>
+                                    <li>Free to try (no card needed). Unlimited users and agents.</li>
                                 </ul>
                                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
                                     <a href={CREW_URL('plain-terms')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Try Dooza Crew free <ArrowRight className="w-4 h-4" /></a>
@@ -563,7 +563,7 @@ export default function BestAiReceptionistContent() {
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
                                     <div className="text-3xl font-bold text-green-700 mb-2">$49/mo</div>
                                     <p className="text-sm text-green-800 font-medium">Dooza Crew</p>
-                                    <p className="text-xs text-green-600 mt-1">Per organization, after a 7-day free trial (no card needed). Phone calls included.</p>
+                                    <p className="text-xs text-green-600 mt-1">Free to try (no card needed). Phone calls included.</p>
                                 </div>
                             </div>
 

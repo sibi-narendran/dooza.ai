@@ -460,7 +460,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                             "Dooza builds the helper agents it needs and reports back",
                                             "Each agent has its own computer and browser, private and isolated",
                                             "Watch every step live in chat",
-                                            "free to try, hard spending cap",
+                                            "free to try, no card needed",
                                             "Best for: small business owners who want the work done"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
@@ -496,7 +496,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     <tbody>
                                         {[
                                             { feature: "Type", perplexity: "Multi-model AI agent", dooza: "Team of agents built by a master agent" },
-                                            { feature: "AI Models Used", perplexity: "Several frontier models; you can choose models for subtasks", dooza: "AI usage included, with a hard spending cap" },
+                                            { feature: "AI Models Used", perplexity: "Several frontier models; you can choose models for subtasks", dooza: "Handled for you" },
                                             { feature: "Runs On", perplexity: "Perplexity cloud sandbox", dooza: "Each agent has its own computer and browser, private and isolated" },
                                             { feature: "Who Sets Up the Work", perplexity: "You (objectives and scheduled tasks)", dooza: "You say the job in plain words; Dooza plans it" },
                                             { feature: "Phone Calls", perplexity: "General-purpose agent", dooza: "Yes, agents can take phone calls, included" },
@@ -507,7 +507,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                             { feature: "Watching the work", perplexity: "See Perplexity's help center", dooza: "Every step live in chat; staff join the same chat" },
                                             { feature: "Approval", perplexity: "See Perplexity's help center", dooza: "Approve, Edit or Reject before Send or Pay" },
                                             { feature: "Price", perplexity: "Pro $17/mo, Max $167/mo (both billed annually)", dooza: "Free to try (no card needed)" },
-                                            { feature: "Credits/Limits", perplexity: "Max: 10,000 credits/mo; monthly plan credits don't roll over", dooza: "Unlimited users and agents; AI usage included, hard spending cap" },
+                                            { feature: "Credits/Limits", perplexity: "Max: 10,000 credits/mo; monthly plan credits don't roll over", dooza: "Unlimited users and agents; free to try" },
                                             { feature: "Best For", perplexity: "Researchers, developers, power users", dooza: "Small businesses that want a team of agents" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -582,7 +582,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                         {[
                                             { text: "Free to try (no card needed)", good: true },
                                             { text: "Unlimited users and agents", good: true },
-                                            { text: "AI usage included, hard spending cap", good: true },
+                                            { text: "Free to try, no card needed", good: true },
                                             { text: "No card needed", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
@@ -781,7 +781,6 @@ export default function PerplexityComputerVsDoozaContent() {
                                     {[
                                         { icon: DollarSign, text: "free to try (no card needed)" },
                                         { icon: Users, text: "Unlimited users and agents" },
-                                        { icon: Repeat, text: "AI usage included, with a hard spending cap" },
                                         { icon: HeartHandshake, text: "Asks you to Approve, Edit or Reject before Send or Pay" },
                                         { icon: Brain, text: "Agents can take phone calls, included" }
                                     ].map((item, idx) => (
