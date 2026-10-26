@@ -21,7 +21,7 @@ const SCRIPT = [
     { who: 'ava', text: 'Found 20. Saved to Files.', event: 'file', file: 'austin-clinics.csv', meta: '20 rows' },
     { who: 'ben', text: '20 drafts ready for you to check. Nothing sent.', event: 'file', file: 'intro-drafts.docx', meta: '20 emails' },
     { who: 'you', text: 'Great. Send me the top 5 here.' },
-    { who: 'master', text: 'Sent. Today\'s AI use so far:', event: 'spend' },
+    { who: 'master', text: 'Sent. Your top 5 are in the chat.' },
 ];
 
 const STEP_MS = 1600;
@@ -178,7 +178,7 @@ export default function CrewRoom() {
                     data-source="home-demo"
                     className="text-[15px] font-semibold text-[#0F766E] after:absolute after:inset-0 after:rounded-[28px] after:content-[''] hover:underline"
                 >
-                    Give your crew this job, free for 7 days →
+                    Give your crew this job, free to try →
                 </a>
             </div>
             <figcaption className="sr-only">An example Dooza Crew chat: you give one job, the master agent splits it between two AI helpers who research in their own browser and save results to Files, with AI spend capped.</figcaption>
