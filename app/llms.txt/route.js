@@ -187,6 +187,11 @@ const staticPages = [
         description: 'Free tool: type questions and answers to get FAQPage JSON-LD you can paste into any page. Runs in your browser.',
     },
     {
+        title: 'Free UTM Builder',
+        url: `${SITE_URL}/utm-builder`,
+        description: 'Free tool: build UTM-tagged campaign links for Google Analytics 4 with presets and checks for capital letters, spaces and mediums GA4 cannot group. Runs in your browser.',
+    },
+    {
         title: 'Free AI Slop Checker',
         url: `${SITE_URL}/ai-slop-checker`,
         description: 'Free tool: paste text and flag 20+ patterns that make writing sound AI-generated. Private, runs in your browser.',

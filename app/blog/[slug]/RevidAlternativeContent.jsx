@@ -219,6 +219,12 @@ export default function RevidAlternativeContent() {
                                     Revid AI is the better pick for self-serve AI video creation and auto-publishing. Dooza is the better pick if you want video to be one part of a done-for-you setup across social, SEO, email and sales, starting with a refundable pilot: 100% refund within 14 days.
                                 </p>
                             </div>
+
+                            <div className="mt-6 prose md:prose-lg text-slate-600">
+                                <p>
+                                    <strong>Our top pick for a small business that wants AI agents to do the content work around its videos: <a href="https://crew.dooza.ai/?utm_source=dooza&utm_medium=blog&utm_content=revid-ai-alternative-body">Dooza Crew</a> (our product).</strong> You tell Dooza, your master agent, the job in plain words (&quot;research this week&apos;s trending topics in our niche and draft three video scripts&quot;), and it builds the helper agents it needs: a researcher, a writer. Every agent works in its own private browser and workspace, and before it sends or pays for anything it asks you to Approve, Edit or Reject in chat. It is $49 a month for the whole organization, AI usage included with a hard spending cap, after a 7-day free trial (card required). <a href="https://crew.dooza.ai/?utm_source=dooza&utm_medium=blog&utm_content=revid-ai-alternative-body">Try Dooza Crew free for 7 days</a>.
+                                </p>
+                            </div>
                         </section>
 
                         <section id="revid" className="scroll-mt-28">
