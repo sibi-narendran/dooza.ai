@@ -25,32 +25,39 @@ const sintraPainPoints = [
 
 const alternatives = [
     {
-        rank: null,
-        name: 'Dooza',
-        tagline: 'Our own product (not ranked; we\'re not neutral): AI employees built and tuned for SMBs',
-        bestFor: 'Small businesses that want AI employees or custom agents built and tuned for them',
-        price: 'Managed: 7 days free, then $200/mo; custom agents: refundable pilot',
-        trial: 'Managed: first 7 days free; custom agents: refundable pilot',
-        agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents)',
-        integrations: '1,000+ app integrations',
+        rank: 1,
+        name: 'Dooza Crew',
+        tagline: 'Our product, top pick: a hosted team of AI agents for small businesses',
+        bestFor: 'Small businesses that want a team of AI agents doing the work, at one flat price',
+        price: '$49/mo per organization (unlimited users and agents)',
+        trial: '7 days free; cancel before day 8 and you pay nothing (card required)',
+        agents: 'You brief a lead agent in plain words from the web or phone; it builds helper agents (researcher, writer, outreach agent), splits the job, and saves work to your files',
+        integrations: 'Every agent has its own computer and browser in a private, isolated workspace',
         creditSystem: false,
-        namedAgents: true,
+        namedAgents: false,
         highlight: true,
+        crewSource: 'sintra_alt_crew_top',
+        topPickReasons: [
+            'One flat price: $49/mo per organization with unlimited users and agents.',
+            'No surprise AI bills: AI usage is included, with a hard spending cap.',
+            'You stay in control: before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat.',
+            'Real tools: every agent has its own computer and browser in a private, isolated workspace, and agents take phone calls, included.',
+            'Works with your team: your staff join the same chat and watch every step live.',
+            'Risk-free start: 7 days free; cancel before day 8 and you pay nothing. (card required)',
+        ],
         pros: [
-            'Dooza Managed: first 7 days free, then $200/month, checked by a real person',
-            'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you',
-            'No credit system and no per-seat fees',
-            '1,000+ app integrations',
+            'One flat price for the whole organization: no per-seat fees',
+            'Want it done for you? Dooza Managed is an AI admin assistant checked by a real person: first 7 days free, then $200/month',
         ],
         cons: [
-            'Fewer named AI employees than Sintra\'s 12+ helpers',
+            'No ready-made library like Sintra\'s 12+ helpers: you brief the lead agent and it builds the helpers',
             'Newer platform with a smaller user base',
-            'No free tier after the 7-day Managed trial; custom agents are a paid, refundable pilot',
+            'No free tier after the 7-day trial, and the trial needs a card',
             'Not the lowest-priced option: self-serve apps like Sintra cost less if you are happy to run the AI yourself',
         ],
     },
     {
-        rank: 1,
+        rank: 2,
         name: 'Marblism',
         tagline: 'Low-cost named-agent platform',
         bestFor: 'Budget-conscious solopreneurs who want an affordable AI team',
@@ -73,7 +80,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 2,
+        rank: 3,
         name: 'Motion',
         tagline: 'Project management and calendar suite with AI built in',
         bestFor: 'Teams already using Motion for PM/calendar who want AI features',
@@ -97,7 +104,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 3,
+        rank: 4,
         name: 'NoimosAI',
         tagline: 'Marketing-focused AI agent (deep but narrow)',
         bestFor: 'Marketing teams and agencies wanting specialized marketing automation',
@@ -121,7 +128,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 4,
+        rank: 5,
         name: 'Lindy AI',
         tagline: 'Self-serve AI teammate with a large integration library',
         bestFor: 'Teams who want a self-serve AI teammate in Slack and are happy to configure it themselves',
@@ -145,7 +152,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 5,
+        rank: 6,
         name: 'Relevance AI',
         tagline: 'Enterprise-grade AI workforce platform',
         bestFor: 'Mid-market and enterprise GTM teams (Canva and Autodesk case studies on its site)',
@@ -168,7 +175,7 @@ const alternatives = [
         ],
     },
     {
-        rank: 6,
+        rank: 7,
         name: 'Cubeo AI',
         tagline: 'No-code AI agent and chatbot builder',
         bestFor: 'Businesses wanting simple AI chatbots on their website',
@@ -193,19 +200,21 @@ const alternatives = [
     },
 ];
 
-// Dooza is our own product: shown after the ranked list, unranked (trial unrank-dooza-listicles pattern, 2026-10-13).
-const listedAlternatives = [...alternatives.filter((a) => !a.highlight), ...alternatives.filter((a) => a.highlight)];
+// Dooza Crew is our own product and our top pick: always #1, disclosed (Sibi 2026-10-26 13:58).
+const listedAlternatives = [...alternatives].sort((a, b) => a.rank - b.rank);
 
 // Sintra X pricing checked on sintra.ai/pricing, October 7, 2026. Sintra no longer sells single-helper plans.
 const sintraCostRows = [
+    { plan: 'Dooza Crew (ours, top pick)', shown: '$49/mo per organization', upfront: '$0 for the first 7 days (card required)', credits: 'AI usage included, hard spending cap', dooza: true },
     { plan: 'Sintra X, 1-month plan', shown: '$48.50/mo (list $97)', upfront: '$48.50', credits: '250 per month' },
     { plan: 'Sintra X, 3-month plan', shown: '$23.60/mo', upfront: '$70.80', credits: '250 per month' },
     { plan: 'Sintra X, 12-month plan', shown: '$15.60/mo', upfront: '$187.20', credits: '250 per month' },
-    { plan: 'Dooza', shown: 'Managed $200/mo', upfront: '$0 for the first 7 days', credits: 'No credits', dooza: true },
+    { plan: 'Dooza Managed', shown: '$200/mo', upfront: '$0 for the first 7 days', credits: 'No credits', dooza: true },
 ];
 
 const decisionGuide = [
-    { need: 'Done for you', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you; Managed is 7 days free, then $200/mo; 1,000+ integrations' },
+    { need: 'A team of AI agents for a small business (our top pick)', pick: 'Dooza Crew', reason: 'One flat $49/mo per organization with unlimited users and agents, AI usage included with a hard spending cap, and it asks you to Approve, Edit or Reject before it clicks Send or Pay; 7 days free' },
+    { need: 'Done for you', pick: 'Dooza Managed', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you; Managed is 7 days free, then $200/mo; 1,000+ integrations' },
     { need: 'Lowest price, self-serve', pick: 'Sintra (12-month) or Cubeo AI', reason: 'Sintra is $15.60/mo if you pay $187.20 for a year; Cubeo starts at \u20ac14.17/mo yearly and has a free plan (checked October 7, 2026)' },
     { need: 'Low-cost named agents', pick: 'Marblism', reason: 'Starts at $24/mo yearly with 7 named agents, unlimited team members, and no credit system' },
     { need: 'AI teammate in Slack', pick: 'Lindy AI', reason: '1,000+ integrations (1,500+ on its pricing page), 40+ skills, setup in about 2 minutes, per Lindy' },
@@ -253,11 +262,11 @@ export default function SintraAlternativesContent({ faqData }) {
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Sintra AI is a low-cost self-serve app: every plan includes 250 credits a month, and you run the helpers yourself. We compared 7 alternatives on pricing, features, pros, and cons (checked October 7, 2026), so you do not have to.
+                                Sintra AI is a low-cost self-serve app: every plan includes 250 credits a month, and you run the helpers yourself. We compared 7 alternatives on pricing, features, pros, and cons (checked October 7, 2026), so you do not have to. Our top pick, Dooza Crew, is our own product; we say why, and where the others fit better.
                             </p>
 
                             <p id="short-answer" className="hero-entrance hero-delay-3 text-base text-slate-700 mb-8 max-w-2xl mx-auto text-left sm:text-center">
-                                <strong>Short answer:</strong> keep Sintra if you want the lowest price and will run the helpers yourself. If you want AI employees that do the work at a similar price, <a href={crewSignupUrl('sintra_alt_short')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> gives you a lead agent with helper agents that you chat with from web or phone, watching every step live in chat: free for 7 days, then $49/month per organization (unlimited users and agents, no per-seat fee) with AI usage included and a hard spending cap. If you would rather have it fully done for you, <a href={tagPay(MANAGED_PAY_URL, 'sintra_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. If you mainly need missed calls answered, <a href={crewSignupUrl('sintra-alternatives-calls')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.
+                                <strong>Short answer:</strong> for a small business, our top pick is <a href={crewSignupUrl('sintra_alt_short')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> (our product): a lead agent with helper agents that you chat with from web or phone, watching every step live in chat, free for 7 days, then $49/month per organization (unlimited users and agents, no per-seat fee) with AI usage included and a hard spending cap. Keep Sintra if you want the lowest price and will run the helpers yourself. If you would rather have it fully done for you, <a href={tagPay(MANAGED_PAY_URL, 'sintra_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. If you mainly need missed calls answered, <a href={crewSignupUrl('sintra-alternatives-calls')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -389,7 +398,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                         </div>
                                         {alt.highlight && (
                                             <span className="bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full shrink-0">
-                                                OUR OWN PRODUCT · NOT RANKED
+                                                OUR PRODUCT · TOP PICK
                                             </span>
                                         )}
                                     </div>
@@ -417,6 +426,21 @@ export default function SintraAlternativesContent({ faqData }) {
                                         <p className="text-sm text-slate-600"><strong className="text-slate-900">AI Agents:</strong> {alt.agents}</p>
                                         <p className="text-sm text-slate-600"><strong className="text-slate-900">Integrations:</strong> {alt.integrations}</p>
                                     </div>
+
+                                    {/* Why it is our top pick (Dooza Crew only) */}
+                                    {alt.topPickReasons && (
+                                        <div className="bg-primary-50/40 border border-primary-100 rounded-xl p-5 mb-6">
+                                            <h4 className="font-bold text-primary-700 text-sm uppercase tracking-wider mb-3">Why it is our top pick for a small business</h4>
+                                            <ul className="space-y-2.5">
+                                                {alt.topPickReasons.map((reason, i) => (
+                                                    <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                                                        <CheckCircle2 size={16} className="text-primary-500 shrink-0 mt-0.5" />
+                                                        {reason}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
 
                                     {/* Pros and Cons */}
                                     <div className="grid md:grid-cols-2 gap-6 mb-2">
@@ -447,7 +471,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                     {/* CTA for Dooza only */}
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <SignupButton source="sintra_alt_dooza_card">Start your pilot</SignupButton>
+                                            <a href={crewSignupUrl('sintra_alt_crew_top')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Start Dooza Crew free for 7 days <ArrowRight size={16} /></a>
                                             <BookDemoButton source="sintra_alt_dooza_card">Book a free 30-min call</BookDemoButton>
                                         </div>
                                     )}

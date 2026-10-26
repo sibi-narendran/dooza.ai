@@ -3,7 +3,7 @@ import SintraAlternativesContent from './SintraAlternativesContent';
 
 export const metadata = {
     title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-    description: '7 Sintra AI alternatives compared on pricing, features, and limits (checked October 7, 2026). Self-serve apps vs done-for-you AI, including our own product, Dooza (not ranked).',
+    description: '7 Sintra AI alternatives compared on pricing, features, and limits (checked October 7, 2026). Our top pick: our own product, Dooza Crew, at $49/mo per organization.',
     keywords: [
         'sintra ai alternatives', 'best sintra alternative 2026', 'sintra ai competitors',
         'sintra alternative', 'sintra ai replacement', 'AI employee platforms',
@@ -24,7 +24,7 @@ export const metadata = {
     },
     openGraph: {
         title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-        description: 'Honest comparison of 7 Sintra AI alternatives — pricing, features, pros, cons. Our own product, Dooza, is listed but not ranked.',
+        description: 'Honest comparison of 7 Sintra AI alternatives — pricing, features, pros, cons. Our top pick is our own product, Dooza Crew.',
         url: `${SITE_URL}/sintra-alternatives`,
         siteName: 'Dooza',
         type: 'article',
@@ -36,7 +36,7 @@ export const metadata = {
         site: '@sibinarendran',
         creator: '@sibinarendran',
         title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-        description: 'Sintra is a low-cost self-serve app. 7 alternatives compared, including done-for-you options. Our own product, Dooza, is listed but not ranked.',
+        description: 'Sintra is a low-cost self-serve app. 7 alternatives compared, including done-for-you options. Our top pick is our own product, Dooza Crew.',
         images: [`${SITE_URL}/logo.png`],
     },
 };
@@ -44,7 +44,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is the best alternative to Sintra AI?',
-        answer: 'It depends on your needs. Dooza is the best all-around alternative for SMBs — it offers named AI employees with no credit system, and Dooza Managed, an AI admin assistant checked by a real person: first 7 days free, then $200/month. Marblism starts at $24/mo on a yearly plan. Lindy AI is a Slack-based AI teammate that lists 1,500+ integrations on its pricing page (checked October 7, 2026). If you want the lowest price and are happy to run the AI yourself, Sintra\'s own 12-month plan ($15.60/mo) is hard to beat.',
+        answer: 'For a small business, our top pick is Dooza Crew (our product): one flat $49/mo per organization with unlimited users and agents, AI usage included with a hard spending cap, and before it clicks Send or Pay it asks you to Approve, Edit or Reject in chat; 7 days free. If you want it done for you, Dooza Managed is an AI admin assistant checked by a real person: first 7 days free, then $200/month. Marblism starts at $24/mo on a yearly plan. Lindy AI is a Slack-based AI teammate that lists 1,500+ integrations on its pricing page (checked October 7, 2026). If you want the lowest price and are happy to run the AI yourself, Sintra\'s own 12-month plan ($15.60/mo) is hard to beat.',
     },
     {
         question: 'Why are people leaving Sintra AI?',
@@ -121,13 +121,13 @@ const schemas = [
         '@type': 'ItemList',
         name: '7 Best Sintra AI Alternatives',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Marblism', url: 'https://marblism.com' },
-            { '@type': 'ListItem', position: 2, name: 'Motion', url: 'https://usemotion.com' },
-            { '@type': 'ListItem', position: 3, name: 'NoimosAI', url: 'https://noimosai.com' },
-            { '@type': 'ListItem', position: 4, name: 'Lindy AI', url: 'https://lindy.ai' },
-            { '@type': 'ListItem', position: 5, name: 'Relevance AI', url: 'https://relevanceai.com' },
-            { '@type': 'ListItem', position: 6, name: 'Cubeo AI', url: 'https://cubeo.ai' },
-            { '@type': 'ListItem', position: 7, name: 'Dooza (our own product, not ranked)', url: SITE_URL },
+            { '@type': 'ListItem', position: 1, name: 'Dooza Crew (our product, top pick)', url: SITE_URL },
+            { '@type': 'ListItem', position: 2, name: 'Marblism', url: 'https://marblism.com' },
+            { '@type': 'ListItem', position: 3, name: 'Motion', url: 'https://usemotion.com' },
+            { '@type': 'ListItem', position: 4, name: 'NoimosAI', url: 'https://noimosai.com' },
+            { '@type': 'ListItem', position: 5, name: 'Lindy AI', url: 'https://lindy.ai' },
+            { '@type': 'ListItem', position: 6, name: 'Relevance AI', url: 'https://relevanceai.com' },
+            { '@type': 'ListItem', position: 7, name: 'Cubeo AI', url: 'https://cubeo.ai' },
         ],
     },
 ];
