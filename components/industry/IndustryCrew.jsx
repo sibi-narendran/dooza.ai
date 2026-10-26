@@ -160,6 +160,9 @@ export default function IndustryCrew({ c }) {
                         <p className={`mt-8 text-[15px] ${MUTED}`}>
                             Want us to set it up for you? <Link href="/book" data-source={`${p}-bottom-book`} className={LINK}>Book a 30-minute call</Link>.
                         </p>
+                        <p className={`mt-3 text-[15px] ${MUTED}`}>
+                            Comparing tools first? See <Link href={`/blog/best-ai-tools-for-${c.slug}`} data-source={`${p}-bottom-tools`} className={LINK}>the best AI tools for {c.slug.replace(/-/g, ' ')} in 2026, with prices</Link>.
+                        </p>
                     </div>
                 </section>
             </main>

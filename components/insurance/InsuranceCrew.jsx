@@ -239,6 +239,9 @@ export default function InsuranceCrew() {
                         <p className={`mt-8 text-[15px] ${MUTED}`}>
                             Want us to set it up for you? <Link href="/book" data-source="ins-bottom-book" className={LINK}>Book a 30-minute call</Link>.
                         </p>
+                        <p className={`mt-3 text-[15px] ${MUTED}`}>
+                            Comparing tools first? See <Link href="/blog/best-ai-tools-for-insurance-agents" data-source="ins-bottom-tools" className={LINK}>the best AI tools for insurance agents in 2026, with prices</Link>.
+                        </p>
                     </div>
                 </section>
             </main>
