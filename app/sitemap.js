@@ -529,6 +529,18 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/llms-txt-generator`,
+            lastModified: pageDate('2026-10-26'),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/faq-schema-generator`,
+            lastModified: pageDate('2026-10-26'),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/ai-slop-checker`,
             lastModified: pageDate('2026-07-28'),
             changeFrequency: 'monthly',

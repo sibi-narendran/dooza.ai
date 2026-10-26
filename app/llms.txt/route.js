@@ -177,6 +177,16 @@ const staticPages = [
         description: 'Free calculator for insurance agents: lead price, close rate and commission give cost per sold policy and break-even close rate for exclusive vs shared leads; 2026 lead prices (Medicare tiers, 27-vendor range, Meta and Google cost per lead) linked to sources, checked October 10, 2026.',
     },
     {
+        title: 'Free llms.txt Generator',
+        url: `${SITE_URL}/llms-txt-generator`,
+        description: 'Free tool: enter your site name, summary and key pages to build a valid llms.txt file (llmstxt.org format) you can copy or download. Runs in your browser.',
+    },
+    {
+        title: 'Free FAQ Schema Generator',
+        url: `${SITE_URL}/faq-schema-generator`,
+        description: 'Free tool: type questions and answers to get FAQPage JSON-LD you can paste into any page. Runs in your browser.',
+    },
+    {
         title: 'Free AI Slop Checker',
         url: `${SITE_URL}/ai-slop-checker`,
         description: 'Free tool: paste text and flag 20+ patterns that make writing sound AI-generated. Private, runs in your browser.',
