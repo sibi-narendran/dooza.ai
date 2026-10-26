@@ -105,7 +105,7 @@ const staticPages = [
     {
         title: 'Marblism Alternatives',
         url: `${SITE_URL}/marblism-alternatives`,
-        description: 'Marblism pricing ($24/mo billed yearly or $44/mo monthly for all 7 AI employees, checked 2026-10) and 7 alternatives compared on pricing, integrations and setup: Dooza, Sintra AI, Motion, NoimosAI, Lindy AI, Relevance AI and Cubeo AI.',
+        description: 'Marblism pricing ($24/mo billed yearly or $44/mo monthly for all 7 AI employees, checked 2026-10) and 7 alternatives compared on pricing, integrations and setup: Dooza Crew (our own product and top pick, $49/mo per organization), Sintra AI, Motion, NoimosAI, Lindy AI, Relevance AI and Cubeo AI.',
     },
     {
         title: 'AI employees for truck dispatchers',

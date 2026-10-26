@@ -6,11 +6,8 @@ import {
     CheckCircle2, XCircle, ArrowRight, Sparkles, Star,
     DollarSign, Puzzle, Shield, Users, Bot, AlertTriangle, Clock
 } from 'lucide-react';
-import SignupButton from '@/components/buttons/SignupButton';
-import BookDemoButton from '@/components/buttons/BookDemoButton';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import FAQAccordion from '@/components/FAQAccordion';
-import { MANAGED_PAY_URL, tagPay } from '@/lib/offers';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -18,39 +15,44 @@ import { trackFBViewContent } from '@/lib/analytics';
 import { crewSignupUrl } from '@/lib/crewUrl';
 
 const marblismPainPoints = [
-    { icon: Users, title: 'Self-Serve Setup', desc: 'Marblism is self-serve: you set up and manage the AI employees yourself. If you would rather have someone build and tune them with you, a done-for-you option fits better.' },
-    { icon: Bot, title: 'Need Custom Agents', desc: 'Every Marblism plan includes the same 7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda). If your workflow needs an agent outside that roster, look at platforms that build custom agents.' },
+    { icon: Users, title: 'Self-Serve Setup', desc: 'Marblism is self-serve: you set up and manage the AI employees yourself. If you would rather brief a lead agent and let it build the helpers, look at Dooza Crew below.' },
+    { icon: Bot, title: 'Need Custom Agents', desc: 'Every Marblism plan includes the same 7 AI employees (Eva, Sonny, Stan, Penny, Rachel, Walter, Linda). If your workflow needs an agent outside that roster, look at platforms that build the agents for each job.' },
     { icon: Puzzle, title: 'Specific Integrations', desc: 'If you depend on a particular tool, check Marblism\'s site for the tools it connects to before you commit, and compare it with the alternatives below.' },
-    { icon: Shield, title: 'How You Evaluate It', desc: 'Marblism\'s pricing page (checked October 7, 2026) does not mention a free trial but offers a 7-day money-back guarantee. Some alternatives offer free trials, free tiers, or refundable pilots.' },
+    { icon: Shield, title: 'How You Evaluate It', desc: 'Marblism\'s pricing page (checked October 7, 2026) does not mention a free trial but offers a 7-day money-back guarantee. Some alternatives offer free trials or free tiers.' },
     { icon: DollarSign, title: 'Hours Included', desc: 'Every Marblism plan includes 50 hours of work. If you expect heavier use, compare how each alternative meters work.' },
-    { icon: Clock, title: 'Time to Set It Up', desc: 'A low price is good value only if you have time to set up and tune the AI employees. If you do not, weigh that time against a done-for-you option.' },
+    { icon: Clock, title: 'Time to Set It Up', desc: 'A low price is good value only if you have time to set up and tune the AI employees. If you do not, weigh that time against a platform where you only describe the job.' },
 ];
 
 const alternatives = [
     {
         rank: 1,
-        name: 'Dooza',
-        tagline: 'Best done-for-you option — engineer-led setup, custom agents, 1,000+ integrations',
-        bestFor: 'SMBs and teams that want AI employees built and tuned for them instead of DIY setup',
-        price: 'Managed: 7 days free, then $200/mo; custom agents: refundable pilot',
-        trial: 'Managed: first 7 days free; custom agents: refundable pilot',
-        agents: 'Maily (email), Somi (social media), Ranky (SEO & AI visibility), Stan (lead generation), Linda (legal documents)',
-        integrations: '1,000+ app integrations',
+        name: 'Dooza Crew',
+        tagline: 'Our product, top pick: a hosted team of AI agents for small businesses',
+        bestFor: 'Small businesses that want a team of AI agents doing the work, at one flat price',
+        price: '$49/mo per organization (unlimited users and agents)',
+        trial: '7 days free; cancel before day 8 and you pay nothing (card required)',
+        agents: 'You tell Dooza, your master agent, the job in plain words from the web or your phone; it plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back',
+        integrations: 'Every agent has its own computer and browser in a private, isolated workspace',
         creditSystem: false,
-        namedAgents: true,
+        namedAgents: false,
         highlight: true,
+        topPickReasons: [
+            'One flat price: $49/mo per organization with unlimited users and agents.',
+            'No surprise AI bills: AI usage is included, with a hard spending cap.',
+            'You stay in control: before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat.',
+            'Real tools: every agent has its own computer and browser in a private, isolated workspace, and agents take phone calls, included.',
+            'Works with your team: your staff join the same chat and watch every step live.',
+            'Risk-free start: 7 days free; cancel before day 8 and you pay nothing. (card required)',
+        ],
         pros: [
-            'Done for you: a Dooza engineer builds and tunes your AI employees with you',
-            'Dooza Managed: first 7 days free, then $200/month, checked by a real person',
-            'A Dooza engineer scopes your pilot on a free 30-minute call and sets it up with you',
-            '1,000+ app integrations',
-            'Custom agents built and maintained by Dooza engineers (Dooza Custom AI Agents)',
+            'One flat price for the whole organization: no per-seat fees',
+            'You watch every step live in chat, from the web or your phone',
         ],
         cons: [
-            'Fewer named AI employees than Sintra\'s 12+ helpers',
-            'Costs more than Marblism for a self-serve user',
+            'No ready-made roster like Marblism\'s 7 named employees: you brief the master agent and it builds the helpers',
             'Newer platform with a smaller user base',
-            'No free tier after the 7-day Managed trial; custom agents are a paid, refundable pilot',
+            'No free tier after the 7-day trial, and the trial needs a card',
+            'Costs more than Marblism\'s yearly plan ($24/mo) if you are happy to run the AI yourself',
         ],
     },
     {
@@ -199,17 +201,16 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative', pick: 'Dooza', reason: 'Done for you: engineer-led setup, custom agents, Managed 7 days free then $200/mo, 1,000+ integrations' },
+    { need: 'Best overall alternative (our top pick)', pick: 'Dooza Crew', reason: 'One flat $49/mo per organization with unlimited users and agents, AI usage included with a hard spending cap, and it asks you to Approve, Edit or Reject before it clicks Send or Pay; 7 days free (card required)' },
     { need: 'Most AI agents', pick: 'Sintra AI', reason: '12+ named helpers that work together; 250 credits a month on every plan, with paid top-ups' },
     { need: 'AI teammate in Slack', pick: 'Lindy AI', reason: '1,000+ integrations (1,500+ on its pricing page), 40+ skills, setup in about 2 minutes, per Lindy' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Canva and Autodesk case studies, multi-agent workforces, 2,000+ integrations. Pricing through sales' },
     { need: 'Marketing only', pick: 'NoimosAI', reason: 'Marketing-focused AI agent with GEO and Social Listening' },
-    { need: 'Small service business (calls, bookings, follow-ups)', pick: 'Lindy AI (DIY) or Dooza Managed (done for you)', reason: 'Lindy connects to Calendly, Google Calendar and Outlook if you build the workflows yourself. Dooza Managed runs an AI admin assistant for you, checked by a real person ($200/month, first 7 days free). Marblism itself already includes Eva (emails, meetings booked) and Rachel (calls answered, jobs booked into your calendar), checked October 21, 2026' },
+    { need: 'Small service business (calls, bookings, follow-ups)', pick: 'Dooza Crew or Lindy AI (DIY)', reason: 'Dooza Crew agents take phone calls, included in the $49/mo plan. Lindy connects to Calendly, Google Calendar and Outlook if you build the workflows yourself. Marblism itself already includes Eva (emails, meetings booked) and Rachel (calls answered, jobs booked into your calendar), checked October 21, 2026' },
     { need: 'Ecommerce store', pick: 'Sintra AI or Lindy AI', reason: 'Sintra\'s Commet helper creates landing pages and improves product pages; Lindy lists a Shopify integration. Marblism lists Shopify among the tools it works with but has no store-support employee (checked October 21, 2026)' },
     { need: 'Social media and content', pick: 'NoimosAI or Sintra AI', reason: 'NoimosAI has a Social Listening Agent and drafts posts; Sintra\'s Soshie writes and schedules social posts. If social is your only gap, note Marblism already includes Sonny, an AI Social Media Manager (checked October 21, 2026)' },
     { need: 'PM + AI in one tool', pick: 'Motion', reason: 'Calendar, tasks, and AI Workflows in one platform. Per-seat pricing' },
     { need: 'Lowest-cost self-serve AI employees', pick: 'Marblism ($24/mo yearly)', reason: 'All 7 AI employees, 50 hours of work, unlimited team members — if you are happy to set it up yourself' },
-    { need: 'Done for you', pick: 'Dooza', reason: 'A Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes AI employees or custom agents with you' },
 ];
 
 export default function MarblismAlternativesContent({ faqData }) {
@@ -247,20 +248,19 @@ export default function MarblismAlternativesContent({ faqData }) {
                             </h1>
 
                             <p className="hero-entrance hero-delay-3 text-xl sm:text-2xl text-slate-500 font-serif italic mb-4">
-                                Want it done for you, or need agents Marblism does not offer? Here are your options.
+                                Want agents that do the work for you, or need agents Marblism does not offer? Here are your options.
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Marblism is a low-cost, self-serve AI employee platform: $24/mo billed yearly or $44/mo monthly for all 7 AI employees (pricing checked October 7, 2026). We compared 7 alternatives on pricing, integrations, setup, pros, and cons — so you do not have to.
+                                Marblism is a low-cost, self-serve AI employee platform: $24/mo billed yearly or $44/mo monthly for all 7 AI employees (pricing checked October 7, 2026). We compared 7 alternatives on pricing, integrations, setup, pros, and cons — so you do not have to. Our top pick, Dooza Crew, is our own product; we say why, and where the others fit better.
                             </p>
 
                             <p id="short-answer" className="hero-entrance hero-delay-3 text-base text-slate-700 mb-8 max-w-2xl mx-auto text-left sm:text-center">
-                                <strong>Short answer:</strong> keep Marblism if you want many AI employees cheaply and will run them yourself. If you want AI employees that do the work at a similar price, <a href={crewSignupUrl('marblism_alt_short')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> gives you a lead agent with helper agents that you chat with from web or phone, watching every step live in chat: free for 7 days, then $49/month per organization (unlimited users and agents, no per-seat fee) with AI usage included and a hard spending cap. If you would rather have it fully done for you, <a href={tagPay(MANAGED_PAY_URL, 'marblism_alt_short')} data-offer="managed" className="font-semibold text-primary-700 underline">Dooza Managed</a> is an AI admin assistant checked by a real person: first 7 days free, then $200/month. If you mainly need missed calls answered, <a href={crewSignupUrl('marblism-alternatives-calls')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.
+                                <strong>Short answer:</strong> for a small business, our top pick is <a href={crewSignupUrl('marblism_alt_short')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> (our product): you tell Dooza, your master agent, the job in plain words from the web or your phone; it plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back, and you watch every step live in chat. It is free for 7 days (card required), then $49/month per organization (unlimited users and agents, no per-seat fee) with AI usage included and a hard spending cap. Cancel before day 8 and you pay nothing. Keep Marblism if you want many AI employees cheaply and will run them yourself. If you mainly need missed calls answered, <a href={crewSignupUrl('marblism-alternatives-calls')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> agents take phone calls too, included in the plan, so there is no separate phone service to buy.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="marblism_alt_hero">Start your pilot</SignupButton>
-                                <BookDemoButton source="marblism_alt_hero">Book a free 30-min call</BookDemoButton>
+                                <a href={crewSignupUrl('marblism_alt_hero')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Start Dooza Crew free for 7 days <ArrowRight size={16} /></a>
                             </div>
                         </div>
                     </div>
@@ -387,7 +387,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                         </div>
                                         {alt.highlight && (
                                             <span className="bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full shrink-0">
-                                                OUR PICK
+                                                OUR PRODUCT · TOP PICK
                                             </span>
                                         )}
                                     </div>
@@ -415,6 +415,21 @@ export default function MarblismAlternativesContent({ faqData }) {
                                         <p className="text-sm text-slate-600"><strong className="text-slate-900">AI Agents:</strong> {alt.agents}</p>
                                         <p className="text-sm text-slate-600"><strong className="text-slate-900">Integrations:</strong> {alt.integrations}</p>
                                     </div>
+
+                                    {/* Why it is our top pick (Dooza Crew only) */}
+                                    {alt.topPickReasons && (
+                                        <div className="bg-primary-50/40 border border-primary-100 rounded-xl p-5 mb-6">
+                                            <h4 className="font-bold text-primary-700 text-sm uppercase tracking-wider mb-3">Why it is our top pick for a small business</h4>
+                                            <ul className="space-y-2.5">
+                                                {alt.topPickReasons.map((reason, i) => (
+                                                    <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                                                        <CheckCircle2 size={16} className="text-primary-500 shrink-0 mt-0.5" />
+                                                        {reason}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
 
                                     {/* Pros and Cons */}
                                     <div className="grid md:grid-cols-2 gap-6 mb-2">
@@ -445,8 +460,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                     {/* CTA for Dooza only */}
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <SignupButton source="marblism_alt_dooza_card">Start your pilot</SignupButton>
-                                            <BookDemoButton source="marblism_alt_dooza_card">Book a free 30-min call</BookDemoButton>
+                                            <a href={crewSignupUrl('marblism_alt_crew_top')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Start Dooza Crew free for 7 days <ArrowRight size={16} /></a>
                                         </div>
                                     )}
                                 </div>
@@ -502,7 +516,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-base text-slate-400 mt-8 max-w-3xl mx-auto text-center leading-relaxed">
-                                For a self-serve user who wants many AI employees at a low price, Marblism is good value. Dooza fits when you would rather not set it up yourself: a Dooza engineer scopes your pilot on a free 30-minute call, then builds and tunes your AI employees or custom agents (Dooza Custom AI Agents) with you, with your approval on anything sensitive. Dooza Managed is free for the first 7 days, then $200/month; custom agents start with a refundable pilot. Pricing depends on the product; see <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
+                                For a self-serve user who wants many AI employees at a low price, Marblism is good value. Dooza Crew fits when you would rather describe the job than set up each employee: $49/month per organization after 7 free days (card required), with AI usage included and a hard spending cap. See <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -571,11 +585,10 @@ export default function MarblismAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Marblism Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start Dooza Crew free for 7 days, then $49/month per organization (unlimited users and agents, no per-seat fee) with AI usage included and a hard spending cap. Want it done for you? Dooza Managed is $200/month, or book a free 30-minute call with a Dooza engineer.
+                                Start Dooza Crew free for 7 days, then $49/month per organization (unlimited users and agents, no per-seat fee) with AI usage included and a hard spending cap.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <SignupButton source="marblism_alt_cta">Start your pilot</SignupButton>
-                                <BookDemoButton source="marblism_alt_cta">Book a free 30-min call</BookDemoButton>
+                                <a href={crewSignupUrl('marblism_alt_cta')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Start Dooza Crew free for 7 days <ArrowRight size={16} /></a>
                             </div>
                         </ScrollReveal>
                     </div>

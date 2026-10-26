@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { getProductSignupUrl, CAL_BOOKING_URL } from '../../../lib/links';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import BottomCTA from '../../../components/BottomCTA';
@@ -56,33 +55,35 @@ import {
 const faqData = [
     {
         question: "What is Perplexity Computer?",
-        answer: "Perplexity Computer is Perplexity's autonomous AI agent, launched on February 25, 2026. You give it an objective and it breaks the work into subtasks, routes them to different frontier models, and runs them in a secure cloud sandbox. It connects to 400+ apps, keeps persistent memory across sessions, and supports Scheduled Tasks (hourly, daily, weekly or monthly). Checked October 7, 2026."
+        answer: "Perplexity Computer is Perplexity's autonomous AI agent, launched on February 25, 2026. You give it an objective and it breaks the work into subtasks, routes them to different frontier models, and runs them in a secure cloud sandbox. It connects to 400+ apps, keeps persistent memory across sessions, and supports Scheduled Tasks (hourly, daily, weekly or monthly). Checked October 26, 2026."
     },
     {
         question: "How much does Perplexity Computer cost?",
-        answer: "Per Perplexity's help center and enterprise pricing page (checked October 7, 2026): paid consumer Pro plans include a weekly amount of Computer usage; Max is $200/month or $2,000/year with 10,000 credits a month; Enterprise Pro ($40/seat/month, $34 billed annually) includes access to Computer; Enterprise Max is $325/seat/month or $3,250/year. Tasks use credits: Light tasks 100–350, Complex 350–950, Heavy 875–2,275 and Mega 2,400–9,800. Dooza pricing depends on the product (see /pricing), and custom Dooza agents start with a refundable pilot: 100% refund within 14 days."
+        answer: "Computer is included in paid Perplexity plans. Perplexity's pricing page (checked October 26, 2026) shows Pro at $17/month billed annually with 4,000 bonus credits, and Max at $167/month billed annually (about $2,000 a year) with 10,000 monthly credits and 35,000 bonus credits. Perplexity's help center listed Max at $200/month when we checked it on October 7, 2026. Enterprise Pro was $40/seat/month ($34 billed annually) and Enterprise Max $325/seat/month on October 7. Tasks use credits: Light tasks 100-350, Complex 350-950, Heavy 875-2,275 and Mega 2,400-9,800. For comparison, Dooza Crew is free for 7 days (card required), then $49/month per organization with unlimited users and agents, AI usage included and a hard spending cap."
     },
     {
-        question: "Is Perplexity Computer better than Dooza for business?",
-        answer: "They solve different problems. Perplexity Computer is a general-purpose agent you direct: you set the objectives and any scheduled tasks. Dooza is an AI-native company that builds AI products and services for small businesses; its Dooza Managed plan gives you an AI admin assistant for email and admin work, checked by a real person, with the first 7 days free; for bigger jobs, Dooza engineers build custom AI agents, scoped on a free 30-minute call. Pick Perplexity if you want to run your own agent; pick Dooza if you want those roles handled for you."
+        question: "Is Perplexity Computer better than Dooza Crew for a small business?",
+        answer: "They solve different problems. Perplexity Computer is a general-purpose agent you direct: you set the objectives, design any scheduled tasks and manage credits. For a small business, our top pick is Dooza Crew (our product): you tell Dooza, your master agent, the job in plain words, it builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back. Each agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. Pick Perplexity if you want multi-model power and 400+ connectors for research and building."
     },
     {
-        question: "Does Dooza answer phone calls?",
-        answer: "Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Dooza Crew is $49 per organization per month after a 7-day free trial (card required). Dooza Managed, the AI admin assistant checked by a real person ($200/month, first 7 days free), covers written admin work, not phones."
+        question: "Does Dooza Crew answer phone calls?",
+        answer: "Yes. Dooza Crew agents can take phone calls, and it is included in the plan: $49 per organization per month after a 7-day free trial (card required)."
     },
     {
         question: "Can Perplexity Computer run tasks on a schedule?",
-        answer: "Yes. Perplexity's Scheduled Tasks can run hourly, daily, every weekday, weekly or monthly, and Perplexity runs each task autonomously in the cloud (checked October 7, 2026). With Dooza, the difference is that Dooza engineers set up the routines for you; for example, Somi creates and publishes social content to your connected platforms on a schedule."
+        answer: "Yes. Perplexity's Scheduled Tasks can run hourly, daily, every weekday, weekly or monthly, and Perplexity runs each task autonomously in the cloud (checked October 7, 2026). You design the schedule yourself."
     },
     {
-        question: "Can I use both Perplexity Computer and Dooza?",
-        answer: "Yes. Perplexity Computer is strong for deep research, building and publishing projects, and recurring tasks you design yourself. Dooza covers business roles you want handled for you, such as email, social media, SEO content, sales outreach and phone answering. They complement each other."
+        question: "Can I use both Perplexity Computer and Dooza Crew?",
+        answer: "Yes. Perplexity Computer is strong for deep research, building and publishing projects, and recurring tasks you design yourself. Dooza Crew works on jobs you describe in plain words, with helper agents such as a researcher, a writer or an outreach agent. Crew is free for 7 days (card required), so you can test it next to Perplexity."
     },
     {
-        question: "Does Dooza require technical skills to set up?",
-        answer: "No. A Dooza engineer scopes your pilot on a free 30-minute call and configures your AI employees for your business. With Perplexity Computer you write the objectives and manage your own credit usage."
+        question: "Does Dooza Crew require technical skills?",
+        answer: "No. You describe the job in plain words from the web or your phone, and Dooza plans it and builds the helper agents. Before Crew clicks Send or Pay, it asks you to Approve, Edit or Reject in chat. With Perplexity Computer you write the objectives and manage your own credit usage."
     }
 ];
+
+const CREW_URL = 'https://crew.dooza.ai/?utm_source=dooza&utm_medium=blog&utm_content=perplexity-computer-vs-dooza-body';
 
 export default function PerplexityComputerVsDoozaContent() {
     const [activeSection, setActiveSection] = useState('introduction');
@@ -144,10 +145,10 @@ export default function PerplexityComputerVsDoozaContent() {
                             <span>Comparison</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                            Perplexity Computer vs Dooza: <span className="text-primary-600">Multi-Model Agent</span> or 5 AI Employees?
+                            Perplexity Computer vs Dooza: <span className="text-primary-600">Multi-Model Agent</span> or Dooza Crew?
                         </h1>
                         <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                            Perplexity Computer is a multi-model AI agent you direct, now with scheduled tasks and access on paid Pro plans. Dooza gives you 6 role-specific AI employees set up for you, starting with a refundable pilot. Here's the honest breakdown, checked October 7, 2026.
+                            Perplexity Computer is a multi-model AI agent you direct, included in paid Pro and Max plans (Pro $17/mo billed annually, Max $167/mo billed annually). Dooza Crew, our product and our top pick for small businesses, is a team of agents you brief in plain words: free for 7 days, then $49/mo per organization. Checked October 26, 2026.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
                             <div className="flex items-center gap-2">
@@ -156,34 +157,27 @@ export default function PerplexityComputerVsDoozaContent() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
-                                <span>Updated October 7, 2026</span>
+                                <span>Updated October 26, 2026</span>
                             </div>
                         </div>
 
                         <div className="mt-10 max-w-3xl mx-auto">
                             <BlogHeroImage
                                 src="/blog/perplexity-computer-vs-dooza.png"
-                                alt="Perplexity Computer vs Dooza comparison — multi-model AI agent versus 5 AI employees with a refundable pilot"
+                                alt="Perplexity Computer vs Dooza Crew comparison: multi-model AI agent versus a team of AI agents for small business"
                                 priority={true}
                             />
                         </div>
 
                         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href={getProductSignupUrl('workforce')}
+                                href={CREW_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Start your pilot
+                                Try Dooza Crew free for 7 days
                                 <ArrowRight className="w-5 h-5" />
-                            </a>
-                            <a
-                                href={CAL_BOOKING_URL}
-                                onClick={handleAction}
-                                className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-full font-bold text-lg border-2 border-primary-200 hover:border-primary-400 transition-all"
-                            >
-                                Book a free pilot call
                             </a>
                         </div>
 
@@ -237,16 +231,16 @@ export default function PerplexityComputerVsDoozaContent() {
                             </nav>
 
                             <div className="mt-8 pt-6 border-t border-slate-200">
-                                <p className="text-sm text-slate-600 mb-4">Want AI employees set up for you?</p>
+                                <p className="text-sm text-slate-600 mb-4">Want a team of agents for your business?</p>
                                 <a
-                                    href={getProductSignupUrl('workforce')}
+                                    href={CREW_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Start your pilot
+                                    Try Dooza Crew
                                 </a>
-                                <p className="text-xs text-slate-500 mt-2 text-center">100% refund within 14 days</p>
+                                <p className="text-xs text-slate-500 mt-2 text-center">Free for 7 days, card required</p>
                             </div>
 
                             <div className="mt-6">
@@ -265,16 +259,15 @@ export default function PerplexityComputerVsDoozaContent() {
                                     Perplexity Computer routes work across several frontier models (Perplexity names Claude, Gemini, Grok and ChatGPT models, among others) to complete entire projects in the background. It's one of the most ambitious multi-model agents available.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    An earlier version of this article said Computer needs the $200 Max plan and can't run on a schedule. Both are out of date, so we rewrote it. The question that matters: <strong>do you want a powerful agent you direct, or AI employees someone sets up and runs for you?</strong>
+                                    Computer is no longer limited to the top plan, and it can run on a schedule. The question that matters: <strong>do you want a powerful agent you direct, or a team of agents you brief in plain words?</strong>
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Perplexity Computer is built for people who want raw capability and are happy to set objectives and manage credits. <Link href="/blog/ai-employees-transforming-small-business" className="text-primary-600 hover:underline font-medium">Dooza's AI employees</Link> are built for business owners who want their operations handled — emails, social media, SEO, sales, and phone calls — starting with a refundable pilot.
-                                </p>
+                                    Perplexity Computer is built for people who want raw capability and are happy to set objectives and manage credits. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a> is built for small business owners: you tell Dooza, your master agent, the job in plain words, and it builds the helper agents it needs. It is free for 7 days (card required), then $49 a month per organization. Crew is our product and our top pick for a small business; we say below where Perplexity is stronger.</p>
                                 <p className="text-lg leading-relaxed">
                                     They solve overlapping but different problems.
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Every Perplexity fact below comes from Perplexity's own site and help center, checked October 7, 2026.
+                                    Every Perplexity fact below comes from Perplexity's own site and help center. Plan prices were re-checked October 26, 2026; other facts are dated where they appear.
                                 </p>
                             </div>
                         </section>
@@ -368,29 +361,30 @@ export default function PerplexityComputerVsDoozaContent() {
                             </div>
                         </section>
 
-                        {/* Section 3: What Is Dooza? */}
+                        {/* Section 3: What Is Dooza Crew? */}
                         <section id="what-is-dooza" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                                 <Bot className="w-8 h-8 text-primary-600" />
-                                What Is Dooza?
+                                What Is Dooza Crew?
                             </h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot. Dooza Managed gives you <strong>an AI admin assistant, checked by a real person</strong>, for email and admin work. <Link href="/blog/ai-employees-vs-virtual-assistants" className="text-primary-600 hover:underline font-medium">Dedicated AI employees</Link> with defined roles, responsibilities, and daily routines.
+                                    You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans the job, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back. Each agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. Agents can take phone calls, included.
                                 </p>
                                 <p>
-                                    Each AI employee runs in the cloud on routines a Dooza engineer sets up with you during the pilot. You don't write prompts or design workflows. They do their job and report back, with your approval on anything sensitive.
+                                    Crew is the main product from <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>. It costs <strong>$49 a month per organization</strong> (unlimited users and agents), with AI usage included and a hard spending cap. It starts free for 7 days (card required). Cancel before day 8 and you pay nothing.
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
                                 {[
-                                    { icon: Mail, title: "Maily — Email Manager", desc: "Reads, drafts, and sends emails. Handles customer inquiries. Follows up automatically." },
-                                    { icon: MessageSquare, title: "Somi — Social Media", desc: "Creates and posts content across platforms. Engages with comments. Runs on autopilot." },
-                                    { icon: Search, title: "Ranky — SEO Specialist", desc: "Writes optimized blog posts. Tracks rankings. Builds your organic traffic." },
-                                    { icon: TrendingUp, title: "Stan — Sales Agent", desc: "Qualifies leads. Sends outreach. Books meetings. Manages your pipeline." },
-                                    { icon: Shield, title: "Linda — Legal Assistant", desc: "Reviews contracts. Flags risks. Drafts legal documents." }
+                                    { icon: Cpu, title: "Its own computer", desc: "Every agent has its own computer and browser in a private, isolated workspace." },
+                                    { icon: MessageSquare, title: "Watch live in chat", desc: "You see every step as it happens, and your staff can join the same chat." },
+                                    { icon: Shield, title: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat." },
+                                    { icon: Phone, title: "Phone calls", desc: "Agents can take phone calls, included in the plan." },
+                                    { icon: DollarSign, title: "One flat price", desc: "$49/mo per organization, unlimited users and agents, AI usage included with a hard spending cap." },
+                                    { icon: Clock, title: "Risk-free start", desc: "7 days free (card required). Cancel before day 8 and you pay nothing." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-3">
@@ -406,10 +400,11 @@ export default function PerplexityComputerVsDoozaContent() {
                                 <div className="flex items-start gap-3">
                                     <Rocket className="w-6 h-6 text-primary-600 shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="font-bold text-slate-900 mb-2">The Key Difference</h4>
+                                        <h4 className="font-bold text-slate-900 mb-2">Why Crew is our top pick for a small business</h4>
                                         <p className="text-slate-700">
-                                            Dooza's AI employees come with defined roles and routines that Dooza engineers configure for your business. Somi posts your social media on schedule. Ranky publishes SEO content every week. <strong>You don't design the workflows; Dooza does.</strong>
+                                            One flat price with no surprise AI bills, approval before Send or Pay, and no workflows for you to design. <strong>Watch for:</strong> Perplexity Computer has 400+ app connectors, multi-model routing and a published credit system. If you want to pick models and build projects yourself, Computer gives you more control.
                                         </p>
+                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free for 7 days</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -419,12 +414,12 @@ export default function PerplexityComputerVsDoozaContent() {
                         <section id="core-difference" className="scroll-mt-28">
                             <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                                 <Layers className="w-8 h-8 text-blue-600" />
-                                The Core Difference: Orchestrator vs Workforce
+                                The Core Difference: Orchestrator vs Team of Agents
                             </h2>
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Both can run work in the cloud on a schedule. The difference is who designs that work. One is a <strong>multi-model agent you direct</strong>. The other is <strong>done-for-you AI employees</strong>.
+                                    Both can run work in the cloud on a schedule. The difference is who designs that work. One is a <strong>multi-model agent you direct</strong>. The other is <strong>a team of agents Dooza builds from your plain-words brief</strong>.
                                 </p>
                             </div>
 
@@ -457,16 +452,16 @@ export default function PerplexityComputerVsDoozaContent() {
                                 <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
                                     <h3 className="font-bold text-green-800 mb-4 flex items-center gap-2 text-lg">
                                         <Bot className="w-5 h-5" />
-                                        Dooza = AI Workforce
+                                        Dooza Crew = Team of Agents
                                     </h3>
                                     <div className="space-y-3">
                                         {[
-                                            "AI employees have defined roles & daily routines",
-                                            "Built for ongoing business operations",
-                                            "Starts with a refundable pilot (100% refund within 14 days)",
-                                            "Dooza engineers configure everything",
-                                            "Role-specific — each employee does one job",
-                                            "Best for: owners who want work handled for them"
+                                            "You brief Dooza in plain words, from the web or your phone",
+                                            "Dooza builds the helper agents it needs and reports back",
+                                            "Each agent has its own computer and browser, private and isolated",
+                                            "Watch every step live in chat",
+                                            "$49/mo per organization, AI usage included, hard spending cap",
+                                            "Best for: small business owners who want the work done"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
@@ -480,14 +475,14 @@ export default function PerplexityComputerVsDoozaContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-900 mb-2">Think of It This Way</h4>
                                 <p className="text-blue-800">
-                                    Perplexity Computer is like a brilliant consultant who can draw on several expert models for any problem you brief them on. Dooza is like a team of specialists that someone else trains and manages for you. <strong>One gives you flexibility. The other gives you the work done.</strong>
+                                    Perplexity Computer is like a brilliant consultant who can draw on several expert models for any problem you brief them on. Dooza Crew is like a master agent that builds a small team for each job you describe, then asks before it sends or pays. <strong>One gives you flexibility. The other gives you a simple way to hand off work.</strong>
                                 </p>
                             </div>
                         </section>
 
                         {/* Section 5: Side-by-Side */}
                         <section id="side-by-side" className="scroll-mt-28">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Perplexity Computer vs Dooza: Side-by-Side</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">Perplexity Computer vs Dooza Crew: Side-by-Side</h2>
 
                             <div className="overflow-x-auto mb-8">
                                 <table className="w-full text-sm border-collapse">
@@ -495,27 +490,25 @@ export default function PerplexityComputerVsDoozaContent() {
                                         <tr className="border-b-2 border-slate-200">
                                             <th className="text-left py-3 px-4 font-bold text-slate-900">Feature</th>
                                             <th className="text-left py-3 px-4 font-bold text-cyan-700 bg-cyan-50">Perplexity Computer</th>
-                                            <th className="text-left py-3 px-4 font-bold text-primary-700 bg-primary-50">Dooza</th>
+                                            <th className="text-left py-3 px-4 font-bold text-primary-700 bg-primary-50">Dooza Crew</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {[
-                                            { feature: "Type", perplexity: "Multi-model AI agent", dooza: "AI admin assistant checked by a real person (Dooza Managed)" },
-                                            { feature: "AI Models Used", perplexity: "Several frontier models; you can choose models for subtasks", dooza: "Chosen and managed by Dooza" },
-                                            { feature: "Runs On", perplexity: "Perplexity cloud sandbox", dooza: "Cloud" },
-                                            { feature: "Who Sets Up the Work", perplexity: "You (objectives and scheduled tasks)", dooza: "Dooza engineers, with you" },
-                                            { feature: "Phone Calls", perplexity: "General-purpose agent", dooza: "Not offered" },
-                                            { feature: "Social Media", perplexity: "Possible as a task you set up", dooza: "Scheduled posting by Somi" },
-                                            { feature: "Email Management", perplexity: "Via Gmail, Outlook and other connectors", dooza: "Handled by Maily" },
-                                            { feature: "SEO Content", perplexity: "Can research & draft", dooza: "Full pipeline (Ranky)" },
-                                            { feature: "Sales Outreach", perplexity: "Tasks you design", dooza: "Handled by Stan" },
-                                            { feature: "Scheduling", perplexity: "Scheduled Tasks (hourly to monthly)", dooza: "Built in, configured for you" },
-                                            { feature: "Memory", perplexity: "Persistent across sessions", dooza: "Managed by Dooza" },
-                                            { feature: "Setup & Onboarding", perplexity: "Self-serve; dedicated support on Enterprise", dooza: "Dooza engineer scopes your pilot on a free call" },
-                                            { feature: "Customer Support", perplexity: "Help center contact; live chat for Pro", dooza: "Dooza engineers" },
-                                            { feature: "Price", perplexity: "Included in Pro (weekly usage); Max $200/mo", dooza: "Depends on product — refundable pilot (see /pricing)" },
-                                            { feature: "Credits/Limits", perplexity: "Max: 10,000 credits/mo; monthly plan credits don't roll over", dooza: "Pricing by product (see /pricing)" },
-                                            { feature: "Best For", perplexity: "Researchers, developers, power users", dooza: "Owners who want business roles handled for them" }
+                                            { feature: "Type", perplexity: "Multi-model AI agent", dooza: "Team of agents built by a master agent" },
+                                            { feature: "AI Models Used", perplexity: "Several frontier models; you can choose models for subtasks", dooza: "AI usage included, with a hard spending cap" },
+                                            { feature: "Runs On", perplexity: "Perplexity cloud sandbox", dooza: "Each agent has its own computer and browser, private and isolated" },
+                                            { feature: "Who Sets Up the Work", perplexity: "You (objectives and scheduled tasks)", dooza: "You say the job in plain words; Dooza plans it" },
+                                            { feature: "Phone Calls", perplexity: "General-purpose agent", dooza: "Yes, agents can take phone calls, included" },
+                                            { feature: "Research & Writing", perplexity: "Strong: deep research on real-time web data", dooza: "Researcher and writer agents" },
+                                            { feature: "Email", perplexity: "Via Gmail, Outlook and other connectors", dooza: "Ask for it in plain words" },
+                                            { feature: "Sales Outreach", perplexity: "Tasks you design", dooza: "Outreach agent" },
+                                            { feature: "Scheduling", perplexity: "Scheduled Tasks (hourly to monthly)", dooza: "Ask Dooza in plain words" },
+                                            { feature: "Watching the work", perplexity: "See Perplexity's help center", dooza: "Every step live in chat; staff join the same chat" },
+                                            { feature: "Approval", perplexity: "See Perplexity's help center", dooza: "Approve, Edit or Reject before Send or Pay" },
+                                            { feature: "Price", perplexity: "Pro $17/mo, Max $167/mo (both billed annually)", dooza: "Free 7 days (card required), then $49/mo per organization" },
+                                            { feature: "Credits/Limits", perplexity: "Max: 10,000 credits/mo; monthly plan credits don't roll over", dooza: "Unlimited users and agents; AI usage included, hard spending cap" },
+                                            { feature: "Best For", perplexity: "Researchers, developers, power users", dooza: "Small businesses that want a team of agents" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                                 <td className="py-3 px-4 font-medium text-slate-900">{row.feature}</td>
@@ -537,7 +530,7 @@ export default function PerplexityComputerVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Computer is no longer limited to Max. Paid consumer Pro plans include a weekly amount of Computer usage, and Enterprise Pro includes access to Computer. Max costs $200/month and includes 10,000 credits a month; unused monthly plan credits don't roll over. Prices below are from Perplexity's help center and enterprise pricing page, checked October 7, 2026.
+                                    Computer is included in paid Perplexity plans. On Perplexity&apos;s pricing page (checked October 26, 2026), Pro is $17/month billed annually with 4,000 bonus credits, and Max is $167/month billed annually (about $2,000 a year) with 10,000 monthly credits and 35,000 bonus credits. Perplexity&apos;s help center listed Max at $200/month on October 7, 2026. Unused monthly plan credits don&apos;t roll over. Enterprise prices below are from October 7, 2026.
                                 </p>
                             </div>
 
@@ -545,11 +538,12 @@ export default function PerplexityComputerVsDoozaContent() {
                                 {/* Perplexity Max Individual */}
                                 <div className="bg-cyan-50 border border-cyan-200 p-6 rounded-xl">
                                     <h3 className="font-bold text-cyan-800 mb-1">Perplexity Max</h3>
-                                    <p className="text-3xl font-bold text-cyan-600 mb-3">$200<span className="text-lg text-cyan-400">/mo or $2,000/yr</span></p>
+                                    <p className="text-3xl font-bold text-cyan-600 mb-3">$167<span className="text-lg text-cyan-400">/mo billed annually</span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
-                                            { text: "10,000 credits/month", good: true },
-                                            { text: "Pro plans also include weekly Computer usage", good: true },
+                                            { text: "10,000 monthly credits plus 35,000 bonus credits", good: true },
+                                            { text: "Pro: $17/mo billed annually, 4,000 bonus credits", good: true },
+                                            { text: "$200/mo on the October 7 help center listing", good: false },
                                             { text: "Monthly plan credits don't roll over", good: false },
                                             { text: "Spending cap defaults to $200 (adjustable up to $5,000)", good: false }
                                         ].map((item, idx) => (
@@ -567,7 +561,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     <p className="text-3xl font-bold text-cyan-600 mb-3">$325<span className="text-lg text-cyan-400">/seat/mo</span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
-                                            { text: "Or $3,250/year per seat", good: true },
+                                            { text: "Or $3,250/year per seat (October 7, 2026)", good: true },
                                             { text: "SOC 2 Type II, HIPAA, GDPR; audit logs", good: true },
                                             { text: "Enterprise Pro from $40/seat/mo ($34 annual)", good: true },
                                             { text: "Per-seat pricing", good: false }
@@ -582,14 +576,14 @@ export default function PerplexityComputerVsDoozaContent() {
 
                                 {/* Dooza */}
                                 <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
-                                    <h3 className="font-bold text-green-800 mb-1">Dooza</h3>
-                                    <p className="text-3xl font-bold text-green-600 mb-3">14-day<span className="text-lg text-green-400"> refundable pilot</span></p>
+                                    <h3 className="font-bold text-green-800 mb-1">Dooza Crew (our top pick)</h3>
+                                    <p className="text-3xl font-bold text-green-600 mb-3">$49<span className="text-lg text-green-400">/mo per organization</span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
-                                            { text: "Six ready-made AI employees", good: true },
-                                            { text: "Set up by Dooza engineers", good: true },
-                                            { text: "Pricing by product — see /pricing", good: true },
-                                            { text: "100% refund within 14 days", good: true }
+                                            { text: "Free for 7 days (card required)", good: true },
+                                            { text: "Unlimited users and agents", good: true },
+                                            { text: "AI usage included, hard spending cap", good: true },
+                                            { text: "Cancel before day 8 and you pay nothing", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -603,7 +597,7 @@ export default function PerplexityComputerVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    Perplexity gives you a powerful agent at published prices, and you direct the work. Dooza starts with a <strong className="text-white">refundable pilot — 100% refund within 14 days</strong> — with 5 AI employees for your email, social media, SEO, sales, and legal documents, configured for you by Dooza engineers.
+                                    Perplexity gives you a powerful agent at published prices, and you direct the work and manage credits. Dooza Crew is <strong className="text-white">$49 a month per organization after 7 free days</strong>, with unlimited users and agents, AI usage included and a hard spending cap.
                                 </p>
                             </div>
                         </section>
@@ -617,7 +611,7 @@ export default function PerplexityComputerVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    Perplexity publishes typical credit ranges per task type in its help center (checked October 7, 2026). Perplexity notes your actual usage may differ.
+                                    Perplexity publishes typical credit ranges per task type in its help center (checked October 7, 2026; not re-read on October 26). Perplexity notes your actual usage may differ.
                                 </p>
                             </div>
 
@@ -641,10 +635,10 @@ export default function PerplexityComputerVsDoozaContent() {
                             <div className="bg-red-50 border border-red-200 p-6 rounded-xl mb-8">
                                 <h4 className="font-bold text-red-900 mb-3">What This Means in Practice</h4>
                                 <div className="space-y-2 text-sm text-red-800">
-                                    <p>Max includes 10,000 credits a month. By Perplexity&apos;s own ranges, that is roughly 10 to 28 Complex tasks, or one to four Mega tasks.</p>
+                                    <p>Max includes 10,000 monthly credits (plus 35,000 bonus credits on the October 26 pricing page). By Perplexity&apos;s own ranges, the 10,000 monthly credits are roughly 10 to 28 Complex tasks, or one to four Mega tasks.</p>
                                     <p>Unused monthly plan credits don&apos;t roll over; credits you buy stay in your account until used.</p>
                                     <p>Auto-refill is off by default. The monthly spending cap defaults to $200, and you can set it anywhere up to $5,000.</p>
-                                    <p className="font-bold">Dooza pricing depends on the product (see /pricing), and custom Dooza agents start with a refundable pilot.</p>
+                                    <p className="font-bold">Dooza Crew has no credits to count: $49/mo per organization, AI usage included, with a hard spending cap.</p>
                                 </div>
                             </div>
 
@@ -689,14 +683,15 @@ export default function PerplexityComputerVsDoozaContent() {
 
                                 {/* Use Dooza */}
                                 <div className="border-2 border-green-300 p-6 rounded-xl bg-green-50/30">
-                                    <h3 className="font-bold text-green-700 mb-4 text-lg">Use Dooza if you...</h3>
+                                    <h3 className="font-bold text-green-700 mb-4 text-lg">Use Dooza Crew if you...</h3>
                                     <div className="space-y-3">
                                         {[
-                                            "Run a business that needs AI handling emails, social, SEO, and sales",
-                                            "Want those roles set up and run for you by Dooza engineers",
+                                            "Run a small business and want to brief a team in plain words",
+                                            "Want a researcher, a writer or an outreach agent built for the job",
+                                            "Want agents that can take phone calls",
                                             "Would rather not design tasks or manage credits",
-                                            "Want your approval on anything sensitive",
-                                            "Want to start with a refundable pilot (100% refund within 14 days)"
+                                            "Want to approve before anything is sent or paid",
+                                            "Want to try it free for 7 days (card required)"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />
@@ -710,7 +705,7 @@ export default function PerplexityComputerVsDoozaContent() {
                             <div className="bg-blue-50 border border-blue-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-blue-900 mb-2">Real Talk</h4>
                                 <p className="text-blue-800">
-                                    If you're a tech-savvy power user who wants a multi-model agent for ambitious projects, Perplexity Computer is genuinely impressive. If you're a business owner who wants specific roles handled for you while you focus on growth, <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Dooza is built for that</Link>.
+                                    If you're a tech-savvy power user who wants a multi-model agent for ambitious projects, Perplexity Computer is genuinely impressive. If you're a business owner who wants specific roles handled for you while you focus on growth, <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Dooza Crew is built for that</Link>.
                                 </p>
                             </div>
                         </section>
@@ -724,7 +719,7 @@ export default function PerplexityComputerVsDoozaContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    You don't have to choose one. Use Perplexity Computer for research and projects you direct, and Dooza for the business roles you want handled for you.
+                                    You don't have to choose one. Use Perplexity Computer for research and projects you direct, and Dooza Crew for the jobs you want to hand off in plain words.
                                 </p>
                             </div>
 
@@ -733,17 +728,17 @@ export default function PerplexityComputerVsDoozaContent() {
                                     {
                                         scenario: "Market Research",
                                         perplexity: "Use Computer to run deep competitive analysis with real-time data",
-                                        dooza: "Dooza's Ranky turns research into SEO blog posts and publishes them weekly"
+                                        dooza: "Ask Dooza for a writer agent to turn the research into a draft you review in chat"
                                     },
                                     {
                                         scenario: "Product Launch",
                                         perplexity: "Computer builds landing pages, generates marketing copy, creates visual assets",
-                                        dooza: "Somi posts launch content to your connected social platforms. Maily handles inbound inquiries."
+                                        dooza: "Ask Dooza for an outreach agent to contact your list, and approve each send in chat"
                                     },
                                     {
                                         scenario: "Lead Generation",
                                         perplexity: "Computer researches prospects, analyzes market data, builds targeted lists",
-                                        dooza: "Stan sends outreach, qualifies leads, and books meetings on your calendar"
+                                        dooza: "Dooza builds a researcher and an outreach agent; agents can also take phone calls"
                                     }
                                 ].map((item, idx) => (
                                     <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden">
@@ -777,19 +772,18 @@ export default function PerplexityComputerVsDoozaContent() {
                                     Perplexity Computer is one of the most technically ambitious AI agents available. Multi-model routing, persistent memory, 400+ connectors and Scheduled Tasks make it a strong tool for researchers, developers, and power users.
                                 </p>
                                 <p>
-                                    If you want <strong>specific business roles handled for you</strong>, without designing tasks or managing credits yourself, Dooza is the better fit, and custom Dooza agents start with a refundable pilot — 100% refund within 14 days.
-                                </p>
+                                    If you are a small business owner who wants to <strong>hand off jobs in plain words</strong>, without designing tasks or managing credits, Dooza Crew is our top pick: free for 7 days (card required), then $49 a month per organization.</p>
                             </div>
 
                             <div className="bg-gradient-to-br from-primary-50 to-green-50 border-2 border-primary-200 p-8 rounded-xl mb-8">
-                                <h3 className="font-bold text-slate-900 text-xl mb-4">Why Businesses Choose Dooza Over Perplexity Computer</h3>
+                                <h3 className="font-bold text-slate-900 text-xl mb-4">Why Small Businesses Choose Dooza Crew</h3>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
-                                        { icon: DollarSign, text: "Refundable pilot — 100% refund within 14 days" },
-                                        { icon: Users, text: "5 specialized AI employees, not one general agent" },
-                                        { icon: Repeat, text: "Work designed and run for you" },
-                                        { icon: HeartHandshake, text: "A Dooza engineer scopes your pilot and sets it up for you" },
-                                        { icon: Brain, text: "Purpose-built for business — not research" }
+                                        { icon: DollarSign, text: "$49/mo per organization, 7 days free (card required)" },
+                                        { icon: Users, text: "Unlimited users and agents" },
+                                        { icon: Repeat, text: "AI usage included, with a hard spending cap" },
+                                        { icon: HeartHandshake, text: "Asks you to Approve, Edit or Reject before Send or Pay" },
+                                        { icon: Brain, text: "Agents can take phone calls, included" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-start gap-3">
                                             <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 shrink-0">
@@ -803,20 +797,13 @@ export default function PerplexityComputerVsDoozaContent() {
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href={getProductSignupUrl('workforce')}
+                                    href={CREW_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Start your pilot
+                                    Try Dooza Crew free for 7 days
                                     <ArrowRight className="w-5 h-5" />
-                                </a>
-                                <a
-                                    href={CAL_BOOKING_URL}
-                                    onClick={handleAction}
-                                    className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-full font-bold text-lg border-2 border-primary-200 hover:border-primary-400 transition-all"
-                                >
-                                    Book a free pilot call
                                 </a>
                             </div>
                         </section>
