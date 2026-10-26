@@ -222,6 +222,10 @@ export default function AiAppointmentSetterContent() {
                                     This post breaks down the real numbers. We'll compare AI appointment setters against agencies, in-house SDRs, and the DIY approach — so you can see which one actually books more meetings per dollar.
                                 </p>
 
+                                <p className="text-lg leading-relaxed">
+                                    <strong>Our top pick for a small business that wants an AI sales team without stitching tools together: <a href="https://crew.dooza.ai/?utm_source=dooza&utm_medium=blog&utm_content=ai-appointment-setter-body" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a> (our product).</strong> You tell Dooza, your master agent, the job in plain words ("find 30 dental clinics in Austin, research each one and draft a first email"), and it builds the helper agents it needs: a researcher, a writer, an outreach agent. Every agent works in its own private browser and workspace, and before it sends or pays for anything it asks you to Approve, Edit or Reject in chat. It is $49 a month for the whole organization, AI usage included with a hard spending cap, after a 7-day free trial (card required). <a href="https://crew.dooza.ai/?utm_source=dooza&utm_medium=blog&utm_content=ai-appointment-setter-body" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free for 7 days</a>.
+                                </p>
+
                                 <div className="my-8">
                                     <YouTubeEmbed
                                         videoId="6Ait5R-3-lI"
