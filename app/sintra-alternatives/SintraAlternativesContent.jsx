@@ -30,7 +30,7 @@ const alternatives = [
         tagline: 'Our product, top pick: a hosted team of AI agents for small businesses',
         bestFor: 'Small businesses that want a team of AI agents doing the work, at one flat price',
         price: '$49/mo per organization (unlimited users and agents)',
-        trial: '7 days free; cancel before day 8 and you pay nothing (card required)',
+        trial: '7 days free, no card needed',
         agents: 'You brief a lead agent in plain words from the web or phone; it builds helper agents (researcher, writer, outreach agent), splits the job, and saves work to your files',
         integrations: 'Every agent has its own computer and browser in a private, isolated workspace',
         creditSystem: false,
@@ -43,7 +43,7 @@ const alternatives = [
             'You stay in control: before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat.',
             'Real tools: every agent has its own computer and browser in a private, isolated workspace, and agents take phone calls, included.',
             'Works with your team: your staff join the same chat and watch every step live.',
-            'Risk-free start: 7 days free; cancel before day 8 and you pay nothing. (card required)',
+            'Risk-free start: 7 days free, no card needed.',
         ],
         pros: [
             'One flat price for the whole organization: no per-seat fees',
@@ -205,7 +205,7 @@ const listedAlternatives = [...alternatives].sort((a, b) => a.rank - b.rank);
 
 // Sintra X pricing checked on sintra.ai/pricing, October 7, 2026. Sintra no longer sells single-helper plans.
 const sintraCostRows = [
-    { plan: 'Dooza Crew (ours, top pick)', shown: '$49/mo per organization', upfront: '$0 for the first 7 days (card required)', credits: 'AI usage included, hard spending cap', dooza: true },
+    { plan: 'Dooza Crew (ours, top pick)', shown: '$49/mo per organization', upfront: '$0 for the first 7 days (no card needed)', credits: 'AI usage included, hard spending cap', dooza: true },
     { plan: 'Sintra X, 1-month plan', shown: '$48.50/mo (list $97)', upfront: '$48.50', credits: '250 per month' },
     { plan: 'Sintra X, 3-month plan', shown: '$23.60/mo', upfront: '$70.80', credits: '250 per month' },
     { plan: 'Sintra X, 12-month plan', shown: '$15.60/mo', upfront: '$187.20', credits: '250 per month' },

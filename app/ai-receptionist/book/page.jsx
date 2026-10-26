@@ -10,7 +10,7 @@ const pageUrl = `${SITE_URL}/ai-receptionist/book`;
 export const metadata = {
     title: { absolute: 'Start Dooza Crew: Phone Calls Included | Dooza' },
     description:
-        'Phone calls are part of Dooza Crew. $49 per organization per month after a 7-day free trial (card required).',
+        'Phone calls are part of Dooza Crew. $49 per organization per month after a 7-day free trial (no card needed).',
     alternates: { canonical: pageUrl },
     robots: { index: false, follow: true },
     openGraph: {

@@ -122,7 +122,7 @@ const alternatives = [
         href: '/ai-receptionist',
         internal: true,
         what: 'AI agents (a lead agent plus helper agents) you chat with on web or phone. They browse the web, write files in their own workspace and take phone calls, and they ask you in chat before they send or pay. Run by us, the company that publishes this page.',
-        price: '$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
+        price: '$49/month per organization after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.',
         bestFor: 'Teams that want AI agents that do more than answer calls, with the phone included in one plan.',
     },
     {
@@ -187,7 +187,7 @@ const faqItems = [
     },
     {
         question: 'How does Dooza Crew pricing compare with Smith.ai?',
-        answer: 'Dooza Crew costs $49 per organization per month after a 7-day free trial (card required), with phone calls included in your Crew plan. Smith.ai’s human-first plans start at $300 a month for 30 calls. Smith.ai’s AI receptionist is free for 25 calls a month and its Pro plan starts at $150 a month at $2.00 per call. Dooza Crew agents are AI, not a human receptionist.',
+        answer: 'Dooza Crew costs $49 per organization per month after a 7-day free trial (no card needed), with phone calls included in your Crew plan. Smith.ai’s human-first plans start at $300 a month for 30 calls. Smith.ai’s AI receptionist is free for 25 calls a month and its Pro plan starts at $150 a month at $2.00 per call. Dooza Crew agents are AI, not a human receptionist.',
     },
     {
         question: 'Does Dooza Crew take phone calls?',
@@ -195,7 +195,7 @@ const faqItems = [
     },
     {
         question: 'Is there a free trial?',
-        answer: 'Dooza Crew has a 7-day free trial (card required), then $49 per organization per month. Check each other vendor’s terms on its own site.',
+        answer: 'Dooza Crew has a 7-day free trial (no card needed), then $49 per organization per month. Check each other vendor’s terms on its own site.',
     },
 ];
 
@@ -247,7 +247,7 @@ const schemas = [
             name: 'Dooza Crew, monthly per organization',
             price: '49',
             priceCurrency: 'USD',
-            description: '$49 per organization per month after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
+            description: '$49 per organization per month after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -405,7 +405,7 @@ export default function SmithAiAlternativesPage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
-                            <p className="mt-3 text-slate-300">$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.</p>
+                            <p className="mt-3 text-slate-300">$49/month per organization after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
                                 <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>

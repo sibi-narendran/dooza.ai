@@ -44,11 +44,11 @@ export const metadata = {
 const faqData = [
     {
         question: 'What are the best Marblism alternatives in 2026?',
-        answer: 'For a small business, our top pick is Dooza Crew (our product): you tell Dooza, your master agent, the job in plain words and it builds the helper agents it needs; $49/month per organization with unlimited users and agents, AI usage included with a hard spending cap, and 7 days free (card required). The other options are Sintra AI (largest agent roster with 12+ helpers), Motion (project management with AI), NoimosAI (marketing-focused AI agent), Lindy AI (self-serve AI teammate in Slack), Relevance AI (enterprise scale), and Cubeo AI (no-code builder with a free plan). The best choice depends on whether you prioritize price, setup effort, integrations, or agent variety. Comparing against Lindy instead? See dooza.ai/lindy-alternatives for Lindy pricing and 8 Lindy alternatives.',
+        answer: 'For a small business, our top pick is Dooza Crew (our product): you tell Dooza, your master agent, the job in plain words and it builds the helper agents it needs; $49/month per organization with unlimited users and agents, AI usage included with a hard spending cap, and 7 days free (no card needed). The other options are Sintra AI (largest agent roster with 12+ helpers), Motion (project management with AI), NoimosAI (marketing-focused AI agent), Lindy AI (self-serve AI teammate in Slack), Relevance AI (enterprise scale), and Cubeo AI (no-code builder with a free plan). The best choice depends on whether you prioritize price, setup effort, integrations, or agent variety. Comparing against Lindy instead? See dooza.ai/lindy-alternatives for Lindy pricing and 8 Lindy alternatives.',
     },
     {
         question: 'Is Dooza better than Marblism?',
-        answer: 'It depends on how you want to work. Dooza Crew is our product and our top pick for a small business: you tell Dooza, your master agent, the job in plain words from the web or your phone; it plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back, and you watch every step live in chat. Each agent has its own computer and browser in a private, isolated workspace. It is free for 7 days (card required), then $49/month per organization (unlimited users and agents) with AI usage included and a hard spending cap; cancel before day 8 and you pay nothing. Marblism is self-serve and costs less: $24/mo billed yearly or $44/mo monthly for all 7 AI employees, 50 hours of work, and unlimited team members (checked October 7, 2026). If you want the lowest-cost self-serve option, Marblism is the better pick.',
+        answer: 'It depends on how you want to work. Dooza Crew is our product and our top pick for a small business: you tell Dooza, your master agent, the job in plain words from the web or your phone; it plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back, and you watch every step live in chat. Each agent has its own computer and browser in a private, isolated workspace. It is free for 7 days (no card needed), then $49/month per organization (unlimited users and agents) with AI usage included and a hard spending cap, no card needed. Marblism is self-serve and costs less: $24/mo billed yearly or $44/mo monthly for all 7 AI employees, 50 hours of work, and unlimited team members (checked October 7, 2026). If you want the lowest-cost self-serve option, Marblism is the better pick.',
     },
     {
         question: 'Why do people look for Marblism alternatives?',
@@ -60,7 +60,7 @@ const faqData = [
     },
     {
         question: 'Is Marblism worth it?',
-        answer: 'For a self-serve user who wants many AI employees at a low price, Marblism is good value: all 7 AI employees, 50 hours of work, and unlimited team members from $24/month billed yearly. If you do not have time to set up and tune them yourself, consider Dooza Crew: you describe the job in plain words, the master agent builds the helper agents, and you watch every step live in chat. It is free for 7 days (card required), then $49/month per organization with AI usage included and a hard spending cap.',
+        answer: 'For a self-serve user who wants many AI employees at a low price, Marblism is good value: all 7 AI employees, 50 hours of work, and unlimited team members from $24/month billed yearly. If you do not have time to set up and tune them yourself, consider Dooza Crew: you describe the job in plain words, the master agent builds the helper agents, and you watch every step live in chat. It is free for 7 days (no card needed), then $49/month per organization with AI usage included and a hard spending cap.',
     },
     {
         question: 'Which Marblism alternative has the most integrations?',
@@ -68,7 +68,7 @@ const faqData = [
     },
     {
         question: 'Is there a free alternative to Marblism?',
-        answer: 'Cubeo AI has a free plan with 100 credits a month, and Lindy AI gives $50 in free credits that last 7 days. Relevance AI\'s pricing page now lists only an Enterprise plan through sales (checked October 7, 2026). Dooza Crew is not free after the trial: it is free for 7 days (card required), then $49/month per organization. Cancel before day 8 and you pay nothing.',
+        answer: 'Cubeo AI has a free plan with 100 credits a month, and Lindy AI gives $50 in free credits that last 7 days. Relevance AI\'s pricing page now lists only an Enterprise plan through sales (checked October 7, 2026). Dooza Crew is not free after the trial: it is free for 7 days (no card needed), then $49/month per organization. No card needed.',
     },
     {
         question: 'What is the cheapest Marblism alternative?',
@@ -76,7 +76,7 @@ const faqData = [
     },
     {
         question: 'Does Marblism have a free trial?',
-        answer: 'Marblism\'s pricing page does not mention a free trial but offers a 7-day money-back guarantee (checked October 7, 2026); check marblism.com/pricing for current terms. Alternatives offer different ways to evaluate: Dooza Crew is free for 7 days (card required; cancel before day 8 and you pay nothing), Motion offers a free trial, and Lindy AI gives $50 in free credits that last 7 days (checked October 7, 2026).',
+        answer: 'Marblism\'s pricing page does not mention a free trial but offers a 7-day money-back guarantee (checked October 7, 2026); check marblism.com/pricing for current terms. Alternatives offer different ways to evaluate: Dooza Crew is free for 7 days (no card needed), Motion offers a free trial, and Lindy AI gives $50 in free credits that last 7 days (checked October 7, 2026).',
     },
     {
         question: 'What is the best Marblism alternative for a small service business?',

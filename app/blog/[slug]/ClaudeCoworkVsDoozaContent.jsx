@@ -51,7 +51,7 @@ const faqData = [
     },
     {
         question: "What is a good Claude Cowork alternative for a small business?",
-        answer: "Our top pick is Dooza Crew (our product). You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back. Each agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. It is $49/month per organization after a 7-day free trial (card required). If you are a knowledge worker who likes to direct a single agent yourself, Claude Cowork fits that better."
+        answer: "Our top pick is Dooza Crew (our product). You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back. Each agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. It is $49/month per organization after a 7-day free trial (no card needed). If you are a knowledge worker who likes to direct a single agent yourself, Claude Cowork fits that better."
     },
     {
         question: "How is Dooza Crew different from Claude Cowork?",
@@ -63,15 +63,15 @@ const faqData = [
     },
     {
         question: "How does pricing compare: Claude Cowork or Dooza Crew?",
-        answer: "Per claude.com/pricing (checked October 7, 2026), Claude Pro is $17/month billed annually or $20 billed monthly, and Max starts at $100/month ($100 or $200 tiers, with 5x or 20x Pro's usage). Usage limits apply on every plan, and Anthropic notes Cowork uses limits faster than chat. Dooza Crew is free for 7 days (card required), then $49/month per organization with unlimited users and agents, AI usage included and a hard spending cap. Cancel before day 8 and you pay nothing."
+        answer: "Per claude.com/pricing (checked October 7, 2026), Claude Pro is $17/month billed annually or $20 billed monthly, and Max starts at $100/month ($100 or $200 tiers, with 5x or 20x Pro's usage). Usage limits apply on every plan, and Anthropic notes Cowork uses limits faster than chat. Dooza Crew is free for 7 days (no card needed), then $49/month per organization with unlimited users and agents, AI usage included and a hard spending cap. No card needed."
     },
     {
         question: "Does Dooza Crew handle phone calls?",
-        answer: "Yes. Crew agents can take phone calls, and it is included in your plan, so there is no separate phone service to buy. Dooza Crew is $49 per organization per month after a 7-day free trial (card required)."
+        answer: "Yes. Crew agents can take phone calls, and it is included in your plan, so there is no separate phone service to buy. Dooza Crew is $49 per organization per month after a 7-day free trial (no card needed)."
     },
     {
         question: "Can I use both Claude Cowork and Dooza Crew?",
-        answer: "Yes. Claude Cowork works well for your own research, documents and recurring knowledge-work tasks. Dooza Crew covers jobs you want a team of agents to take on, such as research, writing and outreach, with your approval before anything is sent or paid. They complement each other, and Crew has a 7-day free trial (card required), so you can test it next to Cowork."
+        answer: "Yes. Claude Cowork works well for your own research, documents and recurring knowledge-work tasks. Dooza Crew covers jobs you want a team of agents to take on, such as research, writing and outreach, with your approval before anything is sent or paid. They complement each other, and Crew has a 7-day free trial (no card needed), so you can test it next to Cowork."
     },
     {
         question: "Does Dooza Crew require technical skills?",
@@ -239,7 +239,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                         <section id="introduction" className="scroll-mt-28">
                             <div className="prose md:prose-lg text-slate-600">
                                 <p className="text-xl leading-relaxed font-medium text-slate-700">
-                                    <strong>Short answer:</strong> Claude Cowork is excellent if you like to direct a single agent yourself. For a small business that wants a team of agents to take jobs described in plain words, we think <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a> is the better pick: free for 7 days (card required), then $49 a month per organization. Dooza Crew is our product, so weigh that.
+                                    <strong>Short answer:</strong> Claude Cowork is excellent if you like to direct a single agent yourself. For a small business that wants a team of agents to take jobs described in plain words, we think <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a> is the better pick: free for 7 days (no card needed), then $49 a month per organization. Dooza Crew is our product, so weigh that.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     Anthropic's Claude Cowork turns Claude into an agent that can open browsers, organize files, and complete multi-step knowledge-work tasks. Since October 6, 2026, new Cowork tasks on Pro and Max plans run in the cloud, and since September 16, 2026 Cowork and chat have been merging into one Claude. It's impressive technology.
@@ -348,7 +348,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans the job, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back. Each agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. Agents can take phone calls, included.
                                 </p>
                                 <p>
-                                    Crew is the main product from <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>. It costs <strong>$49 a month per organization</strong> (unlimited users and agents), with AI usage included and a hard spending cap. It starts free for 7 days (card required). Cancel before day 8 and you pay nothing.
+                                    Crew is the main product from <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>. It costs <strong>$49 a month per organization</strong> (unlimited users and agents), with AI usage included and a hard spending cap. It starts free for 7 days (no card needed). No card needed.
                                 </p>
                             </div>
 
@@ -359,7 +359,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     { icon: ShieldCheck, title: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat." },
                                     { icon: Phone, title: "Phone calls", desc: "Agents can take phone calls, included in the plan." },
                                     { icon: DollarSign, title: "One flat price", desc: "$49/mo per organization, unlimited users and agents, AI usage included with a hard spending cap." },
-                                    { icon: Timer, title: "Risk-free start", desc: "7 days free (card required). Cancel before day 8 and you pay nothing." }
+                                    { icon: Timer, title: "Risk-free start", desc: "7 days free (no card needed). No card needed." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-3">
@@ -442,7 +442,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             "Each agent has its own computer and browser, private and isolated",
                                             "Watch every step live in chat",
                                             "Agents can take phone calls, included",
-                                            "$49/mo per organization, 7 days free (card required)",
+                                            "$49/mo per organization, 7 days free (no card needed)",
                                             "Asks you to Approve, Edit or Reject before Send or Pay"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
@@ -489,7 +489,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             { feature: "Approval", cowork: "See Anthropic's documentation", dooza: "Approve, Edit or Reject before Send or Pay" },
                                             { feature: "Workspace", cowork: "Your desktop, or the cloud for new Pro/Max tasks", dooza: "Each agent has its own computer and browser, private and isolated" },
                                             { feature: "Technical Skill", cowork: "Low (you manage tasks)", dooza: "None (plain words)" },
-                                            { feature: "Starting Price", cowork: "Pro $17/mo annual or $20 monthly (checked Oct 7, 2026)", dooza: "Free 7 days (card required), then $49/mo per organization" },
+                                            { feature: "Starting Price", cowork: "Pro $17/mo annual or $20 monthly (checked Oct 7, 2026)", dooza: "Free 7 days (no card needed), then $49/mo per organization" },
                                             { feature: "Higher Usage", cowork: "Max $100 or $200/mo (checked Oct 7, 2026)", dooza: "AI usage included with a hard spending cap" },
                                             { feature: "Best For", cowork: "People who want to direct their own agent", dooza: "Small businesses that want a team of agents" }
                                         ].map((row, idx) => (
@@ -562,8 +562,8 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     <p className="text-3xl font-bold text-green-600 mb-3">$49<span className="text-lg text-green-400">/mo per organization</span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
-                                            { text: "Free for 7 days (card required)", good: true },
-                                            { text: "Cancel before day 8 and you pay nothing", good: true },
+                                            { text: "Free for 7 days (no card needed)", good: true },
+                                            { text: "No card needed", good: true },
                                             { text: "Unlimited users and agents", good: true },
                                             { text: "AI usage included, with a hard spending cap", good: true }
                                         ].map((item, idx) => (
@@ -622,7 +622,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             "Want a researcher, a writer or an outreach agent built for the job",
                                             "Want agents that can take phone calls",
                                             "Want to approve before anything is sent or paid",
-                                            "Want to try it free for 7 days (card required) and cancel any time before day 8"
+                                            "Want to try it free for 7 days (no card needed) and cancel any time before day 8"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />
@@ -713,7 +713,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     {[
                                         { icon: Repeat, text: "Brief it in plain words; Dooza builds the helper agents" },
                                         { icon: Monitor, text: "Each agent has its own private computer and browser" },
-                                        { icon: DollarSign, text: "$49/mo per organization, 7 days free (card required)" },
+                                        { icon: DollarSign, text: "$49/mo per organization, 7 days free (no card needed)" },
                                         { icon: Phone, text: "Agents can take phone calls, included" },
                                         { icon: Brain, text: "Approve, Edit or Reject before Send or Pay" }
                                     ].map((item, idx) => (
@@ -737,7 +737,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     Try Dooza Crew free for 7 days
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
-                                <p className="text-sm text-slate-500 mt-3">Card required. Cancel before day 8 and you pay nothing. Then $49/mo per organization.</p>
+                                <p className="text-sm text-slate-500 mt-3">No card needed. Then $49/mo per organization.</p>
                             </div>
                         </section>
 

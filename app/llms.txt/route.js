@@ -252,7 +252,7 @@ const productPages = [
     {
         title: 'Dooza Crew (self-serve AI agent team)',
         url: 'https://crew.dooza.ai/?utm_source=llms&utm_medium=aeo',
-        description: 'Self-serve AI agent team: a master agent plus helper agents it creates and briefs, each user\'s agents in their own gVisor sandbox with their own headless browser and files, managed from a private chat app on web or phone. 7-day free trial (card required), then $49/month per organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap.',
+        description: 'Self-serve AI agent team: a master agent plus helper agents it creates and briefs, each user\'s agents in their own gVisor sandbox with their own headless browser and files, managed from a private chat app on web or phone. 7-day free trial (no card needed), then $49/month per organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap.',
     },
     {
         title: 'Dooza Custom AI Agents (AI agentic platform)',
@@ -524,7 +524,7 @@ export async function GET() {
         `RSS: ${SITE_URL}/rss.xml`,
         '',
         '## Offers and trials',
-        '- Dooza Crew (self-serve AI agent team, https://crew.dooza.ai): 7-day free trial (card required), then $49/month per organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap.',
+        '- Dooza Crew (self-serve AI agent team, https://crew.dooza.ai): 7-day free trial (no card needed), then $49/month per organization (unlimited users and agents, no per-seat fee), with AI usage included and a hard spending cap.',
         '- Dooza Managed (AI admin assistant checked by a real person): first 7 days free, then $200/month.',
         '- Phone calls: included in Dooza Crew (Crew agents take phone calls too); no separate phone service.',
         '- Custom AI agents start with a paid, refundable pilot: 100% refund within 14 days. The 30-minute call to scope it is free.',

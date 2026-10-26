@@ -38,7 +38,7 @@ const alternatives = [
         tagline: 'Our product, top pick: a hosted team of AI agents for small businesses',
         bestFor: 'Small businesses, founders, and lean teams that want a team of AI agents doing the work rather than another platform to run',
         price: '$49/mo per organization (unlimited users and agents)',
-        trial: '7 days free; cancel before day 8 and you pay nothing (card required)',
+        trial: '7 days free, no card needed',
         type: 'Hosted team of AI agents',
         doesWork: true,
         highlight: true,
@@ -50,7 +50,7 @@ const alternatives = [
             'You stay in control: before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat.',
             'Real tools: every agent has its own computer and browser in a private, isolated workspace, and agents take phone calls, included.',
             'Works with your team: your staff join the same chat and watch every step live.',
-            'Risk-free start: 7 days free; cancel before day 8 and you pay nothing. (card required)',
+            'Risk-free start: 7 days free, no card needed.',
         ],
         pros: [
             'One flat price for the whole organization: no per-seat fees',

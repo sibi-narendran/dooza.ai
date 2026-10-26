@@ -25,7 +25,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'crew' }) {
                 </div>
                 <p className="mt-5 text-sm text-slate-600">
                     {offer === 'receptionist' ? (
-                        <>Or start now: <a href={crewSignupUrl(`strip-${source}`)} data-offer="crew" data-source={source} className="font-semibold text-primary-700 underline">Dooza Crew</a>, $49 per organization per month after a 7-day free trial (card required).</>
+                        <>Or start now: <a href={crewSignupUrl(`strip-${source}`)} data-offer="crew" data-source={source} className="font-semibold text-primary-700 underline">Dooza Crew</a>, $49 per organization per month after a 7-day free trial (no card needed).</>
                     ) : offer === 'support' ? (
                         <>Or start now: <a href={supportPay(source)} data-offer="support" data-source={source} className="font-semibold text-primary-700 underline">Dooza AI customer support</a>, 14-day free trial (card at signup), then $300/month for up to 250 customer messages. <a href="/customer-support-automation-agency" className="underline">How it works</a>.</>
                     ) : offer === 'notary-renewal' ? (

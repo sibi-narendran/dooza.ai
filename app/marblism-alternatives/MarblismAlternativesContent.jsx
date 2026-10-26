@@ -30,7 +30,7 @@ const alternatives = [
         tagline: 'Our product, top pick: a hosted team of AI agents for small businesses',
         bestFor: 'Small businesses that want a team of AI agents doing the work, at one flat price',
         price: '$49/mo per organization (unlimited users and agents)',
-        trial: '7 days free; cancel before day 8 and you pay nothing (card required)',
+        trial: '7 days free, no card needed',
         agents: 'You tell Dooza, your master agent, the job in plain words from the web or your phone; it plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back',
         integrations: 'Every agent has its own computer and browser in a private, isolated workspace',
         creditSystem: false,
@@ -42,7 +42,7 @@ const alternatives = [
             'You stay in control: before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat.',
             'Real tools: every agent has its own computer and browser in a private, isolated workspace, and agents take phone calls, included.',
             'Works with your team: your staff join the same chat and watch every step live.',
-            'Risk-free start: 7 days free; cancel before day 8 and you pay nothing. (card required)',
+            'Risk-free start: 7 days free, no card needed.',
         ],
         pros: [
             'One flat price for the whole organization: no per-seat fees',
@@ -201,7 +201,7 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative (our top pick)', pick: 'Dooza Crew', reason: 'One flat $49/mo per organization with unlimited users and agents, AI usage included with a hard spending cap, and it asks you to Approve, Edit or Reject before it clicks Send or Pay; 7 days free (card required)' },
+    { need: 'Best overall alternative (our top pick)', pick: 'Dooza Crew', reason: 'One flat $49/mo per organization with unlimited users and agents, AI usage included with a hard spending cap, and it asks you to Approve, Edit or Reject before it clicks Send or Pay; 7 days free (no card needed)' },
     { need: 'Most AI agents', pick: 'Sintra AI', reason: '12+ named helpers that work together; 250 credits a month on every plan, with paid top-ups' },
     { need: 'AI teammate in Slack', pick: 'Lindy AI', reason: '1,000+ integrations (1,500+ on its pricing page), 40+ skills, setup in about 2 minutes, per Lindy' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Canva and Autodesk case studies, multi-agent workforces, 2,000+ integrations. Pricing through sales' },
@@ -256,7 +256,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                             </p>
 
                             <p id="short-answer" className="hero-entrance hero-delay-3 text-base text-slate-700 mb-8 max-w-2xl mx-auto text-left sm:text-center">
-                                <strong>Short answer:</strong> for a small business, our top pick is <a href={crewSignupUrl('marblism_alt_short')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> (our product): you tell Dooza, your master agent, the job in plain words from the web or your phone; it plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back, and you watch every step live in chat. It is free for 7 days (card required), then $49/month per organization (unlimited users and agents, no per-seat fee) with AI usage included and a hard spending cap. Cancel before day 8 and you pay nothing. Keep Marblism if you want many AI employees cheaply and will run them yourself. If you mainly need missed calls answered, <a href={crewSignupUrl('marblism-alternatives-calls')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> agents take phone calls too, included in the plan, so there is no separate phone service to buy.
+                                <strong>Short answer:</strong> for a small business, our top pick is <a href={crewSignupUrl('marblism_alt_short')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> (our product): you tell Dooza, your master agent, the job in plain words from the web or your phone; it plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back, and you watch every step live in chat. It is free for 7 days (no card needed), then $49/month per organization (unlimited users and agents, no per-seat fee) with AI usage included and a hard spending cap. No card needed. Keep Marblism if you want many AI employees cheaply and will run them yourself. If you mainly need missed calls answered, <a href={crewSignupUrl('marblism-alternatives-calls')} data-offer="crew" className="font-semibold text-primary-700 underline">Dooza Crew</a> agents take phone calls too, included in the plan, so there is no separate phone service to buy.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
@@ -516,7 +516,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-base text-slate-400 mt-8 max-w-3xl mx-auto text-center leading-relaxed">
-                                For a self-serve user who wants many AI employees at a low price, Marblism is good value. Dooza Crew fits when you would rather describe the job than set up each employee: $49/month per organization after 7 free days (card required), with AI usage included and a hard spending cap. See <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
+                                For a self-serve user who wants many AI employees at a low price, Marblism is good value. Dooza Crew fits when you would rather describe the job than set up each employee: $49/month per organization after 7 free days (no card needed), with AI usage included and a hard spending cap. See <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
                             </p>
                         </ScrollReveal>
                     </div>

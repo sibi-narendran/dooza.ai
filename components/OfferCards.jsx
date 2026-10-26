@@ -31,7 +31,7 @@ const OFFERS = [
         tagline: 'AI agents you chat with on web or phone. Phone calls are included, so there is no separate phone service to buy.',
         price: '$49',
         per: '/month per organization',
-        terms: '7-day free trial (card required), then $49 per organization per month.',
+        terms: '7-day free trial (no card needed), then $49 per organization per month.',
         cta: 'Start 7 days free',
         points: [
             'A lead agent plus helper agents you chat with on web or phone',
@@ -40,7 +40,7 @@ const OFFERS = [
             'Crew agents take phone calls too, included in your Crew plan',
             'Unlimited users and agents; AI usage included with a hard spending cap',
         ],
-        note: 'Card required for the 7-day free trial.',
+        note: '7-day free trial, no card needed.',
     },
     {
         id: 'trucker-feed',

@@ -60,7 +60,7 @@ const faqItems = [
     },
     {
         question: 'Does Dooza offer an AI receptionist?',
-        answer: 'Dooza Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew costs $49 per organization per month after a 7-day free trial (card required); see dooza.ai/ai-receptionist.',
+        answer: 'Dooza Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew costs $49 per organization per month after a 7-day free trial (no card needed); see dooza.ai/ai-receptionist.',
     },
 ];
 
@@ -134,7 +134,7 @@ export default function AiReceptionistCostCalculatorPage() {
                             </ul>
                             <h2>Dooza Crew</h2>
                             <p>
-                                <Link href="/ai-receptionist">Dooza Crew</Link> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew is $49 per organization per month after a 7-day free trial (card required). <a href={crewSignupUrl('ai-receptionist-cost-calculator-content')} data-offer="crew">Try Dooza Crew free for 7 days</a>.
+                                <Link href="/ai-receptionist">Dooza Crew</Link> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew is $49 per organization per month after a 7-day free trial (no card needed). <a href={crewSignupUrl('ai-receptionist-cost-calculator-content')} data-offer="crew">Try Dooza Crew free for 7 days</a>.
                             </p>
                         </section>
 

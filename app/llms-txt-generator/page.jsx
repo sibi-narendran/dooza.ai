@@ -290,7 +290,7 @@ export default function LlmsTxtGeneratorPage() {
                                     you to Approve, Edit or Reject.
                                 </p>
                                 <p className="mt-2 text-sm text-slate-500">
-                                    $49 a month per organization after a 7-day free trial (card required).
+                                    $49 a month per organization after a 7-day free trial (no card needed).
                                 </p>
                                 <a
                                     href={CREW_URL}

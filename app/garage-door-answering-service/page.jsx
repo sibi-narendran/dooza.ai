@@ -49,7 +49,7 @@ const faqItems = [
     },
     {
         question: 'How much does Dooza Crew cost?',
-        answer: '$49 per organization per month after a 7-day free trial (card required). Users and agents are unlimited, and AI usage is included with a hard spending cap.',
+        answer: '$49 per organization per month after a 7-day free trial (no card needed). Users and agents are unlimited, and AI usage is included with a hard spending cap.',
     },
 ];
 
@@ -68,7 +68,7 @@ const schemas = [
             name: 'Dooza Crew, monthly per organization',
             price: '49',
             priceCurrency: 'USD',
-            description: '$49 per organization per month after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
+            description: '$49 per organization per month after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -113,7 +113,7 @@ export default function GarageDoorAnsweringServicePage() {
                                 <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
-                            <p className="mt-4 text-sm text-slate-600">$49 a month per organization after a 7-day free trial (card required).</p>
+                            <p className="mt-4 text-sm text-slate-600">$49 a month per organization after a 7-day free trial (no card needed).</p>
                         </section>
 
                         <section className="mt-14">
@@ -183,7 +183,7 @@ export default function GarageDoorAnsweringServicePage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop losing garage door calls to voicemail</h2>
-                            <p className="mt-3 text-slate-300">$49/month per organization after a 7-day free trial (card required). Phone calls are included in your Crew plan.</p>
+                            <p className="mt-3 text-slate-300">$49/month per organization after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
                                 <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free for 7 days</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>

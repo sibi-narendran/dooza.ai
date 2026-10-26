@@ -61,7 +61,7 @@ const WHAT_IT_DOES = [
 ];
 
 const PILOT_STEPS = [
-    'Start the 7-day free trial (card required).',
+    'Start the 7-day free trial (no card needed).',
     'Chat with your lead agent on web or phone.',
     'Crew agents take phone calls too, included in your Crew plan.',
     'Before an agent sends or pays, it asks you in chat: Approve, Edit or Reject.',
@@ -99,7 +99,7 @@ export default async function AiReceptionistPage(props) {
             price: '49',
             priceCurrency: 'USD',
             url: 'https://crew.dooza.ai',
-            description: '$49 per organization per month after a 7-day free trial (card required). Phone calls are included in your Crew plan.',
+            description: '$49 per organization per month after a 7-day free trial (no card needed). Phone calls are included in your Crew plan.',
             availability: 'https://schema.org/InStock',
         },
     };

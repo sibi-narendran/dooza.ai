@@ -59,7 +59,7 @@ const faqData = [
     },
     {
         question: "How much does Perplexity Computer cost?",
-        answer: "Computer is included in paid Perplexity plans. Perplexity's pricing page (checked October 26, 2026) shows Pro at $17/month billed annually with 4,000 bonus credits, and Max at $167/month billed annually (about $2,000 a year) with 10,000 monthly credits and 35,000 bonus credits. Perplexity's help center listed Max at $200/month when we checked it on October 7, 2026. Enterprise Pro was $40/seat/month ($34 billed annually) and Enterprise Max $325/seat/month on October 7. Tasks use credits: Light tasks 100-350, Complex 350-950, Heavy 875-2,275 and Mega 2,400-9,800. For comparison, Dooza Crew is free for 7 days (card required), then $49/month per organization with unlimited users and agents, AI usage included and a hard spending cap."
+        answer: "Computer is included in paid Perplexity plans. Perplexity's pricing page (checked October 26, 2026) shows Pro at $17/month billed annually with 4,000 bonus credits, and Max at $167/month billed annually (about $2,000 a year) with 10,000 monthly credits and 35,000 bonus credits. Perplexity's help center listed Max at $200/month when we checked it on October 7, 2026. Enterprise Pro was $40/seat/month ($34 billed annually) and Enterprise Max $325/seat/month on October 7. Tasks use credits: Light tasks 100-350, Complex 350-950, Heavy 875-2,275 and Mega 2,400-9,800. For comparison, Dooza Crew is free for 7 days (no card needed), then $49/month per organization with unlimited users and agents, AI usage included and a hard spending cap."
     },
     {
         question: "Is Perplexity Computer better than Dooza Crew for a small business?",
@@ -67,7 +67,7 @@ const faqData = [
     },
     {
         question: "Does Dooza Crew answer phone calls?",
-        answer: "Yes. Dooza Crew agents can take phone calls, and it is included in the plan: $49 per organization per month after a 7-day free trial (card required)."
+        answer: "Yes. Dooza Crew agents can take phone calls, and it is included in the plan: $49 per organization per month after a 7-day free trial (no card needed)."
     },
     {
         question: "Can Perplexity Computer run tasks on a schedule?",
@@ -75,7 +75,7 @@ const faqData = [
     },
     {
         question: "Can I use both Perplexity Computer and Dooza Crew?",
-        answer: "Yes. Perplexity Computer is strong for deep research, building and publishing projects, and recurring tasks you design yourself. Dooza Crew works on jobs you describe in plain words, with helper agents such as a researcher, a writer or an outreach agent. Crew is free for 7 days (card required), so you can test it next to Perplexity."
+        answer: "Yes. Perplexity Computer is strong for deep research, building and publishing projects, and recurring tasks you design yourself. Dooza Crew works on jobs you describe in plain words, with helper agents such as a researcher, a writer or an outreach agent. Crew is free for 7 days (no card needed), so you can test it next to Perplexity."
     },
     {
         question: "Does Dooza Crew require technical skills?",
@@ -240,7 +240,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                 >
                                     Try Dooza Crew
                                 </a>
-                                <p className="text-xs text-slate-500 mt-2 text-center">Free for 7 days, card required</p>
+                                <p className="text-xs text-slate-500 mt-2 text-center">Free for 7 days, no card needed</p>
                             </div>
 
                             <div className="mt-6">
@@ -262,7 +262,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     Computer is no longer limited to the top plan, and it can run on a schedule. The question that matters: <strong>do you want a powerful agent you direct, or a team of agents you brief in plain words?</strong>
                                 </p>
                                 <p className="text-lg leading-relaxed">
-                                    Perplexity Computer is built for people who want raw capability and are happy to set objectives and manage credits. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a> is built for small business owners: you tell Dooza, your master agent, the job in plain words, and it builds the helper agents it needs. It is free for 7 days (card required), then $49 a month per organization. Crew is our product and our top pick for a small business; we say below where Perplexity is stronger.</p>
+                                    Perplexity Computer is built for people who want raw capability and are happy to set objectives and manage credits. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a> is built for small business owners: you tell Dooza, your master agent, the job in plain words, and it builds the helper agents it needs. It is free for 7 days (no card needed), then $49 a month per organization. Crew is our product and our top pick for a small business; we say below where Perplexity is stronger.</p>
                                 <p className="text-lg leading-relaxed">
                                     They solve overlapping but different problems.
                                 </p>
@@ -373,7 +373,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans the job, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back. Each agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. Agents can take phone calls, included.
                                 </p>
                                 <p>
-                                    Crew is the main product from <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>. It costs <strong>$49 a month per organization</strong> (unlimited users and agents), with AI usage included and a hard spending cap. It starts free for 7 days (card required). Cancel before day 8 and you pay nothing.
+                                    Crew is the main product from <Link href="/" className="text-primary-600 hover:underline font-medium">Dooza</Link>. It costs <strong>$49 a month per organization</strong> (unlimited users and agents), with AI usage included and a hard spending cap. It starts free for 7 days (no card needed). No card needed.
                                 </p>
                             </div>
 
@@ -384,7 +384,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     { icon: Shield, title: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat." },
                                     { icon: Phone, title: "Phone calls", desc: "Agents can take phone calls, included in the plan." },
                                     { icon: DollarSign, title: "One flat price", desc: "$49/mo per organization, unlimited users and agents, AI usage included with a hard spending cap." },
-                                    { icon: Clock, title: "Risk-free start", desc: "7 days free (card required). Cancel before day 8 and you pay nothing." }
+                                    { icon: Clock, title: "Risk-free start", desc: "7 days free (no card needed). No card needed." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-3">
@@ -506,7 +506,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                             { feature: "Scheduling", perplexity: "Scheduled Tasks (hourly to monthly)", dooza: "Ask Dooza in plain words" },
                                             { feature: "Watching the work", perplexity: "See Perplexity's help center", dooza: "Every step live in chat; staff join the same chat" },
                                             { feature: "Approval", perplexity: "See Perplexity's help center", dooza: "Approve, Edit or Reject before Send or Pay" },
-                                            { feature: "Price", perplexity: "Pro $17/mo, Max $167/mo (both billed annually)", dooza: "Free 7 days (card required), then $49/mo per organization" },
+                                            { feature: "Price", perplexity: "Pro $17/mo, Max $167/mo (both billed annually)", dooza: "Free 7 days (no card needed), then $49/mo per organization" },
                                             { feature: "Credits/Limits", perplexity: "Max: 10,000 credits/mo; monthly plan credits don't roll over", dooza: "Unlimited users and agents; AI usage included, hard spending cap" },
                                             { feature: "Best For", perplexity: "Researchers, developers, power users", dooza: "Small businesses that want a team of agents" }
                                         ].map((row, idx) => (
@@ -580,10 +580,10 @@ export default function PerplexityComputerVsDoozaContent() {
                                     <p className="text-3xl font-bold text-green-600 mb-3">$49<span className="text-lg text-green-400">/mo per organization</span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
-                                            { text: "Free for 7 days (card required)", good: true },
+                                            { text: "Free for 7 days (no card needed)", good: true },
                                             { text: "Unlimited users and agents", good: true },
                                             { text: "AI usage included, hard spending cap", good: true },
-                                            { text: "Cancel before day 8 and you pay nothing", good: true }
+                                            { text: "No card needed", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -691,7 +691,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                             "Want agents that can take phone calls",
                                             "Would rather not design tasks or manage credits",
                                             "Want to approve before anything is sent or paid",
-                                            "Want to try it free for 7 days (card required)"
+                                            "Want to try it free for 7 days (no card needed)"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />
@@ -772,14 +772,14 @@ export default function PerplexityComputerVsDoozaContent() {
                                     Perplexity Computer is one of the most technically ambitious AI agents available. Multi-model routing, persistent memory, 400+ connectors and Scheduled Tasks make it a strong tool for researchers, developers, and power users.
                                 </p>
                                 <p>
-                                    If you are a small business owner who wants to <strong>hand off jobs in plain words</strong>, without designing tasks or managing credits, Dooza Crew is our top pick: free for 7 days (card required), then $49 a month per organization.</p>
+                                    If you are a small business owner who wants to <strong>hand off jobs in plain words</strong>, without designing tasks or managing credits, Dooza Crew is our top pick: free for 7 days (no card needed), then $49 a month per organization.</p>
                             </div>
 
                             <div className="bg-gradient-to-br from-primary-50 to-green-50 border-2 border-primary-200 p-8 rounded-xl mb-8">
                                 <h3 className="font-bold text-slate-900 text-xl mb-4">Why Small Businesses Choose Dooza Crew</h3>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
-                                        { icon: DollarSign, text: "$49/mo per organization, 7 days free (card required)" },
+                                        { icon: DollarSign, text: "$49/mo per organization, 7 days free (no card needed)" },
                                         { icon: Users, text: "Unlimited users and agents" },
                                         { icon: Repeat, text: "AI usage included, with a hard spending cap" },
                                         { icon: HeartHandshake, text: "Asks you to Approve, Edit or Reject before Send or Pay" },
