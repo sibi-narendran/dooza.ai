@@ -159,7 +159,7 @@ const doozaEmployees = [
     { name: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject", icon: ShieldCheck },
     { name: "Phone calls", desc: "Agents can take phone calls, included in the plan", icon: Phone },
     { name: "Free to try", desc: "no card needed", icon: DollarSign },
-    { name: "Risk-free start", desc: "7 days free (no card needed). No card needed", icon: Timer }
+    { name: "Risk-free start", desc: "Free to try, no card needed. No card needed", icon: Timer }
 ];
 
 export default function AiToolsForSolopreneursContent() {
@@ -443,7 +443,7 @@ export default function AiToolsForSolopreneursContent() {
                                         "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject",
                                         "Agents can take phone calls, included in the plan",
                                         "free to try",
-                                        "7 days free (no card needed). No card needed"
+                                        "Free to try, no card needed. No card needed"
                                     ].map((point, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
                                             <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
