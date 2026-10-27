@@ -18,7 +18,7 @@ const cfg = {
     startSubject: 'Question: California short-notice WARN sheet',
     startBody: 'Firm:\nCounties you cover:\nAnything you want flagged (industry, size):',
     startLabel: 'Ask a question by email',
-    pay: { href: 'https://buy.stripe.com/5kQbJ16Wn0VT3KQ5UV3AY11', label: 'Start: $299 a month' },
+    pay: { href: '/api/pay/5kQbJ16Wn0VT3KQ5UV3AY11', label: 'Start: $299 a month' },
     priceNote: '$299 a month, paid first. Weekly sheet.',
     sendHeading: 'What is in each weekly sheet',
     sendIntro: 'The source is the WARN report the California Employment Development Department (EDD) publishes and updates every Tuesday and Thursday. September 17 to October 14, 2026: 138 notices processed, 49 with under 60 days between the notice date and the layoff date (1,805 workers), 31 of them in Los Angeles County. In 3, the notice was dated after the layoff date. A short notice is not by itself a violation: Cal-WARN has exceptions, so you check each one.',

@@ -52,7 +52,7 @@ export default function NavTrail() {
     // Stripe payment links: add client_reference_id + prefilled_email from the reply link, at click.
     useEffect(() => {
         const onPay = (e) => {
-            const a = e.target.closest?.('a[href^="https://buy.stripe.com/"]');
+            const a = e.target.closest?.('a[href^="/api/pay/"], a[href^="https://buy.stripe.com/"]');
             if (!a) return;
             try {
                 const s = window.sessionStorage;
@@ -67,7 +67,7 @@ export default function NavTrail() {
         };
         document.addEventListener('click', onPay, true);
         // Same tags on every pay link at load, so each button's href already carries them (Orion 10-18: 2nd button looked bare).
-        const tagAll = () => document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach((a) => onPay({ target: a }));
+        const tagAll = () => document.querySelectorAll('a[href^="/api/pay/"], a[href^="https://buy.stripe.com/"]').forEach((a) => onPay({ target: a }));
         tagAll();
         const t = setTimeout(tagAll, 1500);
         return () => {

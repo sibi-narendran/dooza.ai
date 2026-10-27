@@ -4,7 +4,7 @@ import ReplyStagePage, { replyStageMetadata } from '@/components/ReplyStagePage'
 // for P&C agencies. Pay link = New Business Monday (county list, 7-day trial).
 // Rows: TABC /home/odysseus/data/feeds/tabc_2026-10-17.csv (licence types MB/BG/P/Q/BQ; 85 rows Oct 12-15) and FMCSA new authorities
 // /home/argus/data/feeds/for-hercules/TX_2026-10-16_verified.csv (173 rows Oct 9-15). TABC rows have no phone (0/85), so the page promises none.
-const PAY_URL = 'https://buy.stripe.com/4gM8wP80rdIFa9e1EF3AY12';
+const PAY_URL = '/api/pay/4gM8wP80rdIFa9e1EF3AY12';
 const PRICE = '$129 every 4 weeks, first week free, cancel any time.';
 
 const cfg = {
