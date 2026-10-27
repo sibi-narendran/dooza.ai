@@ -163,6 +163,11 @@ export default function IndustryCrew({ c }) {
                         <p className={`mt-3 text-[15px] ${MUTED}`}>
                             Comparing tools first? See <Link href={`/blog/best-ai-tools-for-${c.slug}`} data-source={`${p}-bottom-tools`} className={LINK}>the best AI tools for {c.slug.replace(/-/g, ' ')} in 2026, with prices</Link>.
                         </p>
+                        {c.extraLink && (
+                            <p className={`mt-3 text-[15px] ${MUTED}`}>
+                                {c.extraLink.lead} <Link href={c.extraLink.href} data-source={`${p}-bottom-extra`} className={LINK}>{c.extraLink.text}</Link>.
+                            </p>
+                        )}
                     </div>
                 </section>
             </main>
