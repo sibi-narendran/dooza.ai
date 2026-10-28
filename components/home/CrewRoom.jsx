@@ -139,7 +139,7 @@ export default function CrewRoom() {
             <div className="flex items-center justify-between gap-3 border-b border-[#E2E8F0] px-5 py-4">
                 <div>
                     <p className="text-sm font-bold text-[#0F172A]">Your crew</p>
-                    <p className="text-xs text-[#64748B]">You and 3 AI employees, each with its own computer</p>
+                    <p className="text-xs text-[#64748B]">You and 3 AI employees, each with its own computer · <span className="font-semibold text-[#0F766E]">Example run</span></p>
                 </div>
                 <div className="flex -space-x-2">
                     {Object.values(PEOPLE).map((p) => (
