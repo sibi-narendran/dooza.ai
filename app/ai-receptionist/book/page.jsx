@@ -47,7 +47,7 @@ export default async function AiReceptionistBookPage(props) {
                                 data-offer="crew"
                                 className="inline-flex w-full items-center justify-center rounded-xl bg-primary-700 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-900/20 transition hover:bg-primary-800 sm:w-auto"
                             >
-                                Join the Dooza Crew waitlist
+                                Try Dooza Crew free
                             </a>
                         </div>
                     </div>

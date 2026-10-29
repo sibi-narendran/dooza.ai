@@ -138,7 +138,7 @@ export default async function AiReceptionistPage(props) {
                         </p>
                         <div id="hero-actions" className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
                             <a href={payHref} data-offer="crew" className={primaryButton}>
-                                Join the Dooza Crew waitlist
+                                Try Dooza Crew free
                             </a>
                         </div>
                         <p className="mt-5 text-sm font-medium text-slate-600">
@@ -269,7 +269,7 @@ export default async function AiReceptionistPage(props) {
                         </p>
                         <div className="mt-8">
                             <a href={payHref} data-offer="crew" className="inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-8 py-4 text-lg font-bold text-slate-950 shadow-lg shadow-primary-900/30 transition hover:bg-primary-400 sm:w-auto">
-                                Join the Dooza Crew waitlist
+                                Try Dooza Crew free
                             </a>
                         </div>
                         <p className="mt-4 text-sm text-slate-300"><Link href={bookHref} className="underline">Questions first? Book a free call.</Link></p>
@@ -279,7 +279,7 @@ export default async function AiReceptionistPage(props) {
 
             {adsMode ? <AdsFooter /> : <Footer variant="light" />}
 
-            <StickyCtaBar bookHref={payHref} label="Join the Dooza Crew waitlist" />
+            <StickyCtaBar bookHref={payHref} label="Try Dooza Crew free" />
         </>
     );
 }

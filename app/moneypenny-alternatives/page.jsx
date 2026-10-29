@@ -314,7 +314,7 @@ export default function MoneypennyAlternativesPage() {
                                 <strong>The best Moneypenny alternative depends on whether callers must be able to reach a person or you just need every call answered. Moneypenny’s US pricing page lists AI Answering from $99 a month for 50 calls and People Answering from $165 for 50 minutes. Dooza Crew is free to try, and Crew agents take phone calls too. Prices checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Join the Dooza Crew waitlist</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page (Dooza). Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
@@ -446,7 +446,7 @@ export default function MoneypennyAlternativesPage() {
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
                             <p className="mt-3 text-slate-300">Free to try (no card needed). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Join the Dooza Crew waitlist</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>

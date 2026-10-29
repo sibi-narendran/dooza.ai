@@ -181,7 +181,7 @@ export default function AccioWorkVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Join the Dooza Crew waitlist
+                                Try Dooza Crew free
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -397,7 +397,7 @@ export default function AccioWorkVsDoozaContent() {
                                         <p className="text-slate-700">
                                             It is one flat price with no surprise AI bills, you stay in control because it asks before it sends or pays, and you do not need a supplier network to get value from it. <strong>Watch for:</strong> Crew has no sourcing network. If Alibaba suppliers are the core of your business, Accio Work fits that job better.
                                         </p>
-                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Join the Dooza Crew waitlist</a></p>
+                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -558,7 +558,7 @@ export default function AccioWorkVsDoozaContent() {
                             <div className="bg-green-50 border border-green-200 p-6 rounded-xl">
                                 <h4 className="font-bold text-slate-900 mb-2">How Dooza Crew is priced</h4>
                                 <p className="text-slate-700 text-sm">
-                                    Free to try (no card needed). No card needed. Agents can take phone calls, included. If you only need sourcing research, Accio&apos;s free plan is the cheaper place to start. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Join the Dooza Crew waitlist</a>.
+                                    Free to try (no card needed). No card needed. Agents can take phone calls, included. If you only need sourcing research, Accio&apos;s free plan is the cheaper place to start. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free</a>.
                                 </p>
                             </div>
                         </section>
@@ -735,7 +735,7 @@ export default function AccioWorkVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Join the Dooza Crew waitlist
+                                    Try Dooza Crew free
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                                 <p className="text-sm text-slate-500 mt-3">No card needed. Free to try.</p>

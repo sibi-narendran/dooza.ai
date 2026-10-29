@@ -198,7 +198,7 @@ export default function BestAiReceptionistContent() {
                                 data-offer="crew"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Join the Dooza Crew waitlist
+                                Try Dooza Crew free
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <span className="text-sm text-slate-500">Free to try · no card needed · phone calls included · <a href={CAL_BOOKING_URL} onClick={handleAction} className="underline">or book a call first</a></span>
@@ -250,7 +250,7 @@ export default function BestAiReceptionistContent() {
                                     data-offer="crew"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Join the Dooza Crew waitlist
+                                    Try Dooza Crew free
                                 </a>
                                 <p className="text-xs text-slate-500 mt-2 text-center">7-day free trial · free to try</p>
                             </div>
@@ -359,7 +359,7 @@ export default function BestAiReceptionistContent() {
                                     <li>Free to try (no card needed). Unlimited users and agents.</li>
                                 </ul>
                                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                                    <a href={CREW_URL('plain-terms')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Join the Dooza Crew waitlist <ArrowRight className="w-4 h-4" /></a>
+                                    <a href={CREW_URL('plain-terms')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Try Dooza Crew free <ArrowRight className="w-4 h-4" /></a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">Book a call first</a>
                                 </div>
                             </div>
@@ -606,7 +606,7 @@ export default function BestAiReceptionistContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    <a href={CREW_URL('hear')} data-offer="crew" className="text-primary-600 hover:underline font-medium">Join the Dooza Crew waitlist &rarr;</a>
+                                    <a href={CREW_URL('hear')} data-offer="crew" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free &rarr;</a>
                                     <br />
                                     <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Learn how to automate your entire business &rarr;</Link>
                                 </p>
@@ -619,7 +619,7 @@ export default function BestAiReceptionistContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={CREW_URL('final')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Join the Dooza Crew waitlist <ArrowRight className="w-4 h-4" />
+                                        Try Dooza Crew free <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book a free call
