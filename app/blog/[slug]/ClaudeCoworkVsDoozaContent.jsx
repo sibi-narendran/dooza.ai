@@ -164,7 +164,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Try Dooza Crew free
+                                Join the Dooza Crew waitlist
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -385,7 +385,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             <li>Agents can take phone calls, included.</li>
                                         </ul>
                                         <p className="mt-3 text-slate-700"><strong>Watch for:</strong> if you want one flexible agent you direct yourself, inside a Claude plan you may already pay for, Claude Cowork fits that better.</p>
-                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free</a></p>
+                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Join the Dooza Crew waitlist</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -579,7 +579,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza Crew gives you <strong className="text-white">a master agent that builds the helper agents each job needs</strong>. It is free to try. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-white underline">Try Dooza Crew free</a>.
+                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza Crew gives you <strong className="text-white">a master agent that builds the helper agents each job needs</strong>. It is free to try. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-white underline">Join the Dooza Crew waitlist</a>.
                                 </p>
                             </div>
                         </section>
@@ -734,7 +734,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Try Dooza Crew free
+                                    Join the Dooza Crew waitlist
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                                 <p className="text-sm text-slate-500 mt-3">No card needed. Free to try.</p>

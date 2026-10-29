@@ -316,7 +316,7 @@ export default function PatliveAlternativesPage() {
                                 <strong>The best PATLive alternative depends on whether you need a live person or just need every call answered. PATLive uses human receptionists only, and its pricing page lists $99 a month for 50 minutes and $759 for 500, plus $1.79 a minute after that. Dooza Crew is free to try, and Crew agents take phone calls too. Prices checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Join the Dooza Crew waitlist</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page (Dooza). Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
@@ -442,7 +442,7 @@ export default function PatliveAlternativesPage() {
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
                             <p className="mt-3 text-slate-300">Free to try (no card needed). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Join the Dooza Crew waitlist</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>
