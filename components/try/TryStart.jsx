@@ -59,7 +59,7 @@ export default function TryStart({ placement, examples = true }) {
                 </button>
             </form>
             <p className="mt-3 text-[14px] leading-snug text-[#4B5567]">
-                Free to try. No card needed. If every seat is taken, leave your email and we write the moment one opens.
+                Free to try, no card needed. We build desks in order — if yours is next in line, we email you the moment it is ready.
             </p>
             <p className="mt-2 text-[14px] text-[#4B5567]">
                 Works today on Android. On an iPhone? Sign up here and your app link is emailed the day Apple clears it.
