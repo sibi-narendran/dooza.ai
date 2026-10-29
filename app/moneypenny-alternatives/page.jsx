@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import HearItFirst from '@/components/HearItFirst';
 import BookingModalProvider from '@/components/BookingModalProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -319,7 +318,6 @@ export default function MoneypennyAlternativesPage() {
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page (Dooza). Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
-                            <HearItFirst source="moneypenny-alternatives" />
                         </section>
 
                         <section className="mt-14">
