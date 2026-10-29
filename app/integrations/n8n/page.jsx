@@ -128,7 +128,7 @@ export default function N8nIntegrationPage() {
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                     <a href={CREW} data-source={SOURCE} className="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
-                        Try Dooza Crew free (no card needed)
+                        Join the Dooza Crew waitlist
                     </a>
                     <a href={NPM} className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-3 font-semibold text-slate-800 hover:border-slate-400">
                         Install from npm
@@ -222,7 +222,7 @@ export default function N8nIntegrationPage() {
                     </p>
                     <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                         <a href={CREW} data-source={SOURCE} className="rounded-lg bg-white px-5 py-3 font-semibold text-slate-900">
-                            Try Dooza Crew free
+                            Join the Dooza Crew waitlist
                         </a>
                         <a href={BOOK} className="rounded-lg border border-white/40 px-5 py-3 font-semibold text-white">
                             Book a free call

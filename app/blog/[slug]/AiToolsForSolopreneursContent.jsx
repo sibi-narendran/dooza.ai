@@ -457,7 +457,7 @@ export default function AiToolsForSolopreneursContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                 >
-                                    Try Dooza Crew free <ArrowRight className="w-4 h-4" />
+                                    Join the Dooza Crew waitlist <ArrowRight className="w-4 h-4" />
                                 </a>
                             </div>
 
@@ -619,7 +619,7 @@ export default function AiToolsForSolopreneursContent() {
                                             rel="noopener noreferrer"
                                             className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors"
                                         >
-                                            Try Dooza Crew free
+                                            Join the Dooza Crew waitlist
                                         </a>
                                     </div>
                                 </div>
@@ -771,7 +771,7 @@ export default function AiToolsForSolopreneursContent() {
                                     },
                                     {
                                         step: "2",
-                                        title: "Try Dooza Crew free",
+                                        title: "Join the Dooza Crew waitlist",
                                         desc: "No card needed. Give Dooza a real task in plain words, such as researching a prospect list or drafting a blog outline, and watch the agents work live in chat."
                                     },
                                     {
@@ -811,7 +811,7 @@ export default function AiToolsForSolopreneursContent() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
-                                        Try Dooza Crew free <ArrowRight className="w-4 h-4" />
+                                        Join the Dooza Crew waitlist <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
                             </div>

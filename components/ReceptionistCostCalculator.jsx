@@ -91,7 +91,7 @@ export default function ReceptionistCostCalculator({ defaultCalls = 100, default
                     Rather not set up and tune one yourself? Dooza Crew agents take phone calls too, included in your Crew plan.
                 </p>
                 <a href={crewSignupUrl('ai-receptionist-cost-calculator-cta')} data-offer="crew" className="shrink-0 rounded-xl bg-primary-600 px-5 py-3 font-semibold text-white hover:bg-primary-700">
-                    Try Dooza Crew free
+                    Join the Dooza Crew waitlist
                 </a>
             </div>
         </div>
