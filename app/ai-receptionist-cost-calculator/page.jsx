@@ -134,7 +134,7 @@ export default function AiReceptionistCostCalculatorPage() {
                             </ul>
                             <h2>Dooza Crew</h2>
                             <p>
-                                <Link href="/ai-receptionist">Dooza Crew</Link> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew is free to try (no card needed). <a href={crewSignupUrl('ai-receptionist-cost-calculator-content')} data-offer="crew">Join the Dooza Crew waitlist</a>.
+                                <Link href="/ai-receptionist">Dooza Crew</Link> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew is free to try (no card needed). <a href={crewSignupUrl('ai-receptionist-cost-calculator-content')} data-offer="crew">Try Dooza Crew free</a>.
                             </p>
                         </section>
 

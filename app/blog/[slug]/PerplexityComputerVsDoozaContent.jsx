@@ -176,7 +176,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Join the Dooza Crew waitlist
+                                Try Dooza Crew free
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -404,7 +404,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                         <p className="text-slate-700">
                                             Free to try, approval before Send or Pay, and no workflows for you to design. <strong>Watch for:</strong> Perplexity Computer has 400+ app connectors, multi-model routing and a published credit system. If you want to pick models and build projects yourself, Computer gives you more control.
                                         </p>
-                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Join the Dooza Crew waitlist</a></p>
+                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Try Dooza Crew free</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -801,7 +801,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Join the Dooza Crew waitlist
+                                    Try Dooza Crew free
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                             </div>

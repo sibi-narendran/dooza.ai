@@ -33,7 +33,7 @@ const steps = [
 ];
 
 const faq = [
-    { q: 'Do I pay today?', a: 'No. Joining the waitlist is free, no card needed.' },
+    { q: 'Do I pay today?', a: 'No. Free to try, no card needed.' },
     { q: 'Can it send things without me?', a: 'Before it clicks Send or Pay, it asks you in chat: Approve, Edit or Reject.' },
     { q: 'Can my staff use it too?', a: 'Yes. Unlimited users and agents, no per-seat fee. Add your people to the same chat, on web or phone.' },
     { q: 'Can it take phone calls?', a: 'Yes. Crew agents take phone calls too, included in the plan. The rest of the work happens on a computer: browser, files, spreadsheets, email drafts.' },

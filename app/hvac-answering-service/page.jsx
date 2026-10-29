@@ -106,7 +106,7 @@ export default function HvacAnsweringServicePage() {
                                 The full table is below. Dooza Crew is free to try, and Crew agents take phone calls too.
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Join the Dooza Crew waitlist</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">Free to try (no card needed).</p>
@@ -181,7 +181,7 @@ export default function HvacAnsweringServicePage() {
                             <h2 className="text-2xl font-bold">Stop losing no-cool calls to voicemail</h2>
                             <p className="mt-3 text-slate-300">Free to try (no card needed). Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Join the Dooza Crew waitlist</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>
