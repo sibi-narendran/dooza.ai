@@ -3,6 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import CalEmbedLoader from '../components/CalEmbedLoader';
 import ColdAdSignupLinkRewriter from '../components/ColdAdSignupLinkRewriter';
+import CrewUtmPassthrough from '../components/CrewUtmPassthrough';
 import BookingModalProvider from '../components/BookingModalProvider';
 import ContactClickTracker from '@/components/ContactClickTracker';
 import NavTrail from '../components/NavTrail';
@@ -164,6 +165,7 @@ export default function RootLayout({ children }) {
         </BookingModalProvider>
 
         <ColdAdSignupLinkRewriter />
+        <CrewUtmPassthrough />
         <CalEmbedLoader />
 
         {/* Facebook Pixel */}
