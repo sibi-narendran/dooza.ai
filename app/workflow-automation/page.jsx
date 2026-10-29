@@ -338,6 +338,10 @@ export default function WorkflowAutomationPage() {
                             <div className="text-center mb-14">
                                 <h2 className="font-serif text-3xl font-bold text-slate-950 md:text-5xl mb-4">1,000+ Integrations, One Platform</h2>
                                 <p className="text-lg text-slate-600 max-w-2xl mx-auto">Connect every tool your team uses — CRM, email, databases, payment, messaging, and more</p>
+                                <p className="mt-4 text-base text-slate-600 max-w-2xl mx-auto">
+                                    Already running n8n? Our community node puts a Dooza Crew AI agent inside your workflows:{' '}
+                                    <a href="/integrations/n8n" className="font-semibold text-primary-700 underline">Dooza Crew for n8n</a>.
+                                </p>
                             </div>
                         </ScrollReveal>
                         <div className="relative">
