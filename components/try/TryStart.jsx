@@ -62,7 +62,7 @@ export default function TryStart({ placement, examples = true }) {
                 Free to try. No card needed.
             </p>
             <p className="mt-2 text-[14px] text-[#4B5567]">
-                On an iPhone? Sign up here in your browser — the iOS app is in Apple review, and your install link is emailed the day it clears. The app is already on Android.
+                Works today on Android. On an iPhone? Sign up now in your browser — your app link is emailed the day Apple clears it.
             </p>
             <p className="mt-2 text-[14px] text-[#4B5567]">
                 Already have an account? <a href="https://crew.dooza.ai/login" data-source={`try-${placement}-login`} className="font-semibold text-[#0F766E] underline underline-offset-2 hover:text-[#14213D]">Log in</a>
