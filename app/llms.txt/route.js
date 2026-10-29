@@ -23,6 +23,11 @@ const staticPages = [
         description: 'What an AI employee is, what it costs (Dooza Managed $200/month with the first 7 days free, compared with DIY AI tools and a human VA, prices checked Oct 21, 2026), what it can do, and how to hire one. Phone answering is included in Dooza Crew: Crew agents take phone calls too.',
     },
     {
+        title: 'Dooza Crew n8n node: give n8n workflows AI employees',
+        url: `${SITE_URL}/integrations/n8n`,
+        description: 'Official n8n community node for Dooza Crew (npm n8n-nodes-dooza-crew, MIT, published 2026-10-28): Run Task and Get Task operations, dz_ API key from the Crew account menu, default 600 s wait with a timedOut flag, usable as a tool by the n8n AI Agent node. Crew is free to try, no card needed.',
+    },
+    {
         title: 'Done-for-you AI agents for small business',
         url: `${SITE_URL}/done-for-you-ai-agents`,
         description: 'Dooza builds, runs and improves AI agents for small businesses, checked by a person. Done-for-you vs DIY tools (n8n, Make, Zapier, Lindy) compared on setup, upkeep and price (checked Oct 21, 2026). Dooza Managed $200/month, first 7 days free; custom agents scoped on a free 30-minute call.',

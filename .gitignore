@@ -50,3 +50,4 @@ open-seo/
 .wrangler/
 .dev.vars
 cloudflare-env.d.ts
+.deploy-ok
