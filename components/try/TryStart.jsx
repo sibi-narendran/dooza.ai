@@ -38,7 +38,7 @@ export default function TryStart({ placement, examples = true }) {
         <div>
             <form onSubmit={go} className="rounded-2xl border border-[#CBD5E1] bg-white p-3 shadow-[0_20px_50px_-30px_rgba(15,23,42,0.5)] focus-within:border-[#14213D]">
                 <label htmlFor={`try-task-${placement}`} className="block px-2 pt-1 text-[15px] font-semibold">
-                    What would you hand off first?
+                    What would you hand off first? <span className="font-normal text-[#4B5567]">(optional)</span>
                 </label>
                 <textarea
                     id={`try-task-${placement}`}
@@ -59,7 +59,7 @@ export default function TryStart({ placement, examples = true }) {
                 </button>
             </form>
             <p className="mt-3 text-[14px] leading-snug text-[#4B5567]">
-                Free to try. No card needed.
+                Free to try. No card needed. Seats open in waves: if all are taken, your email holds your place and we write the moment one frees.
             </p>
             <p className="mt-2 text-[14px] text-[#4B5567]">
                 Already have an account? <a href="https://crew.dooza.ai/login" data-source={`try-${placement}-login`} className="font-semibold text-[#0F766E] underline underline-offset-2 hover:text-[#14213D]">Log in</a>
