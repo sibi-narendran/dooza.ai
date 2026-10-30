@@ -15,6 +15,7 @@ const INDUSTRIES = [
     { name: 'Truck Dispatchers', detail: 'Load boards, brokers, billing', href: '/truck-dispatchers' },
     { name: 'Accountants', detail: 'Client documents, statements, deadlines', href: '/ai-agents-for-accountants' },
     { name: 'Law Firms', detail: 'Intake, client updates, records, dockets', href: '/ai-agents-for-law-firms' },
+    { name: 'Customer Support', detail: 'Tickets, orders, refunds, reviews', href: '/ai-agents-for-customer-support' },
     { name: 'Property Managers', detail: 'Maintenance, tenants, owners, renewals', href: '/ai-agents-for-property-managers' },
     { name: 'Owner-Operators', detail: 'Invoices, PODs, detention, IFTA', href: '/ai-agents-for-truck-drivers' },
 ];

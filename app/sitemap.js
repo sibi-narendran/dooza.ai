@@ -193,6 +193,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/ai-agents-for-customer-support`,
+            lastModified: pageDate('2026-10-30'),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/ai-agents-for-property-managers`,
             lastModified: pageDate('2026-10-30'),
             changeFrequency: 'weekly',
