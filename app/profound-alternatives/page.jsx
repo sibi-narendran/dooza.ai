@@ -46,7 +46,7 @@ export const metadata = {
 const faqData = [
     {
         question: 'What is the best Profound alternative?',
-        answer: 'For a small business, our top pick is Dooza Crew (our product): a hosted team of AI agents you brief in plain words, free to try. For GEO done for you rather than another platform to run, Ranky, Dooza\'s AI SEO & Visibility Employee, and Dooza engineers research, write, optimize, and publish GEO-ready content with your approval, and it starts with a refundable pilot (100% refund within 14 days). If you only want lower-cost monitoring, Otterly.ai and Peec AI are common picks. Larger teams that want a platform with analytics and agents may be better served by Profound itself.',
+        answer: 'For a small business, our top pick is Dooza Crew (our product): a hosted team of AI agents you brief in plain words, start for $5. For GEO done for you rather than another platform to run, Ranky, Dooza\'s AI SEO & Visibility Employee, and Dooza engineers research, write, optimize, and publish GEO-ready content with your approval, and it starts with a refundable pilot (100% refund within 14 days). If you only want lower-cost monitoring, Otterly.ai and Peec AI are common picks. Larger teams that want a platform with analytics and agents may be better served by Profound itself.',
     },
     {
         question: 'Why do people look for Profound alternatives?',

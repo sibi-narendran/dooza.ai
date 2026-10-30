@@ -151,7 +151,7 @@ export default function DynamicBlogContent({ post }) {
                         <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                             <h3 className="text-2xl font-bold text-slate-900 mb-4">Stop Missing Calls with Dooza Crew</h3>
                             <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. free to try (no card needed).
+                                Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Start for $5.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
@@ -159,7 +159,7 @@ export default function DynamicBlogContent({ post }) {
                                     data-offer="crew"
                                     className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all sm:w-auto"
                                 >
-                                    Try Dooza Crew free <ArrowRight className="w-4 h-4" />
+                                    Start Dooza Crew for $5 <ArrowRight className="w-4 h-4" />
                                 </a>
                                 <a
                                     href={getBookingUrlWithUtm('blog', 'cta', post.slug)}
@@ -173,7 +173,7 @@ export default function DynamicBlogContent({ post }) {
                         <div className="bg-primary-50 border border-primary-100 p-8 rounded-xl text-center">
                             <h3 className="text-2xl font-bold text-slate-900 mb-4">Try Dooza Crew</h3>
                             <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                A lead AI agent plus helper agents that browse the web, write files and ask you before they send or pay. free to try (no card needed).
+                                A lead AI agent plus helper agents that browse the web, write files and ask you before they send or pay. Start for $5.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
@@ -182,7 +182,7 @@ export default function DynamicBlogContent({ post }) {
                                     rel="noopener noreferrer"
                                     className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all sm:w-auto"
                                 >
-                                    Start your free trial <ArrowRight className="w-4 h-4" />
+                                    Start for $5 <ArrowRight className="w-4 h-4" />
                                 </a>
                                 <a
                                     href={getBookingUrlWithUtm('blog', 'cta', post.slug)}

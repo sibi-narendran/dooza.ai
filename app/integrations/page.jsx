@@ -12,7 +12,7 @@ const PATH = '/integrations';
 const SOURCE = 'integrations_hub';
 const TITLE = 'Dooza Crew Integrations: API and n8n Node';
 const DESCRIPTION =
-    'Hand a task to a Dooza Crew AI agent from your own software: a REST Task API (OpenAPI, Bearer dz_ key) and an open-source n8n community node. Free to try, no card needed.';
+    'Hand a task to a Dooza Crew AI agent from your own software: a REST Task API (OpenAPI, Bearer dz_ key) and an open-source n8n community node. Start for $5.';
 const UPDATED_LABEL = 'October 30, 2026';
 const CREW = crewSignupUrl(SOURCE);
 const BOOK = `/book?utm_source=website&utm_medium=page&utm_content=${SOURCE}`;
@@ -59,7 +59,7 @@ const faqItems = [
     {
         question: 'How do I get a Dooza Crew API key?',
         answer:
-            'Sign in at crew.dooza.ai (free to try, no card needed), open the account menu at the top right and choose API key. The key starts with dz_ and is sent as an Authorization: Bearer header.',
+            'Sign in at crew.dooza.ai (start for $5), open the account menu at the top right and choose API key. The key starts with dz_ and is sent as an Authorization: Bearer header.',
     },
     {
         question: 'Is the API synchronous?',
@@ -121,7 +121,7 @@ export default function IntegrationsPage() {
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                     <a href={CREW} data-source={SOURCE} className="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
-                        Try Dooza Crew free
+                        Start Dooza Crew for $5
                     </a>
                     <a href={OPENAPI} className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-3 font-semibold text-slate-800 hover:border-slate-400">
                         OpenAPI description
@@ -211,7 +211,7 @@ export default function IntegrationsPage() {
                     </p>
                     <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                         <a href={CREW} data-source={SOURCE} className="rounded-lg bg-white px-5 py-3 font-semibold text-slate-900">
-                            Try Dooza Crew free
+                            Start Dooza Crew for $5
                         </a>
                         <a href={BOOK} className="rounded-lg border border-white/40 px-5 py-3 font-semibold text-white">
                             Book a free call

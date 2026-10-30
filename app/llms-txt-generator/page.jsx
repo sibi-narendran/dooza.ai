@@ -290,7 +290,7 @@ export default function LlmsTxtGeneratorPage() {
                                     you to Approve, Edit or Reject.
                                 </p>
                                 <p className="mt-2 text-sm text-slate-500">
-                                    free to try (no card needed).
+                                    start for $5.
                                 </p>
                                 <a
                                     href={CREW_URL}

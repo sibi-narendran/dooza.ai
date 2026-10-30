@@ -10,14 +10,14 @@ import FinalCTASection from '@/components/sections/FinalCTASection';
 import { faqSchema } from '@/lib/homeData';
 
 export const metadata = {
-    title: 'Dooza Pricing: Crew free to try, Assistant $200/mo',
-    description: 'Dooza Crew: AI agents you chat with on web or phone, free to try; phone calls included. Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Custom builds on a free call.',
+    title: 'Dooza Pricing: Crew $5 to start, Assistant $200/mo',
+    description: 'Dooza Crew: AI agents you chat with on web or phone, start for $5; phone calls included. Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Custom builds on a free call.',
     keywords: ['AI employees pricing', 'AI automation pricing', 'Dooza pricing', 'AI agents cost', 'business automation plans'],
     alternates: {
         canonical: 'https://www.dooza.ai/pricing',
     },
     openGraph: {
-        title: 'Dooza Pricing: Crew free to try, Assistant $200/mo',
+        title: 'Dooza Pricing: Crew $5 to start, Assistant $200/mo',
         description: 'Custom pricing, scoped on a free 30-minute call. Every engagement starts as a refundable pilot: 100% refund within 14 days.',
         url: 'https://www.dooza.ai/pricing',
         type: 'website',
@@ -25,7 +25,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Dooza Pricing: Crew free to try, Assistant $200/mo',
+        title: 'Dooza Pricing: Crew $5 to start, Assistant $200/mo',
         description: 'Custom pricing, scoped on a free 30-minute call. Every engagement starts as a refundable pilot: 100% refund within 14 days.',
         images: ['https://www.dooza.ai/logo.png'],
     },

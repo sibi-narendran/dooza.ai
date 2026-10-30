@@ -10,7 +10,7 @@ const pageUrl = `${SITE_URL}/ai-receptionist/book`;
 export const metadata = {
     title: { absolute: 'Start Dooza Crew: Phone Calls Included | Dooza' },
     description:
-        'Phone calls are part of Dooza Crew. free to try (no card needed).',
+        'Phone calls are part of Dooza Crew. Start for $5.',
     alternates: { canonical: pageUrl },
     robots: { index: false, follow: true },
     openGraph: {
@@ -47,7 +47,7 @@ export default async function AiReceptionistBookPage(props) {
                                 data-offer="crew"
                                 className="inline-flex w-full items-center justify-center rounded-xl bg-primary-700 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-900/20 transition hover:bg-primary-800 sm:w-auto"
                             >
-                                Try Dooza Crew free
+                                Start Dooza Crew for $5
                             </a>
                         </div>
                     </div>

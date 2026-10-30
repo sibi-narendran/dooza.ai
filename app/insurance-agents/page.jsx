@@ -5,7 +5,7 @@ import { SITE_URL } from '@/lib/site';
 
 const URL = `${SITE_URL}/insurance-agents`;
 const TITLE = 'AI Employees for Independent Insurance Agents | Dooza';
-const DESC = 'AI employees for independent insurance agencies: carrier portals, inbox, certificates, renewals and lead follow-up, 24/7, with your approval. Free to try.';
+const DESC = 'AI employees for independent insurance agencies: carrier portals, inbox, certificates, renewals and lead follow-up, 24/7, with your approval. Start for $5.';
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -24,7 +24,7 @@ const schemas = [
         url: URL,
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         audience: { '@type': 'BusinessAudience', audienceType: 'Independent insurance agencies' },
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Free to try. No card needed. Unlimited users and agents.' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Start for $5. Unlimited users and agents.' },
     },
     {
         '@context': 'https://schema.org',

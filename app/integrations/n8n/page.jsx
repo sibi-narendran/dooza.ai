@@ -34,7 +34,7 @@ const faqItems = [
     {
         question: 'Where do I get the Dooza Crew API key?',
         answer:
-            'Sign in at crew.dooza.ai (free to try, no card needed), open the account menu at the top right and choose API key (crew.dooza.ai/bridge/api-key). The key starts with dz_. In n8n, create a Dooza Crew API credential, paste the key and leave Base URL as https://crew.dooza.ai.',
+            'Sign in at crew.dooza.ai (start for $5), open the account menu at the top right and choose API key (crew.dooza.ai/bridge/api-key). The key starts with dz_. In n8n, create a Dooza Crew API credential, paste the key and leave Base URL as https://crew.dooza.ai.',
     },
     {
         question: 'What happens if the agent takes longer than the workflow can wait?',
@@ -49,7 +49,7 @@ const faqItems = [
     {
         question: 'Is the Dooza Crew node free?',
         answer:
-            'The node is open source (MIT) and free to install. Using it consumes your Crew account: Dooza Crew is free to try with no card needed, and agents ask you to Approve, Edit or Reject before they send or pay for anything.',
+            'The node is open source (MIT) and free to install. Using it consumes your Crew account: Dooza Crew is $5 to start, and agents ask you to Approve, Edit or Reject before they send or pay for anything.',
     },
     {
         question: 'Can I use the Dooza Crew node on n8n Cloud?',
@@ -65,7 +65,7 @@ const steps = [
     },
     {
         name: 'Create the Crew API key',
-        text: 'Sign in at crew.dooza.ai, open the account menu and choose API key. Copy the key that starts with dz_. Dooza Crew is free to try and needs no card.',
+        text: 'Sign in at crew.dooza.ai, open the account menu and choose API key. Copy the key that starts with dz_. Dooza Crew is $5 to start.',
     },
     {
         name: 'Add the credential in n8n',
@@ -92,7 +92,7 @@ const schemas = [
         description: DESCRIPTION,
         softwareVersion: '0.1.1',
         datePublished: '2026-10-28',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Community node, MIT licence; Dooza Crew itself is free to try with no card needed.' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Community node, MIT licence; Dooza Crew itself is $5 to start.' },
         publisher: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {
@@ -130,7 +130,7 @@ export default function N8nIntegrationPage() {
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                     <a href={CREW} data-source={SOURCE} className="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
-                        Try Dooza Crew free
+                        Start Dooza Crew for $5
                     </a>
                     <a href={NPM} className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-3 font-semibold text-slate-800 hover:border-slate-400">
                         Install from npm
@@ -210,7 +210,7 @@ export default function N8nIntegrationPage() {
                         All Dooza Crew integrations and the Task API: <a className={A} href="/integrations">dooza.ai/integrations</a>
                     </li>
                     <li>
-                        Crew sign-up: <a className={A} href={CREW}>crew.dooza.ai</a> (free to try, no card needed)
+                        Crew sign-up: <a className={A} href={CREW}>crew.dooza.ai</a> (start for $5)
                     </li>
                 </ul>
 
@@ -227,7 +227,7 @@ export default function N8nIntegrationPage() {
                     </p>
                     <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                         <a href={CREW} data-source={SOURCE} className="rounded-lg bg-white px-5 py-3 font-semibold text-slate-900">
-                            Try Dooza Crew free
+                            Start Dooza Crew for $5
                         </a>
                         <a href={BOOK} className="rounded-lg border border-white/40 px-5 py-3 font-semibold text-white">
                             Book a free call

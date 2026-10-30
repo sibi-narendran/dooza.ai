@@ -21,7 +21,7 @@ const money = (n) => `$${n.toLocaleString('en-US', Number.isInteger(n) ? {} : { 
 const aiRange = `${money(ai[0].result.cost)} to ${money(ai[ai.length - 1].result.cost)}`;
 const humanRange = `${money(human[0].result.cost)} to ${money(human[human.length - 1].result.cost)}`;
 
-const DESCRIPTION = `What an AI receptionist or answering service costs a window tint or window film shop at 80 calls a month: ${ai.length} AI receptionists and ${human.length} human answering services at list prices checked Oct 2026, plus Dooza Crew, free to try.`;
+const DESCRIPTION = `What an AI receptionist or answering service costs a window tint or window film shop at 80 calls a month: ${ai.length} AI receptionists and ${human.length} human answering services at list prices checked Oct 2026, plus Dooza Crew, $5 to start.`;
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -34,7 +34,7 @@ export const metadata = {
 const faqItems = [
     {
         question: 'How much does an answering service cost a window tint shop?',
-        answer: `For an example window tint shop taking 80 calls a month at about 2 minutes each (160 minutes), AI answering services cost ${aiRange} a month and human answering services cost ${humanRange} a month at list prices checked October 6–14, 2026. Dooza Crew is free to try, and Crew agents take phone calls too.`,
+        answer: `For an example window tint shop taking 80 calls a month at about 2 minutes each (160 minutes), AI answering services cost ${aiRange} a month and human answering services cost ${humanRange} a month at list prices checked October 6–14, 2026. Dooza Crew is $5 to start, and Crew agents take phone calls too.`,
     },
     {
         question: 'AI receptionist or human answering service for a tint shop?',
@@ -50,7 +50,7 @@ const faqItems = [
     },
     {
         question: 'How much does Dooza Crew cost?',
-        answer: 'free to try (no card needed).',
+        answer: 'Start for $5.',
     },
 ];
 
@@ -66,10 +66,10 @@ const schemas = [
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
             '@type': 'Offer',
-            name: 'Dooza Crew, free to try',
-            price: '0',
+            name: 'Dooza Crew, $5 to start',
+            price: '5',
             priceCurrency: 'USD',
-            description: 'Free to try. No card needed. Phone calls are included.',
+            description: 'Start for $5. Phone calls are included.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -108,13 +108,13 @@ export default function WindowTintAnsweringServicePage() {
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">AI Receptionist for Window Tint Shops: What It Costs, AI vs Human</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
                                 <strong>For a window tint shop taking 80 calls a month at about 2 minutes each, an AI answering service costs {aiRange} a month and a human answering service costs {humanRange}, at public list prices.</strong>{' '}
-                                The full table is below. Dooza Crew is free to try, and Crew agents take phone calls too.
+                                The full table is below. Dooza Crew is $5 to start, and Crew agents take phone calls too.
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
-                            <p className="mt-4 text-sm text-slate-600">Free to try (no card needed).</p>
+                            <p className="mt-4 text-sm text-slate-600">Start for $5.</p>
                         </section>
 
                         <section className="mt-14">
@@ -146,8 +146,8 @@ export default function WindowTintAnsweringServicePage() {
                                         <tr className="border-t border-slate-200 bg-primary-50">
                                             <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
-                                            <td className="px-3 py-3">Free to try. No card needed.</td>
-                                            <td className="px-3 py-3 font-semibold">Free to try</td>
+                                            <td className="px-3 py-3">Start for $5.</td>
+                                            <td className="px-3 py-3 font-semibold">Start for $5</td>
                                         </tr>
                                         {rows.map((r) => (
                                             <tr key={r.name} className="border-t border-slate-200">
@@ -160,7 +160,7 @@ export default function WindowTintAnsweringServicePage() {
                                     </tbody>
                                 </table>
                             </div>
-                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>. Not trade-specific? See the <Link href="/ai-receptionist" className="text-primary-700 underline">AI answering service for small business</Link> (Dooza Crew: free to try).</p>
+                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>. Not trade-specific? See the <Link href="/ai-receptionist" className="text-primary-700 underline">AI answering service for small business</Link> (Dooza Crew: start for $5).</p>
                         </section>
 
                         <section className="mt-14">
@@ -172,7 +172,7 @@ export default function WindowTintAnsweringServicePage() {
                                     <li>AI agents you chat with on web or phone</li>
                                     <li>They browse the web and write files in their own workspace</li>
                                     <li>Before an agent sends or pays, it asks you in chat (Approve / Edit / Reject)</li>
-                                    <li>Free to try</li>
+                                    <li>Start for $5</li>
                                 </ul>
                             </div>
                         </section>
@@ -184,9 +184,9 @@ export default function WindowTintAnsweringServicePage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop losing tint quotes to voicemail</h2>
-                            <p className="mt-3 text-slate-300">Free to try (no card needed). Phone calls are included in your Crew plan.</p>
+                            <p className="mt-3 text-slate-300">Start for $5. Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>

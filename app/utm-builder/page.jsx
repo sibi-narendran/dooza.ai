@@ -276,13 +276,13 @@ export default function UtmBuilderPage() {
                                     anything it asks you to Approve, Edit or Reject.
                                 </p>
                                 <p className="mt-2 text-sm text-slate-500">
-                                    free to try (no card needed).
+                                    start for $5.
                                 </p>
                                 <a
                                     href={CREW_URL}
                                     className="mt-5 inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors"
                                 >
-                                    Start your free trial →
+                                    Start for $5 →
                                 </a>
                             </div>
                         </section>

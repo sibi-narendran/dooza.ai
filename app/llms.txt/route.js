@@ -25,7 +25,7 @@ const staticPages = [
     {
         title: 'Dooza Crew n8n node: give n8n workflows AI employees',
         url: `${SITE_URL}/integrations/n8n`,
-        description: 'Official n8n community node for Dooza Crew (npm n8n-nodes-dooza-crew, MIT, published 2026-10-28): Run Task and Get Task operations, dz_ API key from the Crew account menu, default 600 s wait with a timedOut flag, usable as a tool by the n8n AI Agent node. Crew is free to try, no card needed.',
+        description: 'Official n8n community node for Dooza Crew (npm n8n-nodes-dooza-crew, MIT, published 2026-10-28): Run Task and Get Task operations, dz_ API key from the Crew account menu, default 600 s wait with a timedOut flag, usable as a tool by the n8n AI Agent node. Crew is $5 to start.',
     },
     {
         title: 'Done-for-you AI agents for small business',
@@ -110,32 +110,32 @@ const staticPages = [
     {
         title: 'Marblism Alternatives',
         url: `${SITE_URL}/marblism-alternatives`,
-        description: 'Marblism pricing ($24/mo billed yearly or $44/mo monthly for all 7 AI employees, checked 2026-10) and 7 alternatives compared on pricing, integrations and setup: Dooza Crew (our own product and top pick, free to try), Sintra AI, Motion, NoimosAI, Lindy AI, Relevance AI and Cubeo AI.',
+        description: 'Marblism pricing ($24/mo billed yearly or $44/mo monthly for all 7 AI employees, checked 2026-10) and 7 alternatives compared on pricing, integrations and setup: Dooza Crew (our own product and top pick, start for $5), Sintra AI, Motion, NoimosAI, Lindy AI, Relevance AI and Cubeo AI.',
     },
     {
         title: 'AI employees for truck dispatchers',
         url: `${SITE_URL}/truck-dispatchers`,
-        description: 'Dooza Crew for truck dispatchers and dispatch services: AI employees that search load boards for loads that fit your trucks, sort the broker inbox and copy rate confirmations into your load sheet, put invoice packets together (rate con + POD) and draft the invoice email, find and follow up with new brokers, and track carrier insurance and authority dates. Asks your approval before anything goes out; you book the loads. free to try. Takes phone calls too, included in the Crew plan.',
+        description: 'Dooza Crew for truck dispatchers and dispatch services: AI employees that search load boards for loads that fit your trucks, sort the broker inbox and copy rate confirmations into your load sheet, put invoice packets together (rate con + POD) and draft the invoice email, find and follow up with new brokers, and track carrier insurance and authority dates. Asks your approval before anything goes out; you book the loads. Start for $5. Takes phone calls too, included in the Crew plan.',
     },
     {
         title: 'AI agents for accountants',
         url: `${SITE_URL}/ai-agents-for-accountants`,
-        description: 'Dooza Crew for accounting, CPA, tax and bookkeeping firms: AI agents that chase clients for missing documents, sort the firm inbox and file attachments by client, download statements from bank and card portals, track returns, extensions and estimated payments coming due, fill engagement letters and organizers, and find new clients. Asks your approval before anything goes out; no tax prep, filing or advice. free to try. Takes phone calls too, included in the Crew plan.',
+        description: 'Dooza Crew for accounting, CPA, tax and bookkeeping firms: AI agents that chase clients for missing documents, sort the firm inbox and file attachments by client, download statements from bank and card portals, track returns, extensions and estimated payments coming due, fill engagement letters and organizers, and find new clients. Asks your approval before anything goes out; no tax prep, filing or advice. Start for $5. Takes phone calls too, included in the Crew plan.',
     },
     {
         title: 'AI agents for owner-operator truck drivers',
         url: `${SITE_URL}/ai-agents-for-truck-drivers`,
-        description: 'Dooza Crew for owner-operators and small fleets with their own authority: AI agents that build invoice packets (rate con, POD, BOL) and draft the broker email, follow up on invoices past 30 days, scan load boards with your login and draft broker emails (you book), bill detention from BOL or ELD times, sort fuel receipts and miles by state for IFTA, and track insurance, UCR, IRP, 2290 and medical card dates. You approve every message; it never books loads or files returns. free to try. Takes phone calls too, included in the Crew plan.',
+        description: 'Dooza Crew for owner-operators and small fleets with their own authority: AI agents that build invoice packets (rate con, POD, BOL) and draft the broker email, follow up on invoices past 30 days, scan load boards with your login and draft broker emails (you book), bill detention from BOL or ELD times, sort fuel receipts and miles by state for IFTA, and track insurance, UCR, IRP, 2290 and medical card dates. You approve every message; it never books loads or files returns. Start for $5. Takes phone calls too, included in the Crew plan.',
     },
     {
         title: 'AI agents for law firms',
         url: `${SITE_URL}/ai-agents-for-law-firms`,
-        description: 'Dooza Crew for small law firms and solo attorneys: AI agents that reply to new web inquiries with intake questions and a booking link, draft client status updates from matter notes, chase clients for missing documents and signatures, fill records request letters and follow up with providers, check court portals for new docket entries, and follow up on unpaid invoices. A person approves every message; no legal advice, signatures or court filing. free to try. Takes phone calls too, included in the Crew plan.',
+        description: 'Dooza Crew for small law firms and solo attorneys: AI agents that reply to new web inquiries with intake questions and a booking link, draft client status updates from matter notes, chase clients for missing documents and signatures, fill records request letters and follow up with providers, check court portals for new docket entries, and follow up on unpaid invoices. A person approves every message; no legal advice, signatures or court filing. Start for $5. Takes phone calls too, included in the Crew plan.',
     },
     {
         title: 'AI employees for independent insurance agents',
         url: `${SITE_URL}/insurance-agents`,
-        description: 'Dooza Crew for independent insurance agencies: AI employees that work carrier portals, the shared inbox, certificates of insurance, renewal reminders and lead follow-up around the clock, asking your approval before anything goes out. free to try. Takes phone calls too, included in the Crew plan.',
+        description: 'Dooza Crew for independent insurance agencies: AI employees that work carrier portals, the shared inbox, certificates of insurance, renewal reminders and lead follow-up around the clock, asking your approval before anything goes out. Start for $5. Takes phone calls too, included in the Crew plan.',
     },
     {
         title: 'Trucking insurance leads near renewal, every Monday (for insurance agencies)',
@@ -257,7 +257,7 @@ const productPages = [
     {
         title: 'Dooza Crew (self-serve AI agent team)',
         url: 'https://crew.dooza.ai/?utm_source=llms&utm_medium=aeo',
-        description: 'Self-serve AI agent team: a master agent plus helper agents it creates and briefs, each user\'s agents in their own gVisor sandbox with their own headless browser and files, managed from a private chat app on web or phone. free to try (no card needed).',
+        description: 'Self-serve AI agent team: a master agent plus helper agents it creates and briefs, each user\'s agents in their own gVisor sandbox with their own headless browser and files, managed from a private chat app on web or phone. Start for $5.',
     },
     {
         title: 'Dooza Custom AI Agents (AI agentic platform)',
@@ -270,7 +270,7 @@ const servicePages = [
     {
         title: 'AI Answering Service for Small Business',
         url: `${SITE_URL}/ai-receptionist`,
-        description: 'Phone answering is now part of Dooza Crew: Crew agents take phone calls too, included in your Crew plan (free to try, no card needed), so there is no separate phone service to buy. This page compares AI and human answering options.',
+        description: 'Phone answering is now part of Dooza Crew: Crew agents take phone calls too, included in your Crew plan (start for $5), so there is no separate phone service to buy. This page compares AI and human answering options.',
     },
     {
         title: 'HVAC Answering Service',
@@ -295,12 +295,12 @@ const servicePages = [
     {
         title: 'Smith.ai Alternatives',
         url: `${SITE_URL}/smith-ai-alternatives`,
-        description: 'Smith.ai pricing (human-first from $300/month for 30 calls; AI receptionist free for 25 calls, Pro $150/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Ruby, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'Smith.ai pricing (human-first from $300/month for 30 calls; AI receptionist free for 25 calls, Pro $150/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Ruby, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'Ruby Receptionist Alternatives',
         url: `${SITE_URL}/ruby-alternatives`,
-        description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'Ruby Receptionists pricing (virtual receptionist from $250/month for 50 minutes to $1,725 for 500; live chat from $143/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'Relevance AI Alternatives',
@@ -315,42 +315,42 @@ const servicePages = [
     {
         title: 'Ambs Call Center Alternatives',
         url: `${SITE_URL}/ambs-call-center-alternatives`,
-        description: 'Ambs Call Center pricing (ambscallcenter.com/pricing; Real People: $149/month for 100 minutes, $330 for 250, $600 for 500, $1,195 for 1,000, $2,945 for 2,500+, excess $1.20-$1.29/min; AI Receptionist: Starter $19/month plus $0.79 per AI minute, $75 for 100, $185 for 250, $350 for 500, $650 for 1,000; Real People + AI from $168 for 100 minutes; $85 one-time set-up fee; work time in 30-second increments) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
+        description: 'Ambs Call Center pricing (ambscallcenter.com/pricing; Real People: $149/month for 100 minutes, $330 for 250, $600 for 500, $1,195 for 1,000, $2,945 for 2,500+, excess $1.20-$1.29/min; AI Receptionist: Starter $19/month plus $0.79 per AI minute, $75 for 100, $185 for 250, $350 for 500, $650 for 1,000; Real People + AI from $168 for 100 minutes; $85 one-time set-up fee; work time in 30-second increments) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
     },
     {
         title: 'MAP Communications Alternatives',
         url: `${SITE_URL}/map-communications-alternatives`,
-        description: 'MAP Communications pricing (live answering billed by minutes: Pay As You Go $49/month plus $1.37/min, Business $179 for 125 minutes, Enterprise $339 for 250, Premium $649 for 500; every plan lists 24/7 coverage, English and Spanish, a toll-free number, HIPAA, PCI-DSS, HITRUST and SOC-2, no long-term contracts) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
+        description: 'MAP Communications pricing (live answering billed by minutes: Pay As You Go $49/month plus $1.37/min, Business $179 for 125 minutes, Enterprise $339 for 250, Premium $649 for 500; every plan lists 24/7 coverage, English and Spanish, a toll-free number, HIPAA, PCI-DSS, HITRUST and SOC-2, no long-term contracts) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
     },
     {
         title: 'Answering Service Care Alternatives',
         url: `${SITE_URL}/answering-service-care-alternatives`,
-        description: 'Answering Service Care pricing (answeringservicecare.com; live answering plans billed monthly: Starter $40/month pay as you go at $1.75/min, $179 for 100 minutes, $329 for 250, $639 for 500, overage $1.35-$1.75/min; the page also mentions a $50 start-up fee; AI plans from $25/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
+        description: 'Answering Service Care pricing (answeringservicecare.com; live answering plans billed monthly: Starter $40/month pay as you go at $1.75/min, $179 for 100 minutes, $329 for 250, $639 for 500, overage $1.35-$1.75/min; the page also mentions a $50 start-up fee; AI plans from $25/month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Posh, Moneypenny, Ruby, Smith.ai, Abby Connect, Upfirst, Dialzara, Rosie.',
     },
     {
         title: 'Posh Virtual Receptionist Alternatives',
         url: `${SITE_URL}/posh-alternatives`,
-        description: 'Posh Virtual Receptionist pricing (posh.com, the live answering service, not Poshmark; live receptionist plans from $65/month plus $2.30/min to $975 for 500 minutes and $1,900 for 1,000; AI + Live plans $130 for 50 mixed minutes to $975 for 500; free trial of seven days or 250 minutes; month to month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Moneypenny, Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, Rosie.',
+        description: 'Posh Virtual Receptionist pricing (posh.com, the live answering service, not Poshmark; live receptionist plans from $65/month plus $2.30/min to $975 for 500 minutes and $1,900 for 1,000; AI + Live plans $130 for 50 mixed minutes to $975 for 500; free trial of seven days or 250 minutes; month to month) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Moneypenny, Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, Rosie.',
     },
     {
         title: 'VoiceNation Alternatives',
         url: `${SITE_URL}/voicenation-alternatives`,
-        description: 'VoiceNation pricing (voicenation.com/pricing redirects to Moneypenny’s US pricing; VoiceNation joined the Moneypenny group in 2020. People Answering billed by minutes: $165/month for 50 minutes to $985 for 500; AI Answering billed by calls: $99/month for 50 calls to $775 for 500, with human escalation; 30 days’ notice to cancel) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'VoiceNation pricing (voicenation.com/pricing redirects to Moneypenny’s US pricing; VoiceNation joined the Moneypenny group in 2020. People Answering billed by minutes: $165/month for 50 minutes to $985 for 500; AI Answering billed by calls: $99/month for 50 calls to $775 for 500, with human escalation; 30 days’ notice to cancel) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'Moneypenny Alternatives',
         url: `${SITE_URL}/moneypenny-alternatives`,
-        description: 'Moneypenny US pricing (AI Answering billed by calls: $99/month for 50 calls to $775 for 500, with human escalation; People Answering billed by minutes: $165/month for 50 minutes to $985 for 500; 30 days’ notice to cancel) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'Moneypenny US pricing (AI Answering billed by calls: $99/month for 50 calls to $775 for 500, with human escalation; People Answering billed by minutes: $165/month for 50 minutes to $985 for 500; 30 days’ notice to cancel) and 8 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'PATLive Alternatives',
         url: `${SITE_URL}/patlive-alternatives`,
-        description: 'PATLive pricing (human-only live call answering: $49/month pay as you go at $2.99/min, $99 for 50 minutes to $759 for 500 at $1.79/min extra; 14-day free trial, no contracts) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'PATLive pricing (human-only live call answering: $49/month pay as you go at $2.99/min, $99 for 50 minutes to $759 for 500 at $1.79/min extra; 14-day free trial, no contracts) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Ruby, Smith.ai, Abby Connect, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'Abby Connect Alternatives',
         url: `${SITE_URL}/abby-connect-alternatives`,
-        description: 'Abby Connect pricing (human or AI answering billed in Abby Minutes: $164/month for 50 to $1,380 for 500; one AI minute counts as half an Abby Minute; overage at the plan rate; free trial, month to month) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (free to try; Crew agents take phone calls too, included), Ruby, PATLive, Smith.ai, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
+        description: 'Abby Connect pricing (human or AI answering billed in Abby Minutes: $164/month for 50 to $1,380 for 500; one AI minute counts as half an Abby Minute; overage at the plan rate; free trial, month to month) and 9 alternatives compared on price and billing unit, checked Oct 21, 2026: Dooza Crew (start for $5; Crew agents take phone calls too, included), Ruby, PATLive, Smith.ai, Goodcall, Upfirst, Dialzara, My AI Front Desk, Rosie.',
     },
     {
         title: 'AI Receptionist',
@@ -416,7 +416,7 @@ const companyFacts = [
     'Founder: Sibi Narendran (https://sibinarendran.com)',
     'Brand colors: Dooza Teal #0F766E (primary), Teal Bright #0D9488, Ink #0F172A, Warm White #FAF9F7, Signal Amber #F59E0B',
     'What Dooza is: an AI-native company that builds AI products and services for small businesses',
-    'Self-serve product: Dooza Crew (https://crew.dooza.ai), your own AI agent team in a private sandbox, free to try',
+    'Self-serve product: Dooza Crew (https://crew.dooza.ai), your own AI agent team in a private sandbox, start for $5',
     'Product: Dooza Custom AI Agents (AI agentic platform with custom AI agents built and maintained by Dooza engineers)',
     'Services (done for you): Dooza Managed (AI admin assistant checked by a real person), custom AI agents scoped on a free 30-minute call, industry offers on their industry pages',
     'Offers: Dooza Managed is free for the first 7 days, then $200/month. Dooza Crew agents take phone calls too, included in the Crew plan; there is no separate phone service. Custom AI agents start with a paid, refundable pilot (100% refund within 14 days), scoped by a Dooza engineer on a free 30-minute call.',
@@ -529,7 +529,7 @@ export async function GET() {
         `RSS: ${SITE_URL}/rss.xml`,
         '',
         '## Offers and trials',
-        '- Dooza Crew (self-serve AI agent team, https://crew.dooza.ai)free to try (no card needed).',
+        '- Dooza Crew (self-serve AI agent team, https://crew.dooza.ai) start for $5.',
         '- Dooza Managed (AI admin assistant checked by a real person): first 7 days free, then $200/month.',
         '- Phone calls: included in Dooza Crew (Crew agents take phone calls too); no separate phone service.',
         '- Custom AI agents start with a paid, refundable pilot: 100% refund within 14 days. The 30-minute call to scope it is free.',

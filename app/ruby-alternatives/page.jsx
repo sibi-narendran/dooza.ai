@@ -132,7 +132,7 @@ const alternatives = [
         href: '/ai-receptionist',
         internal: true,
         what: 'AI agents (a lead agent plus helper agents) you chat with on web or phone. They browse the web, write files in their own workspace and take phone calls, and they ask you in chat before they send or pay. Run by us, the company that publishes this page.',
-        price: 'free to try (no card needed). Phone calls are included in your Crew plan.',
+        price: 'Start for $5. Phone calls are included in your Crew plan.',
         bestFor: 'Teams that want AI agents that do more than answer calls, with the phone included in one plan.',
     },
     {
@@ -201,7 +201,7 @@ const faqItems = [
     },
     {
         question: 'What is the best AI receptionist for small business?',
-        answer: `It depends on what you need. Dooza Crew is free to try, and Crew agents take phone calls too. Upfirst ($24.95 for 30 calls) and Rosie ($49 for 250 minutes) are priced per call or per minute, and both list calendar booking. Prices checked ${CHECKED}.`,
+        answer: `It depends on what you need. Dooza Crew is $5 to start, and Crew agents take phone calls too. Upfirst ($24.95 for 30 calls) and Rosie ($49 for 250 minutes) are priced per call or per minute, and both list calendar booking. Prices checked ${CHECKED}.`,
     },
     {
         question: 'What is a cheaper alternative to a human receptionist?',
@@ -213,7 +213,7 @@ const faqItems = [
     },
     {
         question: 'How much does Dooza Crew cost?',
-        answer: 'Dooza Crew is free to try (no card needed). Crew agents take phone calls too, and it is included in your Crew plan.',
+        answer: 'Dooza Crew is $5 to start. Crew agents take phone calls too, and it is included in your Crew plan.',
     },
 ];
 
@@ -262,10 +262,10 @@ const schemas = [
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
             '@type': 'Offer',
-            name: 'Dooza Crew, free to try',
-            price: '0',
+            name: 'Dooza Crew, $5 to start',
+            price: '5',
             priceCurrency: 'USD',
-            description: 'Free to try. No card needed. Phone calls are included.',
+            description: 'Start for $5. Phone calls are included.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -297,10 +297,10 @@ export default function RubyAlternativesPage() {
                         <section className="text-center">
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Ruby Receptionist Alternatives for Small Businesses (2026 Prices)</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
-                                <strong>The best Ruby alternative depends on whether you need a person or just need every call answered. Ruby’s pricing page lists $250 a month for 50 minutes and $1,725 for 500. Dooza Crew is free to try, and Crew agents take phone calls too. Prices checked {CHECKED} on each vendor’s own page.</strong>
+                                <strong>The best Ruby alternative depends on whether you need a person or just need every call answered. Ruby’s pricing page lists $250 a month for 50 minutes and $1,725 for 500. Dooza Crew is $5 to start, and Crew agents take phone calls too. Prices checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page (Dooza). Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
@@ -309,7 +309,7 @@ export default function RubyAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Ruby Receptionist alternatives compared</h2>
                             <p className="mt-3 text-slate-700">
-                                These services bill in different units: per call, per minute, per Abby Minute or per unique customer. A 10-minute call costs one call on Upfirst but 10 minutes on Rosie, so compare on your own call pattern. A human service’s minute is receptionist time, so it is not directly comparable with an AI minute. The closest like-for-like line: Ruby’s 500 minutes cost $1,725 a month. Dooza Crew is priced per organization (free to try), not per minute or per call. Prices checked {CHECKED}.
+                                These services bill in different units: per call, per minute, per Abby Minute or per unique customer. A 10-minute call costs one call on Upfirst but 10 minutes on Rosie, so compare on your own call pattern. A human service’s minute is receptionist time, so it is not directly comparable with an AI minute. The closest like-for-like line: Ruby’s 500 minutes cost $1,725 a month. Dooza Crew is priced per organization (start for $5), not per minute or per call. Prices checked {CHECKED}.
                             </p>
                             <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
                                 <table className="w-full text-sm">
@@ -328,9 +328,9 @@ export default function RubyAlternativesPage() {
                                             <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
                                             <td className="px-3 py-3">Per organization</td>
-                                            <td className="px-3 py-3 font-semibold">Free to try</td>
+                                            <td className="px-3 py-3 font-semibold">Start for $5</td>
                                             <td className="px-3 py-3">Takes calls: included in Crew</td>
-                                            <td className="px-3 py-3">Free to try, no card needed</td>
+                                            <td className="px-3 py-3">Start for $5</td>
                                         </tr>
                                         {vendors.map((v) => (
                                             <tr key={v.name} className="border-t border-slate-200">
@@ -383,7 +383,7 @@ export default function RubyAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Where Dooza Crew fits</h2>
                             <p className="mt-3 text-slate-700">
-                                Dooza Crew is free to try. Crew agents take phone calls too, and it is included in your Crew plan, so there is no separate phone service to buy. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
+                                Dooza Crew is $5 to start. Crew agents take phone calls too, and it is included in your Crew plan, so there is no separate phone service to buy. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
                             </p>
                             <div className="mt-6 grid gap-4 sm:grid-cols-2">
                                 <div className="rounded-xl border border-primary-100 bg-primary-50 p-5">
@@ -403,7 +403,7 @@ export default function RubyAlternativesPage() {
                                 </div>
                             </div>
                             <p className="mt-4 text-slate-700">
-                                <strong>Other entry prices:</strong> Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes) and My AI Front Desk ($99 for 200 minutes). Smith.ai’s AI plan is free for 25 calls. If your call volume is low or you need booking, start there. Dooza Crew is free to try, with phone calls included in your Crew plan, for teams that want agents that do more than answer calls.
+                                <strong>Other entry prices:</strong> Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes) and My AI Front Desk ($99 for 200 minutes). Smith.ai’s AI plan is free for 25 calls. If your call volume is low or you need booking, start there. Dooza Crew is $5 to start, with phone calls included in your Crew plan, for teams that want agents that do more than answer calls.
                             </p>
                         </section>
 
@@ -424,9 +424,9 @@ export default function RubyAlternativesPage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
-                            <p className="mt-3 text-slate-300">Free to try (no card needed). Phone calls are included in your Crew plan.</p>
+                            <p className="mt-3 text-slate-300">Start for $5. Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Try Dooza Crew free</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>
