@@ -266,6 +266,25 @@ const SUPPORT_SLUGS = new Set([
 ]);
 const stripOffer = (slug) => (slug === 'best-ai-receptionist' ? 'receptionist' : SUPPORT_SLUGS.has(slug) ? 'support' : 'crew');
 
+// Inline Crew box before the 2nd H2 on the top-click posts (trial inline-crew-box, 2026-10-30): since 10-23 the
+// end-of-post strip sent 77 visits and 0 humans to Crew, so most readers never reach it. Other crew posts = control.
+const INLINE_CREW_SLUGS = new Set([
+    'kurzgesagt-ai-crossed-the-line', 'how-to-choose-perfect-ai-assistant-names', 'laziest-way-to-make-money-with-ai',
+    'claude-made-video-western-civilization', 'iphone-second-gpu-macbook-local-ai', 'claude-code-universal-modder-game-mods',
+    'pewdiepie-openai-ban-ai-distillation', 'thinnest-tech-2026-mrwhosetheboss', 'anthropic-2-trillion-valuation-vs-samsung',
+]);
+function withInlineCrew(post, slug) {
+    if (!INLINE_CREW_SLUGS.has(slug) || !post?.content) return post;
+    const heads = [...post.content.matchAll(/<h[12]\b/gi)];
+    if (heads.length < 2) return post;
+    const href = `https://crew.dooza.ai/?utm_source=dooza&utm_medium=page&utm_content=inline-blog_${slug}`;
+    const box = `<aside class="not-prose my-8 rounded-xl border border-teal-200 bg-teal-50 p-5" data-offer="crew" data-source="inline-blog_${slug}">`
+        + `<p class="m-0 text-base text-slate-800"><strong>Dooza Crew (our product):</strong> give an AI employee a job in plain words and it works on its own computer and browser, takes your phone calls, and asks before it sends or pays anything.</p>`
+        + `<p class="mt-3 mb-0"><a href="${href}" data-offer="crew" data-source="inline-blog_${slug}" class="inline-block rounded-lg bg-[#0F766E] px-5 py-2.5 font-semibold text-white no-underline hover:bg-[#115E59]">Start for $5</a></p></aside>`;
+    const i = heads[1].index;
+    return { ...post, content: post.content.slice(0, i) + box + post.content.slice(i) };
+}
+
 // Generate metadata for each blog post
 export async function generateMetadata({ params }) {
     const { slug } = await params;
@@ -384,7 +403,7 @@ export default async function BlogPostPage({ params }) {
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
                 />
-                <DynamicBlogContent post={staticPost} />
+                <DynamicBlogContent post={withInlineCrew(staticPost, slug)} />
                 <TalkNowStrip source={`blog_${slug}`} offer={stripOffer(slug)} />
                 {stripOffer(slug) === 'crew' && <CrewBlogBar source={slug} />}
             </>
@@ -417,7 +436,7 @@ export default async function BlogPostPage({ params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
             />
-            <DynamicBlogContent post={dynamicPost} />
+            <DynamicBlogContent post={withInlineCrew(dynamicPost, slug)} />
             <TalkNowStrip source={`blog_${slug}`} offer={stripOffer(slug)} />
                 {stripOffer(slug) === 'crew' && <CrewBlogBar source={slug} />}
         </>
