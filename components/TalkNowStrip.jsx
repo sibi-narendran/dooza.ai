@@ -25,7 +25,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'crew' }) {
                 </div>
                 <p className="mt-5 text-sm text-slate-600">
                     {offer === 'receptionist' ? (
-                        <>Or start now: <a href={crewSignupUrl(`strip-${source}`)} data-offer="crew" data-source={source} className="font-semibold text-primary-700 underline">Dooza Crew</a>, free to try (no card needed).</>
+                        <>Or start now: <a href={crewSignupUrl(`strip-${source}`)} data-offer="crew" data-source={source} className="font-semibold text-primary-700 underline">Dooza Crew</a>, start for $5.</>
                     ) : offer === 'support' ? (
                         <>Or start now: <a href={supportPay(source)} data-offer="support" data-source={source} className="font-semibold text-primary-700 underline">Dooza AI customer support</a>, 14-day free trial (card at signup), then $300/month for up to 250 customer messages. <a href="/customer-support-automation-agency" className="underline">How it works</a>.</>
                     ) : offer === 'notary-renewal' ? (
@@ -39,7 +39,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'crew' }) {
                     ) : offer === 'cert-agencies' ? (
                         <>Or start now: a <a href={tagPay(CERT_PACK_PAY_URL, source)} data-offer="cert-agencies" data-source={source} className="font-semibold text-primary-700 underline">pack of 10 certificates for $50</a>.</>
                     ) : offer === 'crew' ? (
-                        <>Or start now: <a href={crewSignupUrl(`strip-${source}`)} data-offer="crew" data-source={source} className="font-semibold text-primary-700 underline">Dooza Crew</a>, AI employees you chat with from web or phone, watching every step live in chat: free to try. Want it done for you instead? <a href={tagPay(MANAGED_PAY_URL, source)} data-offer="managed" data-source={source} className="underline">Dooza Managed</a>, $200/month.</>
+                        <>Or start now: <a href={crewSignupUrl(`strip-${source}`)} data-offer="crew" data-source={source} className="font-semibold text-primary-700 underline">Dooza Crew</a>, AI employees you chat with from web or phone, watching every step live in chat: start for $5. Want it done for you instead? <a href={tagPay(MANAGED_PAY_URL, source)} data-offer="managed" data-source={source} className="underline">Dooza Managed</a>, $200/month.</>
                     ) : offer === 'trucker-feed' ? (
                         <>Or start now: the <a href={`${ICP1_A_PAY_URL}?client_reference_id=feed-talknow`} data-offer="trucker-feed" data-source={source} className="font-semibold text-primary-700 underline">Monday Trucker Feed</a>, $129 every 4 weeks, paid first.</>
                     ) : (

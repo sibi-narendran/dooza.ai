@@ -6,7 +6,7 @@ import { SITE_URL } from '@/lib/site';
 export const metadata = {
     title: { absolute: 'Dooza: AI Employees With Their Own Computer and Browser' },
     description:
-        'Dooza Crew gives your business AI employees with their own computer and browser. Work with them and your staff in one chat. Free to try, no card needed.',
+        'Dooza Crew gives your business AI employees with their own computer and browser. Work with them and your staff in one chat. Start for $5.',
     keywords: [
         'Dooza Crew',
         'AI employees',
@@ -26,7 +26,7 @@ export const metadata = {
     openGraph: {
         title: 'Dooza: AI Employees With Their Own Computer and Browser',
         description:
-            'Dooza Crew gives your business AI employees with their own computer and browser. Work with them and your staff in one chat. Free to try, no card needed.',
+            'Dooza Crew gives your business AI employees with their own computer and browser. Work with them and your staff in one chat. Start for $5.',
         url: SITE_URL,
         siteName: 'Dooza',
         type: 'website',
@@ -38,7 +38,7 @@ export const metadata = {
         creator: '@sibinarendran',
         title: 'Dooza: AI Employees With Their Own Computer and Browser',
         description:
-            'Dooza Crew gives your business AI employees with their own computer and browser. Work with them and your staff in one chat. Free to try, no card needed.',
+            'Dooza Crew gives your business AI employees with their own computer and browser. Work with them and your staff in one chat. Start for $5.',
         images: [`${SITE_URL}/logo.png`],
     },
 };

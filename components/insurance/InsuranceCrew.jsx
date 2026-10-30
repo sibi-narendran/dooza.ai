@@ -91,7 +91,7 @@ export const insuranceFaq = [
     { question: 'Can it answer our phones?', answer: 'Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.' },
     { question: 'Can it fill ACORD forms?', answer: 'Yes, if you upload your fillable copy. It fills fillable PDF forms such as ACORD 25 and 125, plus Excel and Word files, and saves the filled form to Files for you to check. It also fills web forms and portal screens, including certificate and change requests in carrier and agency portals. Scanned PDFs without form fields cannot be filled.' },
     { question: 'Is our client data safe?', answer: 'Every account runs in its own isolated sandbox with its own browser and files. You type your passwords and 2FA codes yourself, and nothing is sent without your approval.' },
-    { question: 'How much does it cost?', answer: 'Free to try. Cancel during the trial and you pay nothing.' },
+    { question: 'How much does it cost?', answer: 'Start for $5. Your desk is built in order; we email you the moment it is ready.' },
     { question: 'Can my CSRs and producers use it?', answer: 'Yes. Users are unlimited. Add your team to the same chat and everyone can hand out jobs and see the work.' },
 ];
 
@@ -206,7 +206,7 @@ export default function InsuranceCrew() {
                         <div>
                             <h2 id="price-title" className={`${H2} text-white`}>Less than a day of a CSR&apos;s pay. For the month.</h2>
                             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-                                Free to try. Cancel during the trial and you pay nothing.
+                                Start for $5. Your desk is built in order; we email you the moment it is ready.
                             </p>
                         </div>
                         <div className="lg:text-right">

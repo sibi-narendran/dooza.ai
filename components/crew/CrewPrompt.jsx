@@ -53,7 +53,7 @@ export default function CrewPrompt({ placement = 'crew-hero', tone = 'dark', cen
                     className={`block w-full resize-none bg-transparent px-3 py-2 text-lg focus:outline-none ${t.input}`}
                 />
                 <div className="flex items-center justify-between gap-3 px-2 pb-1 pt-2">
-                    <span className={`text-xs ${t.hint}`}>Free to try. No card needed.</span>
+                    <span className={`text-xs ${t.hint}`}>Start for $5.</span>
                     <button
                         type="submit"
                         data-offer="crew"

@@ -29,10 +29,10 @@ const OFFERS = [
         crew: true,
         name: 'Dooza Crew',
         tagline: 'AI agents you chat with on web or phone. Phone calls are included, so there is no separate phone service to buy.',
-        price: 'Free to try',
+        price: 'Start for $5',
         per: '',
-        terms: 'No card needed.',
-        cta: 'Start free',
+        terms: 'Your desk is built in order.',
+        cta: 'Start for $5',
         points: [
             'A lead agent plus helper agents you chat with on web or phone',
             'They browse the web and write files in their own workspace',
@@ -40,7 +40,7 @@ const OFFERS = [
             'Crew agents take phone calls too, included in your Crew plan',
             'Unlimited users and agents',
         ],
-        note: 'Free to try. No card needed.',
+        note: 'Start for $5.',
     },
     {
         id: 'trucker-feed',

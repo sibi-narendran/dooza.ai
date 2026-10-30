@@ -91,7 +91,7 @@ export const dispatchFaq = [
     { question: 'Can it book loads for me?', answer: 'It finds the loads that fit and drafts the email to the broker. You call or approve before anything is booked.' },
     { question: 'Can it fill broker setup packets?', answer: 'Yes, when the packet is a fillable PDF or a web form. Upload the packet and it fills in your carrier\'s details, such as the W-9, from your files, saves the filled copy to Files and drafts the email back to the broker for your approval. Scanned PDFs without form fields cannot be filled.' },
     { question: 'Is my carriers\' data safe?', answer: 'Every account runs in its own isolated sandbox with its own browser and files. You type your passwords and 2FA codes yourself, and nothing is sent without your approval.' },
-    { question: 'How much does it cost?', answer: 'Free to try. Cancel during the trial and you pay nothing.' },
+    { question: 'How much does it cost?', answer: 'Start for $5. Your desk is built in order; we email you the moment it is ready.' },
     { question: 'I still have questions. Can I talk to someone?', answer: 'Yes. Book a 30-minute call at dooza.ai/book and we will walk through your desk with you.' },
 ];
 
@@ -206,7 +206,7 @@ export default function DispatchCrew() {
                         <div>
                             <h2 id="price-title" className={`${H2} text-white`}>Less than one load&apos;s dispatch fee. For the month.</h2>
                             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-                                Free to try. Cancel during the trial and you pay nothing.
+                                Start for $5. Your desk is built in order; we email you the moment it is ready.
                             </p>
                         </div>
                         <div className="lg:text-right">

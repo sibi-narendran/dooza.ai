@@ -22,7 +22,7 @@ const display = Bricolage_Grotesque({ subsets: ['latin'], weight: ['600', '700',
 const body = Instrument_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap' });
 const D = display.className;
 
-export const PRICE_LINE = 'Free to try. No card needed. You see the plans inside the app after you have tried it.';
+export const PRICE_LINE = 'Start for $5. You see the plans inside the app after you have tried it.';
 
 const kit = [
     { name: 'Its own computer', text: 'A private machine with files, spreadsheets and code. Work stays there between jobs.' },
@@ -56,10 +56,10 @@ export const homeFaq = [
     { question: 'What is Dooza?', answer: 'Dooza gives your business AI employees. With Dooza Crew you get a master agent that builds a team of AI employees for you. Each one has its own computer and a real browser, and they work with your staff in one group chat. You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
     { question: 'What can an AI employee do?', answer: 'Whatever you can do on a computer: research, write, fill in forms, update spreadsheets, draft email and chat replies for your approval. You give the job in plain words.' },
     { question: 'Can my staff work with the AI employees?', answer: 'Yes. Create a group, add your people and your AI employees, and work in one chat. Your staff can give jobs, see the work, and watch every step live.' },
-    { question: 'How much does it cost?', answer: 'Free to try. No card needed. You see the plans inside the app after you have tried it.' },
+    { question: 'How much does it cost?', answer: 'Start for $5. You see the plans inside the app after you have tried it.' },
     { question: 'Can Dooza Crew answer phone calls?', answer: 'Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.' },
     { question: 'Which channels can it use?', answer: 'You talk to your crew in a private chat app on web or phone, and your staff can join the same chat. You watch every step live in chat. Before it clicks Send or Pay, it asks you: Approve, Edit or Reject in chat.' },
-    { question: 'Can I start today?', answer: 'Seats are limited. When they are full you can join the waitlist and we email you when a seat opens.' },
+    { question: 'Can I start today?', answer: 'Yes. Start for $5; your desk is built in order and we email you the moment it is ready.' },
     { question: 'Do you still build AI agents for us?', answer: 'Yes. If you would rather we do it for you, see Dooza Managed and custom AI agents. Each has its own page and price.' },
 ];
 
@@ -226,11 +226,11 @@ export default function HomeCrew() {
                 <section id="price" className="scroll-mt-20 bg-[#0F766E] px-4 py-20 text-white md:px-8 md:py-28">
                     <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
                         <div>
-                            <h2 className={H2}><a href={crewSignupUrl('home-price-h2')} data-source="home-price-h2" className="decoration-white/60 underline-offset-8 hover:underline">Try it free. No card needed.</a></h2>
+                            <h2 className={H2}><a href={crewSignupUrl('home-price-h2')} data-source="home-price-h2" className="decoration-white/60 underline-offset-8 hover:underline">Start for $5.</a></h2>
                             <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/85">
-                                <a href={crewSignupUrl('home-price-copy')} data-source="home-price-copy" className="hover:underline">Add your whole team to the same chat. Start in a minute, no card needed.</a>
+                                <a href={crewSignupUrl('home-price-copy')} data-source="home-price-copy" className="hover:underline">Add your whole team to the same chat. Start in a minute for $5.</a>
                             </p>
-                            <p className="mt-4 text-[15px] text-white/75">Seats are limited. When they are full, join the waitlist.</p>
+                            <p className="mt-4 text-[15px] text-white/75">Your desk is built in order; we email you the moment it is ready.</p>
                         </div>
                         {/* One chat box on the page (Sibi 2026-10-22 20:17): price and bottom sections link to sign-up and offer a call or text. */}
                         <div className="rounded-2xl bg-white p-7 text-[#14213D] md:p-9">

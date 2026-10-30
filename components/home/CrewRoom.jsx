@@ -178,7 +178,7 @@ export default function CrewRoom() {
                     data-source="home-demo"
                     className="text-[15px] font-semibold text-[#0F766E] after:absolute after:inset-0 after:rounded-[28px] after:content-[''] hover:underline"
                 >
-                    Give your crew this job, free to try →
+                    Give your crew this job, start for $5 →
                 </a>
             </div>
             <figcaption className="sr-only">An example Dooza Crew chat: you give one job, the master agent splits it between two AI helpers who research in their own browser and save results to Files, with AI spend capped.</figcaption>
