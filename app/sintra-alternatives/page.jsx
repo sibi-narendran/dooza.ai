@@ -3,7 +3,7 @@ import SintraAlternativesContent from './SintraAlternativesContent';
 
 export const metadata = {
     title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-    description: '7 Sintra AI alternatives compared on pricing, features, and limits (checked October 7, 2026). Our top pick: our own product, Dooza Crew,, free to try.',
+    description: '7 Sintra AI alternatives compared on pricing, features, and limits (checked October 7, 2026). Our top pick: our own product, Dooza Crew, free to try.',
     keywords: [
         'sintra ai alternatives', 'best sintra alternative 2026', 'sintra ai competitors',
         'sintra alternative', 'sintra ai replacement', 'AI employee platforms',
