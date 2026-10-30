@@ -146,8 +146,8 @@ export default function WindowTintAnsweringServicePage() {
                                         <tr className="border-t border-slate-200 bg-primary-50">
                                             <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
-                                            <td className="px-3 py-3">Per organization, free trial</td>
-                                            <td className="px-3 py-3 font-semibold">$49</td>
+                                            <td className="px-3 py-3">Free to try. No card needed.</td>
+                                            <td className="px-3 py-3 font-semibold">Free to try</td>
                                         </tr>
                                         {rows.map((r) => (
                                             <tr key={r.name} className="border-t border-slate-200">
