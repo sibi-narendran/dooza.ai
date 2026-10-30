@@ -142,6 +142,17 @@ export default function AiReceptionistCostCalculatorPage() {
                             <h2 className="mb-6 text-2xl font-bold text-slate-900">Frequently asked questions</h2>
                             <FAQAccordion items={faqItems} />
                         </section>
+                        <section className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+                            <h2 className="text-2xl font-bold text-slate-900">Want the calls answered without buying another service?</h2>
+                            <p className="mt-3 text-slate-600 leading-relaxed">
+                                This calculator is free. If the number it gives you is the problem, Dooza Crew is a team of AI employees
+                                that answers your calls and drafts the follow-up, and before it sends or books anything it asks you to
+                                Approve, Edit or Reject.
+                            </p>
+                            <a href="https://crew.dooza.ai/?utm_source=dooza&utm_medium=tool&utm_content=ai-receptionist-cost-calculator"
+                               className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary-600 px-6 py-3 font-bold text-white hover:bg-primary-700 transition-colors"
+                               data-offer="crew" data-source="receptionist-calc-cta">Try Dooza Crew free →</a>
+                        </section>
                     </div>
                 </main>
                 <Footer />
