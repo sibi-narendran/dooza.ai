@@ -139,6 +139,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/integrations`,
+            lastModified: pageDate('2026-10-30'),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
             url: `${SITE_URL}/integrations/n8n`,
             lastModified: pageDate('2026-10-29'),
             changeFrequency: 'monthly',

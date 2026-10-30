@@ -116,7 +116,9 @@ export default function N8nIntegrationPage() {
         <>
             <Navbar />
             <main className="mx-auto max-w-5xl px-5 pb-20 pt-28 sm:pt-32">
-                <p className="text-sm font-semibold uppercase tracking-wide text-primary-700">Integrations · n8n</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-primary-700">
+                    <a href="/integrations" className="hover:underline">Integrations</a> · n8n
+                </p>
                 <h1 className="mt-3 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
                     Dooza Crew for n8n: give any workflow an AI employee
                 </h1>
@@ -203,6 +205,9 @@ export default function N8nIntegrationPage() {
                         <a className={A} href="https://docs.n8n.io/integrations/community-nodes/installation/" target="_blank" rel="noopener noreferrer">
                             docs.n8n.io installation guide
                         </a>
+                    </li>
+                    <li>
+                        All Dooza Crew integrations and the Task API: <a className={A} href="/integrations">dooza.ai/integrations</a>
                     </li>
                     <li>
                         Crew sign-up: <a className={A} href={CREW}>crew.dooza.ai</a> (free to try, no card needed)
