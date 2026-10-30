@@ -132,7 +132,7 @@ export default function IndustryCrew({ c }) {
                         </div>
                         <div className="lg:text-right">
                             <a href={crewSignupUrl(`${p}-price`)} data-offer="crew" data-source={`${p}-price`} className="inline-block rounded-xl bg-white px-7 py-4 text-lg font-semibold text-[#14213D] hover:bg-[#EEF3F1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                                Start your free trial
+                                Start for $5
                             </a>
                         </div>
                     </div>

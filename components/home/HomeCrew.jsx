@@ -92,7 +92,7 @@ export default function HomeCrew() {
                     <div className="mt-10 grid items-start gap-12 lg:mt-14 lg:grid-cols-[5fr_7fr] lg:gap-16">
                         <div className="lg:pt-2">
                             <p className={`max-w-[34rem] text-lg leading-relaxed md:text-xl ${MUTED}`}>
-                                With Dooza Crew you give it a job in plain words and watch it work on its own computer, with its own browser. It takes your phone calls too, included in your plan. Add your staff to the same chat. Free to try.
+                                With Dooza Crew you give it a job in plain words and watch it work on its own computer, with its own browser. It takes your phone calls too, included in your plan. Add your staff to the same chat. Start for $5.
                             </p>
                             <div className="mt-8">
                                 <CrewPrompt placement="home-hero" tone="light" />
@@ -234,7 +234,7 @@ export default function HomeCrew() {
                         </div>
                         {/* One chat box on the page (Sibi 2026-10-22 20:17): price and bottom sections link to sign-up and offer a call or text. */}
                         <div className="rounded-2xl bg-white p-7 text-[#14213D] md:p-9">
-                            <a href={crewSignupUrl('home-price')} data-source="home-price" className="block rounded-xl bg-[#0F766E] px-6 py-4 text-center text-lg font-semibold text-white hover:bg-[#115E59]">Start your free trial</a>
+                            <a href={crewSignupUrl('home-price')} data-source="home-price" className="block rounded-xl bg-[#0F766E] px-6 py-4 text-center text-lg font-semibold text-white hover:bg-[#115E59]">Start for $5</a>
                             <p className={`mt-6 text-[17px] ${MUTED}`}>Questions first? Talk to us at Dooza.</p>
                             <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-[17px]">
                                 <a href="tel:+14243658980" data-source="home-price-call" className={LINK}>Call +1 (424) 365-8980</a>
@@ -278,7 +278,7 @@ export default function HomeCrew() {
                     <div className="mx-auto max-w-7xl">
                         <h2 className={`${D} max-w-[16ch] text-[40px] font-extrabold leading-[0.98] tracking-[-0.04em] md:text-[72px]`}>Give your crew its first job.</h2>
                         <div className="mt-10 flex max-w-2xl flex-wrap items-center gap-x-8 gap-y-4">
-                            <a href={crewSignupUrl('home-bottom')} data-source="home-bottom" className="rounded-xl bg-[#0F766E] px-7 py-4 text-lg font-semibold text-white hover:bg-[#115E59]">Start your free trial</a>
+                            <a href={crewSignupUrl('home-bottom')} data-source="home-bottom" className="rounded-xl bg-[#0F766E] px-7 py-4 text-lg font-semibold text-white hover:bg-[#115E59]">Start for $5</a>
                             <a href="tel:+14243658980" data-source="home-bottom-call" className={`text-[17px] ${LINK}`}>Call us: +1 (424) 365-8980</a>
                             <a href="sms:+12137192533" data-source="home-bottom-text" className={`text-[17px] ${LINK}`}>Text us: +1 (213) 719-2533</a>
                         </div>

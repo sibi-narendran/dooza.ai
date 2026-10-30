@@ -60,7 +60,7 @@ export default function CrewPrompt({ placement = 'crew-hero', tone = 'dark', cen
                         data-source={placement}
                         className={`shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${t.button}`}
                     >
-                        Try it free
+                        Start for $5
                     </button>
                 </div>
             </form>

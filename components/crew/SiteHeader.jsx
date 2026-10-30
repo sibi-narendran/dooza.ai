@@ -28,7 +28,7 @@ export default function SiteHeader({ tagline, bookSource, source = 'site-header'
                         </a>
                         {bookSource && <Link href="/book" data-source={bookSource} className="hidden text-sm font-semibold text-[#14213D] underline decoration-2 underline-offset-4 hover:text-[#0F766E] lg:inline">Questions? Book a call</Link>}
                         <a href={crewSignupUrl(source)} data-offer="crew" data-source={source} className="whitespace-nowrap rounded-full bg-[#0F766E] px-4 py-2 sm:px-5 md:py-2.5 text-sm font-semibold text-white hover:bg-[#14213D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]">
-                            Try it free
+                            Start for $5
                         </a>
                     </div>
                 </header>

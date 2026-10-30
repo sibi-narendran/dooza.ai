@@ -24,7 +24,7 @@ export default function CrewBlogBar({ source = 'blog' }) {
                 <p className="flex-1 text-sm text-slate-700 sm:text-[15px]">
                     <span className="font-semibold text-[#14213D]">Dooza Crew:</span> AI employees you chat with, each with its own computer and browser. Start for $5, your whole team included.
                 </p>
-                <a href={crewSignupUrl(`bar-${source}`)} data-offer="crew" data-source={`bar-${source}`} className="shrink-0 rounded-full bg-[#0F766E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#14213D]">Try it free</a>
+                <a href={crewSignupUrl(`bar-${source}`)} data-offer="crew" data-source={`bar-${source}`} className="shrink-0 rounded-full bg-[#0F766E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#14213D]">Start for $5</a>
                 <button type="button" onClick={close} aria-label="Close" className="shrink-0 px-1 text-xl leading-none text-slate-400 hover:text-slate-700">&times;</button>
             </div>
         </div>
