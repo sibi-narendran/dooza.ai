@@ -375,6 +375,24 @@ export default function AiSlopCheckerPage() {
                         </section>
                     </div>
                     <TalkNowStrip source="ai-slop-checker" />
+                    <section className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 pb-14">
+                        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+                            <h2 className="text-2xl font-bold text-slate-900">Want the writing done, not just checked?</h2>
+                            <p className="mt-3 text-slate-600 leading-relaxed">
+                                This checker is free and runs in your browser. If you would rather hand the drafting over:
+                                Dooza Crew is a team of AI employees that drafts your emails and posts, and before it sends
+                                anything it asks you to Approve, Edit or Reject.
+                            </p>
+                            <a
+                                href="https://crew.dooza.ai/?utm_source=dooza&utm_medium=tool&utm_content=ai-slop-checker"
+                                className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary-600 px-6 py-3 font-bold text-white hover:bg-primary-700 transition-colors"
+                                data-offer="crew"
+                                data-source="ai-slop-checker-cta"
+                            >
+                                Try Dooza Crew free →
+                            </a>
+                        </div>
+                    </section>
                     </main>
 
                 <Footer />
