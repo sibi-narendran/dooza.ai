@@ -86,7 +86,7 @@ const guardrails = [
 
 export const dispatchFaq = [
     { question: 'What is Dooza Crew for truck dispatchers?', answer: 'Dooza Crew gives a dispatch business AI employees: one for load boards, one for the inbox, one for billing, one for finding brokers, one for carrier compliance. Each has its own computer and browser, works around the clock, and works with your dispatchers in one chat. Before it sends anything, it asks you to approve.' },
-    { question: 'Does it work with DAT or Truckstop?', answer: 'It works in web-based tools you can log in to with a browser, including load boards, webmail and factoring portals. We have not certified any specific load board or TMS yet, so try it on yours during the free trial, and check your load board\'s terms for automated searching.' },
+    { question: 'Does it work with DAT or Truckstop?', answer: 'It works in web-based tools you can log in to with a browser, including load boards, webmail and factoring portals. We have not certified any specific load board or TMS yet, so try it on yours when you start for $5, and check your load board\'s terms for automated searching.' },
     { question: 'Can it make check calls or text drivers?', answer: 'Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.' },
     { question: 'Can it book loads for me?', answer: 'It finds the loads that fit and drafts the email to the broker. You call or approve before anything is booked.' },
     { question: 'Can it fill broker setup packets?', answer: 'Yes, when the packet is a fillable PDF or a web form. Upload the packet and it fills in your carrier\'s details, such as the W-9, from your files, saves the filled copy to Files and drafts the email back to the broker for your approval. Scanned PDFs without form fields cannot be filled.' },
@@ -143,7 +143,7 @@ export default function DispatchCrew() {
                                     <div className="md:pt-9">
                                         <p className={`text-[17px] leading-relaxed ${MUTED}`}>{a.job}</p>
                                         <a href={crewSignupUrl(`dsp-agent-${a.name.split(' ')[0].toLowerCase()}`, a.task)} data-offer="crew" data-source={`dsp-agent-${a.name.split(' ')[0].toLowerCase()}`} className={`mt-4 inline-block text-[15px] ${LINK}`}>
-                                            Hire the {a.name.toLowerCase()} free
+                                            Hire the {a.name.toLowerCase()}, $5 to start
                                         </a>
                                     </div>
                                 </li>
