@@ -31,7 +31,7 @@ import {
 const faqData = [
     {
         question: "What is the best MakeUGC alternative?",
-        answer: "It depends on the job. For AI UGC ad creatives, the closest alternatives are Creatify, Arcads, and HeyGen; Creatify can also launch ads straight to Meta, TikTok, YouTube, Snap, and Amazon ad accounts. Dooza is the alternative for businesses that want the work done for them: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email and sales, and nothing goes out without your approval."
+        answer: "For a small business, our top pick is Dooza Crew (our product): you tell it the job in plain words, such as writing UGC ad scripts and scheduling the posts, it builds the helper agents, and it asks you to Approve, Edit or Reject before it sends or pays. Free to try, no card needed; $49/month when you keep your crew. For AI UGC ad creatives themselves, the closest alternatives are Creatify, Arcads, and HeyGen; Creatify can also launch ads straight to Meta, TikTok, YouTube, Snap, and Amazon ad accounts. Dooza is the alternative for businesses that want the work done for them: Dooza engineers set up AI employees for short-form video and social posting, plus SEO, email and sales, and nothing goes out without your approval."
     },
     {
         question: "Is Dooza better than MakeUGC?",
@@ -47,7 +47,7 @@ const faqData = [
     },
     {
         question: "Which MakeUGC competitors should I compare?",
-        answer: "Common MakeUGC competitors and adjacent AI UGC tools include Creatify, Arcads, HeyGen, Synthesia, Captions, invideo, Predis.ai, AutoUGC, and Infinite UGC. Most compete on avatar quality, scripts, URL-to-video, pricing, languages, or ad launching. Dooza is a different kind of alternative: a done-for-you setup where Dooza engineers run AI employees across video, social, SEO, email and sales."
+        answer: "Common MakeUGC competitors and adjacent AI UGC tools include Creatify, CreateUGC, Arcads, HeyGen, Synthesia, Captions, invideo, Predis.ai, AutoUGC, and Infinite UGC. Most compete on avatar quality, scripts, URL-to-video, pricing, languages, or ad launching. Dooza is a different kind of alternative: a done-for-you setup where Dooza engineers run AI employees across video, social, SEO, email and sales."
     },
     {
         question: "Who should still use MakeUGC?",
@@ -69,8 +69,10 @@ const tocItems = [
 ];
 
 const competitors = [
+    ['Dooza Crew (our product, top pick)', 'AI agent team for UGC ad scripts, social posting and outreach, with approval before Send or Pay', 'Our product, so weigh this pick accordingly. You tell Dooza the job in plain words, for example "write five UGC ad scripts for this product, then schedule the posts"; it plans the work, builds the helper agents it needs, each with its own computer and browser, and asks you to Approve, Edit or Reject before it sends or pays. Free to try, no card needed; $49/month when you keep your crew. For avatar video itself, a dedicated generator below is the stronger tool.'],
     ['MakeUGC', 'AI UGC ad generator, AI avatars, scripts, product images, fast video ads', 'Strong for UGC-style ads: 1,000+ AI creators, avatars that hold your product, and fast variations across hooks, languages, and formats. Enterprise adds an AI media buyer, custom workflows, and API access.'],
     ['Creatify', 'URL-to-video ads, ecommerce video ads, AI avatars, product video generator', 'Strong ecommerce ad creation from a product page, and it can launch ads to connected Meta, TikTok, YouTube, Snap, and Amazon ad accounts.'],
+    ['CreateUGC', 'AI UGC video ads from a product link, AI avatars, voiceovers', 'Turns a product link or script into short UGC-style video ads with AI avatars and voiceovers. Plans start at $19.90/mo billed annually (10 videos a month), each with a 3-day free trial (checked October 30, 2026).'],
     ['Arcads', 'AI actors, realistic UGC ads, AI video ads for paid social', 'An AI ad platform with 1,000+ AI actors, built for paid-social ad creatives.'],
     ['HeyGen', 'AI avatar video, multilingual video, text-to-video, sales videos', 'Great for polished avatar videos and localization, with AI video translation across 175+ languages and dialects.'],
     ['Synthesia', 'enterprise AI video, training videos, avatar video platform', 'Strong for corporate video such as employee and compliance training, and widely used by large enterprises.'],
