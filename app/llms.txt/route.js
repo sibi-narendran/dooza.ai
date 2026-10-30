@@ -123,6 +123,11 @@ const staticPages = [
         description: 'Dooza Crew for accounting, CPA, tax and bookkeeping firms: AI agents that chase clients for missing documents, sort the firm inbox and file attachments by client, download statements from bank and card portals, track returns, extensions and estimated payments coming due, fill engagement letters and organizers, and find new clients. Asks your approval before anything goes out; no tax prep, filing or advice. Start for $5. Takes phone calls too, included in the Crew plan.',
     },
     {
+        title: 'AI agents for property managers',
+        url: `${SITE_URL}/ai-agents-for-property-managers`,
+        description: 'Dooza Crew for residential property management companies: AI agents that sort maintenance requests and draft work orders to your vendors, answer tenant and owner emails, draft rent reminders from your delinquency report, download owner statements and draft owner updates, fill lease renewal offers, and answer listing inquiries with your showing times. Asks your approval before anything goes out; screening, notices and evictions stay with you. Start for $5. Takes phone calls too, included in the Crew plan.',
+    },
+    {
         title: 'AI agents for owner-operator truck drivers',
         url: `${SITE_URL}/ai-agents-for-truck-drivers`,
         description: 'Dooza Crew for owner-operators and small fleets with their own authority: AI agents that build invoice packets (rate con, POD, BOL) and draft the broker email, follow up on invoices past 30 days, scan load boards with your login and draft broker emails (you book), bill detention from BOL or ELD times, sort fuel receipts and miles by state for IFTA, and track insurance, UCR, IRP, 2290 and medical card dates. You approve every message; it never books loads or files returns. Start for $5. Takes phone calls too, included in the Crew plan.',
@@ -493,6 +498,11 @@ export async function GET() {
             title: 'Dooza for accountants',
             url: `${SITE_URL}/ai-agents-for-accountants`,
             description: 'Dooza Crew AI agents for accounting, CPA and bookkeeping firms.',
+        },
+        {
+            title: 'Dooza for property managers',
+            url: `${SITE_URL}/ai-agents-for-property-managers`,
+            description: 'Dooza Crew AI agents for property management companies.',
         },
         {
             title: 'Dooza for owner-operators',

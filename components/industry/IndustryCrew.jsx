@@ -68,7 +68,7 @@ export default function IndustryCrew({ c }) {
                                     <div className="md:pt-9">
                                         <p className={`text-[17px] leading-relaxed ${MUTED}`}>{a.job}</p>
                                         <a href={crewSignupUrl(`${p}-agent-${agentSlug(a)}`, a.task)} data-offer="crew" data-source={`${p}-agent-${agentSlug(a)}`} className={`mt-4 inline-block text-[15px] ${LINK}`}>
-                                            Hire the {a.name.toLowerCase()} free
+                                            Hire the {a.name.toLowerCase()}, $5 to start
                                         </a>
                                     </div>
                                 </li>
