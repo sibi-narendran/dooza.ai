@@ -47,7 +47,7 @@ const BottomCTA = ({ openModal }) => {
                 </div>
 
                 <p className="mt-8 text-sm text-slate-500">
-                    Crew: free trial · Custom agents: refundable pilot, 100% refund within 14 days
+                    Crew: $5 to start · Custom agents: refundable pilot, 100% refund within 14 days
                 </p>
             </div>
         </div>
