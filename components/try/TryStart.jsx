@@ -59,7 +59,7 @@ export default function TryStart({ placement, examples = true }) {
                 </button>
             </form>
             <p className="mt-3 text-[14px] leading-snug text-[#4B5567]">
-                Free to try, no card needed. We build desks in order — if yours is next in line, it is ready within 90 minutes and we email you the moment it is.
+                Free to try, no card needed. Seats are built in order; if yours is queued you will have it within 90 minutes and we email you the moment it is ready.
             </p>
             <p className="mt-2 text-[14px] text-[#4B5567]">
                 Works today on Android. On an iPhone? <a href="https://testflight.apple.com/join/3tjtpbCA" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0F766E] underline underline-offset-2 hover:text-[#14213D]">Install the beta now</a> — free, through Apple's TestFlight app.
