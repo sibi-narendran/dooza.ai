@@ -5,8 +5,8 @@ export const dynamic = 'force-dynamic';
 
 // Every visit to a Stripe payment link opens a Checkout Session, so crawlers and link checkers that follow
 // raw buy.stripe.com hrefs made bursts of open $0 sessions (Napoleon 2026-10-27: 34 in 2 bursts, all Managed).
-// Pay buttons point here instead (/api/ is disallowed in robots.txt). A real click sends Sec-Fetch-User: ?1 and goes
-// straight to Stripe; anything else gets a one-button page (POST), so no session opens without a person.
+// Pay buttons point here instead (/api/ is disallowed in robots.txt). A real click sends Sec-Fetch-User: ?1 + the dz_pay
+// cookie and goes straight to Stripe; anything else gets a one-button page (POST), so no session opens without a person.
 const LINKS = new Set([
     'eVq14n94vbAx95abff3AY0s', // Managed $200, 7 days free
     'dRm3cv3Kb5c94OUerr3AY16', // ICP1 plan A
@@ -35,7 +35,10 @@ export async function GET(request, { params }) {
     const { id } = await params;
     if (!LINKS.has(id)) return new NextResponse('Not found', { status: 404, headers: HEADERS });
     const url = new URL(request.url);
-    if (request.headers.get('sec-fetch-user') === '?1') {
+    // 10-31: a scraper on rotating residential IPs sent Sec-Fetch-User ?1 too, so also require the dz_pay cookie
+    // NavTrail sets on a real click. No cookie (no JS, opened in a new tab) = the one-button page below.
+    const clicked = /(?:^|;\s*)dz_pay=1/.test(request.headers.get('cookie') || '');
+    if (request.headers.get('sec-fetch-user') === '?1' && clicked) {
         return NextResponse.redirect(stripeUrl(id, url.searchParams), { status: 302, headers: HEADERS });
     }
     const action = `${url.pathname}${url.search}`.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
