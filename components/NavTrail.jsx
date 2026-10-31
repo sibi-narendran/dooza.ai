@@ -52,11 +52,11 @@ export default function NavTrail() {
     // Stripe payment links: add client_reference_id + prefilled_email from the reply link, at click.
     useEffect(() => {
         const onPay = (e) => {
-            const a = e.target.closest?.('a[href^="/api/pay/"], a[href^="https://buy.stripe.com/"]');
+            const a = e.target.closest?.('a[href*="/api/pay/"], a[href^="https://buy.stripe.com/"]');
             if (!a) return;
             // Real clicks only (tagAll passes a plain object): /api/pay needs this cookie before it redirects to Stripe,
             // so header-spoofing scrapers that don't run JS stop opening sessions (10-31: ~40 hits, one UA, 25 countries).
-            if (e.isTrusted && a.getAttribute('href')?.startsWith('/api/pay/')) document.cookie = 'dz_pay=1; Max-Age=300; Path=/api/pay; SameSite=Lax; Secure';
+            if (e.isTrusted && a.hostname === window.location.hostname && a.pathname.startsWith('/api/pay/')) document.cookie = 'dz_pay=1; Max-Age=300; Path=/api/pay; SameSite=Lax; Secure';
             try {
                 const s = window.sessionStorage;
                 const u = new URL(a.href);
