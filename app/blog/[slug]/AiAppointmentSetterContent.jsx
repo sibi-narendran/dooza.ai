@@ -52,6 +52,10 @@ const faqData = [
     {
         question: "Do I still need an appointment setting agency if I use AI?",
         answer: "For most small and mid-sized businesses, no. AI handles speed-to-lead, consistent follow-up, and 24/7 availability better than agencies. Agencies may still add value for complex enterprise B2B sales cycles requiring deep industry expertise and relationship-based selling."
+    },
+    {
+        question: "Are AI appointment setters worth the investment for agencies?",
+        answer: "Yes, when the extra meetings it books are worth more than what it costs you. Divide your monthly cost (the tool plus the hours your team spends checking it) by what one booked meeting is worth to you or your client. That is how many extra meetings a month it needs to book to pay for itself. Test it on one client for two weeks before rolling it out to all of them."
     }
 ];
 
@@ -69,7 +73,7 @@ export default function AiAppointmentSetterContent() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['introduction', 'agency-problem', 'what-you-want', 'what-is-ai-setter', 'head-to-head', 'when-agency-wins', 'real-numbers', 'meet-stan-rachel', 'getting-started', 'faq'];
+            const sections = ['introduction', 'agency-problem', 'what-you-want', 'what-is-ai-setter', 'head-to-head', 'when-agency-wins', 'real-numbers', 'meet-stan-rachel', 'for-agencies', 'getting-started', 'faq'];
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -163,6 +167,7 @@ export default function AiAppointmentSetterContent() {
                                     { id: 'when-agency-wins', label: 'When Agency Wins' },
                                     { id: 'real-numbers', label: 'The Real Numbers' },
                                     { id: 'meet-stan', label: 'Meet Stan' },
+                                    { id: 'for-agencies', label: 'For Agencies' },
                                     { id: 'getting-started', label: 'Getting Started' },
                                     { id: 'faq', label: 'FAQ' },
                                 ].map((item) => (
@@ -580,6 +585,33 @@ export default function AiAppointmentSetterContent() {
                             <div className="prose md:prose-lg text-slate-600">
                                 <p>
                                     Stan chases down new leads and nurtures cold prospects. No agency required.
+                                </p>
+                            </div>
+                        </section>
+
+                        {/* AI appointment setter for agencies (added 2026-11-01, GSC: "ai appointment setter for agencies") */}
+                        <section id="for-agencies" className="scroll-mt-28">
+                            <h2 className="text-3xl font-bold text-slate-900 mb-6">AI Appointment Setters for Agencies: Are They Worth It?</h2>
+                            <div className="prose md:prose-lg text-slate-600 mb-8">
+                                <p>
+                                    <strong>For a marketing, lead-gen or sales agency, an AI appointment setter is worth it when the extra meetings it books are worth more than what it costs you.</strong> Most of an agency&apos;s cost per meeting is people: answering new leads, following up, chasing no-shows. That is the part an AI setter takes over.
+                                </p>
+                                <p><strong>Do the break-even math before you buy:</strong></p>
+                                <ol>
+                                    <li>Add up the monthly cost: the tool, plus the hours your team spends checking its messages.</li>
+                                    <li>Divide by what one booked meeting is worth to you (or what you bill the client for it).</li>
+                                    <li>That is how many extra meetings a month it must book to pay for itself. Example: $500 a month in cost and $250 per meeting means 2 extra meetings a month.</li>
+                                </ol>
+                                <p><strong>What to check if you run it for clients:</strong></p>
+                                <ul>
+                                    <li>Each client gets its own calendar, script and qualifying questions.</li>
+                                    <li>The client approves the script before the first message goes out.</li>
+                                    <li>Every conversation is logged, so you can show the client what was said.</li>
+                                    <li>There is a clear handoff to a human when a lead asks something the AI should not answer.</li>
+                                </ul>
+                                <p><strong>When it is not worth it:</strong> if a client gets only a few leads a month, the setup time costs more than it saves. For enterprise deals with many decision makers, a human setter still wins.</p>
+                                <p>
+                                    Start with one client for two weeks, compare booked meetings with the two weeks before, then decide. If you want a team of agents for this, <a href={"https://crew.dooza.ai/?utm_source=dooza&utm_medium=blog&utm_content=ai-appointment-setter-agencies"} className="text-primary-600 underline">Dooza Crew</a> (our product) is $5 to start: you tell your master agent the job in plain words, it builds the helper agents it needs (like an outreach agent), each with its own computer and browser, and agents can take phone calls, included.
                                 </p>
                             </div>
                         </section>
