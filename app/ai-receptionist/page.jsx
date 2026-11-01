@@ -214,7 +214,11 @@ export default async function AiReceptionistPage(props) {
                                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary-700 text-sm font-extrabold text-white">
                                         {index + 1}
                                     </span>
-                                    <p className="text-base font-medium leading-relaxed text-slate-800">{step}</p>
+                                    <p className="text-base font-medium leading-relaxed text-slate-800">
+                                        {index === 0 ? (
+                                            <a href={crewSignupUrl('ai-receptionist-howitworks')} data-offer="crew" className="font-bold text-primary-700 underline underline-offset-4 hover:text-primary-900">{step}</a>
+                                        ) : step}
+                                    </p>
                                 </li>
                             ))}
                         </ol>
@@ -241,7 +245,9 @@ export default async function AiReceptionistPage(props) {
                                 <div key={item.key} className="py-5">
                                     <dt className="text-lg font-bold text-slate-950">{item.question}</dt>
                                     <dd className="mt-1 text-slate-600">
-                                        {item.answer}
+                                        {item.key === 'cost' ? (
+                                            <a href={crewSignupUrl('ai-receptionist-faq-cost')} data-offer="crew" className="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">{item.answer}</a>
+                                        ) : item.answer}
                                     </dd>
                                 </div>
                             ))}
