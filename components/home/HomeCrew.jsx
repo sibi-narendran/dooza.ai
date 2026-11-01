@@ -132,11 +132,14 @@ export default function HomeCrew() {
                                 <span aria-hidden="true" className="absolute left-[10%] right-[10%] top-0 hidden h-10 border-x-2 border-t-2 border-[#14213D]/30 lg:block" />
                                 <span aria-hidden="true" className="absolute left-1/2 top-[-2rem] hidden h-8 w-0.5 bg-[#14213D]/30 lg:block" />
                                 {departments.map((d) => (
-                                    <li key={d.name} className="relative bg-white p-6 lg:mx-2 lg:rounded-2xl lg:border lg:border-[#14213D]/15">
+                                    <li key={d.name} className="relative bg-white lg:mx-2 lg:rounded-2xl lg:border lg:border-[#14213D]/15 lg:hover:border-[#0F766E]">
                                         <span aria-hidden="true" className="absolute -top-10 left-1/2 hidden h-10 w-0.5 bg-[#14213D]/30 lg:block" />
-                                        <h3 className={`${D} text-xl font-bold tracking-[-0.01em]`}>{d.name}</h3>
-                                        <p className="mt-3 flex items-center gap-2 text-sm font-semibold text-[#0F766E]"><Seat kind="ai" /> AI employee</p>
-                                        <p className={`mt-2 text-[16px] leading-relaxed ${MUTED}`}>{d.jobs}</p>
+                                        <a href={crewSignupUrl(`home-dept-${d.name.toLowerCase().replace(/\s+/g, '-')}`, d.jobs)} data-source="home-dept" className="group block h-full p-6">
+                                            <h3 className={`${D} text-xl font-bold tracking-[-0.01em]`}>{d.name}</h3>
+                                            <p className="mt-3 flex items-center gap-2 text-sm font-semibold text-[#0F766E]"><Seat kind="ai" /> AI employee</p>
+                                            <p className={`mt-2 text-[16px] leading-relaxed ${MUTED}`}>{d.jobs}</p>
+                                            <p className="mt-3 text-sm font-semibold text-[#0F766E] group-hover:underline">Give it this job →</p>
+                                        </a>
                                     </li>
                                 ))}
                             </ul>
