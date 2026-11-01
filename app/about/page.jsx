@@ -145,7 +145,7 @@ export default function AboutPage() {
                                 </tr>
                                 <tr>
                                     <td className="px-6 py-4 text-sm font-medium text-slate-500 bg-slate-50">Founder</td>
-                                    <td className="px-6 py-4 text-sm text-slate-900"><a href="https://twitter.com/sibinarendran" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Sibi Narendran</a></td>
+                                    <td className="px-6 py-4 text-sm text-slate-900"><a href="https://www.sibinarendran.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener">Sibi Narendran</a></td>
                                 </tr>
                                 <tr>
                                     <td className="px-6 py-4 text-sm font-medium text-slate-500 bg-slate-50">Verify</td>
