@@ -55,7 +55,7 @@ const organizationSchema = {
         'Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot, and Dooza Crew, your own team of AI agents, each with a real computer and browser, in one chat.',
     email: 'support@dooza.ai',
     telephone: '+1-424-365-8980',
-    foundingDate: '2025',
+    foundingDate: '2024-11',
     founder: {
         '@type': 'Person',
         name: 'Sibi Narendran',

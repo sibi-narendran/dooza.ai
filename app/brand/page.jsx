@@ -81,7 +81,7 @@ const brandSchema = {
         url: SITE_URL,
         logo: `${SITE_URL}/brand/dooza-icon.png`,
         description: 'Dooza is an AI-native company that builds AI products and services for small businesses, including Dooza Managed, an AI admin assistant whose work is checked by a real person (first 7 days free), and custom AI agents built and maintained by Dooza engineers, scoped on a free 30-minute call and started as a refundable pilot.',
-        foundingDate: '2025',
+        foundingDate: '2024-11',
         founder: { '@type': 'Person', name: 'Sibi Narendran', url: 'https://twitter.com/sibinarendran' },
         email: 'support@dooza.ai',
         address: {
