@@ -62,7 +62,7 @@ export default function TryStart({ placement, examples = true }) {
                 Install the app and sign in with your email. $5 to start, paid inside the app.
             </p>
             <p className="mt-2 text-[14px] text-[#4B5567]">
-                Works today on Android. On an iPhone? <a href="https://testflight.apple.com/join/3tjtpbCA" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0F766E] underline underline-offset-2 hover:text-[#14213D]">Install the beta now</a> — free, through Apple's TestFlight app.
+                Works today on Android and Mac (<a href="https://crew.dooza.ai/mac" data-source={`try-${placement}-mac`} className="font-semibold text-[#0F766E] underline underline-offset-2 hover:text-[#14213D]">Get it for Mac</a>). On an iPhone? <a href="https://testflight.apple.com/join/3tjtpbCA" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0F766E] underline underline-offset-2 hover:text-[#14213D]">Install the beta now</a> — free, through Apple's TestFlight app.
             </p>
             <p className="mt-2 text-[14px] text-[#4B5567]">
                 Already have an account? <a href="https://crew.dooza.ai/login" data-source={`try-${placement}-login`} className="font-semibold text-[#0F766E] underline underline-offset-2 hover:text-[#14213D]">Log in</a>
