@@ -190,7 +190,7 @@ export default function BestAiReceptionistContent() {
                         </div>
 
                         <p className="mt-4 text-sm text-slate-600">By <strong>Sibi Narendran</strong>, founder of Dooza</p>
-                        <p className="mt-2 text-sm text-slate-600 max-w-2xl mx-auto"><strong>Disclosure:</strong> Dooza sells one of the services compared here, <a href={CREW_URL('disclosure')} data-offer="crew" className="underline">Dooza Crew</a>, whose agents take phone calls too (start for $5). It is listed first and marked "ours".</p>
+                        <p className="mt-2 text-sm text-slate-600 max-w-2xl mx-auto"><strong>Disclosure:</strong> Dooza sells one of the services compared here, <a href={CREW_URL('disclosure')} data-offer="crew" className="underline">Dooza Crew</a>, whose agents take phone calls too ($5 to start). It is listed first and marked "ours".</p>
 
                         <div className="mt-10 flex flex-col items-center gap-2">
                             <a
@@ -198,10 +198,10 @@ export default function BestAiReceptionistContent() {
                                 data-offer="crew"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Start Dooza Crew for $5
+                                Get the Dooza Crew app
                                 <ArrowRight className="w-5 h-5" />
                             </a>
-                            <span className="text-sm text-slate-500">Start for $5 · phone calls included · <a href={CAL_BOOKING_URL} onClick={handleAction} className="underline">or book a call first</a></span>
+                            <span className="text-sm text-slate-500">$5 to start · phone calls included · <a href={CAL_BOOKING_URL} onClick={handleAction} className="underline">or book a call first</a></span>
                         </div>
                     </div>
                 </div>
@@ -250,9 +250,9 @@ export default function BestAiReceptionistContent() {
                                     data-offer="crew"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Start Dooza Crew for $5
+                                    Get the Dooza Crew app
                                 </a>
-                                <p className="text-xs text-slate-500 mt-2 text-center">Start for $5</p>
+                                <p className="text-xs text-slate-500 mt-2 text-center">$5 to start</p>
                             </div>
 
                             <div className="mt-6">
@@ -286,7 +286,7 @@ export default function BestAiReceptionistContent() {
                                         <tr className="border-t border-slate-200 bg-primary-50">
                                             <td className="py-3 px-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span><span className="block text-xs font-normal text-slate-500 mt-1">Best for: AI agents you chat with on web or phone; phone calls are included in your Crew plan</span></td>
                                             <td className="py-3 px-3">AI</td>
-                                            <td className="py-3 px-3 font-semibold">Start for $5</td>
+                                            <td className="py-3 px-3 font-semibold">$5 to start</td>
                                             <td className="py-3 px-3">Phone calls included</td>
                                             <td className="py-3 px-3">No separate phone service</td>
                                             <td className="py-3 px-3">per organization</td>
@@ -356,10 +356,10 @@ export default function BestAiReceptionistContent() {
                                     <li>AI agents (a lead agent plus helper agents) you chat with on web or phone; they browse the web and write files in their own workspace.</li>
                                     <li>Before an agent sends or pays it asks you in chat (Approve / Edit / Reject).</li>
                                     <li>Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.</li>
-                                    <li>Start for $5. Unlimited users and agents.</li>
+                                    <li>$5 to start. Unlimited users and agents.</li>
                                 </ul>
                                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                                    <a href={CREW_URL('plain-terms')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Start Dooza Crew for $5 <ArrowRight className="w-4 h-4" /></a>
+                                    <a href={CREW_URL('plain-terms')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Get the Dooza Crew app <ArrowRight className="w-4 h-4" /></a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">Book a call first</a>
                                 </div>
                             </div>
@@ -561,7 +561,7 @@ export default function BestAiReceptionistContent() {
                                     <p className="text-xs text-slate-500 mt-1">200 minutes/month plan (<a href="https://www.ruby.com/pricing/" target="_blank" rel="noopener noreferrer" className="underline">ruby.com/pricing</a>, checked Oct 6, 2026)</p>
                                 </div>
                                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded-xl text-center ring-2 ring-green-400 ring-offset-2">
-                                    <div className="text-3xl font-bold text-green-700 mb-2">Start for $5</div>
+                                    <div className="text-3xl font-bold text-green-700 mb-2">$5 to start</div>
                                     <p className="text-sm text-green-800 font-medium">Dooza Crew</p>
                                     <p className="text-xs text-green-600 mt-1">Phone calls included.</p>
                                 </div>
@@ -581,7 +581,7 @@ export default function BestAiReceptionistContent() {
                                     {
                                         step: "1",
                                         title: "Sign Up",
-                                        desc: "Start for $5. Or book a free call first if you have questions."
+                                        desc: "$5 to start. Or book a free call first if you have questions."
                                     },
                                     {
                                         step: "2",
@@ -606,7 +606,7 @@ export default function BestAiReceptionistContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    <a href={CREW_URL('hear')} data-offer="crew" className="text-primary-600 hover:underline font-medium">Start Dooza Crew for $5 &rarr;</a>
+                                    <a href={CREW_URL('hear')} data-offer="crew" className="text-primary-600 hover:underline font-medium">Get the Dooza Crew app &rarr;</a>
                                     <br />
                                     <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Learn how to automate your entire business &rarr;</Link>
                                 </p>
@@ -619,7 +619,7 @@ export default function BestAiReceptionistContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a href={CREW_URL('final')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Start Dooza Crew for $5 <ArrowRight className="w-4 h-4" />
+                                        Get the Dooza Crew app <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book a free call

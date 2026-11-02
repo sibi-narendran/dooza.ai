@@ -23,7 +23,7 @@ const BottomCTA = ({ openModal }) => {
                     Still doing it? The world is Doozaing.
                 </h2>
                 <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-                    Try Dooza Crew, AI agents that do your busywork: start for $5.
+                    Try Dooza Crew, AI agents that do your busywork: $5 to start.
                     Want a custom agent built for you instead? A Dooza engineer scopes it on a free 30-minute call and it starts as a refundable pilot. See <a href="/pricing" className="font-semibold text-primary-700 underline underline-offset-4">pricing</a>.
                 </p>
 
@@ -35,7 +35,7 @@ const BottomCTA = ({ openModal }) => {
                         onClick={handleSignupClick} 
                         className="w-full sm:w-auto bg-primary-600 text-white px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                     >
-                        Try Dooza Crew free
+                        Get the Dooza Crew app
                     </a>
                     <a 
                         href={getBookingUrlFromPath(pathname)}

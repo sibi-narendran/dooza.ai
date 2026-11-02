@@ -86,12 +86,12 @@ const guardrails = [
 
 export const dispatchFaq = [
     { question: 'What is Dooza Crew for truck dispatchers?', answer: 'Dooza Crew gives a dispatch business AI employees: one for load boards, one for the inbox, one for billing, one for finding brokers, one for carrier compliance. Each has its own computer and browser, works around the clock, and works with your dispatchers in one chat. Before it sends anything, it asks you to approve.' },
-    { question: 'Does it work with DAT or Truckstop?', answer: 'It works in web-based tools you can log in to with a browser, including load boards, webmail and factoring portals. We have not certified any specific load board or TMS yet, so try it on yours when you start for $5, and check your load board\'s terms for automated searching.' },
+    { question: 'Does it work with DAT or Truckstop?', answer: 'It works in web-based tools you can log in to with a browser, including load boards, webmail and factoring portals. We have not certified any specific load board or TMS yet, so try it on yours when you $5 to start, and check your load board\'s terms for automated searching.' },
     { question: 'Can it make check calls or text drivers?', answer: 'Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.' },
     { question: 'Can it book loads for me?', answer: 'It finds the loads that fit and drafts the email to the broker. You call or approve before anything is booked.' },
     { question: 'Can it fill broker setup packets?', answer: 'Yes, when the packet is a fillable PDF or a web form. Upload the packet and it fills in your carrier\'s details, such as the W-9, from your files, saves the filled copy to Files and drafts the email back to the broker for your approval. Scanned PDFs without form fields cannot be filled.' },
     { question: 'Is my carriers\' data safe?', answer: 'Every account runs in its own isolated sandbox with its own browser and files. You type your passwords and 2FA codes yourself, and nothing is sent without your approval.' },
-    { question: 'How much does it cost?', answer: 'Start for $5. Your desk is built in order; we email you the moment it is ready.' },
+    { question: 'How much does it cost?', answer: '$5 to start. Your desk is built in order; we email you the moment it is ready.' },
     { question: 'I still have questions. Can I talk to someone?', answer: 'Yes. Book a 30-minute call at dooza.ai/book and we will walk through your desk with you.' },
 ];
 
@@ -143,7 +143,7 @@ export default function DispatchCrew() {
                                     <div className="md:pt-9">
                                         <p className={`text-[17px] leading-relaxed ${MUTED}`}>{a.job}</p>
                                         <a href={crewSignupUrl(`dsp-agent-${a.name.split(' ')[0].toLowerCase()}`, a.task)} data-offer="crew" data-source={`dsp-agent-${a.name.split(' ')[0].toLowerCase()}`} className={`mt-4 inline-block text-[15px] ${LINK}`}>
-                                            Hire the {a.name.toLowerCase()}, $5 to start
+                                            Hire the {a.name.toLowerCase()}: get the app
                                         </a>
                                     </div>
                                 </li>
@@ -206,12 +206,12 @@ export default function DispatchCrew() {
                         <div>
                             <h2 id="price-title" className={`${H2} text-white`}>Less than one load&apos;s dispatch fee. For the month.</h2>
                             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-                                Start for $5. Your desk is built in order; we email you the moment it is ready.
+                                $5 to start. Your desk is built in order; we email you the moment it is ready.
                             </p>
                         </div>
                         <div className="lg:text-right">
                             <a href={crewSignupUrl('dsp-price')} data-offer="crew" data-source="dsp-price" className="inline-block rounded-xl bg-white px-7 py-4 text-lg font-semibold text-[#14213D] hover:bg-[#EEF3F1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                                Start for $5
+                                Get the Dooza Crew app
                             </a>
                         </div>
                     </div>

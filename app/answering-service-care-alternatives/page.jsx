@@ -142,7 +142,7 @@ const alternatives = [
         href: '/ai-receptionist',
         internal: true,
         what: 'AI agents (a lead agent plus helper agents) you chat with on web or phone. They browse the web, write files in their own workspace and take phone calls, and they ask you in chat before they send or pay. Run by us, the company that publishes this page.',
-        price: 'Start for $5. Phone calls are included in your Crew plan.',
+        price: '$5 to start. Phone calls are included in your Crew plan.',
         bestFor: 'Teams that want AI agents that do more than answer calls, with the phone included in one plan.',
     },
     {
@@ -283,7 +283,7 @@ const schemas = [
             name: 'Dooza Crew, $5 to start',
             price: '5',
             priceCurrency: 'USD',
-            description: 'Start for $5. Phone calls are included.',
+            description: '$5 to start. Phone calls are included.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -318,7 +318,7 @@ export default function AnsweringServiceCareAlternativesPage() {
                                 <strong>The best Answering Service Care alternative depends on whether callers must reach a live agent or you just need every call answered. Answering Service Care’s pricing page lists live answering plans from $40 a month, pay as you go at $1.75 a minute, up to $639 for 500 minutes. Dooza Crew is $5 to start, and Crew agents take phone calls too. Prices checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Get the Dooza Crew app</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page (Dooza). Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
@@ -327,7 +327,7 @@ export default function AnsweringServiceCareAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Answering Service Care alternatives compared</h2>
                             <p className="mt-3 text-slate-700">
-                                These services bill in different units: per call, per minute or per Abby Minute. Answering Service Care’s live plans bill by the minute, and a human service’s minute is agent time, so it is not directly comparable with an AI minute. The closest like-for-like line: Answering Service Care’s 500 minutes cost $639 a month. Dooza Crew is priced per organization (start for $5), not per minute or per call. Prices checked {CHECKED}.
+                                These services bill in different units: per call, per minute or per Abby Minute. Answering Service Care’s live plans bill by the minute, and a human service’s minute is agent time, so it is not directly comparable with an AI minute. The closest like-for-like line: Answering Service Care’s 500 minutes cost $639 a month. Dooza Crew is priced per organization ($5 to start), not per minute or per call. Prices checked {CHECKED}.
                             </p>
                             <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
                                 <table className="w-full text-sm">
@@ -346,9 +346,9 @@ export default function AnsweringServiceCareAlternativesPage() {
                                             <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
                                             <td className="px-3 py-3">Per organization</td>
-                                            <td className="px-3 py-3 font-semibold">Start for $5</td>
+                                            <td className="px-3 py-3 font-semibold">$5 to start</td>
                                             <td className="px-3 py-3">Takes calls: included in Crew</td>
-                                            <td className="px-3 py-3">Start for $5</td>
+                                            <td className="px-3 py-3">$5 to start</td>
                                         </tr>
                                         {vendors.map((v) => (
                                             <tr key={v.name} className="border-t border-slate-200">
@@ -445,9 +445,9 @@ export default function AnsweringServiceCareAlternativesPage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
-                            <p className="mt-3 text-slate-300">Start for $5. Phone calls are included in your Crew plan.</p>
+                            <p className="mt-3 text-slate-300">$5 to start. Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Get the Dooza Crew app</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>

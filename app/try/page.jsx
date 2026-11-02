@@ -14,7 +14,7 @@ const MUTED = 'text-[#4B5567]';
 
 export const metadata = {
     title: { absolute: 'Clone Yourself With AI Employees | Dooza Crew' },
-    description: 'Give an AI employee a job in plain words. It works on its own computer and browser and shows you the proof. Start for $5.',
+    description: 'Give an AI employee a job in plain words. It works on its own computer and browser and shows you the proof. $5 to start.',
     alternates: { canonical: 'https://www.dooza.ai/try' },
     robots: { index: false, follow: true },
 };

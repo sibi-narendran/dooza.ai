@@ -176,7 +176,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Start Dooza Crew for $5
+                                Get the Dooza Crew app
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -240,7 +240,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                 >
                                     Try Dooza Crew
                                 </a>
-                                <p className="text-xs text-slate-500 mt-2 text-center">Start for $5</p>
+                                <p className="text-xs text-slate-500 mt-2 text-center">$5 to start</p>
                             </div>
 
                             <div className="mt-6">
@@ -383,8 +383,8 @@ export default function PerplexityComputerVsDoozaContent() {
                                     { icon: MessageSquare, title: "Watch live in chat", desc: "You see every step as it happens, and your staff can join the same chat." },
                                     { icon: Shield, title: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat." },
                                     { icon: Phone, title: "Phone calls", desc: "Agents can take phone calls, included in the plan." },
-                                    { icon: DollarSign, title: "Start for $5", desc: "Low-cost start." },
-                                    { icon: Clock, title: "Low-cost start", desc: "Start for $5." }
+                                    { icon: DollarSign, title: "$5 to start", desc: "Low-cost start." },
+                                    { icon: Clock, title: "Low-cost start", desc: "$5 to start." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-3">
@@ -402,9 +402,9 @@ export default function PerplexityComputerVsDoozaContent() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 mb-2">Why Crew is our top pick for a small business</h4>
                                         <p className="text-slate-700">
-                                            Start for $5, approval before Send or Pay, and no workflows for you to design. <strong>Watch for:</strong> Perplexity Computer has 400+ app connectors, multi-model routing and a published credit system. If you want to pick models and build projects yourself, Computer gives you more control.
+                                            $5 to start, approval before Send or Pay, and no workflows for you to design. <strong>Watch for:</strong> Perplexity Computer has 400+ app connectors, multi-model routing and a published credit system. If you want to pick models and build projects yourself, Computer gives you more control.
                                         </p>
-                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Start Dooza Crew for $5</a></p>
+                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Get the Dooza Crew app</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -460,7 +460,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                             "Dooza builds the helper agents it needs and reports back",
                                             "Each agent has its own computer and browser, private and isolated",
                                             "Watch every step live in chat",
-                                            "start for $5",
+                                            "$5 to start",
                                             "Best for: small business owners who want the work done"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
@@ -506,7 +506,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                             { feature: "Scheduling", perplexity: "Scheduled Tasks (hourly to monthly)", dooza: "Ask Dooza in plain words" },
                                             { feature: "Watching the work", perplexity: "See Perplexity's help center", dooza: "Every step live in chat; staff join the same chat" },
                                             { feature: "Approval", perplexity: "See Perplexity's help center", dooza: "Approve, Edit or Reject before Send or Pay" },
-                                            { feature: "Price", perplexity: "Pro $17/mo, Max $167/mo (both billed annually)", dooza: "Start for $5" },
+                                            { feature: "Price", perplexity: "Pro $17/mo, Max $167/mo (both billed annually)", dooza: "$5 to start" },
                                             { feature: "Credits/Limits", perplexity: "Max: 10,000 credits/mo; monthly plan credits don't roll over", dooza: "Unlimited users and agents; $5 to start" },
                                             { feature: "Best For", perplexity: "Researchers, developers, power users", dooza: "Small businesses that want a team of agents" }
                                         ].map((row, idx) => (
@@ -577,13 +577,13 @@ export default function PerplexityComputerVsDoozaContent() {
                                 {/* Dooza */}
                                 <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
                                     <h3 className="font-bold text-green-800 mb-1">Dooza Crew (our top pick)</h3>
-                                    <p className="text-3xl font-bold text-green-600 mb-3">Start for $5<span className="text-lg text-green-400"></span></p>
+                                    <p className="text-3xl font-bold text-green-600 mb-3">$5 to start<span className="text-lg text-green-400"></span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
-                                            { text: "Start for $5", good: true },
+                                            { text: "$5 to start", good: true },
                                             { text: "Unlimited users and agents", good: true },
-                                            { text: "Start for $5", good: true },
-                                            { text: "Start for $5", good: true }
+                                            { text: "$5 to start", good: true },
+                                            { text: "$5 to start", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -691,7 +691,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                             "Want agents that can take phone calls",
                                             "Would rather not design tasks or manage credits",
                                             "Want to approve before anything is sent or paid",
-                                            "Want to start for $5"
+                                            "Want to start small"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />
@@ -779,7 +779,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                 <h3 className="font-bold text-slate-900 text-xl mb-4">Why Small Businesses Choose Dooza Crew</h3>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
-                                        { icon: DollarSign, text: "Start for $5" },
+                                        { icon: DollarSign, text: "$5 to start" },
                                         { icon: Users, text: "Unlimited users and agents" },
                                         { icon: HeartHandshake, text: "Asks you to Approve, Edit or Reject before Send or Pay" },
                                         { icon: Brain, text: "Agents can take phone calls, included" }
@@ -801,7 +801,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Start Dooza Crew for $5
+                                    Get the Dooza Crew app
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                             </div>

@@ -169,7 +169,7 @@ export default function InsuranceLeadCostCalculatorPage() {
                             </p>
                             <a href="https://crew.dooza.ai/?utm_source=dooza&utm_medium=tool&utm_content=insurance-lead-cost-calculator"
                                className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary-600 px-6 py-3 font-bold text-white hover:bg-primary-700 transition-colors"
-                               data-offer="crew" data-source="insurance-calc-cta">Try Dooza Crew free →</a>
+                               data-offer="crew" data-source="insurance-calc-cta">Get the Dooza Crew app →</a>
                         </section>
                     </div>
                 </main>

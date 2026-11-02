@@ -11,7 +11,7 @@ import { faqSchema } from '@/lib/homeData';
 
 export const metadata = {
     title: 'Dooza Pricing: Crew $5 to start, Assistant $200/mo',
-    description: 'Dooza Crew: AI agents you chat with on web or phone, start for $5; phone calls included. Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Custom builds on a free call.',
+    description: 'Dooza Crew: AI agents you chat with on web or phone, $5 to start; phone calls included. Dooza Managed: an AI admin assistant checked by a real person, $200/month, first 7 days free. Custom builds on a free call.',
     keywords: ['AI employees pricing', 'AI automation pricing', 'Dooza pricing', 'AI agents cost', 'business automation plans'],
     alternates: {
         canonical: 'https://www.dooza.ai/pricing',

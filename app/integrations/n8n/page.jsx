@@ -34,7 +34,7 @@ const faqItems = [
     {
         question: 'Where do I get the Dooza Crew API key?',
         answer:
-            'Sign in at crew.dooza.ai (start for $5), open the account menu at the top right and choose API key (crew.dooza.ai/bridge/api-key). The key starts with dz_. In n8n, create a Dooza Crew API credential, paste the key and leave Base URL as https://crew.dooza.ai.',
+            'Sign in at crew.dooza.ai ($5 to start), open the account menu at the top right and choose API key (crew.dooza.ai/bridge/api-key). The key starts with dz_. In n8n, create a Dooza Crew API credential, paste the key and leave Base URL as https://crew.dooza.ai.',
     },
     {
         question: 'What happens if the agent takes longer than the workflow can wait?',
@@ -130,7 +130,7 @@ export default function N8nIntegrationPage() {
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                     <a href={CREW} data-source={SOURCE} className="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
-                        Start Dooza Crew for $5
+                        Get the Dooza Crew app
                     </a>
                     <a href={NPM} className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-3 font-semibold text-slate-800 hover:border-slate-400">
                         Install from npm
@@ -210,7 +210,7 @@ export default function N8nIntegrationPage() {
                         All Dooza Crew integrations and the Task API: <a className={A} href="/integrations">dooza.ai/integrations</a>
                     </li>
                     <li>
-                        Crew sign-up: <a className={A} href={CREW}>crew.dooza.ai</a> (start for $5)
+                        Crew sign-up: <a className={A} href={CREW}>crew.dooza.ai</a> ($5 to start)
                     </li>
                 </ul>
 
@@ -227,7 +227,7 @@ export default function N8nIntegrationPage() {
                     </p>
                     <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                         <a href={CREW} data-source={SOURCE} className="rounded-lg bg-white px-5 py-3 font-semibold text-slate-900">
-                            Start Dooza Crew for $5
+                            Get the Dooza Crew app
                         </a>
                         <a href={BOOK} className="rounded-lg border border-white/40 px-5 py-3 font-semibold text-white">
                             Book a free call

@@ -164,7 +164,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Start Dooza Crew for $5
+                                Get the Dooza Crew app
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -358,8 +358,8 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     { icon: MessageSquare, title: "Watch live in chat", desc: "You see every step as it happens, and your staff can join the same chat." },
                                     { icon: ShieldCheck, title: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat." },
                                     { icon: Phone, title: "Phone calls", desc: "Agents can take phone calls, included in the plan." },
-                                    { icon: DollarSign, title: "Start for $5", desc: "Low-cost start." },
-                                    { icon: Timer, title: "Low-cost start", desc: "Start for $5." }
+                                    { icon: DollarSign, title: "$5 to start", desc: "Low-cost start." },
+                                    { icon: Timer, title: "Low-cost start", desc: "$5 to start." }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-white border border-slate-200 p-5 rounded-xl hover:border-primary-200 transition-colors">
                                         <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-3">
@@ -381,11 +381,11 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             <li>Dooza builds the helper agents each job needs and reports back.</li>
                                             <li>You stay in control: it asks you to Approve, Edit or Reject before it clicks Send or Pay.</li>
                                             <li>You can watch every step live, and your staff can join the same chat.</li>
-                                            <li>Start for $5.</li>
+                                            <li>$5 to start.</li>
                                             <li>Agents can take phone calls, included.</li>
                                         </ul>
                                         <p className="mt-3 text-slate-700"><strong>Watch for:</strong> if you want one flexible agent you direct yourself, inside a Claude plan you may already pay for, Claude Cowork fits that better.</p>
-                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Start Dooza Crew for $5</a></p>
+                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Get the Dooza Crew app</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +442,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             "Each agent has its own computer and browser, private and isolated",
                                             "Watch every step live in chat",
                                             "Agents can take phone calls, included",
-                                            "start for $5",
+                                            "$5 to start",
                                             "Asks you to Approve, Edit or Reject before Send or Pay"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
@@ -489,8 +489,8 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             { feature: "Approval", cowork: "See Anthropic's documentation", dooza: "Approve, Edit or Reject before Send or Pay" },
                                             { feature: "Workspace", cowork: "Your desktop, or the cloud for new Pro/Max tasks", dooza: "Each agent has its own computer and browser, private and isolated" },
                                             { feature: "Technical Skill", cowork: "Low (you manage tasks)", dooza: "None (plain words)" },
-                                            { feature: "Starting Price", cowork: "Pro $17/mo annual or $20 monthly (checked Oct 7, 2026)", dooza: "Start for $5" },
-                                            { feature: "Higher Usage", cowork: "Max $100 or $200/mo (checked Oct 7, 2026)", dooza: "Start for $5" },
+                                            { feature: "Starting Price", cowork: "Pro $17/mo annual or $20 monthly (checked Oct 7, 2026)", dooza: "$5 to start" },
+                                            { feature: "Higher Usage", cowork: "Max $100 or $200/mo (checked Oct 7, 2026)", dooza: "$5 to start" },
                                             { feature: "Best For", cowork: "People who want to direct their own agent", dooza: "Small businesses that want a team of agents" }
                                         ].map((row, idx) => (
                                             <tr key={idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
@@ -559,13 +559,13 @@ export default function ClaudeCoworkVsDoozaContent() {
                                 {/* Dooza Crew */}
                                 <div className="bg-green-50 border-2 border-green-300 p-6 rounded-xl ring-2 ring-green-400 ring-offset-2">
                                     <h3 className="font-bold text-green-800 mb-1">Dooza Crew</h3>
-                                    <p className="text-3xl font-bold text-green-600 mb-3">Start for $5<span className="text-lg text-green-400"></span></p>
+                                    <p className="text-3xl font-bold text-green-600 mb-3">$5 to start<span className="text-lg text-green-400"></span></p>
                                     <div className="space-y-2 text-sm">
                                         {[
-                                            { text: "Start for $5", good: true },
-                                            { text: "Start for $5", good: true },
+                                            { text: "$5 to start", good: true },
+                                            { text: "$5 to start", good: true },
                                             { text: "Unlimited users and agents", good: true },
-                                            { text: "Start for $5", good: true }
+                                            { text: "$5 to start", good: true }
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -579,7 +579,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza Crew gives you <strong className="text-white">a master agent that builds the helper agents each job needs</strong>. It is $5 to start. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-white underline">Start Dooza Crew for $5</a>.
+                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza Crew gives you <strong className="text-white">a master agent that builds the helper agents each job needs</strong>. It is $5 to start. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-white underline">Get the Dooza Crew app</a>.
                                 </p>
                             </div>
                         </section>
@@ -622,7 +622,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             "Want a researcher, a writer or an outreach agent built for the job",
                                             "Want agents that can take phone calls",
                                             "Want to approve before anything is sent or paid",
-                                            "Want to start for $5"
+                                            "Want to start small"
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-1" />
@@ -713,7 +713,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     {[
                                         { icon: Repeat, text: "Brief it in plain words; Dooza builds the helper agents" },
                                         { icon: Monitor, text: "Each agent has its own private computer and browser" },
-                                        { icon: DollarSign, text: "Start for $5" },
+                                        { icon: DollarSign, text: "$5 to start" },
                                         { icon: Phone, text: "Agents can take phone calls, included" },
                                         { icon: Brain, text: "Approve, Edit or Reject before Send or Pay" }
                                     ].map((item, idx) => (
@@ -734,10 +734,10 @@ export default function ClaudeCoworkVsDoozaContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Start Dooza Crew for $5
+                                    Get the Dooza Crew app
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
-                                <p className="text-sm text-slate-500 mt-3">Start for $5.</p>
+                                <p className="text-sm text-slate-500 mt-3">$5 to start.</p>
                             </div>
                         </section>
 

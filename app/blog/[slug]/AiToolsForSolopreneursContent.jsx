@@ -158,8 +158,8 @@ const doozaEmployees = [
     { name: "Watch live in chat", desc: "You see every step as it happens, and your staff can join the same chat", icon: MessageSquare },
     { name: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject", icon: ShieldCheck },
     { name: "Phone calls", desc: "Agents can take phone calls, included in the plan", icon: Phone },
-    { name: "Start for $5", desc: "Low-cost start", icon: DollarSign },
-    { name: "Low-cost start", desc: "Start for $5", icon: Timer }
+    { name: "$5 to start", desc: "Low-cost start", icon: DollarSign },
+    { name: "Low-cost start", desc: "$5 to start", icon: Timer }
 ];
 
 export default function AiToolsForSolopreneursContent() {
@@ -240,7 +240,7 @@ export default function AiToolsForSolopreneursContent() {
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                             <strong>Our top pick for solopreneurs is Dooza Crew</strong> (our own product, disclosed):
                             you tell a master agent the job in plain words and it builds the helper agents it needs.
-                            Start for $5. Below: Crew, plus the essential
+                            $5 to start. Below: Crew, plus the essential
                             single-purpose AI tools by category.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
@@ -307,7 +307,7 @@ export default function AiToolsForSolopreneursContent() {
                                 >
                                     Try Dooza Crew
                                 </a>
-                                <p className="text-xs text-slate-500 mt-2 text-center">Start for $5</p>
+                                <p className="text-xs text-slate-500 mt-2 text-center">$5 to start</p>
                             </div>
 
                             <div className="mt-6">
@@ -443,7 +443,7 @@ export default function AiToolsForSolopreneursContent() {
                                         "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject",
                                         "Agents can take phone calls, included in the plan",
                                         "$5 to start",
-                                        "Start for $5"
+                                        "$5 to start"
                                     ].map((point, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
                                             <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
@@ -457,7 +457,7 @@ export default function AiToolsForSolopreneursContent() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                 >
-                                    Start Dooza Crew for $5 <ArrowRight className="w-4 h-4" />
+                                    Get the Dooza Crew app <ArrowRight className="w-4 h-4" />
                                 </a>
                             </div>
 
@@ -619,7 +619,7 @@ export default function AiToolsForSolopreneursContent() {
                                             rel="noopener noreferrer"
                                             className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors"
                                         >
-                                            Start Dooza Crew for $5
+                                            Get the Dooza Crew app
                                         </a>
                                     </div>
                                 </div>
@@ -682,7 +682,7 @@ export default function AiToolsForSolopreneursContent() {
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Monthly Cost</td>
                                             <td className="p-4">$89.98+ for 4 verified tools (checked Oct 2026)</td>
-                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">Start for $5</td>
+                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">$5 to start</td>
                                         </tr>
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Annual Cost</td>
@@ -771,7 +771,7 @@ export default function AiToolsForSolopreneursContent() {
                                     },
                                     {
                                         step: "2",
-                                        title: "Start Dooza Crew for $5",
+                                        title: "Get the Dooza Crew app",
                                         desc: "Give Dooza a real task in plain words, such as researching a prospect list or drafting a blog outline, and watch the agents work live in chat."
                                     },
                                     {
@@ -801,7 +801,7 @@ export default function AiToolsForSolopreneursContent() {
                                     Stop Managing Tools. Start Building Your Business.
                                 </h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Tell Dooza the job in plain words and let a team of agents do it. Start for $5.
+                                    Tell Dooza the job in plain words and let a team of agents do it. $5 to start.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a
@@ -810,7 +810,7 @@ export default function AiToolsForSolopreneursContent() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
-                                        Start Dooza Crew for $5 <ArrowRight className="w-4 h-4" />
+                                        Get the Dooza Crew app <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
                             </div>

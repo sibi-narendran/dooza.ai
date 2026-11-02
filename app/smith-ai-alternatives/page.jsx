@@ -10,7 +10,7 @@ const PATH = '/smith-ai-alternatives';
 const PAY_URL = crewSignupUrl('smith-ai-alternatives-cta');
 const CHECKED = 'October 21, 2026';
 const TITLE = 'Smith.ai Alternatives: 8 Answering Services (2026)';
-const DESCRIPTION = 'Smith.ai pricing and 8 alternatives (AI and human) compared on price and billing unit, checked Oct 21, 2026. Dooza Crew: start for $5.';
+const DESCRIPTION = 'Smith.ai pricing and 8 alternatives (AI and human) compared on price and billing unit, checked Oct 21, 2026. Dooza Crew: $5 to start.';
 
 export const metadata = {
     title: { absolute: TITLE },
@@ -121,7 +121,7 @@ const alternatives = [
         href: '/ai-receptionist',
         internal: true,
         what: 'AI agents (a lead agent plus helper agents) you chat with on web or phone. They browse the web, write files in their own workspace and take phone calls, and they ask you in chat before they send or pay. Run by us, the company that publishes this page.',
-        price: 'Start for $5. Phone calls are included in your Crew plan.',
+        price: '$5 to start. Phone calls are included in your Crew plan.',
         bestFor: 'Teams that want AI agents that do more than answer calls, with the phone included in one plan.',
     },
     {
@@ -246,7 +246,7 @@ const schemas = [
             name: 'Dooza Crew, $5 to start',
             price: '5',
             priceCurrency: 'USD',
-            description: 'Start for $5. Phone calls are included.',
+            description: '$5 to start. Phone calls are included.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -281,7 +281,7 @@ export default function SmithAiAlternativesPage() {
                                 <strong>The best Smith.ai alternative depends on who should answer. If you want AI agents that take your calls and do web work for you, Dooza Crew is $5 to start. Smith.ai’s human receptionists start at $300 for 30 calls; its AI plan is free for 25 calls.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Get the Dooza Crew app</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
                             <p className="mt-4 text-sm text-slate-600">We sell one of the services on this page. Prices checked {CHECKED} on each vendor’s own pricing page; check the links yourself.</p>
@@ -309,9 +309,9 @@ export default function SmithAiAlternativesPage() {
                                             <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
                                             <td className="px-3 py-3">Per organization</td>
-                                            <td className="px-3 py-3 font-semibold">Start for $5</td>
+                                            <td className="px-3 py-3 font-semibold">$5 to start</td>
                                             <td className="px-3 py-3">Takes calls: included in Crew</td>
-                                            <td className="px-3 py-3">Start for $5</td>
+                                            <td className="px-3 py-3">$5 to start</td>
                                         </tr>
                                         {vendors.map((v) => (
                                             <tr key={v.name} className="border-t border-slate-200">
@@ -403,9 +403,9 @@ export default function SmithAiAlternativesPage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
-                            <p className="mt-3 text-slate-300">Start for $5. Phone calls are included in your Crew plan.</p>
+                            <p className="mt-3 text-slate-300">$5 to start. Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Get the Dooza Crew app</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>

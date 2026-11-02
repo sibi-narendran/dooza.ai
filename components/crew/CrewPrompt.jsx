@@ -53,14 +53,14 @@ export default function CrewPrompt({ placement = 'crew-hero', tone = 'dark', cen
                     className={`block w-full resize-none bg-transparent px-3 py-2 text-lg focus:outline-none ${t.input}`}
                 />
                 <div className="flex items-center justify-between gap-3 px-2 pb-1 pt-2">
-                    <span className={`text-xs ${t.hint}`}>Start for $5.</span>
+                    <span className={`text-xs ${t.hint}`}>$5 to start.</span>
                     <button
                         type="submit"
                         data-offer="crew"
                         data-source={placement}
                         className={`shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${t.button}`}
                     >
-                        Start for $5
+                        Get the app
                     </button>
                 </div>
             </form>

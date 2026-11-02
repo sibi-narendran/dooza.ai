@@ -68,7 +68,7 @@ export default function IndustryCrew({ c }) {
                                     <div className="md:pt-9">
                                         <p className={`text-[17px] leading-relaxed ${MUTED}`}>{a.job}</p>
                                         <a href={crewSignupUrl(`${p}-agent-${agentSlug(a)}`, a.task)} data-offer="crew" data-source={`${p}-agent-${agentSlug(a)}`} className={`mt-4 inline-block text-[15px] ${LINK}`}>
-                                            Hire the {a.name.toLowerCase()}, $5 to start
+                                            Hire the {a.name.toLowerCase()}: get the app
                                         </a>
                                     </div>
                                 </li>
@@ -132,7 +132,7 @@ export default function IndustryCrew({ c }) {
                         </div>
                         <div className="lg:text-right">
                             <a href={crewSignupUrl(`${p}-price`)} data-offer="crew" data-source={`${p}-price`} className="inline-block rounded-xl bg-white px-7 py-4 text-lg font-semibold text-[#14213D] hover:bg-[#EEF3F1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                                Start for $5
+                                Get the Dooza Crew app
                             </a>
                         </div>
                     </div>

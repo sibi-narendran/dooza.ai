@@ -87,11 +87,11 @@ const guardrails = [
 
 export const insuranceFaq = [
     { question: 'What is Dooza Crew for insurance agents?', answer: 'Dooza Crew gives an independent agency AI employees: one for carrier portals, one for the inbox, one for certificates and changes, one for renewals, one for lead follow-up. Each has its own computer and browser, works around the clock, and works with your staff in one chat. Before it sends anything, it asks you to approve.' },
-    { question: 'Does it work with Applied Epic, EZLynx or HawkSoft?', answer: 'It works in web-based systems you can log in to with a browser: carrier portals, webmail and agency tools. We have not certified any specific agency management system yet, so try it on yours when you start for $5.' },
+    { question: 'Does it work with Applied Epic, EZLynx or HawkSoft?', answer: 'It works in web-based systems you can log in to with a browser: carrier portals, webmail and agency tools. We have not certified any specific agency management system yet, so try it on yours when you $5 to start.' },
     { question: 'Can it answer our phones?', answer: 'Yes. Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.' },
     { question: 'Can it fill ACORD forms?', answer: 'Yes, if you upload your fillable copy. It fills fillable PDF forms such as ACORD 25 and 125, plus Excel and Word files, and saves the filled form to Files for you to check. It also fills web forms and portal screens, including certificate and change requests in carrier and agency portals. Scanned PDFs without form fields cannot be filled.' },
     { question: 'Is our client data safe?', answer: 'Every account runs in its own isolated sandbox with its own browser and files. You type your passwords and 2FA codes yourself, and nothing is sent without your approval.' },
-    { question: 'How much does it cost?', answer: 'Start for $5. Your desk is built in order; we email you the moment it is ready.' },
+    { question: 'How much does it cost?', answer: '$5 to start. Your desk is built in order; we email you the moment it is ready.' },
     { question: 'Can my CSRs and producers use it?', answer: 'Yes. Users are unlimited. Add your team to the same chat and everyone can hand out jobs and see the work.' },
 ];
 
@@ -143,7 +143,7 @@ export default function InsuranceCrew() {
                                     <div className="md:pt-9">
                                         <p className={`text-[17px] leading-relaxed ${MUTED}`}>{a.job}</p>
                                         <a href={crewSignupUrl(`ins-agent-${a.name.split(' ')[0].toLowerCase()}`, a.task)} data-offer="crew" data-source={`ins-agent-${a.name.split(' ')[0].toLowerCase()}`} className={`mt-4 inline-block text-[15px] ${LINK}`}>
-                                            Hire the {a.name.toLowerCase()}, $5 to start
+                                            Hire the {a.name.toLowerCase()}: get the app
                                         </a>
                                     </div>
                                 </li>
@@ -206,12 +206,12 @@ export default function InsuranceCrew() {
                         <div>
                             <h2 id="price-title" className={`${H2} text-white`}>Less than a day of a CSR&apos;s pay. For the month.</h2>
                             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-                                Start for $5. Your desk is built in order; we email you the moment it is ready.
+                                $5 to start. Your desk is built in order; we email you the moment it is ready.
                             </p>
                         </div>
                         <div className="lg:text-right">
                             <a href={crewSignupUrl('ins-price')} data-offer="crew" data-source="ins-price" className="inline-block rounded-xl bg-white px-7 py-4 text-lg font-semibold text-[#14213D] hover:bg-[#EEF3F1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                                Start for $5
+                                Get the Dooza Crew app
                             </a>
                         </div>
                     </div>

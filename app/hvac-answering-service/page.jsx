@@ -45,7 +45,7 @@ const faqItems = [
     },
     {
         question: 'How much does Dooza Crew cost?',
-        answer: 'Start for $5.',
+        answer: '$5 to start.',
     },
 ];
 
@@ -64,7 +64,7 @@ const schemas = [
             name: 'Dooza Crew, $5 to start',
             price: '5',
             priceCurrency: 'USD',
-            description: 'Start for $5. Phone calls are included.',
+            description: '$5 to start. Phone calls are included.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -106,10 +106,10 @@ export default function HvacAnsweringServicePage() {
                                 The full table is below. Dooza Crew is $5 to start, and Crew agents take phone calls too.
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Get the Dooza Crew app</a>
                                 <a href="/book" className={secondaryButton}>Book a free call first</a>
                             </div>
-                            <p className="mt-4 text-sm text-slate-600">Start for $5.</p>
+                            <p className="mt-4 text-sm text-slate-600">$5 to start.</p>
                         </section>
 
                         <section className="mt-14">
@@ -141,8 +141,8 @@ export default function HvacAnsweringServicePage() {
                                         <tr className="border-t border-slate-200 bg-primary-50">
                                             <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
-                                            <td className="px-3 py-3">Start for $5.</td>
-                                            <td className="px-3 py-3 font-semibold">Start for $5</td>
+                                            <td className="px-3 py-3">$5 to start.</td>
+                                            <td className="px-3 py-3 font-semibold">$5 to start</td>
                                         </tr>
                                         {rows.map((r) => (
                                             <tr key={r.name} className="border-t border-slate-200">
@@ -155,7 +155,7 @@ export default function HvacAnsweringServicePage() {
                                     </tbody>
                                 </table>
                             </div>
-                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>. Not trade-specific? See the <Link href="/ai-receptionist" className="text-primary-700 underline">AI answering service for small business</Link> (Dooza Crew: start for $5).</p>
+                            <p className="mt-3 text-sm text-slate-600">Services that publish no price at this volume are left out. For a full feature-by-feature list see <Link href="/blog/best-ai-receptionist" className="text-primary-700 underline">the 20 AI answering services compared</Link>. Not trade-specific? See the <Link href="/ai-receptionist" className="text-primary-700 underline">AI answering service for small business</Link> (Dooza Crew: $5 to start).</p>
                         </section>
 
                         <section className="mt-14">
@@ -167,7 +167,7 @@ export default function HvacAnsweringServicePage() {
                                     <li>AI agents you chat with on web or phone</li>
                                     <li>They browse the web and write files in their own workspace</li>
                                     <li>Before an agent sends or pays, it asks you in chat (Approve / Edit / Reject)</li>
-                                    <li>Start for $5</li>
+                                    <li>$5 to start</li>
                                 </ul>
                             </div>
                         </section>
@@ -179,9 +179,9 @@ export default function HvacAnsweringServicePage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop losing no-cool calls to voicemail</h2>
-                            <p className="mt-3 text-slate-300">Start for $5. Phone calls are included in your Crew plan.</p>
+                            <p className="mt-3 text-slate-300">$5 to start. Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Start Dooza Crew for $5</a>
+                                <a href={PAY_URL} data-offer="crew" className={primaryButton}>Get the Dooza Crew app</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>
                             </div>
                         </section>

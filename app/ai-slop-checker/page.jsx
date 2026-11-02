@@ -389,7 +389,7 @@ export default function AiSlopCheckerPage() {
                                 data-offer="crew"
                                 data-source="ai-slop-checker-cta"
                             >
-                                Try Dooza Crew free →
+                                Get the Dooza Crew app →
                             </a>
                         </div>
                     </section>

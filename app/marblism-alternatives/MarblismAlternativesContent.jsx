@@ -29,15 +29,15 @@ const alternatives = [
         name: 'Dooza Crew',
         tagline: 'Our product, top pick: a hosted team of AI agents for small businesses',
         bestFor: 'Small businesses that want a team of AI agents doing the work, at one flat price',
-        price: 'Start for $5',
-        trial: 'Start for $5',
+        price: '$5 to start',
+        trial: '$5 to start',
         agents: 'You tell Dooza, your master agent, the job in plain words from the web or your phone; it plans it, builds the helper agents it needs (a researcher, a writer, an outreach agent) and reports back',
         integrations: 'Every agent has its own computer and browser in a private, isolated workspace',
         creditSystem: false,
         namedAgents: false,
         highlight: true,
         topPickReasons: [
-            'Start for $5.',
+            '$5 to start.',
             'You stay in control: before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat.',
             'Real tools: every agent has its own computer and browser in a private, isolated workspace, and agents take phone calls, included.',
             'Works with your team: your staff join the same chat and watch every step live.',
@@ -200,7 +200,7 @@ const alternatives = [
 ];
 
 const decisionGuide = [
-    { need: 'Best overall alternative (our top pick)', pick: 'Dooza Crew', reason: 'Start for $5, and it asks you to Approve, Edit or Reject before it clicks Send or Pay; start for $5' },
+    { need: 'Best overall alternative (our top pick)', pick: 'Dooza Crew', reason: '$5 to start, and it asks you to Approve, Edit or Reject before it clicks Send or Pay; $5 to start' },
     { need: 'Most AI agents', pick: 'Sintra AI', reason: '12+ named helpers that work together; 250 credits a month on every plan, with paid top-ups' },
     { need: 'AI teammate in Slack', pick: 'Lindy AI', reason: '1,000+ integrations (1,500+ on its pricing page), 40+ skills, setup in about 2 minutes, per Lindy' },
     { need: 'Enterprise scale', pick: 'Relevance AI', reason: 'Canva and Autodesk case studies, multi-agent workforces, 2,000+ integrations. Pricing through sales' },
@@ -259,7 +259,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-                                <a href={crewSignupUrl('marblism_alt_hero')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Start Dooza Crew for $5 <ArrowRight size={16} /></a>
+                                <a href={crewSignupUrl('marblism_alt_hero')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Get the Dooza Crew app <ArrowRight size={16} /></a>
                             </div>
                         </div>
                     </div>
@@ -459,7 +459,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                     {/* CTA for Dooza only */}
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <a href={crewSignupUrl('marblism_alt_crew_top')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Start Dooza Crew for $5 <ArrowRight size={16} /></a>
+                                            <a href={crewSignupUrl('marblism_alt_crew_top')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Get the Dooza Crew app <ArrowRight size={16} /></a>
                                         </div>
                                     )}
                                 </div>
@@ -515,7 +515,7 @@ export default function MarblismAlternativesContent({ faqData }) {
                                 </div>
                             </div>
                             <p className="text-base text-slate-400 mt-8 max-w-3xl mx-auto text-center leading-relaxed">
-                                For a self-serve user who wants many AI employees at a low price, Marblism is good value. Dooza Crew fits when you would rather describe the job than set up each employee: start for $5. See <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
+                                For a self-serve user who wants many AI employees at a low price, Marblism is good value. Dooza Crew fits when you would rather describe the job than set up each employee: $5 to start. See <Link href="/pricing" className="underline text-primary-300">/pricing</Link>.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -584,10 +584,10 @@ export default function MarblismAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Marblism Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Start Dooza Crew for $5.
+                                Get the Dooza Crew app.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a href={crewSignupUrl('marblism_alt_cta')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Start Dooza Crew for $5 <ArrowRight size={16} /></a>
+                                <a href={crewSignupUrl('marblism_alt_cta')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Get the Dooza Crew app <ArrowRight size={16} /></a>
                             </div>
                         </ScrollReveal>
                     </div>
