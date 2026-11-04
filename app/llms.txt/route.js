@@ -143,6 +143,11 @@ const staticPages = [
         description: 'Dooza Crew for small law firms and solo attorneys: AI agents that reply to new web inquiries with intake questions and a booking link, draft client status updates from matter notes, chase clients for missing documents and signatures, fill records request letters and follow up with providers, check court portals for new docket entries, and follow up on unpaid invoices. A person approves every message; no legal advice, signatures or court filing. Free: install the app and start. Takes phone calls too, included in the Crew plan.',
     },
     {
+        title: 'AI agents for in-house medical billing',
+        url: `${SITE_URL}/ai-agents-for-medical-billing`,
+        description: 'Dooza Crew for small medical, therapy, chiropractic and PT practices that do their own billing: AI agents that track credentialing applications and fill credentialing forms, watch payer prior authorization lists and policy changes for your CPT codes, explain denial codes and draft appeal templates from codes only, build payer fee schedule comparisons, and help hire a biller. No patient data: Dooza does not sign a BAA today, so claims, EOBs, charts and patient calls stay in your billing system. Emails are drafted for your approval. Free: install the app and start.',
+    },
+    {
         title: 'AI employees for independent insurance agents',
         url: `${SITE_URL}/insurance-agents`,
         description: 'Dooza Crew for independent insurance agencies: AI employees that work carrier portals, the shared inbox, certificates of insurance, renewal reminders and lead follow-up around the clock, asking your approval before anything goes out. Free: install the app and start. Takes phone calls too, included in the Crew plan.',
@@ -523,6 +528,11 @@ export async function GET() {
             title: 'Dooza for law firms',
             url: `${SITE_URL}/ai-agents-for-law-firms`,
             description: 'Dooza Crew AI agents for small law firms and solo attorneys.',
+        },
+        {
+            title: 'Dooza for in-house medical billing',
+            url: `${SITE_URL}/ai-agents-for-medical-billing`,
+            description: 'Dooza Crew AI agents for practices that do their own billing (no patient data).',
         },
     ];
 

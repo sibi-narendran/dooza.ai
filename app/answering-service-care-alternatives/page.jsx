@@ -281,7 +281,7 @@ const schemas = [
         offers: {
             '@type': 'Offer',
             name: 'Dooza Crew, free to use',
-            price: '5',
+            price: '0',
             priceCurrency: 'USD',
             description: 'Free: install the app and start. Phone calls are included.',
             url: PAY_URL,

@@ -96,7 +96,7 @@ export default async function AiReceptionistPage(props) {
         offers: {
             '@type': 'Offer',
             name: 'Dooza Crew, free to use',
-            price: '5',
+            price: '0',
             priceCurrency: 'USD',
             url: 'https://crew.dooza.ai',
             description: 'Free: install the app and start. Phone calls are included.',

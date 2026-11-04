@@ -77,13 +77,13 @@ export default function IndustryCrew({ c }) {
                                 <div>
                                     <p className={`flex items-center gap-2.5 text-[15px] font-semibold ${MUTED}`}>
                                         <span aria-hidden="true" className="inline-block h-2.5 w-2.5 rounded-full border-2 border-[#4B5567]" />
-                                        Phones
+                                        {c.phonesLabel || 'Phones'}
                                     </p>
                                     <h3 className={`${D} mt-3 text-[26px] font-bold leading-[1.1] tracking-[-0.02em] md:text-[32px]`}>{c.phonesPain}</h3>
                                 </div>
                                 <div className="md:pt-9">
                                     <p className={`text-[17px] leading-relaxed ${MUTED}`}>
-                                        Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.
+                                        {c.phonesText || 'Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy.'}
                                     </p>
                                 </div>
                             </li>
