@@ -299,7 +299,7 @@ export default function FaqSchemaGeneratorPage() {
                                     anything it asks you to Approve, Edit or Reject.
                                 </p>
                                 <p className="mt-2 text-sm text-slate-500">
-                                    $5 to start.
+                                    Free: install the app and start.
                                 </p>
                                 <a
                                     href={CREW_URL}

@@ -53,7 +53,7 @@ export default function CrewPrompt({ placement = 'crew-hero', tone = 'dark', cen
                     className={`block w-full resize-none bg-transparent px-3 py-2 text-lg focus:outline-none ${t.input}`}
                 />
                 <div className="flex items-center justify-between gap-3 px-2 pb-1 pt-2">
-                    <span className={`text-xs ${t.hint}`}>$5 to start.</span>
+                    <span className={`text-xs ${t.hint}`}>Free: install the app and start.</span>
                     <button
                         type="submit"
                         data-offer="crew"

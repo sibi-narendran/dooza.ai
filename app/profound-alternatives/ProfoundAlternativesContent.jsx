@@ -17,7 +17,7 @@ import { trackFBViewContent } from '@/lib/analytics';
 import { crewSignupUrl } from '@/lib/crewUrl';
 
 const quickAnswer = [
-    { pick: 'Dooza Crew (our product, top pick)', why: 'Our top pick for a small business: a hosted team of AI agents you brief in plain words, $5 to start.' },
+    { pick: 'Dooza Crew (our product, top pick)', why: 'Our top pick for a small business: a hosted team of AI agents you brief in plain words, free to use.' },
     { pick: 'Dooza Ranky (done for you)', why: 'Best for small businesses that want GEO done for them — Ranky and Dooza engineers do the work with your approval, and it starts with a refundable pilot.' },
     { pick: 'Otterly.ai', why: 'Best budget AI visibility tracker — Lite is $29/month (checked October 7, 2026).' },
     { pick: 'Peec AI', why: 'Best mid-priced AI search analytics for marketing teams.' },
@@ -37,19 +37,19 @@ const alternatives = [
         name: 'Dooza Crew',
         tagline: 'Our product, top pick: a hosted team of AI agents for small businesses',
         bestFor: 'Small businesses, founders, and lean teams that want a team of AI agents doing the work rather than another platform to run',
-        price: '$5 to start',
-        trial: '$5 to start',
+        price: 'Free: install the app and start',
+        trial: 'Free: install the app and start',
         type: 'Hosted team of AI agents',
         doesWork: true,
         highlight: true,
         crewSource: 'profound_alt_crew_top',
         what: 'Dooza Crew is a hosted team of AI agents for small businesses. You brief a lead agent in plain words from the web or phone; it builds helper agents (a researcher, a writer, an outreach agent), splits the job between them, and saves the work to your files.',
         topPickReasons: [
-            '$5 to start.',
+            'Free: install the app and start.',
             'You stay in control: before it clicks Send or Pay, it asks you to Approve, Edit or Reject in chat.',
             'Real tools: every agent has its own computer and browser in a private, isolated workspace, and agents take phone calls, included.',
             'Works with your team: your staff join the same chat and watch every step live.',
-            'Low-cost start: $5 to start.',
+            'Low-cost start: free to use.',
         ],
         pros: [
             'One plan for the whole organization: no per-seat fees',
@@ -190,7 +190,7 @@ const alternatives = [
 const listedAlternatives = [...alternatives].sort((a, b) => a.rank - b.rank);
 
 const decisionGuide = [
-    { need: 'A team of AI agents for a small business (our top pick)', pick: 'Dooza Crew', reason: '$5 to start, and it asks you to Approve, Edit or Reject before it clicks Send or Pay. $5 to start.' },
+    { need: 'A team of AI agents for a small business (our top pick)', pick: 'Dooza Crew', reason: 'Free: install the app and start, and it asks you to Approve, Edit or Reject before it clicks Send or Pay. Free: install the app and start.' },
     { need: 'GEO work done for you', pick: 'Dooza Ranky', reason: 'Ranky and Dooza engineers research, write, optimize, and publish with your approval. Starts with a refundable pilot.' },
     { need: 'Cheapest AI visibility tracking', pick: 'Otterly.ai', reason: 'Low entry price among dedicated trackers (Lite $29/mo, checked October 7, 2026).' },
     { need: 'Mid-market AI search analytics', pick: 'Peec AI', reason: 'Mid-priced AI search analytics (Starter $95/mo, checked October 7, 2026).' },
@@ -254,7 +254,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
                             </p>
 
                             <p className="hero-entrance hero-delay-3 text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-                                Profound (tryprofound.com) is an AI visibility platform with analytics and agents, sold as a self-serve agency plan and custom-priced Enterprise. For a small business, our top pick is our own product, Dooza Crew: a hosted team of AI agents you brief in plain words, $5 to start. Want GEO done for you? Ranky and Dooza engineers do the generative engine optimization work with your approval, and it starts with a refundable pilot — 100% refund within 14 days. For lower-cost monitoring only, look at Otterly.ai or Peec AI.
+                                Profound (tryprofound.com) is an AI visibility platform with analytics and agents, sold as a self-serve agency plan and custom-priced Enterprise. For a small business, our top pick is our own product, Dooza Crew: a hosted team of AI agents you brief in plain words, free to use. Want GEO done for you? Ranky and Dooza engineers do the generative engine optimization work with your approval, and it starts with a refundable pilot — 100% refund within 14 days. For lower-cost monitoring only, look at Otterly.ai or Peec AI.
                             </p>
 
                             <div className="hero-entrance hero-delay-4 flex flex-col sm:flex-row gap-4 justify-center">

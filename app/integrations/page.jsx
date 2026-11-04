@@ -12,7 +12,7 @@ const PATH = '/integrations';
 const SOURCE = 'integrations_hub';
 const TITLE = 'Dooza Crew Integrations: API and n8n Node';
 const DESCRIPTION =
-    'Hand a task to a Dooza Crew AI agent from your own software: a REST Task API (OpenAPI, Bearer dz_ key) and an open-source n8n community node. $5 to start.';
+    'Hand a task to a Dooza Crew AI agent from your own software: a REST Task API (OpenAPI, Bearer dz_ key) and an open-source n8n community node. Free: install the app and start.';
 const UPDATED_LABEL = 'October 30, 2026';
 const CREW = crewSignupUrl(SOURCE);
 const BOOK = `/book?utm_source=website&utm_medium=page&utm_content=${SOURCE}`;
@@ -59,7 +59,7 @@ const faqItems = [
     {
         question: 'How do I get a Dooza Crew API key?',
         answer:
-            'Sign in at crew.dooza.ai ($5 to start), open the account menu at the top right and choose API key. The key starts with dz_ and is sent as an Authorization: Bearer header.',
+            'Sign in at crew.dooza.ai (free to use), open the account menu at the top right and choose API key. The key starts with dz_ and is sent as an Authorization: Bearer header.',
     },
     {
         question: 'Is the API synchronous?',

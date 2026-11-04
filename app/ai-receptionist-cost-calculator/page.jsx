@@ -60,7 +60,7 @@ const faqItems = [
     },
     {
         question: 'Does Dooza offer an AI receptionist?',
-        answer: 'Dooza Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew is $5 to start; see dooza.ai/ai-receptionist.',
+        answer: 'Dooza Crew agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew is free to use; see dooza.ai/ai-receptionist.',
     },
 ];
 
@@ -134,7 +134,7 @@ export default function AiReceptionistCostCalculatorPage() {
                             </ul>
                             <h2>Dooza Crew</h2>
                             <p>
-                                <Link href="/ai-receptionist">Dooza Crew</Link> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew is $5 to start. <a href={crewSignupUrl('ai-receptionist-cost-calculator-content')} data-offer="crew">Get the Dooza Crew app</a>.
+                                <Link href="/ai-receptionist">Dooza Crew</Link> agents take phone calls too. It is included in your Crew plan, so there is no separate phone service to buy. Crew is free to use. <a href={crewSignupUrl('ai-receptionist-cost-calculator-content')} data-offer="crew">Get the Dooza Crew app</a>.
                             </p>
                         </section>
 

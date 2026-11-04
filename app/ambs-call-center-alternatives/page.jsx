@@ -160,7 +160,7 @@ const alternatives = [
         href: '/ai-receptionist',
         internal: true,
         what: 'AI agents (a lead agent plus helper agents) you chat with on web or phone. They browse the web, write files in their own workspace and take phone calls, and they ask you in chat before they send or pay. Run by us, the company that publishes this page.',
-        price: '$5 to start. Phone calls are included in your Crew plan.',
+        price: 'Free: install the app and start. Phone calls are included in your Crew plan.',
         bestFor: 'Teams that want AI agents that do more than answer calls, with the phone included in one plan.',
     },
     {
@@ -241,7 +241,7 @@ const faqItems = [
     },
     {
         question: 'How does Dooza Crew pricing compare with Ambs Call Center?',
-        answer: `Dooza Crew is $5 to start, with phone calls included in your Crew plan. It is not billed per call or per minute, so it does not map onto Ambs Call Center’s units. Competitor prices on this page are listed prices checked ${CHECKED}.`,
+        answer: `Dooza Crew is free to use, with phone calls included in your Crew plan. It is not billed per call or per minute, so it does not map onto Ambs Call Center’s units. Competitor prices on this page are listed prices checked ${CHECKED}.`,
     },
     {
         question: 'What is the cheapest Ambs Call Center alternative?',
@@ -249,7 +249,7 @@ const faqItems = [
     },
     {
         question: 'How much does Dooza Crew cost?',
-        answer: 'Dooza Crew is $5 to start. Crew agents take phone calls too, and it is included in your Crew plan.',
+        answer: 'Dooza Crew is free to use. Crew agents take phone calls too, and it is included in your Crew plan.',
     },
 ];
 
@@ -298,10 +298,10 @@ const schemas = [
         provider: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
         offers: {
             '@type': 'Offer',
-            name: 'Dooza Crew, $5 to start',
+            name: 'Dooza Crew, free to use',
             price: '5',
             priceCurrency: 'USD',
-            description: '$5 to start. Phone calls are included.',
+            description: 'Free: install the app and start. Phone calls are included.',
             url: PAY_URL,
             availability: 'https://schema.org/InStock',
         },
@@ -333,7 +333,7 @@ export default function AmbsCallCenterAlternativesPage() {
                         <section className="text-center">
                             <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">Ambs Call Center Alternatives (2026 Prices)</h1>
                             <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-700">
-                                <strong>The best Ambs Call Center alternative depends on whether callers must reach a live agent or you just need every call answered. Ambs’ pricing page lists live answering from $149 a month for 100 minutes to $600 for 500 minutes, and an AI Receptionist from $19 a month plus $0.79 a minute. Dooza Crew is $5 to start, and Crew agents take phone calls too. Listed prices, checked {CHECKED} on each vendor’s own page.</strong>
+                                <strong>The best Ambs Call Center alternative depends on whether callers must reach a live agent or you just need every call answered. Ambs’ pricing page lists live answering from $149 a month for 100 minutes to $600 for 500 minutes, and an AI Receptionist from $19 a month plus $0.79 a minute. Dooza Crew is free to use, and Crew agents take phone calls too. Listed prices, checked {CHECKED} on each vendor’s own page.</strong>
                             </p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
                                 <a href={PAY_URL} data-offer="crew" className={primaryButton}>Get the Dooza Crew app</a>
@@ -345,7 +345,7 @@ export default function AmbsCallCenterAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Ambs Call Center alternatives compared</h2>
                             <p className="mt-3 text-slate-700">
-                                These services bill in different units: per call, per minute or per Abby Minute. Ambs bills by work time, and a human service’s minute is agent time, so it is not directly comparable with an AI minute. The closest like-for-like lines: Ambs’ 500 Real People minutes have a listed price of $600 a month and its 500 AI minutes $350. Dooza Crew is priced per organization ($5 to start), not per minute or per call. Prices checked {CHECKED}.
+                                These services bill in different units: per call, per minute or per Abby Minute. Ambs bills by work time, and a human service’s minute is agent time, so it is not directly comparable with an AI minute. The closest like-for-like lines: Ambs’ 500 Real People minutes have a listed price of $600 a month and its 500 AI minutes $350. Dooza Crew is priced per organization (free to use), not per minute or per call. Prices checked {CHECKED}.
                             </p>
                             <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
                                 <table className="w-full text-sm">
@@ -364,9 +364,9 @@ export default function AmbsCallCenterAlternativesPage() {
                                             <td className="px-3 py-3 font-semibold text-slate-900">Dooza Crew <span className="text-xs font-normal text-slate-500">(ours)</span></td>
                                             <td className="px-3 py-3">AI</td>
                                             <td className="px-3 py-3">Per organization</td>
-                                            <td className="px-3 py-3 font-semibold">$5 to start</td>
+                                            <td className="px-3 py-3 font-semibold">Free</td>
                                             <td className="px-3 py-3">Takes calls: included in Crew</td>
-                                            <td className="px-3 py-3">$5 to start</td>
+                                            <td className="px-3 py-3">Free</td>
                                         </tr>
                                         {vendors.map((v) => (
                                             <tr key={v.name} className="border-t border-slate-200">
@@ -419,7 +419,7 @@ export default function AmbsCallCenterAlternativesPage() {
                         <section className="mt-14">
                             <h2 className="text-2xl font-bold text-slate-900">Where Dooza Crew fits</h2>
                             <p className="mt-3 text-slate-700">
-                                Dooza Crew is $5 to start. Crew agents take phone calls too, and it is included in your Crew plan, so there is no separate phone service to buy. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
+                                Dooza Crew is free to use. Crew agents take phone calls too, and it is included in your Crew plan, so there is no separate phone service to buy. If you miss calls while you are on a job, see how it works for <Link href="/hvac-answering-service" className={link}>HVAC</Link>, <Link href="/plumbing-answering-service" className={link}>plumbing</Link> and <Link href="/garage-door-answering-service" className={link}>garage door</Link> businesses.
                             </p>
                             <div className="mt-6 grid gap-4 sm:grid-cols-2">
                                 <div className="rounded-xl border border-primary-100 bg-primary-50 p-5">
@@ -442,7 +442,7 @@ export default function AmbsCallCenterAlternativesPage() {
                                 <strong>Where Ambs Call Center does more:</strong> Ambs puts real people on your calls, or real people plus AI on one plan. Its pricing page lists 24/7/365 coverage, 100% U.S.-based agents, bilingual answering in English and Spanish, dispatching, emergency line coverage, no holiday charges, local phone numbers, and real-time message delivery by email, text (SMS) or live transfer. It also lists data sent directly into your software, the MyAmbs web portal and integrations with Zapier and more. Dooza Crew agents are AI, not a person on the line. If callers must be able to reach a person, Ambs or another human service fits better.
                             </p>
                             <p className="mt-4 text-slate-700">
-                                <strong>Other entry prices:</strong> Ambs’ own AI Receptionist has a Starter plan at $19 a month plus $0.79 per AI minute, and a 100-minute AI plan at $75, then $0.77 a minute. Those are listed prices before Ambs’ $85 one-time set-up fee. Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes) and Moneypenny’s AI plan ($99/month for 50 calls). Smith.ai’s AI plan is free for 25 calls. If your call volume is low or you need booking, start there. Dooza Crew is $5 to start, with phone calls included in your Crew plan, for teams that want agents that do more than answer calls.
+                                <strong>Other entry prices:</strong> Ambs’ own AI Receptionist has a Starter plan at $19 a month plus $0.79 per AI minute, and a 100-minute AI plan at $75, then $0.77 a minute. Those are listed prices before Ambs’ $85 one-time set-up fee. Upfirst ($24.95/month for 30 calls), Dialzara ($29 for 60 minutes; $99 for 220), Rosie ($49/month for 250 minutes) and Moneypenny’s AI plan ($99/month for 50 calls). Smith.ai’s AI plan is free for 25 calls. If your call volume is low or you need booking, start there. Dooza Crew is free to use, with phone calls included in your Crew plan, for teams that want agents that do more than answer calls.
                             </p>
                         </section>
 
@@ -463,7 +463,7 @@ export default function AmbsCallCenterAlternativesPage() {
 
                         <section className="mt-14 rounded-2xl bg-slate-950 p-8 text-center text-white">
                             <h2 className="text-2xl font-bold">Stop sending callers to voicemail</h2>
-                            <p className="mt-3 text-slate-300">$5 to start. Phone calls are included in your Crew plan.</p>
+                            <p className="mt-3 text-slate-300">Free: install the app and start. Phone calls are included in your Crew plan.</p>
                             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
                                 <a href={PAY_URL} data-offer="crew" className={primaryButton}>Get the Dooza Crew app</a>
                                 <a href="/book" className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white px-6 py-4 font-bold text-white sm:w-auto">Book a free call</a>

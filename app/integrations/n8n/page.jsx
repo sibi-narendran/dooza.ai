@@ -34,7 +34,7 @@ const faqItems = [
     {
         question: 'Where do I get the Dooza Crew API key?',
         answer:
-            'Sign in at crew.dooza.ai ($5 to start), open the account menu at the top right and choose API key (crew.dooza.ai/bridge/api-key). The key starts with dz_. In n8n, create a Dooza Crew API credential, paste the key and leave Base URL as https://crew.dooza.ai.',
+            'Sign in at crew.dooza.ai (free to use), open the account menu at the top right and choose API key (crew.dooza.ai/bridge/api-key). The key starts with dz_. In n8n, create a Dooza Crew API credential, paste the key and leave Base URL as https://crew.dooza.ai.',
     },
     {
         question: 'What happens if the agent takes longer than the workflow can wait?',
@@ -49,7 +49,7 @@ const faqItems = [
     {
         question: 'Is the Dooza Crew node free?',
         answer:
-            'The node is open source (MIT) and free to install. Using it consumes your Crew account: Dooza Crew is $5 to start, and agents ask you to Approve, Edit or Reject before they send or pay for anything.',
+            'The node is open source (MIT) and free to install. Using it consumes your Crew account: Dooza Crew is free to use, and agents ask you to Approve, Edit or Reject before they send or pay for anything.',
     },
     {
         question: 'Can I use the Dooza Crew node on n8n Cloud?',
@@ -65,7 +65,7 @@ const steps = [
     },
     {
         name: 'Create the Crew API key',
-        text: 'Sign in at crew.dooza.ai, open the account menu and choose API key. Copy the key that starts with dz_. Dooza Crew is $5 to start.',
+        text: 'Sign in at crew.dooza.ai, open the account menu and choose API key. Copy the key that starts with dz_. Dooza Crew is free to use.',
     },
     {
         name: 'Add the credential in n8n',
@@ -92,7 +92,7 @@ const schemas = [
         description: DESCRIPTION,
         softwareVersion: '0.1.1',
         datePublished: '2026-10-28',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Community node, MIT licence; Dooza Crew itself is $5 to start.' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Community node, MIT licence; Dooza Crew itself is free to use.' },
         publisher: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {
@@ -210,7 +210,7 @@ export default function N8nIntegrationPage() {
                         All Dooza Crew integrations and the Task API: <a className={A} href="/integrations">dooza.ai/integrations</a>
                     </li>
                     <li>
-                        Crew sign-up: <a className={A} href={CREW}>crew.dooza.ai</a> ($5 to start)
+                        Crew sign-up: <a className={A} href={CREW}>crew.dooza.ai</a> (free to use)
                     </li>
                 </ul>
 

@@ -44,11 +44,11 @@ const CREW_URL = 'https://crew.dooza.ai/?utm_source=dooza&utm_medium=blog&utm_co
 const faqData = [
     {
         question: "What is the best AI tool for solopreneurs in 2026?",
-        answer: "Our top pick is Dooza Crew (our product, so weigh that). You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans the job, builds the helper agents it needs (for example a researcher, a writer or an outreach agent) and reports back. Every agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. Before it clicks Send or Pay it asks you to Approve, Edit or Reject. Crew is $5 to start. Alongside it, most solopreneurs also use single-purpose tools for writing (ChatGPT, Jasper), design (Canva AI, Midjourney), email (Superhuman), social scheduling (Buffer, Hootsuite), meeting notes (Otter.ai), automation (Zapier, Make) and accounting (QuickBooks)."
+        answer: "Our top pick is Dooza Crew (our product, so weigh that). You tell Dooza, your master agent, the job in plain words from the web or your phone. It plans the job, builds the helper agents it needs (for example a researcher, a writer or an outreach agent) and reports back. Every agent has its own computer and browser in a private, isolated workspace, and you watch every step live in chat. Before it clicks Send or Pay it asks you to Approve, Edit or Reject. Crew is free to use. Alongside it, most solopreneurs also use single-purpose tools for writing (ChatGPT, Jasper), design (Canva AI, Midjourney), email (Superhuman), social scheduling (Buffer, Hootsuite), meeting notes (Otter.ai), automation (Zapier, Make) and accounting (QuickBooks)."
     },
     {
         question: "How much do AI tools cost for a solopreneur?",
-        answer: "Individual AI tools vary widely, from free tiers to tens of dollars a month each (see each vendor’s pricing page). A full stack covering content creation, design, email, social media, automation, and accounting adds up quickly. Dooza Crew, our top pick, is $5 to start."
+        answer: "Individual AI tools vary widely, from free tiers to tens of dollars a month each (see each vendor’s pricing page). A full stack covering content creation, design, email, social media, automation, and accounting adds up quickly. Dooza Crew, our top pick, is free to use."
     },
     {
         question: "Can AI replace a virtual assistant for solopreneurs?",
@@ -60,7 +60,7 @@ const faqData = [
     },
     {
         question: "Is Dooza Crew good for solopreneurs?",
-        answer: "We think so, and it is our top pick, but it is our own product, so judge for yourself, since it costs only $5 to start. You describe the job in plain words from the web or your phone, and Dooza plans it and builds the helper agents it needs. Each agent has its own computer and browser in a private, isolated workspace, you watch every step live in chat, and it asks you to Approve, Edit or Reject before it clicks Send or Pay. Agents can take phone calls, included in the plan. No coding is needed. It is $5 to start."
+        answer: "We think so, and it is our top pick, but it is our own product, so judge for yourself, since it costs only free to use. You describe the job in plain words from the web or your phone, and Dooza plans it and builds the helper agents it needs. Each agent has its own computer and browser in a private, isolated workspace, you watch every step live in chat, and it asks you to Approve, Edit or Reject before it clicks Send or Pay. Agents can take phone calls, included in the plan. No coding is needed. It is free to use."
     },
     {
         question: "How much time can AI tools save solopreneurs?",
@@ -158,8 +158,8 @@ const doozaEmployees = [
     { name: "Watch live in chat", desc: "You see every step as it happens, and your staff can join the same chat", icon: MessageSquare },
     { name: "You approve", desc: "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject", icon: ShieldCheck },
     { name: "Phone calls", desc: "Agents can take phone calls, included in the plan", icon: Phone },
-    { name: "$5 to start", desc: "Low-cost start", icon: DollarSign },
-    { name: "Low-cost start", desc: "$5 to start", icon: Timer }
+    { name: "Free: install the app and start", desc: "Low-cost start", icon: DollarSign },
+    { name: "Low-cost start", desc: "Free: install the app and start", icon: Timer }
 ];
 
 export default function AiToolsForSolopreneursContent() {
@@ -240,7 +240,7 @@ export default function AiToolsForSolopreneursContent() {
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                             <strong>Our top pick for solopreneurs is Dooza Crew</strong> (our own product, disclosed):
                             you tell a master agent the job in plain words and it builds the helper agents it needs.
-                            $5 to start. Below: Crew, plus the essential
+                            Free: install the app and start. Below: Crew, plus the essential
                             single-purpose AI tools by category.
                         </p>
                         <div className="flex items-center justify-center gap-6 text-sm text-slate-500">
@@ -307,7 +307,7 @@ export default function AiToolsForSolopreneursContent() {
                                 >
                                     Try Dooza Crew
                                 </a>
-                                <p className="text-xs text-slate-500 mt-2 text-center">$5 to start</p>
+                                <p className="text-xs text-slate-500 mt-2 text-center">Free: install the app and start</p>
                             </div>
 
                             <div className="mt-6">
@@ -325,7 +325,7 @@ export default function AiToolsForSolopreneursContent() {
                                     <strong>Short answer:</strong> our top pick for solopreneurs is{' '}
                                     <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Dooza Crew</a>,
                                     which is our product. You tell Dooza, your master agent, the job in plain words and it builds
-                                    the helper agents it needs and reports back. It is $5 to start.
+                                    the helper agents it needs and reports back. It is free to use.
                                 </p>
                                 <p className="text-lg leading-relaxed">
                                     You're running a one-person empire. Content creation, customer service, sales,
@@ -442,8 +442,8 @@ export default function AiToolsForSolopreneursContent() {
                                         "You watch every step live in chat, and your staff can join the same chat",
                                         "Before it clicks Send or Pay, it asks you to Approve, Edit or Reject",
                                         "Agents can take phone calls, included in the plan",
-                                        "$5 to start",
-                                        "$5 to start"
+                                        "Free: install the app and start",
+                                        "Free: install the app and start"
                                     ].map((point, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
                                             <CheckCircle2 className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
@@ -682,7 +682,7 @@ export default function AiToolsForSolopreneursContent() {
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Monthly Cost</td>
                                             <td className="p-4">$89.98+ for 4 verified tools (checked Oct 2026)</td>
-                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">$5 to start</td>
+                                            <td className="p-4 bg-primary-50/30 text-green-600 font-semibold">Free</td>
                                         </tr>
                                         <tr className="border-b">
                                             <td className="p-4 font-medium">Annual Cost</td>
@@ -801,7 +801,7 @@ export default function AiToolsForSolopreneursContent() {
                                     Stop Managing Tools. Start Building Your Business.
                                 </h3>
                                 <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                                    Tell Dooza the job in plain words and let a team of agents do it. $5 to start.
+                                    Tell Dooza the job in plain words and let a team of agents do it. Free: install the app and start.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a
