@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
 import OfferCards from '@/components/OfferCards';
 import TalkNowStrip from '@/components/TalkNowStrip';
+import SoftwareFactoryBox from '@/components/SoftwareFactoryBox';
 import { MANAGED_PAY_URL, tagPay } from '@/lib/offers';
 import { SITE_URL } from '@/lib/site';
 
@@ -18,6 +19,10 @@ const MANAGED_PAY = tagPay(MANAGED_PAY_URL, SOURCE);
 const A = 'font-semibold text-primary-700 underline';
 
 const faqItems = [
+    {
+        question: 'Can Dooza build custom software for my business?',
+        answer: 'Yes. Dooza Software Factory builds custom apps with AI agents and a human engineer in the loop, and maintains them for you. You get a free working demo of your app before you pay. Built secure; SOC 2 available if you need it.',
+    },
     {
         question: 'What are done-for-you AI agents?',
         answer: 'AI agents that a provider builds, connects to your tools, runs and maintains for you. You explain the job and approve anything sensitive. At Dooza, a Dooza engineer does the building and the upkeep.',
@@ -142,6 +147,25 @@ export default function DoneForYouAiAgentsPage() {
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                                 <a href={BOOK} data-source={`${SOURCE}-hero`} className="rounded-full bg-primary-700 px-7 py-3 text-center font-bold text-white hover:bg-primary-800">Book a free pilot call</a>
                                 <a href={MANAGED_PAY} data-offer="managed" data-source={`${SOURCE}-hero`} className="rounded-full border border-slate-300 bg-white px-7 py-3 text-center font-semibold text-slate-800 hover:border-slate-400">Start Dooza Managed, 7 days free</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="pb-12">
+                        <div className="mx-auto max-w-3xl px-4">
+                            <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-8">
+                                <h2 className="font-serif text-3xl font-bold text-slate-900">Dooza Software Factory</h2>
+                                <p className="mt-3 text-lg leading-relaxed text-slate-700">
+                                    <strong>Custom software at the speed of thought.</strong> We build your app with AI agents and a human engineer in the loop, so it is highly customised to how you work and costs far less than traditional custom development. We maintain it for you after launch.
+                                </p>
+                                <p className="mt-3 text-slate-700">Built secure. SOC 2 available if you need it.</p>
+                                <p className="mt-3 font-semibold text-slate-900">Get a free working demo of your app before you pay.</p>
+                                <div className="mt-5">
+                                    <SoftwareFactoryBox />
+                                </div>
+                                <p className="mt-4 text-slate-700">
+                                    Prefer to talk it through? <a href="/book?utm_source=website&utm_medium=page&utm_content=software_factory" className={A}>Book a call with Sibi</a>.
+                                </p>
                             </div>
                         </div>
                     </section>
