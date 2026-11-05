@@ -133,6 +133,12 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/software-factory`,
+            lastModified: pageDate('2026-11-05'),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${SITE_URL}/done-for-you-ai-agents`,
             lastModified: pageDate('2026-10-21'),
             changeFrequency: 'monthly',

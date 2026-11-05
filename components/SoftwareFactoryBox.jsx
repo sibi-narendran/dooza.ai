@@ -5,7 +5,7 @@ import { useState } from 'react';
 const BOOK_SF = '/book?utm_source=website&utm_medium=page&utm_content=software_factory';
 const inputCls = 'w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-primary-700 focus:outline-none';
 
-export default function SoftwareFactoryBox() {
+export default function SoftwareFactoryBox({ placement = 'sf-hero' }) {
     const [step, setStep] = useState(1);
     const [idea, setIdea] = useState('');
     const [email, setEmail] = useState('');
@@ -37,7 +37,8 @@ export default function SoftwareFactoryBox() {
                     email: email.trim(),
                     phone: phone.trim(),
                     purpose: purpose.trim(),
-                    page: '/done-for-you-ai-agents',
+                    page: typeof window !== 'undefined' ? window.location.pathname : '/software-factory',
+                    placement,
                     ts: new Date().toISOString(),
                 }),
             });
@@ -54,7 +55,7 @@ export default function SoftwareFactoryBox() {
     }
 
     return (
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
+        <div data-source="software_factory" data-placement={placement} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
             {step === 1 && (
                 <form onSubmit={start}>
                     <label htmlFor="sf-idea" className="sr-only">Describe the app you want</label>
@@ -74,7 +75,7 @@ export default function SoftwareFactoryBox() {
             {step === 3 && (
                 <div>
                     <p className="font-serif text-xl font-bold text-slate-900">Thanks. Our team will email and call you shortly.</p>
-                    <a href={BOOK_SF} className="mt-4 inline-block rounded-full bg-primary-700 px-8 py-4 text-lg font-bold text-white hover:bg-primary-800">Book a call with Sibi</a>
+                    <a href={BOOK_SF} data-source="software_factory" className="mt-4 inline-block rounded-full bg-primary-700 px-8 py-4 text-lg font-bold text-white hover:bg-primary-800">Book a call with Sibi</a>
                 </div>
             )}
             {error && <p role="alert" className="mt-3 text-sm font-semibold text-red-700">{error}</p>}

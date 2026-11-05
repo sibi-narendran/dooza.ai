@@ -50,6 +50,10 @@ function CrewMenu() {
                 <span className="block text-[15px] font-semibold text-[#14213D]">Custom AI agents</span>
                 <span className="block text-sm text-[#4B5567]">We build and run an agent for one job</span>
             </Link>
+            <Link href="/software-factory" data-source="crew-nav-software-factory" className={ITEM}>
+                <span className="block text-[15px] font-semibold text-[#14213D]">Software Factory</span>
+                <span className="block text-sm text-[#4B5567]">Custom software built with AI agents</span>
+            </Link>
         </>
     );
 }
