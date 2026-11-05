@@ -35,6 +35,7 @@ const Footer = ({ variant = 'light' }) => {
                                     Dooza Crew
                                 </Link>
                             </li>
+                            <li><a href="https://apps.apple.com/app/id6826755309" target="_blank" rel="noopener noreferrer" data-source="footer-ios" aria-label="Download Dooza Crew on the App Store" className="inline-flex items-center gap-2 rounded-lg bg-black px-3.5 py-2 text-white hover:bg-[#14213D]"><svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-white"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.78-3.33-1.8-1.42-.14-2.77.84-3.49.84-.72 0-1.83-.82-3.01-.8-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.79.75 3.01.72c1.25-.02 2.04-1.13 2.8-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.47-3.7zM14.07 5.83c.64-.78 1.07-1.85.95-2.93-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.02.08 2.07-.52 2.71-1.28z"/></svg><span className="text-left leading-none"><span className="block text-[10px]">Download on the</span><span className="block text-[15px] font-semibold">App Store</span></span></a></li>
                         </ul>
                     </div>
                     <div>
