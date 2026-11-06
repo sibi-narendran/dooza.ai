@@ -351,6 +351,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/customer-service-outsourcing-for-small-business',
+        destination: '/blog/customer-service-outsourcing-for-small-business',
+        permanent: true,
+      },
+      {
         source: '/blog/10-best-ai-agents-for-business',
         destination: '/blog/best-ai-agents-for-business',
         permanent: true,

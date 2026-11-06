@@ -79,7 +79,7 @@ const staticPages = [
     },
     {
         title: 'Customer Service Outsourcing for Small Business',
-        url: `${SITE_URL}/customer-service-outsourcing-for-small-business`,
+        url: `${SITE_URL}/blog/customer-service-outsourcing-for-small-business`,
         description: 'How small businesses outsource customer service without minimum seats or long contracts.',
     },
     {

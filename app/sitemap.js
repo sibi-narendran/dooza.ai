@@ -91,12 +91,6 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
-            url: `${SITE_URL}/customer-service-outsourcing-for-small-business`,
-            lastModified: pageDate('2026-09-30'),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
             url: `${SITE_URL}/ecommerce-customer-service-outsourcing`,
             lastModified: pageDate('2026-09-30'),
             changeFrequency: 'monthly',
