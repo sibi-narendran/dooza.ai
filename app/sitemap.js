@@ -379,6 +379,12 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/free-bookkeeping-for-small-business`,
+            lastModified: pageDate('2026-11-06'),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/1099-prep-for-cpa-firms`,
             lastModified: pageDate('2026-10-16'),
             changeFrequency: 'monthly',
