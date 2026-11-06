@@ -6,8 +6,8 @@ import SoftwareFactoryBox from '@/components/SoftwareFactoryBox';
 import { SITE_URL } from '@/lib/site';
 
 const PATH = '/software-factory';
-const TITLE = 'Custom Software Built With AI Agents | Dooza Software Factory';
-const DESCRIPTION = 'Dooza Software Factory builds custom software with AI agents and a human engineer. Get a free working demo of your app before you pay. Maintained by Dooza.';
+const TITLE = 'Custom Software, Way Cheaper and Way Faster | Dooza';
+const DESCRIPTION = 'Custom software, way cheaper and way faster than a traditional build: Dooza Software Factory builds it with AI agents and a human engineer. Get a free working demo of your app before you pay. Maintained by Dooza.';
 const BOOK = '/book?utm_source=website&utm_medium=page&utm_content=software_factory';
 const A = 'font-semibold text-primary-700 underline';
 
@@ -17,8 +17,8 @@ const faqItems = [
         answer: 'Dooza Software Factory builds custom software for your business with AI agents, with a human engineer in the loop. The app is highly customised to how your business works, and Dooza maintains it after launch.',
     },
     {
-        question: 'How can custom software cost so much less than a traditional build?',
-        answer: 'AI agents do the bulk of the build and an engineer reviews it. You pay for far fewer engineer hours than a traditional custom development project.',
+        question: 'How can custom software be so much cheaper and faster than a traditional build?',
+        answer: 'AI agents do the bulk of the build and an engineer reviews it. You pay for far fewer engineer hours than a traditional custom development project, and you get a working demo and your app far sooner.',
     },
     {
         question: 'Is it secure? Do you offer SOC 2?',
@@ -98,9 +98,9 @@ export default function SoftwareFactoryPage() {
                     <section className="pt-32 pb-10 md:pt-40">
                         <div className="mx-auto max-w-3xl px-4">
                             <p className="text-sm font-semibold uppercase tracking-wide text-primary-700">Dooza Software Factory</p>
-                            <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-slate-900 md:text-5xl">Custom software at the speed of thought.</h1>
+                            <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-slate-900 md:text-5xl">Custom software. Way cheaper. Way faster.</h1>
                             <p className="mt-6 text-lg leading-relaxed text-slate-700">
-                                We build your app with AI agents and a human engineer in the loop. It is highly customised to how your business works and costs far less than traditional custom development. We maintain it for you after launch.
+                                We build your app with AI agents and a human engineer in the loop. It is highly customised to how your business works, costs far less than traditional custom development and ships far sooner. We maintain it for you after launch.
                             </p>
                             <p className="mt-4 font-semibold text-slate-900">Get a free working demo of your app before you pay.</p>
                             <div className="mt-6">
@@ -160,9 +160,9 @@ export default function SoftwareFactoryPage() {
 
                     <section className="pb-12">
                         <div className="mx-auto max-w-3xl px-4">
-                            <h2 className="font-serif text-3xl font-bold text-slate-900">Why it costs less</h2>
+                            <h2 className="font-serif text-3xl font-bold text-slate-900">Why it is way cheaper and way faster</h2>
                             <p className="mt-3 text-lg leading-relaxed text-slate-700">
-                                AI agents do the bulk of the build and an engineer reviews it. You pay for far fewer engineer hours than a traditional custom build, and you still get software made for the way your business works.
+                                AI agents do the bulk of the build and an engineer reviews it. You pay for far fewer engineer hours than a traditional custom build, and you still get software made for the way your business works. Because agents write and test the code while the engineer reviews it, you see a working demo first and get your app far sooner than a traditional project.
                             </p>
                         </div>
                     </section>
