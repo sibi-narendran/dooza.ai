@@ -6,7 +6,7 @@ import SoftwareFactoryBox from '@/components/SoftwareFactoryBox';
 import { SITE_URL } from '@/lib/site';
 
 const PATH = '/software-factory';
-const TITLE = 'Custom Software, Way Cheaper and Way Faster | Dooza';
+const TITLE = 'Custom Software, Way Cheaper and Way Faster';
 const DESCRIPTION = 'Custom software, way cheaper and way faster than a traditional build: Dooza Software Factory builds it with AI agents and a human engineer. Get a free working demo of your app before you pay. Maintained by Dooza.';
 const BOOK = '/book?utm_source=website&utm_medium=page&utm_content=software_factory';
 const A = 'font-semibold text-primary-700 underline';
