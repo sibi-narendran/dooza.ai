@@ -4,8 +4,8 @@ import InsuranceCrew, { insuranceFaq } from '@/components/insurance/InsuranceCre
 import { SITE_URL } from '@/lib/site';
 
 const URL = `${SITE_URL}/insurance-agents`;
-const TITLE = 'AI Employees for Independent Insurance Agents | Dooza';
-const DESC = 'AI employees for independent insurance agencies: carrier portals, inbox, certificates, renewals and lead follow-up, 24/7, with your approval. Free: install the app and start.';
+const TITLE = 'Insurance Agency After-Hours Calls + Admin, AI Crew | Dooza';
+const DESC = 'AI employees for independent insurance agencies: after-hours calls (included, no separate answering service), carrier portals, inbox, certificates, renewals and lead follow-up, 24/7, with your approval. Free: install the app and start.';
 
 export const metadata = {
     title: { absolute: TITLE },
