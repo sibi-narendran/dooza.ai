@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Treatment Center Billing Agent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a working billing desk. Summary strip, then one tab per workflow: worklist on the left, what the agent produced on the right. */
+:root{
+  --bg:#f3f6f8; --panel:#ffffff; --ink:#14232f; --muted:#5b6b78; --line:#d9e1e7;
+  --accent:#0d6e66; --accent-soft:#e1f0ee; --warn:#9a5b00; --warn-soft:#fdf0dc; --bad:#a3262a; --bad-soft:#fbe4e4; --good:#1d6b33; --good-soft:#e2f3e6;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f171d; --panel:#16212a; --ink:#e4ecf1; --muted:#97a8b5; --line:#2a3945;
+  --accent:#4fc1b3; --accent-soft:#163a37; --warn:#e6a54a; --warn-soft:#3a2b14; --bad:#f08a8c; --bad-soft:#3d1c1e; --good:#7fd197; --good-soft:#173322; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171d; --panel:#16212a; --ink:#e4ecf1; --muted:#97a8b5; --line:#2a3945;
+  --accent:#4fc1b3; --accent-soft:#163a37; --warn:#e6a54a; --warn-soft:#3a2b14; --bad:#f08a8c; --bad-soft:#3d1c1e; --good:#7fd197; --good-soft:#173322; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--body);margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px;display:grid;gap:22px}
+header{display:grid;gap:8px}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(26px,4vw,38px)/1.1 var(--display);margin:0;text-wrap:balance}
+h2{font:600 20px/1.2 var(--display);margin:0;text-wrap:balance}
+h3{font:600 16px/1.3 var(--display);margin:0}
+.lede{color:var(--muted);max-width:70ch;margin:0}
+.sample{display:inline-flex;gap:8px;align-items:center;font:600 13px/1.3 var(--body);background:var(--warn-soft);color:var(--warn);padding:6px 10px;border-radius:6px;width:fit-content}
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;gap:2px}
+.stat b{font:700 26px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:14px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line)}
+.tab{font:600 15px/1 var(--body);background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:12px 12px 11px;cursor:pointer}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tab:focus-visible,.row:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.view{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;min-width:0}
+.card .hd{padding:14px 16px;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.card .hd p{margin:0;color:var(--muted);font-size:14px}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font:600 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-variant-numeric:tabular-nums}
+tr.row{cursor:pointer}
+tr.row:hover td{background:var(--accent-soft)}
+tr.row[aria-selected="true"] td{background:var(--accent-soft)}
+tr.row[aria-selected="true"] td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+.code{font:600 12.5px/1.3 var(--mono);white-space:nowrap}
+.pill{display:inline-block;font:600 12px/1 var(--body);padding:4px 8px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-soft);color:var(--good)} .p-warn{background:var(--warn-soft);color:var(--warn)} .p-bad{background:var(--bad-soft);color:var(--bad)} .p-info{background:var(--accent-soft);color:var(--accent)}
+.out{padding:16px;display:grid;gap:12px}
+.out .who{font:600 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+dl{display:grid;grid-template-columns:minmax(0,46%) minmax(0,1fr);gap:6px 12px;margin:0;font-size:14px}
+dt{color:var(--muted)} dd{margin:0;font-weight:600}
+.doc{font:13px/1.55 var(--mono);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.steps{margin:0;padding-left:20px;display:grid;gap:4px;font-size:14px}
+.note{font-size:13px;color:var(--muted);margin:0}
+.pilot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.pilot .card{padding:16px;display:grid;gap:6px;align-content:start}
+.pilot p{margin:0;font-size:15px}
+footer{color:var(--muted);font-size:13px;display:grid;gap:4px}
+@media (max-width:860px){.view{grid-template-columns:minmax(0,1fr)}.strip{grid-template-columns:repeat(2,minmax(0,1fr))}.pilot{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:no-preference){.out{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(3px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Dooza · demo</div>
+  <h1>An AI billing and admissions agent for an outpatient addiction treatment program</h1>
+  <p class="lede">This is what the agent does on an ordinary Monday: it checks benefits on new inquiries, catches carve-outs before a claim goes to the wrong payer, tracks every PHP and IOP authorization and review, works the denial queue by reason code, and matches each payment against the contract rate. Click any row to see what the agent produced.</p>
+  <div class="sample">Sample data. Every patient, payer ID and dollar figure below is invented. No PHI.</div>
+</header>
+
+<section class="strip" aria-label="This week">
+  <div class="stat"><b>26</b><span>VOBs done this week</span></div>
+  <div class="stat"><b>9</b><span>reviews or auth renewals due in 72 h</span></div>
+  <div class="stat"><b>$13,850</b><span>in denials routed to appeal or rebill</span></div>
+  <div class="stat"><b>$3,840</b><span>paid below the contract rate</span></div>
+</section>
+
+<nav class="tabs" role="tablist" aria-label="Workflows">
+  <button class="tab" role="tab" id="t-vob" aria-selected="true" data-view="vob">Intake and VOB</button>
+  <button class="tab" role="tab" id="t-ur" aria-selected="false" data-view="ur">UR and auths</button>
+  <button class="tab" role="tab" id="t-den" aria-selected="false" data-view="den">Denials</button>
+  <button class="tab" role="tab" id="t-era" aria-selected="false" data-view="era">Payment reconciliation</button>
+</nav>
+
+<!-- VOB -->
+<section class="view" id="v-vob" role="tabpanel" aria-labelledby="t-vob">
+  <div class="card">
+    <div class="hd"><h2>New inquiries</h2><p>The agent pulls the card photo and intake form, runs eligibility (270/271), then calls or uses the payer portal for the behavioral health benefits the 271 leaves out.</p></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Inquiry</th><th>Payer</th><th>Level asked</th><th>Network</th><th>Result</th></tr></thead>
+      <tbody id="vob-rows"></tbody>
+    </table></div>
+  </div>
+  <div class="card"><div class="out" id="vob-out"></div></div>
+</section>
+
+<!-- UR -->
+<section class="view" id="v-ur" role="tabpanel" aria-labelledby="t-ur" hidden>
+  <div class="card">
+    <div class="hd"><h2>Authorizations and reviews</h2><p>Every patient's approved days, days used and next review date, by level of care. The agent drafts the review packet from the clinical notes the day before it is due.</p></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Patient</th><th>Level</th><th>Rev / HCPCS</th><th>Days used / approved</th><th>Next review</th></tr></thead>
+      <tbody id="ur-rows"></tbody>
+    </table></div>
+  </div>
+  <div class="card"><div class="out" id="ur-out"></div></div>
+</section>
+
+<!-- Denials -->
+<section class="view" id="v-den" role="tabpanel" aria-labelledby="t-den" hidden>
+  <div class="card">
+    <div class="hd"><h2>Denial worklist</h2><p>Read from the 835 remits. The agent groups denials by reason code, picks the route (corrected claim, reconsideration, appeal, or write-off with a reason), and orders the queue by dollars and deadline.</p></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Claim</th><th>CARC</th><th>Billed</th><th>Route</th><th>Deadline</th></tr></thead>
+      <tbody id="den-rows"></tbody>
+    </table></div>
+  </div>
+  <div class="card"><div class="out" id="den-out"></div></div>
+</section>
+
+<!-- ERA -->
+<section class="view" id="v-era" role="tabpanel" aria-labelledby="t-era" hidden>
+  <div class="card">
+    <div class="hd"><h2>Payments vs. what was owed</h2><p>Each paid line on the remit is matched to the contract rate for that payer and level of care, and to the deposit in the bank.</p></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Payment</th><th>Basis</th><th>Expected</th><th>Paid</th><th>Gap</th></tr></thead>
+      <tbody id="era-rows"></tbody>
+    </table></div>
+  </div>
+  <div class="card"><div class="out" id="era-out"></div></div>
+</section>
+
+<section style="display:grid;gap:12px" aria-label="How a pilot works">
+  <h2>How we start</h2>
+  <div class="pilot">
+    <div class="card"><h3>Pick one workflow</h3><p>Usually benefits checks at intake or the auth and review calendar, since that's where hours and denied days show up first. We map how your team does it today on a 30-minute call.</p></div>
+    <div class="card"><h3>We build it on your stack</h3><p>It works inside the EHR, billing system, payer portals and phone lines you already use. Your billers approve every action before it goes out, until you decide they don't need to.</p></div>
+    <div class="card"><h3>Judge it on numbers</h3><p>Weekly report: VOB turnaround, reviews missed (target zero), denial dollars recovered, underpayments found. If it isn't paying for itself, you stop.</p></div>
+  </div>
+  <p class="note">No patient data comes to us before a signed BAA. Everything on this page is sample data.</p>
+</section>
+
+<footer>
+  <div>Dooza builds AI employees for small and mid-size businesses. dooza.ai</div>
+</footer>
+</div>
+
+<script>
+const D = {
+vob: [
+ {id:"INQ-2207", payer:"Anthem Blue Cross PPO", lvl:"PHP", net:"In-network", res:["p-warn","Auth before day 1"], out:{
+   title:"Benefits summary: INQ-2207 (sample)", rows:[["Plan","Anthem Blue Cross PPO, employer group"],["Eligibility (271)","Active through 12/31"],["Behavioral health","Managed by the plan, not carved out"],["PHP (rev 0913)","Covered in-network, auth required before the first day"],["Deductible","$1,500, $600 met"],["Coinsurance","20% after deductible, OOP max $4,000"],["Day or visit limits","None on this plan"],["Est. patient share, 10 PHP days","about $1,400 (range given to admissions)"]],
+   doc:"Admissions note: Benefits verified on the 271, then the plan's behavioral health line (ref # logged). PHP in-network, auth needed before day 1. Clinical for the auth drafted from the intake assessment. Family given an estimate range, not a promise.", steps:["Auth request drafted from the intake assessment","Admissions told the estimate range","Reminder: first review date set from the auth"]}},
+ {id:"INQ-2208", payer:"Employer plan, BH via Carelon", lvl:"IOP", net:"In-network", res:["p-info","Carve-out"], out:{
+   title:"Benefits summary: INQ-2208 (sample)", rows:[["Medical card","Blue Shield of California"],["Behavioral health","Carved out to Carelon (back of the card)"],["Who authorizes","Carelon, not Blue Shield"],["Where the claim goes","Carelon's claims address, not Blue Shield's"],["IOP (rev 0906 / H0015)","Covered, auth after the first 3 days"],["Copay","$30 per day"]],
+   doc:"Admissions note: Carve-out. Blue Shield cannot authorize and would deny the claim. Auth and claims set to Carelon on the patient record so billing never sends it to the medical plan.", steps:["Payer on the account set to Carelon","Auth reminder on day 3"]}},
+ {id:"INQ-2209", payer:"Aetna", lvl:"Virtual IOP", net:"In-network", res:["p-good","Covered"], out:{
+   title:"Benefits summary: INQ-2209 (sample)", rows:[["Plan","Aetna Open Access"],["Eligibility (271)","Active"],["Virtual IOP","Covered the same as in-person on this plan"],["Telehealth billing","Plan's telehealth rule applied to the claim lines"],["Patient location","Must be in California on session days (license rule), confirmed with the patient"],["Copay","$40 per day"]],
+   doc:"Admissions note: Virtual IOP covered. Patient confirmed they'll join from home in Orange County. Telehealth rule for this plan saved on the account so every claim line gets it.", steps:["Intake slot offered for tomorrow","Telehealth billing rule saved on the account"]}},
+ {id:"INQ-2210", payer:"TRICARE West (TriWest)", lvl:"PHP", net:"In-network", res:["p-warn","Referral + auth"], out:{
+   title:"Benefits summary: INQ-2210 (sample)", rows:[["Plan","TRICARE Prime, West region"],["Needs","Referral from the primary care manager, then auth"],["PHP","Covered with auth"],["Cost share","Set by the beneficiary category, checked on the portal"]],
+   doc:"Admissions note: Prime needs a PCM referral first. Referral request sent to the PCM office with the intake summary; auth follows once the referral is in.", steps:["Referral request faxed and logged","Follow-up call to the PCM office at 24 h"]}},
+ {id:"INQ-2211", payer:"Medi-Cal managed care", lvl:"IOP", net:"Not contracted", res:["p-bad","Refer out"], out:{
+   title:"Benefits summary: INQ-2211 (sample)", rows:[["Plan","Medi-Cal managed care plan"],["Eligibility (271)","Active"],["Contracted with us","No"],["Where SUD care goes","County Drug Medi-Cal program"]],
+   doc:"Admissions note: Medi-Cal, not contracted. Caller given the county's SUD access line and two nearby programs that take Medi-Cal. Logged as a referral-out so marketing sees where demand goes.", steps:["Warm hand-off list sent by text","Logged for the monthly 'payers we turn away' report"]}}
+],
+ur: [
+ {id:"Pt. R-114", lvl:"PHP", code:"0913 / H0035", used:"9 / 10 days", due:["p-bad","Tomorrow 10 AM"], out:{
+   title:"Concurrent review packet: R-114 (sample)", rows:[["Payer","Anthem"],["Approved","10 PHP days, ends tomorrow"],["Asking for","5 more PHP days"],["Reviewer","UM care manager, phone review"]],
+   doc:"ASAM summary drafted from the last 3 days of notes:\nDim 3 (emotional/behavioral): passive SI 11/03, safety plan in place, psychiatry follow-up 11/06.\nDim 4 (readiness): attending all groups, early insight.\nDim 5 (relapse potential): two relapses within a week of past step-downs to IOP.\nDim 6 (recovery environment): a household member still uses.\nWhy PHP, not IOP yet: dimensions 3, 5 and 6 together.\n\nFlag for the clinician: the 11/05 group note is missing a signature.", steps:["Packet in the UR coordinator's queue at 4 PM today","Missing signature flagged to the clinician","If denied: peer-to-peer request drafted and ready"]}},
+ {id:"Pt. K-087", lvl:"PHP", code:"0913 / H0035", used:"4 / 5 days", due:["p-warn","In 2 days"], out:{
+   title:"Concurrent review packet: K-087 (sample)", rows:[["Payer","Cigna"],["Approved","5 days"],["Asking for","5 more PHP days"],["Pattern","This payer stepped 2 of our last 4 PHP cases down to IOP"]],
+   doc:"Agent note: The last two step-down letters from this payer said the notes didn't show why PHP-level hours were needed. This packet leads with each day's hours, groups attended and symptom changes.", steps:["Packet drafted from the notes","IOP step-down auth pre-requested as a fallback, so there's no gap day"]}},
+ {id:"Pt. M-201", lvl:"IOP", code:"0906 / H0015", used:"11 / 12 days", due:["p-warn","Next session"], out:{
+   title:"Auth extension: M-201 (sample)", rows:[["Payer","Carelon (Blue Shield carve-out)"],["Approved","12 IOP days"],["Asking for","12 more"]],
+   doc:"Agent note: Day 12 is Thursday. The extension goes out today so Thursday isn't billed past the auth (that comes back as a CO-197 denial).", steps:["Extension submitted on the portal after the billing lead approved it"]}},
+ {id:"Pt. S-033", lvl:"PHP → IOP", code:"0913 → 0906", used:"Step-down 11/06", due:["p-good","IOP auth in"], out:{
+   title:"Step-down: S-033 (sample)", rows:[["Payer","Aetna"],["PHP","Last day 11/05"],["IOP","Auth from 11/06, ref # logged"],["Same-day rule","PHP and IOP never both billed on 11/06"]],
+   doc:"Agent note: Level change split on the claim at 11/06 with the IOP rev code and the new auth number, so no date is billed twice and no date is billed without an auth.", steps:["Auth # copied to the claim lines","UR calendar updated"]}}
+],
+den: [
+ {id:"CLM-58812", carc:"CO-197", billed:"$4,200", route:["p-bad","Retro-auth + appeal"], ddl:"Dec 2", out:{
+   title:"Denial: CLM-58812 · CO-197 (sample)", rows:[["Means","Precertification/authorization absent"],["What happened","PHP auth ended Friday; the extension was approved Monday from Monday, so Saturday was denied"],["Route","Ask for retro-authorization with the review log, then appeal if refused"],["Deadline","Dec 2, from the plan's appeal window"]],
+   doc:"Re: Request for retro-authorization and reconsideration\nClaim CLM-58812, date of service 10/18.\nOur extension request was submitted 10/17 at 2:10 PM, before the auth ended (portal confirmation on file). The plan approved it 10/20 starting 10/20. We ask that 10/18 be added to the same authorization and the claim reprocessed.\nAttached: portal confirmation with time, clinical notes for 10/18.", steps:["Letter drafted; biller signs and sends","Follow-up call set for day 30"]}},
+ {id:"CLM-58790", carc:"CO-50", billed:"$6,300", route:["p-warn","Clinical appeal"], ddl:"Jan 14", out:{
+   title:"Denial: CLM-58790 · CO-50 (sample)", rows:[["Means","Not deemed medically necessary"],["What happened","3 PHP days denied after the review; payer said IOP was enough"],["Route","Level-1 clinical appeal, ask for the criteria they used"],["Gap found","The weekly ASAM update for that week was never written"]],
+   doc:"Agent note: The appeal ties each denied day to a dimension in that day's notes. Also flagged: weekly ASAM updates are now on the clinician task list, because a missing one is the most common reason this payer gives.", steps:["Appeal drafted for the medical director's signature","Weekly ASAM task turned on"]}},
+ {id:"CLM-58741", carc:"CO-16", billed:"$1,950", route:["p-good","Corrected claim"], ddl:"Rebill now", out:{
+   title:"Denial: CLM-58741 · CO-16 (sample)", rows:[["Means","Claim lacks information"],["RARC","Points to a missing rendering provider identifier"],["Route","Corrected claim, about 10 minutes"]],
+   doc:"Agent note: The same field was missing on 6 other IOP claims from the same site this month. A billing system rule is suggested so it stops at the source.", steps:["Corrected claim queued for the biller to approve","Rule change sent to the billing lead"]}},
+ {id:"CLM-58655", carc:"CO-29", billed:"$1,400", route:["p-bad","Write off, with reason"], ddl:"Passed", out:{
+   title:"Denial: CLM-58655 · CO-29 (sample)", rows:[["Means","Time limit for filing has expired"],["Filed","Day 97 on a 90-day filing limit"],["Root cause","Therapist notes for the week were signed 5 weeks late, so the claim waited"]],
+   doc:"Agent note: Write-off recommended. From now on the agent flags any note unsigned after 48 hours and any claim waiting on notes for more than 7 days.", steps:["Write-off recommended to the billing lead with the reason","Unsigned-note alerts turned on"]}}
+],
+era: [
+ {id:"ERA 11/04 · Anthem", basis:"Contract, amended 10/1", exp:"$11,700", paid:"$10,140", gap:["p-bad","−$1,560"], out:{
+   title:"Underpayment: Anthem remit 11/04 (sample)", rows:[["Lines","26 IOP days"],["Expected","New per diem from the 10/1 contract amendment"],["Paid","Old per diem"],["Deposit","Matched to the bank deposit 11/05"]],
+   doc:"Agent note: Every Anthem IOP line since 10/1 paid at the old rate. Likely the amendment isn't loaded in their system yet. Draft to the provider rep lists all 41 affected lines and asks for a reprocess.", steps:["Rep email drafted with the line list","Tracked as an open underpayment until paid"]}},
+ {id:"ERA 11/04 · Optum", basis:"Contract per diem", exp:"$3,600", paid:"$1,320", gap:["p-bad","−$2,280"], out:{
+   title:"Paid as therapy visits, not IOP (sample)", rows:[["Lines","8 IOP days"],["Paid","As single outpatient therapy visits"],["Cause","Rev code 0906 missing on our claim, only the HCPCS was sent"]],
+   doc:"Agent note: Our error, not the payer's. Corrected claim with rev 0906 on each line queued, and the claim template fixed so it can't drop again.", steps:["Corrected claim queued","Template fix sent to the billing lead"]}},
+ {id:"ERA 11/03 · Cigna", basis:"Contract per diem", exp:"$5,880", paid:"$5,880", gap:["p-good","Matched"], out:{
+   title:"Matched: Cigna remit 11/03 (sample)", rows:[["Lines","14 IOP days"],["Paid","At contract rate"],["Patient share","$560 copays, moved to patient balance"]],
+   doc:"Agent note: Nothing to do. Patient balances moved to statements.", steps:["Posted"]}},
+ {id:"ERA 11/02 · Magellan", basis:"Recoupment", exp:"$0", paid:"−$2,316", gap:["p-warn","Take-back"], out:{
+   title:"Recoupment: Magellan (sample)", rows:[["What happened","Payer took back $2,316 for a July claim, offset against today's payment"],["Reason given","Coordination of benefits: says another plan is primary"]],
+   doc:"Agent note: The other coverage ended 06/30 (confirmed on the 271). Dispute drafted with the termination date. The take-back is logged against the July claim, not today's, so A/R stays right.", steps:["Dispute drafted","A/R corrected"]}}
+]};
+
+const cols = {
+ vob: r => [r.id, r.payer, r.lvl, r.net, `<span class="pill ${r.res[0]}">${r.res[1]}</span>`],
+ ur: r => [r.id, r.lvl, `<span class="code">${r.code}</span>`, r.used, `<span class="pill ${r.due[0]}">${r.due[1]}</span>`],
+ den: r => [r.id, `<span class="code">${r.carc}</span>`, r.billed, `<span class="pill ${r.route[0]}">${r.route[1]}</span>`, r.ddl],
+ era: r => [r.id, r.basis, r.exp, r.paid, `<span class="pill ${r.gap[0]}">${r.gap[1]}</span>`]
+};
+const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function renderOut(view, i){
+  const o = D[view][i].out;
+  document.getElementById(view+'-out').innerHTML =
+    `<div class="who">What the agent produced</div><h3>${esc(o.title)}</h3>
+     <dl>${o.rows.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+     <div class="doc">${esc(o.doc)}</div>
+     <div><div class="who" style="margin-bottom:6px">Then</div><ol class="steps">${o.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></div>`;
+  document.querySelectorAll('#'+view+'-rows tr').forEach((tr,j)=>tr.setAttribute('aria-selected', j===i ? 'true':'false'));
+}
+for (const view of Object.keys(D)){
+  const tb = document.getElementById(view+'-rows');
+  tb.innerHTML = D[view].map((r,i)=>`<tr class="row" tabindex="0" data-i="${i}">${cols[view](r).map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
+  tb.addEventListener('click', e => { const tr = e.target.closest('tr'); if (tr) renderOut(view, +tr.dataset.i); });
+  tb.addEventListener('keydown', e => { if ((e.key==='Enter'||e.key===' ') && e.target.matches('tr')) { e.preventDefault(); renderOut(view, +e.target.dataset.i); } });
+  renderOut(view, 0);
+}
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(x => x.setAttribute('aria-selected', x===t ? 'true':'false'));
+  for (const v of Object.keys(D)) document.getElementById('v-'+v).hidden = (v !== t.dataset.view);
+}));
+</script>
+
+</body>
+</html>

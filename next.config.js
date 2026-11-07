@@ -49,6 +49,18 @@ const nextConfig = {
 
     // Customer design previews in public/preview (built by Dooza's fulfilment agent):
     // allow Google Fonts, and keep them out of search with noindex.
+    // Sales demo pages in public/demo (static, sample data, noindex): inline script + Google Fonts.
+    const demoCspHeader = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline'",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "img-src 'self' data: https:",
+      "font-src 'self' data: https://fonts.gstatic.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "frame-ancestors 'none'",
+    ].join('; ');
+
     const previewCspHeader = [
       "default-src 'self'",
       "script-src 'self'",
@@ -111,6 +123,14 @@ const nextConfig = {
         ],
       },
       {
+        source: '/demo/:path*',
+        headers: [
+          { key: 'Content-Security-Policy', value: demoCspHeader },
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+        ],
+      },
+      {
         source: '/preview/:path*',
         headers: [
           { key: 'Content-Security-Policy', value: previewCspHeader },
@@ -167,6 +187,10 @@ const nextConfig = {
       {
         source: '/voice/:slug',
         destination: '/voice/:slug/index.html',
+      },
+      {
+        source: '/demo/:slug',
+        destination: '/demo/:slug/index.html',
       },
     ];
   },
