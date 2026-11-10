@@ -7,7 +7,29 @@
 // when they exist. No campaign parameters = nothing changes.
 import { useEffect } from 'react';
 
+// 2026-11-10 (Achilles): Crew is live on Google Play (Edison 11-10). On Android, app sign-up links
+// (crew.dooza.ai root, not /login, /mac or the API) go straight to the Play listing, with the link's
+// utm_* carried in Play's referrer so per-link attribution survives the store hop.
 const CREW_HOST = 'crew.dooza.ai';
+const PLAY = 'https://play.google.com/store/apps/details?id=ai.dooza.app';
+const SKIP_PATHS = ['/login', '/mac', '/v1'];
+
+function isAndroid() {
+    try {
+        return /Android/i.test(navigator.userAgent || '');
+    } catch (e) {
+        return false;
+    }
+}
+
+function toPlay(url) {
+    const ref = new URLSearchParams();
+    url.searchParams.forEach((v, k) => {
+        if (k.startsWith('utm_')) ref.set(k, v);
+    });
+    const r = ref.toString();
+    return r ? `${PLAY}&referrer=${encodeURIComponent(r)}` : PLAY;
+}
 const KEEP = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid', 'msclkid'];
 
 function incoming() {
@@ -25,7 +47,8 @@ function incoming() {
 export default function CrewUtmPassthrough() {
     useEffect(() => {
         const inc = incoming();
-        if (!inc) return;
+        const android = isAndroid();
+        if (!inc && !android) return;
 
         const rewrite = () => {
             document.querySelectorAll(`a[href*="${CREW_HOST}"]`).forEach((anchor) => {
@@ -38,6 +61,13 @@ export default function CrewUtmPassthrough() {
                     return;
                 }
                 if (url.hostname !== CREW_HOST) return;
+                if (android && !SKIP_PATHS.some((sp) => url.pathname.startsWith(sp))) {
+                    for (const [k, v] of Object.entries(inc || {})) url.searchParams.set(k, v);
+                    anchor.setAttribute('href', toPlay(url));
+                    anchor.setAttribute('data-play', '1');
+                    return;
+                }
+                if (!inc) return;
                 let changed = false;
                 for (const [k, v] of Object.entries(inc)) {
                     if (url.searchParams.get(k) !== v) {
