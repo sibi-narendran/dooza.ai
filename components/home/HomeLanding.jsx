@@ -7,7 +7,6 @@ import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTAC
 import { testimonials } from '@/lib/homeData';
 import { MANAGED_PAY_URL } from '@/lib/offers';
 import { crewSignupUrl } from '@/lib/crewUrl';
-import HomeInlineBooking from '@/components/home/HomeInlineBooking';
 
 // Homepage (Sibi 2026-10-10 19:49 + 20:05 "improve it design wise, read Claude design").
 // Concept: you are hiring a staff member, so the hero shows that employee's daily report, checked by a Dooza
@@ -327,7 +326,6 @@ export default function HomeLanding() {
                 </section>
             )}
 
-            <HomeInlineBooking />
 
             {/* FAQ */}
             <section id="faq" className="px-4 py-20 md:px-8 md:py-28">
