@@ -37,9 +37,9 @@ export async function POST(request) {
                 contacts: [{ name, phones: [{ phone, type: 'mobile' }] }],
             }),
         });
-        const note = ['Hospital demo request via dooza.ai/hospital', `Name: ${name}`, `Hospital: ${hospital}`, `City: ${city}`, `Mobile: ${phone}`, ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
+        const note = ['Hospital demo request via dooza.ai/hospital', `Name: ${name}`, `Hospital: ${hospital}`, `City: ${city}`, `Mobile: ${phone}`, `Add-ons: ${b.addons === 'yes' ? 'yes' : 'no'}`, ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
         await closeFetch(apiKey, '/activity/note/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, note }) });
-        await closeFetch(apiKey, '/task/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, assigned_to: SIBI_CLOSE_USER, text: `Hospital demo: ${hospital}, ${city}. Call/WhatsApp ${phone}.`, date: new Date().toISOString().slice(0, 10), is_complete: false }) });
+        await closeFetch(apiKey, '/task/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, assigned_to: SIBI_CLOSE_USER, text: `Hospital demo: ${hospital}, ${city}. Call/WhatsApp ${phone}.${b.addons === 'yes' ? ' Wants add-ons.' : ''}`, date: new Date().toISOString().slice(0, 10), is_complete: false }) });
     } catch (e) {
         console.error('hospital-lead', e.message);
         return json({ ok: false, error: 'Could not save right now. Please try again in a minute.' }, 502);

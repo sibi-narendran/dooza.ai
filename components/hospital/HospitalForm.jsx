@@ -61,6 +61,7 @@ export default function HospitalForm() {
                 <label className={label}>City<input name="city" required autoComplete="address-level2" className={input} /></label>
                 <label className={label}>Mobile (WhatsApp)<input name="phone" type="tel" required autoComplete="tel" className={input} /></label>
             </div>
+            <label className="mt-3 flex items-center gap-2 text-[15px] text-[#334155]"><input type="checkbox" name="addons" value="yes" className="h-4 w-4" />Interested in add-ons</label>
             <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
             {error && <p role="alert" className="mt-3 text-[14px] text-[#B91C1C]">{error}</p>}
             <button type="submit" disabled={state === 'sending'} className="mt-4 w-full rounded-xl bg-[#0F766E] px-5 py-4 text-[17px] font-semibold text-white hover:bg-[#0B5D57] disabled:opacity-60">

@@ -67,6 +67,13 @@ export default function HospitalPage() {
                         </tbody></table>
                     </div>
                 </section>
+                <section className="mt-14">
+                    <h2 className="text-2xl font-bold">Add anytime</h2>
+                    <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                        <div className="rounded-2xl border border-[#E2E8F0] bg-white p-5"><h3 className="text-lg font-semibold text-[#14213D]">WhatsApp AI receptionist</h3><p className="mt-2 text-[15px] text-[#334155]">Books appointments and answers patient questions 24/7, in Tamil, Telugu, Kannada and English.</p><p className="mt-3 font-semibold text-[#0F766E]">From ₹3,999/mo</p></div>
+                        <div className="rounded-2xl border border-[#E2E8F0] bg-white p-5"><h3 className="text-lg font-semibold text-[#14213D]">Get more patients</h3><p className="mt-2 text-[15px] text-[#334155]">A Google review request after every visit, your Google Business profile kept fresh, and local Google ads run for you.</p><p className="mt-3 font-semibold text-[#0F766E]">From ₹7,999/mo + ad spend</p></div>
+                    </div>
+                </section>
 
                 <section className="mt-14">
                     <h2 className="text-2xl font-bold">Questions</h2>
