@@ -18,10 +18,12 @@ export async function POST(request) {
     const email = clean(b.email, 160).toLowerCase();
     const phone = clean(b.phone, 40);
     const closing = clean(b.closing_date, 20);
+    const state = clean(b.state, 2).toUpperCase();
     const missing = [];
     if (!name) missing.push('name');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push('email');
     if (phone.replace(/\D/g, '').length < 10) missing.push('mobile');
+    if (!/^[A-Z]{2}$/.test(state)) missing.push('state');
     if (!/^\d{4}-\d{2}-\d{2}$/.test(closing)) missing.push('closing date');
     if (missing.length) return json({ ok: false, error: `Please check: ${missing.join(', ')}.` }, 400);
     const apiKey = process.env.CLOSE_API_KEY;
@@ -31,13 +33,13 @@ export async function POST(request) {
         const lead = await closeFetch(apiKey, '/lead/', {
             method: 'POST',
             body: JSON.stringify({
-                name: `TC free file: ${name}`,
+                name: `TC free file: ${name} (${state})`,
                 status_id: STATUS_POTENTIAL,
                 description: 'Transaction coordinator free file via dooza.ai/tc',
                 contacts: [{ name, emails: [{ email, type: 'office' }], phones: [{ phone, type: 'mobile' }] }],
             }),
         });
-        const note = ['TC free file request via dooza.ai/tc', `Name: ${name}`, `Email: ${email}`, `Mobile: ${phone}`, `Closing date: ${closing}`, ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
+        const note = ['TC free file request via dooza.ai/tc', `Name: ${name}`, `Email: ${email}`, `Mobile: ${phone}`, `State: ${state}`, `Closing date: ${closing}`, ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
         await closeFetch(apiKey, '/activity/note/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, note }) });
         await closeFetch(apiKey, '/task/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, assigned_to: SIBI_CLOSE_USER, text: `TC free file: open the file, closing ${closing}. Email + call.`, date: new Date().toISOString().slice(0, 10), is_complete: false }) });
     } catch (e) {

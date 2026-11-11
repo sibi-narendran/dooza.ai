@@ -4,7 +4,7 @@
 import TcForm from '@/components/tc/TcForm';
 
 export const metadata = {
-    title: 'Transaction Coordinator, $99 per File | Dooza',
+    title: 'Transaction Coordinator, $99 per File',
     description: 'Transaction coordination for Texas real estate agents: $99 per file, first file free. We track every deadline and a person checks every step.',
     robots: { index: false, follow: false },
     alternates: { canonical: 'https://www.dooza.ai/tc' },
