@@ -1,0 +1,298 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>chive · Odoo ↔ Shopify sync check (demo by Dooza)</title>
+<style>
+:root{--a:#2f6b4f;--ink:#1d2330;--mut:#5c6478;--bg:#fff;--soft:#f4f6f3;--line:#dde3dc;--red:#c62f2f;--redbg:#fdeeee;--green:#1a7f37;--amber:#a85b00;--amberbg:#fff6e5}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+.bar{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 16px}.bar b{color:#ffd43b}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 16px;max-width:1120px;margin:auto}
+.logo{font-weight:800;font-size:19px;color:var(--a)}.logo small{display:block;font-weight:500;font-size:12px;color:var(--mut)}
+nav{display:flex;gap:6px;flex-wrap:wrap}nav button,.btn,.btn2{font:inherit;font-weight:700;border-radius:9px;padding:9px 14px;cursor:pointer;border:1px solid var(--a)}
+nav button{background:#fff;color:var(--a)}nav button.on,.btn{background:var(--a);color:#fff}.btn2{background:#fff;color:var(--a)}
+.small{padding:5px 10px;font-size:13px}
+main{max-width:1120px;margin:auto;padding:4px 16px 24px}
+h2{font-size:22px;margin:14px 0 12px}h3{font-size:17px;margin:0 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:var(--soft);border-radius:12px;padding:14px}.kpi>span{display:block;color:var(--mut);font-size:13px}.kpi b{font-size:22px}
+.card{background:var(--soft);border-radius:12px;padding:16px;margin-bottom:16px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.03em}
+td.n,th.n{text-align:right}tr.hi td{background:var(--redbg)}tr.md td{background:var(--amberbg)}
+.tag{display:inline-block;border-radius:6px;font-size:11px;font-weight:700;padding:1px 7px;color:#fff;background:var(--red)}.tag.m{background:var(--amber)}.tag.l{background:#6b7280}
+.ok{color:var(--green);font-weight:700}.bad{color:var(--red);font-weight:700}.warn{color:var(--amber);font-weight:700}
+.pill{display:inline-block;font-size:12px;border-radius:20px;padding:1px 9px;background:#e6ece5;color:var(--mut);margin:1px 2px 1px 0}
+.legend{font-size:12px;color:var(--mut);margin-top:8px}
+form.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;align-items:end}
+label{display:grid;gap:3px;font-size:12px;color:var(--mut);font-weight:600}
+input,select,textarea{font:inherit;font-size:15px;padding:9px;border:1px solid #ccd3cb;border-radius:9px;background:#fff;color:var(--ink);width:100%}
+input.q{width:80px;padding:5px 7px;text-align:right}textarea{min-height:110px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none;max-width:92vw}.toast.show{opacity:1}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.sp{flex:1}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:10px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:24px 16px;border-top:1px solid var(--line);margin-top:20px}
+.hide{display:none}.det{white-space:normal;min-width:220px}
+@media(max-width:520px){.kpi b{font-size:19px}h2{font-size:20px}}
+</style></head><body>
+<div class="bar"><b>Demo</b> with sample data (made-up SKUs, stock and orders, not chive's real data). Everything you change is saved in this browser only.</div>
+<header><span class="logo">chive · sync check<small>Odoo (system of record) ↔ 6 Shopify storefronts</small></span>
+<nav id="nav"><button data-v="check" class="on">Sync issues</button><button data-v="odoo">Odoo products</button><button data-v="stores">Store listings</button><button data-v="orders">Orders</button></nav></header>
+<main>
+
+<section id="v-check">
+<div class="row"><h2 class="sp">Sync issues queue</h2><button class="btn small" id="runBtn">Run check now</button><button class="btn2 small" id="csv1">Export CSV</button></div>
+<div class="kpis" id="kpis"></div>
+<div class="card">
+<div class="filters">
+<label>Issue type<select id="fType"><option value="">All types</option></select></label>
+<label>Store<select id="fStore"><option value="">All stores</option></select></label>
+<label>Stock tolerance (units)<input id="tol" type="number" min="0" step="1"></label>
+<label>Order sync alert after (min)<input id="lag" type="number" min="1" step="1"></label>
+</div>
+<div class="row" style="margin-bottom:10px"><button class="btn2 small" id="pushAll">Push Odoo qty to all mismatched listings</button><span class="legend" id="lastRun"></span></div>
+<div class="tw"><table id="issT"></table></div>
+<p class="legend">Checks: stock on each store vs Odoo available (on hand minus reserved), SKUs that differ only by case/spaces/dashes, SKUs missing in Odoo or in a store, duplicate SKUs, and Shopify orders that never reached Odoo.</p>
+</div>
+<div class="card"><h3>Resolved / ignored log</h3><div class="tw"><table id="logT"></table></div></div>
+</section>
+
+<section id="v-odoo" class="hide">
+<div class="row"><h2 class="sp">Odoo products (system of record)</h2><button class="btn small" id="newProdBtn">+ Add product</button></div>
+<div class="card hide" id="newProdCard"><h3>New product in Odoo</h3>
+<form class="f" id="prodF">
+<label>SKU (Internal Reference)<input name="sku" required placeholder="CF-LOTUS-TEAL-M"></label>
+<label>Product name<input name="name" required placeholder="Ceramic Flower, Lotus, Teal, Medium"></label>
+<label>On hand<input name="onHand" type="number" min="0" step="1" value="0" required></label>
+<label>Sell on stores (comma list)<input name="channels" placeholder="CA,US,UK"></label>
+<button class="btn">Save product</button></form></div>
+<div class="card"><div class="tw"><table id="prodT"></table></div><p class="legend">Edit "On hand" and every store that sells the SKU is re-checked. Available = on hand minus reserved for synced orders.</p></div>
+</section>
+
+<section id="v-stores" class="hide">
+<h2>Shopify store listings</h2>
+<div class="card"><div class="row"><label style="min-width:200px">Store<select id="storeSel"></select></label></div>
+<div class="tw" style="margin-top:10px"><table id="listT"></table></div></div>
+<div class="card"><h3>Add a listing</h3>
+<form class="f" id="listF"><label>SKU<input name="sku" required></label><label>Title<input name="title" required></label>
+<label>Available qty<input name="qty" type="number" step="1" value="0" required></label><button class="btn2">Add listing</button></form></div>
+<div class="card"><h3>Bulk update from CSV (sku,qty)</h3>
+<p class="legend" style="margin-top:0">Paste an inventory export from this store (Matrixify or Shopify CSV, two columns). Unknown SKUs are added as new listings.</p>
+<textarea id="bulkTx" placeholder="sku,qty&#10;CF-LOTUS-TEAL-M,12&#10;POT-MIN-5-GRN,40"></textarea>
+<div class="row" style="margin-top:8px"><button class="btn small" id="bulkBtn">Apply to this store</button></div></div>
+</section>
+
+<section id="v-orders" class="hide">
+<h2>Orders: Shopify → Odoo</h2>
+<div class="card"><div class="tw"><table id="ordT"></table></div><p class="legend">An order with no Odoo sales order (SO) after the alert time lands in the issues queue. Retry fails if a line's SKU is not in Odoo.</p></div>
+<div class="card"><h3>Simulate a new Shopify order</h3>
+<form class="f" id="ordF"><label>Store<select name="store" class="storeOpt"></select></label><label>SKU<input name="sku" required placeholder="CF-ROSE-YEL-S"></label>
+<label>Qty<input name="qty" type="number" min="1" step="1" value="1" required></label>
+<label>Synced to Odoo?<select name="synced"><option value="no">No (connector failed)</option><option value="yes">Yes</option></select></label>
+<label>Minutes ago<input name="age" type="number" min="0" step="1" value="45"></label><button class="btn2">Add order</button></form></div>
+</section>
+</main>
+<footer>Demo built by Dooza (dooza.ai) for chive's ERP &amp; e-commerce systems post. Sample data only.<br><button class="btn2 small" id="reset" style="margin-top:8px">Reset sample data</button></footer>
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+"use strict";
+var KEY="dooza_chive_sync_v1";
+var STORES=["CA","US","UK","EU","Wholesale","Gifts"];
+var STORE_NAMES={CA:"Shopify CA",US:"Shopify US",UK:"Shopify UK",EU:"Shopify EU",Wholesale:"Shopify Wholesale (B2B)",Gifts:"Shopify Gifts"};
+var TYPES={stock:"Stock mismatch",skumis:"Mismatched SKU",noodoo:"SKU missing in Odoo",nostore:"Missing in store",dupodoo:"Duplicate SKU in Odoo",dupstore:"Duplicate listing",order:"Order not in Odoo"};
+var SEV={order:"High",noodoo:"High",dupodoo:"High",stock:"Medium",skumis:"Medium",dupstore:"Medium",nostore:"Low"};
+function minsAgo(m){return Date.now()-m*60000;}
+function seed(){
+ var P=[
+  {sku:"CF-LOTUS-TEAL-M",name:"Ceramic Flower, Lotus, Teal, Medium",onHand:42,reserved:2,ch:["CA","US","UK","EU","Gifts"]},
+  {sku:"CF-ZINNIA-PNK-M",name:"Ceramic Flower, Zinnia, Pink, Medium",onHand:18,reserved:0,ch:["CA","US","UK","EU"]},
+  {sku:"CF-ROSE-YEL-S",name:"Ceramic Flower, Rose, Yellow, Small",onHand:64,reserved:4,ch:["CA","US","UK","EU","Wholesale"]},
+  {sku:"CF-POPPY-NVY-M",name:"Ceramic Flower, Poppy, Navy, Medium",onHand:7,reserved:1,ch:["CA","US"]},
+  {sku:"CF-DAISY-ORG-L",name:"Ceramic Flower, Paris Daisy, Orange, Large",onHand:23,reserved:0,ch:["CA","US","UK","EU"]},
+  {sku:"CF-BOX-ENGGARDEN",name:"Ceramic Flower Box Set, English Garden",onHand:15,reserved:0,ch:["CA","US","Gifts"]},
+  {sku:"POT-MIN-5-GRN",name:"Minute Pot 5in with Saucer, Green Layers",onHand:120,reserved:6,ch:["CA","US","Wholesale"]},
+  {sku:"VASE-CATER-SET3",name:"Caterpillar Glass Vases, Set of 3",onHand:31,reserved:0,ch:["CA","US","UK"]},
+  {sku:"FIG-GNOME-01",name:"Gnome Ceramic Figurine",onHand:0,reserved:0,ch:["CA","US"]},
+  {sku:"SEED-SHIDO-6",name:"Shido Seeds, pack of 6",onHand:200,reserved:10,ch:["CA","US","Wholesale","Gifts"]},
+  {sku:"VASE-LOFT-VTG",name:"Loft Vintage Vase",onHand:12,reserved:0,ch:["CA","Wholesale"]},
+  {sku:"VASE-LOFT-VTG",name:"Loft Vintage Vase (old import)",onHand:5,reserved:0,ch:[]}
+ ];
+ function av(s){var t=0;P.forEach(function(p){if(p.sku===s)t+=p.onHand-p.reserved;});return t;}
+ var L=[],id=1;
+ P.forEach(function(p){p.ch.forEach(function(st){L.push({id:id++,store:st,sku:p.sku,title:p.name,qty:av(p.sku)});});});
+ function set(st,sku,f){L.forEach(function(l){if(l.store===st&&l.sku===sku)f(l);});}
+ set("US","CF-LOTUS-TEAL-M",function(l){l.qty=46;});        // oversell risk
+ set("UK","CF-ROSE-YEL-S",function(l){l.qty=0;});           // hidden stock
+ set("EU","CF-ZINNIA-PNK-M",function(l){l.sku="cf-zinnia-pnk-m ";}); // case/space mismatch
+ set("CA","POT-MIN-5-GRN",function(l){l.sku="POT-MIN5-GRN";});        // dash mismatch
+ set("US","FIG-GNOME-01",function(l){l.qty=9;});            // selling stock that is gone
+ L=L.filter(function(l){return !(l.store==="UK"&&l.sku==="CF-DAISY-ORG-L");}); // missing record in UK
+ L.push({id:id++,store:"Gifts",sku:"GIFT-WRAP-LUX",title:"Luxe gift wrap add-on",qty:50});        // not in Odoo
+ L.push({id:id++,store:"CA",sku:"CF-POPPY-NVY-M",title:"Ceramic Flower, Poppy, Navy, Medium (copy)",qty:6}); // duplicate listing
+ return {nextId:id,nextSO:4812,tol:0,lag:30,products:P.map(function(p,i){return {id:i+1,sku:p.sku,name:p.name,onHand:p.onHand,reserved:p.reserved,ch:p.ch};}),nextPid:P.length+1,
+  listings:L,
+  orders:[
+   {id:"CA-10482",store:"CA",at:minsAgo(12),lines:[{sku:"CF-LOTUS-TEAL-M",qty:2}],so:""},
+   {id:"US-22931",store:"US",at:minsAgo(95),lines:[{sku:"CF-ROSE-YEL-S",qty:3},{sku:"SEED-SHIDO-6",qty:1}],so:""},
+   {id:"UK-3307",store:"UK",at:minsAgo(240),lines:[{sku:"VASE-CATER-SET3",qty:1}],so:"SO4807"},
+   {id:"GF-1190",store:"Gifts",at:minsAgo(61),lines:[{sku:"CF-BOX-ENGGARDEN",qty:1},{sku:"GIFT-WRAP-LUX",qty:1}],so:""},
+   {id:"WS-0418",store:"Wholesale",at:minsAgo(300),lines:[{sku:"POT-MIN-5-GRN",qty:24}],so:"SO4799"}
+  ],log:[],ignored:{},lastRun:Date.now()};
+}
+var S;
+function load(){try{var raw=localStorage.getItem(KEY);if(raw){var p=JSON.parse(raw);if(p&&p.products&&p.listings)return p;}}catch(e){}return seed();}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+S=load();
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function toast(m){var t=$("toast");t.textContent=m;t.className="toast show";clearTimeout(toast.h);toast.h=setTimeout(function(){t.className="toast";},2200);}
+function norm(s){return String(s||"").toUpperCase().replace(/[\s\-_.]/g,"");}
+function prodsBySku(sku){return S.products.filter(function(p){return p.sku===sku;});}
+function avail(sku){return prodsBySku(sku).reduce(function(t,p){return t+(+p.onHand||0)-(+p.reserved||0);},0);}
+function ago(ms){var m=Math.round((Date.now()-ms)/60000);return m<60?m+" min":Math.floor(m/60)+" h "+(m%60)+" min";}
+
+/* the check */
+function check(){
+ var out=[],seenOdoo={},exact={},byNorm={};
+ S.products.forEach(function(p){exact[p.sku]=1;byNorm[norm(p.sku)]=p.sku;seenOdoo[p.sku]=(seenOdoo[p.sku]||0)+1;});
+ function add(type,store,sku,detail,exp,act,ref){var key=type+"|"+store+"|"+sku+"|"+(ref||"");if(S.ignored[key])return;
+  out.push({key:key,type:type,sev:SEV[type],store:store,sku:sku,detail:detail,expected:exp,actual:act,ref:ref||""});}
+ Object.keys(seenOdoo).forEach(function(s){if(seenOdoo[s]>1)add("dupodoo","Odoo",s,seenOdoo[s]+" Odoo products share this SKU; stores can't tell which stock is real","1 product",seenOdoo[s]+" products");});
+ var perStore={};
+ S.listings.forEach(function(l){
+  var k=l.store+"|"+l.sku;perStore[k]=(perStore[k]||[]).concat([l]);
+  if(exact[l.sku]){var a=avail(l.sku);var tol=+S.tol||0;
+   if(Math.abs(l.qty-a)>tol)add("stock",l.store,l.sku,(l.qty>a?"Store shows MORE than Odoo has: oversell risk":"Store shows LESS than Odoo has: lost sales"),a,l.qty,String(l.id));}
+  else if(byNorm[norm(l.sku)])add("skumis",l.store,l.sku,'Store SKU "'+l.sku+'" should be "'+byNorm[norm(l.sku)]+'" (case, space or dash differs), so sync skips it',byNorm[norm(l.sku)],l.sku,String(l.id));
+  else add("noodoo",l.store,l.sku,"Listed on "+STORE_NAMES[l.store]+" but no Odoo product: stock and orders can't sync","in Odoo","missing",String(l.id));
+ });
+ Object.keys(perStore).forEach(function(k){if(perStore[k].length>1){var l=perStore[k];add("dupstore",l[0].store,l[0].sku,l.length+" listings with the same SKU on "+STORE_NAMES[l[0].store],"1 listing",l.length+" listings",String(l[1].id));}});
+ var done={};
+ S.products.forEach(function(p){(p.ch||[]).forEach(function(st){var k=st+"|"+p.sku;if(done[k])return;done[k]=1;
+  var has=S.listings.some(function(l){return l.store===st&&(l.sku===p.sku||norm(l.sku)===norm(p.sku));});
+  if(!has)add("nostore",st,p.sku,"Odoo says sell on "+STORE_NAMES[st]+" but there is no listing","listed","missing");});});
+ var lag=+S.lag||30;
+ S.orders.forEach(function(o){if(!o.so&&(Date.now()-o.at)>=lag*60000){
+  var bad=o.lines.filter(function(x){return !exact[x.sku];}).map(function(x){return x.sku;});
+  add("order",o.store,o.lines.map(function(x){return x.sku;}).join(" + "),"Order "+o.id+" placed "+ago(o.at)+" ago, no Odoo sales order"+(bad.length?". Blocked: "+bad.join(", ")+" not in Odoo":""),"SO in Odoo","none",o.id);}});
+ var rank={High:0,Medium:1,Low:2};
+ out.sort(function(a,b){return rank[a.sev]-rank[b.sev]||a.type.localeCompare(b.type)||a.store.localeCompare(b.store);});
+ return out;
+}
+
+/* actions */
+function logIt(i,how){S.log.unshift({at:Date.now(),type:TYPES[i.type],store:i.store,sku:i.sku,how:how});S.log=S.log.slice(0,50);}
+function listing(id){return S.listings.filter(function(l){return String(l.id)===String(id);})[0];}
+function act(key,what){
+ var i=check().filter(function(x){return x.key===key;})[0];if(!i)return "gone";
+ if(what==="ignore"){var note=(window.prompt?window.prompt("Why ignore this? (saved in the log)",""):"")||"no note";S.ignored[key]=note;logIt(i,"Ignored: "+note);save();return "ignored";}
+ if(i.type==="stock"){var l=listing(i.ref);l.qty=avail(l.sku);logIt(i,"Pushed Odoo qty "+l.qty+" to store");}
+ else if(i.type==="skumis"){var l2=listing(i.ref);var to=i.expected;logIt(i,'SKU renamed "'+l2.sku+'" to "'+to+'"');l2.sku=to;}
+ else if(i.type==="noodoo"){var l3=listing(i.ref);S.products.push({id:S.nextPid++,sku:l3.sku,name:l3.title,onHand:Math.max(0,l3.qty),reserved:0,ch:[l3.store]});logIt(i,"Created Odoo product, on hand "+Math.max(0,l3.qty)+" (count it)");}
+ else if(i.type==="nostore"){S.listings.push({id:S.nextId++,store:i.store,sku:i.sku,title:prodsBySku(i.sku)[0].name,qty:avail(i.sku)});logIt(i,"Listing created with qty "+avail(i.sku));}
+ else if(i.type==="dupstore"){S.listings=S.listings.filter(function(l){return String(l.id)!==i.ref;});logIt(i,"Removed duplicate listing");}
+ else if(i.type==="dupodoo"){var ps=prodsBySku(i.sku),keep=ps[0];ps.slice(1).forEach(function(p){keep.onHand+=+p.onHand||0;keep.reserved+=+p.reserved||0;});
+  S.products=S.products.filter(function(p){return p.sku!==i.sku||p===keep;});logIt(i,"Merged "+ps.length+" Odoo products, on hand now "+keep.onHand);}
+ else if(i.type==="order"){var o=S.orders.filter(function(x){return x.id===i.ref;})[0];
+  var bad=o.lines.filter(function(x){return !prodsBySku(x.sku).length;});
+  if(bad.length){return "blocked:"+bad.map(function(x){return x.sku;}).join(", ");}
+  o.so="SO"+(S.nextSO++);o.lines.forEach(function(x){prodsBySku(x.sku)[0].reserved+=x.qty;});logIt(i,"Order sent to Odoo as "+o.so+", stock reserved");}
+ save();return "fixed";
+}
+var BTN={stock:"Push Odoo qty",skumis:"Fix SKU",noodoo:"Create in Odoo",nostore:"Create listing",dupstore:"Remove duplicate",dupodoo:"Merge in Odoo",order:"Retry sync"};
+
+/* views */
+var view="check";
+function show(v){view=v;["check","odoo","stores","orders"].forEach(function(x){$("v-"+x).className=x===v?"":"hide";});
+ Array.prototype.forEach.call(document.querySelectorAll("#nav button"),function(b){b.className=b.getAttribute("data-v")===v?"on":"";});render();}
+$("nav").addEventListener("click",function(e){var v=e.target.getAttribute("data-v");if(v)show(v);});
+$("fType").innerHTML+=Object.keys(TYPES).map(function(k){return '<option value="'+k+'">'+TYPES[k]+"</option>";}).join("");
+var stOpts=STORES.map(function(s){return '<option value="'+s+'">'+STORE_NAMES[s]+"</option>";}).join("");
+$("fStore").innerHTML+='<option value="Odoo">Odoo</option>'+stOpts;$("storeSel").innerHTML=stOpts;
+Array.prototype.forEach.call(document.querySelectorAll(".storeOpt"),function(s){s.innerHTML=stOpts;});
+
+function renderCheck(){
+ var all=check();
+ function cnt(f){return all.filter(f).length;}
+ var sku=cnt(function(i){return /skumis|noodoo|nostore|dupodoo|dupstore/.test(i.type);});
+ var over=cnt(function(i){return i.type==="stock"&&i.actual>i.expected;});
+ $("kpis").innerHTML=[["Open issues",'<span class="'+(all.length?"bad":"ok")+'">'+all.length+"</span>"],["High priority",'<span class="'+(cnt(function(i){return i.sev==="High";})?"bad":"ok")+'">'+cnt(function(i){return i.sev==="High";})+"</span>"],
+  ["Stock mismatches",cnt(function(i){return i.type==="stock";})+' <small class="'+(over?"bad":"ok")+'">'+over+" oversell</small>"],["SKU / record errors",sku],["Orders not in Odoo",cnt(function(i){return i.type==="order";})]]
+  .map(function(k){return '<div class="kpi"><span>'+k[0]+"</span><b>"+k[1]+"</b></div>";}).join("");
+ var ft=$("fType").value,fs=$("fStore").value;
+ var rows=all.filter(function(i){return(!ft||i.type===ft)&&(!fs||i.store===fs);});
+ $("issT").innerHTML='<tr><th>Priority</th><th>Issue</th><th>Store</th><th>SKU / order</th><th class="n">Odoo</th><th class="n">Store</th><th>What happened</th><th>Fix</th></tr>'+
+  (rows.map(function(i){var c=i.sev==="High"?"":(i.sev==="Medium"?" m":" l");
+   return '<tr class="'+(i.sev==="High"?"hi":i.sev==="Medium"?"md":"")+'"><td><span class="tag'+c+'">'+i.sev+"</span></td><td><b>"+TYPES[i.type]+"</b></td><td>"+esc(i.store==="Odoo"?"Odoo":STORE_NAMES[i.store])+"</td><td>"+esc(i.type==="order"?i.ref:i.sku)+
+   '</td><td class="n">'+esc(i.expected)+'</td><td class="n">'+esc(i.actual)+'</td><td class="det">'+esc(i.detail)+'</td><td><button class="btn small" data-fix="'+esc(i.key)+'">'+BTN[i.type]+'</button> <button class="btn2 small" data-ign="'+esc(i.key)+'">Ignore</button></td></tr>';}).join("")||
+   '<tr><td colspan="8" class="ok">No open issues'+(ft||fs?" for this filter":"")+". Odoo and the stores agree.</td></tr>");
+ $("lastRun").textContent="Last check: "+new Date(S.lastRun).toLocaleTimeString()+" · "+rows.length+" shown";
+ $("logT").innerHTML='<tr><th>When</th><th>Issue</th><th>Store</th><th>SKU</th><th>What was done</th></tr>'+(S.log.map(function(r){return "<tr><td>"+new Date(r.at).toLocaleTimeString()+"</td><td>"+esc(r.type)+"</td><td>"+esc(r.store)+"</td><td>"+esc(r.sku)+'</td><td class="det">'+esc(r.how)+"</td></tr>";}).join("")||'<tr><td colspan="5">Nothing fixed yet.</td></tr>');
+}
+$("issT").addEventListener("click",function(e){var k=e.target.getAttribute("data-fix"),g=e.target.getAttribute("data-ign");
+ if(k){var r=act(k,"fix");toast(r.indexOf("blocked:")===0?"Retry failed: "+r.slice(8)+" not in Odoo. Fix that SKU first.":r==="fixed"?"Fixed and logged":"Already fixed");render();}
+ if(g){act(g,"ignore");toast("Ignored, noted in the log");render();}});
+$("fType").onchange=$("fStore").onchange=function(){render();};
+$("tol").value=S.tol;$("lag").value=S.lag;
+$("tol").onchange=function(){S.tol=Math.max(0,+this.value||0);save();render();};
+$("lag").onchange=function(){S.lag=Math.max(1,+this.value||30);save();render();};
+$("runBtn").onclick=function(){S.lastRun=Date.now();save();render();toast("Checked "+S.listings.length+" listings, "+S.products.length+" Odoo products, "+S.orders.length+" orders");};
+$("pushAll").onclick=function(){var n=0;check().filter(function(i){return i.type==="stock";}).forEach(function(i){if(act(i.key,"fix")==="fixed")n++;});render();toast(n?"Pushed Odoo qty to "+n+" listings":"No stock mismatches");};
+
+function renderOdoo(){
+ $("prodT").innerHTML='<tr><th>SKU</th><th>Product</th><th class="n">On hand</th><th class="n">Reserved</th><th class="n">Available</th><th>Sell on</th></tr>'+S.products.map(function(p){var a=(+p.onHand||0)-(+p.reserved||0);
+  return "<tr><td><b>"+esc(p.sku)+"</b></td><td>"+esc(p.name)+'</td><td class="n"><input class="q" type="number" min="0" step="1" data-oh="'+p.id+'" value="'+p.onHand+'"></td><td class="n">'+p.reserved+'</td><td class="n '+(a<=0?"bad":a<10?"warn":"")+'">'+a+"</td><td>"+((p.ch||[]).map(function(c){return '<span class="pill">'+esc(c)+"</span>";}).join("")||'<span class="pill">none</span>')+"</td></tr>";}).join("");
+}
+$("prodT").addEventListener("change",function(e){var id=e.target.getAttribute("data-oh");if(!id)return;var p=S.products.filter(function(x){return String(x.id)===id;})[0];p.onHand=Math.max(0,+e.target.value||0);save();
+ var n=check().filter(function(i){return i.type==="stock"&&i.sku===p.sku;}).length;toast("On hand saved. "+n+" store listing"+(n===1?"":"s")+" now out of sync");render();});
+$("newProdBtn").onclick=function(){var c=$("newProdCard");c.className=c.className.indexOf("hide")>-1?"card":"card hide";};
+$("prodF").onsubmit=function(e){e.preventDefault();var f=e.target;
+ var ch=f.elements.channels.value.split(",").map(function(s){s=s.trim().toLowerCase();return STORES.filter(function(x){return x.toLowerCase()===s;})[0];}).filter(Boolean);
+ S.products.push({id:S.nextPid++,sku:f.elements.sku.value.trim(),name:f.elements.name.value.trim(),onHand:+f.elements.onHand.value||0,reserved:0,ch:ch});save();f.reset();$("newProdCard").className="card hide";render();
+ toast("Product added. "+ch.length+" store listing"+(ch.length===1?"":"s")+" needed");};
+
+function renderStores(){
+ var st=$("storeSel").value||STORES[0];
+ var ls=S.listings.filter(function(l){return l.store===st;});
+ $("listT").innerHTML='<tr><th>SKU</th><th>Title</th><th class="n">Store qty</th><th class="n">Odoo available</th><th>Status</th><th></th></tr>'+(ls.map(function(l){
+  var inO=prodsBySku(l.sku).length,a=inO?avail(l.sku):null,okk=inO&&Math.abs(l.qty-a)<=(+S.tol||0);
+  return "<tr><td><b>"+esc(l.sku)+"</b></td><td>"+esc(l.title)+'</td><td class="n"><input class="q" type="number" step="1" data-lq="'+l.id+'" value="'+l.qty+'"></td><td class="n">'+(inO?a:"-")+"</td><td>"+(!inO?'<span class="bad">SKU not in Odoo</span>':okk?'<span class="ok">In sync</span>':'<span class="warn">Off by '+(l.qty-a)+"</span>")+
+  '</td><td><button class="btn2 small" data-del="'+l.id+'">Delete</button></td></tr>';}).join("")||'<tr><td colspan="6">No listings on this store.</td></tr>');
+}
+$("storeSel").onchange=function(){render();};
+$("listT").addEventListener("change",function(e){var id=e.target.getAttribute("data-lq");if(!id)return;listing(id).qty=+e.target.value||0;save();render();toast("Store qty saved");});
+$("listT").addEventListener("click",function(e){var id=e.target.getAttribute("data-del");if(!id)return;S.listings=S.listings.filter(function(l){return String(l.id)!==id;});save();render();toast("Listing deleted");});
+$("listF").onsubmit=function(e){e.preventDefault();var f=e.target;S.listings.push({id:S.nextId++,store:$("storeSel").value,sku:f.elements.sku.value.trim(),title:f.elements.title.value.trim(),qty:+f.elements.qty.value||0});save();f.reset();render();toast("Listing added");};
+function bulk(store,text){var up=0,added=0,bad=0;
+ text.split(/\r?\n/).forEach(function(line,ix){var c=line.split(",");if(c.length<2){if(line.trim())bad++;return;}var sku=c[0].trim(),q=c[1].trim();
+  if(ix===0&&/^sku$/i.test(sku))return;if(!sku||!/^-?\d+$/.test(q)){bad++;return;}
+  var l=S.listings.filter(function(x){return x.store===store&&x.sku===sku;})[0];
+  if(l){l.qty=+q;up++;}else{var p=prodsBySku(sku)[0];S.listings.push({id:S.nextId++,store:store,sku:sku,title:p?p.name:"(from CSV)",qty:+q});added++;}});
+ save();return {updated:up,added:added,bad:bad};}
+$("bulkBtn").onclick=function(){var r=bulk($("storeSel").value,$("bulkTx").value);render();toast(r.updated+" updated, "+r.added+" added, "+r.bad+" bad lines skipped");};
+
+function renderOrders(){
+ $("ordT").innerHTML='<tr><th>Order</th><th>Store</th><th>Placed</th><th>Lines</th><th>Odoo SO</th></tr>'+S.orders.slice().sort(function(a,b){return b.at-a.at;}).map(function(o){
+  var late=!o.so&&(Date.now()-o.at)>=(+S.lag||30)*60000;
+  return '<tr class="'+(late?"hi":"")+'"><td><b>'+esc(o.id)+"</b></td><td>"+esc(STORE_NAMES[o.store])+"</td><td>"+ago(o.at)+" ago</td><td>"+o.lines.map(function(x){return esc(x.qty+" × "+x.sku);}).join("<br>")+"</td><td>"+(o.so?'<span class="ok">'+esc(o.so)+"</span>":late?'<span class="bad">Not synced</span>':'<span class="warn">Waiting</span>')+"</td></tr>";}).join("");
+}
+$("ordF").onsubmit=function(e){e.preventDefault();var f=e.target,st=f.elements.store.value,sku=f.elements.sku.value.trim(),q=+f.elements.qty.value||1;
+ var pre={CA:"CA",US:"US",UK:"UK",EU:"EU",Wholesale:"WS",Gifts:"GF"}[st];var id=pre+"-"+(10000+Math.floor(Math.random()*89999));
+ var o={id:id,store:st,at:minsAgo(+f.elements.age.value||0),lines:[{sku:sku,qty:q}],so:""};
+ if(f.elements.synced.value==="yes"&&prodsBySku(sku).length){o.so="SO"+(S.nextSO++);prodsBySku(sku)[0].reserved+=q;}
+ S.orders.push(o);save();render();toast(o.so?"Order "+id+" synced as "+o.so:"Order "+id+" added, not in Odoo");};
+
+function render(){if(view==="check")renderCheck();if(view==="odoo")renderOdoo();if(view==="stores")renderStores();if(view==="orders")renderOrders();}
+
+/* CSV */
+function csvCell(v){v=String(v==null?"":v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
+function buildCSV(){var rows=[["Priority","Issue","Store","SKU","Order","Odoo","Store value","Detail"]];
+ check().forEach(function(i){rows.push([i.sev,TYPES[i.type],i.store==="Odoo"?"Odoo":STORE_NAMES[i.store],i.sku,i.type==="order"?i.ref:"",i.expected,i.actual,i.detail]);});
+ return rows.map(function(r){return r.map(csvCell).join(",");}).join("\n");}
+$("csv1").onclick=function(){var csv=buildCSV();
+ try{var b=new Blob([csv],{type:"text/csv"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="chive-sync-issues-"+new Date().toISOString().slice(0,10)+".csv";document.body.appendChild(a);a.click();a.remove();toast("CSV downloaded");}
+ catch(err){toast("Export not supported in this browser");}};
+$("reset").onclick=function(){if(!window.confirm||confirm("Reset to the sample data?")){S=seed();save();$("tol").value=S.tol;$("lag").value=S.lag;render();toast("Sample data restored");}};
+window.__demo={state:function(){return S;},check:check,act:act,bulk:bulk,avail:avail,buildCSV:buildCSV,show:show};
+render();
+})();
+</script>
+</body></html>

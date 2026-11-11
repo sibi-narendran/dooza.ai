@@ -1,0 +1,241 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Seakeeper · Access &amp; SoD Review (demo by Dooza)</title>
+<style>
+:root{--a:#0b5cad;--ink:#1d2330;--mut:#5c6478;--bg:#fff;--soft:#f4f6fa;--line:#dde2ec;--red:#d1242f;--redbg:#fdecee;--green:#1a7f37;--amber:#b25e00;--ambg:#fff4e0}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+.bar{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 16px}.bar b{color:#ffd43b}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 16px;max-width:1120px;margin:auto}
+.logo{font-weight:800;font-size:19px;color:var(--a)}.logo small{display:block;font-weight:500;font-size:12px;color:var(--mut)}
+nav{display:flex;gap:6px;flex-wrap:wrap}nav button,.btn,.btn2,.btn3{font:inherit;font-weight:700;border-radius:9px;padding:9px 14px;cursor:pointer;border:1px solid var(--a)}
+nav button{background:#fff;color:var(--a)}nav button.on,.btn{background:var(--a);color:#fff}.btn2{background:#fff;color:var(--a)}.btn3{background:#fff;color:var(--red);border-color:var(--red)}
+.small{padding:5px 10px;font-size:13px}
+main{max-width:1120px;margin:auto;padding:4px 16px 24px}
+h2{font-size:22px;margin:14px 0 12px}h3{font-size:17px;margin:0 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:var(--soft);border-radius:12px;padding:14px}.kpi>span{display:block;color:var(--mut);font-size:13px}.kpi b{font-size:22px}
+.card{background:var(--soft);border-radius:12px;padding:16px;margin-bottom:16px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+td.n,th.n{text-align:right}tr.over td{background:var(--redbg)}tr.mit td{background:var(--ambg)}tr.click{cursor:pointer}tr.click:hover td{background:#eef3ff}
+.flag{display:inline-block;background:var(--red);color:#fff;border-radius:6px;font-size:11px;font-weight:700;padding:1px 6px;margin-left:6px}
+.flag.m{background:var(--amber)}.flag.s{background:#6b4fbb}
+.ok{color:var(--green);font-weight:700}.bad{color:var(--red);font-weight:700}.warn{color:var(--amber);font-weight:700}
+.pill{display:inline-block;font-size:12px;border-radius:20px;padding:1px 9px;background:#e7ecf6;color:var(--mut);margin:1px 2px 1px 0;white-space:nowrap}
+.legend{font-size:12px;color:var(--mut);margin-top:8px}
+form.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;align-items:end}
+label{display:grid;gap:3px;font-size:12px;color:var(--mut);font-weight:600}
+input,select,textarea{font:inherit;font-size:15px;padding:9px;border:1px solid #ccd2de;border-radius:9px;background:#fff;color:var(--ink);width:100%}
+.checks{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;color:var(--ink);font-weight:500}.checks label{display:flex;gap:6px;align-items:center;font-size:14px;color:var(--ink);font-weight:500}.checks input{width:auto}
+.prog{height:12px;background:#e3e8f2;border-radius:6px;overflow:hidden;margin:6px 0}.prog i{display:block;height:100%;background:var(--green)}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none;max-width:90vw}.toast.show{opacity:1}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.sp{flex:1}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:24px 16px;border-top:1px solid var(--line);margin-top:20px}
+.hide{display:none}
+#confT td:nth-child(2),#revT td:nth-child(3){min-width:190px}
+@media(max-width:520px){.kpi b{font-size:19px}th,td{padding:7px 8px}}
+</style></head><body>
+<div class="bar"><b>Demo</b> with sample data (made-up users, roles and rules, not Seakeeper's real data). Changes are saved in this browser only.</div>
+<header><span class="logo">Access &amp; SoD Review<small>Demo for Seakeeper · NetSuite roles, permissions, segregation of duties</small></span>
+<nav id="nav"><button data-v="dash" class="on">Dashboard</button><button data-v="users">Users &amp; roles</button><button data-v="review">Access review</button><button data-v="rules">SoD rules</button></nav></header>
+<main>
+
+<section id="v-dash">
+<h2>Segregation of duties dashboard</h2>
+<div class="kpis" id="kpis"></div>
+<div class="card"><div class="row"><h3 class="sp" style="margin:0">Open SoD conflicts</h3><button class="btn2 small" id="csvC">Export conflicts CSV</button></div>
+<div class="tw" style="margin-top:10px"><table id="confT"></table></div>
+<p class="legend">A conflict = one user holds both sides of a rule, through any mix of roles. Amber = risk accepted with a mitigating control (still listed for the auditor).</p></div>
+</section>
+
+<section id="v-users" class="hide">
+<div class="row"><h2 class="sp">Users &amp; roles</h2><button class="btn small" id="newUserBtn">+ Add user</button></div>
+<div class="card hide" id="userCard"><h3 id="userCardH">New user</h3>
+<form class="f" id="userF"><input type="hidden" name="id">
+<label>Name<input name="name" required placeholder="Jordan Lee"></label>
+<label>Department<select name="dept"><option>Finance</option><option>Operations</option><option>Manufacturing</option><option>Sales</option><option>HR</option><option>IT</option></select></label>
+<label>Last reviewed<input name="last" type="date"></label>
+<div style="grid-column:1/-1"><span style="font-size:12px;color:var(--mut);font-weight:600">Roles</span><div class="checks" id="roleChecks"></div></div>
+<div class="row"><button class="btn">Save user</button><button type="button" class="btn2" id="cancelUser">Cancel</button></div></form>
+<p class="legend" id="userPreview"></p></div>
+<div class="card"><div class="tw"><table id="usersT"></table></div><p class="legend">Tap a user to edit roles. Conflicts recalculate the moment roles change.</p></div>
+<div class="card"><h3>Roles and what they can do</h3><div class="tw"><table id="rolesT"></table></div></div>
+</section>
+
+<section id="v-review" class="hide">
+<h2 id="cycleH">Access review</h2>
+<div class="card"><div class="row"><div class="sp"><b id="cycleTxt"></b><div class="prog"><i id="progBar"></i></div><span class="legend" id="progTxt"></span></div>
+<label style="max-width:170px">Review cycle (days)<input type="number" id="cycleDays" min="7" step="1"></label></div></div>
+<div class="card"><div class="row"><h3 class="sp" style="margin:0">Review queue</h3><button class="btn2 small" id="csvR">Export review CSV</button><button class="btn small" id="signOff">Sign off cycle</button></div>
+<div class="tw" style="margin-top:10px"><table id="revT"></table></div>
+<p class="legend">Each user-role line needs a decision: Keep, or Remove (role is taken off and conflicts update). Users overdue for review are flagged.</p></div>
+</section>
+
+<section id="v-rules" class="hide">
+<h2>SoD rules</h2>
+<div class="card"><h3>Add a rule</h3>
+<form class="f" id="ruleF"><label>Rule name<input name="name" required placeholder="Create vendor + pay vendor"></label>
+<label>Permission A<select name="a" class="permSel"></select></label><label>Permission B<select name="b" class="permSel"></select></label>
+<label>Risk<select name="risk"><option>High</option><option>Medium</option><option>Low</option></select></label><button class="btn">Add rule</button></form></div>
+<div class="card"><div class="tw"><table id="rulesT"></table></div></div>
+</section>
+</main>
+<footer>Demo built by Dooza (dooza.ai) for the NetSuite Administrator &amp; Architect post. Sample data only; a real build would read roles and permissions from your NetSuite account.<br><button class="btn2 small" id="reset" style="margin-top:8px">Reset sample data</button></footer>
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+"use strict";
+var KEY="dooza_sk_sod_v1";
+var PERMS=["Vendor (Create/Edit)","Enter Vendor Bills","Approve Vendor Bills","Pay Bills","Customer (Create/Edit)","Credit Memo","Customer Payment","Make Journal Entry","Approve Journal Entry","Items & BOMs (Edit)","Inventory Adjustment","Purchase Order","Approve Purchase Order","Employee Record (Full)","Compensation / Payroll (View)","Setup: Users & Roles","Warranty Claim Credit"];
+var SENSITIVE={"Employee Record (Full)":1,"Compensation / Payroll (View)":1,"Setup: Users & Roles":1};
+function d(off){var t=new Date();t.setDate(t.getDate()-off);return t.toISOString().slice(0,10);}
+function seed(){return {cycleDays:90,cycleStart:d(12),nextUser:11,nextRule:9,signed:[],
+ roles:[
+ {id:"AP",name:"AP Clerk",perms:["Vendor (Create/Edit)","Enter Vendor Bills"]},
+ {id:"APM",name:"AP Manager",perms:["Approve Vendor Bills","Pay Bills"]},
+ {id:"AR",name:"AR Specialist",perms:["Customer Payment","Credit Memo"]},
+ {id:"CS",name:"Customer Service",perms:["Customer (Create/Edit)","Warranty Claim Credit"]},
+ {id:"ACC",name:"Staff Accountant",perms:["Make Journal Entry"]},
+ {id:"CTL",name:"Controller",perms:["Approve Journal Entry","Approve Vendor Bills","Approve Purchase Order"]},
+ {id:"BUY",name:"Buyer",perms:["Purchase Order","Vendor (Create/Edit)"]},
+ {id:"INV",name:"Inventory Control",perms:["Inventory Adjustment"]},
+ {id:"ENG",name:"Engineering (BOM)",perms:["Items & BOMs (Edit)"]},
+ {id:"HR",name:"HR Generalist",perms:["Employee Record (Full)","Compensation / Payroll (View)"]},
+ {id:"ADM",name:"Administrator",perms:["Setup: Users & Roles"]}],
+ rules:[
+ {id:1,name:"Create vendor + pay vendor",a:"Vendor (Create/Edit)",b:"Pay Bills",risk:"High"},
+ {id:2,name:"Enter and approve vendor bills",a:"Enter Vendor Bills",b:"Approve Vendor Bills",risk:"High"},
+ {id:3,name:"Create and approve journal entries",a:"Make Journal Entry",b:"Approve Journal Entry",risk:"High"},
+ {id:4,name:"Record customer payment + issue credit memo",a:"Customer Payment",b:"Credit Memo",risk:"Medium"},
+ {id:5,name:"Create and approve purchase orders",a:"Purchase Order",b:"Approve Purchase Order",risk:"High"},
+ {id:6,name:"Adjust inventory + edit items & BOMs",a:"Inventory Adjustment",b:"Items & BOMs (Edit)",risk:"Medium"},
+ {id:7,name:"Manage users & roles + post journals",a:"Setup: Users & Roles",b:"Make Journal Entry",risk:"High"},
+ {id:8,name:"Edit customers + issue warranty credits",a:"Customer (Create/Edit)",b:"Warranty Claim Credit",risk:"Low"}],
+ users:[
+ {id:1,name:"A. Rivera",dept:"Finance",roles:["AP","APM"],last:d(130)},
+ {id:2,name:"B. Chen",dept:"Finance",roles:["ACC"],last:d(40)},
+ {id:3,name:"C. Okafor",dept:"Finance",roles:["ACC","CTL"],last:d(95)},
+ {id:4,name:"D. Martin",dept:"Finance",roles:["AR"],last:d(20)},
+ {id:5,name:"E. Novak",dept:"Operations",roles:["BUY","APM"],last:d(200)},
+ {id:6,name:"F. Silva",dept:"Manufacturing",roles:["INV","ENG"],last:d(60)},
+ {id:7,name:"G. Patel",dept:"Sales",roles:["CS"],last:d(30)},
+ {id:8,name:"H. Brooks",dept:"HR",roles:["HR"],last:d(75)},
+ {id:9,name:"I. Kim",dept:"IT",roles:["ADM","ACC"],last:d(150)},
+ {id:10,name:"J. Walsh",dept:"Operations",roles:["BUY"],last:d(10)}],
+ accepted:{"6|6":"Weekly cycle-count variance report reviewed by Plant Manager"},
+ decisions:{}};}
+var S;
+function load(){try{var raw=localStorage.getItem(KEY);if(raw){var p=JSON.parse(raw);if(p&&p.users&&p.roles)return p;}}catch(e){}return seed();}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+S=load();
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function toast(m){var t=$("toast");t.textContent=m;t.className="toast show";clearTimeout(toast.h);toast.h=setTimeout(function(){t.className="toast";},2000);}
+function role(id){return S.roles.filter(function(r){return r.id===id;})[0];}
+function user(id){return S.users.filter(function(u){return u.id===id;})[0];}
+function daysSince(s){if(!s)return 9999;return Math.floor((new Date(d(0))-new Date(s))/86400000);}
+
+/* core: effective permissions + conflicts */
+function permsOf(u){var m={};u.roles.forEach(function(rid){var r=role(rid);if(r)r.perms.forEach(function(p){(m[p]=m[p]||[]).push(r.name);});});return m;}
+function conflictsOf(u){var m=permsOf(u);return S.rules.filter(function(r){return m[r.a]&&m[r.b];}).map(function(r){var k=u.id+"|"+r.id;
+ return {user:u,rule:r,key:k,via:m[r.a].concat(m[r.b]).filter(function(x,i,a){return a.indexOf(x)===i;}),accepted:S.accepted[k]||""};});}
+function allConflicts(){var out=[];S.users.forEach(function(u){out=out.concat(conflictsOf(u));});var w={High:0,Medium:1,Low:2};
+ out.sort(function(a,b){return (a.accepted?1:0)-(b.accepted?1:0)||w[a.rule.risk]-w[b.rule.risk];});return out;}
+function sensitiveOf(u){return Object.keys(permsOf(u)).filter(function(p){return SENSITIVE[p];});}
+function overdue(u){return daysSince(u.last)>S.cycleDays;}
+function reviewLines(){var L=[];S.users.forEach(function(u){u.roles.forEach(function(rid){L.push({u:u,rid:rid,key:u.id+"|"+rid,dec:S.decisions[u.id+"|"+rid]||""});});});return L;}
+function riskCls(r){return r==="High"?"bad":r==="Medium"?"warn":"";}
+
+var view="dash",editUser=null;
+function show(v){view=v;["dash","users","review","rules"].forEach(function(x){$("v-"+x).className=x===v?"":"hide";});
+ Array.prototype.forEach.call(document.querySelectorAll("#nav button"),function(b){b.className=b.getAttribute("data-v")===v?"on":"";});render();}
+$("nav").addEventListener("click",function(e){var v=e.target.getAttribute("data-v");if(v)show(v);});
+
+function renderDash(){
+ var cs=allConflicts(),open=cs.filter(function(c){return !c.accepted;}),hi=open.filter(function(c){return c.rule.risk==="High";}).length;
+ var od=S.users.filter(overdue).length,sens=S.users.filter(function(u){return sensitiveOf(u).length;}).length;
+ var L=reviewLines(),done=L.filter(function(l){return l.dec;}).length;
+ $("kpis").innerHTML=[["Users",S.users.length],["Open SoD conflicts",'<span class="'+(open.length?"bad":"ok")+'">'+open.length+"</span>"],["High-risk open",'<span class="'+(hi?"bad":"ok")+'">'+hi+"</span>"],
+  ["Accepted w/ control",'<span class="warn">'+(cs.length-open.length)+"</span>"],["Users overdue for review",'<span class="'+(od?"bad":"ok")+'">'+od+"</span>"],["Sensitive-data access",sens+" users"],["Review progress",(L.length?Math.round(done/L.length*100):0)+"%"]]
+  .map(function(k){return '<div class="kpi"><span>'+k[0]+"</span><b>"+k[1]+"</b></div>";}).join("");
+ $("confT").innerHTML='<tr><th>User</th><th>Rule</th><th>Risk</th><th>Through roles</th><th>Action</th></tr>'+(cs.map(function(c){
+  return '<tr class="'+(c.accepted?"mit":"over")+'"><td><b>'+esc(c.user.name)+'</b><br><small style="color:var(--mut)">'+esc(c.user.dept)+"</small></td><td>"+esc(c.rule.name)+'<br><small style="color:var(--mut)">'+esc(c.rule.a)+" + "+esc(c.rule.b)+'</small></td><td class="'+riskCls(c.rule.risk)+'">'+c.rule.risk+"</td><td>"+c.via.map(function(v){return '<span class="pill">'+esc(v)+"</span>";}).join("")+"</td><td>"+
+  (c.accepted?'<span class="warn">Accepted</span><br><small>'+esc(c.accepted)+'</small><br><button class="btn2 small" data-unaccept="'+c.key+'">Re-open</button>':'<button class="btn2 small" data-accept="'+c.key+'">Accept w/ control</button> <button class="btn small" data-fix="'+c.user.id+'">Fix roles</button>')+"</td></tr>";}).join("")||'<tr><td colspan="5" class="ok">No SoD conflicts.</td></tr>');
+}
+$("confT").addEventListener("click",function(e){var t=e.target,k=t.getAttribute("data-accept");
+ if(k){var note=window.prompt?window.prompt("Mitigating control (who checks what, how often):","Monthly review of vendor master changes by Controller"):"Mitigating control";if(note){S.accepted[k]=note;save();render();toast("Risk accepted with mitigating control");}return;}
+ k=t.getAttribute("data-unaccept");if(k){delete S.accepted[k];save();render();toast("Conflict re-opened");return;}
+ k=t.getAttribute("data-fix");if(k){openUser(+k);}});
+
+function roleChecks(sel){$("roleChecks").innerHTML=S.roles.map(function(r){return '<label><input type="checkbox" value="'+r.id+'"'+(sel.indexOf(r.id)>-1?" checked":"")+">"+esc(r.name)+"</label>";}).join("");previewUser();}
+function checkedRoles(){return Array.prototype.filter.call(document.querySelectorAll("#roleChecks input"),function(i){return i.checked;}).map(function(i){return i.value;});}
+function previewUser(){var c=conflictsOf({id:0,roles:checkedRoles()});$("userPreview").innerHTML=c.length?'<span class="bad">This role mix creates '+c.length+" conflict(s): "+c.map(function(x){return esc(x.rule.name);}).join("; ")+"</span>":'<span class="ok">No SoD conflicts with this role mix.</span>';}
+$("roleChecks").addEventListener("change",previewUser);
+function openUser(id){show("users");var u=id?user(id):null;editUser=u?u.id:null;var f=$("userF");$("userCardH").textContent=u?"Edit "+u.name:"New user";
+ f.elements.id.value=u?u.id:"";f.elements.name.value=u?u.name:"";f.elements.dept.value=u?u.dept:"Finance";f.elements.last.value=u?u.last:"";roleChecks(u?u.roles:[]);$("userCard").className="card";
+ if($("userCard").scrollIntoView)$("userCard").scrollIntoView({behavior:"smooth",block:"start"});}
+$("newUserBtn").onclick=function(){openUser(0);};
+$("cancelUser").onclick=function(){$("userCard").className="card hide";};
+$("userF").onsubmit=function(e){e.preventDefault();var f=e.target,roles=checkedRoles(),u;
+ if(f.elements.id.value){u=user(+f.elements.id.value);var old=u.roles;u.roles=roles;Object.keys(S.decisions).forEach(function(k){var p=k.split("|");if(+p[0]===u.id&&roles.indexOf(p[1])<0)delete S.decisions[k];});}
+ else{u={id:S.nextUser++,name:"",dept:"",roles:roles,last:""};S.users.push(u);}
+ u.name=f.elements.name.value.trim();u.dept=f.elements.dept.value;u.last=f.elements.last.value;
+ save();$("userCard").className="card hide";render();var c=conflictsOf(u).filter(function(x){return !x.accepted;});toast(c.length?"Saved. "+u.name+" now has "+c.length+" open SoD conflict(s)":"Saved. No SoD conflicts for "+u.name);};
+function renderUsers(){
+ $("usersT").innerHTML='<tr><th>User</th><th>Roles</th><th>SoD</th><th>Sensitive data</th><th>Last reviewed</th></tr>'+S.users.map(function(u){var c=conflictsOf(u),o=c.filter(function(x){return !x.accepted;}).length,s=sensitiveOf(u);
+  return '<tr class="click'+(o?" over":"")+'" data-id="'+u.id+'"><td><b>'+esc(u.name)+'</b><br><small style="color:var(--mut)">'+esc(u.dept)+"</small></td><td>"+u.roles.map(function(r){return '<span class="pill">'+esc((role(r)||{name:r}).name)+"</span>";}).join("")+"</td><td>"+
+  (o?'<span class="bad">'+o+" open</span>":c.length?'<span class="warn">'+c.length+" accepted</span>":'<span class="ok">Clean</span>')+"</td><td>"+(s.length?'<span class="flag s">'+s.length+"</span> "+esc(s.join(", ")):"-")+"</td><td"+(overdue(u)?' class="bad"':"")+">"+esc(u.last||"never")+(overdue(u)?'<span class="flag">OVERDUE</span>':"")+"</td></tr>";}).join("");
+ $("rolesT").innerHTML='<tr><th>Role</th><th>Permissions</th><th class="n">Users</th></tr>'+S.roles.map(function(r){return "<tr><td><b>"+esc(r.name)+"</b></td><td>"+r.perms.map(function(p){return '<span class="pill">'+esc(p)+(SENSITIVE[p]?" *":"")+"</span>";}).join("")+'</td><td class="n">'+S.users.filter(function(u){return u.roles.indexOf(r.id)>-1;}).length+"</td></tr>";}).join("");
+}
+$("usersT").addEventListener("click",function(e){var tr=e.target.closest("tr[data-id]");if(tr)openUser(+tr.getAttribute("data-id"));});
+
+function renderReview(){
+ var L=reviewLines(),done=L.filter(function(l){return l.dec;}).length,pct=L.length?Math.round(done/L.length*100):0;
+ var due=new Date(S.cycleStart);due.setDate(due.getDate()+30);
+ $("cycleH").textContent="Access review, cycle started "+S.cycleStart;$("cycleDays").value=S.cycleDays;
+ $("cycleTxt").textContent=done+" of "+L.length+" user-role lines decided · due "+due.toISOString().slice(0,10);
+ $("progBar").style.width=pct+"%";$("progTxt").textContent=pct+"% complete"+(S.signed.length?" · last sign-off "+S.signed[S.signed.length-1].date:"");
+ L.sort(function(a,b){return (a.dec?1:0)-(b.dec?1:0)||(overdue(b.u)?1:0)-(overdue(a.u)?1:0);});
+ $("revT").innerHTML='<tr><th>User</th><th>Role</th><th>Why look</th><th>Decision</th></tr>'+L.map(function(l){var r=role(l.rid)||{name:l.rid,perms:[]};
+  var why=[];conflictsOf(l.u).forEach(function(c){if(c.via.indexOf(r.name)>-1)why.push('<span class="'+(c.accepted?"warn":"bad")+'">SoD: '+esc(c.rule.name)+"</span>");});
+  r.perms.forEach(function(p){if(SENSITIVE[p])why.push('<span style="color:#6b4fbb;font-weight:700">Sensitive: '+esc(p)+"</span>");});
+  if(overdue(l.u))why.push('<span class="bad">Not reviewed in '+daysSince(l.u.last)+" days</span>");
+  return "<tr"+(l.dec?"":(why.length?' class="over"':""))+"><td><b>"+esc(l.u.name)+'</b><br><small style="color:var(--mut)">'+esc(l.u.dept)+"</small></td><td>"+esc(r.name)+"</td><td>"+(why.join("<br>")||'<span style="color:var(--mut)">Routine</span>')+"</td><td>"+
+  (l.dec?'<span class="ok">'+esc(l.dec)+'</span> <button class="btn2 small" data-undo="'+l.key+'">Undo</button>':'<button class="btn small" data-keep="'+l.key+'">Keep</button> <button class="btn3 small" data-remove="'+l.key+'">Remove</button>')+"</td></tr>";}).join("");
+}
+$("revT").addEventListener("click",function(e){var t=e.target,k=t.getAttribute("data-keep");
+ if(k){S.decisions[k]="Kept "+d(0);var u=user(+k.split("|")[0]);if(reviewLines().filter(function(l){return l.u===u&&!l.dec;}).length===0)u.last=d(0);save();render();toast("Kept");return;}
+ k=t.getAttribute("data-remove");if(k){var p=k.split("|"),u2=user(+p[0]),before=conflictsOf(u2).length;u2.roles=u2.roles.filter(function(r){return r!==p[1];});
+  if(reviewLines().filter(function(l){return l.u===u2&&!l.dec;}).length===0)u2.last=d(0);save();render();var after=conflictsOf(u2).length;toast("Role removed from "+u2.name+(before>after?": "+(before-after)+" SoD conflict(s) cleared":""));return;}
+ k=t.getAttribute("data-undo");if(k){delete S.decisions[k];save();render();}});
+$("cycleDays").onchange=function(){var v=+this.value;if(v>0){S.cycleDays=v;save();render();toast("Review cycle set to "+v+" days");}};
+$("signOff").onclick=function(){var L=reviewLines(),left=L.filter(function(l){return !l.dec;}).length;
+ if(left){toast(left+" line(s) still need a decision before sign-off");return;}
+ S.signed.push({date:d(0),lines:L.length,open:allConflicts().filter(function(c){return !c.accepted;}).length});S.decisions={};S.cycleStart=d(0);save();render();toast("Cycle signed off. New cycle started.");};
+
+function permOpts(){var o=PERMS.map(function(p){return '<option>'+esc(p)+"</option>";}).join("");Array.prototype.forEach.call(document.querySelectorAll(".permSel"),function(s,i){var v=s.value;s.innerHTML=o;s.value=v||PERMS[i];});}
+function renderRules(){permOpts();$("rulesT").innerHTML='<tr><th>Rule</th><th>Permission A</th><th>Permission B</th><th>Risk</th><th class="n">Users hit</th><th></th></tr>'+S.rules.map(function(r){
+ var hit=S.users.filter(function(u){var m=permsOf(u);return m[r.a]&&m[r.b];}).length;
+ return "<tr><td><b>"+esc(r.name)+"</b></td><td>"+esc(r.a)+"</td><td>"+esc(r.b)+'</td><td class="'+riskCls(r.risk)+'">'+r.risk+'</td><td class="n'+(hit?" bad":"")+'">'+hit+'</td><td><button class="btn2 small" data-delrule="'+r.id+'">Delete</button></td></tr>';}).join("");}
+$("ruleF").onsubmit=function(e){e.preventDefault();var f=e.target;if(f.elements.a.value===f.elements.b.value){toast("Pick two different permissions");return;}
+ S.rules.push({id:S.nextRule++,name:f.elements.name.value.trim(),a:f.elements.a.value,b:f.elements.b.value,risk:f.elements.risk.value});save();f.elements.name.value="";render();
+ var r=S.rules[S.rules.length-1];toast("Rule added: "+S.users.filter(function(u){var m=permsOf(u);return m[r.a]&&m[r.b];}).length+" user(s) hit");};
+$("rulesT").addEventListener("click",function(e){var id=e.target.getAttribute("data-delrule");if(id){S.rules=S.rules.filter(function(r){return String(r.id)!==id;});save();render();toast("Rule deleted");}});
+
+function render(){if(view==="dash")renderDash();if(view==="users")renderUsers();if(view==="review")renderReview();if(view==="rules")renderRules();}
+
+/* CSV */
+function csvCell(v){v=String(v==null?"":v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
+function toCSV(rows){return rows.map(function(r){return r.map(csvCell).join(",");}).join("\n");}
+function conflictsCSV(){var rows=[["User","Department","Rule","Permission A","Permission B","Risk","Through roles","Status","Mitigating control"]];
+ allConflicts().forEach(function(c){rows.push([c.user.name,c.user.dept,c.rule.name,c.rule.a,c.rule.b,c.rule.risk,c.via.join("; "),c.accepted?"Accepted":"Open",c.accepted]);});return toCSV(rows);}
+function reviewCSV(){var rows=[["User","Department","Role","Last reviewed","Overdue","SoD conflicts via role","Decision"]];
+ reviewLines().forEach(function(l){var r=role(l.rid)||{name:l.rid};rows.push([l.u.name,l.u.dept,r.name,l.u.last,overdue(l.u)?"YES":"no",conflictsOf(l.u).filter(function(c){return c.via.indexOf(r.name)>-1;}).map(function(c){return c.rule.name;}).join("; "),l.dec||"Pending"]);});return toCSV(rows);}
+function dl(csv,name){try{var b=new Blob([csv],{type:"text/csv"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();a.remove();toast("CSV downloaded");}catch(err){toast("Export not supported in this browser");}}
+$("csvC").onclick=function(){dl(conflictsCSV(),"sod-conflicts-"+d(0)+".csv");};
+$("csvR").onclick=function(){dl(reviewCSV(),"access-review-"+d(0)+".csv");};
+$("reset").onclick=function(){if(!window.confirm||confirm("Reset to the sample data?")){S=seed();save();render();toast("Sample data restored");}};
+window.__demo={state:function(){return S;},conflictsOf:conflictsOf,allConflicts:allConflicts,reviewLines:reviewLines,conflictsCSV:conflictsCSV,reviewCSV:reviewCSV,show:show,openUser:openUser};
+render();
+})();
+</script>
+</body></html>
