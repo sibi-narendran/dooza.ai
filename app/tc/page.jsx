@@ -14,13 +14,13 @@ const BULLETS = [
     'No more "did the earnest money go in?" We track every deadline from option period to funding.',
     'We chase the lender, title and signatures so you don\'t.',
     'Weekly status to you and your client, no surprises.',
-    '$99 a file. A human TC costs $350-500.',
+    '$99 a file. Most TCs charge $300-500 a file.',
     'Pay per file only. Skip a month, pay nothing.',
 ];
 const FEARS = [
     ['What if a deadline gets missed?', 'AI sets and watches every date; a person checks each step. Reminders go to you before any date, not after.'],
     ['Who sees my client\'s data?', 'Only the contract documents you send, used only for your file. We keep your files encrypted and delete them on request.'],
-    ['Is it a real TC or a bot?', 'AI does the tracking, a person reviews every step. We never sign, negotiate or give legal advice; you stay agent of record.'],
+    ['Is it a real TC or a bot?', 'A person reviews every step; software just watches the dates. We never sign, negotiate or give legal advice; you stay agent of record.'],
 ];
 const FAQ = [
     ['How do I send a file?', 'Fill the form; we reply with where to forward the contract.'],
@@ -31,6 +31,8 @@ const FAQ = [
     ['Listing-only files?', 'Not yet. We take transaction files, contract to close.'],
     ['What do you not do?', 'Sign, negotiate or give legal advice.'],
 ];
+const PERSON = null; // { name: '', role: '', photo: '/path.jpg' } once Sibi picks who (Apollo 20:00)
+const Person = () => PERSON ? <div className="mt-4 flex items-center gap-3"><img src={PERSON.photo} alt={PERSON.name} width="48" height="48" className="h-12 w-12 rounded-full object-cover" /><p className="text-[15px] text-[#334155]"><strong>{PERSON.name}</strong>, {PERSON.role}</p></div> : null;
 const ck = <span aria-hidden="true" className="text-[#0F766E]">✓</span>;
 
 export default function TcPage() {
@@ -42,7 +44,9 @@ export default function TcPage() {
                 <ul className="mt-6 space-y-2 text-[16px] text-[#334155]">{BULLETS.map((d) => <li key={d} className="flex gap-2">{ck}{d}</li>)}</ul>
 
                 <div className="mt-8"><TcForm /></div>
+                <ul className="mt-3 space-y-1 text-[14px] text-[#334155]"><li>A real TC replies the same business day.</li><li>TREC/TXR forms, rush files OK.</li><li>Only the docs you send, encrypted, deleted on request.</li></ul>
                 <p className="mt-3 text-[14px] text-[#334155]"><strong>First file free.</strong> No card until file #2. No contract. Cancel by not sending another file.</p>
+                <Person />
 
                 <section className="mt-8 grid gap-3 sm:grid-cols-3">
                     {FEARS.map(([q, a]) => <div key={q} className="rounded-2xl border border-[#CBD5E1] bg-white p-4"><p className="font-semibold">{q}</p><p className="mt-1 text-[15px] text-[#4B5567]">{a}</p></div>)}
@@ -55,7 +59,7 @@ export default function TcPage() {
                             <tr className="border-b border-[#E2E8F0]"><td className="p-4">First file</td><td className="p-4 font-semibold">Free</td></tr>
                             <tr className="border-b border-[#E2E8F0]"><td className="p-4">Each file after</td><td className="p-4 font-semibold">$99</td></tr>
                             <tr className="border-b border-[#E2E8F0]"><td className="p-4">5-file pack, prepaid</td><td className="p-4 font-semibold">$449</td></tr>
-                            <tr><td className="p-4 text-[#4B5567]">A human TC, for comparison</td><td className="p-4 text-[#4B5567]">$350-500 a file</td></tr>
+                            <tr><td className="p-4 text-[#4B5567]">Most TCs, for comparison</td><td className="p-4 text-[#4B5567]">$300-500 a file</td></tr>
                         </tbody></table>
                     </div>
                     <p className="mt-3 text-[15px] text-[#334155]">The checklist: earnest money, option period, inspection, appraisal, financing, title, HOA, closing.</p>
@@ -66,7 +70,7 @@ export default function TcPage() {
                     {FAQ.map(([q, a]) => <div key={q}><h3 className="mt-5 text-lg font-semibold">{q}</h3><p className="mt-1 text-[16px] text-[#334155]">{a}</p></div>)}
                 </section>
 
-                <p className="mt-16 text-[13px] text-[#64748B]">Dooza (Adam Laboratory Inc.) / <a href="/privacy" className="underline">Privacy</a> / <a href="/terms" className="underline">Terms</a> / support@dooza.ai</p>
+                <p className="mt-16 text-[13px] text-[#64748B]">Dooza is a brand of Adam Laboratory Inc. · 1111b S Governors Ave Ste 34259, Dover, DE 19904 · <a href="mailto:support@dooza.ai" className="underline">support@dooza.ai</a> · <a href="/privacy" className="underline">Privacy</a> · <a href="/terms" className="underline">Terms</a></p>
             </div>
         </main>
     );
