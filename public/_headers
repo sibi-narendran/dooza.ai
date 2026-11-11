@@ -30,3 +30,7 @@ https://next.dooza.ai/*
 
 https://dooza-site.sibinarendran.workers.dev/*
   X-Robots-Tag: noindex, nofollow
+
+# Sales demo pages (Odysseus demo-first): never index
+/demo/*
+  X-Robots-Tag: noindex, nofollow
