@@ -1,0 +1,250 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Job Costing | Electrical Subcontractor Demo</title>
+<style>
+:root{--a:#1f6feb;--ink:#1d2330;--mut:#5c6478;--bg:#fff;--soft:#f4f6fa;--line:#dde2ec;--red:#d1242f;--redbg:#fdecee;--green:#1a7f37;--amber:#b25e00}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+.bar{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 16px}.bar b{color:#ffd43b}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 16px;max-width:1120px;margin:auto}
+.logo{font-weight:800;font-size:19px;color:var(--a)}.logo small{display:block;font-weight:500;font-size:12px;color:var(--mut)}
+nav{display:flex;gap:6px;flex-wrap:wrap}nav button,.btn,.btn2{font:inherit;font-weight:700;border-radius:9px;padding:9px 14px;cursor:pointer;border:1px solid var(--a)}
+nav button{background:#fff;color:var(--a)}nav button.on,.btn{background:var(--a);color:#fff}.btn2{background:#fff;color:var(--a)}
+.small{padding:5px 10px;font-size:13px}
+main{max-width:1120px;margin:auto;padding:4px 16px 24px}
+h2{font-size:22px;margin:14px 0 12px}h3{font-size:17px;margin:0 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:var(--soft);border-radius:12px;padding:14px}.kpi>span{display:block;color:var(--mut);font-size:13px}.kpi b{font-size:22px}
+.card{background:var(--soft);border-radius:12px;padding:16px;margin-bottom:16px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.03em}
+td.n,th.n{text-align:right}tr.over td{background:var(--redbg)}tr.click{cursor:pointer}tr.click:hover td{background:#eef3ff}
+.flag{display:inline-block;background:var(--red);color:#fff;border-radius:6px;font-size:11px;font-weight:700;padding:1px 6px;margin-left:6px}
+.ok{color:var(--green);font-weight:700}.bad{color:var(--red);font-weight:700}.warn{color:var(--amber);font-weight:700}
+.pill{display:inline-block;font-size:12px;border-radius:20px;padding:1px 9px;background:#e7ecf6;color:var(--mut)}
+.bars{display:grid;gap:10px}.brow{display:grid;grid-template-columns:minmax(90px,170px) 1fr 70px;gap:10px;align-items:center;font-size:14px}
+.brow .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.track{position:relative;height:22px;background:#e3e8f2;border-radius:6px;overflow:hidden}
+.track i{position:absolute;left:0;top:0;bottom:0;background:var(--a);border-radius:6px}.track i.r{background:var(--red)}.track em{position:absolute;top:0;bottom:0;width:2px;background:#111}
+.legend{font-size:12px;color:var(--mut);margin-top:8px}
+form.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;align-items:end}
+label{display:grid;gap:3px;font-size:12px;color:var(--mut);font-weight:600}
+input,select{font:inherit;font-size:15px;padding:9px;border:1px solid #ccd2de;border-radius:9px;background:#fff;color:var(--ink);width:100%}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.cmp{display:grid;grid-template-columns:1fr auto auto auto;gap:4px 14px;font-size:14px}.cmp b{text-align:right}.cmp .h{color:var(--mut);font-size:12px;text-transform:uppercase}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none}.toast.show{opacity:1}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.sp{flex:1}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:24px 16px;border-top:1px solid var(--line);margin-top:20px}
+.hide{display:none}
+@media(max-width:520px){.brow{grid-template-columns:90px 1fr 56px}.kpi b{font-size:19px}}
+</style></head><body>
+<div class="bar"><b>Demo</b> with sample data. Everything you add is saved in this browser only.</div>
+<header><span class="logo">Bright Line Electric<small>Job costing &amp; profitability</small></span>
+<nav id="nav"><button data-v="dash" class="on">Dashboard</button><button data-v="jobs">Jobs</button><button data-v="log">Log time &amp; materials</button></nav></header>
+<main>
+
+<section id="v-dash">
+<h2>Profitability dashboard</h2>
+<div class="kpis" id="kpis"></div>
+<div class="card"><h3>Cost vs revenue per job</h3><div class="bars" id="bars"></div>
+<div class="legend">Bar = actual cost as a share of job revenue (contract + approved change orders). Black tick = estimated cost. Red = over estimate.</div></div>
+<div class="card"><div class="row"><h3 class="sp" style="margin:0">All jobs</h3><button class="btn2 small" id="csv1">Export CSV</button></div>
+<div class="tw" style="margin-top:10px"><table id="sumT"></table></div></div>
+</section>
+
+<section id="v-jobs" class="hide">
+<div class="row"><h2 class="sp">Jobs</h2><button class="btn small" id="newJobBtn">+ Add job</button></div>
+<div class="card hide" id="newJobCard"><h3>New job</h3>
+<form class="f" id="jobF">
+<label>Job name<input name="jobName" required placeholder="Panel upgrade, 14 Oak St"></label>
+<label>Customer / GC<input name="client" required placeholder="Harbor Builders"></label>
+<label>Contract price ($)<input name="contract" type="number" min="0" step="1" required></label>
+<label>Est. labor hours<input name="estHours" type="number" min="0" step="0.5" required></label>
+<label>Est. labor cost ($/hr)<input name="rate" type="number" min="0" step="0.5" value="58" required></label>
+<label>Est. materials ($)<input name="estMat" type="number" min="0" step="1" required></label>
+<label>Status<select name="status"><option>Active</option><option>Bidding</option><option>Complete</option></select></label>
+<button class="btn">Save job</button></form></div>
+<div class="card"><div class="tw"><table id="jobsT"></table></div><p class="legend">Tap a job to see estimate vs actual, change orders and its log.</p></div>
+<div id="detail"></div>
+</section>
+
+<section id="v-log" class="hide">
+<h2>Log time &amp; materials</h2>
+<div class="grid2">
+<div class="card"><h3>Log labor hours</h3>
+<form class="f" id="hrsF">
+<label>Job<select name="job" class="jobSel" required></select></label>
+<label>Date<input name="date" type="date" required></label>
+<label>Electrician<select name="tech" id="techSel"></select></label>
+<label>Hours<input name="hours" type="number" min="0.25" step="0.25" required></label>
+<button class="btn">Add hours</button></form></div>
+<div class="card"><h3>Add material cost</h3>
+<form class="f" id="matF">
+<label>Job<select name="job" class="jobSel" required></select></label>
+<label>Date<input name="date" type="date" required></label>
+<label>Item / supplier<input name="item" required placeholder="12/2 MC cable, 250 ft"></label>
+<label>Cost ($)<input name="cost" type="number" min="0" step="0.01" required></label>
+<button class="btn">Add material</button></form></div>
+</div>
+<div class="card"><h3>Recent entries</h3><div class="tw"><table id="recentT"></table></div></div>
+</section>
+</main>
+<footer>Demo built by Dooza (dooza.ai) for this job post. Sample data only.<br><button class="btn2 small" id="reset" style="margin-top:8px">Reset sample data</button></footer>
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+"use strict";
+var KEY="dooza_elec_jobcost_v1";
+var TECHS=[{n:"Mike R. (Foreman)",r:62},{n:"Dana K. (Journeyman)",r:54},{n:"Luis P. (Journeyman)",r:52},{n:"Tyler S. (Apprentice)",r:34}];
+function d(off){var t=new Date();t.setDate(t.getDate()-off);return t.toISOString().slice(0,10);}
+function seed(){
+return {nextId:7,jobs:[
+{id:1,name:"Riverside Dental TI",client:"Harbor Builders",status:"Active",contract:48500,estHours:310,rate:56,estMat:17800,
+ labor:[{date:d(20),tech:"Mike R. (Foreman)",hours:64},{date:d(14),tech:"Dana K. (Journeyman)",hours:88},{date:d(7),tech:"Luis P. (Journeyman)",hours:96},{date:d(2),tech:"Tyler S. (Apprentice)",hours:58}],
+ mats:[{date:d(19),item:"Gear: 200A panel + breakers (CED)",cost:6420},{date:d(12),item:"EMT, fittings, boxes",cost:4180},{date:d(5),item:"LED troffers x42",cost:7350}],
+ cos:[{id:1,desc:"Add 6 dedicated circuits for X-ray room",amount:4200,hours:30,mat:1100,approved:true},{id:2,desc:"Relocate reception desk power",amount:950,hours:8,mat:180,approved:false}]},
+{id:2,name:"Maple Ave 4-plex rough-in",client:"Keystone Homes",status:"Active",contract:31200,estHours:240,rate:52,estMat:9600,
+ labor:[{date:d(16),tech:"Dana K. (Journeyman)",hours:72},{date:d(9),tech:"Luis P. (Journeyman)",hours:66},{date:d(3),tech:"Tyler S. (Apprentice)",hours:40}],
+ mats:[{date:d(15),item:"Romex 12/2 + 14/2, 20 rolls",cost:3980},{date:d(8),item:"Boxes, plates, staples",cost:1210}],cos:[]},
+{id:3,name:"Lakeview Warehouse lighting retrofit",client:"Lakeview Logistics (direct)",status:"Active",contract:26800,estHours:150,rate:55,estMat:12400,
+ labor:[{date:d(12),tech:"Mike R. (Foreman)",hours:60},{date:d(8),tech:"Luis P. (Journeyman)",hours:72},{date:d(4),tech:"Tyler S. (Apprentice)",hours:56}],
+ mats:[{date:d(13),item:"High-bay LEDs x60",cost:11800},{date:d(6),item:"Lift rental, 1 week",cost:1650}],
+ cos:[{id:1,desc:"Add occupancy sensors, aisles 1-6",amount:2600,hours:12,mat:900,approved:true}]},
+{id:4,name:"Oak Street panel upgrade",client:"J. Patel (homeowner)",status:"Complete",contract:4850,estHours:14,rate:58,estMat:1650,
+ labor:[{date:d(30),tech:"Mike R. (Foreman)",hours:9},{date:d(29),tech:"Tyler S. (Apprentice)",hours:6}],
+ mats:[{date:d(30),item:"200A panel, breakers, meter can",cost:1580}],cos:[]},
+{id:5,name:"Bayside Cafe kitchen circuits",client:"Coastline GC",status:"Complete",contract:9400,estHours:62,rate:54,estMat:2900,
+ labor:[{date:d(26),tech:"Dana K. (Journeyman)",hours:34},{date:d(24),tech:"Luis P. (Journeyman)",hours:26}],
+ mats:[{date:d(26),item:"Wire, breakers, GFCI devices",cost:2480}],
+ cos:[{id:1,desc:"Hood fan interlock",amount:780,hours:5,mat:140,approved:true}]},
+{id:6,name:"Pine Ridge EV charger x4",client:"Pine Ridge HOA",status:"Bidding",contract:14200,estHours:70,rate:56,estMat:7100,labor:[],mats:[],cos:[]}
+]};}
+var S;
+function load(){try{var raw=localStorage.getItem(KEY);if(raw){var p=JSON.parse(raw);if(p&&p.jobs)return p;}}catch(e){}return seed();}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+S=load();
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function money(v){var neg=v<0;v=Math.abs(Math.round(v));return(neg?"-$":"$")+v.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");}
+function num(v){return Math.round(v*10)/10;}
+function sum(a,f){return a.reduce(function(t,x){return t+f(x);},0);}
+function toast(m){var t=$("toast");t.textContent=m;t.className="toast show";clearTimeout(toast.h);toast.h=setTimeout(function(){t.className="toast";},1800);}
+
+function calc(j){
+ var ap=j.cos.filter(function(c){return c.approved;});
+ var coAmt=sum(ap,function(c){return +c.amount;}),coH=sum(ap,function(c){return +c.hours;}),coM=sum(ap,function(c){return +c.mat;});
+ var estH=j.estHours+coH,estM=j.estMat+coM;
+ var actH=sum(j.labor,function(l){return +l.hours;});
+ var actLab=sum(j.labor,function(l){return l.hours*(l.rate||j.rate);});
+ var actM=sum(j.mats,function(m){return +m.cost;});
+ var rev=j.contract+coAmt,estCost=estH*j.rate+estM,actCost=actLab+actM;
+ var margin=rev-actCost,pct=rev?margin/rev*100:0,estMargin=rev-estCost;
+ var overH=actH>estH,overM=actM>estM;
+ return {coAmt:coAmt,pending:j.cos.length-ap.length,estH:estH,estM:estM,actH:actH,actLab:actLab,actM:actM,rev:rev,estCost:estCost,actCost:actCost,
+  margin:margin,pct:pct,estMargin:estMargin,estPct:rev?estMargin/rev*100:0,overH:overH,overM:overM,over:overH||overM||actCost>estCost};
+}
+function pctCls(p){return p<10?"bad":p<20?"warn":"ok";}
+
+/* views */
+var view="dash",openJob=null;
+function show(v){view=v;["dash","jobs","log"].forEach(function(x){$("v-"+x).className=x===v?"":"hide";});
+ Array.prototype.forEach.call(document.querySelectorAll("#nav button"),function(b){b.className=b.getAttribute("data-v")===v?"on":"";});render();}
+$("nav").addEventListener("click",function(e){var v=e.target.getAttribute("data-v");if(v)show(v);});
+
+function renderDash(){
+ var js=S.jobs.filter(function(j){return j.status!=="Bidding";});
+ var cs=js.map(calc);
+ var rev=sum(cs,function(c){return c.rev;}),cost=sum(cs,function(c){return c.actCost;}),m=rev-cost;
+ var over=cs.filter(function(c){return c.over;}).length;
+ var pend=sum(S.jobs.map(calc),function(c){return c.pending;});
+ $("kpis").innerHTML=[["Revenue (active + complete)",money(rev)],["Actual cost to date",money(cost)],["Margin",money(m)+' <small class="'+pctCls(rev?m/rev*100:0)+'">'+(rev?num(m/rev*100):0)+'%</small>'],
+  ["Jobs over budget",'<span class="'+(over?"bad":"ok")+'">'+over+" of "+js.length+"</span>"],["Change orders pending",pend]]
+  .map(function(k){return '<div class="kpi"><span>'+k[0]+"</span><b>"+k[1]+"</b></div>";}).join("");
+ var maxR=Math.max.apply(null,cs.map(function(c){return Math.max(c.rev,c.actCost,c.estCost);}).concat([1]));
+ $("bars").innerHTML=js.map(function(j,i){var c=cs[i];
+  return '<div class="brow"><span class="nm" title="'+esc(j.name)+'">'+esc(j.name)+'</span><div class="track" style="width:'+(c.rev/maxR*100)+'%;min-width:40%" title="Cost '+money(c.actCost)+" of "+money(c.rev)+'">'+
+  '<i class="'+(c.over?"r":"")+'" style="width:'+Math.min(100,c.rev?c.actCost/c.rev*100:0)+'%"></i><em style="left:'+Math.min(99,c.rev?c.estCost/c.rev*100:0)+'%"></em></div>'+
+  '<b class="'+pctCls(c.pct)+'" style="text-align:right">'+num(c.pct)+'%</b></div>';}).join("")||"<p>No jobs yet.</p>";
+ $("sumT").innerHTML=tableHead()+S.jobs.map(jobRow).join("");
+}
+function tableHead(){return '<tr><th>Job</th><th>Status</th><th class="n">Revenue</th><th class="n">Est. cost</th><th class="n">Actual cost</th><th class="n">Hours (act/est)</th><th class="n">Margin</th><th class="n">Margin %</th></tr>';}
+function jobRow(j){var c=calc(j);
+ return '<tr class="click'+(c.over?" over":"")+'" data-id="'+j.id+'"><td><b>'+esc(j.name)+"</b>"+(c.over?'<span class="flag">OVER</span>':"")+'<br><small style="color:var(--mut)">'+esc(j.client)+'</small></td><td><span class="pill">'+esc(j.status)+'</span></td><td class="n">'+money(c.rev)+
+ '</td><td class="n">'+money(c.estCost)+'</td><td class="n">'+money(c.actCost)+'</td><td class="n'+(c.overH?" bad":"")+'">'+num(c.actH)+" / "+num(c.estH)+'</td>'+(j.status==="Bidding"?'<td class="n">'+money(c.estMargin)+' <span class="pill">bid</span></td><td class="n '+pctCls(c.estPct)+'">'+num(c.estPct)+"%</td></tr>":'<td class="n">'+money(c.margin)+'</td><td class="n '+pctCls(c.pct)+'">'+num(c.pct)+"%</td></tr>");}
+
+function renderJobs(){
+ $("jobsT").innerHTML=tableHead()+S.jobs.map(jobRow).join("");
+ var j=S.jobs.filter(function(x){return x.id===openJob;})[0];
+ if(!j){$("detail").innerHTML="";return;}
+ var c=calc(j);
+ function line(lbl,e,a,isMoney){var over=a>e;var f=isMoney?money:num;return "<span>"+lbl+"</span><b>"+f(e)+"</b><b"+(over?' class="bad"':"")+">"+f(a)+"</b><b"+(over?' class="bad"':' class="ok"')+">"+(over?"+":"")+f(a-e)+"</b>";}
+ var h='<div class="card" id="jobDetail"><div class="row"><h3 class="sp" style="margin:0">'+esc(j.name)+(c.over?'<span class="flag">OVER ESTIMATE</span>':"")+'</h3>'+
+ '<select id="stSel" style="width:auto">'+["Bidding","Active","Complete"].map(function(s){return "<option"+(s===j.status?" selected":"")+">"+s+"</option>";}).join("")+'</select></div>'+
+ '<p style="color:var(--mut);margin:4px 0 12px">'+esc(j.client)+" · labor cost rate "+money(j.rate)+"/hr</p>"+
+ '<div class="grid2"><div><div class="cmp"><span class="h">&nbsp;</span><b class="h">Estimate</b><b class="h">Actual</b><b class="h">Diff</b>'+
+ line("Labor hours",c.estH,c.actH,false)+line("Labor $",c.estH*j.rate,c.actLab,true)+line("Materials $",c.estM,c.actM,true)+line("Total cost",c.estCost,c.actCost,true)+
+ '</div><p style="font-size:13px;color:var(--mut)">Estimates include approved change orders.</p></div>'+
+ '<div class="kpis" style="grid-template-columns:1fr 1fr;margin:0"><div class="kpi"><span>Revenue</span><b>'+money(c.rev)+'</b></div><div class="kpi"><span>Margin now</span><b class="'+pctCls(c.pct)+'">'+money(c.margin)+'</b></div>'+
+ '<div class="kpi"><span>Margin %</span><b class="'+pctCls(c.pct)+'">'+num(c.pct)+'%</b></div><div class="kpi"><span>Bid margin %</span><b>'+num(c.estPct)+"%</b></div></div></div>"+
+ '<h3 style="margin-top:16px">Change orders</h3><div class="tw"><table><tr><th>Description</th><th class="n">Price</th><th class="n">Hours</th><th class="n">Materials</th><th>Status</th></tr>'+
+ (j.cos.map(function(co){return "<tr><td>"+esc(co.desc)+'</td><td class="n">'+money(co.amount)+'</td><td class="n">'+num(co.hours)+'</td><td class="n">'+money(co.mat)+"</td><td>"+
+  (co.approved?'<span class="ok">Approved</span>':'<button class="btn small" data-approve="'+co.id+'">Approve</button>')+"</td></tr>";}).join("")||'<tr><td colspan="5">No change orders yet.</td></tr>')+
+ '</table></div><form class="f" id="coF" style="margin-top:10px"><label>Description<input name="desc" required placeholder="Add 2 exterior GFCI outlets"></label>'+
+ '<label>Price to customer ($)<input name="amount" type="number" min="0" step="1" required></label><label>Extra hours<input name="hours" type="number" min="0" step="0.5" value="0"></label>'+
+ '<label>Extra materials ($)<input name="mat" type="number" min="0" step="1" value="0"></label><button class="btn2">Add change order</button></form>'+
+ '<h3 style="margin-top:16px">Labor log</h3><div class="tw"><table><tr><th>Date</th><th>Electrician</th><th class="n">Hours</th><th class="n">Cost</th></tr>'+
+ (j.labor.map(function(l){return "<tr><td>"+esc(l.date)+"</td><td>"+esc(l.tech)+'</td><td class="n">'+num(l.hours)+'</td><td class="n">'+money(l.hours*(l.rate||j.rate))+"</td></tr>";}).join("")||'<tr><td colspan="4">No hours logged.</td></tr>')+
+ '</table></div><h3 style="margin-top:16px">Materials</h3><div class="tw"><table><tr><th>Date</th><th>Item</th><th class="n">Cost</th></tr>'+
+ (j.mats.map(function(m){return "<tr><td>"+esc(m.date)+"</td><td>"+esc(m.item)+'</td><td class="n">'+money(m.cost)+"</td></tr>";}).join("")||'<tr><td colspan="3">No materials logged.</td></tr>')+
+ '</table></div><p class="row" style="margin-top:12px"><button class="btn small" data-goto="log">Log hours or materials</button></p></div>';
+ $("detail").innerHTML=h;
+ $("stSel").onchange=function(){j.status=this.value;save();render();toast("Status updated");};
+ $("coF").onsubmit=function(e){e.preventDefault();var f=e.target;var id=(j.cos.reduce(function(m,x){return Math.max(m,x.id);},0))+1;
+  j.cos.push({id:id,desc:f.elements.desc.value.trim(),amount:+f.elements.amount.value||0,hours:+f.elements.hours.value||0,mat:+f.elements.mat.value||0,approved:false});save();render();toast("Change order added (pending approval)");};
+}
+$("detail").addEventListener("click",function(e){
+ var a=e.target.getAttribute("data-approve");
+ if(a){var j=S.jobs.filter(function(x){return x.id===openJob;})[0];j.cos.forEach(function(c){if(String(c.id)===a)c.approved=true;});save();render();toast("Change order approved: revenue and estimate updated");}
+ var g=e.target.getAttribute("data-goto");if(g){show(g);var sels=document.querySelectorAll(".jobSel");Array.prototype.forEach.call(sels,function(s){s.value=String(openJob);});}
+});
+function onRowClick(e){var tr=e.target.closest("tr[data-id]");if(!tr)return;openJob=+tr.getAttribute("data-id");show("jobs");
+ var el=$("jobDetail");if(el&&el.scrollIntoView)el.scrollIntoView({behavior:"smooth",block:"start"});}
+$("jobsT").addEventListener("click",onRowClick);$("sumT").addEventListener("click",onRowClick);
+
+function renderLog(){
+ var opts=S.jobs.filter(function(j){return j.status!=="Complete";}).concat(S.jobs.filter(function(j){return j.status==="Complete";}))
+  .map(function(j){return '<option value="'+j.id+'">'+esc(j.name)+(j.status==="Complete"?" (complete)":"")+"</option>";}).join("");
+ Array.prototype.forEach.call(document.querySelectorAll(".jobSel"),function(s){var v=s.value;s.innerHTML=opts;if(v)s.value=v;});
+ var all=[];S.jobs.forEach(function(j){j.labor.forEach(function(l){all.push({date:l.date,job:j.name,what:l.tech+", "+num(l.hours)+" h",amt:l.hours*(l.rate||j.rate)});});
+  j.mats.forEach(function(m){all.push({date:m.date,job:j.name,what:m.item,amt:m.cost});});});
+ all.sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0;});
+ $("recentT").innerHTML='<tr><th>Date</th><th>Job</th><th>Entry</th><th class="n">Cost</th></tr>'+all.slice(0,12).map(function(r){return "<tr><td>"+esc(r.date)+"</td><td>"+esc(r.job)+"</td><td>"+esc(r.what)+'</td><td class="n">'+money(r.amt)+"</td></tr>";}).join("");
+}
+function render(){if(view==="dash")renderDash();if(view==="jobs")renderJobs();if(view==="log")renderLog();}
+
+/* forms */
+$("techSel").innerHTML=TECHS.map(function(t){return '<option value="'+esc(t.n)+'">'+esc(t.n)+" ($"+t.r+"/hr)</option>";}).join("");
+Array.prototype.forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.value=d(0);});
+$("newJobBtn").onclick=function(){var c=$("newJobCard");c.className=c.className.indexOf("hide")>-1?"card":"card hide";};
+$("jobF").onsubmit=function(e){e.preventDefault();var f=e.target;
+ var j={id:S.nextId++,name:f.elements.jobName.value.trim(),client:f.elements.client.value.trim(),status:f.elements.status.value,contract:+f.elements.contract.value||0,estHours:+f.elements.estHours.value||0,rate:+f.elements.rate.value||0,estMat:+f.elements.estMat.value||0,labor:[],mats:[],cos:[]};
+ S.jobs.unshift(j);save();f.reset();f.elements.rate.value=58;$("newJobCard").className="card hide";openJob=j.id;render();toast("Job added");};
+$("hrsF").onsubmit=function(e){e.preventDefault();var f=e.target;var j=S.jobs.filter(function(x){return x.id===+f.elements.job.value;})[0];if(!j)return;
+ var t=TECHS.filter(function(x){return x.n===f.elements.tech.value;})[0];
+ j.labor.push({date:f.elements.date.value,tech:f.elements.tech.value,hours:+f.elements.hours.value,rate:t?t.r:j.rate});save();f.elements.hours.value="";render();
+ var c=calc(j);toast(c.overH?"Logged. "+j.name+" is now OVER its labor estimate":"Logged "+j.name+": "+num(c.actH)+" of "+num(c.estH)+" h used");};
+$("matF").onsubmit=function(e){e.preventDefault();var f=e.target;var j=S.jobs.filter(function(x){return x.id===+f.elements.job.value;})[0];if(!j)return;
+ j.mats.push({date:f.elements.date.value,item:f.elements.item.value.trim(),cost:+f.elements.cost.value});save();f.elements.item.value="";f.elements.cost.value="";render();
+ var c=calc(j);toast(c.overM?"Added. "+j.name+" materials are OVER estimate":"Added. Materials "+money(c.actM)+" of "+money(c.estM));};
+
+/* CSV */
+function csvCell(v){v=String(v==null?"":v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
+function buildCSV(){var rows=[["Job","Customer","Status","Contract","Approved COs","Revenue","Est hours","Actual hours","Est materials","Actual materials","Est cost","Actual cost","Margin","Margin %","Over budget"]];
+ S.jobs.forEach(function(j){var c=calc(j);rows.push([j.name,j.client,j.status,j.contract,c.coAmt,c.rev,num(c.estH),num(c.actH),Math.round(c.estM),Math.round(c.actM),Math.round(c.estCost),Math.round(c.actCost),Math.round(c.margin),num(c.pct),c.over?"YES":"no"]);});
+ return rows.map(function(r){return r.map(csvCell).join(",");}).join("\n");}
+$("csv1").onclick=function(){var csv=buildCSV();
+ try{var b=new Blob([csv],{type:"text/csv"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="job-costing-"+d(0)+".csv";document.body.appendChild(a);a.click();a.remove();toast("CSV downloaded");}
+ catch(err){toast("Export not supported in this browser");}};
+$("reset").onclick=function(){if(!window.confirm||confirm("Reset to the sample data?")){S=seed();save();openJob=null;render();toast("Sample data restored");}};
+window.__demo={state:function(){return S;},calc:calc,buildCSV:buildCSV,show:show};
+render();
+})();
+</script>
+</body></html>
