@@ -99,16 +99,16 @@
     }).join("");
 
     // monthly churn sparkline
-    var mc = review.monthly_churn, W = 600, H = 120, P = 8, mxr = Math.max.apply(null, mc.map(function (x) { return x.rate; })) * 1.1;
+    var mc = review.monthly_churn.filter(function (x) { return x.active_start >= 100; }), W = 600, H = 120, P = 8, mxr = Math.max.apply(null, mc.map(function (x) { return x.rate; })) * 1.1;
     var pts = mc.map(function (x, i) { return [P + i * (W - 2 * P) / (mc.length - 1), H - P - x.rate / mxr * (H - 2 * P)]; });
     $("#spark").innerHTML = '<polyline fill="none" stroke="var(--a)" stroke-width="2.5" vector-effect="non-scaling-stroke" points="' + pts.map(function (p) { return p[0].toFixed(1) + "," + p[1].toFixed(1); }).join(" ") + '"/>';
     var peak = mc.reduce(function (a, b) { return b.rate > a.rate ? b : a; });
-    $("#sparkcap").textContent = mc[0].month + " to " + c.lastMonth.month + ". Peak " + pct(peak.rate) + " in " + peak.month + " (the month of the Basic price rise); last month " + pct(c.lastMonth.rate) + " (" + c.lastMonth.cancelled + " of " + c.lastMonth.active_start + ").";
+    $("#sparkcap").textContent = "Months with 100+ active customers, " + mc[0].month + " to " + c.lastMonth.month + ". Peak " + pct(peak.rate) + " in " + peak.month + "; last month " + pct(c.lastMonth.rate) + " (" + c.lastMonth.cancelled + " of " + c.lastMonth.active_start + ").";
 
     $("#ideanote").textContent = "Expected impact assumes each idea closes " + (c.gapClosed * 100) + "% of the churn gap for its group, at today's active mix, valued at " + money(c.avgMrrPerCancel) + " MRR per cancel (the average in the 30-day forecast). An estimate to rank ideas, not a promise; test each one.";
     $("#ideas").innerHTML = c.ideas.map(function (d, i) {
       return '<div class="drv"><div class="num">' + (i + 1) + '</div><div><h3>' + esc(d.action) + "</h3>" +
-        '<div class="small mut">For: ' + esc(d.plain.toLowerCase()) + " (about " + Math.round(d.group_active) + " active customers)</div>" +
+        '<div class="small mut">For: ' + esc(d.plain) + " (about " + Math.round(d.group_active) + " active customers)</div>" +
         '<div class="act">Expected: about <b>' + d.saved_cancels_month.toFixed(1) + " fewer cancels a month</b>, roughly " + money(d.saved_mrr_month) + " MRR kept per month</div></div></div>";
     }).join("");
 
@@ -116,7 +116,7 @@
       card("Holdout AUC (logistic regression)", c.auc.toFixed(3), "1.0 = perfect ranking, 0.5 = coin flip" + (c.treeAuc ? "; a simple decision tree scored " + c.treeAuc.toFixed(3) : "")) +
       card("Top-10% lift", c.lift.toFixed(1) + "x", "the riskiest 10% cancel at " + pct(c.precision, 0) + " vs " + pct(c.baseRate) + " base rate") +
       card("Cancels caught in top 10%", pct(c.recall, 0), "of all cancels in the test months") +
-      card("Tested on unseen months", c.testSnaps, "trained on " + c.trainSnaps + " (" + c.trainRows.toLocaleString() + " customer-months); tested on " + c.testRows.toLocaleString() + " with " + c.testChurn + " cancels");
+      card("Tested on unseen months", "2 months", c.testSnaps + "; " + "trained on " + c.trainSnaps + " (" + c.trainRows.toLocaleString() + " customer-months); tested on " + c.testRows.toLocaleString() + " with " + c.testChurn + " cancels");
     $("#qualnote").textContent = "Honest read: this is a good, simple model, not magic. It ranks who is most likely to leave well enough to act on; it will miss about half of cancels if you only work the top 10%. On synthetic data the numbers are cleaner than real life; expect a lower AUC on a real export.";
 
     var reasons = Object.keys(review.cancel_reasons).map(function (k) { return '<span class="chip">' + esc(k.replace(/_/g, " ")) + " " + review.cancel_reasons[k] + "</span>"; }).join("");
@@ -143,8 +143,8 @@
       document.querySelectorAll("#tbl th").forEach(function (th) { th.classList.toggle("sorted", th.dataset.k === sortK); th.classList.toggle("asc", th.dataset.k === sortK && asc); });
       $("#tbl tbody").innerHTML = current.map(function (r) {
         var b = band(r.risk);
-        return "<tr><td class=n>#" + r.customer_id + "</td><td>" + esc(r.plan) + "</td><td>" + esc(r.billing) + '</td><td class=n>' + r.mrr.toFixed(2) + "</td><td class=n>" + r.tenure_months +
-          "</td><td class=n>" + r.sessions_30d + '</td><td class=n><span class="pill ' + b[1] + '">' + pct(r.risk, 0) + '</span></td><td class="reasons small">' + r.reasons.map(esc).join("; ") + "</td></tr>";
+        return "<tr><td class=n>#" + r.customer_id + '</td><td class=n><span class="pill ' + b[1] + '">' + pct(r.risk, 0) + "</span></td><td>" + esc(r.plan) + "</td><td>" + esc(r.billing) + '</td><td class=n>' + r.mrr.toFixed(2) + "</td><td class=n>" + r.tenure_months +
+          "</td><td class=n>" + r.sessions_30d + '</td><td class="reasons small">' + r.reasons.map(esc).join("; ") + "</td></tr>";
       }).join("");
       $("#count").textContent = current.length + " of " + atRisk.length + " shown";
     }
