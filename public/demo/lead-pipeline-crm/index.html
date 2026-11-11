@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lead pipeline CRM · Demo Travel Co. (Dooza demo)</title>
+<meta name="description" content="Working demo of a lead-management CRM for a travel agency: leads inbox, live enquiry ingestion, kanban pipeline, reminders, activity log, reports and a Hindi/English toggle. Sample data, by Dooza.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="demo-bar" data-ih="demoBar"><b>Demo with sample data, by Dooza.</b> Everything you change is saved only in this browser.</div>
+<header>
+  <div class="logo"><span data-i="brand">Demo Travel Co.</span><small data-i="brandSub">Lead pipeline CRM</small></div>
+  <div class="hctl">
+    <label><span data-i="viewAs">Viewing as</span> <select id="role"></select></label>
+    <button class="btn2 sm" id="langBtn" type="button">हिंदी</button>
+    <button class="btn3 sm" id="resetBtn" type="button" data-i="reset">Reset sample data</button>
+  </div>
+</header>
+<nav class="tabs">
+  <button class="tab on" data-tab="inbox" type="button"><span data-i="tabInbox">Leads inbox</span><span class="cnt" id="dueCnt"></span></button>
+  <button class="tab" data-tab="pipeline" type="button" data-i="tabPipeline">Pipeline</button>
+  <button class="tab" data-tab="reports" type="button" data-i="tabReports">Reports</button>
+</nav>
+<main>
+  <section class="pane on" id="p-inbox">
+    <div class="card">
+      <div class="row"><h3 class="sp" data-i="simTitle">Simulate new enquiry</h3><button class="btn sm" id="addBtn" type="button" data-i="addLead">+ Add lead</button></div>
+      <div class="muted" data-i="simHelp"></div>
+      <div class="sim" id="simBtns"></div>
+      <details class="wire"><summary data-i="wireTitle">How the real wiring works</summary>
+        <ul><li data-ih="wire1"></li><li data-ih="wire2"></li><li data-ih="wire3"></li><li data-ih="wire4"></li></ul>
+      </details>
+    </div>
+    <div class="due"><h3 data-i="dueTitle">Follow-ups due today</h3><ul id="dueList"></ul></div>
+    <div class="filters">
+      <input type="text" id="fQ" data-ph="search" aria-label="Search">
+      <select id="fSrc" aria-label="Source"></select>
+      <select id="fSt" aria-label="Stage"></select>
+      <select id="fAg" aria-label="Agent"></select>
+      <label class="muted"><input type="checkbox" id="fDue"> <span data-i="onlyDue">Due today only</span></label>
+    </div>
+    <table class="leads" id="leadTable"></table>
+  </section>
+
+  <section class="pane" id="p-pipeline">
+    <p class="muted" data-i="dragHelp"></p>
+    <p class="hint" id="mgrHint" data-i="onlyManager" style="display:none"></p>
+    <div class="board" id="board"></div>
+  </section>
+
+  <section class="pane" id="p-reports">
+    <div class="card">
+      <h3 data-i="rFilters">Filters</h3>
+      <div class="filters" style="margin:0">
+        <select id="rSrc" aria-label="Source"></select>
+        <select id="rAg" aria-label="Agent"></select>
+        <label class="muted"><span data-i="rFrom">Travel from</span> <input type="date" id="rFrom"></label>
+        <label class="muted"><span data-i="rTo">Travel to</span> <input type="date" id="rTo"></label>
+        <button class="btn2 sm" id="rClear" type="button" data-i="rClear">Clear filters</button>
+      </div>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="rgrid">
+      <div class="card"><h3 data-i="rBySource">By source</h3><div id="rSource"></div></div>
+      <div class="card"><h3 data-i="rByAgent">By agent</h3><div id="rAgent"></div></div>
+      <div class="card"><h3 data-i="rByMonth">By travel month</h3><div id="rMonth"></div></div>
+      <div class="card"><h3 data-i="rByStage">By stage</h3><div id="rStage"></div></div>
+    </div>
+  </section>
+</main>
+<footer data-i="footer">Sample data only. Built by Dooza as a working demo.</footer>
+
+<div class="shade" id="shade"></div>
+<aside class="drawer" id="drawer" aria-label="Lead detail"></aside>
+<div class="modal" id="modal" role="dialog" aria-labelledby="mT">
+  <h3 id="mT" data-i="mTitle">Add lead manually</h3>
+  <div class="g">
+    <label class="full"><span data-i="mName">Name</span><input type="text" id="mName"></label>
+    <label><span data-i="mPhone">Phone</span><input type="tel" id="mPhone" placeholder="98xxx xxxxx"></label>
+    <label><span data-i="mSource">Source</span><select id="mSrc"></select></label>
+    <label><span data-i="mDest">Destination</span><select id="mDest"></select></label>
+    <label><span data-i="mDate">Travel date</span><input type="date" id="mDate"></label>
+    <label><span data-i="mPax">Pax</span><input type="number" id="mPax" min="1" value="2"></label>
+    <label><span data-i="mBudget">Budget</span><input type="number" id="mBudget" min="0" step="1000" value="50000"></label>
+    <label class="full"><span data-i="mMsg">What do they want?</span><input type="text" id="mMsg"></label>
+  </div>
+  <p class="hint" id="mErr"></p>
+  <div class="row"><span class="sp"></span><button class="btn2" id="mCancel" type="button" data-i="cancel">Cancel</button><button class="btn" id="mSave" type="button" data-i="save">Save lead</button></div>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
