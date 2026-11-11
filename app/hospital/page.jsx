@@ -33,7 +33,7 @@ const FAQ = [
     ['What if I leave?', 'You keep your data. Export everything to Excel/CSV.'],
     ['Who builds it?', 'Dooza, founded by Sibi Narendran. You talk to the team building your software, not a reseller.'],
 ];
-const PERSON = null; // { name: '', role: '', photo: '/path.jpg' } once Sibi picks who (Apollo 20:00)
+const PERSON = { name: 'Sibi Narendran', role: 'Founder, Dooza', photo: '/founder-sibi.jpeg' };
 const Person = () => PERSON ? <div className="mt-4 flex items-center gap-3"><img src={PERSON.photo} alt={PERSON.name} width="48" height="48" className="h-12 w-12 rounded-full object-cover" /><p className="text-[15px] text-[#334155]"><strong>{PERSON.name}</strong>, {PERSON.role}</p></div> : null;
 const ck = <span aria-hidden="true" className="text-[#0F766E]">✓</span>;
 
@@ -49,7 +49,7 @@ export default function HospitalPage() {
                 <div className="mt-8"><HospitalForm /></div>
                 <p className="mt-3 text-[14px] text-[#334155]"><strong>Free demo on your own forms</strong> before you pay anything. Excel/CSV export any time, yours to keep.</p>
                 <Person />
-                <div className="mt-3 flex flex-wrap items-center gap-3 text-[15px] text-[#4B5567]"><span>Prefer to pick a time or chat?</span><BookButton /><WhatsAppButton /><span>WhatsApp: <a href="https://wa.me/918344242526" className="underline">+91 83442 42526</a></span></div>
+                <div className="mt-3 flex flex-wrap items-center gap-3 text-[15px] text-[#4B5567]"><span>Prefer to pick a time or chat?</span><BookButton /><WhatsAppButton /><span>Built and supported by the Dooza team. WhatsApp: <a href="https://wa.me/918344242526" className="underline">+91 83442 42526</a></span></div>
 
                 <section className="mt-8 grid gap-3 sm:grid-cols-3">
                     {FEARS.map(([q, a]) => <div key={q} className="rounded-2xl border border-[#CBD5E1] bg-white p-4"><p className="font-semibold">{q}</p><p className="mt-1 text-[15px] text-[#4B5567]">{a}</p></div>)}

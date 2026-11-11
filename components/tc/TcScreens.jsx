@@ -12,7 +12,7 @@ export default function TcScreens() {
         <section className="mt-14">
             <h2 className="text-2xl font-bold">What you see</h2>
             <p className="mt-1 text-[14px] text-[#64748B]">Sample screens with made-up data.</p>
-            <div className="mt-4 grid gap-4 sm:grid-cols-3">
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <Card title="File timeline · 1418 Oak Ridge Dr">
                     <ol className="space-y-2 text-[13px]">{STEPS.map(([s, d, ok]) => (
                         <li key={s} className="flex items-center gap-2"><span className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] text-white ${ok ? 'bg-[#16A34A]' : 'bg-[#CBD5E1]'}`}>{ok ? '✓' : ''}</span><span className="flex-1 text-[#334155]">{s}</span><span className="text-[#64748B]">{d}</span></li>))}
@@ -26,6 +26,9 @@ export default function TcScreens() {
                     <ul className="space-y-2 text-[13px]">{DOCS.map(([d, ok]) => (
                         <li key={d} className="flex items-center gap-2"><span className={ok ? 'text-[#16A34A]' : 'text-[#DC2626]'}>{ok ? '✓' : '!'}</span><span className={`flex-1 ${ok ? 'text-[#334155]' : 'font-semibold text-[#B91C1C]'}`}>{d}</span>{!ok && <span className="rounded bg-[#FEE2E2] px-1.5 text-[11px] text-[#B91C1C]">Missing</span>}</li>))}
                     </ul>
+                </Card>
+                <Card title="Friday status email · to you + your buyer">
+                    <div className="text-[13px] text-[#334155]"><p className="text-[11px] text-[#64748B]">Fri Nov 14 · Subject: 1418 Oak Ridge Dr, week 2 update</p><p className="mt-2 font-semibold">Done this week</p><p>Earnest money receipted · Inspection complete · Option period ended</p><p className="mt-2 font-semibold">Next</p><p>Appraisal Mon 11/17 · Title commitment by Wed 11/19</p><p className="mt-2 font-semibold">Needed from you</p><p>Nothing right now.</p></div>
                 </Card>
             </div>
         </section>

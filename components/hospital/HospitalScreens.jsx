@@ -13,8 +13,8 @@ export default function HospitalScreens() {
             <p className="mt-1 text-[14px] text-[#64748B]">Sample screens with made-up patients and amounts.</p>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 <Card title="OPD bill · Sample Clinic, Coimbatore">
-                    <p className="text-[12px] text-[#64748B]">Bill OP-24117 · 11 Nov 2026 · Patient: Sample Patient A · GSTIN 33ABCDE1234F1Z5</p>
-                    <div className="mt-2"><Row l="Consultation (Dr. Sample)" r="₹500" /><Row l="CBC blood test" r="₹350" /><Row l="Paracetamol 650 x10" r="₹30" /><Row l="Pantoprazole 40 x10" r="₹110" /><Row l="GST on medicines (12%)" r="₹16.80" /><Row l="Total" r="₹1,006.80" b /></div>
+                    <p className="text-[12px] text-[#64748B]">Bill OP-24117 · 11 Nov 2026 · Patient: Sample Patient A</p>
+                    <div className="mt-2"><Row l="Consultation (Dr. Sample)" r="₹500" /><Row l="CBC blood test" r="₹350" /><Row l="Paracetamol 650 x10" r="₹30" /><Row l="Pantoprazole 40 x10" r="₹110" /><Row l="Total" r="₹990" b /><Row l="Medicine prices are MRP, incl. GST" r="" /></div>
                 </Card>
                 <Card title="IPD discharge bill · Ward B, Bed 7">
                     <p className="text-[12px] text-[#64748B]">IP-0932 · Admitted 6 Nov · Discharged 10 Nov · Sample Patient B</p>

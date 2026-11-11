@@ -33,7 +33,7 @@ const FAQ = [
     ['Listing-only files?', 'Not yet. We take transaction files, contract to close.'],
     ['What do you not do?', 'Sign, negotiate or give legal advice.'],
 ];
-const PERSON = null; // { name: '', role: '', photo: '/path.jpg' } once Sibi picks who (Apollo 20:00)
+const PERSON = { name: 'Sibi Narendran', role: 'Founder, Dooza', photo: '/founder-sibi.jpeg' };
 const Person = () => PERSON ? <div className="mt-4 flex items-center gap-3"><img src={PERSON.photo} alt={PERSON.name} width="48" height="48" className="h-12 w-12 rounded-full object-cover" /><p className="text-[15px] text-[#334155]"><strong>{PERSON.name}</strong>, {PERSON.role}</p></div> : null;
 const ck = <span aria-hidden="true" className="text-[#0F766E]">✓</span>;
 
