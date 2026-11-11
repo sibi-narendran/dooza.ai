@@ -31,6 +31,10 @@ https://next.dooza.ai/*
 https://dooza-site.sibinarendran.workers.dev/*
   X-Robots-Tag: noindex, nofollow
 
+# /tc draft (Apollo TC test, not live until Sibi yes): never index
+/tc
+  X-Robots-Tag: noindex, nofollow
+
 # Sales demo pages (Odysseus demo-first): never index
 /demo/*
   X-Robots-Tag: noindex, nofollow
