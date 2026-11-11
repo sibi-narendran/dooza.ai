@@ -3,6 +3,8 @@
 // DRAFT: noindex, unlinked, not in the sitemap. Left out: ABHA/NHA, Razorpay. Screenshot placeholders dropped (Apollo 19:53).
 import HospitalForm, { WhatsAppButton, BookButton } from '@/components/hospital/HospitalForm';
 
+import HospitalScreens from '@/components/hospital/HospitalScreens';
+
 export const metadata = {
     title: 'Hospital Software for Your Nursing Home, Live in 7 Days',
     description: 'OPD and IPD admission/discharge billing, pharmacy and daily reports, with bills and reminders on WhatsApp. From ₹39,999 one-time. No per-patient fees. You own your data.',
@@ -52,6 +54,8 @@ export default function HospitalPage() {
                 <section className="mt-8 grid gap-3 sm:grid-cols-3">
                     {FEARS.map(([q, a]) => <div key={q} className="rounded-2xl border border-[#CBD5E1] bg-white p-4"><p className="font-semibold">{q}</p><p className="mt-1 text-[15px] text-[#4B5567]">{a}</p></div>)}
                 </section>
+
+                <HospitalScreens />
 
                 <section className="mt-14">
                     <h2 className="text-2xl font-bold">Price</h2>

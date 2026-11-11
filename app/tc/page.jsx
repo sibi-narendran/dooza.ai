@@ -3,6 +3,8 @@
 // DRAFT: noindex, unlinked, not in the sitemap; no ads until Sibi says yes. No reviews or logos until real.
 import TcForm from '@/components/tc/TcForm';
 
+import TcScreens from '@/components/tc/TcScreens';
+
 export const metadata = {
     title: 'Transaction Coordinator for Texas Realtors, $99 a File',
     description: 'Contract to close, every deadline tracked and every step checked by a person. First file free. No card, no contract, no subscription.',
@@ -51,6 +53,8 @@ export default function TcPage() {
                 <section className="mt-8 grid gap-3 sm:grid-cols-3">
                     {FEARS.map(([q, a]) => <div key={q} className="rounded-2xl border border-[#CBD5E1] bg-white p-4"><p className="font-semibold">{q}</p><p className="mt-1 text-[15px] text-[#4B5567]">{a}</p></div>)}
                 </section>
+
+                <TcScreens />
 
                 <section className="mt-14">
                     <h2 className="text-2xl font-bold">Price</h2>
