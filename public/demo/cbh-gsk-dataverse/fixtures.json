@@ -1,0 +1,121 @@
+{
+  "fixture_id": "P1-SYNTH",
+  "version": "0.3.0-sample",
+  "sample": true,
+  "note": "SYNTHETIC Persona 1 cases written by Dooza from the public posting example. Not CBH's controlled Persona 1 profile or executable fixture. Expected results were fixed before the runner was executed.",
+  "persona": {"id": "P1", "label": "Persona 1 (synthetic)", "participant_concern": "ovarian cancer (participant-reported concern, not a diagnosis)"},
+  "compared_fields": ["disposition", "finding_type", "claim_ceiling", "support_level", "rejected_claims", "blocked_on"],
+  "cases": [
+    {
+      "id": "P1-C01", "title": "Baseline: qualified family illness + personal occult evidence",
+      "rule_id": "RC-INV-01",
+      "evidence": [
+        {"id": "EV-P1-001", "input_key": "family_illness_pattern", "domain": "D10", "scope": "family", "value": "yes", "qualified": true, "condition": "ovarian cancer (mother, maternal aunt)", "response_ref": "Q-D10-04"},
+        {"id": "EV-P1-002", "input_key": "occult_involvement", "domain": "D3", "scope": "participant", "value": "yes", "qualified": false, "response_ref": "Q-D3-02"}
+      ],
+      "requested_claims": [],
+      "expected": {"disposition": "PERMITTED", "finding_type": "INVESTIGATION_HYPOTHESIS", "claim_ceiling": "bounded_hypothesis", "support_level": "bounded", "rejected_claims": [], "blocked_on": []}
+    },
+    {
+      "id": "P1-C02", "title": "Same evidence, downstream asks for medical cause, mechanism and ministry priority",
+      "rule_id": "RC-INV-01",
+      "evidence": [
+        {"id": "EV-P1-001", "input_key": "family_illness_pattern", "domain": "D10", "scope": "family", "value": "yes", "qualified": true, "condition": "ovarian cancer (mother, maternal aunt)", "response_ref": "Q-D10-04"},
+        {"id": "EV-P1-002", "input_key": "occult_involvement", "domain": "D3", "scope": "participant", "value": "yes", "qualified": false, "response_ref": "Q-D3-02"}
+      ],
+      "requested_claims": ["MEDICAL_CAUSE", "SPIRITUAL_MECHANISM_CONFIRMED", "MINISTRY_PRIORITY"],
+      "expected": {"disposition": "PERMITTED", "finding_type": "INVESTIGATION_HYPOTHESIS", "claim_ceiling": "bounded_hypothesis", "support_level": "bounded", "rejected_claims": ["MEDICAL_CAUSE", "MINISTRY_PRIORITY", "SPIRITUAL_MECHANISM_CONFIRMED"], "blocked_on": []}
+    },
+    {
+      "id": "P1-C03", "title": "Strong ministry recommendation does not strengthen the hypothesis",
+      "rule_id": "RC-INV-01",
+      "evidence": [
+        {"id": "EV-P1-001", "input_key": "family_illness_pattern", "domain": "D10", "scope": "family", "value": "yes", "qualified": true, "condition": "ovarian cancer (mother, maternal aunt)", "response_ref": "Q-D10-04"},
+        {"id": "EV-P1-002", "input_key": "occult_involvement", "domain": "D3", "scope": "participant", "value": "yes", "qualified": false, "response_ref": "Q-D3-02"}
+      ],
+      "context": {"ministry_recommendation_strength": "strong"},
+      "requested_claims": [],
+      "expected": {"disposition": "PERMITTED", "finding_type": "INVESTIGATION_HYPOTHESIS", "claim_ceiling": "bounded_hypothesis", "support_level": "bounded", "rejected_claims": [], "blocked_on": []}
+    },
+    {
+      "id": "P1-C04", "title": "Negative evidence: occult question supplied and answered no",
+      "rule_id": "RC-INV-01",
+      "evidence": [
+        {"id": "EV-P1-001", "input_key": "family_illness_pattern", "domain": "D10", "scope": "family", "value": "yes", "qualified": true, "condition": "ovarian cancer (mother, maternal aunt)", "response_ref": "Q-D10-04"},
+        {"id": "EV-P1-012", "input_key": "occult_involvement", "domain": "D3", "scope": "participant", "value": "no", "qualified": false, "response_ref": "Q-D3-02"}
+      ],
+      "requested_claims": [],
+      "expected": {"disposition": "WITHHELD", "finding_type": null, "claim_ceiling": "none", "support_level": "none", "rejected_claims": [], "blocked_on": []}
+    },
+    {
+      "id": "P1-C05", "title": "Contrast: illness reported for the participant only, no family pattern",
+      "rule_id": "RC-INV-01",
+      "evidence": [
+        {"id": "EV-P1-021", "input_key": "family_illness_pattern", "domain": "D10", "scope": "participant", "value": "yes", "qualified": true, "condition": "ovarian cancer (participant only)", "response_ref": "Q-D10-04"},
+        {"id": "EV-P1-002", "input_key": "occult_involvement", "domain": "D3", "scope": "participant", "value": "yes", "qualified": false, "response_ref": "Q-D3-02"}
+      ],
+      "requested_claims": [],
+      "expected": {"disposition": "WITHHELD", "finding_type": null, "claim_ceiling": "none", "support_level": "none", "rejected_claims": [], "blocked_on": []}
+    },
+    {
+      "id": "P1-C06", "title": "Missing evidence: occult question never supplied in the fixture",
+      "rule_id": "RC-INV-01",
+      "evidence": [
+        {"id": "EV-P1-001", "input_key": "family_illness_pattern", "domain": "D10", "scope": "family", "value": "yes", "qualified": true, "condition": "ovarian cancer (mother, maternal aunt)", "response_ref": "Q-D10-04"}
+      ],
+      "requested_claims": [],
+      "expected": {"disposition": "BLOCKED", "finding_type": null, "claim_ceiling": "none", "support_level": "none", "rejected_claims": [], "blocked_on": ["ER-02:occult_involvement"]},
+      "missing_owner": "CBH (participant responses) via GSK engineer fixture update"
+    },
+    {
+      "id": "P1-C07", "title": "Inner Healing emphasis from belief + emotional patterns",
+      "rule_id": "RC-IH-01",
+      "evidence": [
+        {"id": "EV-P1-003", "input_key": "belief_pattern", "domain": "D5", "scope": "participant", "value": "yes", "qualified": false, "response_ref": "Q-D5-07"},
+        {"id": "EV-P1-004", "input_key": "emotional_pattern", "domain": "D6", "scope": "participant", "value": "yes", "qualified": false, "response_ref": "Q-D6-03"}
+      ],
+      "requested_claims": ["MINISTRY_PRIORITY"],
+      "expected": {"disposition": "PERMITTED", "finding_type": "INNER_HEALING_EMPHASIS", "claim_ceiling": "bounded_hypothesis", "support_level": "bounded", "rejected_claims": ["MINISTRY_PRIORITY"], "blocked_on": []}
+    },
+    {
+      "id": "P1-C08", "title": "Physical Healing relevance keeps the concern as reported, not a diagnosis",
+      "rule_id": "RC-PH-01",
+      "evidence": [
+        {"id": "EV-P1-005", "input_key": "health_concern", "domain": "D1", "scope": "participant", "value": "yes", "qualified": false, "reported_as": "personal_concern", "condition": "ovarian cancer", "response_ref": "Q-D1-01"}
+      ],
+      "requested_claims": ["DIAGNOSIS", "MEDICAL_CAUSE"],
+      "expected": {"disposition": "PERMITTED", "finding_type": "PHYSICAL_HEALING_RELEVANCE", "claim_ceiling": "relevance_only", "support_level": "relevance_only", "rejected_claims": ["DIAGNOSIS", "MEDICAL_CAUSE"], "blocked_on": []}
+    },
+    {
+      "id": "P1-C09", "title": "Deliberately invalid input is detected, not guessed",
+      "rule_id": "RC-INV-01",
+      "evidence": [
+        {"id": "EV-P1-001", "input_key": "family_illness_pattern", "domain": "D10", "scope": "family", "value": "maybe", "qualified": true, "condition": "ovarian cancer (mother, maternal aunt)", "response_ref": "Q-D10-04"},
+        {"id": "EV-P1-002", "input_key": "occult_involvement", "domain": "D3", "scope": "participant", "value": "yes", "qualified": false, "response_ref": "Q-D3-02"}
+      ],
+      "requested_claims": [],
+      "expected": {"disposition": "INVALID_INPUT", "finding_type": null, "claim_ceiling": "none", "support_level": "none", "rejected_claims": [], "blocked_on": []}
+    },
+    {
+      "id": "P1-C10", "title": "Intentionally altered expected result (harness must catch it)",
+      "rule_id": "RC-INV-01",
+      "evidence": [
+        {"id": "EV-P1-001", "input_key": "family_illness_pattern", "domain": "D10", "scope": "family", "value": "yes", "qualified": true, "condition": "ovarian cancer (mother, maternal aunt)", "response_ref": "Q-D10-04"},
+        {"id": "EV-P1-002", "input_key": "occult_involvement", "domain": "D3", "scope": "participant", "value": "yes", "qualified": false, "response_ref": "Q-D3-02"}
+      ],
+      "context": {"ministry_recommendation_strength": "strong"},
+      "requested_claims": [],
+      "expected": {"disposition": "PERMITTED", "finding_type": "INVESTIGATION_HYPOTHESIS", "claim_ceiling": "established_cause", "support_level": "strong", "rejected_claims": [], "blocked_on": []},
+      "altered_on_purpose": true
+    },
+    {
+      "id": "P1-C11", "title": "Non-contributor restoration-relevance example",
+      "rule_id": "RC-NC-01",
+      "evidence": [
+        {"id": "EV-P1-001", "input_key": "family_illness_pattern", "domain": "D10", "scope": "family", "value": "yes", "qualified": true, "condition": "ovarian cancer (mother, maternal aunt)", "response_ref": "Q-D10-04"}
+      ],
+      "requested_claims": [],
+      "expected": {"disposition": "PERMITTED", "finding_type": "RESTORATION_RELEVANCE", "claim_ceiling": "relevance_only", "support_level": "relevance_only", "rejected_claims": [], "blocked_on": []}
+    }
+  ]
+}

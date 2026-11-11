@@ -1,0 +1,219 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>CBH · GSK Dataverse Spec &amp; Reference Tests (demo by Dooza)</title>
+<style>
+:root{--a:#0b5cad;--ink:#1d2330;--mut:#5c6478;--bg:#fff;--soft:#f4f6fa;--line:#dde2ec;--red:#d1242f;--redbg:#fdecee;--green:#1a7f37;--grbg:#e8f6ec;--amber:#b25e00;--ambg:#fff4e0;--grey:#5c6478;--gybg:#eceff4}
+*{box-sizing:border-box}html,body{overflow-x:hidden}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+.bar{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 16px}.bar b{color:#ffd43b}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 16px;max-width:1120px;margin:auto}
+.logo{font-weight:800;font-size:19px;color:var(--a)}.logo small{display:block;font-weight:500;font-size:12px;color:var(--mut)}
+nav{display:flex;gap:6px;flex-wrap:wrap}nav button,.btn,.btn2{font:inherit;font-weight:700;border-radius:9px;padding:9px 14px;cursor:pointer;border:1px solid var(--a)}
+nav button{background:#fff;color:var(--a)}nav button.on,.btn{background:var(--a);color:#fff}.btn2{background:#fff;color:var(--a)}
+.small{padding:5px 10px;font-size:13px}
+main{max-width:1120px;margin:auto;padding:4px 16px 24px}
+h2{font-size:22px;margin:14px 0 12px}h3{font-size:17px;margin:0 0 8px}h4{margin:14px 0 6px;font-size:15px}
+p{margin:0 0 10px}.mut{color:var(--mut)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:18px}
+.kpi{border-radius:12px;padding:14px;background:var(--soft)}.kpi>span{display:block;color:var(--mut);font-size:13px;font-weight:600}.kpi b{font-size:26px}
+.kpi.p{background:var(--grbg)}.kpi.p b{color:var(--green)}.kpi.f{background:var(--redbg)}.kpi.f b{color:var(--red)}.kpi.b{background:var(--ambg)}.kpi.b b{color:var(--amber)}.kpi.n{background:var(--gybg)}.kpi.n b{color:var(--grey)}
+.card{background:var(--soft);border-radius:12px;padding:16px;margin-bottom:16px;min-width:0}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}.tw>table{min-width:640px}td code{word-break:normal;white-space:nowrap}table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;font-size:14px}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+code,.mono{font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;word-break:break-all}
+.pill{display:inline-block;font-size:12px;border-radius:20px;padding:1px 9px;background:#e7ecf6;color:var(--mut);margin:1px 2px 1px 0;white-space:nowrap}
+.pill.gsk{background:#e6effb;color:var(--a);font-weight:700}.pill.rt{background:#efe9fb;color:#6b4fbb;font-weight:700}
+.st{display:inline-block;font-size:12px;font-weight:800;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.st.PASSED{background:var(--green);color:#fff}.st.FAILED{background:var(--red);color:#fff}.st.BLOCKED{background:var(--amber);color:#fff}.st.NOTRUN{background:var(--grey);color:#fff}
+.owner{background:#fff;border:1px solid var(--line);border-left:4px solid var(--a);border-radius:10px;padding:10px 12px;margin:8px 0;font-size:14px}
+.owner.only{border-left-color:var(--red)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.sp{flex:1}
+details.case{background:#fff;border:1px solid var(--line);border-radius:10px;margin:8px 0}
+details.case summary{cursor:pointer;padding:10px 12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;list-style:none}
+details.case summary::-webkit-details-marker{display:none}
+details.case .body{padding:0 12px 12px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px}.cmp>div{min-width:0}
+pre{background:#0f1420;color:#dbe4f5;border-radius:10px;padding:12px;overflow:auto;font:12px/1.45 ui-monospace,Menlo,Consolas,monospace;max-height:420px;margin:6px 0;white-space:pre}
+pre.wrap{white-space:pre-wrap;word-break:break-word}
+.diff{color:var(--red);font-weight:700}.ok{color:var(--green);font-weight:700}.bad{color:var(--red);font-weight:700}.warn{color:var(--amber);font-weight:700}
+ul{margin:4px 0 10px;padding-left:20px}li{margin:3px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tsel{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 12px}.tsel button{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;border-radius:20px;padding:4px 11px;cursor:pointer}.tsel button.on{border-color:var(--a);color:var(--a);font-weight:700}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:24px 16px;border-top:1px solid var(--line);margin-top:20px}
+.hide{display:none}
+@media(max-width:720px){.cmp,.grid2{grid-template-columns:1fr}.kpi b{font-size:21px}th,td{padding:6px 7px}h2{font-size:20px}}
+</style></head><body>
+<div class="bar"><b>SAMPLE DATA</b>: built by Dooza from the public job posting only. Not CBH's GSK package, Persona 1 profile or approved ministry content.</div>
+<header><span class="logo">GSK → Dataverse handoff<small>Demo for CBH · Power Platform Engineer, Dataverse Design, Testing &amp; Handoff</small></span>
+<nav id="nav"><button data-v="spec" class="on">Dataverse spec</button><button data-v="tests">Reference tests</button><button data-v="evid">Evidence rules</button><button data-v="man">Manifest</button></nav></header>
+<main>
+
+<section id="v-spec">
+<h2>Dataverse implementation spec (sample)</h2>
+<div class="owner only"><b>Write-ownership rule.</b> Characterization (Stage 4) is the <b>only</b> writer of <code>cbh_finding</code>. The six GSK tables are governed, read-only input to Characterization: loaded by the governed GSK import, never written by survey screens, flows or report templates. Participant State (Stage 5) reads Findings and never rewrites them.</div>
+<div class="row" style="margin:12px 0"><span class="sp mut" id="specCount"></span>
+<button class="btn small" id="dlJson">Download spec JSON</button><button class="btn2 small" id="dlCsv">Download columns CSV</button><button class="btn2 small" id="dlXml">Download solution export (XML)</button></div>
+<div class="card"><h3>Write-ownership matrix</h3><div class="tw"><table id="ownT"></table></div></div>
+<div class="card"><h3>Relationships</h3><div class="tw"><table id="relT"></table></div>
+<p class="mut" style="margin-top:8px;font-size:13px">Lookups are N:1 from the child table; the same relationship read from the parent is 1:N. GSK lookups from runtime tables are reference-only (Restrict delete), so a Finding can never lose its rule lineage.</p></div>
+<div class="card"><h3>Tables and columns</h3><div class="tsel" id="tsel"></div><div id="tableDetail"></div></div>
+<div class="card"><h3>Solution-style table export</h3><p class="mut">Same spec in the shape of a Dataverse solution's <code>customizations.xml</code> (entities, attributes, relationships). Proposed physical design, for review; not an exported managed solution.</p><pre id="xmlOut"></pre></div>
+</section>
+
+<section id="v-tests" class="hide">
+<div class="row"><h2 class="sp">Reference tests: synthetic Persona 1</h2><button class="btn small" id="rerun">Re-run in browser</button><button class="btn2 small" id="dlRes">Results JSON</button><button class="btn2 small" id="dlResCsv">Results CSV</button></div>
+<p class="mut" id="runMeta">Loading runner.js, rules.json, fixtures.json…</p>
+<div class="kpis" id="kpis"></div>
+<p class="mut" style="font-size:13px">Expected results sit in fixtures.json and were fixed before the run. runner.js computes the observed result from rules + evidence only, then compares them per case. Click a case for expected vs observed, reasons and lineage.</p>
+<div id="cases"></div>
+</section>
+
+<section id="v-evid" class="hide">
+<h2>Evidence rules</h2>
+<div class="grid2">
+<div class="card"><h3>Missing evidence → BLOCKED</h3><p>A required input was <b>never supplied</b> (the question is not in the fixture, the record was not delivered). The runner makes <b>no inference</b>: no Finding, no withholding decision, nothing guessed or filled in. The test is reported as <span class="st BLOCKED">BLOCKED</span>, naming the missing input, its owner and what can still be checked.</p><p class="mut">Example: <b>P1-C06</b>, occult question absent → blocked on <code>ER-02:occult_involvement</code>.</p></div>
+<div class="card"><h3>Negative evidence → WITHHELD</h3><p>The input <b>was supplied</b> and says no (or is out of scope, or not qualified). That is real evidence. The rule is not met, so the interpretation is correctly <b>withheld</b>, and the test can <span class="st PASSED">PASSED</span> by withholding.</p><p class="mut">Examples: <b>P1-C04</b> occult answered "no"; <b>P1-C05</b> illness reported for the participant only, rule needs a family pattern.</p></div>
+<div class="card"><h3>Expected (fixed before the run)</h3><p>Each case's <code>expected</code> block is written from the GSK rule and committed in fixtures.json before anything runs. Its SHA-256 is pinned in the manifest, so a changed expectation shows up as a changed hash.</p></div>
+<div class="card"><h3>Observed (runner output)</h3><p>runner.js never reads <code>expected</code>. It evaluates rules + evidence, then a separate <code>compare()</code> checks six fields per case: disposition, finding type, claim ceiling, support level, rejected claims, blocked-on. Any difference = <span class="st FAILED">FAILED</span> with the field named.</p></div>
+</div>
+<div class="card"><h3>Boundaries applied (from the posting's example)</h3><ul>
+<li>Qualified family illness pattern + personal/family occult evidence permits a <b>bounded investigation hypothesis</b> about a barrier to healing. Ceiling: <code>bounded_hypothesis</code>.</li>
+<li>It never permits a <b>medical cause</b>, a <b>confirmed spiritual mechanism</b> or a <b>ministry priority</b>: these are rejected as prohibited inferences (P1-C02).</li>
+<li>A strong ministry recommendation is recorded but <b>does not raise support</b> (P1-C03 equals P1-C01).</li>
+<li>A participant-reported concern stays a reported concern, never a diagnosis (P1-C08).</li>
+<li>Invalid input is rejected and named, not coerced (P1-C09). An undelivered evaluator is <span class="st NOTRUN">NOT RUN</span>, not passed (P1-C11).</li></ul>
+<p class="mut" style="font-size:13px">Status order of precedence: NOT RUN (evaluator missing) → INVALID_INPUT → BLOCKED (any required input missing) → WITHHELD (supplied but unmet) → PERMITTED. Contract inspection, simulated consumption and platform execution are separate labels; everything on this page is a local reference run only and certifies no Dataverse behavior.</p></div>
+</section>
+
+<section id="v-man" class="hide">
+<h2>Manifest</h2>
+<p class="mut">SHA-256 of each file computed in your browser (<code>crypto.subtle</code>) next to the static <code>manifest.json</code> computed with <code>sha256sum</code> at build time.</p>
+<div class="card"><div class="tw"><table id="manT"></table></div><p id="manSum" style="margin-top:10px"></p></div>
+<div class="card"><h3>Rerun from a clean folder</h3><pre class="wrap">mkdir cbh-run &amp;&amp; cd cbh-run
+# download rules.json fixtures.json runner.js manifest.json from this page's folder
+sha256sum -c &lt;(node -e 'const m=require("./manifest.json");for(const f of m.files)console.log(f.sha256+"  "+f.path)')
+node -e 'const R=require("./runner.js");const o=R.runAll(require("./rules.json"),require("./fixtures.json"));console.log(o.counts)'</pre>
+<p class="mut" style="font-size:13px">Node 18+; no dependencies, no network, no credentials, no platform connection.</p>
+<div class="row"><a class="btn2 small" href="rules.json" download>rules.json</a><a class="btn2 small" href="fixtures.json" download>fixtures.json</a><a class="btn2 small" href="runner.js" download>runner.js</a><a class="btn2 small" href="manifest.json" download>manifest.json</a></div></div>
+</section>
+</main>
+<footer>Demo built by Dooza (dooza.ai) for the CBH Power Platform Engineer post. Sample data only: tables, rules and Persona 1 cases are illustrative, written from the public posting, and will be replaced by CBH's controlled GSK package, L3 references and fixture.</footer>
+<script src="runner.js"></script>
+<script>
+"use strict";
+var $=function(s){return document.querySelector(s)};
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+document.querySelectorAll("#nav button").forEach(function(b){b.onclick=function(){
+  document.querySelectorAll("#nav button").forEach(function(x){x.classList.toggle("on",x===b)});
+  ["spec","tests","evid","man"].forEach(function(v){$("#v-"+v).classList.toggle("hide",v!==b.dataset.v)});
+  if(b.dataset.v==="man")manifest();}});
+var H=(location.hash||"").slice(1);if(["spec","tests","evid","man"].indexOf(H)>=0)setTimeout(function(){document.querySelector('#nav button[data-v="'+H+'"]').click()},0);
+function download(name,text,type){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:type}));a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)}
+function csvCell(v){v=v==null?"":String(v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
+
+/* ---------- Dataverse spec (SAMPLE) ---------- */
+var GSK_OWNER="GSK governed import (solution data load by GSK engineer, CBH-approved)";
+var C=function(n,t,r,d,x){return{name:n,type:t,required:r?"Yes":"No",notes:d||"",target:x||""}};
+function std(code){return[C("cbh_version","Text",1,"Record version, e.g. 1.0"),C("cbh_approvalstatus","Choice",1,"Draft | Candidate | Approved | Retired"),C("cbh_effectivefrom","Date Only",0,"Approval effective date")]}
+var SPEC={sample:true,solution:"CBHGSKSample",publisher_prefix:"cbh",version:"0.3.0-sample",
+ rule:"Characterization is the only writer of cbh_finding. GSK tables are read-only input to Characterization.",
+ tables:[
+ {logical:"cbh_concept",display:"Concept",layer:"GSK",stage:"GSK",owner:GSK_OWNER,readers:"Characterization (read-only)",pk:"cbh_conceptid",altkey:"cbh_code + cbh_version",
+  columns:[C("cbh_conceptid","Unique identifier",1,"Primary key"),C("cbh_code","Text",1,"Stable ID, e.g. CN-01"),C("cbh_name","Text",1,"Primary name column"),C("cbh_domain","Choice",1,"D1..D12 (Thin Slice: D1, D3, D5, D6, D10)"),C("cbh_definition","Multiline",0,"Approved definition text"),C("cbh_sourceid","Lookup",1,"Controlling source","cbh_source")].concat(std())},
+ {logical:"cbh_proposition",display:"Proposition",layer:"GSK",stage:"GSK",owner:GSK_OWNER,readers:"Characterization (read-only)",pk:"cbh_propositionid",altkey:"cbh_code + cbh_version",
+  columns:[C("cbh_propositionid","Unique identifier",1,"Primary key"),C("cbh_code","Text",1,"Stable ID, e.g. PR-01"),C("cbh_statement","Multiline",1,"Governed statement incl. what it does NOT establish"),C("cbh_conceptid","Lookup",1,"Concept","cbh_concept"),C("cbh_sourceid","Lookup",1,"Source position","cbh_source")].concat(std())},
+ {logical:"cbh_ruleconfiguration",display:"Rule Configuration",layer:"GSK",stage:"GSK",owner:GSK_OWNER,readers:"Characterization (read-only)",pk:"cbh_ruleconfigurationid",altkey:"cbh_code + cbh_version",
+  columns:[C("cbh_ruleconfigurationid","Unique identifier",1,"Primary key"),C("cbh_code","Text",1,"Stable ID, e.g. RC-INV-01"),C("cbh_propositionid","Lookup",1,"Proposition applied","cbh_proposition"),C("cbh_outputfindingtype","Choice",1,"Investigation hypothesis | Inner Healing emphasis | Physical Healing relevance | Restoration relevance"),C("cbh_claimceiling","Choice",1,"None | Relevance only | Bounded hypothesis (Established cause is never configurable here)"),C("cbh_supportlevel","Choice",1,"Relevance only | Bounded"),C("cbh_evaluatorcode","Text",1,"Evaluator ID, e.g. EV-CHAR-01"),C("cbh_evaluatordelivered","Yes/No",1,"No = cases report NOT RUN"),C("cbh_minrequirements","Whole Number",1,"Count of evidence requirements that must all be met")].concat(std())},
+ {logical:"cbh_evidencerequirement",display:"Evidence Requirement",layer:"GSK",stage:"GSK",owner:GSK_OWNER,readers:"Characterization (read-only)",pk:"cbh_evidencerequirementid",altkey:"cbh_code + cbh_version",
+  columns:[C("cbh_evidencerequirementid","Unique identifier",1,"Primary key"),C("cbh_code","Text",1,"Stable ID, e.g. ER-02"),C("cbh_ruleconfigurationid","Lookup",1,"Rule it serves","cbh_ruleconfiguration"),C("cbh_inputkey","Text",1,"Matches cbh_evidenceitem.cbh_inputkey"),C("cbh_domain","Choice",1,"D1..D12"),C("cbh_requiredscope","Choice",1,"Participant | Family | Either"),C("cbh_requiresqualification","Yes/No",1,"Family pattern must be qualified"),C("cbh_onmissing","Choice",1,"Block (no inference)"),C("cbh_onnegative","Choice",1,"Withhold")].concat(std())},
+ {logical:"cbh_source",display:"Source",layer:"GSK",stage:"GSK",owner:GSK_OWNER,readers:"Characterization, report lineage (read-only)",pk:"cbh_sourceid",altkey:"cbh_code + cbh_docversion",
+  columns:[C("cbh_sourceid","Unique identifier",1,"Primary key"),C("cbh_code","Text",1,"Stable ID, e.g. SRC-02"),C("cbh_title","Text",1,"Primary name column"),C("cbh_docversion","Text",1,"Controlling document version"),C("cbh_section","Text",0,"Section cited"),C("cbh_sourcetype","Choice",1,"L3 reference | Ministry framework | Boundary register"),C("cbh_approvalstatus","Choice",1,"Draft | Candidate | Approved | Retired"),C("cbh_link","Text",0,"Controlled-folder path / URL")]},
+ {logical:"cbh_boundary",display:"Boundary",layer:"GSK",stage:"GSK",owner:GSK_OWNER,readers:"Characterization (read-only)",pk:"cbh_boundaryid",altkey:"cbh_code + cbh_version",
+  columns:[C("cbh_boundaryid","Unique identifier",1,"Primary key"),C("cbh_code","Text",1,"Stable ID, e.g. BD-01"),C("cbh_ruleconfigurationid","Lookup",1,"Rule it limits (N:N in full build via intersect)","cbh_ruleconfiguration"),C("cbh_boundarytype","Choice",1,"Prohibited inference | Independence | Claim ceiling"),C("cbh_prohibitedclaim","Choice",0,"Medical cause | Spiritual mechanism confirmed | Ministry priority | Diagnosis"),C("cbh_independentfield","Text",0,"e.g. ministry_recommendation_strength"),C("cbh_text","Multiline",1,"Boundary wording"),C("cbh_sourceid","Lookup",1,"Source","cbh_source")].concat(std())},
+ {logical:"cbh_participant",display:"Participant",layer:"Runtime",stage:"1 Responses",owner:"Stage 1 intake (Power Pages form + intake flow)",readers:"All runtime stages",pk:"cbh_participantid",altkey:"cbh_participantcode",
+  columns:[C("cbh_participantid","Unique identifier",1,"Primary key"),C("cbh_participantcode","Text",1,"Synthetic code, e.g. P1"),C("cbh_issynthetic","Yes/No",1,"Thin Slice = Yes"),C("cbh_consentgiven","Yes/No",1,""),C("cbh_enrolledon","Date Only",0,"")]},
+ {logical:"cbh_assessment",display:"Assessment",layer:"Runtime",stage:"1 Responses",owner:"Stage 1 intake",readers:"Stages 2-5",pk:"cbh_assessmentid",altkey:"cbh_assessmentcode",
+  columns:[C("cbh_assessmentid","Unique identifier",1,"Primary key"),C("cbh_assessmentcode","Text",1,""),C("cbh_participantid","Lookup",1,"Participant","cbh_participant"),C("cbh_surveyversion","Text",1,"Pinned survey version"),C("cbh_status","Choice",1,"In progress | Submitted | Characterized | State published"),C("cbh_submittedon","Date Only",0,"")]},
+ {logical:"cbh_evidenceitem",display:"Evidence Item",layer:"Runtime",stage:"1-3 Responses / Signals / Clusters",owner:"Stages 1-3 flows (response capture, signal derivation, clustering)",readers:"Characterization (read-only)",pk:"cbh_evidenceitemid",altkey:"cbh_assessmentid + cbh_responseref",
+  columns:[C("cbh_evidenceitemid","Unique identifier",1,"Primary key"),C("cbh_assessmentid","Lookup",1,"Assessment","cbh_assessment"),C("cbh_inputkey","Text",1,"e.g. occult_involvement"),C("cbh_domain","Choice",1,"D1..D12"),C("cbh_scope","Choice",1,"Participant | Family (kept separate)"),C("cbh_value","Choice",1,"Yes | No (absence = no row = missing)"),C("cbh_qualified","Yes/No",1,""),C("cbh_reportedas","Choice",0,"Reported diagnosis | Symptom | Personal concern | Pattern"),C("cbh_conditionidentity","Text",0,"Condition name as reported"),C("cbh_responseref","Text",1,"Question ID for lineage"),C("cbh_clustercode","Text",0,"Signal cluster membership"),C("cbh_responsetext","Multiline",0,"Exact participant answer")]},
+ {logical:"cbh_characterization",display:"Characterization Run",layer:"Runtime",stage:"4 Characterization",owner:"Characterization evaluator (Stage 4)",readers:"Participant State",pk:"cbh_characterizationid",altkey:"cbh_runcode",
+  columns:[C("cbh_characterizationid","Unique identifier",1,"Primary key"),C("cbh_runcode","Text",1,""),C("cbh_assessmentid","Lookup",1,"Assessment","cbh_assessment"),C("cbh_rulesetversion","Text",1,"e.g. CBH-GSK-SAMPLE@0.3.0"),C("cbh_runnerversion","Text",1,""),C("cbh_inputhash","Text",1,"SHA-256 of inputs (rerun check)"),C("cbh_runstatus","Choice",1,"Completed | Blocked | Invalid input | Not run"),C("cbh_runon","Date Only",1,"")]},
+ {logical:"cbh_finding",display:"Finding",layer:"Runtime",stage:"4 Characterization",owner:"Characterization ONLY (no flow, form or template may write)",readers:"Participant State (read-only)",pk:"cbh_findingid",altkey:"cbh_characterizationid + cbh_ruleconfigurationid",
+  columns:[C("cbh_findingid","Unique identifier",1,"Primary key"),C("cbh_characterizationid","Lookup",1,"Run that published it","cbh_characterization"),C("cbh_ruleconfigurationid","Lookup",1,"GSK rule applied (lineage)","cbh_ruleconfiguration"),C("cbh_disposition","Choice",1,"Permitted | Withheld | Blocked | Invalid input"),C("cbh_findingtype","Choice",0,"Empty unless Permitted"),C("cbh_claimceiling","Choice",1,"None | Relevance only | Bounded hypothesis"),C("cbh_supportlevel","Choice",1,"None | Relevance only | Bounded"),C("cbh_rejectedclaims","Multiline",0,"Prohibited inferences refused"),C("cbh_blockedon","Multiline",0,"Missing ER IDs"),C("cbh_rationale","Multiline",1,"Reasons, per evidence requirement"),C("cbh_lineage","Multiline",1,"JSON: rule@version, proposition, source, evidence IDs"),C("cbh_recommendationstrength","Choice",0,"Recorded only; never raises support")]},
+ {logical:"cbh_participantstate",display:"Participant State",layer:"Runtime",stage:"5 Participant State",owner:"Participant State normalizer (Stage 5)",readers:"Stage 6+ (out of Thin Slice scope)",pk:"cbh_participantstateid",altkey:"cbh_participantid + cbh_stateversion",
+  columns:[C("cbh_participantstateid","Unique identifier",1,"Primary key"),C("cbh_participantid","Lookup",1,"Participant","cbh_participant"),C("cbh_characterizationid","Lookup",1,"Source run","cbh_characterization"),C("cbh_stateversion","Whole Number",1,"Increments per publish"),C("cbh_contractversion","Text",1,"State contract version"),C("cbh_deliverancewarranted","Yes/No",1,"Independently warranted?"),C("cbh_innerhealingwarranted","Yes/No",1,""),C("cbh_physicalhealingwarranted","Yes/No",1,""),C("cbh_findingsnapshot","Multiline",1,"Findings copied with qualifications + lineage, unmodified"),C("cbh_publishedon","Date Only",1,"")]}
+ ]};
+SPEC.relationships=[];
+SPEC.tables.forEach(function(t){t.columns.forEach(function(c){if(c.type==="Lookup")SPEC.relationships.push({name:c.target+"_"+t.logical+"_"+c.name,parent:c.target,child:t.logical,lookup:c.name,one_to_many:c.target+" 1:N "+t.logical,many_to_one:t.logical+" N:1 "+c.target,cascade_delete:"Restrict"})})});
+
+var DVTYPE={"Unique identifier":"primarykey","Text":"nvarchar","Multiline":"ntext","Choice":"picklist","Lookup":"lookup","Whole Number":"int","Date Only":"datetime","Yes/No":"bit"};
+function specXml(){var o=['<?xml version="1.0" encoding="utf-8"?>','<!-- SAMPLE: proposed physical design for review, not an exported CBH solution -->','<ImportExportXml SolutionPackageVersion="9.2">','  <Entities>'];
+ SPEC.tables.forEach(function(t){o.push('    <Entity Name="'+t.logical+'" DisplayName="'+t.display+'" OwnershipType="OrgOwned" Layer="'+t.layer+'" WriteOwner="'+esc(t.owner)+'">');
+  o.push('      <PrimaryKey>'+t.pk+'</PrimaryKey>','      <AlternateKey>'+esc(t.altkey)+'</AlternateKey>','      <attributes>');
+  t.columns.forEach(function(c){o.push('        <attribute PhysicalName="'+c.name+'" Type="'+DVTYPE[c.type]+'"'+(c.type==="Date Only"?' Behavior="DateOnly"':'')+(c.target?' Target="'+c.target+'"':'')+' RequiredLevel="'+(c.required==="Yes"?"ApplicationRequired":"None")+'"/>')});
+  o.push('      </attributes>','    </Entity>')});
+ o.push('  </Entities>','  <EntityRelationships>');
+ SPEC.relationships.forEach(function(r){o.push('    <EntityRelationship Name="'+r.name+'" Type="OneToMany" ReferencedEntity="'+r.parent+'" ReferencingEntity="'+r.child+'" ReferencingAttribute="'+r.lookup+'" CascadeDelete="'+r.cascade_delete+'"/>')});
+ o.push('  </EntityRelationships>','</ImportExportXml>');return o.join("\n")}
+function specCsv(){var rows=[["table","display","layer","stage","write_owner","primary_key","column","dataverse_type","required","lookup_target","notes"]];
+ SPEC.tables.forEach(function(t){t.columns.forEach(function(c){rows.push([t.logical,t.display,t.layer,t.stage,t.owner,t.pk,c.name,c.type,c.required,c.target,c.notes])})});
+ return rows.map(function(r){return r.map(csvCell).join(",")}).join("\n")}
+
+function renderSpec(){
+ var nc=SPEC.tables.reduce(function(a,t){return a+t.columns.length},0);
+ $("#specCount").textContent=SPEC.tables.length+" tables · "+nc+" columns · "+SPEC.relationships.length+" relationships (sample)";
+ $("#ownT").innerHTML="<tr><th>Table</th><th>Layer</th><th>Stage</th><th>Write owner</th><th>Read by</th></tr>"+SPEC.tables.map(function(t){
+  return "<tr><td><code>"+t.logical+"</code><br>"+t.display+"</td><td><span class='pill "+(t.layer==="GSK"?"gsk":"rt")+"'>"+t.layer+"</span></td><td>"+esc(t.stage)+"</td><td"+(t.logical==="cbh_finding"?" class='bad'":"")+">"+esc(t.owner)+"</td><td>"+esc(t.readers)+"</td></tr>"}).join("");
+ $("#relT").innerHTML="<tr><th>Parent (1)</th><th>Child (N)</th><th>Lookup column</th><th>Read as</th><th>Delete</th></tr>"+SPEC.relationships.map(function(r){
+  return "<tr><td><code>"+r.parent+"</code></td><td><code>"+r.child+"</code></td><td><code>"+r.lookup+"</code></td><td>"+r.one_to_many+"<br><span class='mut'>"+r.many_to_one+"</span></td><td>"+r.cascade_delete+"</td></tr>"}).join("");
+ $("#tsel").innerHTML=SPEC.tables.map(function(t,i){return "<button data-i='"+i+"'"+(i===0?" class='on'":"")+">"+t.display+"</button>"}).join("");
+ $("#tsel").querySelectorAll("button").forEach(function(b){b.onclick=function(){$("#tsel").querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});showTable(+b.dataset.i)}});
+ showTable(0);$("#xmlOut").textContent=specXml();}
+function showTable(i){var t=SPEC.tables[i];
+ var rels=SPEC.relationships.filter(function(r){return r.child===t.logical||r.parent===t.logical}).map(function(r){return r.child===t.logical?"N:1 → <code>"+r.parent+"</code> via <code>"+r.lookup+"</code>":"1:N → <code>"+r.child+"</code> via <code>"+r.lookup+"</code>"});
+ $("#tableDetail").innerHTML="<p><b>"+t.display+"</b> <code>"+t.logical+"</code> <span class='pill "+(t.layer==="GSK"?"gsk":"rt")+"'>"+t.layer+"</span><br>Primary key <code>"+t.pk+"</code> · alternate key <code>"+esc(t.altkey)+"</code></p>"+
+ "<div class='owner"+(t.logical==="cbh_finding"?" only":"")+"'><b>Write owner:</b> "+esc(t.owner)+"<br><b>Read by:</b> "+esc(t.readers)+"</div>"+
+ "<div class='tw'><table><tr><th>Column</th><th>Type</th><th>Req.</th><th>Notes</th></tr>"+t.columns.map(function(c){return "<tr><td><code>"+c.name+"</code></td><td>"+c.type+(c.target?"<br><span class='mut'>→ "+c.target+"</span>":"")+"</td><td>"+c.required+"</td><td>"+esc(c.notes)+"</td></tr>"}).join("")+"</table></div>"+
+ "<h4>Relationships</h4><ul>"+(rels.length?rels.map(function(x){return "<li>"+x+"</li>"}).join(""):"<li class='mut'>none</li>")+"</ul>";}
+$("#dlJson").onclick=function(){download("cbh_gsk_dataverse_spec_SAMPLE.json",JSON.stringify(SPEC,null,2),"application/json")};
+$("#dlCsv").onclick=function(){download("cbh_gsk_dataverse_columns_SAMPLE.csv",specCsv(),"text/csv")};
+$("#dlXml").onclick=function(){download("customizations_SAMPLE.xml",specXml(),"application/xml")};
+renderSpec();
+
+/* ---------- Reference tests ---------- */
+var LAST=null,DATA=null;
+function loadData(){if(DATA)return Promise.resolve(DATA);
+ return Promise.all([fetch("rules.json",{cache:"no-store"}).then(function(r){return r.json()}),fetch("fixtures.json",{cache:"no-store"}).then(function(r){return r.json()})]).then(function(a){DATA={rules:a[0],fixtures:a[1]};return DATA})}
+function sc(s){return s.replace(" ","")}
+function run(){loadData().then(function(d){
+ var t0=performance.now();LAST=window.CBHRunner.runAll(d.rules,d.fixtures);var ms=(performance.now()-t0).toFixed(1);
+ $("#runMeta").innerHTML="Ran <b>"+LAST.total+"</b> cases in your browser in "+ms+" ms · ruleset <code>"+LAST.ruleset+"</code> · fixture <code>"+LAST.fixture+"</code> · runner <code>"+LAST.runner+"</code>";
+ var k=LAST.counts;$("#kpis").innerHTML="<div class='kpi p'><span>PASSED</span><b>"+k.PASSED+"</b></div><div class='kpi f'><span>FAILED</span><b>"+k.FAILED+"</b></div><div class='kpi b'><span>BLOCKED</span><b>"+k.BLOCKED+"</b></div><div class='kpi n'><span>NOT RUN</span><b>"+k["NOT RUN"]+"</b></div>";
+ var fields=d.fixtures.compared_fields;
+ $("#cases").innerHTML=LAST.results.map(function(r){
+  var dset={};r.diffs.forEach(function(x){dset[x.field]=1});
+  var rowsCmp=fields.map(function(f){return "<tr"+(dset[f]?" class='diff'":"")+"><td><code>"+f+"</code></td><td>"+esc(JSON.stringify(r.expected[f]))+"</td><td>"+esc(JSON.stringify(r.observed[f]))+"</td><td>"+(r.status==="PASSED"||r.status==="FAILED"?(dset[f]?"<span class='bad'>differs</span>":"<span class='ok'>match</span>"):"<span class='mut'>not compared</span>")+"</td></tr>"}).join("");
+  return "<details class='case'><summary><span class='st "+sc(r.status)+"'>"+r.status+"</span><b>"+r.case_id+"</b><span>"+esc(r.title)+"</span><span class='pill'>"+r.rule_id+"</span><span class='pill'>observed: "+r.observed.disposition+"</span></summary><div class='body'>"+
+  "<p><b>Reason:</b> "+esc(r.reason)+"</p><div class='tw'><table><tr><th>Field</th><th>Expected (fixed before run)</th><th>Observed (runner)</th><th></th></tr>"+rowsCmp+"</table></div>"+
+  "<div class='cmp'><div><h4>Runner reasons</h4><ul>"+r.observed.reasons.map(function(x){return "<li>"+esc(x)+"</li>"}).join("")+"</ul></div><div><h4>Lineage</h4><pre class='wrap'>"+esc(JSON.stringify(r.observed.lineage,null,1))+"</pre>"+(Object.keys(r.observed.ignored_inputs).length?"<p class='mut'>Recorded, not used for support: <code>"+esc(JSON.stringify(r.observed.ignored_inputs))+"</code></p>":"")+"</div></div></div></details>"}).join("");
+}).catch(function(e){$("#runMeta").innerHTML="<span class='bad'>Could not load the test files ("+esc(e.message)+"). Open this page over http(s), not file://.</span>"})}
+$("#rerun").onclick=run;
+$("#dlRes").onclick=function(){if(LAST)download("cbh_reference_results_SAMPLE.json",JSON.stringify(LAST,null,2),"application/json")};
+$("#dlResCsv").onclick=function(){if(!LAST)return;var rows=[["case_id","rule_id","status","expected_disposition","observed_disposition","expected_claim_ceiling","observed_claim_ceiling","rejected_claims","blocked_on","reason"]];
+ LAST.results.forEach(function(r){rows.push([r.case_id,r.rule_id,r.status,r.expected.disposition,r.observed.disposition,r.expected.claim_ceiling,r.observed.claim_ceiling,r.observed.rejected_claims.join("|"),r.observed.blocked_on.join("|"),r.reason])});
+ download("cbh_reference_results_SAMPLE.csv",rows.map(function(r){return r.map(csvCell).join(",")}).join("\n"),"text/csv")};
+run();
+
+/* ---------- Manifest ---------- */
+var MAN_DONE=false;
+function hex(buf){return Array.prototype.map.call(new Uint8Array(buf),function(b){return("0"+b.toString(16)).slice(-2)}).join("")}
+function manifest(){if(MAN_DONE)return;MAN_DONE=true;
+ var files=["rules.json","fixtures.json","runner.js"];
+ if(!(window.crypto&&crypto.subtle)){$("#manSum").innerHTML="<span class='warn'>crypto.subtle needs a secure (https) page.</span>";}
+ fetch("manifest.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(m){
+  return Promise.all(files.map(function(f){return fetch(f,{cache:"no-store"}).then(function(r){return r.arrayBuffer()}).then(function(b){return crypto.subtle.digest("SHA-256",b)}).then(function(h){return hex(h)})})).then(function(hs){
+   var ok=0;$("#manT").innerHTML="<tr><th>File</th><th>manifest.json (sha256sum)</th><th>Browser (crypto.subtle)</th><th>Match</th></tr>"+files.map(function(f,i){
+    var st=(m.files.filter(function(x){return x.path===f})[0]||{}).sha256||"(not listed)";var mt=st===hs[i];if(mt)ok++;
+    return "<tr><td><code>"+f+"</code></td><td class='mono'>"+st+"</td><td class='mono'>"+hs[i]+"</td><td>"+(mt?"<span class='ok'>match</span>":"<span class='bad'>MISMATCH</span>")+"</td></tr>"}).join("");
+   $("#manSum").innerHTML=(ok===files.length?"<span class='ok'>All "+ok+" files match the manifest.</span>":"<span class='bad'>"+(files.length-ok)+" file(s) do not match: do not trust this run.</span>")+" <span class='mut'>Manifest built "+esc(m.generated_utc)+" with "+esc(m.tool)+".</span>"})
+ }).catch(function(e){$("#manSum").innerHTML="<span class='bad'>Could not compute hashes ("+esc(e.message)+").</span>"})}
+</script>
+</body></html>

@@ -1,0 +1,53 @@
+{
+  "ruleset_id": "CBH-GSK-SAMPLE",
+  "version": "0.3.0-sample",
+  "sample": true,
+  "note": "SAMPLE DATA built by Dooza from the public job posting only. Not CBH's GSK package, not approved ministry content.",
+  "claim_ceiling_order": ["none", "relevance_only", "bounded_hypothesis", "established_cause"],
+  "sources": [
+    {"id": "SRC-01", "title": "Sample L3 Characterization reference", "doc_version": "L3-CHR v0.9 (sample)", "section": "4.2 Evidence sufficiency", "approval_status": "approved_sample"},
+    {"id": "SRC-02", "title": "Sample ministry framework: barriers to healing", "doc_version": "MF v1.1 (sample)", "section": "2.3 Investigation hypotheses", "approval_status": "approved_sample"},
+    {"id": "SRC-03", "title": "Sample interpretation boundaries", "doc_version": "BND v1.0 (sample)", "section": "1 Prohibited inferences", "approval_status": "approved_sample"}
+  ],
+  "concepts": [
+    {"id": "CN-01", "name": "Family illness pattern", "domain": "D10", "source": "SRC-02"},
+    {"id": "CN-02", "name": "Occult involvement", "domain": "D3", "source": "SRC-02"},
+    {"id": "CN-03", "name": "Barrier to healing (investigation)", "domain": "D10", "source": "SRC-02"},
+    {"id": "CN-04", "name": "Belief and emotional pattern", "domain": "D5", "source": "SRC-01"},
+    {"id": "CN-05", "name": "Participant-reported health concern", "domain": "D1", "source": "SRC-01"}
+  ],
+  "propositions": [
+    {"id": "PR-01", "concept": "CN-03", "statement": "A qualified family illness pattern together with personal or family occult evidence permits investigating a possible barrier to healing. It does not establish a medical cause, confirm a spiritual mechanism or set a ministry priority.", "source": "SRC-02"},
+    {"id": "PR-02", "concept": "CN-04", "statement": "An approved belief pattern together with an approved emotional pattern permits an Inner Healing emphasis.", "source": "SRC-01"},
+    {"id": "PR-03", "concept": "CN-05", "statement": "A participant-reported health concern is relevant to Physical Healing. It is kept as reported, never restated as a diagnosis.", "source": "SRC-01"},
+    {"id": "PR-04", "concept": "CN-03", "statement": "Restoration relevance of a non-contributing factor (placeholder: evaluator not delivered).", "source": "SRC-01"}
+  ],
+  "evidence_requirements": [
+    {"id": "ER-01", "input_key": "family_illness_pattern", "domain": "D10", "required_scope": "family", "requires_qualification": true, "on_missing": "BLOCK", "on_negative": "WITHHOLD"},
+    {"id": "ER-02", "input_key": "occult_involvement", "domain": "D3", "required_scope": "either", "requires_qualification": false, "on_missing": "BLOCK", "on_negative": "WITHHOLD"},
+    {"id": "ER-03", "input_key": "belief_pattern", "domain": "D5", "required_scope": "participant", "requires_qualification": false, "on_missing": "BLOCK", "on_negative": "WITHHOLD"},
+    {"id": "ER-04", "input_key": "emotional_pattern", "domain": "D6", "required_scope": "participant", "requires_qualification": false, "on_missing": "BLOCK", "on_negative": "WITHHOLD"},
+    {"id": "ER-05", "input_key": "health_concern", "domain": "D1", "required_scope": "participant", "requires_qualification": false, "on_missing": "BLOCK", "on_negative": "WITHHOLD"}
+  ],
+  "boundaries": [
+    {"id": "BD-01", "type": "prohibited_inference", "claim": "MEDICAL_CAUSE", "applies_to": ["RC-INV-01", "RC-PH-01"], "source": "SRC-03"},
+    {"id": "BD-02", "type": "prohibited_inference", "claim": "SPIRITUAL_MECHANISM_CONFIRMED", "applies_to": ["RC-INV-01"], "source": "SRC-03"},
+    {"id": "BD-03", "type": "prohibited_inference", "claim": "MINISTRY_PRIORITY", "applies_to": ["RC-INV-01", "RC-IH-01", "RC-PH-01"], "source": "SRC-03"},
+    {"id": "BD-04", "type": "independence", "field": "ministry_recommendation_strength", "applies_to": ["RC-INV-01", "RC-IH-01", "RC-PH-01"], "source": "SRC-03", "meaning": "Recommendation strength is recorded but never raises hypothesis support or claim ceiling."},
+    {"id": "BD-05", "type": "prohibited_inference", "claim": "DIAGNOSIS", "applies_to": ["RC-PH-01"], "source": "SRC-03"}
+  ],
+  "evaluators": [
+    {"id": "EV-CHAR-01", "status": "delivered", "version": "1.0"},
+    {"id": "EV-NC-01", "status": "not_delivered", "owner": "GSK engineer", "note": "Non-contributor restoration-relevance evaluator listed in the package index but not delivered."}
+  ],
+  "rule_configurations": [
+    {"id": "RC-INV-01", "version": "1.0", "proposition": "PR-01", "evaluator": "EV-CHAR-01", "requires": ["ER-01", "ER-02"],
+     "output": {"finding_type": "INVESTIGATION_HYPOTHESIS", "claim_ceiling": "bounded_hypothesis", "support_level": "bounded"}},
+    {"id": "RC-IH-01", "version": "1.0", "proposition": "PR-02", "evaluator": "EV-CHAR-01", "requires": ["ER-03", "ER-04"],
+     "output": {"finding_type": "INNER_HEALING_EMPHASIS", "claim_ceiling": "bounded_hypothesis", "support_level": "bounded"}},
+    {"id": "RC-PH-01", "version": "1.0", "proposition": "PR-03", "evaluator": "EV-CHAR-01", "requires": ["ER-05"],
+     "output": {"finding_type": "PHYSICAL_HEALING_RELEVANCE", "claim_ceiling": "relevance_only", "support_level": "relevance_only"}},
+    {"id": "RC-NC-01", "version": "0.1", "proposition": "PR-04", "evaluator": "EV-NC-01", "requires": ["ER-01"],
+     "output": {"finding_type": "RESTORATION_RELEVANCE", "claim_ceiling": "relevance_only", "support_level": "relevance_only"}}
+  ]
+}
