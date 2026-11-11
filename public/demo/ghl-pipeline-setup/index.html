@@ -1,0 +1,144 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>GoHighLevel Pipeline Setup · Working demo (by Dooza)</title>
+<meta name="description" content="Working sample of a GoHighLevel CRM setup: pipeline stages, lead capture form, automation workflows and follow-up notifications, with a live activity log.">
+<style>
+:root{--a:#0b5cad;--ink:#1d2330;--mut:#5c6478;--bg:#fff;--soft:#f4f6fa;--line:#dde2ec;--red:#d1242f;--redbg:#fdecee;--green:#1a7f37;--grbg:#e8f6ec;--amber:#b25e00;--ambg:#fff4e0;--blue:#e8f0fb;--violet:#6639ba;--vibg:#f1ebfb}
+*{box-sizing:border-box}html,body{overflow-x:hidden}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+.bar{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 16px}.bar b{color:#ffd43b}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 16px;max-width:1320px;margin:auto}
+.logo{font-weight:800;font-size:19px;color:var(--a)}.logo small{display:block;font-weight:500;font-size:12px;color:var(--mut)}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+.tab{font:inherit;font-weight:700;font-size:13px;color:var(--a);background:#fff;border:1px solid var(--a);border-radius:9px;padding:6px 11px;cursor:pointer}
+.tab.on{background:var(--a);color:#fff}
+.btn,.btn2,.btn3{font:inherit;font-weight:700;border-radius:9px;padding:9px 12px;cursor:pointer;border:1px solid var(--a)}
+.btn{background:var(--a);color:#fff}.btn2{background:#fff;color:var(--a)}.btn3{background:#fff;color:var(--red);border-color:var(--red)}
+.small{padding:5px 10px;font-size:13px}
+main{max-width:1320px;margin:auto;padding:4px 16px 24px}
+.intro{background:var(--blue);border-radius:12px;padding:12px 16px;margin-bottom:14px;font-size:14px}.intro b{color:var(--a)}
+.assume{font-size:12px;color:var(--amber);font-weight:600;margin-top:4px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media(min-width:1100px){.layout{grid-template-columns:minmax(0,1fr) 370px}}
+h2{font-size:20px;margin:0 0 10px}h3{font-size:16px;margin:0 0 8px}
+.card{background:var(--soft);border-radius:12px;padding:14px;margin-bottom:16px;min-width:0}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.sp{flex:1}
+.clock{font-weight:800;font-size:17px;flex:1 1 240px}.clock small{display:block;font-weight:500;font-size:12px;color:var(--mut)}
+.pane{display:none}.pane.on{display:block}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:12px}
+.kpi{background:var(--soft);border-radius:12px;padding:10px 12px}.kpi>span{display:block;color:var(--mut);font-size:12px}.kpi b{font-size:19px}
+.board{display:flex;gap:10px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px;max-width:100%}
+.col{flex:0 0 208px;background:#e9edf4;border-radius:12px;padding:8px;min-height:180px;transition:background .15s}
+.col.over{background:#d6e4f7;outline:2px dashed var(--a)}
+.col h4{margin:2px 4px 8px;font-size:13px;display:flex;justify-content:space-between;gap:6px}.col h4 span{color:var(--mut);font-weight:600}
+.col.won h4{color:var(--green)}.col.lost h4{color:var(--red)}.col.noshow h4{color:var(--amber)}
+.oppc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 9px;margin-bottom:8px;cursor:grab;font-size:13px}
+.oppc:active{cursor:grabbing}.oppc.flash{animation:fl 1.8s}@keyframes fl{0%{background:#fff3b0}100%{background:#fff}}
+.oppc b{display:block;font-size:14px}.oppc .v{font-weight:800;color:var(--a)}
+.oppc .meta{color:var(--mut);font-size:12px}
+.oppc .last{font-size:12px;border-top:1px dashed var(--line);margin-top:5px;padding-top:4px;color:var(--ink)}
+.oppc .ctl{display:flex;gap:4px;margin-top:6px}.oppc select{font:inherit;font-size:12px;padding:4px;border:1px solid #ccd2de;border-radius:7px;flex:1;min-width:0;background:#fff}
+.oppc .rp{font:inherit;font-size:12px;font-weight:700;border:1px solid var(--green);color:var(--green);background:#fff;border-radius:7px;padding:3px 6px;cursor:pointer;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;border-radius:20px;padding:0 8px;background:#e7ecf6;color:var(--ink);white-space:nowrap;font-weight:600}
+.appt{font-size:12px;color:var(--green);font-weight:700}
+label{display:grid;gap:3px;font-size:12px;color:var(--mut);font-weight:600}
+input,select{font:inherit;font-size:15px;padding:8px;border:1px solid #ccd2de;border-radius:9px;background:#fff;color:var(--ink);width:100%;min-width:0}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.formwrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;max-width:560px}
+.formwrap h3{color:var(--a)}
+.chk{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--ink);font-weight:500}.chk input{width:auto;margin-top:3px}
+.err{color:var(--red);font-size:13px;font-weight:600;margin-top:8px}
+.okmsg{background:var(--grbg);color:var(--green);border-radius:9px;padding:8px 10px;font-size:13px;font-weight:600;margin-top:10px}
+.wfs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.wf{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}.wf.flash{animation:fl2 1.8s}@keyframes fl2{0%{border-color:#f5c400;box-shadow:0 0 0 3px #fff3b0}100%{}}
+.wf .hd{display:flex;justify-content:space-between;gap:8px;align-items:baseline}.wf .hd b{font-size:15px}.wf .hd span{font-size:12px;color:var(--mut);white-space:nowrap}
+.trig{background:var(--vibg);color:var(--violet);border-radius:9px;padding:6px 9px;font-size:13px;font-weight:700;margin:8px 0 4px}
+.steps{list-style:none;margin:0;padding:0 0 0 12px;border-left:2px solid var(--line)}
+.steps li{position:relative;padding:5px 0 5px 10px;font-size:13px}
+.steps li:before{content:"";position:absolute;left:-7px;top:11px;width:10px;height:10px;border-radius:50%;background:var(--a)}
+.steps li.wait:before,.steps li.if:before{background:var(--amber)}.steps li.wait,.steps li.if{color:var(--amber);font-weight:600}
+.steps .tx{display:block;color:var(--mut);font-size:12px;overflow-wrap:anywhere}
+.goal{font-size:12px;color:var(--green);font-weight:600;margin-top:6px}
+.k{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;border-radius:5px;padding:1px 5px;color:#fff;background:var(--a);margin-right:4px;vertical-align:1px}
+.k.sms{background:#0b7a75}.k.email{background:var(--a)}.k.notify{background:var(--violet)}.k.task{background:var(--amber)}.k.trigger{background:#111}.k.move,.k.opp{background:#45506a}
+.k.queued{background:#7a8193}.k.cancel,.k.skip{background:#a0a6b4}.k.reply{background:var(--green)}.k.event{background:#d1242f}
+.log{display:grid;gap:7px;max-height:760px;overflow-y:auto;padding-right:2px}
+.le{background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 9px;font-size:13px;overflow-wrap:anywhere}
+.le.new{animation:fl 1.8s}.le.cancel,.le.skip{color:var(--mut)}
+.le .mt{font-size:11px;color:var(--mut);display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2px}
+.le .sub{font-weight:700}
+.q{font-size:12px;margin:0;padding-left:16px}.q li{margin:3px 0}
+.tasks{list-style:none;padding:0;margin:0;font-size:13px}.tasks li{background:#fff;border-radius:9px;padding:6px 8px;margin:5px 0;display:flex;gap:8px;align-items:flex-start}.tasks li.done{color:var(--mut);text-decoration:line-through}.tasks input{width:auto;margin-top:3px}
+.legend{font-size:12px;color:var(--mut);margin:8px 0 0}
+.cl{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.cl section{background:#fff;border-radius:12px;padding:12px}.cl h3{font-size:15px;color:var(--a)}
+.cl label{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--ink);font-weight:500;margin:5px 0}.cl label input{width:auto;margin-top:3px}
+pre{background:#0f1420;color:#d6e2f5;border-radius:10px;padding:12px;font-size:12px;max-height:380px;overflow:auto;white-space:pre}
+.prog{height:8px;background:#e3e8f1;border-radius:6px;overflow:hidden;margin:6px 0 12px}.prog i{display:block;height:100%;background:var(--green);width:0}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none;max-width:90vw;z-index:9}
+.toast.on{opacity:1}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:24px 16px;border-top:1px solid var(--line);margin-top:20px}
+footer a{color:var(--a)}
+</style></head><body>
+<div class="bar"><b>Sample data, built for this Upwork post.</b> This is a simulation of the setup we'd do in your GoHighLevel account; no GHL login used. Nothing is really sent.</div>
+<header><span class="logo">GoHighLevel Pipeline Setup<small>Coastline Home Services (sample business) · pipeline, lead form, workflows, follow-up notifications</small></span>
+<nav id="tabs"><button class="tab on" data-tab="pipeline">Pipeline</button><button class="tab" data-tab="form">Lead form</button><button class="tab" data-tab="workflows">Workflows</button><button class="tab" data-tab="handoff">Handoff</button></nav></header>
+<main>
+<div class="intro">Drag a card to another stage (or use <b>Move to</b>), submit the <b>Lead form</b>, or click <b>Lead replies</b>. The workflows fire like they would in GHL and the <b>activity log</b> shows every SMS, email, owner alert and task with its time. Use <b>+1 hour / +1 day</b> to see the follow-ups and reminders go out. Short on time? <button class="btn small" id="story">Play 3 sample days</button>
+<div class="assume">Assumption: the post doesn't name your business type, so the sample is a local home-services company. Stages, services and messages are swapped for your business in the real setup.</div></div>
+
+<section class="card"><div class="row"><div class="clock sp" id="clock"></div>
+<button class="btn2 small" data-adv="1">+1 hour</button><button class="btn2 small" data-adv="24">+1 day</button><button class="btn3 small" id="reset">Reset demo</button></div></section>
+
+<div class="layout">
+<div>
+<section class="pane on" id="p-pipeline">
+<div class="kpis" id="kpis"></div>
+<div class="board" id="board"></div>
+<p class="legend">Sales Pipeline in GHL Opportunities. Stage changes trigger the workflows on the Workflows tab. Drag needs a mouse; on a phone use <b>Move to</b>.</p>
+</section>
+
+<section class="pane" id="p-form">
+<div class="formwrap"><h3>Request a Free Estimate</h3>
+<p class="legend" style="margin:0 0 10px">The lead capture form as it would sit on your website or funnel page (GHL Sites > Forms).</p>
+<form id="leadF" novalidate>
+<div class="fgrid">
+<label>Full name *<input name="name" autocomplete="off" placeholder="Jane Smith"></label>
+<label>Phone *<input name="phone" autocomplete="off" placeholder="(555) 010-2000"></label>
+<label>Email<input name="email" autocomplete="off" placeholder="jane@example.com"></label>
+<label>Service needed *<select name="service" id="fService"></select></label>
+<label>How did you hear about us?<select name="source" id="fSource"></select></label>
+</div>
+<label class="chk" style="margin-top:10px"><input type="checkbox" name="consent" checked> I agree to receive texts and emails about my request. Reply STOP to opt out.</label>
+<div class="row" style="margin-top:12px"><button class="btn">Submit</button><button class="btn2 small" type="button" id="fill">Fill a sample lead</button></div>
+<div id="fErr" class="err"></div><div id="fOk"></div>
+</form></div>
+<p class="legend">On submit: contact + opportunity created in <b>New Lead</b>, then workflow 1 fires (SMS + email within 1 minute, owner alert, follow-up and call task if no reply in 1 day).</p>
+</section>
+
+<section class="pane" id="p-workflows">
+<p class="legend" style="margin:0 0 10px">GHL Automation > Workflows, written as trigger then actions. A card flashes when it fires; the count shows how many times it ran in this demo.</p>
+<div class="wfs" id="wfs"></div>
+</section>
+
+<section class="pane" id="p-handoff">
+<div class="card" style="background:var(--blue)"><h2>What we'd set up in your real GHL account</h2>
+<p style="margin:0;font-size:14px">The exact checklist, in order. Tick items to see progress (saved in this browser only). Then download the config as JSON: pipeline, custom fields, form, calendar, notifications and every workflow with its message templates.</p>
+<div class="prog"><i id="progBar"></i></div><div class="legend" id="progTx" style="margin:0"></div></div>
+<div class="cl" id="checklist"></div>
+<section class="card" style="margin-top:16px"><div class="row"><h3 class="sp" style="margin:0">Pipeline + workflow config (JSON)</h3><button class="btn" id="dl">Download JSON</button></div>
+<pre id="json"></pre></section>
+</section>
+</div>
+
+<aside>
+<section class="card"><div class="row"><h3 class="sp" style="margin:0">Activity log (live)</h3><span class="legend" style="margin:0" id="logN"></span></div>
+<p class="legend" style="margin:2px 0 8px">What would fire in GHL, newest first. Times are the business's local time.</p>
+<div class="log" id="log"></div></section>
+<section class="card"><h3>Scheduled next</h3><ul class="q" id="queue"></ul></section>
+<section class="card"><h3>Tasks for the owner</h3><ul class="tasks" id="tasks"></ul></section>
+</aside>
+</div>
+</main>
+<footer>Built by Dooza as a working sample for this GoHighLevel job. <a href="https://www.dooza.ai">dooza.ai</a><br>Sample business, contacts and numbers are made up. The real build is done inside your GHL sub-account.</footer>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script><script src="ui.js"></script>
+</body></html>

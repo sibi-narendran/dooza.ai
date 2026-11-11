@@ -252,8 +252,9 @@
       var c = cancel(st, p, ['Review request', 'Referral ask'], 'patient was unhappy');
       queue(st, R, p, { kind: 'Service recovery', ch: 'SMS', text: T(R, p, 'recovery'), at: st.now }, rec);
       task(st, p, 'Practice manager', 'Call ' + p.name + ' today: rated the visit ' + score + '/5. Find out what went wrong, fix it, log the outcome.', st.now + 4 * H, rec);
-      rec.decisions.push('NO public review ask: score ' + score + '/5 is below the happy bar (' + R.happyMin + '). An unhappy patient gets a call from a person, not a review link.');
-      rec.decisions.push('No referral ask either' + (c ? ' (' + c + ' pending ask cancelled)' : '') + '.');
+      queue(st, R, p, { kind: 'Review request', ch: 'SMS', text: T(R, p, 'review'), at: st.now + 2 * DAY }, rec);
+      rec.decisions.push('Score ' + score + '/5 is below the happy bar (' + R.happyMin + '): the practice manager calls first to put it right.');
+      rec.decisions.push('Every patient can still review: the same review link goes out 2 days later, after the call (no review gating). No referral ask' + (c ? ' (' + c + ' pending ask cancelled)' : '') + '.');
     }
   }
 
@@ -305,7 +306,7 @@
         touch(p, st.now, 'Visit completed');
         queue(st, R, p, { kind: 'Feedback check', ch: 'SMS', text: T(R, p, 'feedback'), at: st.now + R.feedbackHours * H }, rec);
         rec.label = 'Visit completed (' + fmtDT(st.now) + ')';
-        rec.decisions.push('Asks privately first (1 to 5). Only scores of ' + R.happyMin + '+ get the public review link.');
+        rec.decisions.push('Private check-in first (1 to 5). Scores of ' + R.happyMin + '+ get the review link now; lower scores reach the practice manager first, then get the same review link.');
         break;
       case 'reply':
         // The patient answers after the desk's latest pending feedback text has gone out.

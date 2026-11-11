@@ -1,0 +1,405 @@
+{
+ "metrics": {
+  "train_rows": 7716,
+  "train_churn": 687,
+  "test_rows": 2173,
+  "test_churn": 184,
+  "train_snapshots": "2025-04 to 2026-08",
+  "test_snapshots": "2026-09 and 2026-10",
+  "logreg": {
+   "auc": 0.8827,
+   "train_auc": 0.8609,
+   "k": 217,
+   "threshold": 0.2424,
+   "precision_top10": 0.424,
+   "recall_top10": 0.5,
+   "base_rate": 0.0847,
+   "lift_top10": 5.01,
+   "confusion": {
+    "tp": 92,
+    "fp": 125,
+    "fn": 92,
+    "tn": 1864
+   }
+  },
+  "tree": {
+   "auc": 0.7891,
+   "k": 330,
+   "threshold": 0.2419,
+   "precision_top10": 0.3182,
+   "recall_top10": 0.5707,
+   "base_rate": 0.0847,
+   "lift_top10": 3.76,
+   "confusion": {
+    "tp": 105,
+    "fp": 225,
+    "fn": 79,
+    "tn": 1764
+   }
+  }
+ },
+ "drivers": [
+  {
+   "feature": "monthly_billing",
+   "coef": 0.8831,
+   "odds_ratio_per_sd": 2.418,
+   "direction": "raises churn",
+   "plain": "Pays monthly (not annual)",
+   "action": "Offer annual at a real discount (e.g. 2 months free) at month 2-3, when value is clear.",
+   "segment": {
+    "group": "yes",
+    "n_with": 1300,
+    "rate_with": 0.1254,
+    "n_without": 873,
+    "rate_without": 0.0241
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "log_sessions_30d",
+   "coef": -0.4723,
+   "odds_ratio_per_sd": 0.624,
+   "direction": "lowers churn",
+   "plain": "Fewer sessions in the last 30 days",
+   "action": "Low-use nudges: a weekly 'what you missed' email and in-app tip when sessions fall under 4 a month.",
+   "segment": {
+    "group": "3 or fewer sessions",
+    "n_with": 413,
+    "rate_with": 0.1937,
+    "n_without": 1760,
+    "rate_without": 0.0591
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "annual_renewal_due",
+   "coef": 0.4062,
+   "odds_ratio_per_sd": 1.501,
+   "direction": "raises churn",
+   "plain": "Annual renewal due this month",
+   "action": "Send a 'your year in review' email 30 days before renewal, not just the receipt.",
+   "segment": {
+    "group": "yes",
+    "n_with": 39,
+    "rate_with": 0.4103,
+    "n_without": 2134,
+    "rate_without": 0.0787
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "failed_payment_30d",
+   "coef": 0.3734,
+   "odds_ratio_per_sd": 1.453,
+   "direction": "raises churn",
+   "plain": "A failed payment last month",
+   "action": "Fix involuntary churn: smart card retries, pre-expiry card update emails, a 7-day grace period.",
+   "segment": {
+    "group": "yes",
+    "n_with": 65,
+    "rate_with": 0.4462,
+    "n_without": 2108,
+    "rate_without": 0.0735
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "price_rise_last_60d",
+   "coef": 0.2624,
+   "odds_ratio_per_sd": 1.3,
+   "direction": "raises churn",
+   "plain": "Hit by the July Basic price rise",
+   "action": "Grandfather loyal Basic users for 3 months or give them a one-click annual lock-in at the old price.",
+   "segment": {
+    "group": "yes",
+    "n_with": 245,
+    "rate_with": 0.2245,
+    "n_without": 1928,
+    "rate_without": 0.0669
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "usage_drop",
+   "coef": 0.2322,
+   "odds_ratio_per_sd": 1.261,
+   "direction": "raises churn",
+   "plain": "Usage fell sharply vs the two months before",
+   "action": "Trigger a save flow when sessions drop 45%+: personal check-in, offer a pause instead of cancel.",
+   "segment": {
+    "group": "yes",
+    "n_with": 220,
+    "rate_with": 0.1864,
+    "n_without": 1953,
+    "rate_without": 0.0732
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "no_onboarding",
+   "coef": 0.2188,
+   "odds_ratio_per_sd": 1.245,
+   "direction": "raises churn",
+   "plain": "Never finished onboarding",
+   "action": "Shorten onboarding and chase incomplete users on day 1, 3 and 7.",
+   "segment": {
+    "group": "yes",
+    "n_with": 781,
+    "rate_with": 0.1127,
+    "n_without": 1392,
+    "rate_without": 0.069
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "promo_just_ended",
+   "coef": 0.1918,
+   "odds_ratio_per_sd": 1.211,
+   "direction": "raises churn",
+   "plain": "Intro discount just ended",
+   "action": "Step the promo down (30% to 15% to full) and warn 7 days before the price changes, with the value they got.",
+   "segment": {
+    "group": "yes",
+    "n_with": 99,
+    "rate_with": 0.2626,
+    "n_without": 2074,
+    "rate_without": 0.0762
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "support_tickets_30d",
+   "coef": 0.144,
+   "odds_ratio_per_sd": 1.155,
+   "direction": "raises churn",
+   "plain": "More support tickets",
+   "action": "Route customers with 2+ tickets in a month to a senior agent and follow up after closing.",
+   "segment": {
+    "group": "2+ tickets",
+    "n_with": 51,
+    "rate_with": 0.2353,
+    "n_without": 2122,
+    "rate_without": 0.0811
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "discount_pct",
+   "coef": 0.1333,
+   "odds_ratio_per_sd": 1.143,
+   "direction": "raises churn",
+   "plain": "Has a standing discount",
+   "action": "Review coupons: discounted users may be price-sensitive; test value messaging over deeper cuts.",
+   "segment": {
+    "group": "any discount",
+    "n_with": 561,
+    "rate_with": 0.123,
+    "n_without": 1612,
+    "rate_without": 0.0713
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "first_90_days",
+   "coef": 0.1179,
+   "odds_ratio_per_sd": 1.125,
+   "direction": "raises churn",
+   "plain": "In the first 90 days",
+   "action": "A first-90-days success plan: welcome series plus a check-in at day 30.",
+   "segment": {
+    "group": "yes",
+    "n_with": 866,
+    "rate_with": 0.1155,
+    "n_without": 1307,
+    "rate_without": 0.0643
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "features_used_30d",
+   "coef": -0.0802,
+   "odds_ratio_per_sd": 0.923,
+   "direction": "lowers churn",
+   "plain": "Using fewer features",
+   "action": "Guide users to a second core feature in week 1; feature breadth predicts staying.",
+   "segment": {
+    "group": "1 or fewer features",
+    "n_with": 1016,
+    "rate_with": 0.1152,
+    "n_without": 1157,
+    "rate_without": 0.0579
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "plan_basic",
+   "coef": -0.0755,
+   "odds_ratio_per_sd": 0.927,
+   "direction": "lowers churn",
+   "plain": "On the Basic plan",
+   "action": "Show Basic users what Pro adds, with a cheap trial of the upgrade.",
+   "segment": {
+    "group": "yes",
+    "n_with": 1082,
+    "rate_with": 0.097,
+    "n_without": 1091,
+    "rate_without": 0.0724
+   },
+   "risk_side": false
+  },
+  {
+   "feature": "referral",
+   "coef": -0.0575,
+   "odds_ratio_per_sd": 0.944,
+   "direction": "lowers churn",
+   "plain": "Came by referral",
+   "action": "Referred users stay: push the referral program harder.",
+   "segment": {
+    "group": "yes",
+    "n_with": 359,
+    "rate_with": 0.0669,
+    "n_without": 1814,
+    "rate_without": 0.0882
+   },
+   "risk_side": false
+  },
+  {
+   "feature": "plan_team",
+   "coef": -0.0522,
+   "odds_ratio_per_sd": 0.949,
+   "direction": "lowers churn",
+   "plain": "On the Team plan",
+   "action": "Team accounts stay longer: use them as case studies and invite teammates.",
+   "segment": {
+    "group": "yes",
+    "n_with": 298,
+    "rate_with": 0.0604,
+    "n_without": 1875,
+    "rate_without": 0.0885
+   },
+   "risk_side": false
+  },
+  {
+   "feature": "android",
+   "coef": 0.0198,
+   "odds_ratio_per_sd": 1.02,
+   "direction": "raises churn",
+   "plain": "Uses Android",
+   "action": "Check Android payment and app issues; Android shows more failed payments.",
+   "segment": {
+    "group": "yes",
+    "n_with": 771,
+    "rate_with": 0.0869,
+    "n_without": 1402,
+    "rate_without": 0.0835
+   },
+   "risk_side": true
+  },
+  {
+   "feature": "unresolved_tickets_30d",
+   "coef": -0.017,
+   "odds_ratio_per_sd": 0.983,
+   "direction": "lowers churn",
+   "plain": "Support tickets left unresolved",
+   "action": "Set a 48-hour resolution target and flag open tickets on accounts already at risk.",
+   "segment": {
+    "group": "2+ unresolved",
+    "n_with": 14,
+    "rate_with": 0.3571,
+    "n_without": 2159,
+    "rate_without": 0.0829
+   },
+   "risk_side": false
+  },
+  {
+   "feature": "paid_social",
+   "coef": -0.0167,
+   "odds_ratio_per_sd": 0.983,
+   "direction": "lowers churn",
+   "plain": "Came from paid social ads",
+   "action": "Check paid-social targeting and match the ad promise to the first-week experience.",
+   "segment": {
+    "group": "yes",
+    "n_with": 569,
+    "rate_with": 0.1019,
+    "n_without": 1604,
+    "rate_without": 0.0786
+   },
+   "risk_side": false
+  }
+ ],
+ "tree": {
+  "f": "failed_payment_30d",
+  "j": 5,
+  "t": 0.0,
+  "n": 7716,
+  "l": {
+   "f": "monthly_billing",
+   "j": 8,
+   "t": 0.0,
+   "n": 7486,
+   "l": {
+    "f": "log_sessions_30d",
+    "j": 0,
+    "t": 0.6931471805599453,
+    "n": 2727,
+    "l": {
+     "leaf": 0.058673469387755105,
+     "n": 392
+    },
+    "r": {
+     "leaf": 0.01113490364025696,
+     "n": 2335
+    }
+   },
+   "r": {
+    "f": "log_sessions_30d",
+    "j": 0,
+    "t": 1.6094379124341003,
+    "n": 4759,
+    "l": {
+     "leaf": 0.24189307624890447,
+     "n": 1141
+    },
+    "r": {
+     "leaf": 0.07131011608623548,
+     "n": 3618
+    }
+   }
+  },
+  "r": {
+   "f": "log_sessions_30d",
+   "j": 0,
+   "t": 2.302585092994046,
+   "n": 230,
+   "l": {
+    "leaf": 0.5081967213114754,
+    "n": 122
+   },
+   "r": {
+    "leaf": 0.3888888888888889,
+    "n": 108
+   }
+  }
+ },
+ "features": [
+  "log_sessions_30d",
+  "usage_drop",
+  "features_used_30d",
+  "support_tickets_30d",
+  "unresolved_tickets_30d",
+  "failed_payment_30d",
+  "no_onboarding",
+  "first_90_days",
+  "monthly_billing",
+  "plan_basic",
+  "plan_team",
+  "promo_just_ended",
+  "price_rise_last_60d",
+  "annual_renewal_due",
+  "discount_pct",
+  "paid_social",
+  "referral",
+  "android"
+ ]
+}

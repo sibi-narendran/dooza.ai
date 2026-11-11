@@ -1,0 +1,153 @@
+{
+ "rows": {
+  "customers": 2006,
+  "subscriptions": 2000,
+  "price_changes": 495,
+  "activity_monthly": 11917
+ },
+ "signup_range": [
+  "2025-01-05",
+  "2026-10-14"
+ ],
+ "duplicate_customer_rows": 6,
+ "missing_country": 28,
+ "cancel_before_start": 4,
+ "cancelled_no_reason": 74,
+ "active_now": 1123,
+ "cancel_reasons": {
+  "not_using_enough": 214,
+  "too_expensive": 174,
+  "missing_feature": 116,
+  "switched_competitor": 112,
+  "payment_failed": 109,
+  "other": 74,
+  "(blank)": 74
+ },
+ "fixes": [
+  "Dropped 6 duplicate customer rows (kept one per customer_id).",
+  "Excluded 4 subscriptions whose cancel date is before their start date.",
+  "Kept 28 customers with a blank country (country is not a model input)."
+ ],
+ "monthly_churn": [
+  {
+   "month": "2025-03",
+   "active_start": 16,
+   "cancelled": 2,
+   "rate": 0.125
+  },
+  {
+   "month": "2025-04",
+   "active_start": 27,
+   "cancelled": 5,
+   "rate": 0.1852
+  },
+  {
+   "month": "2025-05",
+   "active_start": 53,
+   "cancelled": 4,
+   "rate": 0.0755
+  },
+  {
+   "month": "2025-06",
+   "active_start": 82,
+   "cancelled": 6,
+   "rate": 0.0732
+  },
+  {
+   "month": "2025-07",
+   "active_start": 128,
+   "cancelled": 9,
+   "rate": 0.0703
+  },
+  {
+   "month": "2025-08",
+   "active_start": 183,
+   "cancelled": 13,
+   "rate": 0.071
+  },
+  {
+   "month": "2025-09",
+   "active_start": 232,
+   "cancelled": 15,
+   "rate": 0.0647
+  },
+  {
+   "month": "2025-10",
+   "active_start": 289,
+   "cancelled": 24,
+   "rate": 0.083
+  },
+  {
+   "month": "2025-11",
+   "active_start": 349,
+   "cancelled": 31,
+   "rate": 0.0888
+  },
+  {
+   "month": "2025-12",
+   "active_start": 412,
+   "cancelled": 44,
+   "rate": 0.1068
+  },
+  {
+   "month": "2026-01",
+   "active_start": 476,
+   "cancelled": 28,
+   "rate": 0.0588
+  },
+  {
+   "month": "2026-02",
+   "active_start": 562,
+   "cancelled": 43,
+   "rate": 0.0765
+  },
+  {
+   "month": "2026-03",
+   "active_start": 627,
+   "cancelled": 48,
+   "rate": 0.0766
+  },
+  {
+   "month": "2026-04",
+   "active_start": 698,
+   "cancelled": 54,
+   "rate": 0.0774
+  },
+  {
+   "month": "2026-05",
+   "active_start": 781,
+   "cancelled": 54,
+   "rate": 0.0691
+  },
+  {
+   "month": "2026-06",
+   "active_start": 866,
+   "cancelled": 72,
+   "rate": 0.0831
+  },
+  {
+   "month": "2026-07",
+   "active_start": 951,
+   "cancelled": 124,
+   "rate": 0.1304
+  },
+  {
+   "month": "2026-08",
+   "active_start": 1000,
+   "cancelled": 113,
+   "rate": 0.113
+  },
+  {
+   "month": "2026-09",
+   "active_start": 1040,
+   "cancelled": 76,
+   "rate": 0.0731
+  },
+  {
+   "month": "2026-10",
+   "active_start": 1133,
+   "cancelled": 108,
+   "rate": 0.0953
+  }
+ ]
+}

@@ -94,7 +94,7 @@
   }
   function renderKpis() {
     var s = D.savings(st, R);
-    var k = [['Messages sent', s.sent], ['Staff time saved', s.hours + ' h'], ['Staff cost saved', '$' + s.staff], ['Visits won back', s.recovered], ['Value of those visits', '$' + s.value], ['Review asks (happy only)', s.reviews], ['Referral asks', s.referrals], ['Unhappy routed to a person', s.routed]];
+    var k = [['Messages sent', s.sent], ['Staff time saved', s.hours + ' h'], ['Staff cost saved', '$' + s.staff], ['Visits won back', s.recovered], ['Value of those visits', '$' + s.value], ['Review asks (all patients)', s.reviews], ['Referral asks', s.referrals], ['Unhappy routed to a person', s.routed]];
     $('#kpis').innerHTML = k.map(function (x) { return '<div class="kpi"><span>' + esc(x[0]) + '</span><b>' + esc(x[1]) + '</b></div>'; }).join('');
   }
   function render() {
