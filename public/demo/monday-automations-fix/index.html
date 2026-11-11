@@ -1,0 +1,194 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Monday.com Automation Fix · Working demo (by Dooza)</title>
+<meta name="description" content="Working simulation of a monday.com automations audit and fix on a sample CRM board: 6 broken recipes (wrong time, do nothing, loop), the fixed versions, and a live activity log.">
+<style>
+:root{--a:#0b5cad;--ink:#1d2330;--mut:#5c6478;--bg:#fff;--soft:#f4f6fa;--line:#dde2ec;--red:#d1242f;--redbg:#fdecee;--green:#1a7f37;--grbg:#e8f6ec;--amber:#b25e00;--ambg:#fff4e0;--blue:#e8f0fb;--violet:#6639ba;--vibg:#f1ebfb;--or:#e8590c}
+*{box-sizing:border-box}html,body{overflow-x:hidden}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+.bar{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 16px}.bar b{color:#ffd43b}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 16px;max-width:1320px;margin:auto}
+.logo{font-weight:800;font-size:19px;color:var(--a)}.logo small{display:block;font-weight:500;font-size:12px;color:var(--mut)}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+.tab{font:inherit;font-weight:700;font-size:13px;color:var(--a);background:#fff;border:1px solid var(--a);border-radius:9px;padding:6px 11px;cursor:pointer}
+.tab.on{background:var(--a);color:#fff}
+.btn,.btn2,.btn3{font:inherit;font-weight:700;border-radius:9px;padding:9px 12px;cursor:pointer;border:1px solid var(--a)}
+.btn{background:var(--a);color:#fff}.btn2{background:#fff;color:var(--a)}.btn3{background:#fff;color:var(--red);border-color:var(--red)}
+.small{padding:4px 9px;font-size:12px}
+main{max-width:1320px;margin:auto;padding:4px 16px 24px}
+.intro{background:var(--blue);border-radius:12px;padding:12px 16px;margin-bottom:14px;font-size:14px}.intro b{color:var(--a)}
+.assume{font-size:12px;color:var(--amber);font-weight:600;margin-top:4px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media(min-width:1000px){.layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.layout.wide{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}}
+h2{font-size:20px;margin:0 0 10px}h3{font-size:16px;margin:0 0 8px}
+.card{background:var(--soft);border-radius:12px;padding:14px;margin-bottom:16px;min-width:0}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.sp{flex:1}
+.pane{display:none}.pane.on{display:block}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}
+.kpi{background:var(--soft);border-radius:12px;padding:10px 12px}.kpi>span{display:block;color:var(--mut);font-size:12px}.kpi b{font-size:19px}
+label{display:block;font-size:13px;font-weight:600;margin:8px 0 3px}
+input,select,textarea{font:inherit;width:100%;max-width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+textarea{font:13px/1.45 ui-monospace,Menlo,Consolas,monospace;min-height:190px;resize:vertical}
+.form{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;max-width:440px}
+.form .fh{font-weight:800;font-size:18px}.form .fs{color:var(--mut);font-size:13px;margin-bottom:6px}
+.err{color:var(--red);font-size:13px;font-weight:600;min-height:18px;margin-top:6px}
+.okmsg{color:var(--green);font-size:13px;font-weight:600}
+.flow{display:flex;flex-direction:column;align-items:stretch;gap:0;max-width:440px}
+.node{background:#fff;border:1px solid var(--line);border-left:5px solid var(--a);border-radius:10px;padding:9px 12px;font-size:14px;transition:box-shadow .3s,background .3s}
+.node small{display:block;color:var(--mut);font-size:12px}
+.node.start{border-left-color:var(--green)}.node.tag{border-left-color:var(--violet)}.node.mail{border-left-color:var(--or)}.node.exit{border-left-color:#888}
+.node.flash{background:#fff7d6;box-shadow:0 0 0 3px #ffd43b}
+.arrow{width:2px;height:16px;background:#b7c0d1;margin-left:22px}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;margin:1px 2px 1px 0;white-space:nowrap}
+.p-new{background:var(--grbg);color:var(--green)}.p-int{background:var(--vibg);color:var(--violet)}.p-src{background:var(--blue);color:var(--a)}
+.p-sub{background:var(--grbg);color:var(--green)}.p-uns{background:var(--redbg);color:var(--red)}.p-off{background:var(--ambg);color:var(--amber)}
+.log{list-style:none;margin:0;padding:0;max-height:430px;overflow:auto;font-size:13px}
+.log li{padding:7px 2px;border-bottom:1px solid var(--line);display:flex;gap:8px;min-width:0}
+.log time{color:var(--mut);font:12px ui-monospace,Menlo,monospace;white-space:nowrap;flex:0 0 auto}
+.log span{min-width:0;overflow-wrap:anywhere}
+.k{font-weight:800;font-size:11px;text-transform:uppercase;flex:0 0 58px}
+.k-trigger{color:var(--green)}.k-send{color:var(--or)}.k-tag{color:var(--violet)}.k-skip,.k-error{color:var(--red)}.k-test{color:var(--a)}.k-unsub{color:var(--red)}.k-contact,.k-info{color:var(--mut)}
+.inbox{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.inrow{padding:9px 12px;border-bottom:1px solid var(--line);cursor:pointer;font-size:13px;min-width:0}
+.inrow:hover,.inrow.sel{background:var(--blue)}
+.inrow b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.inrow .pre{color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.inrow .meta{display:flex;justify-content:space-between;gap:8px;color:var(--mut);font-size:12px}
+.envelope{background:#fff;border:1px solid var(--line);border-radius:10px 10px 0 0;padding:10px 12px;font-size:13px;overflow-wrap:anywhere}
+.envelope div{margin:1px 0}.envelope .m{color:var(--mut);display:inline-block;width:70px}
+iframe.prev{width:100%;height:640px;border:1px solid var(--line);border-top:0;border-radius:0 0 10px 10px;background:#fff;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.chip{font:12px ui-monospace,Menlo,monospace;background:#fff;border:1px dashed var(--a);color:var(--a);border-radius:7px;padding:3px 7px;cursor:pointer}
+.warn{background:var(--ambg);color:var(--amber);border-radius:8px;padding:6px 10px;font-size:13px;font-weight:600;margin-top:8px}
+.segs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:14px}
+.seg{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.seg.on{border-color:var(--a);box-shadow:0 0 0 2px var(--a) inset}
+.seg .n{font-size:28px;font-weight:800;color:var(--a);line-height:1.1}.seg .r{font-size:12px;color:var(--mut);margin-top:4px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;border:1px solid var(--line);border-radius:10px;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:720px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--soft);font-size:12px;color:var(--mut)}
+tr.hl td{background:#fff7d6}
+.check{list-style:none;margin:0;padding:0;counter-reset:s}
+.check li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px 10px 44px;margin-bottom:8px;position:relative;counter-increment:s}
+.check li:before{content:counter(s);position:absolute;left:12px;top:10px;width:22px;height:22px;border-radius:50%;background:var(--a);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.check li.done:before{content:"\2713";background:var(--green)}
+.check b{display:block}.check small{color:var(--mut);display:block;font-size:13px}
+.check .where{font-size:12px;color:var(--violet);font-weight:600}
+.toggle{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;cursor:pointer}
+.toggle input{width:auto}
+.muted{color:var(--mut);font-size:13px}
+footer{max-width:1320px;margin:auto;padding:10px 16px 30px;color:var(--mut);font-size:12px}
+.clock{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-weight:700}
+.clock small{display:block;color:var(--mut);font-weight:500;font-size:12px}
+.seg2{display:inline-flex;border:1px solid var(--a);border-radius:9px;overflow:hidden}
+.seg2 button{font:inherit;font-weight:700;font-size:13px;border:0;background:#fff;color:var(--a);padding:7px 12px;cursor:pointer}
+.seg2 button.on{background:var(--a);color:#fff}.seg2 button.on.bad{background:var(--red)}.seg2 button.on.good{background:var(--green)}
+td select,td input{padding:4px 6px;font-size:13px;min-width:0}
+td.st select{font-weight:700;width:132px}td.dt input{width:142px}
+.s-New{background:#e7ecf3}.s-Contacted{background:#fdf0c9}.s-Proposal{background:#e2d8fb}.s-Won{background:#d3f1dc}.s-Lost{background:#fbd9dc}
+.grp{font-size:11px;font-weight:700;color:var(--mut)}.grp.won{color:var(--green)}
+.empty{color:var(--red);font-weight:700;font-size:12px}
+.k-fire{color:var(--green)}.k-wrong{color:var(--amber)}.k-miss,.k-broken,.k-loop{color:var(--red)}.k-user{color:var(--mut)}
+.log li.lw{background:var(--ambg)}.log li.lm,.log li.lb{background:var(--redbg)}
+.rid{display:inline-block;min-width:20px;text-align:center;font-weight:800;font-size:11px;background:var(--a);color:#fff;border-radius:5px;padding:1px 4px;margin-right:4px}
+.recipes{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+@media(min-width:900px){.recipes{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.recipe{background:#fff;border:1px solid var(--line);border-left:6px solid var(--a);border-radius:12px;padding:12px 14px;min-width:0}
+.recipe.wrong-time{border-left-color:var(--amber)}.recipe.does-nothing,.recipe.broken{border-left-color:var(--red)}.recipe.ok{border-left-color:var(--green)}
+.recipe .sent{font-size:16px;margin:6px 0;overflow-wrap:anywhere}.recipe .sent b{color:var(--a)}
+.recipe .why{font-size:13px;color:var(--mut)}
+.recipe.del{opacity:.75}.recipe .was{font-size:12px;color:var(--mut);text-decoration:line-through;margin-top:6px;overflow-wrap:anywhere}
+.chipx{font-size:11px;font-weight:800;text-transform:uppercase;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.c-wrong-time{background:var(--ambg);color:var(--amber)}.c-does-nothing,.c-broken{background:var(--redbg);color:var(--red)}.c-ok{background:var(--grbg);color:var(--green)}
+.cls{font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase}
+.kpi.bad b{color:var(--red)}.kpi.warnk b{color:var(--amber)}.kpi.good b{color:var(--green)}
+.newform{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+@media(min-width:600px){.newform{grid-template-columns:minmax(0,2fr) minmax(0,1.4fr) minmax(0,1fr) auto;align-items:end}}
+.newform label{margin:0 0 3px}
+.bl{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media(min-width:1150px){.bl{grid-template-columns:minmax(0,1fr) 380px}.bl .log{max-height:820px}}
+.bl table{min-width:640px}
+.log li{flex-wrap:wrap;row-gap:2px}.log li>span:last-child{flex:1 1 100%}
+td .em{display:block;font-size:12px;color:var(--mut);font-weight:400;overflow-wrap:anywhere;max-width:190px}
+</style></head><body>
+<div class="bar"><b>Simulation with sample data · demo by Dooza.</b> No real monday.com account is touched. Built for your "fix our monday.com automations" post.</div>
+<header>
+  <div class="logo">Monday.com Automation Fix<small>Audit + fix on a sample CRM board "Leads pipeline" · wrong time · does nothing · broken</small></div>
+  <nav id="tabs">
+    <button class="tab on" data-p="board">1. Board &amp; activity log</button>
+    <button class="tab" data-p="before">2. Automations (Before)</button>
+    <button class="tab" data-p="fixed">3. Automations (Fixed)</button>
+    <button class="tab" data-p="check">4. Fix checklist</button>
+  </nav>
+</header>
+<main>
+  <div class="intro"><b>How to use:</b> pick <b>Run with: Before</b>, press <b>Run the same 6 actions</b> (or edit Status / Follow-up dates yourself and move the clock). Watch the Activity log: pings that fire too often, a reminder at 7 PM the night before, recipes that do nothing, and two recipes that fight. Switch to <b>Fixed</b> and run the same actions: every fire lands at the right moment.
+    <div class="assume">Assumption: your post names the three symptoms, not the recipes, so these 6 are the most common causes of each symptom on a sales board. Owners work in Montreal (Eastern time); the account timezone was left at UTC.</div>
+  </div>
+
+  <section class="pane on" id="p-board">
+    <div class="card">
+      <div class="row">
+        <span class="toggle" style="margin:0">Run with:</span>
+        <div class="seg2" id="mode"><button data-m="before">Before recipes</button><button data-m="fixed">Fixed recipes</button></div>
+        <span class="sp"></span>
+        <div class="clock" id="clock"></div>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="btn" id="scen">Run the same 6 actions</button>
+        <button class="btn2" id="to9">Advance to 9:00 AM</button>
+        <button class="btn2" id="day">Advance time +1 day</button>
+        <button class="btn2" id="h6">+6 hours</button>
+        <button class="btn3 small" id="reset">Reset board</button>
+      </div>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="bl">
+      <div>
+        <div class="card">
+          <h3>Board: Leads pipeline <span class="muted" id="cnt"></span></h3>
+          <div class="tw"><table><thead><tr><th>Name / Email</th><th>Owner</th><th>Status</th><th>Follow-up date</th><th>Deal value</th><th>Group</th><th>Last updated</th></tr></thead><tbody id="rows"></tbody></table></div>
+          <form class="newform" id="newf" style="margin-top:12px" novalidate>
+            <div><label for="n-name">New item (lead) name</label><input id="n-name" maxlength="60" placeholder="e.g. Little Italy Florist"></div>
+            <div><label for="n-by">Created by</label><select id="n-by"></select></div>
+            <div><label for="n-val">Deal value $</label><input id="n-val" type="number" min="0" step="100" value="2500"></div>
+            <div><button class="btn" type="submit">+ Add item</button></div>
+          </form>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="row"><h3 style="margin:0">Activity log</h3><span class="sp"></span><span class="muted" id="logmode"></span></div>
+          <ul class="log" id="log" style="margin-top:8px"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pane" id="p-before">
+    <h2>Automations (Before): what is on the board today</h2>
+    <p class="muted">6 recipes, each ON in the Automations Center. The chip is my diagnosis; the line under it is why.</p>
+    <div class="recipes" id="rb"></div>
+  </section>
+
+  <section class="pane" id="p-fixed">
+    <h2>Automations (Fixed): the same 6 after the fix</h2>
+    <p class="muted">Same intent, rebuilt. Toggle "Run with: Fixed" on the Board tab to see these fire.</p>
+    <div class="recipes" id="rf"></div>
+  </section>
+
+  <section class="pane" id="p-check">
+    <div class="layout">
+      <div class="card">
+        <h3>What I do in your real account (about 2 to 4 hours)</h3>
+        <ul class="check" id="check"></ul>
+      </div>
+      <div class="card">
+        <h3>Tests I run before switching each recipe on</h3>
+        <ul class="check" id="tests"></ul>
+        <p class="muted">You get: the before/after list of every automation, the activity-log screenshots of each test, and a 1-page "what each automation does" doc your team can keep.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Demo by Dooza · sample data only · the same recipe logic (triggers, conditions, date-arrives timing, column references, loop removal) is what gets rebuilt in your monday.com account.</footer>
+<script src="app.js"></script>
+<script src="ui.js"></script>
+</body></html>
