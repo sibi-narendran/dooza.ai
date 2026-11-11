@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 
 // /tc form: 4 fields, no card (Pythia 17:55). Hidden gclid/utm from the URL. gtag events per Apollo's brief.
 const HIDDEN = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+// TC Google Ads account (Apollo 11-11 21:55); old AW-10872232955 tag stays in layout.
+const TC_ADS = 'AW-18569320469';
 const ev = (name) => { try { if (window.gtag) window.gtag('event', name); } catch (e) {} };
 
 export default function TcForm() {
@@ -15,6 +17,7 @@ export default function TcForm() {
             const q = new URLSearchParams(window.location.search);
             HIDDEN.forEach((k) => { const v = q.get(k); if (v) hidden.current[k] = v; });
         } catch (e) {}
+        try { if (window.gtag) window.gtag('config', TC_ADS); } catch (e) {}
     }, []);
     const onFocus = () => { if (!started.current) { started.current = true; ev('tc_form_start'); } };
     const submit = async (e) => {
@@ -27,6 +30,7 @@ export default function TcForm() {
             const d = await r.json().catch(() => ({}));
             if (!r.ok || !d.ok) throw new Error(d.error || 'Could not save right now. Please try again.');
             ev('tc_form_submit');
+            try { if (window.gtag) window.gtag('event', 'conversion', { send_to: 'AW-18569320469/b5kxCMqVuLYdEJWwxZZF' }); } catch (e) {}
             setState('done');
         } catch (err) { setError(err.message); setState('idle'); }
     };
