@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import HeardChips from '@/components/HeardChips';
+import { applyHeard } from '@/lib/heard';
 
 // FB ad landing (/try) start box. Keeps the ad's utm_source/medium/campaign + fbclid and sets utm_content=try-<placement>,
 // so Edison's signups_by_utm.csv shows this page's sign-ups as facebook,paid,try-*. The typed job rides along as ?task=
@@ -24,7 +26,9 @@ function signupUrl(placement, task) {
     }
     out.set('utm_content', `try-${placement}`);
     if (task) out.set('task', task.slice(0, 500));
-    return `https://crew.dooza.ai/?${out.toString()}`;
+    const url = new URL(`https://crew.dooza.ai/?${out.toString()}`);
+    applyHeard(url);
+    return url.toString();
 }
 
 export default function TryStart({ placement, examples = true }) {
@@ -49,6 +53,7 @@ export default function TryStart({ placement, examples = true }) {
                     placeholder="e.g. Find 20 new leads and draft an email to each"
                     className="block w-full resize-none bg-transparent px-2 py-2 text-[17px] text-[#14213D] placeholder:text-[#94A3B8] focus:outline-none"
                 />
+                <HeardChips id={`try-heard-${placement}`} />
                 <button
                     type="submit"
                     data-offer="crew"

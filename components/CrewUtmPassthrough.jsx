@@ -6,6 +6,7 @@
 // 0 trials, unattributable). This copies the visitor's own campaign parameters onto those links
 // when they exist. No campaign parameters = nothing changes.
 import { useEffect } from 'react';
+import { applyHeard } from '@/lib/heard';
 
 // 2026-11-10 (Achilles): Crew is live on Google Play (Edison 11-10). On Android, app sign-up links
 // (crew.dooza.ai root, not /login, /mac or the API) go straight to the Play listing, with the link's
@@ -45,6 +46,20 @@ function incoming() {
 }
 
 export default function CrewUtmPassthrough() {
+    // Click time: add the visitor's "How did you hear about us?" answer (lib/heard.js) to any Crew/Play link.
+    useEffect(() => {
+        const onClick = (e) => {
+            const a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+            if (!a) return;
+            let url;
+            try { url = new URL(a.getAttribute('href'), window.location.origin); } catch (err) { return; }
+            if (url.hostname !== CREW_HOST && !(url.hostname === 'play.google.com' && a.getAttribute('data-play'))) return;
+            if (applyHeard(url)) a.setAttribute('href', url.toString());
+        };
+        document.addEventListener('click', onClick, true);
+        return () => document.removeEventListener('click', onClick, true);
+    }, []);
+
     useEffect(() => {
         const inc = incoming();
         const android = isAndroid();

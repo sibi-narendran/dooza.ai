@@ -15,6 +15,7 @@ import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import FAQAccordion from '@/components/FAQAccordion';
 import CrewPrompt from '@/components/crew/CrewPrompt';
 import { crewSignupUrl } from '@/lib/crewUrl';
+import HeardChips from '@/components/HeardChips';
 import CrewRoom from '@/components/home/CrewRoom';
 import { testimonials } from '@/lib/homeData';
 
@@ -239,6 +240,7 @@ export default function HomeCrew() {
                         {/* One chat box on the page (Sibi 2026-10-22 20:17): price and bottom sections link to sign-up and offer a call or text. */}
                         <div className="rounded-2xl bg-white p-7 text-[#14213D] md:p-9">
                             <a href={crewSignupUrl('home-price')} data-source="home-price" className="block rounded-xl bg-[#0F766E] px-6 py-4 text-center text-lg font-semibold text-white hover:bg-[#115E59]">Get the Dooza Crew app</a>
+                            <div className="rounded-xl bg-white p-2"><HeardChips id="home-heard" /></div>
                             <p className={`mt-6 text-[17px] ${MUTED}`}>Questions first? Talk to us at Dooza.</p>
                             <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-[17px]">
                                 <a href="tel:+14243658980" data-source="home-price-call" className={LINK}>Call +1 (424) 365-8980</a>
