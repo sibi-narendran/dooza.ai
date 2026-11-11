@@ -1,6 +1,6 @@
 // /hospital: India hospital software test (Apollo; Sibi approved the test 2026-11-11 18:56, approves every asset before ads).
 // DRAFT 2026-11-11: noindex, unlinked, not in the sitemap. Left out until Sibi: 'ABHA-ready', Razorpay link, WhatsApp number.
-import HospitalForm, { WhatsAppButton } from '@/components/hospital/HospitalForm';
+import HospitalForm, { WhatsAppButton, BookButton } from '@/components/hospital/HospitalForm';
 
 export const metadata = {
     title: 'Hospital Software, Built for You in 7 Days',
@@ -24,6 +24,7 @@ export default function HospitalPage() {
                 <p className="mt-4 text-lg text-[#4B5567]">OPD billing, pharmacy and reports, with bills, reminders and daily reports on WhatsApp. Fixed price, no per-booking fees. Your hospital owns its data.</p>
                 <div className="mt-6 flex flex-wrap gap-3">
                     <a href="#start" className="inline-block rounded-xl bg-[#0F766E] px-6 py-4 text-lg font-semibold text-white hover:bg-[#0B5D57]">Book a free demo</a>
+                    <BookButton />
                     <WhatsAppButton />
                 </div>
 
@@ -32,6 +33,7 @@ export default function HospitalPage() {
                 </ul>
 
                 <div className="mt-10"><HospitalForm /></div>
+                <div className="mt-4 flex flex-wrap items-center gap-3"><span className="text-[15px] text-[#4B5567]">Prefer to pick a time?</span><BookButton /></div>
 
                 <section className="mt-14">
                     <h2 className="text-2xl font-bold">Screens</h2>

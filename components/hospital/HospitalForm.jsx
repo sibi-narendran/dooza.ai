@@ -4,8 +4,13 @@ import { useEffect, useRef, useState } from 'react';
 // /hospital form: 4 fields + hidden gclid/utm. gtag events per Apollo's brief (2026-11-11).
 const HIDDEN = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
 const ev = (name) => { try { if (window.gtag) window.gtag('event', name); } catch (e) {} };
-// WhatsApp number not decided yet (Apollo 18:57). Set it here; until then the button is a placeholder.
-const WA_NUMBER = '';
+// WhatsApp = Sibi's main number (Sibi voice 19:30 via Apollo; number from /home/nestor/data/people.md).
+const WA_NUMBER = '918344242526';
+const CAL = 'https://calendly.com/sibi-dooza/book-a-meeting-and-walk-away-with-clarity';
+
+export function BookButton() {
+    return <a href={CAL} target="_blank" rel="noopener" onClick={() => ev('hospital_book_click')} className="inline-block rounded-xl border-2 border-[#14213D] px-6 py-4 text-lg font-semibold text-[#14213D] hover:bg-white">Book a 15-min demo</a>;
+}
 
 export function WhatsAppButton() {
     const cls = 'inline-block rounded-xl border-2 border-[#16A34A] px-6 py-4 text-lg font-semibold text-[#15803D]';
