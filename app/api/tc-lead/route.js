@@ -5,6 +5,8 @@ import { closeFetch, STATUS_POTENTIAL, clean } from '../../../lib/agentHire';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
+// Delivery owner = Sibi (Apollo 18:46, Odysseus 81d7iz1n).
+const SIBI_CLOSE_USER = 'user_tMVvbOIMZDjMMSJNQmHNFhaGTjplpDvQZk9ZAsIGkst';
 const HIDDEN = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
 const json = (d, s = 200) => new Response(JSON.stringify(d), { status: s, headers: { 'Content-Type': 'application/json' } });
 
@@ -37,7 +39,7 @@ export async function POST(request) {
         });
         const note = ['TC free file request via dooza.ai/tc', `Name: ${name}`, `Email: ${email}`, `Mobile: ${phone}`, `Closing date: ${closing}`, ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
         await closeFetch(apiKey, '/activity/note/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, note }) });
-        await closeFetch(apiKey, '/task/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, text: `TC free file: open the file, closing ${closing}. Email + call.`, date: new Date().toISOString().slice(0, 10), is_complete: false }) });
+        await closeFetch(apiKey, '/task/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, assigned_to: SIBI_CLOSE_USER, text: `TC free file: open the file, closing ${closing}. Email + call.`, date: new Date().toISOString().slice(0, 10), is_complete: false }) });
     } catch (e) {
         console.error('tc-lead', e.message);
         return json({ ok: false, error: 'Could not save right now. Please try again in a minute.' }, 502);

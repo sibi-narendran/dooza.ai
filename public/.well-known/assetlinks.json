@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ai.dooza.app",
+      "sha256_cert_fingerprints": [
+        "B6:24:78:31:A0:72:3A:36:DF:0D:F2:F7:85:F1:95:94:58:1E:C6:F9:CE:C9:E9:E5:34:6E:4B:A0:CD:4B:46:73",
+        "66:3F:E8:3A:E7:02:E1:D4:E9:5A:69:39:05:8B:82:C3:EA:17:CF:F0:D4:72:AE:A5:F6:E5:FC:A2:AB:73:3F:A0"
+      ]
+    }
+  }
+]
