@@ -1,35 +1,79 @@
-// Sample product screens for /tc (Apollo 21:10, Sibi 21:08 'try to create screenshots'). HTML/CSS mockups, fake data, labelled.
-const Card = ({ title, children }) => (
-    <figure className="rounded-2xl border border-[#CBD5E1] bg-white p-4 shadow-[0_20px_50px_-30px_rgba(15,23,42,0.5)]">
-        <figcaption className="mb-3 flex items-center justify-between"><span className="font-semibold text-[#14213D]">{title}</span><span className="rounded-full bg-[#F1F5F9] px-2 py-0.5 text-[11px] text-[#64748B]">Sample screen</span></figcaption>
-        {children}
+// /tc product screens v2 (Sibi 2026-11-12 21:05 'ui have to be better', Apollo spec n5axzfnm). HTML/CSS mockups of an EXAMPLE file
+// (subhead says example; no client data). Real-app chrome: window bar, iMessage thread, file table, mail client.
+const Window = ({ title, right, children }) => (
+    <figure className="overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-[0_1px_2px_rgba(15,23,42,0.06),0_24px_48px_-24px_rgba(15,23,42,0.35)]">
+        <div className="flex items-center gap-2 border-b border-[#EEF2F6] bg-[#F8FAFC] px-4 py-2.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" /><span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" /><span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
+            <span className="ml-2 truncate text-[12px] font-medium text-[#475569]">{title}</span>
+            {right && <span className="ml-auto shrink-0">{right}</span>}
+        </div>
+        <div className="p-4">{children}</div>
     </figure>
 );
-const STEPS = [['Executed contract', 'Nov 3', 1], ['Option period ends', 'Nov 10', 1], ['Inspection', 'Nov 8', 1], ['Appraisal', 'Nov 17', 0], ['Financing approval', 'Nov 24', 0], ['Closing', 'Dec 2', 0]];
-const DOCS = [['Executed TREC 1-4 contract', 1], ['Earnest money receipt', 1], ["Seller's disclosure", 1], ['Third-party financing addendum', 0], ['HOA addendum', 0], ['Lead-based paint (pre-1978)', 1]];
+const Pill = ({ tone, children }) => {
+    const t = { green: 'bg-[#ECFDF5] text-[#047857] ring-[#A7F3D0]', amber: 'bg-[#FFFBEB] text-[#B45309] ring-[#FDE68A]', blue: 'bg-[#EFF6FF] text-[#1D4ED8] ring-[#BFDBFE]' }[tone];
+    return <span className={`inline-flex items-center whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset ${t}`}>{children}</span>;
+};
+const STEPS = [['Executed contract', 'Nov 3', 'done'], ['Inspection', 'Nov 8', 'done'], ['Option period ends', 'Nov 10', 'done'], ['Appraisal', 'Mon Nov 17', 'now'], ['Financing approval', 'Nov 24', 'next'], ['Closing', 'Dec 2', 'next']];
+const DOCS = [['Executed TREC 1-4 contract', 'ok'], ['Earnest money receipt', 'ok'], ["Seller's disclosure", 'ok'], ['Third-party financing addendum', 'Chasing buyer lender'], ['HOA addendum', 'Requested from HOA'], ['Lead-based paint (pre-1978)', 'ok']];
+
 export default function TcScreens() {
     return (
         <section className="mt-14">
-            <h2 className="text-2xl font-bold">What you see</h2>
-            <p className="mt-1 text-[14px] text-[#64748B]">Sample screens with made-up data.</p>
-            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <Card title="File timeline · 1418 Oak Ridge Dr">
-                    <ol className="space-y-2 text-[13px]">{STEPS.map(([s, d, ok]) => (
-                        <li key={s} className="flex items-center gap-2"><span className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] text-white ${ok ? 'bg-[#16A34A]' : 'bg-[#CBD5E1]'}`}>{ok ? '✓' : ''}</span><span className="flex-1 text-[#334155]">{s}</span><span className="text-[#64748B]">{d}</span></li>))}
+            <h2 className="text-2xl font-bold">What your file looks like with us</h2>
+            <p className="mt-1 text-[15px] text-[#4B5567]">Example file: 1418 Oak Ridge Dr, Austin TX.</p>
+            <div className="mt-5 grid gap-5 lg:grid-cols-2">
+                <Window title="Closing tracker" right={<Pill tone="green">On track</Pill>}>
+                    <div className="flex flex-wrap items-center gap-2 text-[12px] text-[#334155]"><span className="rounded-md bg-[#F1F5F9] px-2 py-1 font-semibold">1418 Oak Ridge Dr</span><span>$485,000</span><span className="text-[#94A3B8]">·</span><span>Closes Dec 2</span></div>
+                    <div className="mt-3 h-1.5 w-full rounded-full bg-[#EEF2F6]"><div className="h-1.5 w-1/2 rounded-full bg-[#10B981]" /></div>
+                    <p className="mt-1 text-[11px] text-[#64748B]">3 of 6 milestones done</p>
+                    <ol className="relative mt-4 space-y-3 border-l border-[#E2E8F0] pl-5">
+                        {STEPS.map(([s, d, st]) => (
+                            <li key={s} className="relative">
+                                <span className={`absolute -left-[27px] top-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[9px] text-white ${st === 'done' ? 'bg-[#10B981]' : st === 'now' ? 'bg-white ring-4 ring-[#BFDBFE] border-2 border-[#2563EB]' : 'border-2 border-[#CBD5E1] bg-white'}`}>{st === 'done' ? '✓' : ''}</span>
+                                <div className="flex items-center justify-between gap-2 text-[13px]"><span className={st === 'now' ? 'font-semibold text-[#1D4ED8]' : st === 'done' ? 'text-[#334155]' : 'text-[#64748B]'}>{s}</span><span className="text-[12px] text-[#64748B]">{d}</span></div>
+                                {st === 'now' && <p className="mt-0.5 text-[12px] text-[#475569]">Appraiser visit confirmed Sat 10 AM</p>}
+                            </li>))}
                     </ol>
-                </Card>
-                <Card title="Alert to you">
-                    <div className="rounded-xl bg-[#FEF3C7] p-3 text-[13px] text-[#78350F]"><p className="font-semibold">⏰ Deadline in 2 days</p><p className="mt-1">Appraisal due Mon Nov 17 for 1418 Oak Ridge Dr. Lender confirmed the appraiser visit for Sat 10am. Nothing needed from you yet.</p></div>
-                    <div className="mt-3 rounded-xl bg-[#F1F5F9] p-3 text-[13px] text-[#334155]"><p className="text-[11px] text-[#64748B]">SMS · 9:02 AM</p><p className="mt-1">Oak Ridge: appraisal Mon 11/17. Lender on track. Reply STATUS for the full file.</p></div>
-                </Card>
-                <Card title="Document checklist">
-                    <ul className="space-y-2 text-[13px]">{DOCS.map(([d, ok]) => (
-                        <li key={d} className="flex items-center gap-2"><span className={ok ? 'text-[#16A34A]' : 'text-[#DC2626]'}>{ok ? '✓' : '!'}</span><span className={`flex-1 ${ok ? 'text-[#334155]' : 'font-semibold text-[#B91C1C]'}`}>{d}</span>{!ok && <span className="rounded bg-[#FEE2E2] px-1.5 text-[11px] text-[#B91C1C]">Missing</span>}</li>))}
-                    </ul>
-                </Card>
-                <Card title="Friday status email · to you + your buyer">
-                    <div className="text-[13px] text-[#334155]"><p className="text-[11px] text-[#64748B]">Fri Nov 14 · Subject: 1418 Oak Ridge Dr, week 2 update</p><p className="mt-2 font-semibold">Done this week</p><p>Earnest money receipted · Inspection complete · Option period ended</p><p className="mt-2 font-semibold">Next</p><p>Appraisal Mon 11/17 · Title commitment by Wed 11/19</p><p className="mt-2 font-semibold">Needed from you</p><p>Nothing right now.</p></div>
-                </Card>
+                </Window>
+                <figure className="overflow-hidden rounded-[28px] border border-[#E2E8F0] bg-white shadow-[0_1px_2px_rgba(15,23,42,0.06),0_24px_48px_-24px_rgba(15,23,42,0.35)]">
+                    <div className="flex flex-col items-center border-b border-[#EEF2F6] bg-[#F8FAFC] py-3">
+                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-b from-[#94A3B8] to-[#64748B] text-[15px] font-semibold text-white">H</span>
+                        <span className="mt-1 text-[12px] font-semibold text-[#0F172A]">Hercules · Your TC</span>
+                        <span className="text-[11px] text-[#64748B]">(737) 390-1099</span>
+                    </div>
+                    <div className="space-y-2 p-4 text-[14px]">
+                        <p className="text-center text-[11px] text-[#94A3B8]">Today 9:02 AM</p>
+                        <div className="max-w-[85%] rounded-2xl rounded-bl-md bg-[#E9E9EB] px-3.5 py-2 text-[#0F172A]">Oak Ridge: appraisal Mon 11/17. Lender confirmed the appraiser for Sat 10 AM. Nothing needed from you.</div>
+                        <div className="ml-auto max-w-[60%] rounded-2xl rounded-br-md bg-[#0A84FF] px-3.5 py-2 text-white">Got it, thanks!</div>
+                        <div className="max-w-[85%] rounded-2xl rounded-bl-md bg-[#E9E9EB] px-3.5 py-2 text-[#0F172A]">Heads up: HOA addendum still missing. I&apos;ve asked the HOA and will update you Friday.</div>
+                        <p className="pt-1 text-right text-[11px] text-[#94A3B8]">Delivered</p>
+                    </div>
+                </figure>
+                <Window title="Documents · 1418 Oak Ridge Dr" right={<span className="text-[11px] text-[#64748B]">4 of 6 verified</span>}>
+                    <table className="w-full text-[13px]">
+                        <thead><tr className="border-b border-[#EEF2F6] text-left text-[11px] uppercase tracking-wide text-[#94A3B8]"><th className="pb-2 font-medium">Document</th><th className="pb-2 text-right font-medium">Status</th></tr></thead>
+                        <tbody>{DOCS.map(([d, s]) => (
+                            <tr key={d} className="border-b border-[#F1F5F9] last:border-0">
+                                <td className="py-2.5"><span className="flex items-center gap-2 text-[#334155]"><span className="flex h-6 w-5 shrink-0 items-center justify-center rounded-sm bg-[#FEE2E2] text-[8px] font-bold text-[#B91C1C]">PDF</span>{d}</span></td>
+                                <td className="py-2.5 text-right">{s === 'ok' ? <Pill tone="green">Verified</Pill> : <Pill tone="amber">{s}</Pill>}</td>
+                            </tr>))}
+                        </tbody>
+                    </table>
+                </Window>
+                <Window title="Inbox">
+                    <div className="space-y-1 border-b border-[#EEF2F6] pb-3 text-[12px] text-[#475569]">
+                        <p><span className="text-[#94A3B8]">From</span> <span className="font-medium text-[#0F172A]">Hercules</span> &lt;hercules@calls.dooza.org&gt;</p>
+                        <p><span className="text-[#94A3B8]">To</span> You, Buyer</p>
+                        <p className="pt-1 text-[14px] font-semibold text-[#0F172A]">1418 Oak Ridge Dr: week 2 closing update</p>
+                        <p className="text-[11px] text-[#94A3B8]">Fri Nov 14, 4:00 PM</p>
+                    </div>
+                    <div className="mt-3 divide-y divide-[#F1F5F9] rounded-xl border border-[#EEF2F6] text-[13px]">
+                        <div className="flex gap-3 p-3"><Pill tone="green">Done</Pill><span className="text-[#334155]">Earnest money receipted · Inspection complete · Option period ended</span></div>
+                        <div className="flex gap-3 p-3"><Pill tone="blue">Up next</Pill><span className="text-[#334155]">Appraisal Mon 11/17 · Title commitment by Wed 11/19</span></div>
+                        <div className="flex gap-3 p-3"><Pill tone="green">From you</Pill><span className="text-[#334155]">Nothing needed. Enjoy your weekend.</span></div>
+                    </div>
+                </Window>
             </div>
         </section>
     );
