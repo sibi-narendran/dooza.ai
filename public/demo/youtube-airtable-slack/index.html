@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>YouTube Agency — Airtable Base & Slack Automation Diagnostic Demo</title>
+<style>
+  :root {
+    --bg: #f6f8fa; --card: #ffffff; --border: #dde2e8; --text: #172b4d; --muted: #5e6c84;
+    --blue: #166ee1; --green: #0b875b; --amber: #d97706; --red: #de350b; --purple: #6554c0;
+    --slack-bg: #1a1d21; --slack-text: #d1d2d3; --slack-accent: #36c5f0;
+  }
+  * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-size: 14px; }
+  header { background: #fff; border-bottom: 1px solid var(--border); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; }
+  .badge { font-size: 11px; padding: 3px 8px; border-radius: 12px; font-weight: 600; background: #e9f2ff; color: var(--blue); }
+  .badge-sample { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+  .layout { display: grid; grid-template-columns: 1.45fr 1fr; gap: 16px; padding: 16px 20px; max-width: 1440px; margin: 0 auto; }
+  @media (max-width: 1024px) { .layout { grid-template-columns: 1fr; } }
+  .panel { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .panel-hdr { padding: 11px 14px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-weight: 600; background: #fafbfc; }
+  .tabs { display: flex; gap: 6px; }
+  .tab { padding: 5px 10px; border-radius: 5px; border: 1px solid var(--border); background: #fff; cursor: pointer; font-size: 12px; font-weight: 600; color: var(--muted); }
+  .tab.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 9px 10px; border-bottom: 1px solid #eef1f5; text-align: left; vertical-align: middle; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); background: #fafbfc; }
+  select, button.btn { padding: 5px 9px; border-radius: 5px; border: 1px solid var(--border); font-size: 12px; background: #fff; cursor: pointer; }
+  button.btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); font-weight: 600; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+  .st-Scripting { background: #f3e8ff; color: #6b21a8; }
+  .st-Filming { background: #e0f2fe; color: #0369a1; }
+  .st-Editing { background: #fef3c7; color: #92400e; }
+  .st-Thumbnail { background: #fce7f3; color: #9d174d; }
+  .st-Client-Review { background: #dbeafe; color: #1d4ed8; }
+  .st-Published { background: #dcfce7; color: #166534; }
+  .fix-list { padding: 12px 14px; display: grid; gap: 8px; border-bottom: 1px solid var(--border); background: #f8fafc; }
+  .fix-item { font-size: 12.5px; display: flex; gap: 8px; align-items: flex-start; line-height: 1.4; }
+  .fix-tag { font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; background: #dcfce7; color: #166534; white-space: nowrap; margin-top: 1px; }
+  .slack-window { background: var(--slack-bg); color: var(--slack-text); padding: 14px; min-height: 290px; max-height: 360px; overflow-y: auto; }
+  .slack-chan { font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid #2e3338; display: flex; justify-content: space-between; }
+  .slack-msg { background: #222529; border-left: 3px solid var(--slack-accent); padding: 10px 12px; border-radius: 4px; margin-bottom: 10px; font-size: 12.5px; line-height: 1.45; }
+  .slack-msg.suppressed { border-left-color: #f59e0b; opacity: 0.82; }
+  .slack-meta { font-size: 11px; color: #9ca3af; margin-bottom: 4px; display: flex; justify-content: space-between; }
+  .log-box { padding: 12px 14px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; background: #0f172a; color: #cbd5e1; max-height: 210px; overflow-y: auto; }
+  .log-line { margin-bottom: 5px; }
+  .ok { color: #4ade80; } .warn { color: #fbbf24; } .err { color: #f87171; }
+  .controls { padding: 10px 14px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+  .toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; cursor: pointer; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span>🎬 YouTube Agency Production Base — Airtable + Slack Fix Prototype</span>
+    <span class="badge">Idempotent Triggers · Linked-Record Integrity · Thread Routing</span>
+  </div>
+  <span class="badge badge-sample">Interactive Demo (Sample Data — No Client Credentials)</span>
+</header>
+
+<div class="layout">
+  <div class="panel">
+    <div class="panel-hdr">
+      <span>Airtable Base: <code>Videos</code> ↔ <code>Clients</code> ↔ <code>Team</code> ↔ <code>Automation_Runs</code></span>
+      <div class="tabs">
+        <button class="tab active" id="tab-videos" onclick="switchView('videos')">Videos Grid</button>
+        <button class="tab" id="tab-schema" onclick="switchView('schema')">4 Common Base Bugs Fixed</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label class="toggle">
+        <input type="checkbox" id="guardToggle" checked onchange="renderAll()">
+        <span>Enable Clean Architecture Guard (idempotency hash + missing-owner check + Slack thread_ts reuse)</span>
+      </label>
+      <button class="btn" onclick="simulateFlicker()">Simulate Rapid Double-Edit (Bug Test)</button>
+    </div>
+
+    <div id="view-videos">
+      <table>
+        <thead>
+          <tr>
+            <th>Video ID & Title</th>
+            <th>Client Channel</th>
+            <th>Stage (Change to Trigger)</th>
+            <th>Assigned Role</th>
+            <th>Due / SLA</th>
+            <th>Last Notified Hash</th>
+          </tr>
+        </thead>
+        <tbody id="videosBody"></tbody>
+      </table>
+    </div>
+
+    <div id="view-schema" style="display:none; padding:14px;">
+      <div class="fix-list" style="border:1px solid var(--border); border-radius:6px;">
+        <div class="fix-item"><span class="fix-tag">FIX 1 · DUPLICATE PINGS</span><div><strong>Stage flicker & multi-field triggers:</strong> Instead of raw "When record matches conditions" (which re-fires whenever a record leaves & re-enters a view), a single Automation script checks <code>Last_Notified_Stage_Hash</code> against <code>RECORD_ID() + ":" + Stage</code> and updates it atomically.</div></div>
+        <div class="fix-item"><span class="fix-tag">FIX 2 · SLACK THREADS</span><div><strong>Channel noise vs per-video threads:</strong> First stage alert posts to the client's Slack channel (looked up from <code>Clients.Slack_Channel_ID</code>) and writes <code>Slack_Thread_TS</code> back to Airtable so Editing, Thumbnail, and Review updates stay inside one clean thread.</div></div>
+        <div class="fix-item"><span class="fix-tag">FIX 3 · BROKEN LOOKUPS</span><div><strong>Array vs string crashes in Airtable scripts:</strong> Lookup fields (<code>Editor_Slack_ID</code>, <code>Drive_Folder_URL</code>) return arrays in Airtable Scripting; normalized safely with fallback routing to the Producer if an assignee or asset link is missing before firing Slack.</div></div>
+        <div class="fix-item"><span class="fix-tag">FIX 4 · ROLLUP DEADLINES</span><div><strong>Stage-aware SLA formula:</strong> Automatically recalculates stage due dates from <code>Publish_Date</code> (Script T-10d, Edit T-5d, Thumbnail T-4d, Client Review T-2d) without overwriting manual overrides.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid; gap:16px; align-content:start;">
+    <div class="panel">
+      <div class="panel-hdr">
+        <span>Live Slack Output Preview</span>
+        <span style="font-size:11px; color:var(--muted);" id="slackStats">0 alerts sent · 0 duplicates blocked</span>
+      </div>
+      <div class="slack-window" id="slackFeed"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-hdr">
+        <span>Airtable Automation Script Execution Log</span>
+        <button class="btn" onclick="clearLogs()">Clear</button>
+      </div>
+      <div class="log-box" id="runLog"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const STAGES = ["Scripting", "Filming", "Editing", "Thumbnail", "Client Review", "Published"];
+const STAGE_OWNER_FIELD = {
+  "Scripting": { role: "Scriptwriter", slack: "@maya.writes", name: "Maya L." },
+  "Filming": { role: "Creator / Host", slack: "@client-host", name: "Client Host" },
+  "Editing": { role: "Video Editor", slack: "@alex.cuts", name: "Alex K." },
+  "Thumbnail": { role: "Thumbnail Designer", slack: "@sara.design", name: "Sara P." },
+  "Client Review": { role: "Account Manager", slack: "@jonas.pm", name: "Jonas M." },
+  "Published": { role: "Channel Manager", slack: "@jonas.pm", name: "Jonas M." }
+};
+
+const videos = [
+  { id: "VID-104", title: "Why 90% of B2B Funnels Leak", client: "Nordic SaaS Lab", channel: "#yt-nordic-saas", stage: "Editing", publishDate: "2026-11-19", assetOk: true, hash: "VID-104:Editing", threadTs: "1762951001.0042" },
+  { id: "VID-105", title: "7 AI Workflows We Run Daily", client: "Copenhagen Founders", channel: "#yt-cph-founders", stage: "Scripting", publishDate: "2026-11-22", assetOk: true, hash: "VID-105:Scripting", threadTs: "1762951208.0119" },
+  { id: "VID-106", title: "Q4 Ad Creative Breakdown", client: "Vesterbro Ecom", channel: "#yt-vesterbro", stage: "Thumbnail", publishDate: "2026-11-16", assetOk: false, hash: "VID-106:Thumbnail", threadTs: "" },
+  { id: "VID-107", title: "Founder Vlog #18 — Hiring Editors", client: "Nordic SaaS Lab", channel: "#yt-nordic-saas", stage: "Client Review", publishDate: "2026-11-14", assetOk: true, hash: "VID-107:Client Review", threadTs: "1762951890.0205" }
+];
+
+let sentCount = 0;
+let blockedCount = 0;
+const slackMessages = [
+  { chan: "#yt-nordic-saas", ts: "1762951001.0042", who: "Airtable Production Bot", text: "🎬 *VID-104 · Why 90% of B2B Funnels Leak* moved to *Editing* → <@alex.cuts> (Due T-5d before Nov 19 · Raw footage folder linked)", suppressed: false }
+];
+const logs = [
+  { cls: "ok", msg: "[INIT] Loaded 4 linked tables (Videos, Clients, Team, Automation_Runs). Change any Stage dropdown on the left to test." }
+];
+
+function switchView(v) {
+  document.getElementById("view-videos").style.display = v === "videos" ? "block" : "none";
+  document.getElementById("view-schema").style.display = v === "schema" ? "block" : "none";
+  document.getElementById("tab-videos").classList.toggle("active", v === "videos");
+  document.getElementById("tab-schema").classList.toggle("active", v === "schema");
+}
+
+function slaLabel(stage, pubDate) {
+  const offsets = { "Scripting": -10, "Filming": -7, "Editing": -5, "Thumbnail": -4, "Client Review": -2, "Published": 0 };
+  const d = new Date(pubDate + "T00:00:00");
+  d.setDate(d.getDate() + (offsets[stage] || 0));
+  return d.toISOString().slice(5, 10) + " (Pub " + pubDate.slice(5) + ")";
+}
+
+function handleStageChange(idx, newStage) {
+  const v = videos[idx];
+  const guard = document.getElementById("guardToggle").checked;
+  const candidateHash = v.id + ":" + newStage;
+  const owner = STAGE_OWNER_FIELD[newStage];
+
+  v.stage = newStage;
+
+  if (guard && v.hash === candidateHash) {
+    blockedCount++;
+    logs.unshift({ cls: "warn", msg: `[DEDUPE] Skipped duplicate trigger for ${v.id} (${candidateHash} already notified).` });
+    slackMessages.unshift({
+      chan: v.channel,
+      ts: v.threadTs || "new",
+      who: "Guard (Suppressed)",
+      text: `⚠️ Blocked duplicate Slack ping on *${v.id}* (${newStage}) — idempotency hash matched.`,
+      suppressed: true
+    });
+    renderAll();
+    return;
+  }
+
+  let warningNote = "";
+  if (guard && !v.assetOk && (newStage === "Thumbnail" || newStage === "Client Review")) {
+    warningNote = " · ⚠️ _Missing Frame.io / Drive link — routed check to @jonas.pm_";
+    logs.unshift({ cls: "warn", msg: `[VALIDATION] ${v.id} missing Drive/Frame.io lookup array -> appended PM fallback instead of crashing script.` });
+  }
+
+  if (!v.threadTs) {
+    v.threadTs = (1762952000 + Math.floor(Math.random() * 900)).toString() + ".0091";
+    logs.unshift({ cls: "ok", msg: `[SLACK] Created root thread ${v.threadTs} in ${v.channel} and wrote thread_ts back to Airtable.` });
+  } else {
+    logs.unshift({ cls: "ok", msg: `[SLACK] Posted reply in existing thread_ts=${v.threadTs} (${v.channel}) for ${owner.slack}.` });
+  }
+
+  v.hash = candidateHash;
+  sentCount++;
+  slackMessages.unshift({
+    chan: v.channel + (guard ? ` (thread ${v.threadTs})` : " (root channel spam)"),
+    ts: new Date().toTimeString().slice(0, 8),
+    who: "Airtable Production Bot",
+    text: `✅ *${v.id} · ${v.title}* → *${newStage}* | Owner: *${owner.name}* (${owner.slack}) | Stage Due: ${slaLabel(newStage, v.publishDate)}${warningNote}`,
+    suppressed: false
+  });
+  renderAll();
+}
+
+function simulateFlicker() {
+  handleStageChange(0, videos[0].stage);
+}
+
+function clearLogs() {
+  logs.length = 0;
+  renderAll();
+}
+
+function renderAll() {
+  const tbody = document.getElementById("videosBody");
+  tbody.innerHTML = videos.map((v, idx) => {
+    const owner = STAGE_OWNER_FIELD[v.stage];
+    const cls = "st-" + v.stage.replace(/\s+/g, "-");
+    const opts = STAGES.map(s => `<option value="${s}" ${s === v.stage ? "selected" : ""}>${s}</option>`).join("");
+    return `<tr>
+      <td><strong>${v.id}</strong><div style="color:var(--muted);font-size:12px;">${v.title}</div></td>
+      <td>${v.client}<div style="color:var(--muted);font-size:11px;">${v.channel}</div></td>
+      <td>
+        <span class="pill ${cls}" style="margin-bottom:4px;">${v.stage}</span><br>
+        <select onchange="handleStageChange(${idx}, this.value)">${opts}</select>
+      </td>
+      <td>${owner.name}<div style="color:var(--blue);font-size:11px;">${owner.role} (${owner.slack})</div></td>
+      <td style="font-size:12px;">${slaLabel(v.stage, v.publishDate)}${!v.assetOk ? '<div style="color:var(--red);font-size:11px;">Missing asset URL</div>' : ''}</td>
+      <td><code style="font-size:11px;">${v.hash}</code></td>
+    </tr>`;
+  }).join("");
+
+  document.getElementById("slackStats").textContent = `${sentCount} new alerts · ${blockedCount} duplicates blocked`;
+  document.getElementById("slackFeed").innerHTML = slackMessages.map(m => `
+    <div class="slack-msg ${m.suppressed ? 'suppressed' : ''}">
+      <div class="slack-meta"><span><strong>${m.who}</strong> in ${m.chan}</span><span>${m.ts}</span></div>
+      <div>${m.text}</div>
+    </div>
+  `).join("");
+
+  document.getElementById("runLog").innerHTML = logs.map(l => `<div class="log-line ${l.cls}">${l.msg}</div>`).join("");
+}
+
+renderAll();
+</script>
+</body>
+</html>
