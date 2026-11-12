@@ -15,7 +15,7 @@ export async function POST(request) {
     const slug = clean(b.page_slug, 20);
     if (!PAGES[slug]) return json({ ok: false, error: 'Invalid request.' }, 400);
     const name = clean(b.name, 120), contact = clean(b.contact, 160), company = clean(b.company, 160);
-    if (!name || !company || contact.replace(/[^\d@]/g, '').length < 6) return json({ ok: false, error: 'Please fill all three fields.' }, 400);
+    if (!name || !company || !(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact) || contact.replace(/\D/g, '').length >= 9)) return json({ ok: false, error: 'Please fill all three fields.' }, 400);
     const apiKey = process.env.CLOSE_API_KEY;
     if (!apiKey) return json({ ok: false, error: 'Could not save right now. Please try again in a minute.' }, 503);
     const isEmail = /@/.test(contact);
