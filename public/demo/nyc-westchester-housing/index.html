@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>NYC (~60-Unit) & Westchester (~20-Unit) Housing Tracker — Live Public-Record Prototype</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #475569;
+      --brand: #1d4ed8;
+      --brand-soft: #eff6ff;
+      --green: #15803d;
+      --green-bg: #dcfce7;
+      --amber: #b45309;
+      --amber-bg: #fef3c7;
+      --purple: #6d28d9;
+      --purple-bg: #f3e8ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 20px 28px;
+      border-bottom: 3px solid #2563eb;
+    }
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    h1 { margin: 0; font-size: 20px; font-weight: 700; }
+    .sub { color: #cbd5e1; font-size: 13px; margin-top: 4px; }
+    .badge-live {
+      background: rgba(37, 99, 235, 0.25);
+      border: 1px solid #60a5fa;
+      color: #dbeafe;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    main { max-width: 1440px; margin: 0 auto; padding: 20px 28px 48px; }
+    .honesty-banner {
+      background: var(--brand-soft);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 11px 16px;
+      font-size: 13px;
+      color: #1e3a8a;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .kpi-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
+    .kpi-val { font-size: 22px; font-weight: 700; margin-top: 4px; }
+    .kpi-note { font-size: 12px; color: var(--muted); margin-top: 3px; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tab-btn {
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .tab-btn.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+    .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    input[type="search"], select {
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 8px 11px;
+      font-size: 13px;
+      background: #fff;
+    }
+    .btn-export {
+      background: #0f766e;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-export:hover { background: #115e59; }
+    .table-wrap {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow-x: auto;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 1580px; }
+    th {
+      background: #f1f5f9;
+      text-align: left;
+      padding: 10px 11px;
+      font-weight: 700;
+      color: #334155;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    td {
+      padding: 10px 11px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: top;
+    }
+    tr:hover td { background: #f8fafc; cursor: pointer; }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .pill-nyc { background: #dbeafe; color: #1e40af; }
+    .pill-west { background: var(--purple-bg); color: var(--purple); }
+    .pill-hot { background: var(--green-bg); color: var(--green); }
+    .pill-pre { background: var(--amber-bg); color: var(--amber); }
+    .method-box {
+      display: none;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 8px;
+    }
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .mcard {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      background: #f8fafc;
+    }
+    .mcard h3 { margin: 0 0 6px; font-size: 14px; color: #0f172a; }
+    .mcard p { margin: 0; font-size: 13px; color: var(--muted); }
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.5);
+      z-index: 50;
+      justify-content: flex-end;
+    }
+    .drawer {
+      background: #fff;
+      width: min(540px, 100%);
+      height: 100%;
+      padding: 22px 24px;
+      overflow-y: auto;
+      box-shadow: -4px 0 24px rgba(0,0,0,0.18);
+    }
+    .script-card {
+      background: #f8fafc;
+      border-left: 3px solid var(--brand);
+      padding: 12px 14px;
+      font-size: 13px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div>
+        <h1>NYC (~60-Unit) &amp; Westchester (~20-Unit) Multifamily Research + Outreach Tracker</h1>
+        <div class="sub">Built specifically for Project 1 (NYC Supportive Housing · 100 Contacts) &amp; Project 2 (Westchester Specialized Housing · 50 Contacts)</div>
+      </div>
+      <div class="badge-live">14-Column Spec Matched · Public Records Pulled Nov 12, 2026</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="honesty-banner">
+      <div>
+        <strong>Verified Public-Record Prototype (Pre-Outreach Sample):</strong> All 12 buildings &amp; owner entities below were pulled live on <strong>Nov 12, 2026</strong> from NYC DOB Certificate of Occupancy (<code>bs8b-p36w</code>), NYC HPD Multiple Dwelling Registrations (<code>kj4p-ruqc</code> / <code>feu5-w2e2</code>), and the 2025 NY State Westchester Assessment Roll (<code>7vem-aaz7</code>, Class 411). No outreach calls have been placed yet — click any row to inspect the call script &amp; log workflow.
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Target Scope</div>
+        <div class="kpi-val">150 Unique Contacts</div>
+        <div class="kpi-note">100 NYC (~60-unit) + 50 Westchester (~20-unit)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Live NYC ~60-Unit Sample</div>
+        <div class="kpi-val">6 Verified Buildings</div>
+        <div class="kpi-note">56–66 units · Incl. Oct 2026 new DOB COs</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Live Westchester Sample</div>
+        <div class="kpi-val">6 Class-411 Parcels</div>
+        <div class="kpi-note">New Rochelle, Yonkers &amp; Peekskill transit corridors</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Deliverable Schema</div>
+        <div class="kpi-val">All 14 Sheet Columns</div>
+        <div class="kpi-note">Unanswered calls logged as attempts, never conversations</div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="setTab('all', this)">All Live Sample Rows (12)</button>
+        <button class="tab-btn" onclick="setTab('NYC', this)">Project 1: NYC ~60-Unit (6)</button>
+        <button class="tab-btn" onclick="setTab('Westchester', this)">Project 2: Westchester ~20-Unit (6)</button>
+        <button class="tab-btn" onclick="setTab('method', this)">How We Find Vacant / Stalled 60-Unit Buildings</button>
+      </div>
+      <div class="controls" id="tableControls">
+        <input type="search" id="q" placeholder="Search address, LLC, officer, city..." oninput="render()" />
+        <select id="prioFilter" onchange="render()">
+          <option value="">All Priorities</option>
+          <option value="High (New CO)">High — Recent DOB Certificate of Occupancy</option>
+          <option value="High (HPD Unmasked)">High — HPD Head Officer Unmasked</option>
+          <option value="High (Transit 411)">High — Westchester Class 411 Near Transit</option>
+        </select>
+        <button class="btn-export" onclick="exportCSV()">⬇ Export 14-Column Google Sheet CSV</button>
+      </div>
+    </div>
+
+    <div class="table-wrap" id="tableSection">
+      <table>
+        <thead>
+          <tr>
+            <th>1. Property Name &amp; Full Address</th>
+            <th>2. Borough / Municipality</th>
+            <th>3. Total Apts</th>
+            <th>4. Available / Vacancy Signal</th>
+            <th>5. Owner / Developer / Mgmt Entity</th>
+            <th>6. Decision-Maker (Unmasked)</th>
+            <th>7. Contact Type</th>
+            <th>8. Call Date, Outcome &amp; Notes</th>
+            <th>9. Email &amp; Follow-up Status</th>
+            <th>10. Asking Rent</th>
+            <th>11. Condition &amp; Construction Status</th>
+            <th>12. Long-Term Lease Interest</th>
+            <th>13. Next Follow-up &amp; Priority</th>
+            <th>14. Official Public Source</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="method-box" id="methodSection">
+      <h2 style="margin-top:0;font-size:17px;">Exact Workflow to Deliver 150 Verified Contacts (100 NYC + 50 Westchester)</h2>
+      <div class="method-grid">
+        <div class="mcard">
+          <h3>1. Newly Built / Unleased ~60-Unit NYC Buildings</h3>
+          <p>Query <strong>NYC DOB Certificate of Occupancy (<code>bs8b-p36w</code>)</strong> and <strong>DOB NOW: Build Job Filings (<code>w9ak-ipjd</code>)</strong> for New Building (NB) and Major Alteration (Alt-1) properties with <strong>48–72 dwelling units</strong> issued a TCO or Final CO in the last 90 days (e.g., <em>408 Lefferts Ave</em> — 60 units, CO issued Oct 26, 2026; <em>284 Humboldt St</em> — 64 units, CO issued Oct 29, 2026) before retail lease-up finishes.</p>
+        </div>
+        <div class="mcard">
+          <h3>2. Stalled Construction &amp; Vacant Multifamily</h3>
+          <p>Cross-reference <strong>NYC DOB Stalled Construction Sites</strong>, expired NB permits at 60%+ completion, and <strong>NYC DOF RPIE / HPD Vacate &amp; Major Renovation filings</strong> to catch developers carrying high construction-loan debt who welcome a single creditworthy supportive-housing master tenant for all ~60 units.</p>
+        </div>
+        <div class="mcard">
+          <h3>3. Piercing Anonymous LLCs to Reach Real Decision-Makers</h3>
+          <p>Every NYC multifamily LLC must file an individual <strong>Head Officer</strong> and <strong>Managing Agent</strong> in <strong>NYC HPD Multiple Dwelling Registrations (<code>feu5-w2e2</code>)</strong> + ACRIS mortgage signatory pages. We skip-trace direct phone + verified email for the named principal before dialing.</p>
+        </div>
+        <div class="mcard">
+          <h3>4. Westchester ~20-Unit Transit-Accessible Properties</h3>
+          <p>Filter the <strong>NY State Assessment Roll (<code>7vem-aaz7</code>, Property Class 411 Apartments)</strong> + municipal planning board NB approvals in Yonkers, New Rochelle, Mount Vernon, White Plains, and Peekskill within 0.6 miles of Metro-North &amp; grocery corridors, targeting $3.5M–$7.5M buildings (~16–26 units).</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-backdrop" id="backdrop" onclick="if(event.target===this)closeDrawer()">
+    <div class="drawer" id="drawerContent"></div>
+  </div>
+
+  <script>
+    const ROWS = [
+      {
+        project: "NYC",
+        c1_addr: "408 Lefferts Avenue, Brooklyn, NY 11225",
+        c2_area: "Brooklyn (Crown Heights / Prospect Lefferts)",
+        c3_units: "60",
+        c4_avail: "New 60-unit CO issued Oct 26, 2026 (verify bulk/master lease availability)",
+        c5_entity: "410 Lefferts LLC",
+        c6_dm: "Tolib Mansurov (Head Officer) / Eugene Krasnitsky (Agent) · Phone/Email queued on skip-trace",
+        c7_type: "Owner / Developer",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "Newly completed 6-story residential (DOB Final CO 2026-10-26)",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (New CO)",
+        c14_src: "NYC DOB Job #321588046 + HPD Reg #392058 (BIN 3429080)"
+      },
+      {
+        project: "NYC",
+        c1_addr: "284 Humboldt Street, Brooklyn, NY 11206",
+        c2_area: "Brooklyn (East Williamsburg)",
+        c3_units: "64",
+        c4_avail: "New 64-unit CO issued Oct 29, 2026 (14 days ago)",
+        c5_entity: "DOB Job #320577746 Owner Entity",
+        c6_dm: "ACRIS / DOB Signatory lookup ready for Day 1 call",
+        c7_type: "Developer",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "Newly completed 64-unit apartment building (CO 2026-10-29)",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (New CO)",
+        c14_src: "NYC DOB CO Dataset bs8b-p36w (Job #320577746)"
+      },
+      {
+        project: "NYC",
+        c1_addr: "1559 Boone Avenue, Bronx, NY 10460",
+        c2_area: "Bronx (Crotona Park East)",
+        c3_units: "66",
+        c4_avail: "New 66-unit CO issued Oct 16, 2026 (strong supportive-housing corridor)",
+        c5_entity: "DOB Job #210181248 Owner Entity",
+        c6_dm: "ACRIS / HPD Principal lookup ready for Day 1 call",
+        c7_type: "Developer",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "Newly completed 66-unit multifamily (DOB CO 2026-10-16)",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (New CO)",
+        c14_src: "NYC DOB CO Dataset bs8b-p36w (Job #210181248)"
+      },
+      {
+        project: "NYC",
+        c1_addr: "4212 Park Avenue, Bronx, NY 10457",
+        c2_area: "Bronx (Tremont)",
+        c3_units: "64",
+        c4_avail: "Check bulk vacancy / master-lease appetite across Tremont BX portfolio",
+        c5_entity: "Tremont BX LLC (1369 65th St, Brooklyn NY)",
+        c6_dm: "Joel Guttman (Head Officer) / Abe Fixler (Managing Agent)",
+        c7_type: "Owner / Management",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "8-story Class A multifamily (64 legal units)",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (HPD Unmasked)",
+        c14_src: "NYC HPD Reg #229595 / BIN 2094606"
+      },
+      {
+        project: "NYC",
+        c1_addr: "2250 Aqueduct Avenue, Bronx, NY 10453",
+        c2_area: "Bronx (University Heights)",
+        c3_units: "56",
+        c4_avail: "Check full/partial building master-lease & sister Bronx assets",
+        c5_entity: "Spaxel CBRE Aqueduct LLC / Spaxel Property Management",
+        c6_dm: "Granit Gjonbalaj (Head Officer, 228 Park Ave S) / Albert Gjonbalaj",
+        c7_type: "Owner / Developer",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "7-story Class A multifamily (56 legal units)",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (HPD Unmasked)",
+        c14_src: "NYC HPD Reg #229578 / BIN 2131344"
+      },
+      {
+        project: "NYC",
+        c1_addr: "46-06 11th Street, Long Island City, NY 11101",
+        c2_area: "Queens (Long Island City)",
+        c3_units: "59",
+        c4_avail: "59-unit 8-story building — verify current occupancy & institutional lease terms",
+        c5_entity: "JNMY Manager LLC",
+        c6_dm: "Matthew Yang (Head Officer & Managing Agent)",
+        c7_type: "Owner",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "8-story modern Class A building (59 units)",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (HPD Unmasked)",
+        c14_src: "NYC HPD Reg #434724 / BIN 4435522"
+      },
+      {
+        project: "Westchester",
+        c1_addr: "59 Locust Avenue, New Rochelle, NY 10801",
+        c2_area: "Westchester — New Rochelle (Downtown / Metro-North walk)",
+        c3_units: "~22 (Est. Class 411 · $7.48M FMV)",
+        c4_avail: "Verify exact unit count, renovations & master-lease availability",
+        c5_entity: "Twin Park Equities LLC (New Hyde Park, NY)",
+        c6_dm: "Managing Principal via NY DOS / skip-trace",
+        c7_type: "Owner",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "Class 411 Apartment Building · Walk to transit, groceries & schools",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (Transit 411)",
+        c14_src: "NYS 2025 Assessment Roll 7vem-aaz7 (SBL 1-212-0092)"
+      },
+      {
+        project: "Westchester",
+        c1_addr: "246 Centre Avenue, New Rochelle, NY 10805",
+        c2_area: "Westchester — New Rochelle",
+        c3_units: "~20 (Est. Class 411 · $7.25M FMV)",
+        c4_avail: "Verify current vacancy & whole-building / block lease option",
+        c5_entity: "Valto Holdings LLC (246 Centre Ave, New Rochelle NY)",
+        c6_dm: "Registered Member via NY DOS + phone verification",
+        c7_type: "Owner",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "Class 411 Apartment Building · Near Bee-Line & Metro-North",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (Transit 411)",
+        c14_src: "NYS 2025 Assessment Roll 7vem-aaz7 (SBL 2-402-0035)"
+      },
+      {
+        project: "Westchester",
+        c1_addr: "927 Palmer Road, Yonkers, NY 10708",
+        c2_area: "Westchester — Yonkers (Bronxville border / Metro-North)",
+        c3_units: "~22 (Est. Class 411 · $7.43M FMV)",
+        c4_avail: "Verify unit availability & long-term program lease interest",
+        c5_entity: "Bronxville Court Inc (3 Main St, Elmsford NY 10523)",
+        c6_dm: "Corporate Officer at 3 Main St, Elmsford NY",
+        c7_type: "Owner / Management",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "Residential neighborhood near Bronxville station, shops & hospital",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (Transit 411)",
+        c14_src: "NYS 2025 Assessment Roll 7vem-aaz7 (SBL 5.-5652-78.80)"
+      },
+      {
+        project: "Westchester",
+        c1_addr: "15 Parkview Avenue, Yonkers, NY 10708",
+        c2_area: "Westchester — Yonkers (Parkview / Garrett Park)",
+        c3_units: "~20 (Est. Class 411 · $7.27M FMV)",
+        c4_avail: "Verify unit count & portfolio availability across Elk properties",
+        c5_entity: "Elk Parkview LLC (411 Theodore Fremd Ave, Rye NY 10580)",
+        c6_dm: "Acquisitions / Leasing Principal (Rye, NY office)",
+        c7_type: "Owner / Management",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "Safe residential street near transit & retail",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (Transit 411)",
+        c14_src: "NYS 2025 Assessment Roll 7vem-aaz7 (SBL 5.-5652-43)"
+      },
+      {
+        project: "Westchester",
+        c1_addr: "257 Valentine Lane, Yonkers, NY 10705",
+        c2_area: "Westchester — Yonkers (Southwest / Ludlow transit)",
+        c3_units: "~20 (Est. Class 411 · $7.15M FMV)",
+        c4_avail: "Verify available units & renovation status",
+        c5_entity: "J D Coutinho LLC (257 Valentine Ln, Yonkers NY)",
+        c6_dm: "J. D. Coutinho (Principal)",
+        c7_type: "Owner",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "Walkable to Metro-North Ludlow, Broadway grocery & schools",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (Transit 411)",
+        c14_src: "NYS 2025 Assessment Roll 7vem-aaz7 (SBL 1.-124-54.57)"
+      },
+      {
+        project: "Westchester",
+        c1_addr: "760 North Avenue, New Rochelle, NY 10801",
+        c2_area: "Westchester — New Rochelle (North Ave corridor)",
+        c3_units: "~21 (Est. Class 411 · $7.25M FMV)",
+        c4_avail: "Check building & off-market sister properties in New Rochelle",
+        c5_entity: "Northeast Properties LLC (309 North Ave, New Rochelle NY)",
+        c6_dm: "Managing Partner (309 North Ave local office)",
+        c7_type: "Owner / Management",
+        c8_call: "Queued Day 1 (0 calls placed yet — sample row)",
+        c9_email: "Ready after phone attempt #1",
+        c10_rent: "TBD on call #1",
+        c11_cond: "Direct bus/transit corridor, supermarkets & services nearby",
+        c12_lease: "To qualify on call",
+        c13_prio: "High (Transit 411)",
+        c14_src: "NYS 2025 Assessment Roll 7vem-aaz7 (SBL 5-1556-0072)"
+      }
+    ];
+
+    let activeTab = "all";
+
+    function setTab(tab, btn) {
+      activeTab = tab;
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const isMethod = tab === "method";
+      document.getElementById("tableSection").style.display = isMethod ? "none" : "block";
+      document.getElementById("tableControls").style.display = isMethod ? "none" : "flex";
+      document.getElementById("methodSection").style.display = isMethod ? "block" : "none";
+      if (!isMethod) render();
+    }
+
+    function filteredRows() {
+      const q = (document.getElementById("q").value || "").toLowerCase();
+      const pf = document.getElementById("prioFilter").value;
+      return ROWS.filter(r => {
+        if (activeTab !== "all" && r.project !== activeTab) return false;
+        if (pf && r.c13_prio !== pf) return false;
+        if (q && !Object.values(r).join(" ").toLowerCase().includes(q)) return false;
+        return true;
+      });
+    }
+
+    function render() {
+      const tbody = document.getElementById("tbody");
+      const list = filteredRows();
+      tbody.innerHTML = list.map((r, idx) => `
+        <tr onclick="openDrawer(${ROWS.indexOf(r)})">
+          <td><strong>${r.c1_addr}</strong></td>
+          <td><span class="pill ${r.project === 'NYC' ? 'pill-nyc' : 'pill-west'}">${r.c2_area}</span></td>
+          <td><strong>${r.c3_units}</strong></td>
+          <td>${r.c4_avail}</td>
+          <td>${r.c5_entity}</td>
+          <td>${r.c6_dm}</td>
+          <td>${r.c7_type}</td>
+          <td><span class="pill pill-pre">${r.c8_call}</span></td>
+          <td>${r.c9_email}</td>
+          <td>${r.c10_rent}</td>
+          <td>${r.c11_cond}</td>
+          <td>${r.c12_lease}</td>
+          <td><span class="pill pill-hot">${r.c13_prio}</span></td>
+          <td style="font-family:monospace;font-size:11.5px;">${r.c14_src}</td>
+        </tr>
+      `).join("");
+    }
+
+    function openDrawer(i) {
+      const r = ROWS[i];
+      const targetUnits = r.project === "NYC" ? "~60-apartment supportive housing" : "~20-apartment specialized housing";
+      document.getElementById("drawerContent").innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="pill ${r.project === 'NYC' ? 'pill-nyc' : 'pill-west'}">${r.project} Target</span>
+          <button onclick="closeDrawer()" style="border:1px solid #cbd5e1;background:#fff;border-radius:6px;padding:4px 10px;cursor:pointer;">Close ✕</button>
+        </div>
+        <h2 style="margin:10px 0 4px;font-size:18px;">${r.c1_addr}</h2>
+        <div style="font-size:13px;color:#475569;margin-bottom:14px;">${r.c5_entity} · ${r.c6_dm}</div>
+        <div style="font-size:12.5px;background:#f1f5f9;padding:10px 12px;border-radius:8px;margin-bottom:14px;">
+          <div><strong>Public Record Source:</strong> ${r.c14_src}</div>
+          <div><strong>Units / Class:</strong> ${r.c3_units} · ${r.c11_cond}</div>
+          <div><strong>Why Shortlisted:</strong> ${r.c4_avail}</div>
+        </div>
+        <h3 style="font-size:14px;margin:14px 0 6px;">Phone Qualification Script (${targetUnits})</h3>
+        <div class="script-card">
+          "Hi, I'm calling for a housing program seeking a ${r.project === 'NYC' ? '55-to-65 unit building in NYC' : 'roughly 20-unit building in Westchester'} for a single long-term institutional lease — guaranteed monthly rent, zero unit-by-unit turnover. I saw ${r.c1_addr.split(',')[0]} in public filings and wanted to ask: do you have bulk vacancy coming up there or an unfinished/renovated building in your portfolio where you'd consider a full-building lease or acquisition?"
+        </div>
+        <h3 style="font-size:14px;margin:14px 0 6px;">Checklist Captured on Every Connected Call</h3>
+        <ul style="font-size:13px;color:#334155;padding-left:18px;margin:0;">
+          <li>Total apartments &amp; how many units can deliver vacant together</li>
+          <li>Construction / TCO / renovation status &amp; timeline</li>
+          <li>Monthly asking rent (whole building vs. per unit) or acquisition ask</li>
+          <li>Openness to long-term institutional / supportive housing master lease</li>
+          <li>Broker involvement &amp; any disclosed brokerage fee</li>
+          <li>Property tour / owner follow-up slot</li>
+        </ul>
+      `;
+      document.getElementById("backdrop").style.display = "flex";
+    }
+
+    function closeDrawer() {
+      document.getElementById("backdrop").style.display = "none";
+    }
+
+    function exportCSV() {
+      const headers = [
+        "Property Name and Full Address","NYC Borough or Westchester Municipality","Total Number of Apartments",
+        "Available or Vacant Units","Property Owner Developer or Management Company","Decision-Maker Name Phone and Email",
+        "Contact Type","Call Date Outcome and Notes","Email Outreach and Follow-up Status",
+        "Monthly Asking Rent","Building Condition and Construction Status","Interest in Long-Term Housing Agreement",
+        "Next Follow-up Date and Priority","Listing or Source Link"
+      ];
+      const rows = filteredRows().map(r => [
+        r.c1_addr, r.c2_area, r.c3_units, r.c4_avail, r.c5_entity, r.c6_dm, r.c7_type,
+        r.c8_call, r.c9_email, r.c10_rent, r.c11_cond, r.c12_lease, r.c13_prio, r.c14_src
+      ]);
+      const csv = [headers, ...rows].map(row => row.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\n");
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "nyc_westchester_150_tracker_sample_2026-11-12.csv";
+      a.click();
+    }
+
+    render();
+  </script>
+</body>
+</html>
