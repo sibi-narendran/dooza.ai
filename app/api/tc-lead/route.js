@@ -1,47 +1,68 @@
-// /tc form (Apollo's $99 transaction coordinator test, brief /home/apollo/learned/knowledge/campaigns/tc-landing-brief.md).
-// DRAFT 2026-11-11: saves a Close lead + note (all fields incl. gclid/utm) + a same-day task (= the alert). No ads until Sibi yes.
+// /tc form v2 (Sibi 2026-11-12 19:32 via Apollo): multipart. phone + email + message and/or contract file.
+// Close lead + note (file attached via Close files API) + task to Sibi. tools/tc_leads.py alerts @hercules + @apollo.
 import { closeFetch, STATUS_POTENTIAL, clean } from '../../../lib/agentHire';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-// Delivery owner = Sibi (Apollo 18:46, Odysseus 81d7iz1n).
 const SIBI_CLOSE_USER = 'user_tMVvbOIMZDjMMSJNQmHNFhaGTjplpDvQZk9ZAsIGkst';
 const HIDDEN = ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+const MAX = 10 * 1024 * 1024;
 const json = (d, s = 200) => new Response(JSON.stringify(d), { status: s, headers: { 'Content-Type': 'application/json' } });
 
+async function attach(apiKey, file) {
+    // Close files: request an upload slot, POST the file to it, then reference download.url in a note.
+    const slot = await closeFetch(apiKey, '/files/upload/', { method: 'POST', body: JSON.stringify({ filename: file.name || 'contract', content_type: file.type || 'application/octet-stream' }) });
+    const fd = new FormData();
+    Object.entries(slot.upload.fields || {}).forEach(([k, v]) => fd.append(k, v));
+    fd.append('file', file, file.name || 'contract');
+    const r = await fetch(slot.upload.url, { method: 'POST', body: fd });
+    if (!r.ok && r.status !== 204) throw new Error(`upload ${r.status}`);
+    return { url: slot.download.url, filename: file.name || 'contract', content_type: file.type || 'application/octet-stream' };
+}
+
 export async function POST(request) {
-    let b;
-    try { b = await request.json(); } catch { return json({ ok: false, error: 'Invalid request.' }, 400); }
-    if (b.website) return json({ ok: true }); // honeypot
-    const name = clean(b.name, 120);
-    const email = clean(b.email, 160).toLowerCase();
-    const phone = clean(b.phone, 40);
-    const closing = clean(b.closing_date, 20);
-    const state = clean(b.state, 2).toUpperCase();
+    let f;
+    try { f = await request.formData(); } catch { return json({ ok: false, error: 'Invalid request.' }, 400); }
+    const g = (k, n) => clean(String(f.get(k) || ''), n);
+    if (g('website', 200)) return json({ ok: true }); // honeypot
+    const email = g('email', 160).toLowerCase();
+    const phone = g('phone', 40);
+    const message = g('message', 2000);
+    const file = f.get('file');
+    const hasFile = file && typeof file === 'object' && file.size > 0;
+    if (hasFile && file.size > MAX) return json({ ok: false, error: 'That file is over 10 MB.' }, 400);
     const missing = [];
-    if (!name) missing.push('name');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push('email');
     if (phone.replace(/\D/g, '').length < 10) missing.push('mobile');
-    if (!/^[A-Z]{2}$/.test(state)) missing.push('state');
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(closing)) missing.push('closing date');
     if (missing.length) return json({ ok: false, error: `Please check: ${missing.join(', ')}.` }, 400);
+    if (!hasFile && !message) return json({ ok: false, error: 'Drop the contract or type a message.' }, 400);
     const apiKey = process.env.CLOSE_API_KEY;
     if (!apiKey) return json({ ok: false, error: 'Could not save right now. Please try again in a minute.' }, 503);
-    const tracking = HIDDEN.map((k) => `${k}: ${clean(b[k], 200) || '-'}`);
+    const tracking = HIDDEN.map((k) => `${k}: ${g(k, 200) || '-'}`);
     try {
+        let att = null, attErr = '';
+        if (hasFile) { try { att = await attach(apiKey, file); } catch (e) { attErr = e.message; console.error('tc-lead attach', e.message); } }
+        const fileLine = hasFile ? `File: ${att ? `${att.filename} (attached)` : `${file.name} (UPLOAD FAILED: ${attErr}; ask them to email it)`}` : 'File: none';
+        if (g('followup', 2) === '1') {
+            // Contract dropped after submit: find their lead by email, add a note.
+            const found = await closeFetch(apiKey, `/lead/?query=${encodeURIComponent(`email:${email}`)}&_fields=id&_limit=1`);
+            const id = found?.data?.[0]?.id;
+            if (id) await closeFetch(apiKey, '/activity/note/', { method: 'POST', body: JSON.stringify({ lead_id: id, note: `TC contract follow-up upload via dooza.ai/tc\n${fileLine}`, ...(att ? { attachments: [att] } : {}) }) });
+            return json({ ok: true });
+        }
         const lead = await closeFetch(apiKey, '/lead/', {
             method: 'POST',
             body: JSON.stringify({
-                name: `TC free file: ${name} (${state})`,
+                name: `TC free file: ${email}`,
                 status_id: STATUS_POTENTIAL,
-                description: 'Transaction coordinator free file via dooza.ai/tc',
-                contacts: [{ name, emails: [{ email, type: 'office' }], phones: [{ phone, type: 'mobile' }] }],
+                description: 'Transaction coordinator free file via dooza.ai/tc (v2: upload or chat)',
+                contacts: [{ name: email, emails: [{ email, type: 'office' }], phones: [{ phone, type: 'mobile' }] }],
             }),
         });
-        const note = ['TC free file request via dooza.ai/tc', `Name: ${name}`, `Email: ${email}`, `Mobile: ${phone}`, `State: ${state}`, `Closing date: ${closing}`, ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
-        await closeFetch(apiKey, '/activity/note/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, note }) });
-        await closeFetch(apiKey, '/task/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, assigned_to: SIBI_CLOSE_USER, text: `TC free file: open the file, closing ${closing}. Email + call.`, date: new Date().toISOString().slice(0, 10), is_complete: false }) });
+        const note = ['TC free file request via dooza.ai/tc', `Name: ${email}`, `Email: ${email}`, `Mobile: ${phone}`, `Message: ${message || '-'}`, fileLine, 'SMS consent: shown under phone field', ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
+        await closeFetch(apiKey, '/activity/note/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, note, ...(att ? { attachments: [att] } : {}) }) });
+        await closeFetch(apiKey, '/task/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, assigned_to: SIBI_CLOSE_USER, text: `TC free file: ${hasFile ? 'contract attached' : 'message'} · text + email now.`, date: new Date().toISOString().slice(0, 10), is_complete: false }) });
     } catch (e) {
         console.error('tc-lead', e.message);
         return json({ ok: false, error: 'Could not save right now. Please try again in a minute.' }, 502);
