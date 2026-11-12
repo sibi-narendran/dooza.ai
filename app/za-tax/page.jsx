@@ -6,13 +6,14 @@ export const metadata = intlMeta('Red SARS Tax Pin to Green in 48 Hours · CIPC 
 
 const P = {
     slug: 'za-tax',
+    book: true,
     h1: 'Red SARS Tax Pin Back to Green in 48 Hours — Or CIPC Annual Financial Statements for R2,450 Flat.',
     subLead: 'Pay R0 upfront.',
-    sub: 'Review your completed draft AFS & ITR14, signed off by a registered South African Tax Practitioner, before you pay a single rand.',
+    sub: 'Review your completed draft AFS & ITR14 before you pay a single rand.',
     bullets: [
         ['R2,450 flat fee', '— full CIPC AFS (IFRS for SMEs) + SARS ITR14 corporate return, or overdue return catch-up.'],
         ['48-hour draft turnaround', '— built for Pty Ltd suppliers & contractors with tenders or payouts stuck on a red tax compliance pin.'],
-        ['Registered SA Tax Practitioner sign-off', '— [Partner Review Desk — SAIT/SAIPA PR# inserted upon partner countersignature before ad launch]'],
+        ['Pay only after you review', '— you see the full draft first, then pay.'],
     ],
     fields: [['name', 'Your name'], ['contact', 'WhatsApp / mobile number (or work email)'], ['company', 'Company name (or CIPC reg number)']],
     cta: 'Get My 48h SARS Pin & AFS Check — Pay R0 Now',

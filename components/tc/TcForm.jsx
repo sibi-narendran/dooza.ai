@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import BookCall from '@/components/BookCall';
 
 // /tc form v2 (Sibi 2026-11-12 19:32 via Apollo): step 1 = drop the contract OR type one line + Enter; step 2 = mobile + email only.
 // Hercules texts (TCPA consent line under phone) + emails from hercules@calls.dooza.org. Conversion: Sibi's AW-10872232955.
@@ -66,6 +67,7 @@ export default function TcForm() {
                 <p className="mt-2 text-[15px] text-[#4B5567]">You can also email contracts or addenda anytime to <a href="mailto:hercules@calls.dooza.org" className="underline">hercules@calls.dooza.org</a>.</p>
                 {!file && <label className="mt-4 block cursor-pointer rounded-xl border-2 border-dashed border-[#94A3B8] p-4 text-center text-[15px] text-[#334155]">Didn&apos;t upload the contract yet? Drop the PDF here.<input type="file" accept={ACCEPT} className="hidden" onChange={(e) => lateUpload(e.target.files?.[0])} /></label>}
                 {file && <p className="mt-3 text-[14px] text-[#0F766E]">Received: {file.name}</p>}
+                <div className="mt-4"><BookCall event="tc_book_click" /></div>
             </div>
         );
     }
@@ -85,7 +87,7 @@ export default function TcForm() {
                     <button type="button" onClick={next} className="shrink-0 rounded-xl bg-[#0F766E] px-4 text-[16px] font-semibold text-white hover:bg-[#0B5D57]">Send</button>
                 </div>
                 {error && <p role="alert" className="mt-3 text-[14px] text-[#B91C1C]">{error}</p>}
-                <p className="mt-3 text-[13px] text-[#64748B]">No card for the first file.</p>
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-2"><p className="text-[13px] text-[#64748B]">No card for the first file.</p><BookCall event="tc_book_click" /></div>
             </div>
         );
     }

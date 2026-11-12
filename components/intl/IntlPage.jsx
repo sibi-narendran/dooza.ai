@@ -1,5 +1,6 @@
 // Shared layout for /za-tax and /ie-accounts (staging, noindex). No mention of software on these pages (Apollo/Pythia P-20261112-71..73).
 import LeadForm3 from '@/components/intl/LeadForm3';
+import BookCall from '@/components/BookCall';
 
 export const intlMeta = (title, description, path) => ({
     title, description, keywords: [],
@@ -19,7 +20,7 @@ export default function IntlPage({ p }) {
                         <p className="mt-4 text-[18px] text-[#334155]"><strong>{p.subLead}</strong> {p.sub}</p>
                         <ul className="mt-6 space-y-3">{p.bullets.map(([b, t]) => <li key={b} className="flex gap-3 text-[16px] text-[#334155]"><span className="mt-1 text-[#0F766E]">✓</span><span><strong>{b}</strong> {t}</span></li>)}</ul>
                     </div>
-                    <div><LeadForm3 slug={p.slug} fields={p.fields} cta={p.cta} done={p.done} /></div>
+                    <div><LeadForm3 slug={p.slug} fields={p.fields} cta={p.cta} done={p.done} />{p.book && <div className="mt-4 flex items-center gap-3 text-[15px] text-[#4B5567]"><span>Prefer to talk?</span><BookCall event={`${p.slug.replace('-', '_')}_book_click`} /></div>}</div>
                 </div>
                 <section className="mt-14">
                     <h2 className="text-2xl font-bold">Price</h2>
