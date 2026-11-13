@@ -37,12 +37,12 @@ const FAQ = [
     ["What don't you do?", "We don't sign, negotiate or give legal advice. That stays with you and your broker."],
 ];
 const PERSON = { name: 'Sibi Narendran', role: 'Founder, Dooza · the person on your file', photo: '/founder-sibi.jpeg' };
-const Person = () => PERSON ? <div className="mt-4 flex items-center gap-3"><img src={PERSON.photo} alt={PERSON.name} width="48" height="48" className="h-12 w-12 rounded-full object-cover" /><p className="text-[15px] text-[#334155]"><strong>{PERSON.name}</strong>, {PERSON.role}<br />Sibi reviews your file&apos;s timeline against the signed contract within 1 business day, and answers you the same business day. Software sends reminders before every deadline.</p></div> : null;
+const Person = () => PERSON ? <div className="mt-4 flex items-start gap-3"><img src={PERSON.photo} alt={PERSON.name} width="48" height="48" className="h-12 w-12 shrink-0 rounded-full object-cover" /><p className="text-[15px] text-[#334155]"><strong>{PERSON.name}</strong>, {PERSON.role}<br />Sibi reviews your file&apos;s timeline against the signed contract within 1 business day, and answers you the same business day. Software sends reminders before every deadline.</p></div> : null;
 const ck = <span aria-hidden="true" className="text-[#0F766E]">✓</span>;
 
 export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99 a File.', tx = false }) {
     return (
-        <main className="min-h-screen bg-[#F7F5F0] pb-20 text-[#14213D] sm:pb-0">
+        <main className="min-h-screen bg-[#F7F5F0] pb-28 text-[#14213D] sm:pb-0">
             <TcCta sticky />
             <div className="mx-auto max-w-3xl px-4 py-10 sm:py-16">
                 <h1 className="text-4xl font-bold leading-tight sm:text-5xl">{h1}</h1>
@@ -76,9 +76,9 @@ export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99
                     <h2 className="text-2xl font-bold">Questions</h2>
                     <div className="mt-4 grid gap-3 sm:grid-cols-2">
                         {(tx ? FAQ.map(([q, a]) => (q === 'Which states?' ? ['Do you work with TREC and TXR forms?', 'Yes. We work on TREC forms (1-4 Family Resale) and TXR forms, and in all 50 US states.'] : [q, a])) : FAQ).map(([q, a], i) => (
-                            <details key={q} open={i < 3} className="group self-start rounded-2xl border border-[#CBD5E1] bg-white p-4">
-                                <summary className="flex cursor-pointer list-none items-start justify-between gap-3 font-semibold"><span>{q}</span><span aria-hidden="true" className="text-[#0F766E] transition group-open:rotate-45">+</span></summary>
-                                <p className="mt-2 text-[15px] leading-relaxed text-[#334155]">{a}</p>
+                            <details key={q} open={i < 3} className="group self-start rounded-2xl border border-[#CBD5E1] bg-white">
+                                <summary className="flex min-h-[48px] cursor-pointer list-none items-center justify-between gap-3 p-4 font-semibold"><span>{q}</span><span aria-hidden="true" className="text-[#0F766E] transition group-open:rotate-45">+</span></summary>
+                                <p className="px-4 pb-4 text-[15px] leading-relaxed text-[#334155]">{a}</p>
                             </details>
                         ))}
                     </div>
@@ -86,7 +86,7 @@ export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99
                     <a href="#start" className="mt-3 block rounded-xl bg-[#14213D] px-4 py-3 text-center font-semibold text-white">Start my free file</a>
                 </section>
 
-                <p className="mt-16 text-[13px] text-[#64748B]">Dooza is a brand of Adam Laboratory Inc. · 1111b S Governors Ave Ste 34259, Dover, DE 19904 · <a href="mailto:support@dooza.ai" className="underline">support@dooza.ai</a> · <a href="/privacy" className="underline">Privacy</a> · <a href="/terms" className="underline">Terms</a></p>
+                <p className="mt-16 text-[13px] text-[#64748B]">Dooza is a brand of Adam Laboratory Inc. · 1111b S Governors Ave Ste 34259, Dover, DE 19904 · <a href="mailto:support@dooza.ai" className="inline-block py-3 underline">support@dooza.ai</a> · <a href="/privacy" className="inline-block py-3 underline">Privacy</a> · <a href="/terms" className="inline-block py-3 underline">Terms</a></p>
             </div>
         </main>
     );
