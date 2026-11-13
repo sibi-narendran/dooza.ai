@@ -38,7 +38,7 @@ export default function TcScreens({ tx = false }) {
                 </Window>
                 <figure className="overflow-hidden rounded-[28px] border border-[#E2E8F0] bg-white shadow-[0_1px_2px_rgba(15,23,42,0.06),0_24px_48px_-24px_rgba(15,23,42,0.35)]">
                     <div className="flex flex-col items-center border-b border-[#EEF2F6] bg-[#F8FAFC] py-3">
-                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-b from-[#94A3B8] to-[#64748B] text-[15px] font-semibold text-white">H</span>
+                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-b from-[#94A3B8] to-[#64748B] text-[15px] font-semibold text-white">S</span>
                         <span className="mt-1 text-[12px] font-semibold text-[#0F172A]">Your TC team</span>
                         <span className="text-[11px] text-[#64748B]">Text updates</span>
                     </div>
