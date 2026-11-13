@@ -51,15 +51,15 @@ export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99
                 <ul className="mt-6 space-y-2 text-[16px] text-[#334155]">{(tx ? BULLETS.map((d) => d.replace('from contract to funding', 'from option period to funding')) : BULLETS).map((d) => <li key={d} className="flex gap-2">{ck}{d}</li>)}</ul>
 
                 <div className="mt-8"><TcForm /></div>
-                <TcCta />
+                <div id="book" className="scroll-mt-4"><TcCta /></div>
                 <ul className="mt-3 space-y-1 text-[14px] text-[#334155]"><li>A person checks every file. Same-day answers.</li><li>{tx ? 'Works on TREC forms (1-4 Family Resale). Rush files OK.' : 'Any state, rush files OK.'}</li><li>Only the docs you send, encrypted, deleted on request.</li></ul>
                 <p className="mt-3 text-[14px] text-[#334155]"><strong>First file free.</strong> No card until file #2. No contract. Cancel by not sending another file.</p>
                 <Person />
 
 
-                <TcScreens tx={tx} />
+                <div id="example" className="scroll-mt-4"><TcScreens tx={tx} /></div>
 
-                <section className="mt-14">
+                <section id="pricing" className="mt-14 scroll-mt-4">
                     <h2 className="text-2xl font-bold">Price</h2>
                     <div className="mt-4 overflow-hidden rounded-2xl border border-[#CBD5E1] bg-white">
                         <table className="w-full text-left text-[16px]"><tbody>
@@ -72,7 +72,7 @@ export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99
                     <p className="mt-3 text-[15px] text-[#334155]">The checklist: earnest money, {tx ? 'option period' : 'contingency deadlines'}, inspection, appraisal, financing, title, HOA, closing.</p>
                 </section>
 
-                <section className="mt-14">
+                <section id="faq" className="mt-14 scroll-mt-4">
                     <h2 className="text-2xl font-bold">Questions</h2>
                     <div className="mt-4 grid gap-3 sm:grid-cols-2">
                         {(tx ? FAQ.map(([q, a]) => (q === 'Which states?' ? ['Do you work with TREC and TXR forms?', 'Yes. We work on TREC forms (1-4 Family Resale) and TXR forms, and in all 50 US states.'] : [q, a])) : FAQ).map(([q, a], i) => (
