@@ -88,7 +88,7 @@ export default function TcForm() {
             <button type="submit" disabled={state === 'sending'} className="mt-4 w-full rounded-xl bg-[#0F766E] px-5 py-4 text-[17px] font-semibold text-white hover:bg-[#0B5D57] disabled:opacity-60">
                 {state === 'sending' ? 'Sending…' : 'Start my free file'}
             </button>
-            <div className="mt-3 flex flex-wrap items-center justify-between gap-2"><p className="text-[13px] text-[#64748B]">No card for the first file.</p><BookCall event="tc_book_click" /></div>
+            <p className="mt-3 text-center text-[13px] text-[#64748B]">No card for the first file.</p>
         </form>
     );
 }
