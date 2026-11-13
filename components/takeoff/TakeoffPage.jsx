@@ -53,6 +53,23 @@ export default function TakeoffPage({ pageKey }) {
                     </section>
                 )}
 
+                {p.trade === 'roofing' && (
+                    <section className="mt-14">
+                        <h2 className="text-2xl font-bold">Sample roofing takeoff</h2>
+                        <p className="mt-3 text-[16px] leading-relaxed text-[#334155]">A real takeoff we did from a public bid set: Leon County (TX) 2025 Roof Improvements, construction drawings dated 2025-09-30, sheets R-2.0 (Annex 1) and R-2.2 (Probation), 1/4&quot; = 1&apos;-0&quot;. Each colour is one measured roof plane.</p>
+                        <a href="/takeoff/sample-roofing-takeoff-annex.jpg" className="mt-4 block overflow-hidden rounded-2xl border border-[#CBD5E1] bg-white"><img src="/takeoff/sample-roofing-takeoff-annex.jpg" alt="Sample roofing takeoff: Annex 1 roof plan with three low-slope planes and a lower standing-seam roof marked in colour" width="1600" height="1067" loading="lazy" className="h-auto w-full" /></a>
+                        <a href="/takeoff/sample-roofing-takeoff-probation.jpg" className="mt-4 block overflow-hidden rounded-2xl border border-[#CBD5E1] bg-white"><img src="/takeoff/sample-roofing-takeoff-probation.jpg" alt="Sample roofing takeoff: Probation building roof plan with a 1:12 plane in green and a 3:12 plane in purple" width="1600" height="1067" loading="lazy" className="h-auto w-full" /></a>
+                        <ul className="mt-4 space-y-1 text-[15px] text-[#334155]">
+                            <li>7 roof planes: 6,503 SF plan, 6,535 SF sloped = 65.4 squares (71.9 with 10% waste)</li>
+                            <li>Probation: ridge 39 LF, eaves 78 LF, rakes 155.5 LF (sloped), wall panel top closures 232 LF</li>
+                            <li>Annex 1: perimeter edge and sealant 256 LF, lower-roof flashing 85 LF; 6 vents, 2 curbs, 1 pipe penetration</li>
+                            <li>Slopes not printed on the sheet are marked &quot;assumed&quot; on the plan and in the Excel</li>
+                        </ul>
+                        <p className="mt-3 text-[15px]"><a href="/takeoff/sample-roofing-takeoff-markup.pdf" className="underline">Marked-up plan (PDF)</a> · <a href="/takeoff/sample-roofing-takeoff.xlsx" className="underline">Quantity sheet (Excel)</a></p>
+                        <p className="mt-2 text-[13px] text-[#64748B]">Sample. Not an accuracy claim. Check any takeoff against your bid set before pricing.</p>
+                    </section>
+                )}
+
                 {p.sections.map(([h, t]) => <section key={h} className="mt-12"><h2 className="text-2xl font-bold">{h}</h2><p className="mt-3 text-[16px] leading-relaxed text-[#334155]">{t}</p></section>)}
 
                 <section className="mt-14">
