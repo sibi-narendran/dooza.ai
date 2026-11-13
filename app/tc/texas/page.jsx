@@ -9,5 +9,5 @@ export const metadata = {
 };
 
 export default function TcTexasPage() {
-    return <TcPage h1="Texas Real Estate Transaction Coordinator. $99 a File." />;
+    return <TcPage tx h1="Texas Real Estate Transaction Coordinator. $99 a File." />;
 }

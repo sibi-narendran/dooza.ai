@@ -15,13 +15,13 @@ const Pill = ({ tone, children }) => {
     return <span className={`inline-flex items-center whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset ${t}`}>{children}</span>;
 };
 const STEPS = [['Executed contract', 'Nov 3', 'done'], ['Inspection', 'Nov 8', 'done'], ['Option period ends', 'Nov 10', 'done'], ['Appraisal', 'Mon Nov 17', 'now'], ['Financing approval', 'Nov 24', 'next'], ['Closing', 'Dec 2', 'next']];
-const DOCS = [['Executed TREC 1-4 contract', 'ok'], ['Earnest money receipt', 'ok'], ["Seller's disclosure", 'ok'], ['Third-party financing addendum', 'Chasing buyer lender'], ['HOA addendum', 'Requested from HOA'], ['Lead-based paint (pre-1978)', 'ok']];
+const DOCS = [['Executed purchase contract', 'ok'], ['Earnest money receipt', 'ok'], ["Seller's disclosure", 'ok'], ['Third-party financing addendum', 'Chasing buyer lender'], ['HOA addendum', 'Requested from HOA'], ['Lead-based paint (pre-1978)', 'ok']];
 
-export default function TcScreens() {
+export default function TcScreens({ tx = false }) {
     return (
         <section className="mt-14">
             <h2 className="text-2xl font-bold">What your file looks like with us</h2>
-            <p className="mt-1 text-[15px] text-[#4B5567]">Example file: 1418 Oak Ridge Dr, Austin TX.</p>
+            <p className="mt-1 text-[15px] text-[#4B5567]">Example file: 1418 Oak Ridge Dr{tx ? ', Austin TX' : ''}.</p>
             <div className="mt-5 grid gap-5 lg:grid-cols-2">
                 <Window title="Closing tracker" right={<Pill tone="green">On track</Pill>}>
                     <div className="flex flex-wrap items-center gap-2 text-[12px] text-[#334155]"><span className="rounded-md bg-[#F1F5F9] px-2 py-1 font-semibold">1418 Oak Ridge Dr</span><span>$485,000</span><span className="text-[#94A3B8]">·</span><span>Closes Dec 2</span></div>
