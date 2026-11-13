@@ -1,4 +1,4 @@
-// /ie-accounts staging (Apollo brief za-ie-landing-briefs.md). Unsourced competitor comparisons left out; partner cert slot = placeholder.
+// /ie-accounts staging (Apollo brief za-ie-landing-briefs.md). Unsourced competitor comparisons left out; no IE sign-off claim until a partner signs (Apollo 11-13).
 import IntlPage, { intlMeta } from '@/components/intl/IntlPage';
 
 export const metadata = intlMeta('Irish Ltd Year-End Accounts, CRO B1 & CT1 · €595 Fixed', 'Abridged accounts + CRO B1 + Revenue CT1 for €595 fixed. Pay €0 upfront: review the draft first.', 'ie-accounts');
@@ -11,7 +11,7 @@ const P = {
     bullets: [
         ['€595 fixed annual fee', '— abridged financial statements + CRO B1 + Revenue ROS CT1 for active Irish private Ltd companies.'],
         ['Zero-awkwardness switch', '— we write to your previous accountant for professional clearance and prior-year trial balances.'],
-        ['Signed off in Ireland', '— [Partner Review Desk — Irish CAI/ACCA/CPA Cert # inserted upon partner countersignature before ad launch]'],
+        ['Pay only after you review', '— you see the full draft first, then pay.'],
     ],
     fields: [['name', 'Director name'], ['contact', 'Work email or Irish mobile'], ['company', 'Company name (or CRO number)']],
     cta: 'Start My 48h Ltd Accounts Draft — Pay €0 Upfront',
