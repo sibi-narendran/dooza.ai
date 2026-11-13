@@ -20,6 +20,20 @@ async function attach(apiKey, file) {
     return { url: slot.download.url, filename: file.name || 'plan.pdf', content_type: file.type || 'application/pdf' };
 }
 
+// Email copy to Odysseus (asked 11-13 14:12): mail wakes him, a Close lead doesn't. Zoho AgentInbox, Worker secret ZOHO_AGENTINBOX_KEY.
+async function mailOdysseus(subject, content) {
+    const key = process.env.ZOHO_AGENTINBOX_KEY;
+    if (!key) { console.error('takeoff-lead mail: no key'); return; }
+    try {
+        const r = await fetch('https://api.zohoagentinbox.in/api/v0.9/agents/Achilles/messages', {
+            method: 'POST',
+            headers: { Authorization: `Zoho-zapikey ${key}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ fromAddress: 'achilles@dooza.org', toAddress: 'odysseus@dooza.org', subject, content, mailFormat: 'plaintext' }),
+        });
+        if (!r.ok) console.error('takeoff-lead mail', r.status);
+    } catch (e) { console.error('takeoff-lead mail', e.message); }
+}
+
 export async function POST(request) {
     let f;
     try { f = await request.formData(); } catch { return json({ ok: false, error: 'Invalid request.' }, 400); }
@@ -55,6 +69,7 @@ export async function POST(request) {
         });
         const note = ['Free first takeoff request via dooza.ai/takeoff', `Trade: ${trade}`, `Name: ${name || '-'}`, `Company: ${company || '-'}`, `Email: ${email}`, `Phone: ${phone || '-'}`, `Plan link: ${link || '-'}`, `Message: ${message || '-'}`, fileLine, `Page: ${g('page', 200) || '-'}`, ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
         await closeFetch(apiKey, '/activity/note/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, note, ...(att ? { attachments: [att] } : {}) }) });
+        await mailOdysseus(`Takeoff request: ${trade} ${company || name || email}`, `${note}\n\nClose lead: https://app.close.com/lead/${lead.id}/`);
     } catch (e) {
         console.error('takeoff-lead', e.message);
         return json({ ok: false, error: 'Could not save right now. Please try again in a minute.' }, 502);
