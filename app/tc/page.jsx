@@ -37,11 +37,11 @@ const PERSON = { name: 'Sibi Narendran', role: 'Founder, Dooza', photo: '/founde
 const Person = () => PERSON ? <div className="mt-4 flex items-center gap-3"><img src={PERSON.photo} alt={PERSON.name} width="48" height="48" className="h-12 w-12 rounded-full object-cover" /><p className="text-[15px] text-[#334155]"><strong>{PERSON.name}</strong>, {PERSON.role}</p></div> : null;
 const ck = <span aria-hidden="true" className="text-[#0F766E]">✓</span>;
 
-export default function TcPage() {
+export default function TcPage({ h1 = 'Transaction Coordinator for Texas Realtors. $99 a File.' }) {
     return (
         <main className="min-h-screen bg-[#F7F5F0] text-[#14213D]">
             <div className="mx-auto max-w-3xl px-4 py-10 sm:py-16">
-                <h1 className="text-4xl font-bold leading-tight sm:text-5xl">Transaction Coordinator for Texas Realtors. $99 a File.</h1>
+                <h1 className="text-4xl font-bold leading-tight sm:text-5xl">{h1}</h1>
                 <p className="mt-4 text-lg text-[#4B5567]">Contract to close, every deadline tracked and every step checked by a person. Your first file is free. No card, no contract, no subscription.</p>
                 <ul className="mt-6 space-y-2 text-[16px] text-[#334155]">{BULLETS.map((d) => <li key={d} className="flex gap-2">{ck}{d}</li>)}</ul>
 
