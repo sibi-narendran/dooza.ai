@@ -66,7 +66,7 @@ export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99
                             <tr><td className="p-4 text-[#4B5567]">Most TCs, for comparison</td><td className="p-4 text-[#4B5567]">$300-500 a file</td></tr>
                         </tbody></table>
                     </div>
-                    <p className="mt-3 text-[15px] text-[#334155]">The checklist: earnest money, option period, inspection, appraisal, financing, title, HOA, closing.</p>
+                    <p className="mt-3 text-[15px] text-[#334155]">The checklist: earnest money, {tx ? 'option period' : 'contingency deadlines'}, inspection, appraisal, financing, title, HOA, closing.</p>
                 </section>
 
                 <section className="mt-14">

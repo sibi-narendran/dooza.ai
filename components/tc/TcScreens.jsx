@@ -14,7 +14,7 @@ const Pill = ({ tone, children }) => {
     const t = { green: 'bg-[#ECFDF5] text-[#047857] ring-[#A7F3D0]', amber: 'bg-[#FFFBEB] text-[#B45309] ring-[#FDE68A]', blue: 'bg-[#EFF6FF] text-[#1D4ED8] ring-[#BFDBFE]' }[tone];
     return <span className={`inline-flex items-center whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset ${t}`}>{children}</span>;
 };
-const STEPS = [['Executed contract', 'Nov 3', 'done'], ['Inspection', 'Nov 8', 'done'], ['Option period ends', 'Nov 10', 'done'], ['Appraisal', 'Mon Nov 17', 'now'], ['Financing approval', 'Nov 24', 'next'], ['Closing', 'Dec 2', 'next']];
+const steps = (tx) => [['Executed contract', 'Nov 3', 'done'], ['Inspection', 'Nov 8', 'done'], [tx ? 'Option period ends' : 'Inspection contingency ends', 'Nov 10', 'done'], ['Appraisal', 'Mon Nov 17', 'now'], ['Financing approval', 'Nov 24', 'next'], ['Closing', 'Dec 2', 'next']];
 const DOCS = [['Executed purchase contract', 'ok'], ['Earnest money receipt', 'ok'], ["Seller's disclosure", 'ok'], ['Third-party financing addendum', 'Chasing buyer lender'], ['HOA addendum', 'Requested from HOA'], ['Lead-based paint (pre-1978)', 'ok']];
 
 export default function TcScreens({ tx = false }) {
@@ -28,7 +28,7 @@ export default function TcScreens({ tx = false }) {
                     <div className="mt-3 h-1.5 w-full rounded-full bg-[#EEF2F6]"><div className="h-1.5 w-1/2 rounded-full bg-[#10B981]" /></div>
                     <p className="mt-1 text-[11px] text-[#64748B]">3 of 6 milestones done</p>
                     <ol className="relative mt-4 space-y-3 border-l border-[#E2E8F0] pl-5">
-                        {STEPS.map(([s, d, st]) => (
+                        {steps(tx).map(([s, d, st]) => (
                             <li key={s} className="relative">
                                 <span className={`absolute -left-[27px] top-0.5 flex h-4 w-4 items-center justify-center rounded-full text-[9px] text-white ${st === 'done' ? 'bg-[#10B981]' : st === 'now' ? 'bg-white ring-4 ring-[#BFDBFE] border-2 border-[#2563EB]' : 'border-2 border-[#CBD5E1] bg-white'}`}>{st === 'done' ? '✓' : ''}</span>
                                 <div className="flex items-center justify-between gap-2 text-[13px]"><span className={st === 'now' ? 'font-semibold text-[#1D4ED8]' : st === 'done' ? 'text-[#334155]' : 'text-[#64748B]'}>{s}</span><span className="text-[12px] text-[#64748B]">{d}</span></div>
@@ -69,7 +69,7 @@ export default function TcScreens({ tx = false }) {
                         <p className="text-[11px] text-[#94A3B8]">Fri Nov 14, 4:00 PM</p>
                     </div>
                     <div className="mt-3 divide-y divide-[#F1F5F9] rounded-xl border border-[#EEF2F6] text-[13px]">
-                        <div className="flex gap-3 p-3"><Pill tone="green">Done</Pill><span className="text-[#334155]">Earnest money receipted · Inspection complete · Option period ended</span></div>
+                        <div className="flex gap-3 p-3"><Pill tone="green">Done</Pill><span className="text-[#334155]">Earnest money receipted · Inspection complete · {tx ? 'Option period ended' : 'Inspection contingency ended'}</span></div>
                         <div className="flex gap-3 p-3"><Pill tone="blue">Up next</Pill><span className="text-[#334155]">Appraisal Mon 11/17 · Title commitment by Wed 11/19</span></div>
                         <div className="flex gap-3 p-3"><Pill tone="green">From you</Pill><span className="text-[#334155]">Nothing needed. Enjoy your weekend.</span></div>
                     </div>
