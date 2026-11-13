@@ -2,12 +2,13 @@
 // /home/apollo/learned/knowledge/sources/2026-11-11-landing-copy-research.md + Apollo's CONFIRM answers (Sibi 19:01/19:51).
 // DRAFT: noindex, unlinked, not in the sitemap; no ads until Sibi says yes. No reviews or logos until real.
 import TcForm from '@/components/tc/TcForm';
+import TcCta from '@/components/tc/TcCta';
 
 import TcScreens from '@/components/tc/TcScreens';
 
 export const metadata = {
     title: 'Transaction Coordinator for Realtors, $99 a File',
-    description: 'Contract to close, software builds your timeline and reminds you before every deadline. First file free. No card, no contract, no subscription.',
+    description: 'Contract to close, every deadline tracked and every step checked by a person. First file free. No card, no contract, no subscription.',
     robots: { index: false, follow: false },
     alternates: { canonical: 'https://www.dooza.ai/tc' },
 };
@@ -19,40 +20,42 @@ const BULLETS = [
     '$99 a file. Most TCs charge $300-500 a file.',
     'Pay per file only. Skip a month, pay nothing.',
 ];
-const FEARS = [
-    ['What if a deadline gets missed?', 'Software builds your timeline and sends reminders before every deadline, not after. Reply to any email and we answer within 1 business day.'],
-    ['Who sees my client\'s data?', 'Only the contract documents you send, used only for your file. We keep your files encrypted and delete them on request.'],
-    ['Is it software or a person?', 'AI-run: software builds your timeline and sends reminders before every deadline. Human review on request. Reply to any email and we answer within 1 business day. We never sign, negotiate or give legal advice; you stay agent of record.'],
-];
 const FAQ = [
-    ['How do I send a file?', 'Fill the form; we reply with where to forward the contract.'],
-    ['What does a file cost?', 'First file free, then $99. 5-file pack $449 prepaid.'],
-    ['When do you charge?', 'Only when we open file #2, and we tell you first.'],
-    ['Which states do you cover?', 'All US states. We work from the contract and forms you send.'],
-    ['Can you take rush files?', 'Yes. Tell us the closing date in the form.'],
-    ['Listing-only files?', 'Not yet. We take transaction files, contract to close.'],
-    ['What do you not do?', 'Sign, negotiate or give legal advice.'],
+    ['Is a real person checking my file?', "Yes. Sibi Narendran, Dooza's founder, checks your timeline against the signed contract within 1 business day, before anything goes to your lender, title or client. Software then tracks every date."],
+    ['How fast do you answer?', 'The same business day, US hours. Text (737) 390-1099 or reply to any email and Sibi answers that day. Prefer to talk? Call that number or book a call; if we miss you, we call back the same business day.'],
+    ['What does it cost?', 'First file free, no card. Then $99 a file, or $449 for a 5-file pack. No subscription, no contract.'],
+    ['When do you charge me?', 'Only when we open your second file, and we tell you first. Skip a month, pay nothing.'],
+    ['How do I send a file?', 'Fill the form with your name, email and closing date. Send the contract now or later; we reply with where to forward it.'],
+    ['What exactly do you handle?', 'Contract to close: the timeline, every deadline, earnest money, inspection, appraisal, financing, title, HOA and closing. We email the lender, title and your client, and send you weekly status.'],
+    ['What if a deadline is missed?', 'You get a reminder before every date, and Sibi checks the timeline on day 1, so nothing gets missed. If something slips on the other side, we tell you the same day.'],
+    ["Do you work in Dotloop, SkySlope or my broker's system?", 'Yes. Add us to your file, or just email the PDFs.'],
+    ['Do you take rush files?', 'Yes. Put the closing date in the form and we start right away.'],
+    ['Which states?', "All 50 US states. We work from your contract and your state's forms."],
+    ['Listing-only files?', 'Yes. Tell us in the form and we track your listing dates and paperwork too.'],
+    ["Who sees my client's data?", 'Only the documents you send, used only for your file. Encrypted, and deleted when you ask.'],
+    ["Will my clients know you're not in my office?", 'We send updates in your name or as "your TC team", your choice. You stay agent of record.'],
+    ["What don't you do?", "We don't sign, negotiate or give legal advice. That stays with you and your broker."],
 ];
-const PERSON = { name: 'Sibi Narendran', role: 'Founder, Dooza', photo: '/founder-sibi.jpeg' };
-const Person = () => PERSON ? <div className="mt-4 flex items-center gap-3"><img src={PERSON.photo} alt={PERSON.name} width="48" height="48" className="h-12 w-12 rounded-full object-cover" /><p className="text-[15px] text-[#334155]"><strong>{PERSON.name}</strong>, {PERSON.role}</p></div> : null;
+const PERSON = { name: 'Sibi Narendran', role: 'Founder, Dooza · the person on your file', photo: '/founder-sibi.jpeg' };
+const Person = () => PERSON ? <div className="mt-4 flex items-center gap-3"><img src={PERSON.photo} alt={PERSON.name} width="48" height="48" className="h-12 w-12 rounded-full object-cover" /><p className="text-[15px] text-[#334155]"><strong>{PERSON.name}</strong>, {PERSON.role}<br />Sibi reviews your file&apos;s timeline against the signed contract within 1 business day, and answers you the same business day. Software sends reminders before every deadline.</p></div> : null;
 const ck = <span aria-hidden="true" className="text-[#0F766E]">✓</span>;
 
 export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99 a File.', tx = false }) {
     return (
-        <main className="min-h-screen bg-[#F7F5F0] text-[#14213D]">
+        <main className="min-h-screen bg-[#F7F5F0] pb-20 text-[#14213D] sm:pb-0">
+            <TcCta sticky />
             <div className="mx-auto max-w-3xl px-4 py-10 sm:py-16">
                 <h1 className="text-4xl font-bold leading-tight sm:text-5xl">{h1}</h1>
-                <p className="mt-4 text-lg text-[#4B5567]">Contract to close, software builds your timeline and reminds you before every deadline. Your first file is free. No card, no contract, no subscription.</p>
+                <p className="mt-4 text-lg text-[#4B5567]">Contract to close, every deadline tracked and every step checked by a person. Your first file is free. No card, no contract, no subscription.</p>
+                <TcCta />
                 <ul className="mt-6 space-y-2 text-[16px] text-[#334155]">{(tx ? BULLETS.map((d) => d.replace('from contract to funding', 'from option period to funding')) : BULLETS).map((d) => <li key={d} className="flex gap-2">{ck}{d}</li>)}</ul>
 
                 <div className="mt-8"><TcForm /></div>
-                <ul className="mt-3 space-y-1 text-[14px] text-[#334155]"><li>AI-run. Human review on request. Email answers within 1 business day.</li><li>{tx ? 'Works on TREC forms (1-4 Family Resale). Rush files OK.' : 'Any state, rush files OK.'}</li><li>Only the docs you send, encrypted, deleted on request.</li></ul>
+                <TcCta />
+                <ul className="mt-3 space-y-1 text-[14px] text-[#334155]"><li>A person checks every file. Same-day answers.</li><li>{tx ? 'Works on TREC forms (1-4 Family Resale). Rush files OK.' : 'Any state, rush files OK.'}</li><li>Only the docs you send, encrypted, deleted on request.</li></ul>
                 <p className="mt-3 text-[14px] text-[#334155]"><strong>First file free.</strong> No card until file #2. No contract. Cancel by not sending another file.</p>
                 <Person />
 
-                <section className="mt-8 grid gap-3 sm:grid-cols-3">
-                    {FEARS.map(([q, a]) => <div key={q} className="rounded-2xl border border-[#CBD5E1] bg-white p-4"><p className="font-semibold">{q}</p><p className="mt-1 text-[15px] text-[#4B5567]">{a}</p></div>)}
-                </section>
 
                 <TcScreens tx={tx} />
 
@@ -71,7 +74,16 @@ export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99
 
                 <section className="mt-14">
                     <h2 className="text-2xl font-bold">Questions</h2>
-                    {(tx ? FAQ.map(([q, a]) => (q === 'Which states do you cover?' ? ['Do you work with TREC and TXR forms?', 'Yes.'] : [q, a])) : FAQ).map(([q, a]) => <div key={q}><h3 className="mt-5 text-lg font-semibold">{q}</h3><p className="mt-1 text-[16px] text-[#334155]">{a}</p></div>)}
+                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                        {(tx ? FAQ.map(([q, a]) => (q === 'Which states?' ? ['Do you work with TREC and TXR forms?', 'Yes. We work on TREC forms (1-4 Family Resale) and TXR forms, and in all 50 US states.'] : [q, a])) : FAQ).map(([q, a], i) => (
+                            <details key={q} open={i < 3} className="group self-start rounded-2xl border border-[#CBD5E1] bg-white p-4">
+                                <summary className="flex cursor-pointer list-none items-start justify-between gap-3 font-semibold"><span>{q}</span><span aria-hidden="true" className="text-[#0F766E] transition group-open:rotate-45">+</span></summary>
+                                <p className="mt-2 text-[15px] leading-relaxed text-[#334155]">{a}</p>
+                            </details>
+                        ))}
+                    </div>
+                    <TcCta />
+                    <a href="#start" className="mt-3 block rounded-xl bg-[#14213D] px-4 py-3 text-center font-semibold text-white">Start my free file</a>
                 </section>
 
                 <p className="mt-16 text-[13px] text-[#64748B]">Dooza is a brand of Adam Laboratory Inc. · 1111b S Governors Ave Ste 34259, Dover, DE 19904 · <a href="mailto:support@dooza.ai" className="underline">support@dooza.ai</a> · <a href="/privacy" className="underline">Privacy</a> · <a href="/terms" className="underline">Terms</a></p>

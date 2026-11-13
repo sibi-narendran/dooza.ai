@@ -63,7 +63,7 @@ export default function TcScreens({ tx = false }) {
                 </Window>
                 <Window title="Inbox">
                     <div className="space-y-1 border-b border-[#EEF2F6] pb-3 text-[12px] text-[#475569]">
-                        <p><span className="text-[#94A3B8]">From</span> <span className="font-medium text-[#0F172A]">Your TC team</span> &lt;hercules@calls.dooza.org&gt;</p>
+                        <p><span className="text-[#94A3B8]">From</span> <span className="font-medium text-[#0F172A]">Sibi · Your TC team</span> &lt;support@dooza.ai&gt;</p>
                         <p><span className="text-[#94A3B8]">To</span> You, Buyer</p>
                         <p className="pt-1 text-[14px] font-semibold text-[#0F172A]">1418 Oak Ridge Dr: week 2 closing update</p>
                         <p className="text-[11px] text-[#94A3B8]">Fri Nov 14, 4:00 PM</p>

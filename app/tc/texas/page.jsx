@@ -3,7 +3,7 @@ import TcPage from '../page';
 
 export const metadata = {
     title: 'Texas Real Estate Transaction Coordinator, $99 a File',
-    description: 'Texas real estate transaction coordinator: contract to close, software builds your timeline and reminds you before every deadline. First file free. No card, no contract.',
+    description: 'Texas real estate transaction coordinator: contract to close, every deadline tracked and every step checked by a person. First file free. No card, no contract.',
     robots: { index: false, follow: false },
     alternates: { canonical: 'https://www.dooza.ai/tc/texas' },
 };
