@@ -15,5 +15,5 @@ export default function TcCta({ sticky = false }) {
         </>
     );
     if (sticky) return <div className="fixed inset-x-0 bottom-0 z-50 grid grid-cols-3 gap-2 border-t border-[#CBD5E1] bg-[#F7F5F0] p-3 pb-[max(12px,env(safe-area-inset-bottom))] sm:hidden">{btns}</div>;
-    return <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">{btns}</div>;
+    return <div className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-[1.5fr_1fr_1fr] sm:gap-3">{btns}</div>;
 }
