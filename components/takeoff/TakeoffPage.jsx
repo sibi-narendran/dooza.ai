@@ -41,17 +41,18 @@ export default function TakeoffPage({ pageKey }) {
                     <section className="mt-14">
                         <h2 className="text-2xl font-bold">Sample drywall takeoff</h2>
                         <p className="mt-3 text-[16px] leading-relaxed text-[#334155]">A real takeoff we did from a public plan set: Highline College Building 23 tenant improvement, Level 3 (sheet A3.01, design development set, 1/8&quot; = 1&apos;-0&quot;). Blue = new A1 partitions, green = F4 exterior furring.</p>
-                        <a href="/takeoff/sample-drywall-takeoff-markup.pdf" className="mt-4 block overflow-hidden rounded-2xl border border-[#CBD5E1] bg-white"><img src="/takeoff/sample-drywall-takeoff.jpg" alt="Sample drywall takeoff: marked-up Level 3 floor plan with partitions in blue and furring in green" width="1600" height="1035" loading="lazy" className="h-auto w-full" /></a>
+                        <a href="/takeoff/sample-drywall-takeoff.jpg" className="mt-4 block overflow-hidden rounded-2xl border border-[#CBD5E1] bg-white"><img src="/takeoff/sample-drywall-takeoff.jpg" alt="Sample drywall takeoff: marked-up Level 3 floor plan with partitions in blue and furring in green" width="1600" height="1428" loading="lazy" className="h-auto w-full" /></a>
                         <ul className="mt-4 space-y-1 text-[15px] text-[#334155]">
                             <li>A1 partitions: 522 LF, 5/8&quot; Type X both sides, 13&apos;-1&quot; to deck = 13,653 SF board</li>
                             <li>F4 exterior furring: 144 LF = 1,887 SF board</li>
                             <li>About 357 sheets of 4x12 incl. 10% waste, about 700 studs, 1,332 LF track</li>
                             <li>Openings not deducted (noted on the sheet)</li>
                         </ul>
-                        <p className="mt-3 text-[15px]"><a href="/takeoff/sample-drywall-takeoff-markup.pdf" className="underline">Marked-up plan (PDF)</a> · <a href="/takeoff/sample-drywall-takeoff.xlsx" className="underline">Quantity sheet (Excel)</a></p>
+                        <p className="mt-3 text-[15px]"><a href="/takeoff/sample-drywall-takeoff.xlsx" className="underline">Quantity sheet (Excel)</a></p>
                         <p className="mt-2 text-[13px] text-[#64748B]">Sample. Not an accuracy claim. Check any takeoff against your bid set before pricing.</p>
                     </section>
                 )}
+
                 {p.sections.map(([h, t]) => <section key={h} className="mt-12"><h2 className="text-2xl font-bold">{h}</h2><p className="mt-3 text-[16px] leading-relaxed text-[#334155]">{t}</p></section>)}
 
                 <section className="mt-14">
