@@ -45,7 +45,7 @@ export default function TakeoffPage({ pageKey }) {
                         <ul className="mt-4 space-y-1 text-[15px] text-[#334155]">
                             <li>A1 partitions: 522 LF, 5/8&quot; Type X both sides, 13&apos;-1&quot; to deck = 13,653 SF board</li>
                             <li>F4 exterior furring: 144 LF = 1,887 SF board</li>
-                            <li>About 397 sheets of 4x12 incl. 10% waste, about 700 studs, 1,332 LF track</li>
+                            <li>About 357 sheets of 4x12 incl. 10% waste, about 700 studs, 1,332 LF track</li>
                             <li>Openings not deducted (noted on the sheet)</li>
                         </ul>
                         <p className="mt-3 text-[15px]"><a href="/takeoff/sample-drywall-takeoff-markup.pdf" className="underline">Marked-up plan (PDF)</a> · <a href="/takeoff/sample-drywall-takeoff.xlsx" className="underline">Quantity sheet (Excel)</a></p>
