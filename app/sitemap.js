@@ -349,6 +349,24 @@ export default async function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${SITE_URL}/takeoff`,
+            lastModified: pageDate('2026-11-13'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/takeoff/drywall`,
+            lastModified: pageDate('2026-11-13'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/takeoff/roofing`,
+            lastModified: pageDate('2026-11-13'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/ai-receptionist-cost-calculator`,
             lastModified: pageDate('2026-10-06'),
             changeFrequency: 'monthly',
