@@ -28,15 +28,18 @@ export async function POST(request) {
     if (g('website', 200)) return json({ ok: true }); // honeypot
     const email = g('email', 160).toLowerCase();
     const phone = g('phone', 40);
+    const name = g('name', 120);
+    const closing = g('closing', 20);
     const message = g('message', 2000);
     const file = f.get('file');
     const hasFile = file && typeof file === 'object' && file.size > 0;
     if (hasFile && file.size > MAX) return json({ ok: false, error: 'That file is over 10 MB.' }, 400);
     const missing = [];
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push('email');
-    if (phone.replace(/\D/g, '').length < 10) missing.push('mobile');
+    if (phone && phone.replace(/\D/g, '').length < 10) missing.push('mobile');
+    if (g('followup', 2) !== '1' && !name) missing.push('name');
+    if (g('followup', 2) !== '1' && !closing) missing.push('closing date');
     if (missing.length) return json({ ok: false, error: `Please check: ${missing.join(', ')}.` }, 400);
-    if (!hasFile && !message) return json({ ok: false, error: 'Drop the contract or type a message.' }, 400);
     const apiKey = process.env.CLOSE_API_KEY;
     if (!apiKey) return json({ ok: false, error: 'Could not save right now. Please try again in a minute.' }, 503);
     const tracking = HIDDEN.map((k) => `${k}: ${g(k, 200) || '-'}`);
@@ -54,15 +57,15 @@ export async function POST(request) {
         const lead = await closeFetch(apiKey, '/lead/', {
             method: 'POST',
             body: JSON.stringify({
-                name: `TC free file: ${email}`,
+                name: `TC free file: ${name || email}`,
                 status_id: STATUS_POTENTIAL,
-                description: 'Transaction coordinator free file via dooza.ai/tc (v2: upload or chat)',
-                contacts: [{ name: email, emails: [{ email, type: 'office' }], phones: [{ phone, type: 'mobile' }] }],
+                description: 'Transaction coordinator free file via dooza.ai/tc (v3: name, email, closing date; contract optional)',
+                contacts: [{ name: name || email, emails: [{ email, type: 'office' }], ...(phone ? { phones: [{ phone, type: 'mobile' }] } : {}) }],
             }),
         });
-        const note = ['TC free file request via dooza.ai/tc', `Name: ${email}`, `Email: ${email}`, `Mobile: ${phone}`, `Message: ${message || '-'}`, fileLine, 'SMS consent: shown under phone field', ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
+        const note = ['TC free file request via dooza.ai/tc', `Name: ${name || '-'}`, `Email: ${email}`, `Expected closing: ${closing || '-'}`, `Mobile: ${phone || '- (email only)'}`, `Message: ${message || '-'}`, fileLine, 'SMS consent: shown under phone field', ...tracking, `Submitted: ${new Date().toISOString()}`].join('\n');
         await closeFetch(apiKey, '/activity/note/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, note, ...(att ? { attachments: [att] } : {}) }) });
-        await closeFetch(apiKey, '/task/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, assigned_to: SIBI_CLOSE_USER, text: `TC free file: ${hasFile ? 'contract attached' : 'message'} · text + email now.`, date: new Date().toISOString().slice(0, 10), is_complete: false }) });
+        await closeFetch(apiKey, '/task/', { method: 'POST', body: JSON.stringify({ lead_id: lead.id, assigned_to: SIBI_CLOSE_USER, text: `TC free file: ${hasFile ? 'contract attached' : 'no contract yet'} · closing ${closing} · ${phone ? 'text + email' : 'email'} now.`, date: new Date().toISOString().slice(0, 10), is_complete: false }) });
     } catch (e) {
         console.error('tc-lead', e.message);
         return json({ ok: false, error: 'Could not save right now. Please try again in a minute.' }, 502);

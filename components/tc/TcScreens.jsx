@@ -39,8 +39,8 @@ export default function TcScreens({ tx = false }) {
                 <figure className="overflow-hidden rounded-[28px] border border-[#E2E8F0] bg-white shadow-[0_1px_2px_rgba(15,23,42,0.06),0_24px_48px_-24px_rgba(15,23,42,0.35)]">
                     <div className="flex flex-col items-center border-b border-[#EEF2F6] bg-[#F8FAFC] py-3">
                         <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-b from-[#94A3B8] to-[#64748B] text-[15px] font-semibold text-white">H</span>
-                        <span className="mt-1 text-[12px] font-semibold text-[#0F172A]">Hercules · Your TC</span>
-                        <span className="text-[11px] text-[#64748B]">(737) 390-1099</span>
+                        <span className="mt-1 text-[12px] font-semibold text-[#0F172A]">Your TC team</span>
+                        <span className="text-[11px] text-[#64748B]">Text updates</span>
                     </div>
                     <div className="space-y-2 p-4 text-[14px]">
                         <p className="text-center text-[11px] text-[#94A3B8]">Today 9:02 AM</p>
@@ -63,7 +63,7 @@ export default function TcScreens({ tx = false }) {
                 </Window>
                 <Window title="Inbox">
                     <div className="space-y-1 border-b border-[#EEF2F6] pb-3 text-[12px] text-[#475569]">
-                        <p><span className="text-[#94A3B8]">From</span> <span className="font-medium text-[#0F172A]">Hercules</span> &lt;hercules@calls.dooza.org&gt;</p>
+                        <p><span className="text-[#94A3B8]">From</span> <span className="font-medium text-[#0F172A]">Your TC team</span> &lt;hercules@calls.dooza.org&gt;</p>
                         <p><span className="text-[#94A3B8]">To</span> You, Buyer</p>
                         <p className="pt-1 text-[14px] font-semibold text-[#0F172A]">1418 Oak Ridge Dr: week 2 closing update</p>
                         <p className="text-[11px] text-[#94A3B8]">Fri Nov 14, 4:00 PM</p>

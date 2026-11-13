@@ -7,7 +7,7 @@ import TcScreens from '@/components/tc/TcScreens';
 
 export const metadata = {
     title: 'Transaction Coordinator for Realtors, $99 a File',
-    description: 'Contract to close, every deadline tracked and every step checked by a person. First file free. No card, no contract, no subscription.',
+    description: 'Contract to close, software builds your timeline and reminds you before every deadline. First file free. No card, no contract, no subscription.',
     robots: { index: false, follow: false },
     alternates: { canonical: 'https://www.dooza.ai/tc' },
 };
@@ -20,9 +20,9 @@ const BULLETS = [
     'Pay per file only. Skip a month, pay nothing.',
 ];
 const FEARS = [
-    ['What if a deadline gets missed?', 'AI sets and watches every date; a person checks each step. Reminders go to you before any date, not after.'],
+    ['What if a deadline gets missed?', 'Software builds your timeline and sends reminders before every deadline, not after. Reply to any email and we answer within 1 business day.'],
     ['Who sees my client\'s data?', 'Only the contract documents you send, used only for your file. We keep your files encrypted and delete them on request.'],
-    ['Is it a real TC or a bot?', 'A person reviews every step; software just watches the dates. We never sign, negotiate or give legal advice; you stay agent of record.'],
+    ['Is it software or a person?', 'AI-run: software builds your timeline and sends reminders before every deadline. Human review on request. Reply to any email and we answer within 1 business day. We never sign, negotiate or give legal advice; you stay agent of record.'],
 ];
 const FAQ = [
     ['How do I send a file?', 'Fill the form; we reply with where to forward the contract.'],
@@ -42,11 +42,11 @@ export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99
         <main className="min-h-screen bg-[#F7F5F0] text-[#14213D]">
             <div className="mx-auto max-w-3xl px-4 py-10 sm:py-16">
                 <h1 className="text-4xl font-bold leading-tight sm:text-5xl">{h1}</h1>
-                <p className="mt-4 text-lg text-[#4B5567]">Contract to close, every deadline tracked and every step checked by a person. Your first file is free. No card, no contract, no subscription.</p>
+                <p className="mt-4 text-lg text-[#4B5567]">Contract to close, software builds your timeline and reminds you before every deadline. Your first file is free. No card, no contract, no subscription.</p>
                 <ul className="mt-6 space-y-2 text-[16px] text-[#334155]">{(tx ? BULLETS.map((d) => d.replace('from contract to funding', 'from option period to funding')) : BULLETS).map((d) => <li key={d} className="flex gap-2">{ck}{d}</li>)}</ul>
 
                 <div className="mt-8"><TcForm /></div>
-                <ul className="mt-3 space-y-1 text-[14px] text-[#334155]"><li>A real TC replies the same business day.</li><li>{tx ? 'TREC/TXR forms, rush files OK.' : 'Any state, rush files OK.'}</li><li>Only the docs you send, encrypted, deleted on request.</li></ul>
+                <ul className="mt-3 space-y-1 text-[14px] text-[#334155]"><li>AI-run. Human review on request. Email answers within 1 business day.</li><li>{tx ? 'Works on TREC forms (1-4 Family Resale). Rush files OK.' : 'Any state, rush files OK.'}</li><li>Only the docs you send, encrypted, deleted on request.</li></ul>
                 <p className="mt-3 text-[14px] text-[#334155]"><strong>First file free.</strong> No card until file #2. No contract. Cancel by not sending another file.</p>
                 <Person />
 
