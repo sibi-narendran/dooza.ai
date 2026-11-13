@@ -1,5 +1,6 @@
 import InForm from '@/components/in/InForm';
-import { IN_PAGES, IN_PRO, IN_TRUST, IN_WHATSAPP } from '@/lib/inPages';
+import InCta from '@/components/in/InCta';
+import { IN_PAGES, IN_PRO, IN_TRUST } from '@/lib/inPages';
 
 const URL = 'https://www.dooza.ai';
 const ck = <span aria-hidden="true" className="text-[#0F766E]">✓</span>;
@@ -14,16 +15,17 @@ export default function InPage({ pageKey }) {
     const hub = pageKey === 'hub';
     const services = Object.entries(IN_PAGES).filter(([k]) => k !== 'hub');
     return (
-        <main className="min-h-screen bg-[#F7F5F0] text-[#14213D]">
+        <main className="min-h-screen bg-[#F7F5F0] pb-20 text-[#14213D] sm:pb-0">
+            <InCta service={p.service} sticky />
             <div className="mx-auto max-w-3xl px-4 py-8 sm:py-14">
                 <a href="/in" className="text-[15px] font-bold tracking-tight">Dooza Compliance India</a>
                 <h1 className="mt-6 text-4xl font-bold leading-tight sm:text-5xl">{p.h1}</h1>
                 <p className="mt-4 text-lg text-[#4B5567]">{p.lead}</p>
                 {p.sub2 && <p className="mt-3 text-[16px] text-[#334155]">{p.sub2}</p>}
+                <InCta service={p.service} />
                 <p className="mt-4 text-[16px] font-semibold">{p.price} <span className="font-normal text-[#4B5567]">· government fees at actuals</span></p>
                 <div className="mt-5 flex flex-wrap gap-3">
                     <a href="#start" className="rounded-xl bg-[#0F766E] px-5 py-3 font-semibold text-white hover:bg-[#0B5D57]">Get started</a>
-                    {IN_WHATSAPP && <a href={`https://wa.me/${IN_WHATSAPP}`} data-ev="in_whatsapp_click" className="rounded-xl border border-[#14213D] px-5 py-3 font-semibold">WhatsApp us</a>}
                 </div>
                 <ul className="mt-6 grid gap-2 text-[15px] text-[#334155] sm:grid-cols-2">{IN_TRUST.map((t) => <li key={t} className="flex gap-2">{ck}{t}</li>)}</ul>
                 {IN_PRO && <div className="mt-5 flex items-center gap-3 rounded-2xl border border-[#CBD5E1] bg-white p-4 text-[14px]">{IN_PRO.photo && <img src={IN_PRO.photo} alt={IN_PRO.name} width="56" height="56" className="h-14 w-14 rounded-full object-cover" />}<div><p className="font-semibold">{IN_PRO.name} · {IN_PRO.reg}</p><p className="text-[#4B5567]">{IN_PRO.address} · GSTIN {IN_PRO.gstin}</p></div></div>}
@@ -41,6 +43,7 @@ export default function InPage({ pageKey }) {
                 )}
 
                 <div className="mt-10"><InForm service={p.service} /></div>
+                <InCta service={p.service} />
 
                 {!hub && (
                     <>

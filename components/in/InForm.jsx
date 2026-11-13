@@ -23,6 +23,7 @@ export default function InForm({ service = 'general' }) {
             const d = await r.json().catch(() => ({}));
             if (!r.ok || !d.ok) throw new Error(d.error || 'Could not save right now. Please try again.');
             ev('in_form_submit', { service: svc });
+            ev('conversion', { send_to: 'AW-10872232955/aPXJCJT8-bcdEPu3pMAo' });
             setState('done');
         } catch (err) { setError(err.message); setState('idle'); }
     };
@@ -30,8 +31,8 @@ export default function InForm({ service = 'general' }) {
     if (state === 'done') {
         return (
             <div id="start" className="rounded-2xl border border-[#0F766E] bg-white p-6">
-                <p className="text-lg font-semibold text-[#14213D]">Thank you. We&apos;ll WhatsApp you within 15 minutes (9am-9pm IST).</p>
-                <p className="mt-2 text-[15px] text-[#4B5567]">Outside those hours, first thing the next morning.</p>
+                <p className="text-lg font-semibold text-[#14213D]">Thank you. We&apos;ll WhatsApp you soon; replies 9am-9pm IST.</p>
+                
             </div>
         );
     }
@@ -55,7 +56,7 @@ export default function InForm({ service = 'general' }) {
             <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
             {error && <p role="alert" className="mt-3 text-[14px] text-[#B91C1C]">{error}</p>}
             <button type="submit" disabled={state === 'sending'} className="mt-4 w-full rounded-xl bg-[#0F766E] px-5 py-4 text-[17px] font-semibold text-white hover:bg-[#0B5D57] disabled:opacity-60">{state === 'sending' ? 'Sending…' : 'Get started'}</button>
-            <p className="mt-2 text-center text-[13px] text-[#64748B]">We WhatsApp you within 15 minutes, 9am-9pm IST.</p>
+            <p className="mt-2 text-center text-[13px] text-[#64748B]">We&apos;ll WhatsApp you soon; replies 9am-9pm IST.</p>
         </form>
     );
 }
