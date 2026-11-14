@@ -41,10 +41,10 @@ const ck = <span aria-hidden="true" className="mt-[3px] text-[#0F766E]">✓</spa
 const TOP_BULLETS = [
     'Every deadline tracked, contract to funding. Reminders before each date.',
     'We chase the lender, title and signatures. Weekly status to you and your client.',
-    'First file free. Then $99 a file. Most TCs charge $300-500.',
+    'First file free, no card. Then $99 per file. Most TCs charge $300-500.',
 ];
 
-export default function TcPage({ h1 = 'Transaction Coordinator for Realtors. $99 a File.', tx = false }) {
+export default function TcPage({ h1 = 'Transaction Coordinator, $99 a File. Your First File Is Free.', tx = false }) {
     const faq = tx ? FAQ.map(([q, a]) => (q === 'Which states?' ? ['Do you work with TREC and TXR forms?', 'Yes. We work on TREC forms (1-4 Family Resale) and TXR forms, and in all 50 US states.'] : [q, a])) : FAQ;
     const Q = ([q, a], open) => (
         <details key={q} open={open} className="group border-b border-[#E2E8F0]">
