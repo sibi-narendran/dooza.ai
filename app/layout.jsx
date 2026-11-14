@@ -134,7 +134,7 @@ export default function RootLayout({ children }) {
             /cut-costs loads it on demand instead. */}
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
-            if (location.pathname.indexOf('/cut-costs')===0) return;
+            if (location.pathname.indexOf('/cut-costs')===0||location.pathname==='/tc'||location.pathname.indexOf('/tc/')===0) return;
             if (document.getElementById('calendly-widget-js')) return;
             var s = document.createElement('script');
             s.id = 'calendly-widget-js';
