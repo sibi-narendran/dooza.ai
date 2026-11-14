@@ -2,7 +2,7 @@
 // Call / Text / Book buttons for /tc (Sibi 23:57 via Apollo). Close number. GA events now; Ads labels when Apollo sends them.
 const TEL = '+17373901099';
 const CAL = 'https://calendly.com/sibi-dooza/book-a-meeting-and-walk-away-with-clarity';
-const LABEL = {};
+const LABEL = { tc_call_click: 'AW-10872232955/V80vCIGylrgdEPu3pMAo', tc_text_click: 'AW-10872232955/IGgOCISylrgdEPu3pMAo', tc_calendly_click: 'AW-10872232955/SGoUCIeylrgdEPu3pMAo' };
 const fire = (name) => { try { if (window.gtag) { window.gtag('event', name); if (LABEL[name]) window.gtag('event', 'conversion', { send_to: LABEL[name] }); } } catch (e) {} };
 
 export default function TcCta({ sticky = false }) {
