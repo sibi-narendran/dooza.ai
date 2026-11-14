@@ -6,6 +6,7 @@ const PAY_URL = `${ICP1_A_PAY_URL}?client_reference_id=feed-site`;
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FAQAccordion from '@/components/FAQAccordion';
+import ShortEmbed from '@/components/ShortEmbed';
 import { SITE_URL } from '@/lib/site';
 import StateRenewalCounter from '@/components/StateRenewalCounter';
 import TruckingSampleForm from '@/components/TruckingSampleForm';
@@ -103,6 +104,17 @@ const schemas = [
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+    },
+    {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: 'Truck insurance renewal dates can be a guess (we checked 53)',
+        description: 'We checked 53 past truck liability policies in FMCSA public insurance history (8 Connecticut carriers): only 36% ran a full year (330-400 days). The filing date is a lead, not a fact: call before it and ask when they really renew.',
+        thumbnailUrl: 'https://i.ytimg.com/vi/pInP4q523Yk/hqdefault.jpg',
+        uploadDate: '2026-11-14',
+        contentUrl: 'https://www.youtube.com/shorts/pInP4q523Yk',
+        embedUrl: 'https://www.youtube-nocookie.com/embed/pInP4q523Yk',
+        publisher: { '@type': 'Organization', name: 'Dooza', url: SITE_URL },
     },
     {
         '@context': 'https://schema.org',
@@ -253,6 +265,18 @@ export default function TruckingInsuranceLeadsPage() {
                         <section id="sample" className="mt-12 scroll-mt-28">
                             <h2 className="text-2xl font-bold text-slate-900">See real rows before you decide</h2>
                             <TruckingSampleForm states={STATE_COUNTS} claimed={CLAIMED_STATES} />
+                        </section>
+
+                        <section className="mt-12">
+                            <h2 className="text-2xl font-bold text-slate-900">Is the filing date the real renewal date?</h2>
+                            <div className="mt-4 grid items-start gap-6 sm:grid-cols-[300px_1fr]">
+                                <ShortEmbed id="pInP4q523Yk" title="Truck insurance renewal dates can be a guess (we checked 53)" />
+                                <div className="text-[16px] leading-relaxed text-slate-700">
+                                    <p>Not always. We checked 53 past truck liability policies in FMCSA&rsquo;s public insurance history (8 Connecticut carriers). The median term was 365 days, but only 36% ran a full year (330 to 400 days). Many ended early after a switch or a cancellation.</p>
+                                    <p className="mt-3">So the renewal date on each row is an estimate: a reason to call before it, not a promise. Ask the owner when they really renew; in our sample, about a third renewed close to it.</p>
+                                    <p className="mt-3 text-xs text-slate-500">Source: Dooza check of FMCSA L&amp;I insurance history, Oct 2026, small sample (53 policies, 8 carriers).</p>
+                                </div>
+                            </div>
                         </section>
 
                         <section className="prose prose-slate mt-12 max-w-none">
