@@ -1,6 +1,6 @@
 import InForm from '@/components/in/InForm';
 import InCta from '@/components/in/InCta';
-import { IN_PAGES, IN_PRO, IN_TRUST } from '@/lib/inPages';
+import { IN_PAGES, IN_PRO, IN_TRUST, IN_TRUST_BIS } from '@/lib/inPages';
 
 const URL = 'https://www.dooza.ai';
 const ck = <span aria-hidden="true" className="text-[#0F766E]">✓</span>;
@@ -27,7 +27,7 @@ export default function InPage({ pageKey }) {
                 <div className="mt-5 flex flex-wrap gap-3">
                     <a href="#start" className="rounded-xl bg-[#0F766E] px-5 py-3 font-semibold text-white hover:bg-[#0B5D57]">Get started</a>
                 </div>
-                <ul className="mt-6 grid gap-2 text-[15px] text-[#334155] sm:grid-cols-2">{IN_TRUST.map((t) => <li key={t} className="flex gap-2">{ck}{t}</li>)}</ul>
+                <ul className="mt-6 grid gap-2 text-[15px] text-[#334155] sm:grid-cols-2">{(p.service === 'bis' ? IN_TRUST_BIS : IN_TRUST).map((t) => <li key={t} className="flex gap-2">{ck}{t}</li>)}</ul>
                 {IN_PRO && <div className="mt-5 flex items-center gap-3 rounded-2xl border border-[#CBD5E1] bg-white p-4 text-[14px]">{IN_PRO.photo && <img src={IN_PRO.photo} alt={IN_PRO.name} width="56" height="56" className="h-14 w-14 rounded-full object-cover" />}<div><p className="font-semibold">{IN_PRO.name} · {IN_PRO.reg}</p><p className="text-[#4B5567]">{IN_PRO.address} · GSTIN {IN_PRO.gstin}</p></div></div>}
 
                 {hub && (
