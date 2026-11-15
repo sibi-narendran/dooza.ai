@@ -72,19 +72,19 @@ export default function TakeoffPage({ pageKey }) {
 
                 {p.sections.map(([h, t]) => <section key={h} className="mt-12"><h2 className="text-2xl font-bold">{h}</h2><p className="mt-3 text-[16px] leading-relaxed text-[#334155]">{t}</p></section>)}
 
-                {p.table && (
-                    <section className="mt-12">
-                        <h2 className="text-2xl font-bold">{p.table.h}</h2>
-                        <p className="mt-3 text-[16px] leading-relaxed text-[#334155]">{p.table.intro}</p>
+                {(p.tables || (p.table ? [p.table] : [])).map((t) => (
+                    <section key={t.h} className="mt-12">
+                        <h2 className="text-2xl font-bold">{t.h}</h2>
+                        <p className="mt-3 text-[16px] leading-relaxed text-[#334155]">{t.intro}</p>
                         <div className="mt-4 overflow-x-auto rounded-2xl border border-[#CBD5E1] bg-white">
-                            <table className="w-full min-w-[520px] text-left text-[15px]">
-                                <thead><tr className="border-b border-[#CBD5E1]">{p.table.head.map((c) => <th key={c} className="p-3 font-semibold">{c}</th>)}</tr></thead>
-                                <tbody>{p.table.rows.map((r, i) => <tr key={r[0]} className={i < p.table.rows.length - 1 ? 'border-b border-[#E2E8F0]' : ''}>{r.map((c, j) => <td key={j} className={`p-3 align-top ${j === 0 ? 'font-semibold' : ''}`}>{c}</td>)}</tr>)}</tbody>
+                            <table className="w-full min-w-[640px] text-left text-[15px]">
+                                <thead><tr className="border-b border-[#CBD5E1]">{t.head.map((c) => <th key={c} className="p-3 font-semibold">{c}</th>)}</tr></thead>
+                                <tbody>{t.rows.map((r, i) => <tr key={r[0]} className={i < t.rows.length - 1 ? 'border-b border-[#E2E8F0]' : 'font-semibold'}>{r.map((c, j) => <td key={j} className={`p-3 align-top ${j === 0 ? 'font-semibold' : ''}`}>{c}</td>)}</tr>)}</tbody>
                             </table>
                         </div>
-                        <p className="mt-2 text-[13px] text-[#64748B]">Sources: {p.table.sources.map(([n, u], i) => <span key={u}>{i ? ' · ' : ''}<a href={u} rel="nofollow noopener" className="underline">{n}</a></span>)}</p>
+                        <p className="mt-2 text-[14px] text-[#64748B]">{t.sourcesLabel || 'Sources'}: {t.sources.map(([n, u], i) => <span key={u}>{i ? ' · ' : ''}<a href={u} rel={u.startsWith('/') ? undefined : 'nofollow noopener'} className="underline">{n}</a></span>)}</p>
                     </section>
-                )}
+                ))}
 
                 <section className="mt-14">
                     <h2 className="text-2xl font-bold">Price</h2>
