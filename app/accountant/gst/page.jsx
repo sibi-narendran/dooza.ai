@@ -23,7 +23,7 @@ const LD = [
     {
         '@context': 'https://schema.org', '@type': 'Service', name: 'GST registration', serviceType: 'GST registration and GST return filing', url: G.GST_URL,
         provider: { '@type': 'Organization', name: 'Dooza Accountant', url: G.GST_URL }, areaServed: { '@type': 'Country', name: 'India' },
-        description: `${G.GST_H1}. ${G.GST_SUB}`,
+        description: `${G.GST_H1} ${G.GST_SUB}`,
         offers: { '@type': 'Offer', price: '499', priceCurrency: 'INR', url: G.GST_WA_LINK, description: 'GST registration and the first return filing, tax included. Paid only when the GSTIN arrives. Nothing is paid if the application is rejected.' },
         potentialAction: { '@type': 'CommunicateAction', name: 'Start on WhatsApp', target: G.GST_WA_LINK },
     },
@@ -142,21 +142,15 @@ export default function Page() {
                         {G.GST_TIMELINE.map(([a, b]) => <li key={a} className="relative py-3 pl-6"><span aria-hidden="true" className="absolute -left-[7px] top-[19px] h-3 w-3 rounded-full bg-[#0F766E]" /><p className="text-[17px] font-bold">{a}</p><p className="text-[16px] text-[#334155]">{rich(b)}</p></li>)}
                     </ol>
                     <p className="mt-4 max-w-3xl text-[16px] text-[#334155]">{G.GST_TIMELINE_NOTE}</p>
+                    <p className="mt-2 max-w-3xl text-[14px] text-[#475569]">Source: <a href={G.GST_RULE9} {...ext} className={link}>CGST Rules 2017, Rule 9 (CBIC)</a></p>
                 </div>
             </section>
 
-            {/* 8 Papers + 9 Do you need GST */}
-            <section className={`${wrap} grid gap-12 py-10 sm:py-16 lg:grid-cols-2`}>
-                <div>
-                    <H2>Papers needed</H2>
-                    <ul className="mt-6 divide-y divide-[#DDE5E2] border-y border-[#DDE5E2]">{G.GST_PAPERS.map((t) => <li key={t} className="flex gap-3 py-3 text-[16px]"><Tick />{t}</li>)}</ul>
-                    <p className="mt-4 text-[15px] text-[#475569]">{G.GST_PAPERS_NOTE}</p>
-                </div>
-                <div>
-                    <H2>Do you need GST?</H2>
-                    <dl className="mt-6 divide-y divide-[#DDE5E2] border-y border-[#DDE5E2]">{G.GST_NEED.map(([a, b]) => <div key={a} className="py-3"><dt className="text-[16px] font-bold">{a}</dt><dd className="text-[16px] text-[#334155]">{b}</dd></div>)}</dl>
-                    <p className="mt-4 text-[15px] text-[#475569]">{G.GST_NEED_NOTE}</p>
-                </div>
+            {/* 8 Papers (9 "Do you need GST?" held until the limits have an official source) */}
+            <section className={`${wrap} py-10 sm:py-16`}>
+                <H2>Papers needed</H2>
+                <ul className="mt-6 max-w-3xl divide-y divide-[#DDE5E2] border-y border-[#DDE5E2]">{G.GST_PAPERS.map((t) => <li key={t} className="flex gap-3 py-3 text-[16px]"><Tick />{t}</li>)}</ul>
+                <p className="mt-4 max-w-3xl text-[15px] text-[#475569]">{G.GST_PAPERS_NOTE}</p>
             </section>
 
             {/* 10 Who we are */}
