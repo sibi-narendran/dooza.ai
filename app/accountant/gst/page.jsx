@@ -146,11 +146,27 @@ export default function Page() {
                 </div>
             </section>
 
-            {/* 8 Papers (9 "Do you need GST?" held until the limits have an official source) */}
+            {/* 8 Papers */}
             <section className={`${wrap} py-10 sm:py-16`}>
                 <H2>Papers needed</H2>
                 <ul className="mt-6 max-w-3xl divide-y divide-[#DDE5E2] border-y border-[#DDE5E2]">{G.GST_PAPERS.map((t) => <li key={t} className="flex gap-3 py-3 text-[16px]"><Tick />{t}</li>)}</ul>
                 <p className="mt-4 max-w-3xl text-[15px] text-[#475569]">{G.GST_PAPERS_NOTE}</p>
+            </section>
+
+            {/* 9 Do you need GST? */}
+            <section className="bg-[#EEF3F1]">
+                <div className={`${wrap} py-10 sm:py-16`}>
+                    <H2>{G.GST_NEED_TITLE}</H2>
+                    <dl className="mt-6 max-w-3xl divide-y divide-[#DDE5E2] rounded-2xl border border-[#DDE5E2] bg-white">
+                        {G.GST_NEED.map(([a, b]) => (
+                            <div key={a} className="grid gap-1 px-4 py-4 sm:grid-cols-2 sm:gap-6 sm:px-6">
+                                <dt className={`text-[16px] font-semibold ${ink}`}>{a}</dt>
+                                <dd className="text-[16px] text-[#334155]">{b}</dd>
+                            </div>
+                        ))}
+                    </dl>
+                    <p className="mt-4 max-w-3xl text-[15px] text-[#475569]">{G.GST_NEED_NOTE} Source: <a href={G.GST_NEED_SRC} {...ext} className={link}>{G.GST_NEED_SRC_LABEL}</a>.</p>
+                </div>
             </section>
 
             {/* 10 Who we are */}
