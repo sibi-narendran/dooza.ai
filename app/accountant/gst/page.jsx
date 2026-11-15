@@ -22,7 +22,7 @@ export const metadata = {
 const LD = [
     {
         '@context': 'https://schema.org', '@type': 'Service', name: 'GST registration', serviceType: 'GST registration and GST return filing', url: G.GST_URL,
-        provider: { '@type': 'Organization', name: 'Dooza Accountant', url: G.GST_URL }, areaServed: { '@type': 'Country', name: 'India' },
+        provider: { '@type': 'Organization', name: 'Dooza Accountant', url: G.GST_URL, founder: { '@type': 'Person', name: 'Sibi Narendran' } }, areaServed: { '@type': 'Country', name: 'India' },
         description: `${G.GST_H1} ${G.GST_SUB}`,
         offers: { '@type': 'Offer', price: '499', priceCurrency: 'INR', url: G.GST_WA_LINK, description: 'GST registration and the first return filing, tax included. Paid only when the GSTIN arrives. Nothing is paid if the application is rejected.' },
         potentialAction: { '@type': 'CommunicateAction', name: 'Start on WhatsApp', target: G.GST_WA_LINK },
@@ -41,9 +41,9 @@ const SRC = [['gst.gov.in', G.GST_PORTAL], ['By rule', G.GST_RULE9], ['CGST Rule
 const rich = (t) => { for (const [w, u] of SRC) { const i = t.indexOf(w); if (i >= 0) return <>{t.slice(0, i)}<a href={u} {...ext} className={link}>{w}</a>{t.slice(i + w.length)}</>; } return t; };
 
 const StartCard = ({ id }) => (
-    <div id={id} className="rounded-2xl border border-[#CBD8D3] bg-white p-5 shadow-[0_18px_40px_-22px_rgba(20,33,61,0.35)] sm:p-7">
-        <p className={`${display.className} text-[22px] font-bold leading-tight ${ink}`}>{G.GST_CARD_TITLE}</p>
-        <ul className="mb-5 mt-4 space-y-2.5 text-[16px] text-[#334155]">{G.GST_CARD.map((t) => <li key={t} className="flex gap-2.5"><Tick /><span>{rich(t)}</span></li>)}</ul>
+    <div id={id} className="rounded-2xl border border-[#CBD8D3] bg-white p-4 shadow-[0_18px_40px_-22px_rgba(20,33,61,0.35)] sm:p-7">
+        <p className={`${display.className} text-[20px] font-bold leading-tight sm:text-[22px] ${ink}`}>{G.GST_CARD_TITLE}</p>
+        <ul className="mb-4 mt-3 space-y-1.5 text-[15px] leading-snug text-[#334155] sm:mb-5 sm:mt-4 sm:space-y-2.5 sm:text-[16px] sm:leading-normal">{G.GST_CARD.map((t) => <li key={t} className="flex gap-2.5"><Tick /><span>{rich(t)}</span></li>)}</ul>
         <GstWa />
     </div>
 );
@@ -55,7 +55,7 @@ export default function Page() {
             <GstWa sticky />
 
             <header className="sticky top-0 z-40 border-b border-[#DDE5E2] bg-white/95 backdrop-blur">
-                <div className={`${wrap} flex h-14 items-center justify-between sm:h-16`}>
+                <div className={`${wrap} flex h-12 items-center justify-between sm:h-16`}>
                     <a href="/accountant/gst" className={`${display.className} text-[19px] font-bold tracking-tight ${ink}`}>Dooza <span className="text-[#0F766E]">Accountant</span></a>
                     <div className="flex items-center gap-4">
                         <span className="text-[14px] font-medium text-[#475569]">GST registration, India</span>
@@ -66,11 +66,11 @@ export default function Page() {
 
             {/* 1 Hero + 2 Start card */}
             <section className="bg-[#EEF3F1]">
-                <div className={`${wrap} grid gap-7 py-8 sm:py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-12`}>
+                <div className={`${wrap} grid gap-4 py-5 sm:gap-7 sm:py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-12`}>
                     <div>
-                        <h1 className={`${display.className} text-[31px] font-extrabold leading-[1.1] tracking-tight ${ink} sm:text-[46px]`}>{G.GST_H1}</h1>
-                        <p className="mt-4 max-w-xl text-[17px] text-[#334155] sm:text-xl">{G.GST_SUB}</p>
-                        <p className="mt-5 inline-flex flex-wrap gap-x-2 rounded-xl border-2 border-[#0F766E] bg-white px-4 py-2.5 text-[16px] font-semibold sm:text-[17px]">{G.GST_BANNER.map((t, i) => <span key={t} className={i === 0 ? 'text-[#0F766E]' : ''}>{t}</span>)}</p>
+                        <h1 className={`${display.className} text-[27px] font-extrabold leading-[1.1] tracking-tight ${ink} sm:text-[46px]`}>{G.GST_H1}</h1>
+                        <p className="mt-2.5 max-w-xl text-[16px] leading-snug text-[#334155] sm:mt-4 sm:text-xl sm:leading-normal">{G.GST_SUB}</p>
+                        <p className="mt-3 inline-flex flex-wrap gap-x-2 rounded-xl border-2 border-[#0F766E] bg-white px-3 py-1.5 text-[15px] font-semibold sm:mt-5 sm:px-4 sm:py-2.5 sm:text-[17px]">{G.GST_BANNER.map((t, i) => <span key={t} className={i === 0 ? 'text-[#0F766E]' : ''}>{t}</span>)}</p>
                     </div>
                     <StartCard />
                 </div>
