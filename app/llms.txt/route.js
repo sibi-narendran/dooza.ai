@@ -8,6 +8,11 @@ export const revalidate = 3600;
 
 const staticPages = [
     {
+        title: 'Dooza Accountant: GST registration in India for Rs 499',
+        url: `${SITE_URL}/accountant/gst`,
+        description: 'GST registration for Rs 499, final price, tax included; Rs 0 today, paid by UPI or card link only when the GSTIN arrives; nothing paid if the application is rejected. Covers the application, replies to GST officer queries and the first return filing. Monthly filing (GSTR-1 + GSTR-3B) Rs 499 a month up to 50 invoices, Rs 999 up to 200. Start on WhatsApp: https://wa.me/917305065161. Plain-text copy for agents: https://www.dooza.ai/accountant/gst.md',
+    },
+    {
         title: 'Home',
         url: SITE_URL,
         description: 'Dooza Custom AI Agents: the AI agentic platform. Custom AI agents built and maintained by Dooza engineers. Starts with a refundable pilot: 100% refund within 14 days.',
