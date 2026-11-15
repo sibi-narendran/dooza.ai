@@ -43,11 +43,11 @@ export function GET() {
         '',
         '## Who we are',
         ...F.FIL_WHO,
+        F.FIL_PRIVATE,
         '',
         '## Questions',
         ...F.FIL_FAQ.flatMap(([q, a]) => [`### ${q}`, a, '']),
-        `### ${F.FIL_REG_Q}`,
-        `${F.FIL_REG_A} ${F.FIL_REG_URL}`,
+        F.FIL_PRIVATE,
         '',
     ].join('\n');
     return new Response(md, { headers: { 'Content-Type': 'text/markdown; charset=utf-8', 'Cache-Control': 'public, max-age=3600' } });

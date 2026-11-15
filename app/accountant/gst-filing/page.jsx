@@ -32,7 +32,7 @@ const LD = [
         },
         potentialAction: { '@type': 'CommunicateAction', name: 'Start on WhatsApp', target: F.FIL_WA_LINK },
     },
-    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [...F.FIL_FAQ, [F.FIL_REG_Q, `${F.FIL_REG_A} ${F.FIL_REG_URL}`]].map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: F.FIL_FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
 ];
 
 const ink = 'text-[#14213D]';
@@ -196,7 +196,7 @@ export default function Page() {
             <section className="bg-[#EEF3F1]">
                 <div className={`${wrap} py-12 sm:py-16`}>
                     <H2>Who we are</H2>
-                    <div className="mt-6 max-w-3xl space-y-2 text-[17px] text-[#334155]">{F.FIL_WHO.map((l) => <p key={l}>{l}</p>)}</div>
+                    <div className="mt-6 max-w-3xl space-y-2 text-[17px] text-[#334155]">{F.FIL_WHO.map((l) => <p key={l}>{l}</p>)}<p>{F.FIL_PRIVATE}</p></div>
                 </div>
             </section>
 
@@ -205,7 +205,6 @@ export default function Page() {
                 <H2>Questions</H2>
                 <div className="mt-6 max-w-3xl divide-y divide-[#DDE5E2] border-y border-[#DDE5E2]">
                     {F.FIL_FAQ.map(([q, a]) => <div key={q} className="py-5"><h3 className={`${body.className} text-[19px] font-bold ${ink}`}>{q}</h3><p className="mt-2 text-[16px] leading-relaxed text-[#334155]">{a}</p></div>)}
-                    <div className="py-5"><h3 className={`${body.className} text-[19px] font-bold ${ink}`}>{F.FIL_REG_Q}</h3><p className="mt-2 text-[16px] leading-relaxed text-[#334155]"><a href={F.FIL_REG_PATH} className={link}>{F.FIL_REG_A}</a></p></div>
                 </div>
             </section>
 
@@ -213,12 +212,12 @@ export default function Page() {
             <section className="bg-[#EEF3F1]">
                 <div className={`${wrap} py-12 sm:py-16`}>
                     <div className="mx-auto max-w-md"><StartCard /></div>
-                    <p className="mt-6 text-center text-[15px] text-[#475569]"><a href={F.FIL_REG_PATH} className={link}>{F.FIL_REG_LINK}</a></p>
                 </div>
             </section>
 
             <footer className={`${wrap} py-8 text-[13px] leading-relaxed text-[#64748B]`}>
-                <p>You pay your GST to the government yourself. GST portal: <a href={F.FIL_PORTAL} {...ext} className="underline">gst.gov.in</a>.</p>
+                <p>{F.FIL_PRIVATE}</p>
+                <p className="mt-1">You pay your GST to the government yourself. GST portal: <a href={F.FIL_PORTAL} {...ext} className="underline">gst.gov.in</a>.</p>
                 <p className="mt-1"><a href="/accountant/gst-filing.md" className="underline">Plain-text version of this page (for AI assistants)</a> <span aria-hidden="true">|</span> <a href="/privacy" className="underline">Privacy</a></p>
             </footer>
         </main>
