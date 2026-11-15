@@ -181,10 +181,11 @@ export default function Page() {
             <section className={`${wrap} py-12 sm:py-20`}>
                 <H2>Prices</H2>
                 <ul className="mt-7 grid gap-4 lg:grid-cols-3">
-                    {F.FIL_PRICES.map(([a, b, c], i) => (
-                        <li key={a} className={`flex items-baseline justify-between gap-4 rounded-2xl p-5 lg:block lg:p-7 ${i === 0 ? 'bg-[#0F766E] text-white' : 'border border-[#CBD8D3] bg-white'}`}>
+                    {F.FIL_PRICES.map(([a, b, c, note], i) => (
+                        <li key={a} className={`flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 rounded-2xl p-5 lg:block lg:p-7 ${i === 0 ? 'bg-[#0F766E] text-white' : 'border border-[#CBD8D3] bg-white'}`}>
                             <p className={`text-[16px] font-semibold ${i === 0 ? 'text-[#D7F0EC]' : 'text-[#475569]'}`}>{a}</p>
                             <p className="shrink-0 lg:mt-3"><span className={`${display.className} text-[28px] font-extrabold tabular-nums tracking-tight lg:text-[40px]`}>{b}</span> <span className={`text-[15px] ${i === 0 ? 'text-[#D7F0EC]' : 'text-[#475569]'}`}>{c}</span></p>
+                            {note && <p className="basis-full text-[15px] leading-snug text-[#334155] lg:mt-3">{note}</p>}
                         </li>
                     ))}
                 </ul>

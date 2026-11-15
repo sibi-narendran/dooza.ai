@@ -37,7 +37,7 @@ export function GET() {
         F.FIL_CAL_NOTE,
         '',
         '## Prices',
-        ...F.FIL_PRICES.map(([a, b, c]) => `- ${a}: ${b} ${c}`),
+        ...F.FIL_PRICES.map(([a, b, c, note]) => `- ${a}: ${b} ${c}${note ? `. ${note}` : ""}`),
         F.FIL_PRICES_LINE,
         `Not included: ${F.FIL_NOT}`,
         '',
