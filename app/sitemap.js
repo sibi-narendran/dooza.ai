@@ -373,6 +373,12 @@ export default async function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${SITE_URL}/accountant/gst-filing`,
+            lastModified: pageDate('2026-11-15'),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: `${SITE_URL}/takeoff/cost`,
             lastModified: pageDate('2026-11-15'),
             changeFrequency: 'weekly',

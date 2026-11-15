@@ -8,6 +8,11 @@ export const revalidate = 3600;
 
 const staticPages = [
     {
+        title: 'Dooza Accountant: GST return filing in India for Rs 499 a month',
+        url: `${SITE_URL}/accountant/gst-filing`,
+        description: 'Monthly GST return filing (GSTR-1 + GSTR-3B) for Rs 499 a month up to 50 sales invoices, Rs 999 up to 200, Rs 4,999 yearly; tax included, no setup fee; Rs 0 today, paid each month after the return is filed. Bills are sent on WhatsApp; nothing is filed without the owner\'s OTP. Start on WhatsApp: https://wa.me/917305065161. Plain-text copy for agents: https://www.dooza.ai/accountant/gst-filing.md',
+    },
+    {
         title: 'Dooza Accountant: GST registration in India for Rs 499',
         url: `${SITE_URL}/accountant/gst`,
         description: 'GST registration for Rs 499, final price, tax included; Rs 0 today, paid by UPI or card link only when the GSTIN arrives; nothing paid if the application is rejected. Covers the application, replies to GST officer queries and the first return filing. Monthly filing (GSTR-1 + GSTR-3B) Rs 499 a month up to 50 invoices, Rs 999 up to 200. Start on WhatsApp: https://wa.me/917305065161. Plain-text copy for agents: https://www.dooza.ai/accountant/gst.md',
