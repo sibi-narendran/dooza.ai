@@ -261,7 +261,7 @@ export default function AiSalesAgentGuideContent() {
                             <div className="grid md:grid-cols-2 gap-6 mb-8">
                                 {[
                                     { stat: "78%", label: "of deals go to the first company that responds", source: "Lead Connect" },
-                                    { stat: "5 min", label: "is the window to reach a lead — after that, conversion drops 10x", source: "MIT / InsideSales" }
+                                    { stat: "5 min", label: "is the window to call a new lead. Wait 30 minutes and the odds of qualifying it drop 21 times", source: "MIT / InsideSales" }
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-red-50 border border-red-100 p-6 rounded-xl text-center">
                                         <div className="text-4xl font-bold text-red-600 mb-2">{item.stat}</div>
@@ -715,7 +715,7 @@ export default function AiSalesAgentGuideContent() {
                                 <div>
                                     <h4 className="font-semibold text-slate-800 mb-3">AI Sales & Lead Conversion</h4>
                                     <ul className="space-y-2 text-sm text-slate-600">
-                                        <li>• <a href="https://marketwiz.ai/real-estate-lead-response-time-why-5-minutes-10x-more-conversions/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">MIT / InsideSales — 5-minute response window</a></li>
+                                        <li>• <a href="https://www.leadresponsemanagement.org/lrm_study" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">MIT / InsideSales Lead Response Management Study: 5-minute response window</a></li>
                                         <li>• <a href="https://www.crescendo.ai/blog/best-real-estate-chatbots-with-ai" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Crescendo AI — 40% lead conversion increase</a></li>
                                     </ul>
                                 </div>

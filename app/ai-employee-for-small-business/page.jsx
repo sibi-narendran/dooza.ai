@@ -22,7 +22,7 @@ const H2 = 'font-serif text-2xl font-bold text-slate-900';
 const faqItems = [
     {
         question: 'How much does it cost to hire an AI employee?',
-        answer: 'Most cost $25 to $200 a month. DIY tools like Teammates.ai start at $25/month and Lindy at $49.99/month per user (checked Oct 21, 2026), and you set them up. Dooza Managed is $200/month after a free first 7 days, with a person checking the work.',
+        answer: 'Most cost about $50 to $200 a month. DIY tools like Teammates.ai start at $50/month (checked Nov 15, 2026) and Lindy at $49.99/month per user (checked Oct 21, 2026), and you set them up. Dooza Managed is $200/month after a free first 7 days, with a person checking the work.',
     },
     {
         question: 'How do I hire an AI employee?',
@@ -113,8 +113,8 @@ const ROWS = [
     {
         who: 'Teammates.ai',
         src: 'https://www.teammates.ai/pricing',
-        price: 'Free (10 credits), Pro $25/month (50 credits), Business $50/month (100 credits), Scale $100/month (200 credits)',
-        unit: '3 AI teammates for support, sales and recruiting. A 30-minute sales call uses 10 credits.',
+        price: 'Free (5 credits to start), Pro $50/month (160 credits), Business $250/month (900 credits), Scale $500/month (2,000 credits). Re-checked Nov 15, 2026.',
+        unit: 'AI teammates for support, sales and recruiting, billed in credits',
         fixes: 'You',
     },
     {
@@ -162,7 +162,7 @@ export default function AiEmployeeForSmallBusinessPage() {
                         <div className="mx-auto max-w-3xl px-4">
                             <h1 className="font-serif text-4xl font-bold leading-tight text-slate-900 md:text-5xl">AI Employee for Small Business: What It Is, What It Costs, How to Hire One</h1>
                             <p className="mt-6 text-lg leading-relaxed text-slate-700">
-                                <strong>An AI employee is an AI agent that does one real job for your business, like following up with leads, drafting emails or answering customer questions. It works in the tools you already use, every day. Prices run from about $25 a month for a do-it-yourself tool to $200 a month for a done-for-you service like Dooza Managed, where a real person checks the work.</strong>
+                                <strong>An AI employee is an AI agent that does one real job for your business, like following up with leads, drafting emails or answering customer questions. It works in the tools you already use, every day. Prices run from about $50 a month for a do-it-yourself tool to $200 a month for a done-for-you service like Dooza Managed, where a real person checks the work.</strong>
                             </p>
                             <p className="mt-4 text-slate-600">Updated {UPDATED_LABEL}. Prices below were read on each vendor&rsquo;s own page that day.</p>
                             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -192,7 +192,7 @@ export default function AiEmployeeForSmallBusinessPage() {
                         <div className="mx-auto max-w-5xl px-4">
                             <div className="mx-auto max-w-3xl">
                                 <h2 className={H2}>How much does an AI employee cost?</h2>
-                                <p className="mt-4 text-slate-700"><strong>Short answer: $25 to $200 a month for most small businesses.</strong> A human assistant costs more, from $390 a month for 10 hours at a US VA service, or about $23 an hour for an in-house hire before taxes and benefits.</p>
+                                <p className="mt-4 text-slate-700"><strong>Short answer: about $50 to $200 a month for most small businesses.</strong> A human assistant costs more, from $390 a month for 10 hours at a US VA service, or about $23 an hour for an in-house hire before taxes and benefits.</p>
                                 <p className="mt-4 text-slate-700">The big difference is not the price. It is who does the setup and who fixes it when it goes wrong.</p>
                             </div>
                             <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-200 bg-white">
@@ -223,7 +223,7 @@ export default function AiEmployeeForSmallBusinessPage() {
                                 <p className="text-slate-700">Two things to watch on DIY tools:</p>
                                 <ol className="mt-3 list-decimal space-y-2 pl-5 text-slate-700">
                                     <li><strong>Credits.</strong> Lindy, Sintra and Teammates.ai all bill in credits. Bigger jobs use more. Check what one month of your real work would use.</li>
-                                    <li><strong>Your time.</strong> A $25 tool is cheap if you build and fix it yourself. It is not cheap if it eats your Saturday.</li>
+                                    <li><strong>Your time.</strong> A $50 tool is cheap if you build and fix it yourself. It is not cheap if it eats your Saturday.</li>
                                 </ol>
                                 <p className="mt-4 text-slate-700">Comparing Dooza with one tool in depth? See <a href="/dooza-vs-sintra" className={LINK}>Dooza vs Sintra</a> and <a href="/sintra-alternatives" className={LINK}>Sintra alternatives</a>.</p>
                             </div>
