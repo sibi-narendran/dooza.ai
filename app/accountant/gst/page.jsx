@@ -1,9 +1,15 @@
 import GstWa from '@/components/in/GstWa';
 import { GST_URL, GST_WA_LINK, GST_H1, GST_SUB, GST_STEPS, GST_COVERS, GST_PRICES, GST_TERMS, GST_NOT, GST_WHO, GST_FAQ } from '@/lib/inGst';
 
-const TITLE = 'GST Registration for Rs 499. Final Price. | Dooza Accountant';
-const DESC = 'GST registration for Rs 499, tax included. Rs 0 today. You pay only when your GST number (GSTIN) arrives. Start on WhatsApp. No sales call.';
-export const metadata = { title: { absolute: TITLE }, description: DESC, alternates: { canonical: GST_URL, types: { 'text/markdown': `${GST_URL}.md` } }, openGraph: { title: TITLE, description: DESC, url: GST_URL, type: 'website' } };
+const TITLE = 'Dooza Accountant: GST registration for Rs 499';
+const DESC = 'GST registration for Rs 499, tax included. Rs 0 today. You pay only when your GSTIN arrives. No sales call. Start on WhatsApp.';
+const OG = 'https://www.dooza.ai/og-accountant-gst.png';
+export const metadata = {
+    title: { absolute: TITLE }, description: DESC,
+    alternates: { canonical: GST_URL, types: { 'text/markdown': `${GST_URL}.md` } },
+    openGraph: { title: TITLE, description: DESC, url: GST_URL, siteName: 'Dooza Accountant', type: 'website', locale: 'en_IN', images: [{ url: OG, width: 1200, height: 630, alt: 'Dooza Accountant: GST registration for Rs 499. Final price.' }] },
+    twitter: { card: 'summary_large_image', title: TITLE, description: DESC, images: [OG] },
+};
 
 const ck = <span aria-hidden="true" className="text-[#0F766E]">✓</span>;
 const LD = [
