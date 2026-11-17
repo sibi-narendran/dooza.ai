@@ -107,17 +107,17 @@ export default function DisputeLanding() {
                                 </p>
                                 <div className="mt-7 flex flex-wrap items-center gap-4">
                                     <a
-                                        href="sms:+18555946841"
+                                        href="sms:+18555946841?&body=DENIED"
                                         data-offer="crew-sms"
                                         data-source="dispute-hero-btn"
                                         className="inline-flex min-h-[50px] items-center justify-center rounded-full bg-[#0F766E] px-6 py-3 text-base font-semibold text-white hover:bg-[#14213D]"
                                     >
-                                        Text Your Bill (+1 855-594-6841)
+                                        Text "DENIED" or Your Bill (+1 855-594-6841)
                                     </a>
-                                    <Link href="/book" data-source="dispute-hero-book" className={LINK}>
-                                        Questions? Book a call
-                                    </Link>
                                 </div>
+                                <p className={`mt-3 text-sm ${MUTED}`}>
+                                    Private &amp; never sold — your bills and EOBs are used only for your dispute and deleted on request. When a carrier requires your consent, we send a 1-tap authorization or conference you in.
+                                </p>
                             </div>
                             <div className="rounded-3xl border border-[#CBD5E1] bg-[#EEF3F1]/70 p-5 sm:p-7">
                                 <p className="mb-3 text-base font-bold text-[#14213D]">Tell us what bill or claim to fight</p>
