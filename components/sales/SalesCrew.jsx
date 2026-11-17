@@ -24,12 +24,12 @@ const ROLES = [
     {
         name: 'LinkedIn Prospector & DM Assistant',
         channel: 'LinkedIn in its own browser',
-        job: 'Searches for buyers matching your ICP, reads their profile and recent posts, drafts a short personalized connection note or DM, and waits for your Approve, Edit, or Reject before sending.',
+        job: 'Searches for buyers matching your ICP with human-paced browser actions and daily caps you control (no bulk scraping or API blasts), reads their profile and recent posts, drafts a short personalized connection note or DM, and waits for your Approve, Edit, or Reject before sending.',
     },
     {
         name: 'Email Outreach & Follow-Up Operator',
         channel: 'Gmail & Outlook',
-        job: 'Researches each company’s public site, writes plain-text emails tied to real signals, queues day-3 and day-7 follow-ups, and stops the moment a prospect replies.',
+        job: 'Connects to your Gmail, Outlook, or a dedicated outreach inbox, researches each company’s public site, writes plain-text emails tied to real signals, queues day-3 and day-7 follow-ups, and stops the moment a prospect replies.',
     },
     {
         name: 'Lead Researcher & Call-Prep Desk',
