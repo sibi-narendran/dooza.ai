@@ -280,7 +280,7 @@ function withInlineCrew(post, slug) {
     const href = `https://crew.dooza.ai/?utm_source=dooza&utm_medium=page&utm_content=inline-blog_${slug}`;
     const box = `<aside class="not-prose my-8 rounded-xl border border-teal-200 bg-teal-50 p-5" data-offer="crew" data-source="inline-blog_${slug}">`
         + `<p class="m-0 text-base text-slate-800"><strong>Dooza Crew (our product):</strong> give an AI employee a job in plain words and it works on its own computer and browser, takes your phone calls, and asks before it sends or pays anything.</p>`
-        + `<p class="mt-3 mb-0"><a href="${href}" data-offer="crew" data-source="inline-blog_${slug}" class="inline-block rounded-lg bg-[#0F766E] px-5 py-2.5 font-semibold text-white no-underline hover:bg-[#115E59]">Get the Dooza Crew app</a></p></aside>`;
+        + `<p class="mt-3 mb-0 flex flex-wrap items-center gap-3"><a href="sms:+18555946841" data-offer="crew-sms" data-source="inline-blog_${slug}" class="inline-block rounded-lg bg-[#0F766E] px-5 py-2.5 font-semibold text-white no-underline hover:bg-[#115E59]">Text +1 (855) 594-6841 (no sign-up)</a><a href="${href}" data-offer="crew" data-source="inline-blog_${slug}" class="text-sm font-semibold text-[#0F766E] underline">Or get the app</a></p></aside>`;
     const i = heads[1].index;
     return { ...post, content: post.content.slice(0, i) + box + post.content.slice(i) };
 }

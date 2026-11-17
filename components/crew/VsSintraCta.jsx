@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 
 const BASE_URL = 'https://crew.dooza.ai/';
+const SMS_HREF = 'sms:+18555946841';
 
 function buildCrewHref(search) {
     const params = new URLSearchParams(search || '');
@@ -23,13 +24,14 @@ function fireConversion(placement) {
 }
 
 export default function VsSintraCta({
-    label = 'Try Dooza Crew free',
+    label = 'Text Dooza Crew (+1 855-594-6841)',
     placement = 'hero',
     variant = 'primary',
     className = '',
     sticky = false,
 }) {
     const [href, setHref] = useState(() => buildCrewHref(''));
+    const sms = SMS_HREF;
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -41,7 +43,7 @@ export default function VsSintraCta({
         return (
             <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[#CBD5E1] bg-[#F7F5F0] p-3 pb-[max(12px,env(safe-area-inset-bottom))] sm:hidden">
                 <a
-                    href={href}
+                    href={sms}
                     onClick={() => fireConversion('sticky_mobile')}
                     className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-[#0F766E] px-4 py-3 text-center text-[16px] font-semibold text-white shadow-sm"
                 >
@@ -58,7 +60,7 @@ export default function VsSintraCta({
 
     return (
         <a
-            href={href}
+            href={sms}
             onClick={() => fireConversion(placement)}
             className={`inline-flex min-h-[50px] items-center justify-center rounded-xl px-6 py-3 text-center text-[16px] font-semibold transition ${styles} ${className}`}
         >

@@ -93,7 +93,7 @@ export default function HomeCrew() {
                     <div className="mt-10 grid items-start gap-12 lg:mt-14 lg:grid-cols-[5fr_7fr] lg:gap-16">
                         <div className="lg:pt-2">
                             <p className={`max-w-[34rem] text-lg leading-relaxed md:text-xl ${MUTED}`}>
-                                With Dooza Crew you give it a job in plain words and watch it work on its own computer, with its own browser. It takes your phone calls too, included in your plan. Add your staff to the same chat. Free: install the app and start.
+                                Text Dooza Crew at +1 (855) 594-6841 with any job—no sign-up needed—and it gets to work on its own computer and browser. It takes your phone calls too, included in your plan, or install the app for your whole team.
                             </p>
                             <div className="mt-8">
                                 <CrewPrompt placement="home-hero" tone="light" />

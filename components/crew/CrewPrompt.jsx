@@ -34,9 +34,11 @@ export default function CrewPrompt({ placement = 'crew-hero', tone = 'dark', cen
     const [task, setTask] = useState('');
     const t = TONES[tone];
 
+    const smsHref = (t) => (t ? `sms:+18555946841?&body=${encodeURIComponent(t)}` : 'sms:+18555946841');
+
     const go = (e) => {
         e.preventDefault();
-        window.location.href = crewSignupUrl(placement, task.trim());
+        window.location.href = smsHref(task.trim());
     };
 
     return (
@@ -53,14 +55,14 @@ export default function CrewPrompt({ placement = 'crew-hero', tone = 'dark', cen
                     className={`block w-full resize-none bg-transparent px-3 py-2 text-lg focus:outline-none ${t.input}`}
                 />
                 <div className="flex items-center justify-between gap-3 px-2 pb-1 pt-2">
-                    <span className={`text-xs ${t.hint}`}>Free: install the app and start — or text <a href="sms:+18555946841" data-offer="crew-sms" data-source={placement} className="underline font-medium hover:opacity-80">+1 (855) 594-6841</a> (no sign-up needed).</span>
+                    <span className={`text-xs ${t.hint}`}>No sign-up needed — text <a href={smsHref(task.trim())} data-offer="crew-sms" data-source={placement} className="underline font-medium hover:opacity-80">+1 (855) 594-6841</a>. Or <a href={crewSignupUrl(placement, task.trim())} data-offer="crew" data-source={placement} className="underline hover:opacity-80">get the app</a>.</span>
                     <button
                         type="submit"
-                        data-offer="crew"
+                        data-offer="crew-sms"
                         data-source={placement}
                         className={`shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${t.button}`}
                     >
-                        Get the app
+                        Text Dooza Crew
                     </button>
                 </div>
             </form>
