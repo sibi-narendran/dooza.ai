@@ -1,0 +1,203 @@
+import Link from 'next/link';
+import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
+import SiteHeader from '@/components/crew/SiteHeader';
+import CrewPrompt from '@/components/crew/CrewPrompt';
+
+const display = Bricolage_Grotesque({ subsets: ['latin'], weight: ['600', '700', '800'], display: 'swap' });
+const body = Instrument_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap' });
+
+const INK = 'text-[#14213D]';
+const MUTED = 'text-[#4B5567]';
+const D = `${display.className} ${INK}`;
+const H2 = `${D} text-3xl font-bold leading-[1.08] tracking-[-0.03em] sm:text-4xl lg:text-[48px]`;
+const LINK = 'font-semibold text-[#14213D] underline decoration-2 underline-offset-4 hover:text-[#0F766E]';
+
+const EXAMPLES = [
+    'Fight my $4,200 hospital bill and ask for an itemized audit',
+    'Appeal my denied health insurance claim with a formal letter',
+    'Negotiate down my Comcast/AT&T internet bill rate hike',
+    'Claim flight delay compensation for my cancelled flight',
+    'Prepare a property tax assessment appeal with local comps',
+];
+
+const CASES = [
+    {
+        tag: 'Insurance',
+        title: 'Denied Health & Auto Claims',
+        detail: 'Drafts formal medical-necessity and policy-language appeals, cites state insurance codes, and follows up with claims adjusters until resolved.',
+    },
+    {
+        tag: 'Medical',
+        title: 'Inflated Hospital & Clinic Bills',
+        detail: 'Audits itemized bills for duplicate or upcoded CPT lines, checks financial-assistance eligibility, and negotiates cash/prompt-pay reductions.',
+    },
+    {
+        tag: 'Bills & Utilities',
+        title: 'ISP, Mobile & Utility Rate Hikes',
+        detail: 'Sits on hold with retention desks, challenges unannounced fee hikes, and locks in lower promotional rates on your behalf.',
+    },
+    {
+        tag: 'Travel',
+        title: 'Flight Delay & Cancellation Claims',
+        detail: 'Assembles DOT / EU261 documentation and files formal airline reimbursement and compensation demands end-to-end.',
+    },
+    {
+        tag: 'Real Estate',
+        title: 'Unfair Property Tax Assessments',
+        detail: 'Pulls comparable property assessments, flags valuation errors, and prepares formal county appeal packets before filing deadlines.',
+    },
+];
+
+const STEPS = [
+    {
+        num: '01',
+        title: 'Text your bill or denial',
+        detail: 'Text +1 (855) 594-6841 with what happened—no sign-up, no card, and zero upfront fee.',
+    },
+    {
+        num: '02',
+        title: 'Agents fight & ask your approval',
+        detail: 'Voice + browser agents sit on hold, draft regulatory appeals, and ask you to Approve, Edit, or Reject before filing or accepting a settlement.',
+    },
+    {
+        num: '03',
+        title: 'Pay 20–30% only if we win',
+        detail: 'Our fee is 20–30% of the cash actually recovered or shaved off your annual bill (quoted upfront). If we fail, you pay $0.',
+    },
+];
+
+export const disputeFaq = [
+    {
+        question: 'What does it cost if you do not recover money or lower my bill?',
+        answer: '$0. There is no upfront fee and no subscription required. You only pay 20–30% of the cash actually recovered or saved on your bill, with the exact percentage agreed upfront before we start.',
+    },
+    {
+        question: 'Will Dooza send a legal letter, call my insurer, or accept a settlement without asking me?',
+        answer: 'No. Every formal appeal, regulatory complaint, or settlement offer pauses for your Approve, Edit, or Reject in chat before anything is submitted or accepted.',
+    },
+    {
+        question: 'What kinds of bills and disputes do you handle?',
+        answer: 'Denied health and auto insurance claims, inflated hospital/medical bills, predatory ISP/mobile/utility rate hikes, flight delay compensation, and property tax assessment appeals.',
+    },
+    {
+        question: 'How do I start right now?',
+        answer: 'Text +1 (855) 594-6841 directly with the bill, denial reason, or rate hike you want fought—no sign-up needed.',
+    },
+];
+
+export default function DisputeLanding() {
+    return (
+        <div className={`${body.className} crew-home bg-white ${INK}`}>
+            <SiteHeader source="dispute-header" bookSource="dispute-header-book" />
+
+            <main id="main-content">
+                <section className="relative overflow-hidden">
+                    <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[linear-gradient(#14213D0D_1px,transparent_1px),linear-gradient(90deg,#14213D0D_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
+                    <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-10 md:px-8 lg:pb-24 lg:pt-16">
+                        <p className="inline-block rounded-full border border-[#0F766E]/25 bg-[#EEF3F1] px-3.5 py-1 text-sm font-semibold text-[#0F766E]">
+                            Dooza Chief Dispute Officer · Zero Upfront Cost
+                        </p>
+                        <h1 className={`${D} mt-4 max-w-[19ch] text-[40px] font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-[58px] lg:text-[78px]`}>
+                            We fight your denied claims and inflated bills. Pay $0 unless we win.
+                        </h1>
+                        <div className="mt-8 grid items-start gap-10 lg:grid-cols-[6fr_6fr] lg:gap-14">
+                            <div>
+                                <p className={`max-w-[36rem] text-lg leading-relaxed md:text-xl ${MUTED}`}>
+                                    Stop losing hours on hold. Text <a href="sms:+18555946841" data-offer="crew-sms" data-source="dispute-hero-copy" className={LINK}>+1 (855) 594-6841</a>—no sign-up needed—and our voice and browser agents sit on hold, draft formal regulatory appeals, negotiate bills down, and file dispute paperwork end-to-end. You pay 20–30% only of cash recovered or saved.
+                                </p>
+                                <div className="mt-7 flex flex-wrap items-center gap-4">
+                                    <a
+                                        href="sms:+18555946841"
+                                        data-offer="crew-sms"
+                                        data-source="dispute-hero-btn"
+                                        className="inline-flex min-h-[50px] items-center justify-center rounded-full bg-[#0F766E] px-6 py-3 text-base font-semibold text-white hover:bg-[#14213D]"
+                                    >
+                                        Text Your Bill (+1 855-594-6841)
+                                    </a>
+                                    <Link href="/book" data-source="dispute-hero-book" className={LINK}>
+                                        Questions? Book a call
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="rounded-3xl border border-[#CBD5E1] bg-[#EEF3F1]/70 p-5 sm:p-7">
+                                <p className="mb-3 text-base font-bold text-[#14213D]">Tell us what bill or claim to fight</p>
+                                <CrewPrompt placement="dispute-hero" tone="light" examples={EXAMPLES} />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="dispute-steps" className="border-y border-[#E2E8F0] bg-[#FAF9F7] px-4 py-14 md:px-8 md:py-20">
+                    <div className="mx-auto max-w-7xl">
+                        <h2 id="dispute-steps" className={H2}>Zero upfront risk. How it works.</h2>
+                        <div className="mt-10 grid gap-6 md:grid-cols-3">
+                            {STEPS.map((s) => (
+                                <div key={s.num} className="rounded-2xl border border-[#14213D]/10 bg-white p-6">
+                                    <p className="text-sm font-bold text-[#0F766E]">{s.num}</p>
+                                    <h3 className={`${D} mt-2 text-2xl font-bold`}>{s.title}</h3>
+                                    <p className={`mt-2 text-[16px] leading-relaxed ${MUTED}`}>{s.detail}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="dispute-cases" className="bg-[#EEF3F1] px-4 py-16 md:px-8 md:py-24">
+                    <div className="mx-auto max-w-7xl">
+                        <h2 id="dispute-cases" className={H2}>What our dispute agents fight for you</h2>
+                        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            {CASES.map((c) => (
+                                <div key={c.title} className="rounded-2xl border border-[#14213D]/10 bg-white p-6">
+                                    <p className="text-xs font-semibold uppercase tracking-wider text-[#0F766E]">{c.tag}</p>
+                                    <h3 className={`${D} mt-1.5 text-xl font-bold`}>{c.title}</h3>
+                                    <p className={`mt-2 text-[15px] leading-relaxed ${MUTED}`}>{c.detail}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="dispute-faq" className="px-4 py-16 md:px-8 md:py-24">
+                    <div className="mx-auto max-w-4xl">
+                        <h2 id="dispute-faq" className={H2}>Questions before you send a bill</h2>
+                        <div className="mt-8 divide-y divide-[#E2E8F0] border-y border-[#E2E8F0]">
+                            {disputeFaq.map((f, i) => (
+                                <details key={f.question} open={i === 0} className="group">
+                                    <summary className="flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-4 py-4 text-lg font-semibold text-[#14213D]">
+                                        <span>{f.question}</span>
+                                        <span aria-hidden="true" className="text-xl text-[#0F766E] transition group-open:rotate-45">+</span>
+                                    </summary>
+                                    <p className={`pb-5 pr-8 text-[16px] leading-relaxed ${MUTED}`}>{f.answer}</p>
+                                </details>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <section className="px-4 pb-20 md:px-8">
+                    <div className="mx-auto max-w-5xl rounded-3xl bg-[#14213D] p-8 text-white sm:p-12">
+                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                            Text your denied claim or inflated bill — pay $0 unless we recover cash.
+                        </h2>
+                        <p className="mt-3 max-w-2xl text-lg text-slate-300">
+                            Text +1 (855) 594-6841 right now (no sign-up needed). 20–30% only of what we recover or save.
+                        </p>
+                        <div className="mt-7 flex flex-wrap items-center gap-4">
+                            <a
+                                href="sms:+18555946841"
+                                data-offer="crew-sms"
+                                data-source="dispute-bottom"
+                                className="inline-flex min-h-[50px] items-center justify-center rounded-full bg-[#F2B53A] px-6 py-3 text-base font-semibold text-[#14213D] hover:bg-[#eab034]"
+                            >
+                                Text +1 (855) 594-6841
+                            </a>
+                            <Link href="/book" data-source="dispute-bottom-book" className="inline-flex min-h-[50px] items-center justify-center rounded-full border border-white/35 px-6 py-3 text-base font-semibold text-white hover:bg-white/10">
+                                Book a 15-min call
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    );
+}
