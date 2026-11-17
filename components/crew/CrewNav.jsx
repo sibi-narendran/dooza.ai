@@ -43,6 +43,10 @@ function CrewMenu() {
                 <span className="block text-[15px] font-semibold text-[#14213D]">Phone calls</span>
                 <span className="block text-sm text-[#4B5567]">Crew answers your calls, included in your plan</span>
             </Link>
+            <Link href="/sales" data-source="crew-nav-sales" className={ITEM}>
+                <span className="block text-[15px] font-semibold text-[#14213D]">Dooza for Sales</span>
+                <span className="block text-sm text-[#4B5567]">LinkedIn, email outreach &amp; follow-ups</span>
+            </Link>
             <p className="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-[#4B5567]">By industry</p>
             <IndustryLinks />
             <p className="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-[#4B5567]">Done for you</p>
