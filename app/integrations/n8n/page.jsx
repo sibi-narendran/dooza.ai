@@ -129,8 +129,8 @@ export default function N8nIntegrationPage() {
                 </p>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                    <a href={CREW} data-source={SOURCE} className="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
-                        Get the Dooza Crew app
+                    <a href="sms:+18555946841" data-source={SOURCE} className="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800">
+                        Text Dooza Crew (+1 855-594-6841)
                     </a>
                     <a href={NPM} className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-3 font-semibold text-slate-800 hover:border-slate-400">
                         Install from npm
@@ -226,8 +226,8 @@ export default function N8nIntegrationPage() {
                         yourself in the next five minutes.
                     </p>
                     <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                        <a href={CREW} data-source={SOURCE} className="rounded-lg bg-white px-5 py-3 font-semibold text-slate-900">
-                            Get the Dooza Crew app
+                        <a href="sms:+18555946841" data-source={SOURCE} className="rounded-lg bg-white px-5 py-3 font-semibold text-slate-900">
+                            Text Dooza Crew (+1 855-594-6841)
                         </a>
                         <a href={BOOK} className="rounded-lg border border-white/40 px-5 py-3 font-semibold text-white">
                             Book a free call

@@ -155,11 +155,11 @@ export default function DynamicBlogContent({ post }) {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href={crewSignupUrl('blog-cta-calls')}
+                                    href="sms:+18555946841"
                                     data-offer="crew"
                                     className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all sm:w-auto"
                                 >
-                                    Get the Dooza Crew app <ArrowRight className="w-4 h-4" />
+                                    Text Dooza Crew (+1 855-594-6841) <ArrowRight className="w-4 h-4" />
                                 </a>
                                 <a
                                     href={getBookingUrlWithUtm('blog', 'cta', post.slug)}
@@ -177,12 +177,12 @@ export default function DynamicBlogContent({ post }) {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href={getProductSignupUrl('workforce', { source: 'blog-end' })}
+                                    href="sms:+18555946841")}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex w-full items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all sm:w-auto"
                                 >
-                                    Get the Dooza Crew app <ArrowRight className="w-4 h-4" />
+                                    Text Dooza Crew (+1 855-594-6841) <ArrowRight className="w-4 h-4" />
                                 </a>
                                 <a
                                     href={getBookingUrlWithUtm('blog', 'cta', post.slug)}

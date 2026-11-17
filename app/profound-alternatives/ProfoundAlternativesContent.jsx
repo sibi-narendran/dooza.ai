@@ -480,7 +480,7 @@ export default function ProfoundAlternativesContent({ faqData }) {
 
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <a href={crewSignupUrl('profound_alt_crew_top')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Get the Dooza Crew app <ArrowRight size={16} /></a>
+                                            <a href="sms:+18555946841" data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Text Dooza Crew (+1 855-594-6841) <ArrowRight size={16} /></a>
                                             <BookDemoButton source="profound_alt_dooza_card" variant="inverse">Book a free pilot call</BookDemoButton>
                                         </div>
                                     )}

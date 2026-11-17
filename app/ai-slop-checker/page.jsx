@@ -389,7 +389,7 @@ export default function AiSlopCheckerPage() {
                                 data-offer="crew"
                                 data-source="ai-slop-checker-cta"
                             >
-                                Get the Dooza Crew app →
+                                Text Dooza Crew (+1 855-594-6841) →
                             </a>
                         </div>
                     </section>

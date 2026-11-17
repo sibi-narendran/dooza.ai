@@ -6,7 +6,7 @@ import { trackReceptionistEvent } from '@/lib/analytics';
 
 // Mobile-only bar that keeps both actions one tap away once the hero scrolls
 // away. Hides while the booking section is on screen.
-export default function StickyCtaBar({ bookHref = 'https://crew.dooza.ai', label = 'Get the Dooza Crew app' }) {
+export default function StickyCtaBar({ bookHref = 'sms:+18555946841', label = 'Text Dooza Crew (+1 855-594-6841)' }) {
     const [pastHero, setPastHero] = useState(false);
     const [pilotVisible, setPilotVisible] = useState(false);
 

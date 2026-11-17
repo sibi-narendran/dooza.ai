@@ -452,12 +452,12 @@ export default function AiToolsForSolopreneursContent() {
                                     ))}
                                 </ul>
                                 <a
-                                    href={CREW_URL}
+                                    href="sms:+18555946841"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                 >
-                                    Get the Dooza Crew app <ArrowRight className="w-4 h-4" />
+                                    Text Dooza Crew (+1 855-594-6841) <ArrowRight className="w-4 h-4" />
                                 </a>
                             </div>
 
@@ -614,12 +614,12 @@ export default function AiToolsForSolopreneursContent() {
                                             <div className="text-3xl font-bold text-primary-600">$5<span className="text-lg font-normal text-slate-500"> to start</span></div>
                                         </div>
                                         <a
-                                            href={CREW_URL}
+                                            href="sms:+18555946841"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-colors"
                                         >
-                                            Get the Dooza Crew app
+                                            Text Dooza Crew (+1 855-594-6841)
                                         </a>
                                     </div>
                                 </div>
@@ -771,7 +771,7 @@ export default function AiToolsForSolopreneursContent() {
                                     },
                                     {
                                         step: "2",
-                                        title: "Get the Dooza Crew app",
+                                        title: "Text Dooza Crew (+1 855-594-6841)",
                                         desc: "Give Dooza a real task in plain words, such as researching a prospect list or drafting a blog outline, and watch the agents work live in chat."
                                     },
                                     {
@@ -805,12 +805,12 @@ export default function AiToolsForSolopreneursContent() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <a
-                                        href={CREW_URL}
+                                        href="sms:+18555946841"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all"
                                     >
-                                        Get the Dooza Crew app <ArrowRight className="w-4 h-4" />
+                                        Text Dooza Crew (+1 855-594-6841) <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
                             </div>

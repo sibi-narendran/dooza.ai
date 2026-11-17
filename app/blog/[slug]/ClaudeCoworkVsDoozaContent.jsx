@@ -159,12 +159,12 @@ export default function ClaudeCoworkVsDoozaContent() {
 
                         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href={CREW_URL}
+                                href="sms:+18555946841"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get the Dooza Crew app
+                                Text Dooza Crew (+1 855-594-6841)
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -385,7 +385,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                                             <li>Agents can take phone calls, included.</li>
                                         </ul>
                                         <p className="mt-3 text-slate-700"><strong>Watch for:</strong> if you want one flexible agent you direct yourself, inside a Claude plan you may already pay for, Claude Cowork fits that better.</p>
-                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Get the Dooza Crew app</a></p>
+                                        <p className="mt-3"><a href="sms:+18555946841" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Text Dooza Crew (+1 855-594-6841)</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -579,7 +579,7 @@ export default function ClaudeCoworkVsDoozaContent() {
                             <div className="bg-slate-900 text-white p-8 rounded-xl">
                                 <p className="text-lg font-bold mb-2">The bottom line:</p>
                                 <p className="text-slate-300">
-                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza Crew gives you <strong className="text-white">a master agent that builds the helper agents each job needs</strong>. It is free to use. <a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-white underline">Get the Dooza Crew app</a>.
+                                    Claude gives you a capable general-purpose agent for a published monthly price, and you do the setup. Dooza Crew gives you <strong className="text-white">a master agent that builds the helper agents each job needs</strong>. It is free to use. <a href="sms:+18555946841" target="_blank" rel="noopener noreferrer" className="text-white underline">Text Dooza Crew (+1 855-594-6841)</a>.
                                 </p>
                             </div>
                         </section>
@@ -729,12 +729,12 @@ export default function ClaudeCoworkVsDoozaContent() {
 
                             <div className="text-center">
                                 <a
-                                    href={CREW_URL}
+                                    href="sms:+18555946841"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Get the Dooza Crew app
+                                    Text Dooza Crew (+1 855-594-6841)
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                                 <p className="text-sm text-slate-500 mt-3">Free: install the app and start.</p>

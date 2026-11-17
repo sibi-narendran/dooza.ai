@@ -171,12 +171,12 @@ export default function PerplexityComputerVsDoozaContent() {
 
                         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href={CREW_URL}
+                                href="sms:+18555946841"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get the Dooza Crew app
+                                Text Dooza Crew (+1 855-594-6841)
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
@@ -404,7 +404,7 @@ export default function PerplexityComputerVsDoozaContent() {
                                         <p className="text-slate-700">
                                             Free: install the app and start, approval before Send or Pay, and no workflows for you to design. <strong>Watch for:</strong> Perplexity Computer has 400+ app connectors, multi-model routing and a published credit system. If you want to pick models and build projects yourself, Computer gives you more control.
                                         </p>
-                                        <p className="mt-3"><a href={CREW_URL} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Get the Dooza Crew app</a></p>
+                                        <p className="mt-3"><a href="sms:+18555946841" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">Text Dooza Crew (+1 855-594-6841)</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -796,12 +796,12 @@ export default function PerplexityComputerVsDoozaContent() {
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href={CREW_URL}
+                                    href="sms:+18555946841"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                                 >
-                                    Get the Dooza Crew app
+                                    Text Dooza Crew (+1 855-594-6841)
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                             </div>

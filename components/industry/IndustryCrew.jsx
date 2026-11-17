@@ -131,8 +131,8 @@ export default function IndustryCrew({ c }) {
                             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">{PRICE_LINE}</p>
                         </div>
                         <div className="lg:text-right">
-                            <a href={crewSignupUrl(`${p}-price`)} data-offer="crew" data-source={`${p}-price`} className="inline-block rounded-xl bg-white px-7 py-4 text-lg font-semibold text-[#14213D] hover:bg-[#EEF3F1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                                Get the Dooza Crew app
+                            <a href="sms:+18555946841"-price`)} data-offer="crew" data-source={`${p}-price`} className="inline-block rounded-xl bg-white px-7 py-4 text-lg font-semibold text-[#14213D] hover:bg-[#EEF3F1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                                Text Dooza Crew (+1 855-594-6841)
                             </a>
                         </div>
                     </div>

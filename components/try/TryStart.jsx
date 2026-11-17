@@ -35,7 +35,7 @@ export default function TryStart({ placement, examples = true }) {
     const [task, setTask] = useState('');
     const go = (e) => {
         e.preventDefault();
-        window.location.href = signupUrl(placement, task.trim());
+        const t = task.trim(); window.location.href = t ? `sms:+18555946841?&body=${encodeURIComponent(t)}` : 'sms:+18555946841';
     };
 
     return (
@@ -60,7 +60,7 @@ export default function TryStart({ placement, examples = true }) {
                     data-source={`try-${placement}`}
                     className="mt-1 w-full rounded-xl bg-[#0F766E] px-5 py-4 text-[17px] font-semibold text-white transition-colors hover:bg-[#0B5D57] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14213D]"
                 >
-                    Get the app
+                    Text Dooza Crew
                 </button>
             </form>
             <p className="mt-3 text-[14px] leading-snug text-[#4B5567]">

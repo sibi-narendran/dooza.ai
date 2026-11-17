@@ -305,7 +305,7 @@ export default function FaqSchemaGeneratorPage() {
                                     href={CREW_URL}
                                     className="mt-5 inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors"
                                 >
-                                    Get the Dooza Crew app →
+                                    Text Dooza Crew (+1 855-594-6841) →
                                 </a>
                             </div>
                         </section>

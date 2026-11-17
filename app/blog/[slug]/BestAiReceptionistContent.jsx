@@ -194,11 +194,11 @@ export default function BestAiReceptionistContent() {
 
                         <div className="mt-10 flex flex-col items-center gap-2">
                             <a
-                                href={CREW_URL('hero')}
+                                href="sms:+18555946841"
                                 data-offer="crew"
                                 className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all shadow-lg"
                             >
-                                Get the Dooza Crew app
+                                Text Dooza Crew (+1 855-594-6841)
                                 <ArrowRight className="w-5 h-5" />
                             </a>
                             <span className="text-sm text-slate-500">Free: install the app and start · phone calls included · <a href={CAL_BOOKING_URL} onClick={handleAction} className="underline">or book a call first</a></span>
@@ -246,11 +246,11 @@ export default function BestAiReceptionistContent() {
                             <div className="mt-8 pt-6 border-t border-slate-200">
                                 <p className="text-sm text-slate-600 mb-4">Never miss a call again</p>
                                 <a
-                                    href={CREW_URL('sidebar')}
+                                    href="sms:+18555946841"
                                     data-offer="crew"
                                     className="w-full inline-flex justify-center py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
                                 >
-                                    Get the Dooza Crew app
+                                    Text Dooza Crew (+1 855-594-6841)
                                 </a>
                                 <p className="text-xs text-slate-500 mt-2 text-center">Free: install the app and start</p>
                             </div>
@@ -359,7 +359,7 @@ export default function BestAiReceptionistContent() {
                                     <li>Free: install the app and start. Unlimited users and agents.</li>
                                 </ul>
                                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                                    <a href={CREW_URL('plain-terms')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Get the Dooza Crew app <ArrowRight className="w-4 h-4" /></a>
+                                    <a href="sms:+18555946841" data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">Text Dooza Crew (+1 855-594-6841) <ArrowRight className="w-4 h-4" /></a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">Book a call first</a>
                                 </div>
                             </div>
@@ -606,7 +606,7 @@ export default function BestAiReceptionistContent() {
 
                             <div className="prose md:prose-lg text-slate-600 mb-8">
                                 <p>
-                                    <a href={CREW_URL('hear')} data-offer="crew" className="text-primary-600 hover:underline font-medium">Get the Dooza Crew app &rarr;</a>
+                                    <a href={CREW_URL('hear')} data-offer="crew" className="text-primary-600 hover:underline font-medium">Text Dooza Crew (+1 855-594-6841) &rarr;</a>
                                     <br />
                                     <Link href="/blog/automate-business-processes" className="text-primary-600 hover:underline font-medium">Learn how to automate your entire business &rarr;</Link>
                                 </p>
@@ -618,8 +618,8 @@ export default function BestAiReceptionistContent() {
                                     Stop losing callers to voicemail. Crew agents take phone calls too, included in your Crew plan: free to use.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <a href={CREW_URL('final')} data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
-                                        Get the Dooza Crew app <ArrowRight className="w-4 h-4" />
+                                    <a href="sms:+18555946841" data-offer="crew" className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition-all">
+                                        Text Dooza Crew (+1 855-594-6841) <ArrowRight className="w-4 h-4" />
                                     </a>
                                     <a href={CAL_BOOKING_URL} onClick={handleAction} className="inline-flex items-center justify-center gap-2 bg-white border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-full font-bold hover:bg-primary-50 transition-all">
                                         <Calendar className="w-4 h-4" /> Book a free call

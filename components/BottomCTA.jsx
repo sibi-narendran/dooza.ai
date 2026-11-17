@@ -29,13 +29,11 @@ const BottomCTA = ({ openModal }) => {
 
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <a 
-                        href={getProductSignupUrl('workforce', { source: 'bottom_cta' })} 
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="sms:+18555946841" 
                         onClick={handleSignupClick} 
                         className="w-full sm:w-auto bg-primary-600 text-white px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 hover:-translate-y-1"
                     >
-                        Get the Dooza Crew app
+                        Text Dooza Crew (+1 855-594-6841)
                     </a>
                     <a 
                         href={getBookingUrlFromPath(pathname)}

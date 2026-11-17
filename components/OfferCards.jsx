@@ -32,7 +32,7 @@ const OFFERS = [
         price: 'Free: install the app and start',
         per: '',
         terms: 'No card needed.',
-        cta: 'Get the Dooza Crew app',
+        cta: 'Text Dooza Crew (+1 855-594-6841)',
         points: [
             'A lead agent plus helper agents you chat with on web or phone',
             'They browse the web and write files in their own workspace',

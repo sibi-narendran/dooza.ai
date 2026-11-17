@@ -43,11 +43,11 @@ export default async function AiReceptionistBookPage(props) {
                         <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">{PILOT_PROMISE}</p>
                         <div className="mt-8">
                             <a
-                                href={crewSignupUrl('ai-receptionist-book-cta')}
+                                href="sms:+18555946841"
                                 data-offer="crew"
                                 className="inline-flex w-full items-center justify-center rounded-xl bg-primary-700 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-900/20 transition hover:bg-primary-800 sm:w-auto"
                             >
-                                Get the Dooza Crew app
+                                Text Dooza Crew (+1 855-594-6841)
                             </a>
                         </div>
                     </div>

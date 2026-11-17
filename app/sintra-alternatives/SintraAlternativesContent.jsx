@@ -470,7 +470,7 @@ export default function SintraAlternativesContent({ faqData }) {
                                     {/* CTA for Dooza only */}
                                     {alt.highlight && (
                                         <div className="flex flex-col sm:flex-row gap-3 pt-6 mt-6 border-t border-slate-100">
-                                            <a href={crewSignupUrl('sintra_alt_crew_top')} data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Get the Dooza Crew app <ArrowRight size={16} /></a>
+                                            <a href="sms:+18555946841" data-offer="crew" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors">Text Dooza Crew (+1 855-594-6841) <ArrowRight size={16} /></a>
                                             <BookDemoButton source="sintra_alt_dooza_card">Book a free 30-min call</BookDemoButton>
                                         </div>
                                     )}
@@ -608,7 +608,7 @@ export default function SintraAlternativesContent({ faqData }) {
                         <ScrollReveal>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Try the Best Sintra Alternative?</h2>
                             <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
-                                Get the Dooza Crew app. Want it done for you? Dooza Managed is $200/month, or book a free 30-minute call with a Dooza engineer. No sales pitch, just a walkthrough of what Dooza handles for your business.
+                                Text Dooza Crew (+1 855-594-6841). Want it done for you? Dooza Managed is $200/month, or book a free 30-minute call with a Dooza engineer. No sales pitch, just a walkthrough of what Dooza handles for your business.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <SignupButton source="sintra_alt_cta">Start your pilot</SignupButton>

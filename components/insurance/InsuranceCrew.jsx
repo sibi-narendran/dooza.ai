@@ -210,8 +210,8 @@ export default function InsuranceCrew() {
                             </p>
                         </div>
                         <div className="lg:text-right">
-                            <a href={crewSignupUrl('ins-price')} data-offer="crew" data-source="ins-price" className="inline-block rounded-xl bg-white px-7 py-4 text-lg font-semibold text-[#14213D] hover:bg-[#EEF3F1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                                Get the Dooza Crew app
+                            <a href="sms:+18555946841" data-offer="crew" data-source="ins-price" className="inline-block rounded-xl bg-white px-7 py-4 text-lg font-semibold text-[#14213D] hover:bg-[#EEF3F1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                                Text Dooza Crew (+1 855-594-6841)
                             </a>
                         </div>
                     </div>
