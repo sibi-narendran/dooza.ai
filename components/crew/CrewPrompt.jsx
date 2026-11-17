@@ -53,7 +53,7 @@ export default function CrewPrompt({ placement = 'crew-hero', tone = 'dark', cen
                     className={`block w-full resize-none bg-transparent px-3 py-2 text-lg focus:outline-none ${t.input}`}
                 />
                 <div className="flex items-center justify-between gap-3 px-2 pb-1 pt-2">
-                    <span className={`text-xs ${t.hint}`}>Free: install the app and start.</span>
+                    <span className={`text-xs ${t.hint}`}>Free: install the app and start — or text <a href="sms:+18555946841" data-offer="crew-sms" data-source={placement} className="underline font-medium hover:opacity-80">+1 (855) 594-6841</a> (no sign-up needed).</span>
                     <button
                         type="submit"
                         data-offer="crew"

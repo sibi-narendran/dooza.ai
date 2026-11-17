@@ -93,7 +93,7 @@ export default function VsSintraPage() {
                     <div className="mt-7 flex flex-wrap items-center gap-4">
                         <VsSintraCta label="Try Dooza Crew free" placement="hero" />
                         <span className="text-[14px] font-medium text-[#4B5567]">
-                            Free to try · No card required · iOS, Android &amp; Mac
+                            Free to try · No card required · Or text <a href="sms:+18555946841" className="font-semibold text-[#0F766E] underline">+1 (855) 594-6841</a> (no sign-up needed)
                         </span>
                     </div>
                 </div>
