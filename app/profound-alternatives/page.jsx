@@ -4,8 +4,8 @@ import ProfoundAlternativesContent from './ProfoundAlternativesContent';
 const PAGE_URL = `${SITE_URL}/profound-alternatives`;
 
 export const metadata = {
-    title: '7 Best Profound Alternatives (2026): GEO Tools Compared',
-    description: 'Looking for a Profound AI alternative? 7 AI visibility and GEO options compared on pricing, fit, pros, and cons, with our top pick, our own product Dooza Crew.',
+    title: '7 Best Profound Alternatives (Nov 2026): Free & Paid',
+    description: 'Compare 7 Profound AI alternatives on real pricing (Otterly, Peec AI from $95/mo, Scrunch, Semrush) + Dooza Crew (free to try, no card) for AEO execution.',
     keywords: [
         'profound alternatives', 'profound alternative', 'profound ai alternatives',
         'tryprofound alternatives', 'profound ai competitors', 'cheaper than profound',
@@ -30,7 +30,7 @@ export const metadata = {
         url: PAGE_URL,
         siteName: 'Dooza',
         type: 'article',
-        modifiedTime: '2026-10-07T00:00:00.000Z',
+        modifiedTime: '2026-11-18T00:00:00.000Z',
         images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: 'Profound AI alternatives — Dooza' }],
     },
     twitter: {
