@@ -1,15 +1,15 @@
 import { SITE_URL, SITE_NAME } from '../../lib/site';
 
 export const metadata = {
-    title: 'AI Employee Tools Compared [2026]: Sintra, Marblism & More',
-    description: 'Side-by-side comparisons of AI employee platforms — Sintra AI, Marblism, Motion, Profound, and more. Real pricing, honest pros and cons.',
+    title: 'AI Employee Alternatives (Nov 2026): Compare Top Tools',
+    description: 'Compare AI employee & agent alternatives (Sintra, Marblism, Lindy, Profound, CrewAI) on real pricing and limits—plus Dooza Crew (free to try, no card).',
     keywords: ['Sintra AI alternative', 'Marblism alternative', 'Motion App alternative', 'AI employees comparison', 'AI automation comparison'],
     alternates: {
         canonical: `${SITE_URL}/alternatives`,
     },
     openGraph: {
-        title: 'AI Employee Tools Compared [2026]: Sintra, Marblism & More',
-        description: 'Side-by-side comparisons of AI employee platforms. Real pricing, features, and limitations revealed.',
+        title: 'AI Employee Alternatives (Nov 2026): Compare Top Tools',
+        description: 'Compare AI employee & agent alternatives (Sintra, Marblism, Lindy, Profound, CrewAI) on real pricing and limits—plus Dooza Crew (free to try, no card).',
         url: `${SITE_URL}/alternatives`,
         siteName: SITE_NAME,
         type: 'website',
@@ -24,8 +24,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'AI Employee Tools Compared [2026]: Sintra, Marblism & More',
-        description: 'Side-by-side comparisons of AI employee platforms. Real pricing, features, and limitations revealed.',
+        title: 'AI Employee Alternatives (Nov 2026): Compare Top Tools',
+        description: 'Compare AI employee & agent alternatives (Sintra, Marblism, Lindy, Profound, CrewAI) on real pricing and limits—plus Dooza Crew (free to try, no card).',
         images: [`${SITE_URL}/logo.png`],
     },
 };
