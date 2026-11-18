@@ -8,6 +8,16 @@ export const revalidate = 3600;
 
 const staticPages = [
     {
+        title: 'Dooza Chief Dispute Officer: fight unfair bills, denied claims & overcharges',
+        url: `${SITE_URL}/dispute`,
+        description: 'Autonomous bill fighter & dispute team for denied health insurance claims, hospital bills, internet/utility hikes, flight delay compensation, property tax appeals, and billing disputes. $0 upfront; 20-30% one-time fee only on recovered or saved cash ($0 if we fail). Text your bill or keyword to +1 (855) 594-6841 — nothing is filed until you tap Approve.',
+    },
+    {
+        title: 'Dooza AI Sales Team: outbound lead research, cold email & follow-ups',
+        url: `${SITE_URL}/sales`,
+        description: 'Done-for-you AI sales team that researches verified B2B decision-makers, verifies emails, writes personalized outreach, and books meetings on your calendar while you approve every step in chat.',
+    },
+    {
         title: 'Dooza Accountant: GST return filing in India for Rs 499 a month',
         url: `${SITE_URL}/accountant/gst-filing`,
         description: 'Monthly GST return filing (GSTR-1 + GSTR-3B) for Rs 499 a month up to 50 sales invoices, Rs 999 up to 200, Rs 4,999 yearly; tax included, no setup fee; Rs 0 today, paid each month after the return is filed. Bills are sent on WhatsApp; nothing is filed without the owner\'s OTP. Start on WhatsApp: https://wa.me/917305065161. Plain-text copy for agents: https://www.dooza.ai/accountant/gst-filing.md',
