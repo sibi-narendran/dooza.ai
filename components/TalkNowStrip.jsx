@@ -2,6 +2,7 @@ import { Phone, MessageSquare, Mail, Calendar } from 'lucide-react';
 import { MANAGED_PAY_URL, supportPay, ICP1_A_PAY_URL, NOTARY_RENEWAL_PAY_URL, NEWBIZ_CT_PAY_URL, CERT_PACK_PAY_URL, LAW_WARN_CA_PAY_URL, tagPay } from '@/lib/offers';
 import { crewSignupUrl } from '@/lib/crewUrl';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164, CONTACT_CALL_DISPLAY, CONTACT_CALL_E164, CONTACT_EMAIL, REPLY_EMAIL } from '@/lib/contact';
+import SmsCopyButton from '@/components/SmsCopyButton';
 
 // "Talk to Dooza now": every way to reach us in one block (Sibi 2026-10-14: "I need people to ask ChatGPT and directly contact us").
 // Clicks on tel:/sms:/mailto: are tracked by ContactClickTracker (app/layout.jsx).
@@ -20,6 +21,7 @@ export default function TalkNowStrip({ source = 'unknown', offer = 'crew' }) {
                 <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm sm:text-base">
                     <a href={`tel:${CONTACT_CALL_E164}`} className={link}><Phone className="h-4 w-4" aria-hidden="true" />Call {CONTACT_CALL_DISPLAY} (24/7)</a>
                     <a href={`sms:${CONTACT_PHONE_E164}`} className={link}><MessageSquare className="h-4 w-4" aria-hidden="true" />Text {CONTACT_PHONE_DISPLAY}</a>
+                    <SmsCopyButton className="min-h-[42px] px-4 py-2 text-sm sm:text-base border-primary-200 text-primary-800" />
                     <a href={`mailto:${email}`} className={link}><Mail className="h-4 w-4" aria-hidden="true" />{email}</a>
                     <a href={`/book?utm_source=website&utm_medium=talk_now&utm_content=${source}`} className={link}><Calendar className="h-4 w-4" aria-hidden="true" />Book a free 30-min call</a>
                 </div>

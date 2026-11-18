@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import SiteHeader from '@/components/crew/SiteHeader';
 import CrewPrompt from '@/components/crew/CrewPrompt';
+import SmsCopyButton from '@/components/SmsCopyButton';
 
 const display = Bricolage_Grotesque({ subsets: ['latin'], weight: ['600', '700', '800'], display: 'swap' });
 const body = Instrument_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap' });
@@ -105,7 +106,7 @@ export default function DisputeLanding() {
                                 <p className={`max-w-[36rem] text-lg leading-relaxed md:text-xl ${MUTED}`}>
                                     Stop losing hours on hold. Text <a href="sms:+18555946841" data-offer="crew-sms" data-source="dispute-hero-copy" className={LINK}>+1 (855) 594-6841</a>—no sign-up needed—and our voice and browser agents sit on hold, draft formal regulatory appeals, negotiate bills down, and file dispute paperwork end-to-end. You pay 20–30% only of cash recovered or saved.
                                 </p>
-                                <div className="mt-7 flex flex-wrap items-center gap-4">
+                                <div className="mt-7 flex flex-wrap items-center gap-3">
                                     <a
                                         href="sms:+18555946841?&body=DENIED"
                                         data-offer="crew-sms"
@@ -114,6 +115,14 @@ export default function DisputeLanding() {
                                     >
                                         Text "DENIED" or Your Bill (+1 855-594-6841)
                                     </a>
+                                    <SmsCopyButton />
+                                </div>
+                                <div className="mt-4 hidden items-center gap-3 rounded-2xl border border-[#CBD5E1] bg-white/80 p-3 sm:inline-flex">
+                                    <img src="/sms-qr.svg" alt="Scan QR code to text +1 (855) 594-6841" width={68} height={68} className="h-[68px] w-[68px] rounded-lg border border-[#E2E8F0] bg-white p-1" />
+                                    <div className="text-sm leading-snug">
+                                        <p className="font-semibold text-[#14213D]">On desktop? Scan to text from your phone</p>
+                                        <p className="text-xs text-[#4B5567]">Opens Messages to +1 (855) 594-6841</p>
+                                    </div>
                                 </div>
                                 <p className={`mt-3 text-sm ${MUTED}`}>
                                     Private &amp; never sold — your bills and EOBs are used only for your dispute and deleted on request. When a carrier requires your consent, we send a 1-tap authorization or conference you in.

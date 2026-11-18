@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { crewSignupUrl } from '@/lib/crewUrl';
+import SmsCopyButton from '@/components/SmsCopyButton';
 
 // Slim Crew bar on blog posts (2026-10-23): Clarity showed ~20 blog sessions in 3 days with 1 page, 0 clicks and
 // 13-66% scroll, so the TalkNowStrip at the end is rarely seen. Shows after a short scroll; dismiss is remembered per browser.
@@ -25,6 +26,7 @@ export default function CrewBlogBar({ source = 'blog' }) {
                     <span className="font-semibold text-[#14213D]">Dooza Crew:</span> Text your AI employee directly at <a href="sms:+18555946841" data-offer="crew-sms" data-source={`bar-${source}`} className="font-semibold text-[#0F766E] underline">+1 (855) 594-6841</a> (no sign-up needed), or <a href={crewSignupUrl(`bar-${source}`)} data-offer="crew" data-source={`bar-${source}`} className="underline">get the app</a>.
                 </p>
                 <a href="sms:+18555946841" data-offer="crew-sms" data-source={`bar-${source}`} className="shrink-0 rounded-full bg-[#0F766E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#14213D]">Text Dooza Crew</a>
+                <SmsCopyButton className="hidden shrink-0 sm:inline-flex min-h-[36px] px-3 py-1.5 text-xs" />
                 <button type="button" onClick={close} aria-label="Close" className="shrink-0 px-1 text-xl leading-none text-slate-400 hover:text-slate-700">&times;</button>
             </div>
         </div>
