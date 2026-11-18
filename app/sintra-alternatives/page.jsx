@@ -2,8 +2,8 @@ import { SITE_URL } from '../../lib/site';
 import SintraAlternativesContent from './SintraAlternativesContent';
 
 export const metadata = {
-    title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-    description: '7 Sintra AI alternatives compared on pricing, features, and limits (checked October 7, 2026). Our top pick: our own product, Dooza Crew, free to use.',
+    title: '7 Best Sintra AI Alternatives (Nov 2026): Free & Paid',
+    description: 'Compare 7 Sintra AI alternatives on real pricing, limits, and workflows (updated Nov 2026). Top pick: Dooza Crew—isolated AI agents, free to try, no card.',
     keywords: [
         'sintra ai alternatives', 'best sintra alternative 2026', 'sintra ai competitors',
         'sintra alternative', 'sintra ai replacement', 'AI employee platforms',
@@ -23,8 +23,8 @@ export const metadata = {
         },
     },
     openGraph: {
-        title: '7 Best Sintra AI Alternatives [2026], Honestly Compared',
-        description: 'Honest comparison of 7 Sintra AI alternatives — pricing, features, pros, cons. Our top pick is our own product, Dooza Crew.',
+        title: '7 Best Sintra AI Alternatives (Nov 2026): Free & Paid',
+        description: 'Compare 7 Sintra AI alternatives on real pricing, limits, and workflows (updated Nov 2026). Top pick: Dooza Crew—isolated AI agents, free to try, no card.',
         url: `${SITE_URL}/sintra-alternatives`,
         siteName: 'Dooza',
         type: 'article',
