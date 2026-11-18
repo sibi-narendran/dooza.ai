@@ -7,7 +7,7 @@ const c = {
     vendorUrl: 'https://www.truckerdb.com/',
     checked: 'October 23, 2026',
     title: 'TruckerDB Alternative: Trucking Renewals Each Monday',
-    description: 'TruckerDB sells a daily list of newly registered DOT carriers ($49) and renewal leads ($99). Compare it with the Monday Trucker Feed: renewals with the current insurer named, $129 per 4 weeks.',
+    description: 'TruckerDB ($49–$99/mo) vs Monday Trucker Feed ($129/4 wks): 3+ unit fleets renewing in 30–60 days with current insurer named. 5 free sample rows, no card.',
     h1: 'TruckerDB alternative for trucking insurance agents',
     lead: 'TruckerDB sends a daily list of newly registered DOT carriers with owner contact details for $49 a month, and adds insurance renewal leads on its $99 Pro plan. It sells to agents, dispatchers, factoring and financing companies alike. The Monday Trucker Feed is narrower: trucking companies with 3 or more power units that renew in 30 to 60 days, with the insurer you would be replacing named.',
     rows: [
