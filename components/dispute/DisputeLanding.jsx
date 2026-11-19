@@ -193,6 +193,7 @@ export default function DisputeLanding() {
             ['/blog/how-to-dispute-an-incorrect-toll-or-fastrak-fee', 'Incorrect Toll & E-ZPass / FasTrak Fees'],
             ['/blog/how-to-dispute-a-moving-company-overcharge', 'Moving Company Overcharges'],
             ['/blog/how-to-dispute-a-debt-collection-letter-fdcpa', 'Debt Collection Letters (FDCPA 30-Day)'],
+            ['/blog/how-to-dispute-an-unauthorized-debit-card-or-ach-charge', 'Unauthorized Debit & ACH Charges (Reg E)'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
