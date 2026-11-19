@@ -155,6 +155,7 @@ export default function SalesCrew() {
                                 ['/blog/ai-sdr-vs-human-sdr-cost-comparison', 'AI SDR vs. Human SDR Cost ($80K vs. $49/mo)'],
                                 ['/blog/best-ai-sales-tools-for-startups', 'Best AI Sales Tools for Startups'],
                                 ['/blog/ai-sdr-tools', 'AI SDR Tools Compared'],
+                                ['/blog/how-to-automate-cold-email-and-linkedin-follow-up', 'Automate Cold Email & LinkedIn Follow-Up'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
