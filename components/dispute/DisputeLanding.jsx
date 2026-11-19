@@ -189,6 +189,7 @@ export default function DisputeLanding() {
             ['/blog/how-to-dispute-an-unwanted-gym-membership-or-recurring-charge', 'Gym Membership & Recurring Charges'],
             ['/blog/how-to-dispute-an-unfair-parking-ticket', 'Unfair Parking Tickets & Private Lots'],
             ['/blog/how-to-dispute-a-contractor-overcharge-or-incomplete-work', 'Contractor Overcharges & Incomplete Work'],
+            ['/blog/how-to-dispute-a-car-repair-overcharge', 'Car Repair & Mechanic Overcharges'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
