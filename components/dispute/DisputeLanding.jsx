@@ -198,6 +198,7 @@ export default function DisputeLanding() {
             ['/blog/how-to-dispute-a-denied-warranty-claim', 'Denied Warranty & Extended Warranty Claims'],
             ['/blog/how-to-dispute-a-high-electric-or-water-bill', 'High Electric & Water Bill Spikes (PUC)'],
             ['/blog/how-to-dispute-lost-luggage-or-airline-baggage-claim', 'Lost Luggage & Airline Baggage Claims (DOT)'],
+            ['/blog/how-to-dispute-a-subscription-charge-after-canceling', 'Post-Cancellation Subscription Charges'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
