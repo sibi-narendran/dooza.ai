@@ -183,6 +183,7 @@ export default function DisputeLanding() {
             ['/blog/how-to-dispute-an-hoa-fine-or-violation-notice', 'HOA Fines & Violation Notices'],
             ['/blog/how-to-appeal-a-homeowners-insurance-claim-denial', 'Denied Homeowners Insurance Claims'],
             ['/blog/how-to-dispute-a-surprise-medical-bill-no-surprises-act', 'Surprise Medical Bills (No Surprises Act)'],
+            ['/blog/how-to-dispute-a-credit-report-error', 'Credit Report Errors (FCRA)'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
