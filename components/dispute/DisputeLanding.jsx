@@ -200,6 +200,7 @@ export default function DisputeLanding() {
             ['/blog/how-to-dispute-lost-luggage-or-airline-baggage-claim', 'Lost Luggage & Airline Baggage Claims (DOT)'],
             ['/blog/how-to-dispute-a-subscription-charge-after-canceling', 'Post-Cancellation Subscription Charges'],
             ['/blog/how-to-dispute-an-early-termination-fee', 'Early Termination Fees (FCC 30-Day)'],
+            ['/blog/how-to-dispute-a-credit-card-late-fee-or-annual-fee', 'Credit Card Late & Annual Fees (Reg Z)'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
