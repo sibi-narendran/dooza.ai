@@ -240,7 +240,7 @@ export default function InsuranceCrew() {
                             Want us to set it up for you? <Link href="/book" data-source="ins-bottom-book" className={LINK}>Book a 30-minute call</Link>.
                         </p>
                         <p className={`mt-3 text-[15px] ${MUTED}`}>
-                            Comparing tools first? See <Link href="/blog/best-ai-tools-for-insurance-agents" data-source="ins-bottom-tools" className={LINK}>the best AI tools for insurance agents in 2026, with prices</Link>, our <Link href="/blog/ai-receptionist-for-insurance-agencies" data-source="ins-bottom-rec" className={LINK}>AMS360 AI receptionist guide</Link>, or <Link href="/blog/new-insurance-agency-carrier-appointments-wholesaler-mga" data-source="ins-bottom-mga" className={LINK}>how new trucking agencies get carrier appointments</Link>.
+                            Comparing tools first? See <Link href="/blog/best-ai-tools-for-insurance-agents" data-source="ins-bottom-tools" className={LINK}>the best AI tools for insurance agents in 2026, with prices</Link>, our <Link href="/blog/ai-receptionist-for-insurance-agencies" data-source="ins-bottom-rec" className={LINK}>AMS360 AI receptionist guide</Link>, or <Link href="/blog/new-insurance-agency-carrier-appointments-wholesaler-mga" data-source="ins-bottom-mga" className={LINK}>how new trucking agencies get carrier appointments</Link>. Writing commercial trucking? Browse <Link href="/best-trucking-insurance-leads" data-source="ins-bottom-leads" className={LINK}>trucking insurance leads</Link> and <Link href="/new-trucking-companies" data-source="ins-bottom-newdot" className={LINK}>new DOT trucking companies</Link>.
                         </p>
                     </div>
                 </section>
