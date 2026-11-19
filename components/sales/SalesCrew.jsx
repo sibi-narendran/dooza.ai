@@ -157,6 +157,7 @@ export default function SalesCrew() {
                                 ['/blog/ai-sdr-tools', 'AI SDR Tools Compared'],
                                 ['/blog/how-to-automate-cold-email-and-linkedin-follow-up', 'Automate Cold Email & LinkedIn Follow-Up'],
                                 ['/blog/how-to-improve-speed-to-lead-with-ai', 'Improve Speed to Lead With AI'],
+                                ['/blog/how-to-build-a-b2b-prospect-list-with-ai', 'Build a B2B Prospect List With AI'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
