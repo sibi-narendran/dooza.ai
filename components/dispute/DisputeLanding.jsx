@@ -177,6 +177,8 @@ export default function DisputeLanding() {
                                 ['/blog/how-to-appeal-a-property-tax-assessment', 'Property Tax Assessment Appeals'],
                                 ['/blog/how-to-dispute-a-credit-card-charge', 'Credit Card Chargebacks & Subscriptions'],
                                 ['/blog/how-to-dispute-a-security-deposit-deduction', 'Security Deposit Deduction Disputes'],
+                                ['/blog/how-to-dispute-a-medical-debt-collection-letter', 'Medical Debt Collection Letters (FDCPA)'],
+                                ['/blog/how-to-appeal-an-auto-insurance-claim-denial', 'Denied Auto Insurance Claims & Total Loss'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
