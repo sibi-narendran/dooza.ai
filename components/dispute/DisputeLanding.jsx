@@ -180,6 +180,7 @@ export default function DisputeLanding() {
                                 ['/blog/how-to-dispute-a-medical-debt-collection-letter', 'Medical Debt Collection Letters (FDCPA)'],
                                 ['/blog/how-to-appeal-an-auto-insurance-claim-denial', 'Denied Auto Insurance Claims & Total Loss'],
                                 ['/blog/how-to-dispute-a-rental-car-damage-claim', 'Rental Car Damage Claims & Junk Fees'],
+            ['/blog/how-to-dispute-an-hoa-fine-or-violation-notice', 'HOA Fines & Violation Notices'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
