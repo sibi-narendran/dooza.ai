@@ -166,6 +166,26 @@ export default function DisputeLanding() {
                     </div>
                 </section>
 
+                <section aria-labelledby="dispute-guides" className="border-t border-[#E2E8F0] bg-[#FAF9F7] px-4 py-14 md:px-8">
+                    <div className="mx-auto max-w-5xl">
+                        <h2 id="dispute-guides" className={H2}>Step-by-step dispute guides</h2>
+                        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                            {[
+                                ['/blog/how-to-fight-a-denied-insurance-claim-or-hospital-bill', 'Denied Insurance Claim or Hospital Bill'],
+                                ['/blog/how-to-negotiate-lower-internet-and-utility-bills', 'Internet, Cable & Utility Bill Hikes'],
+                                ['/blog/how-to-claim-flight-delay-compensation', 'Flight Delay & Cancellation Cash (DOT / EU261)'],
+                                ['/blog/how-to-appeal-a-property-tax-assessment', 'Property Tax Assessment Appeals'],
+                                ['/blog/how-to-dispute-a-credit-card-charge', 'Credit Card Chargebacks & Subscriptions'],
+                                ['/blog/how-to-dispute-a-security-deposit-deduction', 'Security Deposit Deduction Disputes'],
+                            ].map(([href, label]) => (
+                                <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
+                                    {label} &rarr;
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 <section aria-labelledby="dispute-faq" className="px-4 py-16 md:px-8 md:py-24">
                     <div className="mx-auto max-w-4xl">
                         <h2 id="dispute-faq" className={H2}>Questions before you send a bill</h2>
