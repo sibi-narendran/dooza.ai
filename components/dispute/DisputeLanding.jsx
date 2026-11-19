@@ -203,6 +203,7 @@ export default function DisputeLanding() {
             ['/blog/how-to-dispute-a-credit-card-late-fee-or-annual-fee', 'Credit Card Late & Annual Fees (Reg Z)'],
             ['/blog/how-to-dispute-a-refused-return-or-defective-item-chargeback', 'Refused Returns & Defective Items (Reg Z)'],
             ['/blog/how-to-dispute-an-ambulance-or-air-ambulance-bill', 'Ambulance & Air Ambulance Bills (NSA)'],
+            ['/blog/how-to-dispute-a-dental-bill-or-insurance-denial', 'Dental Bills & Claim Denials (CDT/EOB)'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
