@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import SiteHeader from '@/components/crew/SiteHeader';
 import CrewPrompt from '@/components/crew/CrewPrompt';
+import SmsCopyButton from '@/components/SmsCopyButton';
 
 const display = Bricolage_Grotesque({ subsets: ['latin'], weight: ['600', '700', '800'], display: 'swap' });
 const body = Instrument_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap' });
@@ -145,6 +146,24 @@ export default function SalesCrew() {
                     </div>
                 </section>
 
+                <section aria-labelledby="sales-guides" className="border-t border-[#E2E8F0] bg-[#FAF9F7] px-4 py-14 md:px-8">
+                    <div className="mx-auto max-w-5xl">
+                        <h2 id="sales-guides" className={H2}>AI sales guides &amp; cost breakdowns</h2>
+                        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                            {[
+                                ['/blog/how-to-run-an-ai-sales-team-for-small-business', 'AI Sales Team for Small Business (2026 Guide)'],
+                                ['/blog/ai-sdr-vs-human-sdr-cost-comparison', 'AI SDR vs. Human SDR Cost ($80K vs. $49/mo)'],
+                                ['/blog/best-ai-sales-tools-for-startups', 'Best AI Sales Tools for Startups'],
+                                ['/blog/ai-sdr-tools', 'AI SDR Tools Compared'],
+                            ].map(([href, label]) => (
+                                <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
+                                    {label} &rarr;
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 <section aria-labelledby="sales-faq" className="px-4 py-16 md:px-8 md:py-24">
                     <div className="mx-auto max-w-4xl">
                         <h2 id="sales-faq" className={H2}>Questions about Dooza for Sales</h2>
@@ -179,6 +198,7 @@ export default function SalesCrew() {
                             >
                                 Text Dooza Crew (+1 855-594-6841)
                             </a>
+                            <SmsCopyButton />
                             <a
                                 href="https://crew.dooza.ai/?utm_source=dooza&utm_medium=page&utm_content=sales-bottom"
                                 data-offer="crew"
