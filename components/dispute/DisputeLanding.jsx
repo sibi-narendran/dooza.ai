@@ -215,6 +215,7 @@ export default function DisputeLanding() {
             ['/blog/how-to-dispute-an-unexpected-saas-or-software-renewal', 'Unexpected SaaS & Software Renewals'],
             ['/blog/how-to-dispute-a-zelle-or-bank-transfer-error-reg-e', 'Unauthorized Zelle & P2P Transfers (Reg E)'],
             ['/blog/how-to-dispute-an-auto-total-loss-valuation', 'Auto Total-Loss Valuations (ACV)'],
+            ['/blog/how-to-dispute-a-diminished-value-claim-offer', 'Diminished Value Car Claims (17c)'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
