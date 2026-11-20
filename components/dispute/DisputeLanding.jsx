@@ -213,6 +213,7 @@ export default function DisputeLanding() {
             ['/blog/how-to-dispute-a-freight-reclassification-or-ltl-invoice', 'Freight Reclass & LTL Invoices'],
             ['/blog/how-to-dispute-a-mortgage-escrow-or-servicer-fee', 'Mortgage Escrow & Servicer Fees (RESPA)'],
             ['/blog/how-to-dispute-an-unexpected-saas-or-software-renewal', 'Unexpected SaaS & Software Renewals'],
+            ['/blog/how-to-dispute-a-zelle-or-bank-transfer-error-reg-e', 'Unauthorized Zelle & P2P Transfers (Reg E)'],
                             ].map(([href, label]) => (
                                 <Link key={href} href={href} className="rounded-xl border border-[#CBD5E1] bg-white px-4 py-3 text-sm font-semibold text-[#14213D] hover:border-[#0F766E] hover:text-[#0F766E]">
                                     {label} &rarr;
